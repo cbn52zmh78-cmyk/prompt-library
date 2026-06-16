@@ -1,0 +1,29 @@
+{
+  "language": "classical-latin",
+  "texts": [
+    {
+      "id": "caesar-gallic-opening",
+      "title": "De Bello Gallico — opening line",
+      "type": "historical_prose",
+      "date_bce": -50,
+      "source": "Caesar, BG 1.1",
+      "transliteration": "Gallia est omnis divisa in partes tres",
+      "translation": "Gaul as a whole consists of three parts",
+      "confidence": "attested",
+      "history_links": ["julius-caesar"],
+      "notes": "Primary training block for Caesar History figure voice and period prose."
+    },
+    {
+      "id": "aurelius-meditations-greek-note",
+      "title": "Meditations — note on source language",
+      "type": "meta",
+      "date_ce": 170,
+      "source": "Marcus Aurelius wrote in Greek; Latin Stoic vocabulary still relevant for renders",
+      "transliteration": "Ἡγεμονικόν (hegemonikon) — ruling faculty",
+      "translation": "ruling faculty / guiding principle",
+      "confidence": "attested",
+      "history_links": ["marcus-aurelius"],
+      "notes": "Cross-language: Greek primary, Latin philosophical loan vocabulary."
+    }
+  ]
+}

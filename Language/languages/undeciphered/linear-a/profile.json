@@ -1,0 +1,16 @@
+{
+  "id": "linear-a",
+  "name": "Linear A",
+  "status": "undeciphered",
+  "revival_tier": "research",
+  "family": "Aegean (language unknown)",
+  "period": "c. 1800–1450 BCE",
+  "script": "Linear A syllabary (~80 signs)",
+  "region": "Minoan Crete, Aegean islands",
+  "training_readiness": "research_only",
+  "primary_sources": [
+    "Phaistos Disc (contested)",
+    " Hagia Triada tablets",
+    "Malia altar inscriptions"
+  ]
+}

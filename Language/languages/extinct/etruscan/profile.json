@@ -1,0 +1,16 @@
+{
+  "id": "etruscan",
+  "name": "Etruscan",
+  "status": "extinct",
+  "revival_tier": "high",
+  "family": "Tyrsenian (isolate)",
+  "period": "c. 700 BCE – 50 CE",
+  "script": "Etruscan alphabet",
+  "region": "Etruria (central Italy)",
+  "training_readiness": "partial",
+  "primary_sources": [
+    "Liber Linteus (mummy wrappings — longest Etruscan text)",
+    "Pyrgi Tablets (bilingual Etruscan-Phoenician)",
+    "Tita Inscription / Perugia inscriptions"
+  ]
+}

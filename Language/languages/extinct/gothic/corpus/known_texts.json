@@ -1,0 +1,16 @@
+{
+  "language": "gothic",
+  "texts": [
+    {
+      "id": "codex-argenteus-lord-prayer",
+      "title": "Atta unsar (Lord's Prayer)",
+      "type": "religious",
+      "date_ce": 350,
+      "source": "Codex Argenteus, Uppsala University Library",
+      "transliteration": "Atta unsar þu in himinam, weihnai namo þein",
+      "translation": "Our Father, thou in heaven, hallowed be thy name",
+      "confidence": "attested",
+      "notes": "Standard entry text for Gothic phonology and morphology training."
+    }
+  ]
+}

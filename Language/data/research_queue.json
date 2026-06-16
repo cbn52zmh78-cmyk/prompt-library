@@ -1,0 +1,44 @@
+{
+  "queue": [
+    {
+      "id": "rq-001",
+      "language": "etruscan",
+      "priority": "high",
+      "task": "Catalog all bilingual Etruscan-Latin inscription pairs for grammar inference",
+      "status": "pending",
+      "added": "2026-06-16"
+    },
+    {
+      "id": "rq-002",
+      "language": "linear-a",
+      "priority": "high",
+      "task": "Cross-reference Linear A sign frequencies with Linear B syllabic values",
+      "status": "pending",
+      "added": "2026-06-16"
+    },
+    {
+      "id": "rq-003",
+      "language": "gothic",
+      "priority": "medium",
+      "task": "Build aligned Gothic-Greek parallel corpus from Wulfila Bible fragments",
+      "status": "pending",
+      "added": "2026-06-16"
+    },
+    {
+      "id": "rq-004",
+      "language": "sumerian",
+      "priority": "medium",
+      "task": "Index ETCSL literary texts for Grok training pack tier 1",
+      "status": "pending",
+      "added": "2026-06-16"
+    },
+    {
+      "id": "rq-005",
+      "language": "classical-latin",
+      "priority": "high",
+      "task": "Link Caesar and Aurelius History figures to Latin excerpt training blocks",
+      "status": "pending",
+      "added": "2026-06-16"
+    }
+  ]
+}

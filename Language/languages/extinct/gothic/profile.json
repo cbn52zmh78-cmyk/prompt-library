@@ -1,0 +1,16 @@
+{
+  "id": "gothic",
+  "name": "Gothic",
+  "status": "extinct",
+  "revival_tier": "high",
+  "family": "East Germanic",
+  "period": "c. 4th century CE",
+  "script": "Gothic alphabet (Wulfila)",
+  "region": "Danube frontier / Ostrogothic kingdoms",
+  "training_readiness": "good",
+  "primary_sources": [
+    "Codex Argenteus (Gothic Gospels)",
+    "Skeireins (Gothic commentary on John)",
+    "Norse-Gothic comparative grammar"
+  ]
+}

@@ -12,6 +12,8 @@ FLASH = WORKSPACE / "FLASH"
 CONTENT_PRODUCTION = WORKSPACE / "Content_Production"
 CONTENT_PRODUCTION_PROJECTS = CONTENT_PRODUCTION / "Projects"
 STUDIO_DIR = WORKSPACE / "Studio"
+LANGUAGE_DIR = WORKSPACE / "Language"
+HISTORY_DIR = WORKSPACE / "History"
 ARTIFACTS_DIR = WORKSPACE / "artifacts"
 ARTIFACTS_LIB = ARTIFACTS_DIR / "lib"
 
@@ -60,13 +62,24 @@ STUDIO_FOLDERS: tuple[str, ...] = (
 PROMPT_SOURCES: dict[str, Path] = {
     "central": PROMPTS_DIR,
     "studio": STUDIO_DIR / "prompts",
+    "language": LANGUAGE_DIR / "prompts",
 }
 
 # Display name -> absolute path (for repo scanners / status tools)
+LANGUAGE_FOLDERS: tuple[str, ...] = (
+    "data",
+    "languages",
+    "scripts",
+    "prompts",
+    "training_packs",
+    "research",
+)
+
 REPO_PATHS: dict[str, Path] = {
     "Grok Projects": WORKSPACE,
     "Stonebridge_Operations": STONEBRIDGE_OPS,
     "FLASH": FLASH,
+    "Language": LANGUAGE_DIR,
 }
 
 NESTED_REPOS: dict[str, Path] = {

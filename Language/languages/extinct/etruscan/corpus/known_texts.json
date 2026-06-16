@@ -1,0 +1,27 @@
+{
+  "language": "etruscan",
+  "texts": [
+    {
+      "id": "pyrgi-a",
+      "title": "Pyrgi Tablet — Etruscan portion",
+      "type": "inscription",
+      "date_bce": 500,
+      "source": "Museo Nazionale di Villa Giulia, Rome",
+      "transliteration": "Itanim heramave avil eniaci pulumχva",
+      "translation": "This temple and this sanctuary ... (partial; bilingual context from Phoenician side)",
+      "confidence": "attested",
+      "notes": "Bilingual with Phoenician — key for proper-name and formulaic pattern extraction."
+    },
+    {
+      "id": "liber-linteus-excerpt",
+      "title": "Liber Linteus — ritual calendar excerpt",
+      "type": "ritual_text",
+      "date_bce": -200,
+      "source": "Zagreb Archaeological Museum (linen book)",
+      "transliteration": "[excerpt pending cataloguing]",
+      "translation": "[partial — ritual calendar of Haruspicina]",
+      "confidence": "attested",
+      "notes": "Longest continuous Etruscan text; priority for full line-by-line training pack."
+    }
+  ]
+}

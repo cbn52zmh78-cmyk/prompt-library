@@ -2,10 +2,10 @@
 import _bootstrap  # noqa: F401
 from pathlib import Path
 
-from workspace_paths import FLASH, STONEBRIDGE_OPS, STUDIO_DIR, STUDIO_FOLDERS, WORKSPACE
+from workspace_paths import FLASH, LANGUAGE_DIR, LANGUAGE_FOLDERS, STONEBRIDGE_OPS, STUDIO_DIR, STUDIO_FOLDERS, WORKSPACE
 
 REPOS = {
-    "Grok Projects": ["tools", "data", "docs", "prompts", "versions", "outputs", "notes", "artifacts"],
+    "Grok Projects": ["tools", "data", "docs", "prompts", "versions", "outputs", "notes", "artifacts", "Language"],
     "Stonebridge_Operations": ["Compliance_Research", "SOPs", "Client_Deliverables", "Scripts"],
     "FLASH": ["data", "scripts", "notebooks", "docs", "output"],
 }
@@ -37,6 +37,20 @@ def validate():
             path = STUDIO_DIR / folder
             status = "✅" if path.exists() else "❌"
             print(f"  {status} {folder}")
+        print()
+
+    print("Checking: Language Atlas scaffold")
+    if not LANGUAGE_DIR.exists():
+        print("  ❌ Language root missing\n")
+    else:
+        for folder in LANGUAGE_FOLDERS:
+            path = LANGUAGE_DIR / folder
+            status = "✅" if path.exists() else "❌"
+            print(f"  {status} {folder}")
+        for sub in ("living", "dead", "extinct", "reconstructed", "undeciphered"):
+            path = LANGUAGE_DIR / "languages" / sub
+            status = "✅" if path.exists() else "❌"
+            print(f"  {status} languages/{sub}")
         print()
 
 

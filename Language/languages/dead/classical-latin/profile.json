@@ -1,0 +1,18 @@
+{
+  "id": "classical-latin",
+  "name": "Classical Latin",
+  "status": "dead",
+  "revival_tier": "active",
+  "family": "Italic > Indo-European",
+  "period": "Golden Age – Silver Age Rome",
+  "script": "Latin alphabet",
+  "region": "Roman Republic and Empire",
+  "training_readiness": "excellent",
+  "history_links": ["julius-caesar", "marcus-aurelius"],
+  "primary_sources": [
+    "Caesar — Commentarii de Bello Gallico",
+    "Cicero — Orations",
+    "Virgil — Aeneid",
+    "Marcus Aurelius — Meditations (Greek origin; Latin reception corpus)"
+  ]
+}
