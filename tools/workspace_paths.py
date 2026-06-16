@@ -82,6 +82,7 @@ STUDIO_FOLDERS: tuple[str, ...] = (
     f"{STUDIO_PRODUCERS_OFFICE}/Call_Sheets",
     f"{STUDIO_PRODUCERS_OFFICE}/Session_Logs",
     f"{STUDIO_LEGAL}/AI_Content",
+    f"{STUDIO_LEGAL}/Mass_Dissemination",
     f"{STUDIO_LEGAL}/Filmmaking_IRL",
     f"{STUDIO_LEGAL}/Talent_Replica",
     f"{STUDIO_LEGAL}/Music_Clearance",

@@ -42,6 +42,12 @@ class CallSheetManager:
         return path
 
     def log_scene(self, project_id: str, scene: str, medium: str, talent: list[str], legal: str, disposition: str, notes: str = "") -> None:
+        legal_upper = legal.upper()
+        if legal_upper in ("RED", "PENDING", ""):
+            raise ValueError(
+                f"Cannot log scene without Gate 0 clearance. Legal status '{legal}' blocked. "
+                "Run legal_gate.py first."
+            )
         stamp = datetime.now().strftime("%Y-%m-%d")
         path = self.dir / f"{stamp}_{project_id}_call_sheet.json"
         if not path.exists():

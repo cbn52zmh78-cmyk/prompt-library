@@ -24,7 +24,7 @@ TOOLS = {
         ("profile/model_profile_manager.py", "Model Profile Manager v1.2 (integration-ready)"),
     ],
     "Producer's Office": [
-        ("legal/legal_gate.py", "Legal Gate v1.0 (HARD STOP — run before every project)"),
+        ("legal/legal_gate.py", "Legal Gate v1.1 — Gate 0: AI + mass dissemination + CARA (RUN FIRST)"),
         ("production/slate_manager.py", "Production Slate Manager v1.0 (max 10 titles)"),
         ("production/call_sheet_manager.py", "Call Sheet Manager v1.0 (session logging)"),
     ],
