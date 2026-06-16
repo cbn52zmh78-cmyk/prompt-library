@@ -9,7 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lib.bootstrap import ensure_paths
 ensure_paths()
-from lib.studio_paths import studio_path
+from lib.studio_paths import pipeline_path
 
 import json
 from datetime import datetime
@@ -24,7 +24,7 @@ except ImportError:
 
 class BatchPromptGenerator:
     def __init__(self, output_dir=None):
-        self.output_dir = output_dir or studio_path("Batch_Outputs")
+        self.output_dir = output_dir or pipeline_path("Batch_Outputs")
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.profile_mgr = ModelProfileManager() if ModelProfileManager else None
 
@@ -71,7 +71,7 @@ if __name__ == "__main__":
             {"SHOT_TYPE": "slow push-in runway"},
         ],
     }
-    demo_path = studio_path("batch_demo.json")
+    demo_path = pipeline_path("batch_demo.json")
     with open(demo_path, "w", encoding="utf-8") as f:
         json.dump(demo, f, indent=2)
 

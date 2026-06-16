@@ -10,11 +10,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lib.bootstrap import ensure_paths
 
 ensure_paths()
-from lib.studio_paths import studio_path
+from lib.studio_paths import pipeline_path
 
 
 def build_bridge(image_path: str, motion: str, duration_s: int = 6) -> Path:
-    out_dir = studio_path("Video_Prompts")
+    out_dir = pipeline_path("Video_Prompts")
     stem = Path(image_path).stem or "frame"
     payload = {
         "source_image": image_path,

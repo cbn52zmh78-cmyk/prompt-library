@@ -13,8 +13,10 @@
       "language": "linear-a",
       "priority": "high",
       "task": "Cross-reference Linear A sign frequencies with Linear B syllabic values",
-      "status": "pending",
-      "added": "2026-06-16"
+      "status": "in_progress",
+      "added": "2026-06-16",
+      "brain_started_at": "2026-06-16T23:15:13.884796+00:00",
+      "last_brain_scrape": "2026-06-16T23:15:22.234486+00:00"
     },
     {
       "id": "rq-003",

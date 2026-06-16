@@ -4,9 +4,10 @@ Multi-Shot Video Sequence Compiler v1.0 — Director
 Turns a _MASTER_SEQUENCE.json into a single cohesive video prompt or timed list.
 """
 
-import os
 import json
+import os
 from datetime import datetime
+from pathlib import Path
 
 def compile_sequence(json_path: str, output_style: str = "single_prompt"):
     with open(json_path, encoding="utf-8") as f:
@@ -27,7 +28,7 @@ def compile_sequence(json_path: str, output_style: str = "single_prompt"):
 
 if __name__ == "__main__":
     # Demo using the latest Valentina sequence (adjust path if needed)
-    base = "../Studio/Magazine_Assets/ShotLists"
+    base = str(Path(__file__).resolve().parents[2] / "Studio" / "Pipeline" / "ShotLists")
     folders = [f for f in os.listdir(base) if "Valentina_Rossi" in f]
     if folders:
         latest = sorted(folders)[-1]

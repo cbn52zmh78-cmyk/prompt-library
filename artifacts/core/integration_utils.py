@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lib.bootstrap import ensure_paths
 
 ensure_paths()
-from lib.studio_paths import studio_path
+from lib.studio_paths import producers_path, studio_path
 
 
 def _profile_manager():
@@ -39,7 +39,7 @@ def inject_profile_into_prompt(base_prompt: str, profile_name: str):
 
 
 def log_action(tool_name: str, message: str):
-    log_dir = studio_path("Tool_Logs")
+    log_dir = producers_path("Tool_Logs")
     log_file = log_dir / f"{datetime.now().strftime('%Y%m%d')}.log"
     with open(log_file, "a", encoding="utf-8") as f:
         f.write(f"[{datetime.now().strftime('%H:%M:%S')}] [{tool_name}] {message}\n")

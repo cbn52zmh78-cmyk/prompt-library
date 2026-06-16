@@ -9,7 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lib.bootstrap import ensure_paths
 ensure_paths()
-from lib.studio_paths import studio_path
+from lib.studio_paths import pipeline_path
 
 from datetime import datetime
 
@@ -23,7 +23,7 @@ except ImportError:
 
 class PromptRefinementPipeline:
     def __init__(self, output_dir=None):
-        self.output_dir = output_dir or studio_path("Refined_Prompts")
+        self.output_dir = output_dir or pipeline_path("Refined_Prompts")
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.profile_mgr = ModelProfileManager() if ModelProfileManager else None
 

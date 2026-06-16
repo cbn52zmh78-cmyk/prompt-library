@@ -9,7 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lib.bootstrap import ensure_paths
 ensure_paths()
-from lib.studio_paths import studio_path
+from lib.studio_paths import pipeline_path
 
 import json
 from datetime import datetime
@@ -18,7 +18,7 @@ from datetime import datetime
 
 class ModelProfileManager:
     def __init__(self, profiles_dir=None):
-        self.profiles_dir = profiles_dir or studio_path("Model_Profiles")
+        self.profiles_dir = profiles_dir or pipeline_path("Model_Profiles")
         self.profiles_dir.mkdir(parents=True, exist_ok=True)
 
     def _get_path(self, name):
@@ -86,7 +86,7 @@ class ModelProfileManager:
             print("❌ Profile not found.")
 
     def export_roster(self, output_file=None):
-        output_file = output_file or studio_path("model_roster_export.json")
+        output_file = output_file or pipeline_path("model_roster_export.json")
         roster = [self.get_profile_data(p.stem) for p in self.profiles_dir.glob("*.json")]
         with open(output_file, "w", encoding="utf-8") as f:
             json.dump(roster, f, indent=2)

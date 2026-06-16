@@ -7,6 +7,7 @@ Scans a folder of prompts and flags drift in key elements.
 import os
 import re
 from collections import Counter
+from pathlib import Path
 
 def audit_folder(folder_path: str):
     files = [f for f in os.listdir(folder_path) if f.endswith(".txt")]
@@ -29,7 +30,7 @@ def audit_folder(folder_path: str):
 
 if __name__ == "__main__":
     # Demo on the latest Valentina sequence
-    base = "../Studio/Magazine_Assets/ShotLists"
+    base = str(Path(__file__).resolve().parents[2] / "Studio" / "Pipeline" / "ShotLists")
     folders = [f for f in os.listdir(base) if "Valentina_Rossi" in f]
     if folders:
         latest = sorted(folders)[-1]

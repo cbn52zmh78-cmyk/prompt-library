@@ -9,7 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lib.bootstrap import ensure_paths
 ensure_paths()
-from lib.studio_paths import studio_path
+from lib.studio_paths import reference_path
 
 import json
 import os
@@ -19,8 +19,8 @@ from datetime import datetime
 
 class ReferenceLibraryIndexer:
     def __init__(self, refs_dir=None, index_file=None):
-        self.refs_dir = refs_dir or studio_path("References")
-        self.index_file = index_file or studio_path("references_index.json")
+        self.refs_dir = refs_dir or reference_path("plates")
+        self.index_file = index_file or reference_path("references_index.json")
         self.refs_dir.mkdir(parents=True, exist_ok=True)
 
     def rebuild_index(self):

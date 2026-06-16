@@ -9,15 +9,15 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lib.bootstrap import ensure_paths
 ensure_paths()
-from lib.studio_paths import studio_path
+from lib.studio_paths import pipeline_path, producers_path
 
 import argparse
 from datetime import datetime
 
 
 
-DEFAULT_REPORTS_DIR = studio_path("Compliance_Reports")
-DEFAULT_SHOTLISTS_ROOT = studio_path("Magazine_Assets", "ShotLists")
+DEFAULT_REPORTS_DIR = producers_path("Compliance_Reports")
+DEFAULT_SHOTLISTS_ROOT = pipeline_path("ShotLists")
 
 
 class ContentRatingGuard:

@@ -9,7 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lib.bootstrap import ensure_paths
 ensure_paths()
-from lib.studio_paths import studio_path
+from lib.studio_paths import pipeline_path
 
 import json
 from datetime import datetime
@@ -18,7 +18,7 @@ from datetime import datetime
 
 class GrokVideoPackExporter:
     def __init__(self, output_dir=None):
-        self.output_dir = output_dir or studio_path("Grok_Video_Packs")
+        self.output_dir = output_dir or pipeline_path("Grok_Video_Packs")
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
     def export_pack(self, name: str, positive: str, negative: str, target_rating: str = "R", notes: str = ""):

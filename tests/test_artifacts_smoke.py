@@ -15,7 +15,7 @@ for entry in (str(ROOT), str(TOOLS), str(ARTIFACTS), str(ARTIFACTS / "profile"))
     if entry not in sys.path:
         sys.path.insert(0, entry)
 
-from workspace_paths import STUDIO_DIR, studio_path  # noqa: E402
+from workspace_paths import STUDIO_DIR, pipeline_path  # noqa: E402
 
 
 @pytest.fixture
@@ -24,8 +24,8 @@ def profile_name() -> str:
 
 
 def test_studio_path_creates_parent():
-    path = studio_path("Model_Profiles", "_smoke_test_marker")
-    assert path.parent == STUDIO_DIR / "Model_Profiles"
+    path = pipeline_path("Model_Profiles", "_smoke_test_marker")
+    assert path.parent == STUDIO_DIR / "Pipeline" / "Model_Profiles"
     assert path.parent.exists()
 
 

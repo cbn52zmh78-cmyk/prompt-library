@@ -6,6 +6,7 @@ Scans a folder of prompts in a sequence and flags drift. Fully general.
 
 import os
 from collections import Counter
+from pathlib import Path
 
 class SequenceConsistencyAuditor:
     def audit_folder(self, folder_path: str):
@@ -36,7 +37,7 @@ class SequenceConsistencyAuditor:
 if __name__ == "__main__":
     auditor = SequenceConsistencyAuditor()
     # Demo: point at the ShotLists folder if it exists, otherwise note it
-    demo_path = "../Studio/Magazine_Assets/ShotLists"
+    demo_path = str(Path(__file__).resolve().parents[2] / "Studio" / "Pipeline" / "ShotLists")
     if os.path.exists(demo_path):
         subs = [
             os.path.join(demo_path, d)

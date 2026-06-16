@@ -67,5 +67,16 @@
       "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Gothic_language&explaintext=1&inprop=url"
     ],
     "ipa_count": 2
+  },
+  {
+    "slug": "linear-a",
+    "scraped_at": "2026-06-16T23:15:13.885668+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 0
   }
 ]

@@ -39,33 +39,51 @@ ENV_FILE = WORKSPACE / ".env"
 ENV_EXAMPLE_FILE = WORKSPACE / ".env.example"
 QUICK_REF_FILE = DOCS_DIR / "QUICK_REFERENCE.md"
 
+# Producer layout zones (Studio repo — June 2026)
+STUDIO_PRODUCERS_OFFICE = "Producers_Office"
+STUDIO_PIPELINE = "Pipeline"
+STUDIO_PRODUCTIONS = "Productions"
+STUDIO_CAST = "Cast"
+STUDIO_REFERENCE_LIBRARY = "Reference_Library"
+STUDIO_PROMPT_LIBRARY = "Prompt_Library"
+STUDIO_DEVELOPMENT = "Development"
+
 STUDIO_FOLDERS: tuple[str, ...] = (
-    "Model_Profiles",
-    "Prompt_Versions",
-    "Prompt_Templates",
-    "ShotLists",
-    "Video_Prompts",
-    "OneTake_Prompts",
-    "Fashion_Prompts",
-    "Grok_Video_Packs",
-    "Negative_Prompts",
-    "Asset_Metadata",
-    "References",
-    "Compliance_Reports",
-    "Batch_Outputs",
-    "Canons_Bibles",
-    "Refined_Prompts",
-    "Physics_Lighting_Blocks",
-    "Tool_Logs",
+    f"{STUDIO_PIPELINE}/Model_Profiles",
+    f"{STUDIO_PIPELINE}/Prompt_Versions",
+    f"{STUDIO_PIPELINE}/Prompt_Templates",
+    f"{STUDIO_PIPELINE}/ShotLists",
+    f"{STUDIO_PIPELINE}/Video_Prompts",
+    f"{STUDIO_PIPELINE}/OneTake_Prompts",
+    f"{STUDIO_PIPELINE}/Fashion_Prompts",
+    f"{STUDIO_PIPELINE}/Grok_Video_Packs",
+    f"{STUDIO_PIPELINE}/Negative_Prompts",
+    f"{STUDIO_PIPELINE}/Refined_Prompts",
+    f"{STUDIO_PIPELINE}/Physics_Lighting_Blocks",
+    f"{STUDIO_PIPELINE}/Batch_Outputs",
+    f"{STUDIO_PRODUCERS_OFFICE}/Compliance_Reports",
+    f"{STUDIO_PRODUCERS_OFFICE}/Tool_Logs",
+    f"{STUDIO_PRODUCERS_OFFICE}/Release_Tracker",
+    f"{STUDIO_REFERENCE_LIBRARY}/Asset_Metadata",
+    f"{STUDIO_REFERENCE_LIBRARY}/plates",
+    f"{STUDIO_REFERENCE_LIBRARY}/assets",
+    "Canons/Bibles",
+    f"{STUDIO_PRODUCTIONS}/Narrative",
+    f"{STUDIO_PRODUCTIONS}/History",
+    f"{STUDIO_PRODUCTIONS}/GFE",
+    f"{STUDIO_PRODUCTIONS}/Editorial",
+    f"{STUDIO_PRODUCTIONS}/_Scene_Production_Kit",
+    "renders/approved",
+    "renders/review",
+    "renders/rejected",
 )
 
 PROMPT_SOURCES: dict[str, Path] = {
     "central": PROMPTS_DIR,
-    "studio": STUDIO_DIR / "prompts",
+    "studio": STUDIO_DIR / STUDIO_PROMPT_LIBRARY,
     "david": DAVID_DIR / "prompts",
 }
 
-# Display name -> absolute path (for repo scanners / status tools)
 DAVID_FOLDERS: tuple[str, ...] = (
     "data",
     "languages",
@@ -107,6 +125,18 @@ def studio_path(*parts: str) -> Path:
     path = STUDIO_DIR.joinpath(*parts)
     path.parent.mkdir(parents=True, exist_ok=True)
     return path
+
+
+def pipeline_path(*parts: str) -> Path:
+    return studio_path(STUDIO_PIPELINE, *parts)
+
+
+def producers_path(*parts: str) -> Path:
+    return studio_path(STUDIO_PRODUCERS_OFFICE, *parts)
+
+
+def reference_path(*parts: str) -> Path:
+    return studio_path(STUDIO_REFERENCE_LIBRARY, *parts)
 
 
 def count_prompt_files(root: Path, *, exclude_readme: bool = True) -> int:

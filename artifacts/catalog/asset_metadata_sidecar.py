@@ -9,7 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lib.bootstrap import ensure_paths
 ensure_paths()
-from lib.studio_paths import studio_path
+from lib.studio_paths import reference_path
 
 import json
 from datetime import datetime
@@ -18,7 +18,7 @@ from datetime import datetime
 
 class AssetMetadataSidecar:
     def __init__(self, metadata_dir=None):
-        self.metadata_dir = metadata_dir or studio_path("Asset_Metadata")
+        self.metadata_dir = metadata_dir or reference_path("Asset_Metadata")
         self.metadata_dir.mkdir(parents=True, exist_ok=True)
 
     def create_sidecar(self, image_path: str, prompt: str, tags: list = None, extra: dict = None):
@@ -42,7 +42,7 @@ if __name__ == "__main__":
     sidecar = AssetMetadataSidecar()
     # Demo
     sidecar.create_sidecar(
-        str(studio_path("test_hero.jpg")),
+        str(reference_path("plates", "test_hero.jpg")),
         "adult woman, hero studio shot, dramatic side lighting, elegant pose, natural physics",
         tags=["hero", "editorial", "studio"],
         extra={"lighting": "dramatic side", "camera": "static hero", "single_subject": True}

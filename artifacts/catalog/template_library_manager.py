@@ -9,7 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lib.bootstrap import ensure_paths
 ensure_paths()
-from lib.studio_paths import studio_path
+from lib.studio_paths import pipeline_path
 
 import json
 from datetime import datetime
@@ -19,7 +19,7 @@ from datetime import datetime
 
 class TemplateLibraryManager:
     def __init__(self, lib_dir=None):
-        self.lib_dir = lib_dir or studio_path("Prompt_Templates")
+        self.lib_dir = lib_dir or pipeline_path("Prompt_Templates")
         self.lib_dir.mkdir(parents=True, exist_ok=True)
 
     def save_template(self, name: str, template: str, tags: list = None, description: str = ""):

@@ -15,9 +15,11 @@
     "rotation"
   ],
   "current_cycle": 1,
-  "total_batches_run": 0,
-  "last_batch_at": null,
-  "last_batch_languages": [],
+  "total_batches_run": 1,
+  "last_batch_at": "2026-06-16T23:15:22.234486+00:00",
+  "last_batch_languages": [
+    "linear-a"
+  ],
   "last_cycle_completed_at": null,
-  "rotation_index": 0
+  "rotation_index": 1
 }

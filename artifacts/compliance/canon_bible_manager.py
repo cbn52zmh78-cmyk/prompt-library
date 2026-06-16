@@ -19,7 +19,7 @@ from datetime import datetime
 
 class CanonBibleManager:
     def __init__(self, canon_dir=None):
-        self.canon_dir = canon_dir or studio_path("Canons_Bibles")
+        self.canon_dir = canon_dir or studio_path("Canons", "Bibles")
         self.canon_dir.mkdir(parents=True, exist_ok=True)
 
     def _safe_name(self, name):

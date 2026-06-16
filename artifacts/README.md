@@ -1,6 +1,6 @@
 # artifacts — Studio Production Toolchain
 
-Python CLI tools for Studio video and editorial production. Outputs land in `Studio/`.
+Python CLI tools for Studio video and editorial production. Outputs land in `Studio/Pipeline/`. Compliance reports land in `Studio/Producers_Office/Compliance_Reports/`.
 
 ## Install
 

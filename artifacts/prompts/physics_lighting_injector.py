@@ -9,7 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lib.bootstrap import ensure_paths
 ensure_paths()
-from lib.studio_paths import studio_path
+from lib.studio_paths import pipeline_path, studio_path
 
 BLOCKS = {
     "fabric_physics": "natural fabric drape, realistic cloth physics, subtle movement and tension in fabric, micro-folds and natural settling",
@@ -40,7 +40,7 @@ class PhysicsLightingInjector:
             parts = [p for p in filename.replace("\\", "/").split("/") if p and p.lower() != "studio"]
             filepath = studio_path(*parts)
         else:
-            filepath = studio_path("Physics_Lighting_Blocks", f"{key}.txt")
+            filepath = pipeline_path("Physics_Lighting_Blocks", f"{key}.txt")
         filepath.parent.mkdir(parents=True, exist_ok=True)
         filepath.write_text(BLOCKS[key], encoding="utf-8")
         print(f"✅ Block saved: {filepath}")

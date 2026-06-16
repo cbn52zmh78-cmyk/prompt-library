@@ -1,5 +1,5 @@
 # DAVID Brain Report
-Generated: 2026-06-16 23:08 UTC
+Generated: 2026-06-16 23:15 UTC
 
 Public sources only: Wikipedia, Wiktionary, Wikidata (CC BY-SA / CC0).
 
@@ -82,8 +82,33 @@ From , from , from  + , proposed to derive from unattested . Equivalent to . The
 
 ## Linear A (`linear-a`)
 
-⚠️ No brain scrape yet. Run:
-`python DAVID/scripts/david_brain_scraper.py --language linear-a`
+**Scraped:** 2026-06-16T23:15:13.885668+00:00 | **Sources:** wikipedia, wikidata, wiktionary
+
+### Overview (Wikipedia)
+
+Linear A is a writing system that was used by the Minoans of Crete from 1800 BC to 1450 BC. Linear A was the primary script used in palace and religious writings of the Minoan civilization. It was adapted into Linear B, which was used by the Mycenaeans to write an early form of Greek. Since its modern rediscovery in 1900, no texts in the script have yet been deciphered. Archaeologist Sir Arthur Evans named the script "Linear" because its characters consisted simply of lines inscribed in clay, in contrast to the more pictographic characters in Cretan hieroglyphs – likewise undeciphered – that were used during the same period.
+Linear A belongs to a group of scripts that evolved independently of the Egyptian and Mesopotamian systems. During the second millennium BC, there were four major branches of this group: Linear A, Linear B, Cypro-Minoan, and Cretan hieroglyphic. In the 1950s, Linear B was deciphered and its underlying language was found to be Mycenaean Greek. Linear A shares many glyphs and alloglyphs with Linear B, and the syllabic glyphs are thought to notate similar syllabic values, but none of the proposed readings lead to a language that scholars can understand.
+
+
+== Scrip…
+
+Source: https://en.wikipedia.org/wiki/Linear_A
+
+### Classification (Wikidata)
+
+- **Label:** Montigny
+- **ISO 639-3:** —
+- **Description:** commune in Meurthe-et-Moselle, France
+
+### Etymology (Wiktionary)
+
+=
+Named by British archaeologist , to distinguish it from the other linear script, Linear B.
+
+=
+Named by British archaeologist , to distinguish it from the other linear script, Linear B.
+
+---
 
 ## Sumerian (`sumerian`)
 
@@ -175,6 +200,7 @@ From , from , from the verbal root . Related to  and . It could also reflect the
 
 ## Brain activity log (recent)
 
+- `linear-a` @ 2026-06-16T23:15 — 0 IPA, sources: wikipedia, wikidata, wiktionary
 - `gothic` @ 2026-06-16T23:07 — 2 IPA, sources: wikidata, wiktionary ⚠️ 1 errors
 - `classical-latin` @ 2026-06-16T23:07 — 7 IPA, sources: wikipedia, wikidata, wiktionary
 - `gothic` @ 2026-06-16T23:06 — 0 IPA, sources: wikidata, wiktionary ⚠️ 1 errors
@@ -185,4 +211,4 @@ From , from , from the verbal root . Related to  and . It could also reflect the
 
 ---
 
-**Languages with brain data:** 3/10
+**Languages with brain data:** 4/10

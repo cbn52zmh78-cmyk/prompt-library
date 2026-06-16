@@ -10,11 +10,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lib.bootstrap import ensure_paths
 
 ensure_paths()
-from lib.studio_paths import studio_path
+from lib.studio_paths import reference_path
 
 
 def db_path() -> Path:
-    return studio_path("Asset_Metadata", "visual_assets.db")
+    return reference_path("Asset_Metadata", "visual_assets.db")
 
 
 def init_db() -> Path:

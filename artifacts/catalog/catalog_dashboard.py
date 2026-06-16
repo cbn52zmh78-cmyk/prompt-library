@@ -12,7 +12,7 @@ from pathlib import Path
 st.set_page_config(page_title="Visual Asset Catalog", layout="wide")
 st.title("Visual Asset Catalog — Magazine + Video")
 
-db_path = Path(__file__).resolve().parent / "../Studio/Magazine_Assets/visual_assets.db"
+db_path = Path(__file__).resolve().parents[2] / "Studio" / "Reference_Library" / "Asset_Metadata" / "visual_assets.db"
 conn = sqlite3.connect(str(db_path.resolve()))
 df = pd.read_sql_query("SELECT * FROM assets", conn)
 conn.close()
