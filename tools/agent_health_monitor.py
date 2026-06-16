@@ -11,7 +11,7 @@ FOLDERS_TO_CHECK = [
     "~/Videos/Grok Projects/Studio",
     "~/Videos/Grok Projects/artifacts",
     "~/Videos/Grok Projects/GFE",
-    "~/Videos/Grok Projects/MAGAZINE",
+    "~/Videos/Grok Projects/Studio/MAGAZINE",
     "~/Videos/Grok Projects/Nexus",
     "~/Videos/Grok Projects/Science",
     "~/Videos/Grok Projects/History",

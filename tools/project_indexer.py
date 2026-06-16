@@ -18,7 +18,7 @@ PROJECTS = {
     "Stonebridge_Operations": "Business ops junction — SOPs, compliance, client work.",
     "FLASH": "Baseball sabermetrics — player projections and data processing.",
     "GFE": "Girlfriend Experience video assets and production scripts.",
-    "MAGAZINE": "Supermodel editorial assets and production scripts.",
+    "MAGAZINE": "Studio/MAGAZINE — in-universe showcase by medium + scripts.",
     "artifacts": "Studio production toolchain — prompt gen, video compile, catalog, compliance.",
     "DAVID": "Dead-language research, attested corpora, revival scaffolding, Grok training packs.",
 }

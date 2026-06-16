@@ -82,6 +82,7 @@ STUDIO_FOLDERS: tuple[str, ...] = (
     f"{STUDIO_MAGAZINE}/Profiles/Actors",
     f"{STUDIO_MAGAZINE}/History/Features",
     f"{STUDIO_MAGAZINE}/_Catalog",
+    f"{STUDIO_MAGAZINE}/scripts",
     "renders/approved",
     "renders/review",
     "renders/rejected",
@@ -119,7 +120,7 @@ NESTED_REPOS: dict[str, Path] = {
     "Nexus": WORKSPACE / "Nexus",
     "Science": WORKSPACE / "Science",
     "GFE": WORKSPACE / "GFE",
-    "MAGAZINE": WORKSPACE / "MAGAZINE",
+    "MAGAZINE": WORKSPACE / "Studio" / "MAGAZINE",
 }
 
 SUBMODULE_PATHS: dict[str, Path] = {

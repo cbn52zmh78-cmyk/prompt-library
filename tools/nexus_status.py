@@ -18,7 +18,7 @@ REPOS: list[tuple[str, str]] = [
     ("SCIENCE", "~/Videos/Grok Projects/Science"),
     ("STUDIO", "~/Videos/Grok Projects/Studio"),
     ("GFE", "~/Videos/Grok Projects/GFE"),
-    ("MAGAZINE", "~/Videos/Grok Projects/MAGAZINE"),
+    ("MAGAZINE", "~/Videos/Grok Projects/Studio/MAGAZINE"),
     ("Stonebridge-Security-Consultants", "~/Videos/Grok Projects/Stonebridge"),
     ("Stonebridge_Operations (junction)", "~/Stonebridge_Operations"),
 ]

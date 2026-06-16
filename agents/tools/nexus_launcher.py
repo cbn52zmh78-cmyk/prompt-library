@@ -38,7 +38,7 @@ def main() -> int:
     if choice == "1":
         run_script(NEXUS_SCRIPTS / "re_market_pulse.py")
     elif choice == "2":
-        run_script(WORKSPACE / "MAGAZINE" / "scripts" / "magazine_shotlist_templater.py")
+        run_script(WORKSPACE / "Studio" / "MAGAZINE" / "scripts" / "magazine_shotlist_templater.py")
     elif choice == "3":
         title = input("Document title: ").strip() or "Untitled Brief"
         summary = input("Research summary: ").strip() or "Summary pending."
