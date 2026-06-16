@@ -3,7 +3,7 @@ pid: 2668
 cwd: "C:\Users\NCG\Videos\Grok Projects"
 command: "Set-Location \"C:\\Users\\NCG\\Videos\\Grok Projects\\Stonebridge\\Operations\"; python -m py_compile Scripts/regulatory_research_scraper.py; python Scripts/regulatory_research_scraper.py --once --state Michigan"
 started_at: 2026-06-16T20:45:10.544Z
-running_for_ms: 1949993  
+running_for_ms: 5139991  
 ---
  Stonebridge Regulatory Research Scraper
 
