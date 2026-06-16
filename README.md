@@ -9,7 +9,7 @@ Central prompt store and Nexus ecosystem health tools.
 
 ```
 Grok Projects/
-├── scripts/grok.ps1     # Grok CLI launcher
+├── scripts/             # grok.ps1, launcher.py, dual_ai_helper.py (convenience entry points)
 ├── tools/               # Python utilities + workspace_paths.py
 ├── data/                # JSON state (tasks, queues, changelog, etc.)
 ├── docs/                # generated reference docs

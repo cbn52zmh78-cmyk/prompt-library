@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import _bootstrap  # noqa: F401
 import sys
+
 from workspace_paths import OUTPUTS_DIR
 
 OUTPUT_DIR = OUTPUTS_DIR
@@ -35,11 +36,11 @@ Instructions:
 
 def save_output(name, content):
     file = OUTPUT_DIR / f"{name}.txt"
-    file.write_text(content)
+    file.write_text(content, encoding="utf-8")
     print(f"Saved to: {file}")
 
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) < 2:
         print("Commands: grok | claude | polish_grok | polish_claude | workflow")
         sys.exit(1)
@@ -62,3 +63,11 @@ if __name__ == "__main__":
         print(optimize_for_grok(text))
         print("\n=== CLAUDE VERSION ===\n")
         print(optimize_for_claude(text))
+
+    else:
+        print("Unknown command or missing arguments")
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
