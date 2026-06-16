@@ -6,6 +6,11 @@ Helps construct stable long single-take prompts with camera path and timing. Ful
 
 from datetime import datetime
 
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bootstrap  # noqa: F401
 from studio_paths import studio_path
 
 class OneTakeChoreographyBuilder:

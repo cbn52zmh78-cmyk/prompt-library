@@ -7,6 +7,11 @@ Bundles positive + negative + settings into a clean export pack for Grok video. 
 import json
 from datetime import datetime
 
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bootstrap  # noqa: F401
 from studio_paths import studio_path
 
 class GrokVideoPackExporter:

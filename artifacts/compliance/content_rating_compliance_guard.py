@@ -8,6 +8,11 @@ import argparse
 from datetime import datetime
 from pathlib import Path
 
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import bootstrap  # noqa: F401
 from studio_paths import studio_path
 
 DEFAULT_REPORTS_DIR = studio_path("Compliance_Reports")
