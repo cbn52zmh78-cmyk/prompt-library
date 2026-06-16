@@ -10,5 +10,6 @@
   "FLASH": "Baseball sabermetrics \u2014 player projections and data processing.",
   "GFE": "Girlfriend Experience video assets and production scripts.",
   "MAGAZINE": "Supermodel editorial assets and production scripts.",
-  "artifacts": "Studio production toolchain \u2014 prompt gen, video compile, catalog, compliance."
+  "artifacts": "Studio production toolchain \u2014 prompt gen, video compile, catalog, compliance.",
+  "Language": "Language Atlas \u2014 dead/extinct language research, corpus, Grok training packs."
 }
