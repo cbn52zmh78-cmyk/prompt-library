@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "enabled": true,
+  "interval_seconds": 3600,
+  "batch_size": 1,
+  "stale_hours": 24,
+  "deep": true,
+  "report_after_batch": true,
+  "priority_order": [
+    "queue_high",
+    "never_scraped",
+    "scrape_errors",
+    "stale",
+    "revival_tier",
+    "rotation"
+  ],
+  "current_cycle": 1,
+  "total_batches_run": 0,
+  "last_batch_at": null,
+  "last_batch_languages": [],
+  "last_cycle_completed_at": null,
+  "rotation_index": 0
+}

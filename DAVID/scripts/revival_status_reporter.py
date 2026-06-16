@@ -74,6 +74,19 @@ def main() -> int:
     if latest_report.exists():
         print(f"  Latest report: {latest_report}")
 
+    sched_file = _Path(__file__).resolve().parents[1] / "data" / "brain_schedule.json"
+    if sched_file.exists():
+        import json as _json2
+
+        sched = _json2.loads(sched_file.read_text(encoding="utf-8"))
+        print(
+            f"\nBrain scheduler: cycle {sched.get('current_cycle', 1)} | "
+            f"batches {sched.get('total_batches_run', 0)} | "
+            f"interval {sched.get('interval_seconds', 3600)}s"
+        )
+        if sched.get("last_batch_at"):
+            print(f"  Last batch: {sched['last_batch_at'][:16]} → {sched.get('last_batch_languages', [])}")
+
     pending = [t for t in queue.get("queue", []) if t.get("status") == "pending"]
     print(f"\nResearch queue: {len(pending)} pending / {len(queue.get('queue', []))} total")
     for task in pending[:5]:

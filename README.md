@@ -73,6 +73,7 @@ python DAVID/scripts/grok_training_pack_builder.py --language etruscan
 python DAVID/scripts/corpus_cataloguer.py --help
 python DAVID/scripts/david_brain_scraper.py --language etruscan --deep --report
 python DAVID/scripts/david_research_reporter.py
+python DAVID/scripts/david_brain_scheduler.py --daemon --interval 3600
 ```
 
 See [DAVID/README.md](DAVID/README.md). System prompt: `DAVID/prompts/david_linguist_system.md`.

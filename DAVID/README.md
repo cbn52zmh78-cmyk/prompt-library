@@ -65,6 +65,31 @@ Outputs:
 - `reports/latest_brain_report.md`
 - `data/brain_cache/scrape_log.json`
 
+### Continuous / interval mode (scheduler)
+
+DAVID Brain can run in the background, rotating languages automatically when each batch finishes:
+
+```bash
+# What will scrape next (no network)
+python DAVID/scripts/david_brain_scheduler.py --status
+
+# One batch now, then exit
+python DAVID/scripts/david_brain_scheduler.py --once
+
+# Loop forever — default 1h between batches (config: data/brain_schedule.json)
+python DAVID/scripts/david_brain_scheduler.py --daemon
+python DAVID/scripts/david_brain_scheduler.py --daemon --interval 1800   # every 30 min
+
+# Persist interval without running
+python DAVID/scripts/david_brain_scheduler.py --set-interval 3600
+```
+
+**Priority order:** pending research-queue assignments (high first) → never scraped → prior errors → stale (>24h) → revival tier → rotation.
+
+When every language in the registry has been scraped, the scheduler starts **cycle 2** and continues on the interval, re-scraping stale languages first.
+
+Config: `DAVID/data/brain_schedule.json` (`interval_seconds`, `batch_size`, `stale_hours`, `enabled`).
+
 ## Quick start
 
 ```bash
