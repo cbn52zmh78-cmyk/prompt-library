@@ -1,0 +1,72 @@
+{
+  "etruscan": {
+    "wikipedia": "Etruscan_language",
+    "wikidata": "Q35726",
+    "wiktionary": "Etruscan_language",
+    "wiktionary_fallbacks": ["Etruscan", "Category:Etruscan language"],
+    "iso639_3": "ett"
+  },
+  "gothic": {
+    "wikipedia": "Gothic_language",
+    "wikidata": "Q35722",
+    "wiktionary": "Gothic_language",
+    "wiktionary_fallbacks": ["Gothic", "Category:Gothic language"],
+    "iso639_3": "got"
+  },
+  "linear-a": {
+    "wikipedia": "Linear_A",
+    "wikidata": "Q208278",
+    "wiktionary": "Linear_A",
+    "wiktionary_fallbacks": ["Linear A"],
+    "iso639_3": null
+  },
+  "sumerian": {
+    "wikipedia": "Sumerian_language",
+    "wikidata": "Q36434",
+    "wiktionary": "Sumerian_language",
+    "wiktionary_fallbacks": ["Sumerian", "Category:Sumerian language"],
+    "iso639_3": "sux"
+  },
+  "proto-indo-european": {
+    "wikipedia": "Proto-Indo-European_language",
+    "wikidata": "Q37178",
+    "wiktionary": "Proto-Indo-European",
+    "wiktionary_fallbacks": ["Proto-Indo-European language"],
+    "iso639_3": "ine"
+  },
+  "classical-latin": {
+    "wikipedia": "Latin",
+    "wikidata": "Q397",
+    "wiktionary": "Latin",
+    "wiktionary_fallbacks": ["Latin language", "Category:Latin language"],
+    "iso639_3": "lat"
+  },
+  "classical-nahuatl": {
+    "wikipedia": "Classical_Nahuatl",
+    "wikidata": "Q35863",
+    "wiktionary": "Classical_Nahuatl",
+    "wiktionary_fallbacks": ["Nahuatl"],
+    "iso639_3": "nci"
+  },
+  "akkadian": {
+    "wikipedia": "Akkadian_language",
+    "wikidata": "Q35485",
+    "wiktionary": "Akkadian_language",
+    "wiktionary_fallbacks": ["Akkadian"],
+    "iso639_3": "akk"
+  },
+  "old-english": {
+    "wikipedia": "Old_English",
+    "wikidata": "Q36990",
+    "wiktionary": "Old_English",
+    "wiktionary_fallbacks": ["Category:Old English language"],
+    "iso639_3": "ang"
+  },
+  "classical-japanese": {
+    "wikipedia": "Classical_Japanese",
+    "wikidata": "Q1070172",
+    "wiktionary": "Classical_Japanese",
+    "wiktionary_fallbacks": ["Classical Japanese"],
+    "iso639_3": null
+  }
+}

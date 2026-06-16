@@ -1,0 +1,28 @@
+{
+  "version": "1.0",
+  "sources": [
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia (MediaWiki API)",
+      "license": "CC BY-SA 3.0",
+      "base_url": "https://en.wikipedia.org/w/api.php",
+      "fields": ["overview", "history", "phonology_summary", "classification"]
+    },
+    {
+      "id": "wiktionary",
+      "name": "Wiktionary (MediaWiki API)",
+      "license": "CC BY-SA 3.0",
+      "base_url": "https://en.wiktionary.org/w/api.php",
+      "fields": ["etymology", "pronunciation_ipa", "accent_variants", "definitions"]
+    },
+    {
+      "id": "wikidata",
+      "name": "Wikidata (public entity API)",
+      "license": "CC0",
+      "base_url": "https://www.wikidata.org/wiki/Special:EntityData",
+      "fields": ["iso_codes", "ipa_statements", "family", "extinction_status"]
+    }
+  ],
+  "rate_limit_seconds": 2.0,
+  "user_agent": "DAVID-Brain/1.0 (linguistic research; public sources only; Grok Projects)"
+}

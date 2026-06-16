@@ -73,6 +73,8 @@ DAVID_FOLDERS: tuple[str, ...] = (
     "prompts",
     "training_packs",
     "research",
+    "reports",
+    "brain",
 )
 
 REPO_PATHS: dict[str, Path] = {

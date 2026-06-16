@@ -12,6 +12,9 @@ PYTHON = sys.executable
 
 TOOLS = [
     ("revival_status_reporter.py", "DAVID status report"),
+    ("david_research_reporter.py", "Brain research report (DAVID reports to us)"),
+    ("david_brain_scraper.py --language etruscan --deep --report", "Scrape Etruscan (brain deep dive)"),
+    ("david_brain_scraper.py --tier high --report", "Scrape all high-priority languages"),
     ("language_registry_manager.py list", "List all languages"),
     ("language_registry_manager.py list --tier high", "High-priority revival languages"),
     ("research_query_generator.py --language etruscan", "Etruscan research queries"),

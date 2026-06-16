@@ -1,0 +1,79 @@
+{
+  "slug": "gothic",
+  "name": "Gothic",
+  "status": "extinct",
+  "scraped_at": "2026-06-16T23:07:38.675385+00:00",
+  "deep": false,
+  "sources_used": [
+    "wikidata",
+    "wiktionary"
+  ],
+  "errors": [
+    "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Gothic_language&explaintext=1&inprop=url"
+  ],
+  "wikidata": {
+    "qid": "Q35722",
+    "label": "Gothic",
+    "description": "extinct East Germanic language spoken by the Goths",
+    "iso639_3": "got",
+    "language_family": "Q108662",
+    "extinction_status": null,
+    "ipa_statements": [],
+    "source": "wikidata",
+    "license": "CC0"
+  },
+  "wiktionary": {
+    "pages": [
+      "Gothic_language (error: 429 Client Error: Too Many Requests for url: https://en.wiktionary.org/w/api.php?format=json&action=parse&page=Gothic_language&prop=wikitext)",
+      "Gothic",
+      "Category:Gothic language"
+    ],
+    "ipa_entries": [
+      {
+        "ipa": "/\u02c8\u0261\u0252\u03b8.\u026ak/",
+        "accent": "RP",
+        "language_code": "",
+        "quality": "scholarly_ipa"
+      },
+      {
+        "ipa": "/\u02c8\u0261\u0251.\u03b8\u026ak/",
+        "accent": "GenAm",
+        "language_code": "",
+        "quality": "scholarly_ipa"
+      }
+    ],
+    "etymology_blocks": [
+      {
+        "section": "Etymology",
+        "text": "=\nFrom , from , from  + , proposed to derive from unattested . Equivalent to . The various usages of the adjective are introduced nearly simultaneously in the first half of the 17th century. The literal meaning \u201cof the Goths\u201d is found in the 1611 preface of the King James Bible, in reference to the Gothicke tongue. The generalized meaning of \u201cGermanic, Teutonic\u201d appears in the 1640s. Reference to the medieval period in Western Europe, and specifically the architecture of that period (\u201cbarbaric style\u201d, initially a term of abuse), also appears in the 1640s, as does reference to \u201cGothic characters\u201d or \u201cGothic letters\u201d in typography."
+      }
+    ],
+    "pronunciation_notes": [
+      {
+        "section": "Pronunciation",
+        "text": "=\n* \n** \n* \n** \n*"
+      }
+    ],
+    "source": "wiktionary",
+    "license": "CC BY-SA 3.0"
+  },
+  "pronunciation_summary": {
+    "total_ipa_entries": 2,
+    "by_quality": {
+      "scholarly_ipa": [
+        "/\u02c8\u0261\u0252\u03b8.\u026ak/",
+        "/\u02c8\u0261\u0251.\u03b8\u026ak/"
+      ]
+    },
+    "by_accent": {
+      "RP": [
+        "/\u02c8\u0261\u0252\u03b8.\u026ak/"
+      ],
+      "GenAm": [
+        "/\u02c8\u0261\u0251.\u03b8\u026ak/"
+      ]
+    },
+    "accent_count": 2
+  },
+  "etymology_count": 1
+}

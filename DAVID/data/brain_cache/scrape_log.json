@@ -1,0 +1,71 @@
+[
+  {
+    "slug": "etruscan",
+    "scraped_at": "2026-06-16T23:05:17.415895+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 6
+  },
+  {
+    "slug": "gothic",
+    "scraped_at": "2026-06-16T23:05:28.083344+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Gothic_language&explaintext=1&inprop=url"
+    ],
+    "ipa_count": 0
+  },
+  {
+    "slug": "etruscan",
+    "scraped_at": "2026-06-16T23:06:04.538535+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 1
+  },
+  {
+    "slug": "gothic",
+    "scraped_at": "2026-06-16T23:06:15.426801+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Gothic_language&explaintext=1&inprop=url"
+    ],
+    "ipa_count": 0
+  },
+  {
+    "slug": "classical-latin",
+    "scraped_at": "2026-06-16T23:07:02.611474+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 7
+  },
+  {
+    "slug": "gothic",
+    "scraped_at": "2026-06-16T23:07:38.675385+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Gothic_language&explaintext=1&inprop=url"
+    ],
+    "ipa_count": 2
+  }
+]

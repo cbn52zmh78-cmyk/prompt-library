@@ -45,6 +45,35 @@ def main() -> int:
 
     print(f"\n  Total attested texts catalogued: {total_texts}")
 
+    from pathlib import Path as _Path
+
+    brain_log = _Path(__file__).resolve().parents[1] / "data" / "brain_cache" / "scrape_log.json"
+    brain_scraped = 0
+    for entry in registry["languages"]:
+        brain_file = (
+            _Path(__file__).resolve().parents[1]
+            / "languages"
+            / entry["status"]
+            / entry["slug"]
+            / "research"
+            / "brain"
+            / "latest_scrape.json"
+        )
+        if brain_file.exists():
+            brain_scraped += 1
+    print(f"\nDAVID Brain: {brain_scraped}/{len(registry['languages'])} languages scraped")
+    if brain_log.exists():
+        import json as _json
+
+        log = _json.loads(brain_log.read_text(encoding="utf-8"))
+        if log:
+            last = log[-1]
+            print(f"  Last scrape: {last.get('slug')} @ {last.get('scraped_at', '')[:16]}")
+
+    latest_report = _Path(__file__).resolve().parents[1] / "reports" / "latest_brain_report.md"
+    if latest_report.exists():
+        print(f"  Latest report: {latest_report}")
+
     pending = [t for t in queue.get("queue", []) if t.get("status") == "pending"]
     print(f"\nResearch queue: {len(pending)} pending / {len(queue.get('queue', []))} total")
     for task in pending[:5]:

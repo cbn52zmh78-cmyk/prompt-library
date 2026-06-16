@@ -44,6 +44,27 @@ DAVID/
 └── prompts/david_linguist_system.md
 ```
 
+## DAVID Brain (public-source scraper)
+
+David's brain — scrapes etymology, diction, and pronunciation (scholarly IPA, regional accents, reconstructions, learner approximations) from **public APIs only**: Wikipedia, Wiktionary, Wikidata.
+
+```bash
+# Scrape one language (deep = corpus lemma lookups on Wiktionary)
+python DAVID/scripts/david_brain_scraper.py --language etruscan --deep --report
+
+# Scrape all high-priority revival languages + report
+python DAVID/scripts/david_brain_scraper.py --tier high --report
+
+# DAVID reports to us (no scrape — reads latest brain data)
+python DAVID/scripts/david_research_reporter.py
+python DAVID/scripts/david_research_reporter.py --language gothic --print
+```
+
+Outputs:
+- `languages/{status}/{slug}/research/brain/latest_scrape.json`
+- `reports/latest_brain_report.md`
+- `data/brain_cache/scrape_log.json`
+
 ## Quick start
 
 ```bash

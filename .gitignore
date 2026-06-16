@@ -19,6 +19,10 @@ Studio/Batch_Outputs/
 Studio/Video_Prompts/compiled_*.json
 Studio/Tool_Logs/
 
+# DAVID brain scrape cache (keep scrape_log.json)
+DAVID/data/brain_cache/20*.json
+DAVID/reports/brain_report_*.md
+
 # Artifacts local DB / scratch
 artifacts/**/*.db
 artifacts/**/.streamlit/

@@ -20,6 +20,8 @@ REGISTRY_FILE = DATA_DIR / "language_registry.json"
 QUEUE_FILE = DATA_DIR / "research_queue.json"
 TRAINING_OUT = DAVID_ROOT / "training_packs"
 RESEARCH_OUT = DAVID_ROOT / "research"
+BRAIN_CACHE = DATA_DIR / "brain_cache"
+REPORTS_DIR = DAVID_ROOT / "reports"
 
 STATUS_DIRS = {
     "living": LANGUAGES_DIR / "living",
