@@ -1,13 +1,28 @@
-"""Canonical Studio output paths — always under Grok Projects/Studio."""
+"""Re-export canonical workspace paths (single source: tools/workspace_paths.py)."""
 
+from __future__ import annotations
+
+import sys
 from pathlib import Path
 
-ARTIFACTS_DIR = Path(__file__).resolve().parents[1]
-GROK_PROJECTS = ARTIFACTS_DIR.parent
-STUDIO_DIR = GROK_PROJECTS / "Studio"
+_TOOLS = Path(__file__).resolve().parents[2] / "tools"
+if str(_TOOLS) not in sys.path:
+    sys.path.insert(0, str(_TOOLS))
 
+from workspace_paths import (  # noqa: E402
+    ARTIFACTS_DIR,
+    GROK_PROJECTS,
+    STUDIO_DIR,
+    STUDIO_FOLDERS,
+    WORKSPACE,
+    studio_path,
+)
 
-def studio_path(*parts: str) -> Path:
-    path = STUDIO_DIR.joinpath(*parts)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    return path
+__all__ = [
+    "ARTIFACTS_DIR",
+    "GROK_PROJECTS",
+    "STUDIO_DIR",
+    "STUDIO_FOLDERS",
+    "WORKSPACE",
+    "studio_path",
+]

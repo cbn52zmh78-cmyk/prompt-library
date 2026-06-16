@@ -1,30 +1,31 @@
 #!/usr/bin/env python3
 """
-Integration Utils v1.0 — Director | Shared Helper
-Common functions for profile loading, prompt injection, and logging.
+Integration Utils v1.1 — Shared helpers for profile loading, prompt injection, and logging.
 """
 import sys
+from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lib.bootstrap import ensure_paths
+
 ensure_paths()
 from lib.studio_paths import studio_path
 
-from datetime import datetime
 
-
-
-try:
-    from model_profile_manager import ModelProfileManager
-except ImportError:
-    ModelProfileManager = None
+def _profile_manager():
+    try:
+        from profile.model_profile_manager import ModelProfileManager
+    except ImportError:
+        return None
+    return ModelProfileManager()
 
 
 def load_profile(profile_name: str):
-    if not ModelProfileManager:
+    mgr = _profile_manager()
+    if not mgr:
         return None
-    return ModelProfileManager().get_profile_data(profile_name)
+    return mgr.get_profile_data(profile_name)
 
 
 def inject_profile_into_prompt(base_prompt: str, profile_name: str):
@@ -45,4 +46,4 @@ def log_action(tool_name: str, message: str):
 
 
 if __name__ == "__main__":
-    print("Integration Utils loaded. Other tools can import from core.integration_utils.")
+    print("Integration Utils loaded. Import from core.integration_utils.")

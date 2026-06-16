@@ -2,13 +2,14 @@
 import _bootstrap  # noqa: F401
 from pathlib import Path
 
-from workspace_paths import FLASH, STONEBRIDGE_OPS, WORKSPACE
+from workspace_paths import FLASH, STONEBRIDGE_OPS, STUDIO_DIR, STUDIO_FOLDERS, WORKSPACE
 
 REPOS = {
-    "Grok Projects": ["tools", "data", "docs", "prompts", "versions", "outputs", "notes"],
+    "Grok Projects": ["tools", "data", "docs", "prompts", "versions", "outputs", "notes", "artifacts"],
     "Stonebridge_Operations": ["Compliance_Research", "SOPs", "Client_Deliverables", "Scripts"],
     "FLASH": ["data", "scripts", "notebooks", "docs", "output"],
 }
+
 
 def validate():
     print("\n=== STRUCTURE VALIDATOR ===\n")
@@ -27,6 +28,17 @@ def validate():
             status = "✅" if path.exists() else "❌"
             print(f"  {status} {folder}")
         print()
+
+    print("Checking: Studio scaffold (artifacts toolchain)")
+    if not STUDIO_DIR.exists():
+        print("  ❌ Studio root missing\n")
+    else:
+        for folder in STUDIO_FOLDERS:
+            path = STUDIO_DIR / folder
+            status = "✅" if path.exists() else "❌"
+            print(f"  {status} {folder}")
+        print()
+
 
 if __name__ == "__main__":
     validate()

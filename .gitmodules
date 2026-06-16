@@ -1,0 +1,27 @@
+[submodule "AI"]
+	path = AI
+	url = https://github.com/cbn52zmh78-cmyk/AI.git
+[submodule "FLASH"]
+	path = FLASH
+	url = https://github.com/cbn52zmh78-cmyk/FLASH.git
+[submodule "GFE"]
+	path = GFE
+	url = https://github.com/cbn52zmh78-cmyk/GFE.git
+[submodule "History"]
+	path = History
+	url = https://github.com/cbn52zmh78-cmyk/HISTORY.git
+[submodule "MAGAZINE"]
+	path = MAGAZINE
+	url = https://github.com/cbn52zmh78-cmyk/MAGAZINE.git
+[submodule "Nexus"]
+	path = Nexus
+	url = https://github.com/cbn52zmh78-cmyk/Nexus.git
+[submodule "Science"]
+	path = Science
+	url = https://github.com/cbn52zmh78-cmyk/SCIENCE.git
+[submodule "Stonebridge"]
+	path = Stonebridge
+	url = https://github.com/cbn52zmh78-cmyk/Stonebridge-Security-Consultants.git
+[submodule "Studio"]
+	path = Studio
+	url = https://github.com/cbn52zmh78-cmyk/STUDIO.git

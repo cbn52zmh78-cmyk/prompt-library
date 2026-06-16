@@ -8,3 +8,23 @@ venv/
 Thumbs.db
 .vscode/
 .idea/
+
+# Cursor / Grok session state (environment-specific)
+terminals/
+mcps/
+
+# Studio generated outputs
+Studio/renders/
+Studio/Batch_Outputs/
+Studio/Video_Prompts/compiled_*.json
+Studio/Tool_Logs/
+
+# Artifacts local DB / scratch
+artifacts/**/*.db
+artifacts/**/.streamlit/
+
+# Test / build artifacts
+.pytest_cache/
+*.egg-info/
+dist/
+build/

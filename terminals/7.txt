@@ -1,7 +1,0 @@
----
-pid: 33816
-cwd: "C:\Users\NCG\Videos\Grok Projects"
-command: "python \"C:\\Users\\NCG\\Videos\\Grok Projects\\Stonebridge_Operations\\Scripts\\summarize_state_markdown.py\" --provider xai --force 2>&1 | Out-File -FilePath \"C:\\Users\\NCG\\Videos\\Grok Projects\\Stonebridge_Operations\\Compliance_Research\\summarize_run_2026-06-16.log\" -Encoding utf8"
-started_at: 2026-06-16T12:18:31.468Z
-running_for_ms: 21024989 
----

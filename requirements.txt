@@ -1,0 +1,14 @@
+# Grok Projects — workspace-level dependencies
+# Install: pip install -r requirements.txt
+# Studio package: pip install -e artifacts/
+
+python-dotenv>=1.0
+rich>=13.0
+pydantic>=2.0
+pytest>=7.0
+pandas>=2.0
+streamlit>=1.28
+
+# Sub-repo deps (AI, Science) — install separately when working in those repos:
+#   pip install -r AI/requirements.txt
+#   pip install -r Science/requirements.txt

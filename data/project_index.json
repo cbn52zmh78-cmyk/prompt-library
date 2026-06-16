@@ -1,6 +1,14 @@
 {
-  "Stonebridge_Operations": "Main business operations, SOPs, client deliverables, and compliance work.",
-  "FLASH": "Baseball sabermetrics work for dad's company (player projections, data processing).",
-  "Grok Projects": "Central workspace for all AI Systems, multi-agent tools, and prompts.",
-  "SPIT": "Main cinematic project (long-form narrative filmmaking and 3D renders)."
+  "Grok Projects": "Central workspace \u2014 Nexus ops tools, artifacts pipeline, prompts, data.",
+  "Studio": "Cinematic/video production \u2014 prompts, references, model profiles, renders.",
+  "AI": "Multi-agent orchestration and federation routing.",
+  "Science": "Scientific visualization principles and validation.",
+  "Nexus": "Ecosystem registry, workflows, and governance.",
+  "History": "Historical documentary research, timelines, and figure data.",
+  "Stonebridge": "Security consulting \u2014 compliance research, SOPs, client deliverables.",
+  "Stonebridge_Operations": "Business ops junction \u2014 SOPs, compliance, client work.",
+  "FLASH": "Baseball sabermetrics \u2014 player projections and data processing.",
+  "GFE": "Girlfriend Experience video assets and production scripts.",
+  "MAGAZINE": "Supermodel editorial assets and production scripts.",
+  "artifacts": "Studio production toolchain \u2014 prompt gen, video compile, catalog, compliance."
 }

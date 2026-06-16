@@ -1,7 +1,0 @@
----
-pid: 27928
-cwd: "C:\Users\NCG\Videos\Grok Projects"
-command: "Stop-Process -Id 26908 -Force -ErrorAction SilentlyContinue; Set-Location 'C:\\Users\\NCG\\Videos\\Grok Projects'; python tools/git_auto_pusher.py --interval 5"
-started_at: 2026-06-16T22:43:46.373Z
-running_for_ms: 0        
----

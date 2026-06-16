@@ -15,7 +15,7 @@ from datetime import datetime
 
 
 try:
-    from model_profile_manager import ModelProfileManager
+    from profile.model_profile_manager import ModelProfileManager
 except ImportError:
     ModelProfileManager = None
 

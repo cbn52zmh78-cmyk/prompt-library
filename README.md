@@ -3,76 +3,128 @@
 **Canonical path:** `C:\Users\NCG\Videos\Grok Projects`  
 **Legacy alias:** `~/prompt_library` (junction → this folder)
 
-Central prompt store and Nexus ecosystem health tools.
+Central workspace for the Nexus ecosystem: ops tooling, Studio production pipeline, prompts, and multi-repo coordination.
 
-## Layout
+## Ecosystem map
 
 ```
 Grok Projects/
-├── scripts/             # grok.ps1, launcher.py, dual_ai_helper.py (convenience entry points)
-├── tools/               # Python utilities + workspace_paths.py
-├── data/                # JSON state (tasks, queues, changelog, etc.)
-├── docs/                # generated reference docs
-├── prompts/             # categorized prompt library
-├── outputs/             # tool output scratch
-├── notes/               # quick notes
-├── Content_Production/  # editorials + professional document projects
-└── …                    # Stonebridge, Nexus, MAGAZINE, etc.
+├── tools/               # Nexus ops utilities (status, tasks, git, X API)
+├── artifacts/         # Studio production toolchain (prompt gen, video compile)
+├── scripts/           # Convenience entry points → tools/
+├── data/              # JSON state (tasks, decisions, changelog, queues)
+├── prompts/           # Central orchestration prompts (system, orchestration, compliance)
+├── Studio/            # Cinematic production assets & outputs (submodule)
+├── AI/                # Multi-agent federation (submodule)
+├── Science/           # Scientific visualization principles
+├── Nexus/             # Registry & workflows
+├── History/           # Documentary research & timelines (submodule)
+├── Stonebridge/       # Security consulting & compliance (submodule)
+├── GFE/               # GFE video assets
+├── MAGAZINE/          # Editorial supermodel assets
+└── FLASH/             # Sabermetrics project
+```
+
+| Layer | Owns |
+|-------|------|
+| **Nexus** (`tools/`) | Ecosystem health, tasks, decisions, repo sync, central prompts |
+| **artifacts/** | Studio CLI pipeline — profiles, prompts, video packs, compliance |
+| **Studio/** | Visual production — references, canons, model profiles, renders |
+| **AI** | Multi-agent orchestration, federation routing |
+| **Science** | Domain visualization validation (Jantzen, astrophysics, etc.) |
+| **Stonebridge** | Client ops, compliance research, SOPs |
+
+## Quick start
+
+```bash
+# Dependencies
+pip install -r requirements.txt
+pip install -e artifacts/
+
+# Submodule init (first clone)
+git submodule update --init --recursive
+
+# Health & status
+python tools/nexus_status.py
+python tools/agent_health_monitor.py
+python tools/repo_sync_checker.py
+python tools/structure_validator.py
+
+# Unified launcher (Nexus ops + Studio pipeline)
+python tools/launcher.py
+
+# Studio production tools
+python artifacts/core/master_launcher.py
+```
+
+## Prompt storage
+
+| Location | Use |
+|----------|-----|
+| `prompts/{category}/` | Central orchestration prompts — add via `prompt_manager.py` |
+| `Studio/prompts/` | Studio production bibles & domain prompts (read via `--all`) |
+
+```bash
+python tools/prompt_manager.py list --all
+python tools/prompt_manager.py add system my_agent "prompt text"
+python tools/prompt_manager.py get studio ASTROPHYSICS_PROMPT_BIBLE --studio
 ```
 
 ## Tools (`tools/`)
 
 | Script | Purpose |
 |--------|---------|
-| `prompt_manager.py` | Add, list, and retrieve categorized prompts |
-| `agent_health_monitor.py` | Folder existence check across Grok repos |
-| `nexus_status.py` | Repo git status + prompt counts |
-| `new_repo.py` | Scaffold a new git repo in home directory |
-| `professional_editorial_writer.py` | v2.0 academic scaffold + content generation prompt |
-| `decision_log.py` | Log and list project decisions (`data/decisions.json`) |
-| `task_manager.py` | Add, list, and complete tasks (`data/tasks.json`) |
-| `compliance_report.py` | Generate state compliance reports from raw markdown |
-| `repo_sync_checker.py` | Git cleanliness check for home-directory repos |
-| `x_publisher.py` | Post tweets + send DMs via Developer API |
+| `launcher.py` | Unified ecosystem launcher |
+| `nexus_status.py` | Repo branches, dirty counts, prompt totals |
+| `agent_health_monitor.py` | Folder + nested repo health |
+| `repo_sync_checker.py` | Git cleanliness (root + nested repos) |
+| `structure_validator.py` | Expected folder scaffold |
+| `prompt_manager.py` | Central prompt CRUD + Studio prompt listing |
+| `task_manager.py` | Tasks (`data/tasks.json`) |
+| `decision_log.py` | Decisions (`data/decisions.json`) |
+| `x_publisher.py` | Post tweets + DMs via Developer API |
+| `project_indexer.py` | Ecosystem project index (`data/project_index.json`) |
 
-## Prompt categories
+## Artifacts (`artifacts/`)
 
-```
-prompts/
-  system/
-  orchestration/
-  studio/
-  compliance/
-```
+27+ CLI tools for Studio production. See [artifacts/README.md](artifacts/README.md).
 
-## Quick start
+Categories: workspace setup, profiles, prompt generation, video compile, catalog, compliance, export.
+
+## Submodules
+
+Registered in `.gitmodules`:
+
+| Path | Remote |
+|------|--------|
+| `AI/` | github.com/cbn52zmh78-cmyk/AI |
+| `History/` | github.com/cbn52zmh78-cmyk/HISTORY |
+| `Stonebridge/` | github.com/cbn52zmh78-cmyk/Stonebridge-Security-Consultants |
+| `Studio/` | github.com/cbn52zmh78-cmyk/STUDIO |
+
+**Workflow:** Commit inside each submodule repo separately, then update the pointer in Grok Projects:
 
 ```bash
-python tools/prompt_manager.py list
-python tools/prompt_manager.py add system my_agent "prompt text here"
-python tools/nexus_status.py
-python tools/agent_health_monitor.py
-python tools/new_repo.py My-New-Repo "Short description"
-python tools/professional_editorial_writer.py --title "PA Market Q2" --summary "Research notes here" --style APA --domain market --author "Benjamin Cartwright"
-python tools/decision_log.py add "Repo layout" "Default new repos to home directory"
-python tools/decision_log.py list
-python tools/task_manager.py add "Review PA market brief" "Benjamin"
-python tools/task_manager.py list
-python tools/task_manager.py done 1
-python tools/x_publisher.py verify
-python tools/repo_sync_checker.py
-python tools/x_publisher.py queue add "Draft post text"
-python tools/x_publisher.py publish
-python tools/quick_ref.py
+git -C Studio status
+git -C Studio add -A && git -C Studio commit -m "message"
+git add Studio && git commit -m "Bump Studio submodule"
 ```
 
-### X API setup
+## Tests
 
-Grok login with X is separate from the Developer API. Fill in `.env` in this folder with your four OAuth 1.0a tokens from [console.x.com](https://console.x.com), then run `python tools/x_publisher.py verify`.
+```bash
+pytest tests/test_artifacts_smoke.py -v
+```
 
-**Post on command (ask Grok):** `Post to X: Your message` or `DM @user: Your message`
+## X API setup
 
-Requires app permissions: **Read and write and Direct message**. Regenerate access tokens after saving permissions.
+Fill `.env` from `.env.example` with OAuth 1.0a tokens from [console.x.com](https://console.x.com), then:
+
+```bash
+python tools/x_publisher.py verify
+```
+
+Requires app permissions: **Read and write and Direct message**.
 
 ## GitHub
 

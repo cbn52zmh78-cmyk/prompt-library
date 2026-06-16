@@ -1,29 +1,30 @@
 #!/usr/bin/env python3
 import _bootstrap  # noqa: F401
-import os
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
 
-from workspace_paths import PROMPTS_DIR, STONEBRIDGE_OPS, WORKSPACE
+from workspace_paths import NESTED_REPOS, PROMPT_SOURCES, PROMPTS_DIR, STONEBRIDGE_OPS, WORKSPACE, count_prompt_files
 
-BASE = Path.home()
-
-# Add the folders/repos you want to check here
 FOLDERS_TO_CHECK = [
     "~/Videos/Grok Projects",
     "~/Videos/Grok Projects/Studio",
+    "~/Videos/Grok Projects/artifacts",
     "~/Videos/Grok Projects/GFE",
     "~/Videos/Grok Projects/MAGAZINE",
     "~/Videos/Grok Projects/Nexus",
     "~/Videos/Grok Projects/Science",
+    "~/Videos/Grok Projects/History",
+    "~/Videos/Grok Projects/AI",
     "~/Videos/Grok Projects/Stonebridge",
-    "~/Stonebridge_Operations",  # junction -> Stonebridge/Operations
+    "~/Stonebridge_Operations",
 ]
+
 
 def check_folder(path_str):
     path = Path(path_str).expanduser()
     status = "✅ OK" if path.exists() else "❌ MISSING"
     print(f"{status}  {path}")
+
 
 def main():
     print(f"Agent Health Check — {datetime.now().strftime('%Y-%m-%d %H:%M')}\n")
@@ -32,15 +33,21 @@ def main():
         check_folder(folder)
 
     print("\n=== Prompt Library Check ===")
-    if PROMPTS_DIR.exists():
-        for cat in ["system", "orchestration", "studio", "compliance"]:
-            cat_path = PROMPTS_DIR / cat
-            count = len(list(cat_path.glob("*.md"))) if cat_path.exists() else 0
-            print(f"  {cat}: {count} prompts")
-    else:
-        print(f"  prompts folder not found at {PROMPTS_DIR}")
+    for label, root in PROMPT_SOURCES.items():
+        n = count_prompt_files(root)
+        print(f"  {label}: {n} prompts ({root})")
+
+    if not PROMPTS_DIR.exists():
+        print(f"  central prompts folder not found at {PROMPTS_DIR}")
+
+    print("\n=== Nested Repos ===")
+    for name, path in NESTED_REPOS.items():
+        git_ok = (path / ".git").exists()
+        status = "✅" if path.exists() and git_ok else ("⚠️ " if path.exists() else "❌")
+        print(f"  {status} {name}: {path}")
 
     print("\nHealth check finished.")
+
 
 if __name__ == "__main__":
     main()
