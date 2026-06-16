@@ -1,0 +1,14 @@
+---
+pid: 9360
+cwd: "C:\Users\NCG\Videos\Grok Projects"
+command: "python \"C:\\Users\\NCG\\Videos\\Grok Projects\\Stonebridge\\Operations\\Scripts\\build_regulatory_targets.py\"; python \"C:\\Users\\NCG\\Videos\\Grok Projects\\Stonebridge\\Operations\\Scripts\\regulatory_research_scraper.py\" Wyoming Hawaii Vermont Colorado \"South Carolina\" \"New Mexico\" Maine"
+started_at: 2026-06-16T21:34:05.800Z
+running_for_ms: 410006   
+---
+✅ Wrote 204 targets to C:\Users\NCG\Videos\Grok Projects\Stonebridge\Operations\Scripts\regulatory_targets.json
+   Building_Construction/Building_Codes: 51
+   Food_Safety_Regulations/Processing: 1
+   Food_Safety_Regulations/Restaurants: 51
+   Real_Estate/Licensing: 50
+   Security_Licensing/Federal: 1
+   Security_Licensing/Licensing: 50
