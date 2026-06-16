@@ -1,0 +1,25 @@
+---
+pid: 27408
+cwd: "C:\Users\NCG\Videos\Grok Projects"
+command: "python \"C:\\Users\\NCG\\Videos\\Grok Projects\\Stonebridge\\Operations\\Scripts\\summarize_state_markdown.py\" --force --delay 0.5"
+started_at: 2026-06-16T22:36:47.687Z
+running_for_ms: 90011    
+---
+Provider: xai | Model: grok-3-mini | Auth: ~/.grok/auth.json session
+Summarizing Alabama...
+    • Food Safety (8,003 chars)
+    • Real Estate (6,417 chars)
+    • Building Construction (6,509 chars)
+    • Security Licensing (1,921 chars)
+    • merging sections
+  ✅ Alabama_Regulatory_Compliance_Summary.md
+Summarizing Alaska...
+    • Security Licensing (7,280 chars)
+  ✅ Alaska_Regulatory_Compliance_Summary.md
+Summarizing Arizona...
+    • Food Safety (5,441 chars)
+    • Security Licensing (8,561 chars)
+    • merging sections
+  ✅ Arizona_Regulatory_Compliance_Summary.md
+Summarizing Arkansas...
+    • Food Safety (6,691 chars)

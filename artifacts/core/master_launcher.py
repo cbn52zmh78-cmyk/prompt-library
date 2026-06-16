@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
 """
-Master CLI Launcher v1.1 — Director | New Tool
+Master CLI Launcher v1.2 — Director | New Tool
 Single entry point to discover and run all tools in this project.
 """
 
 import subprocess
-import sys
-from pathlib import Path
-
 import sys
 from pathlib import Path
 
@@ -19,12 +16,13 @@ ARTIFACTS_DIR = Path(__file__).resolve().parents[1]
 TOOLS = {
     "Workspace Setup": [
         ("core/workspace_initializer.py", "Workspace Initializer (Studio folder scaffold)"),
+        ("core/workspace_status_reporter.py", "Workspace Status Reporter"),
     ],
     "Profile Management": [
         ("profile/model_profile_manager.py", "Model Profile Manager v1.2 (integration-ready)"),
     ],
     "Prompt Generation & Quality": [
-        ("prompts/fashion_modeling_prompt_generator.py", "Fashion/Modeling Prompt Generator"),
+        ("prompts/fashion_modeling_prompt_generator.py", "Fashion/Modeling Prompt Generator v1.1"),
         ("prompts/batch_prompt_generator.py", "Batch Prompt Generator v1.1 (profile-aware)"),
         ("prompts/prompt_quality_scorer.py", "Prompt Specificity & Quality Scorer"),
         ("prompts/negative_prompt_builder.py", "Compliance-Aware Negative Prompt Builder"),
@@ -33,7 +31,7 @@ TOOLS = {
     ],
     "Shot Listing & Video Tools": [
         ("video/magazine_shotlist_templater.py", "Magazine Shot List Templater"),
-        ("video/multishot_video_compiler.py", "Multi-Shot Video Prompt Compiler"),
+        ("video/multishot_video_compiler.py", "Multi-Shot Video Compiler v1.1 (profile-aware)"),
         ("video/onetake_choreography_builder.py", "One-Take Choreography Builder v1.1 (profile-aware)"),
         ("video/image_to_video_bridge.py", "Image-to-Video Continuity Bridge"),
         ("video/sequence_video_compiler.py", "Sequence Video Compiler"),
@@ -60,7 +58,7 @@ TOOLS = {
 
 def show_menu():
     print("\n" + "=" * 70)
-    print("MASTER CLI LAUNCHER v1.1 — Grok Projects")
+    print("MASTER CLI LAUNCHER v1.2 — Grok Projects")
     print("=" * 70)
     idx = 1
     flat_tools = []

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Workspace Initializer v1.0 — Director | New Tool
-Sets up the complete recommended folder structure for this project.
+Workspace Initializer v1.1 — Director | New Tool
+Sets up the complete recommended folder structure under Grok Projects/Studio.
 """
 
 import sys
@@ -18,6 +18,7 @@ FOLDERS = (
     "ShotLists",
     "Video_Prompts",
     "OneTake_Prompts",
+    "Fashion_Prompts",
     "Grok_Video_Packs",
     "Negative_Prompts",
     "Asset_Metadata",
@@ -26,6 +27,8 @@ FOLDERS = (
     "Batch_Outputs",
     "Canons_Bibles",
     "Refined_Prompts",
+    "Physics_Lighting_Blocks",
+    "Tool_Logs",
 )
 
 
