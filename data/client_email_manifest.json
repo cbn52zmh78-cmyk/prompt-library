@@ -1,0 +1,37 @@
+{
+  "workspace": "C:\\Users\\NCG\\Videos\\Grok Projects",
+  "default_attachment_dirs": [
+    "deliverables",
+    "rosters",
+    "SOPs",
+    "contracts",
+    "templates",
+    "compliance",
+    "output"
+  ],
+  "default_extensions": [
+    ".pdf",
+    ".docx",
+    ".xlsx",
+    ".pptx",
+    ".xls",
+    ".doc",
+    ".csv",
+    ".md",
+    ".txt",
+    ".zip"
+  ],
+  "exclude_filenames": [
+    "README.md",
+    "TASKS.md",
+    ".gitkeep",
+    ".gitignore"
+  ],
+  "clients": {
+    "benjamin.cartwright1234@gmail.com": {
+      "name": "Acme Security (Test)",
+      "project": "Stonebridge/Deliverables/2026-06-16_Acme_Security_Roster_System",
+      "attachment_dirs": ["deliverables", "rosters", "SOPs", "contracts"]
+    }
+  }
+}
