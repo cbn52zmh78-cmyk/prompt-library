@@ -1,0 +1,64 @@
+---
+pid: 23928
+cwd: "C:\Users\NCG\Videos\Grok Projects"
+command: "python \"C:\\Users\\NCG\\Videos\\Grok Projects\\Stonebridge\\Operations\\Scripts\\regulatory_targets_scraper.py\" --once --category Food_Safety_Regulations 2>&1 | Tee-Object -FilePath \"C:\\Users\\NCG\\Videos\\Grok Projects\\Stonebridge\\Operations\\Compliance_Research\\food_safety_scrape_2026-06-16.log\""
+started_at: 2026-06-16T22:16:32.886Z
+running_for_ms: 400009   
+---
+
+=== Stonebridge Regulatory Scan: 2026-06-16 17:16:33.353802 ===
+ Targets: 52
+✅ [Food_Safety_Regulations/Processing] FDA Food Safety
+✅ [Food_Safety_Regulations/Restaurants] FDA Food Code
+✅ [Food_Safety_Regulations/Restaurants] Alabama Food Safety
+❌ Failed Alaska Food Safety: 403 Client Error: Forbidden for url: https://dec.alaska.gov/eh/fss/
+✅ [Food_Safety_Regulations/Restaurants] Arizona Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Arkansas Food Safety
+❌ Failed California Food Safety: HTTPSConnectionPool(host='www.cdph.ca.gov', port=443): Max retries exceeded with url: /Programs/CEH/DFDCS/Pages/FDBPrograms/FoodSafetyProgram.aspx (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))
+❌ Failed Colorado Food Safety: 403 Client Error: Forbidden for url: https://cdphe.colorado.gov/dehs/rf/inspections
+✅ [Food_Safety_Regulations/Restaurants] Connecticut Food Safety
+❌ Failed Delaware Food Safety: HTTPSConnectionPool(host='dhss.delaware.gov', port=443): Read timed out. (read timeout=20)
+✅ [Food_Safety_Regulations/Restaurants] Florida Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Georgia Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Hawaii Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Idaho Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Illinois Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Indiana Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Iowa Food Safety
+❌ Failed Kansas Food Safety: 403 Client Error: Forbidden for url: https://www.agriculture.ks.gov/divisions-programs/food-safety-and-lodging
+✅ [Food_Safety_Regulations/Restaurants] Kentucky Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Louisiana Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Maine Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Maryland Food Safety
+❌ Failed Massachusetts Food Safety: 403 Client Error: Forbidden for url: https://www.mass.gov/food-safety
+❌ Failed Michigan Food Safety: 403 Client Error: Forbidden for url: https://www.michigan.gov/mdard/food-dairy/food-safety
+✅ [Food_Safety_Regulations/Restaurants] Minnesota Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Mississippi Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Missouri Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Montana Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Nebraska Food Safety
+❌ Failed Nevada Food Safety: 404 Client Error: Not Found for url: https://www.dpbh.nv.gov/Reg/Food/Food_Establishments_Home/
+❌ Failed New Hampshire Food Safety: 403 Client Error: Forbidden for url: https://www.dhhs.nh.gov/programs-services/environmental-health-and-you/food-protection
+✅ [Food_Safety_Regulations/Restaurants] New Jersey Food Safety
+✅ [Food_Safety_Regulations/Restaurants] New Mexico Food Safety
+❌ Failed New York Food Safety: 403 Client Error: Forbidden for url: https://www.health.ny.gov/environmental/indoors/food_safety/data.htm
+✅ [Food_Safety_Regulations/Restaurants] North Carolina Food Safety
+✅ [Food_Safety_Regulations/Restaurants] North Dakota Food Safety
+❌ Failed Ohio Food Safety: 404 Client Error: Not Found for url: https://odh.ohio.gov/know-our-programs/food-safety-program
+✅ [Food_Safety_Regulations/Restaurants] Oklahoma Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Oregon Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Pennsylvania Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Rhode Island Food Safety
+✅ [Food_Safety_Regulations/Restaurants] South Carolina Food Safety
+✅ [Food_Safety_Regulations/Restaurants] South Dakota Food Safety
+❌ Failed Tennessee Food Safety: 404 Client Error: Not Found for url: https://www.tn.gov/health/cedep/environmental/food-safety.html
+❌ Failed Texas Food Safety: 404 Client Error: Not Found for url: https://www.dshs.texas.gov/foodestablishments/retail-food-establishments
+✅ [Food_Safety_Regulations/Restaurants] Utah Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Vermont Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Virginia Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Washington Food Safety
+✅ [Food_Safety_Regulations/Restaurants] West Virginia Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Wisconsin Food Safety
+✅ [Food_Safety_Regulations/Restaurants] Wyoming Food Safety
+=== Scan complete: 39/52 succeeded ===
+

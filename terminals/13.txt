@@ -1,0 +1,22 @@
+---
+pid: 16772
+cwd: "C:\Users\NCG\Videos\Grok Projects"
+command: "cd \"C:\\Users\\NCG\\Videos\\Grok Projects\" && python tools\\git_auto_pusher.py --interval 15"
+started_at: 2026-06-16T22:22:24.379Z
+running_for_ms: 50009    
+---
+At line:1 char:44
++ (cd "C:\\Users\\NCG\\Videos\\Grok Projects" ; cd "C:\Users\NCG\Videos ...
++                                            ~
+Missing closing ')' in expression.
+At line:1 char:86
++ ... s\\Grok Projects" ; cd "C:\Users\NCG\Videos\Grok Projects" && python  ...
++                                                                ~~
+The token '&&' is not a valid statement separator in this version.
+At line:1 char:134
++ ... deos\Grok Projects" && python tools\git_auto_pusher.py --interval 15)
++                                                                         ~
+Unexpected token ')' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingEndParenthesisInExpression
+ 

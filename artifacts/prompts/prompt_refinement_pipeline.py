@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+"""
+Prompt Refinement Pipeline v1.1 — Director | Profile Integration
+Can enhance the base prompt using data from a saved Model Profile.
+"""
+
+import sys
+from datetime import datetime
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "profile"))
+import bootstrap  # noqa: F401
+from studio_paths import studio_path
+
+try:
+    from model_profile_manager import ModelProfileManager
+except ImportError:
+    ModelProfileManager = None
+
+
+class PromptRefinementPipeline:
+    def __init__(self, output_dir=None):
+        self.output_dir = output_dir or studio_path("Refined_Prompts")
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.profile_mgr = ModelProfileManager() if ModelProfileManager else None
+
+    def refine(self, base_prompt: str, stages: list = None, profile_name: str = None):
+        if stages is None:
+            stages = ["physics", "camera", "lighting", "composition", "negative_space"]
+
+        prompt = base_prompt.strip()
+        applied = []
+
+        if profile_name and self.profile_mgr:
+            profile = self.profile_mgr.get_profile_data(profile_name)
+            if profile:
+                prompt = f"{profile.get('visual', '')}, {prompt}"
+                if profile.get("default_physics"):
+                    prompt += f", {profile['default_physics']}"
+                print(f"→ Enhanced with profile: {profile_name}")
+
+        if "physics" in stages:
+            prompt += ", natural fabric and body physics, realistic cloth movement"
+            applied.append("physics")
+        if "camera" in stages:
+            prompt += ", motivated camera movement with precise framing progression"
+            applied.append("camera")
+        if "lighting" in stages:
+            prompt += ", dramatic cinematic lighting with clear key and subtle rim"
+            applied.append("lighting")
+        if "composition" in stages:
+            prompt += ", clean single-subject composition, intentional negative space"
+            applied.append("composition")
+        if "negative_space" in stages:
+            prompt += ", generous negative space, balanced frame, no crowding"
+            applied.append("negative_space")
+
+        return prompt, applied
+
+    def save(self, name: str, refined_prompt: str, applied_stages: list):
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M")
+        filepath = self.output_dir / f"{name.replace(' ', '_')}_{timestamp}.txt"
+        content = f"# Stages: {', '.join(applied_stages)}\n\n{refined_prompt}"
+        filepath.write_text(content, encoding="utf-8")
+        print(f"✅ Refined prompt saved: {filepath}")
+
+
+if __name__ == "__main__":
+    pipeline = PromptRefinementPipeline()
+    base = "adult woman in elegant gown, sustained eye contact"
+    refined, stages = pipeline.refine(base, profile_name="Test_Editorial")
+    pipeline.save("Hero_Refined_From_Profile", refined, stages)

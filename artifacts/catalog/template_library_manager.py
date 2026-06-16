@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 """
-Master Prompt Template Library Manager v1.0 — Director | New Tool
-Save, search, tag, and instantiate reusable prompt templates. Fully general.
+Template Library Manager v1.1 — Director | Physics/Lighting Block Support
+Can now store and retrieve physics & lighting blocks as reusable templates.
 """
 
 import json
-from datetime import datetime
-
 import sys
+from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import bootstrap  # noqa: F401
 from studio_paths import studio_path
+
 
 class TemplateLibraryManager:
     def __init__(self, lib_dir=None):
@@ -28,11 +28,27 @@ class TemplateLibraryManager:
             "tags": tags or [],
             "description": description,
             "created": datetime.now().isoformat(),
-            "version": "1.0"
+            "version": "1.1",
         }
         with open(filepath, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2)
-        print(f"✅ Template saved: {filepath}")
+        print(f"✅ Template saved: {name}")
+
+    def get_template(self, name: str):
+        filepath = self.lib_dir / f"{name.replace(' ', '_')}.json"
+        if filepath.exists():
+            with open(filepath, encoding="utf-8") as f:
+                return json.load(f)
+        return None
+
+    def save_physics_block(self, block_name: str, block_text: str):
+        """Convenience method to save physics/lighting blocks as templates."""
+        self.save_template(
+            f"PhysicsBlock_{block_name}",
+            block_text,
+            tags=["physics", "lighting", "injector"],
+            description=f"Reusable physics/lighting block from injector: {block_name}",
+        )
 
     def search(self, tag: str = None):
         results = []
@@ -44,29 +60,19 @@ class TemplateLibraryManager:
         return results
 
     def instantiate(self, name: str, variables: dict):
-        filepath = self.lib_dir / f"{name.replace(' ', '_')}.json"
-        with open(filepath, encoding="utf-8") as f:
-            data = json.load(f)
+        data = self.get_template(name)
+        if not data:
+            return ""
         prompt = data["template"]
-        for k, v in variables.items():
-            prompt = prompt.replace(f"[{k}]", str(v))
+        for key, value in variables.items():
+            prompt = prompt.replace(f"[{key}]", str(value))
         return prompt
+
 
 if __name__ == "__main__":
     lib = TemplateLibraryManager()
-    # Demo: save two templates
-    lib.save_template(
-        "Hero_Editorial",
-        "photorealistic 16:9 hero studio shot of [SUBJECT], [LIGHTING], elegant confident pose, natural fabric physics, single subject, clean composition",
-        tags=["hero", "studio", "editorial"],
-        description="Standard hero editorial pose with strong lighting and physics"
+    lib.save_physics_block(
+        "fabric_physics",
+        "natural fabric drape, realistic cloth physics, subtle movement and tension in fabric",
     )
-    lib.save_template(
-        "Slow_Runway_Walk",
-        "photorealistic 16:9 slow runway walk of [SUBJECT], [LIGHTING], subtle fabric movement and physics, sustained eye contact, dynamic motion",
-        tags=["runway", "motion", "editorial"],
-        description="Controlled runway walk with fabric physics and eye contact"
-    )
-    print("\n--- Search for 'editorial' templates ---")
-    for t in lib.search("editorial"):
-        print(f"  {t['name']}: {t['description']}")
+    print("\nTemplate library now supports physics/lighting blocks from the injector.")

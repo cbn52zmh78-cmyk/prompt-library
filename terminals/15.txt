@@ -1,0 +1,18 @@
+---
+pid: 1300
+cwd: "C:\Users\NCG\Videos\Grok Projects"
+command: "python \"C:\\Users\\NCG\\Videos\\Grok Projects\\tools\\git_auto_pusher.py\" --interval 15"
+started_at: 2026-06-16T22:22:45.280Z
+running_for_ms: 30004    
+---
+At line:1 char:44
++ (cd "C:\\Users\\NCG\\Videos\\Grok Projects" ; python "C:\Users\NCG\Vi ...
++                                            ~
+Missing closing ')' in expression.
+At line:1 char:128
++ ... ers\NCG\Videos\Grok Projects\tools\git_auto_pusher.py" --interval 15)
++                                                                         ~
+Unexpected token ')' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingEndParenthesisInExpression
+ 

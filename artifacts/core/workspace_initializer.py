@@ -24,6 +24,8 @@ FOLDERS = (
     "References",
     "Compliance_Reports",
     "Batch_Outputs",
+    "Canons_Bibles",
+    "Refined_Prompts",
 )
 
 
