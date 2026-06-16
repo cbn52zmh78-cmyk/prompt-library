@@ -44,6 +44,7 @@ STUDIO_PRODUCERS_OFFICE = "Producers_Office"
 STUDIO_PIPELINE = "Pipeline"
 STUDIO_PRODUCTIONS = "Productions"
 STUDIO_CAST = "Cast"
+STUDIO_TALENT_AGENCY = f"{STUDIO_CAST}/Talent_Agency"
 STUDIO_MAGAZINE = "MAGAZINE"
 STUDIO_REFERENCE_LIBRARY = "Reference_Library"
 STUDIO_PROMPT_LIBRARY = "Prompt_Library"
@@ -83,6 +84,10 @@ STUDIO_FOLDERS: tuple[str, ...] = (
     f"{STUDIO_MAGAZINE}/History/Features",
     f"{STUDIO_MAGAZINE}/_Catalog",
     f"{STUDIO_MAGAZINE}/scripts",
+    f"{STUDIO_TALENT_AGENCY}/Performance_Studies",
+    f"{STUDIO_TALENT_AGENCY}/Scoring_Rubrics",
+    f"{STUDIO_TALENT_AGENCY}/Reports",
+    f"{STUDIO_TALENT_AGENCY}/Pairing_Notes",
     "renders/approved",
     "renders/review",
     "renders/rejected",

@@ -23,6 +23,9 @@ TOOLS = {
     "Profile Management": [
         ("profile/model_profile_manager.py", "Model Profile Manager v1.2 (integration-ready)"),
     ],
+    "Talent Agency": [
+        ("talent/performance_study_manager.py", "Performance Study Manager v1.0 (agency readiness)"),
+    ],
     "Prompt Generation & Quality": [
         ("prompts/fashion_modeling_prompt_generator.py", "Fashion/Modeling Prompt Generator v1.1"),
         ("prompts/batch_prompt_generator.py", "Batch Prompt Generator v1.1 (profile-aware)"),
