@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Master launcher for Language Atlas tools."""
+"""Master launcher for DAVID module tools."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ SCRIPTS = Path(__file__).resolve().parent
 PYTHON = sys.executable
 
 TOOLS = [
-    ("revival_status_reporter.py", "Atlas status report"),
+    ("revival_status_reporter.py", "DAVID status report"),
     ("language_registry_manager.py list", "List all languages"),
     ("language_registry_manager.py list --tier high", "High-priority revival languages"),
     ("research_query_generator.py --language etruscan", "Etruscan research queries"),
@@ -24,7 +24,7 @@ TOOLS = [
 
 def main() -> int:
     print("\n" + "=" * 60)
-    print("LANGUAGE ATLAS LAUNCHER — David Protocol")
+    print("DAVID — Dead Language Research & Revival")
     print("=" * 60)
     for i, (_, desc) in enumerate(TOOLS, 1):
         print(f"  {i:2}. {desc}")

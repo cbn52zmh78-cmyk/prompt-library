@@ -3,11 +3,11 @@ import _bootstrap  # noqa: F401
 from datetime import datetime
 from pathlib import Path
 
-from workspace_paths import LANGUAGE_DIR, NESTED_REPOS, PROMPT_SOURCES, PROMPTS_DIR, STONEBRIDGE_OPS, WORKSPACE, count_prompt_files
+from workspace_paths import DAVID_DIR, NESTED_REPOS, PROMPT_SOURCES, PROMPTS_DIR, STONEBRIDGE_OPS, WORKSPACE, count_prompt_files
 
 FOLDERS_TO_CHECK = [
     "~/Videos/Grok Projects",
-    "~/Videos/Grok Projects/Language",
+    "~/Videos/Grok Projects/DAVID",
     "~/Videos/Grok Projects/Studio",
     "~/Videos/Grok Projects/artifacts",
     "~/Videos/Grok Projects/GFE",

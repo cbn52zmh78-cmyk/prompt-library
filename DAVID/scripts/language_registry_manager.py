@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""List, search, and inspect languages in the Language Atlas registry."""
+"""List, search, and inspect languages in the DAVID registry."""
 
 from __future__ import annotations
 
@@ -46,7 +46,7 @@ def show_language(slug: str) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Language Atlas registry manager.")
+    parser = argparse.ArgumentParser(description="DAVID registry manager.")
     sub = parser.add_subparsers(dest="cmd", required=True)
 
     ls = sub.add_parser("list")

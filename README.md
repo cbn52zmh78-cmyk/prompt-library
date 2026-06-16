@@ -20,7 +20,7 @@ Grok Projects/
 ├── Nexus/             # Registry & workflows
 ├── History/           # Documentary research & timelines (submodule)
 ├── Stonebridge/       # Security consulting & compliance (submodule)
-├── Language/          # Language Atlas — dead tongues, corpus research, Grok training
+├── DAVID/             # Dead-language research, corpus, revival, Grok training
 ├── GFE/               # GFE video assets
 ├── MAGAZINE/          # Editorial supermodel assets
 └── FLASH/             # Sabermetrics project
@@ -34,7 +34,7 @@ Grok Projects/
 | **AI** | Multi-agent orchestration, federation routing |
 | **Science** | Domain visualization validation (Jantzen, astrophysics, etc.) |
 | **Stonebridge** | Client ops, compliance research, SOPs |
-| **Language** | Dead/extinct language research, attested corpora, Grok training packs |
+| **DAVID** | Dead/extinct language research, attested corpora, Grok training packs |
 
 ## Quick start
 
@@ -58,22 +58,22 @@ python tools/launcher.py
 # Studio production tools
 python artifacts/core/master_launcher.py
 
-# Language Atlas (David protocol — corpus-first dead language research)
-python tools/language_status.py
-python Language/scripts/language_launcher.py
+# DAVID (corpus-first dead language research — Prometheus protocol)
+python tools/david_status.py
+python DAVID/scripts/david_launcher.py
 ```
 
-## Language Atlas
+## DAVID
 
 Continuous research into living, dead, extinct, and undeciphered languages. Builds Grok training packs from **attested texts only** — revival through evidence, not invention.
 
 ```bash
-python Language/scripts/language_registry_manager.py list --tier high
-python Language/scripts/grok_training_pack_builder.py --language etruscan
-python Language/scripts/corpus_cataloguer.py --help
+python DAVID/scripts/language_registry_manager.py list --tier high
+python DAVID/scripts/grok_training_pack_builder.py --language etruscan
+python DAVID/scripts/corpus_cataloguer.py --help
 ```
 
-See [Language/README.md](Language/README.md). System prompt: `Language/prompts/david_linguist_system.md`.
+See [DAVID/README.md](DAVID/README.md). System prompt: `DAVID/prompts/david_linguist_system.md`.
 
 ## Prompt storage
 

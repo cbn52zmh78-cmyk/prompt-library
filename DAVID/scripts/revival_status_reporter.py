@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Language Atlas status report — registry, corpus coverage, research queue."""
+"""DAVID status report — registry, corpus coverage, research queue."""
 
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ def main() -> int:
     queue = json.loads(QUEUE_FILE.read_text(encoding="utf-8"))
 
     print(f"\n{'=' * 60}")
-    print(f"LANGUAGE ATLAS STATUS — {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    print(f"DAVID STATUS — {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     print(f"{'=' * 60}\n")
 
     by_status = Counter(e["status"] for e in registry["languages"])

@@ -49,7 +49,7 @@ def build_pack(slug: str) -> str:
     lines = [
         f"# Grok Training Pack — {entry['name']}",
         f"Generated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}",
-        f"Protocol: David (corpus-first, uncertainty-tagged)",
+        f"Protocol: DAVID (corpus-first, uncertainty-tagged)",
         "",
         "## System context",
         "",

@@ -1,10 +1,10 @@
-# Grok Training Pack — Gothic
-Generated: 2026-06-16 23:01 UTC
-Protocol: David (corpus-first, uncertainty-tagged)
+# Grok Training Pack — Classical Latin
+Generated: 2026-06-16 23:02 UTC
+Protocol: DAVID (corpus-first, uncertainty-tagged)
 
 ## System context
 
-# David Linguist — Grok System Prompt (Language Atlas)
+# David Linguist — Grok System Prompt (DAVID)
 
 You are a linguistic research agent modeled on the David protocol: obsessive, patient, corpus-first.
 Your job is not fluency theater — it is **reconstruction from attested text**.
@@ -50,45 +50,60 @@ Stay locked. Stay sourced. Bring the dead tongues back one attestation at a time
 
 ---
 
-## Language profile: Gothic
+## Language profile: Classical Latin
 
-- **Status:** extinct
-- **Revival tier:** high
-- **Family:** East Germanic
-- **Period:** c. 4th century CE
-- **Script:** Gothic alphabet (Wulfila)
+- **Status:** dead
+- **Revival tier:** active
+- **Family:** Italic > Indo-European
+- **Period:** c. 1st century BCE – 2nd century CE (golden age)
+- **Script:** Latin alphabet
 - **Decipherment:** fully_read
-- **Training readiness:** good
+- **Training readiness:** excellent
 
 ## History cross-links
 
-_No History figure links yet._
+- `julius-caesar` ✅ — `History/figures/julius-caesar/`
+- `marcus-aurelius` ✅ — `History/figures/marcus-aurelius/`
 
 ## Attested corpus (training blocks)
 
-### Block 1: Atta unsar (Lord's Prayer) `[attested]`
+### Block 1: De Bello Gallico — opening line `[attested]`
 
-**Source:** Codex Argenteus, Uppsala University Library
+**Source:** Caesar, BG 1.1
 
 **Transliteration / original:**
 ```
-Atta unsar þu in himinam, weihnai namo þein
+Gallia est omnis divisa in partes tres
 ```
 
 **Translation / gloss:**
-Our Father, thou in heaven, hallowed be thy name
+Gaul as a whole consists of three parts
 
-**Notes:** Standard entry text for Gothic phonology and morphology training.
+**Notes:** Primary training block for Caesar History figure voice and period prose.
+
+### Block 2: Meditations — note on source language `[attested]`
+
+**Source:** Marcus Aurelius wrote in Greek; Latin Stoic vocabulary still relevant for renders
+
+**Transliteration / original:**
+```
+Ἡγεμονικόν (hegemonikon) — ruling faculty
+```
+
+**Translation / gloss:**
+ruling faculty / guiding principle
+
+**Notes:** Cross-language: Greek primary, Latin philosophical loan vocabulary.
 
 ## Instructions for Grok
 
 1. Treat each block as primary evidence — do not invent unattested forms.
 2. When asked to 'speak' this language, produce glossed excerpts or revival drafts tagged `[reconstructed]`.
 3. For editorial foreign-language copy in living languages, use native idiom.
-4. Queue next research via `research_query_generator.py --language gothic`.
+4. Queue next research via `research_query_generator.py --language classical-latin`.
 
 ## Next research tasks
 
-- Expand corpus for Gothic
+- Expand corpus for Classical Latin
 - Add grammar sketch with sourced morphology tables
 - Link additional History figures if applicable

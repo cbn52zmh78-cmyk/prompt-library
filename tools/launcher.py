@@ -5,7 +5,7 @@ import _bootstrap  # noqa: F401
 import subprocess
 import sys
 
-from workspace_paths import ARTIFACTS_DIR, LANGUAGE_DIR, TOOLS_DIR, WORKSPACE
+from workspace_paths import ARTIFACTS_DIR, DAVID_DIR, TOOLS_DIR, WORKSPACE
 
 PYTHON = sys.executable
 
@@ -61,10 +61,10 @@ def nexus_menu() -> None:
     run_cmd(cmd)
 
 
-def language_menu() -> None:
-    launcher = LANGUAGE_DIR / "scripts" / "language_launcher.py"
+def david_menu() -> None:
+    launcher = DAVID_DIR / "scripts" / "david_launcher.py"
     if not launcher.exists():
-        print(f"❌ Language launcher not found: {launcher}")
+        print(f"❌ DAVID launcher not found: {launcher}")
         return
     run_cmd([PYTHON, str(launcher)])
 
@@ -82,9 +82,9 @@ def main() -> None:
         print("\n=== GROK PROJECTS ECOSYSTEM LAUNCHER ===\n")
         print(" 1. Nexus ops tools")
         print(" 2. Studio production pipeline (artifacts)")
-        print(" 3. Language Atlas (dead tongues / research)")
+        print(" 3. DAVID (dead tongues / language research)")
         print(" 4. Quick: nexus_status")
-        print(" 5. Quick: language_status")
+        print(" 5. Quick: david_status")
         print(" 6. Quick: repo_sync_checker")
         print(" 0. Exit\n")
 
@@ -97,11 +97,11 @@ def main() -> None:
         elif choice == "2":
             studio_menu()
         elif choice == "3":
-            language_menu()
+            david_menu()
         elif choice == "4":
             run_cmd([PYTHON, tool_script("nexus_status.py")])
         elif choice == "5":
-            run_cmd([PYTHON, tool_script("language_status.py")])
+            run_cmd([PYTHON, tool_script("david_status.py")])
         elif choice == "6":
             run_cmd([PYTHON, tool_script("repo_sync_checker.py")])
         else:

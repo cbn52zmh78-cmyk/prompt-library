@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Scaffold folder structure for a new language in the Language Atlas."""
+"""Scaffold folder structure for a new language in DAVID."""
 
 from __future__ import annotations
 
@@ -76,7 +76,7 @@ def init_language(slug: str, name: str, status: str, family: str, period: str) -
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Initialize a language in the Language Atlas.")
+    parser = argparse.ArgumentParser(description="Initialize a language in DAVID.")
     parser.add_argument("--slug", required=True)
     parser.add_argument("--name", required=True)
     parser.add_argument(

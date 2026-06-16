@@ -20,7 +20,7 @@ PROJECTS = {
     "GFE": "Girlfriend Experience video assets and production scripts.",
     "MAGAZINE": "Supermodel editorial assets and production scripts.",
     "artifacts": "Studio production toolchain — prompt gen, video compile, catalog, compliance.",
-    "Language": "Language Atlas — dead/extinct language research, corpus, Grok training packs.",
+    "DAVID": "Dead-language research, attested corpora, revival scaffolding, Grok training packs.",
 }
 
 
