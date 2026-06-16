@@ -28,6 +28,9 @@ python tools/launcher.py   # → option 2
 | `video/` | Multi-shot compile, one-take choreography, shot lists |
 | `catalog/` | Reference indexing, metadata sidecars, asset catalog |
 | `compliance/` | Version control, canon bibles, consistency auditors |
+| `legal/` | **Legal Gate** — Producer hard stop (RED = no production) |
+| `production/` | Slate manager, call sheets, session logs |
+| `talent/` | Performance studies, roster sync, agency readiness |
 | `export/` | Grok video pack exporter |
 
 Paths are canonical in `tools/workspace_paths.py`.

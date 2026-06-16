@@ -49,6 +49,17 @@ STUDIO_MAGAZINE = "MAGAZINE"
 STUDIO_REFERENCE_LIBRARY = "Reference_Library"
 STUDIO_PROMPT_LIBRARY = "Prompt_Library"
 STUDIO_DEVELOPMENT = "Development"
+STUDIO_LEGAL = "Legal"
+STUDIO_PRE_PRODUCTION = "Pre_Production"
+STUDIO_PRODUCTION = "Production"
+STUDIO_POST_PRODUCTION = "Post_Production"
+STUDIO_DISTRIBUTION = "Distribution"
+STUDIO_CREW = "Crew"
+STUDIO_LOCATIONS = "Locations"
+STUDIO_MUSIC_SOUND = "Music_Sound"
+STUDIO_ART_DEPARTMENT = "Art_Department"
+STUDIO_CLIENT_SERVICES = "Client_Services"
+STUDIO_MODULES = "Modules"
 
 STUDIO_FOLDERS: tuple[str, ...] = (
     f"{STUDIO_PIPELINE}/Model_Profiles",
@@ -66,6 +77,56 @@ STUDIO_FOLDERS: tuple[str, ...] = (
     f"{STUDIO_PRODUCERS_OFFICE}/Compliance_Reports",
     f"{STUDIO_PRODUCERS_OFFICE}/Tool_Logs",
     f"{STUDIO_PRODUCERS_OFFICE}/Release_Tracker",
+    f"{STUDIO_PRODUCERS_OFFICE}/SLATE",
+    f"{STUDIO_PRODUCERS_OFFICE}/Legal_Gate",
+    f"{STUDIO_PRODUCERS_OFFICE}/Call_Sheets",
+    f"{STUDIO_PRODUCERS_OFFICE}/Session_Logs",
+    f"{STUDIO_LEGAL}/AI_Content",
+    f"{STUDIO_LEGAL}/Filmmaking_IRL",
+    f"{STUDIO_LEGAL}/Talent_Replica",
+    f"{STUDIO_LEGAL}/Music_Clearance",
+    f"{STUDIO_LEGAL}/Distribution_EO",
+    f"{STUDIO_LEGAL}/Gate_Reports",
+    f"{STUDIO_PRE_PRODUCTION}/Script",
+    f"{STUDIO_PRE_PRODUCTION}/Breakdowns",
+    f"{STUDIO_PRE_PRODUCTION}/Storyboards",
+    f"{STUDIO_PRE_PRODUCTION}/Shot_Lists",
+    f"{STUDIO_PRE_PRODUCTION}/Scheduling",
+    f"{STUDIO_PRE_PRODUCTION}/Budget",
+    f"{STUDIO_PRODUCTION}/Daily_Reports",
+    f"{STUDIO_PRODUCTION}/Continuity",
+    f"{STUDIO_PRODUCTION}/On_Set_Notes",
+    f"{STUDIO_POST_PRODUCTION}/Edit",
+    f"{STUDIO_POST_PRODUCTION}/Color",
+    f"{STUDIO_POST_PRODUCTION}/Sound",
+    f"{STUDIO_POST_PRODUCTION}/VFX",
+    f"{STUDIO_POST_PRODUCTION}/Deliverables",
+    f"{STUDIO_DISTRIBUTION}/Festival",
+    f"{STUDIO_DISTRIBUTION}/Streaming",
+    f"{STUDIO_DISTRIBUTION}/Theatrical",
+    f"{STUDIO_DISTRIBUTION}/Sales",
+    f"{STUDIO_CREW}/Camera",
+    f"{STUDIO_CREW}/Lighting",
+    f"{STUDIO_CREW}/Sound",
+    f"{STUDIO_CREW}/Art",
+    f"{STUDIO_CREW}/Costume",
+    f"{STUDIO_CREW}/HMU",
+    f"{STUDIO_CREW}/Production_Management",
+    f"{STUDIO_CREW}/Transport",
+    f"{STUDIO_LOCATIONS}/Scouting",
+    f"{STUDIO_LOCATIONS}/Permits",
+    f"{STUDIO_LOCATIONS}/Releases",
+    f"{STUDIO_MUSIC_SOUND}/Score",
+    f"{STUDIO_MUSIC_SOUND}/Source_Music",
+    f"{STUDIO_MUSIC_SOUND}/Cue_Sheets",
+    f"{STUDIO_MUSIC_SOUND}/ADR",
+    f"{STUDIO_ART_DEPARTMENT}/Props",
+    f"{STUDIO_ART_DEPARTMENT}/Sets",
+    f"{STUDIO_ART_DEPARTMENT}/Graphics",
+    f"{STUDIO_CLIENT_SERVICES}/Briefs",
+    f"{STUDIO_CLIENT_SERVICES}/Deliverables",
+    f"{STUDIO_CLIENT_SERVICES}/Feedback",
+    STUDIO_MODULES,
     f"{STUDIO_REFERENCE_LIBRARY}/Asset_Metadata",
     f"{STUDIO_REFERENCE_LIBRARY}/plates",
     f"{STUDIO_REFERENCE_LIBRARY}/assets",
@@ -156,6 +217,10 @@ def reference_path(*parts: str) -> Path:
 
 def magazine_path(*parts: str) -> Path:
     return studio_path(STUDIO_MAGAZINE, *parts)
+
+
+def legal_path(*parts: str) -> Path:
+    return studio_path(STUDIO_LEGAL, *parts)
 
 
 def count_prompt_files(root: Path, *, exclude_readme: bool = True) -> int:
