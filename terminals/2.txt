@@ -1,0 +1,19 @@
+---
+pid: 28756
+cwd: "C:\Users\NCG\Videos\Grok Projects"
+command: "python -c \"
+import sys; sys.path.insert(0, r'C:\\Users\\NCG\\Videos\\Grok Projects')
+from state_security_compliance_scraper import scrape_state, STATE_CONFIG
+for s in ['Arizona','Georgia','Kentucky']:
+ r=scrape_state(s, STATE_CONFIG[s])
+ print(s, '->', r)
+\""
+started_at: 2026-06-16T09:17:21.506Z
+running_for_ms: 31864998 
+---
+✅ Scraped Arizona via agency (https://www.azdps.gov/services/public-services-center/sgpi-licensing)
+Arizona -> state_security_compliance/Arizona_2026-06-16_04-17.txt
+✅ Scraped Georgia via regulatory_fallback (https://rules.sos.ga.gov/gac/509-2)
+Georgia -> state_security_compliance/Georgia_2026-06-16_04-17.txt
+✅ Scraped Kentucky via agency (https://www.kentucky.gov/Pages/home.aspx)
+Kentucky -> state_security_compliance/Kentucky_2026-06-16_04-17.txt

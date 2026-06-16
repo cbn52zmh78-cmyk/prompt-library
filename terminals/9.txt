@@ -1,0 +1,15 @@
+---
+pid: 2668
+cwd: "C:\Users\NCG\Videos\Grok Projects"
+command: "Set-Location \"C:\\Users\\NCG\\Videos\\Grok Projects\\Stonebridge\\Operations\"; python -m py_compile Scripts/regulatory_research_scraper.py; python Scripts/regulatory_research_scraper.py --once --state Michigan"
+started_at: 2026-06-16T20:45:10.544Z
+running_for_ms: 1949993  
+---
+ Stonebridge Regulatory Research Scraper
+
+ Stonebridge regulatory scan at 2026-06-16 15:45:11.540062
+⚠️  Michigan: automated scrape blocked — manual review stub saved
+
+✅ Scan complete: 0 scraped, 1 manual stubs, 0 failed.
+
+✅ Master_Index.md updated (50 states × 4 categories)

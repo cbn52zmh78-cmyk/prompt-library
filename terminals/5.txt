@@ -1,0 +1,43 @@
+---
+pid: 15436
+cwd: "C:\Users\NCG\Videos\Grok Projects"
+command: "python -c \"
+import requests,re
+h={'User-Agent':'Stonebridge-Compliance-Research/1.0'}
+for k,u in {
+ 'IN':'https://www.in.gov/pla/private-investigator-and-security-guard-licensing-board/',
+ 'NE':'https://ago.nebraska.gov/private-detective-agency-license',
+ 'OR':'https://www.oregon.gov/olcc/Pages/index.aspx',
+ 'ME':'https://www.maine.gov/pfr/professionallicensing/professions/private-investigators-licensing',
+ 'RI':'https://risp.ri.gov/divisions/administrative-services/bci/private-detectives.php',
+ 'WV':'https://www.wv.gov/private-investigators-security-guards',
+ 'MN':'https://dps.mn.gov/entity/poa/pages/private-detective-licensing.aspx',
+ 'NV':'https://nvpli.nv.gov/',
+ 'MS':'https://www.dps.ms.gov/divisions/alcohol-and-tobacco-enforcement',
+ 'NC':'https://www.nccrimecontrol.org/ppb/default.asp',
+ 'TX':'https://www.dps.texas.gov/section/private-security',
+ 'NY':'https://dos.ny.gov/licensing-services/private-investigators-watch-guard-patrol-agencies',
+}.items():
+    try:
+        r=requests.get(u,headers=h,timeout=20,allow_redirects=True)
+        m=re.search(r'<title[^>]*>([^<]+)', r.text, re.I)
+        t=m.group(1).strip()[:55] if m else ''
+        print(k,r.status_code,t)
+    except Exception as e:
+        print(k,'ERR')
+\""
+started_at: 2026-06-16T11:52:38.034Z
+running_for_ms: 22545002 
+---
+IN 404 PLA: Error - Page Not Found
+NE 404 404 - Page Not Found Error | Nebraska Attorney General 
+OR 200 Oregon Liquor and Cannabis Commission : Oregon Liquor a
+ME 404 Page not found | Office of Professional and Occupationa
+RI 404 Page not found | Rhode Island State Police
+WV 404 Page not found | State of West Virginia
+MN 404 404 | Minnesota Department of Public Safety
+NV ERR
+MS ERR
+NC ERR
+TX 200 Private Security | Department of Public Safety
+NY 404 Page not found | Department of State

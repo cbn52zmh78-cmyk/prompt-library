@@ -1,0 +1,16 @@
+---
+pid: 16008
+cwd: "C:\Users\NCG\Videos\Grok Projects"
+command: "rclone lsd gdrive:"
+started_at: 2026-06-16T18:16:03.152Z
+running_for_ms: 5280015  
+---
+           0 2026-06-16 13:12:29        -1 Grok_Projects
+           0 2026-06-10 08:06:08        -1 HISTORY
+           0 2026-06-10 08:21:40        -1 NEXUS
+           0 2026-06-10 07:47:20        -1 SCIENCE
+           0 2026-06-12 14:52:31        -1 SPIT - Hester References
+           0 2026-06-12 14:54:16        -1 SPIT_Character_Bibles
+           0 2026-06-10 07:45:00        -1 STUDIO
+           0 2026-06-16 03:57:56        -1 Scrapers
+           0 2026-05-29 14:08:51        -1 Stonebridge Operations

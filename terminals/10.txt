@@ -1,0 +1,85 @@
+---
+pid: 6272
+cwd: "C:\Users\NCG\Videos\Grok Projects"
+command: "cd 'C:\\Users\\NCG\\Videos\\Grok Projects\\Stonebridge\\Operations\\Scripts'
+$states = @('Wyoming','Ohio','New Hampshire','Alaska','Colorado','Georgia','Kansas','Massachusetts')
+foreach ($s in $states) {
+  Write-Host \"`n=== $s ===\" -ForegroundColor Cyan
+  python summarize_state_markdown.py --state $s --provider xai --force --delay 0.3
+  if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+}"
+started_at: 2026-06-16T21:02:53.198Z
+running_for_ms: 914999   
+---
+
+=== Wyoming ===
+Provider: xai | Model: grok-3-mini | Auth: ~/.grok/auth.json session
+Summarizing Wyoming...
+    • Security Licensing (667 chars)
+  ✅ Wyoming_Regulatory_Compliance_Summary.md
+
+Done: 1 summarized, 0 skipped → C:\Users\NCG\Videos\Grok Projects\Stonebridge\Operations\Compliance_Research\State_Markdown_Summarized
+Next: python generate_state_pdfs.py --from-summarized
+
+=== Ohio ===
+Provider: xai | Model: grok-3-mini | Auth: ~/.grok/auth.json session
+Summarizing Ohio...
+    • Security Licensing (8,577 chars)
+  ✅ Ohio_Regulatory_Compliance_Summary.md
+
+Done: 1 summarized, 0 skipped → C:\Users\NCG\Videos\Grok Projects\Stonebridge\Operations\Compliance_Research\State_Markdown_Summarized
+Next: python generate_state_pdfs.py --from-summarized
+
+=== New Hampshire ===
+Provider: xai | Model: grok-3-mini | Auth: ~/.grok/auth.json session
+Summarizing New Hampshire...
+    • Security Licensing (2,231 chars)
+  ✅ New_Hampshire_Regulatory_Compliance_Summary.md
+
+Done: 1 summarized, 0 skipped → C:\Users\NCG\Videos\Grok Projects\Stonebridge\Operations\Compliance_Research\State_Markdown_Summarized
+Next: python generate_state_pdfs.py --from-summarized
+
+=== Alaska ===
+Provider: xai | Model: grok-3-mini | Auth: ~/.grok/auth.json session
+Summarizing Alaska...
+    • Security Licensing (7,363 chars)
+  ✅ Alaska_Regulatory_Compliance_Summary.md
+
+Done: 1 summarized, 0 skipped → C:\Users\NCG\Videos\Grok Projects\Stonebridge\Operations\Compliance_Research\State_Markdown_Summarized
+Next: python generate_state_pdfs.py --from-summarized
+
+=== Colorado ===
+Provider: xai | Model: grok-3-mini | Auth: ~/.grok/auth.json session
+Summarizing Colorado...
+    • Security Licensing (3,217 chars)
+  ✅ Colorado_Regulatory_Compliance_Summary.md
+
+Done: 1 summarized, 0 skipped → C:\Users\NCG\Videos\Grok Projects\Stonebridge\Operations\Compliance_Research\State_Markdown_Summarized
+Next: python generate_state_pdfs.py --from-summarized
+
+=== Georgia ===
+Provider: xai | Model: grok-3-mini | Auth: ~/.grok/auth.json session
+Summarizing Georgia...
+    • Security Licensing (8,530 chars)
+  ✅ Georgia_Regulatory_Compliance_Summary.md
+
+Done: 1 summarized, 0 skipped → C:\Users\NCG\Videos\Grok Projects\Stonebridge\Operations\Compliance_Research\State_Markdown_Summarized
+Next: python generate_state_pdfs.py --from-summarized
+
+=== Kansas ===
+Provider: xai | Model: grok-3-mini | Auth: ~/.grok/auth.json session
+Summarizing Kansas...
+    • Security Licensing (7,327 chars)
+  ✅ Kansas_Regulatory_Compliance_Summary.md
+
+Done: 1 summarized, 0 skipped → C:\Users\NCG\Videos\Grok Projects\Stonebridge\Operations\Compliance_Research\State_Markdown_Summarized
+Next: python generate_state_pdfs.py --from-summarized
+
+=== Massachusetts ===
+Provider: xai | Model: grok-3-mini | Auth: ~/.grok/auth.json session
+Summarizing Massachusetts...
+    • Security Licensing (8,508 chars)
+  ✅ Massachusetts_Regulatory_Compliance_Summary.md
+
+Done: 1 summarized, 0 skipped → C:\Users\NCG\Videos\Grok Projects\Stonebridge\Operations\Compliance_Research\State_Markdown_Summarized
+Next: python generate_state_pdfs.py --from-summarized

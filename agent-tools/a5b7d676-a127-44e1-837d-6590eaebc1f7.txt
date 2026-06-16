@@ -1,0 +1,560 @@
+Initialized empty Git repository in C:/Users/NCG/Videos/Grok Projects/Stonebridge/.git/
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Compliance_Research/deep_research_passes_2026-06-16.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Compliance_Research/security_pipeline_deep_dive_research_log.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/bootstrap_structure.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/build_regulatory_targets.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/compliance_paths.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/generate_state_markdown_raw.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/generate_state_pdfs.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/llm_client.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/organize_compliance_research.ps1', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/organize_compliance_research.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/organize_compliance_research.sh', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/regulatory_research_scraper.py', LF will be replaced by CRLF the next time Git touches it
+
+warning: in the working copy of 'Operations/Scripts/regulatory_targets_scraper.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/setup_stonebridge.ps1', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/setup_stonebridge.sh', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/state_regulatory_urls.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/summarize_state_markdown.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/security_licensing_research_2026.md', LF will be replaced by CRLF the next time Git touches it
+[main (root-commit) 9d05145] Add local Stonebridge workspace: Deliverables, Operations compliance pipeline, and folder structure
+ 532 files changed, 81348 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 Deliverables/2026-06-16_Acme_Security_Roster_System/.gitignore
+ create mode 100644 Deliverables/2026-06-16_Acme_Security_Roster_System/README.md
+ create mode 100644 Deliverables/2026-06-16_Acme_Security_Roster_System/SOPs/.gitkeep
+ create mode 100644 Deliverables/2026-06-16_Acme_Security_Roster_System/TASKS.md
+ create mode 100644 Deliverables/2026-06-16_Acme_Security_Roster_System/compliance/.gitkeep
+ create mode 100644 Deliverables/2026-06-16_Acme_Security_Roster_System/contracts/.gitkeep
+ create mode 100644 Deliverables/2026-06-16_Acme_Security_Roster_System/deliverables/.gitkeep
+ create mode 100644 Deliverables/2026-06-16_Acme_Security_Roster_System/logs/.gitkeep
+ create mode 100644 Deliverables/2026-06-16_Acme_Security_Roster_System/rosters/.gitkeep
+ create mode 100644 Deliverables/2026-06-16_Acme_Security_Roster_System/templates/.gitkeep
+ create mode 100644 Operations/Client_Deliverables/.gitkeep
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Alabama_Building_Codes/2026-06-16_0443.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Alabama_Building_Codes/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/ICC_Building_Codes/2026-06-16_0425.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/ICC_Building_Codes/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Permits_Inspections/Pennsylvania_UCC/2026-06-16_0425.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Permits_Inspections/Pennsylvania_UCC/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Processing/FDA_Food_Safety/2026-06-16_0424.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Processing/FDA_Food_Safety/2026-06-16_0425.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Processing/FDA_Food_Safety/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Alabama_Food_Safety/2026-06-16_0443.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Alabama_Food_Safety/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/FDA_Food_Code/2026-06-16_0424.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/FDA_Food_Code/2026-06-16_0425.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/FDA_Food_Code/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Alabama_Real_Estate_Licensing/2026-06-16_0443.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Alabama_Real_Estate_Licensing/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Georgia_Real_Estate_Commission/2026-06-16_0425.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Georgia_Real_Estate_Commission/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Pennsylvania_Real_Estate_Licensing/2026-06-16_0425.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Pennsylvania_Real_Estate_Licensing/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Federal/CISA_Federal_Physical_Security/2026-06-16_0425.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Federal/CISA_Federal_Physical_Security/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Alabama_Security_Licensing/2026-06-16_0444.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Alabama_Security_Licensing/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/California_BSIS_Security/2026-06-16_0425.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/California_BSIS_Security/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Alabama/Building_Construction/2026-06-16_0443.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Alabama/Building_Construction/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Alabama/Food_Safety/2026-06-16_0443.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Alabama/Food_Safety/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Alabama/Real_Estate/2026-06-16_0443.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Alabama/Real_Estate/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Alabama/Security_Licensing/2026-06-16_0444.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Alabama/Security_Licensing/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Alabama/Security_Licensing/latest_Alabama_2026-06-16_04-14.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Alabama/Security_Licensing/latest_Alabama_2026-06-16_07-10.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Alabama/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Alabama/Security_Licensing/scrape_2026-06-16_07-10.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Alaska/Security_Licensing/latest_Alaska_2026-06-16_04-14.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Alaska/Security_Licensing/latest_Alaska_2026-06-16_07-10.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Alaska/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Alaska/Security_Licensing/scrape_2026-06-16_07-10.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arizona/Security_Licensing/latest_Arizona_2026-06-16_04-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arizona/Security_Licensing/latest_Arizona_2026-06-16_07-10.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arizona/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arizona/Security_Licensing/scrape_2026-06-16_07-10.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arkansas/Security_Licensing/latest_Arkansas_2026-06-16_04-02.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arkansas/Security_Licensing/latest_Arkansas_2026-06-16_07-10.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arkansas/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arkansas/Security_Licensing/scrape_2026-06-16_07-10.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Security_Licensing/latest_California_2026-06-16_04-02.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Security_Licensing/latest_California_2026-06-16_07-10.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Security_Licensing/scrape_2026-06-16_07-10.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Colorado/Security_Licensing/latest_Colorado_2026-06-16_04-14.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Colorado/Security_Licensing/latest_Colorado_2026-06-16_07-11.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Colorado/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Colorado/Security_Licensing/scrape_2026-06-16_07-11.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Connecticut/Security_Licensing/latest_Connecticut_2026-06-16_04-02.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Connecticut/Security_Licensing/latest_Connecticut_2026-06-16_07-11.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Connecticut/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Connecticut/Security_Licensing/scrape_2026-06-16_07-11.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Security_Licensing/latest_Delaware_2026-06-16_04-14.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Security_Licensing/latest_Delaware_2026-06-16_07-11.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Security_Licensing/scrape_2026-06-16_07-11.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Security_Licensing/latest_Florida_2026-06-16_04-02.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Security_Licensing/latest_Florida_2026-06-16_07-11.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Security_Licensing/scrape_2026-06-16_07-11.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Georgia/Security_Licensing/latest_Georgia_2026-06-16_04-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Georgia/Security_Licensing/latest_Georgia_2026-06-16_07-11.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Georgia/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Georgia/Security_Licensing/scrape_2026-06-16_07-11.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Hawaii/Security_Licensing/latest_Hawaii_2026-06-16_04-02.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Hawaii/Security_Licensing/latest_Hawaii_2026-06-16_07-12.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Hawaii/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Hawaii/Security_Licensing/scrape_2026-06-16_07-12.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Idaho/Security_Licensing/latest_Idaho_2026-06-16_04-02.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Idaho/Security_Licensing/latest_Idaho_2026-06-16_07-12.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Idaho/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Idaho/Security_Licensing/scrape_2026-06-16_07-12.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Illinois/Security_Licensing/latest_Illinois_2026-06-16_04-02.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Illinois/Security_Licensing/latest_Illinois_2026-06-16_07-12.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Illinois/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Illinois/Security_Licensing/scrape_2026-06-16_07-12.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Indiana/Security_Licensing/latest_Indiana_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Indiana/Security_Licensing/latest_Indiana_2026-06-16_07-12.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Indiana/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Indiana/Security_Licensing/scrape_2026-06-16_07-12.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Iowa/Security_Licensing/latest_Iowa_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Iowa/Security_Licensing/latest_Iowa_2026-06-16_07-12.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Iowa/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Iowa/Security_Licensing/scrape_2026-06-16_07-12.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Kansas/Security_Licensing/latest_Kansas_2026-06-16_04-14.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Kansas/Security_Licensing/latest_Kansas_2026-06-16_07-12.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Kansas/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Kansas/Security_Licensing/scrape_2026-06-16_07-12.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Kentucky/Security_Licensing/latest_Kentucky_2026-06-16_04-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Kentucky/Security_Licensing/latest_Kentucky_2026-06-16_07-13.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Kentucky/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Kentucky/Security_Licensing/scrape_2026-06-16_07-13.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Louisiana/Security_Licensing/latest_Louisiana_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Louisiana/Security_Licensing/latest_Louisiana_2026-06-16_07-13.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Louisiana/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Louisiana/Security_Licensing/scrape_2026-06-16_07-13.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maine/Security_Licensing/latest_Maine_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maine/Security_Licensing/latest_Maine_2026-06-16_07-13.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maine/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maine/Security_Licensing/scrape_2026-06-16_07-13.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maryland/Security_Licensing/latest_Maryland_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maryland/Security_Licensing/latest_Maryland_2026-06-16_07-13.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maryland/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maryland/Security_Licensing/scrape_2026-06-16_07-13.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Massachusetts/Security_Licensing/latest_Massachusetts_2026-06-16_04-15.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Massachusetts/Security_Licensing/latest_Massachusetts_2026-06-16_07-13.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Massachusetts/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Massachusetts/Security_Licensing/scrape_2026-06-16_07-13.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Michigan/Security_Licensing/MANUAL_REVIEW_2026-06-16_07-14.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Michigan/Security_Licensing/latest_Michigan_MANUAL_REVIEW_2026-06-16_04-20.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Michigan/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Minnesota/Security_Licensing/latest_Minnesota_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Minnesota/Security_Licensing/latest_Minnesota_2026-06-16_07-14.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Minnesota/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Minnesota/Security_Licensing/scrape_2026-06-16_07-14.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Mississippi/Security_Licensing/latest_Mississippi_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Mississippi/Security_Licensing/latest_Mississippi_2026-06-16_07-14.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Mississippi/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Mississippi/Security_Licensing/scrape_2026-06-16_07-14.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Missouri/Security_Licensing/latest_Missouri_2026-06-16_04-15.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Missouri/Security_Licensing/latest_Missouri_2026-06-16_07-14.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Missouri/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Missouri/Security_Licensing/scrape_2026-06-16_07-14.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Security_Licensing/latest_Montana_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Security_Licensing/latest_Montana_2026-06-16_07-15.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Security_Licensing/scrape_2026-06-16_07-15.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nebraska/Security_Licensing/latest_Nebraska_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nebraska/Security_Licensing/latest_Nebraska_2026-06-16_07-15.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nebraska/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nebraska/Security_Licensing/scrape_2026-06-16_07-15.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nevada/Security_Licensing/latest_Nevada_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nevada/Security_Licensing/latest_Nevada_2026-06-16_07-15.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nevada/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nevada/Security_Licensing/scrape_2026-06-16_07-15.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Hampshire/Security_Licensing/latest_New_Hampshire_2026-06-16_04-16.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Hampshire/Security_Licensing/latest_New_Hampshire_2026-06-16_07-15.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Hampshire/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Hampshire/Security_Licensing/scrape_2026-06-16_07-15.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Jersey/Security_Licensing/latest_New_Jersey_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Jersey/Security_Licensing/latest_New_Jersey_2026-06-16_07-16.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Jersey/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Jersey/Security_Licensing/scrape_2026-06-16_07-16.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Mexico/Security_Licensing/latest_New_Mexico_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Mexico/Security_Licensing/latest_New_Mexico_2026-06-16_07-16.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Mexico/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Mexico/Security_Licensing/scrape_2026-06-16_07-16.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New York/Security_Licensing/latest_New_York_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New York/Security_Licensing/latest_New_York_2026-06-16_07-16.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New York/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New York/Security_Licensing/scrape_2026-06-16_07-16.txt
+ create mode 100644 Operations/Compliance_Research/By_State/North Carolina/Security_Licensing/latest_North_Carolina_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/By_State/North Carolina/Security_Licensing/latest_North_Carolina_2026-06-16_07-16.txt
+ create mode 100644 Operations/Compliance_Research/By_State/North Carolina/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/North Carolina/Security_Licensing/scrape_2026-06-16_07-16.txt
+ create mode 100644 Operations/Compliance_Research/By_State/North Dakota/Security_Licensing/latest_North_Dakota_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/By_State/North Dakota/Security_Licensing/latest_North_Dakota_2026-06-16_07-16.txt
+ create mode 100644 Operations/Compliance_Research/By_State/North Dakota/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/North Dakota/Security_Licensing/scrape_2026-06-16_07-16.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Ohio/Security_Licensing/latest_Ohio_2026-06-16_04-16.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Ohio/Security_Licensing/latest_Ohio_2026-06-16_07-16.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Ohio/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Ohio/Security_Licensing/scrape_2026-06-16_07-16.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oklahoma/Security_Licensing/latest_Oklahoma_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oklahoma/Security_Licensing/latest_Oklahoma_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oklahoma/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oklahoma/Security_Licensing/scrape_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oregon/Security_Licensing/latest_Oregon_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oregon/Security_Licensing/latest_Oregon_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oregon/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oregon/Security_Licensing/scrape_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Pennsylvania/Security_Licensing/latest_Pennsylvania_2026-06-16_06-56.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Pennsylvania/Security_Licensing/latest_Pennsylvania_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Pennsylvania/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Pennsylvania/Security_Licensing/scrape_2026-06-16_06-56.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Pennsylvania/Security_Licensing/scrape_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Rhode Island/Security_Licensing/latest_Rhode_Island_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Rhode Island/Security_Licensing/latest_Rhode_Island_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Rhode Island/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Rhode Island/Security_Licensing/scrape_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Carolina/Security_Licensing/latest_South_Carolina_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Carolina/Security_Licensing/latest_South_Carolina_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Carolina/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Carolina/Security_Licensing/scrape_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Dakota/Security_Licensing/latest_South_Dakota_2026-06-16_04-16.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Dakota/Security_Licensing/latest_South_Dakota_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Dakota/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Dakota/Security_Licensing/scrape_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Tennessee/Security_Licensing/latest_Tennessee_2026-06-16_04-16.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Tennessee/Security_Licensing/latest_Tennessee_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Tennessee/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Tennessee/Security_Licensing/scrape_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Texas/Security_Licensing/latest_Texas_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Texas/Security_Licensing/latest_Texas_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Texas/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Texas/Security_Licensing/scrape_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Utah/Security_Licensing/latest_Utah_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Utah/Security_Licensing/latest_Utah_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Utah/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Utah/Security_Licensing/scrape_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Vermont/Security_Licensing/latest_Vermont_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Vermont/Security_Licensing/latest_Vermont_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Vermont/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Vermont/Security_Licensing/scrape_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Virginia/Security_Licensing/latest_Virginia_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Virginia/Security_Licensing/latest_Virginia_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Virginia/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Virginia/Security_Licensing/scrape_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Washington/Security_Licensing/latest_Washington_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Washington/Security_Licensing/latest_Washington_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Washington/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Washington/Security_Licensing/scrape_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/West Virginia/Security_Licensing/latest_West_Virginia_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/By_State/West Virginia/Security_Licensing/latest_West_Virginia_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/West Virginia/Security_Licensing/latest_West_Virginia_2026-06-16_07-34.txt
+ create mode 100644 Operations/Compliance_Research/By_State/West Virginia/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/West Virginia/Security_Licensing/scrape_2026-06-16_07-17.txt
+ create mode 100644 Operations/Compliance_Research/By_State/West Virginia/Security_Licensing/scrape_2026-06-16_07-34.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Wisconsin/Security_Licensing/latest_Wisconsin_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Wisconsin/Security_Licensing/latest_Wisconsin_2026-06-16_07-18.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Wisconsin/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Wisconsin/Security_Licensing/scrape_2026-06-16_07-18.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Wyoming/Security_Licensing/latest_Wyoming_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Wyoming/Security_Licensing/latest_Wyoming_2026-06-16_07-18.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Wyoming/Security_Licensing/latest_scrape.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Wyoming/Security_Licensing/scrape_2026-06-16_07-18.txt
+ create mode 100644 Operations/Compliance_Research/Master_Index.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Alabama_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Alaska_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Arizona_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Arkansas_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/California_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Colorado_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Connecticut_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Delaware_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Florida_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Georgia_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Hawaii_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Idaho_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Illinois_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Indiana_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Iowa_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Kansas_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Kentucky_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Louisiana_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Maine_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Maryland_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Massachusetts_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Michigan_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Minnesota_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Mississippi_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Missouri_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Montana_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Nebraska_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Nevada_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/New Hampshire_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/New Jersey_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/New Mexico_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/New York_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/North Carolina_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/North Dakota_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Ohio_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Oklahoma_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Oregon_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Pennsylvania_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Rhode Island_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/South Carolina_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/South Dakota_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Tennessee_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Texas_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Utah_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Vermont_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Virginia_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Washington_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/West Virginia_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Wisconsin_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Raw/Wyoming_Regulatory_Compliance_Raw.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Alabama_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Alaska_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Arizona_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Arkansas_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/California_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Colorado_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Connecticut_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Delaware_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Florida_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Georgia_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Hawaii_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Idaho_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Illinois_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Indiana_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Iowa_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Kansas_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Kentucky_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Louisiana_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Maine_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Maryland_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Massachusetts_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Michigan_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Minnesota_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Mississippi_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Missouri_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Montana_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Nebraska_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Nevada_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/New_Hampshire_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/New_Jersey_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/New_Mexico_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/New_York_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/North_Carolina_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/North_Dakota_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Ohio_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Oklahoma_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Oregon_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Pennsylvania_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Rhode_Island_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/South_Carolina_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/South_Dakota_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Tennessee_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Texas_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Utah_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Vermont_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Virginia_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Washington_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/West_Virginia_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Wisconsin_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_Markdown_Summarized/Wyoming_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Alabama_Regulatory_Compliance_Summary.html
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Alabama_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Alabama_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Alaska_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Alaska_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Arizona_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Arizona_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Arkansas_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Arkansas_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/California_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/California_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Colorado_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Colorado_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Connecticut_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Connecticut_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Delaware_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Delaware_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Florida_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Florida_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Georgia_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Georgia_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Hawaii_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Hawaii_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Idaho_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Idaho_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Illinois_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Illinois_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Indiana_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Indiana_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Iowa_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Iowa_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Kansas_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Kansas_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Kentucky_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Kentucky_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Louisiana_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Louisiana_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Maine_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Maine_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Maryland_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Maryland_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Massachusetts_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Massachusetts_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Michigan_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Michigan_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Minnesota_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Minnesota_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Mississippi_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Mississippi_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Missouri_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Missouri_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Montana_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Montana_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Nebraska_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Nebraska_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Nevada_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Nevada_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/New_Hampshire_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/New_Hampshire_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/New_Jersey_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/New_Jersey_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/New_Mexico_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/New_Mexico_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/New_York_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/New_York_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/North_Carolina_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/North_Carolina_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/North_Dakota_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/North_Dakota_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Ohio_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Ohio_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Oklahoma_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Oklahoma_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Oregon_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Oregon_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Pennsylvania_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Pennsylvania_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Rhode_Island_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Rhode_Island_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/South_Carolina_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/South_Carolina_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/South_Dakota_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/South_Dakota_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Tennessee_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Tennessee_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Texas_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Texas_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Utah_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Utah_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Vermont_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Vermont_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Virginia_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Virginia_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Washington_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Washington_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/West_Virginia_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/West_Virginia_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Wisconsin_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Wisconsin_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Wyoming_Regulatory_Compliance_Summary.md
+ create mode 100644 Operations/Compliance_Research/State_PDFs/Wyoming_Regulatory_Compliance_Summary.pdf
+ create mode 100644 Operations/Compliance_Research/compliance_research/FDA Food Safety Updates_2026-06-16_03-59.txt
+ create mode 100644 Operations/Compliance_Research/compliance_research/Federal Security Guidelines_2026-06-16_03-59.txt
+ create mode 100644 Operations/Compliance_Research/compliance_research/Georgia Real Estate Regulations_2026-06-16_03-59.txt
+ create mode 100644 Operations/Compliance_Research/compliance_research/Pennsylvania Security Laws_2026-06-16_03-58.txt
+ create mode 100644 Operations/Compliance_Research/deep_research_passes_2026-06-16.md
+ create mode 100644 Operations/Compliance_Research/security_pipeline_deep_dive_research_log.md
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Alabama_2026-06-16_04-14.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Alaska_2026-06-16_04-14.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Arizona_2026-06-16_04-17.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Arizona_MANUAL_REVIEW_2026-06-16_04-14.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Arizona_MANUAL_REVIEW_2026-06-16_04-16.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Arkansas_2026-06-16_04-02.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/California_2026-06-16_04-02.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Colorado_2026-06-16_04-14.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Connecticut_2026-06-16_04-02.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Delaware_2026-06-16_04-14.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Florida_2026-06-16_04-02.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Georgia_2026-06-16_04-17.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Georgia_MANUAL_REVIEW_2026-06-16_04-14.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Georgia_MANUAL_REVIEW_2026-06-16_04-16.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Hawaii_2026-06-16_04-02.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Idaho_2026-06-16_04-02.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Illinois_2026-06-16_04-02.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Indiana_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Iowa_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Kansas_2026-06-16_04-14.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Kentucky_2026-06-16_04-17.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Kentucky_MANUAL_REVIEW_2026-06-16_04-14.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Kentucky_MANUAL_REVIEW_2026-06-16_04-16.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Louisiana_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Maine_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Maryland_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Massachusetts_2026-06-16_04-15.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Michigan_MANUAL_REVIEW_2026-06-16_04-15.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Michigan_MANUAL_REVIEW_2026-06-16_04-20.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Minnesota_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Mississippi_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Missouri_2026-06-16_04-15.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Montana_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Nebraska_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Nevada_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/New_Hampshire_2026-06-16_04-16.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/New_Jersey_2026-06-16_04-03.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/New_Mexico_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/New_York_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/North_Carolina_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/North_Dakota_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Ohio_2026-06-16_04-16.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Oklahoma_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Oregon_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Pennsylvania_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Rhode_Island_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/South_Carolina_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/South_Dakota_2026-06-16_04-16.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Tennessee_2026-06-16_04-16.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Texas_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Utah_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Vermont_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Virginia_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Washington_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/West_Virginia_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Wisconsin_2026-06-16_04-04.txt
+ create mode 100644 Operations/Compliance_Research/state_security_compliance/Wyoming_2026-06-16_04-04.txt
+ create mode 100644 Operations/SOPs/.gitkeep
+ create mode 100644 Operations/Scripts/bootstrap_structure.py
+ create mode 100644 Operations/Scripts/build_regulatory_targets.py
+ create mode 100644 Operations/Scripts/compliance_paths.py
+ create mode 100644 Operations/Scripts/generate_state_markdown_raw.py
+ create mode 100644 Operations/Scripts/generate_state_pdfs.py
+ create mode 100644 Operations/Scripts/llm_client.py
+ create mode 100644 Operations/Scripts/organize_compliance_research.ps1
+ create mode 100644 Operations/Scripts/organize_compliance_research.py
+ create mode 100644 Operations/Scripts/organize_compliance_research.sh
+ create mode 100644 Operations/Scripts/regulatory_research_scraper.py
+ create mode 100644 Operations/Scripts/regulatory_targets.json
+ create mode 100644 Operations/Scripts/regulatory_targets_scraper.py
+ create mode 100644 Operations/Scripts/setup_stonebridge.ps1
+ create mode 100644 Operations/Scripts/setup_stonebridge.sh
+ create mode 100644 Operations/Scripts/state_regulatory_urls.py
+ create mode 100644 Operations/Scripts/summarize_state_markdown.py
+ create mode 100644 Operations/Templates/.gitkeep
+ create mode 100644 Operations/security_licensing_research_2026.md
+Lines Words Characters Property
+----- ----- ---------- --------
+  532                          
+
+
