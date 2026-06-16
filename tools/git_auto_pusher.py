@@ -27,6 +27,28 @@ def run_git(args, cwd):
             print(f"[Git Error] {e.stderr.strip()}")
         return None
 
+def list_untracked(repo_path):
+    """Return untracked, non-ignored paths relative to repo root."""
+    output = run_git(["ls-files", "--others", "--exclude-standard"], repo_path)
+    if not output:
+        return []
+    return [line for line in output.splitlines() if line.strip()]
+
+def stage_all_changes(repo_path):
+    """Stage modified, deleted, and untracked files."""
+    untracked = list_untracked(repo_path)
+    if untracked:
+        print(f"   Untracked files ({len(untracked)}):")
+        for path in untracked[:15]:
+            print(f"     + {path}")
+        if len(untracked) > 15:
+            print(f"     ... and {len(untracked) - 15} more")
+
+    if not run_git(["add", "-A", "--", "."], repo_path):
+        return False
+
+    return True
+
 def auto_commit_push(repo_path, interval_minutes):
     print(f" Git Auto Pusher started")
     print(f"   Repo: {repo_path}")
@@ -40,18 +62,25 @@ def auto_commit_push(repo_path, interval_minutes):
             
             if status:
                 print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] Changes detected. Committing...")
-                
-                # Stage everything
-                run_git(["add", "-A"], repo_path)
-                
-                # Commit with timestamp
+
+                if not stage_all_changes(repo_path):
+                    print("   Staging failed. Retrying next interval.\n")
+                    time.sleep(interval_minutes * 60)
+                    continue
+
                 commit_msg = f"Auto commit: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
-                run_git(["commit", "-m", commit_msg], repo_path)
-                
-                # Push
+                if not run_git(["commit", "-m", commit_msg], repo_path):
+                    print("   Commit failed. Retrying next interval.\n")
+                    time.sleep(interval_minutes * 60)
+                    continue
+
                 print("   Pushing to remote...")
                 push_output = run_git(["push"], repo_path)
-                
+                if push_output is None:
+                    print("   Push failed. Commit is local only.\n")
+                    time.sleep(interval_minutes * 60)
+                    continue
+
                 if push_output:
                     print(f"   {push_output}")
                 print("✅ Commit + Push complete.\n")
