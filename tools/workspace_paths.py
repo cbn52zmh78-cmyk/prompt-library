@@ -44,6 +44,7 @@ STUDIO_PRODUCERS_OFFICE = "Producers_Office"
 STUDIO_PIPELINE = "Pipeline"
 STUDIO_PRODUCTIONS = "Productions"
 STUDIO_CAST = "Cast"
+STUDIO_MAGAZINE = "MAGAZINE"
 STUDIO_REFERENCE_LIBRARY = "Reference_Library"
 STUDIO_PROMPT_LIBRARY = "Prompt_Library"
 STUDIO_DEVELOPMENT = "Development"
@@ -73,6 +74,14 @@ STUDIO_FOLDERS: tuple[str, ...] = (
     f"{STUDIO_PRODUCTIONS}/GFE",
     f"{STUDIO_PRODUCTIONS}/Editorial",
     f"{STUDIO_PRODUCTIONS}/_Scene_Production_Kit",
+    f"{STUDIO_MAGAZINE}/Editorial/Models",
+    f"{STUDIO_MAGAZINE}/Film/Features",
+    f"{STUDIO_MAGAZINE}/Video/Features",
+    f"{STUDIO_MAGAZINE}/Runway/Shows",
+    f"{STUDIO_MAGAZINE}/Promos/Trailers",
+    f"{STUDIO_MAGAZINE}/Profiles/Actors",
+    f"{STUDIO_MAGAZINE}/History/Features",
+    f"{STUDIO_MAGAZINE}/_Catalog",
     "renders/approved",
     "renders/review",
     "renders/rejected",
@@ -137,6 +146,10 @@ def producers_path(*parts: str) -> Path:
 
 def reference_path(*parts: str) -> Path:
     return studio_path(STUDIO_REFERENCE_LIBRARY, *parts)
+
+
+def magazine_path(*parts: str) -> Path:
+    return studio_path(STUDIO_MAGAZINE, *parts)
 
 
 def count_prompt_files(root: Path, *, exclude_readme: bool = True) -> int:
