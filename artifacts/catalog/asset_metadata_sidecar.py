@@ -3,17 +3,18 @@
 Asset Metadata Sidecar Generator v1.0 — Director | New Tool
 Creates .json sidecar metadata files for generated images/assets. Fully general.
 """
-
-import json
-from datetime import datetime
-from pathlib import Path
-
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import bootstrap  # noqa: F401
-from studio_paths import studio_path
+from lib.bootstrap import ensure_paths
+ensure_paths()
+from lib.studio_paths import studio_path
+
+import json
+from datetime import datetime
+
+
 
 class AssetMetadataSidecar:
     def __init__(self, metadata_dir=None):

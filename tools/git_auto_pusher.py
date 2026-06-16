@@ -30,7 +30,7 @@ def run_git(args, cwd):
 def list_untracked(repo_path):
     """Return untracked, non-ignored paths relative to repo root."""
     output = run_git(["ls-files", "--others", "--exclude-standard"], repo_path)
-    if not output:
+    if output is None or not output:
         return []
     return [line for line in output.splitlines() if line.strip()]
 
@@ -44,10 +44,7 @@ def stage_all_changes(repo_path):
         if len(untracked) > 15:
             print(f"     ... and {len(untracked) - 15} more")
 
-    if not run_git(["add", "-A", "--", "."], repo_path):
-        return False
-
-    return True
+    return run_git(["add", "-A", "--", "."], repo_path) is not None
 
 def auto_commit_push(repo_path, interval_minutes):
     print(f" Git Auto Pusher started")
@@ -59,7 +56,11 @@ def auto_commit_push(repo_path, interval_minutes):
         try:
             # Check for changes
             status = run_git(["status", "--porcelain"], repo_path)
-            
+            if status is None:
+                print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] Git status failed. Retrying...\n")
+                time.sleep(60)
+                continue
+
             if status:
                 print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] Changes detected. Committing...")
 
@@ -69,7 +70,7 @@ def auto_commit_push(repo_path, interval_minutes):
                     continue
 
                 commit_msg = f"Auto commit: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
-                if not run_git(["commit", "-m", commit_msg], repo_path):
+                if run_git(["commit", "-m", commit_msg], repo_path) is None:
                     print("   Commit failed. Retrying next interval.\n")
                     time.sleep(interval_minutes * 60)
                     continue
@@ -106,8 +107,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "--interval", 
         type=int, 
-        default=15,
-        help="Minutes between checks (default: 15)"
+        default=5,
+        help="Minutes between checks (default: 5)"
     )
     args = parser.parse_args()
     

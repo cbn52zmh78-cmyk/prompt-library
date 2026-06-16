@@ -3,16 +3,18 @@
 Grok Video Prompt Pack Exporter v1.0 — Director | New Tool
 Bundles positive + negative + settings into a clean export pack for Grok video. Fully general.
 """
-
-import json
-from datetime import datetime
-
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import bootstrap  # noqa: F401
-from studio_paths import studio_path
+from lib.bootstrap import ensure_paths
+ensure_paths()
+from lib.studio_paths import studio_path
+
+import json
+from datetime import datetime
+
+
 
 class GrokVideoPackExporter:
     def __init__(self, output_dir=None):

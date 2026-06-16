@@ -3,13 +3,13 @@
 Physics & Lighting Reference Injector v1.0 — Director | New Tool
 Quick injection of high-quality physics, lighting, and camera language blocks.
 """
-
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import bootstrap  # noqa: F401
-from studio_paths import studio_path
+from lib.bootstrap import ensure_paths
+ensure_paths()
+from lib.studio_paths import studio_path
 
 BLOCKS = {
     "fabric_physics": "natural fabric drape, realistic cloth physics, subtle movement and tension in fabric, micro-folds and natural settling",

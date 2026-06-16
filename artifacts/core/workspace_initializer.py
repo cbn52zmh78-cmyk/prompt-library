@@ -3,13 +3,13 @@
 Workspace Initializer v1.1 — Director | New Tool
 Sets up the complete recommended folder structure under Grok Projects/Studio.
 """
-
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import bootstrap  # noqa: F401
-from studio_paths import STUDIO_DIR
+from lib.bootstrap import ensure_paths
+ensure_paths()
+from lib.studio_paths import STUDIO_DIR
 
 FOLDERS = (
     "Model_Profiles",

@@ -3,13 +3,15 @@
 Master CLI Launcher v1.2 — Director | New Tool
 Single entry point to discover and run all tools in this project.
 """
-
-import subprocess
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import bootstrap  # noqa: F401
+from lib.bootstrap import ensure_paths
+ensure_paths()
+
+import subprocess
+
 
 ARTIFACTS_DIR = Path(__file__).resolve().parents[1]
 

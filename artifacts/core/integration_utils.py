@@ -3,15 +3,17 @@
 Integration Utils v1.0 — Director | Shared Helper
 Common functions for profile loading, prompt injection, and logging.
 """
-
 import sys
-from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "profile"))
-import bootstrap  # noqa: F401
-from studio_paths import studio_path
+from lib.bootstrap import ensure_paths
+ensure_paths()
+from lib.studio_paths import studio_path
+
+from datetime import datetime
+
+
 
 try:
     from model_profile_manager import ModelProfileManager

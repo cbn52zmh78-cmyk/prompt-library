@@ -3,15 +3,18 @@
 Canon & Bible Version Manager v1.0 — Director | New Tool
 Versioning, locking, notes, and diffing for story bibles and canons.
 """
-
-import difflib
 import sys
-from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import bootstrap  # noqa: F401
-from studio_paths import studio_path
+from lib.bootstrap import ensure_paths
+ensure_paths()
+from lib.studio_paths import studio_path
+
+import difflib
+from datetime import datetime
+
+
 
 
 class CanonBibleManager:

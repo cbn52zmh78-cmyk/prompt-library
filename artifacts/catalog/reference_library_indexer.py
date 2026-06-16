@@ -3,17 +3,19 @@
 Reference Library Indexer & Suggester v1.0 — Director | New Tool
 Indexes reference PDFs/images and suggests relevant ones for prompts. Fully general.
 """
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from lib.bootstrap import ensure_paths
+ensure_paths()
+from lib.studio_paths import studio_path
 
 import json
 import os
 from datetime import datetime
 
-import sys
-from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import bootstrap  # noqa: F401
-from studio_paths import studio_path
 
 class ReferenceLibraryIndexer:
     def __init__(self, refs_dir=None, index_file=None):

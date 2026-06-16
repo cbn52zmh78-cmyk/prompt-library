@@ -3,16 +3,18 @@
 Batch Prompt Generator v1.1 — Director | Now integrates with Model Profiles
 Can pull subject data from a saved profile in Model Profile Manager.
 """
-
-import json
 import sys
-from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "profile"))
-import bootstrap  # noqa: F401
-from studio_paths import studio_path
+from lib.bootstrap import ensure_paths
+ensure_paths()
+from lib.studio_paths import studio_path
+
+import json
+from datetime import datetime
+
+
 
 try:
     from model_profile_manager import ModelProfileManager

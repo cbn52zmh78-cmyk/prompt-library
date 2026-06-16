@@ -3,15 +3,17 @@
 Model Profile Manager v1.2 — Director | Integration-Ready
 Clean data export methods so other tools can consume profiles.
 """
-
-import json
 import sys
-from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import bootstrap  # noqa: F401
-from studio_paths import studio_path
+from lib.bootstrap import ensure_paths
+ensure_paths()
+from lib.studio_paths import studio_path
+
+import json
+from datetime import datetime
+
 
 
 class ModelProfileManager:

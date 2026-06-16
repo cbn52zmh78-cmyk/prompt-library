@@ -3,17 +3,18 @@
 Content Rating & Compliance Guard v1.2 — Director | Fully General
 Official CARA/MPA theatrical standards. No model-specific defaults.
 """
-
-import argparse
-from datetime import datetime
-from pathlib import Path
-
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import bootstrap  # noqa: F401
-from studio_paths import studio_path
+from lib.bootstrap import ensure_paths
+ensure_paths()
+from lib.studio_paths import studio_path
+
+import argparse
+from datetime import datetime
+
+
 
 DEFAULT_REPORTS_DIR = studio_path("Compliance_Reports")
 DEFAULT_SHOTLISTS_ROOT = studio_path("Magazine_Assets", "ShotLists")

@@ -3,16 +3,18 @@
 Prompt Version Control v1.0 — Director | New Tool
 Local versioning + unified diff for prompts. Fully general.
 """
-
-import difflib
-from datetime import datetime
-
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import bootstrap  # noqa: F401
-from studio_paths import studio_path
+from lib.bootstrap import ensure_paths
+ensure_paths()
+from lib.studio_paths import studio_path
+
+import difflib
+from datetime import datetime
+
+
 
 class PromptVersionControl:
     def __init__(self, base_dir=None):

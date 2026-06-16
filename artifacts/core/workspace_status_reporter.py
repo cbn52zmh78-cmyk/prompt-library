@@ -3,14 +3,17 @@
 Workspace Status Reporter v1.0 — Director | New Tool
 Shows counts and health of all major Studio folders.
 """
-
 import sys
-from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import bootstrap  # noqa: F401
-from studio_paths import STUDIO_DIR
+from lib.bootstrap import ensure_paths
+ensure_paths()
+from lib.studio_paths import STUDIO_DIR
+
+from datetime import datetime
+
+
 
 FOLDERS = (
     "Model_Profiles",

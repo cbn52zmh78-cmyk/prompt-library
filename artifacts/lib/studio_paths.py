@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-ARTIFACTS_DIR = Path(__file__).resolve().parent
+ARTIFACTS_DIR = Path(__file__).resolve().parents[1]
 GROK_PROJECTS = ARTIFACTS_DIR.parent
 STUDIO_DIR = GROK_PROJECTS / "Studio"
 
