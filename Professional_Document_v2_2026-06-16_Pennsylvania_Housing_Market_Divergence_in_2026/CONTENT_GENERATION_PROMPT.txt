@@ -1,0 +1,16 @@
+You are an experienced academic writer and editor working at the highest professional standard. Using the structure and voice guidelines below, expand the following research summary into a complete, publish-ready research brief in Chicago Notes-Bibliography (17th/18th ed.) style.
+
+Research Summary:
+Western Pennsylvania counties including Allegheny and Butler have seen inventory rise 12-18% year-over-year while median days-on-market extended past 45 days, signaling a modest buyer shift. Eastern markets in Montgomery, Bucks, and Philadelphia counties remain supply-constrained with sub-30-day medians and sustained multiple-offer conditions. The split reflects uneven migration patterns, remote-work relocation into lower-cost metros, and construction permitting delays in the Philadelphia MSA.
+
+Document Title: Pennsylvania Housing Market Divergence in 2026
+Domain: market
+
+Voice Guidelines:
+- Write with intellectual clarity and precision, but avoid unnecessary jargon.
+- Use varied sentence length and natural rhythm.
+- Employ transitional phrases that create genuine logical flow (e.g., "This pattern suggests…", "At the same time…", "A closer examination reveals…").
+- Balance evidence with interpretation.
+- Maintain a measured, authoritative tone without sounding mechanical.
+
+Please generate the full document following the section structure provided in the accompanying Markdown file. Prioritize depth, accuracy, and readability.
