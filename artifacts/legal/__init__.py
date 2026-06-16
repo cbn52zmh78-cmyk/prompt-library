@@ -1,0 +1,1 @@
+"""Legal compliance gate — Producer authority, hard stops."""
