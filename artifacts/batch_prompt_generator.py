@@ -4,14 +4,15 @@ Batch Prompt Generator v1.0 — Director | New Tool
 Reads JSON parameter file and generates many prompts at once. Fully general.
 """
 
-import os
 import json
 from datetime import datetime
 
+from studio_paths import studio_path
+
 class BatchPromptGenerator:
-    def __init__(self, output_dir="../../studio/Batch_Outputs"):
-        self.output_dir = output_dir
-        os.makedirs(output_dir, exist_ok=True)
+    def __init__(self, output_dir=None):
+        self.output_dir = output_dir or studio_path("Batch_Outputs")
+        self.output_dir.mkdir(parents=True, exist_ok=True)
 
     def generate_from_json(self, json_path: str):
         with open(json_path, encoding="utf-8") as f:
@@ -25,7 +26,7 @@ class BatchPromptGenerator:
                 prompt = prompt.replace(f"[{key}]", str(value))
             results.append({"index": i, "prompt": prompt})
         timestamp = datetime.now().strftime("%Y%m%d_%H%M")
-        out_file = os.path.join(self.output_dir, f"batch_{timestamp}.json")
+        out_file = self.output_dir / f"batch_{timestamp}.json"
         with open(out_file, "w", encoding="utf-8") as f:
             json.dump({"generated": timestamp, "prompts": results}, f, indent=2)
         print(f"✅ Generated {len(results)} prompts → {out_file}")
@@ -41,7 +42,7 @@ if __name__ == "__main__":
             {"SHOT_TYPE": "slow push-in runway", "SUBJECT": "adult woman in metallic avant-garde dress", "LIGHTING": "high contrast cinematic lighting"}
         ]
     }
-    demo_path = "../../studio/batch_demo_params.json"
+    demo_path = studio_path("batch_demo_params.json")
     with open(demo_path, "w", encoding="utf-8") as f:
         json.dump(demo_json, f, indent=2)
     gen.generate_from_json(demo_path)

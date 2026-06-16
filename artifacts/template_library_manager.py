@@ -4,18 +4,19 @@ Master Prompt Template Library Manager v1.0 — Director | New Tool
 Save, search, tag, and instantiate reusable prompt templates. Fully general.
 """
 
-import os
 import json
 from datetime import datetime
 
+from studio_paths import studio_path
+
 class TemplateLibraryManager:
-    def __init__(self, lib_dir="../../studio/Prompt_Templates"):
-        self.lib_dir = lib_dir
-        os.makedirs(lib_dir, exist_ok=True)
+    def __init__(self, lib_dir=None):
+        self.lib_dir = lib_dir or studio_path("Prompt_Templates")
+        self.lib_dir.mkdir(parents=True, exist_ok=True)
 
     def save_template(self, name: str, template: str, tags: list = None, description: str = ""):
         safe_name = name.replace(" ", "_")
-        filepath = os.path.join(self.lib_dir, f"{safe_name}.json")
+        filepath = self.lib_dir / f"{safe_name}.json"
         data = {
             "name": name,
             "template": template,
@@ -30,16 +31,15 @@ class TemplateLibraryManager:
 
     def search(self, tag: str = None):
         results = []
-        for fname in os.listdir(self.lib_dir):
-            if fname.endswith(".json"):
-                with open(os.path.join(self.lib_dir, fname), encoding="utf-8") as f:
-                    data = json.load(f)
-                if not tag or tag in data.get("tags", []):
-                    results.append(data)
+        for path in self.lib_dir.glob("*.json"):
+            with open(path, encoding="utf-8") as f:
+                data = json.load(f)
+            if not tag or tag in data.get("tags", []):
+                results.append(data)
         return results
 
     def instantiate(self, name: str, variables: dict):
-        filepath = os.path.join(self.lib_dir, f"{name.replace(' ', '_')}.json")
+        filepath = self.lib_dir / f"{name.replace(' ', '_')}.json"
         with open(filepath, encoding="utf-8") as f:
             data = json.load(f)
         prompt = data["template"]

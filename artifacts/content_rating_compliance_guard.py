@@ -5,12 +5,13 @@ Official CARA/MPA theatrical standards. No model-specific defaults.
 """
 
 import argparse
-import os
 from datetime import datetime
 from pathlib import Path
 
-DEFAULT_REPORTS_DIR = Path(__file__).resolve().parent / "../Studio/Compliance_Reports"
-DEFAULT_SHOTLISTS_ROOT = Path(__file__).resolve().parent / "../Studio/Magazine_Assets/ShotLists"
+from studio_paths import studio_path
+
+DEFAULT_REPORTS_DIR = studio_path("Compliance_Reports")
+DEFAULT_SHOTLISTS_ROOT = studio_path("Magazine_Assets", "ShotLists")
 
 
 class ContentRatingGuard:

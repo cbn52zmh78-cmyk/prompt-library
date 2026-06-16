@@ -4,31 +4,32 @@ Model Profile Manager v1.0 — Director | New Tool
 CRUD for model/character profiles with structured descriptors. Fully general.
 """
 
-import os
 import json
 from datetime import datetime
 
+from studio_paths import studio_path
+
 class ModelProfileManager:
-    def __init__(self, profiles_dir="../../studio/Model_Profiles"):
-        self.profiles_dir = profiles_dir
-        os.makedirs(profiles_dir, exist_ok=True)
+    def __init__(self, profiles_dir=None):
+        self.profiles_dir = profiles_dir or studio_path("Model_Profiles")
+        self.profiles_dir.mkdir(parents=True, exist_ok=True)
 
     def create_profile(self, name: str, data: dict):
         safe = name.replace(" ", "_")
-        filepath = os.path.join(self.profiles_dir, f"{safe}.json")
+        filepath = self.profiles_dir / f"{safe}.json"
         data["created"] = datetime.now().isoformat()
         data["version"] = "1.0"
-        with open(filepath, "w") as f:
+        with open(filepath, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2)
         print(f"✅ Profile created: {filepath}")
 
     def list_profiles(self):
-        return [f.replace(".json", "") for f in os.listdir(self.profiles_dir) if f.endswith(".json")]
+        return [p.stem for p in self.profiles_dir.glob("*.json")]
 
     def get_profile(self, name: str):
-        filepath = os.path.join(self.profiles_dir, f"{name.replace(' ', '_')}.json")
-        if os.path.exists(filepath):
-            with open(filepath) as f:
+        filepath = self.profiles_dir / f"{name.replace(' ', '_')}.json"
+        if filepath.exists():
+            with open(filepath, encoding="utf-8") as f:
                 return json.load(f)
         return None
 

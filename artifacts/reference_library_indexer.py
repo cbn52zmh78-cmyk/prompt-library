@@ -4,15 +4,17 @@ Reference Library Indexer & Suggester v1.0 — Director | New Tool
 Indexes reference PDFs/images and suggests relevant ones for prompts. Fully general.
 """
 
-import os
 import json
+import os
 from datetime import datetime
 
+from studio_paths import studio_path
+
 class ReferenceLibraryIndexer:
-    def __init__(self, refs_dir="../../studio/References", index_file="../../studio/references_index.json"):
-        self.refs_dir = refs_dir
-        self.index_file = index_file
-        os.makedirs(refs_dir, exist_ok=True)
+    def __init__(self, refs_dir=None, index_file=None):
+        self.refs_dir = refs_dir or studio_path("References")
+        self.index_file = index_file or studio_path("references_index.json")
+        self.refs_dir.mkdir(parents=True, exist_ok=True)
 
     def rebuild_index(self):
         index = {}
