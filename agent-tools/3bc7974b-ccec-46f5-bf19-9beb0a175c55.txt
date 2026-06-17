@@ -1,0 +1,642 @@
+Timestamp: 2026-06-17 08:49:58warning: in the working copy of 'Dispatches/NEXUS_Dispatch_02.pdf', LF will be replaced by CRLF the next time Git touches it
+
+=== Nexus ===
+warning: in the working copy of 'Dispatches/NEXUS_Dispatch_03.pdf', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Dispatches/NEXUS_Dispatch_04.pdf', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Dispatches/NEXUS_Dispatch_05.pdf', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Dispatches/NEXUS_Dispatch_06.pdf', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/NEXUS_Phone_Grok_Briefing.md', LF will be replaced by CRLF the next time Git touches it
+[main abe0894] Hard commit: 2026-06-17 08:49:58
+ 6 files changed, 878 insertions(+)
+ create mode 100644 Dispatches/NEXUS_Dispatch_02.pdf
+ create mode 100644 Dispatches/NEXUS_Dispatch_03.pdf
+ create mode 100644 Dispatches/NEXUS_Dispatch_04.pdf
+ create mode 100644 Dispatches/NEXUS_Dispatch_05.pdf
+ create mode 100644 Dispatches/NEXUS_Dispatch_06.pdf
+ create mode 100644 docs/NEXUS_Phone_Grok_Briefing.md
+=== Stonebridge ===To https://github.com/cbn52zmh78-cmyk/Nexus.git
+
+   9d70c7e..abe0894  main -> main
+error: unable to normalize alternate object path: /tmp/git_new_objs
+error: unable to normalize alternate object path: /tmp/sb_temp_repo/.git/objects
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/SOPs/Internal_SOP_Library_v1.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/playwright_scraper.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/regulatory_research_scraper.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/schedule.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/setup_gmail_token.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Compliance_Research/pipeline_state.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Dispatches/NEXUS_Dispatch_07.pdf', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/HANDOFF.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/SOPs/Client_Proposal_Template.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/SOPs/SOP-003_Gmail_API_Email_Setup_v1.0.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/SOPs/Service_Packages.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/SOPs/Services_Page_Content.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/Email_Automation/README_Email_Scripts.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/Email_Automation/email_templates/cold_outreach.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/Email_Automation/email_templates/monthly_report_email.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/Email_Automation/email_templates/proposal_followup.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/Email_Automation/email_templates/testimonial_request.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/Email_Automation/email_templates/welcome_email.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/Email_Automation/send_email.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/probe_mt_security.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/rescrape_empty.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Operations/Scripts/scrape_wayback_fallback.py', LF will be replaced by CRLF the next time Git touches it
+error: unable to normalize alternate object path: /tmp/git_new_objs
+error: unable to normalize alternate object path: /tmp/sb_temp_repo/.git/objects
+error: unable to normalize alternate object path: /tmp/git_new_objs
+error: unable to normalize alternate object path: /tmp/sb_temp_repo/.git/objects
+error: unable to normalize alternate object path: /tmp/git_new_objs
+error: unable to normalize alternate object path: /tmp/sb_temp_repo/.git/objects
+error: unable to normalize alternate object path: /tmp/git_new_objs
+error: unable to normalize alternate object path: /tmp/sb_temp_repo/.git/objects
+error: unable to normalize alternate object path: /tmp/git_new_objs
+error: unable to normalize alternate object path: /tmp/sb_temp_repo/.git/objects
+error: unable to normalize alternate object path: /tmp/git_new_objs
+error: unable to normalize alternate object path: /tmp/sb_temp_repo/.git/objects
+error: unable to normalize alternate object path: /tmp/git_new_objs
+error: unable to normalize alternate object path: /tmp/sb_temp_repo/.git/objects
+error: unable to update .git/info/refs: No such file or directory
+[main e8a4ece] Hard commit: 2026-06-17 08:49:58
+ 765 files changed, 39837 insertions(+), 4508 deletions(-)
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Arizona_Building_Codes/2026-06-17_0832.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Arizona_Building_Codes/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Arizona_Building_Codes/2026-06-17_0841.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Arizona_Building_Codes/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/California_Building_Codes/2026-06-17_0832.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/California_Building_Codes/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/California_Building_Codes/2026-06-17_0841.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/California_Building_Codes/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Delaware_Building_Codes/2026-06-17_0832.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Delaware_Building_Codes/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Delaware_Building_Codes/2026-06-17_0841.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Delaware_Building_Codes/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Georgia_Building_Codes/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Georgia_Building_Codes/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Georgia_Building_Codes/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Georgia_Building_Codes/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Hawaii_Building_Codes/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Hawaii_Building_Codes/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Hawaii_Building_Codes/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Hawaii_Building_Codes/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/ICC_Building_Codes/2026-06-17_0831.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/ICC_Building_Codes/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/ICC_Building_Codes/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/ICC_Building_Codes/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Kansas_Building_Codes/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Kansas_Building_Codes/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Kansas_Building_Codes/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Kansas_Building_Codes/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Louisiana_Building_Codes/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Louisiana_Building_Codes/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Louisiana_Building_Codes/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Louisiana_Building_Codes/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Maine_Building_Codes/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Maine_Building_Codes/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Maine_Building_Codes/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Maine_Building_Codes/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Maryland_Building_Codes/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Maryland_Building_Codes/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Maryland_Building_Codes/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Maryland_Building_Codes/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Missouri_Building_Codes/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Missouri_Building_Codes/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Missouri_Building_Codes/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Missouri_Building_Codes/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/New_Jersey_Building_Codes/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/New_Jersey_Building_Codes/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/New_Jersey_Building_Codes/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/New_Jersey_Building_Codes/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/North_Dakota_Building_Codes/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/North_Dakota_Building_Codes/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/North_Dakota_Building_Codes/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/North_Dakota_Building_Codes/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Ohio_Building_Codes/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Ohio_Building_Codes/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Ohio_Building_Codes/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Ohio_Building_Codes/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Oklahoma_Building_Codes/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Oklahoma_Building_Codes/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Oklahoma_Building_Codes/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Oklahoma_Building_Codes/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Oregon_Building_Codes/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Oregon_Building_Codes/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Oregon_Building_Codes/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Oregon_Building_Codes/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Rhode_Island_Building_Codes/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Rhode_Island_Building_Codes/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Rhode_Island_Building_Codes/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Rhode_Island_Building_Codes/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/South_Dakota_Building_Codes/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/South_Dakota_Building_Codes/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/South_Dakota_Building_Codes/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/South_Dakota_Building_Codes/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Texas_Building_Codes/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Texas_Building_Codes/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Texas_Building_Codes/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Vermont_Building_Codes/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Vermont_Building_Codes/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Vermont_Building_Codes/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Vermont_Building_Codes/2026-06-17_0846.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Washington_Building_Codes/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Washington_Building_Codes/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Washington_Building_Codes/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Washington_Building_Codes/2026-06-17_0846.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/West_Virginia_Building_Codes/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/West_Virginia_Building_Codes/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/West_Virginia_Building_Codes/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/West_Virginia_Building_Codes/2026-06-17_0846.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Connecticut_Food_Safety/2026-06-17_0832.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Connecticut_Food_Safety/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Connecticut_Food_Safety/2026-06-17_0841.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Connecticut_Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Delaware_Food_Safety/2026-06-17_0832.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Delaware_Food_Safety/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Delaware_Food_Safety/2026-06-17_0841.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Delaware_Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/FDA_Food_Code/2026-06-17_0831.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/FDA_Food_Code/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/FDA_Food_Code/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/FDA_Food_Code/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Florida_Food_Safety/2026-06-17_0832.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Florida_Food_Safety/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Florida_Food_Safety/2026-06-17_0841.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Florida_Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Illinois_Food_Safety/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Illinois_Food_Safety/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Illinois_Food_Safety/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Illinois_Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Maine_Food_Safety/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Maine_Food_Safety/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Maine_Food_Safety/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Maine_Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Minnesota_Food_Safety/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Minnesota_Food_Safety/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Minnesota_Food_Safety/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Minnesota_Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Minnesota_Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Mississippi_Food_Safety/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Mississippi_Food_Safety/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Mississippi_Food_Safety/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Mississippi_Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Mississippi_Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Missouri_Food_Safety/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Missouri_Food_Safety/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Missouri_Food_Safety/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Missouri_Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Missouri_Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Montana_Food_Safety/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Montana_Food_Safety/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Montana_Food_Safety/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Montana_Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Montana_Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Nebraska_Food_Safety/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Nebraska_Food_Safety/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Nebraska_Food_Safety/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Nebraska_Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Nebraska_Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Nevada_Food_Safety/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Nevada_Food_Safety/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Nevada_Food_Safety/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Nevada_Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Nevada_Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/New_Hampshire_Food_Safety/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/New_Hampshire_Food_Safety/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/New_Hampshire_Food_Safety/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/New_Hampshire_Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/New_Hampshire_Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/New_Mexico_Food_Safety/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/New_Mexico_Food_Safety/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/New_Mexico_Food_Safety/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/New_Mexico_Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/New_Mexico_Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Pennsylvania_Food_Safety/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Pennsylvania_Food_Safety/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Pennsylvania_Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Pennsylvania_Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/South_Dakota_Food_Safety/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/South_Dakota_Food_Safety/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/South_Dakota_Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/South_Dakota_Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Utah_Food_Safety/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Utah_Food_Safety/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Utah_Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Vermont_Food_Safety/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Vermont_Food_Safety/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Vermont_Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Vermont_Food_Safety/2026-06-17_0846.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Washington_Food_Safety/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Washington_Food_Safety/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Washington_Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Washington_Food_Safety/2026-06-17_0846.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Wisconsin_Food_Safety/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Wisconsin_Food_Safety/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Wisconsin_Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Wisconsin_Food_Safety/2026-06-17_0846.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Hawaii_Real_Estate_Broker/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Hawaii_Real_Estate_Broker/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Hawaii_Real_Estate_Broker/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Hawaii_Real_Estate_Broker/2026-06-17_0849.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Hawaii_Real_Estate_Company/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Hawaii_Real_Estate_Company/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Hawaii_Real_Estate_Company/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Hawaii_Real_Estate_Company/2026-06-17_0849.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Hawaii_Real_Estate_Salesperson/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Hawaii_Real_Estate_Salesperson/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Hawaii_Real_Estate_Salesperson/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Hawaii_Real_Estate_Salesperson/2026-06-17_0849.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Kansas_Real_Estate_Company/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Kansas_Real_Estate_Company/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Kansas_Real_Estate_Company/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Kansas_Real_Estate_Company/2026-06-17_0849.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Mississippi_Real_Estate_Broker/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Mississippi_Real_Estate_Broker/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Mississippi_Real_Estate_Broker/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Mississippi_Real_Estate_Broker/2026-06-17_0849.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Mississippi_Real_Estate_Salesperson/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Mississippi_Real_Estate_Salesperson/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Mississippi_Real_Estate_Salesperson/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Mississippi_Real_Estate_Salesperson/2026-06-17_0849.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Montana_Real_Estate_Broker/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Montana_Real_Estate_Broker/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Montana_Real_Estate_Broker/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Montana_Real_Estate_Broker/2026-06-17_0849.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Montana_Real_Estate_Company/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Montana_Real_Estate_Company/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Montana_Real_Estate_Company/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Montana_Real_Estate_Company/2026-06-17_0849.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Montana_Real_Estate_Salesperson/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Montana_Real_Estate_Salesperson/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Montana_Real_Estate_Salesperson/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Montana_Real_Estate_Salesperson/2026-06-17_0849.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_Jersey_Real_Estate_Broker/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_Jersey_Real_Estate_Broker/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_Jersey_Real_Estate_Broker/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_Jersey_Real_Estate_Broker/2026-06-17_0849.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/North_Dakota_Real_Estate_Broker/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/North_Dakota_Real_Estate_Broker/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/North_Dakota_Real_Estate_Broker/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/North_Dakota_Real_Estate_Company/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/North_Dakota_Real_Estate_Company/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/North_Dakota_Real_Estate_Company/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/North_Dakota_Real_Estate_Salesperson/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/North_Dakota_Real_Estate_Salesperson/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/North_Dakota_Real_Estate_Salesperson/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Ohio_Real_Estate_Broker/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Ohio_Real_Estate_Broker/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Ohio_Real_Estate_Broker/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Ohio_Real_Estate_Company/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Ohio_Real_Estate_Company/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Ohio_Real_Estate_Company/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Ohio_Real_Estate_Salesperson/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Ohio_Real_Estate_Salesperson/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Ohio_Real_Estate_Salesperson/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oklahoma_Real_Estate_Broker/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oklahoma_Real_Estate_Broker/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oklahoma_Real_Estate_Broker/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oklahoma_Real_Estate_Company/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oklahoma_Real_Estate_Company/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oklahoma_Real_Estate_Company/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oklahoma_Real_Estate_Salesperson/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oklahoma_Real_Estate_Salesperson/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oklahoma_Real_Estate_Salesperson/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Utah_Real_Estate_Broker/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Utah_Real_Estate_Broker/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Utah_Real_Estate_Broker/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Utah_Real_Estate_Company/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Utah_Real_Estate_Company/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Utah_Real_Estate_Company/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Utah_Real_Estate_Salesperson/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Utah_Real_Estate_Salesperson/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Utah_Real_Estate_Salesperson/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Vermont_Real_Estate_Broker/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Vermont_Real_Estate_Broker/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Vermont_Real_Estate_Broker/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Vermont_Real_Estate_Company/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Vermont_Real_Estate_Company/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Vermont_Real_Estate_Company/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Vermont_Real_Estate_Company/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Vermont_Real_Estate_Salesperson/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Vermont_Real_Estate_Salesperson/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Vermont_Real_Estate_Salesperson/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Federal/CISA_Federal_Physical_Security/2026-06-17_0832.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Federal/CISA_Federal_Physical_Security/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Federal/CISA_Federal_Physical_Security/2026-06-17_0841.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/California_Security_Licensing/2026-06-17_0832.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/California_Security_Licensing/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/California_Security_Licensing/2026-06-17_0841.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Florida_Security_Licensing/2026-06-17_0832.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Florida_Security_Licensing/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Florida_Security_Licensing/2026-06-17_0841.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Montana_Security_Licensing/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Montana_Security_Licensing/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Montana_Security_Licensing/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Nebraska_Security_Licensing/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Nebraska_Security_Licensing/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Nebraska_Security_Licensing/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/South_Carolina_Security_Licensing/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/South_Carolina_Security_Licensing/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/South_Carolina_Security_Licensing/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/South_Dakota_Security_Licensing/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/South_Dakota_Security_Licensing/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/South_Dakota_Security_Licensing/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Tennessee_Security_Licensing/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Tennessee_Security_Licensing/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Tennessee_Security_Licensing/2026-06-17_0845.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/Alaska/Real_Estate/PARKED.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arizona/Building_Construction/2026-06-17_0832.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arizona/Building_Construction/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arizona/Building_Construction/2026-06-17_0841.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arizona/Building_Construction/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Building_Construction/2026-06-17_0832.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Building_Construction/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Building_Construction/2026-06-17_0841.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Building_Construction/2026-06-17_0844.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/California/Food_Safety/PARKED.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Security_Licensing/2026-06-17_0832.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Security_Licensing/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Security_Licensing/2026-06-17_0841.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/California/Security_Licensing/PARKED.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/Colorado/Building_Construction/PARKED.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/Colorado/Real_Estate/PARKED.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Connecticut/Food_Safety/2026-06-17_0832.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Connecticut/Food_Safety/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Connecticut/Food_Safety/2026-06-17_0841.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Connecticut/Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Building_Construction/2026-06-17_0832.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Building_Construction/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Building_Construction/2026-06-17_0841.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Building_Construction/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Food_Safety/2026-06-17_0832.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Food_Safety/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Food_Safety/2026-06-17_0841.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Food_Safety/2026-06-17_0832.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Food_Safety/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Food_Safety/2026-06-17_0841.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Security_Licensing/2026-06-17_0832.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Security_Licensing/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Security_Licensing/2026-06-17_0841.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Georgia/Building_Construction/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Georgia/Building_Construction/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Georgia/Building_Construction/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Georgia/Building_Construction/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Hawaii/Building_Construction/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Hawaii/Building_Construction/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Hawaii/Building_Construction/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Hawaii/Building_Construction/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Hawaii/Real_Estate/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Hawaii/Real_Estate/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Hawaii/Real_Estate/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Hawaii/Real_Estate/2026-06-17_0849.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/Idaho/Security_Licensing/PARKED.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Illinois/Food_Safety/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Illinois/Food_Safety/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Illinois/Food_Safety/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Illinois/Food_Safety/2026-06-17_0844.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/Illinois/Real_Estate/PARKED.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Kansas/Building_Construction/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Kansas/Building_Construction/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Kansas/Building_Construction/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Kansas/Building_Construction/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Kansas/Real_Estate/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Kansas/Real_Estate/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Kansas/Real_Estate/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Kansas/Real_Estate/2026-06-17_0849.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/Kansas/Real_Estate/PARKED.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Louisiana/Building_Construction/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Louisiana/Building_Construction/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Louisiana/Building_Construction/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Louisiana/Building_Construction/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maine/Building_Construction/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maine/Building_Construction/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maine/Building_Construction/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maine/Building_Construction/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maine/Food_Safety/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maine/Food_Safety/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maine/Food_Safety/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maine/Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maryland/Building_Construction/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maryland/Building_Construction/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maryland/Building_Construction/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Maryland/Building_Construction/2026-06-17_0844.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/Massachusetts/Building_Construction/PARKED.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/Massachusetts/Food_Safety/PARKED.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/Massachusetts/Real_Estate/PARKED.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/Massachusetts/Security_Licensing/PARKED.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/Michigan/Building_Construction/PARKED.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/Michigan/Food_Safety/PARKED.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/Michigan/Real_Estate/PARKED.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/Michigan/Security_Licensing/PARKED.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Minnesota/Food_Safety/2026-06-17_0833.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Minnesota/Food_Safety/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Minnesota/Food_Safety/2026-06-17_0842.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Minnesota/Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Minnesota/Food_Safety/2026-06-17_0845.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/Minnesota/Security_Licensing/PARKED.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/Mississippi/Building_Construction/PARKED.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Mississippi/Food_Safety/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Mississippi/Food_Safety/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Mississippi/Food_Safety/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Mississippi/Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Mississippi/Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Mississippi/Real_Estate/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Mississippi/Real_Estate/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Mississippi/Real_Estate/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Mississippi/Real_Estate/2026-06-17_0849.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Missouri/Building_Construction/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Missouri/Building_Construction/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Missouri/Building_Construction/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Missouri/Building_Construction/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Missouri/Food_Safety/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Missouri/Food_Safety/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Missouri/Food_Safety/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Missouri/Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Missouri/Food_Safety/2026-06-17_0845.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/Missouri/Real_Estate/PARKED.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/Missouri/Security_Licensing/PARKED.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Food_Safety/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Food_Safety/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Food_Safety/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Real_Estate/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Real_Estate/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Real_Estate/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Real_Estate/2026-06-17_0849.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Security_Licensing/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Security_Licensing/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Security_Licensing/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Security_Licensing/latest_Montana_2026-06-17_08-43.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Security_Licensing/latest_Montana_2026-06-17_08-46.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Security_Licensing/scrape_2026-06-17_08-43.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Montana/Security_Licensing/scrape_2026-06-17_08-46.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nebraska/Food_Safety/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nebraska/Food_Safety/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nebraska/Food_Safety/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nebraska/Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nebraska/Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nebraska/Security_Licensing/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nebraska/Security_Licensing/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nebraska/Security_Licensing/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nevada/Food_Safety/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nevada/Food_Safety/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nevada/Food_Safety/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nevada/Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Nevada/Food_Safety/2026-06-17_0845.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/New Hampshire/Building_Construction/PARKED.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Hampshire/Food_Safety/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Hampshire/Food_Safety/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Hampshire/Food_Safety/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Hampshire/Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Hampshire/Food_Safety/2026-06-17_0845.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/New Hampshire/Real_Estate/PARKED.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Jersey/Building_Construction/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Jersey/Building_Construction/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Jersey/Building_Construction/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Jersey/Building_Construction/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Jersey/Real_Estate/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Jersey/Real_Estate/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Jersey/Real_Estate/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Jersey/Real_Estate/2026-06-17_0849.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/New Jersey/Security_Licensing/PARKED.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Mexico/Food_Safety/2026-06-17_0834.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Mexico/Food_Safety/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Mexico/Food_Safety/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Mexico/Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/New Mexico/Food_Safety/2026-06-17_0845.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/North Carolina/Real_Estate/PARKED.txt
+ create mode 100644 Operations/Compliance_Research/By_State/North Dakota/Building_Construction/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_State/North Dakota/Building_Construction/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_State/North Dakota/Building_Construction/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/North Dakota/Building_Construction/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/North Dakota/Real_Estate/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_State/North Dakota/Real_Estate/2026-06-17_0838.txt
+ create mode 100644 Operations/Compliance_Research/By_State/North Dakota/Real_Estate/2026-06-17_0843.txt
+ create mode 100644 Operations/Compliance_Research/By_State/North Dakota/Real_Estate/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Ohio/Building_Construction/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Ohio/Building_Construction/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Ohio/Building_Construction/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Ohio/Building_Construction/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Ohio/Real_Estate/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Ohio/Real_Estate/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Ohio/Real_Estate/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oklahoma/Building_Construction/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oklahoma/Building_Construction/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oklahoma/Building_Construction/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oklahoma/Building_Construction/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oklahoma/Real_Estate/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oklahoma/Real_Estate/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oklahoma/Real_Estate/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oregon/Building_Construction/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oregon/Building_Construction/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oregon/Building_Construction/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Oregon/Building_Construction/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Pennsylvania/Food_Safety/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Pennsylvania/Food_Safety/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Pennsylvania/Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Pennsylvania/Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Rhode Island/Building_Construction/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Rhode Island/Building_Construction/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Rhode Island/Building_Construction/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Rhode Island/Building_Construction/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Carolina/Security_Licensing/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Carolina/Security_Licensing/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Carolina/Security_Licensing/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Dakota/Building_Construction/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Dakota/Building_Construction/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Dakota/Building_Construction/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Dakota/Building_Construction/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Dakota/Food_Safety/2026-06-17_0835.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Dakota/Food_Safety/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Dakota/Food_Safety/2026-06-17_0844.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Dakota/Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Dakota/Security_Licensing/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Dakota/Security_Licensing/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_State/South Dakota/Security_Licensing/2026-06-17_0845.txt
+ delete mode 100644 Operations/Compliance_Research/By_State/South Dakota/Security_Licensing/PARKED.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Tennessee/Security_Licensing/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Tennessee/Security_Licensing/2026-06-17_0839.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Tennessee/Security_Licensing/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Texas/Building_Construction/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Texas/Building_Construction/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Texas/Building_Construction/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Utah/Food_Safety/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Utah/Food_Safety/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Utah/Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Utah/Real_Estate/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Utah/Real_Estate/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Utah/Real_Estate/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Vermont/Building_Construction/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Vermont/Building_Construction/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Vermont/Building_Construction/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Vermont/Building_Construction/2026-06-17_0846.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Vermont/Food_Safety/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Vermont/Food_Safety/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Vermont/Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Vermont/Food_Safety/2026-06-17_0846.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Vermont/Real_Estate/2026-06-17_0836.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Vermont/Real_Estate/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Vermont/Real_Estate/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Washington/Building_Construction/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Washington/Building_Construction/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Washington/Building_Construction/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Washington/Building_Construction/2026-06-17_0846.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Washington/Food_Safety/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Washington/Food_Safety/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Washington/Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Washington/Food_Safety/2026-06-17_0846.txt
+ create mode 100644 Operations/Compliance_Research/By_State/West Virginia/Building_Construction/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_State/West Virginia/Building_Construction/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_State/West Virginia/Building_Construction/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/West Virginia/Building_Construction/2026-06-17_0846.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Wisconsin/Food_Safety/2026-06-17_0837.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Wisconsin/Food_Safety/2026-06-17_0840.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Wisconsin/Food_Safety/2026-06-17_0845.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Wisconsin/Food_Safety/2026-06-17_0846.txt
+ create mode 100644 Operations/Compliance_Research/pipeline_state.json
+ create mode 100644 Operations/Dispatches/NEXUS_Dispatch_07.pdf
+ create mode 100644 Operations/HANDOFF.md
+ create mode 100644 Operations/SOPs/Client_Proposal_Template.md
+ create mode 100644 Operations/SOPs/SOP-003_Gmail_API_Email_Setup_v1.0.md
+ create mode 100644 Operations/SOPs/Service_Packages.md
+ create mode 100644 Operations/SOPs/Services_Page_Content.md
+ create mode 100644 Operations/Scripts/Email_Automation/README_Email_Scripts.md
+ create mode 100644 Operations/Scripts/Email_Automation/send_email.py
+ create mode 100644 Operations/Scripts/probe_mt_security.py
+ create mode 100644 Operations/Scripts/rescrape_empty.py
+ create mode 100644 Operations/Scripts/scrape_wayback_fallback.py
+error: unable to normalize alternate object path: /tmp/git_new_objs
+error: unable to normalize alternate object path: /tmp/sb_temp_repo/.git/objects
+error: unable to normalize alternate object path: /tmp/git_new_objs
+error: unable to normalize alternate object path: /tmp/sb_temp_repo/.git/objects
+error: unable to normalize alternate object path: /tmp/git_new_objs
+error: unable to normalize alternate object path: /tmp/sb_temp_repo/.git/objects
+=== Studio ===To https://github.com/cbn52zmh78-cmyk/Stonebridge-Security-Consultants.git
+
+   9ef2cc6..e8a4ece  main -> main
+warning: in the working copy of 'Reference_Library/style_bibles/Anime_Bible_01_§9_Corrected.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Reference_Library/style_bibles/Anime_Bible_02_§9_Corrected.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Reference_Library/style_bibles/Anime_Bible_03_§9_Corrected.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Reference_Library/style_bibles/Anime_Bible_04_§9_Corrected.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Reference_Library/style_bibles/Anime_Bible_05_§9_Corrected.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Reference_Library/style_bibles/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'prompts/ACTIVE_VERSION.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'prompts/CHANGELOG_v2.1_to_v2.2.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'prompts/MASTER_JSON_Prompt_Template_ACTIVE.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'prompts/MASTER_JSON_Prompt_Template_v2.2.json', LF will be replaced by CRLF the next time Git touches it
+[main 9206ed3] Hard commit: 2026-06-17 08:49:58
+ 10 files changed, 1325 insertions(+)
+ create mode 100644 "Reference_Library/style_bibles/Anime_Bible_01_\302\2479_Corrected.md"
+ create mode 100644 "Reference_Library/style_bibles/Anime_Bible_02_\302\2479_Corrected.md"
+ create mode 100644 "Reference_Library/style_bibles/Anime_Bible_03_\302\2479_Corrected.md"
+ create mode 100644 "Reference_Library/style_bibles/Anime_Bible_04_\302\2479_Corrected.md"
+ create mode 100644 "Reference_Library/style_bibles/Anime_Bible_05_\302\2479_Corrected.md"
+ create mode 100644 Reference_Library/style_bibles/README.md
+ create mode 100644 prompts/ACTIVE_VERSION.md
+ create mode 100644 prompts/CHANGELOG_v2.1_to_v2.2.md
+ create mode 100644 prompts/MASTER_JSON_Prompt_Template_ACTIVE.json
+ create mode 100644 prompts/MASTER_JSON_Prompt_Template_v2.2.json
+To https://github.com/cbn52zmh78-cmyk/STUDIO
+   8849466..9206ed3  main -> main
