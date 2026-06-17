@@ -1,5 +1,5 @@
 # DAVID Brain Report
-Generated: 2026-06-16 23:15 UTC
+Generated: 2026-06-17 00:15 UTC
 
 Public sources only: Wikipedia, Wiktionary, Wikidata (CC BY-SA / CC0).
 
@@ -112,8 +112,45 @@ Named by British archaeologist , to distinguish it from the other linear script,
 
 ## Sumerian (`sumerian`)
 
-⚠️ No brain scrape yet. Run:
-`python DAVID/scripts/david_brain_scraper.py --language sumerian`
+**Scraped:** 2026-06-17T00:15:22.826168+00:00 | **Sources:** wikipedia, wikidata, wiktionary
+
+### Overview (Wikipedia)
+
+Sumerian  was the language of ancient Sumer. It is the oldest attested language, dating back to at least 3100 BC, perhaps earlier. It is a local language isolate, thus unrelated to any other known language that was spoken exclusively in ancient Mesopotamia, in the area that is now modern-day Iraq.
+Sumerian is read from left to right, from the top; however early inscriptions were read top to bottom from the right. 
+Akkadian, a Semitic language, gradually replaced Sumerian as the primary spoken language in the area c. 2000 BC (the exact date is debated), but Sumerian continued to be used as a sacred, ceremonial, literary, and scientific language in Akkadian-speaking Mesopotamian states, such as Assyria and Babylonia, until the 1st century AD. Thereafter, it seems to have fallen into obscurity until the 19th century, when Assyriologists began deciphering the cuneiform inscriptions and excavated tablets that had been left by its speakers.
+In spite of its extinction, Sumerian exerted a significant influence on the languages of the area. The cuneiform script, originally used for Sumerian, was widely adopted by numerous regional languages such as its fellow Mesopotamian Akkadian, as well…
+
+Source: https://en.wikipedia.org/wiki/Sumerian_language
+
+### Classification (Wikidata)
+
+- **Label:** Audrey Hollander
+- **ISO 639-3:** —
+- **Description:** American pornographic actress
+
+### Pronunciation map
+
+**IPA entries found:** 3 | **Accent buckets:** 3
+
+- **scholarly_ipa:** /s(j)ʊˈmɪəɹiən/, /sʊˈmɛɹiən/, LL-Q58635 (pan)-Gaurav Jhammat-ਔਡਰੀ ਹੋਲੈਂਡਰ.wav
+
+- *RP:* /s(j)ʊˈmɪəɹiən/
+- *GA:* /sʊˈmɛɹiən/
+- *wikidata:* LL-Q58635 (pan)-Gaurav Jhammat-ਔਡਰੀ ਹੋਲੈਂਡਰ.wav
+
+### Pronunciation notes (Wiktionary)
+
+=
+* 
+* 
+* 
+*  
+* 
+* 
+*
+
+---
 
 ## Proto-Indo-European (`proto-indo-european`)
 
@@ -200,6 +237,7 @@ From , from , from the verbal root . Related to  and . It could also reflect the
 
 ## Brain activity log (recent)
 
+- `sumerian` @ 2026-06-17T00:15 — 3 IPA, sources: wikipedia, wikidata, wiktionary
 - `linear-a` @ 2026-06-16T23:15 — 0 IPA, sources: wikipedia, wikidata, wiktionary
 - `gothic` @ 2026-06-16T23:07 — 2 IPA, sources: wikidata, wiktionary ⚠️ 1 errors
 - `classical-latin` @ 2026-06-16T23:07 — 7 IPA, sources: wikipedia, wikidata, wiktionary
@@ -211,4 +249,4 @@ From , from , from the verbal root . Related to  and . It could also reflect the
 
 ---
 
-**Languages with brain data:** 4/10
+**Languages with brain data:** 5/10

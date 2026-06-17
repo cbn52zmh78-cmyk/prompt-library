@@ -78,5 +78,16 @@
     ],
     "errors": [],
     "ipa_count": 0
+  },
+  {
+    "slug": "sumerian",
+    "scraped_at": "2026-06-17T00:15:22.826168+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 3
   }
 ]
