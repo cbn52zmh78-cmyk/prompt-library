@@ -464,5 +464,16 @@
     ],
     "errors": [],
     "ipa_count": 0
+  },
+  {
+    "slug": "biblical-hebrew",
+    "scraped_at": "2026-06-18T13:33:07.907319+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 2
   }
 ]
