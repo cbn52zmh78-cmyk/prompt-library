@@ -1,5 +1,5 @@
 # DAVID Brain Report
-Generated: 2026-06-18 14:01 UTC
+Generated: 2026-06-18 16:03 UTC
 
 Public sources only: Wikipedia, Wiktionary, Wikidata (CC BY-SA / CC0).
 
@@ -7,7 +7,7 @@ Public sources only: Wikipedia, Wiktionary, Wikidata (CC BY-SA / CC0).
 
 ## Etruscan (`etruscan`)
 
-**Scraped:** 2026-06-18T14:01:12.892989+00:00 | **Sources:** wikipedia, wikidata, wiktionary
+**Scraped:** 2026-06-18T16:02:25.540396+00:00 | **Sources:** wikipedia, wikidata, wiktionary
 
 ### Overview (Wikipedia)
 
@@ -603,14 +603,14 @@ Source: https://en.wikipedia.org/wiki/Old_Church_Slavonic
 
 ## Brain activity log (recent)
 
+- `etruscan` @ 2026-06-18T16:02 — 1 IPA, sources: wikipedia, wikidata, wiktionary
+- `etruscan` @ 2026-06-18T15:01 — 1 IPA, sources: wikipedia, wikidata, wiktionary
 - `etruscan` @ 2026-06-18T14:01 — 1 IPA, sources: wikipedia, wikidata, wiktionary
 - `akkadian` @ 2026-06-18T13:38 — 1 IPA, sources: wikipedia, wikidata, wiktionary
 - `sumerian` @ 2026-06-18T13:37 — 2 IPA, sources: wikipedia, wikidata, wiktionary
 - `old-church-slavonic` @ 2026-06-18T13:37 — 0 IPA, sources: wikipedia, wikidata, wiktionary
 - `middle-egyptian` @ 2026-06-18T13:36 — 0 IPA, sources: wikipedia, wikidata, wiktionary
 - `old-church-slavonic` @ 2026-06-18T13:35 — 0 IPA, sources: wikipedia, wikidata, wiktionary
-- `hittite` @ 2026-06-18T13:35 — 1 IPA, sources: wikipedia, wikidata, wiktionary
-- `middle-egyptian` @ 2026-06-18T13:34 — 0 IPA, sources: wikipedia, wikidata, wiktionary
 
 
 ---

@@ -563,5 +563,27 @@
     ],
     "errors": [],
     "ipa_count": 1
+  },
+  {
+    "slug": "etruscan",
+    "scraped_at": "2026-06-18T15:01:49.000989+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 1
+  },
+  {
+    "slug": "etruscan",
+    "scraped_at": "2026-06-18T16:02:25.540396+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 1
   }
 ]

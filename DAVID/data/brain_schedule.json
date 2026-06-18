@@ -14,12 +14,12 @@
     "revival_tier",
     "rotation"
   ],
-  "current_cycle": 2,
-  "total_batches_run": 6,
-  "last_batch_at": "2026-06-18T14:01:48.257851+00:00",
+  "current_cycle": 4,
+  "total_batches_run": 8,
+  "last_batch_at": "2026-06-18T16:03:01.041090+00:00",
   "last_batch_languages": [
     "etruscan"
   ],
-  "last_cycle_completed_at": "2026-06-18T14:01:48.257851+00:00",
+  "last_cycle_completed_at": "2026-06-18T16:03:01.041090+00:00",
   "rotation_index": 0
 }
