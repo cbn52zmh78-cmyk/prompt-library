@@ -1,0 +1,80 @@
+{
+  "slug": "classical-nahuatl",
+  "name": "Classical Nahuatl",
+  "status": "dead",
+  "scraped_at": "2026-06-18T12:00:06.631610+00:00",
+  "deep": true,
+  "sources_used": [
+    "wikipedia",
+    "wikidata",
+    "wiktionary"
+  ],
+  "errors": [],
+  "wikipedia": {
+    "title": "Classical_Nahuatl",
+    "url": "https://en.wikipedia.org/wiki/Classical_Nahuatl",
+    "extract": "Classical Nahuatl, also known simply as Aztec or Nahuatl, is a set of variants of Nahuatl spoken in the Valley of Mexico and central Mexico as a lingua franca at the time of the 16th-century Spanish conquest of the Aztec Empire. Indigenous languages, including Classical Nahuatl, remained dominant until the time when New Spain (Mexico) became independent in 1821. However, during the subsequent centuries, it was largely displaced by Spanish and evolved into some of the modern Nahuan languages in use (other modern dialects descend more directly from other 16th-century variants). Although classified as an extinct language, Classical Nahuatl has survived through a multitude of written sources transcribed by Nahua peoples and Spaniards in the Latin script.\nClassical Nahuatl may be called Codical Nahuatl (when referring to the variants employed in the Mesoamerican codices through the medium of the Aztec script) or Colonial Nahuatl (if written in post-conquest documents in the Latin alphabet).\n\n\n== Classification ==\nClassical Nahuatl is one of the Nahuan languages within the Uto-Aztecan family. It is classified as a central dialect and is most closely related to the modern dialects of Nahuatl spoken in the valley of Mexico in colonial and modern times. It is probable that the Classical Nahuatl documented by 16th- and 17th-century written sources represents a particularly prestigious sociolect. That is to say, the variety of Nahuatl recorded in these documents is most likely to be more particularly representative of the speech of Aztec nobles (p\u012bpiltin), while the commoners (m\u0101c\u0113hualtin) spoke a somewhat different variety.\n\n\n== Phonology ==\n\n\n=== Vowels ===\n\n\n=== Consonants ===\n\n\n=== Accent ===\nStress generally falls on the penultimate syllable. The one exception is the vocative suffix (used by men) -\u00e9, which is added to the end of a word and is always stressed, e.g. Cu\u0101uhtliquetzqui (a name, meaning \"Eagle Warrior\"), but Cu\u0101uhtliquetzqu\u00e9 \"O Cuauhtliquetzqui!\"\nWhen women use the vocative, the stress is shifted to the final syllable without adding any suffix. Oquichtli means \"man\", and oquichtl\u00ed means \"O man!\"\n\n\n=== Phonotactics ===\nMaximally complex Nahuatl syllables are of the form CVC;\nthat is, there can be at most one consonant at the beginning and end of every syllable. In contrast, English, for example, allows up to three consonants syllable-initially and up to four  consonants to occur at the end of syllables (e.g. strengths) (ngths = /\u014bk\u03b8s/).\nConsonant clusters are only allowed word-medially, Nahuatl uses processes of both epenthesis (usually of /i/) and deletion to deal with this constraint.\nFor such purposes, tl /t\u026c/, like all other affricates, is treated as a single sound, and not all consonants can occur in both syllable-initial and syllable-final position.\nThe sonorants /n/, /l/ and /w/ are devoiced in syllable-final position. Likewise, /j/ is also devoiced and merged into /\u0283/ in syllable-final position. The sonorant /m/ is the only one that is not devoiced in final position because it never appears in that position to begin with.\n\n\n== Grammar ==\n\n\n== Writing system ==\n\nAt the time of the Spanish conquest, Aztec writing used mostly pictograms supplemented with a few ideograms. When needed, it also used syllabic equivalences; Diego Dur\u00e1n recorded how the tlacuilos could render a prayer in Latin using this system but it was difficult to use. The writing system was adequate for keeping such records as genealogies, astronomical information, and tribute lists, but it could not represent a full vocabulary of spoken language in the way that the writing systems of the Old World or the Maya civilization's script could.\nThe Spanish introduced the Latin script, which was then used to record a large body of Aztec prose and poetry, which somewhat diminished the devastating loss caused by the burning of thousands of Aztec codices by the Spanish authorities.\n\n\n== Literature ==\nNahuatl literature is extensive (probably the most extensive of all Indigenous languages of the Americas), including a relatively large corpus of poetry (see also Nezahualcoyotl). The Huei tlamahui\u00e7oltica is an early sample of literary Nahuatl.\nA bilingual dictionary with Spanish, Vocabulario manual de las lenguas castellana y mexicana, was first published in 1611 and is \"the most important and most frequently reprinted Spanish work on Nahuatl,\" according to the World Digital Library.\n\n\n== See also ==\n\nAztec codices\nList of extinct languages of North America\nMesoamerican language area\n\n\n== References ==\n\n\n== Sources ==\n\n\n== External links ==\n Media related to Classical Nahuatl language at Wikimedia Commons\n\n\"Vocabulario manual de las lenguas castellana, y mexicana. : En que se contienen las palabras, preguntas, y respuestas mas co[m]munes, y ordinarias que se suelen offrecer en el trato, y communicacion entre Espa\u00f1oles, \u00e9 Indios\". World Digital Library. Retrieved May 23, 2013.",
+    "wikitext_length": 17559,
+    "phonology_keywords": [
+      "IPA",
+      "accent",
+      "consonant",
+      "dialect",
+      "extinct",
+      "phonolog",
+      "pronunciation",
+      "vowel"
+    ],
+    "source": "wikipedia",
+    "license": "CC BY-SA 3.0"
+  },
+  "wikidata": {
+    "qid": "Q35863",
+    "label": "Nkongho",
+    "description": "language",
+    "iso639_3": "nkc",
+    "language_family": null,
+    "extinction_status": null,
+    "ipa_statements": [],
+    "source": "wikidata",
+    "license": "CC0"
+  },
+  "wiktionary": {
+    "pages": [
+      "Classical_Nahuatl",
+      "Nahuatl"
+    ],
+    "ipa_entries": [
+      {
+        "ipa": "/\u02c8n\u0251\u02d0w\u0251\u02d0t(\u0259)l/",
+        "accent": "unspecified",
+        "language_code": "",
+        "quality": "scholarly_ipa"
+      }
+    ],
+    "etymology_blocks": [],
+    "pronunciation_notes": [
+      {
+        "section": "Pronunciation",
+        "text": "=\n* \n*"
+      }
+    ],
+    "source": "wiktionary",
+    "license": "CC BY-SA 3.0"
+  },
+  "pronunciation_summary": {
+    "total_ipa_entries": 1,
+    "by_quality": {
+      "scholarly_ipa": [
+        "/\u02c8n\u0251\u02d0w\u0251\u02d0t(\u0259)l/"
+      ]
+    },
+    "by_accent": {
+      "unspecified": [
+        "/\u02c8n\u0251\u02d0w\u0251\u02d0t(\u0259)l/"
+      ]
+    },
+    "accent_count": 1
+  },
+  "etymology_count": 0
+}

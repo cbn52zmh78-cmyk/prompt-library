@@ -1,0 +1,12 @@
+{
+  "id": "proxemics",
+  "name": "Proxemics",
+  "category": "non-verbal",
+  "priority": "medium",
+  "notes": "Spatial distance and territory in human interaction (Hall)",
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

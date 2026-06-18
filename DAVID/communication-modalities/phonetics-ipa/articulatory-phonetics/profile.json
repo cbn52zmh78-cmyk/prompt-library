@@ -1,0 +1,12 @@
+{
+  "id": "articulatory-phonetics",
+  "name": "Articulatory Phonetics",
+  "category": "phonetics-ipa",
+  "priority": "medium",
+  "notes": "Place and manner of articulation; consonant/vowel production",
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

@@ -1,4 +1,8 @@
 {
+  "categories": {
+    "language": "Per-language corpus, grammar, and revival tasks",
+    "communication-modalities": "How humans communicate — phonetics, non-verbal, sign, scripts"
+  },
   "queue": [
     {
       "id": "rq-001",
@@ -43,6 +47,60 @@
       "task": "Link Caesar and Aurelius History figures to Latin excerpt training blocks",
       "status": "pending",
       "added": "2026-06-16"
+    },
+    {
+      "id": "rq-cm-001",
+      "category": "communication-modalities",
+      "topic": "international-phonetic-alphabet",
+      "priority": "high",
+      "task": "Ingest IPA chart and articulatory descriptors for DAVID pronunciation layer",
+      "status": "in_progress",
+      "added": "2026-06-18"
+    },
+    {
+      "id": "rq-cm-002",
+      "category": "communication-modalities",
+      "topic": "gesture",
+      "priority": "high",
+      "task": "Catalog co-speech gesture typology for avatar non-verbal rendering",
+      "status": "in_progress",
+      "added": "2026-06-18"
+    },
+    {
+      "id": "rq-cm-003",
+      "category": "communication-modalities",
+      "topic": "sign-language",
+      "priority": "high",
+      "task": "Baseline sign-language linguistics (cherology, grammar) from public sources",
+      "status": "in_progress",
+      "added": "2026-06-18"
+    },
+    {
+      "id": "rq-cm-004",
+      "category": "communication-modalities",
+      "topic": "writing-system",
+      "priority": "high",
+      "task": "Writing-system typology for script-linked dead-language corpus",
+      "status": "in_progress",
+      "added": "2026-06-18"
+    },
+    {
+      "id": "rq-cm-005",
+      "category": "communication-modalities",
+      "topic": "linear-a-script",
+      "priority": "medium",
+      "task": "Flag undeciphered Linear A phonetic reconstructions; cross-link language scrape",
+      "status": "pending",
+      "added": "2026-06-18"
+    },
+    {
+      "id": "rq-cm-006",
+      "category": "communication-modalities",
+      "topic": "paralinguistics",
+      "priority": "medium",
+      "task": "Prosody and voice-quality reference for speech synthesis guardrails",
+      "status": "pending",
+      "added": "2026-06-18"
     }
   ]
 }

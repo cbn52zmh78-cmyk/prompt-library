@@ -29,7 +29,7 @@ def get_json(
     url: str,
     params: dict[str, Any] | None = None,
     timeout: int = 30,
-    retries: int = 3,
+    retries: int = 5,
 ) -> dict[str, Any]:
     headers = {"User-Agent": USER_AGENT}
     last_exc: Exception | None = None
@@ -37,12 +37,16 @@ def get_json(
         _throttle()
         try:
             response = requests.get(url, params=params, headers=headers, timeout=timeout)
+            if response.status_code == 429:
+                wait = max(5, 2 ** (attempt + 2))
+                time.sleep(wait)
+                continue
             response.raise_for_status()
             return response.json()
         except requests.RequestException as exc:
             last_exc = exc
             if attempt < retries - 1:
-                time.sleep(2 * (attempt + 1))
+                time.sleep(max(2, 2 * (attempt + 1)))
     raise last_exc  # type: ignore[misc]
 
 

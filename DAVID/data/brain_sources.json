@@ -6,7 +6,7 @@
       "name": "Wikipedia (MediaWiki API)",
       "license": "CC BY-SA 3.0",
       "base_url": "https://en.wikipedia.org/w/api.php",
-      "fields": ["overview", "history", "phonology_summary", "classification"]
+      "fields": ["overview", "history", "phonology_summary", "classification", "modality_keywords", "script_sections"]
     },
     {
       "id": "wiktionary",
@@ -20,9 +20,16 @@
       "name": "Wikidata (public entity API)",
       "license": "CC0",
       "base_url": "https://www.wikidata.org/wiki/Special:EntityData",
-      "fields": ["iso_codes", "ipa_statements", "family", "extinction_status"]
+      "fields": ["iso_codes", "ipa_statements", "family", "extinction_status", "modality_claims"]
     }
   ],
-  "rate_limit_seconds": 2.0,
+  "scraper_2": {
+    "name": "DAVID Scraper 2 — communication modalities",
+    "registry": "data/communication_modality_registry.json",
+    "wiki_map": "data/wiki_modality_map.json",
+    "output_root": "communication-modalities",
+    "categories": ["phonetics-ipa", "non-verbal", "sign-languages", "writing-systems"]
+  },
+  "rate_limit_seconds": 3.5,
   "user_agent": "DAVID-Brain/1.0 (linguistic research; public sources only; Grok Projects)"
 }

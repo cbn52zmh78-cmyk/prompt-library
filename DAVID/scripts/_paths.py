@@ -15,8 +15,10 @@ if str(TOOLS) not in sys.path:
 
 DATA_DIR = DAVID_ROOT / "data"
 LANGUAGES_DIR = DAVID_ROOT / "languages"
+MODALITIES_DIR = DAVID_ROOT / "communication-modalities"
 PROMPTS_DIR = DAVID_ROOT / "prompts"
 REGISTRY_FILE = DATA_DIR / "language_registry.json"
+MODALITY_REGISTRY_FILE = DATA_DIR / "communication_modality_registry.json"
 QUEUE_FILE = DATA_DIR / "research_queue.json"
 TRAINING_OUT = DAVID_ROOT / "training_packs"
 RESEARCH_OUT = DAVID_ROOT / "research"

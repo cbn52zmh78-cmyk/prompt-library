@@ -1,0 +1,157 @@
+{
+  "slug": "latin-script",
+  "name": "Latin Script",
+  "category": "writing-systems",
+  "category_label": "Writing Systems / Scripts",
+  "scraped_at": "2026-06-18T12:07:41.080429+00:00",
+  "retrieval_date": "2026-06-18",
+  "deep": false,
+  "source_policy": "public_only",
+  "licenses": {
+    "wikipedia": "CC BY-SA 3.0",
+    "wiktionary": "CC BY-SA 3.0",
+    "wikidata": "CC0"
+  },
+  "sources_used": [
+    "wikipedia",
+    "wikidata",
+    "wiktionary"
+  ],
+  "citations": [
+    {
+      "source": "Wikipedia",
+      "title": "Latin script",
+      "url": "https://en.wikipedia.org/wiki/Latin_script",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "source": "Wikidata",
+      "qid": "Q8229",
+      "url": "https://www.wikidata.org/wiki/Q8229",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    },
+    {
+      "source": "Wiktionary",
+      "title": "Latin script",
+      "url": "https://en.wiktionary.org/wiki/Latin_script",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  ],
+  "errors": [],
+  "wikipedia": {
+    "title": "Latin_script",
+    "url": "https://en.wikipedia.org/wiki/Latin_script",
+    "extract": "The Latin script, also known as the Roman script, is a writing system based on the letters of the classical Latin alphabet, derived from a form of the Greek alphabet which was in use in the ancient Greek city of Cumae in Magna Graecia. The Greek alphabet was altered by the Etruscans, and subsequently their alphabet was altered by the Ancient Romans. Several Latin-script alphabets exist, which differ in graphemes, collation and phonetic values from the classical Latin alphabet.\nThe Latin script is the basis of the International Phonetic Alphabet (IPA), and the 26 most widespread letters are the letters contained in the ISO basic Latin alphabet, which are the same letters as the English alphabet.\nThe Latin script is the basis for the largest number of alphabets of any writing system and is the most widely adopted writing system in the world. Latin script is used as the standard method of writing the languages of Western and Central Europe, most of sub-Saharan Africa, the Americas, and Oceania, as well as many languages in other parts of the world.\n\n\n== Name ==\nThe script is either called Latin script or Roman script, in reference to its origin in ancient Rome (though some of the capital letters are Greek in origin). In the context of transliteration, the term romanization is often found. Unicode uses the term Latin as does the International Organization for Standardization (ISO).\nThe numeral system is called the Roman numeral system, and the collection of the elements is known as the Roman numerals. The numbers 1, 2, 3 ... are Latin/Roman script numbers for the Hindu\u2013Arabic numeral system.\n\n\n== ISO basic Latin alphabet ==\n\nThe use of the letters I and V for both consonants and vowels proved inconvenient as the Latin alphabet was adapted to Germanic and Romance languages. W originated as a doubled V (VV) used to represent the Voiced labial\u2013velar approximant /w/ found in Old English as early as the 7th century. It came into common use in the later 11th century, replacing the letter wynn \u27e8\u01f7 \u01bf\u27e9, which had been used for the same sound. In the Romance languages, the minuscule form of V was a rounded u; from this was derived a rounded capital U for the vowel in the 16th century, while a new, pointed minuscule v was derived from V for the consonant. In the case of I, a word-final swash form, j, came to be used for the consonant, with the unswashed form restricted to vowel use. Such conventions were erratic for centuries. J was introduced into English for the consonant in the 17th century (it had been rare as a vowel), but it was not universally considered a distinct letter in the alphabetic order until the 19th century.\nBy the 1960s, it became apparent to the computer and telecommunications industries in the First World that a non-proprietary method of encoding characters was needed. The International Organization for Standardization (ISO) encapsulated the Latin alphabet in their (ISO/IEC 646) standard. To achieve widespread acceptance, this encapsulation was based on popular usage. As the United States held a preeminent position in both industries during the 1960s, the standard was based on the already published American Standard Code for Information Interchange, better known as ASCII, which included in the character set the 26 \u00d7 2 (uppercase and lowercase) letters of the English alphabet. Later standards issued by the ISO, for example ISO/IEC 10646 (Unicode Latin), have continued to define the 26 \u00d7 2 letters of the English alphabet as the basic Latin alphabet with extensions to handle other letters in other languages.\n\n\n== Spread ==\n\nThe Latin alphabet spread, along with Latin, from the Italian Peninsula to the lands surrounding the Mediterranean Sea with the expansion of the Roman Empire. The eastern half of the Empire, including Greece, T\u00fcrkiye, the Levant, and Egypt, continued to use Greek as a lingua franca, but Latin was widely spoken in the western half, and as the western Romance languages evolved out of Latin, they continued to use and adapt the Latin alphabet.\n\n\n=== Middle Ages ===\nWith the spread of Western Christianity during the Middle Ages, the Latin alphabet was gradually adopted by the peoples of Northern Europe who spoke Celtic languages (displacing the Ogham alphabet) or Germanic languages (displacing earlier Runic alphabets) or Baltic languages, as well as by the speakers of several Uralic languages, most notably Hungarian, Finnish and Estonian.\nThe Latin script also came into use for writing the West Slavic languages and several South Slavic languages, as the people who spoke them adopted Roman Catholicism. The speakers of East Slavic languages generally adopted Cyrillic along with Orthodox Christianity. The Serbian language uses both scripts, with Cyrillic predominating in official communication and Latin elsewhere, as determined by the Law on Official Use of the Language and Alphabet.\n\n\n=== Since the 16th century ===\nAs late as 1500, the Latin script was limited primarily to the languages spoken in Western, Northern, and Central Europe. The Orthodox Christian Slavs of Eastern and South-eastern Europe mostly used Cyrillic, and the Greek alphabet was in use by Greek speakers around the eastern Mediterranean. The Arabic script was widespread within Islam, both among Arabs and non-Arab nations like the Iranians, Indonesians, Malays, and Turkic peoples. Most of the rest of Asia used a variety of Brahmic scripts or the Chinese script.\nThrough European colonization the Latin script has spread to the Americas, Oceania, parts of Asia, Africa, and the Pacific, in forms based on the Spanish, Portuguese, English, French, German and Dutch alphabets.\nIt is used for many Austronesian languages, including the languages of the Philippines and the Malaysian and Indonesian languages, replacing earlier Arabic and indigenous Brahmic alphabets. Latin letters served as the basis for the forms of the Cherokee syllabary developed by Sequoyah; however, the sound values are completely different.\nUnder Portuguese missionary influence, a Latin alphabet was devised for the Vietnamese language, which had previously used Chinese characters. Portuguese and other European missionaries, who arrived in Goa on west coast of India  in sixteenth and seventeenth centuries, introduced Roman script for the Konkani language\u2014an Indo-Aryan language. The Latin-based alphabet replaced the Chinese characters in administration in the 19th century with French rule.\n\n\n=== Since the 19th century ===\nIn the late 19th century, the Romanians returned to the Latin alphabet, dropping the Romanian Cyrillic alphabet. Romanian is one of the Romance languages.\n\n\n=== Since 20th century ===\nIn 1928, as part of Mustafa Kemal Atat\u00fcrk's reforms, the new Republic of T\u00fcrkiye adopted a Latin alphabet for the Turkish language, replacing a modified Arabic alphabet. In the 1930s, most peoples of the former USSR adopted a Latin-based script, the Unified Turkic Alphabet. This began with Turkic-speaking peoples such as the Azeri, Yakuts, Tatars, Bashkirs, Kazakh, Kyrgyz, and others, and then spread to peoples of other language groups (for example, the Moldovans were transferred to the Latin alphabet, which is almost identical to the Romanian alphabet). However, in the 1940s, all scripts were replaced by the Cyrillic alphabet; but, in the 1940s, all were replaced by Cyrillic. However, some peoples were not affected by Cyrillization (Latvians, Lithuanians, Estonians, Germans, Poles, Finns, Georgians, Armenians).\nAfter the collapse of the Soviet Union in 1991, three of the newly independent Turkic-speaking republics, Azerbaijan, Uzbekistan, Turkmenistan, as well as Romanian-speaking Moldova, officially adopted Latin alphabets for their languages. Kyrgyzstan, Iranian-speaking Tajikistan, and the breakaway region of Transnistria kept the Cyrillic alphabet, chiefly due to their close ties with Russia.\nIn the 1930s and 1940s, the majority of Kurds replaced the Arabic script with two Latin alphabets. Although only the official Kurdish government uses an Arabic alphabet for public documents, the Latin Kurdish alphabet remains widely used throughout the region by the majority of Kurdish-speakers.\nIn 1957, the People's Republic of China introduced a script reform to the Zhuang language, changing its orthography from Sawndip, a writing system based on Chinese, to a Latin script alphabet that used a mixture of Latin, Cyrillic, and IPA letters to represent both the phonemes and tones of the Zhuang language, without the use of diacritics. In 1982 this was further standardised to use only Latin script letters.\nWith the collapse of the Derg and subsequent end of decades of Amharic assimilation in 1991, various ethnic groups in Ethiopia dropped the Ge\u02bdez script, which was deemed unsuitable for languages outside of the Semitic branch. In the following years the Kafa, Oromo, Sidama, Somali, and Wolaitta languages switched to Latin while there is continued debate on whether to follow suit for the Hadiyya and Kambaata languages.\n\n\n=== 21st century ===\nOn 15 September 1999, the authorities of Tatarstan, Russia, passed a law to make the Latin script a co-official writing system alongside Cyrillic for the Tatar language by 2011. A year later, however, the Russian government overruled the law and banned Latinization on its territory.\nIn 2015, the government of Kazakhstan announced that a Kazakh Latin alphabet would replace the Kazakh Cyrillic alphabet as the official writing system for the Kazakh language by 2025. There are also talks about switching from the Cyrillic script to Latin in Ukraine, Kyrgyzstan, and Mongolia. Mongolia, however, has since opted to revive the Mongolian script instead of switching to Latin.\nIn October 2019, Inuit Tapiriit Kanatami (ITK), the national organization for Inuit in Canada announced that they will introduce a unified writing system for the Inuit languages in the country. The writing system is based on the Latin alphabet and is modeled after the one used in the Greenlandic language.\nOn 12 February 2021, the government of Uzbekistan announced it will finalize the transition from Cyrillic to Latin for the Uzbek language by 2023. Plans to switch to Latin originally began in 1993 but subsequently stalled and Cyrillic remained in widespread use.\nAt present the Crimean Tatar language uses both Cyrillic and Latin. The use of Latin was originally approved by Crimean Tatar representatives after the Soviet Union's collapse but was never implemented by the regional government. After Russia's annexation of Crimea in 2014 the Latin script was dropped entirely. Nevertheless, Crimean Tatars outside of Crimea continue to use Latin and on 22 October 2021, the government of Ukraine approved a proposal endorsed by the Mejlis of the Crimean Tatar People to switch the Crimean Tatar language to Latin by 2025.\nIn July 2020, 2.6 billion people (36% of the world population) use the Latin alphabet.\n\n\n== International standards ==\n\nBy the 1960s, it became apparent to the computer and telecommunications industries in the First World that a non-proprietary method of encoding characters was needed. The International Organization for Standardization (ISO) encapsulated the Latin alphabet in their (ISO/IEC 646) standard. To achieve widespread acceptance, this encapsulation was based on popular usage.\nAs the United States held a preeminent position in both industries during the 1960s, the standard was based on the already published American Standard Code for Information Interchange, better known as ASCII, which included in the character set the 26 \u00d7 2 (uppercase and lowercase) letters of the English alphabet. Later standards issued by the ISO, for example ISO/IEC 10646 (Unicode Latin), have continued to define the 26 \u00d7 2 letters of the English alphabet as the basic Latin alphabet with extensions to handle other letters in other languages.\n\n\n== National standards ==\nThe DIN standard DIN 91379 specifies a subset of Unicode letters, special characters, and sequences of letters and diacritic signs to allow the correct representation of names and to simplify data exchange in Europe. This specification supports all official languages of European Union and European Free Trade Association countries (thus also the Greek and Cyrillic scripts), plus the German minority languages. To allow the transliteration of names in other writing systems to the Latin script according to the relevant ISO standards, all necessary combinations of base letters and diacritic signs are provided.\nEfforts are being made to further develop it into a European CEN standard.\n\n\n== As used by various languages ==\n\nIn the course of its use, the Latin alphabet was adapted for use in new languages, sometimes representing phonemes not found in languages that were already written with the Roman characters. To represent these new sounds, extensions were therefore created, be it by adding diacritics to existing letters, by joining multiple letters together to make ligatures, by creating completely new forms, or by assigning a special function to pairs or triplets of letters. These new forms are given a place in the alphabet by defining an alphabetical order or collation sequence, which can vary with the particular language.\n\n\n=== Letters ===\n\nSome examples of new letters to the standard Latin alphabet are the Runic letters wynn \u27e8\u01f7 \u01bf\u27e9 and thorn \u27e8\u00de \u00fe\u27e9, and the letter eth \u27e8\u00d0/\u00f0\u27e9, which were added to the alphabet of Old English. Another Irish letter, the insular g, developed into yogh \u27e8\u021c \u021d\u27e9, used in Middle English. Wynn was later replaced with the new letter \u27e8w\u27e9, eth and thorn with \u27e8th\u27e9, and yogh with \u27e8gh\u27e9. Although the four are no longer part of the English or Irish alphabets, eth and thorn are still used in the modern Icelandic alphabet, while eth is also used by the Faroese alphabet.\nSome West, Central and Southern African languages use a few additional letters that have sound values similar to those of their equivalents in the IPA. For example, Adangme uses the letters \u27e8\u0190 \u025b\u27e9 and \u27e8\u0186 \u0254\u27e9, and Ga uses \u27e8\u0190 \u025b\u27e9, \u27e8\u014a \u014b\u27e9 and \u27e8\u0186 \u0254\u27e9. Hausa uses \u27e8\u0181 \u0253\u27e9 and \u27e8\u018a \u0257\u27e9 for implosives, and \u27e8\u0198 \u0199\u27e9 for an ejective. Africanists have standardized these into the African reference alphabet.\nDotted and dotless I \u2014 \u27e8\u0130 i\u27e9 and \u27e8I \u0131\u27e9 \u2014 are two forms of the letter I used by the Turkish, Azerbaijani, and Kazakh alphabets. The Azerbaijani language also has \u27e8\u018f \u0259\u27e9, which represents the near-open front unrounded vowel.\n\n\n=== Multigraphs ===\n\nA digraph is a pair of letters used to write one sound or a combination of sounds that does not correspond to the written letters in sequence. Examples are \u27e8ch\u27e9, \u27e8ng\u27e9, \u27e8rh\u27e9, \u27e8sh\u27e9, \u27e8ph\u27e9, \u27e8th\u27e9  in English, and \u27e8ij\u27e9, \u27e8ee\u27e9, \u27e8ch\u27e9 and \u27e8ei\u27e9 in Dutch. In Dutch the \u27e8ij\u27e9 is capitalized as \u27e8IJ\u27e9 or the ligature \u27e8\u0132\u27e9, but never as \u27e8Ij\u27e9, and it often takes the appearance of a ligature \u27e8\u0133\u27e9 very similar to the letter \u27e8\u00ff\u27e9 in handwriting.\nA trigraph is made up of three letters, like the German \u27e8sch\u27e9, the Breton \u27e8c'h\u27e9 or the Milanese \u27e8oeu\u27e9. In the orthographies of some languages, digraphs and trigraphs are regarded as independent letters of the alphabet in their own right. The capitalization of digraphs and trigraphs is language-dependent, as only the first letter may be capitalized, or all component letters simultaneously (even for words written in title case, where letters after the digraph or trigraph are left in lowercase).\n\n\n=== Ligatures ===\n\nA ligature is a fusion of two or more ordinary letters into a new glyph or character. Examples are \u27e8\u00c6 \u00e6\u27e9 (from \u27e8AE\u27e9, called ash), \u27e8\u0152 \u0153\u27e9 (from \u27e8OE\u27e9, sometimes called oethel or e\u00f0el), the abbreviation \u27e8&\u27e9 (from Latin: et, lit.\u2009'and', called ampersand), and \u27e8\u1e9e \u00df\u27e9 (from \u27e8\u017f\u0292\u27e9 or \u27e8\u017fs\u27e9, the archaic medial form of \u27e8s\u27e9, followed by an \u27e8\u0292\u27e9 or \u27e8s\u27e9, called sharp S or eszett).\n\n\n=== Diacritics ===\n\nA diacritic, in some cases also called an accent, is a small symbol that can appear above or below a letter, or in some other position, such as the umlaut sign used in the German characters \u27e8\u00e4\u27e9, \u27e8\u00f6\u27e9, \u27e8\u00fc\u27e9 or the Romanian characters \u27e8\u0103\u27e9, \u27e8\u00e2\u27e9, \u27e8\u00ee\u27e9, \u27e8\u0219\u27e9 and \u27e8\u021b\u27e9. Its main function is to change the phonetic value of the letter to which it is added, but it may also modify the pronunciation of a whole syllable or word, change the tone of the word, such as in Vietnamese or Yoruba, indicate the start of a new syllable, or distinguish between homographs such as the Dutch words een (pronounced [\u0259n]) meaning \"a\" or \"an\", and \u00e9\u00e9n, (pronounced [e:n]) meaning \"one\". As with the pronunciation of letters, the effect of diacritics is language-dependent.\nEnglish is the only major modern European language that requires no diacritics for its native vocabulary. Historically, in formal writing, a diaeresis was sometimes used to indicate the start of a new syllable within a sequence of letters that could otherwise be misinterpreted as being a single vowel (e.g., \"co\u00f6perative\", \"re\u00eblect\"), but modern writing styles either omit such marks or use a hyphen to indicate a syllable break (e.g. \"co-operative\", \"re-elect\"). \n\n\n=== Collation ===\n\nSome modified letters, such as the symbols \u27e8\u00e5\u27e9, \u27e8\u00e4\u27e9, and \u27e8\u00f6\u27e9, may be regarded as new individual letters in themselves, and assigned a specific place in the alphabet for collation purposes, separate from that of the letter on which they are based, as is done in Swedish. In other cases, such as with \u27e8\u00e4\u27e9, \u27e8\u00f6\u27e9, \u27e8\u00fc\u27e9 in German, this is not done; letter-diacritic combinations being identified with their base letter. The same applies to digraphs and trigraphs. Different diacritics may be treated differently in collation within a single language. For example, in Spanish, the character \u27e8\u00f1\u27e9 is considered a letter, and sorted between \u27e8n\u27e9 and \u27e8o\u27e9 in dictionaries, but the accented vowels \u27e8\u00e1\u27e9, \u27e8\u00e9\u27e9, \u27e8\u00ed\u27e9, \u27e8\u00f3\u27e9, \u27e8\u00fa\u27e9, \u27e8\u00fc\u27e9 are not separated from the unaccented vowels \u27e8a\u27e9, \u27e8e\u27e9, \u27e8i\u27e9, \u27e8o\u27e9, \u27e8u\u27e9.\n\n\n=== Capitalization ===\n\nThe languages that use the Latin script today generally use capital letters to begin paragraphs, sentences and proper nouns. The rules for capitalization have changed over time, and different languages have varied in their rules for capitalization. Old English, for example, was rarely written with even proper nouns capitalized; whereas Modern English of the 18th century had frequently all nouns capitalized, in the same way that Modern German is written today, e.g. German: Alle Schwestern der alten Stadt hatten die V\u00f6gel gesehen, lit.\u2009'All of the Sisters of the old City had seen the Birds'.\n\n\n== Romanization ==\n\nWords from languages natively written with other scripts, such as Arabic or Chinese, are usually transliterated or transcribed when embedded in Latin-script text or in multilingual international communication, a process termed romanization.\nWhilst the romanization of such languages is used mostly at unofficial levels, it has been especially prominent in computer messaging where only the limited seven-bit ASCII code is available on older systems. However, with the introduction of Unicode, romanization is now becoming less necessary. Keyboards used to enter such text may still restrict users to romanized text, as only ASCII or Latin-alphabet characters may be available.\n\n\n== See also ==\nWestern Latin character sets (computing)\nEuropean Latin Unicode subset (DIN 91379)\nH with left hook\nLatin letters used in mathematics\nLatin omega\n\n\n== Notes ==\n\n\n== References ==\n\n\n=== Citations ===\n\n\n=== Sources ===\n\n\n== Further reading ==\nBoyle, Leonard E. 1976. \"Optimist and recensionist: 'Common errors' or 'common variations.'\" In Latin script and letters A.D. 400\u2013900: Festschrift presented to Ludwig Bieler on the occasion of his 70th birthday. Edited by John J. O'Meara and Bernd Naumann, 264\u201374. Leiden, The Netherlands: Brill.\nMorison, Stanley. 1972. Politics and script: Aspects of authority and freedom in the development of Graeco-Latin script from the sixth century B.C. to the twentieth century A.D. Oxford: Clarendon.\n\n\n== External links ==\n\nUnicode collation chart\u2014Latin letters sorted by shape\nDiacritics Project \u2013 All you need to design a font with correct accents Archived 23 October 2018 at the Wayback Machine",
+    "wikitext_length": 41170,
+    "phonology_keywords": [],
+    "source": "wikipedia",
+    "license": "CC BY-SA 3.0",
+    "modality_keywords": [
+      "IPA",
+      "accent",
+      "alphabet",
+      "consonant",
+      "orthograph",
+      "pronunciation",
+      "script",
+      "syllab",
+      "transliterat",
+      "vowel",
+      "writing system"
+    ],
+    "retrieved_at": "2026-06-18T12:07:41.080429+00:00",
+    "citation": {
+      "source": "Wikipedia",
+      "title": "Latin script",
+      "url": "https://en.wikipedia.org/wiki/Latin_script",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    "script_sections": [
+      {
+        "section": "script_inventory",
+        "text": "=\n\nSome examples of new letters to the standard Latin alphabet are the Runic letters wynn  and thorn , and the letter eth , which were added to the alphabet of Old English. Another Irish letter, the insular g, developed into yogh , used in Middle English. Wynn was later replaced with the new letter , eth and thorn with , and yogh with . Although the four are no longer part of the English or Irish alphabets, eth and thorn are still used in the modern Icelandic alphabet, while eth is also used by the Faroese alphabet.\n\nSome West, Central and Southern African languages use a few additional letters that have sound values similar to those of their equivalents in the IPA. For example, Adangme uses the letters  and , and Ga uses ,  and . Hausa uses  and  for implosives, and  for an ejective. Africanists have standardized these into the African reference alphabet.\n\nDotted and dotless I \u2014  and  \u2014 are two forms of the letter I used by the Turkish, Azerbaijani, and Kazakh alphabets. The Azerbaijani language also has , which represents the near-open front unrounded vowel."
+      }
+    ]
+  },
+  "wikidata": {
+    "qid": "Q8229",
+    "label": "Latin script",
+    "description": "writing system used to write most Western, Northern and Central European languages",
+    "iso639_3": null,
+    "language_family": "Q2182919",
+    "extinction_status": null,
+    "ipa_statements": [],
+    "source": "wikidata",
+    "license": "CC0",
+    "modality_claims": {
+      "category": "writing-systems",
+      "statements": [
+        {
+          "property": "P31",
+          "value": "Q29517555"
+        },
+        {
+          "property": "P31",
+          "value": "Q8192"
+        }
+      ]
+    },
+    "retrieved_at": "2026-06-18T12:07:41.080429+00:00",
+    "citation": {
+      "source": "Wikidata",
+      "qid": "Q8229",
+      "url": "https://www.wikidata.org/wiki/Q8229",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    }
+  },
+  "wiktionary": {
+    "pages": [
+      "Latin script",
+      "Latin alphabet"
+    ],
+    "ipa_entries": [],
+    "etymology_blocks": [],
+    "pronunciation_notes": [
+      {
+        "section": "Pronunciation",
+        "text": "=\n*"
+      }
+    ],
+    "source": "wiktionary",
+    "license": "CC BY-SA 3.0",
+    "retrieved_at": "2026-06-18T12:07:41.080429+00:00",
+    "citation": {
+      "source": "Wiktionary",
+      "title": "Latin script",
+      "url": "https://en.wiktionary.org/wiki/Latin_script",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  },
+  "uncertainty_flags": [],
+  "modality_summary": {
+    "category": "writing-systems",
+    "keyword_count": 11,
+    "top_keywords": [
+      "IPA",
+      "accent",
+      "alphabet",
+      "consonant",
+      "orthograph",
+      "pronunciation",
+      "script",
+      "syllab",
+      "transliterat",
+      "vowel"
+    ],
+    "ipa_entries": 0,
+    "uncertainty_flag_count": 0,
+    "has_wikidata_statements": true,
+    "extract_chars": 20067
+  }
+}

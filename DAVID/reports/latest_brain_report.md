@@ -1,5 +1,5 @@
 # DAVID Brain Report
-Generated: 2026-06-17 00:15 UTC
+Generated: 2026-06-18 12:00 UTC
 
 Public sources only: Wikipedia, Wiktionary, Wikidata (CC BY-SA / CC0).
 
@@ -7,7 +7,7 @@ Public sources only: Wikipedia, Wiktionary, Wikidata (CC BY-SA / CC0).
 
 ## Etruscan (`etruscan`)
 
-**Scraped:** 2026-06-16T23:06:04.538535+00:00 | **Sources:** wikipedia, wikidata, wiktionary
+**Scraped:** 2026-06-18T11:58:54.826346+00:00 | **Sources:** wikipedia, wikidata, wiktionary
 
 ### Overview (Wikipedia)
 
@@ -37,17 +37,20 @@ Source: https://en.wikipedia.org/wiki/Etruscan_language
 * , 
 *
 
-=
-*
-
 ---
 
 ## Gothic (`gothic`)
 
-**Scraped:** 2026-06-16T23:07:38.675385+00:00 | **Sources:** wikidata, wiktionary
+**Scraped:** 2026-06-18T11:59:05.222919+00:00 | **Sources:** wikipedia, wikidata, wiktionary
 
-**Scrape warnings:**
-- wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Gothic_language&explaintext=1&inprop=url
+### Overview (Wikipedia)
+
+Gothic is an extinct East Germanic language that was spoken by the Goths. It is known primarily from the Codex Argenteus, a 6th-century copy of a 4th-century Bible translation, and is the only East Germanic language with a sizeable text corpus.
+It is the earliest Germanic language that is attested in any sizable texts, but it lacks any modern descendants. The oldest documents in Gothic date back to the fourth century. The language was in decline by the mid-sixth century, partly because of the military defeat of the Goths at the hands of the Franks, the elimination of the Goths in Italy, and geographic isolation (in Spain, the Gothic language lost its last and probably already declining function as a church language when the Visigoths converted from Arianism to Nicene Christianity in 589). 
+The language survived as a domestic language in the Iberian Peninsula (modern-day Spain and Portugal) as late as the eighth century. Gothic-seeming terms are found in manuscripts subsequent to this date, but these may or may not belong to the same language.
+A language known as Crimean Gothic survived in isolated mountain regions in Crimea as late as the second half of the 18th century. Lacking ce…
+
+Source: https://en.wikipedia.org/wiki/Gothic_language
 
 ### Classification (Wikidata)
 
@@ -112,7 +115,7 @@ Named by British archaeologist , to distinguish it from the other linear script,
 
 ## Sumerian (`sumerian`)
 
-**Scraped:** 2026-06-17T00:15:22.826168+00:00 | **Sources:** wikipedia, wikidata, wiktionary
+**Scraped:** 2026-06-18T11:59:17.160476+00:00 | **Sources:** wikipedia, wikidata, wiktionary
 
 ### Overview (Wikipedia)
 
@@ -131,24 +134,11 @@ Source: https://en.wikipedia.org/wiki/Sumerian_language
 
 ### Pronunciation map
 
-**IPA entries found:** 3 | **Accent buckets:** 3
+**IPA entries found:** 1 | **Accent buckets:** 1
 
-- **scholarly_ipa:** /s(j)ʊˈmɪəɹiən/, /sʊˈmɛɹiən/, LL-Q58635 (pan)-Gaurav Jhammat-ਔਡਰੀ ਹੋਲੈਂਡਰ.wav
+- **scholarly_ipa:** LL-Q58635 (pan)-Gaurav Jhammat-ਔਡਰੀ ਹੋਲੈਂਡਰ.wav
 
-- *RP:* /s(j)ʊˈmɪəɹiən/
-- *GA:* /sʊˈmɛɹiən/
 - *wikidata:* LL-Q58635 (pan)-Gaurav Jhammat-ਔਡਰੀ ਹੋਲੈਂਡਰ.wav
-
-### Pronunciation notes (Wiktionary)
-
-=
-* 
-* 
-* 
-*  
-* 
-* 
-*
 
 ---
 
@@ -217,13 +207,71 @@ From , from , from the verbal root . Related to  and . It could also reflect the
 
 ## Classical Nahuatl (`classical-nahuatl`)
 
-⚠️ No brain scrape yet. Run:
-`python DAVID/scripts/david_brain_scraper.py --language classical-nahuatl`
+**Scraped:** 2026-06-18T12:00:06.631610+00:00 | **Sources:** wikipedia, wikidata, wiktionary
+
+### Overview (Wikipedia)
+
+Classical Nahuatl, also known simply as Aztec or Nahuatl, is a set of variants of Nahuatl spoken in the Valley of Mexico and central Mexico as a lingua franca at the time of the 16th-century Spanish conquest of the Aztec Empire. Indigenous languages, including Classical Nahuatl, remained dominant until the time when New Spain (Mexico) became independent in 1821. However, during the subsequent centuries, it was largely displaced by Spanish and evolved into some of the modern Nahuan languages in use (other modern dialects descend more directly from other 16th-century variants). Although classified as an extinct language, Classical Nahuatl has survived through a multitude of written sources transcribed by Nahua peoples and Spaniards in the Latin script.
+Classical Nahuatl may be called Codical Nahuatl (when referring to the variants employed in the Mesoamerican codices through the medium of the Aztec script) or Colonial Nahuatl (if written in post-conquest documents in the Latin alphabet).
+
+
+== Classification ==
+Classical Nahuatl is one of the Nahuan languages within the Uto-Aztecan family. It is classified as a central dialect and is most closely related to the modern dialects of Nahu…
+
+Source: https://en.wikipedia.org/wiki/Classical_Nahuatl
+
+### Classification (Wikidata)
+
+- **Label:** Nkongho
+- **ISO 639-3:** nkc
+- **Description:** language
+
+### Pronunciation map
+
+**IPA entries found:** 1 | **Accent buckets:** 1
+
+- **scholarly_ipa:** /ˈnɑːwɑːt(ə)l/
+
+- *unspecified:* /ˈnɑːwɑːt(ə)l/
+
+### Pronunciation notes (Wiktionary)
+
+=
+* 
+*
+
+---
 
 ## Akkadian (`akkadian`)
 
-⚠️ No brain scrape yet. Run:
-`python DAVID/scripts/david_brain_scraper.py --language akkadian`
+**Scraped:** 2026-06-18T11:59:48.879682+00:00 | **Sources:** wikidata, wiktionary
+
+**Scrape warnings:**
+- wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Akkadian_language&explaintext=1&inprop=url
+
+### Classification (Wikidata)
+
+- **Label:** Alicia Rhodes
+- **ISO 639-3:** —
+- **Description:** pornographic performer (b. 1978)
+
+### Pronunciation map
+
+**IPA entries found:** 1 | **Accent buckets:** 1
+
+- **scholarly_ipa:** /əˈkeɪ.di.ən/
+
+- *unspecified:* /əˈkeɪ.di.ən/
+
+### Pronunciation notes (Wiktionary)
+
+=
+* 
+** 
+* 
+*
+
+---
 
 ## Old English (`old-english`)
 
@@ -237,16 +285,16 @@ From , from , from the verbal root . Related to  and . It could also reflect the
 
 ## Brain activity log (recent)
 
+- `classical-nahuatl` @ 2026-06-18T12:00 — 1 IPA, sources: wikipedia, wikidata, wiktionary
+- `akkadian` @ 2026-06-18T11:59 — 1 IPA, sources: wikidata, wiktionary ⚠️ 1 errors
+- `sumerian` @ 2026-06-18T11:59 — 1 IPA, sources: wikipedia, wikidata, wiktionary
+- `gothic` @ 2026-06-18T11:59 — 2 IPA, sources: wikipedia, wikidata, wiktionary
+- `etruscan` @ 2026-06-18T11:58 — 1 IPA, sources: wikipedia, wikidata, wiktionary
 - `sumerian` @ 2026-06-17T00:15 — 3 IPA, sources: wikipedia, wikidata, wiktionary
 - `linear-a` @ 2026-06-16T23:15 — 0 IPA, sources: wikipedia, wikidata, wiktionary
 - `gothic` @ 2026-06-16T23:07 — 2 IPA, sources: wikidata, wiktionary ⚠️ 1 errors
-- `classical-latin` @ 2026-06-16T23:07 — 7 IPA, sources: wikipedia, wikidata, wiktionary
-- `gothic` @ 2026-06-16T23:06 — 0 IPA, sources: wikidata, wiktionary ⚠️ 1 errors
-- `etruscan` @ 2026-06-16T23:06 — 1 IPA, sources: wikipedia, wikidata, wiktionary
-- `gothic` @ 2026-06-16T23:05 — 0 IPA, sources: wikidata, wiktionary ⚠️ 1 errors
-- `etruscan` @ 2026-06-16T23:05 — 6 IPA, sources: wikipedia, wikidata, wiktionary
 
 
 ---
 
-**Languages with brain data:** 5/10
+**Languages with brain data:** 7/10

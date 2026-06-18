@@ -1,0 +1,12 @@
+{
+  "id": "writing-system",
+  "name": "Writing System",
+  "category": "writing-systems",
+  "priority": "high",
+  "notes": "Typology: logographic, syllabic, alphabetic, abjad, abugida",
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

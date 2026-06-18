@@ -1,0 +1,12 @@
+{
+  "id": "body-language",
+  "name": "Body Language",
+  "category": "non-verbal",
+  "priority": "medium",
+  "notes": "Posture, orientation, and holistic non-verbal signaling",
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

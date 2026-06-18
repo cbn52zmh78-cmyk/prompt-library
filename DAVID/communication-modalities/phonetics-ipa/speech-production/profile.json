@@ -1,0 +1,12 @@
+{
+  "id": "speech-production",
+  "name": "Speech Production",
+  "category": "phonetics-ipa",
+  "priority": "high",
+  "notes": "Physiology and mechanics of spoken language output",
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

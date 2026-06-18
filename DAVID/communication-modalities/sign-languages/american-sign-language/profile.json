@@ -1,0 +1,12 @@
+{
+  "id": "american-sign-language",
+  "name": "American Sign Language",
+  "category": "sign-languages",
+  "priority": "high",
+  "notes": "Major natural sign language; reference for cherology and grammar",
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

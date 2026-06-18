@@ -1,0 +1,12 @@
+{
+  "id": "international-phonetic-alphabet",
+  "name": "International Phonetic Alphabet",
+  "category": "phonetics-ipa",
+  "priority": "high",
+  "notes": "Core notation system for speech sounds across DAVID pronunciation work",
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

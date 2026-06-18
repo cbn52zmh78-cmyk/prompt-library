@@ -89,5 +89,83 @@
     ],
     "errors": [],
     "ipa_count": 3
+  },
+  {
+    "slug": "etruscan",
+    "scraped_at": "2026-06-18T11:58:54.826346+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 1
+  },
+  {
+    "slug": "gothic",
+    "scraped_at": "2026-06-18T11:59:05.222919+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 2
+  },
+  {
+    "slug": "sumerian",
+    "scraped_at": "2026-06-18T11:59:17.160476+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 1
+  },
+  {
+    "slug": "akkadian",
+    "scraped_at": "2026-06-18T11:59:48.879682+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Akkadian_language&explaintext=1&inprop=url"
+    ],
+    "ipa_count": 1
+  },
+  {
+    "slug": "classical-nahuatl",
+    "scraped_at": "2026-06-18T12:00:06.631610+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 1
+  },
+  {
+    "slug": "akkadian",
+    "scraped_at": "2026-06-18T12:03:51.620784+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 0
+  },
+  {
+    "slug": "akkadian",
+    "scraped_at": "2026-06-18T12:07:13.966104+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 1
   }
 ]

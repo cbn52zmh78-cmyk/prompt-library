@@ -1,0 +1,12 @@
+{
+  "id": "cuneiform",
+  "name": "Cuneiform",
+  "category": "writing-systems",
+  "priority": "high",
+  "notes": "Mesopotamian wedge script; links to Sumerian/Akkadian corpus",
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

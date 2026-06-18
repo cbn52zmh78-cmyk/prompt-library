@@ -2,8 +2,8 @@
   "slug": "etruscan",
   "name": "Etruscan",
   "status": "extinct",
-  "scraped_at": "2026-06-16T23:06:04.538535+00:00",
-  "deep": true,
+  "scraped_at": "2026-06-18T11:58:54.826346+00:00",
+  "deep": false,
   "sources_used": [
     "wikipedia",
     "wikidata",
@@ -41,8 +41,7 @@
   "wiktionary": {
     "pages": [
       "Etruscan",
-      "Category:Etruscan language",
-      "cataloguing"
+      "Category:Etruscan language"
     ],
     "ipa_entries": [
       {
@@ -57,10 +56,6 @@
       {
         "section": "Pronunciation",
         "text": "=\n* , \n*"
-      },
-      {
-        "section": "Pronunciation",
-        "text": "=\n*"
       }
     ],
     "source": "wiktionary",

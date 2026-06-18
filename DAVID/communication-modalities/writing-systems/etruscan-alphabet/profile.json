@@ -1,0 +1,12 @@
+{
+  "id": "etruscan-alphabet",
+  "name": "Etruscan Alphabet",
+  "category": "writing-systems",
+  "priority": "medium",
+  "notes": "Adapted Greek alphabet for Etruscan inscriptions",
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

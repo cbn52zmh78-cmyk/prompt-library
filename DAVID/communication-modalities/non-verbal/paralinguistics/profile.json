@@ -1,0 +1,12 @@
+{
+  "id": "paralinguistics",
+  "name": "Paralinguistics",
+  "category": "non-verbal",
+  "priority": "high",
+  "notes": "Prosody, pitch, tempo, voice quality beyond lexical content",
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

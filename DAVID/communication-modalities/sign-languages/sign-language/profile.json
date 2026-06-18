@@ -1,0 +1,12 @@
+{
+  "id": "sign-language",
+  "name": "Sign Language",
+  "category": "sign-languages",
+  "priority": "high",
+  "notes": "General typology and linguistics of natural signed languages",
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

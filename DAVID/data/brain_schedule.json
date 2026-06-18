@@ -15,11 +15,11 @@
     "rotation"
   ],
   "current_cycle": 1,
-  "total_batches_run": 2,
-  "last_batch_at": "2026-06-17T00:15:33.147847+00:00",
+  "total_batches_run": 3,
+  "last_batch_at": "2026-06-18T12:00:15.147333+00:00",
   "last_batch_languages": [
-    "sumerian"
+    "classical-nahuatl"
   ],
   "last_cycle_completed_at": null,
-  "rotation_index": 2
+  "rotation_index": 3
 }

@@ -1,0 +1,1059 @@
+{
+  "id": "REG-SRC-001",
+  "version": "1.0",
+  "updated": "2026-06-18",
+  "description": "DAVID public-source citation registry (REG-SRC-001)",
+  "guardrails": {
+    "public_pages_only": true,
+    "robots_txt_compliant": true,
+    "tos_compliant": true,
+    "rate_limit_seconds": 3.5,
+    "no_logins": true,
+    "no_captcha": true,
+    "no_gated_data": true
+  },
+  "allowed_sources": [
+    {
+      "id": "wikipedia",
+      "name": "Wikipedia (MediaWiki API)",
+      "license": "CC BY-SA 3.0",
+      "base_url": "https://en.wikipedia.org/w/api.php",
+      "fields": [
+        "overview",
+        "history",
+        "phonology_summary",
+        "classification",
+        "modality_keywords",
+        "script_sections"
+      ]
+    },
+    {
+      "id": "wiktionary",
+      "name": "Wiktionary (MediaWiki API)",
+      "license": "CC BY-SA 3.0",
+      "base_url": "https://en.wiktionary.org/w/api.php",
+      "fields": [
+        "etymology",
+        "pronunciation_ipa",
+        "accent_variants",
+        "definitions"
+      ]
+    },
+    {
+      "id": "wikidata",
+      "name": "Wikidata (public entity API)",
+      "license": "CC0",
+      "base_url": "https://www.wikidata.org/wiki/Special:EntityData",
+      "fields": [
+        "iso_codes",
+        "ipa_statements",
+        "family",
+        "extinction_status",
+        "modality_claims"
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "record_id": "language:akkadian:wikidata",
+      "target_slug": "akkadian",
+      "target_type": "language",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q35518",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Akkadian"
+    },
+    {
+      "record_id": "language:akkadian:wikipedia",
+      "target_slug": "akkadian",
+      "target_type": "language",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Akkadian_language",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Akkadian_language"
+    },
+    {
+      "record_id": "language:akkadian:wiktionary",
+      "target_slug": "akkadian",
+      "target_type": "language",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "akkadian"
+    },
+    {
+      "record_id": "language:classical-latin:wikidata",
+      "target_slug": "classical-latin",
+      "target_type": "language",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q397",
+      "retrieved_date": "2026-06-16",
+      "license": "CC0",
+      "title": "Latin"
+    },
+    {
+      "record_id": "language:classical-latin:wikipedia",
+      "target_slug": "classical-latin",
+      "target_type": "language",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Latin",
+      "retrieved_date": "2026-06-16",
+      "license": "CC BY-SA 3.0",
+      "title": "Latin"
+    },
+    {
+      "record_id": "language:classical-latin:wiktionary",
+      "target_slug": "classical-latin",
+      "target_type": "language",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-16",
+      "license": "CC BY-SA 3.0",
+      "title": "classical-latin"
+    },
+    {
+      "record_id": "language:classical-nahuatl:wikidata",
+      "target_slug": "classical-nahuatl",
+      "target_type": "language",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q35863",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Nkongho"
+    },
+    {
+      "record_id": "language:classical-nahuatl:wikipedia",
+      "target_slug": "classical-nahuatl",
+      "target_type": "language",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Classical_Nahuatl",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Classical_Nahuatl"
+    },
+    {
+      "record_id": "language:classical-nahuatl:wiktionary",
+      "target_slug": "classical-nahuatl",
+      "target_type": "language",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "classical-nahuatl"
+    },
+    {
+      "record_id": "language:etruscan:wikidata",
+      "target_slug": "etruscan",
+      "target_type": "language",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q35726",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Etruscan"
+    },
+    {
+      "record_id": "language:etruscan:wikipedia",
+      "target_slug": "etruscan",
+      "target_type": "language",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Etruscan_language",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Etruscan_language"
+    },
+    {
+      "record_id": "language:etruscan:wiktionary",
+      "target_slug": "etruscan",
+      "target_type": "language",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "etruscan"
+    },
+    {
+      "record_id": "language:gothic:wikidata",
+      "target_slug": "gothic",
+      "target_type": "language",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q35722",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Gothic"
+    },
+    {
+      "record_id": "language:gothic:wikipedia",
+      "target_slug": "gothic",
+      "target_type": "language",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Gothic_language",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Gothic_language"
+    },
+    {
+      "record_id": "language:gothic:wiktionary",
+      "target_slug": "gothic",
+      "target_type": "language",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "gothic"
+    },
+    {
+      "record_id": "language:linear-a:wikidata",
+      "target_slug": "linear-a",
+      "target_type": "language",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q208278",
+      "retrieved_date": "2026-06-16",
+      "license": "CC0",
+      "title": "Montigny"
+    },
+    {
+      "record_id": "language:linear-a:wikipedia",
+      "target_slug": "linear-a",
+      "target_type": "language",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Linear_A",
+      "retrieved_date": "2026-06-16",
+      "license": "CC BY-SA 3.0",
+      "title": "Linear_A"
+    },
+    {
+      "record_id": "language:linear-a:wiktionary",
+      "target_slug": "linear-a",
+      "target_type": "language",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-16",
+      "license": "CC BY-SA 3.0",
+      "title": "linear-a"
+    },
+    {
+      "record_id": "language:sumerian:wikidata",
+      "target_slug": "sumerian",
+      "target_type": "language",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q36434",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Audrey Hollander"
+    },
+    {
+      "record_id": "language:sumerian:wikipedia",
+      "target_slug": "sumerian",
+      "target_type": "language",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Sumerian_language",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Sumerian_language"
+    },
+    {
+      "record_id": "language:sumerian:wiktionary",
+      "target_slug": "sumerian",
+      "target_type": "language",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "sumerian"
+    },
+    {
+      "record_id": "modality:american-sign-language:wikidata",
+      "target_slug": "american-sign-language",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q14759",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Q14759"
+    },
+    {
+      "record_id": "modality:american-sign-language:wikidata",
+      "target_slug": "american-sign-language",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q14759",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "American Sign Language"
+    },
+    {
+      "record_id": "modality:american-sign-language:wiktionary",
+      "target_slug": "american-sign-language",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "https://en.wiktionary.org/wiki/American_Sign_Language",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "American Sign Language"
+    },
+    {
+      "record_id": "modality:american-sign-language:wiktionary",
+      "target_slug": "american-sign-language",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "american-sign-language"
+    },
+    {
+      "record_id": "modality:articulatory-phonetics:wikidata",
+      "target_slug": "articulatory-phonetics",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q755113",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Q755113"
+    },
+    {
+      "record_id": "modality:articulatory-phonetics:wikidata",
+      "target_slug": "articulatory-phonetics",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q755113",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "1999\u20132000 Serie A"
+    },
+    {
+      "record_id": "modality:articulatory-phonetics:wikipedia",
+      "target_slug": "articulatory-phonetics",
+      "target_type": "modality",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Articulatory_phonetics",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Articulatory phonetics"
+    },
+    {
+      "record_id": "modality:articulatory-phonetics:wikipedia",
+      "target_slug": "articulatory-phonetics",
+      "target_type": "modality",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Articulatory_phonetics",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Articulatory_phonetics"
+    },
+    {
+      "record_id": "modality:body-language:wikidata",
+      "target_slug": "body-language",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q189022",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Q189022"
+    },
+    {
+      "record_id": "modality:body-language:wikidata",
+      "target_slug": "body-language",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q189022",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Imperial College London"
+    },
+    {
+      "record_id": "modality:body-language:wiktionary",
+      "target_slug": "body-language",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "https://en.wiktionary.org/wiki/body_language",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "body language"
+    },
+    {
+      "record_id": "modality:body-language:wiktionary",
+      "target_slug": "body-language",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "body-language"
+    },
+    {
+      "record_id": "modality:british-sign-language:wikidata",
+      "target_slug": "british-sign-language",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q33302",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Q33302"
+    },
+    {
+      "record_id": "modality:british-sign-language:wikidata",
+      "target_slug": "british-sign-language",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q33302",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "French Sign Language"
+    },
+    {
+      "record_id": "modality:british-sign-language:wiktionary",
+      "target_slug": "british-sign-language",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "https://en.wiktionary.org/wiki/British_Sign_Language",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "British Sign Language"
+    },
+    {
+      "record_id": "modality:british-sign-language:wiktionary",
+      "target_slug": "british-sign-language",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "british-sign-language"
+    },
+    {
+      "record_id": "modality:cuneiform:wikidata",
+      "target_slug": "cuneiform",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q35468",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Q35468"
+    },
+    {
+      "record_id": "modality:cuneiform:wikidata",
+      "target_slug": "cuneiform",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q35468",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Briz-K"
+    },
+    {
+      "record_id": "modality:cuneiform:wiktionary",
+      "target_slug": "cuneiform",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "https://en.wiktionary.org/wiki/cuneiform",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "cuneiform"
+    },
+    {
+      "record_id": "modality:cuneiform:wiktionary",
+      "target_slug": "cuneiform",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "cuneiform"
+    },
+    {
+      "record_id": "modality:etruscan-alphabet:wikidata",
+      "target_slug": "etruscan-alphabet",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q33539",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Q33539"
+    },
+    {
+      "record_id": "modality:etruscan-alphabet:wikidata",
+      "target_slug": "etruscan-alphabet",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q33539",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "twin paradox"
+    },
+    {
+      "record_id": "modality:etruscan-alphabet:wiktionary",
+      "target_slug": "etruscan-alphabet",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "https://en.wiktionary.org/wiki/Etruscan_alphabet",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Etruscan alphabet"
+    },
+    {
+      "record_id": "modality:etruscan-alphabet:wiktionary",
+      "target_slug": "etruscan-alphabet",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "etruscan-alphabet"
+    },
+    {
+      "record_id": "modality:facial-expression:wikidata",
+      "target_slug": "facial-expression",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q10737",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Q10737"
+    },
+    {
+      "record_id": "modality:facial-expression:wikidata",
+      "target_slug": "facial-expression",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q10737",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "suicide"
+    },
+    {
+      "record_id": "modality:facial-expression:wiktionary",
+      "target_slug": "facial-expression",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "https://en.wiktionary.org/wiki/facial_expression",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "facial expression"
+    },
+    {
+      "record_id": "modality:facial-expression:wiktionary",
+      "target_slug": "facial-expression",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "facial-expression"
+    },
+    {
+      "record_id": "modality:gesture:wikidata",
+      "target_slug": "gesture",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q46940",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Q46940"
+    },
+    {
+      "record_id": "modality:gesture:wikidata",
+      "target_slug": "gesture",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q46940",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Alcal\u00e1 de Henares"
+    },
+    {
+      "record_id": "modality:gesture:wikipedia",
+      "target_slug": "gesture",
+      "target_type": "modality",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Gesture",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Gesture"
+    },
+    {
+      "record_id": "modality:gesture:wikipedia",
+      "target_slug": "gesture",
+      "target_type": "modality",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Gesture",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Gesture"
+    },
+    {
+      "record_id": "modality:gesture:wiktionary",
+      "target_slug": "gesture",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "https://en.wiktionary.org/wiki/gesture",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "gesture"
+    },
+    {
+      "record_id": "modality:gesture:wiktionary",
+      "target_slug": "gesture",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "gesture"
+    },
+    {
+      "record_id": "modality:gothic-alphabet:wikidata",
+      "target_slug": "gothic-alphabet",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q33538",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Q33538"
+    },
+    {
+      "record_id": "modality:gothic-alphabet:wikidata",
+      "target_slug": "gothic-alphabet",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q33538",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Syriac"
+    },
+    {
+      "record_id": "modality:gothic-alphabet:wiktionary",
+      "target_slug": "gothic-alphabet",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "https://en.wiktionary.org/wiki/Gothic_alphabet",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Gothic alphabet"
+    },
+    {
+      "record_id": "modality:gothic-alphabet:wiktionary",
+      "target_slug": "gothic-alphabet",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "gothic-alphabet"
+    },
+    {
+      "record_id": "modality:international-phonetic-alphabet:wikidata",
+      "target_slug": "international-phonetic-alphabet",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q10199",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Q10199"
+    },
+    {
+      "record_id": "modality:international-phonetic-alphabet:wikidata",
+      "target_slug": "international-phonetic-alphabet",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q10199",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Zazaki"
+    },
+    {
+      "record_id": "modality:international-phonetic-alphabet:wiktionary",
+      "target_slug": "international-phonetic-alphabet",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "https://en.wiktionary.org/wiki/IPA",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "IPA"
+    },
+    {
+      "record_id": "modality:international-phonetic-alphabet:wiktionary",
+      "target_slug": "international-phonetic-alphabet",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "international-phonetic-alphabet"
+    },
+    {
+      "record_id": "modality:latin-script:wikidata",
+      "target_slug": "latin-script",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q8229",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Q8229"
+    },
+    {
+      "record_id": "modality:latin-script:wikidata",
+      "target_slug": "latin-script",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q8229",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Latin script"
+    },
+    {
+      "record_id": "modality:latin-script:wiktionary",
+      "target_slug": "latin-script",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "https://en.wiktionary.org/wiki/Latin_script",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Latin script"
+    },
+    {
+      "record_id": "modality:latin-script:wiktionary",
+      "target_slug": "latin-script",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "latin-script"
+    },
+    {
+      "record_id": "modality:linear-a-script:wikidata",
+      "target_slug": "linear-a-script",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q208278",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Q208278"
+    },
+    {
+      "record_id": "modality:linear-a-script:wikidata",
+      "target_slug": "linear-a-script",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q208278",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Montigny"
+    },
+    {
+      "record_id": "modality:linear-a-script:wikipedia",
+      "target_slug": "linear-a-script",
+      "target_type": "modality",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Linear_A",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Linear A"
+    },
+    {
+      "record_id": "modality:linear-a-script:wikipedia",
+      "target_slug": "linear-a-script",
+      "target_type": "modality",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Linear_A",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Linear_A"
+    },
+    {
+      "record_id": "modality:linear-a-script:wiktionary",
+      "target_slug": "linear-a-script",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "https://en.wiktionary.org/wiki/Linear_A",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Linear A"
+    },
+    {
+      "record_id": "modality:linear-a-script:wiktionary",
+      "target_slug": "linear-a-script",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "linear-a-script"
+    },
+    {
+      "record_id": "modality:paralinguistics:wikidata",
+      "target_slug": "paralinguistics",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q1757686",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Q1757686"
+    },
+    {
+      "record_id": "modality:paralinguistics:wikidata",
+      "target_slug": "paralinguistics",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q1757686",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Thomas-Mann-Gesellschaft"
+    },
+    {
+      "record_id": "modality:paralinguistics:wikipedia",
+      "target_slug": "paralinguistics",
+      "target_type": "modality",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Paralanguage",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Paralanguage"
+    },
+    {
+      "record_id": "modality:paralinguistics:wikipedia",
+      "target_slug": "paralinguistics",
+      "target_type": "modality",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Paralanguage",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Paralanguage"
+    },
+    {
+      "record_id": "modality:paralinguistics:wiktionary",
+      "target_slug": "paralinguistics",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "https://en.wiktionary.org/wiki/paralinguistics",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "paralinguistics"
+    },
+    {
+      "record_id": "modality:paralinguistics:wiktionary",
+      "target_slug": "paralinguistics",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "paralinguistics"
+    },
+    {
+      "record_id": "modality:phonetics:wikidata",
+      "target_slug": "phonetics",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q27216",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Q27216"
+    },
+    {
+      "record_id": "modality:phonetics:wikidata",
+      "target_slug": "phonetics",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q27216",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Siliana"
+    },
+    {
+      "record_id": "modality:phonetics:wikipedia",
+      "target_slug": "phonetics",
+      "target_type": "modality",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Phonetics",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Phonetics"
+    },
+    {
+      "record_id": "modality:phonetics:wikipedia",
+      "target_slug": "phonetics",
+      "target_type": "modality",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Phonetics",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Phonetics"
+    },
+    {
+      "record_id": "modality:phonetics:wiktionary",
+      "target_slug": "phonetics",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "https://en.wiktionary.org/wiki/phonetics",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "phonetics"
+    },
+    {
+      "record_id": "modality:phonetics:wiktionary",
+      "target_slug": "phonetics",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "phonetics"
+    },
+    {
+      "record_id": "modality:proxemics:wikidata",
+      "target_slug": "proxemics",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q1757685",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Q1757685"
+    },
+    {
+      "record_id": "modality:proxemics:wikidata",
+      "target_slug": "proxemics",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q1757685",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Boa Vista do Sul"
+    },
+    {
+      "record_id": "modality:sign-language:wikidata",
+      "target_slug": "sign-language",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q34228",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Q34228"
+    },
+    {
+      "record_id": "modality:sign-language:wikidata",
+      "target_slug": "sign-language",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q34228",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "sign language"
+    },
+    {
+      "record_id": "modality:sign-language:wiktionary",
+      "target_slug": "sign-language",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "https://en.wiktionary.org/wiki/sign_language",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "sign language"
+    },
+    {
+      "record_id": "modality:sign-language:wiktionary",
+      "target_slug": "sign-language",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "sign-language"
+    },
+    {
+      "record_id": "modality:speech-production:wikidata",
+      "target_slug": "speech-production",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q7578977",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Q7578977"
+    },
+    {
+      "record_id": "modality:speech-production:wikidata",
+      "target_slug": "speech-production",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q7578977",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Category:2000s in North Korea"
+    },
+    {
+      "record_id": "modality:writing-system:wikidata",
+      "target_slug": "writing-system",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q8192",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "Q8192"
+    },
+    {
+      "record_id": "modality:writing-system:wikidata",
+      "target_slug": "writing-system",
+      "target_type": "modality",
+      "source_name": "Wikidata",
+      "source_url": "https://www.wikidata.org/wiki/Q8192",
+      "retrieved_date": "2026-06-18",
+      "license": "CC0",
+      "title": "writing system"
+    },
+    {
+      "record_id": "modality:writing-system:wikipedia",
+      "target_slug": "writing-system",
+      "target_type": "modality",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Writing_system",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Writing system"
+    },
+    {
+      "record_id": "modality:writing-system:wikipedia",
+      "target_slug": "writing-system",
+      "target_type": "modality",
+      "source_name": "Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/Writing_system",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "Writing_system"
+    },
+    {
+      "record_id": "modality:writing-system:wiktionary",
+      "target_slug": "writing-system",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "https://en.wiktionary.org/wiki/writing_system",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "writing system"
+    },
+    {
+      "record_id": "modality:writing-system:wiktionary",
+      "target_slug": "writing-system",
+      "target_type": "modality",
+      "source_name": "Wiktionary",
+      "source_url": "",
+      "retrieved_date": "2026-06-18",
+      "license": "CC BY-SA 3.0",
+      "title": "writing-system"
+    }
+  ],
+  "coverage": {
+    "languages": {
+      "scraped": 7,
+      "total": 10
+    },
+    "modalities": {
+      "scraped": 18,
+      "total": 18
+    },
+    "citation_count": 99
+  }
+}

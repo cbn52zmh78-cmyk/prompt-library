@@ -1,0 +1,111 @@
+{
+  "international-phonetic-alphabet": {
+    "wikipedia": "International_Phonetic_Alphabet",
+    "wikidata": "Q21204",
+    "wiktionary": "IPA",
+    "wiktionary_fallbacks": ["International Phonetic Alphabet"]
+  },
+  "phonetics": {
+    "wikipedia": "Phonetics",
+    "wikidata": "Q27216",
+    "wiktionary": "phonetics",
+    "wiktionary_fallbacks": ["Phonetics"]
+  },
+  "speech-production": {
+    "wikipedia": "Speech_production",
+    "wikidata": "Q7578977",
+    "wiktionary": null,
+    "wiktionary_fallbacks": []
+  },
+  "articulatory-phonetics": {
+    "wikipedia": "Articulatory_phonetics",
+    "wikidata": "Q755113",
+    "wiktionary": null,
+    "wiktionary_fallbacks": []
+  },
+  "gesture": {
+    "wikipedia": "Gesture",
+    "wikidata": "Q46940",
+    "wiktionary": "gesture",
+    "wiktionary_fallbacks": ["Gesture"]
+  },
+  "facial-expression": {
+    "wikipedia": "Facial_expression",
+    "wikidata": "Q10737",
+    "wiktionary": "facial expression",
+    "wiktionary_fallbacks": []
+  },
+  "proxemics": {
+    "wikipedia": "Proxemics",
+    "wikidata": "Q1757685",
+    "wiktionary": null,
+    "wiktionary_fallbacks": []
+  },
+  "paralinguistics": {
+    "wikipedia": "Paralanguage",
+    "wikidata": "Q1757686",
+    "wiktionary": "paralinguistics",
+    "wiktionary_fallbacks": ["Paralanguage"]
+  },
+  "body-language": {
+    "wikipedia": "Body_language",
+    "wikidata": "Q189022",
+    "wiktionary": "body language",
+    "wiktionary_fallbacks": []
+  },
+  "sign-language": {
+    "wikipedia": "Sign_language",
+    "wikidata": "Q34228",
+    "wiktionary": "sign language",
+    "wiktionary_fallbacks": ["Sign language"]
+  },
+  "american-sign-language": {
+    "wikipedia": "American_Sign_Language",
+    "wikidata": "Q14759",
+    "wiktionary": "American Sign Language",
+    "wiktionary_fallbacks": ["Category:American Sign Language"]
+  },
+  "british-sign-language": {
+    "wikipedia": "British_Sign_Language",
+    "wikidata": "Q33302",
+    "wiktionary": "British Sign Language",
+    "wiktionary_fallbacks": []
+  },
+  "writing-system": {
+    "wikipedia": "Writing_system",
+    "wikidata": "Q8192",
+    "wiktionary": "writing system",
+    "wiktionary_fallbacks": ["Writing system"]
+  },
+  "cuneiform": {
+    "wikipedia": "Cuneiform",
+    "wikidata": "Q35468",
+    "wiktionary": "cuneiform",
+    "wiktionary_fallbacks": ["Cuneiform"]
+  },
+  "linear-a-script": {
+    "wikipedia": "Linear_A",
+    "wikidata": "Q208278",
+    "wiktionary": "Linear A",
+    "wiktionary_fallbacks": [],
+    "uncertainty_flags": ["undeciphered", "phonetic_values_partly_inferred"]
+  },
+  "gothic-alphabet": {
+    "wikipedia": "Gothic_alphabet",
+    "wikidata": "Q33538",
+    "wiktionary": "Gothic alphabet",
+    "wiktionary_fallbacks": []
+  },
+  "etruscan-alphabet": {
+    "wikipedia": "Etruscan_alphabet",
+    "wikidata": "Q33539",
+    "wiktionary": "Etruscan alphabet",
+    "wiktionary_fallbacks": []
+  },
+  "latin-script": {
+    "wikipedia": "Latin_script",
+    "wikidata": "Q8229",
+    "wiktionary": "Latin script",
+    "wiktionary_fallbacks": ["Latin alphabet"]
+  }
+}

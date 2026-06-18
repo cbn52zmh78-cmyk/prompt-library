@@ -1,0 +1,12 @@
+{
+  "id": "facial-expression",
+  "name": "Facial Expression",
+  "category": "non-verbal",
+  "priority": "high",
+  "notes": "Emotion display, micro-expressions, cross-cultural variation",
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

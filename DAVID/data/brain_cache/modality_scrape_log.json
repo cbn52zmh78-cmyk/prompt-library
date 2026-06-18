@@ -1,0 +1,1211 @@
+[
+  {
+    "slug": "international-phonetic-alphabet",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:00:22.589432+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 13
+  },
+  {
+    "slug": "international-phonetic-alphabet",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:00:44.836517+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=International_Phonetic_Alphabet&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "international-phonetic-alphabet",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:00:32.286534+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=parse&page=International_Phonetic_Alphabet&prop=wikitext"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "phonetics",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:00:39.472042+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Phonetics&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "speech-production",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:01:02.725166+00:00",
+    "sources": [
+      "wikidata"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=parse&page=Speech_production&prop=wikitext"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "phonetics",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:01:02.066305+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 12
+  },
+  {
+    "slug": "phonetics",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:01:02.413366+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 12
+  },
+  {
+    "slug": "articulatory-phonetics",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:01:17.247702+00:00",
+    "sources": [
+      "wikidata"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Articulatory_phonetics&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "speech-production",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:01:27.125633+00:00",
+    "sources": [
+      "wikidata"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Speech_production&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "speech-production",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:01:27.464154+00:00",
+    "sources": [
+      "wikidata"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Speech_production&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "articulatory-phonetics",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:01:39.726917+00:00",
+    "sources": [
+      "wikidata"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Articulatory_phonetics&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "articulatory-phonetics",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:01:40.113086+00:00",
+    "sources": [
+      "wikidata"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Articulatory_phonetics&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "gesture",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:01:29.833047+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Gesture&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "facial-expression",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:01:59.633268+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 4
+  },
+  {
+    "slug": "gesture",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:01:52.273538+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 7
+  },
+  {
+    "slug": "gesture",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:01:52.706326+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 7
+  },
+  {
+    "slug": "proxemics",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:02:16.082011+00:00",
+    "sources": [
+      "wikidata"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Proxemics&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "gesture",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:02:03.269760+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 7
+  },
+  {
+    "slug": "facial-expression",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:02:17.379772+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Facial_expression&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "facial-expression",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:02:24.357660+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Facial_expression&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "proxemics",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:02:38.465064+00:00",
+    "sources": [
+      "wikidata"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Proxemics&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "proxemics",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:02:45.617980+00:00",
+    "sources": [
+      "wikidata"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Proxemics&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "paralinguistics",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:02:28.775896+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Paralanguage&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:02:42.062548+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Sign_language&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "body-language",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:02:58.512744+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 3,
+    "keywords": 9
+  },
+  {
+    "slug": "paralinguistics",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:02:51.041637+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 7
+  },
+  {
+    "slug": "paralinguistics",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:02:58.181537+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 7
+  },
+  {
+    "slug": "body-language",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:03:16.119690+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Body_language&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "body-language",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:03:16.722643+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Body_language&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:03:15.075973+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Sign_language&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "writing-system",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:03:09.614317+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Writing_system&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:03:37.292582+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Sign_language&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:03:37.947327+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Sign_language&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "american-sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:03:44.969391+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=American_Sign_Language&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "british-sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:04:01.617169+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=parse&page=British_Sign_Language&prop=wikitext"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "american-sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:04:00.447823+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 3,
+    "keywords": 8
+  },
+  {
+    "slug": "american-sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:04:01.119834+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=parse&page=American_Sign_Language&prop=wikitext"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "british-sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:04:25.502544+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=British_Sign_Language&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "speech-production",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:04:37.613437+00:00",
+    "sources": [
+      "wikidata"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Speech_production&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "british-sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:04:32.840121+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=British_Sign_Language&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "writing-system",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:04:24.690015+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Writing_system&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "writing-system",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:04:46.601736+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Writing_system&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "articulatory-phonetics",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:05:01.378314+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 10
+  },
+  {
+    "slug": "writing-system",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:04:54.011915+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 15
+  },
+  {
+    "slug": "cuneiform",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:04:54.402705+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 14
+  },
+  {
+    "slug": "cuneiform",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:05:03.219308+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 14
+  },
+  {
+    "slug": "linear-a-script",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:05:26.109413+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Linear_A&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 2,
+    "keywords": 0
+  },
+  {
+    "slug": "linear-a-script",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:05:28.402931+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Linear_A&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 2,
+    "keywords": 0
+  },
+  {
+    "slug": "cuneiform",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:05:25.746610+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Cuneiform&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "international-phonetic-alphabet",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:05:20.573282+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=International_Phonetic_Alphabet&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "gothic-alphabet",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:05:47.318203+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Gothic_alphabet&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "gothic-alphabet",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:05:49.611975+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Gothic_alphabet&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "linear-a-script",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:05:55.482026+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 5,
+    "keywords": 9
+  },
+  {
+    "slug": "etruscan-alphabet",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:06:01.962890+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 9
+  },
+  {
+    "slug": "etruscan-alphabet",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:06:04.383259+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 9
+  },
+  {
+    "slug": "gothic-alphabet",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:06:08.132699+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Gothic_alphabet&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "cuneiform",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:06:06.702558+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=parse&page=Cuneiform&prop=wikitext"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "latin-script",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:06:18.592055+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Latin_script&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "etruscan-alphabet",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:06:28.905435+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Etruscan_alphabet&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "latin-script",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:06:20.927565+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Latin_script&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "latin-script",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:06:50.050381+00:00",
+    "sources": [
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [
+      "wikipedia: 429 Client Error: Too Many Requests for url: https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts%7Cinfo&titles=Latin_script&explaintext=1&inprop=url"
+    ],
+    "uncertainty_flags": 0,
+    "keywords": 0
+  },
+  {
+    "slug": "latin-script",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:07:41.080429+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 11
+  },
+  {
+    "slug": "gothic-alphabet",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:08:29.729804+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 5,
+    "keywords": 8
+  },
+  {
+    "slug": "international-phonetic-alphabet",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:08:29.247365+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 13
+  },
+  {
+    "slug": "speech-production",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:09:05.981485+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 10
+  },
+  {
+    "slug": "etruscan-alphabet",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:08:47.277334+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 9
+  },
+  {
+    "slug": "international-phonetic-alphabet",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:08:46.279919+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 13
+  },
+  {
+    "slug": "facial-expression",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:09:22.118578+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 4
+  },
+  {
+    "slug": "speech-production",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:09:25.997150+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 10
+  },
+  {
+    "slug": "cuneiform",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:09:18.277438+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 14
+  },
+  {
+    "slug": "proxemics",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:10:43.962377+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 5
+  },
+  {
+    "slug": "sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:10:41.340368+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 11
+  },
+  {
+    "slug": "facial-expression",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:10:47.327074+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 4
+  },
+  {
+    "slug": "body-language",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:11:13.734431+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 3,
+    "keywords": 9
+  },
+  {
+    "slug": "british-sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:11:15.955639+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 8
+  },
+  {
+    "slug": "proxemics",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:11:23.525463+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 5
+  },
+  {
+    "slug": "sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:12:35.709833+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 11
+  },
+  {
+    "slug": "american-sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:12:35.578956+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 3,
+    "keywords": 8
+  },
+  {
+    "slug": "body-language",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:12:44.806122+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 3,
+    "keywords": 9
+  },
+  {
+    "slug": "speech-production",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:13:10.165502+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 10
+  },
+  {
+    "slug": "american-sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:13:12.414300+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 3,
+    "keywords": 8
+  },
+  {
+    "slug": "sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:13:21.153649+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 11
+  },
+  {
+    "slug": "british-sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:14:37.788131+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 8
+  },
+  {
+    "slug": "international-phonetic-alphabet",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:13:24.176806+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 13
+  },
+  {
+    "slug": "american-sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:14:49.635477+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 3,
+    "keywords": 8
+  },
+  {
+    "slug": "cuneiform",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:15:11.015019+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 14
+  },
+  {
+    "slug": "proxemics",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:15:17.144398+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 5
+  },
+  {
+    "slug": "facial-expression",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:16:33.246234+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 4
+  },
+  {
+    "slug": "gothic-alphabet",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:16:36.385024+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 5,
+    "keywords": 8
+  },
+  {
+    "slug": "body-language",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:16:50.806501+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 3,
+    "keywords": 9
+  },
+  {
+    "slug": "etruscan-alphabet",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:16:56.115814+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 9
+  }
+]

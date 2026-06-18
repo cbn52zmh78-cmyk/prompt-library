@@ -1,0 +1,12 @@
+{
+  "id": "gesture",
+  "name": "Gesture",
+  "category": "non-verbal",
+  "priority": "high",
+  "notes": "Co-speech and emblematic gestures; kinesic communication",
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

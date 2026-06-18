@@ -1,0 +1,159 @@
+{
+  "slug": "etruscan-alphabet",
+  "name": "Etruscan Alphabet",
+  "category": "writing-systems",
+  "category_label": "Writing Systems / Scripts",
+  "scraped_at": "2026-06-18T12:16:56.115814+00:00",
+  "retrieval_date": "2026-06-18",
+  "deep": true,
+  "source_policy": "public_only",
+  "licenses": {
+    "wikipedia": "CC BY-SA 3.0",
+    "wiktionary": "CC BY-SA 3.0",
+    "wikidata": "CC0"
+  },
+  "sources_used": [
+    "wikipedia",
+    "wikidata",
+    "wiktionary"
+  ],
+  "citations": [
+    {
+      "source": "Wikipedia",
+      "title": "Etruscan alphabet",
+      "url": "https://en.wikipedia.org/wiki/Etruscan_alphabet",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "source": "Wikidata",
+      "qid": "Q33539",
+      "url": "https://www.wikidata.org/wiki/Q33539",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    },
+    {
+      "source": "Wiktionary",
+      "title": "Etruscan alphabet",
+      "url": "https://en.wiktionary.org/wiki/Etruscan_alphabet",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  ],
+  "errors": [],
+  "wikipedia": {
+    "title": "Etruscan_alphabet",
+    "url": "https://en.wikipedia.org/wiki/Etruscan_alphabet",
+    "extract": "The Etruscan alphabet was used by the Etruscans, an ancient civilization of central and northern Italy, to write their language, from about 700 BC to sometime around 100 AD.\nThe Etruscan alphabet derives from the Euboean alphabet used in the Greek colonies in southern Italy which belonged to the \"western\" (\"red\") type, the so-called Western Greek alphabet. Several Old Italic scripts, including the Latin alphabet, derived from it (or simultaneously with it).\n\n\n== Origins ==\nThe Etruscan alphabet originated as an adaptation of the Euboean alphabet used by the Euboean Greeks in their first colonies in Italy, the island of Pithekoussai and the city of Cumae in Campania.\nIn the alphabets of the West, X had the sound value [ks], \u03a8 stood for [k\u02b0]; in Etruscan: X = [s], \u03a8 = [k\u02b0] or [k\u03c7] (Rix 202\u2013209).\nThe earliest known Etruscan abecedarium is inscribed on the frame of a wax tablet in ivory, measuring 8.8 cm \u00d7 5 cm (3.5 in \u00d7 2 in), found at Marsiliana (near Grosseto, Tuscany). It dates from about 700 BC, and lists 26 letters corresponding to contemporary forms of the Greek alphabet, including digamma, san, and qoppa, but not omega, which had still not been added at the time.\n\n\n== Letters ==\n\nThe shapes of the Archaic Etruscan and Neo-Etruscan letters had a few variants, used in different places and/or in different epochs. Notably, opposite letters were used for [s] and [\u0283] depending on the locality. Shown above are the glyphs from the Unicode Old Italic block, whose appearance will depend on the font used by the browser. These are oriented as they would be in lines written from left to right. Also shown are SVG images of variants shown as they would be written right to left, as in most of the actual inscriptions.\n\n\n== Development ==\n\nThe archaic form of the Etruscan alphabet remained practically unchanged from its origin in the 8th century BC until about 600 BC, and the direction of writing was free. From the 6th century BC, however, the alphabet evolved, adjusting to the phonology of the Etruscan language, and letters representing phonemes nonexistent in Etruscan were dropped. By 400 BC, it appears that all of Etruria was using the classical Etruscan alphabet of 20 letters, mostly written from right to left.\nAn additional sign \ud800\udf1a, in shape similar to the numeral 8, transcribed as F, was present in Lydian, Neo-Etruscan and Italic alphabets of Osco-Umbrian languages such as Oscan, Umbrian, Old Sabine and South Picene (Old Volscian). This sign was introduced in Etruscan around 600\u2013550 BC and was not present in the Marsiliana tablet, the earliest example of the Etruscan alphabet. It is thought that the sign \ud800\udf1a may have been an altered B or H or an ex novo creation. Formerly it was even suspected to have been an Etruscan invention, but an early Sabellian inscription suggests that it is instead an invention of speakers of a Sabellian language (Osco-Umbrian languages). Its sound value was /f/ and it replaced the Etruscan digraph FH that was previously used to express that sound. Some letters were, on the other hand, falling out of use. Etruscan did not have any voiced stops, for which B, C, D were originally intended (/b/, /\u0261/, and /d/ respectively). The B and D therefore fell out of use, and the C, which is simpler and easier to write than K, was adopted to write /k/, mostly displacing K itself. Likewise, since Etruscan had no /o/ vowel sound, O disappeared and was replaced by U. In the course of its simplification, the redundant letters showed some tendency towards a semi-syllabary: C, K and Q were predominantly used in the contexts CE, KA, QU.\nThis classical alphabet remained in use until the 2nd century BC, when it began to be influenced by the rise of the Latin alphabet. Soon after, the Etruscan language itself became extinct \u2014 so thoroughly that its vocabulary and grammar are still only partly known, in spite of more than a century of intense research. The Romans, who did have voiced stops in their language, after taking over the archaic Etruscan alphabet in the 7th century BC, continued to use B and D for /b/ and /d/, and used C for both /k/ and /\u0261/, until they invented a separate letter G to distinguish the two sounds.\n\n\n== Legacy ==\nThe Etruscan alphabet apparently was the immediate ancestor for the Latin alphabet, as well as of several Old Italic scripts used in Italy before the rise of Rome, such as those used in the Oscan, Umbrian, Lepontic, Rhaetian (or Raetic), Venetic, Messapian, North and South Picene, and Camunic inscriptions.\n\n\n== Gallery ==\n\n\n== See also ==\nEtruscan numerals\nOld Italic scripts\nRunes\n\n\n== References ==",
+    "wikitext_length": 16233,
+    "phonology_keywords": [],
+    "source": "wikipedia",
+    "license": "CC BY-SA 3.0",
+    "modality_keywords": [
+      "IPA",
+      "alphabet",
+      "extinct",
+      "phonolog",
+      "script",
+      "syllab",
+      "transliterat",
+      "vowel",
+      "writing system"
+    ],
+    "retrieved_at": "2026-06-18T12:16:56.115814+00:00",
+    "citation": {
+      "source": "Wikipedia",
+      "title": "Etruscan alphabet",
+      "url": "https://en.wikipedia.org/wiki/Etruscan_alphabet",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    "script_sections": [
+      {
+        "section": "script_inventory",
+        "text": "{|class=\"wikitable\"\n|- style=\"text-align: center;\"\n!Phoenician model\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|- style=\"text-align: center;\"\n!Western Greek\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| \n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#33FF3320 !important;\"|\n| style=\"background-color:#FF0B0B50 !important;\"|\n| style=\"background-color:#FF0B0B50 !important;\"|\n| style=\"background-color:#FF0B0B50 !important;\"|\n|\n|- style=\"text-align: center;\"\n!Sound in Ancient Greek (Western)\n||| || ||||||||~~|||||||||||||||| ||||||~|||||||||||||||||| \n|- style=\"text-align: center;\"\n! Old Italic (Unicode block)\n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n----\n\n| \n| \n| \n| \n| \n| \n| \n|- style=\"text-align: center;\"\n!Marsiliana tablet\n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n|- style=\"text-align: center;\"\n!Archaic Etruscan (to 5th c.)\n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n|- style=\"text-align: center;\"\n!Neo-Etruscan\n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n|\n| \n| \n| \n| \n| \n| \n| \n|\n| \n| \n| \n| \n|\n| \n| \n| \n|- style=\"text-align: center;\"\n!Transliteration\n| a\n| b\n| c\n| d\n| e\n| v\n| z\n| h\n| \u03b8\n| i\n| k\n| l\n| m\n| n\n| s\u1ac8\n| o\n| p\n| \u03c3\n| q\n| r\n| s, \u03c2\n| t\n| u\n| s\u033d\n| \u03c6\n| \u03c7\n| f\n|- style=\"text-align: center;\"\n! Approx. pron.\n| \n| \u2014\n| \n| \u2014\n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \n| \u2014\n| \u2014\n| \n| , \n| \n| \n| , \n| \n| \n| \u2014\n| \n| \n| \n|}\nThe shapes of the Archaic Etruscan and Neo-Etruscan letters had a few variants, used in different places and/or in different epochs. Notably, opposite letters were used for  and  depending on the locality. Shown above are the glyphs from the Unicode Old Italic block, whose appearance will depend on the font used by the browser. These are oriented as they would be in lines written from left to right. Also shown are SVG images of variants shown as they would be written right to left, as in most of the actual inscriptions."
+      }
+    ]
+  },
+  "wikidata": {
+    "qid": "Q33539",
+    "label": "twin paradox",
+    "description": "thought experiment in special relativity",
+    "iso639_3": null,
+    "language_family": null,
+    "extinction_status": null,
+    "ipa_statements": [],
+    "source": "wikidata",
+    "license": "CC0",
+    "modality_claims": {
+      "category": "writing-systems",
+      "statements": [
+        {
+          "property": "P31",
+          "value": "Q483372"
+        },
+        {
+          "property": "P31",
+          "value": "Q147027"
+        },
+        {
+          "property": "P361",
+          "value": "Q11455"
+        }
+      ]
+    },
+    "retrieved_at": "2026-06-18T12:16:56.115814+00:00",
+    "citation": {
+      "source": "Wikidata",
+      "qid": "Q33539",
+      "url": "https://www.wikidata.org/wiki/Q33539",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    }
+  },
+  "wiktionary": {
+    "pages": [],
+    "ipa_entries": [],
+    "etymology_blocks": [],
+    "pronunciation_notes": [],
+    "source": "wiktionary",
+    "license": "CC BY-SA 3.0",
+    "retrieved_at": "2026-06-18T12:16:56.115814+00:00",
+    "citation": {
+      "source": "Wiktionary",
+      "title": "Etruscan alphabet",
+      "url": "https://en.wiktionary.org/wiki/Etruscan_alphabet",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  },
+  "uncertainty_flags": [
+    {
+      "flag": "partly_known",
+      "context_snippet": "o thoroughly that its vocabulary and grammar are still only partly known, in spite of more than a century of intense research. The R"
+    }
+  ],
+  "modality_summary": {
+    "category": "writing-systems",
+    "keyword_count": 9,
+    "top_keywords": [
+      "IPA",
+      "alphabet",
+      "extinct",
+      "phonolog",
+      "script",
+      "syllab",
+      "transliterat",
+      "vowel",
+      "writing system"
+    ],
+    "ipa_entries": 0,
+    "uncertainty_flag_count": 1,
+    "has_wikidata_statements": true,
+    "extract_chars": 4606
+  },
+  "deep_sections": {
+    "etymology_blocks": [],
+    "pronunciation_notes": []
+  }
+}

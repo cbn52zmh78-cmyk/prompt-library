@@ -1,0 +1,12 @@
+{
+  "id": "british-sign-language",
+  "name": "British Sign Language",
+  "category": "sign-languages",
+  "priority": "medium",
+  "notes": "BANZSL-family signed language",
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "slug": "gothic-alphabet",
+  "name": "Gothic Alphabet",
+  "category": "writing-systems",
+  "category_label": "Writing Systems / Scripts",
+  "scraped_at": "2026-06-18T12:16:36.385024+00:00",
+  "retrieval_date": "2026-06-18",
+  "deep": true,
+  "source_policy": "public_only",
+  "licenses": {
+    "wikipedia": "CC BY-SA 3.0",
+    "wiktionary": "CC BY-SA 3.0",
+    "wikidata": "CC0"
+  },
+  "sources_used": [
+    "wikipedia",
+    "wikidata",
+    "wiktionary"
+  ],
+  "citations": [
+    {
+      "source": "Wikipedia",
+      "title": "Gothic alphabet",
+      "url": "https://en.wikipedia.org/wiki/Gothic_alphabet",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "source": "Wikidata",
+      "qid": "Q33538",
+      "url": "https://www.wikidata.org/wiki/Q33538",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    },
+    {
+      "source": "Wiktionary",
+      "title": "Gothic alphabet",
+      "url": "https://en.wiktionary.org/wiki/Gothic_alphabet",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  ],
+  "errors": [],
+  "wikipedia": {
+    "title": "Gothic_alphabet",
+    "url": "https://en.wikipedia.org/wiki/Gothic_alphabet",
+    "extract": "The Gothic alphabet is an alphabet for writing the Gothic language. It was developed in the 4th century AD by Ulfilas (or Wulfila), a Gothic preacher of Cappadocian Greek descent, for the purpose of translating the Bible.\nIn form, most letters resemble letters of the Greek alphabet. The origin of the alphabet is disputed: it is debated whether (or how) the Latin and Runic alphabets were used as a source. The set of letters, and the way that they are used, show some innovations to express Gothic phonology.\n\n\n== Origin ==\nThe origin of the Gothic alphabet is controversial. In addition to the Gothic language, Ulfilas knew Greek and Latin. When developing the Gothic alphabet, he may have drawn on the Greek alphabet, Latin alphabet, and Runic alphabet. According to Cercignani, it is generally agreed that Ulfilas had knowledge of each of these three alphabets. However, this has been debated. It is not known that Ulfilas was familiar with runes; on the other hand, there is also lack of evidence showing that Ulfilas was unfamiliar with runes. There are a few extant runic inscriptions thought to be East Germanic, possibly Gothic  (see Gothic runic inscriptions). The influence of Latin and Runic letters on the Gothic alphabet is disputed, and some scholars have argued that they were not used as inputs. \nCercignani (1988:172\u2013178) supposes that Ulfilas used a twenty-four letter Runic fu\u00feark alphabet as his starting point and assigned most of its letters to corresponding letters of the twenty-seven letter Greek alphabet, taking the value of the Greek letters as numerals and their alphabetical position, and using additional symbols (some taken from the Latin alphabet) to take the place of remaining unmatched Greek letters. After the correspondences were established, Cercignani supposes the form of the Runic letters were either modified or outright replaced by the corresponding Latin or Greek letters. Miller (2019:25) calls Cercignani's hypothesis of an adapted runic alphabet \"not implausible\".\nSn\u00e6dal (2015:96\u201397, 104\u2013105) argues that Ulfilas's alphabet was initially and primarily adapted from the Greek alphabet (cursive and perhaps also uncial), with secondary influence from Latin and only minor, uncertain influence from Runic. \nMiller (2019:25) cites a number of authors that consider the Gothic alphabet to be derived from the Greek alphabet, influenced by Latin and Runic.\nUlfilas is thought to have consciously chosen to avoid the use of the older Runic alphabet for this purpose, as it was heavily connected with pagan beliefs and customs. Also, the Greek-based script probably helped to integrate the Gothic nation into the dominant Greco-Roman culture around the Black Sea.\n\n\n== Letters ==\nBelow is a table of the Gothic alphabet. Two letters used in its transliteration are not used in current English: thorn \u27e8\u00fe\u27e9 (representing /\u03b8/), and hwair \u27e8\u0195\u27e9 (representing /h\u02b7/).\nAs with the Greek alphabet, Gothic letters were also assigned numerical values. When used as numerals, letters were written either between two dots (\u2022\ud800\udf39\ud800\udf31\u2022 = 12) or with an overline (\ud800\udf39\ud800\udf31 = 12). Two letters, \ud800\udf41 (90) and \ud800\udf4a (900), have no phonetic value.\nNames for the letters are recorded in Codex Vindobonensis 795, a 9th-century manuscript of Alcuin. Most of them seem to be Gothic forms of names also appearing in the rune poems. The antiquity of these names is not certain: Cercignani (1988:172, 178\u2013180) argues that the names recorded in this manuscript may be influenced by Old English and Old High German, and concludes that the original rune names are unknown. Most of the names follow the principle of acrophony (starting with the sound that the letter represents), which Cercignani argues must have been a feature of the original names used by Ulfilas. In the following table, the names are given in their attested forms followed by reconstructed Gothic forms and their meanings.\n\n\ud800\udf47 (x) is only used in proper names and loanwords containing Greek \u03a7  (xristus \"Christ\", galiugaxristus \"Pseudo-Christ\", zaxarias \"Zacharias\", aiwxaristia \"eucharist\").\nThe letter/numeral \ud800\udf4a (900) is not attested in the Gothic bible, but only in the Salzburg-Vienna manuscript (Codex Vindobonensis 795).\n\n\n== Letter origins ==\nMost of the letters clearly bear a one-to-one correspondence to matching letters of the Greek alphabet, having similar forms and sounds and sharing the same value as numerals.\nHowever, a few letters have uncertain or disputed origins, and may have been taken from Latin or possibly (more controversially) Runic letters. These are:\n\n\ud800\udf35 (q). Its numeric value of 6 corresponds to Greek digamma or stigma (), which may also be the source of its form. Other possible sources are a cursive variant of kappa (\u03f0), which could strongly resemble a u, or Latin minuscule q.\n\ud800\udf37 (h). Its numeric value of 8 corresponds to Greek eta (\u03b7). Its form and phonetic value may be borrowed from Latin uncial h; however, Sn\u00e6dal (2015:98) argues that there is no need to use Latin to explain the form or sound value of the Gothic letter.\n\ud800\udf38 (\u00fe). Its numeric value of 9 corresponds to Greek theta (\u03b8) /\u03b8/. It is used for theta in the Gothic transcription of Greek names, such as \ud800\udf44\ud800\udf34\ud800\udf39\ud800\udf3c\ud800\udf30\ud800\udf3f\ud800\udf38\ud800\udf30\ud800\udf39\ud800\udf3f\ud800\udf43 (teimau\u00feaius) for \u03a4\u03b9\u03bc\u03cc\u03b8\u03b5\u03bf\u03c2. Its form may be derived from theta via the 4th-century cursive form \u03d1. Alternatively, its form has been argued to derive from Greek phi (\u03a6) /f/ or psi (\u03a8) /ps/ with phonetic reassignment, or from Runic \u16a6, which had a \u03c6-shaped variant around the time of the creation of the Gothic alphabet.\n\ud800\udf3e (j). Its numeric value of 60 corresponds to Greek xi (\u03be) /ks/. Its form may be derived from Latin G /\u0261/, Greek \u03be, the Greek epsilon-iota ligature, or Runic \u16c3 (the last of which is itself speculated to be derived from Greek epsilon-iota ligature).\n\ud800\udf3f (u). Its numeric value of 70 corresponds to Greek omicron (\u03bf) (originally named \u03bf\u1f56 /u\u02d0/). Its form may be derived from Greek \u03bf or from Runic \u16a2 /u/.\n\ud800\udf48 (\u0195). Its numeric value of 700 corresponds to Greek psi (\u03c8) /ps/. Its form is potentially derived from Greek \u0398 /\u03b8/ with phonetic reassignment; or from Greek \u039f /o/; possibly the letterform was switched with \ud800\udf38; also possibly pictographic in nature, with O for rounding and \u2022 for aspiration.\n\ud800\udf49 (o). Its numeric value of 800 corresponds to Greek omega (\u03c9). Its form may be derived from Greek \u03c9 or from Runic \u16df. An alternative proposal derives it from a cursive form of Greek omicron (\u03bf): Sn\u00e6dal (2015:103) argues that this better matches the shape of the Gothic letter (though the variant of Greek omicron is often vertically mirrored compared to the Gothic letter), and that the use of Greek omicron to represent close-mid /o/ would be symmetrical to the use of Greek epsilon to represent close-mid /e/. On the other hand, Miller argues that the idea that \ud800\udf49 was derived from omicron does not explain why it has the same numerical value and alphabetical position as omega, with the (pronounced) Gothic alphabet being ordered from \ud800\udf30 to \ud800\udf49 like the Greek alphabet is ordered from \u0391 to \u03a9.\n\ud800\udf42 (r), \ud800\udf43 (s) and \ud800\udf46 (f) appear to be derived from their Latin equivalents rather than from the Greek, although the equivalent Runic letters (\u16b1, \u16cb and \u16a0), assumed to have been part of the Gothic futhark, possibly played some role in this choice. However, Sn\u00e6dal claims that \"Wulfila's knowledge of runes was questionable to say the least\", as the paucity of inscriptions attests that knowledge and use of runes was rare among the East Germanic peoples. Miller refutes this claim, stating that it is \"not implausible\" that Wulfila used a runic script in his creation of the Gothic alphabet, noting six other authors\u2014Wimmer, Mensel, Hermann, d'Alquen, Rousseau, and Falluomini\u2014who support the idea of the Gothic alphabet having runic contributions. Some variants of \ud800\udf43 (s) are shaped like a sigma and more obviously derive from the Greek \u03a3.\n\n\n== Diacritics and punctuation ==\nDiacritics and punctuation used in the Codex Argenteus include a trema (\u25cc\u0308) placed on \ud800\udf39i, transliterated as \u00ef (used at the start of a word or syllable); the interpunct (\u00b7) and colon (:) as well as overlines to indicate sigla (such as xaus for xristaus) and numerals.\n\n\n== Unicode ==\nThe Gothic alphabet was added to the Unicode Standard in March 2001 with the release of version 3.1.\nThe Unicode block for Gothic is U+10330\u2013U+1034F in the Supplementary Multilingual Plane. As older software that uses UCS-2 (the predecessor of UTF-16) assumes that all Unicode codepoints can be expressed as 16 bit numbers (U+FFFF or lower, the Basic Multilingual Plane), problems may be encountered using the Gothic alphabet Unicode range and others outside of the Basic Multilingual Plane.\n\n\n== See also ==\nRing of Pietroassa\nHelp:Gothic Unicode Fonts\n\n\n== Notes ==\n\n\n== References ==\n\n\n== Sources ==\n\n\n== Further reading ==\n\n\n== External links ==\n\nOmniglot's Gothic writing page\nPater Noster and Ave Maria in Gothic\nJavaScript Gothic transliterator\nUnicode code chart for Gothic\nWAZU JAPAN's Gallery of Gothic Unicode Fonts\nDr. Pfeffer's Gothic Unicode Fonts\nGNU FreeFont Unicode font family with the Gothic range in a serif face.",
+    "wikitext_length": 28255,
+    "phonology_keywords": [],
+    "source": "wikipedia",
+    "license": "CC BY-SA 3.0",
+    "modality_keywords": [
+      "IPA",
+      "alphabet",
+      "phonolog",
+      "reconstructed",
+      "script",
+      "syllab",
+      "transliterat",
+      "writing system"
+    ],
+    "retrieved_at": "2026-06-18T12:16:36.385024+00:00",
+    "citation": {
+      "source": "Wikipedia",
+      "title": "Gothic alphabet",
+      "url": "https://en.wikipedia.org/wiki/Gothic_alphabet",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    "script_sections": [
+      {
+        "section": "script_inventory",
+        "text": "Below is a table of the Gothic alphabet. Two letters used in its transliteration are not used in current English: thorn  (representing ), and hwair  (representing ).\n\nAs with the Greek alphabet, Gothic letters were also assigned numerical values. When used as numerals, letters were written either between two dots (\u2022\u2022 = 12) or with an overline ( = 12). Two letters,  (90) and  (900), have no phonetic value.\n\nNames for the letters are recorded in Codex Vindobonensis 795, a 9th-century manuscript of Alcuin. Most of them seem to be Gothic forms of names also appearing in the rune poems. The antiquity of these names is not certain:  argues that the names recorded in this manuscript may be influenced by Old English and Old High German, and concludes that the original rune names are unknown. Most of the names follow the principle of acrophony (starting with the sound that the letter represents), which Cercignani argues must have been a feature of the original names used by Ulfilas. In the following table, the names are given in their attested forms followed by reconstructed Gothic forms and their meanings. For a survey of the relevant literature, cf.}}\n{| class=\"wikitable\" style=\"margin:1em auto;\"\n! colspan=\"2\" style=\"background:#ccf;\" | Letter || style=\"background:#ccf;\" | Translit. || style=\"background:#ccf;\"|Compare || style=\"background:#ccf;\"| Alcuinic name || style=\"background:#ccf;\"| Gothic name || style=\"background:#ccf;\"| PGmc rune name || style=\"background:#ccf;\"| IPA || style=\"background:#ccf;\"|Numeric value || style=\"background:#ccf;\"| XML entity\n|-\n| class=skin-invert-image|x48px\n|  || a || \u0391 || aza || * (*) \"god\" or * (*) \"ash\" || *ansuz ||  || 1 || &amp;#x10330;\n|-\n| class=skin-invert-image|x48px\n|  || b || \u0392 || bercna || * (*) \"birch\" || *berkanan ||  [, ] || 2 || &amp;#x10331;\n|-\n| class=skin-invert-image|x48px\n|  || g || \u0393 || geuua ||  () \"gift\" || *geb\u014d ||  [, , ];  [] || 3 || &amp;#x10332;\n|-\n| class=skin-invert-image|x48px\n|  || d || \u0394 || daaz ||  () \"day\" || *dagaz ||  [, ] || 4 || &amp;#x10333;\n|-\n| class=skin-invert-image|x48px\n|  || e (\u0113) || \u0395 (\u03f5) || eyz || * () \"horse\" or * () \"yew\" || *ehwaz, *eihwaz ||  || 5 || &amp;#x10334;\n|-\n| class=skin-invert-image|x48px\n|  || q || class=skin-invert-image|x16px (\u03da), , \u2c8a(?) || quertra || * (*) ??? or * (*) \"millstone\" || (see *per\u00fe\u014d) ||  || 6 || &amp;#x10335;\n|-\n| class=skin-invert-image|x48px\n|  || z || \u0396 || ezec || (?)}} Likely related to *idz\u0113ta. || (?) ||  || 7 || &amp;#x10336;\n|-\n| class=skin-invert-image|x48px\n|  || h || \u0397 || haal || * (*) or * (*) \"hail\" || *haglaz/*haglan ||  || 8 || &amp;#x10337;\n|-\n| class=skin-invert-image|x48px\n|  || \u00fe (th) || \u03a6, \u03a8, \u2c90 || thyth ||  (\u00feiu\u00fe) \"good\"(?) () \"thorn\" as the original Gothic rune name (this name was also previously postulated by Munch).}} || disputed (see *Thurisaz) ||  || 9 || &amp;#x10338;\n|-\n| class=skin-invert-image|x48px\n|  || i || \u0399 || iiz || * (*) \"ice\" || *\u012bsaz/*\u012bsan ||  || 10 || &amp;#x10339;\n|-\n| class=skin-invert-image|x48px\n|  || k || \u039a || chozma || * (*) or * (*) \"pine sap\" || *kaunan ||  || 20 || &amp;#x1033A;\n|-\n| class=skin-invert-image|x48px\n|  || l || \u039b || laaz || * (*) \"sea, lake\" || *laguz ||  || 30 || &amp;#x1033B;\n|-\n| class=skin-invert-image|x48px\n|  || m || \u039c || manna ||  () \"man, human\" || *mannaz ||  || 40 || &amp;#x1033C;\n|-\n| class=skin-invert-image|x48px\n|  || n || \u039d || noicz ||  () \"need\" || *naudiz ||  || 50 || &amp;#x1033D;\n|-\n| class=skin-invert-image|x48px\n|  || j || G, \u16c3, \u2c9c(?) || gaar ||  () \"year, harvest\" || *j\u0113ran ||  || 60 || &amp;#x1033E;\n|-\n| class=skin-invert-image|x48px\n|  || u || , \u2c9e(?) || uraz || * (*) \"aurochs\" || *\u016bruz ||  || 70 || &amp;#x1033F;\n|-\n| class=skin-invert-image|x48px\n|  || p || \u03a0 || pertra || * (*) ??? || *per\u00fe\u014d ||  || 80  || &amp;#x10340;\n|-\n| class=skin-invert-image|x48px\n|  ||  || \u03d8 (x16px) || || || || || 90 || &amp;#x10341;\n|-\n| class=skin-invert-image|x48px\n|  || r || R, \u03a1 || reda || * (*) \"wagon\" || *raid\u014d ||  || 100 || &amp;#x10342;\n|-\n| class=skin-inver"
+      }
+    ]
+  },
+  "wikidata": {
+    "qid": "Q33538",
+    "label": "Syriac",
+    "description": "dialect of Middle Aramaic",
+    "iso639_3": "syc",
+    "language_family": "Q28602",
+    "extinction_status": null,
+    "ipa_statements": [],
+    "source": "wikidata",
+    "license": "CC0",
+    "modality_claims": {
+      "category": "writing-systems",
+      "statements": [
+        {
+          "property": "P282",
+          "value": "Q26567"
+        },
+        {
+          "property": "P282",
+          "value": "Q3510984"
+        },
+        {
+          "property": "P31",
+          "value": "Q33742"
+        },
+        {
+          "property": "P31",
+          "value": "Q839470"
+        },
+        {
+          "property": "P31",
+          "value": "Q2315359"
+        }
+      ]
+    },
+    "retrieved_at": "2026-06-18T12:16:36.385024+00:00",
+    "citation": {
+      "source": "Wikidata",
+      "qid": "Q33538",
+      "url": "https://www.wikidata.org/wiki/Q33538",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    }
+  },
+  "wiktionary": {
+    "pages": [
+      "Gothic alphabet"
+    ],
+    "ipa_entries": [],
+    "etymology_blocks": [],
+    "pronunciation_notes": [],
+    "source": "wiktionary",
+    "license": "CC BY-SA 3.0",
+    "retrieved_at": "2026-06-18T12:16:36.385024+00:00",
+    "citation": {
+      "source": "Wiktionary",
+      "title": "Gothic alphabet",
+      "url": "https://en.wiktionary.org/wiki/Gothic_alphabet",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  },
+  "uncertainty_flags": [
+    {
+      "flag": "reconstructed",
+      "context_snippet": "le, the names are given in their attested forms followed by reconstructed Gothic forms and their meanings. \ud800\udf47 (x) is only used in pro"
+    },
+    {
+      "flag": "hypothetical",
+      "context_snippet": "Latin or Greek letters. Miller (2019:25) calls Cercignani's hypothesis of an adapted runic alphabet \"not implausible\". Sn\u00e6dal (201"
+    },
+    {
+      "flag": "disputed",
+      "context_snippet": "etters of the Greek alphabet. The origin of the alphabet is disputed: it is debated whether (or how) the Latin and Runic alphabe"
+    },
+    {
+      "flag": "uncertain",
+      "context_snippet": "ncial), with secondary influence from Latin and only minor, uncertain influence from Runic. Miller (2019:25) cites a number of a"
+    },
+    {
+      "flag": "debated",
+      "context_snippet": "eek alphabet. The origin of the alphabet is disputed: it is debated whether (or how) the Latin and Runic alphabets were used as"
+    }
+  ],
+  "modality_summary": {
+    "category": "writing-systems",
+    "keyword_count": 8,
+    "top_keywords": [
+      "IPA",
+      "alphabet",
+      "phonolog",
+      "reconstructed",
+      "script",
+      "syllab",
+      "transliterat",
+      "writing system"
+    ],
+    "ipa_entries": 0,
+    "uncertainty_flag_count": 5,
+    "has_wikidata_statements": true,
+    "extract_chars": 9062
+  },
+  "deep_sections": {
+    "etymology_blocks": [],
+    "pronunciation_notes": []
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "version": "1.0",
+  "updated": "2026-06-18",
+  "description": "DAVID Scraper 2 — how humans communicate beyond lexicon",
+  "categories": {
+    "phonetics-ipa": {
+      "label": "Phonetics & IPA / Speech Production",
+      "description": "Articulatory and acoustic phonetics, IPA notation, speech production mechanisms"
+    },
+    "non-verbal": {
+      "label": "Non-Verbal Communication",
+      "description": "Gesture, facial expression, proxemics, paralinguistics, kinesics"
+    },
+    "sign-languages": {
+      "label": "Sign Languages",
+      "description": "Natural signed languages — grammar, phonology (cherology), sociolinguistics"
+    },
+    "writing-systems": {
+      "label": "Writing Systems / Scripts",
+      "description": "Scripts, orthographies, typology, decipherment status"
+    }
+  },
+  "topics": [
+    {
+      "slug": "international-phonetic-alphabet",
+      "name": "International Phonetic Alphabet",
+      "category": "phonetics-ipa",
+      "priority": "high",
+      "notes": "Core notation system for speech sounds across DAVID pronunciation work"
+    },
+    {
+      "slug": "phonetics",
+      "name": "Phonetics",
+      "category": "phonetics-ipa",
+      "priority": "high",
+      "notes": "General phonetic theory — articulatory, acoustic, auditory"
+    },
+    {
+      "slug": "speech-production",
+      "name": "Speech Production",
+      "category": "phonetics-ipa",
+      "priority": "high",
+      "notes": "Physiology and mechanics of spoken language output"
+    },
+    {
+      "slug": "articulatory-phonetics",
+      "name": "Articulatory Phonetics",
+      "category": "phonetics-ipa",
+      "priority": "medium",
+      "notes": "Place and manner of articulation; consonant/vowel production"
+    },
+    {
+      "slug": "gesture",
+      "name": "Gesture",
+      "category": "non-verbal",
+      "priority": "high",
+      "notes": "Co-speech and emblematic gestures; kinesic communication"
+    },
+    {
+      "slug": "facial-expression",
+      "name": "Facial Expression",
+      "category": "non-verbal",
+      "priority": "high",
+      "notes": "Emotion display, micro-expressions, cross-cultural variation"
+    },
+    {
+      "slug": "proxemics",
+      "name": "Proxemics",
+      "category": "non-verbal",
+      "priority": "medium",
+      "notes": "Spatial distance and territory in human interaction (Hall)"
+    },
+    {
+      "slug": "paralinguistics",
+      "name": "Paralinguistics",
+      "category": "non-verbal",
+      "priority": "high",
+      "notes": "Prosody, pitch, tempo, voice quality beyond lexical content"
+    },
+    {
+      "slug": "body-language",
+      "name": "Body Language",
+      "category": "non-verbal",
+      "priority": "medium",
+      "notes": "Posture, orientation, and holistic non-verbal signaling"
+    },
+    {
+      "slug": "sign-language",
+      "name": "Sign Language",
+      "category": "sign-languages",
+      "priority": "high",
+      "notes": "General typology and linguistics of natural signed languages"
+    },
+    {
+      "slug": "american-sign-language",
+      "name": "American Sign Language",
+      "category": "sign-languages",
+      "priority": "high",
+      "notes": "Major natural sign language; reference for cherology and grammar"
+    },
+    {
+      "slug": "british-sign-language",
+      "name": "British Sign Language",
+      "category": "sign-languages",
+      "priority": "medium",
+      "notes": "BANZSL-family signed language"
+    },
+    {
+      "slug": "writing-system",
+      "name": "Writing System",
+      "category": "writing-systems",
+      "priority": "high",
+      "notes": "Typology: logographic, syllabic, alphabetic, abjad, abugida"
+    },
+    {
+      "slug": "cuneiform",
+      "name": "Cuneiform",
+      "category": "writing-systems",
+      "priority": "high",
+      "notes": "Mesopotamian wedge script; links to Sumerian/Akkadian corpus"
+    },
+    {
+      "slug": "linear-a-script",
+      "name": "Linear A",
+      "category": "writing-systems",
+      "priority": "high",
+      "notes": "Undeciphered Minoan syllabary; uncertain phonetic values flagged"
+    },
+    {
+      "slug": "gothic-alphabet",
+      "name": "Gothic Alphabet",
+      "category": "writing-systems",
+      "priority": "medium",
+      "notes": "Wulfila script for Gothic corpus"
+    },
+    {
+      "slug": "etruscan-alphabet",
+      "name": "Etruscan Alphabet",
+      "category": "writing-systems",
+      "priority": "medium",
+      "notes": "Adapted Greek alphabet for Etruscan inscriptions"
+    },
+    {
+      "slug": "latin-script",
+      "name": "Latin Script",
+      "category": "writing-systems",
+      "priority": "medium",
+      "notes": "Roman alphabet lineage and orthographic conventions"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "gothic-alphabet",
+  "name": "Gothic Alphabet",
+  "category": "writing-systems",
+  "priority": "medium",
+  "notes": "Wulfila script for Gothic corpus",
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

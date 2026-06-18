@@ -1,0 +1,12 @@
+{
+  "id": "phonetics",
+  "name": "Phonetics",
+  "category": "phonetics-ipa",
+  "priority": "high",
+  "notes": "General phonetic theory \u2014 articulatory, acoustic, auditory",
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}
