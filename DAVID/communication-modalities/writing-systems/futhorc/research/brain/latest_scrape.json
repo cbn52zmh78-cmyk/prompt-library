@@ -1,0 +1,167 @@
+{
+  "slug": "futhorc",
+  "name": "Futhorc",
+  "category": "writing-systems",
+  "category_label": "Writing Systems / Scripts",
+  "scraped_at": "2026-06-18T13:27:17.367143+00:00",
+  "retrieval_date": "2026-06-18",
+  "deep": false,
+  "source_policy": "public_only",
+  "licenses": {
+    "wikipedia": "CC BY-SA 3.0",
+    "wiktionary": "CC BY-SA 3.0",
+    "wikidata": "CC0"
+  },
+  "sources_used": [
+    "wikipedia",
+    "wikidata"
+  ],
+  "citations": [
+    {
+      "source": "Wikipedia",
+      "title": "Anglo-Saxon runes",
+      "url": "https://en.wikipedia.org/wiki/Anglo-Saxon_runes",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "source": "Wikidata",
+      "qid": "Q2712936",
+      "url": "https://www.wikidata.org/wiki/Q2712936",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    }
+  ],
+  "errors": [],
+  "wikipedia": {
+    "title": "Anglo-Saxon_runes",
+    "url": "https://en.wikipedia.org/wiki/Anglo-Saxon_runes",
+    "extract": "Anglo-Saxon runes or Anglo-Frisian runes are runes that were used by the Anglo-Saxons and Medieval Frisians (collectively called Anglo-Frisians) as an alphabet in their native writing system, recording both Old English and Pre\u2013Old Frisian (Old English: \u16b1\u16a2\u16be\u16aa, romanized: r\u016bna, lit.\u2009'rune'). Today, the characters are known collectively as the Futhorc ( FOO-thork) from the first six runes and their sound values (\u16a0\u16a2\u16a6\u16a9\u16b1\u16b3, fu\u00feorc). The futhorc was a development from the older co-Germanic 24-character runic alphabet, known today as Elder Futhark, expanding to 28 characters in its older form and up to 34 characters in its younger form. In contemporary Scandinavia, the Elder Futhark developed into a shorter 16-character alphabet, today simply called Younger Futhark.\nUse of the Anglo-Frisian runes is likely to have started in the 5th century onward and they continued to see use into the High Middle Ages. By the 8th century, they were eventually overtaken by the Old English Latin alphabet introduced to Anglo-Saxon England by missionaries at the end of the 6th century. Futhorc runes were no longer in common use by the 11th century, but MS Oxford St John's College 17 indicates that fairly accurate understanding of them persisted into at least the 12th century.\n\n\n== History ==\n\nThe Anglo-Frisian runic row was a 28-type further development of the 24-type Elder Futhark (type = number of runes), introducing more runes and reworking some existing runes to fit the period language. Starting from around the 5th century, it was used in Britain and Frisia as part of the diffuse Anglo-Frisian cultured sphere. Around the 8th century, runic writing disappears from Frisia, but use continues in Britain.\nIn the 9th century, the now Anglo-Saxon runic row, was further developed and more runes were introduced, eventually becoming a 33-type runic row with some further unstandardized examples of runes existing. In its late stage, it was largely analogous to the Latin script, and disappeared in its favour during the High Middle Ages.\nUsage and commonality is unclear. From at least five centuries of use, fewer than 200 artifacts bearing futhorc inscriptions have survived.\n\n\n=== Origin ===\nThe origin of the Anglo-Frisian runic row is unknown. One theory proposes that it was developed in Frisia and from there later spread to Britain. Another holds that runes were first introduced to Britain from the mainland where they were then modified and exported to Frisia. Both theories have their inherent weaknesses, and a definitive answer may come from further archaeological evidence.\n\n\n=== Anglo-Frisian development ===\nThe early futhorc was nearly identical to the Elder Futhark, except for the split of \u16a8 a into three variants \u16aa \u0101c, \u16ab \u00e6sc and \u16a9 \u014ds, resulting in 26 runes. This was done to account for the new phoneme produced by the Ingvaeonic split of allophones of long and short a. The earliest known instance of the \u16a9 \u014ds rune may be from the 5th century, on the Undley bracteate. The earliest known instances of the \u16aa \u0101c rune may be from the 6th century, appearing on objects such as the Schweindorf solidus. The double-barred \u16bb h\u00e6gl characteristic of continental inscriptions is first attested as late as 698, on St Cuthbert's coffin; before that, the single-barred variant was used.\n\n\n=== Anglo-Saxon development ===\nIn England, outside of the Brittonic West Country where evidence of Latin and even Ogham continued for several centuries, usage of the futhorc expanded. Runic writing in England became closely associated with the Latin scriptoria from the time of Anglo-Saxon Christianization in the 7th century. In some cases, texts would be written in the Latin alphabet, and \u00feorn and \u01bfynn came to be used as extensions of the Latin alphabet. Additionally, in texts such as Beowulf and The Exeter Book, Anglo-Saxon runes were sometimes used as ideographic runes alongside the Latin alphabet to abbreviate words; for example, \u16d7 was sometimes used to abbreviate \"mann\". By the time of the Norman Conquest of 1066 it was very rare, and it disappeared altogether a few centuries thereafter.\nSeveral famous English examples mix runes and Roman script, or Old English and Latin, on the same object, including the Franks Casket and St Cuthbert's coffin; in the latter, three of the names of the Four Evangelists are given in Latin written in runes, but \"LUKAS\" (Saint Luke) is in Roman script. The coffin is also an example of an object created at the heart of the Anglo-Saxon church that uses runes. A leading expert, Raymond Ian Page, rejects the assumption often made in non-scholarly literature that runes were especially associated in post-conversion Anglo-Saxon England with Anglo-Saxon paganism or magic.\n\n\n== Letters ==\n\nThe letter sequence and letter inventory of futhorc, along with the actual sounds indicated by those letters, could vary depending on location and time. That being so, an authentic and unified list of runes is not possible.\n\n\n=== Rune inventory ===\n\nThe sequence of the runes above is based on Codex Vindobonensis 795. The first 24 of these runes directly continue the elder futhark letters, and do not deviate in sequence (though \u16de\u16df rather than \u16df\u16de is an attested sequence in both elder futhark and futhorc). The manuscripts Codex Sangallensis 878 and Cotton MS Domitian A IX have  \u16a3  precede  \u16e0 .\nThe names of the runes above are based on Codex Vindobonensis 795, besides the names ing and \u00e6sc which come from The Byrhtferth's Manuscript and replace the seemingly corrupted names lug and \u00e6s found in Codex Vindobonensis 795. Ti is sometimes named tir or tyr in other manuscripts. The words in parentheses in the name column are standardized spellings.\n\nThe runes in the second table, above, were not included in Codex Vindobonensis 795: Calc appears in manuscripts, and epigraphically on the Ruthwell Cross, the Bramham Moor Ring, the Kingmoor Ring, and elsewhere. Gar appears in manuscripts, and epigraphically on the Ruthwell Cross and probably on the Bewcastle Cross. The unnamed \u16e4 rune only appears on the Ruthwell Cross, where it seems to take calc's place as /k/ where that consonant is followed by a secondary fronted vowel. Cweor\u00f0 and stan only appear in manuscripts. The unnamed \u0119 rune only appears on the Baconsthorpe Grip. The unnamed \u012f rune only appears on the Sedgeford Handle. While the rune poem and Cotton MS Domitian A IX present \u16e1 as ior, and \u16c4 as ger, epigraphically both are variants of ger (although \u16c4 is only attested once outside of manuscripts (on the Brandon Pin). R.I. Page designated ior a pseudo-rune.\nThere is little doubt that calc and gar are modified forms of cen and gyfu, and that they were invented to address the ambiguity which arose from /k/ and /g/ spawning palatalized offshoots. R.I. Page designated cweor\u00f0 and stan \"pseudo-runes\" because they appear pointless, and speculated that cweor\u00f0 was invented merely to give futhorc an equivalent to 'Q'. The \u0119 rune is likely a local innovation, possibly representing an unstressed vowel, and may derive its shape from \u16e0}. The unnamed \u012f rune is found in a personal name (b\u012frnfer\u00fe), where it stands for a vowel or diphthong. Anglo-Saxon expert Gaby Waxenberger speculates that \u012f may not be a true rune, but rather a bindrune of \u16c1 and \u16a9, or the result of a mistake.\n\n\n=== Combinations and digraphs ===\nVarious runic combinations are found in the futhorc corpus. For example, the sequence \u16ab\u16aa appears on the Mortain Casket where \u16e0 could theoretically have been used.\n\n\n== Usage and culture ==\nA rune in Old English could be called a r\u016bnst\u00e6f (lit.\u2009'runestaff'), or simply r\u016bn.\nFuthorc inscriptions hold diverse styles and contents. Ochre has been detected on at least one English runestone, implying its runes were once painted. Bind runes are common in futhorc (relative to its small corpus), and were seemingly used most often to ensure the runes would fit in a limited space. Futhorc logography is attested to in a few manuscripts. This was done by having a rune stand for its name, or a similar sounding word. In the sole extant manuscript of the poem Beowulf, the \u0113\u00f0el rune was used as a logogram for the word \u0113\u00f0el (meaning \"homeland\", or \"estate\"). Both the Hackness Stone and Codex Vindobonensis 795 attest to futhorc Cipher runes. In one manuscript (Corpus Christi College, MS 041) a writer seems to have used futhorc runes like Roman numerals, writing \u16c9\u16c1\u16c1\u204a\u16c9\u16c9\u16c9\u16cb\u16b9\u16c1\u16a6\u16a9\u16b1, which likely means \"12&30 more\".\nThere is some evidence of futhorc rune magic. The possibly magical alu sequence seems to appear on an urn found at Spong Hill in spiegelrunes (runes whose shapes are mirrored). In a tale from Bede's Ecclesiastical History (written in Latin), a man named Imma cannot be bound by his captors and is asked if he is using \"litteras solutorias\" ('loosening letters') to break his binds. In one Old English translation of the passage, Imma is asked if he is using \"drycraft\" (magic, druidcraft) or \"runestaves\" to break his binds. Furthermore, futhorc rings have been found with what appear to be enchanted inscriptions for the stanching of blood.\n\n\n== Inscription corpus ==\n\nThe Old English and Old Frisian Runic Inscriptions database project at the Catholic University of Eichst\u00e4tt-Ingolstadt, Germany, aims at collecting the genuine corpus of Old English inscriptions containing more than two runes in its paper edition, while the electronic edition aims at including both genuine and doubtful inscriptions down to single-rune inscriptions.\nThe corpus of the paper edition encompasses about one hundred objects (including stone slabs, stone crosses, bones, rings, brooches, weapons, urns, a writing tablet, tweezers, a sun-dial, comb, bracteates, caskets, a font, dishes, and graffiti).\nThe database includes, in addition, 16 inscriptions containing a single rune, several runic coins, and 8 cases of dubious runic characters (runelike signs, possible Latin characters, weathered characters). Comprising fewer than 200 inscriptions, the corpus is slightly larger than that of Continental Elder Futhark (about 80 inscriptions, c. 400\u2013700), but slightly smaller than that of the Scandinavian Elder Futhark (about 260 inscriptions, c. 200\u2013800).\nRunic finds in England cluster along the east coast with a few finds scattered further inland in Southern England. Frisian finds cluster in West Frisia. Looijenga (1997) lists 23 English (including two 7th-century Christian inscriptions) and 21 Frisian inscriptions predating the 9th century.\n\n\n=== Frisian ===\nCurrently known inscriptions in Anglo-Frisian runes from Frisia include:\n\nFerwerd combcase, 6th century; me ur\u00e6\nAmay comb, c. 600; eda\nOostyn comb, 8th century; aib ka[m]bu / deda habuku (with a triple-barred h)\nToornwerd comb, 8th century; kabu\nSkanomodu solidus, 575\u2013610; skanomodu\nHarlingen solidus, 575\u2013625, hada (two ac runes, double-barred h)\nSchweindorf solidus, 575\u2013625, wela[n]du \"Weyland\" (or \u00feeladu; running right to left)\nFolkestone tremissis, c. 650; \u00e6niwulufu\nMidlum sceat, c. 750; \u00e6pa\nRasquert swordhandle (whalebone handle of a symbolic sword), late 8th century; ek [u]m\u00e6dit oka, \"I, Oka, not made mad\" (compare ek unwodz from the Danish corpus)\nArum sword, a yew-wood miniature sword, late 8th century; ed\u00e6boda\nWesteremden A, a yew weaving-slay; adujislume[\u00fe]jisuhidu\nWesteremden B, a yew-stick, 8th century; oph?nmuji?adaamlu\u00fe / :wim\u0153?ah\u00feu?? / iwio?u?du?ale\nBritsum yew-stick; \u00fekniaberetdud / ]n:bsrsdnu; the k has Younger Futhark shape and probably represents a vowel.\nHantum whalebone plate; [.]:aha:k[; the reverse side is inscribed with Roman ABA.\nBernsterburen whalebone staff, c. 800; tuda \u00e6wudu kius \u00feu tuda\nHamwic horse knucklebone, dated to between 650 and 1025; kat\u00e6 (categorised as Frisian on linguistic grounds, from *kaut\u014dn \"knucklebone\")\nWijnaldum B gold pendant, c. 600; hiwi\nKantens combcase, early 5th century; li\nHoogebeintum comb, c. 700; [...]nlu / ded\nWijnaldum A antler piece; zwfuwizw[...]\n\n\n=== English ===\nCurrently known inscriptions in Anglo-Frisian runes from England include:\n\nAsh Gilton (Kent) gilt silver sword pommel, 6th century; [...]emsigimer[...]\nChessel Down I (Isle of Wight), 6th century; [...]bwseeekkkaaa\nChessel Down II (Isle of Wight) silver plate (attached to the scabbard mouthpiece of a ring-sword), early 6th century; \u00e6ko:[.]ori\nBoarley (Kent) copper disc-brooch, c. 600; \u00e6rsil\nHarford (Norfolk) brooch, c. 650; luda:gib\u0153t\u00e6sigil\u00e6 \"Luda repaired the brooch\"\nWest Heslerton (North Yorkshire) copper cruciform brooch, early 6th century; neim\nLoveden Hill (Lincolnshire) urn; 5th to 6th century; reading uncertain, maybe s\u00ef\u00fe\u00e6b\u00e6d \u00feiuw hlaw \"the grave of Si\u00fe\u00e6b\u00e6d the maid\"\nSpong Hill (Norfolk), three cremation urns, 5th century; decorated with identical runic stamps, reading alu (in Spiegelrunen).\nKent II coins (some 30 items), 7th century; reading pada\nKent III, IV silver sceattas, c. 600; reading \u00e6pa and epa\nSuffolk gold shillings (three items), c. 660; stamped with desaiona\nCaistor-by-Norwich astragalus, 5th century; possibly a Scandinavian import, in Elder Futhark transliteration reading ra\u00efhan \"roe\"\nWatchfield (Oxfordshire) copper fittings, 6th century; Elder Futhark reading hariboki:wusa (with a probably already fronted to \u00e6)\nWakerley (Northamptonshire) copper brooch, 6th century; buhui\nDover (Kent) brooch, c. 600; \u00fed bli / bkk\nUpper Thames Valley gold coins (four items), 620s; benu:tigoii; benu:+:tidi\nWilloughby-on-the-Wolds (Nottinghamshire) copper bowl, c. 600; a\nCleatham (South Humbershire) copper bowl, c. 600; [...]edih\nSandwich/Richborough (Kent) stone, 650 or earlier; [...]ahabu[...]i, perhaps *r\u00e6h\u00e6bul \"stag\"\nWhitby I (Yorkshire) jet spindle whorl; ueu\nSelsey (West Sussex) gold plates, 6th to 8th centuries; brnrn / anmu\nSt. Cuthbert's coffin (Durham), dated to 698\nWhitby II (Yorkshire) bone comb, 7th century; [d\u00e6]us m\u00e6us godaluwalu dohelip\u00e6 cy[ i.e. deus meus, god aluwaldo, help\u00e6 Cy... \"my god, almighty god, help Cy...\" (Cynewulf or a similar personal name; compare also names of God in Old English poetry.)\nthe Franks casket; 7th century\nzoomorphic silver-gilt knife mount, discovered in the River Thames near Westminster Bridge (late 8th century)\nthe Ruthwell Cross; 8th century, the inscription may be partly a modern reconstruction\nthe Brandon antler piece, wohs wildum deor\u00e6 an \"[this] grew on a wild animal\"; 9th century.\nKingmoor Ring\nthe Seax of Beagnoth; 9th century (also known as the Thames scramasax); the only complete alphabet\nNear Fakenham plaque; 8th-11th century lead plaque interpreted as bearing a healing inscription \n\n\n=== Related manuscript texts ===\nCodex Sangallensis 270 \u2014 lists runes with their names, and explains how to use certain rune ciphers\nCodex Sangallensis 878 \u2014 contains a presentation of Anglo-Saxon runes\nCodex Vindobonensis 795 \u2014 contains a description of Anglo-Saxon runes\nCotton Domitian A.IX \u2014 lists runes with their names\nCotton Otho B.x.165 \u2014 contained the Old English rune poem before being destroyed in a fire\nCotton Vitellius A.XII \u2014 lists runes in alphabetical order\nMS Oxford St. John's College 17 \u2014 contains a \"table of runic, cryptographic, and exotic alphabets\".\n\n\n== See also ==\nElder Futhark\nList of runestones\nOgham\nOld English Latin alphabet\nRunic alphabet\nYounger Futhark\n\n\n== Notes ==\n\n\n== References ==\nBammesberger, A, ed. (1991), \"Old English Runes and their Continental Background\", Anglistische Forschungen, 217, Heidelberg.\n\u2014\u2014\u2014 (2006), \"Das Futhark und seine Weiterentwicklung in der anglo-friesischen \u00dcberlieferung\", in Bammesberger, A; Waxenberger (eds.), Das fu\u00feark und seine einzelsprachlichen Weiterentwicklungen, Walter de Gruyter, pp. 171\u201387, ISBN 978-3-11-019008-3.\nHines, J (1990), \"The Runic Inscriptions of Early Anglo-Saxon England\", in Bammesberger, A (ed.), Britain 400\u2013600: Language and History, Heidelberg: C. Winter, pp. 437\u201356.\nKilpatrick, K (2013), Latin, Runes and Pseudo-Ogham: The Enigma of the Hackness Stone, pp. 1\u201313\nJ. H. Looijenga, Runes around the North Sea and on the Continent AD 150\u2013700, dissertation, Groningen University (1997).\nOdenstedt, Bengt, On the Origin and Early History of the Runic Script, Uppsala (1990), ISBN 91-85352-20-9; chapter 20: 'The position of continental and Anglo-Frisian runic forms in the history of the older futhark '\nPage, Raymond Ian (1999). An Introduction to English Runes. Woodbridge: Boydell Press. ISBN 978-0-85115-768-9.\nMiddleton & Tum, Andrew & Julia (2006). Radiography of Cultural Material. Elsevier. ISBN 978-0-7506-6347-2.\nRobinson, Orrin W (1992). Old English and its Closest Relatives: A Survey of the Earliest Germanic Languages. Stanford University Press. ISBN 978-0-8047-1454-9.\nFrisian runes and neighbouring traditions, Amsterdamer Beitr\u00e4ge zur \u00e4lteren Germanistik 45 (1996).\nH. Marquardt, Die Runeninschriften der Britischen Inseln (Bibliographie der Runeninschriften nach Fundorten, Bd. I), Abhandlungen der Akademie der Wissenschaften in G\u00f6ttingen, Phil.-hist. Klasse, dritte Folge, Nr. 48, G\u00f6ttingen 1961, pp. 10\u201316.\n\n\n== Further reading ==\nLooijenga, Tineke (September 2003). Texts & Contexts of the Oldest Runic Inscriptions (Northern World, 4). Brill. ISBN 978-9004123960.\n\n\n== External links ==\nFrisia Coast Trail (2023), Scratching runes was not much different from spraying tags\nAnglo-Saxon Runic Texts at Georgetown Univ\nEarly Runic Inscriptions in England\nPortable Antiquities Scheme (has information on runic artefacts from England)\nPresenter: The Ruthwell Cross (3D rendering of the Ruthwell Cross)\nThe Byrhtferth's Manuscript",
+    "wikitext_length": 37742,
+    "phonology_keywords": [],
+    "source": "wikipedia",
+    "license": "CC BY-SA 3.0",
+    "modality_keywords": [
+      "IPA",
+      "alphabet",
+      "consonant",
+      "logograph",
+      "script",
+      "transliterat",
+      "vowel",
+      "writing system"
+    ],
+    "retrieved_at": "2026-06-18T13:27:17.367143+00:00",
+    "citation": {
+      "source": "Wikipedia",
+      "title": "Anglo-Saxon runes",
+      "url": "https://en.wikipedia.org/wiki/Anglo-Saxon_runes",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    "script_sections": [
+      {
+        "section": "script_inventory",
+        "text": "thumb|A chart showing 30 Anglo-Saxon runes\nthumb|right|A rune-row showing variant shapes\nThe letter sequence and letter inventory of futhorc, along with the actual sounds indicated by those letters, could vary depending on location and time. That being so, an authentic and unified list of runes is not possible."
+      }
+    ]
+  },
+  "wikidata": {
+    "qid": "Q2712936",
+    "label": "futhorc",
+    "description": "system of runes for Old English",
+    "iso639_3": null,
+    "language_family": "Q82996",
+    "extinction_status": null,
+    "ipa_statements": [],
+    "source": "wikidata",
+    "license": "CC0",
+    "modality_claims": {
+      "category": "writing-systems",
+      "statements": [
+        {
+          "property": "P31",
+          "value": "Q9779"
+        },
+        {
+          "property": "P31",
+          "value": "Q29517555"
+        },
+        {
+          "property": "P31",
+          "value": "Q4004706"
+        }
+      ]
+    },
+    "retrieved_at": "2026-06-18T13:27:17.367143+00:00",
+    "citation": {
+      "source": "Wikidata",
+      "qid": "Q2712936",
+      "url": "https://www.wikidata.org/wiki/Q2712936",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    }
+  },
+  "uncertainty_flags": [
+    {
+      "flag": "reconstructed",
+      "context_snippet": "Cross; 8th century, the inscription may be partly a modern reconstruction the Brandon antler piece, wohs wildum deor\u00e6 an \"[this] grew"
+    },
+    {
+      "flag": "uncertain",
+      "context_snippet": "oveden Hill (Lincolnshire) urn; 5th to 6th century; reading uncertain, maybe s\u00ef\u00fe\u00e6b\u00e6d \u00feiuw hlaw \"the grave of Si\u00fe\u00e6b\u00e6d the maid\" Sp"
+    }
+  ],
+  "modality_summary": {
+    "category": "writing-systems",
+    "keyword_count": 8,
+    "top_keywords": [
+      "IPA",
+      "alphabet",
+      "consonant",
+      "logograph",
+      "script",
+      "transliterat",
+      "vowel",
+      "writing system"
+    ],
+    "ipa_entries": 0,
+    "uncertainty_flag_count": 2,
+    "has_wikidata_statements": true,
+    "extract_chars": 17452
+  },
+  "corpus_cross_links": {
+    "language_corpus": [
+      {
+        "slug": "old-english",
+        "name": "Old English",
+        "status": "extinct",
+        "script": "Latin alphabet (Anglo-Saxon)",
+        "decipherment": "fully_read",
+        "brain_scrape_path": "languages/extinct/old-english/research/brain/latest_scrape.json",
+        "linked": true,
+        "brain_scraped_at": "2026-06-18T13:26:35.245408+00:00",
+        "brain_sources": [
+          "wikipedia",
+          "wikidata",
+          "wiktionary"
+        ],
+        "ipa_count": 0,
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Old_English",
+        "phonology_keywords": [
+          "IPA",
+          "accent",
+          "consonant",
+          "dialect",
+          "etymolog",
+          "phonolog",
+          "pronunciation",
+          "reconstructed"
+        ]
+      }
+    ],
+    "modality_topics": [],
+    "language_link_count": 1,
+    "modality_link_count": 0
+  }
+}

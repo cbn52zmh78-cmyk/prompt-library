@@ -36,6 +36,12 @@ CATEGORY_KEYWORDS: dict[str, tuple[str, ...]] = {
         r"\bplace\s+of\s+articulation\b",
         r"\bmanner\s+of\s+articulation\b",
         r"\bspeech\s+production\b",
+        r"\bprosod\w*\b",
+        r"\bintonation\b",
+        r"\bpitch\s+accent\b",
+        r"\bstress\b",
+        r"\brhythm\b",
+        r"\bsuprasegmental\b",
     ),
     "non-verbal": (
         r"\bgesture\b",
@@ -50,6 +56,10 @@ CATEGORY_KEYWORDS: dict[str, tuple[str, ...]] = {
         r"\bgaze\b",
         r"\bintonation\b",
         r"\bprosod\w*\b",
+        r"\bturn-?taking\b",
+        r"\bconversation\s+analysis\b",
+        r"\boverlap\b",
+        r"\bbackchannel\b",
     ),
     "sign-languages": (
         r"\bsign\s+language\b",

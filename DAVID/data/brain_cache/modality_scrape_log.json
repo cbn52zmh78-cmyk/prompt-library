@@ -1451,5 +1451,235 @@
     "errors": [],
     "uncertainty_flags": 0,
     "keywords": 11
+  },
+  {
+    "slug": "linear-a-script",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T13:21:03.987320+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 5,
+    "keywords": 9
+  },
+  {
+    "slug": "paralinguistics",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T13:21:19.101981+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 7
+  },
+  {
+    "slug": "prosody",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T13:22:10.243569+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 11
+  },
+  {
+    "slug": "intonation",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T13:22:31.289410+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 10
+  },
+  {
+    "slug": "turn-taking",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T13:23:20.565171+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 5
+  },
+  {
+    "slug": "french-sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T13:23:32.931847+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 5
+  },
+  {
+    "slug": "german-sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T13:24:20.253737+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 7
+  },
+  {
+    "slug": "japanese-sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T13:25:07.597883+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 5
+  },
+  {
+    "slug": "linear-b-script",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T13:25:25.122666+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 7,
+    "keywords": 12
+  },
+  {
+    "slug": "manyogana",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T13:25:42.651755+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 7
+  },
+  {
+    "slug": "hiragana",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T13:26:26.600490+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 13
+  },
+  {
+    "slug": "futhorc",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T13:27:17.367143+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 8
+  },
+  {
+    "slug": "aztec-script",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T13:27:31.339622+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 1
+  },
+  {
+    "slug": "cuneiform",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T13:28:15.162535+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 14
+  },
+  {
+    "slug": "gothic-alphabet",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T13:29:05.993171+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 5,
+    "keywords": 8
+  },
+  {
+    "slug": "etruscan-alphabet",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T13:30:25.604949+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 9
+  },
+  {
+    "slug": "latin-script",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T13:31:12.894940+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 11
+  },
+  {
+    "slug": "linear-a-script",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T13:32:41.406258+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 5,
+    "keywords": 9
   }
 ]

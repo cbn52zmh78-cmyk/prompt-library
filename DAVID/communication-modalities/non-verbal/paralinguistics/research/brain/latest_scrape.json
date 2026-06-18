@@ -3,9 +3,9 @@
   "name": "Paralinguistics",
   "category": "non-verbal",
   "category_label": "Non-Verbal Communication",
-  "scraped_at": "2026-06-18T12:24:10.558412+00:00",
+  "scraped_at": "2026-06-18T13:21:19.101981+00:00",
   "retrieval_date": "2026-06-18",
-  "deep": false,
+  "deep": true,
   "source_policy": "public_only",
   "licenses": {
     "wikipedia": "CC BY-SA 3.0",
@@ -58,7 +58,7 @@
       "prosod",
       "proxemic"
     ],
-    "retrieved_at": "2026-06-18T12:24:10.558412+00:00",
+    "retrieved_at": "2026-06-18T13:21:19.101981+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Paralanguage",
@@ -81,7 +81,7 @@
       "category": "non-verbal",
       "statements": []
     },
-    "retrieved_at": "2026-06-18T12:24:10.558412+00:00",
+    "retrieved_at": "2026-06-18T13:21:19.101981+00:00",
     "citation": {
       "source": "Wikidata",
       "qid": "Q1753225",
@@ -117,7 +117,7 @@
     ],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T12:24:10.558412+00:00",
+    "retrieved_at": "2026-06-18T13:21:19.101981+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "paralinguistics",
@@ -148,5 +148,30 @@
     "uncertainty_flag_count": 1,
     "has_wikidata_statements": false,
     "extract_chars": 11940
+  },
+  "deep_sections": {
+    "etymology_blocks": [],
+    "pronunciation_notes": []
+  },
+  "corpus_cross_links": {
+    "language_corpus": [],
+    "modality_topics": [
+      {
+        "slug": "prosody",
+        "name": "Prosody",
+        "category": "phonetics-ipa",
+        "modality_scrape_path": "communication-modalities/phonetics-ipa/prosody/research/brain/latest_scrape.json",
+        "linked": false
+      },
+      {
+        "slug": "intonation",
+        "name": "Intonation",
+        "category": "phonetics-ipa",
+        "modality_scrape_path": "communication-modalities/phonetics-ipa/intonation/research/brain/latest_scrape.json",
+        "linked": false
+      }
+    ],
+    "language_link_count": 0,
+    "modality_link_count": 0
   }
 }

@@ -1,0 +1,18 @@
+{
+  "id": "linear-b-script",
+  "name": "Linear B",
+  "category": "writing-systems",
+  "priority": "high",
+  "notes": "Deciphered Mycenaean Greek syllabary; phonetic key for Linear A inference",
+  "language_corpus_links": [
+    "linear-a"
+  ],
+  "modality_links": [
+    "linear-a-script"
+  ],
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

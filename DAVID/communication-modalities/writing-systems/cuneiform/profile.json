@@ -4,6 +4,11 @@
   "category": "writing-systems",
   "priority": "high",
   "notes": "Mesopotamian wedge script; links to Sumerian/Akkadian corpus",
+  "language_corpus_links": [
+    "sumerian",
+    "akkadian"
+  ],
+  "modality_links": [],
   "source_policy": "public_only",
   "licenses": [
     "CC BY-SA 3.0 (Wikipedia/Wiktionary)",

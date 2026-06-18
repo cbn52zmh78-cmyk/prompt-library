@@ -1,0 +1,134 @@
+{
+  "slug": "french-sign-language",
+  "name": "French Sign Language",
+  "category": "sign-languages",
+  "category_label": "Sign Languages",
+  "scraped_at": "2026-06-18T13:23:32.931847+00:00",
+  "retrieval_date": "2026-06-18",
+  "deep": false,
+  "source_policy": "public_only",
+  "licenses": {
+    "wikipedia": "CC BY-SA 3.0",
+    "wiktionary": "CC BY-SA 3.0",
+    "wikidata": "CC0"
+  },
+  "sources_used": [
+    "wikipedia",
+    "wikidata",
+    "wiktionary"
+  ],
+  "citations": [
+    {
+      "source": "Wikipedia",
+      "title": "French Sign Language",
+      "url": "https://en.wikipedia.org/wiki/French_Sign_Language",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "source": "Wikidata",
+      "qid": "Q33302",
+      "url": "https://www.wikidata.org/wiki/Q33302",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    },
+    {
+      "source": "Wiktionary",
+      "title": "French Sign Language",
+      "url": "https://en.wiktionary.org/wiki/French_Sign_Language",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  ],
+  "errors": [],
+  "wikipedia": {
+    "title": "French_Sign_Language",
+    "url": "https://en.wikipedia.org/wiki/French_Sign_Language",
+    "extract": "French Sign Language (French: langue des signes fran\u00e7aise, LSF) is the sign language of deaf and hard-of-hearing people in France and in French-speaking parts of Switzerland.  According to Ethnologue, it has 100,000 native signers.\nFrench Sign Language is related and partially ancestral to Dutch Sign Language (NGT), Flemish Sign Language (VGT), Belgian-French Sign Language (LSFB), Irish Sign Language (ISL), American Sign Language (ASL), Quebec (also known as French Canadian) Sign Language (LSQ), Brazilian Sign Language (LSB or Libras) and Russian Sign Language (RSL).\n\n\n== History ==\n\nFrench Sign Language is frequently, though mistakenly, attributed to the work of Charles Michel de l'\u00c9p\u00e9e (l'abb\u00e9 de l'\u00c9p\u00e9e). In fact, he is said to have discovered the already existing language by total accident; having ducked into a nearby house to escape the rain, he fell upon a pair of deaf twin sisters and was struck by the richness and complexity of the language that they used to communicate among themselves and the deaf Parisian community. The abb\u00e9 set himself to learning the language, now known as Old French Sign Language, and eventually he established a free school for the deaf. At this school, he developed a system he called \"methodical signs\", to teach his students how to read and write. The abb\u00e9 was eventually able to make public demonstrations (1771\u20131774) of his system, demonstrations that attracted educators and celebrities from all over the continent and that popularised the idea that the deaf could be educated, especially by gesture.\nThe methodical signs he created were a mixture of sign language words he had learned with some grammatical terms he invented. The resulting combination, an artificial language, was over-complicated and completely unusable by his students. For example, where his system would elaborately construct the word \"unintelligible\" with a chain of five signs (\"interior-understand-possible-adjective-not\"), the deaf natural language would simply say \"understand-impossible\".  LSF was not invented by the abb\u00e9, but his major contributions to the deaf community were to recognize that the deaf did not need oral language to be able to think, and to indirectly accelerate the natural growth of the language by virtue of putting so many deaf students under a single roof.\nFrom this time French Sign Language flourished until the late 19th century when a schism developed between the manualist and oralist schools of thought. In 1880 the Milan International Congress of Teachers for the Deaf-Mute convened and decided that the oralist tradition would be preferred. In due time the use of sign language was treated as a barrier to learning to talk and thus forbidden from the classroom.\nThis situation remained unchanged in France until the late 1970s, when the deaf community began to militate for greater recognition of sign language and for a bilingual education system. In 1991 the National Assembly passed the Fabius law, officially authorising the use of LSF for the education of deaf children. A law was passed in 2005 fully recognising LSF as a language in its own right.\n\n\n=== Alphabet ===\nThe French manual alphabet is used both to distinguish signs of LSF and to incorporate French words while signing.\n\n\n== See also ==\nOld French Sign Language\nSigned French\nFrench Sign Language Academy\nAmerican Sign Language\n\n\n== Further reading ==\nMoody, William (1987). \"French\". In Van Cleve, John V. (ed.). Gallaudet Encyclopedia of Deaf People and Deafness. Vol. 3. New York: McGraw-Hill Book Company. pp. 74\u201377. ISBN 9780070792296. OCLC 13821696.\n\n\n== References ==\n\n\n== External links ==\nThe LSF wikibook (in French)",
+    "wikitext_length": 6028,
+    "phonology_keywords": [],
+    "source": "wikipedia",
+    "license": "CC BY-SA 3.0",
+    "modality_keywords": [
+      "Deaf",
+      "fingerspell",
+      "manual alphabet",
+      "sign language",
+      "signing"
+    ],
+    "retrieved_at": "2026-06-18T13:23:32.931847+00:00",
+    "citation": {
+      "source": "Wikipedia",
+      "title": "French Sign Language",
+      "url": "https://en.wikipedia.org/wiki/French_Sign_Language",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  },
+  "wikidata": {
+    "qid": "Q33302",
+    "label": "French Sign Language",
+    "description": "sign language used predominately in France and French-speaking Switzerland",
+    "iso639_3": "fsl",
+    "language_family": "Q5501921",
+    "extinction_status": null,
+    "ipa_statements": [],
+    "source": "wikidata",
+    "license": "CC0",
+    "modality_claims": {
+      "category": "sign-languages",
+      "statements": [
+        {
+          "property": "P279",
+          "value": "Q5501921"
+        },
+        {
+          "property": "P910",
+          "value": "Q24892692"
+        }
+      ]
+    },
+    "retrieved_at": "2026-06-18T13:23:32.931847+00:00",
+    "citation": {
+      "source": "Wikidata",
+      "qid": "Q33302",
+      "url": "https://www.wikidata.org/wiki/Q33302",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    }
+  },
+  "wiktionary": {
+    "pages": [
+      "French Sign Language"
+    ],
+    "ipa_entries": [],
+    "etymology_blocks": [],
+    "pronunciation_notes": [],
+    "source": "wiktionary",
+    "license": "CC BY-SA 3.0",
+    "retrieved_at": "2026-06-18T13:23:32.931847+00:00",
+    "citation": {
+      "source": "Wiktionary",
+      "title": "French Sign Language",
+      "url": "https://en.wiktionary.org/wiki/French_Sign_Language",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  },
+  "uncertainty_flags": [],
+  "modality_summary": {
+    "category": "sign-languages",
+    "keyword_count": 5,
+    "top_keywords": [
+      "Deaf",
+      "fingerspell",
+      "manual alphabet",
+      "sign language",
+      "signing"
+    ],
+    "ipa_entries": 0,
+    "uncertainty_flag_count": 0,
+    "has_wikidata_statements": true,
+    "extract_chars": 3660
+  }
+}

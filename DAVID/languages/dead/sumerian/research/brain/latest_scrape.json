@@ -2,7 +2,7 @@
   "slug": "sumerian",
   "name": "Sumerian",
   "status": "dead",
-  "scraped_at": "2026-06-18T11:59:17.160476+00:00",
+  "scraped_at": "2026-06-18T13:22:28.895174+00:00",
   "deep": false,
   "sources_used": [
     "wikipedia",
@@ -47,29 +47,54 @@
   },
   "wiktionary": {
     "pages": [
-      "Sumerian_language (error: 429 Client Error: Too Many Requests for url: https://en.wiktionary.org/w/api.php?format=json&action=parse&page=Sumerian_language&prop=wikitext)",
-      "Sumerian (error: 429 Client Error: Too Many Requests for url: https://en.wiktionary.org/w/api.php?format=json&action=parse&page=Sumerian&prop=wikitext)",
-      "Category:Sumerian language (error: 429 Client Error: Too Many Requests for url: https://en.wiktionary.org/w/api.php?format=json&action=parse&page=Category%3ASumerian+language&prop=wikitext)"
+      "Sumerian",
+      "Category:Sumerian language"
     ],
-    "ipa_entries": [],
+    "ipa_entries": [
+      {
+        "ipa": "/s(j)\u028a\u02c8m\u026a\u0259\u0279i\u0259n/",
+        "accent": "RP",
+        "language_code": "",
+        "quality": "scholarly_ipa"
+      },
+      {
+        "ipa": "/s\u028a\u02c8m\u025b\u0279i\u0259n/",
+        "accent": "GA",
+        "language_code": "",
+        "quality": "scholarly_ipa"
+      }
+    ],
     "etymology_blocks": [],
-    "pronunciation_notes": [],
+    "pronunciation_notes": [
+      {
+        "section": "Pronunciation",
+        "text": "=\n* \n* \n* \n*  \n* \n* \n*"
+      }
+    ],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0"
   },
   "pronunciation_summary": {
-    "total_ipa_entries": 1,
+    "total_ipa_entries": 3,
     "by_quality": {
       "scholarly_ipa": [
+        "/s(j)\u028a\u02c8m\u026a\u0259\u0279i\u0259n/",
+        "/s\u028a\u02c8m\u025b\u0279i\u0259n/",
         "LL-Q58635 (pan)-Gaurav Jhammat-\u0a14\u0a21\u0a30\u0a40 \u0a39\u0a4b\u0a32\u0a48\u0a02\u0a21\u0a30.wav"
       ]
     },
     "by_accent": {
+      "RP": [
+        "/s(j)\u028a\u02c8m\u026a\u0259\u0279i\u0259n/"
+      ],
+      "GA": [
+        "/s\u028a\u02c8m\u025b\u0279i\u0259n/"
+      ],
       "wikidata": [
         "LL-Q58635 (pan)-Gaurav Jhammat-\u0a14\u0a21\u0a30\u0a40 \u0a39\u0a4b\u0a32\u0a48\u0a02\u0a21\u0a30.wav"
       ]
     },
-    "accent_count": 1
+    "accent_count": 3
   },
   "etymology_count": 0
 }

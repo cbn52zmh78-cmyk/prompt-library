@@ -1,0 +1,139 @@
+{
+  "slug": "japanese-sign-language",
+  "name": "Japanese Sign Language",
+  "category": "sign-languages",
+  "category_label": "Sign Languages",
+  "scraped_at": "2026-06-18T13:25:07.597883+00:00",
+  "retrieval_date": "2026-06-18",
+  "deep": false,
+  "source_policy": "public_only",
+  "licenses": {
+    "wikipedia": "CC BY-SA 3.0",
+    "wiktionary": "CC BY-SA 3.0",
+    "wikidata": "CC0"
+  },
+  "sources_used": [
+    "wikipedia",
+    "wikidata",
+    "wiktionary"
+  ],
+  "citations": [
+    {
+      "source": "Wikipedia",
+      "title": "Japanese Sign Language",
+      "url": "https://en.wikipedia.org/wiki/Japanese_Sign_Language",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "source": "Wikidata",
+      "qid": "Q35601",
+      "url": "https://www.wikidata.org/wiki/Q35601",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    },
+    {
+      "source": "Wiktionary",
+      "title": "Japanese Sign Language",
+      "url": "https://en.wiktionary.org/wiki/Japanese_Sign_Language",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  ],
+  "errors": [],
+  "wikipedia": {
+    "title": "Japanese_Sign_Language",
+    "url": "https://en.wikipedia.org/wiki/Japanese_Sign_Language",
+    "extract": "Japanese Sign Language (\u65e5\u672c\u624b\u8a71, nihon-shuwa), also known by the acronym JSL, is the dominant sign language in Japan and is a complete natural language, distinct from but influenced by the spoken Japanese language.\n\n\n== Population ==\n\nThere are 304,000 Deaf and Hard of Hearing people who are above age 18 in Japan (2008). However, there is no specific source about the number of JSL users because of the difficulty in distinguishing who are JSL users and who use other kinds of sign, like Signed Japanese (\u5bfe\u5fdc\u624b\u8a71, tai\u014d-shuwa) and Pidgin Signed Japanese (\u4e2d\u9593\u624b\u8a71, ch\u016bkan-shuwa). According to the Japanese Association for Sign Language Studies, the estimated number of JSL users is around 60,000 in Japan.\n\n\n== History ==\nLittle is known about sign language and the deaf community before the Edo period. In 1862, the Tokugawa shogunate dispatched envoys to various European schools for the deaf but the first school for the deaf was not established until 1878 in Ky\u014dto. It was founded by Tashiro Furukawa, who also developed what would become JSL.\nUntil 1948, deaf children were not required to attend school or to receive a formal education.\nIn the second half of the 20th century, a subtle cultural change in views about the Deaf in Japan evolved.  The long-standing concept that deaf only means \"people who cannot hear\" emphasized a physical impairment as part of a biomedical disease model; however, this was gradually replaced by a slightly different paradigm.  Deaf people were more often identified as people who use Japanese sign language.  In other words, the biomedical disability model began slowly to be displaced by a social-cultural or JSL paradigm.\nThe Japanese Federation of the Deaf has worked with slow success in efforts to enhance communication opportunities for Japanese whose primary language is JSL.\nThe changing status of JSL and the Deaf in Japan is a slow process, but there are highlights.  For example, JSL has an advocate among the Imperial family. Kiko, Princess Akishino has studied JSL and is a trained sign language interpreter.  She attends the Sign Language Speech Contest for High School Students held every August, and Praising Mothers Raising Children with Hearing Impairments every December.  In October 2008, she participated in the 38th National Deaf Women's Conference.  She also signs in informal Deaf gatherings.\nThe Deaf community supported passage of the proposed Sign Language Law.  The Basic Act for Persons with Disabilities was enacted in 2011.  This law recognized sign language as a language.\n\n\n=== Interpreters ===\nThe slow integration of JSL within the context of Japanese culture has been accompanied by an expansion of the numbers of sign language interpreters:\n\n1991: Japanese Association of Sign Language Interpreters (JASLI) established\n1997: Ethics code of the Sign Language Interpreters established by JASLI\n2002: Japanese Federation of the Deaf and the National Research Association for Sign Language Interpretation established the National Training Institution of Sign Language\nIn 2006, the Japanese government amended the Supporting Independence of People with Disabilities Act.  The new language in the law encourages local governments to increase the number and use of JSL interpreters.\n\n\n== Other sign terms in Japan ==\nJapanese Sign Language is often confused with other manually coded language for communicating that are used in Japan. JSL is a naturally evolved language, and like any other language has its own linguistic structures. Manual systems for expressing a spoken language often lead to ungrammatical structures and incomplete sentences in both the spoken and signed language. In Japan, there are three kinds of sign terms:\n\nNihon Shuwa (\u65e5\u672c\u624b\u8a71; JSL: Japanese Sign Language)Nihon Shuwa (JSL) is a natural language that is constructed by unique phonology, morphology, syntax, and semantics, like all languages.\nTaiou Shuwa (\u5bfe\u5fdc\u624b\u8a71; Signed Japanese, or \u65e5\u672c\u8a9e\u5bfe\u5fdc\u624b\u8a71; Manually coded Japanese)Taiou Shuwa uses the Japanese language word order (grammar) and supplements sign words with the Japanese language. In other words, Taiou Shuwa is not a sign language, but simply signed Japanese.\nChuukan Shuwa (\u4e2d\u9593\u624b\u8a71; Pidgin Signed Japanese) Chuukan Shuwa combines JSL with Japanese language grammar. It is called contact sign in the United States.\nJSL is the only one of these to be considered a true sign language, as opposed to an encoding of spoken Japanese. However, these three kinds of sign are all widely referred to as shuwa (\u624b\u8a71; lit.\u2009'manual language') in Japan.\nThese are not to be confused with the following, as they are distinct languages in separate language families:\n\nAmami Shuwa (\u30b7\u30de\u624b\u8a71; AOSL: Amami Oshima Sign Language, also called Koniya Sign Language or Koniya Shuwa)\nMiyakubo Shuwa (\u5bae\u7aaa\u624b\u8a71; Miyakubo Sign Language, also called Ehime-Oshima Sign Language)\nThe sign languages of Korea (KSL; Korean: \ud55c\uad6d \uc218\ud654; Hanja: \u97d3\u570b\u624b\u8a71; RR: Hanguk Suhwa) and Taiwan (TSL; Chinese: \u53f0\u7063\u624b\u8a9e; pinyin: T\u00e1iw\u0101n Sh\u01d2uy\u01d4) share some signs with JSL, perhaps due to cultural transfer during the period of Japanese occupation. JSL has about a 60% lexical similarity with Taiwanese Sign Language.\n\n\n== Deaf education ==\nThe conflict on the definition of JSL and Taiou Shuwa continues, and it affects Deaf education. In the 1990s, oral education, long in use, was replaced with the total communication method. Previously, Deaf children were forced to speak and banned from using sign language in all schools for the Deaf. With the total communication method, teachers use multiple modes of communication, including spoken language, written language, and simultaneous communication, to fit each Deaf child. The use of sign language spread in Japan at that time, but it was used along with speaking, as in simultaneous communication with Taiou Shuwa.\nIn 2003, the Japan Deaf Children and Parents Association published a civil rights remedy statement called \"Rights of Deaf children to education equality were infringed\". They requested teachers who can teach JSL in all schools, and they demanded the JSL cambism course in all universities give a license for teachers of the Deaf. However, the Japanese Federation of the Deaf said \"human rights may be infringed by distinguishing the two communication methods for users of JSL and Taiou Shuwa,\" with some agreement from the Japan Deaf Children and Parents Association. Finally, the Japan Federation of Bar Associations prepared the document \"Opinion to require enriched sign education,\" and used the word sign instead of JSL. The statement did not have the power to add the requirement that teachers can teach in JSL in all schools for the Deaf.Currently, JSL is used in only one private school in Tokyo, Meisei Gakuen, and the other schools for the Deaf use other communication methods.\n\n\n== Bilingual education for Deaf in Japan ==\nBilingual education for the Deaf (see also Bilingual\u2013bicultural education) aims to acquire JSL and written language. Some parents select other language modalities as well, like spoken language, to communicate with their children. Some parents also opt to use other tools, such as cochlear implants and hearing aids, for their Deaf children with sign language. In regards to Deaf education, using sign was cited in studies as it prevents from acquiring written language for a long time.\nHowever, recent articles have reported that children with fluency in a first language have the ability to acquire a second language, like other foreign language learners, even though the modalities are different. Therefore, the most important factor is to acquire fluency in one's first language. The future task is to consider how to bridge Japanese Sign Language and written language in bilingual education.\nIn Japan, the bilingual education has been in free school (Tatsunoko Gakuen) since 1999 and school (Meisei Gakuen) since 2009.\n\n\n== Law ==\nIn 2011, the first sign language law was established on \"language\" as an act for persons with disabilities on July 29, and it was announced on August 5. After this, sign language was acknowledged as a form of language by law in Japan.\nIn 2013, the first sign language law was established in Tottori Prefecture. The law stated \"Sign is language\". From then on, sign language law has spread across the country at the prefecture level. There are goals to establish a sign language law at the national level.\nHowever, there are two conflicting positions on sign language law as the sign language laws were not written in reference to JSL. One position claims that it is dangerous to mislead that sign language includes not only JSL, but also Taiou Shuwa (manually-coded Japanese or simultaneous communication) and Chuukan Shuwa (contact sign). The other claims that by establishing JSL, the language law makes it easy to discriminate against various sign users (deaf and mute people).\n\n\n== Diffusion among the hearing ==\nInterest in sign language among the hearing population of Japan has been increasing, with numerous books now published targeting the hearing population, a weekly TV program teaching JSL, and the increasing availability of night school classes for the hearing to learn JSL. There have been several TV dramas, including Hoshi no Kinka (1995), in which signing has been a significant part of the plot, and sign language dramas are now a minor genre on Japanese TV.\nThe highly acclaimed 2006 film Babel, which was directed by Alejandro Gonz\u00e1lez I\u00f1\u00e1rritu and nominated for multiple Academy Awards,  also featured JSL as a significant element of the plot. Hearing actress Rinko Kikuchi received a Best Supporting Actress nomination for her signing role in this film. In Japan, about 40,000 signatures including both the hearing and deaf people were collected to subtitle the scene in Babel spoken in Japanese for the deaf audience.\nThe anime school drama film A Silent Voice (Koe no Katachi (\u8072\u306e\u5f62) lit. 'The Shape of Voice'), released in 2016, features a prominent deaf JSL-speaking character, Sh\u014dko Nishimiya. It was produced by Kyoto Animation, directed by Naoko Yamada, written by Reiko Yoshida, and featured character designs by Futoshi Nishiya. It is based on the manga of the same name written and illustrated by Yoshitoki \u014cima. The film premiered in Japan on September 17, 2016.\nA manga series titled A Sign of Affection (\u3086\u3073\u3055\u304d\u3068\u604b\u3005, Yubisaki to Renren) by the author Suu Morishita which features several JSL-speaking characters including the main deaf character Yuki Itose was adapted into anime series on January 6, 2024, by Ajia-do Animation Works.\n\n\n== Elements ==\nAs in other sign languages, JSL (usually called simply \u624b\u8a71 shuwa, 'hand talk') consists of words, or signs, and the grammar with which they are put together. JSL signs may be nouns, verbs, adjectives, or any other part of a sentence, including suffixes indicating tense, negation, and grammatical particles. Signs consist not just of a manual gesture, but also mouthing (\u53e3\u8a71, k\u014dwa; 'mouth talk') (pronouncing a standard Japanese word with or without making a sound). The same sign may assume one of two different but semantically related meanings, as for example in home and house, according to its mouthing. Another indispensable part of many signs is facial expression.\n\nIn addition to signs and their grammar, JSL is augmented by 'finger letters' (\u6307\u6587\u5b57, yubimoji), a form of fingerspelling, which was introduced from the United States in the early part of the twentieth century, but is used less often than in American Sign Language. Each yubimoji corresponds to a kana, as illustrated by the JSL syllabary. Fingerspelling is used mostly for foreign words, last names, and unusual words. Pantomime (\u8eab\u632f\u308a, miburi; 'gestures') is used to cover situations where existing signs are not sufficient.\nBecause JSL is strongly influenced by the complex Japanese writing system, it dedicates particular attention to the written language and includes elements specifically designed to express kanji in signs. For either conciseness or disambiguation, particular signs are associated with certain commonly used kanji, place names, and sometimes surnames. Finger writing (\u7a7a\u66f8, k\u016bsho; 'air writing') (tracing kanji in the air) is also sometimes used for last names or place names, just as it is in spoken Japanese.\n\n\n== Examples of signs ==\n\n\n== Other sign languages in Japan ==\nSome communities where deafness is relatively common and which have historically had little contact with mainland Japan have formed their own village sign languages:\n\nKoniya Sign Language in Amami \u014cshima\nMiyakubo Sign Language in Miyakubo, Ehime\nThe increase in communication has led to an increasing influence of the Japanese sign over the village forms.\n\n\n== See also ==\n\nManually coded language\nJapanese Sign Language family\n\n\n== Notes ==\n\n\n== References ==\nChokaku Shogaisha Rikai no Tame Archived 2009-03-07 at the Wayback Machine, Kanagawa Prefecture Site accessed on August 27, 2009 (in Japanese)\nNy\u016bmon - Shin Shuwa Ky\u014dshitsu - K\u014dsei R\u014dd\u014dsh\u014d H\u014dshiin Y\u014dsei K\u014dza - Ny\u016bmon Katei Taiy\u014d (in Japanese). Zenkoku Shuwa Kensh\u016b Senta-. 2004. ISBN 978-4-902158-11-3.\nMonaghan, Leila Frances. (2003). Many Ways to be Deaf: International Variation in Deaf Communities. Washington, D.C.: Gallaudet University Press. ISBN 9781563681356; OCLC 248814292\nNakamura, Karen. (2006). Deaf in Japan: Signing and the Politics of Identity. Ithaca: Cornell University Press. ISBN 9780801443503; ISBN 9780801473562; OCLC 238810838\n\n\n== External links ==\n\nJapanese Association of Sign Linguistics (JASL)\n\u624b\u8a71\u6559\u5ba4 (online JSL lessons and dictionary, in Japanese)\nOnline JSL dictionaries\nKyoto Prefectural Education Center Website with explanations in English",
+    "wikitext_length": 21283,
+    "phonology_keywords": [],
+    "source": "wikipedia",
+    "license": "CC BY-SA 3.0",
+    "modality_keywords": [
+      "Deaf",
+      "fingerspell",
+      "phonolog",
+      "sign language",
+      "signing"
+    ],
+    "retrieved_at": "2026-06-18T13:25:07.597883+00:00",
+    "citation": {
+      "source": "Wikipedia",
+      "title": "Japanese Sign Language",
+      "url": "https://en.wikipedia.org/wiki/Japanese_Sign_Language",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  },
+  "wikidata": {
+    "qid": "Q35601",
+    "label": "Japanese Sign Language",
+    "description": "sign language",
+    "iso639_3": "jsl",
+    "language_family": "Q11722508",
+    "extinction_status": null,
+    "ipa_statements": [],
+    "source": "wikidata",
+    "license": "CC0",
+    "modality_claims": {
+      "category": "sign-languages",
+      "statements": [
+        {
+          "property": "P279",
+          "value": "Q11722508"
+        },
+        {
+          "property": "P910",
+          "value": "Q106190857"
+        }
+      ]
+    },
+    "retrieved_at": "2026-06-18T13:25:07.597883+00:00",
+    "citation": {
+      "source": "Wikidata",
+      "qid": "Q35601",
+      "url": "https://www.wikidata.org/wiki/Q35601",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    }
+  },
+  "wiktionary": {
+    "pages": [
+      "Japanese Sign Language"
+    ],
+    "ipa_entries": [],
+    "etymology_blocks": [],
+    "pronunciation_notes": [],
+    "source": "wiktionary",
+    "license": "CC BY-SA 3.0",
+    "retrieved_at": "2026-06-18T13:25:07.597883+00:00",
+    "citation": {
+      "source": "Wiktionary",
+      "title": "Japanese Sign Language",
+      "url": "https://en.wiktionary.org/wiki/Japanese_Sign_Language",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  },
+  "uncertainty_flags": [
+    {
+      "flag": "proposed",
+      "context_snippet": "eaf gatherings. The Deaf community supported passage of the proposed Sign Language Law. The Basic Act for Persons with Disabili"
+    }
+  ],
+  "modality_summary": {
+    "category": "sign-languages",
+    "keyword_count": 5,
+    "top_keywords": [
+      "Deaf",
+      "fingerspell",
+      "phonolog",
+      "sign language",
+      "signing"
+    ],
+    "ipa_entries": 0,
+    "uncertainty_flag_count": 1,
+    "has_wikidata_statements": true,
+    "extract_chars": 13627
+  }
+}

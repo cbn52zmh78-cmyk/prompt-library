@@ -4,6 +4,12 @@
   "category": "writing-systems",
   "priority": "high",
   "notes": "Undeciphered Minoan syllabary; uncertain phonetic values flagged",
+  "language_corpus_links": [
+    "linear-a"
+  ],
+  "modality_links": [
+    "linear-b-script"
+  ],
   "source_policy": "public_only",
   "licenses": [
     "CC BY-SA 3.0 (Wikipedia/Wiktionary)",

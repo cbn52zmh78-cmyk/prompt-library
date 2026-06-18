@@ -3,7 +3,7 @@
   "name": "Gothic Alphabet",
   "category": "writing-systems",
   "category_label": "Writing Systems / Scripts",
-  "scraped_at": "2026-06-18T12:26:53.287523+00:00",
+  "scraped_at": "2026-06-18T13:29:05.993171+00:00",
   "retrieval_date": "2026-06-18",
   "deep": false,
   "source_policy": "public_only",
@@ -59,7 +59,7 @@
       "transliterat",
       "writing system"
     ],
-    "retrieved_at": "2026-06-18T12:26:53.287523+00:00",
+    "retrieved_at": "2026-06-18T13:29:05.993171+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Gothic alphabet",
@@ -93,7 +93,7 @@
         }
       ]
     },
-    "retrieved_at": "2026-06-18T12:26:53.287523+00:00",
+    "retrieved_at": "2026-06-18T13:29:05.993171+00:00",
     "citation": {
       "source": "Wikidata",
       "qid": "Q467784",
@@ -111,7 +111,7 @@
     "pronunciation_notes": [],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T12:26:53.287523+00:00",
+    "retrieved_at": "2026-06-18T13:29:05.993171+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "Gothic alphabet",
@@ -159,5 +159,39 @@
     "uncertainty_flag_count": 5,
     "has_wikidata_statements": true,
     "extract_chars": 9062
+  },
+  "corpus_cross_links": {
+    "language_corpus": [
+      {
+        "slug": "gothic",
+        "name": "Gothic",
+        "status": "extinct",
+        "script": "Gothic alphabet (Wulfila)",
+        "decipherment": "fully_read",
+        "brain_scrape_path": "languages/extinct/gothic/research/brain/latest_scrape.json",
+        "linked": true,
+        "brain_scraped_at": "2026-06-18T13:20:17.177637+00:00",
+        "brain_sources": [
+          "wikipedia",
+          "wikidata",
+          "wiktionary"
+        ],
+        "ipa_count": 2,
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Gothic_language",
+        "phonology_keywords": [
+          "IPA",
+          "accent",
+          "consonant",
+          "dialect",
+          "etymolog",
+          "extinct",
+          "phonolog",
+          "pronunciation"
+        ]
+      }
+    ],
+    "modality_topics": [],
+    "language_link_count": 1,
+    "modality_link_count": 0
   }
 }

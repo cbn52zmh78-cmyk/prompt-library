@@ -1,0 +1,51 @@
+{
+  "slug": "middle-egyptian",
+  "name": "Middle Egyptian",
+  "status": "extinct",
+  "scraped_at": "2026-06-18T13:30:33.274846+00:00",
+  "deep": false,
+  "sources_used": [
+    "wikipedia",
+    "wikidata",
+    "wiktionary"
+  ],
+  "errors": [],
+  "wikipedia": {
+    "title": "Middle_Egyptian",
+    "url": "https://en.wikipedia.org/wiki/Middle_Egyptian",
+    "extract": "",
+    "wikitext_length": 47,
+    "phonology_keywords": [],
+    "source": "wikipedia",
+    "license": "CC BY-SA 3.0"
+  },
+  "wikidata": {
+    "qid": "Q726849",
+    "label": "Araneus flavus",
+    "description": "species of arachnid",
+    "iso639_3": null,
+    "language_family": null,
+    "extinction_status": null,
+    "ipa_statements": [],
+    "source": "wikidata",
+    "license": "CC0"
+  },
+  "wiktionary": {
+    "pages": [
+      "Middle_Egyptian",
+      "Category:Middle Egyptian"
+    ],
+    "ipa_entries": [],
+    "etymology_blocks": [],
+    "pronunciation_notes": [],
+    "source": "wiktionary",
+    "license": "CC BY-SA 3.0"
+  },
+  "pronunciation_summary": {
+    "total_ipa_entries": 0,
+    "by_quality": {},
+    "by_accent": {},
+    "accent_count": 0
+  },
+  "etymology_count": 0
+}

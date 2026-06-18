@@ -1,0 +1,251 @@
+{
+  "slug": "hiragana",
+  "name": "Hiragana",
+  "category": "writing-systems",
+  "category_label": "Writing Systems / Scripts",
+  "scraped_at": "2026-06-18T13:26:26.600490+00:00",
+  "retrieval_date": "2026-06-18",
+  "deep": false,
+  "source_policy": "public_only",
+  "licenses": {
+    "wikipedia": "CC BY-SA 3.0",
+    "wiktionary": "CC BY-SA 3.0",
+    "wikidata": "CC0"
+  },
+  "sources_used": [
+    "wikipedia",
+    "wikidata",
+    "wiktionary"
+  ],
+  "citations": [
+    {
+      "source": "Wikipedia",
+      "title": "Hiragana",
+      "url": "https://en.wikipedia.org/wiki/Hiragana",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "source": "Wikidata",
+      "qid": "Q48332",
+      "url": "https://www.wikidata.org/wiki/Q48332",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    },
+    {
+      "source": "Wiktionary",
+      "title": "hiragana",
+      "url": "https://en.wiktionary.org/wiki/hiragana",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  ],
+  "errors": [],
+  "wikipedia": {
+    "title": "Hiragana",
+    "url": "https://en.wikipedia.org/wiki/Hiragana",
+    "extract": "Hiragana (\u5e73\u4eee\u540d, \u3072\u3089\u304c\u306a; IPA: [\u00e7i\u027ea\u0261a\ua71cna, \u00e7i\u027ea\u0261ana(\ua71c)]) is a Japanese syllabary, part of the Japanese writing system, along with katakana as well as kanji (Chinese characters).\nIt is a phonetic lettering system. The word hiragana means \"common\" or \"plain\" kana (originally also \"easy\", as contrasted with kanji).\nHistorically, hiragana developed from cursive forms of Kanji (s\u014dsho (\u8349\u66f8)) via man'y\u014dgana (\u4e07\u8449\u4eee\u540d), with each sign originating as a simplified cursive rendering of a whole kanji\u2014for example, \u3042 (a) from \u5b89 (an).\nHiragana and katakana are both kana systems. With few exceptions, each mora in the Japanese language is represented by one character (or one digraph) in each system. This may be a vowel such as /a/ (hiragana \u3042); a consonant followed by a vowel such as /ka/ (\u304b); or the nasal sonorant /N/ (\u3093). Because the characters of the kana do not represent single consonants (except in the case of the aforementioned \u3093), the kana are referred to as syllabic symbols and not alphabetic letters.\nHiragana is used to write okurigana (kana suffixes following a kanji root, for example to inflect verbs and adjectives), various grammatical and function words including particles, and miscellaneous other native words for which there are no kanji or whose kanji form is obscure or too formal for the writing purpose. Words that do have common kanji renditions may also sometimes be written instead in hiragana, according to an individual author's preference, for example to impart an informal feel. Hiragana is also used to write furigana, a reading aid that shows the pronunciation of kanji characters.\nThere are two main systems of ordering hiragana: the old-fashioned iroha ordering and the more prevalent goj\u016bon ordering.\n\n\n== Writing system ==\n\nAfter the 1900 script reform, which deemed hundreds of characters hentaigana, the hiragana syllabary consists of 48 base characters, of which two (\u3090 and \u3091) are only used in some proper names:\n\n5 singular vowels: \u3042 /a/, \u3044 /i/, \u3046 /u/, \u3048 /e/, \u304a /o/ (respectively pronounced [a], [i], [\u026f], [e] and [o])\n42 consonant\u2013vowel unions: for example \u304d /ki/, \u3066 /te/, \u307b /ho/, \u3086 /yu/, \u308f /wa/ (respectively pronounced [ki], [te], [ho], [j\u026f] and [wa])\n1 singular consonant (\u3093), romanized as n.\nThese are conceived as a 5\u00d710 grid (goj\u016bon, \u4e94\u5341\u97f3, \"Fifty Sounds\"), as illustrated in the adjacent table, read \u3042 (a), \u3044 (i), \u3046 (u), \u3048 (e), \u304a (o), \u304b (ka), \u304d (ki), \u304f (ku), \u3051 (ke), \u3053 (ko) and so forth (but si\u2192shi, ti\u2192chi, tu\u2192tsu, hu\u2192fu, wi\u2192i, we\u2192e, wo\u2192o). Of the 50 theoretically possible combinations, yi, ye, and wu are completely unused. On the w row, \u3090 and \u3091, pronounced [i] and [e] respectively, are uncommon in modern Japanese, while \u3092, pronounced [o], is common as a particle but otherwise rare. Strictly speaking, the singular consonant \u3093 (n) is considered to be outside the goj\u016bon.\nThese basic characters can be modified in various ways. By adding a dakuten marker ( \u309b), a voiceless consonant is turned into a voiced consonant: k\u2192g, ts/s\u2192z, t\u2192d, h/f\u2192b and ch/sh\u2192j (also u\u2192v(u)). For example, \u304b (ka) becomes \u304c (ga). Hiragana beginning with an h (or f) sound can also add a handakuten marker ( \u309c) changing the h (f) to a p. For example, \u306f (ha) becomes \u3071 (pa).\nA small version of the hiragana for ya, yu, or yo (\u3083, \u3085, or \u3087 respectively) may be added to hiragana ending in i. This changes the i vowel sound to a glide (palatalization) to a, u or o. For example, \u304d (ki) plus \u3083 (small ya) becomes \u304d\u3083 (kya). The addition of the small y kana is called y\u014don.\nA small tsu \u3063, called a sokuon, indicates that the following consonant is geminated (doubled). In Japanese this is an important distinction in pronunciation; for example, compare \u3055\u304b, saka, \"hill\" with \u3055\u3063\u304b, sakka, \"author\". However, it cannot be used to double an n \u2013 for this purpose, the singular n (\u3093) is added in front of the syllable, as in \u307f\u3093\u306a (minna, \"all\"). The sokuon also sometimes appears at the end of utterances, where it denotes a glottal stop, as in \u3044\u3066\u3063! ([ite\u0294], \"Ouch!\").\nTwo hiragana have pronunciations that depend on the context:\n\n\u306f is pronounced [wa] when used as a particle (otherwise, [ha]).\n\u3078 is pronounced [e] when used as a particle (otherwise, [he]).\nHiragana usually spells long vowels with the addition of a second vowel kana; for example, \u304a\u304b\u3042\u3055\u3093 (o-ka-a-sa-n, \"mother\"). The ch\u014donpu (long vowel mark) (\u30fc) used in katakana is rarely used with hiragana, for example in the word \u3089\u30fc\u3081\u3093, r\u0101men, but this usage is considered non-standard in Japanese. However, the Okinawan language uses ch\u014donpu with hiragana. In informal writing, small versions of the five vowel kana are sometimes used to represent trailing off sounds (\u306f\u3041, haa, \u306d\u3047, nee). Plain (clear) and voiced iteration marks are written in hiragana as \u309d and \u309e, respectively. These marks are rarely used nowadays.\n\n\n== Table of hiragana ==\nThe following table shows the complete hiragana together with the modified Hepburn romanization and IPA transcription, arranged in four categories, each of them displayed in the goj\u016bon order. Those whose romanization are in bold do not use the initial consonant for that row. For all syllables besides \u3093, the pronunciation indicated is for word-initial syllables; for mid-word pronunciations see below.\n\n\n=== Spelling\u2013phonology correspondence ===\n\nIn the middle of words, the g sound (normally [\u0261]) may turn into a velar nasal [\u014b] or velar fricative [\u0263]. For example, \u304b\u304e (kagi, key) is often pronounced [ka\u014bi]. However, \u3058\u3085\u3046\u3054 (j\u016bgo, fifteen) is pronounced as if it was j\u016b and go stacked end to end: [d\u0361\u0291\u026f\u02d0\u0261o].\nIn many accents, the j and z sounds are pronounced as affricates ([d\u0361\u0291] and [d\u0361z], respectively) at the beginning of utterances and fricatives [\u0291, z] in the middle of words. For example, \u3059\u3046\u3058 s\u016bji [s\u026f\u02d0\u0291i] 'number', \u3056\u3063\u3057 zasshi [d\u0361za\u0255\u0255i] 'magazine'.\nThe singular n is pronounced [m] before m, b and p, [n] before plosives (t, d), affricates(ch, ts, j), r, n, and z, [\u014b] before k and g, [\u0274] at the end of utterances, and some kind of high nasal vowel [\u0270\u0303] before vowels, palatal approximants (y), and some fricative consonants (s, sh, h, f and w).\nIn kanji readings, the grapheme combinations ou and ei are usually pronounced [o\u02d0] (long o) and [e\u02d0] (long e) respectively. For example, \u3068\u3046\u304d\u3087\u3046 (lit. toukyou) is pronounced [to\u02d0k\u02b2o\u02d0] 'Tokyo', and \u305b\u3093\u305b\u3044 sensei is [se\u026f\u0303se\u02d0] 'teacher'. However, \u3068\u3046 tou is pronounced [to\u026f] 'to inquire', because the o and u are considered distinct, u being the verb ending in the dictionary form. Similarly, \u3057\u3066\u3044\u308b shite iru is pronounced [\u0255itei\u027e\u026f], present progressive form of \u3059\u308b (suru, \"to do\").\nIn archaic forms of Japanese, there existed the kwa (\u304f\u308e [k\u02b7a]) and gwa (\u3050\u308e [\u0261\u02b7a]) digraphs. In modern Japanese, these phonemes have been phased out of usage.\n\n\n== Spelling rules ==\n\nWith a few exceptions, such as for the three particles \u306f (pronounced [wa] instead of [ha]), \u3078 (pronounced [e] instead of [he]) and [o] (written \u3092 instead of \u304a), Japanese when written in kana is phonemically orthographic, i.e. there is a one-to-one correspondence between kana characters and sounds, leaving only words' pitch accent unrepresented. This has not always been the case: a previous system of spelling, now referred to as historical kana usage, differed substantially from pronunciation; the three above-mentioned exceptions in modern usage are the legacy of that system.\nThere are two hiragana pronounced ji (\u3058 and \u3062) and two hiragana pronounced zu (\u305a and \u3065), but to distinguish them, particularly when typing Japanese, sometimes \u3062 is written as di and \u3065 is written as du. These pairs are not interchangeable. Usually, ji is written as \u3058 and zu is written as \u305a. There are some exceptions. If the first two syllables of a word consist of one syllable without a dakuten and the same syllable with a dakuten, the same hiragana is used to write the sounds. For example, chijimeru ('to boil down' or 'to shrink') is spelled \u3061\u3062\u3081\u308b and tsuzuku ('to continue') is \u3064\u3065\u304f.\nFor compound words where the dakuten reflects rendaku voicing, the original hiragana is used. For example, chi (\u8840 'blood') is spelled \u3061 in plain hiragana. When \u9f3b hana ('nose') and \u8840 chi ('blood') combine to make hanaji (\u9f3b\u8840 'nose bleed'), the sound of \u8840 changes from chi to ji. So hanaji is spelled \u306f\u306a\u3062. Similarly, tsukau (\u4f7f\u3046/\u9063\u3046; 'to use') is spelled \u3064\u304b\u3046 in hiragana, so kanazukai (\u4eee\u540d\u9063\u3044; 'kana use', or 'kana orthography') is spelled \u304b\u306a\u3065\u304b\u3044 in hiragana. However, there are cases where \u3062 and \u3065 are not used, such as the word for 'lightning', inazuma (\u7a32\u59bb). The first component, \u7a32, meaning 'rice plant', is written \u3044\u306a (ina). The second component, \u59bb (etymologically \u592b), meaning 'spouse', is pronounced \u3064\u307e (tsuma) when standalone or often as \u3065\u307e (zuma) when following another syllable, such in \u4eba\u59bb (hitozuma, 'married woman'). Even though these components of \u7a32\u59bb are etymologically linked to 'lightning', it is generally arduous for a contemporary speaker to consciously perceive inazuma as separable into two discrete words. Thus, the default spelling \u3044\u306a\u305a\u307e is used instead of \u3044\u306a\u3065\u307e. Other examples include kizuna (\u304d\u305a\u306a) and sakazuki (\u3055\u304b\u305a\u304d). Although these rules were officially established by a Cabinet Notice in 1986 revising the modern kana usage, they have sometimes faced criticism due to their perceived arbitrariness.\nOfficially, \u3062 and \u3065 do not occur word-initially pursuant to modern spelling rules. There were words such as \u3062\u3070\u3093 jiban 'ground' in the historical kana usage, but they were unified under \u3058 in the modern kana usage in 1946, so today it is spelled exclusively \u3058\u3070\u3093. However, \u3065\u3089 zura 'wig' (from \u304b\u3064\u3089 katsura) and \u3065\u3051 zuke (a sushi term for lean tuna soaked in soy sauce) are examples of word-initial \u3065 today.\nNo standard Japanese words begin with the kana \u3093 (n). This is the basis of the word game shiritori. \u3093 n is normally treated as its own syllable and is separate from the other n-based kana (na, ni etc.).\n\u3093 is sometimes directly followed by a vowel (a, i, u, e or o) or a palatal approximant (ya, yu or yo). These are clearly distinct from the na, ni etc. syllables, and there are minimal pairs such as \u304d\u3093\u3048\u3093 kin'en 'smoking forbidden', \u304d\u306d\u3093 kinen 'commemoration', \u304d\u3093\u306d\u3093 kinnen 'recent years'. In Hepburn romanization, they are distinguished with an apostrophe, but not all romanization methods make the distinction. For example, past prime minister Junichiro Koizumi's first name is actually \u3058\u3085\u3093\u3044\u3061\u308d\u3046 Jun'ichir\u014d pronounced [d\u0291\u026f\u0270\u0303it\u0255i\u027eo\u02d0]\nThere are a few hiragana that are rarely used. Outside of Okinawan orthography, \u3090 wi [i] and \u3091 we [e] are only used in some proper names. \ud82c\udc01 e was an alternate version of \u3048 e before spelling reform, and was briefly reused for ye during initial spelling reforms, but is now completely obsolete. \u3094 vu is a modern addition used to represent the /v/ sound in foreign languages such as English, but since Japanese from a phonological standpoint does not have a /v/ sound, it is pronounced as /b/ and mostly serves as a more accurate indicator of a word's pronunciation in its original language. However, it is rarely seen because loanwords and transliterated words are usually written in katakana, where the corresponding character would be written as \u30f4. The digraphs \u3062\u3083, \u3062\u3085, \u3062\u3087 for ja/ju/jo are theoretically possible in rendaku, but are nearly never used in modern kana usage; for example, the word \u592b\u5a66\u8336\u7897, meoto-jawan (couple bowls), spelled \u3081\u304a\u3068\u3062\u3083\u308f\u3093, where \u8336\u7897 alone is spelled \u3061\u3083\u308f\u3093 (chawan).\nThe \u307f\u3085 myu kana is extremely rare in originally Japanese words; linguist Haruhiko Kindaichi raises the example of the Japanese family name Omamy\u016bda (\u5c0f\u8c46\u751f\u7530) and claims it is the only occurrence amongst pure Japanese words. Its katakana counterpart is used in many loanwords, however.\n\n\n== Obsolete kana ==\n\n\n=== Hentaigana ===\n\n\n=== Polysyllabic kana ===\n\n\n=== e and i ===\nOn the row beginning with \u308f /wa/, the hiragana \u3090 /wi/ and \u3091 /we/ are both quasi-obsolete, only used in some names. They are usually respectively pronounced [i] and [e]. In modified Hepburn romanization, they are generally written as i and e.\nIn modern orthography, the phonemes 'wi' and 'we' are transcribed in loanwords and names from other languages, as \u3046\u3043 (\u30a6\u30a3) and \u3046\u3047 (\u30a6\u30a7).\n\n\n=== yi, ye and wu ===\n\n\n==== yi ====\n\nIt has not been demonstrated whether the mora /ji/ existed in old Japanese. Though ye did appear in some textbooks during the Meiji period along with another kana for yi in the form of cursive \u4ee5. Today it is considered a Hentaigana by scholars and is encoded in Unicode 10 (\ud82c\udc06)  This kana could have a colloquial use, to convert the combo yui (\u3086\u3044) into yii (\ud82c\udc06\u3044), due to other Japanese words having a similar change.\n\n\n==== ye ====\n\nAn early, now obsolete, hiragana-esque form of ye may have existed (\ud82c\udc01 [je]) in pre-Classical Japanese (prior to the advent of kana), but is generally represented for purposes of reconstruction by the kanji \u6c5f, and its hiragana form is not present in any known orthography. In modern orthography, ye can also be written as \u3044\u3047 (\u30a4\u30a7 in katakana).\n\nWhile hiragana and katakana letters for \"ye\" were used for a short period after the advent of kana, the distinction between /ye/ and /e/ disappeared before glyphs could become established.\n\n\n==== wu ====\n\nIt has not been demonstrated whether the mora /wu/ existed in old Japanese. However, hiragana wu also appeared in different Meiji-era textbooks (). Although there are several possible source kanji, it is likely to have been derived from a cursive form of the man'y\u014dgana \u6c59, although a related variant sometimes listed () is from a cursive form of \u7d06. However, it was never commonly used. This character is included in Unicode 14 as HIRAGANA LETTER ARCHAIC WU (\ud82c\udd1f).\n\n\n== History ==\n\nHiragana developed from man'y\u014dgana, Chinese characters used for their pronunciations, a practice that started in the 5th century. The oldest examples of Man'y\u014dgana include the Inariyama Sword, an iron sword excavated at the Inariyama Kofun. This sword is thought to be made in the year \u8f9b\u4ea5\u5e74 (most commonly taken to be C.E. 471).\nThe forms of the hiragana originate from the cursive script style of Chinese calligraphy. The table to the right shows the derivation of hiragana from many\u014dgana via cursive script. The upper part shows the character in the regular script form, the center character in red shows the cursive script form of the character, and the bottom shows the equivalent hiragana. The cursive script forms are not strictly confined to those in the illustration.\nWhen it was first developed, hiragana was not accepted by everyone. The educated or elites preferred to use only the kanji system. Historically, in Japan, the regular script (kaisho) form of the characters was used by men and called otokode (\u7537\u624b), \"men's writing\", while the cursive script (s\u014dsho) form of the kanji was used by women. Hence hiragana first gained popularity among women, who were generally not allowed access to the same levels of education as men, thus hiragana was first widely used among court women in the writing of personal communications and literature. From this comes the alternative name of onnade (\u5973\u624b) \"women's writing\". For example, The Tale of Genji and other early novels by female authors used hiragana extensively or exclusively. Even today, hiragana is felt to have a feminine quality.\nMale authors came to write literature using hiragana. Hiragana was used for unofficial writing such as personal letters, while katakana and kanji were used for official documents. In modern times, the usage of hiragana has become mixed with katakana writing. Katakana is now relegated to special uses such as recently borrowed words (i.e., since the 19th century), names in transliteration, the names of animals, in telegrams, and for emphasis.\nOriginally, for all syllables there was more than one possible hiragana. In 1900, the system was simplified so each syllable had only one hiragana. The deprecated hiragana are now known as hentaigana (\u5909\u4f53\u4eee\u540d).\nThe pangram poem Iroha-uta (\"ABC song/poem\"), which dates to the 10th century, uses every hiragana once (except n \u3093, which was a variant of \u3080 before the Muromachi era).\n\n\n== Stroke order and direction ==\nThe following table shows the method for writing each hiragana character. The table is arranged in a traditional manner, beginning top right and reading columns down. The numbers and arrows indicate the stroke order and direction respectively.\n\n\n== Unicode ==\n\nHiragana was added to the Unicode Standard in October, 1991 with the release of version 1.0.\nThe Unicode block for Hiragana is U+3040\u2013U+309F:\n\nThe Unicode hiragana block contains precomposed characters for all hiragana in the modern set, including small vowels and y\u014don kana for compound syllables as well as the rare \u3090 wi and \u3091 we; the archaic \ud82c\udc01 ye is included in plane 1 at U+1B001 (see below). All combinations of hiragana with dakuten and handakuten used in modern Japanese are available as precomposed characters (including the rare \u3094 vu), and can also be produced by using a base hiragana followed by the combining dakuten and handakuten characters (U+3099 and U+309A, respectively). This method is used to add the diacritics to kana that are not normally used with them, for example applying the dakuten to a pure vowel or the handakuten to a kana not in the h-group.\nCharacters U+3095 and U+3096 are small \u304b (ka) and small \u3051 (ke), respectively. U+309F is a ligature of \u3088\u308a (yori) occasionally used in vertical text. U+309B and U+309C are spacing (non-combining) equivalents to the combining dakuten and handakuten characters, respectively.\nHistoric and variant forms of Japanese kana characters were first added to the Unicode Standard in October, 2010 with the release of version 6.0, with significantly more added in 2017 as part of Unicode 10.\nThe Unicode block for Kana Supplement is U+1B000\u2013U+1B0FF, and is immediately followed by the Kana Extended-A block (U+1B100\u2013U+1B12F). These blocks include mainly hentaigana (historic or variant hiragana):\n\nThe Unicode block for Kana Extended-B is U+1AFF0\u2013U+1AFFF:\n\nThe Unicode block for Small Kana Extension is U+1B130\u2013U+1B16F:\n\nIn the following character sequences a kana from the /k/ row is modified by a handakuten combining mark to indicate that a syllable starts with an initial nasal, known as bidakuon. As of Unicode 17.0, these character combinations are explicitly called out as Named Sequences:\n\n\n== See also ==\nBopomofo (Zh\u00f9y\u012bn f\u00fah\u00e0o, \"phonetic symbols\"), a phonetic system of 37 characters for writing Chinese developed in the 1900s and which is more common in Taiwan.\nIteration mark explains the iteration marks used with hiragana.\nJapanese phonology explains Japanese pronunciation in detail.\nJapanese typographic symbols gives other non-kana, non-kanji symbols.\nJapanese writing system\nKatakana\nN\u00fcshu, a syllabary writing system used by women in China's Hunan province\nShod\u014d, Japanese calligraphy.\n\n\n== References ==\n\n\n=== Citations ===\n\n\n=== Sources ===\n\n\n=== Notes ===\n\n\n== External links ==\n\nHiragana unicode chart\nHiragana table with strokes animations Archived 2023-06-03 at the Wayback Machine\nPractice Hiragana",
+    "wikitext_length": 52057,
+    "phonology_keywords": [],
+    "source": "wikipedia",
+    "license": "CC BY-SA 3.0",
+    "modality_keywords": [
+      "IPA",
+      "accent",
+      "consonant",
+      "etymolog",
+      "grapheme",
+      "orthograph",
+      "phonolog",
+      "pronunciation",
+      "script",
+      "syllab",
+      "transliterat",
+      "vowel",
+      "writing system"
+    ],
+    "retrieved_at": "2026-06-18T13:26:26.600490+00:00",
+    "citation": {
+      "source": "Wikipedia",
+      "title": "Hiragana",
+      "url": "https://en.wikipedia.org/wiki/Hiragana",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    "script_sections": []
+  },
+  "wikidata": {
+    "qid": "Q48332",
+    "label": "hiragana",
+    "description": "Japanese syllabary",
+    "iso639_3": null,
+    "language_family": "Q187659",
+    "extinction_status": null,
+    "ipa_statements": [],
+    "source": "wikidata",
+    "license": "CC0",
+    "modality_claims": {
+      "category": "writing-systems",
+      "statements": [
+        {
+          "property": "P31",
+          "value": "Q29517555"
+        },
+        {
+          "property": "P31",
+          "value": "Q182133"
+        },
+        {
+          "property": "P31",
+          "value": "Q4004706"
+        },
+        {
+          "property": "P361",
+          "value": "Q187659"
+        }
+      ]
+    },
+    "retrieved_at": "2026-06-18T13:26:26.600490+00:00",
+    "citation": {
+      "source": "Wikidata",
+      "qid": "Q48332",
+      "url": "https://www.wikidata.org/wiki/Q48332",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    }
+  },
+  "wiktionary": {
+    "pages": [
+      "hiragana",
+      "Hiragana"
+    ],
+    "ipa_entries": [
+      {
+        "ipa": "/\u02cch\u026a.\u0279\u0259\u02c8\u0261\u00e6.n\u0259/",
+        "accent": "unspecified",
+        "language_code": "",
+        "quality": "scholarly_ipa"
+      },
+      {
+        "ipa": "/hi\u0281a\u02c8\u0261a\u02d0na/",
+        "accent": "unspecified",
+        "language_code": "",
+        "quality": "scholarly_ipa"
+      }
+    ],
+    "etymology_blocks": [],
+    "pronunciation_notes": [
+      {
+        "section": "Pronunciation",
+        "text": "=\n* \n* \n*"
+      },
+      {
+        "section": "Pronunciation",
+        "text": "=\n* \n* \n*"
+      },
+      {
+        "section": "Pronunciation",
+        "text": "="
+      },
+      {
+        "section": "Pronunciation",
+        "text": "=\n* \n*"
+      },
+      {
+        "section": "Pronunciation",
+        "text": "="
+      },
+      {
+        "section": "Pronunciation",
+        "text": "=\n\n*"
+      },
+      {
+        "section": "Pronunciation",
+        "text": "=\n* \n*"
+      },
+      {
+        "section": "Pronunciation",
+        "text": "=\n* \n*"
+      }
+    ],
+    "source": "wiktionary",
+    "license": "CC BY-SA 3.0",
+    "retrieved_at": "2026-06-18T13:26:26.600490+00:00",
+    "citation": {
+      "source": "Wiktionary",
+      "title": "hiragana",
+      "url": "https://en.wiktionary.org/wiki/hiragana",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  },
+  "uncertainty_flags": [
+    {
+      "flag": "reconstructed",
+      "context_snippet": "vent of kana), but is generally represented for purposes of reconstruction by the kanji \u6c5f, and its hiragana form is not present in any"
+    }
+  ],
+  "modality_summary": {
+    "category": "writing-systems",
+    "keyword_count": 13,
+    "top_keywords": [
+      "IPA",
+      "accent",
+      "consonant",
+      "etymolog",
+      "grapheme",
+      "orthograph",
+      "phonolog",
+      "pronunciation",
+      "script",
+      "syllab"
+    ],
+    "ipa_entries": 2,
+    "uncertainty_flag_count": 1,
+    "has_wikidata_statements": true,
+    "extract_chars": 18953
+  },
+  "corpus_cross_links": {
+    "language_corpus": [
+      {
+        "slug": "classical-japanese",
+        "name": "Classical Japanese",
+        "status": "dead",
+        "script": "Man'y\u014dgana, kana, kanji",
+        "decipherment": "fully_read",
+        "brain_scrape_path": "languages/dead/classical-japanese/research/brain/latest_scrape.json",
+        "linked": true,
+        "brain_scraped_at": "2026-06-18T13:00:57.990294+00:00",
+        "brain_sources": [
+          "wikipedia",
+          "wikidata",
+          "wiktionary"
+        ],
+        "ipa_count": 0,
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Classical_Japanese",
+        "phonology_keywords": [
+          "IPA",
+          "consonant",
+          "dialect",
+          "etymolog",
+          "phonolog",
+          "pronunciation",
+          "vowel"
+        ]
+      }
+    ],
+    "modality_topics": [
+      {
+        "slug": "manyogana",
+        "name": "Man'y\u014dgana",
+        "category": "writing-systems",
+        "modality_scrape_path": "communication-modalities/writing-systems/manyogana/research/brain/latest_scrape.json",
+        "linked": true,
+        "modality_scraped_at": "2026-06-18T13:25:42.651755+00:00",
+        "uncertainty_flags": 0
+      }
+    ],
+    "language_link_count": 1,
+    "modality_link_count": 1
+  }
+}

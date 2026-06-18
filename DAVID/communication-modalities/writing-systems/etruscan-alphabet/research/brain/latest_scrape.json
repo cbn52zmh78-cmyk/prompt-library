@@ -3,7 +3,7 @@
   "name": "Etruscan Alphabet",
   "category": "writing-systems",
   "category_label": "Writing Systems / Scripts",
-  "scraped_at": "2026-06-18T12:27:16.077752+00:00",
+  "scraped_at": "2026-06-18T13:30:25.604949+00:00",
   "retrieval_date": "2026-06-18",
   "deep": false,
   "source_policy": "public_only",
@@ -60,7 +60,7 @@
       "vowel",
       "writing system"
     ],
-    "retrieved_at": "2026-06-18T12:27:16.077752+00:00",
+    "retrieved_at": "2026-06-18T13:30:25.604949+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Etruscan alphabet",
@@ -106,7 +106,7 @@
         }
       ]
     },
-    "retrieved_at": "2026-06-18T12:27:16.077752+00:00",
+    "retrieved_at": "2026-06-18T13:30:25.604949+00:00",
     "citation": {
       "source": "Wikidata",
       "qid": "Q271565",
@@ -122,7 +122,7 @@
     "pronunciation_notes": [],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T12:27:16.077752+00:00",
+    "retrieved_at": "2026-06-18T13:30:25.604949+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "Etruscan alphabet",
@@ -155,5 +155,38 @@
     "uncertainty_flag_count": 1,
     "has_wikidata_statements": true,
     "extract_chars": 4606
+  },
+  "corpus_cross_links": {
+    "language_corpus": [
+      {
+        "slug": "etruscan",
+        "name": "Etruscan",
+        "status": "extinct",
+        "script": "Etruscan alphabet (adapted from Greek)",
+        "decipherment": "readable_script_unknown_language",
+        "brain_scrape_path": "languages/extinct/etruscan/research/brain/latest_scrape.json",
+        "linked": true,
+        "brain_scraped_at": "2026-06-18T13:19:53.851577+00:00",
+        "brain_sources": [
+          "wikipedia",
+          "wikidata",
+          "wiktionary"
+        ],
+        "ipa_count": 1,
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Etruscan_language",
+        "phonology_keywords": [
+          "IPA",
+          "consonant",
+          "dialect",
+          "extinct",
+          "phonolog",
+          "pronunciation",
+          "vowel"
+        ]
+      }
+    ],
+    "modality_topics": [],
+    "language_link_count": 1,
+    "modality_link_count": 0
   }
 }

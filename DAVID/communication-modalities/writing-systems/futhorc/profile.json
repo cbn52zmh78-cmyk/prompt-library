@@ -1,0 +1,16 @@
+{
+  "id": "futhorc",
+  "name": "Futhorc",
+  "category": "writing-systems",
+  "priority": "medium",
+  "notes": "Anglo-Saxon runic alphabet; Old English inscriptional tradition",
+  "language_corpus_links": [
+    "old-english"
+  ],
+  "modality_links": [],
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

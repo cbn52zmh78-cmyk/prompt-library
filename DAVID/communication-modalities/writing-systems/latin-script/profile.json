@@ -4,6 +4,11 @@
   "category": "writing-systems",
   "priority": "medium",
   "notes": "Roman alphabet lineage and orthographic conventions",
+  "language_corpus_links": [
+    "classical-latin",
+    "old-english"
+  ],
+  "modality_links": [],
   "source_policy": "public_only",
   "licenses": [
     "CC BY-SA 3.0 (Wikipedia/Wiktionary)",

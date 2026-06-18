@@ -1,0 +1,14 @@
+{
+  "id": "french-sign-language",
+  "name": "French Sign Language",
+  "category": "sign-languages",
+  "priority": "medium",
+  "notes": "LSF \u2014 ancestor of many signed languages; historical Deaf education",
+  "language_corpus_links": [],
+  "modality_links": [],
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

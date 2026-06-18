@@ -1,0 +1,150 @@
+{
+  "slug": "manyogana",
+  "name": "Man'y\u014dgana",
+  "category": "writing-systems",
+  "category_label": "Writing Systems / Scripts",
+  "scraped_at": "2026-06-18T13:25:42.651755+00:00",
+  "retrieval_date": "2026-06-18",
+  "deep": false,
+  "source_policy": "public_only",
+  "licenses": {
+    "wikipedia": "CC BY-SA 3.0",
+    "wiktionary": "CC BY-SA 3.0",
+    "wikidata": "CC0"
+  },
+  "sources_used": [
+    "wikipedia",
+    "wikidata"
+  ],
+  "citations": [
+    {
+      "source": "Wikipedia",
+      "title": "Man'y\u014dgana",
+      "url": "https://en.wikipedia.org/wiki/Man%27y%C5%8Dgana",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "source": "Wikidata",
+      "qid": "Q862803",
+      "url": "https://www.wikidata.org/wiki/Q862803",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    }
+  ],
+  "errors": [],
+  "wikipedia": {
+    "title": "Man'y\u014dgana",
+    "url": "https://en.wikipedia.org/wiki/Man%27y%C5%8Dgana",
+    "extract": "Man'y\u014dgana (\u4e07\u8449\u4eee\u540d; Japanese pronunciation: [ma\u0270\u0303jo\ua71c\u02d0\u0261ana] or [ma\u0270\u0303jo\u02d0\u0261ana]) is an ancient writing system that uses Chinese characters to represent the Japanese language. It was the first known kana system to be developed as a means to represent the Japanese language phonetically. The date of the earliest usage of this type of kana is not clear, but it was in use since at least the mid-7th century. The name \"man'y\u014dgana\" derives from the Man'y\u014dsh\u016b, a Japanese poetry anthology from the Nara period written with man'y\u014dgana.\nTexts using the system also often use Chinese characters for their meaning, but man'y\u014dgana refers to such characters only when they are used to represent a phonetic value. The values were derived from the contemporary Chinese pronunciation, but native Japanese readings of the character were also sometimes used. For example, \u6728 (whose character means 'tree') could represent /mo/ (based on Middle Chinese [m\u0259wk]), /ko/, or /kwi/ (meaning 'tree' in Old Japanese).\nSimplified versions of man'y\u014dgana eventually gave rise to both the hiragana and katakana scripts, which are used in Modern Japanese.\n\n\n== Origin ==\n\nScholars from the Korean kingdom of Baekje are believed to have introduced the man'y\u014dgana writing system to the Japanese archipelago. The chronicles Kojiki and the Nihon Shoki both state so; though direct evidence is hard to come by, scholars tend to accept the idea.\nA possible oldest example of man'y\u014dgana is the iron Inariyama Sword, which was excavated at the Inariyama Kofun in 1968. In 1978, X-ray analysis revealed a gold-inlaid inscription consisting of at least 115 Chinese characters, and this text, written in Chinese, included Japanese personal names, which were written for names in a phonetic language. This sword is thought to have been made in the year \u8f9b\u4ea5\u5e74 (471 AD in the commonly accepted theory).\nThere is a strong possibility that the inscription of the Inariyama Sword may be written in a version of the Chinese language used in Baekje.\n\n\n== Principles ==\nMan'y\u014dgana uses kanji characters for their sounds, not their meanings. There was no standard system for choice of kanji, and different ones could be used to represent the same sound, with the choice made on the whims of the writer. By the end of the 8th century, 970 kanji were in use to represent the 90 morae of Japanese. For example, the Man'y\u014dsh\u016b poem 17/4025 was written as follows:\n\nIn the poem, the sounds mo (\u6bcd, \u6bdb) and shi (\u4e4b, \u601d) are written with multiple, different characters. All particles and most words are represented phonetically (\u591a\u592a tada, \u5b89\u4f50 asa), but the words ji (\u8def), umi (\u6d77) and funekaji (\u8239\u68b6) are rendered semantically.\nIn some cases, specific syllables in particular words are consistently represented by specific characters. That usage is known as J\u014ddai Tokushu Kanazukai and usage has led historical linguists to conclude that certain disparate sounds in Old Japanese, consistently represented by differing sets of man'y\u014dgana characters, may have merged since then.\n\n\n== Types ==\nIn writing which utilizes man'y\u014dgana, kanji are mapped to sounds in a number of different ways, some of which are straightforward and others which are less so.\nShakuon kana (\u501f\u97f3\u4eee\u540d) are based on a Sino-Japanese on'yomi reading, in which one character represents either one mora or two morae.\n\nShakkun kana (\u501f\u8a13\u4eee\u540d) are based on a native kun'yomi reading, one to three characters represent one to three morae.\n\n\n== Development ==\nDue to the major differences between the Japanese language (which was polysyllabic) and the Chinese language (which was monosyllabic) from which kanji came, man'y\u014dgana proved to be very cumbersome to read and write. As stated earlier, since kanji has two different sets of pronunciation, one based on Sino-Japanese pronunciation and the other on native Japanese pronunciation, it was difficult to determine whether a certain character was used to represent its pronunciation or its meaning, i.e., whether it was man'y\u014dgana or actual kanji, or both.\nTo alleviate the confusion and to save time writing, kanji that were used as man'y\u014dgana eventually gave rise to hiragana, including the now-obsolete hentaigana (\u5909\u4f53\u4eee\u540d) alternatives, alongside a separate system that became katakana. Hiragana developed from man'y\u014dgana written in the highly cursive s\u014dsho (\u8349\u66f8) style popularly used by women; meanwhile, katakana was developed by Buddhist monks as a form of shorthand, utilizing, in most cases, only fragments (for example, usually the first or last few strokes) of man'y\u014dgana characters. In some cases, one man'y\u014dgana character for a given syllable gave rise to a hentaigana that was simplified further to result in the current hiragana character, while a different man'y\u014dgana character was the source for the current katakana equivalent. For example, the hiragana \u308b (ru) is derived from the man'y\u014dgana \u7559, whereas the katakana \u30eb (ru) is derived from the man'y\u014dgana \u6d41. The multiple alternative hiragana forms for a single syllable were ultimately standardized in 1900, and the rejected variants are now known as hentaigana.\nMan'y\u014dgana continues to appear in some regional names of present-day Japan, especially in Ky\u016bsh\u016b. A phenomenon similar to man'y\u014dgana, called ateji (\u5f53\u3066\u5b57), still occurs, where words (including loanwords) are spelled out using kanji for their phonetic value. Examples include \u5036\u697d\u90e8 (kurabu, \"club\"), \u4ecf\u862d\u897f (Furansu, France), \u963f\u5f17\u5229\u52a0 (Afurika, Africa) and \u4e9c\u7c73\u5229\u52a0 (Amerika, America).\n\n\n== Example ==\nThe following example is from the second chapter of Nihon Shoki, one of two songs associated with the Emishi people written in Western Old Japanese.\n\n\u6bd4\u4f50\u8fe6\u591a\u80fd\n\u3072\u3055\u304b\u305f\u306e\np\u00eesa kata n-\u00f6 \n \n\u963f\u9ebb\u9045\u6ce2\u7b49\u4fdd\u65af \n\u3042\u307e\u3062\u306f\u3068\u307b\u3057\nama-N-ti pa t\u00f6po-si  \n\n\u5948\u4fdd\u5948\u4fdd\u723e \n\u306a\u307b\u306a\u307b\u306b \nnapo napo n-i \n\n\u4f0a\u5f0a\u723e\u53ef\u5f0a\u5229\u63d0 \n\u3044\u3078\u306b\u304b\u3078\u308a\u3066\nip\u00ea-ni kap\u00ear-i-te\n\n\u5948\u5229\u4e4e\u65af\u9ebb\u4f50\u723e \n\u306a\u308a\u3092\u3057\u307e\u3055\u306b\nnari-wo s-i-[i] mas-an-i\n\n\n== See also ==\nAteji\nSyllabogram\nS\u014dgana \u2013 Archaic Japanese syllabary\nIdu script, Korean analogue\n\n\n== References ==\n\n\n=== Citations ===\n\n\n=== Works cited ===\n\n\n== External links ==\n\nAn extensive list of man\u2019y\u014dgana arranged according to the characters, and not their readings\nTomasz Majtczak: \"How are we supposed to write with something like that? Early employment of the Chinese script to write Japanese as exemplified by the Man'y\u014dsh\u016b Archived 2018-04-17 at the Wayback Machine\".",
+    "wikitext_length": 22380,
+    "phonology_keywords": [],
+    "source": "wikipedia",
+    "license": "CC BY-SA 3.0",
+    "modality_keywords": [
+      "IPA",
+      "pronunciation",
+      "script",
+      "syllab",
+      "transliterat",
+      "vowel",
+      "writing system"
+    ],
+    "retrieved_at": "2026-06-18T13:25:42.651755+00:00",
+    "citation": {
+      "source": "Wikipedia",
+      "title": "Man'y\u014dgana",
+      "url": "https://en.wikipedia.org/wiki/Man%27y%C5%8Dgana",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    "script_sections": []
+  },
+  "wikidata": {
+    "qid": "Q862803",
+    "label": "man'y\u014dgana",
+    "description": "system of writing Japanese based solely on Chinese characters",
+    "iso639_3": null,
+    "language_family": "Q187659",
+    "extinction_status": null,
+    "ipa_statements": [],
+    "source": "wikidata",
+    "license": "CC0",
+    "modality_claims": {
+      "category": "writing-systems",
+      "statements": [
+        {
+          "property": "P31",
+          "value": "Q29517555"
+        },
+        {
+          "property": "P31",
+          "value": "Q182133"
+        },
+        {
+          "property": "P361",
+          "value": "Q190502"
+        }
+      ]
+    },
+    "retrieved_at": "2026-06-18T13:25:42.651755+00:00",
+    "citation": {
+      "source": "Wikidata",
+      "qid": "Q862803",
+      "url": "https://www.wikidata.org/wiki/Q862803",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    }
+  },
+  "uncertainty_flags": [],
+  "modality_summary": {
+    "category": "writing-systems",
+    "keyword_count": 7,
+    "top_keywords": [
+      "IPA",
+      "pronunciation",
+      "script",
+      "syllab",
+      "transliterat",
+      "vowel",
+      "writing system"
+    ],
+    "ipa_entries": 0,
+    "uncertainty_flag_count": 0,
+    "has_wikidata_statements": true,
+    "extract_chars": 6253
+  },
+  "corpus_cross_links": {
+    "language_corpus": [
+      {
+        "slug": "classical-japanese",
+        "name": "Classical Japanese",
+        "status": "dead",
+        "script": "Man'y\u014dgana, kana, kanji",
+        "decipherment": "fully_read",
+        "brain_scrape_path": "languages/dead/classical-japanese/research/brain/latest_scrape.json",
+        "linked": true,
+        "brain_scraped_at": "2026-06-18T13:00:57.990294+00:00",
+        "brain_sources": [
+          "wikipedia",
+          "wikidata",
+          "wiktionary"
+        ],
+        "ipa_count": 0,
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Classical_Japanese",
+        "phonology_keywords": [
+          "IPA",
+          "consonant",
+          "dialect",
+          "etymolog",
+          "phonolog",
+          "pronunciation",
+          "vowel"
+        ]
+      }
+    ],
+    "modality_topics": [],
+    "language_link_count": 1,
+    "modality_link_count": 0
+  }
+}

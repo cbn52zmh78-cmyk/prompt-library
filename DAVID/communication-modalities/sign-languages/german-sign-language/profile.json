@@ -1,0 +1,14 @@
+{
+  "id": "german-sign-language",
+  "name": "German Sign Language",
+  "category": "sign-languages",
+  "priority": "medium",
+  "notes": "DGS \u2014 independent German signed language (not Signed German)",
+  "language_corpus_links": [],
+  "modality_links": [],
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

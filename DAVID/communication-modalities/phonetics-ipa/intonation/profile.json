@@ -1,0 +1,17 @@
+{
+  "id": "intonation",
+  "name": "Intonation",
+  "category": "phonetics-ipa",
+  "priority": "high",
+  "notes": "Pitch contours, tone boundaries, question/statement marking",
+  "language_corpus_links": [],
+  "modality_links": [
+    "prosody",
+    "paralinguistics"
+  ],
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

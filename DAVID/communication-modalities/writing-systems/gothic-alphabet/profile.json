@@ -4,6 +4,10 @@
   "category": "writing-systems",
   "priority": "medium",
   "notes": "Wulfila script for Gothic corpus",
+  "language_corpus_links": [
+    "gothic"
+  ],
+  "modality_links": [],
   "source_policy": "public_only",
   "licenses": [
     "CC BY-SA 3.0 (Wikipedia/Wiktionary)",

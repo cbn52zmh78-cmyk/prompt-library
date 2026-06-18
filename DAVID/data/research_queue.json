@@ -94,8 +94,10 @@
       "topic": "linear-a-script",
       "priority": "medium",
       "task": "Flag undeciphered Linear A phonetic reconstructions; cross-link language scrape",
-      "status": "pending",
-      "added": "2026-06-18"
+      "status": "completed",
+      "added": "2026-06-18",
+      "last_modality_scrape": "2026-06-18",
+      "deep_scrape": true
     },
     {
       "id": "rq-cm-006",
@@ -103,6 +105,62 @@
       "topic": "paralinguistics",
       "priority": "medium",
       "task": "Prosody and voice-quality reference for speech synthesis guardrails",
+      "status": "completed",
+      "added": "2026-06-18",
+      "last_modality_scrape": "2026-06-18",
+      "deep_scrape": true
+    },
+    {
+      "id": "rq-cm-007",
+      "category": "communication-modalities",
+      "topic": "prosody",
+      "priority": "high",
+      "task": "Ingest prosodic features for DAVID speech synthesis layer",
+      "status": "in_progress",
+      "added": "2026-06-18"
+    },
+    {
+      "id": "rq-cm-008",
+      "category": "communication-modalities",
+      "topic": "intonation",
+      "priority": "high",
+      "task": "Pitch contour reference for question/statement and emphasis rendering",
+      "status": "in_progress",
+      "added": "2026-06-18"
+    },
+    {
+      "id": "rq-cm-009",
+      "category": "communication-modalities",
+      "topic": "turn-taking",
+      "priority": "medium",
+      "task": "Conversation organization for multi-speaker avatar dialogue",
+      "status": "in_progress",
+      "added": "2026-06-18"
+    },
+    {
+      "id": "rq-cm-010",
+      "category": "communication-modalities",
+      "topic": "linear-b-script",
+      "priority": "high",
+      "task": "Deciphered Linear B syllabary as phonetic key for Linear A cross-reference",
+      "status": "in_progress",
+      "added": "2026-06-18"
+    },
+    {
+      "id": "rq-cm-011",
+      "category": "communication-modalities",
+      "topic": "manyogana",
+      "priority": "medium",
+      "task": "Heian Japanese writing layer; cross-link classical-japanese corpus",
+      "status": "pending",
+      "added": "2026-06-18"
+    },
+    {
+      "id": "rq-cm-012",
+      "category": "communication-modalities",
+      "topic": "french-sign-language",
+      "priority": "medium",
+      "task": "Expand sign-language coverage — LSF historical lineage",
       "status": "pending",
       "added": "2026-06-18"
     }

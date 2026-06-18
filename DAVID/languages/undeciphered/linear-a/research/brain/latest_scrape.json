@@ -2,8 +2,8 @@
   "slug": "linear-a",
   "name": "Linear A",
   "status": "undeciphered",
-  "scraped_at": "2026-06-16T23:15:13.885668+00:00",
-  "deep": true,
+  "scraped_at": "2026-06-18T13:21:08.523173+00:00",
+  "deep": false,
   "sources_used": [
     "wikipedia",
     "wikidata",
@@ -25,10 +25,10 @@
     "license": "CC BY-SA 3.0"
   },
   "wikidata": {
-    "qid": "Q208278",
-    "label": "Montigny",
-    "description": "commune in Meurthe-et-Moselle, France",
-    "iso639_3": null,
+    "qid": "Q30972",
+    "label": "Linear A",
+    "description": "undeciphered writing system from Crete",
+    "iso639_3": "lab",
     "language_family": null,
     "extinction_status": null,
     "ipa_statements": [],

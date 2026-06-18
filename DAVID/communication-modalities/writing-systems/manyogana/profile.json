@@ -1,0 +1,16 @@
+{
+  "id": "manyogana",
+  "name": "Man'y\u014dgana",
+  "category": "writing-systems",
+  "priority": "medium",
+  "notes": "Early Japanese phonographic writing via kanji; Heian literary corpus",
+  "language_corpus_links": [
+    "classical-japanese"
+  ],
+  "modality_links": [],
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

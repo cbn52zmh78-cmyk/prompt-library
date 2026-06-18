@@ -222,5 +222,247 @@
     ],
     "errors": [],
     "ipa_count": 0
+  },
+  {
+    "slug": "hittite",
+    "scraped_at": "2026-06-18T13:16:12.910121+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 1
+  },
+  {
+    "slug": "classical-sanskrit",
+    "scraped_at": "2026-06-18T13:17:33.422008+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 5
+  },
+  {
+    "slug": "biblical-hebrew",
+    "scraped_at": "2026-06-18T13:17:51.826855+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 2
+  },
+  {
+    "slug": "middle-egyptian",
+    "scraped_at": "2026-06-18T13:18:10.184448+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 0
+  },
+  {
+    "slug": "old-church-slavonic",
+    "scraped_at": "2026-06-18T13:19:31.487940+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 0
+  },
+  {
+    "slug": "etruscan",
+    "scraped_at": "2026-06-18T13:19:53.851577+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 1
+  },
+  {
+    "slug": "gothic",
+    "scraped_at": "2026-06-18T13:20:17.177637+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 2
+  },
+  {
+    "slug": "linear-a",
+    "scraped_at": "2026-06-18T13:21:08.523173+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 0
+  },
+  {
+    "slug": "sumerian",
+    "scraped_at": "2026-06-18T13:22:28.895174+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 3
+  },
+  {
+    "slug": "proto-indo-european",
+    "scraped_at": "2026-06-18T13:23:19.972944+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 2
+  },
+  {
+    "slug": "classical-latin",
+    "scraped_at": "2026-06-18T13:24:07.342689+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 7
+  },
+  {
+    "slug": "classical-nahuatl",
+    "scraped_at": "2026-06-18T13:25:30.424412+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 1
+  },
+  {
+    "slug": "akkadian",
+    "scraped_at": "2026-06-18T13:26:17.822083+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 1
+  },
+  {
+    "slug": "old-english",
+    "scraped_at": "2026-06-18T13:26:35.245408+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 0
+  },
+  {
+    "slug": "classical-japanese",
+    "scraped_at": "2026-06-18T13:27:22.614789+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 0
+  },
+  {
+    "slug": "ancient-greek",
+    "scraped_at": "2026-06-18T13:28:09.913863+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 1
+  },
+  {
+    "slug": "old-norse",
+    "scraped_at": "2026-06-18T13:29:00.766588+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 0
+  },
+  {
+    "slug": "hittite",
+    "scraped_at": "2026-06-18T13:30:15.106453+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 1
+  },
+  {
+    "slug": "hittite",
+    "scraped_at": "2026-06-18T13:29:21.761838+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 1
+  },
+  {
+    "slug": "middle-egyptian",
+    "scraped_at": "2026-06-18T13:30:33.274846+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 0
+  },
+  {
+    "slug": "classical-sanskrit",
+    "scraped_at": "2026-06-18T13:31:14.708927+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 5
+  },
+  {
+    "slug": "old-church-slavonic",
+    "scraped_at": "2026-06-18T13:32:23.420254+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 0
   }
 ]

@@ -1,0 +1,138 @@
+{
+  "slug": "german-sign-language",
+  "name": "German Sign Language",
+  "category": "sign-languages",
+  "category_label": "Sign Languages",
+  "scraped_at": "2026-06-18T13:24:20.253737+00:00",
+  "retrieval_date": "2026-06-18",
+  "deep": false,
+  "source_policy": "public_only",
+  "licenses": {
+    "wikipedia": "CC BY-SA 3.0",
+    "wiktionary": "CC BY-SA 3.0",
+    "wikidata": "CC0"
+  },
+  "sources_used": [
+    "wikipedia",
+    "wikidata",
+    "wiktionary"
+  ],
+  "citations": [
+    {
+      "source": "Wikipedia",
+      "title": "German Sign Language",
+      "url": "https://en.wikipedia.org/wiki/German_Sign_Language",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "source": "Wikidata",
+      "qid": "Q33282",
+      "url": "https://www.wikidata.org/wiki/Q33282",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    },
+    {
+      "source": "Wiktionary",
+      "title": "German Sign Language",
+      "url": "https://en.wiktionary.org/wiki/German_Sign_Language",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  ],
+  "errors": [],
+  "wikipedia": {
+    "title": "German_Sign_Language",
+    "url": "https://en.wikipedia.org/wiki/German_Sign_Language",
+    "extract": "German Sign Language (German: Deutsche Geb\u00e4rdensprache, DGS) is the sign language of the deaf community in Germany, Luxembourg and the German-speaking community of Belgium. It is unclear how many use German Sign Language as their main language; Gallaudet University estimated 50,000 users as of 1986.\nThe language has evolved through use in deaf communities over hundreds of years.\n\n\n== Recognition ==\nGermany has a very strong oralist tradition and historically has seen a suppression of sign language. German Sign Language was first legally recognised in The Federal Disability Equality Act (2002) in May 2002. Since then, deaf people have a legal entitlement to sign language interpreters when communicating with federal authorities, free of charge.\nVery few television programs include an interpreter; those that do are the news and a news \"round-up\". There is at least one programme conducted entirely in German Sign Language called Sehen statt H\u00f6ren (Seeing Instead of Hearing), a documentary-style programme produced by the Bayerischer Rundfunk (BR) and broadcast on Saturday mornings on BR and the other regional state broadcasters in Germany.\nIn 2018, the Luxembourgish Chamber of Deputies voted unanimously to recognise German Sign Language.\n\n\n== German and German Sign Language ==\nGerman Sign Language is unrelated to spoken German. While spoken German builds sentences following a subject \u2013 verb \u2013 object pattern, German Sign Language uses a subject object verb strategy. Thus, the two have very different grammars, though as the dominant language of the region, German has had some influence on German Sign Language. A signed system that follows German grammar, Signed German (Lautsprachbegleitende Geb\u00e4rden or Lautbegleitende Geb\u00e4rden, \"sound-accompanying signs\"), is used in education. It is not used as a natural means of communication between deaf people.  Another system of manually representing German is cued speech, known as Phonembestimmes Manualsystem (Phonemic Manual System).\n\n\n== Manual alphabet and fingerspelling ==\n\nGerman Sign Language uses a one-handed manual alphabet ('Fingeralphabet' in German) derived from the French manual alphabet of the 18th century; it is related to manual alphabets used across Europe and in North America. It differs from the ASL manual alphabet in the shape of the letter T and in the addition of a letter SCH (a 'five' hand). The additional letters for \u00c4, \u00d6, \u00dc, and \u00df are formed by moving the letters for A, O, U, and S a short distance downwards.\n\n\n== Dialects and related languages ==\n\nRegional variants of German Sign Language include Hamburg, Berlin, and Munich sign. Sign languages of regions in the former East Germany have a greater divergence from sign languages of the western regions; some may be unrelated. Polish Sign Language is descended from German Sign Language. Israeli Sign Language may be as well, as it evolved from the sign language used by German Jewish teachers who opened a school for deaf children in Jerusalem in 1932, and still shows some resemblance to its German counterpart. It is not related to Austrian Sign Language, which is used in parts of southern Germany, nor to Swiss Sign Language, both of which are part of the French Sign Language family, though they have had some influence from German Sign Language.\n\n\n== Notation systems ==\nEveryday users of German Sign Language use no written form of the language. In academic contexts, German Sign Language is usually described with the Hamburg notation system or HamNoSys. SignWriting also has its adherents in Germany.\n\n\n== Grammar ==\nThe grammar of German Sign Language may be described in terms of the conventional linguistic categories phonology, morphology, morphosyntax and syntax.\n\n\n=== Phonology ===\nSigns are made up of a combination of different elements from each of the classes of distinctive features: handshape, hand orientation, location and movement. If one of these elements is changed, it can result in a sign with a completely different meaning. Two signs differing in only one element are deemed to be a minimal pair. German Sign Language uses 32 handshapes, of which six are basic handshapes found in all sign languages.\nTwo-handed signs are signs which are necessarily performed with both hands. Their formation is in accordance with certain phonotactic limitations, such as the rule of symmetry (when both hands move at the same time, they have the same handshape) and the rule of dominance (if the two hands have different handshapes, only the dominant hand is moved while the non-dominant hand remains passive).\nUninflected lexical signs in German Sign Language have at most two syllables. Syllables consist of two syllabic positions, described as Hold (H) and Movement (M). Holds consist of the handshape together with the hand orientation (together referred to as the hand configuration) at a specific location in signing space. Holds do not contain any change of location (movement from one location to another). Movements, on the other hand, involve a change of location and may involve secondary movements such as wiggling of the fingers. Syllables may then be grouped into the following types: M (the minimal syllable), HM, MH, HMH (the maximal syllable). In the case of HM syllables, for example, the hand configuration of the  Movement moves away from the location of the Hold. A syllable of type M can consist of the following specifications: a path movement (from one location to another), a path movement with secondary movement (such as wiggling or twisting), or a secondary movement without path movement. The syllable type H (a segment without a Movement) is not allowed for phonotactical reasons.\nAn elementary component of lexical signs are non-manual lexical markings, such as movements of eyes (rolling, widening), mouth (puffing, rounding) and face, as well as the whole head (nodding, tilting) and upper body (leaning). These are obligatory accompaniments of a quarter of all lexical signs. Making visual syllables with the mouth is referred to as mouthing.\n\n\n=== Syntax ===\n\n\n==== Clause structure ====\n\n\n===== Unmarked word order =====\nThe unmarked word order in DGS is subject-object-verb, similar to languages such as Turkish, Japanese and Latin, but differing from German.\n\nIf an indirect object appears in the sentence, it stands before the direct object.\n\nIn sentences with chains of verbs, auxiliary verbs and similar usually appear after the full verb, the opposite of English word order.\n\nThe Personal Agreement Marker (glossed as \"PAM\"), which looks almost like the sign for \"person\" and may be accompanied by the mouthing \"auf\" (\"on\"), is a sign used to indicate the location in signing space of animate objects when the verb in the sentence does not do this. It roughly fills the roll of object pronouns, however it seems to function more as an auxiliary verb, inflecting for person where the main verb does not. Although there is considerable variation, especially across dialects, it tends to occur where auxiliaries occur, after the verb, rather than in the object slot. The benefactive marker (glossed as \"BEM\") is similarly placed.\n\nTime expressions (tomorrow, next week) appear at the beginning of the sentence (as a discourse topic).\n\nPhrases specifying location tend to occur at the beginning of the sentence (after the time information).\n\nThis follows the figure-ground-principle, according to which smaller, more mobile referents (figures) tend to occur after larger, less mobile referents (ground).\n\nSentence adverbs often appear at the beginning of the sentence.\n\nHowever, adverbs that modify the verb but which cannot be expressed non-manually follow the verb as an extra clause.\n\nWh-words (interrogatives) usually occur at the end of the sentence after the verb.\n\nSome signs with a negative meaning tend to occur at the end of the sentence.\n\nHowever, if the negation is not emphasised, it can also appear in the expected position.\n\nDeterminers (articles, demonstratives, quantifiers, relative pronouns) follow the noun.\n\nTheir function is to set the location of referents within the signing space. If this is indicated instead by directional verbs, determiners can always be omitted, provided they are not required for other reasons (such as showing possession, pluralisation, etc.) There is no distinction between definite and indefinite articles.\nAttributive adjectives follow immediately after the noun.\n\nThe copula to be does not exist in DGS. Predicative adjectives are generally separated from the noun by a  determiner.\n\nCompare the preceding sentence to the following noun phrase, in which the determiner follows the adjective.\n\nPossessive adjectives stand between the possessor and the possession.\n\nHere is an example of a longer but nevertheless simple, unmarked sentence.\n\n\n===== Marked sentences =====\nParts of the sentence which are moved outside of their usual unmarked position are accompanied by non-manual marking.\nSentence elements (with the exception of verbs) can be topicalised by being moved to the beginning of the sentence and marked with raised eyebrows.\n\nOften, a topic doesn't otherwise have any other role in the sentence. In these cases, it represents a limitation of the scope of the sentence. Compare the following three sentences.\n\n\n== References ==\n\n\n== Further reading ==\n\"German Sign Language Dictionary\" \u2013 Maisch, G\u00fcnther, and Fritz-H. Wisch (1987\u201389). Geb\u00e4rden-Lexikon. Hamburg: Verlag h\u00f6rgesch\u00e4digter Kinder.\n\"German Sign Language\" Rammel, Georg (1974). Die Geb\u00e4rdensprache: Versuch einer Wesenanalyse. Berlin-Charlottenburg: Marhold.\n\"Signed German\" Hogger, Birgit (1991). Linguistische \u00dcberlegungen zur lautsprachbegleitenden Geb\u00e4rdung. H\u00f6rgesch\u00e4digtenp\u00e4dagogik, v.45 no.4, p. 234-237\nDaniela Happ, Marc-Oliver Vork\u00f6per: Deutsche Geb\u00e4rdensprache : Ein Lehr- und Arbeitsbuch. Fachhochschulverlag, Frankfurt am Main 2006, ISBN 3-936065-76-4\nHelen Leuninger: Geb\u00e4rdensprachen : Struktur, Erwerb, Verwendung. Buske, Hamburg 2005, ISBN 3-87548-353-7\nBross F (2020). The clausal syntax of German Sign Language (pdf). Berlin: Language Science Press. doi:10.5281/zenodo.3560718. ISBN 978-3-96110-219-8.\n\n\n== External links ==\n\nCompetence Center for Sign Language and Gesture at RWTH Aachen University (Archived 2014-02-08 at the Wayback Machine (in German))\nList of online DGS corpora and lexical ressources at Sign Language Dataset Compendium\nList of online DGS dictionaries at WikiSign (Internet Archive copy, 26 Aug 2008)\nInstitute of German Sign Language and Communication of the Deaf at University of Hamburg\nWork on Automatic Sign Language Recognition at RWTH Aachen University\nWebsite of the German National Association of the Deaf (in German)",
+    "wikitext_length": 22012,
+    "phonology_keywords": [],
+    "source": "wikipedia",
+    "license": "CC BY-SA 3.0",
+    "modality_keywords": [
+      "Deaf",
+      "fingerspell",
+      "handshape",
+      "manual alphabet",
+      "phonolog",
+      "sign language",
+      "signing"
+    ],
+    "retrieved_at": "2026-06-18T13:24:20.253737+00:00",
+    "citation": {
+      "source": "Wikipedia",
+      "title": "German Sign Language",
+      "url": "https://en.wikipedia.org/wiki/German_Sign_Language",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  },
+  "wikidata": {
+    "qid": "Q33282",
+    "label": "German Sign Language",
+    "description": "sign language in which the deaf community and hearing people communicate with each other in Germany",
+    "iso639_3": "gsg",
+    "language_family": "Q5551235",
+    "extinction_status": null,
+    "ipa_statements": [],
+    "source": "wikidata",
+    "license": "CC0",
+    "modality_claims": {
+      "category": "sign-languages",
+      "statements": [
+        {
+          "property": "P279",
+          "value": "Q5551235"
+        },
+        {
+          "property": "P910",
+          "value": "Q105715136"
+        }
+      ]
+    },
+    "retrieved_at": "2026-06-18T13:24:20.253737+00:00",
+    "citation": {
+      "source": "Wikidata",
+      "qid": "Q33282",
+      "url": "https://www.wikidata.org/wiki/Q33282",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    }
+  },
+  "wiktionary": {
+    "pages": [
+      "German Sign Language"
+    ],
+    "ipa_entries": [],
+    "etymology_blocks": [],
+    "pronunciation_notes": [],
+    "source": "wiktionary",
+    "license": "CC BY-SA 3.0",
+    "retrieved_at": "2026-06-18T13:24:20.253737+00:00",
+    "citation": {
+      "source": "Wiktionary",
+      "title": "German Sign Language",
+      "url": "https://en.wiktionary.org/wiki/German_Sign_Language",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  },
+  "uncertainty_flags": [],
+  "modality_summary": {
+    "category": "sign-languages",
+    "keyword_count": 7,
+    "top_keywords": [
+      "Deaf",
+      "fingerspell",
+      "handshape",
+      "manual alphabet",
+      "phonolog",
+      "sign language",
+      "signing"
+    ],
+    "ipa_entries": 0,
+    "uncertainty_flag_count": 0,
+    "has_wikidata_statements": true,
+    "extract_chars": 10697
+  }
+}

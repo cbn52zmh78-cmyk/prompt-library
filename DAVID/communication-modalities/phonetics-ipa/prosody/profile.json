@@ -1,0 +1,17 @@
+{
+  "id": "prosody",
+  "name": "Prosody",
+  "category": "phonetics-ipa",
+  "priority": "high",
+  "notes": "Suprasegmental features \u2014 stress, rhythm, pitch range; synthesis guardrails",
+  "language_corpus_links": [],
+  "modality_links": [
+    "paralinguistics",
+    "intonation"
+  ],
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

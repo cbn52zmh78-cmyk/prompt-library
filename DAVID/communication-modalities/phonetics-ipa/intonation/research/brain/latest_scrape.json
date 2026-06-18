@@ -1,0 +1,181 @@
+{
+  "slug": "intonation",
+  "name": "Intonation",
+  "category": "phonetics-ipa",
+  "category_label": "Phonetics & IPA / Speech Production",
+  "scraped_at": "2026-06-18T13:22:31.289410+00:00",
+  "retrieval_date": "2026-06-18",
+  "deep": false,
+  "source_policy": "public_only",
+  "licenses": {
+    "wikipedia": "CC BY-SA 3.0",
+    "wiktionary": "CC BY-SA 3.0",
+    "wikidata": "CC0"
+  },
+  "sources_used": [
+    "wikipedia",
+    "wikidata",
+    "wiktionary"
+  ],
+  "citations": [
+    {
+      "source": "Wikipedia",
+      "title": "Intonation (linguistics)",
+      "url": "https://en.wikipedia.org/wiki/Intonation_(linguistics)",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "source": "Wikidata",
+      "qid": "Q5576720",
+      "url": "https://www.wikidata.org/wiki/Q5576720",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    },
+    {
+      "source": "Wiktionary",
+      "title": "intonation",
+      "url": "https://en.wiktionary.org/wiki/intonation",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  ],
+  "errors": [],
+  "wikipedia": {
+    "title": "Intonation_(linguistics)",
+    "url": "https://en.wikipedia.org/wiki/Intonation_(linguistics)",
+    "extract": "In linguistics, intonation is the variation in pitch used to indicate the speaker's attitudes and emotions, to highlight or focus an expression, to signal the illocutionary act performed by a sentence, or to regulate the flow of discourse. For example, the English question \"Does Maria speak Spanish or French?\" is interpreted as a yes-or-no question when it is uttered with a single rising intonation contour, but is interpreted as an alternative question when uttered with a rising contour on \"Spanish\" and a falling contour on \"French\". Although intonation is primarily a matter of pitch variation, its effects almost always work hand-in-hand with other prosodic features. Intonation is distinct from tone, the phenomenon where pitch is used to distinguish words (as in Mandarin) or to mark grammatical features (as in Kinyarwanda).\n\n\n== Transcription ==\nMost transcription conventions have been devised for describing one particular accent or language, and the specific conventions therefore need to be explained in the context of what is being described. However, for general purposes the International Phonetic Alphabet offers the two intonation marks shown in the box at the head of this article. Global rising and falling intonation are marked with a diagonal arrow rising left-to-right [\u2197\ufe0e] and falling left-to-right [\u2198\ufe0e], respectively. These may be written as part of a syllable, or separated with a space when they have a broader scope:\n\nHe found it on the street?\n[hi\u02d0 \u02c8fa\u028and \u026at \u0252n \u00f0\u0259 \u2197\ufe0e\u02c8st\u0279i\u02d0t \u2016]\nHere the rising pitch on street indicates that the question hinges on that word, on where he found it, not whether he found it.\n\nYes, he found it on the street.\n[\u2198\ufe0e\u02c8j\u025bs \u2016 hi \u02c8fa\u028and \u026at \u0252n \u00f0\u0259 \u2198\ufe0e\u02c8st\u0279i\u02d0t \u2016]\nHow did you ever escape?\n[\u2197\ufe0e\u02c8ha\u028a d\u026adju\u02d0 \u02c8\u025bv\u025a \u0259\u2198\ufe0e\u02c8ske\u026ap \u2016]\nHere, as is common with wh- questions, there is a rising intonation on the question word, and a falling intonation at the end of the question.\nIn many descriptions of English, the following intonation patterns are distinguished:\n\nRising Intonation means the pitch of the voice rises over time.\nFalling Intonation means that the pitch falls with time.\nDipping or Fall-rise Intonation falls and then rises.\nPeaking or Rise-fall Intonation rises and then falls.\nIt is also common to trace the pitch of a phrase with a line above the phrase, adjacent to the phrase, or even through (overstriking) the phrase. Such usage is not supported by Unicode as of 2015, but the symbols have been submitted. The following example requires an SIL font such as Gentium Plus, either as the default browser font or as the user-defined font for IPA text, for which see Template:IPA#Usage.\n\n\n== Functions ==\nAll vocal languages use pitch pragmatically in intonation\u2014for instance for emphasis, to convey surprise or irony, or to pose a question. Tonal languages such as Chinese and Hausa use intonation in addition to using pitch for distinguishing words.\nMany writers have attempted to produce a list of distinct functions of intonation. Perhaps the longest was that of W.R. Lee, who proposed ten. J.C. Wells and E. Couper-Kuhlen both put forward six functions. Wells's list is given below; the examples are not his:\n\nattitudinal function (for expressing emotions and attitudes)\nexample: a fall from a high pitch on the 'mor' syllable of \"good morning\" suggests more excitement than a fall from a low pitch\ngrammatical function (to identify grammatical structure)\nexample: it is claimed that in English a falling pitch movement is associated with statements, but a rising pitch turns a statement into a yes\u2013no question, as in  He's going \u2197home?. This use of intonation is more typical of American English than of British.\nfocusing (to show what information in the utterance is new and what is already known)\nexample: in English I saw a \u2198man in the garden answers \"Whom did you see?\" or \"What happened?\", while I \u2198saw a man in the garden answers \"Did you hear a man in the garden?\"\ndiscourse function (to show how clauses and sentences go together in spoken discourse)\nexample: subordinate clauses often have lower pitch, faster tempo and narrower pitch range than their main clause, as in the case of the material in parentheses in \"The Red Planet (as it's known) is fourth from the sun\"\npsychological function (to organize speech into units that are easy to perceive, memorize and perform)\nexample: the utterance \"You can have it in red blue green yellow or \u2198black\" is more difficult to understand and remember than the same utterance divided into tone units as in \"You can have it in \u2197red | \u2197blue | \u2197green | \u2197yellow | or \u2198black\"\nindexical function (to act as a marker of personal or social identity)\nexample: group membership can be indicated by the use of intonation patterns adopted specifically by that group, such as street vendors or preachers. The so-called high rising terminal, where a statement ends with a high rising pitch movement, is said to be typical of younger speakers of English, and possibly to be more widely found among young female speakers.\nIt is not known whether such a list would apply to other languages without alteration.\n\n\n== English ==\n\nThe description of English intonation has developed along different lines in the US and in Britain (and, indeed, different US and British dialects may follow different intonation patterns).\n\n\n=== British approaches ===\nBritish descriptions of English intonation can be traced back to the 16th century. Early in the 20th century the dominant approach in the description of English and French intonation was based on a small number of basic \"tunes\" associated with intonation units: in a typical description, Tune 1 is falling, with final fall, while Tune 2 has a final rise. Phoneticians such as H. E. Palmer broke up the intonation of such units into smaller components, the most important of which was the nucleus, which corresponds to the main accented syllable of the intonation unit, usually in the last lexical word of the intonation unit. Each nucleus carries one of a small number of nuclear tones, usually including fall, rise, fall-rise, rise-fall, and possibly others. The nucleus may be preceded by a head containing stressed syllables preceding the nucleus, and a tail consisting of syllables following the nucleus within the tone unit. Unstressed syllables preceding the head (if present) or nucleus (if there is no head) constitute a pre-head. This approach was further developed by Halliday and by O'Connor and Arnold, though with considerable variation in terminology. This \"Standard British\" treatment of intonation in its present-day form is explained in detail by Wells and in a simplified version by Roach. Halliday saw the functions of intonation as depending on choices in three main variables: Tonality (division of speech into intonation units), Tonicity (the placement of the tonic syllable or nucleus) and Tone (choice of nuclear tone); these terms (sometimes referred to as \"the three T's\") have been used more recently.\nResearch by Crystal emphasized the importance of making generalizations about intonation based on authentic, unscripted speech, and the roles played by prosodic features such as tempo, pitch range, loudness and rhythmicality in communicative functions traditionally attributed to intonation alone.\nThe transcription of intonation in such approaches is normally incorporated into the line of text. A typical example would be:\n\nWe \u02cclooked at the \u2197sky | and \u02c8saw the \u2198clouds\nIn this example, the | mark indicates a division between intonation units.\nAn influential development in British studies of intonation has been Discourse Intonation, an offshoot of Discourse Analysis first put forward by David Brazil. This approach lays great emphasis on the communicative and informational use of intonation, pointing out its use for distinguishing between presenting new information and referring to old, shared information, as well as signalling the relative status of participants in a conversation (e.g. teacher-pupil, or doctor-patient) and helping to regulate conversational turn-taking. The description of intonation in this approach owes much to Halliday. Intonation is analysed purely in terms of pitch movements and \"key\" and makes little reference to the other prosodic features usually thought to play a part in conversational interaction.\n\n\n=== American approaches ===\nThe dominant framework used for American English from the 1940s to the 1990s was based on the idea of pitch phonemes, or tonemes. In the work of Trager and Smith there are four contrastive levels of pitch: low (1), middle (2), high (3), and very high (4). (The important work of Kenneth Pike on the same subject had the four pitch levels labelled in the opposite way, with (1) being high and (4) being low). In its final form, the Trager and Smith system was highly complex, each pitch phoneme having four pitch allophones (or allotones); there was also a Terminal Contour to end an intonation clause, as well as four stress phonemes. Some generalizations using this formalism are given below. The American linguist Dwight Bolinger carried on a long campaign to argue that pitch contours were more important in the study of intonation than individual pitch levels.\n\nNormal conversation is usually at middle or high pitch; low pitch occurs at the end of utterances other than yes\u2013no questions, while high pitch occurs at the end of yes\u2013no questions. Very high pitch is for strong emotion or emphasis. Pitch can indicate attitude: for example, Great uttered in isolation can indicate weak emotion (with pitch starting medium and dropping to low), enthusiasm (with pitch starting very high and ending low), or sarcasm (with pitch starting and remaining low).\nDeclarative sentences show a 2\u20133\u20131 pitch pattern. If the last syllable is prominent the final decline in pitch is a glide. For example, in This is fun, this is is at pitch 2, and fun starts at level 3 and glides down to level 1. But if the last prominent syllable is not the last syllable of the utterance, the pitch fall-off is a step. For example, in That can be frustrating, That can be has pitch 2, frus- has level 3, and both syllables of -trating have pitch 1. Wh-questions work the same way, as in Who (2) will (2) help (3\u21981)? and Who (2) did (3) it (1)?. But if something is left unsaid, the final pitch level 1 is replaced by pitch 2. Thus in John's (2) sick (3\u21982) ..., with the speaker indicating more to come, John's has pitch 2 while sick starts at pitch 3 and drops only to pitch 2.\nYes\u2013no questions with a 2\u21973 intonation pattern usually have subject-verb inversion, as in Have (2) you (2) got (2) a (2) minute (3, 3)? (Here a 2\u21974 contour would show more emotion, while a 1\u21972 contour would show uncertainty.) Another example is Has (2) the (2) plane (3) left (3) already (3, 3, 3)?, which, depending on the word to be emphasized, could move the location of the rise, as in Has (2) the (2) plane (2) left (3) already (3, 3, 3)? or Has (2) the (2) plane (2) left (2) already (2, 3, 3)? And for example the latter question could also be framed without subject-verb inversion but with the same pitch contour: The (2) plane (2) has (2) left (2) already (2, 3, 3)?\nTag questions with declarative intent at the end of a declarative statement follow a 3\u21981 contour rather than a rising contour, since they are not actually intended as yes\u2013no questions, as in We (2) should (2) visit (3, 1) him (1), shouldn't (3, 1) we (1)? But tag questions exhibiting uncertainty, which are interrogatory in nature, have the usual 2\u21973 contour, as in We (2) should (2) visit (3, 1) him (1), shouldn't (3, 3) we (3)?\nQuestions with or can be ambiguous in English writing with regard to whether they are either-or questions or yes\u2013no questions. But intonation in speech eliminates the ambiguity. For example, Would (2) you (2) like (2) juice (3) or (2) soda (3, 1)? emphasizes juice and soda separately and equally, and ends with a decline in pitch, thus indicating that this is not a yes\u2013no question but rather a choice question equivalent to Which would you like: juice or soda? In contrast, Would (2) you (2) like (2) juice (3) or (3) soda (3, 3)? has yes\u2013no intonation and thus is equivalent to Would you like something to drink (such as juice or soda)?\nThus the two basic sentence pitch contours are rising-falling and rising. However, other within-sentence rises and falls result from the placement of prominence on the stressed syllables of certain words.\nFor declaratives or wh-questions with a final decline, the decline is located as a step-down to the syllable after the last prominently stressed syllable, or as a down-glide on the last syllable itself if it is prominently stressed. But for final rising pitch on yes\u2013no questions, the rise always occurs as an upward step to the last stressed syllable, and the high (3) pitch is retained through the rest of the sentence.\n\n\n=== The ToBI system ===\nA more recent approach to the analysis of intonation grew out of the research of Janet Pierrehumbert and developed into the system most widely known by the name of ToBI (short for \"Tones and Break Indices\"). The approach is sometimes referred to as autosegmental. The most important points of this system are the following:\n\nOnly two tones, associated with pitch accents, are recognised, these being H (high) and L (low); all other tonal contours are made up of combinations of H, L and some other modifying elements.\nIn addition to the two tones mentioned above, the phonological system includes \"break indices\" used to mark the boundaries between prosodic elements. Breaks may be of different levels.\nTones are linked to stressed syllables: an asterisk is used to indicate a tone that must be aligned with a stressed syllable.\nIn addition, there are phrasal accents which signal the pitch at the end of an intermediate phrase (e.g. H\u2212 and L\u2212), and boundary tones at full phrase boundaries (e.g. H% and L%).\nA full ToBI transcription includes not only the above phonological elements, but also the acoustic signal on which the transcription is based. The ToBI system is intended to be used in computer-based transcription.\nA simplified example of a ToBI transcription is given below. In this example, two phrases \"we looked at the sky\" and \"and saw the clouds\" are combined into one larger intonational phrase; there is a rise on \"sky\" and a fall on \"clouds\":\n\n      L*                    L*H\u2212       H*      H* L\u2212L%\nwe looked at the sky and saw the clouds\nBecause of its simplicity compared with previous analyses, the ToBI system has been very influential and has been adapted for describing several other languages.\n\n\n== French ==\nFrench intonation differs substantially from that of English. There are four primary patterns.\n\nThe continuation pattern is a rise in pitch occurring in the last syllable of a rhythm group (typically a phrase).\nThe finality pattern is a sharp fall in pitch occurring in the last syllable of a declarative statement.\nThe yes/no intonation is a sharp rise in pitch occurring in the last syllable of a yes/no question.\nThe information question intonation is a rapid fall-off from high pitch on the first word of a non-yes/no question, often followed by a small rise in pitch on the last syllable of the question.\n\n\n=== Continuation pattern ===\nThe most distinctive feature of French intonation is the continuation pattern. While many languages, such as English and Spanish, place stress on a particular syllable of each word, and while many speakers of languages such as English may accompany this stress with a rising intonation, French has neither stress nor distinctive intonation on a given syllable. Instead, on the final syllable of every \"rhythm group\" except the last one in a sentence, there is placed a rising pitch. For example (as before the pitch change arrows \u2198 and \u2197 apply to the syllable immediately following the arrow):\n\nHier \u2197soir, il m'a off\u2197ert une ciga\u2198rette. (The English equivalent would be \"Last \u2197evening, he \u2197offered me a ciga\u2198rette (BrE) / \u2198cigarette (AmE)).\nLe lendemain ma\u2197tin, apr\u00e8s avoir chang\u00e9 le pansement du ma\u2197lade, l'infir\u2197mier est ren\u2197tr\u00e9 chez \u2198lui.\nAdjectives are in the same rhythm group as their noun. Each item in a list forms its own rhythm group:\n\nChez le frui\u2197tier on trouve des \u2197pommes, des o\u2197ranges, des ba\u2197nanes, des \u2197fraises et des abri\u2198cots.\nSide comments inserted into the middle of a sentence form their own rhythm group:\n\nLa grande \u2197guerre, si j'ai bonne m\u00e9\u2197moire, a dur\u00e9 quatre \u2198ans.\n\n\n=== Finality pattern ===\nAs can be seen in the example sentences above, a sharp fall in pitch is placed on the last syllable of a declarative statement. The preceding syllables of the final rhythm group are at a relatively high pitch.\n\n\n=== Yes/no pattern ===\nMost commonly in informal speech, a yes/no question is indicated by a sharply rising pitch alone, without any change or rearrangement of words. For example\n\nIl est \u2197riche?\nA form found in both spoken and written French is the Est-ce que ... (\"Is it that ...\") construction, in which the spoken question can end in either a rising or a falling pitch:\n\nEst-ce qu'il est \u2197riche? OR Est-ce qu'il est \u2198riche?\nThe most formal form for a yes/no question, which is also found in both spoken and written French, inverts the order of the subject and verb. There too, the spoken question can end in either a rising or a falling pitch:\n\nEst-il \u2197riche? OR  Est-il \u2198riche?\nSometimes yes/no questions begin with a topic phrase, specifying the focus of the utterance. Then, the initial topic phrase follows the intonation pattern of a declarative sentence, and the rest of the question follows the usual yes/no question pattern:\n\nEt cette pho\u2198to, tu l'as \u2197prise?......\n\n\n=== Information question pattern ===\nInformation questions begin with a question word such as qui, pourquoi, combien, etc., referred to in linguistics as interrogatives. The question word may be followed in French by est-ce que (as in English \"(where) is it that ...\") or est-ce qui, or by inversion of the subject-verb order (as in \"where goes he?\"). The sentence starts at a relatively high pitch which falls away rapidly after the question word, or its first syllable in case of a polysyllabic question word. There may be a small increase in pitch on the final syllable of the question. For example:\n\n\u2197O\u00f9 \u2198part-il ? OR \u2197O\u00f9 \u2198part-\u2197il ?\n\u2197O\u00f9 \u2198est-ce qu'il part ? OR \u2197O\u00f9 \u2198est-ce qu'il \u2197part ? OR O\u00f9 \u2197est-ce qu'il \u2197part ?\n\u2197Com\u2198bien \u00e7a vaut ? OR \u2197Com\u2198bien \u00e7a \u2197vaut ?\nIn both cases, the question both begins and ends at higher pitches than does a declarative sentence.\nIn informal speech, the question word is sometimes put at the end of the sentence. In this case, the question ends at a high pitch, often with a slight rise on the high final syllable. The question may also start at a slightly higher pitch:\n\nIl part \u2197o\u00f9? OR \u2197Il \u2198part \u2197o\u00f9?\n\n\n== Mandarin Chinese ==\nMandarin Chinese is a tonal language so pitch contours within a word distinguish the word from other words with the same vowels and consonants. Nevertheless, Mandarin also has intonation patterns that indicate the nature of the sentence as a whole.\nThere are four basic sentence types having distinctive intonation: declarative sentences, unmarked interrogative questions, yes\u2013no questions marked as such with the sentence-final particle ma, and A-not-A questions of the form \"He go not go\" (meaning \"Does he go or not?\"). In the Beijing dialect, they are intonationally distinguished for the average speaker as follows, using a pitch scale from 1 (lowest) to 9 (highest):\n\nDeclarative sentences go from pitch level 3 to 5 and then down to 2 and 1.\nA-not-A questions go from 6 to 9 to 2 to 1.\nYes\u2013no ma questions go from 6 to 9 to 4 to 5.\nUnmarked questions go from 6 to 9 to 4 to 6.\nThus, questions are begun with a higher pitch than are declarative sentences; pitch rises and then falls in all sentences; and in yes\u2013no questions and unmarked questions pitch rises at the end of the sentence, while for declarative sentences and A-not-A questions the sentence ends at very low pitch.\nBecause Mandarin distinguishes words on the basis of within-syllable tones, these tones create fluctuations of pitch around the sentence patterns indicated above. Thus, sentence patterns can be thought of as bands whose pitch varies over the course of the sentence, and changes of syllable pitch cause fluctuations within the band.\nFurthermore, the details of Mandarin intonation are affected by various factors like the tone of the final syllable, the presence or absence of focus (centering of attention) on the final word, and the dialect of the speaker.\n\n\n== Punjabi ==\nIntonation in Punjabi has always been an area of discussion and experimentation. There are different studies [Gill and Gleason (1969), Malik (1995), Kalra (1982), Bhatia (1993), Joshi (1972 & 1989)] that explain intonation in Punjabi, according to their respective theories and models.\nChander Shekhar Singh carried forward a description of the experimental phonetics and phonology of Punjabi intonation based on sentences read in isolation. His research design is based on the classification of two different levels of intonation (horizontal level and vertical level). The first experiment (at the horizontal level) is conducted to investigate three utterance types: declarative, imperative, and interrogative. In his second experiment, the investigation of sentences is conducted to view intonation but in vertical sense. 'Vertical' here means a comparative analysis of intonations of the three types of sentences by keeping the nuclear intonation constant.\nThe experiment shows some extremely significant results. The vertical level demonstrates four different types of accentuations in Punjabi:\n\nNormal statement\nSimple emphatic\nConfirmation\nInformation\nDoubtful/Exclamation\nThe second experiment provides a significant difference between the horizontal level and the vertical level.\n\n\n== Comparative studies ==\nCruttenden points out the extreme difficulty of making meaningful comparisons among the intonation systems of different languages, the difficulty being compounded by the lack of an agreed descriptive framework.\nFalling intonation is said to be used at the end of questions in some languages, including Hawaiian, Fijian, and Samoan and in Greenlandic. It is also used in Hawaiian Creole English, presumably derived from Hawaiian. Rises are common on statements in urban Belfast; falls on most questions have been said to be typical of urban Leeds speech.\nAn ESRC-funded project (E. Grabe, B. Post and F. Nolan) to study the intonation of nine urban accents of British English in five different speaking styles has resulted in the IViE Corpus and a purpose-built transcription system. The corpus and notation system can be downloaded from the project's website. Following on this work is a paper explaining that the dialects of British and Irish English vary substantially.\nA project to bring together descriptions of the intonation of twenty different languages, ideally using a unified descriptive framework (INTSINT), resulted in a book published in 1998 by D. Hirst and A. Di Cristo. The languages described are American English, British English, German, Dutch, Swedish, Danish, Spanish, European Portuguese, Brazilian Portuguese, French, Italian, Romanian, Russian, Bulgarian, Greek, Finnish, Hungarian, Western Arabic (Moroccan), Japanese, Thai, Vietnamese and Beijing Chinese. A number of contributing authors did not use the INTSINT system but preferred to use their own system.\n\n\n== Disorders ==\nThose with congenital amusia show impaired ability to discriminate, identify and imitate the intonation of the final words in sentences.\n\n\n== See also ==\nAffect (linguistics)\nBoundary tone (linguistics)\nFocus (linguistics)\nHigh rising terminal\nProsodic unit\nProsody (linguistics)\nSpeech act\nSquiggle operator\nTone (linguistics)\n\n\n== References ==\n\n\n== Bibliography ==\n\n\n== External links ==\n\nToBI \u2013 Ohio State University, Department of Linguistics",
+    "wikitext_length": 37141,
+    "phonology_keywords": [],
+    "source": "wikipedia",
+    "license": "CC BY-SA 3.0",
+    "modality_keywords": [
+      "IPA",
+      "accent",
+      "dialect",
+      "intonation",
+      "phonet",
+      "phonolog",
+      "pitch accent",
+      "prosod",
+      "rhythm",
+      "stress"
+    ],
+    "retrieved_at": "2026-06-18T13:22:31.289410+00:00",
+    "citation": {
+      "source": "Wikipedia",
+      "title": "Intonation (linguistics)",
+      "url": "https://en.wikipedia.org/wiki/Intonation_(linguistics)",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  },
+  "wikidata": {
+    "qid": "Q5576720",
+    "label": "intonation",
+    "description": "variation of pitch in speech",
+    "iso639_3": null,
+    "language_family": "Q10880526",
+    "extinction_status": null,
+    "ipa_statements": [],
+    "source": "wikidata",
+    "license": "CC0",
+    "modality_claims": {
+      "category": "phonetics-ipa",
+      "statements": []
+    },
+    "retrieved_at": "2026-06-18T13:22:31.289410+00:00",
+    "citation": {
+      "source": "Wikidata",
+      "qid": "Q5576720",
+      "url": "https://www.wikidata.org/wiki/Q5576720",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    }
+  },
+  "wiktionary": {
+    "pages": [
+      "intonation"
+    ],
+    "ipa_entries": [
+      {
+        "ipa": "/\u026ant\u0259\u02c8ne\u026a\u0283\u0259n/",
+        "accent": "unspecified",
+        "language_code": "",
+        "quality": "scholarly_ipa"
+      }
+    ],
+    "etymology_blocks": [],
+    "pronunciation_notes": [
+      {
+        "section": "Pronunciation",
+        "text": "=\n* \n** \n*"
+      },
+      {
+        "section": "Pronunciation",
+        "text": "=\n* \n* \n*"
+      }
+    ],
+    "source": "wiktionary",
+    "license": "CC BY-SA 3.0",
+    "retrieved_at": "2026-06-18T13:22:31.289410+00:00",
+    "citation": {
+      "source": "Wiktionary",
+      "title": "intonation",
+      "url": "https://en.wiktionary.org/wiki/intonation",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  },
+  "uncertainty_flags": [
+    {
+      "flag": "proposed",
+      "context_snippet": "f intonation. Perhaps the longest was that of W.R. Lee, who proposed ten. J.C. Wells and E. Couper-Kuhlen both put forward six f"
+    }
+  ],
+  "modality_summary": {
+    "category": "phonetics-ipa",
+    "keyword_count": 10,
+    "top_keywords": [
+      "IPA",
+      "accent",
+      "dialect",
+      "intonation",
+      "phonet",
+      "phonolog",
+      "pitch accent",
+      "prosod",
+      "rhythm",
+      "stress"
+    ],
+    "ipa_entries": 1,
+    "uncertainty_flag_count": 1,
+    "has_wikidata_statements": false,
+    "extract_chars": 23966
+  },
+  "corpus_cross_links": {
+    "language_corpus": [],
+    "modality_topics": [
+      {
+        "slug": "prosody",
+        "name": "Prosody",
+        "category": "phonetics-ipa",
+        "modality_scrape_path": "communication-modalities/phonetics-ipa/prosody/research/brain/latest_scrape.json",
+        "linked": true,
+        "modality_scraped_at": "2026-06-18T13:22:10.243569+00:00",
+        "uncertainty_flags": 0
+      },
+      {
+        "slug": "paralinguistics",
+        "name": "Paralinguistics",
+        "category": "non-verbal",
+        "modality_scrape_path": "communication-modalities/non-verbal/paralinguistics/research/brain/latest_scrape.json",
+        "linked": true,
+        "modality_scraped_at": "2026-06-18T13:21:19.101981+00:00",
+        "uncertainty_flags": 1
+      }
+    ],
+    "language_link_count": 0,
+    "modality_link_count": 2
+  }
+}

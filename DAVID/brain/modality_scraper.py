@@ -19,8 +19,10 @@ from .sources import fetch_wikidata, fetch_wikipedia, fetch_wiktionary
 
 DAVID_ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_FILE = DAVID_ROOT / "data" / "communication_modality_registry.json"
+LANGUAGE_REGISTRY_FILE = DAVID_ROOT / "data" / "language_registry.json"
 WIKI_MAP_FILE = DAVID_ROOT / "data" / "wiki_modality_map.json"
 MODALITIES_ROOT = DAVID_ROOT / "communication-modalities"
+LANGUAGES_ROOT = DAVID_ROOT / "languages"
 MODALITY_CACHE = DAVID_ROOT / "data" / "brain_cache"
 MODALITY_LOG = MODALITY_CACHE / "modality_scrape_log.json"
 
@@ -51,17 +53,18 @@ def _scaffold_profile(topic: dict[str, Any]) -> None:
     (root / "research" / "brain").mkdir(parents=True, exist_ok=True)
 
     profile_path = root / "profile.json"
-    if not profile_path.exists():
-        profile = {
-            "id": topic["slug"],
-            "name": topic["name"],
-            "category": topic["category"],
-            "priority": topic.get("priority", "medium"),
-            "notes": topic.get("notes", ""),
-            "source_policy": "public_only",
-            "licenses": ["CC BY-SA 3.0 (Wikipedia/Wiktionary)", "CC0 (Wikidata)"],
-        }
-        profile_path.write_text(json.dumps(profile, indent=2), encoding="utf-8")
+    profile = {
+        "id": topic["slug"],
+        "name": topic["name"],
+        "category": topic["category"],
+        "priority": topic.get("priority", "medium"),
+        "notes": topic.get("notes", ""),
+        "language_corpus_links": topic.get("language_corpus_links", []),
+        "modality_links": topic.get("modality_links", []),
+        "source_policy": "public_only",
+        "licenses": ["CC BY-SA 3.0 (Wikipedia/Wiktionary)", "CC0 (Wikidata)"],
+    }
+    profile_path.write_text(json.dumps(profile, indent=2), encoding="utf-8")
 
     notes_path = root / "research" / "notes.md"
     if not notes_path.exists():
@@ -188,9 +191,84 @@ def scrape_modality(slug: str, *, deep: bool = False) -> dict[str, Any]:
             "pronunciation_notes": parse_pronunciation_section(wikitext)[:4],
         }
 
+    corpus_links = topic.get("language_corpus_links", [])
+    modality_links = topic.get("modality_links", [])
+    if corpus_links or modality_links:
+        result["corpus_cross_links"] = _build_corpus_cross_links(corpus_links, modality_links)
+
     _persist(topic["category"], slug, result)
     _append_log(slug, result)
     return result
+
+
+def _load_language_registry() -> list[dict[str, Any]]:
+    return json.loads(LANGUAGE_REGISTRY_FILE.read_text(encoding="utf-8"))["languages"]
+
+
+def _language_brain_path(slug: str, status: str) -> Path:
+    return LANGUAGES_ROOT / status / slug / "research" / "brain" / "latest_scrape.json"
+
+
+def _build_corpus_cross_links(
+    language_slugs: list[str],
+    modality_slugs: list[str],
+) -> dict[str, Any]:
+    """Link modality scrape to DAVID language brain data and sibling modality topics."""
+    languages: list[dict[str, Any]] = []
+    registry = {e["slug"]: e for e in _load_language_registry()}
+
+    for slug in language_slugs:
+        entry = registry.get(slug)
+        if not entry:
+            languages.append({"slug": slug, "linked": False, "reason": "not_in_registry"})
+            continue
+        brain_path = _language_brain_path(slug, entry["status"])
+        link: dict[str, Any] = {
+            "slug": slug,
+            "name": entry["name"],
+            "status": entry["status"],
+            "script": entry.get("script", ""),
+            "decipherment": entry.get("decipherment", ""),
+            "brain_scrape_path": str(brain_path.relative_to(DAVID_ROOT)).replace("\\", "/"),
+            "linked": brain_path.exists(),
+        }
+        if brain_path.exists():
+            brain = json.loads(brain_path.read_text(encoding="utf-8"))
+            link["brain_scraped_at"] = brain.get("scraped_at")
+            link["brain_sources"] = brain.get("sources_used", [])
+            link["ipa_count"] = brain.get("pronunciation_summary", {}).get("total_ipa_entries", 0)
+            wp = brain.get("wikipedia", {})
+            link["wikipedia_url"] = wp.get("url", "")
+            link["phonology_keywords"] = wp.get("phonology_keywords", [])[:8]
+        languages.append(link)
+
+    modalities: list[dict[str, Any]] = []
+    for mslug in modality_slugs:
+        try:
+            mtopic = _registry_topic(mslug)
+        except ValueError:
+            modalities.append({"slug": mslug, "linked": False, "reason": "not_in_modality_registry"})
+            continue
+        mpath = _topic_dir(mtopic["category"], mslug) / "research" / "brain" / "latest_scrape.json"
+        mlink: dict[str, Any] = {
+            "slug": mslug,
+            "name": mtopic["name"],
+            "category": mtopic["category"],
+            "modality_scrape_path": str(mpath.relative_to(DAVID_ROOT)).replace("\\", "/"),
+            "linked": mpath.exists(),
+        }
+        if mpath.exists():
+            mdata = json.loads(mpath.read_text(encoding="utf-8"))
+            mlink["modality_scraped_at"] = mdata.get("scraped_at")
+            mlink["uncertainty_flags"] = len(mdata.get("uncertainty_flags", []))
+        modalities.append(mlink)
+
+    return {
+        "language_corpus": languages,
+        "modality_topics": modalities,
+        "language_link_count": sum(1 for x in languages if x.get("linked")),
+        "modality_link_count": sum(1 for x in modalities if x.get("linked")),
+    }
 
 
 def _fetch_wikidata_entity(qid: str) -> dict[str, Any]:

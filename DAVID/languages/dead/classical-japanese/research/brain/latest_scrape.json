@@ -2,8 +2,8 @@
   "slug": "classical-japanese",
   "name": "Classical Japanese",
   "status": "dead",
-  "scraped_at": "2026-06-18T13:00:57.990294+00:00",
-  "deep": true,
+  "scraped_at": "2026-06-18T13:27:22.614789+00:00",
+  "deep": false,
   "sources_used": [
     "wikipedia",
     "wikidata",

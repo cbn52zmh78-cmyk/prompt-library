@@ -1,0 +1,16 @@
+{
+  "id": "aztec-script",
+  "name": "Aztec Script",
+  "category": "writing-systems",
+  "priority": "medium",
+  "notes": "Mesoamerican ideographic/phonetic writing; colonial Nahuatl manuscripts",
+  "language_corpus_links": [
+    "classical-nahuatl"
+  ],
+  "modality_links": [],
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

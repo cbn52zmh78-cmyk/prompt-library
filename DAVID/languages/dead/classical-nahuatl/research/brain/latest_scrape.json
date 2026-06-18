@@ -2,8 +2,8 @@
   "slug": "classical-nahuatl",
   "name": "Classical Nahuatl",
   "status": "dead",
-  "scraped_at": "2026-06-18T12:00:06.631610+00:00",
-  "deep": true,
+  "scraped_at": "2026-06-18T13:25:30.424412+00:00",
+  "deep": false,
   "sources_used": [
     "wikipedia",
     "wikidata",

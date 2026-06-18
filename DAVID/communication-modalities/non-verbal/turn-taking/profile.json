@@ -1,0 +1,17 @@
+{
+  "id": "turn-taking",
+  "name": "Turn-Taking",
+  "category": "non-verbal",
+  "priority": "high",
+  "notes": "Conversation organization, overlap, backchannels, adjacency pairs",
+  "language_corpus_links": [],
+  "modality_links": [
+    "paralinguistics",
+    "gesture"
+  ],
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

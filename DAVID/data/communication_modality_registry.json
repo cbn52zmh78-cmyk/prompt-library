@@ -1,15 +1,15 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "updated": "2026-06-18",
   "description": "DAVID Scraper 2 — how humans communicate beyond lexicon",
   "categories": {
     "phonetics-ipa": {
       "label": "Phonetics & IPA / Speech Production",
-      "description": "Articulatory and acoustic phonetics, IPA notation, speech production mechanisms"
+      "description": "Articulatory and acoustic phonetics, IPA notation, speech production, prosody, intonation"
     },
     "non-verbal": {
       "label": "Non-Verbal Communication",
-      "description": "Gesture, facial expression, proxemics, paralinguistics, kinesics"
+      "description": "Gesture, facial expression, proxemics, paralinguistics, kinesics, turn-taking"
     },
     "sign-languages": {
       "label": "Sign Languages",
@@ -50,6 +50,22 @@
       "notes": "Place and manner of articulation; consonant/vowel production"
     },
     {
+      "slug": "prosody",
+      "name": "Prosody",
+      "category": "phonetics-ipa",
+      "priority": "high",
+      "notes": "Suprasegmental features — stress, rhythm, pitch range; synthesis guardrails",
+      "modality_links": ["paralinguistics", "intonation"]
+    },
+    {
+      "slug": "intonation",
+      "name": "Intonation",
+      "category": "phonetics-ipa",
+      "priority": "high",
+      "notes": "Pitch contours, tone boundaries, question/statement marking",
+      "modality_links": ["prosody", "paralinguistics"]
+    },
+    {
       "slug": "gesture",
       "name": "Gesture",
       "category": "non-verbal",
@@ -75,7 +91,8 @@
       "name": "Paralinguistics",
       "category": "non-verbal",
       "priority": "high",
-      "notes": "Prosody, pitch, tempo, voice quality beyond lexical content"
+      "notes": "Prosody, pitch, tempo, voice quality beyond lexical content",
+      "modality_links": ["prosody", "intonation"]
     },
     {
       "slug": "body-language",
@@ -83,6 +100,14 @@
       "category": "non-verbal",
       "priority": "medium",
       "notes": "Posture, orientation, and holistic non-verbal signaling"
+    },
+    {
+      "slug": "turn-taking",
+      "name": "Turn-Taking",
+      "category": "non-verbal",
+      "priority": "high",
+      "notes": "Conversation organization, overlap, backchannels, adjacency pairs",
+      "modality_links": ["paralinguistics", "gesture"]
     },
     {
       "slug": "sign-language",
@@ -106,6 +131,27 @@
       "notes": "BANZSL-family signed language"
     },
     {
+      "slug": "french-sign-language",
+      "name": "French Sign Language",
+      "category": "sign-languages",
+      "priority": "medium",
+      "notes": "LSF — ancestor of many signed languages; historical Deaf education"
+    },
+    {
+      "slug": "german-sign-language",
+      "name": "German Sign Language",
+      "category": "sign-languages",
+      "priority": "medium",
+      "notes": "DGS — independent German signed language (not Signed German)"
+    },
+    {
+      "slug": "japanese-sign-language",
+      "name": "Japanese Sign Language",
+      "category": "sign-languages",
+      "priority": "medium",
+      "notes": "JSL — distinct from spoken/written Japanese modalities"
+    },
+    {
       "slug": "writing-system",
       "name": "Writing System",
       "category": "writing-systems",
@@ -117,35 +163,83 @@
       "name": "Cuneiform",
       "category": "writing-systems",
       "priority": "high",
-      "notes": "Mesopotamian wedge script; links to Sumerian/Akkadian corpus"
+      "notes": "Mesopotamian wedge script; links to Sumerian/Akkadian corpus",
+      "language_corpus_links": ["sumerian", "akkadian"]
     },
     {
       "slug": "linear-a-script",
       "name": "Linear A",
       "category": "writing-systems",
       "priority": "high",
-      "notes": "Undeciphered Minoan syllabary; uncertain phonetic values flagged"
+      "notes": "Undeciphered Minoan syllabary; uncertain phonetic values flagged",
+      "language_corpus_links": ["linear-a"],
+      "modality_links": ["linear-b-script"]
+    },
+    {
+      "slug": "linear-b-script",
+      "name": "Linear B",
+      "category": "writing-systems",
+      "priority": "high",
+      "notes": "Deciphered Mycenaean Greek syllabary; phonetic key for Linear A inference",
+      "language_corpus_links": ["linear-a"],
+      "modality_links": ["linear-a-script"]
     },
     {
       "slug": "gothic-alphabet",
       "name": "Gothic Alphabet",
       "category": "writing-systems",
       "priority": "medium",
-      "notes": "Wulfila script for Gothic corpus"
+      "notes": "Wulfila script for Gothic corpus",
+      "language_corpus_links": ["gothic"]
     },
     {
       "slug": "etruscan-alphabet",
       "name": "Etruscan Alphabet",
       "category": "writing-systems",
       "priority": "medium",
-      "notes": "Adapted Greek alphabet for Etruscan inscriptions"
+      "notes": "Adapted Greek alphabet for Etruscan inscriptions",
+      "language_corpus_links": ["etruscan"]
     },
     {
       "slug": "latin-script",
       "name": "Latin Script",
       "category": "writing-systems",
       "priority": "medium",
-      "notes": "Roman alphabet lineage and orthographic conventions"
+      "notes": "Roman alphabet lineage and orthographic conventions",
+      "language_corpus_links": ["classical-latin", "old-english"]
+    },
+    {
+      "slug": "manyogana",
+      "name": "Man'yōgana",
+      "category": "writing-systems",
+      "priority": "medium",
+      "notes": "Early Japanese phonographic writing via kanji; Heian literary corpus",
+      "language_corpus_links": ["classical-japanese"]
+    },
+    {
+      "slug": "hiragana",
+      "name": "Hiragana",
+      "category": "writing-systems",
+      "priority": "medium",
+      "notes": "Japanese syllabary derived from cursive kanji; kana layer",
+      "language_corpus_links": ["classical-japanese"],
+      "modality_links": ["manyogana"]
+    },
+    {
+      "slug": "futhorc",
+      "name": "Futhorc",
+      "category": "writing-systems",
+      "priority": "medium",
+      "notes": "Anglo-Saxon runic alphabet; Old English inscriptional tradition",
+      "language_corpus_links": ["old-english"]
+    },
+    {
+      "slug": "aztec-script",
+      "name": "Aztec Script",
+      "category": "writing-systems",
+      "priority": "medium",
+      "notes": "Mesoamerican ideographic/phonetic writing; colonial Nahuatl manuscripts",
+      "language_corpus_links": ["classical-nahuatl"]
     }
   ]
 }

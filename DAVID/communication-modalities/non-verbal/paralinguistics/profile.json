@@ -4,6 +4,11 @@
   "category": "non-verbal",
   "priority": "high",
   "notes": "Prosody, pitch, tempo, voice quality beyond lexical content",
+  "language_corpus_links": [],
+  "modality_links": [
+    "prosody",
+    "intonation"
+  ],
   "source_policy": "public_only",
   "licenses": [
     "CC BY-SA 3.0 (Wikipedia/Wiktionary)",

@@ -23,6 +23,18 @@
     "wiktionary": null,
     "wiktionary_fallbacks": []
   },
+  "prosody": {
+    "wikipedia": "Prosody_(linguistics)",
+    "wikidata": "Q10880526",
+    "wiktionary": "prosody",
+    "wiktionary_fallbacks": ["Prosody"]
+  },
+  "intonation": {
+    "wikipedia": "Intonation_(linguistics)",
+    "wikidata": "Q5576720",
+    "wiktionary": "intonation",
+    "wiktionary_fallbacks": []
+  },
   "gesture": {
     "wikipedia": "Gesture",
     "wikidata": "Q371174",
@@ -53,6 +65,12 @@
     "wiktionary": "body language",
     "wiktionary_fallbacks": []
   },
+  "turn-taking": {
+    "wikipedia": "Turn-taking",
+    "wikidata": "Q2313343",
+    "wiktionary": null,
+    "wiktionary_fallbacks": []
+  },
   "sign-language": {
     "wikipedia": "Sign_language",
     "wikidata": "Q34228",
@@ -69,6 +87,24 @@
     "wikipedia": "British_Sign_Language",
     "wikidata": "Q33000",
     "wiktionary": "British Sign Language",
+    "wiktionary_fallbacks": []
+  },
+  "french-sign-language": {
+    "wikipedia": "French_Sign_Language",
+    "wikidata": "Q33302",
+    "wiktionary": "French Sign Language",
+    "wiktionary_fallbacks": []
+  },
+  "german-sign-language": {
+    "wikipedia": "German_Sign_Language",
+    "wikidata": "Q33282",
+    "wiktionary": "German Sign Language",
+    "wiktionary_fallbacks": []
+  },
+  "japanese-sign-language": {
+    "wikipedia": "Japanese_Sign_Language",
+    "wikidata": "Q35601",
+    "wiktionary": "Japanese Sign Language",
     "wiktionary_fallbacks": []
   },
   "writing-system": {
@@ -90,6 +126,12 @@
     "wiktionary_fallbacks": [],
     "uncertainty_flags": ["undeciphered", "phonetic_values_partly_inferred"]
   },
+  "linear-b-script": {
+    "wikipedia": "Linear_B",
+    "wikidata": "Q190102",
+    "wiktionary": "Linear B",
+    "wiktionary_fallbacks": []
+  },
   "gothic-alphabet": {
     "wikipedia": "Gothic_alphabet",
     "wikidata": "Q467784",
@@ -107,5 +149,29 @@
     "wikidata": "Q8229",
     "wiktionary": "Latin script",
     "wiktionary_fallbacks": ["Latin alphabet"]
+  },
+  "manyogana": {
+    "wikipedia": "Man'yōgana",
+    "wikidata": "Q862803",
+    "wiktionary": null,
+    "wiktionary_fallbacks": []
+  },
+  "hiragana": {
+    "wikipedia": "Hiragana",
+    "wikidata": "Q48332",
+    "wiktionary": "hiragana",
+    "wiktionary_fallbacks": ["Hiragana"]
+  },
+  "futhorc": {
+    "wikipedia": "Anglo-Saxon_runes",
+    "wikidata": "Q2712936",
+    "wiktionary": null,
+    "wiktionary_fallbacks": []
+  },
+  "aztec-script": {
+    "wikipedia": "Aztec_writing",
+    "wikidata": "Q794182",
+    "wiktionary": null,
+    "wiktionary_fallbacks": []
   }
 }

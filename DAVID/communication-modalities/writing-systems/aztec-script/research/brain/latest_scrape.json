@@ -1,0 +1,143 @@
+{
+  "slug": "aztec-script",
+  "name": "Aztec Script",
+  "category": "writing-systems",
+  "category_label": "Writing Systems / Scripts",
+  "scraped_at": "2026-06-18T13:27:31.339622+00:00",
+  "retrieval_date": "2026-06-18",
+  "deep": false,
+  "source_policy": "public_only",
+  "licenses": {
+    "wikipedia": "CC BY-SA 3.0",
+    "wiktionary": "CC BY-SA 3.0",
+    "wikidata": "CC0"
+  },
+  "sources_used": [
+    "wikipedia",
+    "wikidata"
+  ],
+  "citations": [
+    {
+      "source": "Wikipedia",
+      "title": "Aztec writing",
+      "url": "https://en.wikipedia.org/wiki/Aztec_writing",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "source": "Wikidata",
+      "qid": "Q794182",
+      "url": "https://www.wikidata.org/wiki/Q794182",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    }
+  ],
+  "errors": [],
+  "wikipedia": {
+    "title": "Aztec_writing",
+    "url": "https://en.wikipedia.org/wiki/Aztec_writing",
+    "extract": "",
+    "wikitext_length": 73,
+    "phonology_keywords": [],
+    "source": "wikipedia",
+    "license": "CC BY-SA 3.0",
+    "modality_keywords": [
+      "script"
+    ],
+    "retrieved_at": "2026-06-18T13:27:31.339622+00:00",
+    "citation": {
+      "source": "Wikipedia",
+      "title": "Aztec writing",
+      "url": "https://en.wikipedia.org/wiki/Aztec_writing",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    "script_sections": []
+  },
+  "wikidata": {
+    "qid": "Q794182",
+    "label": "Aztec script",
+    "description": "mixed ideographic/phonetic writing system for Nahuatl",
+    "iso639_3": null,
+    "language_family": null,
+    "extinction_status": null,
+    "ipa_statements": [],
+    "source": "wikidata",
+    "license": "CC0",
+    "modality_claims": {
+      "category": "writing-systems",
+      "statements": [
+        {
+          "property": "P31",
+          "value": "Q3953107"
+        },
+        {
+          "property": "P31",
+          "value": "Q11818508"
+        },
+        {
+          "property": "P31",
+          "value": "Q860735"
+        },
+        {
+          "property": "P31",
+          "value": "Q29517555"
+        }
+      ]
+    },
+    "retrieved_at": "2026-06-18T13:27:31.339622+00:00",
+    "citation": {
+      "source": "Wikidata",
+      "qid": "Q794182",
+      "url": "https://www.wikidata.org/wiki/Q794182",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    }
+  },
+  "uncertainty_flags": [],
+  "modality_summary": {
+    "category": "writing-systems",
+    "keyword_count": 1,
+    "top_keywords": [
+      "script"
+    ],
+    "ipa_entries": 0,
+    "uncertainty_flag_count": 0,
+    "has_wikidata_statements": true,
+    "extract_chars": 0
+  },
+  "corpus_cross_links": {
+    "language_corpus": [
+      {
+        "slug": "classical-nahuatl",
+        "name": "Classical Nahuatl",
+        "status": "dead",
+        "script": "Latin alphabet (colonial manuscripts); pictographic codices",
+        "decipherment": "fully_read",
+        "brain_scrape_path": "languages/dead/classical-nahuatl/research/brain/latest_scrape.json",
+        "linked": true,
+        "brain_scraped_at": "2026-06-18T13:25:30.424412+00:00",
+        "brain_sources": [
+          "wikipedia",
+          "wikidata",
+          "wiktionary"
+        ],
+        "ipa_count": 1,
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Classical_Nahuatl",
+        "phonology_keywords": [
+          "IPA",
+          "accent",
+          "consonant",
+          "dialect",
+          "extinct",
+          "phonolog",
+          "pronunciation",
+          "vowel"
+        ]
+      }
+    ],
+    "modality_topics": [],
+    "language_link_count": 1,
+    "modality_link_count": 0
+  }
+}

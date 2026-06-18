@@ -85,7 +85,7 @@
   },
   "hittite": {
     "wikipedia": "Hittite_language",
-    "wikidata": "Q35720",
+    "wikidata": "Q46269",
     "wiktionary": "Hittite_language",
     "wiktionary_fallbacks": ["Hittite", "Category:Hittite language"],
     "iso639_3": "hit"
@@ -106,14 +106,14 @@
   },
   "middle-egyptian": {
     "wikipedia": "Middle_Egyptian",
-    "wikidata": "Q33549",
+    "wikidata": "Q726849",
     "wiktionary": "Middle_Egyptian",
     "wiktionary_fallbacks": ["Egyptian language", "Category:Middle Egyptian"],
     "iso639_3": "egy"
   },
   "old-church-slavonic": {
     "wikipedia": "Old_Church_Slavonic",
-    "wikidata": "Q35468",
+    "wikidata": "Q34257",
     "wiktionary": "Old_Church_Slavonic",
     "wiktionary_fallbacks": ["Church Slavonic", "Category:Old Church Slavonic language"],
     "iso639_3": "chu"

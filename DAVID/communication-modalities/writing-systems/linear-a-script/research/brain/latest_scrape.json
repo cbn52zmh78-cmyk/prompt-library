@@ -3,9 +3,9 @@
   "name": "Linear A",
   "category": "writing-systems",
   "category_label": "Writing Systems / Scripts",
-  "scraped_at": "2026-06-18T12:26:35.794389+00:00",
+  "scraped_at": "2026-06-18T13:32:41.406258+00:00",
   "retrieval_date": "2026-06-18",
-  "deep": false,
+  "deep": true,
   "source_policy": "public_only",
   "licenses": {
     "wikipedia": "CC BY-SA 3.0",
@@ -60,7 +60,7 @@
       "vowel",
       "writing system"
     ],
-    "retrieved_at": "2026-06-18T12:26:35.794389+00:00",
+    "retrieved_at": "2026-06-18T13:32:41.406258+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Linear A",
@@ -106,7 +106,7 @@
         }
       ]
     },
-    "retrieved_at": "2026-06-18T12:26:35.794389+00:00",
+    "retrieved_at": "2026-06-18T13:32:41.406258+00:00",
     "citation": {
       "source": "Wikidata",
       "qid": "Q30972",
@@ -129,7 +129,7 @@
     "pronunciation_notes": [],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T12:26:35.794389+00:00",
+    "retrieved_at": "2026-06-18T13:32:41.406258+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "Linear A",
@@ -178,5 +178,49 @@
     "uncertainty_flag_count": 5,
     "has_wikidata_statements": true,
     "extract_chars": 24208
+  },
+  "deep_sections": {
+    "etymology_blocks": [],
+    "pronunciation_notes": []
+  },
+  "corpus_cross_links": {
+    "language_corpus": [
+      {
+        "slug": "linear-a",
+        "name": "Linear A",
+        "status": "undeciphered",
+        "script": "Linear A syllabary",
+        "decipherment": "undeciphered",
+        "brain_scrape_path": "languages/undeciphered/linear-a/research/brain/latest_scrape.json",
+        "linked": true,
+        "brain_scraped_at": "2026-06-18T13:21:08.523173+00:00",
+        "brain_sources": [
+          "wikipedia",
+          "wikidata",
+          "wiktionary"
+        ],
+        "ipa_count": 0,
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Linear_A",
+        "phonology_keywords": [
+          "extinct",
+          "phonolog",
+          "pronunciation",
+          "vowel"
+        ]
+      }
+    ],
+    "modality_topics": [
+      {
+        "slug": "linear-b-script",
+        "name": "Linear B",
+        "category": "writing-systems",
+        "modality_scrape_path": "communication-modalities/writing-systems/linear-b-script/research/brain/latest_scrape.json",
+        "linked": true,
+        "modality_scraped_at": "2026-06-18T13:25:25.122666+00:00",
+        "uncertainty_flags": 7
+      }
+    ],
+    "language_link_count": 1,
+    "modality_link_count": 1
   }
 }

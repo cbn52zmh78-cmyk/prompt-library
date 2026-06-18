@@ -1,0 +1,14 @@
+{
+  "id": "japanese-sign-language",
+  "name": "Japanese Sign Language",
+  "category": "sign-languages",
+  "priority": "medium",
+  "notes": "JSL \u2014 distinct from spoken/written Japanese modalities",
+  "language_corpus_links": [],
+  "modality_links": [],
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}
