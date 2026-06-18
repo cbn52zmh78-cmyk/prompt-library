@@ -1,4 +1,35 @@
 {
   "language": "ancient-greek",
-  "texts": []
+  "texts": [
+    {
+      "id": "delphic-maxim-gnothi-seauton",
+      "title": "Delphic maxim — γνῶθι σεαυτόν (Post 3)",
+      "type": "maxim",
+      "post_number": 3,
+      "source": "Attributed to Chilon of Sparta; preserved in Diogenes Laertius Lives of the Eminent Philosophers 1.40; https://en.wikipedia.org/wiki/Know_thyself (CC BY-SA 3.0)",
+      "transliteration": "γνῶθι σεαυτόν",
+      "translation": "Know thyself.",
+      "confidence": "attested",
+      "text_label": "Attested",
+      "pronunciation_label": "Reconstructed (Classical)",
+      "text_confidence": "attested",
+      "pronunciation_model": "reconstructed Classical Athenian Greek",
+      "pronunciation_confidence": "high — scholarly consensus on Classical restitution",
+      "line_ipa": "[ɡnôːti seautón]",
+      "line_ipa_derivation": {
+        "method": "lesson IPA per content_concepts_v1; not from Wiktionary language-name entry",
+        "language_ipa_from_scrape": [
+          {
+            "ipa": "/ˈeɪn.ʃənt ˈɡɹiːk/",
+            "accent": "unspecified",
+            "quality": "scholarly_ipa"
+          }
+        ],
+        "citation": "Diogenes Laertius Lives 1.40; Wikipedia: Know thyself (CC BY-SA 3.0)",
+        "brain_scrape": "languages/dead/ancient-greek/research/brain/latest_scrape.json"
+      },
+      "catalogued": "2026-06-18",
+      "notes": "DAVID Post 3 hook line. Literary attestation secure; lesson IPA is reconstructed Classical, not Modern Greek."
+    }
+  ]
 }

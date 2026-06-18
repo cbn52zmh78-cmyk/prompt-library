@@ -1,0 +1,88 @@
+{
+  "issue": 70,
+  "format": "hybrid_host",
+  "model_video": "grok-imagine-video-1.5",
+  "resolution": "720p",
+  "aspect_ratio": "16:9",
+  "host_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\references\\david_avatar_reference.jpg",
+  "avatar_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+  "shots": [
+    {
+      "shot_id": "01_host_cold_open",
+      "duration": 6,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "The Archive keeper host speaks directly to camera in English, lip-synced, measured documentary gravitas, mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Delivers slowly: \"Before Latin. Before Greek. Before anything was written down — there was one language. No one ever recorded it. And yet we can rebuild it… from its children.\" Subtle slow push-in, warm brass lamp on face, hands near open codex on worktable.",
+      "speech_text": "Before Latin. Before Greek. Before anything was written down — there was one language. No one ever recorded it. And yet we can rebuild it… from its children.",
+      "on_screen": "DAVID · The Archive · 🔶 RECONSTRUCTED",
+      "on_screen_labels": [
+        "RECONSTRUCTED language"
+      ],
+      "timing": {
+        "start_s": 0,
+        "end_s": 6
+      }
+    },
+    {
+      "shot_id": "02_host_question",
+      "duration": 5,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "Host push-in medium-close, speaks signature beat in English, lip-synced, thoughtful pause between clauses, mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Delivers: \"What did they actually say? … And how do we prove it?\" Still grounded, trustworthy delivery.",
+      "speech_text": "What did they actually say? … And how do we prove it?",
+      "on_screen": "What did they actually say?",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 6,
+        "end_s": 11
+      }
+    },
+    {
+      "shot_id": "03_host_pie_line",
+      "duration": 15,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "The same Archive host now speaks reconstructed Proto-Indo-European slowly and clearly, lip-synced, scholarly documentary tone, never claiming it is a recording. PIE line: \"h₂éwis, h₁éḱwōs h₁éḱontes\" IPA target [ˈh₂é.wis ˈh₁é.kʷoːs ˈh₁é.kʷon.tes]. On-screen feel: bold RECONSTRUCTED warning tags, asterisk forms visible. mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Steady medium shot, lamp light, deliberate pace.",
+      "speech_text": "h₂éwis, h₁éḱwōs h₁éḱontes",
+      "on_screen": "*h₂éwis, h₁éḱwōs h₁éḱontes\n[ˈh₂é.wis ˈh₁é.kʷoːs ˈh₁é.kʷon.tes]\nRECONSTRUCTED — NOT ATTESTED",
+      "on_screen_labels": [
+        "RECONSTRUCTED text",
+        "RECONSTRUCTED pronunciation",
+        "NOT ATTESTED"
+      ],
+      "timing": {
+        "start_s": 11,
+        "end_s": 26
+      }
+    },
+    {
+      "shot_id": "04_host_comparative_method",
+      "duration": 10,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "Host back in Archive, gestures toward manuscripts on table while explaining in English, lip-synced, mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Delivers: \"We compare its daughters — Latin, Sanskrit, Old English — and work backward to the sound that must have stood behind them all. That's the comparative method. It's reconstruction, not a recording — and we'll always tell you which is which.\" Educational hand gesture toward codex, calm authority, honesty about uncertainty.",
+      "speech_text": "We compare its daughters — Latin, Sanskrit, Old English — and work backward to the sound that must have stood behind them all. That's the comparative method. It's reconstruction, not a recording — and we'll always tell you which is which.",
+      "on_screen": "Comparative method · Latin ovis ← *h₂éwis · Sanskrit ávi- · English ewe",
+      "on_screen_labels": [
+        "RECONSTRUCTED inference"
+      ],
+      "timing": {
+        "start_s": 26,
+        "end_s": 36
+      }
+    },
+    {
+      "shot_id": "05_tagline_vo",
+      "duration": 6,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "Host warm close, speaks tagline in English, lip-synced, mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Delivers: \"Bring the dead tongues back — one attestation at a time. DAVID.\" Slight smile of quiet wonder, medium close-up.",
+      "speech_text": "Bring the dead tongues back — one attestation at a time. DAVID.",
+      "on_screen": "DAVID",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 36,
+        "end_s": 42
+      }
+    }
+  ],
+  "provenance_shot": {
+    "type": "code_rendered_png",
+    "duration_s": 7
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "issue": 70,
+  "slug": "proto-indo-european",
+  "qa_at": "2026-06-18T22:58:30.207383+00:00",
+  "pass": true,
+  "passes": [
+    "host identity lock LOADED",
+    "text labeled reconstructed",
+    "line IPA bracketed with laryngeal notation",
+    "PIE shot has heavy RECONSTRUCTED + NOT ATTESTED labels",
+    "hybrid host shot structure complete (5 host + provenance)"
+  ],
+  "issues": []
+}

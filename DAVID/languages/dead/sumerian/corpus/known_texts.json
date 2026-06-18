@@ -1,0 +1,40 @@
+{
+  "language": "sumerian",
+  "texts": [
+    {
+      "id": "instructions-of-shuruppak-opening",
+      "title": "Instructions of Shuruppak — opening formula (Post 2)",
+      "type": "wisdom_literature",
+      "post_number": 2,
+      "source": "The Instructions of Shuruppak, ETCSL corpus text 5.6.1, line 1; https://etcsl.orinst.ox.ac.uk/",
+      "transliteration": "ud re-a ud su-ra re-a",
+      "translation": "In those days, in those distant days…",
+      "confidence": "attested",
+      "text_label": "Attested",
+      "pronunciation_label": "Reconstructed",
+      "text_confidence": "attested",
+      "pronunciation_model": "reconstructed Sumerian vocalization (consonantal cuneiform)",
+      "pronunciation_confidence": "moderate — vowels not written; scholarly convention",
+      "line_ipa": "[ˈud ˈreː.a ˈud ˈsuː.ra ˈreː.a]",
+      "line_ipa_derivation": {
+        "method": "reconstructed from Wikipedia Sumerian phonology in latest_scrape.json; ETCSL transliteration attested",
+        "language_ipa_from_scrape": [
+          {
+            "ipa": "/s(j)ʊˈmɪəɹiən/",
+            "accent": "RP",
+            "quality": "scholarly_ipa"
+          },
+          {
+            "ipa": "/sʊˈmɛɹiən/",
+            "accent": "GA",
+            "quality": "scholarly_ipa"
+          }
+        ],
+        "citation": "ETCSL 5.6.1; Wikipedia: Sumerian language (CC BY-SA 3.0)",
+        "brain_scrape": "languages/dead/sumerian/research/brain/latest_scrape.json"
+      },
+      "catalogued": "2026-06-18",
+      "notes": "DAVID Post 2 hook line. Transliteration attested on cuneiform tablets; spoken vowels reconstructed."
+    }
+  ]
+}

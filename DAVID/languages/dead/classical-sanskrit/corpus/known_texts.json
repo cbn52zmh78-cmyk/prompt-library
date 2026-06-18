@@ -1,4 +1,36 @@
 {
   "language": "classical-sanskrit",
-  "texts": []
+  "texts": [
+    {
+      "id": "rig-veda-1-1-1-opening",
+      "title": "Rig Veda 1.1.1 — opening pada (Post 9)",
+      "type": "sacred_text",
+      "post_number": 9,
+      "source": "Rigveda 1.1.1; public domain sacred text; https://en.wikisource.org/wiki/Rig_Veda/Mandala_1/Hymn_1",
+      "transliteration": "अग्निमीळे पुरोहितं",
+      "translation": "I praise Agni, the priest…",
+      "confidence": "attested",
+      "text_label": "Attested",
+      "pronunciation_label": "Reconstructed (Vedic)",
+      "text_confidence": "attested",
+      "pronunciation_model": "reconstructed Vedic Sanskrit phonology",
+      "pronunciation_confidence": "moderate — scholarly Vedic reconstruction; continuous liturgical tradition",
+      "line_ipa": "[ˈɐɡnɪm iːɭe pʊroːɦɪt̪ɐm]",
+      "line_ipa_derivation": {
+        "method": "lesson IPA per content_concepts_v1; Vedic stage, not Modern Hindi/Sanskrit",
+        "language_ipa_from_scrape": [
+          {
+            "ipa": "/ˈsɑn.skrɪt/",
+            "accent": "unspecified",
+            "quality": "scholarly_ipa"
+          }
+        ],
+        "citation": "Rig Veda 1.1.1; Wikisource Rig Veda/Mandala 1/Hymn 1; Vedic phonology (CC BY-SA 3.0 where applicable)",
+        "brain_scrape": "languages/dead/classical-sanskrit/research/brain/latest_scrape.json",
+        "spoken_transliteration": "agnim īḷe purohitam"
+      },
+      "catalogued": "2026-06-18",
+      "notes": "DAVID Post 9 hook line. Manuscript attestation secure; lesson IPA is reconstructed Vedic, not modern pronunciation."
+    }
+  ]
 }

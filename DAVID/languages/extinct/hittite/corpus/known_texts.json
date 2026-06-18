@@ -1,4 +1,36 @@
 {
   "language": "hittite",
-  "texts": []
+  "texts": [
+    {
+      "id": "hittite-laws-1-opening",
+      "title": "Hittite Laws §1 — opening formula (Post 10)",
+      "type": "legal_text",
+      "post_number": 10,
+      "source": "Corpus des textes hittites; Hoffner, Hittite Laws (1997); https://en.wikipedia.org/wiki/Hittite_language (CC BY-SA 3.0)",
+      "transliteration": "nu-za-kán ḫa-a[n-…]",
+      "translation": "If a man slays…",
+      "confidence": "attested",
+      "text_label": "Attested",
+      "pronunciation_label": "Reconstructed",
+      "text_confidence": "attested",
+      "pronunciation_model": "reconstructed Hittite vocalization (Anatolian IE phonology)",
+      "pronunciation_confidence": "moderate — cuneiform transliteration attested; vowels reconstructed",
+      "line_ipa": "[ˈnu ˈza ˈkaːn ˈxaː]",
+      "line_ipa_derivation": {
+        "method": "reconstructed from Wikipedia Hittite phonology in latest_scrape.json; speakable opener before lacuna",
+        "language_ipa_from_scrape": [
+          {
+            "ipa": "/ˈhɪ.taɪt/",
+            "accent": "unspecified",
+            "quality": "scholarly_ipa"
+          }
+        ],
+        "citation": "Hittite Laws §1; Hoffner (1997); Wikipedia: Hittite language (CC BY-SA 3.0)",
+        "brain_scrape": "languages/extinct/hittite/research/brain/latest_scrape.json",
+        "spoken_transliteration": "nu za kán ḫa-a"
+      },
+      "catalogued": "2026-06-18",
+      "notes": "DAVID Post 10 hook line. Cuneiform attestation secure at Boğazköy; ḫ=[x]; excerpt truncated at lacuna; vocalization reconstructed."
+    }
+  ]
 }

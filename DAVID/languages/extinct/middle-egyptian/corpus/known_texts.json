@@ -1,4 +1,30 @@
 {
   "language": "middle-egyptian",
-  "texts": []
+  "texts": [
+    {
+      "id": "royal-blessing-ankh-wedja-seneb",
+      "title": "Royal blessing — ꜥnḫ wḏꜣ snb (Post 6)",
+      "type": "formula",
+      "post_number": 6,
+      "source": "Formula ubiquitous in New Kingdom stelae; transliteration per Gardiner/James P. Allen, Middle Egyptian (2010); https://en.wikipedia.org/wiki/Egyptian_language (CC BY-SA 3.0)",
+      "transliteration": "ꜥnḫ wḏꜣ snb",
+      "translation": "Life, prosperity, health",
+      "confidence": "attested",
+      "text_label": "Attested",
+      "pronunciation_label": "Reconstructed",
+      "text_confidence": "attested",
+      "pronunciation_model": "reconstructed Egyptological vocalization (Allen/Gardiner)",
+      "pronunciation_confidence": "moderate — vowels not written in hieroglyphs",
+      "line_ipa": "[ˈʕaːnax ˈwaːḏaʕ ˈsanax]",
+      "line_ipa_derivation": {
+        "method": "lesson IPA per content_concepts_v1; Egyptological convention, not in brain scrape",
+        "language_ipa_from_scrape": [],
+        "citation": "Allen, Middle Egyptian (2010); Wikipedia: Egyptian language (CC BY-SA 3.0)",
+        "brain_scrape": "languages/extinct/middle-egyptian/research/brain/latest_scrape.json",
+        "spoken_transliteration": "anḫ wḏꜣ snb"
+      },
+      "catalogued": "2026-06-18",
+      "notes": "DAVID Post 6 hook line. Hieroglyphic attestation secure; Egyptological vowel insertions are reconstructed."
+    }
+  ]
 }

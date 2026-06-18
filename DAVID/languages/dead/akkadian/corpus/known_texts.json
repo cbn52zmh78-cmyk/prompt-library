@@ -1,0 +1,35 @@
+{
+  "language": "akkadian",
+  "texts": [
+    {
+      "id": "gilgamesh-sb-tablet-i-opening",
+      "title": "Epic of Gilgamesh — SB Tablet I opening (Post 5)",
+      "type": "epic_poetry",
+      "post_number": 5,
+      "source": "Epic of Gilgamesh, Standard Babylonian recension Tablet I; ORACC https://oracc.museum.upenn.edu/; George (2003) via https://en.wikipedia.org/wiki/Epic_of_Gilgamesh (CC BY-SA 3.0)",
+      "transliteration": "ša nagba imuru",
+      "translation": "He who saw the Deep",
+      "confidence": "attested",
+      "text_label": "Attested",
+      "pronunciation_label": "Reconstructed",
+      "text_confidence": "attested",
+      "pronunciation_model": "reconstructed Standard Babylonian Akkadian (Semitic vocalization)",
+      "pronunciation_confidence": "moderate — consonantal cuneiform; vowels scholarly reconstruction",
+      "line_ipa": "[ʃaː ˈnag.ba iˈmu.ru]",
+      "line_ipa_derivation": {
+        "method": "reconstructed from Wikipedia Akkadian phonology in latest_scrape.json; ORACC transliteration attested",
+        "language_ipa_from_scrape": [
+          {
+            "ipa": "/əˈkeɪ.di.ən/",
+            "accent": "unspecified",
+            "quality": "scholarly_ipa"
+          }
+        ],
+        "citation": "Gilgamesh SB Tablet I; ORACC; George (2003); Wikipedia: Epic of Gilgamesh (CC BY-SA 3.0)",
+        "brain_scrape": "languages/dead/akkadian/research/brain/latest_scrape.json"
+      },
+      "catalogued": "2026-06-18",
+      "notes": "DAVID Post 5 hook line. Cuneiform attestation secure; š=[ʃ]; vowels reconstructed from Semitic root structure."
+    }
+  ]
+}

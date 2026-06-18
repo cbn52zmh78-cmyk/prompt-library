@@ -1,0 +1,90 @@
+{
+  "issue": 73,
+  "batch": "T5_corpus_inputs_posts_7-10",
+  "generated_at": "2026-06-18T00:00:00+00:00",
+  "source_spec": "DAVID/reports/content_concepts_v1.md",
+  "scope": "Posts 7–10 corpus inputs: attested excerpt + source + cited IPA + on-screen labels; Linear A flagged undeciphered/speculative",
+  "summary": {
+    "total": 4,
+    "ok": 4,
+    "missing_corpus_before": 1,
+    "empty_corpus_before": 3
+  },
+  "entries": [
+    {
+      "post": 7,
+      "slug": "biblical-hebrew",
+      "status": "dead",
+      "corpus_id": "genesis-1-1-opening",
+      "corpus_path": "languages/dead/biblical-hebrew/corpus/known_texts.json",
+      "attested_excerpt": "בְּרֵאשִׁית בָּרָא אֱלֹהִים",
+      "spoken_transliteration": "bərēʾšīṯ bārāʾ ʾĕlōhīm",
+      "translation": "In the beginning God created…",
+      "source": "Masoretic Text WLC; https://en.wikisource.org/wiki/Bible_(WLC)/Genesis#Chapter_1",
+      "line_ipa": "[bə.ɾeː.ʃiːθ baː.ɾaː ʔɛ.loː.hiːm]",
+      "ipa_citation": "content_concepts_v1 Tiberian scholarly IPA; Masoretic niqqud attested tradition",
+      "text_label": "Attested",
+      "pronunciation_label": "Attested tradition (Tiberian; scholarly IPA)",
+      "brain_scrape": "languages/dead/biblical-hebrew/research/brain/latest_scrape.json",
+      "result": "ok"
+    },
+    {
+      "post": 8,
+      "slug": "linear-a",
+      "status": "undeciphered",
+      "corpus_id": "hagia-triada-libation-formula",
+      "corpus_path": "languages/undeciphered/linear-a/corpus/known_texts.json",
+      "attested_excerpt": "a-sa-sa-ra-me",
+      "translation": "Unknown — formulaic ritual text; meaning not deciphered",
+      "source": "Hagia Triada libation formula; GORILA (1976–1985); https://en.wikipedia.org/wiki/Linear_A",
+      "line_ipa": "[ˈa ˈsa ˈsa ˈɾa ˈme]",
+      "ipa_citation": "speculative Linear B parallel syllabic values; modality scrape uncertainty_flags",
+      "text_label": "Attested script / undeciphered language",
+      "pronunciation_label": "Reconstructed / speculative",
+      "decipherment_status": "undeciphered",
+      "uncertainty_flags": [
+        "undeciphered",
+        "phonetic_values_partly_inferred",
+        "proposed",
+        "debated"
+      ],
+      "brain_scrape": "languages/undeciphered/linear-a/research/brain/latest_scrape.json",
+      "modality_scrape": "communication-modalities/writing-systems/linear-a-script/research/brain/latest_scrape.json",
+      "result": "ok"
+    },
+    {
+      "post": 9,
+      "slug": "classical-sanskrit",
+      "status": "dead",
+      "corpus_id": "rig-veda-1-1-1-opening",
+      "corpus_path": "languages/dead/classical-sanskrit/corpus/known_texts.json",
+      "attested_excerpt": "अग्निमीळे पुरोहितं",
+      "spoken_transliteration": "agnim īḷe purohitam",
+      "translation": "I praise Agni, the priest…",
+      "source": "Rigveda 1.1.1; https://en.wikisource.org/wiki/Rig_Veda/Mandala_1/Hymn_1",
+      "line_ipa": "[ˈɐɡnɪm iːɭe pʊroːɦɪt̪ɐm]",
+      "ipa_citation": "content_concepts_v1 Vedic reconstruction; not Wiktionary language-name IPA",
+      "text_label": "Attested",
+      "pronunciation_label": "Reconstructed (Vedic)",
+      "brain_scrape": "languages/dead/classical-sanskrit/research/brain/latest_scrape.json",
+      "result": "ok"
+    },
+    {
+      "post": 10,
+      "slug": "hittite",
+      "status": "extinct",
+      "corpus_id": "hittite-laws-1-opening",
+      "corpus_path": "languages/extinct/hittite/corpus/known_texts.json",
+      "attested_excerpt": "nu-za-kán ḫa-a[n-…]",
+      "spoken_transliteration": "nu za kán ḫa-a",
+      "translation": "If a man slays…",
+      "source": "Hittite Laws §1; Hoffner (1997); https://en.wikipedia.org/wiki/Hittite_language",
+      "line_ipa": "[ˈnu ˈza ˈkaːn ˈxaː]",
+      "ipa_citation": "Wikipedia Hittite phonology (CC BY-SA 3.0); speakable opener before lacuna",
+      "text_label": "Attested",
+      "pronunciation_label": "Reconstructed",
+      "brain_scrape": "languages/extinct/hittite/research/brain/latest_scrape.json",
+      "result": "ok"
+    }
+  ]
+}

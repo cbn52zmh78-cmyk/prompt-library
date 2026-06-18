@@ -1,4 +1,36 @@
 {
   "language": "biblical-hebrew",
-  "texts": []
+  "texts": [
+    {
+      "id": "genesis-1-1-opening",
+      "title": "Genesis 1:1 — opening (Post 7)",
+      "type": "sacred_text",
+      "post_number": 7,
+      "source": "Masoretic Text, Westminster Leningrad Codex; https://en.wikisource.org/wiki/Bible_(WLC)/Genesis#Chapter_1",
+      "transliteration": "בְּרֵאשִׁית בָּרָא אֱלֹהִים",
+      "translation": "In the beginning God created…",
+      "confidence": "attested",
+      "text_label": "Attested",
+      "pronunciation_label": "Attested tradition (Tiberian; scholarly IPA)",
+      "text_confidence": "attested",
+      "pronunciation_model": "Tiberian Masoretic reading tradition (niqqud)",
+      "pronunciation_confidence": "high — attested reading tradition; some phonetic detail debated",
+      "line_ipa": "[bə.ɾeː.ʃiːθ baː.ɾaː ʔɛ.loː.hiːm]",
+      "line_ipa_derivation": {
+        "method": "lesson IPA per content_concepts_v1; Tiberian scholarly convention from Masoretic niqqud",
+        "language_ipa_from_scrape": [
+          {
+            "ipa": "/ˈhiːbɹuː/",
+            "accent": "unspecified",
+            "quality": "scholarly_ipa"
+          }
+        ],
+        "citation": "WLC Genesis 1:1; Wikisource Bible (WLC); Tiberian phonology (CC BY-SA 3.0 where applicable)",
+        "brain_scrape": "languages/dead/biblical-hebrew/research/brain/latest_scrape.json",
+        "spoken_transliteration": "bərēʾšīṯ bārāʾ ʾĕlōhīm"
+      },
+      "catalogued": "2026-06-18",
+      "notes": "DAVID Post 7 hook line. Consonants and niqqud attested in Masoretic tradition; distinct from Modern Hebrew revival pronunciation."
+    }
+  ]
 }

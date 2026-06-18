@@ -1,0 +1,38 @@
+{
+  "language": "linear-a",
+  "texts": [
+    {
+      "id": "hagia-triada-libation-formula",
+      "title": "Hagia Triada libation formula — a-sa-sa-ra-me (Post 8)",
+      "type": "ritual_formula",
+      "post_number": 8,
+      "source": "Hagia Triada libation table formula; Godart & Olivier, GORILA (1976–1985); https://en.wikipedia.org/wiki/Linear_A (CC BY-SA 3.0)",
+      "transliteration": "a-sa-sa-ra-me",
+      "translation": "Unknown — formulaic ritual text; meaning not deciphered",
+      "confidence": "unknown",
+      "text_label": "Attested script / undeciphered language",
+      "pronunciation_label": "Reconstructed / speculative",
+      "text_confidence": "attested_script_undeciphered",
+      "pronunciation_model": "speculative syllabic reading via Linear B parallel values",
+      "pronunciation_confidence": "low — language undeciphered; phonetic values partly inferred",
+      "line_ipa": "[ˈa ˈsa ˈsa ˈɾa ˈme]",
+      "line_ipa_derivation": {
+        "method": "speculative syllable values from Linear B mapping; NOT attested language phonology",
+        "language_ipa_from_scrape": [],
+        "citation": "GORILA; Wikipedia: Linear A (CC BY-SA 3.0); linear-a-script modality scrape uncertainty flags",
+        "brain_scrape": "languages/undeciphered/linear-a/research/brain/latest_scrape.json",
+        "modality_scrape": "communication-modalities/writing-systems/linear-a-script/research/brain/latest_scrape.json",
+        "uncertainty_flags": [
+          "undeciphered",
+          "phonetic_values_partly_inferred",
+          "proposed",
+          "debated"
+        ]
+      },
+      "decipherment_status": "undeciphered",
+      "meaning_status": "unknown",
+      "catalogued": "2026-06-18",
+      "notes": "DAVID Post 8 hook line. Signs are attested on tablets; language and meaning unknown. Any audio is speculative — label prominently on-screen. Do not claim translation."
+    }
+  ]
+}

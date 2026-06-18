@@ -1,4 +1,29 @@
 {
   "language": "old-norse",
-  "texts": []
+  "texts": [
+    {
+      "id": "voluspa-opening-st1",
+      "title": "Völuspá — opening line, st. 1 (Post 4)",
+      "type": "epic_poetry",
+      "post_number": 4,
+      "source": "Poetic Edda, Völuspá st. 1, Codex Regius (GKS 2365 4to); https://en.wikisource.org/wiki/Translation:Poetic_Edda/Völuspá",
+      "transliteration": "Hljóðs bið ek allar",
+      "translation": "Hearing I ask from all…",
+      "confidence": "attested",
+      "text_label": "Attested",
+      "pronunciation_label": "Reconstructed (Old Icelandic)",
+      "text_confidence": "attested",
+      "pronunciation_model": "reconstructed Old Icelandic (West Norse)",
+      "pronunciation_confidence": "moderate — derived from Wikipedia phonology; 0 Wiktionary excerpt IPA",
+      "line_ipa": "[ˈhljoːðs ˈbið ˈek ˈɑlːɑr]",
+      "line_ipa_derivation": {
+        "method": "reconstructed from Wikipedia Old Norse phonology in latest_scrape.json; not from Wiktionary",
+        "language_ipa_from_scrape": [],
+        "citation": "Codex Regius Völuspá; Wikisource: Poetic Edda/Völuspá; Wikipedia: Old Norse (CC BY-SA 3.0)",
+        "brain_scrape": "languages/extinct/old-norse/research/brain/latest_scrape.json"
+      },
+      "catalogued": "2026-06-18",
+      "notes": "DAVID Post 4 hook line. Manuscript attestation secure; lesson IPA is West Norse reconstruction."
+    }
+  ]
 }

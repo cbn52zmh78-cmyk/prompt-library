@@ -1,0 +1,8 @@
+{
+  "path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\references\\archive_set_reference.jpg",
+  "url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-575fd8c4-c189-4f04-a9b8-7dcd873612c2.jpeg",
+  "prompt": "The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting.",
+  "model": "grok-imagine-image-quality",
+  "aspect_ratio": "16:9",
+  "reused": false
+}

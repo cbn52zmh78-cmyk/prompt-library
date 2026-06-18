@@ -1,0 +1,27 @@
+{
+  "issue": 70,
+  "format": "hybrid_host",
+  "format_proof": 2,
+  "completed_at": "2026-06-18T22:58:30.208230+00:00",
+  "production_dir": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1",
+  "post": {
+    "script": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1\\post01_pie_script_final.json",
+    "imagine_pack": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1\\post01_pie_imagine_pack.json",
+    "provenance_card": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1\\provenance_card.png",
+    "output": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1\\output\\david_post01_pie_hybrid_v1.mp4",
+    "qa": {
+      "issue": 70,
+      "slug": "proto-indo-european",
+      "qa_at": "2026-06-18T22:58:30.207383+00:00",
+      "pass": true,
+      "passes": [
+        "host identity lock LOADED",
+        "text labeled reconstructed",
+        "line IPA bracketed with laryngeal notation",
+        "PIE shot has heavy RECONSTRUCTED + NOT ATTESTED labels",
+        "hybrid host shot structure complete (5 host + provenance)"
+      ],
+      "issues": []
+    }
+  }
+}
