@@ -1,0 +1,101 @@
+{
+  "model_image": "grok-imagine-image-quality",
+  "model_video": "grok-imagine-video-1.5",
+  "resolution": "720p",
+  "aspect_ratio": "16:9",
+  "avatar": {
+    "prompt": "Synthetic East Germanic scribe avatar, 4th-century scholarly aesthetic, chest-up portrait, neutral invented features, no real person likeness, candlelit scriptorium with Codex-style manuscript hints, cool blue-amber contrast, educational documentary, 16:9 cinematic frame, facing camera",
+    "reference_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-9cc8af1d-a301-416a-ac68-f944e42cc3a9.jpeg",
+    "synthetic_only": true,
+    "no_real_person_likeness": true
+  },
+  "shots": [
+    {
+      "shot_id": "01_cold_open",
+      "duration": 6,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-9cc8af1d-a301-416a-ac68-f944e42cc3a9.jpeg",
+      "video_prompt": "The avatar speaks slowly and clearly in reconstructed Gothic, lip-synced, delivering: \"Atta unsar þu in himinam, weihnai namo þein\". Subtle slow push-in, documentary tone, on-screen caption feel. Speech must match reconstructed pronunciation.",
+      "speech_text": "Atta unsar þu in himinam, weihnai namo þein",
+      "speech_ipa": "[ˈat.ta ˈun.sar θuː in ˈhi.mi.nam ˈwiːh.nɛː ˈna.moː θiːn]",
+      "on_screen": "Gothic · Wulfila's Bible, 4th c. CE — oldest substantial Germanic text",
+      "timing": {
+        "start_s": 0,
+        "end_s": 6
+      }
+    },
+    {
+      "shot_id": "02_natural_ipa",
+      "duration": 6,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-9cc8af1d-a301-416a-ac68-f944e42cc3a9.jpeg",
+      "video_prompt": "Avatar speaks the line at natural scholarly pace in reconstructed Gothic, lip-synced: \"Atta unsar þu in himinam, weihnai namo þein\". Hold steady medium shot. Clear educational audio. IPA overlay implied.",
+      "speech_text": "Atta unsar þu in himinam, weihnai namo þein",
+      "speech_ipa": "[ˈat.ta ˈun.sar θuː in ˈhi.mi.nam ˈwiːh.nɛː ˈna.moː θiːn]",
+      "on_screen": "Atta unsar þu in himinam, weihnai namo þein\n[ˈat.ta ˈun.sar θuː in ˈhi.mi.nam ˈwiːh.nɛː ˈna.moː θiːn]",
+      "timing": {
+        "start_s": 6,
+        "end_s": 12
+      }
+    },
+    {
+      "shot_id": "03_lesson_þ → [θ]",
+      "duration": 6,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-9cc8af1d-a301-416a-ac68-f944e42cc3a9.jpeg",
+      "video_prompt": "Avatar voices a minimal contrast in reconstructed Gothic, lip-synced, emphasizing \"þu\" (þ → [θ]). Micro-lesson card energy, steady camera, crisp speech.",
+      "speech_text": "þu",
+      "speech_ipa": "þu → [θuː]",
+      "on_screen": "þ → [θ] · þu → [θuː]",
+      "timing": {
+        "start_s": 12,
+        "end_s": 18
+      }
+    },
+    {
+      "shot_id": "04_lesson_ai ≈ [ɛː",
+      "duration": 6,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-9cc8af1d-a301-416a-ac68-f944e42cc3a9.jpeg",
+      "video_prompt": "Avatar voices a minimal contrast in reconstructed Gothic, lip-synced, emphasizing \"weihnai\" (ai ≈ [ɛː]). Micro-lesson card energy, steady camera, crisp speech.",
+      "speech_text": "weihnai",
+      "speech_ipa": "weihnai → [ˈwiːh.nɛː]",
+      "on_screen": "ai ≈ [ɛː] · weihnai → [ˈwiːh.nɛː]",
+      "timing": {
+        "start_s": 18,
+        "end_s": 24
+      }
+    },
+    {
+      "shot_id": "05_lesson_ei → [iː",
+      "duration": 6,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-9cc8af1d-a301-416a-ac68-f944e42cc3a9.jpeg",
+      "video_prompt": "Avatar voices a minimal contrast in reconstructed Gothic, lip-synced, emphasizing \"þein\" (ei → [iː]). Micro-lesson card energy, steady camera, crisp speech.",
+      "speech_text": "þein",
+      "speech_ipa": "þein → [θiːn]",
+      "on_screen": "ei → [iː] · þein → [θiːn]",
+      "timing": {
+        "start_s": 24,
+        "end_s": 30
+      }
+    },
+    {
+      "shot_id": "06_full_line",
+      "duration": 10,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-9cc8af1d-a301-416a-ac68-f944e42cc3a9.jpeg",
+      "video_prompt": "Avatar delivers the full attested line confidently in reconstructed Gothic, lip-synced: \"Atta unsar þu in himinam, weihnai namo þein\". Slight energy lift, documentary climax, medium close-up, clear audio.",
+      "speech_text": "Atta unsar þu in himinam, weihnai namo þein",
+      "speech_ipa": "[ˈat.ta ˈun.sar θuː in ˈhi.mi.nam ˈwiːh.nɛː ˈna.moː θiːn]",
+      "on_screen": "Atta unsar þu in himinam, weihnai namo þein",
+      "timing": {
+        "start_s": 24,
+        "end_s": 34
+      }
+    }
+  ],
+  "provenance_shot": {
+    "type": "code_rendered_png",
+    "duration_s": 7,
+    "timing": {
+      "start_s": 34,
+      "end_s": 41
+    }
+  },
+  "cta": "More dead languages, actually pronounced — DAVID."
+}

@@ -1,0 +1,110 @@
+{
+  "issue": 41,
+  "generated_at": "2026-06-18T22:33:13.512498+00:00",
+  "slug": "gothic",
+  "title": "Gothic — Wulfila Bible, Matthew 6:9",
+  "attested_text": "Atta unsar þu in himinam, weihnai namo þein",
+  "translation": "Our Father who is in heaven, hallowed be thy name.",
+  "text_confidence": "attested",
+  "pronunciation_model": "reconstructed from Wulfila's alphabet + comparative Germanic",
+  "pronunciation_confidence": "moderate — debated points flagged",
+  "line_ipa": "[ˈat.ta ˈun.sar θuː in ˈhi.mi.nam ˈwiːh.nɛː ˈna.moː θiːn]",
+  "line_ipa_derivation": {
+    "method": "reconstructed from Wikipedia phonology in latest_scrape.json + scholarly restituta/Wulfila conventions",
+    "language_ipa_from_scrape": [
+      {
+        "ipa": "/ˈɡɒθ.ɪk/",
+        "accent": "RP",
+        "language_code": "",
+        "quality": "scholarly_ipa"
+      },
+      {
+        "ipa": "/ˈɡɑ.θɪk/",
+        "accent": "GenAm",
+        "language_code": "",
+        "quality": "scholarly_ipa"
+      }
+    ],
+    "phonology_excerpt_chars": 2499
+  },
+  "on_screen_labels": {
+    "text": "attested text",
+    "pronunciation": "reconstructed pronunciation"
+  },
+  "shots": [
+    {
+      "id": "01_cold_open",
+      "t_start": 0,
+      "t_end": 6,
+      "duration": 6,
+      "on_screen": "Gothic · Wulfila's Bible, 4th c. CE — oldest substantial Germanic text",
+      "video_prompt": "The avatar speaks slowly and clearly in reconstructed Gothic, lip-synced, delivering: \"Atta unsar þu in himinam, weihnai namo þein\". Subtle slow push-in, documentary tone, on-screen caption feel. Speech must match reconstructed pronunciation.",
+      "speech_text": "Atta unsar þu in himinam, weihnai namo þein",
+      "speech_ipa": "[ˈat.ta ˈun.sar θuː in ˈhi.mi.nam ˈwiːh.nɛː ˈna.moː θiːn]",
+      "pace": "slow"
+    },
+    {
+      "id": "02_natural_ipa",
+      "t_start": 6,
+      "t_end": 12,
+      "duration": 6,
+      "on_screen": "Atta unsar þu in himinam, weihnai namo þein\n[ˈat.ta ˈun.sar θuː in ˈhi.mi.nam ˈwiːh.nɛː ˈna.moː θiːn]",
+      "video_prompt": "Avatar speaks the line at natural scholarly pace in reconstructed Gothic, lip-synced: \"Atta unsar þu in himinam, weihnai namo þein\". Hold steady medium shot. Clear educational audio. IPA overlay implied.",
+      "speech_text": "Atta unsar þu in himinam, weihnai namo þein",
+      "speech_ipa": "[ˈat.ta ˈun.sar θuː in ˈhi.mi.nam ˈwiːh.nɛː ˈna.moː θiːn]",
+      "pace": "natural"
+    },
+    {
+      "id": "03_lesson_þ → [θ]",
+      "t_start": 12,
+      "t_end": 18,
+      "duration": 6,
+      "on_screen": "þ → [θ] · þu → [θuː]",
+      "video_prompt": "Avatar voices a minimal contrast in reconstructed Gothic, lip-synced, emphasizing \"þu\" (þ → [θ]). Micro-lesson card energy, steady camera, crisp speech.",
+      "speech_text": "þu",
+      "speech_ipa": "þu → [θuː]",
+      "pace": "didactic"
+    },
+    {
+      "id": "04_lesson_ai ≈ [ɛː",
+      "t_start": 18,
+      "t_end": 24,
+      "duration": 6,
+      "on_screen": "ai ≈ [ɛː] · weihnai → [ˈwiːh.nɛː]",
+      "video_prompt": "Avatar voices a minimal contrast in reconstructed Gothic, lip-synced, emphasizing \"weihnai\" (ai ≈ [ɛː]). Micro-lesson card energy, steady camera, crisp speech.",
+      "speech_text": "weihnai",
+      "speech_ipa": "weihnai → [ˈwiːh.nɛː]",
+      "pace": "didactic"
+    },
+    {
+      "id": "05_lesson_ei → [iː",
+      "t_start": 24,
+      "t_end": 30,
+      "duration": 6,
+      "on_screen": "ei → [iː] · þein → [θiːn]",
+      "video_prompt": "Avatar voices a minimal contrast in reconstructed Gothic, lip-synced, emphasizing \"þein\" (ei → [iː]). Micro-lesson card energy, steady camera, crisp speech.",
+      "speech_text": "þein",
+      "speech_ipa": "þein → [θiːn]",
+      "pace": "didactic"
+    },
+    {
+      "id": "06_full_line",
+      "t_start": 24,
+      "t_end": 34,
+      "duration": 10,
+      "on_screen": "Atta unsar þu in himinam, weihnai namo þein",
+      "video_prompt": "Avatar delivers the full attested line confidently in reconstructed Gothic, lip-synced: \"Atta unsar þu in himinam, weihnai namo þein\". Slight energy lift, documentary climax, medium close-up, clear audio.",
+      "speech_text": "Atta unsar þu in himinam, weihnai namo þein",
+      "speech_ipa": "[ˈat.ta ˈun.sar θuː in ˈhi.mi.nam ˈwiːh.nɛː ˈna.moː θiːn]",
+      "pace": "confident"
+    }
+  ],
+  "total_duration_target_s": 41,
+  "provenance": {
+    "text": "Wulfila, Gothic Bible, Matthew 6:9 (Codex Argenteus), public domain. Attested.",
+    "pronunciation": "Reconstructed from Wulfila's alphabet + comparative Germanic; moderate confidence.",
+    "sources": "Wikipedia / Wiktionary (CC BY-SA), Wikidata (CC0), retrieved 2026-06-18.",
+    "brain_scrape": "languages/extinct/gothic/research/brain/latest_scrape.json",
+    "scrape_at": "2026-06-18T13:20:17.177637+00:00"
+  }
+}

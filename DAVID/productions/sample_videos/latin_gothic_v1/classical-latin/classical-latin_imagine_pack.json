@@ -1,0 +1,101 @@
+{
+  "model_image": "grok-imagine-image-quality",
+  "model_video": "grok-imagine-video-1.5",
+  "resolution": "720p",
+  "aspect_ratio": "16:9",
+  "avatar": {
+    "prompt": "Synthetic classical Roman scholar avatar, chest-up portrait, neutral Mediterranean features, no real person likeness, warm amber rim light on dark marble study background, subtle toga folds, educational documentary style, 16:9 cinematic frame, facing camera with calm authority",
+    "reference_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-bbc25ecb-3185-4012-8a0d-4d0e5d291075.jpeg",
+    "synthetic_only": true,
+    "no_real_person_likeness": true
+  },
+  "shots": [
+    {
+      "shot_id": "01_cold_open",
+      "duration": 6,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-bbc25ecb-3185-4012-8a0d-4d0e5d291075.jpeg",
+      "video_prompt": "The avatar speaks slowly and clearly in reconstructed Classical Latin, lip-synced, delivering: \"Arma virumque canō, Trōiae quī prīmus ab ōrīs\". Subtle slow push-in, documentary tone, on-screen caption feel. Speech must match reconstructed pronunciation.",
+      "speech_text": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+      "speech_ipa": "[ˈar.ma wɪˈrũːk.we ˈka.noː ˈtroː.jae̯ kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+      "on_screen": "Latin · Virgil, Aeneid (19 BCE)",
+      "timing": {
+        "start_s": 0,
+        "end_s": 6
+      }
+    },
+    {
+      "shot_id": "02_natural_ipa",
+      "duration": 6,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-bbc25ecb-3185-4012-8a0d-4d0e5d291075.jpeg",
+      "video_prompt": "Avatar speaks the line at natural scholarly pace in reconstructed Classical Latin, lip-synced: \"Arma virumque canō, Trōiae quī prīmus ab ōrīs\". Hold steady medium shot. Clear educational audio. IPA overlay implied.",
+      "speech_text": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+      "speech_ipa": "[ˈar.ma wɪˈrũːk.we ˈka.noː ˈtroː.jae̯ kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+      "on_screen": "Arma virumque canō, Trōiae quī prīmus ab ōrīs\n[ˈar.ma wɪˈrũːk.we ˈka.noː ˈtroː.jae̯ kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+      "timing": {
+        "start_s": 6,
+        "end_s": 12
+      }
+    },
+    {
+      "shot_id": "03_lesson_v → [w]",
+      "duration": 6,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-bbc25ecb-3185-4012-8a0d-4d0e5d291075.jpeg",
+      "video_prompt": "Avatar voices a minimal contrast in reconstructed Classical Latin, lip-synced, emphasizing \"virumque\" (v → [w]). Micro-lesson card energy, steady camera, crisp speech.",
+      "speech_text": "virumque",
+      "speech_ipa": "virumque → [wɪˈrũːk.we]",
+      "on_screen": "v → [w] · virumque → [wɪˈrũːk.we]",
+      "timing": {
+        "start_s": 12,
+        "end_s": 18
+      }
+    },
+    {
+      "shot_id": "04_lesson_c → [k] ",
+      "duration": 6,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-bbc25ecb-3185-4012-8a0d-4d0e5d291075.jpeg",
+      "video_prompt": "Avatar voices a minimal contrast in reconstructed Classical Latin, lip-synced, emphasizing \"cano\" (c → [k] always). Micro-lesson card energy, steady camera, crisp speech.",
+      "speech_text": "cano",
+      "speech_ipa": "cano → [ˈka.noː]",
+      "on_screen": "c → [k] always · cano → [ˈka.noː]",
+      "timing": {
+        "start_s": 18,
+        "end_s": 24
+      }
+    },
+    {
+      "shot_id": "05_lesson_vowel le",
+      "duration": 6,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-bbc25ecb-3185-4012-8a0d-4d0e5d291075.jpeg",
+      "video_prompt": "Avatar voices a minimal contrast in reconstructed Classical Latin, lip-synced, emphasizing \"prīmus\" (vowel length). Micro-lesson card energy, steady camera, crisp speech.",
+      "speech_text": "prīmus",
+      "speech_ipa": "prīmus → [ˈpriː.mʊs]",
+      "on_screen": "vowel length · prīmus → [ˈpriː.mʊs]",
+      "timing": {
+        "start_s": 24,
+        "end_s": 30
+      }
+    },
+    {
+      "shot_id": "06_full_line",
+      "duration": 10,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-bbc25ecb-3185-4012-8a0d-4d0e5d291075.jpeg",
+      "video_prompt": "Avatar delivers the full attested line confidently in reconstructed Classical Latin, lip-synced: \"Arma virumque canō, Trōiae quī prīmus ab ōrīs\". Slight energy lift, documentary climax, medium close-up, clear audio.",
+      "speech_text": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+      "speech_ipa": "[ˈar.ma wɪˈrũːk.we ˈka.noː ˈtroː.jae̯ kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+      "on_screen": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+      "timing": {
+        "start_s": 24,
+        "end_s": 34
+      }
+    }
+  ],
+  "provenance_shot": {
+    "type": "code_rendered_png",
+    "duration_s": 7,
+    "timing": {
+      "start_s": 34,
+      "end_s": 41
+    }
+  },
+  "cta": "More dead languages, actually pronounced — DAVID."
+}

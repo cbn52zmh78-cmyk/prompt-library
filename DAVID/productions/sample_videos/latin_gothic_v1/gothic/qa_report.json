@@ -1,0 +1,15 @@
+{
+  "slug": "gothic",
+  "qa_at": "2026-06-18T22:33:20.723580+00:00",
+  "pass": true,
+  "passes": [
+    "attested_text matches corpus transliteration",
+    "line IPA bracketed for reconstructed pronunciation",
+    "language IPA pulled from scrape (2 entries)",
+    "phonology excerpt present in scrape wikipedia extract"
+  ],
+  "issues": [],
+  "attested_text": "Atta unsar þu in himinam, weihnai namo þein",
+  "line_ipa": "[ˈat.ta ˈun.sar θuː in ˈhi.mi.nam ˈwiːh.nɛː ˈna.moː θiːn]",
+  "corpus_id": "codex-argenteus-lord-prayer"
+}

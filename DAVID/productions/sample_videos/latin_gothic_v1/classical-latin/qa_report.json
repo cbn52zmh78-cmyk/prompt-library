@@ -1,0 +1,15 @@
+{
+  "slug": "classical-latin",
+  "qa_at": "2026-06-18T22:33:13.511508+00:00",
+  "pass": true,
+  "passes": [
+    "attested_text matches corpus transliteration",
+    "line IPA bracketed for reconstructed pronunciation",
+    "language IPA pulled from scrape (7 entries)",
+    "phonology excerpt present in scrape wikipedia extract"
+  ],
+  "issues": [],
+  "attested_text": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+  "line_ipa": "[ˈar.ma wɪˈrũːk.we ˈka.noː ˈtroː.jae̯ kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+  "corpus_id": "virgil-aeneid-1-1"
+}

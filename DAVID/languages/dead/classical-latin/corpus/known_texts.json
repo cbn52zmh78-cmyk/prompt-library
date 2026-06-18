@@ -2,6 +2,17 @@
   "language": "classical-latin",
   "texts": [
     {
+      "id": "virgil-aeneid-1-1",
+      "title": "Aeneid — opening line",
+      "type": "epic_poetry",
+      "date_bce": -19,
+      "source": "Virgil, Aeneid 1.1",
+      "transliteration": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+      "translation": "I sing of arms and the man, who first from the shores of Troy…",
+      "confidence": "attested",
+      "notes": "Standard hook line for Classical Latin phonology renders; manuscript tradition secure."
+    },
+    {
       "id": "caesar-gallic-opening",
       "title": "De Bello Gallico — opening line",
       "type": "historical_prose",

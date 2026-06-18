@@ -1,0 +1,140 @@
+{
+  "issue": 41,
+  "generated_at": "2026-06-18T22:33:07.169944+00:00",
+  "slug": "classical-latin",
+  "title": "Latin — Virgil, Aeneid 1.1",
+  "attested_text": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+  "translation": "I sing of arms and the man, who first from the shores of Troy…",
+  "text_confidence": "attested",
+  "pronunciation_model": "reconstructed Classical Latin (restituta)",
+  "pronunciation_confidence": "high — scholarly consensus",
+  "line_ipa": "[ˈar.ma wɪˈrũːk.we ˈka.noː ˈtroː.jae̯ kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+  "line_ipa_derivation": {
+    "method": "reconstructed from Wikipedia phonology in latest_scrape.json + scholarly restituta/Wulfila conventions",
+    "language_ipa_from_scrape": [
+      {
+        "ipa": "/ˈlæt.ɪn/",
+        "accent": "RP",
+        "language_code": "",
+        "quality": "scholarly_ipa"
+      },
+      {
+        "ipa": "/ˈlæt.ɪn/",
+        "accent": "GA,CA",
+        "language_code": "",
+        "quality": "regional_variant"
+      },
+      {
+        "ipa": "/ˈlæt.ɪn/",
+        "accent": "AU",
+        "language_code": "",
+        "quality": "regional_variant"
+      },
+      {
+        "ipa": "/ˈlɛt.ən/",
+        "accent": "NZ",
+        "language_code": "",
+        "quality": "regional_variant"
+      },
+      {
+        "ipa": "[laten]",
+        "accent": "unspecified",
+        "language_code": "",
+        "quality": "disputed"
+      },
+      {
+        "ipa": "/laˈtiːn/",
+        "accent": "unspecified",
+        "language_code": "",
+        "quality": "scholarly_ipa"
+      },
+      {
+        "ipa": "/lǎtiːn/",
+        "accent": "unspecified",
+        "language_code": "",
+        "quality": "scholarly_ipa"
+      }
+    ],
+    "phonology_excerpt_chars": 3500
+  },
+  "on_screen_labels": {
+    "text": "attested text",
+    "pronunciation": "reconstructed pronunciation"
+  },
+  "shots": [
+    {
+      "id": "01_cold_open",
+      "t_start": 0,
+      "t_end": 6,
+      "duration": 6,
+      "on_screen": "Latin · Virgil, Aeneid (19 BCE)",
+      "video_prompt": "The avatar speaks slowly and clearly in reconstructed Classical Latin, lip-synced, delivering: \"Arma virumque canō, Trōiae quī prīmus ab ōrīs\". Subtle slow push-in, documentary tone, on-screen caption feel. Speech must match reconstructed pronunciation.",
+      "speech_text": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+      "speech_ipa": "[ˈar.ma wɪˈrũːk.we ˈka.noː ˈtroː.jae̯ kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+      "pace": "slow"
+    },
+    {
+      "id": "02_natural_ipa",
+      "t_start": 6,
+      "t_end": 12,
+      "duration": 6,
+      "on_screen": "Arma virumque canō, Trōiae quī prīmus ab ōrīs\n[ˈar.ma wɪˈrũːk.we ˈka.noː ˈtroː.jae̯ kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+      "video_prompt": "Avatar speaks the line at natural scholarly pace in reconstructed Classical Latin, lip-synced: \"Arma virumque canō, Trōiae quī prīmus ab ōrīs\". Hold steady medium shot. Clear educational audio. IPA overlay implied.",
+      "speech_text": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+      "speech_ipa": "[ˈar.ma wɪˈrũːk.we ˈka.noː ˈtroː.jae̯ kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+      "pace": "natural"
+    },
+    {
+      "id": "03_lesson_v → [w]",
+      "t_start": 12,
+      "t_end": 18,
+      "duration": 6,
+      "on_screen": "v → [w] · virumque → [wɪˈrũːk.we]",
+      "video_prompt": "Avatar voices a minimal contrast in reconstructed Classical Latin, lip-synced, emphasizing \"virumque\" (v → [w]). Micro-lesson card energy, steady camera, crisp speech.",
+      "speech_text": "virumque",
+      "speech_ipa": "virumque → [wɪˈrũːk.we]",
+      "pace": "didactic"
+    },
+    {
+      "id": "04_lesson_c → [k] ",
+      "t_start": 18,
+      "t_end": 24,
+      "duration": 6,
+      "on_screen": "c → [k] always · cano → [ˈka.noː]",
+      "video_prompt": "Avatar voices a minimal contrast in reconstructed Classical Latin, lip-synced, emphasizing \"cano\" (c → [k] always). Micro-lesson card energy, steady camera, crisp speech.",
+      "speech_text": "cano",
+      "speech_ipa": "cano → [ˈka.noː]",
+      "pace": "didactic"
+    },
+    {
+      "id": "05_lesson_vowel le",
+      "t_start": 24,
+      "t_end": 30,
+      "duration": 6,
+      "on_screen": "vowel length · prīmus → [ˈpriː.mʊs]",
+      "video_prompt": "Avatar voices a minimal contrast in reconstructed Classical Latin, lip-synced, emphasizing \"prīmus\" (vowel length). Micro-lesson card energy, steady camera, crisp speech.",
+      "speech_text": "prīmus",
+      "speech_ipa": "prīmus → [ˈpriː.mʊs]",
+      "pace": "didactic"
+    },
+    {
+      "id": "06_full_line",
+      "t_start": 24,
+      "t_end": 34,
+      "duration": 10,
+      "on_screen": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+      "video_prompt": "Avatar delivers the full attested line confidently in reconstructed Classical Latin, lip-synced: \"Arma virumque canō, Trōiae quī prīmus ab ōrīs\". Slight energy lift, documentary climax, medium close-up, clear audio.",
+      "speech_text": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+      "speech_ipa": "[ˈar.ma wɪˈrũːk.we ˈka.noː ˈtroː.jae̯ kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+      "pace": "confident"
+    }
+  ],
+  "total_duration_target_s": 41,
+  "provenance": {
+    "text": "Virgil, Aeneid 1.1, public domain. Attested.",
+    "pronunciation": "Reconstructed Classical (restituta), scholarly consensus; high confidence.",
+    "sources": "Wikipedia / Wiktionary (CC BY-SA), Wikidata (CC0), retrieved 2026-06-18.",
+    "brain_scrape": "languages/dead/classical-latin/research/brain/latest_scrape.json",
+    "scrape_at": "2026-06-18T13:24:07.342689+00:00"
+  }
+}

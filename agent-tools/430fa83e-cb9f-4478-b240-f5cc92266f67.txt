@@ -1,0 +1,893 @@
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Alabama_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Alaska_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Arizona_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Arkansas_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/California_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Connecticut_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Delaware_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Florida_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Georgia_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Hawaii_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/ICC_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Idaho_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Illinois_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Indiana_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Iowa_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Kansas_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Kentucky_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Louisiana_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Maine_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Maryland_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Minnesota_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Missouri_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Montana_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Nebraska_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Nevada_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/New_Jersey_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/New_Mexico_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/New_York_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/North_Carolina_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/North_Dakota_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Ohio_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Oklahoma_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Oregon_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Pennsylvania_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Rhode_Island_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/South_Carolina_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/South_Dakota_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Tennessee_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Texas_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Utah_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Vermont_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Virginia_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Washington_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/West_Virginia_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Wisconsin_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Wyoming_Building_Codes/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Processing/FDA_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Alabama_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Arizona_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Arkansas_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Connecticut_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Delaware_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/FDA_Food_Code/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Florida_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Georgia_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Hawaii_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Idaho_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Illinois_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Indiana_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Iowa_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Kentucky_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Louisiana_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Maine_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Maryland_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Minnesota_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Mississippi_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Missouri_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Montana_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Nebraska_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Nevada_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/New_Hampshire_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/New_Jersey_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/New_Mexico_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/New_York_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/North_Carolina_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/North_Dakota_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Ohio_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Oklahoma_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Oregon_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Pennsylvania_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Rhode_Island_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/South_Carolina_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/South_Dakota_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Tennessee_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Texas_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Utah_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Vermont_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Virginia_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Washington_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/West_Virginia_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Wisconsin_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Wyoming_Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Alabama_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Alabama_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Alabama_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Arizona_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Arizona_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Arkansas_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Arkansas_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Arkansas_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/California_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/California_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/California_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Colorado_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Colorado_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Colorado_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Connecticut_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Connecticut_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Delaware_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Delaware_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Florida_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Florida_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Florida_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Georgia_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Georgia_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Hawaii_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Hawaii_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Hawaii_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Idaho_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Idaho_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Idaho_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Illinois_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Illinois_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Illinois_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Indiana_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Indiana_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Indiana_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Iowa_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Iowa_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Iowa_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Kansas_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Kansas_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Kansas_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Kentucky_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Kentucky_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Kentucky_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Louisiana_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Louisiana_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Louisiana_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Maine_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Maine_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Maine_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Maryland_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Maryland_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Maryland_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Massachusetts_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Massachusetts_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Massachusetts_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Michigan_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Michigan_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Michigan_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Minnesota_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Minnesota_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Mississippi_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Mississippi_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Mississippi_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Montana_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Montana_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Montana_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Nebraska_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Nebraska_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Nebraska_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Nevada_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Nevada_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Nevada_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_Jersey_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_Jersey_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_Jersey_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_Mexico_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_Mexico_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_Mexico_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_York_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_York_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_York_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/North_Dakota_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/North_Dakota_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/North_Dakota_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Ohio_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Ohio_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Ohio_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oklahoma_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oklahoma_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oklahoma_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oregon_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oregon_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oregon_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Pennsylvania_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Pennsylvania_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Pennsylvania_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Rhode_Island_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Rhode_Island_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Rhode_Island_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/South_Carolina_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/South_Carolina_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/South_Carolina_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/South_Dakota_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/South_Dakota_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/South_Dakota_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Tennessee_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Tennessee_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Texas_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Texas_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Texas_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Utah_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Utah_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Utah_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Virginia_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Virginia_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Virginia_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Washington_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Washington_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Washington_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/West_Virginia_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/West_Virginia_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/West_Virginia_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Wisconsin_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Wisconsin_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Wisconsin_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Wyoming_Real_Estate_Broker/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Wyoming_Real_Estate_Company/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Wyoming_Real_Estate_Salesperson/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Federal/CISA_Federal_Physical_Security/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Alabama_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Alaska_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Arizona_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Arkansas_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/California_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Connecticut_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Delaware_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Florida_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Georgia_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Idaho_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Illinois_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Indiana_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Iowa_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Kentucky_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Louisiana_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Maine_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Maryland_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Montana_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Nebraska_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/New_Mexico_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/New_York_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/North_Carolina_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/North_Dakota_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Oklahoma_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Oregon_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Pennsylvania_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Rhode_Island_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/South_Carolina_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/South_Dakota_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Tennessee_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Texas_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Utah_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Virginia_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Washington_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/West_Virginia_Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Alabama/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Alabama/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Alabama/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Alabama/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Alaska/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Alaska/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Arizona/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Arizona/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Arizona/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Arizona/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Arkansas/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Arkansas/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Arkansas/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Arkansas/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/California/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/California/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/California/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Colorado/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Connecticut/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Connecticut/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Connecticut/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Connecticut/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Delaware/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Delaware/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Delaware/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Delaware/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Florida/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Florida/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Florida/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Florida/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Georgia/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Georgia/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Georgia/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Georgia/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Hawaii/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Hawaii/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Hawaii/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Idaho/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Idaho/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Idaho/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Idaho/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Illinois/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Illinois/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Illinois/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Illinois/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Indiana/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Indiana/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Indiana/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Indiana/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Iowa/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Iowa/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Iowa/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Iowa/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Kansas/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Kansas/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Kentucky/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Kentucky/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Kentucky/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Kentucky/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Louisiana/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Louisiana/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Louisiana/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Louisiana/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Maine/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Maine/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Maine/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Maine/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Maryland/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Maryland/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Maryland/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Maryland/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Massachusetts/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Michigan/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Minnesota/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Minnesota/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Minnesota/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Mississippi/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Mississippi/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Missouri/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Missouri/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Montana/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Montana/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Montana/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Montana/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Nebraska/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Nebraska/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Nebraska/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Nebraska/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Nevada/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Nevada/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Nevada/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/New Hampshire/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/New Jersey/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/New Jersey/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/New Jersey/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/New Mexico/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/New Mexico/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/New Mexico/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/New Mexico/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/New York/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/New York/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/New York/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/New York/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/North Carolina/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/North Carolina/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/North Carolina/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/North Dakota/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/North Dakota/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/North Dakota/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/North Dakota/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Ohio/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Ohio/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Ohio/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Oklahoma/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Oklahoma/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Oklahoma/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Oklahoma/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Oregon/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Oregon/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Oregon/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Oregon/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Pennsylvania/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Pennsylvania/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Pennsylvania/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Pennsylvania/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Rhode Island/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Rhode Island/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Rhode Island/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Rhode Island/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/South Carolina/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/South Carolina/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/South Carolina/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/South Carolina/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/South Dakota/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/South Dakota/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/South Dakota/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/South Dakota/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Tennessee/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Tennessee/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Tennessee/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Tennessee/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Texas/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Texas/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Texas/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Texas/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Utah/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Utah/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Utah/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Utah/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Vermont/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Vermont/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Virginia/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Virginia/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Virginia/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Virginia/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Washington/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Washington/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Washington/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Washington/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/West Virginia/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/West Virginia/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/West Virginia/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/West Virginia/Security_Licensing/latest.txt
+modified:   Operations/Compliance_Research/By_State/Wisconsin/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Wisconsin/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Wisconsin/Real_Estate/latest.txt
+modified:   Operations/Compliance_Research/By_State/Wyoming/Building_Construction/latest.txt
+modified:   Operations/Compliance_Research/By_State/Wyoming/Food_Safety/latest.txt
+modified:   Operations/Compliance_Research/By_State/Wyoming/Real_Estate/latest.txt
+modified:   apps/cli/main.py
+modified:   connectors/evidence_collector_sdk/recipe_registry.py
+modified:   connectors/evidence_collector_sdk/recipes/jurisdiction/README.md
+modified:   connectors/evidence_collector_sdk/recipes/jurisdiction/__init__.py
+modified:   core/sot.py
+modified:   docs/automation-reference.md
+modified:   docs/operations-manual.md
+modified:   docs/sop-food-safety.md
+modified:   docs/sop-real-estate.md
+modified:   docs/sop-security.md
+modified:   tests/test_crm_crud.py
+modified:   tests/test_jurisdiction_collectors.py
+modified:   tests/test_reference_recipes.py
+modified:   tests/test_sot.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Alabama_Building_Codes/2026-06-18_0501.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Alaska_Building_Codes/2026-06-18_0501.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Arizona_Building_Codes/2026-06-18_0502.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Arkansas_Building_Codes/2026-06-18_0502.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/California_Building_Codes/2026-06-18_0502.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Connecticut_Building_Codes/2026-06-18_0503.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Delaware_Building_Codes/2026-06-18_0503.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Florida_Building_Codes/2026-06-18_0504.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Georgia_Building_Codes/2026-06-18_0504.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Hawaii_Building_Codes/2026-06-18_0504.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/ICC_Building_Codes/2026-06-18_0501.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Idaho_Building_Codes/2026-06-18_0505.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Illinois_Building_Codes/2026-06-18_0505.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Indiana_Building_Codes/2026-06-18_0506.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Iowa_Building_Codes/2026-06-18_0506.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Kansas_Building_Codes/2026-06-18_0506.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Kentucky_Building_Codes/2026-06-18_0507.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Louisiana_Building_Codes/2026-06-18_0507.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Maine_Building_Codes/2026-06-18_0507.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Maryland_Building_Codes/2026-06-18_0508.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Minnesota_Building_Codes/2026-06-18_0509.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Missouri_Building_Codes/2026-06-18_0510.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Montana_Building_Codes/2026-06-18_0510.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Nebraska_Building_Codes/2026-06-18_0510.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Nevada_Building_Codes/2026-06-18_0511.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/New_Jersey_Building_Codes/2026-06-18_0511.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/New_Mexico_Building_Codes/2026-06-18_0512.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/New_York_Building_Codes/2026-06-18_0512.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/North_Carolina_Building_Codes/2026-06-18_0513.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/North_Dakota_Building_Codes/2026-06-18_0513.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Ohio_Building_Codes/2026-06-18_0513.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Oklahoma_Building_Codes/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Oregon_Building_Codes/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Pennsylvania_Building_Codes/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Rhode_Island_Building_Codes/2026-06-18_0515.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/South_Carolina_Building_Codes/2026-06-18_0515.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/South_Dakota_Building_Codes/2026-06-18_0515.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Tennessee_Building_Codes/2026-06-18_0516.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Texas_Building_Codes/2026-06-18_0516.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Utah_Building_Codes/2026-06-18_0516.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Vermont_Building_Codes/2026-06-18_0517.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Virginia_Building_Codes/2026-06-18_0517.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Washington_Building_Codes/2026-06-18_0517.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/West_Virginia_Building_Codes/2026-06-18_0518.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Wisconsin_Building_Codes/2026-06-18_0518.txt
+Operations/Compliance_Research/By_Category/Building_Construction/Building_Codes/Wyoming_Building_Codes/2026-06-18_0518.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Processing/FDA_Food_Safety/2026-06-18_0500.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Alabama_Food_Safety/2026-06-18_0501.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Arizona_Food_Safety/2026-06-18_0501.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Arkansas_Food_Safety/2026-06-18_0502.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Connecticut_Food_Safety/2026-06-18_0503.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Delaware_Food_Safety/2026-06-18_0503.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/FDA_Food_Code/2026-06-18_0500.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Florida_Food_Safety/2026-06-18_0504.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Georgia_Food_Safety/2026-06-18_0504.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Hawaii_Food_Safety/2026-06-18_0504.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Idaho_Food_Safety/2026-06-18_0505.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Illinois_Food_Safety/2026-06-18_0505.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Indiana_Food_Safety/2026-06-18_0506.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Iowa_Food_Safety/2026-06-18_0506.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Kentucky_Food_Safety/2026-06-18_0507.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Louisiana_Food_Safety/2026-06-18_0507.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Maine_Food_Safety/2026-06-18_0507.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Maryland_Food_Safety/2026-06-18_0508.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Minnesota_Food_Safety/2026-06-18_0509.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Mississippi_Food_Safety/2026-06-18_0509.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Missouri_Food_Safety/2026-06-18_0510.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Montana_Food_Safety/2026-06-18_0510.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Nebraska_Food_Safety/2026-06-18_0510.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Nevada_Food_Safety/2026-06-18_0511.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/New_Hampshire_Food_Safety/2026-06-18_0511.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/New_Jersey_Food_Safety/2026-06-18_0511.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/New_Mexico_Food_Safety/2026-06-18_0512.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/New_York_Food_Safety/2026-06-18_0512.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/North_Carolina_Food_Safety/2026-06-18_0512.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/North_Dakota_Food_Safety/2026-06-18_0513.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Ohio_Food_Safety/2026-06-18_0513.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Oklahoma_Food_Safety/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Oregon_Food_Safety/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Pennsylvania_Food_Safety/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Rhode_Island_Food_Safety/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/South_Carolina_Food_Safety/2026-06-18_0515.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/South_Dakota_Food_Safety/2026-06-18_0515.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Tennessee_Food_Safety/2026-06-18_0516.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Texas_Food_Safety/2026-06-18_0516.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Utah_Food_Safety/2026-06-18_0516.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Vermont_Food_Safety/2026-06-18_0517.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Virginia_Food_Safety/2026-06-18_0517.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Washington_Food_Safety/2026-06-18_0517.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/West_Virginia_Food_Safety/2026-06-18_0518.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Wisconsin_Food_Safety/2026-06-18_0518.txt
+Operations/Compliance_Research/By_Category/Food_Safety_Regulations/Restaurants/Wyoming_Food_Safety/2026-06-18_0518.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Alabama_Real_Estate_Broker/2026-06-18_0501.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Alabama_Real_Estate_Company/2026-06-18_0501.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Alabama_Real_Estate_Salesperson/2026-06-18_0501.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Arizona_Real_Estate_Broker/2026-06-18_0501.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Arizona_Real_Estate_Salesperson/2026-06-18_0501.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Arkansas_Real_Estate_Broker/2026-06-18_0502.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Arkansas_Real_Estate_Company/2026-06-18_0502.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Arkansas_Real_Estate_Salesperson/2026-06-18_0502.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/California_Real_Estate_Broker/2026-06-18_0502.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/California_Real_Estate_Company/2026-06-18_0502.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/California_Real_Estate_Salesperson/2026-06-18_0502.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Colorado_Real_Estate_Broker/2026-06-18_0502.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Colorado_Real_Estate_Company/2026-06-18_0503.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Colorado_Real_Estate_Salesperson/2026-06-18_0502.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Connecticut_Real_Estate_Broker/2026-06-18_0503.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Connecticut_Real_Estate_Salesperson/2026-06-18_0503.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Delaware_Real_Estate_Broker/2026-06-18_0503.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Delaware_Real_Estate_Salesperson/2026-06-18_0503.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Florida_Real_Estate_Broker/2026-06-18_0504.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Florida_Real_Estate_Company/2026-06-18_0504.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Florida_Real_Estate_Salesperson/2026-06-18_0503.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Georgia_Real_Estate_Broker/2026-06-18_0504.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Georgia_Real_Estate_Company/2026-06-18_0504.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Hawaii_Real_Estate_Broker/2026-06-18_0504.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Hawaii_Real_Estate_Company/2026-06-18_0504.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Hawaii_Real_Estate_Salesperson/2026-06-18_0504.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Idaho_Real_Estate_Broker/2026-06-18_0505.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Idaho_Real_Estate_Company/2026-06-18_0505.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Idaho_Real_Estate_Salesperson/2026-06-18_0505.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Illinois_Real_Estate_Broker/2026-06-18_0505.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Illinois_Real_Estate_Company/2026-06-18_0505.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Illinois_Real_Estate_Salesperson/2026-06-18_0505.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Indiana_Real_Estate_Broker/2026-06-18_0505.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Indiana_Real_Estate_Company/2026-06-18_0505.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Indiana_Real_Estate_Salesperson/2026-06-18_0505.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Iowa_Real_Estate_Broker/2026-06-18_0506.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Iowa_Real_Estate_Company/2026-06-18_0506.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Iowa_Real_Estate_Salesperson/2026-06-18_0506.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Kansas_Real_Estate_Broker/2026-06-18_0506.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Kansas_Real_Estate_Company/2026-06-18_0506.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Kansas_Real_Estate_Salesperson/2026-06-18_0506.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Kentucky_Real_Estate_Broker/2026-06-18_0506.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Kentucky_Real_Estate_Company/2026-06-18_0507.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Kentucky_Real_Estate_Salesperson/2026-06-18_0506.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Louisiana_Real_Estate_Broker/2026-06-18_0507.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Louisiana_Real_Estate_Company/2026-06-18_0507.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Louisiana_Real_Estate_Salesperson/2026-06-18_0507.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Maine_Real_Estate_Broker/2026-06-18_0507.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Maine_Real_Estate_Company/2026-06-18_0507.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Maine_Real_Estate_Salesperson/2026-06-18_0507.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Maryland_Real_Estate_Broker/2026-06-18_0508.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Maryland_Real_Estate_Company/2026-06-18_0508.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Maryland_Real_Estate_Salesperson/2026-06-18_0507.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Massachusetts_Real_Estate_Broker/2026-06-18_0508.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Massachusetts_Real_Estate_Company/2026-06-18_0508.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Massachusetts_Real_Estate_Salesperson/2026-06-18_0508.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Michigan_Real_Estate_Broker/2026-06-18_0508.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Michigan_Real_Estate_Company/2026-06-18_0508.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Michigan_Real_Estate_Salesperson/2026-06-18_0508.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Minnesota_Real_Estate_Broker/2026-06-18_0509.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Minnesota_Real_Estate_Company/2026-06-18_0509.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Mississippi_Real_Estate_Broker/2026-06-18_0509.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Mississippi_Real_Estate_Company/2026-06-18_0509.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Mississippi_Real_Estate_Salesperson/2026-06-18_0509.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Missouri_Real_Estate_Broker/
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Missouri_Real_Estate_Company/
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Missouri_Real_Estate_Salesperson/
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Montana_Real_Estate_Broker/2026-06-18_0510.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Montana_Real_Estate_Company/2026-06-18_0510.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Montana_Real_Estate_Salesperson/2026-06-18_0510.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Nebraska_Real_Estate_Broker/2026-06-18_0510.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Nebraska_Real_Estate_Company/2026-06-18_0510.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Nebraska_Real_Estate_Salesperson/2026-06-18_0510.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Nevada_Real_Estate_Broker/2026-06-18_0511.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Nevada_Real_Estate_Company/2026-06-18_0511.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Nevada_Real_Estate_Salesperson/2026-06-18_0510.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_Jersey_Real_Estate_Broker/2026-06-18_0511.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_Jersey_Real_Estate_Company/2026-06-18_0511.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_Jersey_Real_Estate_Salesperson/2026-06-18_0511.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_Mexico_Real_Estate_Broker/2026-06-18_0512.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_Mexico_Real_Estate_Company/2026-06-18_0512.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_Mexico_Real_Estate_Salesperson/2026-06-18_0512.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_York_Real_Estate_Broker/2026-06-18_0512.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_York_Real_Estate_Company/2026-06-18_0512.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/New_York_Real_Estate_Salesperson/2026-06-18_0512.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/North_Carolina_Real_Estate_Broker/
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/North_Carolina_Real_Estate_Company/
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/North_Carolina_Real_Estate_Salesperson/
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/North_Dakota_Real_Estate_Broker/2026-06-18_0513.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/North_Dakota_Real_Estate_Company/2026-06-18_0513.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/North_Dakota_Real_Estate_Salesperson/2026-06-18_0513.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Ohio_Real_Estate_Broker/2026-06-18_0513.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Ohio_Real_Estate_Company/2026-06-18_0513.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Ohio_Real_Estate_Salesperson/2026-06-18_0513.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oklahoma_Real_Estate_Broker/2026-06-18_0513.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oklahoma_Real_Estate_Company/2026-06-18_0513.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oklahoma_Real_Estate_Salesperson/2026-06-18_0513.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oregon_Real_Estate_Broker/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oregon_Real_Estate_Company/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Oregon_Real_Estate_Salesperson/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Pennsylvania_Real_Estate_Broker/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Pennsylvania_Real_Estate_Company/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Pennsylvania_Real_Estate_Salesperson/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Rhode_Island_Real_Estate_Broker/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Rhode_Island_Real_Estate_Company/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Rhode_Island_Real_Estate_Salesperson/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/South_Carolina_Real_Estate_Broker/2026-06-18_0515.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/South_Carolina_Real_Estate_Company/2026-06-18_0515.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/South_Carolina_Real_Estate_Salesperson/2026-06-18_0515.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/South_Dakota_Real_Estate_Broker/2026-06-18_0515.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/South_Dakota_Real_Estate_Company/2026-06-18_0515.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/South_Dakota_Real_Estate_Salesperson/2026-06-18_0515.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Tennessee_Real_Estate_Broker/2026-06-18_0515.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Tennessee_Real_Estate_Company/2026-06-18_0515.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Tennessee_Real_Estate_Salesperson/
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Texas_Real_Estate_Broker/2026-06-18_0516.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Texas_Real_Estate_Company/2026-06-18_0516.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Texas_Real_Estate_Salesperson/2026-06-18_0516.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Utah_Real_Estate_Broker/2026-06-18_0516.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Utah_Real_Estate_Company/2026-06-18_0516.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Utah_Real_Estate_Salesperson/2026-06-18_0516.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Virginia_Real_Estate_Broker/2026-06-18_0517.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Virginia_Real_Estate_Company/2026-06-18_0517.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Virginia_Real_Estate_Salesperson/2026-06-18_0517.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Washington_Real_Estate_Broker/2026-06-18_0517.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Washington_Real_Estate_Company/2026-06-18_0517.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Washington_Real_Estate_Salesperson/2026-06-18_0517.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/West_Virginia_Real_Estate_Broker/2026-06-18_0517.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/West_Virginia_Real_Estate_Company/2026-06-18_0518.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/West_Virginia_Real_Estate_Salesperson/2026-06-18_0517.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Wisconsin_Real_Estate_Broker/2026-06-18_0518.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Wisconsin_Real_Estate_Company/2026-06-18_0518.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Wisconsin_Real_Estate_Salesperson/2026-06-18_0518.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Wyoming_Real_Estate_Broker/2026-06-18_0518.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Wyoming_Real_Estate_Company/2026-06-18_0518.txt
+Operations/Compliance_Research/By_Category/Real_Estate/Licensing/Wyoming_Real_Estate_Salesperson/2026-06-18_0518.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Federal/CISA_Federal_Physical_Security/2026-06-18_0501.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Alabama_Security_Licensing/2026-06-18_0501.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Alaska_Security_Licensing/2026-06-18_0501.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Arizona_Security_Licensing/2026-06-18_0502.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Arkansas_Security_Licensing/2026-06-18_0502.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/California_Security_Licensing/2026-06-18_0502.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Connecticut_Security_Licensing/2026-06-18_0503.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Delaware_Security_Licensing/2026-06-18_0503.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Florida_Security_Licensing/2026-06-18_0504.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Georgia_Security_Licensing/2026-06-18_0504.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Idaho_Security_Licensing/2026-06-18_0505.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Illinois_Security_Licensing/2026-06-18_0505.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Indiana_Security_Licensing/2026-06-18_0506.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Iowa_Security_Licensing/2026-06-18_0506.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Kentucky_Security_Licensing/2026-06-18_0507.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Louisiana_Security_Licensing/2026-06-18_0507.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Maine_Security_Licensing/2026-06-18_0507.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Maryland_Security_Licensing/2026-06-18_0508.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Montana_Security_Licensing/2026-06-18_0510.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Nebraska_Security_Licensing/2026-06-18_0510.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/New_Mexico_Security_Licensing/2026-06-18_0512.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/New_York_Security_Licensing/2026-06-18_0512.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/North_Carolina_Security_Licensing/2026-06-18_0513.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/North_Dakota_Security_Licensing/2026-06-18_0513.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Oklahoma_Security_Licensing/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Oregon_Security_Licensing/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Pennsylvania_Security_Licensing/2026-06-18_0514.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Rhode_Island_Security_Licensing/2026-06-18_0515.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/South_Carolina_Security_Licensing/2026-06-18_0515.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/South_Dakota_Security_Licensing/2026-06-18_0515.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Tennessee_Security_Licensing/2026-06-18_0516.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Texas_Security_Licensing/2026-06-18_0516.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Utah_Security_Licensing/2026-06-18_0516.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Virginia_Security_Licensing/2026-06-18_0517.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/Washington_Security_Licensing/2026-06-18_0517.txt
+Operations/Compliance_Research/By_Category/Security_Licensing/Licensing/West_Virginia_Security_Licensing/2026-06-18_0518.txt
+Operations/Compliance_Research/By_State/Alabama/Building_Construction/2026-06-18_0501.txt
+Operations/Compliance_Research/By_State/Alabama/Food_Safety/2026-06-18_0501.txt
+Operations/Compliance_Research/By_State/Alabama/Real_Estate/2026-06-18_0501.txt
+Operations/Compliance_Research/By_State/Alabama/Security_Licensing/2026-06-18_0501.txt
+Operations/Compliance_Research/By_State/Alaska/Building_Construction/2026-06-18_0501.txt
+Operations/Compliance_Research/By_State/Alaska/Security_Licensing/2026-06-18_0501.txt
+Operations/Compliance_Research/By_State/Arizona/Building_Construction/2026-06-18_0502.txt
+Operations/Compliance_Research/By_State/Arizona/Food_Safety/2026-06-18_0501.txt
+Operations/Compliance_Research/By_State/Arizona/Real_Estate/2026-06-18_0501.txt
+Operations/Compliance_Research/By_State/Arizona/Security_Licensing/2026-06-18_0502.txt
+Operations/Compliance_Research/By_State/Arkansas/Building_Construction/2026-06-18_0502.txt
+Operations/Compliance_Research/By_State/Arkansas/Food_Safety/2026-06-18_0502.txt
+Operations/Compliance_Research/By_State/Arkansas/Real_Estate/2026-06-18_0502.txt
+Operations/Compliance_Research/By_State/Arkansas/Security_Licensing/2026-06-18_0502.txt
+Operations/Compliance_Research/By_State/California/Building_Construction/2026-06-18_0502.txt
+Operations/Compliance_Research/By_State/California/Real_Estate/2026-06-18_0502.txt
+Operations/Compliance_Research/By_State/California/Security_Licensing/2026-06-18_0502.txt
+Operations/Compliance_Research/By_State/Colorado/Real_Estate/2026-06-18_0502.txt
+Operations/Compliance_Research/By_State/Colorado/Real_Estate/2026-06-18_0503.txt
+Operations/Compliance_Research/By_State/Connecticut/Building_Construction/2026-06-18_0503.txt
+Operations/Compliance_Research/By_State/Connecticut/Food_Safety/2026-06-18_0503.txt
+Operations/Compliance_Research/By_State/Connecticut/Real_Estate/2026-06-18_0503.txt
+Operations/Compliance_Research/By_State/Connecticut/Security_Licensing/2026-06-18_0503.txt
+Operations/Compliance_Research/By_State/Delaware/Building_Construction/2026-06-18_0503.txt
+Operations/Compliance_Research/By_State/Delaware/Food_Safety/2026-06-18_0503.txt
+Operations/Compliance_Research/By_State/Delaware/Real_Estate/2026-06-18_0503.txt
+Operations/Compliance_Research/By_State/Delaware/Security_Licensing/2026-06-18_0503.txt
+Operations/Compliance_Research/By_State/Florida/Building_Construction/2026-06-18_0504.txt
+Operations/Compliance_Research/By_State/Florida/Food_Safety/2026-06-18_0504.txt
+Operations/Compliance_Research/By_State/Florida/Real_Estate/2026-06-18_0503.txt
+Operations/Compliance_Research/By_State/Florida/Real_Estate/2026-06-18_0504.txt
+Operations/Compliance_Research/By_State/Florida/Security_Licensing/2026-06-18_0504.txt
+Operations/Compliance_Research/By_State/Georgia/Building_Construction/2026-06-18_0504.txt
+Operations/Compliance_Research/By_State/Georgia/Food_Safety/2026-06-18_0504.txt
+Operations/Compliance_Research/By_State/Georgia/Real_Estate/2026-06-18_0504.txt
+Operations/Compliance_Research/By_State/Georgia/Security_Licensing/2026-06-18_0504.txt
+Operations/Compliance_Research/By_State/Hawaii/Building_Construction/2026-06-18_0504.txt
+Operations/Compliance_Research/By_State/Hawaii/Food_Safety/2026-06-18_0504.txt
+Operations/Compliance_Research/By_State/Hawaii/Real_Estate/2026-06-18_0504.txt
+Operations/Compliance_Research/By_State/Idaho/Building_Construction/2026-06-18_0505.txt
+Operations/Compliance_Research/By_State/Idaho/Food_Safety/2026-06-18_0505.txt
+Operations/Compliance_Research/By_State/Idaho/Real_Estate/2026-06-18_0505.txt
+Operations/Compliance_Research/By_State/Idaho/Security_Licensing/2026-06-18_0505.txt
+Operations/Compliance_Research/By_State/Illinois/Building_Construction/2026-06-18_0505.txt
+Operations/Compliance_Research/By_State/Illinois/Food_Safety/2026-06-18_0505.txt
+Operations/Compliance_Research/By_State/Illinois/Real_Estate/2026-06-18_0505.txt
+Operations/Compliance_Research/By_State/Illinois/Security_Licensing/2026-06-18_0505.txt
+Operations/Compliance_Research/By_State/Indiana/Building_Construction/2026-06-18_0506.txt
+Operations/Compliance_Research/By_State/Indiana/Food_Safety/2026-06-18_0506.txt
+Operations/Compliance_Research/By_State/Indiana/Real_Estate/2026-06-18_0505.txt
+Operations/Compliance_Research/By_State/Indiana/Security_Licensing/2026-06-18_0506.txt
+Operations/Compliance_Research/By_State/Iowa/Building_Construction/2026-06-18_0506.txt
+Operations/Compliance_Research/By_State/Iowa/Food_Safety/2026-06-18_0506.txt
+Operations/Compliance_Research/By_State/Iowa/Real_Estate/2026-06-18_0506.txt
+Operations/Compliance_Research/By_State/Iowa/Security_Licensing/2026-06-18_0506.txt
+Operations/Compliance_Research/By_State/Kansas/Building_Construction/2026-06-18_0506.txt
+Operations/Compliance_Research/By_State/Kansas/Real_Estate/2026-06-18_0506.txt
+Operations/Compliance_Research/By_State/Kentucky/Building_Construction/2026-06-18_0507.txt
+Operations/Compliance_Research/By_State/Kentucky/Food_Safety/2026-06-18_0507.txt
+Operations/Compliance_Research/By_State/Kentucky/Real_Estate/2026-06-18_0506.txt
+Operations/Compliance_Research/By_State/Kentucky/Real_Estate/2026-06-18_0507.txt
+Operations/Compliance_Research/By_State/Kentucky/Security_Licensing/2026-06-18_0507.txt
+Operations/Compliance_Research/By_State/Louisiana/Building_Construction/2026-06-18_0507.txt
+Operations/Compliance_Research/By_State/Louisiana/Food_Safety/2026-06-18_0507.txt
+Operations/Compliance_Research/By_State/Louisiana/Real_Estate/2026-06-18_0507.txt
+Operations/Compliance_Research/By_State/Louisiana/Security_Licensing/2026-06-18_0507.txt
+Operations/Compliance_Research/By_State/Maine/Building_Construction/2026-06-18_0507.txt
+Operations/Compliance_Research/By_State/Maine/Food_Safety/2026-06-18_0507.txt
+Operations/Compliance_Research/By_State/Maine/Real_Estate/2026-06-18_0507.txt
+Operations/Compliance_Research/By_State/Maine/Security_Licensing/2026-06-18_0507.txt
+Operations/Compliance_Research/By_State/Maryland/Building_Construction/2026-06-18_0508.txt
+Operations/Compliance_Research/By_State/Maryland/Food_Safety/2026-06-18_0508.txt
+Operations/Compliance_Research/By_State/Maryland/Real_Estate/2026-06-18_0507.txt
+Operations/Compliance_Research/By_State/Maryland/Real_Estate/2026-06-18_0508.txt
+Operations/Compliance_Research/By_State/Maryland/Security_Licensing/2026-06-18_0508.txt
+Operations/Compliance_Research/By_State/Massachusetts/Real_Estate/2026-06-18_0508.txt
+Operations/Compliance_Research/By_State/Michigan/Real_Estate/2026-06-18_0508.txt
+Operations/Compliance_Research/By_State/Minnesota/Building_Construction/2026-06-18_0509.txt
+Operations/Compliance_Research/By_State/Minnesota/Food_Safety/2026-06-18_0509.txt
+Operations/Compliance_Research/By_State/Minnesota/Real_Estate/2026-06-18_0509.txt
+Operations/Compliance_Research/By_State/Mississippi/Food_Safety/2026-06-18_0509.txt
+Operations/Compliance_Research/By_State/Mississippi/Real_Estate/2026-06-18_0509.txt
+Operations/Compliance_Research/By_State/Missouri/Building_Construction/2026-06-18_0510.txt
+Operations/Compliance_Research/By_State/Missouri/Food_Safety/2026-06-18_0510.txt
+Operations/Compliance_Research/By_State/Missouri/Real_Estate/
+Operations/Compliance_Research/By_State/Montana/Building_Construction/2026-06-18_0510.txt
+Operations/Compliance_Research/By_State/Montana/Food_Safety/2026-06-18_0510.txt
+Operations/Compliance_Research/By_State/Montana/Real_Estate/2026-06-18_0510.txt
+Operations/Compliance_Research/By_State/Montana/Security_Licensing/2026-06-18_0510.txt
+Operations/Compliance_Research/By_State/Nebraska/Building_Construction/2026-06-18_0510.txt
+Operations/Compliance_Research/By_State/Nebraska/Food_Safety/2026-06-18_0510.txt
+Operations/Compliance_Research/By_State/Nebraska/Real_Estate/2026-06-18_0510.txt
+Operations/Compliance_Research/By_State/Nebraska/Security_Licensing/2026-06-18_0510.txt
+Operations/Compliance_Research/By_State/Nevada/Building_Construction/2026-06-18_0511.txt
+Operations/Compliance_Research/By_State/Nevada/Food_Safety/2026-06-18_0511.txt
+Operations/Compliance_Research/By_State/Nevada/Real_Estate/2026-06-18_0510.txt
+Operations/Compliance_Research/By_State/Nevada/Real_Estate/2026-06-18_0511.txt
+Operations/Compliance_Research/By_State/New Hampshire/Food_Safety/2026-06-18_0511.txt
+Operations/Compliance_Research/By_State/New Jersey/Building_Construction/2026-06-18_0511.txt
+Operations/Compliance_Research/By_State/New Jersey/Food_Safety/2026-06-18_0511.txt
+Operations/Compliance_Research/By_State/New Jersey/Real_Estate/2026-06-18_0511.txt
+Operations/Compliance_Research/By_State/New Mexico/Building_Construction/2026-06-18_0512.txt
+Operations/Compliance_Research/By_State/New Mexico/Food_Safety/2026-06-18_0512.txt
+Operations/Compliance_Research/By_State/New Mexico/Real_Estate/2026-06-18_0512.txt
+Operations/Compliance_Research/By_State/New Mexico/Security_Licensing/2026-06-18_0512.txt
+Operations/Compliance_Research/By_State/New York/Building_Construction/2026-06-18_0512.txt
+Operations/Compliance_Research/By_State/New York/Food_Safety/2026-06-18_0512.txt
+Operations/Compliance_Research/By_State/New York/Real_Estate/2026-06-18_0512.txt
+Operations/Compliance_Research/By_State/New York/Security_Licensing/2026-06-18_0512.txt
+Operations/Compliance_Research/By_State/North Carolina/Building_Construction/2026-06-18_0513.txt
+Operations/Compliance_Research/By_State/North Carolina/Food_Safety/2026-06-18_0512.txt
+Operations/Compliance_Research/By_State/North Carolina/Real_Estate/
+Operations/Compliance_Research/By_State/North Carolina/Security_Licensing/2026-06-18_0513.txt
+Operations/Compliance_Research/By_State/North Dakota/Building_Construction/2026-06-18_0513.txt
+Operations/Compliance_Research/By_State/North Dakota/Food_Safety/2026-06-18_0513.txt
+Operations/Compliance_Research/By_State/North Dakota/Real_Estate/2026-06-18_0513.txt
+Operations/Compliance_Research/By_State/North Dakota/Security_Licensing/2026-06-18_0513.txt
+Operations/Compliance_Research/By_State/Ohio/Building_Construction/2026-06-18_0513.txt
+Operations/Compliance_Research/By_State/Ohio/Food_Safety/2026-06-18_0513.txt
+Operations/Compliance_Research/By_State/Ohio/Real_Estate/2026-06-18_0513.txt
+Operations/Compliance_Research/By_State/Oklahoma/Building_Construction/2026-06-18_0514.txt
+Operations/Compliance_Research/By_State/Oklahoma/Food_Safety/2026-06-18_0514.txt
+Operations/Compliance_Research/By_State/Oklahoma/Real_Estate/2026-06-18_0513.txt
+Operations/Compliance_Research/By_State/Oklahoma/Security_Licensing/2026-06-18_0514.txt
+Operations/Compliance_Research/By_State/Oregon/Building_Construction/2026-06-18_0514.txt
+Operations/Compliance_Research/By_State/Oregon/Food_Safety/2026-06-18_0514.txt
+Operations/Compliance_Research/By_State/Oregon/Real_Estate/2026-06-18_0514.txt
+Operations/Compliance_Research/By_State/Oregon/Security_Licensing/2026-06-18_0514.txt
+Operations/Compliance_Research/By_State/Pennsylvania/Building_Construction/2026-06-18_0514.txt
+Operations/Compliance_Research/By_State/Pennsylvania/Food_Safety/2026-06-18_0514.txt
+Operations/Compliance_Research/By_State/Pennsylvania/Real_Estate/2026-06-18_0514.txt
+Operations/Compliance_Research/By_State/Pennsylvania/Security_Licensing/2026-06-18_0514.txt
+Operations/Compliance_Research/By_State/Rhode Island/Building_Construction/2026-06-18_0515.txt
+Operations/Compliance_Research/By_State/Rhode Island/Food_Safety/2026-06-18_0514.txt
+Operations/Compliance_Research/By_State/Rhode Island/Real_Estate/2026-06-18_0514.txt
+Operations/Compliance_Research/By_State/Rhode Island/Security_Licensing/2026-06-18_0515.txt
+Operations/Compliance_Research/By_State/South Carolina/Building_Construction/2026-06-18_0515.txt
+Operations/Compliance_Research/By_State/South Carolina/Food_Safety/2026-06-18_0515.txt
+Operations/Compliance_Research/By_State/South Carolina/Real_Estate/2026-06-18_0515.txt
+Operations/Compliance_Research/By_State/South Carolina/Security_Licensing/2026-06-18_0515.txt
+Operations/Compliance_Research/By_State/South Dakota/Building_Construction/2026-06-18_0515.txt
+Operations/Compliance_Research/By_State/South Dakota/Food_Safety/2026-06-18_0515.txt
+Operations/Compliance_Research/By_State/South Dakota/Real_Estate/2026-06-18_0515.txt
+Operations/Compliance_Research/By_State/South Dakota/Security_Licensing/2026-06-18_0515.txt
+Operations/Compliance_Research/By_State/Tennessee/Building_Construction/2026-06-18_0516.txt
+Operations/Compliance_Research/By_State/Tennessee/Food_Safety/2026-06-18_0516.txt
+Operations/Compliance_Research/By_State/Tennessee/Real_Estate/2026-06-18_0515.txt
+Operations/Compliance_Research/By_State/Tennessee/Security_Licensing/2026-06-18_0516.txt
+Operations/Compliance_Research/By_State/Texas/Building_Construction/2026-06-18_0516.txt
+Operations/Compliance_Research/By_State/Texas/Food_Safety/2026-06-18_0516.txt
+Operations/Compliance_Research/By_State/Texas/Real_Estate/2026-06-18_0516.txt
+Operations/Compliance_Research/By_State/Texas/Security_Licensing/2026-06-18_0516.txt
+Operations/Compliance_Research/By_State/Utah/Building_Construction/2026-06-18_0516.txt
+Operations/Compliance_Research/By_State/Utah/Food_Safety/2026-06-18_0516.txt
+Operations/Compliance_Research/By_State/Utah/Real_Estate/2026-06-18_0516.txt
+Operations/Compliance_Research/By_State/Utah/Security_Licensing/2026-06-18_0516.txt
+Operations/Compliance_Research/By_State/Vermont/Building_Construction/2026-06-18_0517.txt
+Operations/Compliance_Research/By_State/Vermont/Food_Safety/2026-06-18_0517.txt
+Operations/Compliance_Research/By_State/Virginia/Building_Construction/2026-06-18_0517.txt
+Operations/Compliance_Research/By_State/Virginia/Food_Safety/2026-06-18_0517.txt
+Operations/Compliance_Research/By_State/Virginia/Real_Estate/2026-06-18_0517.txt
+Operations/Compliance_Research/By_State/Virginia/Security_Licensing/2026-06-18_0517.txt
+Operations/Compliance_Research/By_State/Washington/Building_Construction/2026-06-18_0517.txt
+Operations/Compliance_Research/By_State/Washington/Food_Safety/2026-06-18_0517.txt
+Operations/Compliance_Research/By_State/Washington/Real_Estate/2026-06-18_0517.txt
+Operations/Compliance_Research/By_State/Washington/Security_Licensing/2026-06-18_0517.txt
+Operations/Compliance_Research/By_State/West Virginia/Building_Construction/2026-06-18_0518.txt
+Operations/Compliance_Research/By_State/West Virginia/Food_Safety/2026-06-18_0518.txt
+Operations/Compliance_Research/By_State/West Virginia/Real_Estate/2026-06-18_0517.txt
+Operations/Compliance_Research/By_State/West Virginia/Real_Estate/2026-06-18_0518.txt
+Operations/Compliance_Research/By_State/West Virginia/Security_Licensing/2026-06-18_0518.txt
+Operations/Compliance_Research/By_State/Wisconsin/Building_Construction/2026-06-18_0518.txt
+Operations/Compliance_Research/By_State/Wisconsin/Food_Safety/2026-06-18_0518.txt
+Operations/Compliance_Research/By_State/Wisconsin/Real_Estate/2026-06-18_0518.txt
+Operations/Compliance_Research/By_State/Wyoming/Building_Construction/2026-06-18_0518.txt
+Operations/Compliance_Research/By_State/Wyoming/Food_Safety/2026-06-18_0518.txt
+Operations/Compliance_Research/By_State/Wyoming/Real_Estate/2026-06-18_0518.txt
+connectors/evidence_collector_sdk/recipes/jurisdiction/real_estate_tx_harris.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
