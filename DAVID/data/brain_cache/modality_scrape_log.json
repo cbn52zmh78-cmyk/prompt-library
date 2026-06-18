@@ -1207,5 +1207,18 @@
     "errors": [],
     "uncertainty_flags": 1,
     "keywords": 9
+  },
+  {
+    "slug": "latin-script",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:17:21.077166+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 11
   }
 ]
