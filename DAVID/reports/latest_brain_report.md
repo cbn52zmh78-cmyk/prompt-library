@@ -1,5 +1,5 @@
 # DAVID Brain Report
-Generated: 2026-06-18 13:33 UTC
+Generated: 2026-06-18 14:01 UTC
 
 Public sources only: Wikipedia, Wiktionary, Wikidata (CC BY-SA / CC0).
 
@@ -7,7 +7,7 @@ Public sources only: Wikipedia, Wiktionary, Wikidata (CC BY-SA / CC0).
 
 ## Etruscan (`etruscan`)
 
-**Scraped:** 2026-06-18T13:19:53.851577+00:00 | **Sources:** wikipedia, wikidata, wiktionary
+**Scraped:** 2026-06-18T14:01:12.892989+00:00 | **Sources:** wikipedia, wikidata, wiktionary
 
 ### Overview (Wikipedia)
 
@@ -35,6 +35,9 @@ Source: https://en.wikipedia.org/wiki/Etruscan_language
 
 =
 * , 
+*
+
+=
 *
 
 ---
@@ -115,7 +118,7 @@ Named by British archaeologist , to distinguish it from the other linear script,
 
 ## Sumerian (`sumerian`)
 
-**Scraped:** 2026-06-18T13:22:28.895174+00:00 | **Sources:** wikipedia, wikidata, wiktionary
+**Scraped:** 2026-06-18T13:37:31.169889+00:00 | **Sources:** wikipedia, wikidata, wiktionary
 
 ### Overview (Wikipedia)
 
@@ -128,19 +131,18 @@ Source: https://en.wikipedia.org/wiki/Sumerian_language
 
 ### Classification (Wikidata)
 
-- **Label:** Audrey Hollander
-- **ISO 639-3:** —
-- **Description:** American pornographic actress
+- **Label:** Sumerian
+- **ISO 639-3:** sux
+- **Description:** language of ancient Sumer
 
 ### Pronunciation map
 
-**IPA entries found:** 3 | **Accent buckets:** 3
+**IPA entries found:** 2 | **Accent buckets:** 2
 
-- **scholarly_ipa:** /s(j)ʊˈmɪəɹiən/, /sʊˈmɛɹiən/, LL-Q58635 (pan)-Gaurav Jhammat-ਔਡਰੀ ਹੋਲੈਂਡਰ.wav
+- **scholarly_ipa:** /s(j)ʊˈmɪəɹiən/, /sʊˈmɛɹiən/
 
 - *RP:* /s(j)ʊˈmɪəɹiən/
 - *GA:* /sʊˈmɛɹiən/
-- *wikidata:* LL-Q58635 (pan)-Gaurav Jhammat-ਔਡਰੀ ਹੋਲੈਂਡਰ.wav
 
 ### Pronunciation notes (Wiktionary)
 
@@ -278,7 +280,7 @@ Source: https://en.wikipedia.org/wiki/Classical_Nahuatl
 
 ## Akkadian (`akkadian`)
 
-**Scraped:** 2026-06-18T13:26:17.822083+00:00 | **Sources:** wikipedia, wikidata, wiktionary
+**Scraped:** 2026-06-18T13:38:02.808221+00:00 | **Sources:** wikipedia, wikidata, wiktionary
 
 ### Overview (Wikipedia)
 
@@ -423,7 +425,7 @@ Source: https://en.wikipedia.org/wiki/Old_Norse
 
 ## Hittite (`hittite`)
 
-**Scraped:** 2026-06-18T13:29:21.761838+00:00 | **Sources:** wikipedia, wikidata, wiktionary
+**Scraped:** 2026-06-18T13:35:04.838603+00:00 | **Sources:** wikipedia, wikidata, wiktionary
 
 ### Overview (Wikipedia)
 
@@ -439,9 +441,9 @@ Source: https://en.wikipedia.org/wiki/Hittite_language
 
 ### Classification (Wikidata)
 
-- **Label:** Also sprach Zarathustra
-- **ISO 639-3:** —
-- **Description:** tone poem by Richard Strauss
+- **Label:** Hittite
+- **ISO 639-3:** hit
+- **Description:** extinct Bronze Age Indo-European language
 
 ### Pronunciation map
 
@@ -523,7 +525,7 @@ Probably borrowed from a European language, ultimately from .
 
 ## Biblical Hebrew (`biblical-hebrew`)
 
-**Scraped:** 2026-06-18T13:17:51.826855+00:00 | **Sources:** wikipedia, wikidata, wiktionary
+**Scraped:** 2026-06-18T13:33:07.907319+00:00 | **Sources:** wikipedia, wikidata, wiktionary
 
 ### Overview (Wikipedia)
 
@@ -563,19 +565,19 @@ From , from , from  or , from , from , from .
 
 ## Middle Egyptian (`middle-egyptian`)
 
-**Scraped:** 2026-06-18T13:30:33.274846+00:00 | **Sources:** wikipedia, wikidata, wiktionary
+**Scraped:** 2026-06-18T13:36:25.044973+00:00 | **Sources:** wikipedia, wikidata, wiktionary
 
 ### Classification (Wikidata)
 
-- **Label:** Araneus flavus
+- **Label:** Middle Egyptian
 - **ISO 639-3:** —
-- **Description:** species of arachnid
+- **Description:** language written from 2000-1300 BC, during the Middle Kingdom and the Second Intermediate Period
 
 ---
 
 ## Old Church Slavonic (`old-church-slavonic`)
 
-**Scraped:** 2026-06-18T13:32:23.420254+00:00 | **Sources:** wikipedia, wikidata, wiktionary
+**Scraped:** 2026-06-18T13:37:13.014729+00:00 | **Sources:** wikipedia, wikidata, wiktionary
 
 ### Overview (Wikipedia)
 
@@ -588,9 +590,9 @@ Source: https://en.wikipedia.org/wiki/Old_Church_Slavonic
 
 ### Classification (Wikidata)
 
-- **Label:** Wolof
-- **ISO 639-3:** wol
-- **Description:** language of Senegal, the Gambia, and Mauritania
+- **Label:** Old Church Slavonic
+- **ISO 639-3:** —
+- **Description:** medieval Slavic literary language, without ISO codes, preceding Church Slavonic (Q33251, cu, chu)
 
 ### Pronunciation notes (Wiktionary)
 
@@ -601,14 +603,14 @@ Source: https://en.wikipedia.org/wiki/Old_Church_Slavonic
 
 ## Brain activity log (recent)
 
-- `old-church-slavonic` @ 2026-06-18T13:32 — 0 IPA, sources: wikipedia, wikidata, wiktionary
-- `classical-sanskrit` @ 2026-06-18T13:31 — 5 IPA, sources: wikipedia, wikidata, wiktionary
-- `middle-egyptian` @ 2026-06-18T13:30 — 0 IPA, sources: wikipedia, wikidata, wiktionary
-- `hittite` @ 2026-06-18T13:29 — 1 IPA, sources: wikipedia, wikidata, wiktionary
-- `hittite` @ 2026-06-18T13:30 — 1 IPA, sources: wikipedia, wikidata, wiktionary
-- `old-norse` @ 2026-06-18T13:29 — 0 IPA, sources: wikipedia, wikidata, wiktionary
-- `ancient-greek` @ 2026-06-18T13:28 — 1 IPA, sources: wikipedia, wikidata, wiktionary
-- `classical-japanese` @ 2026-06-18T13:27 — 0 IPA, sources: wikipedia, wikidata, wiktionary
+- `etruscan` @ 2026-06-18T14:01 — 1 IPA, sources: wikipedia, wikidata, wiktionary
+- `akkadian` @ 2026-06-18T13:38 — 1 IPA, sources: wikipedia, wikidata, wiktionary
+- `sumerian` @ 2026-06-18T13:37 — 2 IPA, sources: wikipedia, wikidata, wiktionary
+- `old-church-slavonic` @ 2026-06-18T13:37 — 0 IPA, sources: wikipedia, wikidata, wiktionary
+- `middle-egyptian` @ 2026-06-18T13:36 — 0 IPA, sources: wikipedia, wikidata, wiktionary
+- `old-church-slavonic` @ 2026-06-18T13:35 — 0 IPA, sources: wikipedia, wikidata, wiktionary
+- `hittite` @ 2026-06-18T13:35 — 1 IPA, sources: wikipedia, wikidata, wiktionary
+- `middle-egyptian` @ 2026-06-18T13:34 — 0 IPA, sources: wikipedia, wikidata, wiktionary
 
 
 ---

@@ -1681,5 +1681,31 @@
     "errors": [],
     "uncertainty_flags": 5,
     "keywords": 9
+  },
+  {
+    "slug": "paralinguistics",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T13:33:26.596007+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 7
+  },
+  {
+    "slug": "prosody",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T13:35:03.257453+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 11
   }
 ]

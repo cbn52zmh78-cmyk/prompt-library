@@ -28,7 +28,7 @@
     "registry": "data/communication_modality_registry.json",
     "wiki_map": "data/wiki_modality_map.json",
     "output_root": "communication-modalities",
-    "categories": ["phonetics-ipa", "non-verbal", "sign-languages", "writing-systems"]
+    "categories": ["phonetics-ipa", "non-verbal", "sign-languages", "writing-systems", "pragmatics"]
   },
   "rate_limit_seconds": 3.5,
   "user_agent": "DAVID-Brain/1.0 (linguistic research; public sources only; Grok Projects)"

@@ -330,6 +330,111 @@ def scrape_modality_batch(
     return results
 
 
+def build_crosslink_index_report() -> str:
+    """Markdown index of language corpus + modality sibling links for all topics."""
+    data = _load_registry()
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    lines = [
+        "# DAVID Modality Cross-Link Index",
+        f"Generated: {now}",
+        "",
+        "Public sources only. Links resolve against `language_registry.json` brain scrapes",
+        "and sibling modality `latest_scrape.json` files.",
+        "",
+        f"**Topics indexed:** {len(data['topics'])}",
+        "",
+        "---",
+        "",
+    ]
+
+    by_cat: dict[str, list[dict[str, Any]]] = {}
+    for topic in data["topics"]:
+        by_cat.setdefault(topic["category"], []).append(topic)
+
+    for cat_key in sorted(by_cat.keys(), key=lambda k: data["categories"][k]["label"]):
+        cat_label = data["categories"][cat_key]["label"]
+        lines.append(f"## {cat_label} (`{cat_key}`)")
+        lines.append("")
+
+        for topic in sorted(by_cat[cat_key], key=lambda t: t["slug"]):
+            slug = topic["slug"]
+            lang_slugs = topic.get("language_corpus_links", [])
+            mod_slugs = topic.get("modality_links", [])
+            links = _build_corpus_cross_links(lang_slugs, mod_slugs)
+
+            scrape_path = (
+                _topic_dir(cat_key, slug) / "research" / "brain" / "latest_scrape.json"
+            )
+            scraped = scrape_path.exists()
+            flag_count = 0
+            if scraped:
+                scrape = json.loads(scrape_path.read_text(encoding="utf-8"))
+                flag_count = len(scrape.get("uncertainty_flags", []))
+
+            lines.append(f"### {topic['name']} (`{slug}`)")
+            lines.append("")
+            lines.append(f"- **Scraped:** {'yes' if scraped else 'no'}")
+            lines.append(f"- **Uncertainty flags:** {flag_count}")
+            lines.append("")
+
+            lines.append("**Language corpus links:**")
+            if links["language_corpus"]:
+                lines.append("")
+                lines.append("| Language | Status | Brain scrape path | IPA count | Linked |")
+                lines.append("|----------|--------|-------------------|-----------|--------|")
+                for lang in links["language_corpus"]:
+                    if lang.get("reason"):
+                        lines.append(
+                            f"| `{lang['slug']}` | — | — | — | no ({lang['reason']}) |"
+                        )
+                        continue
+                    ipa = lang.get("ipa_count", "—")
+                    linked = "yes" if lang.get("linked") else "no"
+                    path = lang.get("brain_scrape_path", "—")
+                    status = lang.get("status", "—")
+                    lines.append(
+                        f"| {lang.get('name', lang['slug'])} | {status} | `{path}` | {ipa} | {linked} |"
+                    )
+            else:
+                lines.append("")
+                lines.append("_None configured._")
+            lines.append("")
+
+            lines.append("**Sibling modality links:**")
+            if links["modality_topics"]:
+                lines.append("")
+                lines.append("| Modality | Category | Scrape path | Linked | Flags |")
+                lines.append("|----------|----------|-------------|--------|-------|")
+                for mod in links["modality_topics"]:
+                    if mod.get("reason"):
+                        lines.append(
+                            f"| `{mod['slug']}` | — | — | no ({mod['reason']}) | — |"
+                        )
+                        continue
+                    linked = "yes" if mod.get("linked") else "no"
+                    flags = mod.get("uncertainty_flags", "—")
+                    path = mod.get("modality_scrape_path", "—")
+                    lines.append(
+                        f"| {mod.get('name', mod['slug'])} | `{mod.get('category', '—')}` | `{path}` | {linked} | {flags} |"
+                    )
+            else:
+                lines.append("")
+                lines.append("_None configured._")
+            lines.append("")
+            lines.append("---")
+            lines.append("")
+
+    return "\n".join(lines)
+
+
+def write_crosslink_index_report() -> Path:
+    REPORTS_DIR = DAVID_ROOT / "reports"
+    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+    out = REPORTS_DIR / "modality_crosslink_index.md"
+    out.write_text(build_crosslink_index_report(), encoding="utf-8")
+    return out
+
+
 def coverage_report() -> dict[str, Any]:
     data = _load_registry()
     by_category: dict[str, dict[str, Any]] = {}

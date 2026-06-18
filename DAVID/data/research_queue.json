@@ -1,7 +1,7 @@
 {
   "categories": {
     "language": "Per-language corpus, grammar, and revival tasks",
-    "communication-modalities": "How humans communicate — phonetics, non-verbal, sign, scripts"
+    "communication-modalities": "How humans communicate \u2014 phonetics, non-verbal, sign, scripts"
   },
   "queue": [
     {
@@ -9,8 +9,10 @@
       "language": "etruscan",
       "priority": "high",
       "task": "Catalog all bilingual Etruscan-Latin inscription pairs for grammar inference",
-      "status": "pending",
-      "added": "2026-06-16"
+      "status": "in_progress",
+      "added": "2026-06-16",
+      "brain_started_at": "2026-06-18T14:01:12.889428+00:00",
+      "last_brain_scrape": "2026-06-18T14:01:48.257851+00:00"
     },
     {
       "id": "rq-002",
@@ -116,8 +118,9 @@
       "topic": "prosody",
       "priority": "high",
       "task": "Ingest prosodic features for DAVID speech synthesis layer",
-      "status": "in_progress",
-      "added": "2026-06-18"
+      "status": "completed",
+      "added": "2026-06-18",
+      "last_modality_scrape": "2026-06-18"
     },
     {
       "id": "rq-cm-008",
@@ -125,8 +128,9 @@
       "topic": "intonation",
       "priority": "high",
       "task": "Pitch contour reference for question/statement and emphasis rendering",
-      "status": "in_progress",
-      "added": "2026-06-18"
+      "status": "completed",
+      "added": "2026-06-18",
+      "last_modality_scrape": "2026-06-18"
     },
     {
       "id": "rq-cm-009",
@@ -134,8 +138,9 @@
       "topic": "turn-taking",
       "priority": "medium",
       "task": "Conversation organization for multi-speaker avatar dialogue",
-      "status": "in_progress",
-      "added": "2026-06-18"
+      "status": "completed",
+      "added": "2026-06-18",
+      "last_modality_scrape": "2026-06-18"
     },
     {
       "id": "rq-cm-010",
@@ -143,8 +148,9 @@
       "topic": "linear-b-script",
       "priority": "high",
       "task": "Deciphered Linear B syllabary as phonetic key for Linear A cross-reference",
-      "status": "in_progress",
-      "added": "2026-06-18"
+      "status": "completed",
+      "added": "2026-06-18",
+      "last_modality_scrape": "2026-06-18"
     },
     {
       "id": "rq-cm-011",
@@ -152,17 +158,19 @@
       "topic": "manyogana",
       "priority": "medium",
       "task": "Heian Japanese writing layer; cross-link classical-japanese corpus",
-      "status": "pending",
-      "added": "2026-06-18"
+      "status": "completed",
+      "added": "2026-06-18",
+      "last_modality_scrape": "2026-06-18"
     },
     {
       "id": "rq-cm-012",
       "category": "communication-modalities",
       "topic": "french-sign-language",
       "priority": "medium",
-      "task": "Expand sign-language coverage — LSF historical lineage",
-      "status": "pending",
-      "added": "2026-06-18"
+      "task": "Expand sign-language coverage \u2014 LSF historical lineage",
+      "status": "completed",
+      "added": "2026-06-18",
+      "last_modality_scrape": "2026-06-18"
     }
   ]
 }

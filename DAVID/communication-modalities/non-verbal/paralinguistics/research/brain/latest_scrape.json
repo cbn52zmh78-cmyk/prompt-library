@@ -3,7 +3,7 @@
   "name": "Paralinguistics",
   "category": "non-verbal",
   "category_label": "Non-Verbal Communication",
-  "scraped_at": "2026-06-18T13:21:19.101981+00:00",
+  "scraped_at": "2026-06-18T13:33:26.596007+00:00",
   "retrieval_date": "2026-06-18",
   "deep": true,
   "source_policy": "public_only",
@@ -58,7 +58,7 @@
       "prosod",
       "proxemic"
     ],
-    "retrieved_at": "2026-06-18T13:21:19.101981+00:00",
+    "retrieved_at": "2026-06-18T13:33:26.596007+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Paralanguage",
@@ -81,7 +81,7 @@
       "category": "non-verbal",
       "statements": []
     },
-    "retrieved_at": "2026-06-18T13:21:19.101981+00:00",
+    "retrieved_at": "2026-06-18T13:33:26.596007+00:00",
     "citation": {
       "source": "Wikidata",
       "qid": "Q1753225",
@@ -117,7 +117,7 @@
     ],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T13:21:19.101981+00:00",
+    "retrieved_at": "2026-06-18T13:33:26.596007+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "paralinguistics",
@@ -161,17 +161,21 @@
         "name": "Prosody",
         "category": "phonetics-ipa",
         "modality_scrape_path": "communication-modalities/phonetics-ipa/prosody/research/brain/latest_scrape.json",
-        "linked": false
+        "linked": true,
+        "modality_scraped_at": "2026-06-18T13:22:10.243569+00:00",
+        "uncertainty_flags": 0
       },
       {
         "slug": "intonation",
         "name": "Intonation",
         "category": "phonetics-ipa",
         "modality_scrape_path": "communication-modalities/phonetics-ipa/intonation/research/brain/latest_scrape.json",
-        "linked": false
+        "linked": true,
+        "modality_scraped_at": "2026-06-18T13:22:31.289410+00:00",
+        "uncertainty_flags": 1
       }
     ],
     "language_link_count": 0,
-    "modality_link_count": 0
+    "modality_link_count": 2
   }
 }

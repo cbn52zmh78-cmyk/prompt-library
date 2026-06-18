@@ -2,7 +2,7 @@
   "slug": "sumerian",
   "name": "Sumerian",
   "status": "dead",
-  "scraped_at": "2026-06-18T13:22:28.895174+00:00",
+  "scraped_at": "2026-06-18T13:37:31.169889+00:00",
   "deep": false,
   "sources_used": [
     "wikipedia",
@@ -29,19 +29,13 @@
     "license": "CC BY-SA 3.0"
   },
   "wikidata": {
-    "qid": "Q36434",
-    "label": "Audrey Hollander",
-    "description": "American pornographic actress",
-    "iso639_3": null,
-    "language_family": null,
+    "qid": "Q36790",
+    "label": "Sumerian",
+    "description": "language of ancient Sumer",
+    "iso639_3": "sux",
+    "language_family": "Q20162172",
     "extinction_status": null,
-    "ipa_statements": [
-      {
-        "property": "P443",
-        "value": "LL-Q58635 (pan)-Gaurav Jhammat-\u0a14\u0a21\u0a30\u0a40 \u0a39\u0a4b\u0a32\u0a48\u0a02\u0a21\u0a30.wav",
-        "source": "wikidata"
-      }
-    ],
+    "ipa_statements": [],
     "source": "wikidata",
     "license": "CC0"
   },
@@ -75,12 +69,11 @@
     "license": "CC BY-SA 3.0"
   },
   "pronunciation_summary": {
-    "total_ipa_entries": 3,
+    "total_ipa_entries": 2,
     "by_quality": {
       "scholarly_ipa": [
         "/s(j)\u028a\u02c8m\u026a\u0259\u0279i\u0259n/",
-        "/s\u028a\u02c8m\u025b\u0279i\u0259n/",
-        "LL-Q58635 (pan)-Gaurav Jhammat-\u0a14\u0a21\u0a30\u0a40 \u0a39\u0a4b\u0a32\u0a48\u0a02\u0a21\u0a30.wav"
+        "/s\u028a\u02c8m\u025b\u0279i\u0259n/"
       ]
     },
     "by_accent": {
@@ -89,12 +82,9 @@
       ],
       "GA": [
         "/s\u028a\u02c8m\u025b\u0279i\u0259n/"
-      ],
-      "wikidata": [
-        "LL-Q58635 (pan)-Gaurav Jhammat-\u0a14\u0a21\u0a30\u0a40 \u0a39\u0a4b\u0a32\u0a48\u0a02\u0a21\u0a30.wav"
       ]
     },
-    "accent_count": 3
+    "accent_count": 2
   },
   "etymology_count": 0
 }

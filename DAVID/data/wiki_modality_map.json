@@ -173,5 +173,53 @@
     "wikidata": "Q794182",
     "wiktionary": null,
     "wiktionary_fallbacks": []
+  },
+  "hangul": {
+    "wikipedia": "Hangul",
+    "wikidata": "Q8222",
+    "wiktionary": "hangul",
+    "wiktionary_fallbacks": ["Hangul"]
+  },
+  "devanagari": {
+    "wikipedia": "Devanagari",
+    "wikidata": "Q38592",
+    "wiktionary": "Devanagari",
+    "wiktionary_fallbacks": ["devanagari"]
+  },
+  "phoenician-alphabet": {
+    "wikipedia": "Phoenician_alphabet",
+    "wikidata": "Q26752",
+    "wiktionary": "Phoenician alphabet",
+    "wiktionary_fallbacks": []
+  },
+  "oracle-bone-script": {
+    "wikipedia": "Oracle_bone_script",
+    "wikidata": "Q7476695",
+    "wiktionary": null,
+    "wiktionary_fallbacks": []
+  },
+  "deixis": {
+    "wikipedia": "Deixis",
+    "wikidata": "Q340015",
+    "wiktionary": "deixis",
+    "wiktionary_fallbacks": []
+  },
+  "speech-acts": {
+    "wikipedia": "Speech_act",
+    "wikidata": "Q25481968",
+    "wiktionary": "speech act",
+    "wiktionary_fallbacks": ["Speech act"]
+  },
+  "discourse-markers": {
+    "wikipedia": "Discourse_marker",
+    "wikidata": "Q472911",
+    "wiktionary": "discourse marker",
+    "wiktionary_fallbacks": []
+  },
+  "code-switching": {
+    "wikipedia": "Code-switching",
+    "wikidata": "Q255615",
+    "wiktionary": "code-switching",
+    "wiktionary_fallbacks": ["code switching"]
   }
 }

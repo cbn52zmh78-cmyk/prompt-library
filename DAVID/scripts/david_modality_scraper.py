@@ -20,6 +20,7 @@ from brain.modality_scraper import (  # noqa: E402
     coverage_report,
     scrape_modality,
     scrape_modality_batch,
+    write_crosslink_index_report,
 )
 
 
@@ -32,6 +33,11 @@ def main() -> int:
     parser.add_argument("--all", action="store_true", help="Scrape all registered modality topics")
     parser.add_argument("--deep", action="store_true", help="Include extra etymology/pronunciation sections")
     parser.add_argument("--coverage", action="store_true", help="Print coverage report (no network)")
+    parser.add_argument(
+        "--crosslink-report",
+        action="store_true",
+        help="Write DAVID/reports/modality_crosslink_index.md (no network)",
+    )
     args = parser.parse_args()
 
     if args.coverage:
@@ -39,8 +45,15 @@ def main() -> int:
         print(json.dumps(report, indent=2))
         return 0
 
+    if args.crosslink_report:
+        out = write_crosslink_index_report()
+        print(f"\n📋 Cross-link index written: {out}")
+        return 0
+
     if not args.topic and not args.category and not args.all:
-        parser.error("Specify --topic <slug>, --category <cat>, --all, or --coverage")
+        parser.error(
+            "Specify --topic <slug>, --category <cat>, --all, --coverage, or --crosslink-report"
+        )
 
     print("\n=== DAVID SCRAPER 2 — COMMUNICATION MODALITIES ===\n")
 

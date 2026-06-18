@@ -1,0 +1,18 @@
+{
+  "id": "deixis",
+  "name": "Deixis",
+  "category": "pragmatics",
+  "priority": "high",
+  "notes": "Person, place, time reference anchored to speech context",
+  "language_corpus_links": [],
+  "modality_links": [
+    "gesture",
+    "proxemics",
+    "turn-taking"
+  ],
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

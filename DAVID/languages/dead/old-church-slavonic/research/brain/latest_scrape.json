@@ -2,7 +2,7 @@
   "slug": "old-church-slavonic",
   "name": "Old Church Slavonic",
   "status": "dead",
-  "scraped_at": "2026-06-18T13:32:23.420254+00:00",
+  "scraped_at": "2026-06-18T13:37:13.014729+00:00",
   "deep": false,
   "sources_used": [
     "wikipedia",
@@ -31,11 +31,11 @@
     "license": "CC BY-SA 3.0"
   },
   "wikidata": {
-    "qid": "Q34257",
-    "label": "Wolof",
-    "description": "language of Senegal, the Gambia, and Mauritania",
-    "iso639_3": "wol",
-    "language_family": "Q1708753",
+    "qid": "Q35499",
+    "label": "Old Church Slavonic",
+    "description": "medieval Slavic literary language, without ISO codes, preceding Church Slavonic (Q33251, cu, chu)",
+    "iso639_3": null,
+    "language_family": "Q146665",
     "extinction_status": null,
     "ipa_statements": [],
     "source": "wikidata",

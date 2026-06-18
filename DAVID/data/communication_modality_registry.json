@@ -1,5 +1,5 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "updated": "2026-06-18",
   "description": "DAVID Scraper 2 — how humans communicate beyond lexicon",
   "categories": {
@@ -18,6 +18,10 @@
     "writing-systems": {
       "label": "Writing Systems / Scripts",
       "description": "Scripts, orthographies, typology, decipherment status"
+    },
+    "pragmatics": {
+      "label": "Pragmatics",
+      "description": "Deixis, speech acts, discourse markers, code-switching — context-dependent meaning"
     }
   },
   "topics": [
@@ -240,6 +244,72 @@
       "priority": "medium",
       "notes": "Mesoamerican ideographic/phonetic writing; colonial Nahuatl manuscripts",
       "language_corpus_links": ["classical-nahuatl"]
+    },
+    {
+      "slug": "hangul",
+      "name": "Hangul",
+      "category": "writing-systems",
+      "priority": "medium",
+      "notes": "Korean featural alphabet; comparative syllabary design",
+      "modality_links": ["writing-system", "hiragana"]
+    },
+    {
+      "slug": "devanagari",
+      "name": "Devanagari",
+      "category": "writing-systems",
+      "priority": "medium",
+      "notes": "Brahmic abugida; vowel diacritics and conjunct ligatures",
+      "modality_links": ["writing-system", "latin-script"]
+    },
+    {
+      "slug": "phoenician-alphabet",
+      "name": "Phoenician Alphabet",
+      "category": "writing-systems",
+      "priority": "high",
+      "notes": "Ancestor of Greek/Latin alphabets; links to DAVID script corpus",
+      "language_corpus_links": ["classical-latin", "etruscan"],
+      "modality_links": ["latin-script", "etruscan-alphabet", "gothic-alphabet"]
+    },
+    {
+      "slug": "oracle-bone-script",
+      "name": "Oracle Bone Script",
+      "category": "writing-systems",
+      "priority": "high",
+      "notes": "Earliest attested Chinese writing; archaic character forms",
+      "modality_links": ["writing-system", "cuneiform"]
+    },
+    {
+      "slug": "deixis",
+      "name": "Deixis",
+      "category": "pragmatics",
+      "priority": "high",
+      "notes": "Person, place, time reference anchored to speech context",
+      "modality_links": ["gesture", "proxemics", "turn-taking"]
+    },
+    {
+      "slug": "speech-acts",
+      "name": "Speech Acts",
+      "category": "pragmatics",
+      "priority": "high",
+      "notes": "Illocutionary force — asserting, promising, commanding",
+      "modality_links": ["discourse-markers", "turn-taking"]
+    },
+    {
+      "slug": "discourse-markers",
+      "name": "Discourse Markers",
+      "category": "pragmatics",
+      "priority": "high",
+      "notes": "Connectors and pragmatic particles organizing discourse",
+      "modality_links": ["speech-acts", "turn-taking", "paralinguistics"]
+    },
+    {
+      "slug": "code-switching",
+      "name": "Code-Switching",
+      "category": "pragmatics",
+      "priority": "medium",
+      "notes": "Multilingual alternation; colonial diglossia in DAVID corpora",
+      "language_corpus_links": ["classical-latin", "classical-nahuatl", "classical-japanese"],
+      "modality_links": ["writing-system", "discourse-markers"]
     }
   ]
 }

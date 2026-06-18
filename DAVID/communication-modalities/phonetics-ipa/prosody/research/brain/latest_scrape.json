@@ -3,7 +3,7 @@
   "name": "Prosody",
   "category": "phonetics-ipa",
   "category_label": "Phonetics & IPA / Speech Production",
-  "scraped_at": "2026-06-18T13:22:10.243569+00:00",
+  "scraped_at": "2026-06-18T13:35:03.257453+00:00",
   "retrieval_date": "2026-06-18",
   "deep": false,
   "source_policy": "public_only",
@@ -62,7 +62,7 @@
       "suprasegmental",
       "vowel"
     ],
-    "retrieved_at": "2026-06-18T13:22:10.243569+00:00",
+    "retrieved_at": "2026-06-18T13:35:03.257453+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Prosody (linguistics)",
@@ -85,7 +85,7 @@
       "category": "phonetics-ipa",
       "statements": []
     },
-    "retrieved_at": "2026-06-18T13:22:10.243569+00:00",
+    "retrieved_at": "2026-06-18T13:35:03.257453+00:00",
     "citation": {
       "source": "Wikidata",
       "qid": "Q10880526",
@@ -121,7 +121,7 @@
     ],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T13:22:10.243569+00:00",
+    "retrieved_at": "2026-06-18T13:35:03.257453+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "prosody",
@@ -160,7 +160,7 @@
         "category": "non-verbal",
         "modality_scrape_path": "communication-modalities/non-verbal/paralinguistics/research/brain/latest_scrape.json",
         "linked": true,
-        "modality_scraped_at": "2026-06-18T13:21:19.101981+00:00",
+        "modality_scraped_at": "2026-06-18T13:33:26.596007+00:00",
         "uncertainty_flags": 1
       },
       {
@@ -168,10 +168,12 @@
         "name": "Intonation",
         "category": "phonetics-ipa",
         "modality_scrape_path": "communication-modalities/phonetics-ipa/intonation/research/brain/latest_scrape.json",
-        "linked": false
+        "linked": true,
+        "modality_scraped_at": "2026-06-18T13:22:31.289410+00:00",
+        "uncertainty_flags": 1
       }
     ],
     "language_link_count": 0,
-    "modality_link_count": 1
+    "modality_link_count": 2
   }
 }

@@ -475,5 +475,93 @@
     ],
     "errors": [],
     "ipa_count": 2
+  },
+  {
+    "slug": "middle-egyptian",
+    "scraped_at": "2026-06-18T13:34:31.105017+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 0
+  },
+  {
+    "slug": "hittite",
+    "scraped_at": "2026-06-18T13:35:04.838603+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 1
+  },
+  {
+    "slug": "old-church-slavonic",
+    "scraped_at": "2026-06-18T13:35:05.578754+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 0
+  },
+  {
+    "slug": "middle-egyptian",
+    "scraped_at": "2026-06-18T13:36:25.044973+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 0
+  },
+  {
+    "slug": "old-church-slavonic",
+    "scraped_at": "2026-06-18T13:37:13.014729+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 0
+  },
+  {
+    "slug": "sumerian",
+    "scraped_at": "2026-06-18T13:37:31.169889+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 2
+  },
+  {
+    "slug": "akkadian",
+    "scraped_at": "2026-06-18T13:38:02.808221+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 1
+  },
+  {
+    "slug": "etruscan",
+    "scraped_at": "2026-06-18T14:01:12.892989+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 1
   }
 ]

@@ -22,7 +22,7 @@
   },
   "sumerian": {
     "wikipedia": "Sumerian_language",
-    "wikidata": "Q36434",
+    "wikidata": "Q36790",
     "wiktionary": "Sumerian_language",
     "wiktionary_fallbacks": ["Sumerian", "Category:Sumerian language"],
     "iso639_3": "sux"
@@ -85,7 +85,7 @@
   },
   "hittite": {
     "wikipedia": "Hittite_language",
-    "wikidata": "Q46269",
+    "wikidata": "Q35668",
     "wiktionary": "Hittite_language",
     "wiktionary_fallbacks": ["Hittite", "Category:Hittite language"],
     "iso639_3": "hit"
@@ -105,15 +105,15 @@
     "iso639_3": "hbo"
   },
   "middle-egyptian": {
-    "wikipedia": "Middle_Egyptian",
-    "wikidata": "Q726849",
+    "wikipedia": "Middle_Egyptian_language",
+    "wikidata": "Q657330",
     "wiktionary": "Middle_Egyptian",
     "wiktionary_fallbacks": ["Egyptian language", "Category:Middle Egyptian"],
     "iso639_3": "egy"
   },
   "old-church-slavonic": {
     "wikipedia": "Old_Church_Slavonic",
-    "wikidata": "Q34257",
+    "wikidata": "Q35499",
     "wiktionary": "Old_Church_Slavonic",
     "wiktionary_fallbacks": ["Church Slavonic", "Category:Old Church Slavonic language"],
     "iso639_3": "chu"

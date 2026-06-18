@@ -2,7 +2,7 @@
   "slug": "hittite",
   "name": "Hittite",
   "status": "extinct",
-  "scraped_at": "2026-06-18T13:29:21.761838+00:00",
+  "scraped_at": "2026-06-18T13:35:04.838603+00:00",
   "deep": false,
   "sources_used": [
     "wikipedia",
@@ -27,11 +27,11 @@
     "license": "CC BY-SA 3.0"
   },
   "wikidata": {
-    "qid": "Q35720",
-    "label": "Also sprach Zarathustra",
-    "description": "tone poem by Richard Strauss",
-    "iso639_3": null,
-    "language_family": null,
+    "qid": "Q35668",
+    "label": "Hittite",
+    "description": "extinct Bronze Age Indo-European language",
+    "iso639_3": "hit",
+    "language_family": "Q147085",
     "extinction_status": null,
     "ipa_statements": [],
     "source": "wikidata",

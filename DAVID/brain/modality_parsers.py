@@ -84,6 +84,20 @@ CATEGORY_KEYWORDS: dict[str, tuple[str, ...]] = {
         r"\btransliterat\w*\b",
         r"\bgrapheme\b",
     ),
+    "pragmatics": (
+        r"\bdeixis\b",
+        r"\bdeictic\b",
+        r"\bspeech\s+act\b",
+        r"\billocution\w*\b",
+        r"\bperlocution\w*\b",
+        r"\bdiscourse\s+marker\b",
+        r"\bpragmatic\w*\b",
+        r"\bimplicature\b",
+        r"\bcode-?switch\w*\b",
+        r"\bmultilingual\w*\b",
+        r"\bcontext\b",
+        r"\breference\b",
+    ),
 }
 
 SCRIPT_INFO_SECTION = re.compile(
@@ -138,6 +152,7 @@ def extract_wikidata_modality_claims(entity: dict[str, Any], category: str) -> d
         "sign-languages": ("P218", "P279", "P910"),
         "writing-systems": ("P282", "P31", "P361"),
         "phonetics-ipa": ("P898", "P443"),
+        "pragmatics": ("P31", "P279", "P1269"),
     }
     for prop in prop_map.get(category, ()):
         for claim in claims.get(prop, [])[:4]:
