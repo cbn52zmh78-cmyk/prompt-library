@@ -1707,5 +1707,18 @@
     "errors": [],
     "uncertainty_flags": 0,
     "keywords": 11
+  },
+  {
+    "slug": "deixis",
+    "category": "pragmatics",
+    "scraped_at": "2026-06-18T14:14:10.107975+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 5
   }
 ]

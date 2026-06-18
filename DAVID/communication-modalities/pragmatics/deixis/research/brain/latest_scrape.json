@@ -1,0 +1,193 @@
+{
+  "slug": "deixis",
+  "name": "Deixis",
+  "category": "pragmatics",
+  "category_label": "Pragmatics",
+  "scraped_at": "2026-06-18T14:14:10.107975+00:00",
+  "retrieval_date": "2026-06-18",
+  "deep": false,
+  "source_policy": "public_only",
+  "licenses": {
+    "wikipedia": "CC BY-SA 3.0",
+    "wiktionary": "CC BY-SA 3.0",
+    "wikidata": "CC0"
+  },
+  "sources_used": [
+    "wikipedia",
+    "wikidata",
+    "wiktionary"
+  ],
+  "citations": [
+    {
+      "source": "Wikipedia",
+      "title": "Deixis",
+      "url": "https://en.wikipedia.org/wiki/Deixis",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "source": "Wikidata",
+      "qid": "Q340015",
+      "url": "https://www.wikidata.org/wiki/Q340015",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    },
+    {
+      "source": "Wiktionary",
+      "title": "deixis",
+      "url": "https://en.wiktionary.org/wiki/deixis",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  ],
+  "errors": [],
+  "wikipedia": {
+    "title": "Deixis",
+    "url": "https://en.wikipedia.org/wiki/Deixis",
+    "extract": "In linguistics, deixis () is the use of words or phrases to refer to a particular time (e.g. then), place (e.g. here), or person (e.g. you) relative to the context of the utterance. Deixis exists in all known natural languages and is closely related to anaphora, with a sometimes unclear distinction between the two. In linguistic anthropology, deixis is seen as the same as, or a subclass of, indexicality.\nThe term's origin is Ancient Greek: \u03b4\u03b5\u1fd6\u03be\u03b9\u03c2, romanized: deixis, lit.\u2009'display, demonstration, or reference'. To this, Chrysippus (c.\u2009279 \u2013 c.\u2009206 BCE) added the specialized meaning point of reference, which is the sense in which the term is used in contemporary linguistics.\n\n\n== Types ==\nThere are three main types of deictic words, as described by Charles J. Fillmore: personal, spatial, and temporal. In some languages, these may overlap, such as spatial and personal deixis in many signed pronouns. Some linguists consider social deixis to be a fourth type.\n\n\n=== Personal ===\n\nPersonal deictic words, called personal pronouns in English, refer to the grammatical persons involved in an utterance. These can include the first person (speaker), second person (addressee), third, and in some languages fourth and fifth person. Personal deixis may give further information about the referent, such as gender. Examples of personal deixis include:\n\nI am going to the cinema.\nWould you like to have dinner?\nThey tried to hurt me, but she helped me.\n\n\n=== Spatial ===\nSpatial, or place, deixis is used to refer to spatial locations relative to an utterance. Similarly to personal deixis, the locations may be either those of the speaker and addressee or those of persons or objects being referred to. Spatial demonstratives include locative adverbs (e.g. here and there) and demonstratives (e.g. this, these, that, and those) although those are far from exclusive. Spatial demonstratives are often relative to the location of the speaker such as:\n\nThe shop is across the street.\nwhere \"across the street\" is understood to mean \"across the street from where I [the speaker] am right now.\"\nWords relating to spatial deixis can be proximal (near, such as English (right) here or this), medial (near the addressee, such as English (over) there or that), distal (far, such as English (out) there or that), far-distal (far from both the speaker and addressee, such as archaic English yon and yonder). The Malagasy language has seven degrees of distance combined with two degrees of visibility, while many Inuit languages have even more complex systems.\n\n\n=== Temporal ===\nTemporal, or time, deixis is used to refer to time relevant to the utterance. This includes temporal adverbs (e.g., then and soon), nouns (e.g., tomorrow), and use of grammatical tense. Temporal deixis can be relative to the time when an utterance is made (the speaker\u2019s \"now\") or the time when the utterance is heard or seen (the addressee\u2019s \"now\"). Although these are often the same time, they can differ in cases such as a voice recording or written text. For example:\n\nIt is raining now, but I hope when you read this it will be sunny.\nTenses are usually separated into absolute (deictic) and relative tenses. For example, simple English past tense is absolute, such as \"He went\" whereas the pluperfect is relative to some other deictically specified time, as in \"When I got home, he had gone.\"\n\n\n=== Discourse deixis ===\nDiscourse deixis, also referred to as text deixis, refers to the use of expressions within an utterance to refer to parts of the discourse that contain the utterance\u2014including the utterance itself. For example, in \"This is a great story\" this refers to an upcoming portion of the discourse.\nSwitch reference is a type of discourse deixis, and a grammatical feature found in some languages, which indicates whether the argument of one clause is the same as the argument of the previous clause. In some languages, this is done through same-subject markers and different-subject markers. In the translated example \"John punched Tom, and left-[same-subject marker],\" it is John who left, and in \"John punched Tom, and left-[different-subject marker],\" it is Tom who left.\nDiscourse deixis has been observed in internet language, particularly with the use of iconic language forms resembling arrows.\n\n\n=== Social deixis ===\nSocial deixis concerns the social information that is encoded within various expressions, such as relative social status and familiarity. These include T\u2013V distinctions and honorifics.\n\n\n== Deictic center ==\nA deictic center, sometimes referred to as an origo, is a set of theoretical points that a deictic expression is \"anchored\" to, such that the evaluation of the meaning of the expression leads one to the relevant point. As deictic expressions are frequently egocentric, the center often consists of the speaker at the time and place of the utterance and, additionally, the place in the discourse and relevant social factors. However, deictic expressions can also be used in such a way that the deictic center is transferred to other participants in the exchange or to persons\u200a and \u200aplaces\u200a, \u200aetc., being described in a narrative. For example, in the sentence;\n\nI am standing here now.\nthe deictic center is simply the person at the time and place of speaking. \nIf, for example, two people in London and New York are talking over the phone, the Londoner can say both of the two sentences below, with equal validity:\n\nWe are leaving [New York] next week.\nWe are coming [to London] next week.\nwhere the deictic center is in New York and London, respectively. \nSimilarly, when a speaker is telling a story about someone, the deictic center is likely to switch to third-person pronouns. So then in the sentence\n\nThey then ran twenty feet to the left.\nit is understood that the center is with the people being spoken of, and thus \"to the left\" refers not to the speaker's left, but to the object of the story's left, that is, the people referred to as \"they\" at the time immediately before they ran twenty feet.\n\n\n== Usages ==\nIt is helpful to distinguish between two usages of deixis, gestural and symbolic, as well as non-deictic usages of frequently deictic words. Gestural deixis refers, broadly, to deictic expressions whose understanding requires some sort of audio-visual information. A simple example is when an object is pointed at and referred to as \"this\" or \"that.\" However, the category can include other types of information than pointing, such as direction of gaze, tone of voice, and so on. Symbolic usage, by contrast, requires generally only basic spatiotemporal knowledge of the utterance. So, for example\n\nI broke this finger.\nrequires being able to see which finger is being held up, whereas\n\nI love this city.\nrequires only knowledge of the current location. In a similar vein,\n\nI went to this city one time\nis a non-deictic usage of \"this,\" which does not identify anywhere specifically. Rather, it is used as an indefinite article, much the way \"a\" could be used in its place.\n\n\n== Distinction with similar terms ==\nThe distinction between deixis and anaphora is unclearly defined. Generally, an anaphoric reference refers to something within a text that has been previously identified. For example, in \"Susan dropped the plate. It shattered loudly,\" the word it refers to the phrase, \"the plate.\" An expression can be both deictic and anaphoric at the same time, for example, in \"I was born in London, and I have lived here/there all my life\" here or there functions anaphorically in their reference to London, and deictically in that the choice between \"here\" and \"there\" indicates whether the speaker is or is not currently in London.\nThe terms deixis and indexicality are frequently used almost interchangeably, and both deal with essentially the same idea of contextually dependent references. However, the two terms have different histories and traditions. In the past, deixis was associated specifically with spatiotemporal reference, and indexicality was used more broadly. More importantly, each is associated with a different field of study: Deixis is associated with linguistics, and indexicality is associated with philosophy and pragmatics.\n\n\n== Deictic field and narration ==\n\nIn linguistics, psychology, and literary theory, the concepts of deictic field and deictic shift are sometimes deployed in the study of narrative media. These terms provide a theoretical framework for the literary analysis of the ways in which readers redirect their attention away from their immediate surroundings as they become immersed in the reality generated by the text.\n\n\n=== Deixis ===\nThe term deixis refers to the ways in which language encodes contextual information into its grammatical system. More broadly, deixis refers to the inherent ambiguity of certain linguistic expressions and the interpretive processes that communicants must perform in order to disambiguate them. Such ambiguity can only be resolved by analyzing the context of the utterance. To understand deixis, one must first understand that language grammaticalizes context-dependent features such as person, space, and time. When language is oriented toward its context, certain expressions differentiate the \"here\" and \"now\" (proximal deixis) from the \"then\" and \"there\" (distal deixis). According to Karl B\u00fchler, an Austrian psychologist who was one of the earliest to present a theory of deixis, \"When philosophers, linguists, and narrative theorists attempt to understand the role of subjectivity in language and conversely, the role of language in subjectivity, they invariably notice a certain aspect of language which seems to depend on extralinguistic, subjective, occasion-specific considerations.\" Within the context of narrative, deixis reflects those aspects of storytelling by which the audience is pragmatically directed to understand the perspective of the narrator or of the story's characters in relation to their own story-external vantage point. Essentially, deictic expressions help form the layers of narrative that direct the audience to either the narratorial discourse or to the story world. \"Deixis (adjectival form, deictic) is a psycholinguistic term for those aspects of meaning associated with self-world orientation.\" Deixis is an integral component of the lens through which the audience perceives the narrative.\n\n\n=== Labov's narrative model ===\nWilliam Labov argues that stories of personal experience can be divided into distinct sections, each of which serves a unique function within the narrative progression. Labov schematizes the organization of natural narrative using the following conceptual units: abstract, orientation, complicating action, resolution, evaluation, and coda. Generally, anecdotal narratives tend to arrange these units in that order; however, this is not an inflexible, structural progression. For instance, sentences and phrasal items that serve an evaluative function can be interspersed throughout a narrative. Some stretches of narrative discourse also feature overlap among these Labovian categories. Each of Labov's narrative divisions serves a characteristic purpose typified by a particular section's grammatical construction and functional role within the unfolding narrative, but the boundaries of such divisions are not always clear-cut.\nAs a feature of natural language, deixis is an important element of oral narrative and can be realized in different ways in each of Labov's categories. According to Galbraith, \"All language use depends on some felt relevance to situation, on the attention of participants, and their ability to lift out the topic.... Like zero in mathematics and the dark space in the theater, deixis orients us within a situation without calling attention to itself.\" Two of Labov's categories that often feature deixis prominently are the \"orientation\" and the \"coda.\" The orientation typically occurs near the beginning of a narrative and serves to introduce the characters, settings, and events. Given its presentative quality, the orientation shifts the deictic center away from the speaker's here-and-now into the spatiotemporal coordinates of the story, which logically must occur at a time prior to the story's enunciation. The coda occurs toward the end of a narrative and functions as a means of terminating the flow of story events. By doing so, the coda reorients the speakers and listeners out of the story world and back into the communicative present.\n\n\n=== Deictic center ===\nThe deictic center\u2014sometimes called the \"origo\" or zero-point\u2014represents the originating source in relation to which deictic expressions gain their context-dependent meaning. Often the deictic center is the speaker: thus, any tokens of \"I\" in the speaker's discourse must deictically refer back to the speaker as center; likewise, the word \"you\" must project outward from this center toward the addressee. Any participants not part of this communicative channel will be referred to in the third person. The theory of deixis is therefore egocentric in that the indexical anchorage of deictic expressions is a function of this zero-point of subjectivity. The \"I\"-center serves as the perceptual vantage point that surveys relations among salient contextual entities and events. Such a center, therefore, determines which deictic expressions are pragmatically licensed by a context that has been naturally delimited through this perceptual and evaluative locus. Thus, the appropriateness of a proximal \"this\" over a distal \"that\" is determined by the nearness of an object or a location in relation to the deictic zero-point.\nA deictic field contains the range of bounded participants and objects, spatial locations and landmarks, and temporal frames that point back to some deictic center as the source for their pragmatic demarcation. The deictic field radiates out from the deictic center, and the boundaries of such a field enclose the scope of objects, spaces, and events that constitute a set from which deictic expressions might seek out a potential referent. These fields function as cognitive frames that participants in a discourse can use to conceptualize their contextual surroundings in relation to each interlocutor's (alternating) function as deictic center across communicative turns. Within the context of literature, the presence of multiple deictic fields in a text can be fruitfully analyzed using the cognitive principle of deictic shift (discussed below).\n\n\n=== Deictic shift theory ===\nDeictic shift theory (DST) refers to a range of immersion processes by which readers imaginatively project hypothetical deictic centers that are anchored to communicative and experiential loci within a narrative. Such cognitive framing, theorists of DST argue, form a necessary part of the reader's involvement in narrative, whereby through a process of frame shifting the reader constructs a story world by interpreting the (deictic) cues instantiated in the text. Deictic shifting can be accomplished in several ways. The most basic shift involves the reader's initial immersion into the world of the story. Here the deictic center moves out of the here-and-now of the reader's physical environment and becomes anchored to some text-internal perceptual or presentative instance, in most cases the deictic center of a character or a narrator. Deictic shifts at the level of narration include those cues that implicate a covert or overt narrator\u2014specifically, story commentary or instances when the narrator refers to himself or herself as an \"I.\" Such instances of commentary and evaluation often reflect the perceptual field, as well as the interpretive and ideological stance, of the narrator as they present the story's events.\nWithin the world of the story, deictic shifts occur in a number of ways. A fundamental shift occurs when the deictic center moves from one character to another\u2014for instance, in cases of omniscient thought report. Here the reader must adjust the deictic center accordingly and interprets the lens of the current focal window through the experiential subjectivity of the character-locus. Other forms of story-internal deictic shifts involve the cognitive framing associated with embedded narratives and other discourse-types: stories-within-stories, letters in epistolary fiction, diary entries, etc.\n\"Within literary scholarship, it is often noted that first and second person pronouns (and less so, and differently, third) facilitate readerly identification with the textually inscribed position (the position of the character or narrator designated by that pronoun), and evoke a sense of readerly conceptual immersion in the fictional world of the story, contributing to the ways in which the scene is imaginatively 'realized' in the mind of the reader, particularly the perspective from which the scene is conceptually visualized. Cognitive poetics and cognitive narratology have employed deictic shift theory, largely based on the work of Duchan, Bruder and Hewitt, to attempt to offer a cognitive account of how these interpretative effects are created. DST proposes that readers conceptually project to the contextual locus of the speaker of deictic cues in order to comprehend them, offering a model of how the deictic referents determining such contextual coordinates are processed by readers, and how this contributes to readers' conceptualization of the world of the story\" (Deictic shifting in literature: Experimental analysis).\n\n\n=== Deixis in narratology ===\nBuhler applied the theory of deixis to narratives. He proposed the concept of Zeigfeld, or deictic field, which operates in three modes: the first, ad oculos, \"operates in the here-and-now of the speaker's sensible environment;\" the second, anaphora, \"operates in the context of the discourse itself considered as a structured environment;\" and the third, what Buhler calls deixis at phantasma, operates in the context \"of imagination and long-term memory.\" Buhler's model attempts \"to describe the psychological and physical process whereby the live deictic field of our own bodily orientation and experience\" is \"transposed into an imaginative construction.\" According to Buhler, \"the body-feeling representation, or K\u00f6rpertastbild (what psychologists would probably now call the body schema), becomes loosened from its involvement with the HERE//NOW/I deictic coordinates of waking life in our immediate environment, and becomes available to translation into an environment we construct both conceptually and orientationally\"; this deictic coordinate system is used \"in the constructive environment to orient ourselves within 'the somewhere-realm of pure imagination and the there-and-there in memory'\".\nKatie Hamburger, a German narrative theorist, studied and theorized how deictic words are used in literature. In her work The Logic of Literature, she argued that there are two realms of language act: reality statement and fiction (Galbraith, 24-25). Reality statements are by someone and about something. \"Acts of fictional narration, on the other hand, transfer their referentiality from the actuality of the historical world to the entertained reality of the fictive world, and transfer the subjectivity of the speaker to the subjectivity of the story world characters\". Hamburger argued that this transfer occurs due to the use of deictic adverbs, and psychological verbs.\n\n\n== See also ==\nComplementiser\nDeterminer\nEpideictic \u2013 Branch or \"eid\u0113\" of rhetoric\nGeneric antecedents\nMetaphysics of presence\nObservation\nPresent\nPro-form\nSelf\nTerms of orientation\n\n\n== References ==\n\n\n== Further reading ==\nAnderson, Stephen R.; & Keenan, Edward L. (1985). Deixis. In T. Shopen (Ed.), Language typology and syntactic description: Grammatical categories and the lexicon (Vol. 3, pp. 259\u2013308). Cambridge: Cambridge University Press.\nFillmore, Charles J. (1966). Deictic categories in the semantics of 'come'. Foundations of Language, 2, 219\u2013227.\nFillmore, Charles J. (1982). Towards a descriptive framework for spatial deixis. In R. J. Jarvell & W. Klein (Eds.), Speech, place and action: Studies in deixis and related topics (pp. 31\u201359). London: Wiley.\nGaynesford, M. de I: The Meaning of the First Person Term, Oxford, Oxford University Press, 2006.\nGeorge Grigore, La deixis spatial dans l'arabe parl\u00e9 \u00e0 Bagdad, Estudios de dialectologia arabe n.7, Zaragoza, pp 77\u201390 George Grigore. 2012. \"La deixis spatiale dans l\u2019arabe parl\u00e9 \u00e0 Bagdad\", Alexandrine Barontini, Christophe Pereira, \u00c1ngeles Vicente, Karima Ziamari (ed.), Estudios de dialectolog\u00eda \u00e1rabe (n.7): Hommage offert \u00e0 Dominique Caubet. Universidad de Zaragoza. pp: 77-90\nKordi\u0107, Snje\u017eana (2001). W\u00f6rter im Grenzbereich von Lexikon und Grammatik im Serbokroatischen [Serbo-Croatian Words on the Border Between Lexicon and Grammar]. Studies in Slavic Linguistics; 18 (in German). Munich: Lincom Europa. p. 280. ISBN 3895869546. LCCN 2005530313. OCLC 47905097. OL 2863539W. Summary.\n\n\n== External links ==\n\nDemonstratives & Indexicals at Internet Encyclopedia of Philosophy\nWhat is deixis?",
+    "wikitext_length": 31548,
+    "phonology_keywords": [],
+    "source": "wikipedia",
+    "license": "CC BY-SA 3.0",
+    "modality_keywords": [
+      "context",
+      "deictic",
+      "deixis",
+      "pragmatic",
+      "reference"
+    ],
+    "retrieved_at": "2026-06-18T14:14:10.107975+00:00",
+    "citation": {
+      "source": "Wikipedia",
+      "title": "Deixis",
+      "url": "https://en.wikipedia.org/wiki/Deixis",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  },
+  "wikidata": {
+    "qid": "Q340015",
+    "label": "deixis",
+    "description": "linguistic term for the use of words or phrases to refer to a particular entity relative to the context of the utterance",
+    "iso639_3": null,
+    "language_family": "Q39645",
+    "extinction_status": null,
+    "ipa_statements": [],
+    "source": "wikidata",
+    "license": "CC0",
+    "modality_claims": {
+      "category": "pragmatics",
+      "statements": [
+        {
+          "property": "P31",
+          "value": "Q66664364"
+        },
+        {
+          "property": "P31",
+          "value": "Q1047050"
+        },
+        {
+          "property": "P279",
+          "value": "Q39645"
+        }
+      ]
+    },
+    "retrieved_at": "2026-06-18T14:14:10.107975+00:00",
+    "citation": {
+      "source": "Wikidata",
+      "qid": "Q340015",
+      "url": "https://www.wikidata.org/wiki/Q340015",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    }
+  },
+  "wiktionary": {
+    "pages": [
+      "deixis"
+    ],
+    "ipa_entries": [
+      {
+        "ipa": "/\u02c8da\u026aks\u026as/",
+        "accent": "unspecified",
+        "language_code": "",
+        "quality": "scholarly_ipa"
+      }
+    ],
+    "etymology_blocks": [],
+    "pronunciation_notes": [
+      {
+        "section": "Pronunciation",
+        "text": "=\n* \n* \n* \n*"
+      },
+      {
+        "section": "Pronunciation",
+        "text": "=\n*"
+      }
+    ],
+    "source": "wiktionary",
+    "license": "CC BY-SA 3.0",
+    "retrieved_at": "2026-06-18T14:14:10.107975+00:00",
+    "citation": {
+      "source": "Wiktionary",
+      "title": "deixis",
+      "url": "https://en.wiktionary.org/wiki/deixis",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  },
+  "uncertainty_flags": [
+    {
+      "flag": "proposed",
+      "context_snippet": "y === Buhler applied the theory of deixis to narratives. He proposed the concept of Zeigfeld, or deictic field, which operates i"
+    }
+  ],
+  "modality_summary": {
+    "category": "pragmatics",
+    "keyword_count": 5,
+    "top_keywords": [
+      "context",
+      "deictic",
+      "deixis",
+      "pragmatic",
+      "reference"
+    ],
+    "ipa_entries": 1,
+    "uncertainty_flag_count": 1,
+    "has_wikidata_statements": true,
+    "extract_chars": 21057
+  },
+  "corpus_cross_links": {
+    "language_corpus": [],
+    "modality_topics": [
+      {
+        "slug": "gesture",
+        "name": "Gesture",
+        "category": "non-verbal",
+        "modality_scrape_path": "communication-modalities/non-verbal/gesture/research/brain/latest_scrape.json",
+        "linked": true,
+        "modality_scraped_at": "2026-06-18T12:23:12.814618+00:00",
+        "uncertainty_flags": 2
+      },
+      {
+        "slug": "proxemics",
+        "name": "Proxemics",
+        "category": "non-verbal",
+        "modality_scrape_path": "communication-modalities/non-verbal/proxemics/research/brain/latest_scrape.json",
+        "linked": true,
+        "modality_scraped_at": "2026-06-18T12:23:51.256696+00:00",
+        "uncertainty_flags": 2
+      },
+      {
+        "slug": "turn-taking",
+        "name": "Turn-Taking",
+        "category": "non-verbal",
+        "modality_scrape_path": "communication-modalities/non-verbal/turn-taking/research/brain/latest_scrape.json",
+        "linked": true,
+        "modality_scraped_at": "2026-06-18T13:23:20.565171+00:00",
+        "uncertainty_flags": 1
+      }
+    ],
+    "language_link_count": 0,
+    "modality_link_count": 3
+  }
+}
