@@ -1733,5 +1733,95 @@
     "errors": [],
     "uncertainty_flags": 2,
     "keywords": 8
+  },
+  {
+    "slug": "discourse-markers",
+    "category": "pragmatics",
+    "scraped_at": "2026-06-18T14:14:46.127736+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 3
+  },
+  {
+    "slug": "code-switching",
+    "category": "pragmatics",
+    "scraped_at": "2026-06-18T14:15:03.568033+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 3,
+    "keywords": 9
+  },
+  {
+    "slug": "hangul",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T14:15:24.532801+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 3,
+    "keywords": 13
+  },
+  {
+    "slug": "devanagari",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T14:15:45.524183+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 14
+  },
+  {
+    "slug": "phoenician-alphabet",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T14:16:20.008853+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 11
+  },
+  {
+    "slug": "oracle-bone-script",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T14:16:37.608861+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 7
+  },
+  {
+    "slug": "speech-acts",
+    "category": "pragmatics",
+    "scraped_at": "2026-06-18T14:16:59.565285+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 8
   }
 ]

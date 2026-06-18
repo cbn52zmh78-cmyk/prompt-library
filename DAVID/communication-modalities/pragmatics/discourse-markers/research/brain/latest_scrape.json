@@ -1,0 +1,168 @@
+{
+  "slug": "discourse-markers",
+  "name": "Discourse Markers",
+  "category": "pragmatics",
+  "category_label": "Pragmatics",
+  "scraped_at": "2026-06-18T14:14:46.127736+00:00",
+  "retrieval_date": "2026-06-18",
+  "deep": false,
+  "source_policy": "public_only",
+  "licenses": {
+    "wikipedia": "CC BY-SA 3.0",
+    "wiktionary": "CC BY-SA 3.0",
+    "wikidata": "CC0"
+  },
+  "sources_used": [
+    "wikipedia",
+    "wikidata",
+    "wiktionary"
+  ],
+  "citations": [
+    {
+      "source": "Wikipedia",
+      "title": "Discourse marker",
+      "url": "https://en.wikipedia.org/wiki/Discourse_marker",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "source": "Wikidata",
+      "qid": "Q472911",
+      "url": "https://www.wikidata.org/wiki/Q472911",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    },
+    {
+      "source": "Wiktionary",
+      "title": "discourse marker",
+      "url": "https://en.wiktionary.org/wiki/discourse_marker",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  ],
+  "errors": [],
+  "wikipedia": {
+    "title": "Discourse_marker",
+    "url": "https://en.wikipedia.org/wiki/Discourse_marker",
+    "extract": "A discourse marker is a word or a phrase that plays a role in managing the flow and structure of discourse. Since their main function is at the level of discourse (sequences of utterances) rather than at the level of utterances or sentences, discourse markers are relatively syntax-independent and usually do not change the truth conditional meaning of the sentence. They can also indicate what a speaker is doing on a variety of different planes. Examples of discourse markers include the particles oh, well, now, then, you know, and I mean, and the discourse connectives so, because, and, but, and or. The term discourse marker was popularized by Deborah Schiffrin in her 1987 book Discourse Markers.\n\n\n== Usage in English ==\nCommon discourse markers used in the English language include you know, actually, basically, like, I mean, okay and so. Discourse markers come from varied word classes, such as adverbs (well) or prepositional phrases (in fact). The process that leads from a free construction to a discourse marker can be traced back through grammaticalization studies and resources. Discourse markers can be seen as a \u201cjoint product\u201d of grammaticalization and cooption, explaining both their grammatical behavior and their metatextual properties.\nTraditionally, some of the words or phrases that were considered discourse markers were treated as fillers or expletives: words or phrases that had no function at all. Now they are assigned functions in different levels of analysis: topic changes, reformulations, discourse planning, stressing, hedging, or backchanneling.\nYael Maschler divided discourse markers into four broad categories: interpersonal, referential, structural, and cognitive.\n\nInterpersonal markers are used to indicate the relationship between the speaker and the listener.\nPerception: look, believe me\nAgreement: exactly, or disagreement: I'm not sure\nAmazement: wow\nReferential markers, usually conjunctions, are used to indicate the sequence, causality, and coordination between statements.\nSequence: now, then\nCausality: because\nCoordination: and, or non-coordination: but\nStructural markers indicate the hierarchy of conversational actions at the time in which they are spoken. These markers indicate which statements the speaker believes to be most or least important.\nOrganization: first of all\nIntroduction: so\nSummarization: in the end\nCognitive markers reveal the speaker's thought process\nProcessing information: uhh\nRealization: oh!\nRephrasing: I mean\nIn her book on discourse analysis, Barbara Johnstone called discourse markers that are used by speakers to take the floor (like so) \"boundarymarking uses\" of the word. This use of discourse markers is present and important in both monologue and dialogue situations.\n\n\n== Examples in other languages ==\nAnother example of an interpersonal discourse marker is the Yiddish marker nu, also used in Modern Hebrew and other languages, often to convey impatience or to urge the listener to act (cf. German cognate nun, meaning 'now' in the sense of 'at the moment being discussed', but contrast Latin etymological cognate nunc, meaning 'now' in the sense of 'at the moment in which discussion is occurring'; Latin used iam for 'at the moment being discussed' (and many other meanings) and German uses jetzt for 'at the moment in which discussion is occurring'). The French phrase \u00e0 propos can indicate 'a smooth or a more abrupt discourse shift.'\n\n\n== See also ==\nFiller (linguistics)\nSo (word)\nSpeech disfluency\nTag question\nInterjection\nTone indicator\n\n\n== Notes ==\n\n\n== Further reading ==\n\nHansen, Maj-Britt Mosegaard. 1998. The semantic status of discourse markers. Lingua 104(3\u20134), 235\u2013260.\nBrown, Benjamin (2014). \"'But Me No Buts': The Theological Debate Between the Hasidim and the Mitnagdim in Light of the Discourse-Markers Theory\". Numen. 61 (5\u20136): 525\u2013551. doi:10.1163/15685276-12341341.\nBrown, Benjamin (2014). \"'Some Say This, Some Say That': Pragmatics and Discourse Markers in Yad Malachi's Interpretation Rules\". Language and Law. 3: 1\u201320.",
+    "wikitext_length": 7052,
+    "phonology_keywords": [],
+    "source": "wikipedia",
+    "license": "CC BY-SA 3.0",
+    "modality_keywords": [
+      "discourse marker",
+      "etymolog",
+      "pragmatic"
+    ],
+    "retrieved_at": "2026-06-18T14:14:46.127736+00:00",
+    "citation": {
+      "source": "Wikipedia",
+      "title": "Discourse marker",
+      "url": "https://en.wikipedia.org/wiki/Discourse_marker",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  },
+  "wikidata": {
+    "qid": "Q472911",
+    "label": "discourse marker",
+    "description": "word or phrase that manages the flow of discourse: e.g. oh, well, now, then, you know, and I mean, so, because, and, but, or",
+    "iso639_3": null,
+    "language_family": "Q631256",
+    "extinction_status": null,
+    "ipa_statements": [],
+    "source": "wikidata",
+    "license": "CC0",
+    "modality_claims": {
+      "category": "pragmatics",
+      "statements": [
+        {
+          "property": "P31",
+          "value": "Q82042"
+        },
+        {
+          "property": "P279",
+          "value": "Q631256"
+        },
+        {
+          "property": "P1269",
+          "value": "Q1129466"
+        }
+      ]
+    },
+    "retrieved_at": "2026-06-18T14:14:46.127736+00:00",
+    "citation": {
+      "source": "Wikidata",
+      "qid": "Q472911",
+      "url": "https://www.wikidata.org/wiki/Q472911",
+      "retrieved": "2026-06-18",
+      "license": "CC0"
+    }
+  },
+  "wiktionary": {
+    "pages": [
+      "discourse marker"
+    ],
+    "ipa_entries": [],
+    "etymology_blocks": [],
+    "pronunciation_notes": [],
+    "source": "wiktionary",
+    "license": "CC BY-SA 3.0",
+    "retrieved_at": "2026-06-18T14:14:46.127736+00:00",
+    "citation": {
+      "source": "Wiktionary",
+      "title": "discourse marker",
+      "url": "https://en.wiktionary.org/wiki/discourse_marker",
+      "retrieved": "2026-06-18",
+      "license": "CC BY-SA 3.0"
+    }
+  },
+  "uncertainty_flags": [],
+  "modality_summary": {
+    "category": "pragmatics",
+    "keyword_count": 3,
+    "top_keywords": [
+      "discourse marker",
+      "etymolog",
+      "pragmatic"
+    ],
+    "ipa_entries": 0,
+    "uncertainty_flag_count": 0,
+    "has_wikidata_statements": true,
+    "extract_chars": 4043
+  },
+  "corpus_cross_links": {
+    "language_corpus": [],
+    "modality_topics": [
+      {
+        "slug": "speech-acts",
+        "name": "Speech Acts",
+        "category": "pragmatics",
+        "modality_scrape_path": "communication-modalities/pragmatics/speech-acts/research/brain/latest_scrape.json",
+        "linked": true,
+        "modality_scraped_at": "2026-06-18T14:14:25.004914+00:00",
+        "uncertainty_flags": 2
+      },
+      {
+        "slug": "turn-taking",
+        "name": "Turn-Taking",
+        "category": "non-verbal",
+        "modality_scrape_path": "communication-modalities/non-verbal/turn-taking/research/brain/latest_scrape.json",
+        "linked": true,
+        "modality_scraped_at": "2026-06-18T13:23:20.565171+00:00",
+        "uncertainty_flags": 1
+      },
+      {
+        "slug": "paralinguistics",
+        "name": "Paralinguistics",
+        "category": "non-verbal",
+        "modality_scrape_path": "communication-modalities/non-verbal/paralinguistics/research/brain/latest_scrape.json",
+        "linked": true,
+        "modality_scraped_at": "2026-06-18T13:33:26.596007+00:00",
+        "uncertainty_flags": 1
+      }
+    ],
+    "language_link_count": 0,
+    "modality_link_count": 3
+  }
+}

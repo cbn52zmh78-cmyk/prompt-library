@@ -1,0 +1,21 @@
+{
+  "id": "code-switching",
+  "name": "Code-Switching",
+  "category": "pragmatics",
+  "priority": "medium",
+  "notes": "Multilingual alternation; colonial diglossia in DAVID corpora",
+  "language_corpus_links": [
+    "classical-latin",
+    "classical-nahuatl",
+    "classical-japanese"
+  ],
+  "modality_links": [
+    "writing-system",
+    "discourse-markers"
+  ],
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

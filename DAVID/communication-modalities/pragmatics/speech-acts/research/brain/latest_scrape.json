@@ -3,7 +3,7 @@
   "name": "Speech Acts",
   "category": "pragmatics",
   "category_label": "Pragmatics",
-  "scraped_at": "2026-06-18T14:14:25.004914+00:00",
+  "scraped_at": "2026-06-18T14:16:59.565285+00:00",
   "retrieval_date": "2026-06-18",
   "deep": false,
   "source_policy": "public_only",
@@ -59,7 +59,7 @@
       "reference",
       "speech act"
     ],
-    "retrieved_at": "2026-06-18T14:14:25.004914+00:00",
+    "retrieved_at": "2026-06-18T14:16:59.565285+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Speech act",
@@ -95,7 +95,7 @@
         }
       ]
     },
-    "retrieved_at": "2026-06-18T14:14:25.004914+00:00",
+    "retrieved_at": "2026-06-18T14:16:59.565285+00:00",
     "citation": {
       "source": "Wikidata",
       "qid": "Q25481968",
@@ -113,7 +113,7 @@
     "pronunciation_notes": [],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T14:14:25.004914+00:00",
+    "retrieved_at": "2026-06-18T14:16:59.565285+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "speech act",
@@ -158,7 +158,9 @@
         "name": "Discourse Markers",
         "category": "pragmatics",
         "modality_scrape_path": "communication-modalities/pragmatics/discourse-markers/research/brain/latest_scrape.json",
-        "linked": false
+        "linked": true,
+        "modality_scraped_at": "2026-06-18T14:14:46.127736+00:00",
+        "uncertainty_flags": 0
       },
       {
         "slug": "turn-taking",
@@ -171,6 +173,6 @@
       }
     ],
     "language_link_count": 0,
-    "modality_link_count": 1
+    "modality_link_count": 2
   }
 }

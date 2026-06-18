@@ -1,0 +1,21 @@
+{
+  "id": "phoenician-alphabet",
+  "name": "Phoenician Alphabet",
+  "category": "writing-systems",
+  "priority": "high",
+  "notes": "Ancestor of Greek/Latin alphabets; links to DAVID script corpus",
+  "language_corpus_links": [
+    "classical-latin",
+    "etruscan"
+  ],
+  "modality_links": [
+    "latin-script",
+    "etruscan-alphabet",
+    "gothic-alphabet"
+  ],
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

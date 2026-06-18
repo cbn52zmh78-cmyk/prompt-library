@@ -1,0 +1,17 @@
+{
+  "id": "oracle-bone-script",
+  "name": "Oracle Bone Script",
+  "category": "writing-systems",
+  "priority": "high",
+  "notes": "Earliest attested Chinese writing; archaic character forms",
+  "language_corpus_links": [],
+  "modality_links": [
+    "writing-system",
+    "cuneiform"
+  ],
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

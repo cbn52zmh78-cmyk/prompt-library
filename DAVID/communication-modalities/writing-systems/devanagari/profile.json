@@ -1,0 +1,17 @@
+{
+  "id": "devanagari",
+  "name": "Devanagari",
+  "category": "writing-systems",
+  "priority": "medium",
+  "notes": "Brahmic abugida; vowel diacritics and conjunct ligatures",
+  "language_corpus_links": [],
+  "modality_links": [
+    "writing-system",
+    "latin-script"
+  ],
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "hangul",
+  "name": "Hangul",
+  "category": "writing-systems",
+  "priority": "medium",
+  "notes": "Korean featural alphabet; comparative syllabary design",
+  "language_corpus_links": [],
+  "modality_links": [
+    "writing-system",
+    "hiragana"
+  ],
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}
