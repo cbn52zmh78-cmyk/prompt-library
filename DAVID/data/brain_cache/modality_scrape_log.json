@@ -1720,5 +1720,18 @@
     "errors": [],
     "uncertainty_flags": 1,
     "keywords": 5
+  },
+  {
+    "slug": "speech-acts",
+    "category": "pragmatics",
+    "scraped_at": "2026-06-18T14:14:25.004914+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 8
   }
 ]

@@ -1,0 +1,18 @@
+{
+  "id": "discourse-markers",
+  "name": "Discourse Markers",
+  "category": "pragmatics",
+  "priority": "high",
+  "notes": "Connectors and pragmatic particles organizing discourse",
+  "language_corpus_links": [],
+  "modality_links": [
+    "speech-acts",
+    "turn-taking",
+    "paralinguistics"
+  ],
+  "source_policy": "public_only",
+  "licenses": [
+    "CC BY-SA 3.0 (Wikipedia/Wiktionary)",
+    "CC0 (Wikidata)"
+  ]
+}
