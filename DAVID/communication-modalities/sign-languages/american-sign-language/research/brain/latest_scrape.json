@@ -3,7 +3,7 @@
   "name": "American Sign Language",
   "category": "sign-languages",
   "category_label": "Sign Languages",
-  "scraped_at": "2026-06-18T12:14:49.635477+00:00",
+  "scraped_at": "2026-06-18T12:25:10.031846+00:00",
   "retrieval_date": "2026-06-18",
   "deep": false,
   "source_policy": "public_only",
@@ -59,7 +59,7 @@
       "sign language",
       "signing"
     ],
-    "retrieved_at": "2026-06-18T12:14:49.635477+00:00",
+    "retrieved_at": "2026-06-18T12:25:10.031846+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "American Sign Language",
@@ -91,7 +91,7 @@
         }
       ]
     },
-    "retrieved_at": "2026-06-18T12:14:49.635477+00:00",
+    "retrieved_at": "2026-06-18T12:25:10.031846+00:00",
     "citation": {
       "source": "Wikidata",
       "qid": "Q14759",
@@ -115,7 +115,7 @@
     ],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T12:14:49.635477+00:00",
+    "retrieved_at": "2026-06-18T12:25:10.031846+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "American Sign Language",

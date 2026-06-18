@@ -3,9 +3,9 @@
   "name": "British Sign Language",
   "category": "sign-languages",
   "category_label": "Sign Languages",
-  "scraped_at": "2026-06-18T12:14:37.788131+00:00",
+  "scraped_at": "2026-06-18T12:25:31.024107+00:00",
   "retrieval_date": "2026-06-18",
-  "deep": true,
+  "deep": false,
   "source_policy": "public_only",
   "licenses": {
     "wikipedia": "CC BY-SA 3.0",
@@ -27,8 +27,8 @@
     },
     {
       "source": "Wikidata",
-      "qid": "Q33302",
-      "url": "https://www.wikidata.org/wiki/Q33302",
+      "qid": "Q33000",
+      "url": "https://www.wikidata.org/wiki/Q33000",
       "retrieved": "2026-06-18",
       "license": "CC0"
     },
@@ -59,7 +59,7 @@
       "sign language",
       "signing"
     ],
-    "retrieved_at": "2026-06-18T12:14:37.788131+00:00",
+    "retrieved_at": "2026-06-18T12:25:31.024107+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "British Sign Language",
@@ -69,11 +69,11 @@
     }
   },
   "wikidata": {
-    "qid": "Q33302",
-    "label": "French Sign Language",
-    "description": "sign language used predominately in France and French-speaking Switzerland",
-    "iso639_3": "fsl",
-    "language_family": "Q5501921",
+    "qid": "Q33000",
+    "label": "British Sign Language",
+    "description": "sign language used in the United Kingdom",
+    "iso639_3": "bfi",
+    "language_family": "Q2805523",
     "extinction_status": null,
     "ipa_statements": [],
     "source": "wikidata",
@@ -83,19 +83,19 @@
       "statements": [
         {
           "property": "P279",
-          "value": "Q5501921"
+          "value": "Q2805523"
         },
         {
           "property": "P910",
-          "value": "Q24892692"
+          "value": "Q21206577"
         }
       ]
     },
-    "retrieved_at": "2026-06-18T12:14:37.788131+00:00",
+    "retrieved_at": "2026-06-18T12:25:31.024107+00:00",
     "citation": {
       "source": "Wikidata",
-      "qid": "Q33302",
-      "url": "https://www.wikidata.org/wiki/Q33302",
+      "qid": "Q33000",
+      "url": "https://www.wikidata.org/wiki/Q33000",
       "retrieved": "2026-06-18",
       "license": "CC0"
     }
@@ -109,7 +109,7 @@
     "pronunciation_notes": [],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T12:14:37.788131+00:00",
+    "retrieved_at": "2026-06-18T12:25:31.024107+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "British Sign Language",
@@ -141,9 +141,5 @@
     "uncertainty_flag_count": 1,
     "has_wikidata_statements": true,
     "extract_chars": 20755
-  },
-  "deep_sections": {
-    "etymology_blocks": [],
-    "pronunciation_notes": []
   }
 }

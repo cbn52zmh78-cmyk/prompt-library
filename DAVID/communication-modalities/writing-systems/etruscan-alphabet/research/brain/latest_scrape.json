@@ -3,9 +3,9 @@
   "name": "Etruscan Alphabet",
   "category": "writing-systems",
   "category_label": "Writing Systems / Scripts",
-  "scraped_at": "2026-06-18T12:16:56.115814+00:00",
+  "scraped_at": "2026-06-18T12:27:16.077752+00:00",
   "retrieval_date": "2026-06-18",
-  "deep": true,
+  "deep": false,
   "source_policy": "public_only",
   "licenses": {
     "wikipedia": "CC BY-SA 3.0",
@@ -27,8 +27,8 @@
     },
     {
       "source": "Wikidata",
-      "qid": "Q33539",
-      "url": "https://www.wikidata.org/wiki/Q33539",
+      "qid": "Q271565",
+      "url": "https://www.wikidata.org/wiki/Q271565",
       "retrieved": "2026-06-18",
       "license": "CC0"
     },
@@ -60,7 +60,7 @@
       "vowel",
       "writing system"
     ],
-    "retrieved_at": "2026-06-18T12:16:56.115814+00:00",
+    "retrieved_at": "2026-06-18T12:27:16.077752+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Etruscan alphabet",
@@ -76,9 +76,9 @@
     ]
   },
   "wikidata": {
-    "qid": "Q33539",
-    "label": "twin paradox",
-    "description": "thought experiment in special relativity",
+    "qid": "Q271565",
+    "label": "Etruscan alphabet",
+    "description": "alphabet used by the Etruscans of central Italy",
     "iso639_3": null,
     "language_family": null,
     "extinction_status": null,
@@ -90,23 +90,27 @@
       "statements": [
         {
           "property": "P31",
-          "value": "Q483372"
+          "value": "Q9779"
         },
         {
           "property": "P31",
-          "value": "Q147027"
+          "value": "Q4004706"
         },
         {
-          "property": "P361",
-          "value": "Q11455"
+          "property": "P31",
+          "value": "Q29517555"
+        },
+        {
+          "property": "P31",
+          "value": "Q8192"
         }
       ]
     },
-    "retrieved_at": "2026-06-18T12:16:56.115814+00:00",
+    "retrieved_at": "2026-06-18T12:27:16.077752+00:00",
     "citation": {
       "source": "Wikidata",
-      "qid": "Q33539",
-      "url": "https://www.wikidata.org/wiki/Q33539",
+      "qid": "Q271565",
+      "url": "https://www.wikidata.org/wiki/Q271565",
       "retrieved": "2026-06-18",
       "license": "CC0"
     }
@@ -118,7 +122,7 @@
     "pronunciation_notes": [],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T12:16:56.115814+00:00",
+    "retrieved_at": "2026-06-18T12:27:16.077752+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "Etruscan alphabet",
@@ -151,9 +155,5 @@
     "uncertainty_flag_count": 1,
     "has_wikidata_statements": true,
     "extract_chars": 4606
-  },
-  "deep_sections": {
-    "etymology_blocks": [],
-    "pronunciation_notes": []
   }
 }

@@ -3,7 +3,7 @@
   "name": "Gesture",
   "category": "non-verbal",
   "category_label": "Non-Verbal Communication",
-  "scraped_at": "2026-06-18T12:02:03.269760+00:00",
+  "scraped_at": "2026-06-18T12:23:12.814618+00:00",
   "retrieval_date": "2026-06-18",
   "deep": false,
   "source_policy": "public_only",
@@ -27,8 +27,8 @@
     },
     {
       "source": "Wikidata",
-      "qid": "Q46940",
-      "url": "https://www.wikidata.org/wiki/Q46940",
+      "qid": "Q371174",
+      "url": "https://www.wikidata.org/wiki/Q371174",
       "retrieved": "2026-06-18",
       "license": "CC0"
     },
@@ -58,7 +58,7 @@
       "prosod",
       "proxemic"
     ],
-    "retrieved_at": "2026-06-18T12:02:03.269760+00:00",
+    "retrieved_at": "2026-06-18T12:23:12.814618+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Gesture",
@@ -68,11 +68,11 @@
     }
   },
   "wikidata": {
-    "qid": "Q46940",
-    "label": "Alcal\u00e1 de Henares",
-    "description": "city of Spain in the Community of Madrid",
+    "qid": "Q371174",
+    "label": "gesture",
+    "description": "form of non-verbal communication or non-vocal communication",
     "iso639_3": null,
-    "language_family": null,
+    "language_family": "Q207125",
     "extinction_status": null,
     "ipa_statements": [],
     "source": "wikidata",
@@ -81,26 +81,43 @@
       "category": "non-verbal",
       "statements": []
     },
-    "retrieved_at": "2026-06-18T12:02:03.269760+00:00",
+    "retrieved_at": "2026-06-18T12:23:12.814618+00:00",
     "citation": {
       "source": "Wikidata",
-      "qid": "Q46940",
-      "url": "https://www.wikidata.org/wiki/Q46940",
+      "qid": "Q371174",
+      "url": "https://www.wikidata.org/wiki/Q371174",
       "retrieved": "2026-06-18",
       "license": "CC0"
     }
   },
   "wiktionary": {
     "pages": [
-      "gesture (error: 429 Client Error: Too Many Requests for url: https://en.wiktionary.org/w/api.php?format=json&action=parse&page=gesture&prop=wikitext)",
-      "Gesture (error: 429 Client Error: Too Many Requests for url: https://en.wiktionary.org/w/api.php?format=json&action=parse&page=Gesture&prop=wikitext)"
+      "gesture"
     ],
-    "ipa_entries": [],
+    "ipa_entries": [
+      {
+        "ipa": "/\u02c8d\u0361\u0292\u025bs.t\u0361\u0283\u0259/",
+        "accent": "UK",
+        "language_code": "",
+        "quality": "regional_variant"
+      },
+      {
+        "ipa": "/\u02c8d\u0361\u0292\u025bs.t\u0361\u0283\u025a/",
+        "accent": "GenAm",
+        "language_code": "",
+        "quality": "scholarly_ipa"
+      }
+    ],
     "etymology_blocks": [],
-    "pronunciation_notes": [],
+    "pronunciation_notes": [
+      {
+        "section": "Pronunciation",
+        "text": "=\n* \n* \n* \n*"
+      }
+    ],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T12:02:03.269760+00:00",
+    "retrieved_at": "2026-06-18T12:23:12.814618+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "gesture",
@@ -131,7 +148,7 @@
       "prosod",
       "proxemic"
     ],
-    "ipa_entries": 0,
+    "ipa_entries": 2,
     "uncertainty_flag_count": 2,
     "has_wikidata_statements": false,
     "extract_chars": 28267

@@ -167,5 +167,60 @@
     ],
     "errors": [],
     "ipa_count": 1
+  },
+  {
+    "slug": "old-english",
+    "scraped_at": "2026-06-18T13:00:40.704891+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 0
+  },
+  {
+    "slug": "classical-japanese",
+    "scraped_at": "2026-06-18T13:00:57.990294+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 0
+  },
+  {
+    "slug": "proto-indo-european",
+    "scraped_at": "2026-06-18T13:14:02.282978+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 2
+  },
+  {
+    "slug": "ancient-greek",
+    "scraped_at": "2026-06-18T13:14:36.196765+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 1
+  },
+  {
+    "slug": "old-norse",
+    "scraped_at": "2026-06-18T13:15:24.261040+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "ipa_count": 0
   }
 ]

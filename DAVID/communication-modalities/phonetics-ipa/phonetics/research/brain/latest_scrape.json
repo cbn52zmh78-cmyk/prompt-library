@@ -3,7 +3,7 @@
   "name": "Phonetics",
   "category": "phonetics-ipa",
   "category_label": "Phonetics & IPA / Speech Production",
-  "scraped_at": "2026-06-18T12:01:02.413366+00:00",
+  "scraped_at": "2026-06-18T12:22:23.789703+00:00",
   "retrieval_date": "2026-06-18",
   "deep": false,
   "source_policy": "public_only",
@@ -27,8 +27,8 @@
     },
     {
       "source": "Wikidata",
-      "qid": "Q27216",
-      "url": "https://www.wikidata.org/wiki/Q27216",
+      "qid": "Q35395",
+      "url": "https://www.wikidata.org/wiki/Q35395",
       "retrieved": "2026-06-18",
       "license": "CC0"
     },
@@ -63,7 +63,7 @@
       "voicing",
       "vowel"
     ],
-    "retrieved_at": "2026-06-18T12:01:02.413366+00:00",
+    "retrieved_at": "2026-06-18T12:22:23.789703+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Phonetics",
@@ -73,11 +73,11 @@
     }
   },
   "wikidata": {
-    "qid": "Q27216",
-    "label": "Siliana",
-    "description": "Tunisian town",
+    "qid": "Q35395",
+    "label": "phonetics",
+    "description": "branch of linguistics that comprises the study of the sounds of human speech",
     "iso639_3": null,
-    "language_family": null,
+    "language_family": "Q8162",
     "extinction_status": null,
     "ipa_statements": [],
     "source": "wikidata",
@@ -86,26 +86,55 @@
       "category": "phonetics-ipa",
       "statements": []
     },
-    "retrieved_at": "2026-06-18T12:01:02.413366+00:00",
+    "retrieved_at": "2026-06-18T12:22:23.789703+00:00",
     "citation": {
       "source": "Wikidata",
-      "qid": "Q27216",
-      "url": "https://www.wikidata.org/wiki/Q27216",
+      "qid": "Q35395",
+      "url": "https://www.wikidata.org/wiki/Q35395",
       "retrieved": "2026-06-18",
       "license": "CC0"
     }
   },
   "wiktionary": {
     "pages": [
-      "phonetics (error: 429 Client Error: Too Many Requests for url: https://en.wiktionary.org/w/api.php?format=json&action=parse&page=phonetics&prop=wikitext)",
-      "Phonetics (error: 429 Client Error: Too Many Requests for url: https://en.wiktionary.org/w/api.php?format=json&action=parse&page=Phonetics&prop=wikitext)"
+      "phonetics"
     ],
-    "ipa_entries": [],
+    "ipa_entries": [
+      {
+        "ipa": "/f\u0259\u02c8n\u025bt.\u026aks/",
+        "accent": "unspecified",
+        "language_code": "",
+        "quality": "scholarly_ipa"
+      },
+      {
+        "ipa": "[f\u0259\u02c8n\u025b\u0294\u0259ks]",
+        "accent": "Dublin",
+        "language_code": "",
+        "quality": "regional_variant"
+      },
+      {
+        "ipa": "/fo\u02c8n\u025b.\u0288\u026aks/",
+        "accent": "North",
+        "language_code": "",
+        "quality": "scholarly_ipa"
+      },
+      {
+        "ipa": "/\u02c8f\u0275.n\u1d7b.\u0288\u026aks/",
+        "accent": "South",
+        "language_code": "",
+        "quality": "scholarly_ipa"
+      }
+    ],
     "etymology_blocks": [],
-    "pronunciation_notes": [],
+    "pronunciation_notes": [
+      {
+        "section": "Pronunciation",
+        "text": "=\n* \n** \n** \n* \n* \n* \n*"
+      }
+    ],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T12:01:02.413366+00:00",
+    "retrieved_at": "2026-06-18T12:22:23.789703+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "phonetics",
@@ -130,7 +159,7 @@
       "speech production",
       "vocal tract"
     ],
-    "ipa_entries": 0,
+    "ipa_entries": 4,
     "uncertainty_flag_count": 0,
     "has_wikidata_statements": false,
     "extract_chars": 50331

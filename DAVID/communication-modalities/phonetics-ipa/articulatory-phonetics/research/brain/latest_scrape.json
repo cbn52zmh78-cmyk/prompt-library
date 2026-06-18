@@ -3,7 +3,7 @@
   "name": "Articulatory Phonetics",
   "category": "phonetics-ipa",
   "category_label": "Phonetics & IPA / Speech Production",
-  "scraped_at": "2026-06-18T12:05:01.378314+00:00",
+  "scraped_at": "2026-06-18T12:22:58.864661+00:00",
   "retrieval_date": "2026-06-18",
   "deep": false,
   "source_policy": "public_only",
@@ -26,8 +26,8 @@
     },
     {
       "source": "Wikidata",
-      "qid": "Q755113",
-      "url": "https://www.wikidata.org/wiki/Q755113",
+      "qid": "Q1200775",
+      "url": "https://www.wikidata.org/wiki/Q1200775",
       "retrieved": "2026-06-18",
       "license": "CC0"
     }
@@ -53,7 +53,7 @@
       "voicing",
       "vowel"
     ],
-    "retrieved_at": "2026-06-18T12:05:01.378314+00:00",
+    "retrieved_at": "2026-06-18T12:22:58.864661+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Articulatory phonetics",
@@ -63,11 +63,11 @@
     }
   },
   "wikidata": {
-    "qid": "Q755113",
-    "label": "1999\u20132000 Serie A",
-    "description": "sports season",
+    "qid": "Q1200775",
+    "label": "articulatory phonetics",
+    "description": "subfield of phonetics that studies how humans produce speech sounds via the interaction of physiological structures",
     "iso639_3": null,
-    "language_family": null,
+    "language_family": "Q35395",
     "extinction_status": null,
     "ipa_statements": [],
     "source": "wikidata",
@@ -76,11 +76,11 @@
       "category": "phonetics-ipa",
       "statements": []
     },
-    "retrieved_at": "2026-06-18T12:05:01.378314+00:00",
+    "retrieved_at": "2026-06-18T12:22:58.864661+00:00",
     "citation": {
       "source": "Wikidata",
-      "qid": "Q755113",
-      "url": "https://www.wikidata.org/wiki/Q755113",
+      "qid": "Q1200775",
+      "url": "https://www.wikidata.org/wiki/Q1200775",
       "retrieved": "2026-06-18",
       "license": "CC0"
     }

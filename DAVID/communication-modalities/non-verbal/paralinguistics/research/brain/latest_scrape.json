@@ -3,7 +3,7 @@
   "name": "Paralinguistics",
   "category": "non-verbal",
   "category_label": "Non-Verbal Communication",
-  "scraped_at": "2026-06-18T12:02:58.181537+00:00",
+  "scraped_at": "2026-06-18T12:24:10.558412+00:00",
   "retrieval_date": "2026-06-18",
   "deep": false,
   "source_policy": "public_only",
@@ -27,8 +27,8 @@
     },
     {
       "source": "Wikidata",
-      "qid": "Q1757686",
-      "url": "https://www.wikidata.org/wiki/Q1757686",
+      "qid": "Q1753225",
+      "url": "https://www.wikidata.org/wiki/Q1753225",
       "retrieved": "2026-06-18",
       "license": "CC0"
     },
@@ -58,7 +58,7 @@
       "prosod",
       "proxemic"
     ],
-    "retrieved_at": "2026-06-18T12:02:58.181537+00:00",
+    "retrieved_at": "2026-06-18T12:24:10.558412+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Paralanguage",
@@ -68,11 +68,11 @@
     }
   },
   "wikidata": {
-    "qid": "Q1757686",
-    "label": "Thomas-Mann-Gesellschaft",
-    "description": "Wikimedia disambiguation page",
+    "qid": "Q1753225",
+    "label": "paralanguage",
+    "description": "communication of additional meaning, nuance, or emotion in speech",
     "iso639_3": null,
-    "language_family": null,
+    "language_family": "Q1069371",
     "extinction_status": null,
     "ipa_statements": [],
     "source": "wikidata",
@@ -81,19 +81,18 @@
       "category": "non-verbal",
       "statements": []
     },
-    "retrieved_at": "2026-06-18T12:02:58.181537+00:00",
+    "retrieved_at": "2026-06-18T12:24:10.558412+00:00",
     "citation": {
       "source": "Wikidata",
-      "qid": "Q1757686",
-      "url": "https://www.wikidata.org/wiki/Q1757686",
+      "qid": "Q1753225",
+      "url": "https://www.wikidata.org/wiki/Q1753225",
       "retrieved": "2026-06-18",
       "license": "CC0"
     }
   },
   "wiktionary": {
     "pages": [
-      "paralinguistics",
-      "Paralanguage (error: 429 Client Error: Too Many Requests for url: https://en.wiktionary.org/w/api.php?format=json&action=parse&page=Paralanguage&prop=wikitext)"
+      "paralinguistics"
     ],
     "ipa_entries": [
       {
@@ -118,7 +117,7 @@
     ],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T12:02:58.181537+00:00",
+    "retrieved_at": "2026-06-18T12:24:10.558412+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "paralinguistics",

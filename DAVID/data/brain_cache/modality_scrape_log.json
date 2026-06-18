@@ -1220,5 +1220,236 @@
     "errors": [],
     "uncertainty_flags": 0,
     "keywords": 11
+  },
+  {
+    "slug": "international-phonetic-alphabet",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:22:05.894398+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 13
+  },
+  {
+    "slug": "phonetics",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:22:23.789703+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 12
+  },
+  {
+    "slug": "speech-production",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:22:44.744800+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 10
+  },
+  {
+    "slug": "articulatory-phonetics",
+    "category": "phonetics-ipa",
+    "scraped_at": "2026-06-18T12:22:58.864661+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 10
+  },
+  {
+    "slug": "gesture",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:23:12.814618+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 7
+  },
+  {
+    "slug": "facial-expression",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:23:33.761985+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 4
+  },
+  {
+    "slug": "proxemics",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:23:51.256696+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 5
+  },
+  {
+    "slug": "paralinguistics",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:24:10.558412+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 7
+  },
+  {
+    "slug": "body-language",
+    "category": "non-verbal",
+    "scraped_at": "2026-06-18T12:24:31.500932+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 3,
+    "keywords": 9
+  },
+  {
+    "slug": "sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:24:49.010520+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 11
+  },
+  {
+    "slug": "american-sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:25:10.031846+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 3,
+    "keywords": 8
+  },
+  {
+    "slug": "british-sign-language",
+    "category": "sign-languages",
+    "scraped_at": "2026-06-18T12:25:31.024107+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 8
+  },
+  {
+    "slug": "writing-system",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:25:48.543211+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 15
+  },
+  {
+    "slug": "cuneiform",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:26:14.825294+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 2,
+    "keywords": 14
+  },
+  {
+    "slug": "linear-a-script",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:26:35.794389+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 5,
+    "keywords": 9
+  },
+  {
+    "slug": "gothic-alphabet",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:26:53.287523+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 5,
+    "keywords": 8
+  },
+  {
+    "slug": "etruscan-alphabet",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:27:16.077752+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 1,
+    "keywords": 9
+  },
+  {
+    "slug": "latin-script",
+    "category": "writing-systems",
+    "scraped_at": "2026-06-18T12:27:33.619063+00:00",
+    "sources": [
+      "wikipedia",
+      "wikidata",
+      "wiktionary"
+    ],
+    "errors": [],
+    "uncertainty_flags": 0,
+    "keywords": 11
   }
 ]

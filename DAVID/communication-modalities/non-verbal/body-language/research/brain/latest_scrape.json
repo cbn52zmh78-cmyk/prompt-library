@@ -3,7 +3,7 @@
   "name": "Body Language",
   "category": "non-verbal",
   "category_label": "Non-Verbal Communication",
-  "scraped_at": "2026-06-18T12:16:50.806501+00:00",
+  "scraped_at": "2026-06-18T12:24:31.500932+00:00",
   "retrieval_date": "2026-06-18",
   "deep": false,
   "source_policy": "public_only",
@@ -27,8 +27,8 @@
     },
     {
       "source": "Wikidata",
-      "qid": "Q189022",
-      "url": "https://www.wikidata.org/wiki/Q189022",
+      "qid": "Q477298",
+      "url": "https://www.wikidata.org/wiki/Q477298",
       "retrieved": "2026-06-18",
       "license": "CC0"
     },
@@ -60,7 +60,7 @@
       "posture",
       "proxemic"
     ],
-    "retrieved_at": "2026-06-18T12:16:50.806501+00:00",
+    "retrieved_at": "2026-06-18T12:24:31.500932+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Body language",
@@ -70,11 +70,11 @@
     }
   },
   "wikidata": {
-    "qid": "Q189022",
-    "label": "Imperial College London",
-    "description": "public research university located in London, United Kingdom",
+    "qid": "Q477298",
+    "label": "body language",
+    "description": "type of nonverbal communication in which physical behavior is used to express or convey",
     "iso639_3": null,
-    "language_family": null,
+    "language_family": "Q3685487",
     "extinction_status": null,
     "ipa_statements": [],
     "source": "wikidata",
@@ -83,11 +83,11 @@
       "category": "non-verbal",
       "statements": []
     },
-    "retrieved_at": "2026-06-18T12:16:50.806501+00:00",
+    "retrieved_at": "2026-06-18T12:24:31.500932+00:00",
     "citation": {
       "source": "Wikidata",
-      "qid": "Q189022",
-      "url": "https://www.wikidata.org/wiki/Q189022",
+      "qid": "Q477298",
+      "url": "https://www.wikidata.org/wiki/Q477298",
       "retrieved": "2026-06-18",
       "license": "CC0"
     }
@@ -106,7 +106,7 @@
     ],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T12:16:50.806501+00:00",
+    "retrieved_at": "2026-06-18T12:24:31.500932+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "body language",

@@ -100,7 +100,10 @@ def pending_queue_by_language() -> dict[str, list[dict[str, Any]]]:
     for item in load_queue():
         if item.get("status") not in ("pending", "in_progress"):
             continue
-        grouped.setdefault(item["language"], []).append(item)
+        slug = item.get("language")
+        if not slug:
+            continue  # modality / non-language queue items
+        grouped.setdefault(slug, []).append(item)
     return grouped
 
 
@@ -175,7 +178,10 @@ def mark_assignments_in_progress(slugs: list[str]) -> None:
     queue = load_queue()
     changed = False
     for item in queue:
-        if item.get("language") in slugs and item.get("status") == "pending":
+        lang = item.get("language")
+        if not lang:
+            continue
+        if lang in slugs and item.get("status") == "pending":
             item["status"] = "in_progress"
             item["brain_started_at"] = _utcnow().isoformat()
             changed = True
@@ -209,11 +215,12 @@ def record_batch(slugs: list[str], *, errors: dict[str, list[str]] | None = None
     queue = load_queue()
     changed = False
     for item in queue:
-        if item.get("language") not in slugs:
+        lang = item.get("language")
+        if not lang or lang not in slugs:
             continue
         item["last_brain_scrape"] = now
-        if errors and item["language"] in errors and errors[item["language"]]:
-            item["brain_last_errors"] = errors[item["language"]]
+        if errors and lang in errors and errors[lang]:
+            item["brain_last_errors"] = errors[lang]
         changed = True
     if changed:
         save_queue(queue)

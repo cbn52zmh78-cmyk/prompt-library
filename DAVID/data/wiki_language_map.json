@@ -15,7 +15,7 @@
   },
   "linear-a": {
     "wikipedia": "Linear_A",
-    "wikidata": "Q208278",
+    "wikidata": "Q30972",
     "wiktionary": "Linear_A",
     "wiktionary_fallbacks": ["Linear A"],
     "iso639_3": null
@@ -68,5 +68,54 @@
     "wiktionary": "Classical_Japanese",
     "wiktionary_fallbacks": ["Classical Japanese"],
     "iso639_3": null
+  },
+  "ancient-greek": {
+    "wikipedia": "Ancient_Greek",
+    "wikidata": "Q35497",
+    "wiktionary": "Ancient_Greek",
+    "wiktionary_fallbacks": ["Ancient Greek", "Category:Ancient Greek language"],
+    "iso639_3": "grc"
+  },
+  "old-norse": {
+    "wikipedia": "Old_Norse",
+    "wikidata": "Q33089",
+    "wiktionary": "Old_Norse",
+    "wiktionary_fallbacks": ["Old Norse", "Category:Old Norse language"],
+    "iso639_3": "non"
+  },
+  "hittite": {
+    "wikipedia": "Hittite_language",
+    "wikidata": "Q35720",
+    "wiktionary": "Hittite_language",
+    "wiktionary_fallbacks": ["Hittite", "Category:Hittite language"],
+    "iso639_3": "hit"
+  },
+  "classical-sanskrit": {
+    "wikipedia": "Sanskrit",
+    "wikidata": "Q11059",
+    "wiktionary": "Sanskrit",
+    "wiktionary_fallbacks": ["Classical Sanskrit", "Category:Sanskrit language"],
+    "iso639_3": "san"
+  },
+  "biblical-hebrew": {
+    "wikipedia": "Biblical_Hebrew",
+    "wikidata": "Q9288",
+    "wiktionary": "Biblical_Hebrew",
+    "wiktionary_fallbacks": ["Hebrew", "Category:Hebrew language"],
+    "iso639_3": "hbo"
+  },
+  "middle-egyptian": {
+    "wikipedia": "Middle_Egyptian",
+    "wikidata": "Q33549",
+    "wiktionary": "Middle_Egyptian",
+    "wiktionary_fallbacks": ["Egyptian language", "Category:Middle Egyptian"],
+    "iso639_3": "egy"
+  },
+  "old-church-slavonic": {
+    "wikipedia": "Old_Church_Slavonic",
+    "wikidata": "Q35468",
+    "wiktionary": "Old_Church_Slavonic",
+    "wiktionary_fallbacks": ["Church Slavonic", "Category:Old Church Slavonic language"],
+    "iso639_3": "chu"
   }
 }

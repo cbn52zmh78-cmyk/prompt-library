@@ -3,7 +3,7 @@
   "name": "Proxemics",
   "category": "non-verbal",
   "category_label": "Non-Verbal Communication",
-  "scraped_at": "2026-06-18T12:15:17.144398+00:00",
+  "scraped_at": "2026-06-18T12:23:51.256696+00:00",
   "retrieval_date": "2026-06-18",
   "deep": false,
   "source_policy": "public_only",
@@ -26,8 +26,8 @@
     },
     {
       "source": "Wikidata",
-      "qid": "Q1757685",
-      "url": "https://www.wikidata.org/wiki/Q1757685",
+      "qid": "Q171755",
+      "url": "https://www.wikidata.org/wiki/Q171755",
       "retrieved": "2026-06-18",
       "license": "CC0"
     }
@@ -48,7 +48,7 @@
       "posture",
       "proxemic"
     ],
-    "retrieved_at": "2026-06-18T12:15:17.144398+00:00",
+    "retrieved_at": "2026-06-18T12:23:51.256696+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Proxemics",
@@ -58,11 +58,11 @@
     }
   },
   "wikidata": {
-    "qid": "Q1757685",
-    "label": "Boa Vista do Sul",
-    "description": "municipality of Rio Grande do Sul state, Brazil",
+    "qid": "Q171755",
+    "label": "proxemics",
+    "description": "study of human use of space and the effects that population density has on behaviour, communication, and social interaction",
     "iso639_3": null,
-    "language_family": null,
+    "language_family": "Q207125",
     "extinction_status": null,
     "ipa_statements": [],
     "source": "wikidata",
@@ -71,11 +71,11 @@
       "category": "non-verbal",
       "statements": []
     },
-    "retrieved_at": "2026-06-18T12:15:17.144398+00:00",
+    "retrieved_at": "2026-06-18T12:23:51.256696+00:00",
     "citation": {
       "source": "Wikidata",
-      "qid": "Q1757685",
-      "url": "https://www.wikidata.org/wiki/Q1757685",
+      "qid": "Q171755",
+      "url": "https://www.wikidata.org/wiki/Q171755",
       "retrieved": "2026-06-18",
       "license": "CC0"
     }

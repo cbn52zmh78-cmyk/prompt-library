@@ -1,0 +1,2 @@
+# Old Norse — research notes
+

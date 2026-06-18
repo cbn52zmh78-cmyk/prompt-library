@@ -3,7 +3,7 @@
   "name": "Speech Production",
   "category": "phonetics-ipa",
   "category_label": "Phonetics & IPA / Speech Production",
-  "scraped_at": "2026-06-18T12:13:10.165502+00:00",
+  "scraped_at": "2026-06-18T12:22:44.744800+00:00",
   "retrieval_date": "2026-06-18",
   "deep": false,
   "source_policy": "public_only",
@@ -26,8 +26,8 @@
     },
     {
       "source": "Wikidata",
-      "qid": "Q7578977",
-      "url": "https://www.wikidata.org/wiki/Q7578977",
+      "qid": "Q7575399",
+      "url": "https://www.wikidata.org/wiki/Q7575399",
       "retrieved": "2026-06-18",
       "license": "CC0"
     }
@@ -53,7 +53,7 @@
       "vocal tract",
       "vowel"
     ],
-    "retrieved_at": "2026-06-18T12:13:10.165502+00:00",
+    "retrieved_at": "2026-06-18T12:22:44.744800+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Speech production",
@@ -63,11 +63,11 @@
     }
   },
   "wikidata": {
-    "qid": "Q7578977",
-    "label": "Category:2000s in North Korea",
-    "description": "Wikimedia category",
+    "qid": "Q7575399",
+    "label": "speech production",
+    "description": "process by which people translate thoughts into verbal words",
     "iso639_3": null,
-    "language_family": null,
+    "language_family": "Q29389485",
     "extinction_status": null,
     "ipa_statements": [],
     "source": "wikidata",
@@ -76,11 +76,11 @@
       "category": "phonetics-ipa",
       "statements": []
     },
-    "retrieved_at": "2026-06-18T12:13:10.165502+00:00",
+    "retrieved_at": "2026-06-18T12:22:44.744800+00:00",
     "citation": {
       "source": "Wikidata",
-      "qid": "Q7578977",
-      "url": "https://www.wikidata.org/wiki/Q7578977",
+      "qid": "Q7575399",
+      "url": "https://www.wikidata.org/wiki/Q7575399",
       "retrieved": "2026-06-18",
       "license": "CC0"
     }

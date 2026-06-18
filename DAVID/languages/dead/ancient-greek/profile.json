@@ -1,0 +1,12 @@
+{
+  "id": "ancient-greek",
+  "name": "Ancient Greek",
+  "status": "dead",
+  "revival_tier": "medium",
+  "family": "Hellenic > Indo-European",
+  "period": "c. 9th century BCE \u2013 6th century CE",
+  "script": "",
+  "region": "",
+  "training_readiness": "scaffold",
+  "primary_sources": []
+}

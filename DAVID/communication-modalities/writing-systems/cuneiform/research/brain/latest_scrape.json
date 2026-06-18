@@ -3,9 +3,9 @@
   "name": "Cuneiform",
   "category": "writing-systems",
   "category_label": "Writing Systems / Scripts",
-  "scraped_at": "2026-06-18T12:15:11.015019+00:00",
+  "scraped_at": "2026-06-18T12:26:14.825294+00:00",
   "retrieval_date": "2026-06-18",
-  "deep": true,
+  "deep": false,
   "source_policy": "public_only",
   "licenses": {
     "wikipedia": "CC BY-SA 3.0",
@@ -27,8 +27,8 @@
     },
     {
       "source": "Wikidata",
-      "qid": "Q35468",
-      "url": "https://www.wikidata.org/wiki/Q35468",
+      "qid": "Q401",
+      "url": "https://www.wikidata.org/wiki/Q401",
       "retrieved": "2026-06-18",
       "license": "CC0"
     },
@@ -65,7 +65,7 @@
       "transliterat",
       "writing system"
     ],
-    "retrieved_at": "2026-06-18T12:15:11.015019+00:00",
+    "retrieved_at": "2026-06-18T12:26:14.825294+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Cuneiform",
@@ -76,11 +76,11 @@
     "script_sections": []
   },
   "wikidata": {
-    "qid": "Q35468",
-    "label": "Briz-K",
-    "description": "Russian liquid-propellant orbit-insertion upper stage",
+    "qid": "Q401",
+    "label": "cuneiform",
+    "description": "ancient writing system used for many languages, including Akkadian and Hittite",
     "iso639_3": null,
-    "language_family": "Q1958838",
+    "language_family": "Q29517555",
     "extinction_status": null,
     "ipa_statements": [],
     "source": "wikidata",
@@ -90,15 +90,27 @@
       "statements": [
         {
           "property": "P31",
-          "value": "Q110055303"
+          "value": "Q8192"
+        },
+        {
+          "property": "P31",
+          "value": "Q3953107"
+        },
+        {
+          "property": "P31",
+          "value": "Q182133"
+        },
+        {
+          "property": "P31",
+          "value": "Q29517555"
         }
       ]
     },
-    "retrieved_at": "2026-06-18T12:15:11.015019+00:00",
+    "retrieved_at": "2026-06-18T12:26:14.825294+00:00",
     "citation": {
       "source": "Wikidata",
-      "qid": "Q35468",
-      "url": "https://www.wikidata.org/wiki/Q35468",
+      "qid": "Q401",
+      "url": "https://www.wikidata.org/wiki/Q401",
       "retrieved": "2026-06-18",
       "license": "CC0"
     }
@@ -140,7 +152,7 @@
     ],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T12:15:11.015019+00:00",
+    "retrieved_at": "2026-06-18T12:26:14.825294+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "cuneiform",
@@ -178,9 +190,5 @@
     "uncertainty_flag_count": 2,
     "has_wikidata_statements": true,
     "extract_chars": 37210
-  },
-  "deep_sections": {
-    "etymology_blocks": [],
-    "pronunciation_notes": []
   }
 }

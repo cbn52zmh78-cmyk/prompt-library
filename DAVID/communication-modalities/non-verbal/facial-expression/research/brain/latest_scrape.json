@@ -3,7 +3,7 @@
   "name": "Facial Expression",
   "category": "non-verbal",
   "category_label": "Non-Verbal Communication",
-  "scraped_at": "2026-06-18T12:16:33.246234+00:00",
+  "scraped_at": "2026-06-18T12:23:33.761985+00:00",
   "retrieval_date": "2026-06-18",
   "deep": false,
   "source_policy": "public_only",
@@ -27,8 +27,8 @@
     },
     {
       "source": "Wikidata",
-      "qid": "Q10737",
-      "url": "https://www.wikidata.org/wiki/Q10737",
+      "qid": "Q327968",
+      "url": "https://www.wikidata.org/wiki/Q327968",
       "retrieved": "2026-06-18",
       "license": "CC0"
     },
@@ -55,7 +55,7 @@
       "gaze",
       "non-?verbal"
     ],
-    "retrieved_at": "2026-06-18T12:16:33.246234+00:00",
+    "retrieved_at": "2026-06-18T12:23:33.761985+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Facial expression",
@@ -65,40 +65,24 @@
     }
   },
   "wikidata": {
-    "qid": "Q10737",
-    "label": "suicide",
-    "description": "intentional act of causing one's own death",
+    "qid": "Q327968",
+    "label": "facial expression",
+    "description": "motions or positions of subcutaneous human face muscles, conveying emotional state",
     "iso639_3": null,
-    "language_family": "Q844482",
+    "language_family": "Q207125",
     "extinction_status": null,
-    "ipa_statements": [
-      {
-        "property": "P443",
-        "value": "LL-Q33810 (ori)-Psubhashish-\u0b06\u0b24\u0b4d\u0b2e\u0b39\u0b24\u0b4d\u0b5f\u0b3e.wav",
-        "source": "wikidata"
-      },
-      {
-        "property": "P443",
-        "value": "De-Suizid.ogg",
-        "source": "wikidata"
-      },
-      {
-        "property": "P443",
-        "value": "De-Selbstmord.ogg",
-        "source": "wikidata"
-      }
-    ],
+    "ipa_statements": [],
     "source": "wikidata",
     "license": "CC0",
     "modality_claims": {
       "category": "non-verbal",
       "statements": []
     },
-    "retrieved_at": "2026-06-18T12:16:33.246234+00:00",
+    "retrieved_at": "2026-06-18T12:23:33.761985+00:00",
     "citation": {
       "source": "Wikidata",
-      "qid": "Q10737",
-      "url": "https://www.wikidata.org/wiki/Q10737",
+      "qid": "Q327968",
+      "url": "https://www.wikidata.org/wiki/Q327968",
       "retrieved": "2026-06-18",
       "license": "CC0"
     }
@@ -112,7 +96,7 @@
     "pronunciation_notes": [],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T12:16:33.246234+00:00",
+    "retrieved_at": "2026-06-18T12:23:33.761985+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "facial expression",

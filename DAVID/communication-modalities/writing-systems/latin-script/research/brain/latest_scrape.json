@@ -3,9 +3,9 @@
   "name": "Latin Script",
   "category": "writing-systems",
   "category_label": "Writing Systems / Scripts",
-  "scraped_at": "2026-06-18T12:17:21.077166+00:00",
+  "scraped_at": "2026-06-18T12:27:33.619063+00:00",
   "retrieval_date": "2026-06-18",
-  "deep": true,
+  "deep": false,
   "source_policy": "public_only",
   "licenses": {
     "wikipedia": "CC BY-SA 3.0",
@@ -62,7 +62,7 @@
       "vowel",
       "writing system"
     ],
-    "retrieved_at": "2026-06-18T12:17:21.077166+00:00",
+    "retrieved_at": "2026-06-18T12:27:33.619063+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Latin script",
@@ -100,7 +100,7 @@
         }
       ]
     },
-    "retrieved_at": "2026-06-18T12:17:21.077166+00:00",
+    "retrieved_at": "2026-06-18T12:27:33.619063+00:00",
     "citation": {
       "source": "Wikidata",
       "qid": "Q8229",
@@ -124,7 +124,7 @@
     ],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T12:17:21.077166+00:00",
+    "retrieved_at": "2026-06-18T12:27:33.619063+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "Latin script",
@@ -153,9 +153,5 @@
     "uncertainty_flag_count": 0,
     "has_wikidata_statements": true,
     "extract_chars": 20067
-  },
-  "deep_sections": {
-    "etymology_blocks": [],
-    "pronunciation_notes": []
   }
 }

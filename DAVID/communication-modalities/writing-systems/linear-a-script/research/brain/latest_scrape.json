@@ -3,7 +3,7 @@
   "name": "Linear A",
   "category": "writing-systems",
   "category_label": "Writing Systems / Scripts",
-  "scraped_at": "2026-06-18T12:05:55.482026+00:00",
+  "scraped_at": "2026-06-18T12:26:35.794389+00:00",
   "retrieval_date": "2026-06-18",
   "deep": false,
   "source_policy": "public_only",
@@ -27,8 +27,8 @@
     },
     {
       "source": "Wikidata",
-      "qid": "Q208278",
-      "url": "https://www.wikidata.org/wiki/Q208278",
+      "qid": "Q30972",
+      "url": "https://www.wikidata.org/wiki/Q30972",
       "retrieved": "2026-06-18",
       "license": "CC0"
     },
@@ -60,7 +60,7 @@
       "vowel",
       "writing system"
     ],
-    "retrieved_at": "2026-06-18T12:05:55.482026+00:00",
+    "retrieved_at": "2026-06-18T12:26:35.794389+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Linear A",
@@ -76,10 +76,10 @@
     ]
   },
   "wikidata": {
-    "qid": "Q208278",
-    "label": "Montigny",
-    "description": "commune in Meurthe-et-Moselle, France",
-    "iso639_3": null,
+    "qid": "Q30972",
+    "label": "Linear A",
+    "description": "undeciphered writing system from Crete",
+    "iso639_3": "lab",
     "language_family": null,
     "extinction_status": null,
     "ipa_statements": [],
@@ -90,15 +90,27 @@
       "statements": [
         {
           "property": "P31",
-          "value": "Q484170"
+          "value": "Q182133"
+        },
+        {
+          "property": "P31",
+          "value": "Q1156875"
+        },
+        {
+          "property": "P31",
+          "value": "Q4241360"
+        },
+        {
+          "property": "P31",
+          "value": "Q436240"
         }
       ]
     },
-    "retrieved_at": "2026-06-18T12:05:55.482026+00:00",
+    "retrieved_at": "2026-06-18T12:26:35.794389+00:00",
     "citation": {
       "source": "Wikidata",
-      "qid": "Q208278",
-      "url": "https://www.wikidata.org/wiki/Q208278",
+      "qid": "Q30972",
+      "url": "https://www.wikidata.org/wiki/Q30972",
       "retrieved": "2026-06-18",
       "license": "CC0"
     }
@@ -117,7 +129,7 @@
     "pronunciation_notes": [],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T12:05:55.482026+00:00",
+    "retrieved_at": "2026-06-18T12:26:35.794389+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "Linear A",

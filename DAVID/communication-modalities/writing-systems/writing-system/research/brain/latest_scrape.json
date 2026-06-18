@@ -3,7 +3,7 @@
   "name": "Writing System",
   "category": "writing-systems",
   "category_label": "Writing Systems / Scripts",
-  "scraped_at": "2026-06-18T12:04:54.011915+00:00",
+  "scraped_at": "2026-06-18T12:25:48.543211+00:00",
   "retrieval_date": "2026-06-18",
   "deep": false,
   "source_policy": "public_only",
@@ -66,7 +66,7 @@
       "vowel",
       "writing system"
     ],
-    "retrieved_at": "2026-06-18T12:04:54.011915+00:00",
+    "retrieved_at": "2026-06-18T12:25:48.543211+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Writing system",
@@ -99,7 +99,7 @@
         }
       ]
     },
-    "retrieved_at": "2026-06-18T12:04:54.011915+00:00",
+    "retrieved_at": "2026-06-18T12:25:48.543211+00:00",
     "citation": {
       "source": "Wikidata",
       "qid": "Q8192",
@@ -110,15 +110,14 @@
   },
   "wiktionary": {
     "pages": [
-      "writing system (error: 429 Client Error: Too Many Requests for url: https://en.wiktionary.org/w/api.php?format=json&action=parse&page=writing+system&prop=wikitext)",
-      "Writing system (error: 429 Client Error: Too Many Requests for url: https://en.wiktionary.org/w/api.php?format=json&action=parse&page=Writing+system&prop=wikitext)"
+      "writing system"
     ],
     "ipa_entries": [],
     "etymology_blocks": [],
     "pronunciation_notes": [],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T12:04:54.011915+00:00",
+    "retrieved_at": "2026-06-18T12:25:48.543211+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "writing system",

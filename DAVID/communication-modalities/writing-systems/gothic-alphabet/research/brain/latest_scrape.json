@@ -3,9 +3,9 @@
   "name": "Gothic Alphabet",
   "category": "writing-systems",
   "category_label": "Writing Systems / Scripts",
-  "scraped_at": "2026-06-18T12:16:36.385024+00:00",
+  "scraped_at": "2026-06-18T12:26:53.287523+00:00",
   "retrieval_date": "2026-06-18",
-  "deep": true,
+  "deep": false,
   "source_policy": "public_only",
   "licenses": {
     "wikipedia": "CC BY-SA 3.0",
@@ -27,8 +27,8 @@
     },
     {
       "source": "Wikidata",
-      "qid": "Q33538",
-      "url": "https://www.wikidata.org/wiki/Q33538",
+      "qid": "Q467784",
+      "url": "https://www.wikidata.org/wiki/Q467784",
       "retrieved": "2026-06-18",
       "license": "CC0"
     },
@@ -59,7 +59,7 @@
       "transliterat",
       "writing system"
     ],
-    "retrieved_at": "2026-06-18T12:16:36.385024+00:00",
+    "retrieved_at": "2026-06-18T12:26:53.287523+00:00",
     "citation": {
       "source": "Wikipedia",
       "title": "Gothic alphabet",
@@ -75,11 +75,11 @@
     ]
   },
   "wikidata": {
-    "qid": "Q33538",
-    "label": "Syriac",
-    "description": "dialect of Middle Aramaic",
-    "iso639_3": "syc",
-    "language_family": "Q28602",
+    "qid": "Q467784",
+    "label": "Gothic script",
+    "description": "unicameral alphabet created in the 4th century by Ulfilas for the purpose of translating the Bible to the Gothic language",
+    "iso639_3": null,
+    "language_family": null,
     "extinction_status": null,
     "ipa_statements": [],
     "source": "wikidata",
@@ -88,32 +88,16 @@
       "category": "writing-systems",
       "statements": [
         {
-          "property": "P282",
-          "value": "Q26567"
-        },
-        {
-          "property": "P282",
-          "value": "Q3510984"
-        },
-        {
           "property": "P31",
-          "value": "Q33742"
-        },
-        {
-          "property": "P31",
-          "value": "Q839470"
-        },
-        {
-          "property": "P31",
-          "value": "Q2315359"
+          "value": "Q4004706"
         }
       ]
     },
-    "retrieved_at": "2026-06-18T12:16:36.385024+00:00",
+    "retrieved_at": "2026-06-18T12:26:53.287523+00:00",
     "citation": {
       "source": "Wikidata",
-      "qid": "Q33538",
-      "url": "https://www.wikidata.org/wiki/Q33538",
+      "qid": "Q467784",
+      "url": "https://www.wikidata.org/wiki/Q467784",
       "retrieved": "2026-06-18",
       "license": "CC0"
     }
@@ -127,7 +111,7 @@
     "pronunciation_notes": [],
     "source": "wiktionary",
     "license": "CC BY-SA 3.0",
-    "retrieved_at": "2026-06-18T12:16:36.385024+00:00",
+    "retrieved_at": "2026-06-18T12:26:53.287523+00:00",
     "citation": {
       "source": "Wiktionary",
       "title": "Gothic alphabet",
@@ -175,9 +159,5 @@
     "uncertainty_flag_count": 5,
     "has_wikidata_statements": true,
     "extract_chars": 9062
-  },
-  "deep_sections": {
-    "etymology_blocks": [],
-    "pronunciation_notes": []
   }
 }

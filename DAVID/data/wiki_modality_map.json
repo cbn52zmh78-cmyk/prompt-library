@@ -7,49 +7,49 @@
   },
   "phonetics": {
     "wikipedia": "Phonetics",
-    "wikidata": "Q27216",
+    "wikidata": "Q35395",
     "wiktionary": "phonetics",
     "wiktionary_fallbacks": ["Phonetics"]
   },
   "speech-production": {
     "wikipedia": "Speech_production",
-    "wikidata": "Q7578977",
+    "wikidata": "Q7575399",
     "wiktionary": null,
     "wiktionary_fallbacks": []
   },
   "articulatory-phonetics": {
     "wikipedia": "Articulatory_phonetics",
-    "wikidata": "Q755113",
+    "wikidata": "Q1200775",
     "wiktionary": null,
     "wiktionary_fallbacks": []
   },
   "gesture": {
     "wikipedia": "Gesture",
-    "wikidata": "Q46940",
+    "wikidata": "Q371174",
     "wiktionary": "gesture",
     "wiktionary_fallbacks": ["Gesture"]
   },
   "facial-expression": {
     "wikipedia": "Facial_expression",
-    "wikidata": "Q10737",
+    "wikidata": "Q327968",
     "wiktionary": "facial expression",
     "wiktionary_fallbacks": []
   },
   "proxemics": {
     "wikipedia": "Proxemics",
-    "wikidata": "Q1757685",
+    "wikidata": "Q171755",
     "wiktionary": null,
     "wiktionary_fallbacks": []
   },
   "paralinguistics": {
     "wikipedia": "Paralanguage",
-    "wikidata": "Q1757686",
+    "wikidata": "Q1753225",
     "wiktionary": "paralinguistics",
     "wiktionary_fallbacks": ["Paralanguage"]
   },
   "body-language": {
     "wikipedia": "Body_language",
-    "wikidata": "Q189022",
+    "wikidata": "Q477298",
     "wiktionary": "body language",
     "wiktionary_fallbacks": []
   },
@@ -67,7 +67,7 @@
   },
   "british-sign-language": {
     "wikipedia": "British_Sign_Language",
-    "wikidata": "Q33302",
+    "wikidata": "Q33000",
     "wiktionary": "British Sign Language",
     "wiktionary_fallbacks": []
   },
@@ -79,26 +79,26 @@
   },
   "cuneiform": {
     "wikipedia": "Cuneiform",
-    "wikidata": "Q35468",
+    "wikidata": "Q401",
     "wiktionary": "cuneiform",
     "wiktionary_fallbacks": ["Cuneiform"]
   },
   "linear-a-script": {
     "wikipedia": "Linear_A",
-    "wikidata": "Q208278",
+    "wikidata": "Q30972",
     "wiktionary": "Linear A",
     "wiktionary_fallbacks": [],
     "uncertainty_flags": ["undeciphered", "phonetic_values_partly_inferred"]
   },
   "gothic-alphabet": {
     "wikipedia": "Gothic_alphabet",
-    "wikidata": "Q33538",
+    "wikidata": "Q467784",
     "wiktionary": "Gothic alphabet",
     "wiktionary_fallbacks": []
   },
   "etruscan-alphabet": {
     "wikipedia": "Etruscan_alphabet",
-    "wikidata": "Q33539",
+    "wikidata": "Q271565",
     "wiktionary": "Etruscan alphabet",
     "wiktionary_fallbacks": []
   },

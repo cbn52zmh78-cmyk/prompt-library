@@ -54,8 +54,9 @@
       "topic": "international-phonetic-alphabet",
       "priority": "high",
       "task": "Ingest IPA chart and articulatory descriptors for DAVID pronunciation layer",
-      "status": "in_progress",
-      "added": "2026-06-18"
+      "status": "completed",
+      "added": "2026-06-18",
+      "last_modality_scrape": "2026-06-18"
     },
     {
       "id": "rq-cm-002",
@@ -63,8 +64,9 @@
       "topic": "gesture",
       "priority": "high",
       "task": "Catalog co-speech gesture typology for avatar non-verbal rendering",
-      "status": "in_progress",
-      "added": "2026-06-18"
+      "status": "completed",
+      "added": "2026-06-18",
+      "last_modality_scrape": "2026-06-18"
     },
     {
       "id": "rq-cm-003",
@@ -72,8 +74,9 @@
       "topic": "sign-language",
       "priority": "high",
       "task": "Baseline sign-language linguistics (cherology, grammar) from public sources",
-      "status": "in_progress",
-      "added": "2026-06-18"
+      "status": "completed",
+      "added": "2026-06-18",
+      "last_modality_scrape": "2026-06-18"
     },
     {
       "id": "rq-cm-004",
@@ -81,8 +84,9 @@
       "topic": "writing-system",
       "priority": "high",
       "task": "Writing-system typology for script-linked dead-language corpus",
-      "status": "in_progress",
-      "added": "2026-06-18"
+      "status": "completed",
+      "added": "2026-06-18",
+      "last_modality_scrape": "2026-06-18"
     },
     {
       "id": "rq-cm-005",

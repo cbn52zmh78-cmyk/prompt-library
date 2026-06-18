@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updated": "2026-06-16",
+  "updated": "2026-06-18",
   "languages": [
     {
       "id": "etruscan",
@@ -141,6 +141,104 @@
       "decipherment": "fully_read",
       "history_links": ["murasaki-shikibu"],
       "notes": "The Tale of Genji, Man'yōshū; essential for Murasaki Shikibu History work."
+    },
+    {
+      "id": "ancient-greek",
+      "name": "Ancient Greek",
+      "slug": "ancient-greek",
+      "status": "dead",
+      "revival_tier": "active",
+      "family": "Hellenic > Indo-European",
+      "period": "c. 9th century BCE – 6th century CE",
+      "script": "Greek alphabet",
+      "corpus_size": "extensive",
+      "decipherment": "fully_read",
+      "history_links": [],
+      "notes": "Homer, Plato, New Testament Koine; foundational for Western philology and PIE reconstruction."
+    },
+    {
+      "id": "old-norse",
+      "name": "Old Norse",
+      "slug": "old-norse",
+      "status": "extinct",
+      "revival_tier": "high",
+      "family": "North Germanic",
+      "period": "c. 8th–14th century CE",
+      "script": "Younger Futhark; Latin alphabet (later manuscripts)",
+      "corpus_size": "moderate",
+      "decipherment": "fully_read",
+      "history_links": [],
+      "notes": "Eddas, sagas, runic inscriptions; ancestor of Icelandic, Norwegian, Swedish, Danish."
+    },
+    {
+      "id": "hittite",
+      "name": "Hittite",
+      "slug": "hittite",
+      "status": "extinct",
+      "revival_tier": "high",
+      "family": "Anatolian > Indo-European",
+      "period": "c. 1650–1200 BCE",
+      "script": "Cuneiform (adapted Akkadian)",
+      "corpus_size": "extensive",
+      "decipherment": "fully_read",
+      "history_links": [],
+      "notes": "Earliest attested Indo-European language; Hittite Laws, royal annals, religious texts."
+    },
+    {
+      "id": "classical-sanskrit",
+      "name": "Classical Sanskrit",
+      "slug": "classical-sanskrit",
+      "status": "dead",
+      "revival_tier": "high",
+      "family": "Indo-Aryan > Indo-European",
+      "period": "c. 500 BCE – present (liturgical/literary continuity)",
+      "script": "Devanagari and regional Brahmic scripts",
+      "corpus_size": "extensive",
+      "decipherment": "fully_read",
+      "history_links": [],
+      "notes": "Vedas, Mahabharata, Paninian grammar; key daughter-language anchor for PIE studies."
+    },
+    {
+      "id": "biblical-hebrew",
+      "name": "Biblical Hebrew",
+      "slug": "biblical-hebrew",
+      "status": "dead",
+      "revival_tier": "high",
+      "family": "Semitic > Afro-Asiatic",
+      "period": "c. 10th–2nd century BCE (biblical corpus)",
+      "script": "Hebrew alphabet",
+      "corpus_size": "moderate",
+      "decipherment": "fully_read",
+      "history_links": [],
+      "notes": "Hebrew Bible, Dead Sea Scrolls; distinct from Modern Hebrew revival."
+    },
+    {
+      "id": "middle-egyptian",
+      "name": "Middle Egyptian",
+      "slug": "middle-egyptian",
+      "status": "extinct",
+      "revival_tier": "high",
+      "family": "Afro-Asiatic > Egyptian",
+      "period": "c. 2000–1300 BCE (classical phase)",
+      "script": "Hieroglyphs, hieratic, demotic",
+      "corpus_size": "extensive",
+      "decipherment": "fully_read",
+      "history_links": [],
+      "notes": "Pyramid Texts, Book of the Dead, Amarna letters; classical literary stage of Egyptian."
+    },
+    {
+      "id": "old-church-slavonic",
+      "name": "Old Church Slavonic",
+      "slug": "old-church-slavonic",
+      "status": "dead",
+      "revival_tier": "medium",
+      "family": "South Slavic > Indo-European",
+      "period": "c. 9th–11th century CE",
+      "script": "Glagolitic and Cyrillic",
+      "corpus_size": "moderate",
+      "decipherment": "fully_read",
+      "history_links": [],
+      "notes": "Cyril and Methodius liturgical corpus; bridge to East Slavic and Balkan philology."
     }
   ]
 }
