@@ -1,0 +1,260 @@
+{
+  "slug": "science_immune_checkpoint_v1",
+  "title": "Observable — The Immune Checkpoint Cancer Hijacks",
+  "format_id": "science-explainer",
+  "target_seconds": 54,
+  "intake": {
+    "format_id": "science-explainer",
+    "actor_id": "Julian-001",
+    "set_id": "@Set-Seamless-Neutral-001",
+    "style_id": "@Style-Cool-Clinical-001",
+    "source": "STUDIO/Pipeline/production_intake.py",
+    "gate_0": {
+      "version": "1.3",
+      "verdict": "YELLOW",
+      "blocked": false,
+      "requires_human_signoff": true,
+      "human_signoff": true,
+      "target_rating": "PG",
+      "channels": [
+        "social",
+        "streaming"
+      ],
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_immune_checkpoint_v1_20260619_011957.json",
+      "checklist_domains": {
+        "row_1_synthetic_ownership": "MANUAL",
+        "row_2_music_sync": "PASS",
+        "row_3_no_real_likeness": "MANUAL",
+        "row_4_target_channel": "REVIEW",
+        "row_5_age_documentation": "N/A",
+        "row_6_ai_disclosure": "MANUAL"
+      },
+      "hard_stops": [],
+      "counsel_flags": [],
+      "distribution_flags": [
+        "[SOCIAL] Social platforms require AI disclosure labels — verify current ToS"
+      ],
+      "warnings": [],
+      "rating_flags": [],
+      "cara_status": "COMPLIANT",
+      "music_bed_id": "BED-CLI-001",
+      "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
+      "row_2_music_sync": "PASS",
+      "notes": [
+        "Social = mass dissemination. Platform AI-label + community guidelines apply.",
+        "Row 2: Manifest-cleared music bed(s): BED-CLI-001 (STUDIO/Music_Sound/clearance_manifest.json)",
+        "Science Gate: illustrative-not-simulation policy applies.",
+        "Science Gate: disclosure + source present; no simulation overclaims flagged.",
+        "Revise and re-submit to Legal Gate (Gate 0)."
+      ],
+      "brief_source": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Pipeline\\Concepts\\molecular_mini_slate\\science_immune_checkpoint_v1_brief.txt"
+    },
+    "libraries": {
+      "formats": "Production_Templates_v1.json (#98)",
+      "sets": "Set_Library_v1.json (#99)",
+      "styles": "Style_Library_v1.json (#99)",
+      "casting": "Casting_Bible/registry/casting_registry.json"
+    },
+    "duration_clamp": {
+      "applied": true,
+      "policy": "seamless_7_9",
+      "lo": 7,
+      "hi": 9,
+      "shots_clamped": 1
+    },
+    "science_subject": {
+      "subject_id": "IMM-CHK-001",
+      "domain": "Molecular Immunology — Immune Checkpoints",
+      "phenomenon": "PD-1/PD-L1 immune checkpoint",
+      "field": "biology",
+      "key_measurement": "Human PD-1:PD-L1 complex solved by X-ray crystallography at 2.0 Å (PDB 4ZQK, Zak et al. 2015); blocking this contact is the basis of anti-PD-1/PD-L1 checkpoint immunotherapy (2018 Nobel Prize, Allison & Honjo)",
+      "visualization_ref": "Science/reference_plates/molecular/images/pd1-pdl1-complex_4ZQK_rcsb_assembly.jpeg",
+      "visualization_prompt": "Scientific molecular visualization, immune checkpoint synapse — PD-1 receptor on a T-cell lipid bilayer bound to PD-L1 ligand on an opposing tumor-cell bilayer across a thin aqueous gap, interface geometry per PDB 4ZQK, neighboring membrane proteins and surface glycans showing molecular crowding, faint solvent, neutral dark background, accurate relative scale, no anthropomorphic faces, no directed lunging, reversible probabilistic contact, Jantzen molecular-cellular fidelity, 16:9, ILLUSTRATIVE NOT TO SCALE label lower corner",
+      "principle_set": "jantzen_molecular_cellular",
+      "plate_id": "@Sci-ImmuneCheckpoint-001",
+      "institutions": [
+        "RCSB Protein Data Bank",
+        "EBI PDBe"
+      ],
+      "sources": [
+        {
+          "citation": "Zak KM, Kitel R, Przetocka S, et al. Structure of the Complex of Human Programmed Death 1, PD-1, and Its Ligand PD-L1. Structure. 2015;23(12):2341-2348 (PDB 4ZQK, 2.0 Å)",
+          "url": "https://www.rcsb.org/structure/4ZQK",
+          "type": "primary",
+          "notes": "X-ray structure of the human PD-1/PD-L1 binding interface — CC0 coordinates"
+        },
+        {
+          "citation": "Sharpe AH, Pauken KE. The diverse functions of the PD1 inhibitory pathway. Nat Rev Immunol. 2018;18(3):153-167",
+          "url": "https://doi.org/10.1038/nri.2017.108",
+          "type": "secondary",
+          "notes": "Peer-reviewed review of PD-1/PD-L1 biology and checkpoint blockade"
+        }
+      ],
+      "principle_selection_reason": "explicit"
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "voice_suffix": "clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only",
+    "use_identity_lock": false,
+    "avatar_reference": "STUDIO/Cast/actors_roster/male/north_america/Julian_Cross/01_casting_shots/casting_turnaround_v1.jpg",
+    "set_reference": "STUDIO/Pipeline/references/seamless_neutral_grey_reference.jpg",
+    "visualization_reference": "Science/reference_plates/molecular/images/pd1-pdl1-complex_4ZQK_rcsb_assembly.jpeg",
+    "seamless": {
+      "primary": "extend",
+      "xfade_s": 0.2,
+      "match_color": true,
+      "cut_on_motion": true,
+      "lamp_lock": true,
+      "glasses_lock": true,
+      "loudnorm": true,
+      "pin_audio_sync": true,
+      "reground_interval": 2,
+      "magenta_clamp": true
+    },
+    "music_bed": {
+      "track_id": "BED-CLI-001",
+      "manifest": "STUDIO/Music_Sound/clearance_manifest.json"
+    }
+  },
+  "shots": [
+    {
+      "id": "01_hook",
+      "duration": 7,
+      "t_start": 0,
+      "t_end": 7,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter addresses camera on seamless neutral, crisp science hook. Camera: locked medium, direct address. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Your immune system can recognize and kill a cancer cell. So why doesn't it always? Often, the tumor has found the off-switch — and it's a single molecular handshake.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Your immune system can recognize and kill a cancer cell. So why doesn't it always? Often, the tumor has found the off-switch — and it's a single molecular handshake.",
+      "on_screen": "Observable · The Immune Checkpoint"
+    },
+    {
+      "id": "02_phenomenon",
+      "duration": 9,
+      "t_start": 7,
+      "t_end": 16,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter explains the phenomenon plainly, motivated gesture, clinical lighting. Camera: slow push-in medium. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"It's called an immune checkpoint. A T cell carries a receptor named PD-1. When PD-1 touches a partner protein, PD-L1, on a neighboring cell, it dials the T cell down — a built-in brake that normally stops your immune system attacking healthy tissue. Many tumors simply coat themselves in PD-L1 and press that brake.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "It's called an immune checkpoint. A T cell carries a receptor named PD-1. When PD-1 touches a partner protein, PD-L1, on a neighboring cell, it dials the T cell down — a built-in brake that normally stops your immune system attacking healthy tissue. Many tumors simply coat themselves in PD-L1 and press that brake."
+    },
+    {
+      "id": "03_how_we_know",
+      "duration": 9,
+      "t_start": 16,
+      "t_end": 25,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter cites measurement, experiment, or observation chain — evidence-forward tone. Camera: medium — gesture to evidence. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"In twenty fifteen, crystallographers resolved the human PD-1 to PD-L1 contact at two angstroms — coordinates anyone can download. And we know the brake is real because releasing it works: antibodies that block this exact handshake unleash the immune system on tumors, a breakthrough recognized with the twenty-eighteen Nobel Prize in Medicine.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "In twenty fifteen, crystallographers resolved the human PD-1 to PD-L1 contact at two angstroms — coordinates anyone can download. And we know the brake is real because releasing it works: antibodies that block this exact handshake unleash the immune system on tumors, a breakthrough recognized with the twenty-eighteen Nobel Prize in Medicine."
+    },
+    {
+      "id": "04_visualization_payoff",
+      "duration": 9,
+      "t_start": 25,
+      "t_end": 34,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter narrates over locked @2 science visualization — see attached render for phenomenon geometry; accurate color, on-screen NOT TO SCALE when illustrative. Camera: locked medium beside or over @2 visualization plate. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Here is that handshake — PD-1 on one membrane, PD-L1 on the other, meeting across a crowded molecular gap. This is a structural model, not a microscope photograph, and it's a reversible, chance encounter — no molecule is hunting another.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Here is that handshake — PD-1 on one membrane, PD-L1 on the other, meeting across a crowded molecular gap. This is a structural model, not a microscope photograph, and it's a reversible, chance encounter — no molecule is hunting another.",
+      "on_screen_labels": [
+        "SCIENCE VISUALIZATION",
+        "ILLUSTRATIVE",
+        "NOT A SIMULATION",
+        "STRUCTURAL MODEL — PDB 4ZQK",
+        "NOT TO SCALE"
+      ],
+      "reference_slots": {
+        "@2": "visualization"
+      },
+      "science_subject_ref": "IMM-CHK-001",
+      "visualization_prompt": "PD-1/PD-L1 interface per PDB 4ZQK between two apposed lipid bilayers, crowded membrane proteins and glycans, reversible contact, no faces, Jantzen molecular-cellular fidelity",
+      "visualization_ref": "Science/reference_plates/molecular/images/pd1-pdl1-complex_4ZQK_rcsb_assembly.jpeg",
+      "duration_raw": 10
+    },
+    {
+      "id": "05_significance",
+      "duration": 9,
+      "t_start": 34,
+      "t_end": 43,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter lands significance — real-world stakes or deeper insight; end on gesture peak. Camera: warm medium-close, inviting settle. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"One small contact between two proteins decides whether your immune system fights or stands down — and learning to block it rewrote cancer treatment. The molecules don't intend any of it; the consequences are enormous.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "One small contact between two proteins decides whether your immune system fights or stands down — and learning to block it rewrote cancer treatment. The molecules don't intend any of it; the consequences are enormous."
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 6,
+    "card_type": "sources",
+    "title": "Sources — PD-1/PD-L1 immune checkpoint",
+    "subtitle": "Molecular Immunology — Immune Checkpoints",
+    "footer": "Zak KM, Kitel R, Przetocka S, et al. Structure of the Complex of Huma… · Sharpe AH, Pauken KE. The diverse functions of the PD1 inhibitory pat…",
+    "lines": [
+      "SUBJECT: PD-1/PD-L1 immune checkpoint (IMM-CHK-001)",
+      "EVIDENCE: Human PD-1:PD-L1 complex, PDB 4ZQK (Zak et al., Structure 2015), 2.0 Å",
+      "VIZ: Illustrative structural model — labeled NOT TO SCALE; not a micrograph; Jantzen molecular fidelity"
+    ],
+    "sources": [
+      {
+        "citation": "Zak KM, Kitel R, Przetocka S, et al. Structure of the Complex of Human Programmed Death 1, PD-1, and Its Ligand PD-L1. Structure. 2015;23(12):2341-2348 (PDB 4ZQK, 2.0 Å)",
+        "url": "https://www.rcsb.org/structure/4ZQK",
+        "type": "primary",
+        "notes": "X-ray structure of the human PD-1/PD-L1 binding interface — CC0 coordinates"
+      },
+      {
+        "citation": "Sharpe AH, Pauken KE. The diverse functions of the PD1 inhibitory pathway. Nat Rev Immunol. 2018;18(3):153-167",
+        "url": "https://doi.org/10.1038/nri.2017.108",
+        "type": "secondary",
+        "notes": "Peer-reviewed review of PD-1/PD-L1 biology and checkpoint blockade"
+      }
+    ],
+    "science_subject_id": "IMM-CHK-001"
+  },
+  "qa_rules": {
+    "require_identity_lock": false,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": false,
+    "min_shots": 5
+  },
+  "production_meta": {
+    "set_id": "@Set-Seamless-Neutral-001",
+    "style_id": "@Style-Cool-Clinical-001",
+    "identity_anchor": "@Julian-001",
+    "pacing": {
+      "words_per_second": 2.6,
+      "beat_gap_s": 0.35,
+      "register": "clear science communication, wonder without hype",
+      "pause_on": [
+        "measurement beats",
+        "visualization reveals",
+        "significance landings"
+      ]
+    },
+    "camera": {
+      "primary": "locked medium on seamless neutral — presenter direct to camera",
+      "secondary": "full-frame @2 science visualization payoff",
+      "forbidden": [
+        "handheld jitter",
+        "beauty-filter smoothing",
+        "misleading scale without label"
+      ]
+    },
+    "target_rating": "PG",
+    "science_subject": {
+      "subject_id": "IMM-CHK-001",
+      "domain": "Molecular Immunology — Immune Checkpoints",
+      "phenomenon": "PD-1/PD-L1 immune checkpoint",
+      "field": "biology",
+      "principle_set": "jantzen_molecular_cellular",
+      "key_measurement": "Human PD-1:PD-L1 complex solved by X-ray crystallography at 2.0 Å (PDB 4ZQK, Zak et al. 2015); blocking this contact is the basis of anti-PD-1/PD-L1 checkpoint immunotherapy (2018 Nobel Prize, Allison & Honjo)",
+      "source_count": 2,
+      "has_visualization_ref": true,
+      "plate_id": "@Sci-ImmuneCheckpoint-001"
+    },
+    "principle_set": "jantzen_molecular_cellular"
+  },
+  "batch": {
+    "batch_id": "T4_181_science_molecular",
+    "phase": "draft_480p",
+    "resolution": "480p"
+  }
+}

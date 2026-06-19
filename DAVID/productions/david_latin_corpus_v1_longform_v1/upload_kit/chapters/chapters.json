@@ -3,50 +3,50 @@
     {
       "shot_id": "01_cold_open",
       "start_s": 0.0,
-      "label": "Cold Open",
-      "youtube": "00:00 Cold Open"
+      "label": "Latin: dead in name only",
+      "youtube": "00:00 Latin: dead in name only"
     },
     {
       "shot_id": "02_stakes",
       "start_s": 8.0,
-      "label": "Stakes",
-      "youtube": "00:08 Stakes"
+      "label": "It left the home, not the lectern",
+      "youtube": "00:08 It left the home, not the lectern"
     },
     {
       "shot_id": "03_signature_question",
       "start_s": 15.8,
-      "label": "Signature Question",
-      "youtube": "00:15 Signature Question"
+      "label": "Who kept speaking it?",
+      "youtube": "00:15 Who kept speaking it?"
     },
     {
       "shot_id": "04_proof_beat",
       "start_s": 23.6,
-      "label": "Proof Beat",
-      "youtube": "00:23 Proof Beat"
+      "label": "The proof — continuous performance",
+      "youtube": "00:23 The proof — continuous performance"
     },
     {
       "shot_id": "05_method",
       "start_s": 30.4,
-      "label": "Method",
-      "youtube": "00:30 Method"
+      "label": "Rebuilding it corpus-first",
+      "youtube": "00:30 Rebuilding it corpus-first"
     },
     {
       "shot_id": "06_honesty",
       "start_s": 38.2,
-      "label": "Honesty",
-      "youtube": "00:38 Honesty"
+      "label": "Attested vs reconstructed",
+      "youtube": "00:38 Attested vs reconstructed"
     },
     {
       "shot_id": "07_demonstration",
       "start_s": 46.0,
-      "label": "Demonstration",
-      "youtube": "00:46 Demonstration"
+      "label": "Hear it — Caesar, actually pronounced",
+      "youtube": "00:46 Hear it — Caesar, actually pronounced"
     },
     {
       "shot_id": "08_invitation",
       "start_s": 55.8,
-      "label": "Invitation",
-      "youtube": "00:55 Invitation"
+      "label": "Follow the Archive",
+      "youtube": "00:55 Follow the Archive"
     },
     {
       "shot_id": "provenance_card",

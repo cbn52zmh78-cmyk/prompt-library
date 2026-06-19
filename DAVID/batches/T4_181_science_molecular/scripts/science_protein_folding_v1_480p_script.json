@@ -1,0 +1,271 @@
+{
+  "slug": "science_protein_folding_v1",
+  "title": "Observable — How a Protein Finds Its Shape",
+  "format_id": "science-explainer",
+  "target_seconds": 54,
+  "intake": {
+    "format_id": "science-explainer",
+    "actor_id": "Julian-001",
+    "set_id": "@Set-Seamless-Neutral-001",
+    "style_id": "@Style-Cool-Clinical-001",
+    "source": "STUDIO/Pipeline/production_intake.py",
+    "gate_0": {
+      "version": "1.3",
+      "verdict": "YELLOW",
+      "blocked": false,
+      "requires_human_signoff": true,
+      "human_signoff": true,
+      "target_rating": "PG",
+      "channels": [
+        "social",
+        "streaming"
+      ],
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_protein_folding_v1_20260619_012332.json",
+      "checklist_domains": {
+        "row_1_synthetic_ownership": "MANUAL",
+        "row_2_music_sync": "PASS",
+        "row_3_no_real_likeness": "MANUAL",
+        "row_4_target_channel": "REVIEW",
+        "row_5_age_documentation": "N/A",
+        "row_6_ai_disclosure": "MANUAL"
+      },
+      "hard_stops": [],
+      "counsel_flags": [],
+      "distribution_flags": [
+        "[SOCIAL] Social platforms require AI disclosure labels — verify current ToS"
+      ],
+      "warnings": [],
+      "rating_flags": [],
+      "cara_status": "COMPLIANT",
+      "music_bed_id": "BED-CLI-001",
+      "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
+      "row_2_music_sync": "PASS",
+      "notes": [
+        "Social = mass dissemination. Platform AI-label + community guidelines apply.",
+        "Row 2: Manifest-cleared music bed(s): BED-CLI-001 (STUDIO/Music_Sound/clearance_manifest.json)",
+        "Revise and re-submit to Legal Gate (Gate 0)."
+      ],
+      "brief_source": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Pipeline\\Concepts\\molecular_mini_slate\\science_protein_folding_v1_brief.txt"
+    },
+    "libraries": {
+      "formats": "Production_Templates_v1.json (#98)",
+      "sets": "Set_Library_v1.json (#99)",
+      "styles": "Style_Library_v1.json (#99)",
+      "casting": "Casting_Bible/registry/casting_registry.json"
+    },
+    "duration_clamp": {
+      "applied": true,
+      "policy": "seamless_7_9",
+      "lo": 7,
+      "hi": 9,
+      "shots_clamped": 1
+    },
+    "science_subject": {
+      "subject_id": "PRO-FLD-001",
+      "domain": "Molecular Biophysics — Protein Folding",
+      "phenomenon": "Folding down an energy funnel",
+      "field": "physics",
+      "key_measurement": "Anfinsen (1973): amino-acid sequence determines native structure; folded geometry resolved by crystallography (hemoglobin, PDB 4HHB, 1.74 Å); folding-funnel ensemble (Dill & Chan 1997) resolves Levinthal's paradox",
+      "visualization_ref": "Science/reference_plates/molecular/images/protein-hemoglobin_4HHB_rcsb_assembly.jpeg",
+      "visualization_prompt": "Scientific molecular visualization, protein folding — an extended unfolded polypeptide collapsing through an ensemble of transient intermediates into a compact native fold, alongside a GroEL/GroES chaperonin barrel assisting, a faint folding-funnel energy landscape clearly marked as schematic, crowded aqueous cytoplasm, neutral dark background, accurate relative scale, no anthropomorphic faces, multiple parallel folding routes not one path, reversible thermodynamic process, Jantzen molecular-cellular fidelity, 16:9, ILLUSTRATIVE NOT TO SCALE label lower corner",
+      "principle_set": "jantzen_molecular_cellular",
+      "plate_id": "@Sci-Protein-001",
+      "institutions": [
+        "RCSB Protein Data Bank",
+        "EBI PDBe"
+      ],
+      "sources": [
+        {
+          "citation": "Fermi G, Perutz MF, Shaanan B, Fourme R. The crystal structure of human deoxyhaemoglobin at 1.74 Å resolution. J Mol Biol. 1984;175(2):159-174 (PDB 4HHB)",
+          "url": "https://www.rcsb.org/structure/4HHB",
+          "type": "primary",
+          "notes": "Folded native protein geometry — CC0 coordinates"
+        },
+        {
+          "citation": "Anfinsen CB. Principles that govern the folding of protein chains. Science. 1973;181(4096):223-230",
+          "url": "https://doi.org/10.1126/science.181.4096.223",
+          "type": "primary",
+          "notes": "Thermodynamic hypothesis — sequence encodes native fold"
+        },
+        {
+          "citation": "Dill KA, Chan HS. From Levinthal to pathways to funnels. Nat Struct Biol. 1997;4(1):10-19",
+          "url": "https://doi.org/10.1038/nsb0197-10",
+          "type": "secondary",
+          "notes": "Folding-funnel ensemble framework"
+        }
+      ],
+      "principle_selection_reason": "explicit"
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "voice_suffix": "clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only",
+    "use_identity_lock": false,
+    "avatar_reference": "STUDIO/Cast/actors_roster/male/north_america/Julian_Cross/01_casting_shots/casting_turnaround_v1.jpg",
+    "set_reference": "STUDIO/Pipeline/references/seamless_neutral_grey_reference.jpg",
+    "visualization_reference": "Science/reference_plates/molecular/images/protein-hemoglobin_4HHB_rcsb_assembly.jpeg",
+    "seamless": {
+      "primary": "extend",
+      "xfade_s": 0.2,
+      "match_color": true,
+      "cut_on_motion": true,
+      "lamp_lock": true,
+      "glasses_lock": true,
+      "loudnorm": true,
+      "pin_audio_sync": true,
+      "reground_interval": 2,
+      "magenta_clamp": true
+    },
+    "music_bed": {
+      "track_id": "BED-CLI-001",
+      "manifest": "STUDIO/Music_Sound/clearance_manifest.json"
+    }
+  },
+  "shots": [
+    {
+      "id": "01_hook",
+      "duration": 7,
+      "t_start": 0,
+      "t_end": 7,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter addresses camera on seamless neutral, crisp science hook. Camera: locked medium, direct address. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"A protein starts life as a floppy chain. Within milliseconds it folds into one exact three-dimensional shape — out of more possibilities than there are atoms in the universe. How does it find the right one so fast?\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "A protein starts life as a floppy chain. Within milliseconds it folds into one exact three-dimensional shape — out of more possibilities than there are atoms in the universe. How does it find the right one so fast?",
+      "on_screen": "Observable · How a Protein Finds Its Shape"
+    },
+    {
+      "id": "02_phenomenon",
+      "duration": 9,
+      "t_start": 7,
+      "t_end": 16,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter explains the phenomenon plainly, motivated gesture, clinical lighting. Camera: slow push-in medium. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"It doesn't search them all. The chain slides downhill across an energy landscape shaped like a funnel — many different routes, all draining toward the same stable, native fold. In the crowded cell, helper proteins called chaperones give tricky chains a protected space to fold.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "It doesn't search them all. The chain slides downhill across an energy landscape shaped like a funnel — many different routes, all draining toward the same stable, native fold. In the crowded cell, helper proteins called chaperones give tricky chains a protected space to fold."
+    },
+    {
+      "id": "03_how_we_know",
+      "duration": 9,
+      "t_start": 16,
+      "t_end": 25,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter cites measurement, experiment, or observation chain — evidence-forward tone. Camera: medium — gesture to evidence. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"In nineteen seventy-three, Anfinsen showed the instructions live in the sequence itself: unfold a protein, remove the stress, and it folds right back. And the finished shapes are measured directly — hemoglobin's fold was solved by crystallography to better than two angstroms.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "In nineteen seventy-three, Anfinsen showed the instructions live in the sequence itself: unfold a protein, remove the stress, and it folds right back. And the finished shapes are measured directly — hemoglobin's fold was solved by crystallography to better than two angstroms."
+    },
+    {
+      "id": "04_visualization_payoff",
+      "duration": 9,
+      "t_start": 25,
+      "t_end": 34,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter narrates over locked @2 science visualization — see attached render for phenomenon geometry; accurate color, on-screen NOT TO SCALE when illustrative. Camera: locked medium beside or over @2 visualization plate. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Here is the funnel: a chain finding its fold along many parallel paths, not one script. The landscape is a schematic, the structure is a model — not a photograph — and folding is reversible, driven by physics, not effort.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Here is the funnel: a chain finding its fold along many parallel paths, not one script. The landscape is a schematic, the structure is a model — not a photograph — and folding is reversible, driven by physics, not effort.",
+      "on_screen_labels": [
+        "SCIENCE VISUALIZATION",
+        "ILLUSTRATIVE",
+        "NOT A SIMULATION",
+        "STRUCTURAL MODEL — PDB 4HHB",
+        "SCHEMATIC LANDSCAPE",
+        "NOT TO SCALE"
+      ],
+      "reference_slots": {
+        "@2": "visualization"
+      },
+      "science_subject_ref": "PRO-FLD-001",
+      "visualization_prompt": "Protein folding funnel ensemble, native fold per PDB 4HHB, GroEL/GroES chaperonin, crowded cytoplasm, schematic energy landscape labeled, no faces, Jantzen molecular-cellular fidelity",
+      "visualization_ref": "Science/reference_plates/molecular/images/protein-hemoglobin_4HHB_rcsb_assembly.jpeg",
+      "duration_raw": 10
+    },
+    {
+      "id": "05_significance",
+      "duration": 9,
+      "t_start": 34,
+      "t_end": 43,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter lands significance — real-world stakes or deeper insight; end on gesture peak. Camera: warm medium-close, inviting settle. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Get the fold right and the protein works. Get it wrong and you have the misfolding behind Alzheimer's and Parkinson's. Cracking how sequence becomes shape is one of biology's deepest problems — and we're only now learning to predict it.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Get the fold right and the protein works. Get it wrong and you have the misfolding behind Alzheimer's and Parkinson's. Cracking how sequence becomes shape is one of biology's deepest problems — and we're only now learning to predict it."
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 6,
+    "card_type": "sources",
+    "title": "Sources — Folding down an energy funnel",
+    "subtitle": "Molecular Biophysics — Protein Folding",
+    "footer": "Fermi G, Perutz MF, Shaanan B, Fourme R. The crystal structure of hum… · Anfinsen CB. Principles that govern the folding of protein chains. Sc… · Dill KA, Chan HS. From Levinthal to pathways to funnels. Nat Struct B…",
+    "lines": [
+      "SUBJECT: Protein folding — energy funnel (PRO-FLD-001)",
+      "EVIDENCE: Anfinsen (Science 1973); folded geometry PDB 4HHB (Fermi et al. 1984); funnel model (Dill & Chan 1997)",
+      "VIZ: Illustrative structural model + schematic landscape — labeled NOT TO SCALE; Jantzen molecular fidelity"
+    ],
+    "sources": [
+      {
+        "citation": "Fermi G, Perutz MF, Shaanan B, Fourme R. The crystal structure of human deoxyhaemoglobin at 1.74 Å resolution. J Mol Biol. 1984;175(2):159-174 (PDB 4HHB)",
+        "url": "https://www.rcsb.org/structure/4HHB",
+        "type": "primary",
+        "notes": "Folded native protein geometry — CC0 coordinates"
+      },
+      {
+        "citation": "Anfinsen CB. Principles that govern the folding of protein chains. Science. 1973;181(4096):223-230",
+        "url": "https://doi.org/10.1126/science.181.4096.223",
+        "type": "primary",
+        "notes": "Thermodynamic hypothesis — sequence encodes native fold"
+      },
+      {
+        "citation": "Dill KA, Chan HS. From Levinthal to pathways to funnels. Nat Struct Biol. 1997;4(1):10-19",
+        "url": "https://doi.org/10.1038/nsb0197-10",
+        "type": "secondary",
+        "notes": "Folding-funnel ensemble framework"
+      }
+    ],
+    "science_subject_id": "PRO-FLD-001"
+  },
+  "qa_rules": {
+    "require_identity_lock": false,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": false,
+    "min_shots": 5
+  },
+  "production_meta": {
+    "set_id": "@Set-Seamless-Neutral-001",
+    "style_id": "@Style-Cool-Clinical-001",
+    "identity_anchor": "@Julian-001",
+    "pacing": {
+      "words_per_second": 2.6,
+      "beat_gap_s": 0.35,
+      "register": "clear science communication, wonder without hype",
+      "pause_on": [
+        "measurement beats",
+        "visualization reveals",
+        "significance landings"
+      ]
+    },
+    "camera": {
+      "primary": "locked medium on seamless neutral — presenter direct to camera",
+      "secondary": "full-frame @2 science visualization payoff",
+      "forbidden": [
+        "handheld jitter",
+        "beauty-filter smoothing",
+        "misleading scale without label"
+      ]
+    },
+    "target_rating": "PG",
+    "science_subject": {
+      "subject_id": "PRO-FLD-001",
+      "domain": "Molecular Biophysics — Protein Folding",
+      "phenomenon": "Folding down an energy funnel",
+      "field": "physics",
+      "principle_set": "jantzen_molecular_cellular",
+      "key_measurement": "Anfinsen (1973): amino-acid sequence determines native structure; folded geometry resolved by crystallography (hemoglobin, PDB 4HHB, 1.74 Å); folding-funnel ensemble (Dill & Chan 1997) resolves Levinthal's paradox",
+      "source_count": 3,
+      "has_visualization_ref": true,
+      "plate_id": "@Sci-Protein-001"
+    },
+    "principle_set": "jantzen_molecular_cellular"
+  },
+  "batch": {
+    "batch_id": "T4_181_science_molecular",
+    "phase": "draft_480p",
+    "resolution": "480p"
+  }
+}
