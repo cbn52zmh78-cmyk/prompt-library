@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -23,6 +24,64 @@ STAR_SCRIPT = (
 )
 STAR_PROD = ROOT / "STUDIO/Productions/Editorial/science_star_lifecycle_v1_longform_v1"
 RENDER = DAVID_SCRIPTS / "render_longform.py"
+
+
+def test_apply_grade_policy_disables_lamp_lock_for_clinical_neutral():
+    script = {
+        "format_id": "science-explainer",
+        "config": {"seamless": {"lamp_lock": True, "neutral_grade": True}},
+    }
+    refs = {
+        "set_file": str(ROOT / "STUDIO/Pipeline/references/seamless_neutral_reference.jpg"),
+    }
+    opts = SeamlessOptions(enabled=True, lamp_lock=True, match_color=True)
+    graded = rl._apply_grade_policy(script, refs, opts)
+    assert graded.lamp_lock is False
+    assert graded.neutral_grade is True
+    assert graded.match_color is True
+
+
+def test_process_shot_segment_uses_neutral_grade_not_lamp_clamp(tmp_path: Path):
+    video = tmp_path / "chain_01_hook.mp4"
+    out = tmp_path / "chain_01_hook_processed.mp4"
+    video.write_bytes(b"x" * 20_000)
+    shot = {"id": "01_hook", "duration": 8}
+    refs = {
+        "set_file": str(ROOT / "STUDIO/Pipeline/references/seamless_neutral_reference.jpg"),
+    }
+    opts = SeamlessOptions(
+        enabled=True, match_color=True, magenta_clamp=True,
+        neutral_grade=True, lamp_lock=False,
+    )
+    color_ref = ROOT / "STUDIO/Pipeline/references/seamless_neutral_reference.jpg"
+
+    with (
+        patch.object(rl, "apply_neutral_white_balance_grade", return_value=out) as neutral,
+        patch.object(rl, "apply_per_shot_magenta_clamp") as lamp_clamp,
+        patch.object(rl, "pin_av_to_duration", side_effect=lambda src, dst, _d: shutil.copy2(src, dst)),
+        patch.object(rl, "loudnorm_two_pass", side_effect=lambda src, dst: shutil.copy2(src, dst)),
+    ):
+        rl.process_shot_segment(video, out, shot, refs, opts, tmp_path, color_ref)
+
+    neutral.assert_called_once()
+    lamp_clamp.assert_not_called()
+
+
+def test_assemble_xfade_chain_threads_neutral_grade(tmp_path: Path):
+    seg_a = tmp_path / "chain_01_hook_processed.mp4"
+    seg_b = tmp_path / "chain_02_phenomenon_processed.mp4"
+    seg_a.write_bytes(b"x" * 20_000)
+    seg_b.write_bytes(b"x" * 20_000)
+    out = tmp_path / "host_performance_extend.mp4"
+    shots = [{"id": "01_hook", "duration": 8}, {"id": "02_phenomenon", "duration": 9}]
+    opts = SeamlessOptions(enabled=True, loudnorm=False, neutral_grade=True, match_color=True)
+
+    with patch.object(rl, "concat_xfade_chain") as xfade:
+        rl._assemble_xfade_chain(
+            [seg_a, seg_b], shots, out, opts=opts, shots_dir=tmp_path, color_ref=None,
+        )
+    _args, kwargs = xfade.call_args
+    assert kwargs.get("neutral_grade") is True
 
 
 def test_resolve_render_exit_code_pass():
@@ -215,3 +274,4 @@ def test_star_lifecycle_concat_only_exit_zero_when_qa_passes():
     passes = manifest["qa"].get("passes", [])
     assert any("xfade chain" in p for p in passes)
     assert any("re-concat join preserved" in p for p in passes)
+    assert any("clinical neutral WB grade" in p for p in passes)

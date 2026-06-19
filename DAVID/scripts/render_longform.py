@@ -86,6 +86,7 @@ DARK_SCENE_MAGENTA_CLAMP_VF = (
     "eq=gamma_r=1.14:gamma_g=1.05:gamma_b=0.68:saturation=0.94:brightness=0.02"
 )
 ARCHIVE_NEUTRAL_CLAMP_VF = f"{NEUTRAL_WB_VF},{MAGENTA_CLAMP_VF},{SKIN_NEUTRAL_VF}"
+CLINICAL_NEUTRAL_CLAMP_VF = f"{NEUTRAL_WB_VF},{MAGENTA_CLAMP_VF},{SKIN_NEUTRAL_VF}"
 WARM_GOLD_CLAMP_VF = ARCHIVE_NEUTRAL_CLAMP_VF
 MAGENTA_SCORE_MAX = 0.42
 YELLOW_GREEN_SCORE_MAX = 0.12
@@ -1328,6 +1329,64 @@ def probe_yellow_green_score(video: Path, at_s: float | None = None) -> float:
     return bias_n / total_n if total_n else 0.0
 
 
+def apply_neutral_white_balance_grade(
+    video: Path,
+    out: Path,
+    color_ref: Path,
+) -> Path:
+    """Clinical/neutral WB grade — histogram match + neutral clamp, no full-frame lamp cast (#193)."""
+    ff = _ffmpeg_exe()
+    out.parent.mkdir(parents=True, exist_ok=True)
+    clamp_vf = CLINICAL_NEUTRAL_CLAMP_VF
+    cur = video
+    staged = out.with_name(f"{out.stem}_neutral_stage.mp4")
+
+    use_histogram = color_ref.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp")
+    if use_histogram:
+        vfilter = (
+            "[0:v][1:v]histogrammatching=pattern=1:strength=0.55[matched];"
+            f"[matched]{clamp_vf}[outv]"
+        )
+        hist_cmd = [
+            ff, "-y", "-i", str(video), "-loop", "1", "-i", str(color_ref),
+            "-filter_complex", vfilter,
+            "-map", "[outv]", "-c:v", "libx264", "-pix_fmt", "yuv420p",
+        ]
+        if has_audio_stream(video):
+            hist_cmd.extend(["-map", "0:1", "-c:a", "aac", "-b:a", "192k"])
+        hist_cmd.extend(["-shortest", str(staged)])
+        r = subprocess.run(hist_cmd, capture_output=True, text=True)
+        if r.returncode == 0:
+            cur = staged
+        else:
+            _log("[seamless] neutral WB histogram failed; eq-only fallback")
+            use_histogram = False
+
+    if not use_histogram:
+        if not _run_video_eq_pass(video, staged, clamp_vf):
+            shutil.copy2(video, out)
+            return out
+        cur = staged
+
+    for pass_n in range(2):
+        yg = probe_yellow_green_score(cur)
+        if yg <= YELLOW_GREEN_SCORE_MAX:
+            break
+        strong_vf = f"{CLINICAL_NEUTRAL_CLAMP_VF},{MAGENTA_CLAMP_STRONG_VF}"
+        strong_out = out.with_name(f"{out.stem}_neutral_strong{pass_n}.mp4")
+        if not _run_video_eq_pass(cur, strong_out, strong_vf):
+            break
+        cur = strong_out
+        _log(f"[neutral] WB strong pass {pass_n + 1}/2 (yellow-green was {yg:.3f})")
+
+    staging = out.with_name(f"{out.stem}__neutral_staging.mp4")
+    if staging.exists():
+        staging.unlink(missing_ok=True)
+    shutil.move(str(cur), str(staging))
+    os.replace(staging, out)
+    return out
+
+
 def apply_lamp_accent_local(video: Path, out: Path) -> Path:
     """Warm 3200K pool on desk/lamp quadrant only — not full-frame tint (#194)."""
     ff = _ffmpeg_exe()
@@ -1548,12 +1607,15 @@ def match_color_segment(
     lamp_lock: bool = True,
     color_ref: Path | None = None,
     archive_neutral: bool = False,
+    neutral_grade: bool = False,
 ) -> Path:
     """Match *target* to locked *color_ref* (David-001), not drifted prior segment."""
     ff = _ffmpeg_exe()
     out.parent.mkdir(parents=True, exist_ok=True)
     ref = color_ref or reference
-    if archive_neutral:
+    if neutral_grade:
+        post_vf = CLINICAL_NEUTRAL_CLAMP_VF
+    elif archive_neutral:
         post_vf = WARM_GOLD_CLAMP_VF
     elif lamp_lock:
         post_vf = f"{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}"
@@ -1629,11 +1691,14 @@ def process_shot_segment(
 
     if opts.magenta_clamp or opts.match_color:
         clamped = work / f"{video.stem}_clamped.mp4"
-        apply_per_shot_magenta_clamp(
-            cur, clamped, color_ref,
-            dark_scene=dark_scene, lamp_lock=opts.lamp_lock,
-            archive_neutral=archive_neutral,
-        )
+        if opts.neutral_grade and not dark_scene:
+            apply_neutral_white_balance_grade(cur, clamped, color_ref)
+        else:
+            apply_per_shot_magenta_clamp(
+                cur, clamped, color_ref,
+                dark_scene=dark_scene, lamp_lock=opts.lamp_lock,
+                archive_neutral=archive_neutral,
+            )
         cur = clamped
 
     if _shot_needs_label_chip_burn(shot):
@@ -1747,6 +1812,7 @@ def _assemble_xfade_chain(
             match_color=opts.match_color,
             cut_on_motion=opts.cut_on_motion,
             lamp_lock=opts.lamp_lock,
+            neutral_grade=opts.neutral_grade,
             color_ref=color_ref,
             work_dir=shots_dir,
         )
@@ -1948,6 +2014,7 @@ def concat_xfade_two(
     match_color: bool = False,
     cut_on_motion: bool = False,
     lamp_lock: bool = True,
+    neutral_grade: bool = False,
     color_ref: Path | None = None,
     work_dir: Path | None = None,
 ) -> Path:
@@ -1961,12 +2028,15 @@ def concat_xfade_two(
     if match_color:
         matched = work / f"{right.stem}_matched_{out.stem}.mp4"
         ref = color_ref or left
-        archive_neutral = lamp_lock and any(
-            k in str(ref).lower() for k in ("archive", "david_identity", "david_avatar")
+        archive_neutral = (
+            lamp_lock
+            and not neutral_grade
+            and any(k in str(ref).lower() for k in ("archive", "david_identity", "david_avatar"))
         )
         match_color_segment(
             left, right, matched,
             lamp_lock=lamp_lock, color_ref=ref, archive_neutral=archive_neutral,
+            neutral_grade=neutral_grade,
         )
         if archive_neutral:
             accented = work / f"{right.stem}_matched_accent_{out.stem}.mp4"
@@ -1997,6 +2067,7 @@ def concat_xfade_chain(
     match_color: bool = False,
     cut_on_motion: bool = False,
     lamp_lock: bool = True,
+    neutral_grade: bool = False,
     color_ref: Path | None = None,
     work_dir: Path | None = None,
 ) -> Path:
@@ -2018,6 +2089,7 @@ def concat_xfade_chain(
             match_color=match_color,
             cut_on_motion=cut_on_motion,
             lamp_lock=lamp_lock,
+            neutral_grade=neutral_grade,
             color_ref=color_ref,
             work_dir=work,
         )
@@ -2482,7 +2554,11 @@ def qa_check(
                 issues.append(f"no audio stream in {check_path.name}")
         if rules.get("require_audio") and not audio_ok:
             issues.append("require_audio: final output missing synced speech track")
-        if seamless_opts.lamp_lock and _is_archive_production(script, refs):
+        if seamless_opts.neutral_grade and _is_clinical_neutral_set(script, refs):
+            passes.append(
+                "clinical neutral WB grade (#193) — lamp_lock disabled, no full-frame warm cast"
+            )
+        elif seamless_opts.lamp_lock and _is_archive_production(script, refs):
             passes.append(
                 "#194 archive color: neutral WB + natural skin + localized 3200K lamp accent"
             )
@@ -2525,7 +2601,9 @@ def qa_check(
                     issues.append(f"A/V sync drift: {sync_bad}")
                 else:
                     passes.append("tight A/V sync per shot (duration pinned)")
-                if _is_archive_production(script, refs):
+                if _is_archive_production(script, refs) or (
+                    _is_clinical_neutral_set(script, refs) and seamless_opts.neutral_grade
+                ):
                     yg_scores = [probe_yellow_green_score(p) for p in segs]
                     if max(yg_scores) <= YELLOW_GREEN_SCORE_MAX:
                         passes.append(
@@ -2606,7 +2684,7 @@ def render_longform(
     shots_dir.mkdir(parents=True, exist_ok=True)
 
     refs = resolve_refs(script, client=client)
-    opts = seamless_opts or SeamlessOptions()
+    opts = _apply_grade_policy(script, refs, seamless_opts or SeamlessOptions())
     pack = build_imagine_pack(script, refs, opts if opts.enabled else None)
     pack_path = prod_dir / f"{script.get('slug', 'longform')}_imagine_pack.json"
     pack_path.write_text(json.dumps(pack, indent=2, ensure_ascii=False), encoding="utf-8")
@@ -2668,6 +2746,7 @@ def render_longform(
                 match_color=opts.match_color,
                 cut_on_motion=False,
                 lamp_lock=opts.lamp_lock,
+                neutral_grade=opts.neutral_grade,
                 color_ref=color_ref,
                 work_dir=shots_dir,
             )
