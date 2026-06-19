@@ -1553,9 +1553,12 @@ def match_color_segment(
     ff = _ffmpeg_exe()
     out.parent.mkdir(parents=True, exist_ok=True)
     ref = color_ref or reference
-    post_vf = WARM_GOLD_CLAMP_VF if (lamp_lock and archive_neutral) else (
-        WARM_GOLD_CLAMP_VF if lamp_lock else MAGENTA_CLAMP_VF
-    )
+    if archive_neutral:
+        post_vf = WARM_GOLD_CLAMP_VF
+    elif lamp_lock:
+        post_vf = f"{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}"
+    else:
+        post_vf = MAGENTA_CLAMP_VF
     if ref.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp"):
         if lamp_lock:
             vfilter = (

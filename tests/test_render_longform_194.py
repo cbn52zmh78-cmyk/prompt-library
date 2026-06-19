@@ -1,0 +1,39 @@
+"""#194 — archive neutral color + pronunciation chip overlay."""
+
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+import pytest
+
+ROOT = Path(__file__).resolve().parents[1]
+DAVID_SCRIPTS = ROOT / "DAVID" / "scripts"
+if str(DAVID_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(DAVID_SCRIPTS))
+
+import render_longform as rl  # noqa: E402
+
+
+def test_archive_neutral_clamp_excludes_global_lamp():
+    vf = rl._magenta_clamp_vf(dark_scene=False, lamp_lock=True, archive_neutral=True)
+    assert rl.LAMP_LOCK_VF not in vf
+    assert rl.NEUTRAL_WB_VF in vf
+
+
+def test_non_archive_lamp_lock_still_global():
+    vf = rl._magenta_clamp_vf(dark_scene=False, lamp_lock=True, archive_neutral=False)
+    assert rl.LAMP_LOCK_VF in vf
+
+
+def test_shot_needs_label_chip_burn():
+    assert rl._shot_needs_label_chip_burn({"on_screen": "RECONSTRUCTED PRONUNCIATION · Classical Latin"})
+    assert not rl._shot_needs_label_chip_burn({"on_screen": "Who kept speaking it?"})
+
+
+def test_render_pronunciation_chip_overlay(tmp_path: Path):
+    shot = {"id": "07_demonstration", "on_screen": "RECONSTRUCTED PRONUNCIATION · Classical Latin"}
+    out = tmp_path / "chip.png"
+    rl.render_pronunciation_chip_overlay(shot, out, width=1280, height=720)
+    assert out.is_file()
+    assert out.stat().st_size > 500
