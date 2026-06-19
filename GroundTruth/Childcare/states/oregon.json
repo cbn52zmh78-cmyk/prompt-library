@@ -8,9 +8,9 @@
   "state_code": "OR",
   "state_slug": "oregon",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:26:46.309495+00:00",
+  "generated_at": "2026-06-19T16:41:57.360458+00:00",
   "status": "NOT FOUND",
-  "primary_source": "Oregon OAR Child Care Rules",
+  "primary_source": "Oregon OAR 414-350-0030 (OARD portal)",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
     "ratios": {
@@ -38,8 +38,8 @@
     {
       "domain": "ratios",
       "status": "NOT FOUND",
-      "source_checked": "Oregon OAR Child Care Rules",
-      "rendered": "NOT FOUND — [source checked: Oregon OAR Child Care Rules] — Live source fetched but no ratio facts extracted from static content"
+      "source_checked": "Oregon OAR 414-350-0030 (OARD portal)",
+      "rendered": "NOT FOUND — [source checked: Oregon OAR 414-350-0030 (OARD portal)] — Live source fetched but no ratio facts extracted from static content"
     },
     {
       "domain": "group_size",
@@ -58,14 +58,14 @@
   ],
   "parked": [
     {
-      "source_id": "oregon_oregon_oar_child_care_rules",
+      "source_id": "oregon_oregon_oar_414_350_0030_oard_portal_",
       "state": "Oregon",
-      "source": "Oregon OAR Child Care Rules",
+      "source": "Oregon OAR 414-350-0030 (OARD portal)",
       "url": "https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=280451",
       "extractor": "generic",
       "status": "HARVESTED",
       "http_status": 200,
-      "bytes": 16691,
+      "bytes": 16701,
       "retrieved_date": "2026-06-19",
       "issue": 279,
       "lane": "Childcare",

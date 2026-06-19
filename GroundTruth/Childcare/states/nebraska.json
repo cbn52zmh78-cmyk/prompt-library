@@ -8,9 +8,9 @@
   "state_code": "NE",
   "state_slug": "nebraska",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:26:31.779973+00:00",
+  "generated_at": "2026-06-19T16:41:42.073299+00:00",
   "status": "NOT FOUND",
-  "primary_source": "Nebraska 391-04-004",
+  "primary_source": "Nebraska 391-04-004.04 (HTML admin code)",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
     "ratios": {
@@ -38,8 +38,8 @@
     {
       "domain": "ratios",
       "status": "NOT FOUND",
-      "source_checked": "Nebraska 391-04-004",
-      "rendered": "NOT FOUND — [source checked: Nebraska 391-04-004] — Live source fetched but no ratio facts extracted from static content"
+      "source_checked": "Nebraska 391-04-004.04 (HTML admin code)",
+      "rendered": "NOT FOUND — [source checked: Nebraska 391-04-004.04 (HTML admin code)] — Live source fetched but no ratio facts extracted from static content"
     },
     {
       "domain": "group_size",
@@ -48,15 +48,32 @@
     {
       "domain": "staff_qualifications",
       "status": "NOT FOUND",
-      "source_checked": "https://www.nebraska.gov/rules-and-regs/regsearch/Rules/Health_and_Human_Services_System/Title-391/Chapter-4/391-04-004.pdf; https://dhhs.ne.gov/licensure/Pages/Child-Care-Licensing.aspx; https://www.childcare.gov/state-resources/nebraska/understanding-and-finding-child-care-resources"
+      "source_checked": "https://www.nebraska.gov/rules-and-regs/regsearch/Rules/Health_and_Human_Services_System/Title-391/Chapter-4/391-04-004.04.html; https://www.nebraska.gov/rules-and-regs/regsearch/Rules/Health_and_Human_Services_System/Title-391/Chapter-4/391-04-004.pdf; https://dhhs.ne.gov/licensure/Pages/Child-Care-Licensing.aspx …"
     },
     {
       "domain": "background_checks",
       "status": "NOT FOUND",
-      "source_checked": "https://www.nebraska.gov/rules-and-regs/regsearch/Rules/Health_and_Human_Services_System/Title-391/Chapter-4/391-04-004.pdf; https://dhhs.ne.gov/licensure/Pages/Child-Care-Licensing.aspx; https://www.childcare.gov/state-resources/nebraska/understanding-and-finding-child-care-resources"
+      "source_checked": "https://www.nebraska.gov/rules-and-regs/regsearch/Rules/Health_and_Human_Services_System/Title-391/Chapter-4/391-04-004.04.html; https://www.nebraska.gov/rules-and-regs/regsearch/Rules/Health_and_Human_Services_System/Title-391/Chapter-4/391-04-004.pdf; https://dhhs.ne.gov/licensure/Pages/Child-Care-Licensing.aspx …"
     }
   ],
   "parked": [
+    {
+      "source_id": "nebraska_nebraska_391_04_004_04_html_admin_code_",
+      "state": "Nebraska",
+      "source": "Nebraska 391-04-004.04 (HTML admin code)",
+      "url": "https://www.nebraska.gov/rules-and-regs/regsearch/Rules/Health_and_Human_Services_System/Title-391/Chapter-4/391-04-004.04.html",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 803,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    },
     {
       "source_id": "nebraska_nebraska_391_04_004",
       "state": "Nebraska",

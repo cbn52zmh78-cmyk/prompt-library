@@ -8,7 +8,7 @@
   "state_code": "MS",
   "state_slug": "mississippi",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:26:26.107385+00:00",
+  "generated_at": "2026-06-19T16:41:36.126237+00:00",
   "status": "NOT FOUND",
   "primary_source": "Mississippi MDHS Child Care Licensing",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
@@ -39,7 +39,7 @@
       "domain": "ratios",
       "status": "NOT FOUND",
       "source_checked": "Mississippi MDHS Child Care Licensing",
-      "rendered": "NOT FOUND — [source checked: Mississippi MDHS Child Care Licensing] — [WinError 10054] An existing connection was forcibly closed by the remote host"
+      "rendered": "NOT FOUND — [source checked: Mississippi MDHS Child Care Licensing] — HTTP 404"
     },
     {
       "domain": "group_size",
@@ -64,14 +64,14 @@
       "url": "https://www.mdhs.ms.gov/early-childhood-care-development/child-care-licensing/",
       "extractor": "generic",
       "status": "PARKED",
-      "http_status": null,
-      "bytes": 0,
+      "http_status": 404,
+      "bytes": 139115,
       "retrieved_date": "2026-06-19",
       "issue": 279,
       "lane": "Childcare",
       "domain": "ratios",
       "tier": "secondary",
-      "park_reason": "[WinError 10054] An existing connection was forcibly closed by the remote host"
+      "park_reason": "HTTP 404"
     },
     {
       "source_id": "mississippi_mississippi_child_care_regulations_fallback_",

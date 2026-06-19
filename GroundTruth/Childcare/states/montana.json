@@ -8,9 +8,9 @@
   "state_code": "MT",
   "state_slug": "montana",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:26:30.430818+00:00",
+  "generated_at": "2026-06-19T16:41:40.422850+00:00",
   "status": "NOT FOUND",
-  "primary_source": "Montana ARM 37.95.301",
+  "primary_source": "Montana ARM 37.95.301 (rules.mt.gov)",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
     "ratios": {
@@ -38,8 +38,8 @@
     {
       "domain": "ratios",
       "status": "NOT FOUND",
-      "source_checked": "Montana ARM 37.95.301",
-      "rendered": "NOT FOUND — [source checked: Montana ARM 37.95.301] — Live source fetched but no ratio facts extracted from static content"
+      "source_checked": "Montana ARM 37.95.301 (rules.mt.gov)",
+      "rendered": "NOT FOUND — [source checked: Montana ARM 37.95.301 (rules.mt.gov)] — Live source fetched but no ratio facts extracted from static content"
     },
     {
       "domain": "group_size",
@@ -48,15 +48,32 @@
     {
       "domain": "staff_qualifications",
       "status": "NOT FOUND",
-      "source_checked": "https://rules.mt.gov/gateway/RuleNo.asp?RN=37%2E95%2E301; https://dphhs.mt.gov/ecfsd/childcare; https://www.childcare.gov/state-resources/montana/understanding-and-finding-child-care-resources"
+      "source_checked": "https://rules.mt.gov/gateway/getRuleFile.asp?RN=37%2E95%2E301; https://rules.mt.gov/gateway/RuleNo.asp?RN=37%2E95%2E301; https://dphhs.mt.gov/ecfsd/childcare …"
     },
     {
       "domain": "background_checks",
       "status": "NOT FOUND",
-      "source_checked": "https://rules.mt.gov/gateway/RuleNo.asp?RN=37%2E95%2E301; https://dphhs.mt.gov/ecfsd/childcare; https://www.childcare.gov/state-resources/montana/understanding-and-finding-child-care-resources"
+      "source_checked": "https://rules.mt.gov/gateway/getRuleFile.asp?RN=37%2E95%2E301; https://rules.mt.gov/gateway/RuleNo.asp?RN=37%2E95%2E301; https://dphhs.mt.gov/ecfsd/childcare …"
     }
   ],
   "parked": [
+    {
+      "source_id": "montana_montana_arm_37_95_301_rules_mt_gov_",
+      "state": "Montana",
+      "source": "Montana ARM 37.95.301 (rules.mt.gov)",
+      "url": "https://rules.mt.gov/gateway/getRuleFile.asp?RN=37%2E95%2E301",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 894,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    },
     {
       "source_id": "montana_montana_arm_37_95_301",
       "state": "Montana",

@@ -8,9 +8,9 @@
   "state_code": "TX",
   "state_slug": "texas",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:26:50.423421+00:00",
+  "generated_at": "2026-06-19T16:42:01.741627+00:00",
   "status": "PARTIAL",
-  "primary_source": "Texas 26 TAC §746.1601 (Ratio chart — LII)",
+  "primary_source": "Texas 26 TAC §746.1601 (texreg SOS)",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
     "ratios": {
@@ -75,8 +75,8 @@
     {
       "domain": "ratios",
       "status": "NOT FOUND",
-      "source_checked": "Texas 26 TAC §746.1601 (Ratio chart — LII)",
-      "rendered": "NOT FOUND — [source checked: Texas 26 TAC §746.1601 (Ratio chart — LII)] — Live source fetched but no ratio facts extracted from static content"
+      "source_checked": "Texas 26 TAC §746.1601 (texreg SOS)",
+      "rendered": "NOT FOUND — [source checked: Texas 26 TAC §746.1601 (texreg SOS)] — Live source fetched but no ratio facts extracted from static content"
     },
     {
       "domain": "group_size",
@@ -85,57 +85,24 @@
     {
       "domain": "background_checks",
       "status": "NOT FOUND",
-      "source_checked": "https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-746-1601; https://www.law.cornell.edu/tx/admin/2025/tx26_7461601_200901576_1.pdf; https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-746-1603 …"
+      "source_checked": "https://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=5&ti=26&pt=1&ch=746&sch=E&sec=746.1601; https://www.hhs.texas.gov/providers/child-care-regulation; https://www.childcare.gov/state-resources/texas/understanding-and-finding-child-care-resources"
     }
   ],
   "parked": [
     {
-      "source_id": "texas_texas_26_tac_746_1601_ratio_chart_lii_",
+      "source_id": "texas_texas_26_tac_746_1601_texreg_sos_",
       "state": "Texas",
-      "source": "Texas 26 TAC §746.1601 (Ratio chart — LII)",
-      "url": "https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-746-1601",
-      "extractor": "tx_tac746_chart",
-      "status": "HARVESTED",
-      "http_status": 200,
-      "bytes": 28812,
-      "retrieved_date": "2026-06-19",
-      "issue": 279,
-      "lane": "Childcare",
-      "domain": "ratios",
-      "tier": "primary",
-      "ratio_facts_extracted": 0,
-      "park_reason": "Live source fetched but no ratio facts extracted from static content"
-    },
-    {
-      "source_id": "texas_texas_26_tac_746_1601_ratio_chart_pdf_",
-      "state": "Texas",
-      "source": "Texas 26 TAC §746.1601 Ratio Chart (PDF)",
-      "url": "https://www.law.cornell.edu/tx/admin/2025/tx26_7461601_200901576_1.pdf",
+      "source": "Texas 26 TAC §746.1601 (texreg SOS)",
+      "url": "https://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=5&ti=26&pt=1&ch=746&sch=E&sec=746.1601",
       "extractor": "generic",
-      "status": "PARKED",
-      "http_status": 404,
-      "bytes": 228,
-      "retrieved_date": "2026-06-19",
-      "issue": 279,
-      "lane": "Childcare",
-      "domain": "ratios",
-      "tier": "secondary",
-      "park_reason": "HTTP 404"
-    },
-    {
-      "source_id": "texas_texas_26_tac_746_1603_ratios_lii_",
-      "state": "Texas",
-      "source": "Texas 26 TAC §746.1603 (Ratios — LII)",
-      "url": "https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-746-1603",
-      "extractor": "lii_ratio_table",
       "status": "HARVESTED",
       "http_status": 200,
-      "bytes": 29634,
+      "bytes": 2517,
       "retrieved_date": "2026-06-19",
       "issue": 279,
       "lane": "Childcare",
       "domain": "ratios",
-      "tier": "primary",
+      "tier": "tertiary",
       "ratio_facts_extracted": 0,
       "park_reason": "Live source fetched but no ratio facts extracted from static content"
     },

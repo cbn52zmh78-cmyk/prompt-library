@@ -8,9 +8,9 @@
   "state_code": "DE",
   "state_slug": "delaware",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:26:06.335292+00:00",
+  "generated_at": "2026-06-19T16:41:18.502311+00:00",
   "status": "NOT FOUND",
-  "primary_source": "Delaware Admin Code Title 14",
+  "primary_source": "Delaware Admin Code Title 14 Ch 3000 (PDF)",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
     "ratios": {
@@ -38,8 +38,8 @@
     {
       "domain": "ratios",
       "status": "NOT FOUND",
-      "source_checked": "Delaware Admin Code Title 14",
-      "rendered": "NOT FOUND — [source checked: Delaware Admin Code Title 14] — Live source fetched but no ratio facts extracted from static content"
+      "source_checked": "Delaware Admin Code Title 14 Ch 3000 (PDF)",
+      "rendered": "NOT FOUND — [source checked: Delaware Admin Code Title 14 Ch 3000 (PDF)] — Live source fetched but no ratio facts extracted from static content"
     },
     {
       "domain": "group_size",
@@ -48,15 +48,32 @@
     {
       "domain": "staff_qualifications",
       "status": "NOT FOUND",
-      "source_checked": "https://regulations.delaware.gov/AdminCode/title14/3000.shtml; https://education.delaware.gov/families/child_care/; https://www.childcare.gov/state-resources/delaware/understanding-and-finding-child-care-resources"
+      "source_checked": "https://regulations.delaware.gov/AdminCode/title14/3000.pdf; https://regulations.delaware.gov/AdminCode/title14/3000.shtml; https://education.delaware.gov/families/child_care/ …"
     },
     {
       "domain": "background_checks",
       "status": "NOT FOUND",
-      "source_checked": "https://regulations.delaware.gov/AdminCode/title14/3000.shtml; https://education.delaware.gov/families/child_care/; https://www.childcare.gov/state-resources/delaware/understanding-and-finding-child-care-resources"
+      "source_checked": "https://regulations.delaware.gov/AdminCode/title14/3000.pdf; https://regulations.delaware.gov/AdminCode/title14/3000.shtml; https://education.delaware.gov/families/child_care/ …"
     }
   ],
   "parked": [
+    {
+      "source_id": "delaware_delaware_admin_code_title_14_ch_3000_pdf_",
+      "state": "Delaware",
+      "source": "Delaware Admin Code Title 14 Ch 3000 (PDF)",
+      "url": "https://regulations.delaware.gov/AdminCode/title14/3000.pdf",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 65540,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    },
     {
       "source_id": "delaware_delaware_admin_code_title_14",
       "state": "Delaware",

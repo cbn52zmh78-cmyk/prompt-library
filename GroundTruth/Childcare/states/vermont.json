@@ -8,9 +8,9 @@
   "state_code": "VT",
   "state_slug": "vermont",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:26:52.299529+00:00",
+  "generated_at": "2026-06-19T16:42:03.744478+00:00",
   "status": "NOT FOUND",
-  "primary_source": "Vermont 33 V.S.A. §851",
+  "primary_source": "Vermont 33 V.S.A. §851 (legislature portal)",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
     "ratios": {
@@ -38,8 +38,8 @@
     {
       "domain": "ratios",
       "status": "NOT FOUND",
-      "source_checked": "Vermont 33 V.S.A. §851",
-      "rendered": "NOT FOUND — [source checked: Vermont 33 V.S.A. §851] — Live source fetched but no ratio facts extracted from static content"
+      "source_checked": "Vermont 33 V.S.A. §851 (legislature portal)",
+      "rendered": "NOT FOUND — [source checked: Vermont 33 V.S.A. §851 (legislature portal)] — Live source fetched but no ratio facts extracted from static content"
     },
     {
       "domain": "group_size",
@@ -58,9 +58,9 @@
   ],
   "parked": [
     {
-      "source_id": "vermont_vermont_33_v_s_a_851",
+      "source_id": "vermont_vermont_33_v_s_a_851_legislature_portal_",
       "state": "Vermont",
-      "source": "Vermont 33 V.S.A. §851",
+      "source": "Vermont 33 V.S.A. §851 (legislature portal)",
       "url": "https://legislature.vermont.gov/statutes/section/33/035/00851",
       "extractor": "generic",
       "status": "HARVESTED",

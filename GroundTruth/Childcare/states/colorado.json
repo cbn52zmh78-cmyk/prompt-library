@@ -8,15 +8,124 @@
   "state_code": "CO",
   "state_slug": "colorado",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:26:02.610640+00:00",
-  "status": "NOT FOUND",
-  "primary_source": "Colorado 7 CCR 1-3.5",
+  "generated_at": "2026-06-19T16:41:15.217400+00:00",
+  "status": "HARVESTED",
+  "primary_source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
     "ratios": {
-      "status": "NOT FOUND",
-      "fact_count": 0,
-      "facts": []
+      "status": "HARVESTED",
+      "fact_count": 6,
+      "facts": [
+        {
+          "fact_id": "colorado-childcare-ratios-1",
+          "category": "ratios",
+          "text": "Colorado licensed child care center staff:child ratio for infants 12–36 months: 1:5.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado CDHS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "colorado-childcare-ratios-2",
+          "category": "ratios",
+          "text": "Colorado licensed child care center staff:child ratio for toddlers 24–36 months: 1:5.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado CDHS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "colorado-childcare-ratios-3",
+          "category": "ratios",
+          "text": "Colorado licensed child care center staff:child ratio for toddlers 2½–3 years: 1:7.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado CDHS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "colorado-childcare-ratios-4",
+          "category": "ratios",
+          "text": "Colorado licensed child care center staff:child ratio for children 3–4 years: 1:8.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado CDHS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "colorado-childcare-ratios-5",
+          "category": "ratios",
+          "text": "Colorado licensed child care center staff:child ratio for children 4–5 years: 1:10.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado CDHS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "colorado-childcare-ratios-6",
+          "category": "ratios",
+          "text": "Colorado licensed child care center staff:child ratio for children 5 years and older: 1:12.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado CDHS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        }
+      ]
     },
     "group_size": {
       "status": "NOT FOUND",
@@ -24,88 +133,257 @@
       "facts": []
     },
     "staff_qualifications": {
-      "status": "NOT FOUND",
-      "fact_count": 0,
-      "facts": []
+      "status": "HARVESTED",
+      "fact_count": 7,
+      "facts": [
+        {
+          "fact_id": "colorado-childcare-staff-qualifications-1",
+          "category": "staff_qualifications",
+          "text": "Colorado child care licensing — A total of 6 semester hours or equivalent quarter hours in 2 classes: health, nutrition, and safety; and administration of a child care center which must be at least 3 semester or equivalent quarter hours; or Directors of public school preschools must attend a department-approved course of training in nutrition and implementation of rules regulating child care.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "category": "staff_qualifications",
+            "tier": "tertiary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "tertiary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "colorado-childcare-staff-qualifications-2",
+          "category": "staff_qualifications",
+          "text": "Colorado child care licensing — The experience requirements for the director of a large center must be met by completion of the following amount of work experience in a child development program, which includes working with a group of children in such programs as a preschool, child care center, kindergarten, or Head Start program: 1.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "category": "staff_qualifications",
+            "tier": "tertiary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "tertiary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "colorado-childcare-staff-qualifications-3",
+          "category": "staff_qualifications",
+          "text": "Colorado child care licensing — Staff aides must be at least 16 years of age, must work directly under the supervision of the director or a toddler group leader, and must have completed 8 hours of orientation at the toddler nursery.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "category": "staff_qualifications",
+            "tier": "tertiary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "tertiary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "colorado-childcare-staff-qualifications-4",
+          "category": "staff_qualifications",
+          "text": "Colorado child care licensing — All child care staff designated by the center director to give medications must complete the 4- hour Department-approved medication administration training and have current first aid and universal precautions training prior to administering medication.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "category": "staff_qualifications",
+            "tier": "tertiary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "tertiary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "colorado-childcare-staff-qualifications-5",
+          "category": "staff_qualifications",
+          "text": "Colorado child care licensing — If the center engages in special activities away from the child care facility, the staff member responsible for the activity must possess evidence of appropriate experience, training, and/or certification in the program specialty.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "category": "staff_qualifications",
+            "tier": "tertiary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "tertiary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "colorado-childcare-staff-qualifications-6",
+          "category": "staff_qualifications",
+          "text": "Colorado child care licensing — Each special activity shall be under the supervision of a staff member who shall possess evidence of appropriate experience, training and/or certification in the program specialty.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "category": "staff_qualifications",
+            "tier": "tertiary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "tertiary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "colorado-childcare-staff-qualifications-7",
+          "category": "staff_qualifications",
+          "text": "Colorado child care licensing — The hiking or backpacking supervisor must be at least 21 years old, shall hold a current American Red Cross First Aid/CPR/AED Certificate for schools an communities or equivalent, and shall have verifiable experience leading a group in backpacking at the elevation, terrain and climate where the hike is to take place.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "category": "staff_qualifications",
+            "tier": "tertiary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "tertiary",
+            "category": "staff_qualifications"
+          }
+        }
+      ]
     },
     "background_checks": {
-      "status": "NOT FOUND",
-      "fact_count": 0,
-      "facts": []
+      "status": "HARVESTED",
+      "fact_count": 6,
+      "facts": [
+        {
+          "fact_id": "colorado-childcare-background-checks-1",
+          "category": "background_checks",
+          "text": "Colorado child care licensing — For the purposes of all child care licensing rules, the terms \"child battering\", \"child abuse\", \"child molesting\", and \"child neglect\" are terms to be considered within the definition of abuse set forth in Section 19-1-103, C.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "category": "background_checks",
+            "tier": "tertiary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "tertiary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "colorado-childcare-background-checks-2",
+          "category": "background_checks",
+          "text": "Colorado child care licensing — 32 Use of Reports and Records of Child Abuse or Neglect for Background and Employment Inquiries [Rev.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "category": "background_checks",
+            "tier": "tertiary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "tertiary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "colorado-childcare-background-checks-3",
+          "category": "background_checks",
+          "text": "Colorado child care licensing — 9/1/06] A request to determine whether any owner, applicant, employee, licensee or resident of a licensed facility, or any supervisory employee of a guest care facility, was found to be responsible in a confirmed report of child abuse or neglect reported to the State Department’s automated system shall be directed to and be the responsibility of the State Department.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "category": "background_checks",
+            "tier": "tertiary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "tertiary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "colorado-childcare-background-checks-4",
+          "category": "background_checks",
+          "text": "Colorado child care licensing — The State Department will inform the requesting party in writing of whether the individual has been confirmed to be responsible for an incident of child abuse or neglect.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "category": "background_checks",
+            "tier": "tertiary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "tertiary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "colorado-childcare-background-checks-5",
+          "category": "background_checks",
+          "text": "Colorado child care licensing — If the result of the inquiry is that the individual has been confirmed as responsible for an incident of child abuse or neglect, the State Department shall provide the requesting party with information regarding the date of the reported incident, the type of abuse or neglect with the severity level, and the county department that confirmed the report.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "category": "background_checks",
+            "tier": "tertiary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "tertiary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "colorado-childcare-background-checks-6",
+          "category": "background_checks",
+          "text": "Colorado child care licensing — If the result of the inquiry is that the individual has not been confirmed to be responsible for an incident of child abuse or neglect, the State Department shall notify the requesting party of this fact.",
+          "citation": {
+            "source": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=973",
+            "agency": "Colorado 7 CCR 1-3.5 (SOS admin-code PDF)",
+            "category": "background_checks",
+            "tier": "tertiary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "tertiary",
+            "category": "background_checks"
+          }
+        }
+      ]
     }
   },
   "gaps": [
     {
-      "domain": "ratios",
-      "status": "NOT FOUND",
-      "source_checked": "Colorado 7 CCR 1-3.5",
-      "rendered": "NOT FOUND — [source checked: Colorado 7 CCR 1-3.5] — Live source fetched but no ratio facts extracted from static content"
-    },
-    {
       "domain": "group_size",
-      "status": "NOT FOUND"
-    },
-    {
-      "domain": "staff_qualifications",
-      "status": "NOT FOUND",
-      "source_checked": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=1042&fileName=7%20CCR%201-3.5; https://cdhs.colorado.gov/child-care-licensing; https://www.childcare.gov/state-resources/colorado/understanding-and-finding-child-care-resources"
-    },
-    {
-      "domain": "background_checks",
-      "status": "NOT FOUND",
-      "source_checked": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=1042&fileName=7%20CCR%201-3.5; https://cdhs.colorado.gov/child-care-licensing; https://www.childcare.gov/state-resources/colorado/understanding-and-finding-child-care-resources"
+      "status": "PARTIAL"
     }
   ],
-  "parked": [
-    {
-      "source_id": "colorado_colorado_7_ccr_1_3_5",
-      "state": "Colorado",
-      "source": "Colorado 7 CCR 1-3.5",
-      "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=1042&fileName=7%20CCR%201-3.5",
-      "extractor": "generic",
-      "status": "HARVESTED",
-      "http_status": 200,
-      "bytes": 131307,
-      "retrieved_date": "2026-06-19",
-      "issue": 279,
-      "lane": "Childcare",
-      "domain": "ratios",
-      "tier": "tertiary",
-      "ratio_facts_extracted": 0,
-      "park_reason": "Live source fetched but no ratio facts extracted from static content"
-    },
-    {
-      "source_id": "colorado_colorado_child_care_regulations_fallback_",
-      "state": "Colorado",
-      "source": "Colorado Child Care Regulations (fallback)",
-      "url": "https://cdhs.colorado.gov/child-care-licensing",
-      "extractor": "generic",
-      "status": "PARKED",
-      "http_status": 403,
-      "bytes": 919,
-      "retrieved_date": "2026-06-19",
-      "issue": 279,
-      "lane": "Childcare",
-      "domain": "ratios",
-      "tier": "secondary",
-      "park_reason": "HTTP 403"
-    },
-    {
-      "source_id": "colorado_childcare_gov_colorado",
-      "state": "Colorado",
-      "source": "Childcare.gov — Colorado",
-      "url": "https://www.childcare.gov/state-resources/colorado/understanding-and-finding-child-care-resources",
-      "extractor": "generic",
-      "status": "HARVESTED",
-      "http_status": 200,
-      "bytes": 66735,
-      "retrieved_date": "2026-06-19",
-      "issue": 279,
-      "lane": "Childcare",
-      "domain": "ratios",
-      "tier": "secondary",
-      "ratio_facts_extracted": 0,
-      "park_reason": "Live source fetched but no ratio facts extracted from static content"
-    }
-  ]
+  "parked": []
 }

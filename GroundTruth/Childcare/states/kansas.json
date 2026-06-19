@@ -8,9 +8,9 @@
   "state_code": "KS",
   "state_slug": "kansas",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:26:13.388518+00:00",
+  "generated_at": "2026-06-19T16:41:27.486422+00:00",
   "status": "NOT FOUND",
-  "primary_source": "Kansas KDHE Child Care Licensing Regulations",
+  "primary_source": "Kansas KAR 28-4-114 (Secretary of State PDF)",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
     "ratios": {
@@ -38,8 +38,8 @@
     {
       "domain": "ratios",
       "status": "NOT FOUND",
-      "source_checked": "Kansas KDHE Child Care Licensing Regulations",
-      "rendered": "NOT FOUND — [source checked: Kansas KDHE Child Care Licensing Regulations] — Live source fetched but no ratio facts extracted from static content"
+      "source_checked": "Kansas KAR 28-4-114 (Secretary of State PDF)",
+      "rendered": "NOT FOUND — [source checked: Kansas KAR 28-4-114 (Secretary of State PDF)] — Live source fetched but no ratio facts extracted from static content"
     },
     {
       "domain": "group_size",
@@ -48,15 +48,32 @@
     {
       "domain": "staff_qualifications",
       "status": "NOT FOUND",
-      "source_checked": "https://www.kdhe.ks.gov/463/Child-Care-Licensing-Regulations; https://www.kdhe.ks.gov/463/Child-Care-Licensing; https://www.childcare.gov/state-resources/kansas/understanding-and-finding-child-care-resources"
+      "source_checked": "https://www.sos.ks.gov/publications/pubs_kar/K-028-004-114.pdf; https://www.kdhe.ks.gov/463/Child-Care-Licensing-Regulations; https://www.kdhe.ks.gov/463/Child-Care-Licensing …"
     },
     {
       "domain": "background_checks",
       "status": "NOT FOUND",
-      "source_checked": "https://www.kdhe.ks.gov/463/Child-Care-Licensing-Regulations; https://www.kdhe.ks.gov/463/Child-Care-Licensing; https://www.childcare.gov/state-resources/kansas/understanding-and-finding-child-care-resources"
+      "source_checked": "https://www.sos.ks.gov/publications/pubs_kar/K-028-004-114.pdf; https://www.kdhe.ks.gov/463/Child-Care-Licensing-Regulations; https://www.kdhe.ks.gov/463/Child-Care-Licensing …"
     }
   ],
   "parked": [
+    {
+      "source_id": "kansas_kansas_kar_28_4_114_secretary_of_state_pdf_",
+      "state": "Kansas",
+      "source": "Kansas KAR 28-4-114 (Secretary of State PDF)",
+      "url": "https://www.sos.ks.gov/publications/pubs_kar/K-028-004-114.pdf",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 29795,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    },
     {
       "source_id": "kansas_kansas_kdhe_child_care_licensing_regulations",
       "state": "Kansas",

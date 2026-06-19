@@ -8,9 +8,9 @@
   "state_code": "WV",
   "state_slug": "west_virginia",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:26:54.889179+00:00",
+  "generated_at": "2026-06-19T16:42:05.818856+00:00",
   "status": "NOT FOUND",
-  "primary_source": "West Virginia CSR Child Care",
+  "primary_source": "West Virginia CSR 78-34-4.4 (SoS PDF)",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
     "ratios": {
@@ -38,8 +38,8 @@
     {
       "domain": "ratios",
       "status": "NOT FOUND",
-      "source_checked": "West Virginia CSR Child Care",
-      "rendered": "NOT FOUND — [source checked: West Virginia CSR Child Care] — Live source fetched but no ratio facts extracted from static content"
+      "source_checked": "West Virginia CSR 78-34-4.4 (SoS PDF)",
+      "rendered": "NOT FOUND — [source checked: West Virginia CSR 78-34-4.4 (SoS PDF)] — Live source fetched but no ratio facts extracted from static content"
     },
     {
       "domain": "group_size",
@@ -58,9 +58,9 @@
   ],
   "parked": [
     {
-      "source_id": "west_virginia_west_virginia_csr_child_care",
+      "source_id": "west_virginia_west_virginia_csr_78_34_4_4_sos_pdf_",
       "state": "West Virginia",
-      "source": "West Virginia CSR Child Care",
+      "source": "West Virginia CSR 78-34-4.4 (SoS PDF)",
       "url": "https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=15418&Format=PDF",
       "extractor": "generic",
       "status": "HARVESTED",
