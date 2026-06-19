@@ -3,20 +3,20 @@
   "version": "1.0",
   "task": "T5-280-B",
   "as_of_date": "2026-06-19",
-  "input_conflict_count": 706,
-  "trivial_count": 143,
-  "substantive_count": 563,
-  "facts_collapsed": 0,
+  "input_conflict_count": 718,
+  "trivial_count": 146,
+  "substantive_count": 572,
+  "facts_collapsed": 542,
   "by_reason": {
     "TRIVIAL": {
       "wording_substring": 74,
-      "wording_high_similarity": 65,
+      "wording_high_similarity": 68,
       "wording_portal_pointer": 4
     },
     "SUBSTANTIVE": {
-      "url_multifact_distinct": 388,
-      "number_delta": 85,
-      "low_similarity_borderline": 73,
+      "url_multifact_distinct": 393,
+      "number_delta": 86,
+      "low_similarity_borderline": 76,
       "requirement_polarity": 12,
       "number_or_requirement_delta": 5
     }
@@ -31,8 +31,8 @@
       "substantive": 57
     },
     "R3": {
-      "trivial": 20,
-      "substantive": 102
+      "trivial": 23,
+      "substantive": 103
     },
     "R4": {
       "trivial": 34,
@@ -40,7 +40,7 @@
     },
     "R5": {
       "trivial": 0,
-      "substantive": 20
+      "substantive": 28
     },
     "R6": {
       "trivial": 18,
@@ -4226,6 +4226,24 @@
       "lane": "R3",
       "vertical": "health_personal_care",
       "state_key": "az",
+      "block": "childcare_licensing",
+      "url": "https://www.law.cornell.edu/regulations/arizona/ariz-admin-code-ss-r9-5-404",
+      "text_variants": [
+        "arizona licensed child care center staff:child ratio for 1-year-old children: 1:6 (or 2:13 with two staff).",
+        "arizona licensed child care center staff:child ratio for 2-year-old children: 1:8.",
+        "arizona licensed child care center staff:child ratio for 3-year-old children: 1:13.",
+        "arizona licensed child care center staff:child ratio for 4-year-old children: 1:15."
+      ],
+      "variant_count": 4,
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
+      "recommended_canonical_variant": "arizona licensed child care center staff:child ratio for 1-year-old children: 1:6 (or 2:13 with two staff).",
+      "collapse": true
+    },
+    {
+      "lane": "R3",
+      "vertical": "health_personal_care",
+      "state_key": "az",
       "block": "dentistry_boards",
       "url": "https://www.azdentalboard.us",
       "text_variants": [
@@ -4321,6 +4339,24 @@
       "retain_all_variants": false,
       "assessment": "Materially different content under shared URL (low_similarity_borderline). Recommended canonical variant is the longest cited harvest text; confirm at source.",
       "collapse": false
+    },
+    {
+      "lane": "R3",
+      "vertical": "health_personal_care",
+      "state_key": "co",
+      "block": "childcare_licensing",
+      "url": "https://www.sos.state.co.us/ccr/generaterulepdf.do?ruleversionid=973",
+      "text_variants": [
+        "colorado licensed child care center staff:child ratio for children 3–4 years: 1:8.",
+        "colorado licensed child care center staff:child ratio for children 4–5 years: 1:10.",
+        "colorado licensed child care center staff:child ratio for children 5 years and older: 1:12.",
+        "colorado licensed child care center staff:child ratio for infants 12–36 months: 1:5."
+      ],
+      "variant_count": 4,
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
+      "recommended_canonical_variant": "colorado licensed child care center staff:child ratio for infants 12–36 months: 1:5.",
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -4922,6 +4958,26 @@
       "recommended_canonical_variant": null,
       "retain_all_variants": true,
       "assessment": "Distinct facts share the same portal URL — not a POC-vs-lane wording conflict. Retain all variants; no collapse.",
+      "collapse": false
+    },
+    {
+      "lane": "R3",
+      "vertical": "health_personal_care",
+      "state_key": "ma",
+      "block": "childcare_licensing",
+      "url": "https://www.law.cornell.edu/regulations/massachusetts/606-cmr-7-10",
+      "text_variants": [
+        "massachusetts licensed child care center staff:child ratio for infant / toddler group: 1:3.",
+        "massachusetts licensed child care center staff:child ratio for infants (up to 15 months old) (full or half day): 1:3; maximum group size 7.",
+        "massachusetts licensed child care center staff:child ratio for kindergarten (attending first grade the following year): 1:15; maximum group size 30.",
+        "massachusetts licensed child care center staff:child ratio for kindergarten / school age group: 1:13; maximum group size 26."
+      ],
+      "variant_count": 4,
+      "classification": "SUBSTANTIVE",
+      "reason": "low_similarity_borderline",
+      "recommended_canonical_variant": "massachusetts licensed child care center staff:child ratio for infants (up to 15 months old) (full or half day): 1:3; maximum group size 7.",
+      "retain_all_variants": false,
+      "assessment": "Materially different content under shared URL (low_similarity_borderline). Recommended canonical variant is the longest cited harvest text; confirm at source.",
       "collapse": false
     },
     {
@@ -6202,6 +6258,24 @@
       "retain_all_variants": true,
       "assessment": "Distinct facts share the same portal URL — not a POC-vs-lane wording conflict. Retain all variants; no collapse.",
       "collapse": false
+    },
+    {
+      "lane": "R3",
+      "vertical": "health_personal_care",
+      "state_key": "va",
+      "block": "childcare_licensing",
+      "url": "https://www.law.cornell.edu/regulations/virginia/8vac20-780-350",
+      "text_variants": [
+        "virginia licensed child care center staff:child ratio for 16 months up to 24 months: 1:5; maximum group size 15.",
+        "virginia licensed child care center staff:child ratio for 2 year olds: 1:8; maximum group size 24.",
+        "virginia licensed child care center staff:child ratio for 3 year olds up to school age eligible: 1:10; maximum group size 30.",
+        "virginia licensed child care center staff:child ratio for 9 years through 12 years: 1:20."
+      ],
+      "variant_count": 4,
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
+      "recommended_canonical_variant": "virginia licensed child care center staff:child ratio for 16 months up to 24 months: 1:5; maximum group size 15.",
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -11061,6 +11135,24 @@
       "lane": "R5",
       "vertical": "transport_logistics_auto",
       "state_key": "ca",
+      "block": "dot_carrier_registration",
+      "url": "https://www.cpuc.ca.gov/regulatory-services/licensing/transportation-licensing-and-analysis-branch/licensing-requirements-for-carriers-under-cpuc-authority",
+      "text_variants": [
+        "california intrastate for-hire motor carriers of property must obtain cpuc authority; interstate carriers must also maintain federal usdot/mc registration and ucr where applicable.",
+        "interstate carriers of passengers or used household goods conducting for-hire transportation from one state to another participate in california's single state registration system (ssrs) under cpuc registration requirements."
+      ],
+      "variant_count": 2,
+      "classification": "SUBSTANTIVE",
+      "reason": "url_multifact_distinct",
+      "recommended_canonical_variant": null,
+      "retain_all_variants": true,
+      "assessment": "Distinct facts share the same portal URL — not a POC-vs-lane wording conflict. Retain all variants; no collapse.",
+      "collapse": false
+    },
+    {
+      "lane": "R5",
+      "vertical": "transport_logistics_auto",
+      "state_key": "ca",
       "block": "rideshare_delivery",
       "url": "https://www.cpuc.ca.gov/-/media/cpuc-website/files/uploadedfiles/cpuc_public_website/content/licensing/transportation_network_companies/basicinformationfortncs.pdf",
       "text_variants": [
@@ -11110,6 +11202,24 @@
       "recommended_canonical_variant": "a manufacturer, importer, or distributor license is required to distribute and sell motor vehicles, recreational vehicles, or mobile homes in florida and applicants must meet flhsmv licensing requirements.",
       "retain_all_variants": false,
       "assessment": "Materially different content under shared URL (low_similarity_borderline). Recommended canonical variant is the longest cited harvest text; confirm at source.",
+      "collapse": false
+    },
+    {
+      "lane": "R5",
+      "vertical": "transport_logistics_auto",
+      "state_key": "fl",
+      "block": "dot_carrier_registration",
+      "url": "https://www.flhsmv.gov/florida-highway-patrol/commercial-vehicle-enforcement",
+      "text_variants": [
+        "florida highway patrol office of commercial vehicle enforcement inspects commercial vehicles and publishes unified carrier registration guidance for interstate motor carriers.",
+        "florida statutes authorize cve troopers to require any commercial vehicle driver to stop and submit to inspection."
+      ],
+      "variant_count": 2,
+      "classification": "SUBSTANTIVE",
+      "reason": "url_multifact_distinct",
+      "recommended_canonical_variant": null,
+      "retain_all_variants": true,
+      "assessment": "Distinct facts share the same portal URL — not a POC-vs-lane wording conflict. Retain all variants; no collapse.",
       "collapse": false
     },
     {
@@ -11170,12 +11280,102 @@
     {
       "lane": "R5",
       "vertical": "transport_logistics_auto",
+      "state_key": "ga",
+      "block": "dot_carrier_registration",
+      "url": "https://dps.georgia.gov/divisions/motor-carrier-compliance-division",
+      "text_variants": [
+        "ga permitting online portal (gaprospermits.com) supports georgia oversize/overweight and related commercial vehicle permitting administered through dps cve.",
+        "georgia department of public safety commercial vehicle enforcement (cve) is the primary focus for commercial motor vehicle highway safety, including new-entrant background reviews and motor-carrier compliance."
+      ],
+      "variant_count": 2,
+      "classification": "SUBSTANTIVE",
+      "reason": "url_multifact_distinct",
+      "recommended_canonical_variant": null,
+      "retain_all_variants": true,
+      "assessment": "Distinct facts share the same portal URL — not a POC-vs-lane wording conflict. Retain all variants; no collapse.",
+      "collapse": false
+    },
+    {
+      "lane": "R5",
+      "vertical": "transport_logistics_auto",
       "state_key": "il",
       "block": "moving",
       "url": "https://icc.illinois.gov/authority/household-goods-movers",
       "text_variants": [
         "for-hire household goods movers in illinois must obtain an icc household goods license, publish and file a tariff of services and prices, and comply with 625 ilcs 5/18c and 92 ill. adm. code 1457.",
         "icc maintains a searchable registry of licensed household goods movers and publishes a consumer guide to household goods movers in illinois."
+      ],
+      "variant_count": 2,
+      "classification": "SUBSTANTIVE",
+      "reason": "url_multifact_distinct",
+      "recommended_canonical_variant": null,
+      "retain_all_variants": true,
+      "assessment": "Distinct facts share the same portal URL — not a POC-vs-lane wording conflict. Retain all variants; no collapse.",
+      "collapse": false
+    },
+    {
+      "lane": "R5",
+      "vertical": "transport_logistics_auto",
+      "state_key": "in",
+      "block": "dot_carrier_registration",
+      "url": "https://iga.in.gov/legislative-laws/ic-8-2.1",
+      "text_variants": [
+        "indiana code title 8 article 2.1 governs motor carriers operating on indiana highways, including registration and safety requirements for commercial motor vehicles.",
+        "indiana motor carrier services are administered through indot and the bureau of motor vehicles for intrastate commercial vehicle registration and safety compliance."
+      ],
+      "variant_count": 2,
+      "classification": "SUBSTANTIVE",
+      "reason": "low_similarity_borderline",
+      "recommended_canonical_variant": "indiana code title 8 article 2.1 governs motor carriers operating on indiana highways, including registration and safety requirements for commercial motor vehicles.",
+      "retain_all_variants": false,
+      "assessment": "Materially different content under shared URL (low_similarity_borderline). Recommended canonical variant is the longest cited harvest text; confirm at source.",
+      "collapse": false
+    },
+    {
+      "lane": "R5",
+      "vertical": "transport_logistics_auto",
+      "state_key": "mi",
+      "block": "dot_carrier_registration",
+      "url": "https://www.legislature.mi.gov/laws/mcl?objectname=mcl-act-254-of-1933",
+      "text_variants": [
+        "michigan act 254 of 1933 (motor carrier act) provides for supervision and regulation of motor carriers of property for hire on michigan public highways and gives the michigan public service commission jurisdiction over registration and rates.",
+        "mpsc may require registration, conduct audits, and assess unified carrier registration fees for motor carriers under the motor carrier act."
+      ],
+      "variant_count": 2,
+      "classification": "SUBSTANTIVE",
+      "reason": "url_multifact_distinct",
+      "recommended_canonical_variant": null,
+      "retain_all_variants": true,
+      "assessment": "Distinct facts share the same portal URL — not a POC-vs-lane wording conflict. Retain all variants; no collapse.",
+      "collapse": false
+    },
+    {
+      "lane": "R5",
+      "vertical": "transport_logistics_auto",
+      "state_key": "nc",
+      "block": "dot_carrier_registration",
+      "url": "https://www.ncuc.gov/industries/transportation/transportation.html",
+      "text_variants": [
+        "a household goods mover must obtain a certificate (c-#) from the north carolina utilities commission to engage in intrastate hhg transportation.",
+        "regular-route bus companies must obtain a certificate (b-#) from the ncuc to transport passengers as a motor carrier over fixed routes in intrastate commerce."
+      ],
+      "variant_count": 2,
+      "classification": "SUBSTANTIVE",
+      "reason": "low_similarity_borderline",
+      "recommended_canonical_variant": "regular-route bus companies must obtain a certificate (b-#) from the ncuc to transport passengers as a motor carrier over fixed routes in intrastate commerce.",
+      "retain_all_variants": false,
+      "assessment": "Materially different content under shared URL (low_similarity_borderline). Recommended canonical variant is the longest cited harvest text; confirm at source.",
+      "collapse": false
+    },
+    {
+      "lane": "R5",
+      "vertical": "transport_logistics_auto",
+      "state_key": "ny",
+      "block": "dot_carrier_registration",
+      "url": "https://dmv.ny.gov/commercial-drivers",
+      "text_variants": [
+        "cdl-holders operating buses for motor carriers with ny state department of transportation authority may be subject to article 19-a driver qualification rules.",
+        "ny dmv queries the fmcsa drug and alcohol clearinghouse for cdl/clp holders and applicants before commercial motor vehicle operation."
       ],
       "variant_count": 2,
       "classification": "SUBSTANTIVE",
@@ -11238,6 +11438,24 @@
       "recommended_canonical_variant": null,
       "retain_all_variants": true,
       "assessment": "Distinct facts share the same portal URL — not a POC-vs-lane wording conflict. Retain all variants; no collapse.",
+      "collapse": false
+    },
+    {
+      "lane": "R5",
+      "vertical": "transport_logistics_auto",
+      "state_key": "oh",
+      "block": "dot_carrier_registration",
+      "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4923",
+      "text_variants": [
+        "a for-hire motor carrier is a person engaged in transporting persons or property by motor vehicle for compensation in intrastate commerce, subject to puco regulation under ohio revised code chapter 4923.",
+        "puco adopts motor-carrier safety rules, may inspect carriers and drivers, and may assess forfeitures up to $25,000 per day per violation of chapters 4921 and 4923."
+      ],
+      "variant_count": 2,
+      "classification": "SUBSTANTIVE",
+      "reason": "number_delta",
+      "recommended_canonical_variant": "puco adopts motor-carrier safety rules, may inspect carriers and drivers, and may assess forfeitures up to $25,000 per day per violation of chapters 4921 and 4923.",
+      "retain_all_variants": false,
+      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
       "collapse": false
     },
     {

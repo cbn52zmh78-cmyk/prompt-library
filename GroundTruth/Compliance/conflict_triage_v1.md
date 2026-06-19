@@ -4,21 +4,21 @@ _Task T5-280-B · 2026-06-19_
 
 ## Counts
 
-- **Input conflicts:** 706
-- **TRIVIAL (auto-collapse):** 143
-- **SUBSTANTIVE:** 563
-- **Facts collapsed:** 0
+- **Input conflicts:** 718
+- **TRIVIAL (auto-collapse):** 146
+- **SUBSTANTIVE:** 572
+- **Facts collapsed:** 542
 
 ### By reason
 
 | Class | Reason | Count |
 |-------|--------|------:|
 | TRIVIAL | wording_substring | 74 |
-| TRIVIAL | wording_high_similarity | 65 |
+| TRIVIAL | wording_high_similarity | 68 |
 | TRIVIAL | wording_portal_pointer | 4 |
-| SUBSTANTIVE | url_multifact_distinct | 388 |
-| SUBSTANTIVE | number_delta | 85 |
-| SUBSTANTIVE | low_similarity_borderline | 73 |
+| SUBSTANTIVE | url_multifact_distinct | 393 |
+| SUBSTANTIVE | number_delta | 86 |
+| SUBSTANTIVE | low_similarity_borderline | 76 |
 | SUBSTANTIVE | requirement_polarity | 12 |
 | SUBSTANTIVE | number_or_requirement_delta | 5 |
 
@@ -28,9 +28,9 @@ _Task T5-280-B · 2026-06-19_
 |------|--------:|------------:|
 | R1 | 18 | 93 |
 | R2 | 53 | 57 |
-| R3 | 20 | 102 |
+| R3 | 23 | 103 |
 | R4 | 34 | 198 |
-| R5 | 0 | 20 |
+| R5 | 0 | 28 |
 | R6 | 18 | 93 |
 
 ## Substantive sample (assessment required)

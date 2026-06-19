@@ -13,13 +13,13 @@
       "consolidation_note": "Compliance_Research/groundtruth/Compliance/state_consolidation_note_v1.json",
       "lane_count": 6,
       "total_federal_facts": 1334,
-      "total_state_facts": 4388,
-      "total_facts": 5722
+      "total_state_facts": 4394,
+      "total_facts": 5728
     },
     "local_permits_tier_b": "GroundTruth/Compliance/local_permits/"
   },
   "consolidation": {
-    "conflict_count": 717,
+    "conflict_count": 718,
     "gap_count": 0,
     "multi_source_merges": 100
   },

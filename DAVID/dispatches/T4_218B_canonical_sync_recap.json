@@ -1,0 +1,73 @@
+{
+  "message_type": "recap_vcs",
+  "issue": "218-B",
+  "title": "DAVID #218-B — canonical refs + identity_lock sync",
+  "generated_at": "2026-06-19T16:50:00+00:00",
+  "status": "AMBER",
+  "verdict": "AMBER — T1 refs_neutral PASS; proof 05 GREEN metric; proof 01 burden FAIL; API blocked chain regen completion",
+  "owner_terminal": "T4",
+  "lane": "DAVID",
+  "proof_218": "HELD",
+  "no_full_corpus_render": true,
+  "commit": {
+    "allowed": false,
+    "reason": "HOLD — proof_218 HELD; shot01 clamp burden >0.20; human-eye + NEXUS before full corpus"
+  },
+  "recap": {
+    "did": [
+      "Patched render_host_identity.py: ARCHIVE_ANTI_MAGENTA_GENERATION_LOCK on ref plates; sync_identity_lock_refs() on --refs-only",
+      "python DAVID/scripts/render_host_identity.py --force-refs --refs-only — canonical JPGs + david_identity_lock.json synced",
+      "Avatar re-uploaded to stable files-cdn.x.ai URL (tmp imgen URLs were dropping)",
+      "Partial 480p regen chain_01_cold_open with new canonical refs",
+      "python DAVID/scripts/proof_244_clamp_pass.py --force",
+      "T1 gate: python DAVID/scripts/t243_pre_render_gate.py — refs_neutral PASS"
+    ],
+    "state": "AMBER — canonical sync DONE; T1 gate PASS; proof 05 metric GREEN; proof 01 burden 0.261 (retry regen when API stable)",
+    "next": [
+      "Retry 480p --force-shot 01_cold_open when video API stable (burden <0.20 target)",
+      "Benjamin human-eye on proof RAW 01/05",
+      "Full corpus --force-all only after proof cohort fully GREEN + GO"
+    ]
+  },
+  "canonical_sync": {
+    "identity_lock": "DAVID/productions/host_identity_v1/david_identity_lock.json",
+    "avatar_url_before": "https://imgen.x.ai/.../89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+    "avatar_url_after": "files-cdn.x.ai (re-uploaded from canonical JPG)",
+    "anti_magenta_lock": "injected in identity_lock.references.*.anti_magenta_lock + image prompts"
+  },
+  "refs_magenta": {
+    "avatar": 0.3785,
+    "set": 0.3793,
+    "max": 0.42,
+    "pass": true
+  },
+  "t1_gate": {
+    "command": "python DAVID/scripts/t243_pre_render_gate.py --script DAVID/batches/T3_dryrun/scripts/david_latin_corpus_v1_480p_script.json",
+    "verdict": "PASS",
+    "refs_neutral": "PASS — avatar magenta 0.3785; set magenta 0.3793"
+  },
+  "proof_244": {
+    "report": "DAVID/productions/david_latin_corpus_v1_longform_v1/proof_244/proof_244_clamp_report.json",
+    "state": "RED",
+    "green_metrics": "1/2",
+    "shots": {
+      "01_cold_open": {
+        "raw_magenta": 0.36,
+        "clamp_burden": 0.2608,
+        "green_metric": "FAIL",
+        "generation_defect": true
+      },
+      "05_method": {
+        "raw_magenta": 0.2385,
+        "clamp_burden": 0.1494,
+        "green_metric": "PASS",
+        "generation_defect": false
+      }
+    }
+  },
+  "api_blocker": "xai video.generate internal_error / image_download_interrupted on tmp imgen URLs — mitigated via files-cdn re-upload; regen retry pending",
+  "vcs_commit_draft": {
+    "subject": "DAVID #218-B: canonical refs+lock sync; T1 refs_neutral PASS (HOLD)",
+    "body": "RECAP\n- Did: anti-magenta ref regen; sync identity_lock; CDN avatar re-upload; partial chain_01 regen; proof_244 --force; T1 PASS\n- State: AMBER — refs 0.378/0.379; T1 refs_neutral PASS; 05 green metric PASS; 01 burden 0.261 FAIL; proof_218 HELD\n- Next: retry shot01 regen; Benjamin eyeball; full corpus on GO only\n\nFix now in canonical files — not just sidecar drift."
+  }
+}
