@@ -1,9 +1,9 @@
 {
   "pipeline": "render_longform_seamless",
   "protocol": "STUDIO_Canonical_Schema_and_Seamless_Spec_v1",
-  "completed_at": "2026-06-19T03:06:32.232946+00:00",
+  "completed_at": "2026-06-19T03:15:32.770977+00:00",
   "script_source": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Productions\\Companion\\gfe_companion_sage_proof_v1_longform_v1\\gfe_companion_sage_proof_v1_script.json",
-  "concat_only": false,
+  "concat_only": true,
   "seamless": true,
   "production_dir": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\gfe_companion_sage_proof_v1_longform_v1",
   "script": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\gfe_companion_sage_proof_v1_longform_v1\\gfe_companion_sage_proof_v1_script.json",
@@ -11,34 +11,33 @@
   "output": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\gfe_companion_sage_proof_v1_longform_v1\\output\\david_gfe_companion_sage_proof_v1_seamless_v1.mp4",
   "extend_performance": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\gfe_companion_sage_proof_v1_longform_v1\\shots\\host_performance_extend.mp4",
   "extend_steps": "cached",
-  "continuity_mode": "cached",
+  "continuity_mode": "frame_chain",
   "comparison": null,
   "qa": {
     "slug": "gfe_companion_sage_proof_v1",
-    "qa_at": "2026-06-19T03:06:32.232329+00:00",
-    "pass": false,
+    "qa_at": "2026-06-19T03:15:32.770291+00:00",
+    "pass": true,
     "passes": [
       "shot count OK (6 >= 4)",
       "all shots carry synthetic talent guard (incl. auto-patched)",
-      "target duration ~40s",
+      "target duration ~43s",
       "STUDIO v1.1 seamless mode ACTIVE",
-      "continuity mode: cached; card join xfade=0.2s",
+      "continuity mode: frame_chain; card join xfade=0.2s",
+      "frame-chain i2v fallback (extend unsupported on 1.5)",
       "match-color pre-join ENABLED",
       "cut-on-motion tail trim ENABLED",
-      "host performance: host_performance_extend.mp4 (7.0s)",
+      "host performance: host_performance_extend.mp4 (42.1s)",
       "@David-001 continuity prefix embedded in video_prompt",
       "xfade chain + synced audio crossfade at joins",
-      "audio PRESENT (david_gfe_companion_sage_proof_v1_seamless_v1.mp4 mean -19.5 dB)",
+      "audio PRESENT (david_gfe_companion_sage_proof_v1_seamless_v1.mp4 mean -28.4 dB)",
       "loudnorm two-pass target I=-16.0 LUFS per shot",
       "audio pinned to exact shot duration (no stretch/offset)",
-      "zero magenta (max score 0.121 <= 0.42)",
-      "tight A/V sync per shot (duration pinned)"
+      "flat loudness across shots (spread 0.78 LU)",
+      "zero magenta (max score 0.120 <= 0.42)",
+      "tight A/V sync per shot (duration pinned)",
+      "zero hue drift across segments (max magenta 0.120)"
     ],
-    "issues": [
-      "01_greeting: duration 6s outside 7–9s seamless band",
-      "04_reflective_pause: duration 6s outside 7–9s seamless band",
-      "06_soft_close: duration 6s outside 7–9s seamless band"
-    ],
+    "issues": [],
     "shot_count": 6,
     "segment_count": 1,
     "seamless": true,
@@ -48,7 +47,7 @@
       "model": "grok-imagine-video-1.5",
       "editor_extend": "Grok Imagine UI Continue/Extend may work before API parity on 1.5",
       "finding": "client.video.extend() exists in xAI SDK but grok-imagine-video-1.5 returns 'Video extension is not supported for this model'. Pipeline uses frame-chain i2v fallback.",
-      "continuity_mode": "cached"
+      "continuity_mode": "frame_chain"
     }
   },
   "segments": [

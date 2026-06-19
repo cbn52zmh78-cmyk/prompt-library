@@ -22,8 +22,7 @@
     "use_identity_lock": false,
     "identity_lock": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Productions\\Narrative\\movies_lane_sample_v1\\amara_character_identity_lock.json",
     "avatar_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Productions\\Narrative\\movies_lane_sample_v1\\references\\amara_character_avatar_reference.jpg",
-    "set_reference": "STUDIO/Pipeline/references/warehouse_industrial_reference.jpg",
-    "avatar_url": "https://files-cdn.x.ai/86u5A3AqQICxhWZUPi_-dw/file_b16727f6-48b1-4dde-bc9c-0a921798eba8.jpg"
+    "set_reference": "STUDIO/Pipeline/references/warehouse_industrial_reference.jpg"
   },
   "shots": [
     {
