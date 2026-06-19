@@ -18,7 +18,7 @@ import render_longform as rl  # noqa: E402
 def test_archive_neutral_clamp_excludes_global_lamp():
     vf = rl._magenta_clamp_vf(dark_scene=False, lamp_lock=True, archive_neutral=True)
     assert rl.LAMP_LOCK_VF not in vf
-    assert rl.NEUTRAL_WB_VF in vf
+    assert vf == rl.MAGENTA_SATURATION_CLAMP_VF
 
 
 def test_non_archive_lamp_lock_still_global():

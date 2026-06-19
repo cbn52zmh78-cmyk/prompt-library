@@ -1,0 +1,44 @@
+{
+  "issue": 243,
+  "handoff_from": "T1",
+  "handoff_to": "T4",
+  "coordination": "T4 #244 calibrates against single-pass clamp at process_shot_segment",
+  "generated_at": "2026-06-19T14:00:00+00:00",
+  "state": "GREEN",
+  "no_render": true,
+  "constants_commit": "HOLD — manual + NEXUS sign-off only; MAGENTA_SATURATION_CLAMP_VF unchanged",
+  "recap": {
+    "did": [
+      "Re-architected #244 saturation clamp to ONE idempotent pass via apply_archive_saturation_clamp_once()",
+      "Stage boundary locked at process_shot_segment — .clamp244.json marker; second call is no-op",
+      "Removed join-stage re-clamp: concat_xfade_two uses skip_post_clamp when segments pre-graded",
+      "Removed per-join apply_lamp_accent_local (lamp accent stays per-shot only when enabled)",
+      "Pipeline order confirmed: per-shot clamp → chip/pin/loudnorm → xfade (histogram-only) → final mux"
+    ],
+    "stage_boundary": {
+      "clamp_stage": "process_shot_segment",
+      "clamp_fn": "apply_archive_saturation_clamp_once",
+      "marker": "{stem}_clamped.mp4.clamp244.json",
+      "vf": "MAGENTA_SATURATION_CLAMP_VF",
+      "downstream_no_clamp": [
+        "match_color_segment (skip_post_clamp when magenta_clamp or neutral_grade)",
+        "concat_xfade_two / concat_xfade_chain",
+        "_write_seamless_final"
+      ]
+    },
+    "next": [
+      "T4 #244: re-run proof_244_clamp_pass.py against single-pass baseline",
+      "T1: regen avatar/set refs (T243 gate) then proposed test-render when approved",
+      "NEXUS: sign off MAGENTA_SATURATION_CLAMP_VF constants before commit"
+    ]
+  },
+  "tests": {
+    "module": "tests/test_render_longform_polish.py",
+    "added": [
+      "test_archive_saturation_clamp_idempotent_skip",
+      "test_concat_xfade_two_skips_join_clamp_when_pre_graded"
+    ],
+    "updated": "tests/test_render_longform_194.py::test_archive_neutral_clamp_excludes_global_lamp"
+  },
+  "proposed_test_render": "python DAVID/scripts/render_longform.py DAVID/scripts/longform_scripts/david_latin_corpus_v1_script.json --seamless --match-color --cut-on-motion --force-all"
+}

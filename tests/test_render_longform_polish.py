@@ -71,6 +71,54 @@ def test_generation_reference_gate_blocks_blue_starved_avatar(tmp_path: Path):
         rl.assert_generation_reference_gate(script, refs, seamless_opts=opts)
 
 
+def test_archive_saturation_clamp_idempotent_skip(tmp_path: Path):
+    video = tmp_path / "chain_01.mp4"
+    out = tmp_path / "chain_01_clamped.mp4"
+    video.write_bytes(b"x" * 20_000)
+    out.write_bytes(b"y" * 20_000)
+    rl._write_clamp_stage_marker(out, magenta=0.31, host_b=42.0)
+
+    with patch.object(rl, "_run_video_eq_pass") as eq_pass:
+        result = rl.apply_archive_saturation_clamp_once(video, out)
+
+    eq_pass.assert_not_called()
+    assert result == out
+
+
+def test_concat_xfade_two_skips_join_clamp_when_pre_graded(tmp_path: Path):
+    left = tmp_path / "chain_01_processed.mp4"
+    right = tmp_path / "chain_02_processed.mp4"
+    out = tmp_path / "xfade_chain_01.mp4"
+    left.write_bytes(b"x" * 20_000)
+    right.write_bytes(b"y" * 20_000)
+    color_ref = ROOT / "DAVID/productions/host_identity_v1/references/david_avatar_reference.jpg"
+
+    def _fake_match(_ref, _tgt, matched_out, **kwargs):
+        matched_out.write_bytes(b"z" * 20_000)
+        return matched_out
+
+    with (
+        patch.object(rl, "match_color_segment", side_effect=_fake_match) as match,
+        patch.object(rl, "apply_lamp_accent_local") as accent,
+        patch.object(rl, "probe_duration", return_value=8.0),
+        patch.object(rl, "has_audio_stream", return_value=False),
+        patch.object(rl.subprocess, "run") as run,
+    ):
+        run.return_value = subprocess.CompletedProcess(args=[], returncode=0)
+        rl.concat_xfade_two(
+            left,
+            right,
+            out,
+            match_color=True,
+            magenta_clamp=True,
+            color_ref=color_ref,
+            work_dir=tmp_path,
+        )
+
+    assert match.call_args.kwargs.get("skip_post_clamp") is True
+    accent.assert_not_called()
+
+
 def test_resolve_xfade_s_floors_legacy_0_2():
     assert resolve_xfade_s(cli=None, script_seam={"xfade_s": 0.2}) == MIN_XFADE_S
     assert resolve_xfade_s(cli=0.2, script_seam={}) == MIN_XFADE_S

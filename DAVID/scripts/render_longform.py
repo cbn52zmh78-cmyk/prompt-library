@@ -126,6 +126,9 @@ MAGENTA_SATURATION_CLAMP_VF = (
 )
 CLAMP_STAGE_ISSUE = 244
 CLAMP_STAGE_NAME = "process_shot_segment"
+# Grade pipeline (#243/#244): clamp ONCE in process_shot_segment → chip/pin/loudnorm →
+# xfade chain (histogram match optional, NO re-clamp) → final mux. T4 #244 calibrates
+# against the single saturation-reduction pass stamped via .clamp244.json.
 ARCHIVE_NEUTRAL_CLAMP_VF = MAGENTA_SATURATION_CLAMP_VF
 CLINICAL_NEUTRAL_CLAMP_VF = f"{NEUTRAL_WB_VF},{MAGENTA_CLAMP_VF},{SKIN_NEUTRAL_VF}"
 WARM_GOLD_CLAMP_VF = ARCHIVE_NEUTRAL_CLAMP_VF
@@ -1773,6 +1776,43 @@ def apply_warm_gold_clamp(video: Path, out: Path, color_ref: Path) -> Path:
     )
 
 
+def apply_archive_saturation_clamp_once(
+    video: Path,
+    out: Path,
+    *,
+    apply_lamp_accent: bool = False,
+) -> Path:
+    """#244 — one saturation-reduction eq pass; idempotent via .clamp244.json marker."""
+    out.parent.mkdir(parents=True, exist_ok=True)
+    if _clamp_already_applied(out):
+        _log(f"[#244] clamp idempotent skip — already stamped {out.name}")
+        return out
+
+    staged = out.with_name(f"{out.stem}_clamp_stage.mp4")
+    if not _run_video_eq_pass(video, staged, MAGENTA_SATURATION_CLAMP_VF):
+        shutil.copy2(video, out)
+        return out
+    cur = staged
+
+    if apply_lamp_accent:
+        accented = out.with_name(f"{out.stem}_lamp_accent.mp4")
+        apply_lamp_accent_local(cur, accented)
+        cur = accented
+
+    staging = out.with_name(f"{out.stem}__clamp_staging.mp4")
+    if staging.exists():
+        staging.unlink(missing_ok=True)
+    shutil.move(str(cur), str(staging))
+    os.replace(staging, out)
+    cast = probe_color_cast_score(out)
+    _write_clamp_stage_marker(
+        out,
+        magenta=probe_magenta_score(out),
+        host_b=cast.get("host_blue_mean", 0.0),
+    )
+    return out
+
+
 def _run_video_eq_pass(video: Path, out: Path, vf: str) -> bool:
     ff = _ffmpeg_exe()
     cmd = [
@@ -1796,87 +1836,70 @@ def apply_per_shot_magenta_clamp(
     archive_neutral: bool = False,
     neutral_generation: bool = False,
 ) -> Path:
-    """Per-shot magenta suppression — #244 single-pass at process_shot_segment only."""
+    """Per-shot magenta suppression — archive-neutral delegates to single-pass #244 clamp."""
     out.parent.mkdir(parents=True, exist_ok=True)
-    if archive_neutral and _clamp_already_applied(out):
-        _log(f"[#244] clamp idempotent skip — already stamped {out.name}")
-        return out
+    if archive_neutral and not dark_scene:
+        return apply_archive_saturation_clamp_once(
+            video,
+            out,
+            apply_lamp_accent=not neutral_generation,
+        )
 
     clamp_vf = _magenta_clamp_vf(
         dark_scene=dark_scene, lamp_lock=lamp_lock, archive_neutral=archive_neutral,
     )
     staged = out.with_name(f"{out.stem}_clamp_stage.mp4")
+    ff = _ffmpeg_exe()
+    cur = video
+    use_histogram = (
+        not dark_scene
+        and color_ref.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp")
+    )
+    if use_histogram:
+        vfilter = (
+            "[0:v][1:v]histogrammatching=pattern=1:strength=0.55[matched];"
+            f"[matched]{clamp_vf}[outv]"
+        )
+        hist_cmd = [
+            ff, "-y", "-i", str(video), "-loop", "1", "-i", str(color_ref),
+            "-filter_complex", vfilter,
+            "-map", "[outv]", "-c:v", "libx264", "-pix_fmt", "yuv420p",
+        ]
+        if has_audio_stream(video):
+            hist_cmd.extend(["-map", "0:1", "-c:a", "aac", "-b:a", "192k"])
+        hist_cmd.extend(["-shortest", str(staged)])
+        r = subprocess.run(hist_cmd, capture_output=True, text=True)
+        if r.returncode == 0:
+            cur = staged
+        else:
+            _log("[seamless] per-shot histogram clamp failed; eq-only fallback")
+            use_histogram = False
 
-    # #244 Archive-neutral: ONE saturation-reduction eq pass — no histogram stack, no strong loop.
-    if archive_neutral and not dark_scene:
+    if not use_histogram:
         if not _run_video_eq_pass(video, staged, clamp_vf):
             shutil.copy2(video, out)
             return out
         cur = staged
-    else:
-        ff = _ffmpeg_exe()
-        cur = video
-        use_histogram = (
-            not dark_scene
-            and color_ref.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp")
+
+    max_strong = 4 if dark_scene else 2
+    for pass_n in range(max_strong):
+        mag = probe_magenta_score(cur)
+        if mag <= MAGENTA_SCORE_MAX:
+            break
+        strong_vf = _magenta_clamp_vf(
+            dark_scene=True, lamp_lock=lamp_lock, strong=True, archive_neutral=False,
         )
-        if use_histogram:
-            vfilter = (
-                "[0:v][1:v]histogrammatching=pattern=1:strength=0.55[matched];"
-                f"[matched]{clamp_vf}[outv]"
-            )
-            hist_cmd = [
-                ff, "-y", "-i", str(video), "-loop", "1", "-i", str(color_ref),
-                "-filter_complex", vfilter,
-                "-map", "[outv]", "-c:v", "libx264", "-pix_fmt", "yuv420p",
-            ]
-            if has_audio_stream(video):
-                hist_cmd.extend(["-map", "0:1", "-c:a", "aac", "-b:a", "192k"])
-            hist_cmd.extend(["-shortest", str(staged)])
-            r = subprocess.run(hist_cmd, capture_output=True, text=True)
-            if r.returncode == 0:
-                cur = staged
-            else:
-                _log("[seamless] per-shot histogram clamp failed; eq-only fallback")
-                use_histogram = False
-
-        if not use_histogram:
-            if not _run_video_eq_pass(video, staged, clamp_vf):
-                shutil.copy2(video, out)
-                return out
-            cur = staged
-
-        max_strong = 4 if dark_scene else 2
-        for pass_n in range(max_strong):
-            mag = probe_magenta_score(cur)
-            if mag <= MAGENTA_SCORE_MAX:
-                break
-            strong_vf = _magenta_clamp_vf(
-                dark_scene=True, lamp_lock=lamp_lock, strong=True, archive_neutral=False,
-            )
-            strong_out = out.with_name(f"{out.stem}_strong{pass_n}.mp4")
-            if not _run_video_eq_pass(cur, strong_out, strong_vf):
-                break
-            cur = strong_out
-            _log(f"[magenta] within-clip strong pass {pass_n + 1}/{max_strong} (score was {mag:.3f})")
-
-        if archive_neutral and not dark_scene and not neutral_generation:
-            accented = out.with_name(f"{out.stem}_lamp_accent.mp4")
-            apply_lamp_accent_local(cur, accented)
-            cur = accented
+        strong_out = out.with_name(f"{out.stem}_strong{pass_n}.mp4")
+        if not _run_video_eq_pass(cur, strong_out, strong_vf):
+            break
+        cur = strong_out
+        _log(f"[magenta] within-clip strong pass {pass_n + 1}/{max_strong} (score was {mag:.3f})")
 
     staging = out.with_name(f"{out.stem}__clamp_staging.mp4")
     if staging.exists():
         staging.unlink(missing_ok=True)
     shutil.move(str(cur), str(staging))
     os.replace(staging, out)
-    if archive_neutral:
-        cast = probe_color_cast_score(out)
-        _write_clamp_stage_marker(
-            out,
-            magenta=probe_magenta_score(out),
-            host_b=cast.get("host_blue_mean", 0.0),
-        )
     return out
 
 
@@ -1891,7 +1914,11 @@ def match_color_segment(
     neutral_grade: bool = False,
     skip_post_clamp: bool = False,
 ) -> Path:
-    """Match *target* to locked *color_ref* (David-001), not drifted prior segment."""
+    """Match *target* to locked *color_ref* (David-001), not drifted prior segment.
+
+    When skip_post_clamp=True (#244), histogram alignment only — saturation clamp already
+    ran once in process_shot_segment; fallbacks pass through without re-clamp.
+    """
     ff = _ffmpeg_exe()
     out.parent.mkdir(parents=True, exist_ok=True)
     ref = color_ref or reference
@@ -2003,6 +2030,8 @@ def process_shot_segment(
         clamped = work / f"{video.stem}_clamped.mp4"
         if opts.neutral_grade:
             apply_neutral_white_balance_grade(cur, clamped, color_ref)
+        elif archive_neutral and _clamp_already_applied(clamped) and clamped.is_file():
+            _log(f"[#244] grade stage no-op — clamp marker on {clamped.name}")
         else:
             apply_per_shot_magenta_clamp(
                 cur, clamped, color_ref,
@@ -2040,13 +2069,6 @@ def process_shot_segment(
         staging.unlink(missing_ok=True)
     shutil.move(str(cur), str(staging))
     os.replace(staging, out)
-    if archive_neutral and needs_grade and not opts.neutral_grade:
-        cast = probe_color_cast_score(out)
-        _write_clamp_stage_marker(
-            out,
-            magenta=probe_magenta_score(out),
-            host_b=cast.get("host_blue_mean", 0.0),
-        )
     return out
 
 
@@ -2109,7 +2131,7 @@ def _assemble_xfade_chain(
     color_ref: Path | None,
     label: str = "xfade chain",
 ) -> Path:
-    """Re-concat/clamp/sync path — loudness-tighten then mandatory xfade when N>=2 (#193)."""
+    """Re-concat/sync path — loudness-tighten then xfade when N>=2; no re-clamp (#244)."""
     segs = [p for p in segments if p.is_file() and p.stat().st_size > 10000]
     if not segs:
         raise ValueError("_assemble_xfade_chain: no valid segments")
@@ -2390,19 +2412,15 @@ def concat_xfade_two(
             and not neutral_grade
             and any(k in str(ref).lower() for k in ("archive", "david_identity", "david_avatar"))
         )
-        skip_post_clamp = archive_neutral and magenta_clamp
+        # Segments are pre-graded in process_shot_segment — join is histogram-only, no re-clamp.
+        skip_post_clamp = magenta_clamp or neutral_grade
         match_color_segment(
             left, right, matched,
             lamp_lock=lamp_lock, color_ref=ref, archive_neutral=archive_neutral,
             neutral_grade=neutral_grade,
             skip_post_clamp=skip_post_clamp,
         )
-        if archive_neutral and not neutral_generation:
-            accented = work / f"{right.stem}_matched_accent_{out.stem}.mp4"
-            apply_lamp_accent_local(matched, accented)
-            b = accented
-        else:
-            b = matched
+        b = matched
     dur_a = probe_duration(a)
     dur_b = probe_duration(b)
     out.parent.mkdir(parents=True, exist_ok=True)
