@@ -216,3 +216,47 @@ def test_migrated_v2_example_files_exist_and_validate():
         assert is_correlation_id(sub["correlationId"])
         assert sub["schemaVersion"] == "2.0.0" and len(sub["unspsc"]) == 8
         assert v2.validate_against_schema(sub, schema) == []
+
+
+# --------------------------------------------------- full v2 rollout (all 11)
+def test_full_library_has_eleven_v1_and_v2_examples():
+    v1 = sorted(EXAMPLES.glob("*_filled_v1.json"))
+    v2_files = sorted(V2_EXAMPLES.glob("*_filled_v2.json"))
+    assert len(v1) == 11, [p.name for p in v1]
+    assert len(v2_files) == 11, [p.name for p in v2_files]
+
+
+def test_all_eleven_v1_forms_ingest_backward_compatible(tmp_path):
+    seen_services = set()
+    for i, p in enumerate(sorted(EXAMPLES.glob("*_filled_v1.json"))):
+        legacy = json.loads(p.read_text(encoding="utf-8"))
+        r = v2.ingest_submission(legacy, store=SubmissionStore(tmp_path / f"s{i}.json"))
+        assert r["schemaValid"] is True, (p.name, r["schemaErrors"])
+        assert len(r["unspsc"]) == 8 and r["schemaVersion"] == "2.0.0"
+        assert r["dispatchPlan"]["status"] in ("READY", "READY_WITH_WARNINGS")
+        seen_services.add(r["serviceId"])
+    assert len(seen_services) == 11  # one filled example per service
+
+
+def test_all_eleven_v2_examples_validate():
+    schema = v2.load_submission_schema()
+    files = sorted(V2_EXAMPLES.glob("*_filled_v2.json"))
+    assert len(files) == 11
+    for path in files:
+        sub = json.loads(path.read_text(encoding="utf-8"))
+        assert is_correlation_id(sub["correlationId"])
+        assert sub["schemaVersion"] == "2.0.0" and len(sub["unspsc"]) == 8
+        assert "service_id" not in sub and "auto_route" not in sub  # camelCase only
+        assert v2.validate_against_schema(sub, schema) == [], path.name
+
+
+def test_all_eleven_md_forms_carry_v2_standard():
+    codes = v2.load_service_codes()
+    forms = sorted(MD_FORMS.glob("*.md"))
+    assert len(forms) == 11
+    for md in forms:
+        ar = parse_auto_route_block(md.read_text(encoding="utf-8"))
+        assert ar["schemaVersion"] == "2.0.0", md.name
+        assert ar["unspsc"] == codes[ar["service_id"]]["unspsc"], md.name
+        assert "correlationId" in ar, md.name           # placeholder, minted at intake
+        assert validate_auto_route_schema(ar)["valid"] is True, md.name
