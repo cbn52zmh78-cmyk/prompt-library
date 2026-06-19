@@ -21,7 +21,7 @@
       "on_screen_labels": [],
       "timing": {
         "start_s": 0,
-        "end_s": 6
+        "end_s": 7
       }
     },
     {
@@ -34,8 +34,8 @@
       "on_screen": "",
       "on_screen_labels": [],
       "timing": {
-        "start_s": 6,
-        "end_s": 13
+        "start_s": 7,
+        "end_s": 14
       }
     },
     {
@@ -48,8 +48,8 @@
       "on_screen": "",
       "on_screen_labels": [],
       "timing": {
-        "start_s": 13,
-        "end_s": 21
+        "start_s": 14,
+        "end_s": 22
       }
     },
     {
@@ -62,8 +62,8 @@
       "on_screen": "",
       "on_screen_labels": [],
       "timing": {
-        "start_s": 21,
-        "end_s": 27
+        "start_s": 22,
+        "end_s": 29
       }
     },
     {
@@ -76,8 +76,8 @@
       "on_screen": "",
       "on_screen_labels": [],
       "timing": {
-        "start_s": 27,
-        "end_s": 34
+        "start_s": 29,
+        "end_s": 36
       }
     },
     {
@@ -90,8 +90,8 @@
       "on_screen": "Synthetic companion — AI generated performer",
       "on_screen_labels": [],
       "timing": {
-        "start_s": 34,
-        "end_s": 40
+        "start_s": 36,
+        "end_s": 43
       }
     }
   ],

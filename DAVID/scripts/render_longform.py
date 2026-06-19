@@ -673,7 +673,7 @@ def extract_last_frame(video: Path, out_jpg: Path) -> Path:
     ff = _ffmpeg_exe()
     out_jpg.parent.mkdir(parents=True, exist_ok=True)
     dur = probe_duration(video)
-    seek = max(0.0, dur - 0.12)
+    seek = max(0.0, dur - 0.4)
     subprocess.run(
         [
             ff, "-y", "-ss", f"{seek:.3f}", "-i", str(video),

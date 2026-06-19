@@ -25,5 +25,6 @@ sys.argv = [
     "--seamless",
     "--match-color",
     "--cut-on-motion",
+    "--force-all",
 ]
 raise SystemExit(render_longform.main())
