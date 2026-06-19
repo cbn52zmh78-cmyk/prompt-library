@@ -13,8 +13,9 @@ shots_dir = ROOT / "DAVID" / "productions" / "gfe_companion_sage_proof_v1_longfo
 partial = shots_dir / "host_performance_extend.mp4"
 state = shots_dir / "extend_state.json"
 
-# Drop incomplete extend (failed mid-chain) so render does not short-circuit on cached partial
-if partial.exists() and not state.exists():
+# Drop incomplete extend only when frame-chain has not started
+chain_done = list(shots_dir.glob("chain_*_processed.mp4"))
+if partial.exists() and not state.exists() and not chain_done:
     partial.unlink()
     print("[resume] removed incomplete extend partial")
 

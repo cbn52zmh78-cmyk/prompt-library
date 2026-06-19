@@ -677,7 +677,7 @@ def extract_last_frame(video: Path, out_jpg: Path) -> Path:
     subprocess.run(
         [
             ff, "-y", "-ss", f"{seek:.3f}", "-i", str(video),
-            "-frames:v", "1", "-q:v", "2", str(out_jpg),
+            "-frames:v", "1", "-q:v", "2", "-update", "1", str(out_jpg),
         ],
         check=True,
         capture_output=True,
