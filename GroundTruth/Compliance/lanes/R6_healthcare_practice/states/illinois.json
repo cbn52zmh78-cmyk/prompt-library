@@ -1,0 +1,148 @@
+{
+  "artifact": "healthcare_practice_state_pack",
+  "version": "1.0",
+  "lane": "R6",
+  "task": "R6-C — Healthcare practice state privacy add-on (Illinois PIPA + mental health confidentiality)",
+  "state": "Illinois",
+  "state_code": "IL",
+  "state_slug": "illinois",
+  "generated_at": "2026-06-19T22:00:00+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research — not legal advice. Illinois ILCS primary portal inaccessible at harvest; no bypass — gaps explicit.",
+  "policy": "Public .gov sources only; gaps explicit.",
+  "domains": {
+    "medical_records_privacy": {
+      "domain": "medical_records_privacy",
+      "label": "740 ILCS 110/ — Mental Health and Developmental Disabilities Confidentiality Act",
+      "statute": "740 ILCS 110/",
+      "status": "ACCESS_RESTRICTED",
+      "regulator": {
+        "agency": "Illinois General Assembly — ILCS",
+        "url": "https://www.ilga.gov/legislation/ilcs/ilcs.asp"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-IL-MH-001",
+          "text": "ACCESS_RESTRICTED — Illinois General Assembly ILCS portal (ilcs.asp, ilcs4.asp DocName=074001100K2, fulltext.asp) returns HTTP 404; JCAR entirepart titlepart=07400110 returns HTTP 500 at harvest.",
+          "status": "ACCESS_RESTRICTED",
+          "citation": {
+            "source": "740 ILCS 110/ (mental health confidentiality)",
+            "url": "https://www.ilga.gov/legislation/ilcs/ilcs4.asp?DocName=074001100K2",
+            "jurisdiction": "Illinois",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "source_checked": "https://www.ilga.gov/legislation/ilcs/ilcs4.asp?DocName=074001100K2"
+        },
+        {
+          "fact_id": "R6-IL-MH-002",
+          "text": "NOT FOUND — Illinois Attorney General consumer PIPA/privacy pages (illinoisattorneygeneral.gov/consumer/pipa.html, privacy.html) return HTTP 404; no alternate .gov mental-health confidentiality statute text harvested.",
+          "status": "NOT FOUND",
+          "citation": {
+            "source": "740 ILCS 110/ (alternate AG consumer)",
+            "url": "https://illinoisattorneygeneral.gov/consumer/pipa.html",
+            "jurisdiction": "Illinois",
+            "tier": "agency_secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "source_checked": "https://illinoisattorneygeneral.gov/consumer/pipa.html"
+        }
+      ],
+      "fact_count": 2,
+      "gap": {
+        "status": "ACCESS_RESTRICTED",
+        "message": "NOT FOUND — 740 ILCS 110/ section text [source checked: ilga.gov ILCS/JCAR — 404/500]",
+        "alternate_sources_checked": [
+          {
+            "url": "https://www.ilga.gov/legislation/ilcs/ilcs.asp",
+            "status": "NOT FOUND",
+            "http_status": 404
+          },
+          {
+            "url": "https://www.ilga.gov/legislation/ilcs/ilcs4.asp?DocName=074001100K2",
+            "status": "NOT FOUND",
+            "http_status": 404
+          },
+          {
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=07400110",
+            "status": "ACCESS_RESTRICTED",
+            "http_status": 500
+          },
+          {
+            "url": "https://illinoisattorneygeneral.gov/consumer/pipa.html",
+            "status": "NOT FOUND",
+            "http_status": 404
+          }
+        ]
+      }
+    },
+    "data_security_breach": {
+      "domain": "data_security_breach",
+      "label": "815 ILCS 530/ — Personal Information Protection Act (PIPA)",
+      "statute": "815 ILCS 530/",
+      "status": "ACCESS_RESTRICTED",
+      "regulator": {
+        "agency": "Illinois General Assembly — ILCS",
+        "url": "https://www.ilga.gov/legislation/ilcs/ilcs.asp"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-IL-PIPA-001",
+          "text": "ACCESS_RESTRICTED — 815 ILCS 530/ PIPA primary paths (ilcs3.asp ActID=2702, ilcs4.asp DocName=081505300K2, documents/081505300K2.htm) return HTTP 404; JCAR entirepart titlepart=08150530 returns HTTP 500.",
+          "status": "ACCESS_RESTRICTED",
+          "citation": {
+            "source": "815 ILCS 530/ (PIPA)",
+            "url": "https://www.ilga.gov/legislation/ilcs/ilcs4.asp?DocName=081505300K2",
+            "jurisdiction": "Illinois",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "source_checked": "https://www.ilga.gov/legislation/ilcs/ilcs4.asp?DocName=081505300K2"
+        },
+        {
+          "fact_id": "R6-IL-PIPA-002",
+          "text": "NOT FOUND — www2.illinois.gov agr Consumers PIPA page returns unrelated redirect content; no harvestable PIPA breach-notification statute text from checked .gov alternates.",
+          "status": "NOT FOUND",
+          "citation": {
+            "source": "815 ILCS 530/ (alternate state portal)",
+            "url": "https://www2.illinois.gov/sites/agr/Consumers/Pages/Personal-Information-Protection-Act.aspx",
+            "jurisdiction": "Illinois",
+            "tier": "agency_secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "source_checked": "https://www2.illinois.gov/sites/agr/Consumers/Pages/Personal-Information-Protection-Act.aspx"
+        }
+      ],
+      "fact_count": 2,
+      "gap": {
+        "status": "ACCESS_RESTRICTED",
+        "message": "NOT FOUND — 815 ILCS 530/ PIPA [source checked: ilga.gov ILCS/JCAR — 404/500]",
+        "alternate_sources_checked": [
+          {
+            "url": "https://www.ilga.gov/legislation/ilcs/ilcs4.asp?DocName=081505300K2",
+            "status": "NOT FOUND",
+            "http_status": 404
+          },
+          {
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08150530",
+            "status": "ACCESS_RESTRICTED",
+            "http_status": 500
+          },
+          {
+            "url": "https://www2.illinois.gov/sites/agr/Consumers/Pages/Personal-Information-Protection-Act.aspx",
+            "status": "NOT FOUND",
+            "note": "Unrelated page content at harvest"
+          }
+        ]
+      }
+    }
+  },
+  "status_roll": {
+    "FOUND": 0,
+    "REQUIRES_CONFIRMATION": 0,
+    "NOT FOUND": 2,
+    "ACCESS_RESTRICTED": 2,
+    "PARKED": 0
+  },
+  "total_facts": 4
+}

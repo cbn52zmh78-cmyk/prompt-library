@@ -3,8 +3,8 @@
   "lane": "R6",
   "slug": "healthcare_practice",
   "vertical": "Healthcare Practice",
-  "version": "1.1",
-  "task": "R6-B — Close parked HIPAA items + expand states",
+  "version": "1.2",
+  "task": "R6-C — Expand healthcare toward sellable depth (IL · PA · NJ · GA · OH)",
   "as_of_date": "2026-06-19",
   "retrieved_date": "2026-06-19",
   "citation_standard": "STD-CITE-001",
@@ -17,7 +17,8 @@
     "bible_seed_md": "healthcare_practice_knowledge_bible_seed_v1.md",
     "template": "compliance_bible_template_v1.json",
     "recap_r6": "dispatches/R6_healthcare_practice_recap.json",
-    "recap_r6b": "dispatches/R6_B_healthcare_practice_recap.json"
+    "recap_r6b": "dispatches/R6_B_healthcare_practice_recap.json",
+    "recap_r6c": "dispatches/R6_C_healthcare_practice_recap.json"
   },
   "states": [
     { "state": "California", "state_code": "CA", "file": "states/california.json", "total_facts": 6, "status_counts": { "FOUND": 6 } },
@@ -25,14 +26,19 @@
     { "state": "New York", "state_code": "NY", "file": "states/new_york.json", "total_facts": 8, "status_counts": { "FOUND": 7, "PARKED": 1 } },
     { "state": "Washington", "state_code": "WA", "file": "states/washington.json", "total_facts": 5, "status_counts": { "FOUND": 5 } },
     { "state": "Florida", "state_code": "FL", "file": "states/florida.json", "total_facts": 6, "status_counts": { "FOUND": 6 } },
-    { "state": "Massachusetts", "state_code": "MA", "file": "states/massachusetts.json", "total_facts": 3, "status_counts": { "FOUND": 2, "REQUIRES_CONFIRMATION": 1 } }
+    { "state": "Massachusetts", "state_code": "MA", "file": "states/massachusetts.json", "total_facts": 3, "status_counts": { "FOUND": 2, "REQUIRES_CONFIRMATION": 1 } },
+    { "state": "Ohio", "state_code": "OH", "file": "states/ohio.json", "total_facts": 6, "status_counts": { "FOUND": 6 } },
+    { "state": "Pennsylvania", "state_code": "PA", "file": "states/pennsylvania.json", "total_facts": 7, "status_counts": { "FOUND": 6, "NOT FOUND": 1 } },
+    { "state": "Illinois", "state_code": "IL", "file": "states/illinois.json", "total_facts": 4, "status_counts": { "NOT FOUND": 2, "ACCESS_RESTRICTED": 2 } },
+    { "state": "New Jersey", "state_code": "NJ", "file": "states/new_jersey.json", "total_facts": 4, "status_counts": { "NOT FOUND": 1, "PARKED": 3 } },
+    { "state": "Georgia", "state_code": "GA", "file": "states/georgia.json", "total_facts": 4, "status_counts": { "NOT FOUND": 1, "ACCESS_RESTRICTED": 2, "PARKED": 1 } }
   ],
   "metrics": {
     "federal_controls": 35,
-    "state_facts": 30,
-    "total_facts": 65,
-    "sources_harvested": 22,
-    "sources_parked": 5,
-    "gap_count": 5
+    "state_facts": 55,
+    "total_facts": 90,
+    "sources_harvested": 28,
+    "sources_parked": 10,
+    "gap_count": 12
   }
 }

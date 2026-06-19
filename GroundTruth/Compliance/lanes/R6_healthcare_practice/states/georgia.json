@@ -1,0 +1,148 @@
+{
+  "artifact": "healthcare_practice_state_pack",
+  "version": "1.0",
+  "lane": "R6",
+  "task": "R6-C — Healthcare practice state privacy add-on (Georgia health records + identity protection)",
+  "state": "Georgia",
+  "state_code": "GA",
+  "state_slug": "georgia",
+  "generated_at": "2026-06-19T22:00:00+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research — not legal advice. Georgia OCGA official APIs and SOS reference PDF blocked at harvest; no bypass.",
+  "policy": "Public .gov sources only; gaps explicit.",
+  "domains": {
+    "medical_records_privacy": {
+      "domain": "medical_records_privacy",
+      "label": "O.C.G.A. §31-33 — Health Records Confidentiality",
+      "statute": "O.C.G.A. Title 31, Ch. 33",
+      "status": "ACCESS_RESTRICTED",
+      "regulator": {
+        "agency": "Georgia General Assembly / Secretary of State (OCGA)",
+        "url": "https://www.legis.ga.gov/"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-GA-HR-001",
+          "text": "ACCESS_RESTRICTED — legis.ga.gov OCGA document API (20232024/20242025 OCGA/31/33/1) returns HTTP 404; legis.ga.gov search SPA shell only.",
+          "status": "ACCESS_RESTRICTED",
+          "citation": {
+            "source": "O.C.G.A. §31-33-2 (patient record confidentiality)",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20242025/OCGA/31/33/2",
+            "jurisdiction": "Georgia",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "source_checked": "https://www.legis.ga.gov/api/legislation/document/20242025/OCGA/31/33/2"
+        },
+        {
+          "fact_id": "R6-GA-HR-002",
+          "text": "PARKED — sos.ga.gov OCGA Title 31 Chapter 33 Health Records reference PDF returns HTTP 403; law.georgia.gov search returns empty results shell.",
+          "status": "PARKED",
+          "citation": {
+            "source": "O.C.G.A. Title 31 Ch. 33 (SOS reference PDF)",
+            "url": "https://sos.ga.gov/sites/default/files/forms/12%20Reference%20-%20O.C.G.A.%20TITLE%2031%20Chapter%2033%20Health%20Records.pdf",
+            "jurisdiction": "Georgia",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "source_checked": "https://sos.ga.gov/sites/default/files/forms/12%20Reference%20-%20O.C.G.A.%20TITLE%2031%20Chapter%2033%20Health%20Records.pdf"
+        }
+      ],
+      "fact_count": 2,
+      "gap": {
+        "status": "ACCESS_RESTRICTED",
+        "message": "NOT FOUND — O.C.G.A. §31-33 health records [source checked: legis.ga.gov API 404; sos.ga.gov PDF 403]",
+        "alternate_sources_checked": [
+          {
+            "url": "https://www.legis.ga.gov/api/legislation/document/20242025/OCGA/31/33/2",
+            "status": "NOT FOUND",
+            "http_status": 404
+          },
+          {
+            "url": "https://sos.ga.gov/sites/default/files/forms/12%20Reference%20-%20O.C.G.A.%20TITLE%2031%20Chapter%2033%20Health%20Records.pdf",
+            "status": "PARKED",
+            "http_status": 403
+          },
+          {
+            "url": "https://law.georgia.gov/search?q=31-33-2",
+            "status": "NOT FOUND",
+            "note": "Search shell, no statute body"
+          },
+          {
+            "url": "https://dch.georgia.gov/medical-records",
+            "status": "NOT FOUND",
+            "http_status": 404
+          }
+        ]
+      }
+    },
+    "data_security_breach": {
+      "domain": "data_security_breach",
+      "label": "O.C.G.A. §10-1-910 et seq. — Georgia Personal Identity Protection Act",
+      "statute": "O.C.G.A. Title 10, Art. 27",
+      "status": "ACCESS_RESTRICTED",
+      "regulator": {
+        "agency": "Georgia General Assembly / Office of Attorney General",
+        "url": "https://www.legis.ga.gov/"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-GA-BRN-001",
+          "text": "ACCESS_RESTRICTED — legis.ga.gov OCGA document API for Title 10 §10-1-910 returns HTTP 404; search API returns HTTP 401 Unauthorized.",
+          "status": "ACCESS_RESTRICTED",
+          "citation": {
+            "source": "O.C.G.A. §10-1-910 (breach notification)",
+            "url": "https://www.legis.ga.gov/api/legislation/document/20242025/OCGA/10/1/910",
+            "jurisdiction": "Georgia",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "source_checked": "https://www.legis.ga.gov/api/legislation/document/20242025/OCGA/10/1/910"
+        },
+        {
+          "fact_id": "R6-GA-BRN-002",
+          "text": "NOT FOUND — consumer.georgia.gov identity-theft/data-breach pages return HTTP 404 at harvest; no alternate .gov breach-statute text harvested.",
+          "status": "NOT FOUND",
+          "citation": {
+            "source": "O.C.G.A. §10-1-910 (GA consumer breach page)",
+            "url": "https://consumer.georgia.gov/consumer-services/identity-theft/data-breach-notifications",
+            "jurisdiction": "Georgia",
+            "tier": "agency_secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "source_checked": "https://consumer.georgia.gov/consumer-services/identity-theft/data-breach-notifications"
+        }
+      ],
+      "fact_count": 2,
+      "gap": {
+        "status": "ACCESS_RESTRICTED",
+        "message": "NOT FOUND — O.C.G.A. §10-1-910 breach notification [source checked: legis.ga.gov API 404/401; consumer.georgia.gov 404]",
+        "alternate_sources_checked": [
+          {
+            "url": "https://www.legis.ga.gov/api/legislation/document/20242025/OCGA/10/1/910",
+            "status": "NOT FOUND",
+            "http_status": 404
+          },
+          {
+            "url": "https://www.legis.ga.gov/api/legislation/search?query=31-33",
+            "status": "ACCESS_RESTRICTED",
+            "http_status": 401
+          },
+          {
+            "url": "https://consumer.georgia.gov/consumer-services/identity-theft/data-breach-notifications",
+            "status": "NOT FOUND",
+            "http_status": 404
+          }
+        ]
+      }
+    }
+  },
+  "status_roll": {
+    "FOUND": 0,
+    "REQUIRES_CONFIRMATION": 0,
+    "NOT FOUND": 1,
+    "ACCESS_RESTRICTED": 2,
+    "PARKED": 1
+  },
+  "total_facts": 4
+}

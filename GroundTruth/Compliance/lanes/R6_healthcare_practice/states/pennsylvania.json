@@ -1,0 +1,159 @@
+{
+  "artifact": "healthcare_practice_state_pack",
+  "version": "1.0",
+  "lane": "R6",
+  "task": "R6-C — Healthcare practice state privacy add-on (Pennsylvania patient records + BPINA)",
+  "state": "Pennsylvania",
+  "state_code": "PA",
+  "state_slug": "pennsylvania",
+  "generated_at": "2026-06-19T22:00:00+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research — not legal advice. BPINA primary statute text not harvestable at palegis consolidated index (2026 chpt renumber); AG official summary used as secondary.",
+  "policy": "Public .gov sources only; gaps explicit.",
+  "domains": {
+    "medical_records_privacy": {
+      "domain": "medical_records_privacy",
+      "label": "42 Pa.C.S. §§6155–6156 — Patient Medical Record Rights",
+      "statute": "42 Pa.C.S. §§6155–6156",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Pennsylvania General Assembly — palegis.us",
+        "url": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=PDF&ttl=42&div=00.&chpt=61&sctn=55&subsctn=0"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-PA-MR-001",
+          "text": "A patient or designee (including attorney) has the right of access to medical charts and records and to obtain photocopies without a subpoena duces tecum for the patient's own use.",
+          "status": "FOUND",
+          "citation": {
+            "source": "42 Pa.C.S. §6155(b)(1)",
+            "url": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=PDF&ttl=42&div=00.&chpt=61&sctn=55&subsctn=0",
+            "jurisdiction": "Pennsylvania",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-PA-MR-002",
+          "text": "A patient whose records are copied under the medical-records subpoena subchapter may seek a protective order denying, restricting, or limiting access to copies or originals.",
+          "status": "FOUND",
+          "citation": {
+            "source": "42 Pa.C.S. §6155(a)",
+            "url": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=PDF&ttl=42&div=00.&chpt=61&sctn=55&subsctn=0",
+            "jurisdiction": "Pennsylvania",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-PA-MR-003",
+          "text": "Sealed medical-record copies may be opened only upon direction of the tribunal at trial, deposition, or hearing after confirming the records were subpoenaed or the patient (or authorized representative) consented.",
+          "status": "FOUND",
+          "citation": {
+            "source": "42 Pa.C.S. §6156(1)-(2)",
+            "url": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=PDF&ttl=42&div=00.&chpt=61&sctn=56&subsctn=0",
+            "jurisdiction": "Pennsylvania",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 3,
+      "gap": null
+    },
+    "data_security_breach": {
+      "domain": "data_security_breach",
+      "label": "73 P.S. §2301 — Breach of Personal Information Notification Act (BPINA)",
+      "statute": "73 P.S. §2301 et seq. (BPINA)",
+      "status": "PARTIAL",
+      "regulator": {
+        "agency": "Pennsylvania Office of Attorney General — BPINA",
+        "url": "https://www.attorneygeneral.gov/protect-yourself/bpina/"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-PA-BPINA-001",
+          "text": "BPINA defines a breach as unauthorized access and acquisition of computerized data that materially compromises security or confidentiality of personal information and causes or is reasonably believed to cause loss or injury to a Pennsylvania resident.",
+          "status": "FOUND",
+          "citation": {
+            "source": "PA OAG — BPINA breach definition (73 P.S. §2301 summary)",
+            "url": "https://www.attorneygeneral.gov/protect-yourself/bpina/",
+            "jurisdiction": "Pennsylvania",
+            "tier": "agency_secondary",
+            "retrieved_date": "2026-06-19",
+            "statute_ref": "73 P.S. §2301"
+          }
+        },
+        {
+          "fact_id": "R6-PA-BPINA-002",
+          "text": "Entities maintaining computerized personal information must notify affected Pennsylvania residents without unreasonable delay after determining information was accessed and acquired in readable form by an unauthorized person.",
+          "status": "FOUND",
+          "citation": {
+            "source": "PA OAG — BPINA individual notice requirements",
+            "url": "https://www.attorneygeneral.gov/protect-yourself/bpina/",
+            "jurisdiction": "Pennsylvania",
+            "tier": "agency_secondary",
+            "retrieved_date": "2026-06-19",
+            "statute_ref": "73 P.S. §2301"
+          }
+        },
+        {
+          "fact_id": "R6-PA-BPINA-003",
+          "text": "When more than 500 Pennsylvania residents are affected, the entity must notify the Attorney General at the same time as individual notice, including breach summary and impacted counts.",
+          "status": "FOUND",
+          "citation": {
+            "source": "PA OAG — BPINA Attorney General notice (500+ residents)",
+            "url": "https://www.attorneygeneral.gov/protect-yourself/bpina/",
+            "jurisdiction": "Pennsylvania",
+            "tier": "agency_secondary",
+            "retrieved_date": "2026-06-19",
+            "statute_ref": "73 P.S. §2301"
+          }
+        },
+        {
+          "fact_id": "R6-PA-BPINA-004",
+          "text": "NOT FOUND — 73 P.S. §2301 primary statute text at palegis.us consolidated Title 73: chapter-index scan (chpts 1–119) and sctn=2301 lookup return unrelated 2026 township-treasurer text; unconsolidated Act 94/2005 URL 404.",
+          "status": "NOT FOUND",
+          "citation": {
+            "source": "73 P.S. §2301 (BPINA primary statute)",
+            "url": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=PDF&ttl=73&div=00.&chpt=23&sctn=2301&subsctn=0",
+            "jurisdiction": "Pennsylvania",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "source_checked": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=PDF&ttl=73&div=00.&chpt=23&sctn=2301&subsctn=0"
+        }
+      ],
+      "fact_count": 4,
+      "gap": {
+        "status": "NOT FOUND",
+        "message": "NOT FOUND — 73 P.S. §2301 BPINA primary statute [source checked: palegis.us Title 73 chpt 23 sctn 2301 — township treasurer; consolidated scan no BPINA match]",
+        "alternate_sources_checked": [
+          {
+            "url": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=PDF&ttl=73&div=00.&chpt=23&sctn=2301&subsctn=0",
+            "status": "NOT FOUND",
+            "note": "Returns 2026 township-treasurer §2301, not BPINA"
+          },
+          {
+            "url": "https://www.palegis.us/statutes/unconsolidated/laws/statute-general?SessYear=2005&ActNumber=94",
+            "status": "NOT FOUND",
+            "http_status": 404
+          },
+          {
+            "url": "https://www.palegis.us/statutes/consolidated/statute-search?search=breach+personal+information",
+            "status": "NOT FOUND",
+            "http_status": 404
+          }
+        ]
+      }
+    }
+  },
+  "status_roll": {
+    "FOUND": 6,
+    "REQUIRES_CONFIRMATION": 0,
+    "NOT FOUND": 1,
+    "ACCESS_RESTRICTED": 0,
+    "PARKED": 0
+  },
+  "total_facts": 7
+}

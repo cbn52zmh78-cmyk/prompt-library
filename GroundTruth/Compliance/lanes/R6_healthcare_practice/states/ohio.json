@@ -1,0 +1,123 @@
+{
+  "artifact": "healthcare_practice_state_pack",
+  "version": "1.0",
+  "lane": "R6",
+  "task": "R6-C — Healthcare practice state privacy add-on (Ohio medical records + breach)",
+  "state": "Ohio",
+  "state_code": "OH",
+  "state_slug": "ohio",
+  "generated_at": "2026-06-19T22:00:00+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research — not legal advice. Ohio breach notice rules exempt HIPAA covered entities; medical-record access rules apply broadly to health care providers.",
+  "policy": "Public statute sources only; gaps explicit.",
+  "domains": {
+    "medical_records_privacy": {
+      "domain": "medical_records_privacy",
+      "label": "ORC Ch. 3701 / 4731 — Medical Records Access & Professional Confidence",
+      "statute": "ORC §§3701.74, 4731.22",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Ohio Legislative Service Commission — codes.ohio.gov",
+        "url": "https://codes.ohio.gov/ohio-revised-code/chapter-3701"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-OH-MR-001",
+          "text": "A patient, personal representative, or authorized person must submit a written request (dated within one year) to examine or obtain a copy of a medical record; the health care provider shall permit examination without charge or provide a copy within a reasonable time.",
+          "status": "FOUND",
+          "citation": {
+            "source": "ORC §3701.74(B)",
+            "url": "https://codes.ohio.gov/ohio-revised-code/section-3701.74",
+            "jurisdiction": "Ohio",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-OH-MR-002",
+          "text": "'Medical record' means data in any form pertaining to a patient's medical history, diagnosis, prognosis, or medical condition generated and maintained by a health care provider in the course of treatment.",
+          "status": "FOUND",
+          "citation": {
+            "source": "ORC §3701.74(A)(8)",
+            "url": "https://codes.ohio.gov/ohio-revised-code/section-3701.74",
+            "jurisdiction": "Ohio",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-OH-MR-003",
+          "text": "Willfully betraying a professional confidence is grounds for medical-board discipline; specified statutory disclosures (e.g., mandated reports, child-fatality review) are carved out from that definition.",
+          "status": "FOUND",
+          "citation": {
+            "source": "ORC §4731.22(B)(4)",
+            "url": "https://codes.ohio.gov/ohio-revised-code/section-4731.22",
+            "jurisdiction": "Ohio",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 3,
+      "gap": null
+    },
+    "data_security_breach": {
+      "domain": "data_security_breach",
+      "label": "ORC §1349.19 — Security Breach of Computerized Personal Information",
+      "statute": "ORC §1349.19",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Ohio Legislative Service Commission — codes.ohio.gov",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-1349.19"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-OH-BRN-001",
+          "text": "A 'breach of the security of the system' means unauthorized access to and acquisition of computerized personal information that compromises security or confidentiality and causes or is reasonably believed to cause material risk of identity theft or fraud to an Ohio resident.",
+          "status": "FOUND",
+          "citation": {
+            "source": "ORC §1349.19(A)(1)(a)",
+            "url": "https://codes.ohio.gov/ohio-revised-code/section-1349.19",
+            "jurisdiction": "Ohio",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-OH-BRN-002",
+          "text": "After discovery of a breach, the owner or licensee of computerized personal information must disclose to affected Ohio residents in the most expedient time possible but not later than forty-five days, subject to law-enforcement delay.",
+          "status": "FOUND",
+          "citation": {
+            "source": "ORC §1349.19(B)(1)-(2)",
+            "url": "https://codes.ohio.gov/ohio-revised-code/section-1349.19",
+            "jurisdiction": "Ohio",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-OH-BRN-003",
+          "text": "ORC §1349.19 does not apply to a person or entity that is a HIPAA covered entity as defined in 45 C.F.R. §160.103.",
+          "status": "FOUND",
+          "citation": {
+            "source": "ORC §1349.19(B)(2) (exemption)",
+            "url": "https://codes.ohio.gov/ohio-revised-code/section-1349.19",
+            "jurisdiction": "Ohio",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 3,
+      "gap": null
+    }
+  },
+  "status_roll": {
+    "FOUND": 6,
+    "REQUIRES_CONFIRMATION": 0,
+    "NOT FOUND": 0,
+    "ACCESS_RESTRICTED": 0,
+    "PARKED": 0
+  },
+  "total_facts": 6
+}

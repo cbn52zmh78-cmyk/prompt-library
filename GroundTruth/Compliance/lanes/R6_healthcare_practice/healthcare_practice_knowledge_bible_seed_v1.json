@@ -1,38 +1,39 @@
 {
   "artifact": "knowledge_bible",
   "format": "8-section",
-  "version": "1.0",
-  "variant": "seed_6_states",
-  "task": "R6-B",
+  "version": "1.1",
+  "variant": "seed_11_states",
+  "task": "R6-C",
   "lane": "R6",
   "vertical": "Healthcare Practice",
-  "sku": "R6-HC-SEED-3-v1",
+  "sku": "R6-HC-SEED-11-v1",
   "product_status": "SEED",
   "sellable": false,
+  "sellable_depth_note": "11 high-volume states / 55 state facts — approaching product threshold; IL·NJ·GA portal blocks limit sellable grade",
   "citation_standard": "STD-CITE-001",
   "knowledge_gate": "Knowledge-Gate-clean",
   "template": "GroundTruth/Compliance/lanes/R6_healthcare_practice/compliance_bible_template_v1.json",
-  "generated_at": "2026-06-19T18:00:00+00:00",
+  "generated_at": "2026-06-19T22:00:00+00:00",
   "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm HIPAA and state medical-privacy obligations with licensed counsel before relying on any fact for operations or filings.",
   "sections": {
     "1_tldr": {
       "title": "TL;DR / Executive Summary",
-      "coverage": "Federal HIPAA (eCFR + CMS/ASPE fallbacks) + BAA control-map; state add-ons CA, TX, NY, WA, FL, MA.",
-      "state_count": 6,
-      "state_codes": ["CA", "TX", "NY", "WA", "FL", "MA"],
-      "cited_claims": 65,
-      "citation_count": 22,
-      "gaps_flagged": 5,
-      "parked_sources": 5,
+      "coverage": "Federal HIPAA (eCFR + CMS/ASPE fallbacks) + BAA control-map; state add-ons CA, TX, NY, WA, FL, MA, OH, PA, IL, NJ, GA.",
+      "state_count": 11,
+      "state_codes": ["CA", "TX", "NY", "WA", "FL", "MA", "OH", "PA", "IL", "NJ", "GA"],
+      "cited_claims": 90,
+      "citation_count": 38,
+      "gaps_flagged": 12,
+      "parked_sources": 10,
       "status_roll": {
-        "FOUND": 61,
+        "FOUND": 73,
         "REQUIRES_CONFIRMATION": 1,
-        "NOT FOUND": 0,
-        "ACCESS_RESTRICTED": 2,
-        "PARKED": 2
+        "NOT FOUND": 6,
+        "ACCESS_RESTRICTED": 7,
+        "PARKED": 6
       },
       "as_of_date": "2026-06-19",
-      "honesty_rule": "Every claim STD-CITE-001 cited; gaps render NOT FOUND — [source checked: …]; eCFR primary when HHS 403."
+      "honesty_rule": "Every claim STD-CITE-001 cited; gaps render NOT FOUND — [source checked: …]; no bypass."
     },
     "2_scope_methodology_as_of": {
       "title": "Scope, Methodology & As-Of Date",
@@ -51,10 +52,10 @@
           "breach_notification",
           "state_medical_privacy_addons"
         ],
-        "jurisdictions": ["Federal", "California", "Texas", "New York"],
+        "jurisdictions": ["Federal", "California", "Texas", "New York", "Washington", "Florida", "Massachusetts", "Ohio", "Pennsylvania", "Illinois", "New Jersey", "Georgia"],
         "federal_baseline": true
       },
-      "methodology": "Public-source harvest 2026-06-19. Primary federal authority = eCFR 45 CFR Parts 160 & 164. HHS.gov HIPAA guidance pages PARKED (HTTP 403). State statutes via official legislature portals; SPA/Cloudflare gaps flagged explicitly.",
+      "methodology": "Public-source harvest 2026-06-19. R6-C tranche: IL·PA·NJ·GA·OH privacy/breach add-ons. Primary = official statute portals; SPA/403/404/500 = park or ACCESS_RESTRICTED; agency .gov secondary when statute blocked (PA BPINA, NY SHIELD precedent).",
       "as_of_date": "2026-06-19",
       "retrieved_date": "2026-06-19",
       "policy": {
@@ -70,160 +71,127 @@
       "title": "Body — Cited Compliance Record",
       "federal_hipaa_summary": [
         {
-          "text": "HIPAA covered entities (health plans, clearinghouses, providers transmitting standard electronic transactions) and their business associates must comply with Privacy, Security, and Breach Notification rules codified at 45 CFR Part 164.",
+          "text": "HIPAA covered entities and business associates must comply with Privacy, Security, and Breach Notification rules at 45 CFR Part 164.",
           "status": "FOUND",
           "citation_ref": 1,
           "control_ref": "HIPAA-DEF-001"
         },
         {
-          "text": "PHI may not be used or disclosed except as permitted or required; minimum necessary applies to most uses and requests.",
+          "text": "PHI minimum necessary; BAAs with §164.504(e) elements; breach notice within 60 days.",
           "status": "FOUND",
           "citation_ref": 2,
           "control_ref": "HIPAA-PRV-001"
-        },
-        {
-          "text": "BAAs must document permitted uses, require safeguards for ePHI, mandate breach reporting, flow down subcontractor obligations, and authorize termination for material breach.",
-          "status": "FOUND",
-          "citation_ref": 3,
-          "control_ref": "HIPAA-BAA-002"
-        },
-        {
-          "text": "Security Rule administrative safeguards require risk analysis, designated security official, incident response, and contingency planning (backup, disaster recovery, emergency mode).",
-          "status": "FOUND",
-          "citation_ref": 4,
-          "control_ref": "HIPAA-SEC-ADM-001"
-        },
-        {
-          "text": "Technical safeguards require access control, audit controls, integrity, authentication, and transmission security for ePHI.",
-          "status": "FOUND",
-          "citation_ref": 5,
-          "control_ref": "HIPAA-SEC-TEC-002"
-        },
-        {
-          "text": "Breach of unsecured PHI: notify affected individuals within 60 days of discovery; business associates must notify covered entities within 60 days.",
-          "status": "FOUND",
-          "citation_ref": 8,
-          "control_ref": "HIPAA-BRN-001"
         }
       ],
       "state_addons": {
-        "California": {
-          "statute": "CMIA (Civ. Code §§56.10–56.11)",
+        "Ohio": {
+          "statute": "ORC §§3701.74, 4731.22; §1349.19",
           "key_requirements": [
-            "Authorization required before disclosure except listed compelled/permitted cases (§56.10).",
-            "No sale/marketing/non-treatment use of medical information (§56.10(d)).",
-            "Authorization form: 14-point type, specific uses, 1-year max expiration (§56.11).",
-            "HIPAA Part 164 cross-reference for ERISA plan disclosures (§56.10(c)(21))."
+            "Written request for medical-record access (§3701.74).",
+            "Professional-confidence betrayal = board discipline (§4731.22).",
+            "Breach notice within 45 days; HIPAA CE exempt (§1349.19)."
           ],
           "status": "FOUND",
-          "citation_refs": [11, 12]
+          "citation_refs": [30, 31, 32]
         },
-        "Texas": {
-          "statute": "Health & Safety Code Ch. 181",
+        "Pennsylvania": {
+          "statute": "42 Pa.C.S. §§6155–6156; 73 P.S. §2301 (BPINA)",
           "key_requirements": [
-            "Chapter anchor confirmed; section-level disclosure/authorization rules REQUIRES_CONFIRMATION (SPA portal)."
-          ],
-          "status": "REQUIRES_CONFIRMATION",
-          "citation_refs": [17]
-        },
-        "New York": {
-          "statute": "PHL §§17–18; SHIELD (GBL §899-aa)",
-          "key_requirements": [
-            "NY DOH: state laws more stringent than HIPAA are not superseded; preemption charts map PHL vs. HIPAA.",
-            "PHL §17 patient-directed record transfer prevails as required-by-law disclosure.",
-            "PHL §18 practitioner patient-information rules differ in scope from HIPAA record sets.",
-            "SHIELD Act statute text and AG breach portal NOT FOUND at harvest — REQUIRES_CONFIRMATION."
+            "Patient access to records without subpoena (§6155).",
+            "Sealed-record consent/subpoena rules (§6156).",
+            "BPINA breach notice via PA OAG summary; primary 73 P.S. §2301 NOT FOUND at palegis."
           ],
           "status": "PARTIAL",
-          "citation_refs": [13, 14, 18, 19]
+          "citation_refs": [33, 34, 35]
+        },
+        "Illinois": {
+          "statute": "740 ILCS 110/; 815 ILCS 530/",
+          "key_requirements": [
+            "ACCESS_RESTRICTED — ilga.gov ILCS/JCAR 404/500 at harvest."
+          ],
+          "status": "ACCESS_RESTRICTED",
+          "citation_refs": [36]
+        },
+        "New Jersey": {
+          "statute": "N.J.S.A. 26:5C; 56:8-163",
+          "key_requirements": [
+            "PARKED — lis.njleg SPA shell; cyber.nj.gov Incapsula."
+          ],
+          "status": "PARKED",
+          "citation_refs": [37, 38]
+        },
+        "Georgia": {
+          "statute": "O.C.G.A. §§31-33; 10-1-910",
+          "key_requirements": [
+            "ACCESS_RESTRICTED — legis.ga.gov OCGA API 404/401; SOS PDF 403."
+          ],
+          "status": "ACCESS_RESTRICTED",
+          "citation_refs": [39, 40]
         }
       }
     },
     "4_source_register_graded": {
       "title": "Source Register (Graded)",
       "register_path": "GroundTruth/Compliance/lanes/R6_healthcare_practice/source_register.json",
-      "primary_count": 11,
-      "secondary_count": 4,
-      "parked_count": 6,
-      "summary": "eCFR = primary federal; CA leginfo = primary state; NY DOH = secondary preemption analysis; HHS/TX SPA/nysenate = parked or restricted."
+      "primary_count": 17,
+      "secondary_count": 6,
+      "parked_count": 10,
+      "summary": "R6-C adds OH codes.ohio.gov primary; PA palegis PDF + OAG BPINA; IL/NJ/GA blocks explicit."
     },
     "5_conflict_reconciliation": {
       "title": "Conflicting Sources Reconciliation",
       "items": [
         {
-          "topic": "Federal guidance vs. eCFR",
-          "sources": ["HHS.gov HIPAA pages (403)", "eCFR Part 164"],
-          "assessment": "eCFR used as operative primary; HHS guidance PARKED until portal accessible. No substantive conflict detected in harvested CFR text."
+          "topic": "PA BPINA primary vs OAG summary",
+          "sources": ["palegis.us Title 73 §2301 PDF", "attorneygeneral.gov/bpina"],
+          "assessment": "2026 township-treasurer chpt collision on palegis; OAG secondary used for operative breach requirements until primary statute re-located."
         },
         {
-          "topic": "HIPAA vs. California CMIA",
-          "sources": ["45 CFR Part 164", "Cal. Civ. Code §56.10"],
-          "assessment": "CMIA explicitly references HIPAA Part 164 for certain ERISA disclosures; CMIA authorization and anti-sale rules may be more stringent — apply stricter standard."
-        },
-        {
-          "topic": "HIPAA vs. New York PHL",
-          "sources": ["45 CFR §160.202", "NY DOH Preemption Charts"],
-          "assessment": "NY DOH documents instances where PHL §17/§18 prevail as more stringent or required-by-law; dual-track compliance required for NY practitioners."
+          "topic": "Ohio §1349.19 vs HIPAA breach",
+          "sources": ["ORC §1349.19", "45 CFR Part 164"],
+          "assessment": "HIPAA covered entities exempt from ORC §1349.19; non-CE vendors holding PI still subject."
         }
       ]
     },
     "6_gaps_not_found": {
       "title": "Gaps / NOT FOUND / Open Questions",
       "gaps": [
-        {
-          "gap_id": "R6-GAP-001",
-          "status": "PARKED",
-          "text": "HHS.gov HIPAA for Professionals — HTTP 403 [source checked: hhs.gov/hipaa/for-professionals/privacy/]"
-        },
-        {
-          "gap_id": "R6-GAP-002",
-          "status": "ACCESS_RESTRICTED",
-          "text": "Texas HS Ch. 181 section text — SPA statute portal [source checked: statutes.capitol.texas.gov/Docs/HS/htm/HS.181.htm]"
-        },
-        {
-          "gap_id": "R6-GAP-003",
-          "status": "PARKED",
-          "text": "N.Y. GBL §899-aa (SHIELD) — Cloudflare block [source checked: nysenate.gov/legislation/laws/GBM/899-AA]"
-        },
-        {
-          "gap_id": "R6-GAP-004",
-          "status": "NOT FOUND",
-          "text": "NY AG data breach reporting — HTTP 404 [source checked: ag.ny.gov/internet/data-breach-reporting]"
-        },
-        {
-          "gap_id": "R6-GAP-005",
-          "status": "NOT FOUND",
-          "text": "Texas Medical Board privacy page — HTTP 404 [source checked: tmb.texas.gov/page/privacy-and-security]"
-        }
+        { "gap_id": "R6-GAP-001", "status": "PARKED", "text": "HHS.gov HIPAA — HTTP 403" },
+        { "gap_id": "R6-GAP-006", "status": "NOT FOUND", "text": "73 P.S. §2301 BPINA primary — palegis Title 73 chpt 23 collision [source checked: palegis.us PDF sctn 2301]" },
+        { "gap_id": "R6-GAP-007", "status": "ACCESS_RESTRICTED", "text": "815 ILCS 530 / 740 ILCS 110 — ilga.gov 404/500 [source checked: ilga.gov ILCS/JCAR]" },
+        { "gap_id": "R6-GAP-008", "status": "PARKED", "text": "N.J.S.A. 26:5C / 56:8-163 — lis.njleg SPA [source checked: lis.njleg gateway]" },
+        { "gap_id": "R6-GAP-009", "status": "ACCESS_RESTRICTED", "text": "O.C.G.A. §31-33 / §10-1-910 — legis.ga.gov API 404; sos.ga.gov PDF 403" }
       ]
     },
     "7_confidence": {
       "title": "Confidence Assessment",
-      "overall": "MEDIUM-HIGH",
-      "basis": "Federal HIPAA controls well-sourced via eCFR (8 domains, 31 FOUND controls). California CMIA fully harvested. Texas section text and NY SHIELD primary statute gaps reduce state-addon confidence.",
+      "overall": "MEDIUM",
+      "basis": "Federal + 7 fully/partially harvested states (CA, NY, WA, FL, MA, OH, PA partial). IL·NJ·GA tranche blocked at official portals.",
       "by_section": {
         "federal_hipaa": "HIGH",
-        "california": "HIGH",
-        "texas": "LOW",
-        "new_york": "MEDIUM"
+        "ohio": "HIGH",
+        "pennsylvania": "MEDIUM",
+        "illinois": "LOW",
+        "new_jersey": "LOW",
+        "georgia": "LOW"
       }
     },
     "8_citations": {
       "title": "Full Citation Appendix",
       "references": [
         {"ref": 1, "source": "eCFR — 45 CFR §160.103", "url": "https://www.ecfr.gov/current/title-45/section-160.103", "retrieved_date": "2026-06-19", "jurisdiction": "Federal"},
-        {"ref": 2, "source": "eCFR — 45 CFR §164.502", "url": "https://www.ecfr.gov/current/title-45/section-164.502", "retrieved_date": "2026-06-19", "jurisdiction": "Federal"},
-        {"ref": 3, "source": "eCFR — 45 CFR §164.504", "url": "https://www.ecfr.gov/current/title-45/section-164.504", "retrieved_date": "2026-06-19", "jurisdiction": "Federal"},
-        {"ref": 4, "source": "eCFR — 45 CFR §164.308", "url": "https://www.ecfr.gov/current/title-45/section-164.308", "retrieved_date": "2026-06-19", "jurisdiction": "Federal"},
-        {"ref": 5, "source": "eCFR — 45 CFR §164.312", "url": "https://www.ecfr.gov/current/title-45/section-164.312", "retrieved_date": "2026-06-19", "jurisdiction": "Federal"},
-        {"ref": 8, "source": "eCFR — 45 CFR §164.404", "url": "https://www.ecfr.gov/current/title-45/section-164.404", "retrieved_date": "2026-06-19", "jurisdiction": "Federal"},
-        {"ref": 11, "source": "Cal. Civ. Code §56.10", "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=56.10.&lawCode=CIV", "retrieved_date": "2026-06-19", "jurisdiction": "California"},
-        {"ref": 12, "source": "Cal. Civ. Code §56.11", "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=56.11.&lawCode=CIV", "retrieved_date": "2026-06-19", "jurisdiction": "California"},
-        {"ref": 13, "source": "NY DOH — HIPAA regulations", "url": "https://www.health.ny.gov/regulations/hipaa/", "retrieved_date": "2026-06-19", "jurisdiction": "New York"},
-        {"ref": 14, "source": "NY DOH — HIPAA Preemption Charts", "url": "https://www.health.ny.gov/regulations/hipaa/preemption_charts.htm", "retrieved_date": "2026-06-19", "jurisdiction": "New York"},
-        {"ref": 17, "source": "Tex. Health & Safety Code Ch. 181 (index)", "url": "https://statutes.capitol.texas.gov/Docs/HS/htm/HS.181.htm", "retrieved_date": "2026-06-19", "jurisdiction": "Texas"},
-        {"ref": 18, "source": "N.Y. GBL §899-aa (PARKED)", "url": "https://www.nysenate.gov/legislation/laws/GBM/899-AA", "retrieved_date": "2026-06-19", "jurisdiction": "New York"},
-        {"ref": 19, "source": "NY AG breach reporting (404)", "url": "https://ag.ny.gov/internet/data-breach-reporting", "retrieved_date": "2026-06-19", "jurisdiction": "New York"}
+        {"ref": 2, "source": "eCFR — 45 CFR §164.404", "url": "https://www.ecfr.gov/current/title-45/section-164.404", "retrieved_date": "2026-06-19", "jurisdiction": "Federal"},
+        {"ref": 30, "source": "ORC §3701.74", "url": "https://codes.ohio.gov/ohio-revised-code/section-3701.74", "retrieved_date": "2026-06-19", "jurisdiction": "Ohio"},
+        {"ref": 31, "source": "ORC §4731.22", "url": "https://codes.ohio.gov/ohio-revised-code/section-4731.22", "retrieved_date": "2026-06-19", "jurisdiction": "Ohio"},
+        {"ref": 32, "source": "ORC §1349.19", "url": "https://codes.ohio.gov/ohio-revised-code/section-1349.19", "retrieved_date": "2026-06-19", "jurisdiction": "Ohio"},
+        {"ref": 33, "source": "42 Pa.C.S. §6155", "url": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=PDF&ttl=42&div=00.&chpt=61&sctn=55&subsctn=0", "retrieved_date": "2026-06-19", "jurisdiction": "Pennsylvania"},
+        {"ref": 34, "source": "42 Pa.C.S. §6156", "url": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=PDF&ttl=42&div=00.&chpt=61&sctn=56&subsctn=0", "retrieved_date": "2026-06-19", "jurisdiction": "Pennsylvania"},
+        {"ref": 35, "source": "PA OAG — BPINA", "url": "https://www.attorneygeneral.gov/protect-yourself/bpina/", "retrieved_date": "2026-06-19", "jurisdiction": "Pennsylvania"},
+        {"ref": 36, "source": "815 ILCS 530/ (ACCESS_RESTRICTED)", "url": "https://www.ilga.gov/legislation/ilcs/ilcs.asp", "retrieved_date": "2026-06-19", "jurisdiction": "Illinois"},
+        {"ref": 37, "source": "N.J.S.A. 26:5C (PARKED)", "url": "https://lis.njleg.state.nj.us/nxt/gateway.dll?f=templates&fn=default.htm&vid=Publish:10.1048/Enu&d=statutes/26%5f5C-7.htm", "retrieved_date": "2026-06-19", "jurisdiction": "New Jersey"},
+        {"ref": 38, "source": "N.J.S.A. 56:8-163 (PARKED)", "url": "https://lis.njleg.state.nj.us/nxt/gateway.dll?f=templates&fn=default.htm&vid=Publish:10.1048/Enu&d=statutes/56%5f8-163.htm", "retrieved_date": "2026-06-19", "jurisdiction": "New Jersey"},
+        {"ref": 39, "source": "O.C.G.A. §31-33 (ACCESS_RESTRICTED)", "url": "https://www.legis.ga.gov/api/legislation/document/20242025/OCGA/31/33/2", "retrieved_date": "2026-06-19", "jurisdiction": "Georgia"},
+        {"ref": 40, "source": "O.C.G.A. §10-1-910 (ACCESS_RESTRICTED)", "url": "https://www.legis.ga.gov/api/legislation/document/20242025/OCGA/10/1/910", "retrieved_date": "2026-06-19", "jurisdiction": "Georgia"}
       ]
     }
   },
@@ -232,6 +200,14 @@
     "source_register.json",
     "states/california.json",
     "states/texas.json",
-    "states/new_york.json"
+    "states/new_york.json",
+    "states/washington.json",
+    "states/florida.json",
+    "states/massachusetts.json",
+    "states/ohio.json",
+    "states/pennsylvania.json",
+    "states/illinois.json",
+    "states/new_jersey.json",
+    "states/georgia.json"
   ]
 }

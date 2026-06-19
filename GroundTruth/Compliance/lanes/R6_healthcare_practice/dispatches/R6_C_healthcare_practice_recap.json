@@ -1,0 +1,74 @@
+{
+  "message_type": "recap_vcs",
+  "task": "R6-C — Expand healthcare toward sellable depth",
+  "title": "R6-C — IL·PA·NJ·GA·OH state tranche (11-state seed)",
+  "generated_at": "2026-06-19T22:00:00+00:00",
+  "status": "COMPLETE",
+  "verdict": "YELLOW",
+  "lane": "R6",
+  "vertical": "Healthcare Practice",
+  "pinned_lane": "GroundTruth/Compliance/lanes/R6_healthcare_practice",
+  "recap": {
+    "did": [
+      "Added high-volume state tranche: Ohio (6 FOUND), Pennsylvania (6 FOUND + 1 NOT FOUND), Illinois (4 blocked), New Jersey (4 PARKED), Georgia (4 blocked)",
+      "Ohio: harvested ORC §3701.74, §4731.22, §1349.19 from codes.ohio.gov (primary)",
+      "Pennsylvania: harvested 42 Pa.C.S. §6155–6156 via palegis PDF; BPINA via PA OAG secondary; 73 P.S. §2301 primary NOT FOUND (palegis Title 73 chpt collision)",
+      "Illinois: ilga.gov ILCS/JCAR 404/500 — ACCESS_RESTRICTED; explicit gap facts, no bypass",
+      "New Jersey: lis.njleg SPA shell + cyber.nj.gov Incapsula — PARKED",
+      "Georgia: legis.ga.gov OCGA API 404/401; sos.ga.gov PDF 403 — ACCESS_RESTRICTED",
+      "Updated source_register v1.2, lane_meta, INDEX, 8-section bible seed (11 states / 55 state facts)"
+    ],
+    "state": "11 states / 55 state facts / 35 federal controls / 90 cited claims — approaching sellable depth; IL·NJ·GA portal blocks cap confidence",
+    "gaps": {
+      "federal": ["hhs.gov/hipaa — 403 PARKED (unchanged)"],
+      "states": {
+        "Illinois": "815 ILCS 530 + 740 ILCS 110 — ilga.gov 404/500 ACCESS_RESTRICTED",
+        "New Jersey": "26:5C + 56:8-163 — lis.njleg SPA PARKED",
+        "Georgia": "31-33 + 10-1-910 — legis.ga.gov/sos.ga.gov ACCESS_RESTRICTED",
+        "Pennsylvania": "73 P.S. §2301 BPINA primary NOT FOUND at palegis"
+      }
+    },
+    "next": [
+      "Browser/manual harvest IL ILCS when portal accessible",
+      "NJ lis.njleg statute gateway when SPA yields text",
+      "GA OCGA via legis.ga.gov or SOS when 403 clears",
+      "Resolve PA BPINA primary palegis index collision",
+      "R6-D: NC·VA·MI·AZ tranche toward sellable pack"
+    ]
+  },
+  "metrics": {
+    "federal_controls": 35,
+    "federal_status_roll": { "FOUND": 34, "PARKED": 1 },
+    "state_count": 11,
+    "state_facts": 55,
+    "state_status_roll": {
+      "FOUND": 39,
+      "REQUIRES_CONFIRMATION": 1,
+      "NOT FOUND": 5,
+      "ACCESS_RESTRICTED": 7,
+      "PARKED": 6
+    },
+    "sources_harvested": 28,
+    "sources_parked": 10,
+    "gap_count": 12,
+    "sellable": false,
+    "sellable_depth_pct": "~55% toward 20-state product threshold"
+  },
+  "vcs_commit_draft": {
+    "subject": "R6-C: +IL/PA/NJ/GA/OH healthcare state tranche (11-state seed, 55 facts)",
+    "body": "RECAP\n- Did: Add OH/PA/IL/NJ/GA state packs; OH+PA harvested; IL/NJ/GA blocks explicit\n- State: 11 states, 55 facts; OH full FOUND; PA partial; IL/NJ/GA blocked\n- Gaps: IL ilga 404/500; NJ lis SPA; GA legis/sos 403/404; PA 73 P.S. NOT FOUND\n- Next: Browser IL/NJ/GA; PA BPINA primary; R6-D tranche\n\nCEILING: Public .gov only; gaps explicit."
+  },
+  "artifacts": [
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/states/ohio.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/states/pennsylvania.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/states/illinois.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/states/new_jersey.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/states/georgia.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/source_register.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/lane_meta.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/INDEX.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/healthcare_practice_knowledge_bible_seed_v1.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/healthcare_practice_knowledge_bible_seed_v1.md",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/dispatches/R6_C_healthcare_practice_recap.json"
+  ]
+}

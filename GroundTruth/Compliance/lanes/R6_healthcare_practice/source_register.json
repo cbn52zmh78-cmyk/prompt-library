@@ -1,7 +1,7 @@
 {
   "artifact": "groundtruth_healthcare_practice_source_register",
-  "version": "1.1",
-  "task": "R6-B — Close parked HIPAA items + expand states",
+  "version": "1.2",
+  "task": "R6-C — Expand healthcare toward sellable depth (IL · PA · NJ · GA · OH)",
   "lane": "R6",
   "vertical": "Healthcare Practice",
   "tier": "A",
@@ -10,8 +10,8 @@
   "retrieved_date": "2026-06-19",
   "pinned_path": "GroundTruth/Compliance/lanes/R6_healthcare_practice/source_register.json",
   "policy": "Public .gov / official statute sources only; HTTP 403/SPA/Cloudflare = park; gaps explicit.",
-  "harvested_count": 22,
-  "parked_count": 5,
+  "harvested_count": 28,
+  "parked_count": 10,
   "sources": [
     {
       "source_id": "ecfr_45_part_164",
@@ -372,6 +372,162 @@
       "http_status": 403,
       "retrieved_date": "2026-06-19",
       "reliability_note": "mass.gov 403 at harvest; c. 93H §2 statute framework FOUND."
+    },
+    {
+      "source_id": "oh_3701_74",
+      "name": "Ohio Rev. Code §3701.74 — Medical record access",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-3701.74",
+      "jurisdiction": "Ohio",
+      "domain": "state_medical_privacy",
+      "grade": "primary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "Written request access; medical record definition."
+    },
+    {
+      "source_id": "oh_4731_22",
+      "name": "Ohio Rev. Code §4731.22 — Professional confidence discipline",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-4731.22",
+      "jurisdiction": "Ohio",
+      "domain": "state_medical_privacy",
+      "grade": "primary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "Willfully betraying professional confidence grounds."
+    },
+    {
+      "source_id": "oh_1349_19",
+      "name": "Ohio Rev. Code §1349.19 — Breach notification",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-1349.19",
+      "jurisdiction": "Ohio",
+      "domain": "state_data_security",
+      "grade": "primary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "45-day notice; HIPAA covered-entity exemption."
+    },
+    {
+      "source_id": "pa_6155",
+      "name": "42 Pa.C.S. §6155 — Patient medical record rights",
+      "url": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=PDF&ttl=42&div=00.&chpt=61&sctn=55&subsctn=0",
+      "jurisdiction": "Pennsylvania",
+      "domain": "state_medical_privacy",
+      "grade": "primary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "PDF primary; HTML view SPA-empty at harvest."
+    },
+    {
+      "source_id": "pa_6156",
+      "name": "42 Pa.C.S. §6156 — Sealed medical records",
+      "url": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=PDF&ttl=42&div=00.&chpt=61&sctn=56&subsctn=0",
+      "jurisdiction": "Pennsylvania",
+      "domain": "state_medical_privacy",
+      "grade": "primary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "Consent/subpoena requirements for opening sealed copies."
+    },
+    {
+      "source_id": "pa_ag_bpina",
+      "name": "PA OAG — Breach of Personal Information Notification Act (BPINA)",
+      "url": "https://www.attorneygeneral.gov/protect-yourself/bpina/",
+      "jurisdiction": "Pennsylvania",
+      "domain": "state_data_security",
+      "grade": "secondary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "Official AG summary; primary 73 P.S. §2301 palegis NOT FOUND (2026 chpt conflict)."
+    },
+    {
+      "source_id": "pa_73_ps_2301",
+      "name": "73 P.S. §2301 — BPINA primary statute (palegis)",
+      "url": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=PDF&ttl=73&div=00.&chpt=23&sctn=2301&subsctn=0",
+      "jurisdiction": "Pennsylvania",
+      "domain": "state_data_security",
+      "grade": "primary",
+      "status": "NOT FOUND",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "PDF returns 2026 township-treasurer §2301, not BPINA; consolidated scan chpts 1–119 no match."
+    },
+    {
+      "source_id": "il_ilcs_portal",
+      "name": "Illinois ILCS — 815 ILCS 530 / 740 ILCS 110",
+      "url": "https://www.ilga.gov/legislation/ilcs/ilcs.asp",
+      "jurisdiction": "Illinois",
+      "domain": "state_medical_privacy",
+      "grade": "primary",
+      "status": "ACCESS_RESTRICTED",
+      "http_status": 404,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "ILCS/JCAR paths 404/500 at harvest; no AG alternate."
+    },
+    {
+      "source_id": "nj_lis_26_5c",
+      "name": "N.J.S.A. 26:5C — Health care records (lis.njleg)",
+      "url": "https://lis.njleg.state.nj.us/nxt/gateway.dll?f=templates&fn=default.htm&vid=Publish:10.1048/Enu&d=statutes/26%5f5C-7.htm",
+      "jurisdiction": "New Jersey",
+      "domain": "state_medical_privacy",
+      "grade": "primary",
+      "status": "PARKED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "SPA gateway shell; no extractable statute body."
+    },
+    {
+      "source_id": "nj_lis_56_8_163",
+      "name": "N.J.S.A. 56:8-163 — Breach notification (lis.njleg)",
+      "url": "https://lis.njleg.state.nj.us/nxt/gateway.dll?f=templates&fn=default.htm&vid=Publish:10.1048/Enu&d=statutes/56%5f8-163.htm",
+      "jurisdiction": "New Jersey",
+      "domain": "state_data_security",
+      "grade": "primary",
+      "status": "PARKED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "SPA gateway shell; cyber.nj.gov Incapsula at harvest."
+    },
+    {
+      "source_id": "ga_legis_ocga_31_33",
+      "name": "O.C.G.A. §31-33 — Health records confidentiality",
+      "url": "https://www.legis.ga.gov/api/legislation/document/20242025/OCGA/31/33/2",
+      "jurisdiction": "Georgia",
+      "domain": "state_medical_privacy",
+      "grade": "primary",
+      "status": "ACCESS_RESTRICTED",
+      "http_status": 404,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "legis.ga.gov OCGA API 404; SOS reference PDF 403."
+    },
+    {
+      "source_id": "ga_legis_ocga_10_1_910",
+      "name": "O.C.G.A. §10-1-910 — Personal identity protection / breach",
+      "url": "https://www.legis.ga.gov/api/legislation/document/20242025/OCGA/10/1/910",
+      "jurisdiction": "Georgia",
+      "domain": "state_data_security",
+      "grade": "primary",
+      "status": "ACCESS_RESTRICTED",
+      "http_status": 404,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "legis.ga.gov API 404/401; consumer.georgia.gov breach page 404."
+    },
+    {
+      "source_id": "ga_sos_ocga_31_33_pdf",
+      "name": "GA SOS — OCGA Title 31 Ch. 33 Health Records (PDF)",
+      "url": "https://sos.ga.gov/sites/default/files/forms/12%20Reference%20-%20O.C.G.A.%20TITLE%2031%20Chapter%2033%20Health%20Records.pdf",
+      "jurisdiction": "Georgia",
+      "domain": "state_medical_privacy",
+      "grade": "primary",
+      "status": "PARKED",
+      "http_status": 403,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "HTTP 403 at harvest."
     }
   ]
 }

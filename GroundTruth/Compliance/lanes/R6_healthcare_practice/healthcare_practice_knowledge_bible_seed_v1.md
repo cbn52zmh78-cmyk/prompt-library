@@ -1,9 +1,9 @@
-# Healthcare Practice Knowledge Bible — Seed v1 (R6)
+# Healthcare Practice Knowledge Bible — Seed v1.1 (R6-C)
 
 **Lane:** R6 — Healthcare Practice  
-**Variant:** 6-state seed (CA, TX, NY, WA, FL, MA) + federal HIPAA control-map (R6-B)  
+**Variant:** 11-state seed (CA, TX, NY, WA, FL, MA, OH, PA, IL, NJ, GA) + federal HIPAA control-map  
 **As-of:** 2026-06-19  
-**Status:** SEED (not sellable)  
+**Status:** SEED (approaching sellable depth — not sellable yet)  
 **Citation standard:** STD-CITE-001
 
 > Operational compliance research and cited public-records compilation — not legal advice.
@@ -12,80 +12,62 @@
 
 ## 1. TL;DR / Executive Summary
 
-This seed gathers **federal HIPAA** Privacy, Security, Breach Notification, and **BAA** requirements from **eCFR** (primary), plus state medical-privacy add-ons for **California (CMIA)**, **Texas (HS Ch. 181)**, and **New York (PHL + SHIELD context)**.
+R6-C adds a **high-volume state tranche** (IL · PA · NJ · GA · OH) to the existing 6-state seed. Federal HIPAA remains eCFR-primary with CMS/ASPE fallbacks.
 
 | Metric | Value |
 |--------|-------|
-| Cited claims | 42 |
-| Federal controls mapped | 32 (31 FOUND) |
-| States | CA, TX, NY, WA, FL, MA |
-| Gaps flagged | 5 |
-| Parked sources | 5 |
+| Cited claims | 90 |
+| Federal controls | 35 (34 FOUND) |
+| States | 11 |
+| State facts | 55 |
+| Gaps flagged | 12 |
+| Parked sources | 10 |
 
-**Honesty rule:** Gaps render as `NOT FOUND — [source checked: …]`. HHS.gov still **HTTP 403** (R6-B re-probe); eCFR primary + **CMS/ASPE** fallbacks harvested.
+**Honesty rule:** Portal blocks render as `NOT FOUND — [source checked: …]`. No bypass.
 
 ---
 
 ## 2. Scope, Methodology & As-Of Date
 
-**Scope:** Outpatient medical practices (physician, dental, behavioral health, urgent care, multi-specialty groups).
+**Scope:** Outpatient medical practices — HIPAA + state medical-privacy and breach-notification overlays.
 
-**Domains:** HIPAA privacy/security, vendor BAA chain, breach notification, state medical-privacy overlays.
-
-**Methodology:** Public `.gov` and official statute portals only; no bypass. AI-assisted synthesis with explicit gap taxonomy.
+**R6-C tranche:** IL, PA, NJ, GA, OH — privacy/breach add-ons only.
 
 ---
 
 ## 3. Body — Cited Compliance Record
 
-### Federal HIPAA (eCFR primary)
+### Ohio — FOUND (primary)
 
-- **Covered entities** = health plans, clearinghouses, or providers transmitting electronic covered transactions ([45 CFR §160.103](https://www.ecfr.gov/current/title-45/section-160.103)).
-- **Privacy:** No use/disclosure except as permitted/required; **minimum necessary** applies ([§164.502](https://www.ecfr.gov/current/title-45/section-164.502)).
-- **BAA:** Written contract with §164.504(e) elements — permitted uses, ePHI safeguards, breach reporting, subcontractor flow-down, termination rights ([§164.504](https://www.ecfr.gov/current/title-45/section-164.504), [§164.314](https://www.ecfr.gov/current/title-45/section-164.314)).
-- **Security (admin):** Risk analysis, security official, incident response, contingency plan ([§164.308](https://www.ecfr.gov/current/title-45/section-164.308)).
-- **Security (technical):** Access control, audit, integrity, authentication, transmission security ([§164.312](https://www.ecfr.gov/current/title-45/section-164.312)).
-- **Breach:** Individual notice within **60 days**; BA notifies CE within 60 days ([§164.404](https://www.ecfr.gov/current/title-45/section-164.404)).
+- [§3701.74](https://codes.ohio.gov/ohio-revised-code/section-3701.74) — written request for medical-record access; record definition.
+- [§4731.22](https://codes.ohio.gov/ohio-revised-code/section-4731.22) — betraying professional confidence = discipline.
+- [§1349.19](https://codes.ohio.gov/ohio-revised-code/section-1349.19) — breach definition; 45-day notice; **HIPAA CE exempt**.
 
-Full control map: `hipaa_control_map_seed_v1.json`.
+### Pennsylvania — PARTIAL
 
-### California — CMIA
+- **FOUND:** [42 Pa.C.S. §6155–6156](https://www.palegis.us/statutes/consolidated/view-statute?txtType=PDF&ttl=42&div=00.&chpt=61&sctn=55&subsctn=0) (PDF primary) — patient access, protective orders, sealed-record consent.
+- **FOUND (secondary):** [PA OAG BPINA](https://www.attorneygeneral.gov/protect-yourself/bpina/) — breach definition, resident notice, AG notice (500+).
+- **NOT FOUND:** 73 P.S. §2301 primary at palegis (2026 Title 73 chpt collision).
 
-- No disclosure without **authorization** except §56.10(b)/(c) cases ([Civ. §56.10](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=56.10.&lawCode=CIV)).
-- Prohibits sale/marketing/non-treatment use of medical information (§56.10(d)).
-- Authorization: **14-point type**, specific uses, **1-year max** expiration ([§56.11](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=56.11.&lawCode=CIV)).
-- HIPAA Part 164 cross-reference for ERISA plan disclosures (§56.10(c)(21)).
+### Illinois — ACCESS_RESTRICTED
 
-### Texas — Medical Records Privacy
+- **ACCESS_RESTRICTED:** 740 ILCS 110/ and 815 ILCS 530/ — ilga.gov ILCS/JCAR 404/500.
 
-- **FOUND:** Ch. 181 index anchor at [statutes.capitol.texas.gov](https://statutes.capitol.texas.gov/Docs/HS/htm/HS.181.htm).
-- **ACCESS_RESTRICTED:** Section text not harvestable (SPA shell). TMB privacy page **404**.
+### New Jersey — PARKED
 
-### New York — PHL + SHIELD
+- **PARKED:** N.J.S.A. 26:5C and 56:8-163 — lis.njleg SPA shell; cyber.nj.gov Incapsula.
 
-- **FOUND:** [NY DOH HIPAA hub](https://www.health.ny.gov/regulations/hipaa/) and [preemption charts](https://www.health.ny.gov/regulations/hipaa/preemption_charts.htm); PHL §17/§18 prevail in documented scenarios.
-- **FOUND (R6-B):** [NY AG SHIELD Act](https://www.ag.ny.gov/resources/organizations/data-breach-reporting/shield-act) — reasonable safeguards + breach notice; [AG breach portal](https://www.ag.ny.gov/resources/organizations/data-breach-reporting).
-- **PARKED:** nysenate.gov GBL §899-aa statute HTML (Cloudflare).
+### Georgia — ACCESS_RESTRICTED
 
-### Washington — RCW 70.02
+- **ACCESS_RESTRICTED:** O.C.G.A. §31-33 and §10-1-910 — legis.ga.gov API 404/401; sos.ga.gov PDF 403.
 
-- Written authorization required for disclosure ([§70.02.020](https://app.leg.wa.gov/RCW/default.aspx?cite=70.02.020)); authorization form requirements ([§70.02.030](https://app.leg.wa.gov/RCW/default.aspx?cite=70.02.030)); reasonable safeguards ([§70.02.150](https://app.leg.wa.gov/RCW/default.aspx?cite=70.02.150)).
-
-### Florida — Patient Records + FIPA
-
-- [§456.057](https://www.flsenate.gov/Laws/Statutes/2024/456.057) — patient access, written authorization, no marketing use, security policies.
-- [§501.171](https://www.flsenate.gov/Laws/Statutes/2024/501.171) — reasonable security; breach notice (health info in PI definition).
-
-### Massachusetts — c. 93H
-
-- **FOUND:** [c. 93H §1-§2](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXV/Chapter93H/Section1) — breach definition; safeguard regulations consistent with federal (HIPAA).
-- **REQUIRES_CONFIRMATION:** 201 CMR 17.00 (mass.gov **403**).
+*(Prior states CA, TX, NY, WA, FL, MA unchanged from R6-B — see state packs.)*
 
 ---
 
 ## 4. Source Register (Graded)
 
-See `source_register.json` — 12 harvested, 6 parked/restricted.
+See `source_register.json` v1.2 — **28 harvested, 10 parked**.
 
 ---
 
@@ -93,19 +75,19 @@ See `source_register.json` — 12 harvested, 6 parked/restricted.
 
 | Topic | Assessment |
 |-------|------------|
-| HHS vs eCFR | eCFR operative; HHS guidance parked |
-| HIPAA vs CMIA | Apply stricter; CMIA references Part 164 |
-| HIPAA vs NY PHL | Dual-track; NY DOH charts document prevailing law |
+| PA BPINA primary vs OAG | palegis chpt collision; OAG secondary operative until primary re-located |
+| OH §1349.19 vs HIPAA | CE exempt; non-CE PI holders still notify |
 
 ---
 
 ## 6. Gaps / NOT FOUND
 
-1. **PARKED** — HHS HIPAA pages (403)
-2. **ACCESS_RESTRICTED** — Texas Ch. 181 section text (SPA)
-3. **PARKED** — NY SHIELD statute (Cloudflare)
-4. **NOT FOUND** — NY AG breach portal (404)
-5. **NOT FOUND** — TMB privacy page (404)
+1. **PARKED** — HHS HIPAA (403)
+2. **NOT FOUND** — 73 P.S. §2301 BPINA primary (palegis)
+3. **ACCESS_RESTRICTED** — Illinois ILCS 815/740
+4. **PARKED** — New Jersey lis.njleg + cyber.nj.gov
+5. **ACCESS_RESTRICTED** — Georgia legis.ga.gov / sos.ga.gov
+6. *(Prior R6 gaps: TX SPA, NY nysenate, MA 201 CMR 17, etc.)*
 
 ---
 
@@ -114,12 +96,12 @@ See `source_register.json` — 12 harvested, 6 parked/restricted.
 | Section | Confidence |
 |---------|------------|
 | Federal HIPAA | HIGH |
-| California | HIGH |
-| Texas | LOW |
-| New York | MEDIUM |
+| Ohio | HIGH |
+| Pennsylvania | MEDIUM |
+| Illinois / NJ / GA | LOW |
 
 ---
 
 ## 8. Citation Appendix
 
-Numbered references match `healthcare_practice_knowledge_bible_seed_v1.json` §8 and `hipaa_control_map_seed_v1.json` citations array.
+Numbered references in `healthcare_practice_knowledge_bible_seed_v1.json` §8 and per-state packs under `states/`.
