@@ -183,6 +183,39 @@ def _use_magenta_hue_qa(script: dict[str, Any], refs: dict[str, Any]) -> bool:
     )
 
 
+def _should_magenta_reroll(script: dict[str, Any], refs: dict[str, Any]) -> bool:
+    """Clinical/neutral sets skip API re-roll; dark/archive/movies must converge."""
+    if _is_clinical_neutral_set(script, refs):
+        return False
+    return _use_magenta_hue_qa(script, refs) or _is_dark_scene(refs, script=script)
+
+
+def _script_ctx_from_refs(refs: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "format_id": refs.get("format_id"),
+        "production_meta": refs.get("production_meta") or {},
+    }
+
+
+def _use_avatar_reground(
+    refs: dict[str, Any],
+    shot: dict[str, Any],
+    shot_index: int,
+    opts: "SeamlessOptions",
+) -> bool:
+    """Dark/high-contrast: re-ground every shot on locked avatar (never drifted chain frame)."""
+    if _is_dark_scene(refs, shot=shot):
+        return True
+    if shot_index == 0:
+        return True
+    reground_n = _effective_reground_interval(opts, refs, shot)
+    return reground_n > 0 and (shot_index % reground_n == 0)
+
+
+def _magenta_reroll_attempts(refs: dict[str, Any], shot: dict[str, Any]) -> int:
+    return 5 if _is_dark_scene(refs, shot=shot) else 3
+
+
 def _load_set_library() -> dict[str, Any]:
     global _SET_LIBRARY_CACHE
     if _SET_LIBRARY_CACHE is None:
@@ -372,26 +405,6 @@ def normalize_script(raw: dict[str, Any], script_path: Path) -> dict[str, Any]:
                 out[key] = raw[key]
         return out
 
-
-def assert_gate_0_cleared(script: dict[str, Any]) -> None:
-    """Block render when intake Gate 0 is RED or pending human sign-off."""
-    intake = script.get("intake") or {}
-    gate = intake.get("gate_0") or {}
-    if not gate:
-        return  # legacy script without intake stamp
-    verdict = gate.get("verdict", "")
-    if gate.get("blocked") or verdict == "RED":
-        report = gate.get("report_path", "unknown")
-        raise SystemExit(
-            f"Gate 0 RED — render blocked. No script may ship. Report: {report}"
-        )
-    if gate.get("requires_human_signoff") and not gate.get("human_signoff"):
-        raise SystemExit(
-            f"Gate 0 {verdict} — human sign-off required before render. "
-            f"Set gate_0.human_signoff in concept and re-run intake, or update script intake stamp. "
-            f"Report: {gate.get('report_path', 'unknown')}"
-        )
-
     # Channel intro / alternate longform shape (shot_id, host_identity, closing_card)
     if "shots" in raw and any("shot_id" in s for s in raw["shots"]):
         slug = raw.get("slug", script_path.stem.replace("_script", ""))
@@ -504,6 +517,26 @@ def assert_gate_0_cleared(script: dict[str, Any]) -> None:
     }
 
 
+def assert_gate_0_cleared(script: dict[str, Any]) -> None:
+    """Block render when intake Gate 0 is RED or pending human sign-off."""
+    intake = script.get("intake") or {}
+    gate = intake.get("gate_0") or {}
+    if not gate:
+        return  # legacy script without intake stamp
+    verdict = gate.get("verdict", "")
+    if gate.get("blocked") or verdict == "RED":
+        report = gate.get("report_path", "unknown")
+        raise SystemExit(
+            f"Gate 0 RED — render blocked. No script may ship. Report: {report}"
+        )
+    if gate.get("requires_human_signoff") and not gate.get("human_signoff"):
+        raise SystemExit(
+            f"Gate 0 {verdict} — human sign-off required before render. "
+            f"Set gate_0.human_signoff in concept and re-run intake, or update script intake stamp. "
+            f"Report: {gate.get('report_path', 'unknown')}"
+        )
+
+
 def resolve_production_dir(script: dict[str, Any]) -> Path:
     if script.get("production_dir"):
         raw = str(script["production_dir"]).replace("\\", "/")
@@ -568,6 +601,7 @@ def resolve_refs(script: dict[str, Any], *, client: Any = None) -> dict[str, Any
         "set_file": set_file,
         "voice_suffix": voice_suffix,
         "format_id": script.get("format_id"),
+        "production_meta": script.get("production_meta"),
         "model_video": cfg.get("model_video", "grok-imagine-video-1.5"),
         "resolution": cfg.get("resolution", "720p"),
     }
@@ -1137,7 +1171,8 @@ def apply_per_shot_magenta_clamp(
             return out
         cur = staged
 
-    for pass_n in range(2):
+    max_strong = 4 if dark_scene else 2
+    for pass_n in range(max_strong):
         mag = probe_magenta_score(cur)
         if mag <= MAGENTA_SCORE_MAX:
             break
@@ -1146,7 +1181,7 @@ def apply_per_shot_magenta_clamp(
         if not _run_video_eq_pass(cur, strong_out, strong_vf):
             break
         cur = strong_out
-        print(f"[magenta] within-clip strong pass {pass_n + 1} (score was {mag:.3f})")
+        print(f"[magenta] within-clip strong pass {pass_n + 1}/{max_strong} (score was {mag:.3f})")
 
     staging = out.with_name(f"{out.stem}__clamp_staging.mp4")
     if staging.exists():
@@ -1582,6 +1617,7 @@ def render_frame_chain_performance(
     shots_dir: Path,
     out_path: Path,
     *,
+    script: dict[str, Any] | None = None,
     concat_only: bool = False,
     force: bool = False,
     force_shots: set[str] | None = None,
@@ -1596,6 +1632,8 @@ def render_frame_chain_performance(
     force_ids = force_shots or set()
     color_ref = resolve_color_reference(refs, shots_dir)
     avatar_url = refs["avatar_url"]
+    script_ctx = script or _script_ctx_from_refs(refs)
+    magenta_reroll = _should_magenta_reroll(script_ctx, refs)
 
     for i, shot in enumerate(shots):
         sid = shot["id"]
@@ -1621,11 +1659,10 @@ def render_frame_chain_performance(
             segments.append(proc_path)
             continue
 
-        archive_prod = _is_archive_production({"format_id": refs.get("format_id")}, refs)
         if seg_path.exists() and seg_path.stat().st_size > 10000 and not regen and not concat_only:
             raw = ensure_segment_audio(seg_path, shot, refs, shots_dir)
             process_shot_segment(raw, proc_path, shot, refs, opts, shots_dir, color_ref)
-            if not archive_prod:
+            if not magenta_reroll:
                 segments.append(proc_path)
                 continue
             mag = probe_magenta_score(proc_path)
@@ -1642,17 +1679,21 @@ def render_frame_chain_performance(
             shutil.copy2(seed_segment, seg_path)
             print(f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} — reusing extend seed")
 
-        magenta_ok = False
-        for attempt in range(3):
+        magenta_ok = not magenta_reroll
+        max_attempts = _magenta_reroll_attempts(refs, shot) if magenta_reroll else 1
+        for attempt in range(max_attempts):
             if not (seg_path.exists() and seg_path.stat().st_size > 10000 and not regen and attempt == 0):
                 if i == 0 and attempt == 0 and seed_segment and seed_segment.is_file() and not regen:
                     pass
                 else:
-                    reground_n = _effective_reground_interval(opts, refs, shot)
-                    reground = i > 0 and reground_n > 0 and (i % reground_n == 0)
-                    if i == 0 or reground:
+                    if _use_avatar_reground(refs, shot, i, opts):
                         image_url = avatar_url
-                        src = "talent re-ground" if reground else "locked talent avatar"
+                        dark = _is_dark_scene(refs, shot=shot)
+                        src = (
+                            "dark-set avatar re-ground (Kelvin locked)"
+                            if dark
+                            else ("talent re-ground" if i > 0 else "locked talent avatar")
+                        )
                         print(f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} ({dur}s) ← {src}")
                     else:
                         frame_jpg = frames_dir / f"frame_after_{segments[-1].stem}.jpg"
@@ -1674,15 +1715,19 @@ def render_frame_chain_performance(
 
             raw = ensure_segment_audio(seg_path, shot, refs, shots_dir)
             process_shot_segment(raw, proc_path, shot, refs, opts, shots_dir, color_ref)
-            mag = probe_magenta_score(proc_path)
-            if mag <= MAGENTA_SCORE_MAX:
+            if magenta_reroll:
+                mag = probe_magenta_score(proc_path)
+                if mag <= MAGENTA_SCORE_MAX:
+                    magenta_ok = True
+                    break
+                print(f"[magenta] {sid} score={mag:.3f} — re-roll attempt {attempt + 2}/{max_attempts}")
+                regen = True
+            else:
                 magenta_ok = True
                 break
-            print(f"[magenta] {sid} score={mag:.3f} — re-roll attempt {attempt + 2}/3")
-            regen = True
 
-        if not magenta_ok and proc_path.is_file():
-            print(f"[magenta] {sid} still elevated after 3 attempts — keeping best-effort clamp")
+        if magenta_reroll and not magenta_ok and proc_path.is_file():
+            print(f"[magenta] {sid} still elevated after {max_attempts} attempts — keeping best-effort clamp")
 
         segments.append(proc_path)
 
@@ -1714,6 +1759,7 @@ def render_extend_performance(
     out_path: Path,
     shots_dir: Path,
     *,
+    script: dict[str, Any] | None = None,
     concat_only: bool = False,
     force: bool = False,
     force_shots: set[str] | None = None,
@@ -1728,6 +1774,7 @@ def render_extend_performance(
     if concat_only:
         return render_frame_chain_performance(
             shots, client, refs, opts, shots_dir, out_path,
+            script=script,
             concat_only=True, force=force, force_shots=force_shots,
         )
     if have_chain and not regen_any:
@@ -1846,6 +1893,7 @@ def render_extend_performance(
             shutil.copy2(out_path, seed)
         result = render_frame_chain_performance(
             shots, client, refs, opts, shots_dir, out_path,
+            script=script,
             concat_only=False, force=force, force_shots=force_shots,
             seed_segment=seed if not regen_any else None,
         )
@@ -2092,6 +2140,7 @@ def render_longform(
             opts,
             extend_path,
             shots_dir,
+            script=script,
             concat_only=concat_only,
             force=force_all,
             force_shots=shot_force,

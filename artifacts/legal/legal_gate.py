@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Legal Gate v1.2 — Producer Hard Stop (aligned to Gate_0_Checklist.md v1.1)
+Legal Gate v1.3 — Producer Hard Stop (aligned to Gate_0_Checklist.md v1.1)
 
 Gate 0: FIRST action on every scene, video, brief, or client ask.
 
@@ -27,6 +27,7 @@ from lib.bootstrap import ensure_paths
 
 ensure_paths()
 from lib.studio_paths import producers_path, studio_path
+from music_clearance import music_row2_status  # noqa: E402
 
 VALID_RATINGS = ("G", "PG", "PG-13", "R")
 VALID_CHANNELS = ("social", "streaming", "theatrical", "festival", "client")
@@ -215,9 +216,11 @@ def _evaluate_checklist_domains(result: GateResult, text: str, channels: list[st
     else:
         domains["row_1_synthetic_ownership"] = "MANUAL"
 
-    # Row 2 — music / sync rights
+    # Row 2 — music / sync rights (manifest-backed beds + legacy cleared phrases)
     if any("[MUSIC]" in h for h in result.hard_stops):
         domains["row_2_music_sync"] = "FAIL"
+    elif music_row2_status(text, channels).get("manifest_cleared"):
+        domains["row_2_music_sync"] = "PASS"
     elif _music_cleared(text):
         domains["row_2_music_sync"] = "PASS"
     elif any("music" in f.lower() for f in result.counsel_flags):
@@ -368,7 +371,26 @@ class LegalGate:
         if "social" in channels:
             result.notes.append("Social = mass dissemination. Platform AI-label + community guidelines apply.")
 
-        # ── Gate 0 row 2: uncleared music on client deliverable = RED ───
+        # ── Gate 0 row 2: clearance_manifest.json + uncleared music ─────
+        mstatus = music_row2_status(text, channels)
+        if mstatus["unlisted"]:
+            result.hard_stops.append(
+                "[MUSIC] Unlisted music bed(s) "
+                f"{', '.join(mstatus['unlisted'])} — not in "
+                "STUDIO/Music_Sound/clearance_manifest.json (Gate 0 row 2)"
+            )
+        for block in mstatus.get("channel_blocked") or []:
+            result.hard_stops.append(
+                f"[MUSIC] {block['track_id']} not cleared for channel(s): "
+                f"{', '.join(block['channels'])} (Gate 0 row 2)"
+            )
+        if mstatus.get("manifest_cleared"):
+            result.notes.append(
+                "Row 2: Manifest-cleared music bed(s): "
+                f"{', '.join(mstatus['cleared'])} "
+                "(STUDIO/Music_Sound/clearance_manifest.json)"
+            )
+
         client_delivery = "client" in channels or "client deliverable" in lower
         if client_delivery:
             for pattern, msg in MUSIC_UNCLEARED_PATTERNS:
@@ -479,7 +501,7 @@ def main() -> int:
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="Legal Gate v1.2 — Gate 0: AI + mass dissemination + v1.1 checklist domains (RUN FIRST)"
+        description="Legal Gate v1.3 — Gate 0: AI + mass dissemination + v1.1 checklist domains (RUN FIRST)"
     )
     parser.add_argument("--project", required=True, help="Project / slate ID")
     parser.add_argument("--text", help="Inline brief, prompt, or scene description")
