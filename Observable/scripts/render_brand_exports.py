@@ -269,9 +269,6 @@ def render_intro_sting() -> Path:
     total_frames = int(duration_s * fps)
     fonts = _fonts()
     bg = _rgb("obs-bg")
-    seamless_top = _rgb("obs-seamless")
-    seamless_bot = _rgb("obs-bg")
-    title_c = _rgb("obs-title")
     body_c = _rgb("obs-body")
 
     wm_path = render_wordmark_png()
