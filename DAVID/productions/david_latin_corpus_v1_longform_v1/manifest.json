@@ -1,7 +1,7 @@
 {
   "pipeline": "render_longform_seamless",
   "protocol": "STUDIO_Canonical_Schema_and_Seamless_Spec_v1",
-  "completed_at": "2026-06-19T13:36:02.282834+00:00",
+  "completed_at": "2026-06-19T13:38:21.807816+00:00",
   "script_source": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\scripts\\longform_scripts\\david_latin_corpus_v1_script.json",
   "concat_only": false,
   "seamless": true,
@@ -15,7 +15,7 @@
   "comparison": null,
   "qa": {
     "slug": "david_latin_corpus_v1",
-    "qa_at": "2026-06-19T13:36:02.282124+00:00",
+    "qa_at": "2026-06-19T13:38:21.807114+00:00",
     "pass": false,
     "passes": [
       "host identity lock LOADED",
@@ -35,15 +35,15 @@
       "loudnorm two-pass target I=-16.0 LUFS per shot",
       "audio pinned to exact shot duration (no stretch/offset)",
       "flat loudness across shots (spread 0.07 LU)",
-      "zero magenta (max score 0.006 <= 0.42)",
+      "zero magenta (max score 0.122 <= 0.42)",
       "tight A/V sync per shot (duration pinned)",
-      "neutral WB — yellow-green suppressed (max 0.009 <= 0.12)",
+      "neutral WB — yellow-green suppressed (max 0.096 <= 0.12)",
       "pronunciation chip overlay burned (high-contrast #194)",
       "lamp warm ratio stable across segments (Δ=0.000)"
     ],
     "issues": [
-      "final output bypassed grade/xfade path (#244 T4): ['rgb_skew 0.2543 > 0.12', 'blue_starvation_fraction 1.000 > 0.5', 'host B/R 0.029 < 0.22', 'blue_starvation B=2.1 lum=57.6']",
-      "blue-starved generation cast (#194 T4): [('chain_01_cold_open_processed', ['blue_starvation_fraction 0.631 > 0.5', 'host B mean 14.0 < 25.0']), ('chain_02_stakes_processed', ['rgb_skew 0.2270 > 0.12', 'blue_starvation_fraction 0.987 > 0.5', 'host B/R 0.097 < 0.22', 'blue_starvation B=5.7 lum=55.0']), ('chain_03_signature_question_processed', ['rgb_skew 0.2172 > 0.12', 'blue_starvation_fraction 0.989 > 0.5', 'host B/R 0.092 < 0.22', 'blue_starvation B=4.9 lum=52.1']), ('chain_04_proof_beat_processed', ['rgb_skew 0.2172 > 0.12', 'blue_starvation_fraction 0.994 > 0.5', 'host B/R 0.081 < 0.22', 'blue_starvation B=4.4 lum=51.7']), ('chain_05_method_processed', ['rgb_skew 0.2125 > 0.12', 'blue_starvation_fraction 0.997 > 0.5', 'host B/R 0.092 < 0.22', 'blue_starvation B=4.7 lum=51.0']), ('chain_06_honesty_processed', ['rgb_skew 0.2228 > 0.12', 'blue_starvation_fraction 0.983 > 0.5', 'host B/R 0.104 < 0.22', 'blue_starvation B=5.9 lum=54.4']), ('chain_07_demonstration_processed', ['rgb_skew 0.2000 > 0.12', 'blue_starvation_fraction 0.990 > 0.5', 'host B/R 0.130 < 0.22', 'blue_starvation B=7.1 lum=50.2']), ('chain_08_invitation_processed', ['rgb_skew 0.2251 > 0.12', 'blue_starvation_fraction 0.979 > 0.5', 'host B/R 0.107 < 0.22', 'blue_starvation B=6.3 lum=55.2'])]"
+      "final output bypassed grade/xfade path (#244 T4): ['rgb_skew 0.2542 > 0.12', 'blue_starvation_fraction 1.000 > 0.5', 'host B/R 0.029 < 0.22', 'blue_starvation B=2.1 lum=57.5']",
+      "blue-starved generation cast (#194 T4): [('chain_02_stakes_processed', ['rgb_skew 0.2270 > 0.12', 'blue_starvation_fraction 0.987 > 0.5', 'host B/R 0.097 < 0.22', 'blue_starvation B=5.7 lum=55.0']), ('chain_03_signature_question_processed', ['rgb_skew 0.2172 > 0.12', 'blue_starvation_fraction 0.989 > 0.5', 'host B/R 0.092 < 0.22', 'blue_starvation B=4.9 lum=52.1']), ('chain_04_proof_beat_processed', ['rgb_skew 0.2172 > 0.12', 'blue_starvation_fraction 0.994 > 0.5', 'host B/R 0.081 < 0.22', 'blue_starvation B=4.4 lum=51.7']), ('chain_05_method_processed', ['rgb_skew 0.2125 > 0.12', 'blue_starvation_fraction 0.997 > 0.5', 'host B/R 0.092 < 0.22', 'blue_starvation B=4.7 lum=51.0']), ('chain_06_honesty_processed', ['rgb_skew 0.2228 > 0.12', 'blue_starvation_fraction 0.983 > 0.5', 'host B/R 0.104 < 0.22', 'blue_starvation B=5.9 lum=54.4']), ('chain_07_demonstration_processed', ['rgb_skew 0.2000 > 0.12', 'blue_starvation_fraction 0.990 > 0.5', 'host B/R 0.130 < 0.22', 'blue_starvation B=7.1 lum=50.2']), ('chain_08_invitation_processed', ['rgb_skew 0.2251 > 0.12', 'blue_starvation_fraction 0.979 > 0.5', 'host B/R 0.107 < 0.22', 'blue_starvation B=6.3 lum=55.2'])]"
     ],
     "shot_count": 8,
     "segment_count": 2,

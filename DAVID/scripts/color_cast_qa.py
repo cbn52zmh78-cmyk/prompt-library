@@ -246,6 +246,7 @@ def probe_video_midframe(video: Path, at_s: float | None = None) -> dict[str, fl
     """Extract one frame from video and measure color cast."""
     import subprocess
     import tempfile
+    from pathlib import Path as _Path
 
     from PIL import Image
 
@@ -266,7 +267,7 @@ def probe_video_midframe(video: Path, at_s: float | None = None) -> dict[str, fl
                 break
         at_s = dur
     with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as tmp:
-        jpg = Path(tmp.name)
+        jpg = _Path(tmp.name)
     subprocess.run(
         [ff, "-y", "-ss", f"{at_s:.3f}", "-i", str(video), "-frames:v", "1", str(jpg)],
         check=True,
