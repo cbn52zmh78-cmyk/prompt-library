@@ -1148,7 +1148,11 @@ def apply_per_shot_magenta_clamp(
         cur = strong_out
         print(f"[magenta] within-clip strong pass {pass_n + 1} (score was {mag:.3f})")
 
-    shutil.copy2(cur, out)
+    staging = out.with_name(f"{out.stem}__clamp_staging.mp4")
+    if staging.exists():
+        staging.unlink(missing_ok=True)
+    shutil.move(str(cur), str(staging))
+    os.replace(staging, out)
     return out
 
 
@@ -1249,8 +1253,11 @@ def process_shot_segment(
             pin_av_to_duration(cur, final_pin, target_dur)
             cur = final_pin
 
-    out.unlink(missing_ok=True)
-    shutil.move(str(cur), str(out))
+    staging = work / f"{out.stem}__staging.mp4"
+    if staging.exists():
+        staging.unlink(missing_ok=True)
+    shutil.move(str(cur), str(staging))
+    os.replace(staging, out)
     return out
 
 
@@ -1290,8 +1297,11 @@ def tighten_chain_loudness(
             target_dur = float(clamp_shot_duration(shot.get("duration", probe_duration(leveled))))
             pinned = shots_dir / f"{seg.stem}_lvl{iteration}_pin.mp4"
             pin_av_to_duration(leveled, pinned, target_dur)
-            seg.unlink(missing_ok=True)
-            shutil.move(str(pinned), str(seg))
+            staging = shots_dir / f"{seg.stem}__lvl_staging.mp4"
+            if staging.exists():
+                staging.unlink(missing_ok=True)
+            shutil.move(str(pinned), str(staging))
+            os.replace(staging, seg)
             updated[idx] = seg
             print(
                 f"[audio] chain level pass {iteration + 1} {seg.name}: "
