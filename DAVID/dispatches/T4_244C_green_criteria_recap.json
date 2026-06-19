@@ -1,0 +1,43 @@
+{
+  "message_type": "recap_vcs",
+  "issue": "244-C",
+  "title": "T4 #244-C — GREEN criteria locked; T4 standing by for DAVID re-gen",
+  "generated_at": "2026-06-19T16:45:00+00:00",
+  "status": "HOLD",
+  "verdict": "RED",
+  "owner_terminal": "T4",
+  "lane": "DAVID",
+  "no_render": true,
+  "commit": {
+    "allowed": false,
+    "reason": "HOLD — no commit until GREEN criteria pass + NEXUS sign-off",
+    "cron": "PAUSED"
+  },
+  "recap": {
+    "did": [
+      "Locked explicit GREEN pass-gate at Nexus/gates/T4_244_GREEN_criteria.json",
+      "Criteria: raw_magenta < 0.42 AND clamp_burden < 0.20 AND Bμ in [40,70] AND human-eye PASS",
+      "Wired proof_244_clamp_pass.py to evaluate green_gate per shot from locked criteria",
+      "T4 STANDING BY — re-score shot01+05 via proof_244_clamp_pass.py --force when #218 raw arrives"
+    ],
+    "state": "RED — 0/2 shots pass metric GREEN gates; human-eye PENDING; awaiting DAVID #218 re-gen",
+    "next": [
+      "DAVID #218 delivers clean raw chain_01_cold_open + chain_05_method",
+      "T4: python DAVID/scripts/proof_244_clamp_pass.py --force",
+      "Human-eye + NEXUS sign-off on processed outputs",
+      "Manual commit only after full GREEN"
+    ]
+  },
+  "green_criteria_gate": "Nexus/gates/T4_244_GREEN_criteria.json",
+  "pass_gate": "GREEN iff raw_magenta<0.42 AND clamp_burden<0.20 AND 40<=Bμ<=70 AND human_eye=PASS",
+  "stand_by": {
+    "terminal": "T4",
+    "trigger": "new raw chain segments in david_latin_corpus_v1_longform_v1/shots/",
+    "action": "python DAVID/scripts/proof_244_clamp_pass.py --force"
+  },
+  "proof_218": "HELD",
+  "vcs_commit_draft": {
+    "subject": "T4 #244-C: GREEN criteria locked + stand-by for #218 re-gen (HOLD)",
+    "body": "RECAP\n- Did: Nexus/gates/T4_244_GREEN_criteria.json — raw magenta<0.42, burden<0.20, Bμ[40-70], human-eye; proof scorer wired\n- State: RED 0/2 metric GREEN; T4 STANDING BY for DAVID #218 re-gen; cron PAUSED; no commit\n- Next: Re-score shot01+05 on raw arrival; human-eye+NEXUS; GREEN only when all gates pass"
+  }
+}

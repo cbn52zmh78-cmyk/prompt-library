@@ -30,6 +30,7 @@ MAGENTA_MAX = rl.MAGENTA_SCORE_MAX
 # #244-B — single-pass clamp burden ceiling (raw_magenta − graded_magenta)
 CLAMP_BURDEN_MAX = 0.20
 GENERATION_DEFECT_LABEL = "GENERATION DEFECT — clamp masking"
+GREEN_CRITERIA_GATE = ROOT.parent / "Nexus" / "gates" / "T4_244_GREEN_criteria.json"
 
 
 def scale_to_480p(src: Path, dst: Path) -> Path:
@@ -85,7 +86,56 @@ def overall_state(rows: list[dict]) -> str:
         return "RED"
     if any(r["metric_verdict"] == "RED" for r in rows):
         return "RED"
+    if rows and all(r.get("green_gate", {}).get("metric_pass") for r in rows):
+        return "AMBER"
     return "AMBER"
+
+
+def load_green_criteria() -> dict:
+    if not GREEN_CRITERIA_GATE.is_file():
+        return {}
+    return json.loads(GREEN_CRITERIA_GATE.read_text(encoding="utf-8"))
+
+
+def evaluate_green_gate(
+    *,
+    raw_magenta: float,
+    graded_magenta: float,
+    graded_bmu: float,
+    clamp_burden: float,
+    criteria: dict,
+) -> dict:
+    """#244-C — score shot against locked GREEN criteria (metrics only; human-eye external)."""
+    t = criteria.get("thresholds", {})
+    raw_max = float(t.get("raw_magenta_max", MAGENTA_MAX))
+    burden_max = float(t.get("clamp_burden_max", CLAMP_BURDEN_MAX))
+    bmu_min = float(t.get("host_blue_mean_min", 40.0))
+    bmu_max = float(t.get("host_blue_mean_max", 70.0))
+    graded_max = float(t.get("graded_magenta_max", MAGENTA_MAX))
+
+    checks = {
+        "raw_magenta": raw_magenta < raw_max,
+        "graded_magenta": graded_magenta < graded_max,
+        "clamp_burden": clamp_burden < burden_max,
+        "host_blue_mean": bmu_min <= graded_bmu <= bmu_max,
+    }
+    metric_pass = all(checks.values())
+    failures = [k for k, ok in checks.items() if not ok]
+    return {
+        "metric_pass": metric_pass,
+        "human_eye": "PENDING",
+        "green_pass": False,
+        "checks": checks,
+        "failures": failures,
+        "thresholds": {
+            "raw_magenta_max": raw_max,
+            "graded_magenta_max": graded_max,
+            "clamp_burden_max": burden_max,
+            "host_blue_mean_min": bmu_min,
+            "host_blue_mean_max": bmu_max,
+        },
+        "criteria_gate": str(GREEN_CRITERIA_GATE.relative_to(ROOT.parent)),
+    }
 
 
 def run_proof(
@@ -123,6 +173,7 @@ def run_proof(
     color_ref = rl.resolve_color_reference(refs, shots_dir)
 
     shot_map = {s["id"]: s for s in script.get("shots", [])}
+    green_criteria = load_green_criteria()
     rows: list[dict] = []
 
     for sid in shot_ids:
@@ -172,6 +223,14 @@ def run_proof(
                 clamp_marker = json.loads(candidate.read_text(encoding="utf-8"))
                 break
 
+        green_gate = evaluate_green_gate(
+            raw_magenta=before["magenta"],
+            graded_magenta=after["magenta"],
+            graded_bmu=after["host_blue_mean"],
+            clamp_burden=guard["clamp_burden"],
+            criteria=green_criteria,
+        ) if green_criteria else {}
+
         rows.append({
             "shot_id": sid,
             "resolution": resolution_label,
@@ -188,12 +247,14 @@ def run_proof(
             },
             "metric_verdict": verdict_state(after["magenta"], before["magenta"]),
             "clamp_marker": clamp_marker,
+            "green_gate": green_gate,
             **guard,
         })
 
     gen_defects = [r for r in rows if r.get("generation_defect")]
+    metric_green = [r for r in rows if r.get("green_gate", {}).get("metric_pass")]
     report = {
-        "issue": "244-B",
+        "issue": "244-C",
         "state": overall_state(rows),
         "target": "GREEN only when raw generation clean + dual-verify + #218",
         "proof_218": "HELD",
@@ -206,6 +267,14 @@ def run_proof(
             "label": GENERATION_DEFECT_LABEL,
             "calibrated_for": "T1 single-pass",
             "defect_count": len(gen_defects),
+        },
+        "green_criteria": {
+            "gate": str(GREEN_CRITERIA_GATE.relative_to(ROOT.parent)) if green_criteria else None,
+            "metric_pass_count": len(metric_green),
+            "shot_count": len(rows),
+            "human_eye": "PENDING",
+            "green_pass": False,
+            "stand_by": "T4 STANDING BY for DAVID #218 re-gen",
         },
         "magenta_max": MAGENTA_MAX,
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -239,20 +308,26 @@ def main() -> int:
         metrics_only=args.metrics_only,
     )
     guard = report["clamp_burden_guard"]
+    green = report.get("green_criteria", {})
     print(
-        f"T4 #244-B clamp proof — state={report['state']}  "
+        f"T4 #244-C clamp proof — state={report['state']}  "
         f"gen_defects={guard['defect_count']}/{len(report['shots'])}  "
+        f"green_metrics={green.get('metric_pass_count', 0)}/{green.get('shot_count', 0)}  "
         f"commit={report['commit']}"
     )
     print(f"Report: {args.production / 'proof_244' / 'proof_244_clamp_report.json'}")
     for row in report["shots"]:
         b, a = row["before"], row["after"]
         defect = f"  ⚠ {row['generation_defect_label']}" if row.get("generation_defect") else ""
+        gg = row.get("green_gate", {})
+        green_tag = ""
+        if gg:
+            green_tag = "  green_metric=PASS" if gg.get("metric_pass") else f"  green_metric=FAIL ({','.join(gg.get('failures', []))})"
         print(
             f"  {row['shot_id']}: magenta {b['magenta']:.4f} → {a['magenta']:.4f}  "
             f"(burden {row['clamp_burden']:.4f})  "
             f"Bμ {b['host_blue_mean']:.1f} → {a['host_blue_mean']:.1f}  "
-            f"metric={row['metric_verdict']}{defect}"
+            f"metric={row['metric_verdict']}{defect}{green_tag}"
         )
     return 0 if report["state"] != "RED" else 1
 
