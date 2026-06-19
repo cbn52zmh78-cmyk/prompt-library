@@ -1,0 +1,65 @@
+{
+  "artifact": "groundtruth_grants_index",
+  "version": "1.0",
+  "category": "grants_funding",
+  "tier": "B",
+  "as_of_date": "2026-06-19",
+  "generated_at": "2026-06-19T10:00:20.297787+00:00",
+  "anchor_portal": "Grants.gov",
+  "subscription_product": "living_bible — deadlines + new grant postings drive weekly/daily refresh",
+  "citation_standard": "STD-CITE-001",
+  "artifacts": {
+    "bible_template": "GroundTruth/Grants/grants_bible_template.json",
+    "source_register": "GroundTruth/Grants/source_register.json",
+    "sample_pack": "GroundTruth/Grants/packs/small_business_innovation_sample_pack.json",
+    "harvester": "Science/scripts/harvest_groundtruth_grants_sample.py"
+  },
+  "eligibility_categories": [
+    "small_biz",
+    "nonprofit",
+    "research",
+    "government",
+    "individual"
+  ],
+  "packs": [
+    {
+      "vertical_id": "small_business_innovation",
+      "display_name": "Small Business Innovation (SBIR/STTR + SBA)",
+      "pack_kind": "sample_template",
+      "program_count": 4,
+      "fact_count": 10,
+      "watchlist_deadlines_next_30d": [
+        {
+          "program_id": "sba-fast-fy26",
+          "close_date": "2026-07-22"
+        },
+        {
+          "program_id": "nsf-sbir-sttr-26-510",
+          "close_date": "2026-07-27"
+        }
+      ],
+      "path": "GroundTruth/Grants/packs/small_business_innovation_sample_pack.json",
+      "status": "SAMPLE"
+    }
+  ],
+  "source_layers": {
+    "federal_portals": 5,
+    "state_example": "PA DCED",
+    "foundation_example": "Gates Foundation"
+  },
+  "parked_count": 2,
+  "next_verticals": [
+    "nonprofit_community_development",
+    "research_university_federal",
+    "state_small_business_pa_nj_ny"
+  ],
+  "probe_status": {
+    "grants_gov": 200,
+    "grants_api": 403,
+    "sam_entity": 200,
+    "sbir_root": 200,
+    "sbir_about": 404,
+    "nsf_26510": 200,
+    "sba_fast": 200
+  }
+}

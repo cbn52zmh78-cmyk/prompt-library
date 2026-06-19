@@ -6,7 +6,7 @@
   "tier": "B",
   "pack_kind": "sample_template",
   "task": "GroundTruth Grants — sample curated pack (living-bible subscription proof)",
-  "generated_at": "2026-06-19T10:00:00+00:00",
+  "generated_at": "2026-06-19T10:00:20.296257+00:00",
   "as_of_date": "2026-06-19",
   "retrieved_date": "2026-06-19",
   "citation_standard": "STD-CITE-001",
@@ -22,12 +22,39 @@
       "SAM.gov entity registration renewal (365-day cycle)"
     ],
     "watchlist_deadlines": [
-      {"program_id": "sba-fast-fy26", "close_date": "2026-07-22", "alert_days": [30, 7, 1]},
-      {"program_id": "nsf-sbir-sttr-26-510", "close_date": "2026-07-27", "alert_days": [30, 7, 1]},
-      {"program_id": "nsf-sbir-sttr-26-510", "close_date": "2026-11-04", "alert_days": [30, 7, 1]}
+      {
+        "program_id": "sba-fast-fy26",
+        "close_date": "2026-07-22",
+        "alert_days": [
+          30,
+          7,
+          1
+        ]
+      },
+      {
+        "program_id": "nsf-sbir-sttr-26-510",
+        "close_date": "2026-07-27",
+        "alert_days": [
+          30,
+          7,
+          1
+        ]
+      },
+      {
+        "program_id": "nsf-sbir-sttr-26-510",
+        "close_date": "2026-11-04",
+        "alert_days": [
+          30,
+          7,
+          1
+        ]
+      }
     ]
   },
-  "eligibility_categories": ["small_biz", "research"],
+  "eligibility_categories": [
+    "small_biz",
+    "research"
+  ],
   "prerequisites": [
     {
       "prerequisite_id": "sam_entity_registration",
@@ -92,9 +119,14 @@
       "title": "NSF SBIR/STTR Phase I, Phase II, Fast-Track (NSF 26-510)",
       "sponsor_agency": "U.S. National Science Foundation — Directorate for Technology, Innovation and Partnerships",
       "funding_layer": "federal",
-      "opportunity_numbers": ["NSF 26-510"],
+      "opportunity_numbers": [
+        "NSF 26-510"
+      ],
       "grants_gov_detail_url": "https://www.nsf.gov/funding/opportunities/small-business-innovation-research-small-business-technology/nsf26-510/solicitation",
-      "eligibility_categories": ["small_biz", "research"],
+      "eligibility_categories": [
+        "small_biz",
+        "research"
+      ],
       "status": "POSTED",
       "amount": {
         "phase_i_max": 305000,
@@ -177,11 +209,17 @@
       "title": "SBA Federal and State Technology (FAST) Partnership Program FY2026",
       "sponsor_agency": "U.S. Small Business Administration",
       "funding_layer": "federal",
-      "opportunity_numbers": ["SB-OIIFT-26-001"],
+      "opportunity_numbers": [
+        "SB-OIIFT-26-001"
+      ],
       "assistance_listing": "59.058",
       "grants_gov_detail_url": "https://www.grants.gov/search-results-detail/362646",
       "simpler_grants_url": "https://simpler.grants.gov/opportunity/9ea5fbca-f285-4ad8-a14e-cc2c0abc0266",
-      "eligibility_categories": ["nonprofit", "government", "small_biz"],
+      "eligibility_categories": [
+        "nonprofit",
+        "government",
+        "small_biz"
+      ],
       "status": "POSTED",
       "amount": {
         "award_min": 1,
@@ -243,7 +281,9 @@
       "title": "SBIR/STTR Federal Program Hub",
       "sponsor_agency": "U.S. Small Business Administration (SBIR/STTR policy) + participating agencies",
       "funding_layer": "federal",
-      "eligibility_categories": ["small_biz"],
+      "eligibility_categories": [
+        "small_biz"
+      ],
       "status": "FOUND",
       "amount": {
         "award_min": null,
@@ -293,7 +333,11 @@
       "sponsor_agency": "PA Department of Community & Economic Development",
       "funding_layer": "state",
       "state_code": "PA",
-      "eligibility_categories": ["small_biz", "nonprofit", "government"],
+      "eligibility_categories": [
+        "small_biz",
+        "nonprofit",
+        "government"
+      ],
       "status": "PARTIAL",
       "amount": {
         "award_min": null,
@@ -349,8 +393,22 @@
       "label": "grants_gov_api_search2",
       "url": "https://api.grants.gov/v1/api/search2",
       "reason": "HTTP 403 — no bypass; curated from opportunity detail pages"
+    },
+    {
+      "label": "grants_gov_api_search2",
+      "url": "https://api.grants.gov/v1/api/search2",
+      "reason": "HTTP 403 — no bypass"
     }
   ],
   "fact_count": 10,
-  "program_count": 4
+  "program_count": 4,
+  "probe_status": {
+    "grants_gov": 200,
+    "grants_api": 403,
+    "sam_entity": 200,
+    "sbir_root": 200,
+    "sbir_about": 404,
+    "nsf_26510": 200,
+    "sba_fast": 200
+  }
 }

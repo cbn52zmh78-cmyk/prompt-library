@@ -1,0 +1,195 @@
+{
+  "artifact": "groundtruth_grants_source_register",
+  "version": "1.0",
+  "category": "grants_funding",
+  "tier": "B",
+  "as_of_date": "2026-06-19",
+  "retrieved_date": "2026-06-19",
+  "citation_standard": "STD-CITE-001",
+  "source_count": 14,
+  "parked_count": 2,
+  "sources": [
+    {
+      "source_id": "SRC-GRANTS-GOV",
+      "name": "Grants.gov",
+      "url": "https://www.grants.gov/",
+      "agency": "Grants.gov (HHS)",
+      "tier": "agency_primary",
+      "layer": "federal",
+      "retrieved": "2026-06-19",
+      "status": "ACTIVE",
+      "used_in": [
+        "prerequisites",
+        "subscription_anchor"
+      ]
+    },
+    {
+      "source_id": "SRC-SIMPLER-GRANTS",
+      "name": "Simpler.Grants.gov",
+      "url": "https://simpler.grants.gov/",
+      "agency": "Grants.gov (HHS)",
+      "tier": "agency_primary",
+      "layer": "federal",
+      "retrieved": "2026-06-19",
+      "status": "ACTIVE",
+      "used_in": [
+        "sba-fast-fy26"
+      ]
+    },
+    {
+      "source_id": "SRC-SAM-ENTITY",
+      "name": "SAM.gov — Entity Registration",
+      "url": "https://www.sam.gov/content/entity-registration",
+      "agency": "GSA / SAM.gov",
+      "tier": "agency_primary",
+      "layer": "federal",
+      "retrieved": "2026-06-19",
+      "status": "ACTIVE",
+      "used_in": [
+        "prerequisites"
+      ]
+    },
+    {
+      "source_id": "SRC-GRANTS-ELIGIBILITY",
+      "name": "Grants.gov — Grant Eligibility",
+      "url": "https://www.grants.gov/learn-grants/grant-eligibility",
+      "agency": "Grants.gov (HHS)",
+      "tier": "agency_primary",
+      "layer": "federal",
+      "retrieved": "2026-06-19",
+      "status": "ACTIVE",
+      "used_in": [
+        "prerequisites",
+        "eligibility_categories"
+      ]
+    },
+    {
+      "source_id": "SRC-GRANTS-HOWTO",
+      "name": "Grants.gov — How to Apply for Grants",
+      "url": "https://www.grants.gov/applicants/grant-applications/how-to-apply-for-grants",
+      "agency": "Grants.gov (HHS)",
+      "tier": "agency_primary",
+      "layer": "federal",
+      "retrieved": "2026-06-19",
+      "status": "ACTIVE",
+      "used_in": [
+        "prerequisites"
+      ]
+    },
+    {
+      "source_id": "SRC-GRANTS-POLICIES",
+      "name": "Grants.gov — Grant Policies",
+      "url": "https://www.grants.gov/learn-grants/grant-policies/",
+      "agency": "Grants.gov (HHS)",
+      "tier": "agency_secondary",
+      "layer": "federal",
+      "retrieved": "2026-06-19",
+      "status": "ACTIVE",
+      "used_in": [
+        "bible_template"
+      ]
+    },
+    {
+      "source_id": "SRC-NSF-26-510",
+      "name": "NSF 26-510 SBIR/STTR Solicitation",
+      "url": "https://www.nsf.gov/funding/opportunities/small-business-innovation-research-small-business-technology/nsf26-510/solicitation",
+      "agency": "NSF",
+      "tier": "agency_primary",
+      "layer": "federal",
+      "retrieved": "2026-06-19",
+      "status": "ACTIVE",
+      "used_in": [
+        "nsf-sbir-sttr-26-510"
+      ]
+    },
+    {
+      "source_id": "SRC-NSF-SEEDFUND",
+      "name": "NSF America's Seed Fund — About",
+      "url": "https://seedfund.nsf.gov/our-program/",
+      "agency": "NSF",
+      "tier": "agency_primary",
+      "layer": "federal",
+      "retrieved": "2026-06-19",
+      "status": "ACTIVE",
+      "used_in": [
+        "nsf-sbir-sttr-26-510"
+      ]
+    },
+    {
+      "source_id": "SRC-SBA-FAST-26",
+      "name": "SBA FAST FY2026 (SB-OIIFT-26-001)",
+      "url": "https://simpler.grants.gov/opportunity/9ea5fbca-f285-4ad8-a14e-cc2c0abc0266",
+      "agency": "SBA",
+      "tier": "agency_primary",
+      "layer": "federal",
+      "retrieved": "2026-06-19",
+      "status": "ACTIVE",
+      "grants_gov_detail": "https://www.grants.gov/search-results-detail/362646",
+      "used_in": [
+        "sba-fast-fy26"
+      ]
+    },
+    {
+      "source_id": "SRC-SBIR-GOV",
+      "name": "SBIR.gov",
+      "url": "https://www.sbir.gov/",
+      "agency": "SBA / SBIR Program",
+      "tier": "agency_primary",
+      "layer": "federal",
+      "retrieved": "2026-06-19",
+      "status": "ACTIVE",
+      "used_in": [
+        "sbir-sttr-program-hub"
+      ]
+    },
+    {
+      "source_id": "SRC-PA-DCED",
+      "name": "PA DCED — Programs & Funding",
+      "url": "https://dced.pa.gov/programs-funding/",
+      "agency": "PA DCED",
+      "tier": "agency_primary",
+      "layer": "state",
+      "jurisdiction": "Pennsylvania",
+      "retrieved": "2026-06-19",
+      "status": "ACTIVE",
+      "used_in": [
+        "pa-dced-programs-funding"
+      ]
+    },
+    {
+      "source_id": "SRC-GATES-GRANTS",
+      "name": "Gates Foundation — Grant Opportunities",
+      "url": "https://www.gatesfoundation.org/about/how-we-work/grant-opportunities",
+      "agency": "Gates Foundation",
+      "tier": "foundation_primary",
+      "layer": "foundations",
+      "retrieved": "2026-06-19",
+      "status": "ACTIVE",
+      "used_in": [
+        "bible_template"
+      ]
+    },
+    {
+      "source_id": "PARKED-GRANTS-API",
+      "name": "PARKED — Grants.gov Search2 API",
+      "url": "https://api.grants.gov/v1/api/search2",
+      "agency": "Grants.gov",
+      "tier": "api",
+      "layer": "federal",
+      "retrieved": "2026-06-19",
+      "status": "SITE_PARKED",
+      "reason": "HTTP 403 at harvest — no bypass"
+    },
+    {
+      "source_id": "PARKED-SBIR-ABOUT",
+      "name": "PARKED — SBIR.gov /about-sbir",
+      "url": "https://www.sbir.gov/about-sbir",
+      "agency": "SBIR.gov",
+      "tier": "agency_secondary",
+      "layer": "federal",
+      "retrieved": "2026-06-19",
+      "status": "SITE_PARKED",
+      "reason": "HTTP 404 — use https://www.sbir.gov/ root"
+    }
+  ]
+}
