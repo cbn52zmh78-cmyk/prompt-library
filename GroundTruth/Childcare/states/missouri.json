@@ -1,0 +1,349 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "Missouri",
+  "state_code": "MO",
+  "state_slug": "missouri",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:12:58.164081+00:00",
+  "status": "HARVESTED",
+  "primary_source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "HARVESTED",
+      "fact_count": 4,
+      "facts": [
+        {
+          "fact_id": "missouri-childcare-ratios-1",
+          "category": "ratios",
+          "text": "Missouri child care center staff:child ratio for birth to 36 months (infant/toddler/2yo): 1:4; maximum group size 8.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri DESE Office of Childhood",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "missouri-childcare-ratios-2",
+          "category": "ratios",
+          "text": "Missouri child care center staff:child ratio for 24–36 months only: 1:8; maximum group size 16.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri DESE Office of Childhood",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "missouri-childcare-ratios-3",
+          "category": "ratios",
+          "text": "Missouri child care center staff:child ratio for 3–4 years only: 1:10; maximum group size 20.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri DESE Office of Childhood",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "missouri-childcare-ratios-4",
+          "category": "ratios",
+          "text": "Missouri child care center staff:child ratio for 5 years and older: 1:16; maximum group size 32.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri DESE Office of Childhood",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        }
+      ]
+    },
+    "group_size": {
+      "status": "HARVESTED",
+      "fact_count": 4,
+      "facts": [
+        {
+          "fact_id": "missouri-childcare-group-size-1",
+          "category": "group_size",
+          "text": "Missouri child care center maximum group size for birth to 36 months (infant/toddler/2yo): 8 children.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri DESE Office of Childhood",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "missouri-childcare-group-size-2",
+          "category": "group_size",
+          "text": "Missouri child care center maximum group size for 24–36 months only: 16 children.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri DESE Office of Childhood",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "missouri-childcare-group-size-3",
+          "category": "group_size",
+          "text": "Missouri child care center maximum group size for 3–4 years only: 20 children.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri DESE Office of Childhood",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "missouri-childcare-group-size-4",
+          "category": "group_size",
+          "text": "Missouri child care center maximum group size for 5 years and older: 32 children.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri DESE Office of Childhood",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        }
+      ]
+    },
+    "staff_qualifications": {
+      "status": "HARVESTED",
+      "fact_count": 5,
+      "facts": [
+        {
+          "fact_id": "missouri-childcare-staff-qualifications-1",
+          "category": "staff_qualifications",
+          "text": "Missouri child care licensing — If the facility operates less than forty (40) hours per week, the center director or group child care home provider shall be on duty at least fifty percent (50%) of the operating hours.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "missouri-childcare-staff-qualifications-2",
+          "category": "staff_qualifications",
+          "text": "Missouri child care licensing — (A) The center director, group child care home provider, all other caregivers, and those volunteers who are counted in staff/child ratios shall obtain at least twelve (12) clock hours of child-care related training during each calendar year.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "missouri-childcare-staff-qualifications-3",
+          "category": "staff_qualifications",
+          "text": "Missouri child care licensing — The child care provider, group child care home provider, child care staff members, and volunteers in a group child care home or child care center shall complete safe sleep training described in subsection (4)(A) of this rule prior to licensure.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "missouri-childcare-staff-qualifications-4",
+          "category": "staff_qualifications",
+          "text": "Missouri child care licensing — The child care provider, group child care home provider, child care staff members, and volunteers shall complete safe sleep training described in subsection (4)(A) of this rule within thirty (30) days of employment or volunteering at the facility.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "missouri-childcare-staff-qualifications-5",
+          "category": "staff_qualifications",
+          "text": "Missouri child care licensing — (E) An adult with a current lifeguard training certificate, in - cluding infant/child cardiopulmonary resuscitation (CPR) train- ing, shall be on duty at all times when a swimming or wading pool containing a depth of forty-eight inches (48\") or more of water is being used.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        }
+      ]
+    },
+    "background_checks": {
+      "status": "HARVESTED",
+      "fact_count": 4,
+      "facts": [
+        {
+          "fact_id": "missouri-childcare-background-checks-1",
+          "category": "background_checks",
+          "text": "Missouri child care licensing — (J) All staff shall acquaint themselves with the child abuse and neglect law and shall make a report of any suspected child abuse or neglect to the Children’s Division at the toll-free number 1-800-392-3738 or online at https://apps.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "missouri-childcare-background-checks-2",
+          "category": "background_checks",
+          "text": "Missouri child care licensing — The mandated responsibility to report any suspected child abuse or neglect to the Children’s Division.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "missouri-childcare-background-checks-3",
+          "category": "background_checks",
+          "text": "Missouri child care licensing — (M) The provider shall request the results of a criminal background check for child care staff members as required by 5 CSR 25-600.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "missouri-childcare-background-checks-4",
+          "category": "background_checks",
+          "text": "Missouri child care licensing — (P) The child care provider shall conduct a Family Care Safety Registry screening prior to employment for any newly hired child care staff member who has a qualifying criminal background check result.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        }
+      ]
+    }
+  },
+  "gaps": [],
+  "parked": []
+}

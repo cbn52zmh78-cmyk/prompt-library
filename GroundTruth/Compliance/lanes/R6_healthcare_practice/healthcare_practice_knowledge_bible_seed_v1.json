@@ -1,0 +1,236 @@
+{
+  "artifact": "knowledge_bible",
+  "format": "8-section",
+  "version": "1.0",
+  "variant": "seed_3_states",
+  "lane": "R6",
+  "vertical": "Healthcare Practice",
+  "sku": "R6-HC-SEED-3-v1",
+  "product_status": "SEED",
+  "sellable": false,
+  "citation_standard": "STD-CITE-001",
+  "knowledge_gate": "Knowledge-Gate-clean",
+  "template": "GroundTruth/Compliance/lanes/R6_healthcare_practice/compliance_bible_template_v1.json",
+  "generated_at": "2026-06-19T18:00:00+00:00",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm HIPAA and state medical-privacy obligations with licensed counsel before relying on any fact for operations or filings.",
+  "sections": {
+    "1_tldr": {
+      "title": "TL;DR / Executive Summary",
+      "coverage": "Federal HIPAA Privacy/Security/Breach + BAA control-map seed; state medical-privacy add-ons for CA, TX, NY.",
+      "state_count": 3,
+      "state_codes": ["CA", "TX", "NY"],
+      "cited_claims": 42,
+      "citation_count": 14,
+      "gaps_flagged": 8,
+      "parked_sources": 6,
+      "status_roll": {
+        "FOUND": 35,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 2,
+        "ACCESS_RESTRICTED": 2,
+        "PARKED": 4
+      },
+      "as_of_date": "2026-06-19",
+      "honesty_rule": "Every claim STD-CITE-001 cited; gaps render NOT FOUND — [source checked: …]; eCFR primary when HHS 403."
+    },
+    "2_scope_methodology_as_of": {
+      "title": "Scope, Methodology & As-Of Date",
+      "scope": {
+        "practice_types": [
+          "physician_office",
+          "dental",
+          "behavioral_health",
+          "urgent_care",
+          "multi_specialty_group"
+        ],
+        "domains": [
+          "hipaa_privacy",
+          "hipaa_security",
+          "baa_vendor_chain",
+          "breach_notification",
+          "state_medical_privacy_addons"
+        ],
+        "jurisdictions": ["Federal", "California", "Texas", "New York"],
+        "federal_baseline": true
+      },
+      "methodology": "Public-source harvest 2026-06-19. Primary federal authority = eCFR 45 CFR Parts 160 & 164. HHS.gov HIPAA guidance pages PARKED (HTTP 403). State statutes via official legislature portals; SPA/Cloudflare gaps flagged explicitly.",
+      "as_of_date": "2026-06-19",
+      "retrieved_date": "2026-06-19",
+      "policy": {
+        "public_sources_only": true,
+        "no_bypass": true,
+        "http_403_ssl_park": true,
+        "gap_rendering": "NOT FOUND — [source checked: …]",
+        "status_taxonomy": ["FOUND", "EXEMPT", "REQUIRES_CONFIRMATION", "NOT FOUND", "ACCESS_RESTRICTED", "PARKED"],
+        "source_grades": ["primary", "secondary", "tertiary"]
+      }
+    },
+    "3_body": {
+      "title": "Body — Cited Compliance Record",
+      "federal_hipaa_summary": [
+        {
+          "text": "HIPAA covered entities (health plans, clearinghouses, providers transmitting standard electronic transactions) and their business associates must comply with Privacy, Security, and Breach Notification rules codified at 45 CFR Part 164.",
+          "status": "FOUND",
+          "citation_ref": 1,
+          "control_ref": "HIPAA-DEF-001"
+        },
+        {
+          "text": "PHI may not be used or disclosed except as permitted or required; minimum necessary applies to most uses and requests.",
+          "status": "FOUND",
+          "citation_ref": 2,
+          "control_ref": "HIPAA-PRV-001"
+        },
+        {
+          "text": "BAAs must document permitted uses, require safeguards for ePHI, mandate breach reporting, flow down subcontractor obligations, and authorize termination for material breach.",
+          "status": "FOUND",
+          "citation_ref": 3,
+          "control_ref": "HIPAA-BAA-002"
+        },
+        {
+          "text": "Security Rule administrative safeguards require risk analysis, designated security official, incident response, and contingency planning (backup, disaster recovery, emergency mode).",
+          "status": "FOUND",
+          "citation_ref": 4,
+          "control_ref": "HIPAA-SEC-ADM-001"
+        },
+        {
+          "text": "Technical safeguards require access control, audit controls, integrity, authentication, and transmission security for ePHI.",
+          "status": "FOUND",
+          "citation_ref": 5,
+          "control_ref": "HIPAA-SEC-TEC-002"
+        },
+        {
+          "text": "Breach of unsecured PHI: notify affected individuals within 60 days of discovery; business associates must notify covered entities within 60 days.",
+          "status": "FOUND",
+          "citation_ref": 8,
+          "control_ref": "HIPAA-BRN-001"
+        }
+      ],
+      "state_addons": {
+        "California": {
+          "statute": "CMIA (Civ. Code §§56.10–56.11)",
+          "key_requirements": [
+            "Authorization required before disclosure except listed compelled/permitted cases (§56.10).",
+            "No sale/marketing/non-treatment use of medical information (§56.10(d)).",
+            "Authorization form: 14-point type, specific uses, 1-year max expiration (§56.11).",
+            "HIPAA Part 164 cross-reference for ERISA plan disclosures (§56.10(c)(21))."
+          ],
+          "status": "FOUND",
+          "citation_refs": [11, 12]
+        },
+        "Texas": {
+          "statute": "Health & Safety Code Ch. 181",
+          "key_requirements": [
+            "Chapter anchor confirmed; section-level disclosure/authorization rules REQUIRES_CONFIRMATION (SPA portal)."
+          ],
+          "status": "REQUIRES_CONFIRMATION",
+          "citation_refs": [17]
+        },
+        "New York": {
+          "statute": "PHL §§17–18; SHIELD (GBL §899-aa)",
+          "key_requirements": [
+            "NY DOH: state laws more stringent than HIPAA are not superseded; preemption charts map PHL vs. HIPAA.",
+            "PHL §17 patient-directed record transfer prevails as required-by-law disclosure.",
+            "PHL §18 practitioner patient-information rules differ in scope from HIPAA record sets.",
+            "SHIELD Act statute text and AG breach portal NOT FOUND at harvest — REQUIRES_CONFIRMATION."
+          ],
+          "status": "PARTIAL",
+          "citation_refs": [13, 14, 18, 19]
+        }
+      }
+    },
+    "4_source_register_graded": {
+      "title": "Source Register (Graded)",
+      "register_path": "GroundTruth/Compliance/lanes/R6_healthcare_practice/source_register.json",
+      "primary_count": 11,
+      "secondary_count": 4,
+      "parked_count": 6,
+      "summary": "eCFR = primary federal; CA leginfo = primary state; NY DOH = secondary preemption analysis; HHS/TX SPA/nysenate = parked or restricted."
+    },
+    "5_conflict_reconciliation": {
+      "title": "Conflicting Sources Reconciliation",
+      "items": [
+        {
+          "topic": "Federal guidance vs. eCFR",
+          "sources": ["HHS.gov HIPAA pages (403)", "eCFR Part 164"],
+          "assessment": "eCFR used as operative primary; HHS guidance PARKED until portal accessible. No substantive conflict detected in harvested CFR text."
+        },
+        {
+          "topic": "HIPAA vs. California CMIA",
+          "sources": ["45 CFR Part 164", "Cal. Civ. Code §56.10"],
+          "assessment": "CMIA explicitly references HIPAA Part 164 for certain ERISA disclosures; CMIA authorization and anti-sale rules may be more stringent — apply stricter standard."
+        },
+        {
+          "topic": "HIPAA vs. New York PHL",
+          "sources": ["45 CFR §160.202", "NY DOH Preemption Charts"],
+          "assessment": "NY DOH documents instances where PHL §17/§18 prevail as more stringent or required-by-law; dual-track compliance required for NY practitioners."
+        }
+      ]
+    },
+    "6_gaps_not_found": {
+      "title": "Gaps / NOT FOUND / Open Questions",
+      "gaps": [
+        {
+          "gap_id": "R6-GAP-001",
+          "status": "PARKED",
+          "text": "HHS.gov HIPAA for Professionals — HTTP 403 [source checked: hhs.gov/hipaa/for-professionals/privacy/]"
+        },
+        {
+          "gap_id": "R6-GAP-002",
+          "status": "ACCESS_RESTRICTED",
+          "text": "Texas HS Ch. 181 section text — SPA statute portal [source checked: statutes.capitol.texas.gov/Docs/HS/htm/HS.181.htm]"
+        },
+        {
+          "gap_id": "R6-GAP-003",
+          "status": "PARKED",
+          "text": "N.Y. GBL §899-aa (SHIELD) — Cloudflare block [source checked: nysenate.gov/legislation/laws/GBM/899-AA]"
+        },
+        {
+          "gap_id": "R6-GAP-004",
+          "status": "NOT FOUND",
+          "text": "NY AG data breach reporting — HTTP 404 [source checked: ag.ny.gov/internet/data-breach-reporting]"
+        },
+        {
+          "gap_id": "R6-GAP-005",
+          "status": "NOT FOUND",
+          "text": "Texas Medical Board privacy page — HTTP 404 [source checked: tmb.texas.gov/page/privacy-and-security]"
+        }
+      ]
+    },
+    "7_confidence": {
+      "title": "Confidence Assessment",
+      "overall": "MEDIUM-HIGH",
+      "basis": "Federal HIPAA controls well-sourced via eCFR (8 domains, 31 FOUND controls). California CMIA fully harvested. Texas section text and NY SHIELD primary statute gaps reduce state-addon confidence.",
+      "by_section": {
+        "federal_hipaa": "HIGH",
+        "california": "HIGH",
+        "texas": "LOW",
+        "new_york": "MEDIUM"
+      }
+    },
+    "8_citations": {
+      "title": "Full Citation Appendix",
+      "references": [
+        {"ref": 1, "source": "eCFR — 45 CFR §160.103", "url": "https://www.ecfr.gov/current/title-45/section-160.103", "retrieved_date": "2026-06-19", "jurisdiction": "Federal"},
+        {"ref": 2, "source": "eCFR — 45 CFR §164.502", "url": "https://www.ecfr.gov/current/title-45/section-164.502", "retrieved_date": "2026-06-19", "jurisdiction": "Federal"},
+        {"ref": 3, "source": "eCFR — 45 CFR §164.504", "url": "https://www.ecfr.gov/current/title-45/section-164.504", "retrieved_date": "2026-06-19", "jurisdiction": "Federal"},
+        {"ref": 4, "source": "eCFR — 45 CFR §164.308", "url": "https://www.ecfr.gov/current/title-45/section-164.308", "retrieved_date": "2026-06-19", "jurisdiction": "Federal"},
+        {"ref": 5, "source": "eCFR — 45 CFR §164.312", "url": "https://www.ecfr.gov/current/title-45/section-164.312", "retrieved_date": "2026-06-19", "jurisdiction": "Federal"},
+        {"ref": 8, "source": "eCFR — 45 CFR §164.404", "url": "https://www.ecfr.gov/current/title-45/section-164.404", "retrieved_date": "2026-06-19", "jurisdiction": "Federal"},
+        {"ref": 11, "source": "Cal. Civ. Code §56.10", "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=56.10.&lawCode=CIV", "retrieved_date": "2026-06-19", "jurisdiction": "California"},
+        {"ref": 12, "source": "Cal. Civ. Code §56.11", "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=56.11.&lawCode=CIV", "retrieved_date": "2026-06-19", "jurisdiction": "California"},
+        {"ref": 13, "source": "NY DOH — HIPAA regulations", "url": "https://www.health.ny.gov/regulations/hipaa/", "retrieved_date": "2026-06-19", "jurisdiction": "New York"},
+        {"ref": 14, "source": "NY DOH — HIPAA Preemption Charts", "url": "https://www.health.ny.gov/regulations/hipaa/preemption_charts.htm", "retrieved_date": "2026-06-19", "jurisdiction": "New York"},
+        {"ref": 17, "source": "Tex. Health & Safety Code Ch. 181 (index)", "url": "https://statutes.capitol.texas.gov/Docs/HS/htm/HS.181.htm", "retrieved_date": "2026-06-19", "jurisdiction": "Texas"},
+        {"ref": 18, "source": "N.Y. GBL §899-aa (PARKED)", "url": "https://www.nysenate.gov/legislation/laws/GBM/899-AA", "retrieved_date": "2026-06-19", "jurisdiction": "New York"},
+        {"ref": 19, "source": "NY AG breach reporting (404)", "url": "https://ag.ny.gov/internet/data-breach-reporting", "retrieved_date": "2026-06-19", "jurisdiction": "New York"}
+      ]
+    }
+  },
+  "linked_artifacts": [
+    "hipaa_control_map_seed_v1.json",
+    "source_register.json",
+    "states/california.json",
+    "states/texas.json",
+    "states/new_york.json"
+  ]
+}

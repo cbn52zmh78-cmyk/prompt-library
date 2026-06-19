@@ -1,0 +1,32 @@
+{
+  "artifact": "healthcare_practice_knowledge_bible_template",
+  "version": "1.0",
+  "format": "knowledge_bible_8_section",
+  "tier": "A",
+  "lane": "R6",
+  "vertical": "Healthcare Practice",
+  "citation_standard": "STD-CITE-001",
+  "knowledge_gate": "Knowledge-Gate-clean",
+  "generated_at": "2026-06-19T18:00:00+00:00",
+  "parent_template": "GroundTruth/Compliance/compliance_bible_template_v1.json",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm HIPAA and state medical-privacy requirements with licensed counsel.",
+  "pinned_output_dir": "GroundTruth/Compliance/lanes/R6_healthcare_practice",
+  "policy": {
+    "public_sources_only": true,
+    "no_bypass": true,
+    "http_403_ssl_park": true,
+    "gap_rendering": "NOT FOUND — [source checked: …]",
+    "status_taxonomy": ["FOUND", "EXEMPT", "REQUIRES_CONFIRMATION", "NOT FOUND", "ACCESS_RESTRICTED", "PARKED"],
+    "as_of_field": "retrieved_date",
+    "source_grades": ["primary", "secondary", "tertiary"],
+    "federal_primary": "eCFR 45 CFR Parts 160 & 164",
+    "hipaa_control_map": "hipaa_control_map_seed_v1.json"
+  },
+  "product_variants": {
+    "seed_3_states": {
+      "sku": "R6-HC-SEED-3-v1",
+      "stem": "healthcare_practice_knowledge_bible_seed_v1",
+      "state_codes": ["CA", "TX", "NY"]
+    }
+  }
+}

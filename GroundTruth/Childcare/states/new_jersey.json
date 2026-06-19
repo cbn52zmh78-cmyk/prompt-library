@@ -1,0 +1,248 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "New Jersey",
+  "state_code": "NJ",
+  "state_slug": "new_jersey",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:13:04.863699+00:00",
+  "status": "PARTIAL",
+  "primary_source": "New Jersey N.J.A.C. 3A:52-4.3",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "HARVESTED",
+      "fact_count": 7,
+      "facts": [
+        {
+          "fact_id": "new_jersey-childcare-ratios-1",
+          "category": "ratios",
+          "text": "New Jersey child care center staff:child ratio for Under 18 months: 1:4; maximum group size 18.",
+          "citation": {
+            "source": "New Jersey N.J.A.C. 3A:52-4.3",
+            "url": "https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-3A-52-4-3",
+            "agency": "New Jersey DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "new_jersey-childcare-ratios-2",
+          "category": "ratios",
+          "text": "New Jersey child care center staff:child ratio for Under 18 months: 1:10; maximum group size 18.",
+          "citation": {
+            "source": "New Jersey N.J.A.C. 3A:52-4.3",
+            "url": "https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-3A-52-4-3",
+            "agency": "New Jersey DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "new_jersey-childcare-ratios-3",
+          "category": "ratios",
+          "text": "New Jersey child care center staff:child ratio for 2 years: 1:6; maximum group size 2.",
+          "citation": {
+            "source": "New Jersey N.J.A.C. 3A:52-4.3",
+            "url": "https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-3A-52-4-3",
+            "agency": "New Jersey DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "new_jersey-childcare-ratios-4",
+          "category": "ratios",
+          "text": "New Jersey child care center staff:child ratio for 4 years: 1:10; maximum group size 4.",
+          "citation": {
+            "source": "New Jersey N.J.A.C. 3A:52-4.3",
+            "url": "https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-3A-52-4-3",
+            "agency": "New Jersey DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "new_jersey-childcare-ratios-5",
+          "category": "ratios",
+          "text": "New Jersey child care center staff:child ratio for 5 years and older: 1:15.",
+          "citation": {
+            "source": "New Jersey N.J.A.C. 3A:52-4.3",
+            "url": "https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-3A-52-4-3",
+            "agency": "New Jersey DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "new_jersey-childcare-ratios-6",
+          "category": "ratios",
+          "text": "New Jersey child care center staff:child ratio for 2 years: 1:12; maximum group size 2.",
+          "citation": {
+            "source": "New Jersey N.J.A.C. 3A:52-4.3",
+            "url": "https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-3A-52-4-3",
+            "agency": "New Jersey DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "new_jersey-childcare-ratios-7",
+          "category": "ratios",
+          "text": "New Jersey child care center staff:child ratio for 2 years: 1:3; maximum group size 21.",
+          "citation": {
+            "source": "New Jersey N.J.A.C. 3A:52-4.3",
+            "url": "https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-3A-52-4-3",
+            "agency": "New Jersey DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        }
+      ]
+    },
+    "group_size": {
+      "status": "HARVESTED",
+      "fact_count": 4,
+      "facts": [
+        {
+          "fact_id": "new_jersey-childcare-group-size-1",
+          "category": "group_size",
+          "text": "New Jersey child care center maximum group size for Under 18 months: 18 children.",
+          "citation": {
+            "source": "New Jersey N.J.A.C. 3A:52-4.3",
+            "url": "https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-3A-52-4-3",
+            "agency": "New Jersey DCF",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "new_jersey-childcare-group-size-2",
+          "category": "group_size",
+          "text": "New Jersey child care center maximum group size for 2 years: 2 children.",
+          "citation": {
+            "source": "New Jersey N.J.A.C. 3A:52-4.3",
+            "url": "https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-3A-52-4-3",
+            "agency": "New Jersey DCF",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "new_jersey-childcare-group-size-3",
+          "category": "group_size",
+          "text": "New Jersey child care center maximum group size for 4 years: 4 children.",
+          "citation": {
+            "source": "New Jersey N.J.A.C. 3A:52-4.3",
+            "url": "https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-3A-52-4-3",
+            "agency": "New Jersey DCF",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "new_jersey-childcare-group-size-4",
+          "category": "group_size",
+          "text": "New Jersey child care center maximum group size for 2 years: 21 children.",
+          "citation": {
+            "source": "New Jersey N.J.A.C. 3A:52-4.3",
+            "url": "https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-3A-52-4-3",
+            "agency": "New Jersey DCF",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        }
+      ]
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": []
+}
