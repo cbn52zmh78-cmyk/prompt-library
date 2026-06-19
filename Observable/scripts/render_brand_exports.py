@@ -277,43 +277,31 @@ def render_intro_sting() -> Path:
     wm_path = render_wordmark_png()
     wordmark = Image.open(wm_path).convert("RGBA")
 
+    wide = _gradient_vertical((w, h), "obs-seamless", "obs-bg")
+    if CASTING.is_file():
+        _paste_chest_up(wide, CASTING, (w // 2 - 280, 120, 560, 840))
+        wide = ImageEnhance.Brightness(wide).enhance(0.98)
+
+    end_card = Image.new("RGB", (w, h), bg)
+    draw = ImageDraw.Draw(end_card)
+    wm = wordmark.resize((900, 225), Image.Resampling.LANCZOS)
+    end_card.paste(wm, ((w - 900) // 2, 360), wm)
+    draw.text((w // 2, 640), "Evidence before wonder.", fill=body_c, font=fonts["tagline"], anchor="mm")
+    bg_layer = Image.new("RGB", (w, h), bg)
+
     with tempfile.TemporaryDirectory(prefix="obs_intro_") as tmp:
         tmp_dir = Path(tmp)
         for i in range(total_frames):
             t = i / fps
-            img = Image.new("RGB", (w, h), bg)
-
-            # 0.0–0.5 s: obs-bg hold; 0.5–3.0 s: seamless neutral wide + Julian
             host_alpha = _fade_alpha(i, fps, 0.35, 0.55)
-            if host_alpha > 0:
-                wide = _gradient_vertical((w, h), "obs-seamless", "obs-bg")
-                img = wide.copy()
-                if CASTING.is_file():
-                    _paste_chest_up(img, CASTING, (w // 2 - 280, 120, 560, 840))
-                    img = ImageEnhance.Brightness(img).enhance(0.98)
-                overlay = Image.new("RGBA", (w, h), (0, 0, 0, 0))
-                if t < 0.5:
-                    fade = int(255 * (1.0 - t / 0.5))
-                    overlay = Image.new("RGBA", (w, h), (*bg, fade))
-                img = img.convert("RGBA")
-                img = Image.alpha_composite(img, overlay).convert("RGB")
-                if t < 0.5:
-                    bg_layer = Image.new("RGB", (w, h), bg)
-                    blend = _lerp(1.0, 0.0, t / 0.5)
-                    img = Image.blend(bg_layer, img, 1.0 - blend)
-
-            # 3.0–4.0 s: wordmark + tagline on obs-bg
             end_alpha = _fade_alpha(i, fps, 3.0, 3.25)
+
             if end_alpha > 0:
-                end_card = Image.new("RGB", (w, h), bg)
-                draw = ImageDraw.Draw(end_card)
-                wm = wordmark.resize((900, 225), Image.Resampling.LANCZOS)
-                end_card.paste(wm, ((w - 900) // 2, 360), wm)
-                draw.text((w // 2, 640), "Evidence before wonder.", fill=body_c, font=fonts["tagline"], anchor="mm")
-                if host_alpha > 0 and end_alpha < 1.0:
-                    img = Image.blend(img, end_card, end_alpha)
-                else:
-                    img = end_card
+                img = end_card if end_alpha >= 1.0 or host_alpha <= 0 else Image.blend(wide, end_card, end_alpha)
+            elif t < 0.5:
+                img = Image.blend(bg_layer, wide, _lerp(0.0, 1.0, t / 0.5))
+            else:
+                img = wide.copy()
 
             img.save(tmp_dir / f"frame_{i:04d}.png")
 

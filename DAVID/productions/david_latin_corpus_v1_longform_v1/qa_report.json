@@ -1,6 +1,6 @@
 {
   "slug": "david_latin_corpus_v1",
-  "qa_at": "2026-06-19T07:00:23.032271+00:00",
+  "qa_at": "2026-06-19T07:06:39.812086+00:00",
   "pass": true,
   "passes": [
     "host identity lock LOADED",
