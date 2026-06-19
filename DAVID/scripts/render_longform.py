@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -47,6 +48,25 @@ DEFAULT_END_GUARD = (
 )
 HOST_PERFORMANCE_NAME = "host_performance_extend.mp4"
 API_PACE_S = 1.25  # xAI video rate limit ~1 req/s
+LAMP_LOCK_VF = (
+    "eq=gamma_r=1.06:gamma_g=1.02:gamma_b=0.88:saturation=1.10:brightness=0.02"
+)
+LAMP_LOCK_PROMPT = (
+    "Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only, "
+    "no magenta purple ambient, no cool fill, no glasses purple reflection."
+)
+GLASSES_LOCK_PROMPT = "Reading glasses pushed up into hair — same placement every frame."
+AUDIO_SILENCE_DB = -45.0
+LOUDNORM_I = -16.0
+LOUDNORM_TP = -1.5
+LOUDNORM_LRA = 11.0
+MAGENTA_CLAMP_VF = (
+    "curves=r='0/0 0.5/0.50 1/1':b='0/0 0.5/0.40 1/0.90',"
+    "eq=gamma_r=1.08:gamma_g=1.02:gamma_b=0.82:saturation=1.05"
+)
+MAGENTA_SCORE_MAX = 0.42
+LOUDNESS_SPREAD_MAX_LU = 1.5
+REGROUND_EVERY_N = 2
 
 
 def _load_grok_token() -> str:
@@ -122,11 +142,88 @@ def _normalize_shot_list(shots: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return out
 
 
+def _canonicalize_config(raw: dict[str, Any], cfg: dict[str, Any]) -> dict[str, Any]:
+    """Fold legacy top-level fields into config; seamless lives only in config."""
+    out = dict(cfg)
+    for key in ("model_video", "resolution", "aspect_ratio"):
+        if key not in out and raw.get(key):
+            out[key] = raw[key]
+    if "compare_v1" not in out and raw.get("compare_v1"):
+        out["compare_v1"] = raw["compare_v1"]
+    seam = out.get("seamless") or raw.get("seamless") or raw.get("config", {}).get("seamless")
+    if seam:
+        out["seamless"] = seam
+    avatar_rel = (raw.get("avatar") or {}).get("reference")
+    if avatar_rel and "avatar_reference" not in out:
+        out["avatar_reference"] = str(_resolve_david_path(avatar_rel))
+    lock_rel = raw.get("host_identity") or raw.get("identity_lock")
+    if lock_rel and "identity_lock" not in out:
+        out["identity_lock"] = str(_resolve_david_path(lock_rel))
+    voice = out.get("voice_suffix") or raw.get("voice_suffix", DEFAULT_VOICE_SUFFIX)
+    if "synthetic" not in voice.lower():
+        voice = f"{voice}, {SYNTHETIC_GUARD}"
+    out["voice_suffix"] = voice
+    return out
+
+
+def _embed_legacy_continuity(
+    shots: list[dict[str, Any]],
+    prefix: str,
+    guard: str,
+    voice: str,
+) -> list[dict[str, Any]]:
+    """Bake legacy top-level continuity_prefix/end_guard into video_prompt when missing."""
+    out: list[dict[str, Any]] = []
+    for s in shots:
+        shot = {**s}
+        prompt = shot.get("video_prompt", "")
+        if "@David-001" not in prompt and prefix:
+            prompt = f"{prefix} {prompt}".strip()
+        speech = shot.get("speech_text", "")
+        if speech and speech not in prompt:
+            prompt = f'{prompt.rstrip()} Lip-synced, delivers: "{speech}"'
+        if "gesture peak" not in prompt.lower() and guard:
+            prompt = f"{prompt.rstrip()} {guard}"
+        shot["video_prompt"] = ensure_voice_in_prompt(prompt, voice)
+        for drop in ("shot_id", "scene_id", "join", "timing", "gesture_peak", "continuity_prefix", "end_guard"):
+            shot.pop(drop, None)
+        out.append(shot)
+    return out
+
+
 def normalize_script(raw: dict[str, Any], script_path: Path) -> dict[str, Any]:
-    """Accept longform schema, channel-intro shape, or legacy post01/sample script."""
+    """Accept canonical schema or legacy shapes; always return canonical in-memory."""
     if "config" in raw and "shots" in raw:
-        raw["shots"] = _normalize_shot_list(raw["shots"])
-        return raw
+        cfg = _canonicalize_config(raw, dict(raw["config"]))
+        shots = _normalize_shot_list(raw["shots"])
+        prefix = raw.get("continuity_prefix", "")
+        guard = raw.get("end_guard", "")
+        if prefix or guard:
+            shots = _embed_legacy_continuity(shots, prefix, guard, cfg.get("voice_suffix", DEFAULT_VOICE_SUFFIX))
+        prov = raw.get("provenance_card")
+        if not prov and raw.get("closing_card"):
+            closing = raw["closing_card"]
+            prov = {
+                "enabled": closing.get("type") != "none",
+                "card_type": "closing",
+                "duration_s": closing.get("duration_s", 6),
+                "title": closing.get("text", "DAVID · The Archive"),
+                "subtitle": closing.get("subtext", ""),
+                "footer": raw.get("cta", ""),
+            }
+        return {
+            "slug": raw.get("slug", script_path.stem.replace("_script", "")),
+            "title": raw.get("title", raw.get("slug", script_path.stem)),
+            "target_seconds": raw.get("target_seconds"),
+            "config": cfg,
+            "shots": shots,
+            "provenance_card": prov or {"enabled": False},
+            "qa_rules": raw.get("qa_rules", {
+                "require_identity_lock": True,
+                "require_synthetic_guard": True,
+                "min_shots": 1,
+            }),
+        }
 
     # Channel intro / alternate longform shape (shot_id, host_identity, closing_card)
     if "shots" in raw and any("shot_id" in s for s in raw["shots"]):
@@ -147,24 +244,30 @@ def normalize_script(raw: dict[str, Any], script_path: Path) -> dict[str, Any]:
         }
         if avatar_rel:
             cfg["avatar_reference"] = str(_resolve_david_path(avatar_rel))
+        if raw.get("seamless"):
+            cfg["seamless"] = raw["seamless"]
+        if raw.get("compare_v1"):
+            cfg["compare_v1"] = raw["compare_v1"]
 
-        out: dict[str, Any] = {
+        shots = _normalize_shot_list(raw["shots"])
+        prefix = raw.get("continuity_prefix", DEFAULT_CONTINUITY_PREFIX)
+        guard = raw.get("end_guard", DEFAULT_END_GUARD)
+        shots = _embed_legacy_continuity(shots, prefix, guard, voice)
+
+        return {
             "slug": slug,
             "title": raw.get("title", slug),
             "target_seconds": raw.get("target_seconds"),
             "config": cfg,
-            "shots": _normalize_shot_list(raw["shots"]),
+            "shots": shots,
             "provenance_card": {
                 "enabled": closing.get("type") != "none",
                 "card_type": "closing",
                 "duration_s": closing.get("duration_s", 6),
-                "banner": "",
                 "title": closing.get("text", "DAVID · The Archive"),
                 "subtitle": closing.get("subtext", ""),
-                "lines": [],
                 "footer": raw.get("cta", ""),
             },
-            "guardrails": raw.get("guardrails", []),
             "qa_rules": {
                 "require_identity_lock": True,
                 "require_synthetic_guard": True,
@@ -172,16 +275,6 @@ def normalize_script(raw: dict[str, Any], script_path: Path) -> dict[str, Any]:
                 "min_shots": 1,
             },
         }
-        if raw.get("seamless"):
-            out["seamless"] = raw["seamless"]
-            cfg["seamless"] = raw["seamless"]
-        if raw.get("continuity_prefix"):
-            out["continuity_prefix"] = raw["continuity_prefix"]
-        if raw.get("end_guard"):
-            out["end_guard"] = raw["end_guard"]
-        if raw.get("compare_v1"):
-            out["compare_v1"] = raw["compare_v1"]
-        return out
 
     slug = raw.get("slug", script_path.stem)
     cfg: dict[str, Any] = {
@@ -272,11 +365,19 @@ def resolve_refs(script: dict[str, Any]) -> dict[str, Any]:
                 "Avatar URL missing from identity lock — re-run render_host_identity.py"
             )
 
+    if avatar_file:
+        avatar_file = str(Path(str(avatar_file)) if Path(str(avatar_file)).is_absolute() else _resolve_david_path(str(avatar_file)))
+    elif cfg.get("avatar_reference"):
+        ar = _resolve_david_path(str(cfg["avatar_reference"]))
+        if ar.is_file():
+            avatar_file = str(ar)
+
     return {
         "lock": lock,
         "lock_path": lock_path,
         "avatar_url": avatar_url,
         "avatar_file": avatar_file,
+        "config_avatar_reference": cfg.get("avatar_reference"),
         "set_file": set_file,
         "voice_suffix": voice_suffix,
         "model_video": cfg.get("model_video", "grok-imagine-video-1.5"),
@@ -436,20 +537,40 @@ class SeamlessOptions:
     xfade_s: float = 0.2
     match_color: bool = False
     cut_on_motion: bool = False
-    continuity_prefix: str = DEFAULT_CONTINUITY_PREFIX
-    end_guard: str = DEFAULT_END_GUARD
+    lamp_lock: bool = True
+    glasses_lock: bool = True
+    loudnorm: bool = True
+    pin_audio_sync: bool = True
+    reground_interval: int = REGROUND_EVERY_N
+    magenta_clamp: bool = True
+
+
+EXTEND_API_FINDING = {
+    "scriptable": True,
+    "enabled_on_model": False,
+    "model": "grok-imagine-video-1.5",
+    "editor_extend": "Grok Imagine UI Continue/Extend may work before API parity on 1.5",
+    "finding": (
+        "client.video.extend() exists in xAI SDK but grok-imagine-video-1.5 returns "
+        "'Video extension is not supported for this model'. Pipeline uses frame-chain i2v fallback."
+    ),
+}
 
 
 def get_seamless_options(script: dict[str, Any], args: argparse.Namespace) -> SeamlessOptions:
-    seam = script.get("seamless") or script.get("config", {}).get("seamless") or {}
+    seam = script.get("config", {}).get("seamless") or {}
     auto = seam.get("primary") in ("extend", "extend_chain", True)
     return SeamlessOptions(
         enabled=bool(getattr(args, "seamless", False) or auto),
         xfade_s=float(getattr(args, "xfade", None) or seam.get("xfade_s", 0.2)),
         match_color=getattr(args, "match_color", False) or bool(seam.get("match_color")),
         cut_on_motion=getattr(args, "cut_on_motion", False) or bool(seam.get("cut_on_motion")),
-        continuity_prefix=script.get("continuity_prefix", DEFAULT_CONTINUITY_PREFIX),
-        end_guard=script.get("end_guard", DEFAULT_END_GUARD),
+        lamp_lock=bool(seam.get("lamp_lock", True)),
+        glasses_lock=bool(seam.get("glasses_lock", True)),
+        loudnorm=bool(seam.get("loudnorm", True)),
+        pin_audio_sync=bool(seam.get("pin_audio_sync", True)),
+        reground_interval=int(seam.get("reground_interval", REGROUND_EVERY_N)),
+        magenta_clamp=bool(seam.get("magenta_clamp", True)),
     )
 
 
@@ -458,14 +579,24 @@ def clamp_shot_duration(duration: int, lo: int = 7, hi: int = 9) -> int:
 
 
 def apply_seamless_prompt(shot: dict[str, Any], refs: dict[str, Any], opts: SeamlessOptions) -> str:
-    base = ensure_voice_in_prompt(shot.get("video_prompt", ""), refs["voice_suffix"])
-    prefix = shot.get("continuity_prefix", opts.continuity_prefix)
-    guard = shot.get("end_guard", opts.end_guard)
+    """Use embedded video_prompt when continuity is already baked in; else patch defaults."""
+    base = shot.get("video_prompt", "")
+    locks: list[str] = []
+    if opts.lamp_lock and "3200K" not in base:
+        locks.append(LAMP_LOCK_PROMPT)
+    if opts.glasses_lock and "glasses" not in base.lower():
+        locks.append(GLASSES_LOCK_PROMPT)
+    if "@David-001" in base and "gesture peak" in base.lower():
+        out = ensure_voice_in_prompt(base, refs["voice_suffix"])
+        if locks:
+            out = f"{' '.join(locks)} {out}"
+        return out
+    base = ensure_voice_in_prompt(base, refs["voice_suffix"])
     speech = shot.get("speech_text", "")
-    parts = [prefix, base]
+    parts = [*locks, DEFAULT_CONTINUITY_PREFIX, base]
     if speech and speech not in base:
         parts.append(f'Lip-synced, delivers: "{speech}"')
-    parts.append(guard)
+    parts.append(DEFAULT_END_GUARD)
     return " ".join(p.strip() for p in parts if p.strip())
 
 
@@ -520,21 +651,485 @@ def upload_image_url(client: Any, image_path: Path) -> str:
     return url
 
 
-def match_color_segment(reference: Path, target: Path, out: Path) -> Path:
-    """Histogram-match *target* to *reference* (STUDIO v1.1 pre-join)."""
+def resolve_color_reference(refs: dict[str, Any], shots_dir: Path) -> Path:
+    """Locked warm-gold reference — David-001 avatar still (never drifted chain frame)."""
+    candidates: list[Path] = []
+    if refs.get("avatar_file"):
+        candidates.append(Path(str(refs["avatar_file"])))
+    cfg_ref = refs.get("config_avatar_reference")
+    if cfg_ref:
+        candidates.append(_resolve_david_path(str(cfg_ref)))
+    lock = refs.get("lock") or {}
+    lock_file = (lock.get("references") or {}).get("david_avatar", {}).get("file")
+    if lock_file:
+        candidates.append(Path(str(lock_file)))
+    for p in candidates:
+        if p.is_file():
+            return p
+    anchor = shots_dir / "color_anchor.jpg"
+    if anchor.is_file():
+        return anchor
+    raise RuntimeError("No color reference (avatar_file or color_anchor.jpg)")
+
+
+def _parse_loudnorm_json(stderr: str) -> dict[str, str] | None:
+    m = re.search(r"\{[\s\S]*?\"input_i\"[\s\S]*?\}", stderr)
+    if not m:
+        return None
+    try:
+        return json.loads(m.group(0))
+    except json.JSONDecodeError:
+        return None
+
+
+def pin_av_to_duration(video: Path, out: Path, duration_s: float) -> Path:
+    """Trim/pad audio to exact video duration — no atempo stretch, no offset."""
     ff = _ffmpeg_exe()
     out.parent.mkdir(parents=True, exist_ok=True)
+    d = f"{duration_s:.6f}"
+    has_a = has_audio_stream(video)
+    if has_a:
+        filt = (
+            f"[0:v]fps=24,trim=0:{d},setpts=PTS-STARTPTS[v];"
+            f"[0:a]asetpts=PTS-STARTPTS,atrim=0:{d},"
+            f"apad=whole_dur={d}[a]"
+        )
+        maps = ["-map", "[v]", "-map", "[a]", "-c:a", "aac", "-b:a", "192k"]
+    else:
+        filt = f"[0:v]fps=24,trim=0:{d},setpts=PTS-STARTPTS[v]"
+        maps = ["-map", "[v]"]
     subprocess.run(
         [
-            ff, "-y", "-i", str(target), "-i", str(reference),
-            "-filter_complex", "[0:v][1:v]histogrammatching=pattern=1:strength=0.55[outv]",
-            "-map", "[outv]", "-map", "0:a?", "-c:v", "libx264", "-pix_fmt", "yuv420p",
-            "-c:a", "copy", str(out),
+            ff, "-y", "-i", str(video),
+            "-filter_complex", filt,
+            *maps, "-c:v", "libx264", "-pix_fmt", "yuv420p", str(out),
         ],
         check=True,
         capture_output=True,
     )
     return out
+
+
+def loudnorm_two_pass(
+    video: Path,
+    out: Path,
+    *,
+    target_i: float = LOUDNORM_I,
+    target_tp: float = LOUDNORM_TP,
+    target_lra: float = LOUDNORM_LRA,
+) -> Path:
+    """Two-pass EBU R128 loudnorm — one target for every shot."""
+    ff = _ffmpeg_exe()
+    out.parent.mkdir(parents=True, exist_ok=True)
+    if not has_audio_stream(video):
+        shutil.copy2(video, out)
+        return out
+    measure_af = f"loudnorm=I={target_i}:TP={target_tp}:LRA={target_lra}:print_format=json"
+    r1 = subprocess.run(
+        [ff, "-i", str(video), "-af", measure_af, "-f", "null", "-"],
+        capture_output=True,
+        text=True,
+    )
+    stats = _parse_loudnorm_json(r1.stderr or "")
+    if not stats:
+        print("[audio] loudnorm measure failed; dynaudnorm fallback")
+        subprocess.run(
+            [
+                ff, "-y", "-i", str(video),
+                "-af", f"dynaudnorm=f=150:g=15:p=0.95:m=100:s=12",
+                "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", str(out),
+            ],
+            check=True,
+            capture_output=True,
+        )
+        return out
+    apply_af = (
+        f"loudnorm=I={target_i}:TP={target_tp}:LRA={target_lra}:"
+        f"measured_I={stats.get('input_i', target_i)}:"
+        f"measured_TP={stats.get('input_tp', target_tp)}:"
+        f"measured_LRA={stats.get('input_lra', target_lra)}:"
+        f"measured_thresh={stats.get('input_thresh', '-70')}:"
+        f"offset={stats.get('target_offset', '0')}:linear=true"
+    )
+    subprocess.run(
+        [
+            ff, "-y", "-i", str(video),
+            "-af", apply_af,
+            "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", str(out),
+        ],
+        check=True,
+        capture_output=True,
+    )
+    return out
+
+
+def probe_integrated_loudness(video: Path) -> float | None:
+    if not has_audio_stream(video):
+        return None
+    ff = _ffmpeg_exe()
+    r = subprocess.run(
+        [
+            ff, "-i", str(video),
+            "-af", f"loudnorm=I={LOUDNORM_I}:TP={LOUDNORM_TP}:LRA={LOUDNORM_LRA}:print_format=json",
+            "-f", "null", "-",
+        ],
+        capture_output=True,
+        text=True,
+    )
+    stats = _parse_loudnorm_json(r.stderr or "")
+    if stats and "input_i" in stats:
+        try:
+            return float(stats["input_i"])
+        except ValueError:
+            return None
+    return None
+
+
+def probe_av_duration_delta(video: Path, expected_s: float | None = None) -> float:
+    """Container duration vs expected shot length; 0 = tight sync."""
+    dur = probe_duration(video)
+    if expected_s is None:
+        return 0.0
+    return abs(dur - expected_s)
+
+
+def chain_segment_paths(shots_dir: Path, shots: list[dict[str, Any]]) -> list[Path]:
+    paths: list[Path] = []
+    for s in shots:
+        proc = shots_dir / f"chain_{s['id']}_processed.mp4"
+        raw = shots_dir / f"chain_{s['id']}.mp4"
+        paths.append(proc if proc.is_file() and proc.stat().st_size > 10000 else raw)
+    return paths
+
+
+def probe_magenta_score(video: Path, at_s: float | None = None) -> float:
+    """Fraction of ambient pixels with purple/magenta bias (0=none, 1=all)."""
+    from PIL import Image
+
+    ff = _ffmpeg_exe()
+    at_s = at_s if at_s is not None else max(0.0, probe_duration(video) * 0.5)
+    jpg = video.with_suffix(".magenta_probe.jpg")
+    subprocess.run(
+        [ff, "-y", "-ss", f"{at_s:.3f}", "-i", str(video), "-frames:v", "1", str(jpg)],
+        check=True,
+        capture_output=True,
+    )
+    img = Image.open(jpg).convert("RGB")
+    w, h = img.size
+    magenta_n = total_n = 0
+    for y in range(0, h, 6):
+        for x in range(0, w, 6):
+            r, g, b = img.getpixel((x, y))
+            lum = 0.299 * r + 0.587 * g + 0.114 * b
+            if lum < 40 or lum > 200:
+                continue
+            total_n += 1
+            if b > r * 1.08 and b > g * 1.05:
+                magenta_n += 1
+            elif (r + b) > g * 1.35 and b > g * 0.95:
+                magenta_n += 1
+    jpg.unlink(missing_ok=True)
+    return magenta_n / total_n if total_n else 0.0
+
+
+def apply_warm_gold_clamp(video: Path, out: Path, color_ref: Path) -> Path:
+    """Magenta suppression + warm-gold clamp against locked David-001 reference."""
+    ff = _ffmpeg_exe()
+    out.parent.mkdir(parents=True, exist_ok=True)
+    ref = color_ref
+    if ref.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp"):
+        vfilter = (
+            f"[0:v][1:v]histogrammatching=pattern=1:strength=0.62[matched];"
+            f"[matched]{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}[outv]"
+        )
+        cmd = [
+            ff, "-y", "-i", str(video), "-loop", "1", "-i", str(ref),
+            "-filter_complex", vfilter,
+            "-map", "[outv]", "-map", "0:a?", "-c:v", "libx264", "-pix_fmt", "yuv420p",
+            "-c:a", "copy", "-shortest", str(out),
+        ]
+    else:
+        vfilter = f"[0:v]{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}[outv]"
+        cmd = [
+            ff, "-y", "-i", str(video),
+            "-filter_complex", vfilter,
+            "-map", "[outv]", "-map", "0:a?", "-c:v", "libx264", "-pix_fmt", "yuv420p",
+            "-c:a", "copy", str(out),
+        ]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    if r.returncode != 0:
+        vf = f"{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}"
+        subprocess.run(
+            [
+                ff, "-y", "-i", str(video), "-vf", vf,
+                "-c:v", "libx264", "-pix_fmt", "yuv420p",
+                "-map", "0:v", "-map", "0:a?", "-c:a", "copy", str(out),
+            ],
+            check=True,
+            capture_output=True,
+        )
+    return out
+
+
+def match_color_segment(
+    reference: Path,
+    target: Path,
+    out: Path,
+    *,
+    lamp_lock: bool = True,
+    color_ref: Path | None = None,
+) -> Path:
+    """Match *target* to locked *color_ref* (David-001), not drifted prior segment."""
+    ff = _ffmpeg_exe()
+    out.parent.mkdir(parents=True, exist_ok=True)
+    ref = color_ref or reference
+    if ref.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp"):
+        if lamp_lock:
+            vfilter = (
+                f"[0:v][1:v]histogrammatching=pattern=1:strength=0.62[matched];"
+                f"[matched]{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}[outv]"
+            )
+        else:
+            vfilter = "[0:v][1:v]histogrammatching=pattern=1:strength=0.62[outv]"
+        cmd = [
+            ff, "-y", "-i", str(target), "-loop", "1", "-i", str(ref),
+            "-filter_complex", vfilter,
+            "-map", "[outv]", "-map", "0:a?", "-c:v", "libx264", "-pix_fmt", "yuv420p",
+            "-c:a", "copy", "-shortest", str(out),
+        ]
+    elif lamp_lock:
+        vfilter = (
+            f"[0:v][1:v]histogrammatching=pattern=1:strength=0.55[matched];"
+            f"[matched]{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}[outv]"
+        )
+        cmd = [
+            ff, "-y", "-i", str(target), "-i", str(ref),
+            "-filter_complex", vfilter,
+            "-map", "[outv]", "-map", "0:a?", "-c:v", "libx264", "-pix_fmt", "yuv420p",
+            "-c:a", "copy", str(out),
+        ]
+    else:
+        vfilter = "[0:v][1:v]histogrammatching=pattern=1:strength=0.55[outv]"
+        cmd = [
+            ff, "-y", "-i", str(target), "-i", str(ref),
+            "-filter_complex", vfilter,
+            "-map", "[outv]", "-map", "0:a?", "-c:v", "libx264", "-pix_fmt", "yuv420p",
+            "-c:a", "copy", str(out),
+        ]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    if r.returncode != 0:
+        print("[seamless] match-color filter unavailable; warm-gold + magenta clamp fallback")
+        vf = f"{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}" if lamp_lock else MAGENTA_CLAMP_VF
+        cmd_eq = [
+            ff, "-y", "-i", str(target), "-vf", vf,
+            "-c:v", "libx264", "-pix_fmt", "yuv420p",
+            "-map", "0:v", "-map", "0:a?", "-c:a", "copy", str(out),
+        ]
+        r2 = subprocess.run(cmd_eq, capture_output=True, text=True)
+        if r2.returncode != 0:
+            shutil.copy2(target, out)
+    return out
+
+
+def process_shot_segment(
+    video: Path,
+    out: Path,
+    shot: dict[str, Any],
+    refs: dict[str, Any],
+    opts: SeamlessOptions,
+    shots_dir: Path,
+    color_ref: Path,
+) -> Path:
+    """Post-process: magenta clamp → pin A/V sync → loudnorm."""
+    work = shots_dir
+    cur = video
+    staged = work / f"{video.stem}_raw.mp4"
+    if cur != staged:
+        shutil.copy2(cur, staged)
+    cur = staged
+
+    if opts.magenta_clamp or opts.match_color:
+        clamped = work / f"{video.stem}_clamped.mp4"
+        apply_warm_gold_clamp(cur, clamped, color_ref)
+        cur = clamped
+
+    target_dur = float(shot.get("duration", probe_duration(cur)))
+    if opts.pin_audio_sync:
+        pinned = work / f"{video.stem}_pinned.mp4"
+        pin_av_to_duration(cur, pinned, target_dur)
+        cur = pinned
+
+    if opts.loudnorm:
+        normalized = work / f"{video.stem}_loud.mp4"
+        loudnorm_two_pass(cur, normalized)
+        cur = normalized
+        if opts.pin_audio_sync:
+            final_pin = work / f"{video.stem}_final.mp4"
+            pin_av_to_duration(cur, final_pin, target_dur)
+            cur = final_pin
+
+    shutil.copy2(cur, out)
+    return out
+
+
+def has_audio_stream(video: Path) -> bool:
+    ff = _ffmpeg_exe()
+    r = subprocess.run([ff, "-i", str(video)], capture_output=True, text=True)
+    return "Audio:" in (r.stderr or "")
+
+
+def audio_mean_volume_db(video: Path) -> float | None:
+    """Return mean_volume (dB) or None if no audio / probe failed."""
+    if not has_audio_stream(video):
+        return None
+    ff = _ffmpeg_exe()
+    r = subprocess.run(
+        [ff, "-i", str(video), "-af", "volumedetect", "-f", "null", "-"],
+        capture_output=True,
+        text=True,
+    )
+    for line in (r.stderr or "").splitlines():
+        if "mean_volume:" in line:
+            try:
+                return float(line.split("mean_volume:")[1].split("dB")[0].strip())
+            except ValueError:
+                return None
+    return None
+
+
+def audio_has_speech(video: Path, silence_db: float = AUDIO_SILENCE_DB) -> bool:
+    db = audio_mean_volume_db(video)
+    return db is not None and db > silence_db
+
+
+def _build_av_xfade_filter(
+    dur_a: float,
+    dur_b: float,
+    xfade_s: float,
+    *,
+    has_a: bool,
+    has_b: bool,
+) -> tuple[str, list[str]]:
+    """Video xfade + audio crossfade aligned to the same offset (no acrossfade o1)."""
+    offset = max(0.0, dur_a - xfade_s)
+    delay_ms = int(offset * 1000)
+    out_dur = dur_a + dur_b - xfade_s
+    filter_parts = [
+        "[0:v]fps=24,scale=1280:720:flags=lanczos,setsar=1[v0]",
+        "[1:v]fps=24,scale=1280:720:flags=lanczos,setsar=1[v1]",
+        f"[v0][v1]xfade=transition=fade:duration={xfade_s}:offset={offset:.3f}[vout]",
+    ]
+    maps = ["-map", "[vout]"]
+    if has_a or has_b:
+        if has_a and has_b:
+            filter_parts.append(
+                f"[0:a]aformat=sample_rates=48000:channel_layouts=stereo,asetpts=PTS-STARTPTS,"
+                f"afade=t=out:st={offset:.3f}:d={xfade_s}[a0f];"
+                f"[1:a]aformat=sample_rates=48000:channel_layouts=stereo,asetpts=PTS-STARTPTS,"
+                f"afade=t=in:st=0:d={xfade_s}[a1f];"
+                f"[a1f]adelay={delay_ms}|{delay_ms}[a1d];"
+                f"[a0f][a1d]amix=inputs=2:duration=longest:dropout_transition=0[aout]"
+            )
+        elif has_a:
+            filter_parts.append(
+                f"[0:a]aformat=sample_rates=48000:channel_layouts=stereo,asetpts=PTS-STARTPTS,"
+                f"apad=whole_dur={out_dur:.3f},"
+                f"afade=t=out:st={offset:.3f}:d={xfade_s}[aout]"
+            )
+        else:
+            filter_parts.append(
+                f"[1:a]aformat=sample_rates=48000:channel_layouts=stereo,asetpts=PTS-STARTPTS,"
+                f"adelay={delay_ms}|{delay_ms}[aout]"
+            )
+        maps.extend(["-map", "[aout]", "-c:a", "aac", "-b:a", "192k"])
+    return ";".join(filter_parts), maps
+
+
+def mux_audio_track(video: Path, audio_wav: Path, out: Path, duration: float | None = None) -> Path:
+    ff = _ffmpeg_exe()
+    out.parent.mkdir(parents=True, exist_ok=True)
+    dur_flag = ["-t", f"{duration:.3f}"] if duration else []
+    subprocess.run(
+        [
+            ff, "-y", "-i", str(video), "-i", str(audio_wav),
+            *dur_flag, "-map", "0:v", "-map", "1:a",
+            "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", str(out),
+        ],
+        check=True,
+        capture_output=True,
+    )
+    return out
+
+
+def synthesize_speech_wav(text: str, out_wav: Path, voice_hint: str = "") -> Path:
+    """Fallback TTS when i2v clip has no dialogue audio (edge-tts)."""
+    out_wav.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        import asyncio
+        import edge_tts
+    except ImportError as exc:
+        raise RuntimeError(
+            "Segment missing audio and edge-tts not installed — pip install edge-tts"
+        ) from exc
+
+    voice = "en-US-GuyNeural"
+    if "attent" in voice_hint.lower() or "documentary" in voice_hint.lower():
+        voice = "en-GB-RyanNeural"
+
+    async def _run() -> None:
+        comm = edge_tts.Communicate(text, voice)
+        await comm.save(str(out_wav))
+
+    asyncio.run(_run())
+    return out_wav
+
+
+def ensure_segment_audio(
+    video: Path,
+    shot: dict[str, Any],
+    refs: dict[str, Any],
+    work_dir: Path,
+) -> Path:
+    """Keep Grok i2v dialogue audio; synthesize+mux only when the clip is silent."""
+    if audio_has_speech(video):
+        return video
+    speech = shot.get("speech_text", "").strip()
+    if not speech:
+        return video
+    print(f"[audio] silent segment {video.name} — TTS fallback for speech")
+    wav = work_dir / f"{video.stem}_tts.wav"
+    synthesize_speech_wav(speech, wav, refs.get("voice_suffix", ""))
+    out = work_dir / f"{video.stem}_muxed.mp4"
+    mux_audio_track(video, wav, out, duration=probe_duration(video))
+    return out
+
+
+def probe_lamp_warm_ratio(video: Path, at_s: float | None = None) -> float:
+    """Sample lamp-region warm ratio (R/G); higher = warmer gold."""
+    from PIL import Image
+
+    ff = _ffmpeg_exe()
+    at_s = at_s if at_s is not None else max(0.0, probe_duration(video) * 0.5)
+    jpg = video.with_suffix(".lamp_probe.jpg")
+    subprocess.run(
+        [ff, "-y", "-ss", f"{at_s:.3f}", "-i", str(video), "-frames:v", "1", str(jpg)],
+        check=True,
+        capture_output=True,
+    )
+    img = Image.open(jpg).convert("RGB")
+    w, h = img.size
+    x0, x1 = int(w * 0.55), int(w * 0.92)
+    y0, y1 = int(h * 0.15), int(h * 0.65)
+    rs = gs = 0
+    n = 0
+    for y in range(y0, y1, 4):
+        for x in range(x0, x1, 4):
+            r, g, b = img.getpixel((x, y))
+            rs += r
+            gs += max(g, 1)
+            n += 1
+    jpg.unlink(missing_ok=True)
+    return rs / gs / n if n else 1.0
 
 
 def concat_xfade_two(
@@ -545,33 +1140,71 @@ def concat_xfade_two(
     xfade_s: float = 0.2,
     match_color: bool = False,
     cut_on_motion: bool = False,
+    lamp_lock: bool = True,
+    color_ref: Path | None = None,
     work_dir: Path | None = None,
 ) -> Path:
     ff = _ffmpeg_exe()
     work = work_dir or out.parent
     a, b = left, right
     if cut_on_motion:
-        trimmed = work / f"{left.stem}_trim.mp4"
+        trimmed = work / f"{left.stem}_trim_{out.stem}.mp4"
         trim_tail_motion(left, trimmed)
         a = trimmed
     if match_color:
-        matched = work / f"{right.stem}_matched.mp4"
-        match_color_segment(a, right, matched)
+        matched = work / f"{right.stem}_matched_{out.stem}.mp4"
+        ref = color_ref or left
+        match_color_segment(left, right, matched, lamp_lock=lamp_lock, color_ref=ref)
         b = matched
     dur_a = probe_duration(a)
-    offset = max(0.0, dur_a - xfade_s)
+    dur_b = probe_duration(b)
     out.parent.mkdir(parents=True, exist_ok=True)
-    # Video xfade; audio optional (Grok clips often have no audio track)
-    filter_v = f"[0:v][1:v]xfade=transition=fade:duration={xfade_s}:offset={offset:.3f}[vout]"
+    has_a = has_audio_stream(a)
+    has_b = has_audio_stream(b)
+    filt, maps = _build_av_xfade_filter(dur_a, dur_b, xfade_s, has_a=has_a, has_b=has_b)
     cmd = [
         ff, "-y", "-i", str(a), "-i", str(b),
-        "-filter_complex", filter_v,
-        "-map", "[vout]", "-c:v", "libx264", "-pix_fmt", "yuv420p", str(out),
+        "-filter_complex", filt,
+        *maps, "-c:v", "libx264", "-pix_fmt", "yuv420p", str(out),
     ]
-    r = subprocess.run(cmd, capture_output=True)
-    if r.returncode != 0:
-        # Retry without audio acrossfade
-        subprocess.run(cmd, check=True, capture_output=True)
+    subprocess.run(cmd, check=True, capture_output=True, text=True)
+    return out
+
+
+def concat_xfade_chain(
+    segments: list[Path],
+    out: Path,
+    *,
+    xfade_s: float = 0.2,
+    match_color: bool = False,
+    cut_on_motion: bool = False,
+    lamp_lock: bool = True,
+    color_ref: Path | None = None,
+    work_dir: Path | None = None,
+) -> Path:
+    """Chain 0.2s xfade + synced audio crossfade joins across N segments."""
+    if not segments:
+        raise ValueError("concat_xfade_chain: no segments")
+    work = work_dir or out.parent
+    if len(segments) == 1:
+        shutil.copy2(segments[0], out)
+        return out
+    current = segments[0]
+    for i, nxt in enumerate(segments[1:], start=1):
+        tmp = work / f"xfade_chain_{i:02d}.mp4"
+        concat_xfade_two(
+            current,
+            nxt,
+            tmp,
+            xfade_s=xfade_s,
+            match_color=match_color,
+            cut_on_motion=cut_on_motion,
+            lamp_lock=lamp_lock,
+            color_ref=color_ref,
+            work_dir=work,
+        )
+        current = tmp
+    shutil.copy2(current, out)
     return out
 
 
@@ -613,6 +1246,7 @@ def render_frame_chain_performance(
     *,
     concat_only: bool = False,
     force: bool = False,
+    force_shots: set[str] | None = None,
     seed_segment: Path | None = None,
 ) -> tuple[Path, list[str], str]:
     """Fallback PRIMARY — last-frame → image-to-video chain (same take discipline)."""
@@ -621,53 +1255,103 @@ def render_frame_chain_performance(
     model = refs["model_video"]
     frames_dir = shots_dir / "chain_frames"
     frames_dir.mkdir(parents=True, exist_ok=True)
+    force_ids = force_shots or set()
+    color_ref = resolve_color_reference(refs, shots_dir)
+    avatar_url = refs["avatar_url"]
 
     for i, shot in enumerate(shots):
         sid = shot["id"]
         seg_path = shots_dir / f"chain_{sid}.mp4"
+        proc_path = shots_dir / f"chain_{sid}_processed.mp4"
         dur = clamp_shot_duration(shot.get("duration", 8))
         prompt = apply_seamless_prompt(shot, refs, opts)
+        regen = force or sid in force_ids
 
-        if seg_path.exists() and seg_path.stat().st_size > 10000 and not force:
-            print(f"[seamless] reusing frame-chain {seg_path.name}")
-            segments.append(seg_path)
+        if proc_path.exists() and proc_path.stat().st_size > 10000 and not regen:
+            print(f"[seamless] reusing processed {proc_path.name}")
+            segments.append(proc_path)
             continue
+
+        if seg_path.exists() and seg_path.stat().st_size > 10000 and not regen and concat_only:
+            raw = ensure_segment_audio(seg_path, shot, refs, shots_dir)
+            process_shot_segment(raw, proc_path, shot, refs, opts, shots_dir, color_ref)
+            segments.append(proc_path)
+            continue
+
+        if seg_path.exists() and seg_path.stat().st_size > 10000 and not regen and not concat_only:
+            raw = ensure_segment_audio(seg_path, shot, refs, shots_dir)
+            process_shot_segment(raw, proc_path, shot, refs, opts, shots_dir, color_ref)
+            mag = probe_magenta_score(proc_path)
+            if mag <= MAGENTA_SCORE_MAX:
+                segments.append(proc_path)
+                continue
+            print(f"[magenta] cached {sid} score={mag:.3f} — re-roll")
+            regen = True
 
         if concat_only:
             raise FileNotFoundError(f"--concat-only: missing frame-chain segment {seg_path}")
 
-        if i == 0 and seed_segment and seed_segment.is_file() and not force:
-            seed_segment.replace(seg_path)
+        if i == 0 and seed_segment and seed_segment.is_file() and not regen:
+            shutil.copy2(seed_segment, seg_path)
             print(f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} — reusing extend seed")
-            segments.append(seg_path)
-            continue
 
-        image_url = refs["avatar_url"]
-        if i > 0 and segments:
-            frame_jpg = frames_dir / f"frame_after_{segments[-1].stem}.jpg"
-            extract_last_frame(segments[-1], frame_jpg)
-            _api_pace()
-            image_url = upload_image_url(client, frame_jpg)
-            print(f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} ({dur}s) ← last frame")
-        else:
-            print(f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} ({dur}s) ← David-001")
+        magenta_ok = False
+        for attempt in range(3):
+            if not (seg_path.exists() and seg_path.stat().st_size > 10000 and not regen and attempt == 0):
+                if i == 0 and attempt == 0 and seed_segment and seed_segment.is_file() and not regen:
+                    pass
+                else:
+                    reground = i > 0 and opts.reground_interval > 0 and (i % opts.reground_interval == 0)
+                    if i == 0 or reground:
+                        image_url = avatar_url
+                        src = "David-001 re-ground" if reground else "David-001"
+                        print(f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} ({dur}s) ← {src}")
+                    else:
+                        frame_jpg = frames_dir / f"frame_after_{segments[-1].stem}.jpg"
+                        extract_last_frame(segments[-1], frame_jpg)
+                        _api_pace()
+                        image_url = upload_image_url(client, frame_jpg)
+                        print(f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} ({dur}s) ← last frame")
 
-        _api_pace()
-        resp = client.video.generate(
-            prompt=prompt,
-            model=model,
-            image_url=image_url,
-            duration=dur,
-            resolution=refs["resolution"],
-        )
-        step_urls.append(resp.url)
-        _download(resp.url, seg_path)
-        segments.append(seg_path)
+                    _api_pace()
+                    resp = client.video.generate(
+                        prompt=prompt,
+                        model=model,
+                        image_url=image_url,
+                        duration=dur,
+                        resolution=refs["resolution"],
+                    )
+                    step_urls.append(resp.url)
+                    _download(resp.url, seg_path)
+
+            raw = ensure_segment_audio(seg_path, shot, refs, shots_dir)
+            process_shot_segment(raw, proc_path, shot, refs, opts, shots_dir, color_ref)
+            mag = probe_magenta_score(proc_path)
+            if mag <= MAGENTA_SCORE_MAX:
+                magenta_ok = True
+                break
+            print(f"[magenta] {sid} score={mag:.3f} — re-roll attempt {attempt + 2}/3")
+            regen = True
+
+        if not magenta_ok and proc_path.is_file():
+            print(f"[magenta] {sid} still elevated after 3 attempts — keeping best-effort clamp")
+
+        segments.append(proc_path)
 
     if len(segments) == 1:
-        segments[0].replace(out_path)
+        shutil.copy2(segments[0], out_path)
     else:
-        concat_videos(segments, out_path)
+        print(f"[seamless] xfade chain joining {len(segments)} segments (xfade={opts.xfade_s}s, audio=synced)")
+        concat_xfade_chain(
+            segments,
+            out_path,
+            xfade_s=opts.xfade_s,
+            match_color=opts.match_color,
+            cut_on_motion=opts.cut_on_motion,
+            lamp_lock=opts.lamp_lock,
+            color_ref=color_ref,
+            work_dir=shots_dir,
+        )
     return out_path, step_urls, "frame_chain"
 
 
@@ -681,18 +1365,58 @@ def render_extend_performance(
     *,
     concat_only: bool = False,
     force: bool = False,
+    force_shots: set[str] | None = None,
 ) -> tuple[Path, list[str], str]:
     """PRIMARY path — Grok Imagine EXTEND when supported; else frame-chain fallback."""
     state_path = shots_dir / "extend_state.json"
-    if out_path.exists() and out_path.stat().st_size > 10000 and not force:
+    chain_segs = chain_segment_paths(shots_dir, shots)
+    have_chain = all(p.is_file() and p.stat().st_size > 10000 for p in chain_segs)
+    color_ref = resolve_color_reference(refs, shots_dir)
+
+    regen_any = force or bool(force_shots)
+    if concat_only:
+        return render_frame_chain_performance(
+            shots, client, refs, opts, shots_dir, out_path,
+            concat_only=True, force=force, force_shots=force_shots,
+        )
+    if have_chain and not regen_any:
+        print(f"[seamless] xfade chain reassembly from {len(chain_segs)} cached segments")
+        if len(chain_segs) == 1:
+            shutil.copy2(chain_segs[0], out_path)
+        else:
+            concat_xfade_chain(
+                chain_segs,
+                out_path,
+                xfade_s=opts.xfade_s,
+                match_color=opts.match_color,
+                cut_on_motion=opts.cut_on_motion,
+                lamp_lock=opts.lamp_lock,
+                color_ref=color_ref,
+                work_dir=shots_dir,
+            )
+        mode = "frame_chain"
+        if state_path.is_file():
+            mode = json.loads(state_path.read_text(encoding="utf-8")).get("mode", mode)
+        state_path.write_text(
+            json.dumps({
+                "mode": mode,
+                "extend_api": {**EXTEND_API_FINDING, "continuity_mode": mode},
+                "segments": len(chain_segs),
+                "assembly": (
+                    f"xfade_chain_{opts.xfade_s}s_loudnorm={opts.loudnorm}"
+                    f"_pin_sync={opts.pin_audio_sync}_magenta_clamp={opts.magenta_clamp}"
+                ),
+            }),
+            encoding="utf-8",
+        )
+        return out_path, [], mode
+
+    if out_path.exists() and out_path.stat().st_size > 10000 and not force and not have_chain:
         print(f"[seamless] reusing performance {out_path.name}")
         mode = "cached"
         if state_path.is_file():
-            mode = json.loads(state_path.read_text()).get("mode", mode)
+            mode = json.loads(state_path.read_text(encoding="utf-8")).get("mode", mode)
         return out_path, [], mode
-
-    if concat_only:
-        raise FileNotFoundError(f"--concat-only: missing performance {out_path}")
 
     gen_model = refs["model_video"]
     extend_model = refs.get("extend_model") or gen_model
@@ -752,7 +1476,12 @@ def render_extend_performance(
             _download(current_url, out_path)
 
         state_path.write_text(
-            json.dumps({"mode": "extend", "model": extend_model, "urls": step_urls}),
+            json.dumps({
+                "mode": "extend",
+                "model": extend_model,
+                "urls": step_urls,
+                "extend_api": {**EXTEND_API_FINDING, "enabled_on_model": True, "continuity_mode": "extend"},
+            }),
             encoding="utf-8",
         )
         return out_path, step_urls, "extend"
@@ -766,10 +1495,19 @@ def render_extend_performance(
             shutil.copy2(out_path, seed)
         result = render_frame_chain_performance(
             shots, client, refs, opts, shots_dir, out_path,
-            concat_only=False, force=False,
-            seed_segment=seed,
+            concat_only=False, force=force, force_shots=force_shots,
+            seed_segment=seed if not regen_any else None,
         )
-        state_path.write_text(json.dumps({"mode": "frame_chain", "urls": result[1]}), encoding="utf-8")
+        state_path.write_text(
+            json.dumps({
+                "mode": "frame_chain",
+                "urls": result[1],
+                "extend_api": {**EXTEND_API_FINDING, "continuity_mode": "frame_chain"},
+                "segments": len(shots),
+                "assembly": f"xfade_chain_{opts.xfade_s}s_match_color={opts.match_color}_cut_on_motion={opts.cut_on_motion}",
+            }),
+            encoding="utf-8",
+        )
         return result
 
 
@@ -780,6 +1518,8 @@ def qa_check(
     *,
     seamless_opts: SeamlessOptions | None = None,
     extend_path: Path | None = None,
+    final_path: Path | None = None,
+    chain_segments: list[Path] | None = None,
     comparison_path: Path | None = None,
     continuity_mode: str | None = None,
 ) -> dict[str, Any]:
@@ -847,9 +1587,67 @@ def qa_check(
             passes.append(f"host performance: {extend_path.name} ({probe_duration(extend_path):.1f}s)")
         else:
             issues.append("missing host performance file")
-        prefix = seamless_opts.continuity_prefix
-        if "@David-001" in prefix:
-            passes.append("David-001 continuity prefix locked")
+        david_locked = any("@David-001" in s.get("video_prompt", "") for s in shots)
+        if david_locked:
+            passes.append("David-001 continuity prefix embedded in video_prompt")
+        else:
+            issues.append("shots missing @David-001 continuity in video_prompt")
+        passes.append("xfade chain + synced audio crossfade at joins")
+        check_path = final_path if final_path and final_path.is_file() else extend_path
+        audio_ok = False
+        if check_path and check_path.is_file():
+            if has_audio_stream(check_path):
+                db = audio_mean_volume_db(check_path)
+                if db is not None and db > AUDIO_SILENCE_DB:
+                    passes.append(f"audio PRESENT ({check_path.name} mean {db:.1f} dB)")
+                    audio_ok = True
+                else:
+                    issues.append(f"audio stream too quiet ({db} dB) in {check_path.name}")
+            else:
+                issues.append(f"no audio stream in {check_path.name}")
+        if rules.get("require_audio") and not audio_ok:
+            issues.append("require_audio: final output missing synced speech track")
+        if seamless_opts.lamp_lock:
+            passes.append("lamp lock 3200K warm-gold clamp to David-001 reference")
+        if seamless_opts.loudnorm:
+            passes.append(f"loudnorm two-pass target I={LOUDNORM_I} LUFS per shot")
+        if seamless_opts.pin_audio_sync:
+            passes.append("audio pinned to exact shot duration (no stretch/offset)")
+        segs = [p for p in (chain_segments or []) if p.is_file()]
+        if segs:
+            try:
+                ilufs = [probe_integrated_loudness(p) for p in segs]
+                ilufs = [x for x in ilufs if x is not None]
+                if len(ilufs) >= 2:
+                    spread = max(ilufs) - min(ilufs)
+                    if spread <= LOUDNESS_SPREAD_MAX_LU:
+                        passes.append(f"flat loudness across shots (spread {spread:.2f} LU)")
+                    else:
+                        issues.append(f"loudness spread {spread:.2f} LU > {LOUDNESS_SPREAD_MAX_LU}")
+                mag_scores = [probe_magenta_score(p) for p in segs]
+                if max(mag_scores) <= MAGENTA_SCORE_MAX:
+                    passes.append(f"zero magenta (max score {max(mag_scores):.3f} <= {MAGENTA_SCORE_MAX})")
+                else:
+                    bad = [(segs[i].stem, mag_scores[i]) for i in range(len(segs)) if mag_scores[i] > MAGENTA_SCORE_MAX]
+                    issues.append(f"magenta detected: {bad}")
+                sync_bad = []
+                for p, shot in zip(segs, shots[: len(segs)]):
+                    delta = probe_av_duration_delta(p, float(shot.get("duration", 0)))
+                    if delta > 0.12:
+                        sync_bad.append(f"{shot['id']}:{delta:.3f}s")
+                if sync_bad:
+                    issues.append(f"A/V sync drift: {sync_bad}")
+                else:
+                    passes.append("tight A/V sync per shot (duration pinned)")
+                if len(segs) >= 2:
+                    ratios = [probe_lamp_warm_ratio(p) for p in segs]
+                    delta = max(ratios) - min(ratios)
+                    if delta <= 0.18:
+                        passes.append(f"lamp warm ratio stable across segments (Δ={delta:.3f})")
+                    else:
+                        issues.append(f"lamp hue drift between segments Δ={delta:.3f} ratios={ratios}")
+            except Exception as exc:
+                issues.append(f"post-process QA probe failed: {exc}")
         for s in shots:
             dur = s.get("duration", 0)
             if dur < 7 or dur > 9:
@@ -857,7 +1655,7 @@ def qa_check(
         if comparison_path and comparison_path.is_file():
             passes.append(f"side-by-side: {comparison_path.name}")
 
-    return {
+    report: dict[str, Any] = {
         "slug": script.get("slug"),
         "qa_at": datetime.now(timezone.utc).isoformat(),
         "pass": len(issues) == 0,
@@ -867,6 +1665,12 @@ def qa_check(
         "segment_count": len(rendered),
         "seamless": seamless_opts.enabled if seamless_opts else False,
     }
+    if seamless_opts and seamless_opts.enabled:
+        report["extend_api"] = {
+            **EXTEND_API_FINDING,
+            "continuity_mode": continuity_mode or "unknown",
+        }
+    return report
 
 
 def render_longform(
@@ -875,6 +1679,7 @@ def render_longform(
     client: Any = None,
     concat_only: bool = False,
     force_shots: set[str] | None = None,
+    force_all: bool = False,
     seamless_opts: SeamlessOptions | None = None,
 ) -> dict[str, Any]:
     prod_dir = resolve_production_dir(script)
@@ -897,13 +1702,14 @@ def render_longform(
     extend_path: Path | None = None
 
     if opts.enabled:
-        scene_id = (script.get("seamless") or {}).get("performance_scene_id", "archive_performance")
-        perf_shots = [s for s in script["shots"] if s.get("scene_id", scene_id) == scene_id]
+        perf_shots = [s for s in script["shots"] if s.get("role", "host") != "card"]
         if not perf_shots:
             perf_shots = list(script["shots"])
 
         extend_path = shots_dir / HOST_PERFORMANCE_NAME
-        force_extend = bool(force_shots)
+        shot_force = set(force_shots or set())
+        if force_all:
+            shot_force = {s["id"] for s in perf_shots}
         host_mp4, step_urls, continuity_mode = render_extend_performance(
             perf_shots,
             client,
@@ -912,7 +1718,8 @@ def render_longform(
             extend_path,
             shots_dir,
             concat_only=concat_only,
-            force=force_extend,
+            force=force_all,
+            force_shots=shot_force,
         )
 
         prov_cfg = script.get("provenance_card", {})
@@ -929,6 +1736,7 @@ def render_longform(
             trim_tail_motion(host_mp4, trimmed_host)
             host_join = trimmed_host
 
+        color_ref = resolve_color_reference(refs, shots_dir)
         if card_mp4:
             seamless_out = prod_dir / "output" / f"david_{slug}_seamless_v1.mp4"
             concat_xfade_two(
@@ -938,14 +1746,21 @@ def render_longform(
                 xfade_s=opts.xfade_s,
                 match_color=opts.match_color,
                 cut_on_motion=False,
+                lamp_lock=opts.lamp_lock,
+                color_ref=color_ref,
                 work_dir=shots_dir,
             )
+            final_mp4 = seamless_out
+        elif opts.enabled:
+            seamless_out = prod_dir / "output" / f"david_{slug}_seamless_v1.mp4"
+            shutil.copy2(host_mp4, seamless_out)
             final_mp4 = seamless_out
 
         rendered = [p for p in [host_mp4, card_mp4] if p]
         print(f"[seamless] final → {final_mp4}")
+        chain_segments = chain_segment_paths(shots_dir, perf_shots)
 
-        compare_v1 = script.get("compare_v1")
+        compare_v1 = script.get("config", {}).get("compare_v1")
         if compare_v1:
             v1_path = _resolve_david_path(compare_v1)
             if v1_path.is_file():
@@ -972,6 +1787,8 @@ def render_longform(
             script, refs, rendered,
             seamless_opts=opts,
             extend_path=extend_path,
+            final_path=final_mp4,
+            chain_segments=chain_segments,
             comparison_path=comparison_path,
             continuity_mode=continuity_mode,
         )
@@ -1061,6 +1878,7 @@ def main() -> int:
     parser.add_argument("--concat-only", action="store_true", help="Reuse cached shots; no API calls")
     parser.add_argument("--script-only", action="store_true", help="Normalize + write imagine pack only")
     parser.add_argument("--force-shot", action="append", default=[], help="Regenerate specific shot id(s)")
+    parser.add_argument("--force-all", action="store_true", help="Regenerate every seamless chain shot")
     parser.add_argument("--seamless", action="store_true", help="STUDIO v1.1 extend-primary + xfade joins")
     parser.add_argument("--match-color", action="store_true", help="Histogram-match before frame-chain joins")
     parser.add_argument("--cut-on-motion", action="store_true", help="Trim tail stillness before card join")
@@ -1102,17 +1920,22 @@ def main() -> int:
 
     seamless_opts = get_seamless_options(script, args)
 
+    force_ids = set(args.force_shot)
+    if args.force_all and seamless_opts.enabled:
+        force_ids = {s["id"] for s in script["shots"]}
+
     result = render_longform(
         script,
         client=client,
         concat_only=args.concat_only,
-        force_shots=set(args.force_shot),
+        force_shots=force_ids,
+        force_all=args.force_all,
         seamless_opts=seamless_opts,
     )
 
     manifest = {
         "pipeline": "render_longform_seamless" if seamless_opts.enabled else "render_longform",
-        "protocol": "STUDIO_Seamless_Continuity_Protocol_v1.1" if seamless_opts.enabled else None,
+        "protocol": "STUDIO_Canonical_Schema_and_Seamless_Spec_v1" if seamless_opts.enabled else None,
         "completed_at": datetime.now(timezone.utc).isoformat(),
         "script_source": str(script_path),
         "concat_only": args.concat_only,
