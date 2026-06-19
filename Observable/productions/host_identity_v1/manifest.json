@@ -1,0 +1,9 @@
+{
+  "task": "#180",
+  "completed_at": "2026-06-19",
+  "identity_lock": "Observable/productions/host_identity_v1/julian_identity_lock.json",
+  "casting_plate": "STUDIO/Cast/actors_roster/male/north_america/Julian_Cross/01_casting_shots/casting_turnaround_v1.jpg",
+  "brand_avatar": "Observable/brand/export/channel_avatar_800.png",
+  "host_test_clip": null,
+  "notes": "v1 uses casting plate crop for banner/avatar; host test clip ships in follow-on pack"
+}

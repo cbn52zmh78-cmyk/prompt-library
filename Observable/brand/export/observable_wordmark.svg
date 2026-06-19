@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" role="img" aria-label="Observable wordmark">
+  <title>Observable</title>
+  <defs>
+    <style>
+      .wordmark { font-family: 'IBM Plex Sans', 'Segoe UI', Inter, Arial, sans-serif; font-weight: 600; font-size: 72px; fill: #E8EEF2; letter-spacing: -0.02em; }
+      .tagline { font-family: Inter, 'Segoe UI', Arial, sans-serif; font-weight: 400; font-size: 22px; fill: #A8B8C8; }
+    </style>
+  </defs>
+  <!-- Aperture O accent -->
+  <circle cx="36" cy="54" r="30" fill="none" stroke="#2A7B9E" stroke-width="3"/>
+  <text class="wordmark" x="72" y="72">bservable</text>
+  <text class="tagline" x="4" y="108">Evidence before wonder.</text>
+</svg>

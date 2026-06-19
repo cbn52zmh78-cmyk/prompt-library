@@ -1,0 +1,56 @@
+{
+  "task": "#180",
+  "locked_at": "2026-06-19",
+  "status": "LOCKED",
+  "character": {
+    "actor_id": "Julian-001",
+    "stage_name": "Julian Cross",
+    "role": "science communicator",
+    "core_question": "What do we observe — and how do we know it?",
+    "age_locked": 31,
+    "wardrobe_episode": "smart-casual navy henley or unstructured blazer over neutral tee — NOT gym casting kit",
+    "set_id": "@Set-Seamless-Neutral-001",
+    "style_id": "@Style-Cool-Clinical-001",
+    "format_id": "science-explainer"
+  },
+  "references": {
+    "casting_plate": {
+      "file": "STUDIO/Cast/actors_roster/male/north_america/Julian_Cross/01_casting_shots/casting_turnaround_v1.jpg",
+      "lock_card": "STUDIO/Cast/Casting_Bible/lock_cards/Julian-001.md",
+      "reuse": "v1 avatar + banner crop from center (front) panel; episode wardrobe via image_edit from plate",
+      "notes": "Casting wardrobe is gym kit — production prompts must specify smart-casual per brand kit §2"
+    },
+    "seamless_set": {
+      "file": "STUDIO/Pipeline/references/seamless_neutral_grey_reference.json",
+      "backdrop_hex": "#9A9A98",
+      "lighting": "5500K bilateral soft key — cool-clinical, no magenta vignette"
+    },
+    "brand_avatar_export": {
+      "file": "Observable/brand/export/channel_avatar_800.png"
+    }
+  },
+  "voice": {
+    "register": "warm mid-Atlantic baritone",
+    "pace": "clear, enthusiastic science communicator",
+    "tone": "evidence-forward, accessible, never hype",
+    "signature_beat": "What do we observe — and how do we know it?",
+    "prompt_suffix": "Warm mid-Atlantic baritone; clear enthusiastic science communicator."
+  },
+  "continuity_lock_verbatim": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut.",
+  "episode_reuse": {
+    "host_shots": "Lead every prompt with 31-year-old Julian Cross; smart-casual wardrobe; @Set-Seamless-Neutral-001",
+    "viz_payoff": "Label OBSERVED / SIMULATION / MODEL / NOT TO SCALE on science visualization beats",
+    "on_screen_label": "Observable · Evidence before wonder.",
+    "brand_fields": {
+      "title": "Observable",
+      "subtitle": "Evidence before wonder.",
+      "cta": "Follow Observable — one measurement at a time."
+    }
+  },
+  "guardrails": [
+    "synthetic only — no real-person likeness",
+    "educational content — not medical or legal advice",
+    "sources cited per episode; AI disclosure in description",
+    "never use DAVID · The Archive marks on Observable deliverables"
+  ]
+}
