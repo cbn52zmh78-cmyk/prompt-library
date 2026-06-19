@@ -351,6 +351,9 @@ def _is_dark_scene(
     shot: dict[str, Any] | None = None,
 ) -> bool:
     set_file = str(refs.get("set_file") or "").lower()
+    # Clinical seamless sets use "shadow definition" in prompts — not dark-scene grade (#193).
+    if any(k in set_file for k in ("cyclorama", "seamless_neutral", "studio_interior")):
+        return False
     if any(k in set_file for k in ("warehouse", "industrial", "rooftop", "night", "dusk")):
         return True
     texts: list[str] = []
@@ -1695,7 +1698,7 @@ def process_shot_segment(
 
     if opts.magenta_clamp or opts.match_color:
         clamped = work / f"{video.stem}_clamped.mp4"
-        if opts.neutral_grade and not dark_scene:
+        if opts.neutral_grade:
             apply_neutral_white_balance_grade(cur, clamped, color_ref)
         else:
             apply_per_shot_magenta_clamp(
