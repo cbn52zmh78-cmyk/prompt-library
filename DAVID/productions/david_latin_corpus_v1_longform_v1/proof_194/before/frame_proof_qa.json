@@ -1,0 +1,1317 @@
+{
+  "master": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_corpus_v1_longform_v1\\proof_194\\before\\master_concat_only_v1.mp4",
+  "frames_checked": 68,
+  "fps_sampled": 1.0,
+  "frame_proof_dir": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_corpus_v1_longform_v1\\proof_194\\before\\frame_proof",
+  "thresholds": {
+    "magenta_max": 0.42,
+    "yellow_green_max": 0.12,
+    "grey_balance_drift_max": 0.12,
+    "blue_starvation_max": 0.5,
+    "host_br_ratio_min": 0.22,
+    "host_blue_mean_min": 25.0
+  },
+  "measured": {
+    "magenta_max": 0.0782,
+    "magenta_mean": 0.0071,
+    "yellow_green_max": 0.0067,
+    "yellow_green_mean": 0.0004,
+    "grey_balance_drift": 0.2701,
+    "blue_starvation_max": 1.0,
+    "host_br_ratio_min": 0.0503,
+    "host_blue_mean_min": 2.23,
+    "color_cast_fail_frames": 68
+  },
+  "breaches": {
+    "magenta": [],
+    "yellow_green": [],
+    "color_cast": [
+      [
+        0.0,
+        [
+          "blue_starvation_fraction 0.995 > 0.5",
+          "host B/R 0.087 < 0.22",
+          "blue_starvation B=4.6 lum=0.0"
+        ]
+      ],
+      [
+        1.0,
+        [
+          "blue_starvation_fraction 0.994 > 0.5",
+          "host B/R 0.085 < 0.22",
+          "blue_starvation B=4.5 lum=0.0"
+        ]
+      ],
+      [
+        2.0,
+        [
+          "blue_starvation_fraction 0.987 > 0.5",
+          "host B/R 0.106 < 0.22",
+          "blue_starvation B=6.2 lum=0.0"
+        ]
+      ],
+      [
+        3.0,
+        [
+          "blue_starvation_fraction 0.986 > 0.5",
+          "host B/R 0.101 < 0.22",
+          "blue_starvation B=5.8 lum=0.0"
+        ]
+      ],
+      [
+        4.0,
+        [
+          "blue_starvation_fraction 0.983 > 0.5",
+          "host B/R 0.113 < 0.22",
+          "blue_starvation B=6.8 lum=0.0"
+        ]
+      ],
+      [
+        5.0,
+        [
+          "blue_starvation_fraction 0.988 > 0.5",
+          "host B/R 0.093 < 0.22",
+          "blue_starvation B=5.3 lum=0.0"
+        ]
+      ],
+      [
+        6.0,
+        [
+          "blue_starvation_fraction 0.990 > 0.5",
+          "host B/R 0.100 < 0.22",
+          "blue_starvation B=5.5 lum=0.0"
+        ]
+      ],
+      [
+        7.0,
+        [
+          "blue_starvation_fraction 0.990 > 0.5",
+          "host B/R 0.096 < 0.22",
+          "blue_starvation B=5.3 lum=0.0"
+        ]
+      ],
+      [
+        8.0,
+        [
+          "blue_starvation_fraction 1.000 > 0.5",
+          "host B/R 0.066 < 0.22",
+          "blue_starvation B=3.0 lum=0.0"
+        ]
+      ],
+      [
+        9.0,
+        [
+          "blue_starvation_fraction 0.999 > 0.5",
+          "host B/R 0.065 < 0.22",
+          "blue_starvation B=3.0 lum=0.0"
+        ]
+      ],
+      [
+        10.0,
+        [
+          "blue_starvation_fraction 0.999 > 0.5",
+          "host B/R 0.065 < 0.22",
+          "blue_starvation B=3.1 lum=0.0"
+        ]
+      ],
+      [
+        11.0,
+        [
+          "blue_starvation_fraction 0.998 > 0.5",
+          "host B/R 0.086 < 0.22",
+          "blue_starvation B=4.5 lum=0.0"
+        ]
+      ],
+      [
+        12.0,
+        [
+          "blue_starvation_fraction 1.000 > 0.5",
+          "host B/R 0.070 < 0.22",
+          "blue_starvation B=3.6 lum=0.0"
+        ]
+      ],
+      [
+        13.0,
+        [
+          "blue_starvation_fraction 0.999 > 0.5",
+          "host B/R 0.072 < 0.22",
+          "blue_starvation B=3.7 lum=0.0"
+        ]
+      ],
+      [
+        14.0,
+        [
+          "blue_starvation_fraction 0.999 > 0.5",
+          "host B/R 0.079 < 0.22",
+          "blue_starvation B=4.4 lum=0.0"
+        ]
+      ],
+      [
+        15.0,
+        [
+          "blue_starvation_fraction 0.999 > 0.5",
+          "host B/R 0.084 < 0.22",
+          "blue_starvation B=4.8 lum=0.0"
+        ]
+      ],
+      [
+        16.0,
+        [
+          "blue_starvation_fraction 1.000 > 0.5",
+          "host B/R 0.068 < 0.22",
+          "blue_starvation B=3.0 lum=0.0"
+        ]
+      ],
+      [
+        17.0,
+        [
+          "blue_starvation_fraction 0.998 > 0.5",
+          "host B/R 0.071 < 0.22",
+          "blue_starvation B=3.4 lum=0.0"
+        ]
+      ],
+      [
+        18.0,
+        [
+          "blue_starvation_fraction 0.998 > 0.5",
+          "host B/R 0.069 < 0.22",
+          "blue_starvation B=3.3 lum=0.0"
+        ]
+      ],
+      [
+        19.0,
+        [
+          "blue_starvation_fraction 0.997 > 0.5",
+          "host B/R 0.070 < 0.22",
+          "blue_starvation B=3.4 lum=0.0"
+        ]
+      ],
+      [
+        20.0,
+        [
+          "blue_starvation_fraction 0.992 > 0.5",
+          "host B/R 0.081 < 0.22",
+          "blue_starvation B=4.1 lum=0.0"
+        ]
+      ],
+      [
+        21.0,
+        [
+          "blue_starvation_fraction 0.991 > 0.5",
+          "host B/R 0.095 < 0.22",
+          "blue_starvation B=5.0 lum=0.0"
+        ]
+      ],
+      [
+        22.0,
+        [
+          "blue_starvation_fraction 0.996 > 0.5",
+          "host B/R 0.078 < 0.22",
+          "blue_starvation B=3.9 lum=0.0"
+        ]
+      ],
+      [
+        23.0,
+        [
+          "blue_starvation_fraction 1.000 > 0.5",
+          "host B/R 0.063 < 0.22",
+          "blue_starvation B=2.9 lum=0.0"
+        ]
+      ],
+      [
+        24.0,
+        [
+          "blue_starvation_fraction 0.999 > 0.5",
+          "host B/R 0.065 < 0.22",
+          "blue_starvation B=3.0 lum=0.0"
+        ]
+      ],
+      [
+        25.0,
+        [
+          "blue_starvation_fraction 1.000 > 0.5",
+          "host B/R 0.072 < 0.22",
+          "blue_starvation B=3.6 lum=0.0"
+        ]
+      ],
+      [
+        26.0,
+        [
+          "blue_starvation_fraction 1.000 > 0.5",
+          "host B/R 0.065 < 0.22",
+          "blue_starvation B=3.1 lum=0.0"
+        ]
+      ],
+      [
+        27.0,
+        [
+          "blue_starvation_fraction 1.000 > 0.5",
+          "host B/R 0.065 < 0.22",
+          "blue_starvation B=3.1 lum=0.0"
+        ]
+      ],
+      [
+        28.0,
+        [
+          "blue_starvation_fraction 0.998 > 0.5",
+          "host B/R 0.067 < 0.22",
+          "blue_starvation B=3.3 lum=0.0"
+        ]
+      ],
+      [
+        29.0,
+        [
+          "blue_starvation_fraction 0.997 > 0.5",
+          "host B/R 0.074 < 0.22",
+          "blue_starvation B=3.8 lum=0.0"
+        ]
+      ],
+      [
+        30.0,
+        [
+          "blue_starvation_fraction 0.998 > 0.5",
+          "host B/R 0.069 < 0.22",
+          "blue_starvation B=3.2 lum=0.0"
+        ]
+      ],
+      [
+        31.0,
+        [
+          "blue_starvation_fraction 0.995 > 0.5",
+          "host B/R 0.077 < 0.22",
+          "blue_starvation B=3.6 lum=0.0"
+        ]
+      ],
+      [
+        32.0,
+        [
+          "blue_starvation_fraction 0.993 > 0.5",
+          "host B/R 0.083 < 0.22",
+          "blue_starvation B=4.3 lum=0.0"
+        ]
+      ],
+      [
+        33.0,
+        [
+          "blue_starvation_fraction 0.992 > 0.5",
+          "host B/R 0.071 < 0.22",
+          "blue_starvation B=3.5 lum=0.0"
+        ]
+      ],
+      [
+        34.0,
+        [
+          "blue_starvation_fraction 0.983 > 0.5",
+          "host B/R 0.091 < 0.22",
+          "blue_starvation B=4.7 lum=0.0"
+        ]
+      ],
+      [
+        35.0,
+        [
+          "blue_starvation_fraction 0.995 > 0.5",
+          "host B/R 0.070 < 0.22",
+          "blue_starvation B=3.2 lum=0.0"
+        ]
+      ],
+      [
+        36.0,
+        [
+          "blue_starvation_fraction 0.993 > 0.5",
+          "host B/R 0.076 < 0.22",
+          "blue_starvation B=3.6 lum=0.0"
+        ]
+      ],
+      [
+        37.0,
+        [
+          "blue_starvation_fraction 0.993 > 0.5",
+          "host B/R 0.069 < 0.22",
+          "blue_starvation B=3.2 lum=0.0"
+        ]
+      ],
+      [
+        38.0,
+        [
+          "blue_starvation_fraction 0.999 > 0.5",
+          "host B/R 0.059 < 0.22",
+          "blue_starvation B=2.6 lum=0.0"
+        ]
+      ],
+      [
+        39.0,
+        [
+          "blue_starvation_fraction 1.000 > 0.5",
+          "host B/R 0.060 < 0.22",
+          "blue_starvation B=2.6 lum=0.0"
+        ]
+      ],
+      [
+        40.0,
+        [
+          "blue_starvation_fraction 0.999 > 0.5",
+          "host B/R 0.064 < 0.22",
+          "blue_starvation B=2.8 lum=0.0"
+        ]
+      ],
+      [
+        41.0,
+        [
+          "blue_starvation_fraction 0.997 > 0.5",
+          "host B/R 0.081 < 0.22",
+          "blue_starvation B=3.9 lum=0.0"
+        ]
+      ],
+      [
+        42.0,
+        [
+          "blue_starvation_fraction 0.999 > 0.5",
+          "host B/R 0.063 < 0.22",
+          "blue_starvation B=2.9 lum=0.0"
+        ]
+      ],
+      [
+        43.0,
+        [
+          "blue_starvation_fraction 1.000 > 0.5",
+          "host B/R 0.064 < 0.22",
+          "blue_starvation B=2.7 lum=0.0"
+        ]
+      ],
+      [
+        44.0,
+        [
+          "blue_starvation_fraction 0.997 > 0.5",
+          "host B/R 0.090 < 0.22",
+          "blue_starvation B=4.8 lum=0.0"
+        ]
+      ],
+      [
+        45.0,
+        [
+          "blue_starvation_fraction 0.997 > 0.5",
+          "host B/R 0.075 < 0.22",
+          "blue_starvation B=3.4 lum=0.0"
+        ]
+      ],
+      [
+        46.0,
+        [
+          "blue_starvation_fraction 1.000 > 0.5",
+          "host B/R 0.062 < 0.22",
+          "blue_starvation B=2.6 lum=0.0"
+        ]
+      ],
+      [
+        47.0,
+        [
+          "blue_starvation_fraction 0.998 > 0.5",
+          "host B/R 0.079 < 0.22",
+          "blue_starvation B=3.5 lum=0.0"
+        ]
+      ],
+      [
+        48.0,
+        [
+          "blue_starvation_fraction 1.000 > 0.5",
+          "host B/R 0.065 < 0.22",
+          "blue_starvation B=2.6 lum=0.0"
+        ]
+      ],
+      [
+        49.0,
+        [
+          "blue_starvation_fraction 1.000 > 0.5",
+          "host B/R 0.065 < 0.22",
+          "blue_starvation B=2.6 lum=0.0"
+        ]
+      ],
+      [
+        50.0,
+        [
+          "blue_starvation_fraction 1.000 > 0.5",
+          "host B/R 0.071 < 0.22",
+          "blue_starvation B=3.0 lum=0.0"
+        ]
+      ],
+      [
+        51.0,
+        [
+          "blue_starvation_fraction 1.000 > 0.5",
+          "host B/R 0.059 < 0.22",
+          "blue_starvation B=2.3 lum=0.0"
+        ]
+      ],
+      [
+        52.0,
+        [
+          "blue_starvation_fraction 1.000 > 0.5",
+          "host B/R 0.059 < 0.22",
+          "blue_starvation B=2.3 lum=0.0"
+        ]
+      ],
+      [
+        53.0,
+        [
+          "blue_starvation_fraction 1.000 > 0.5",
+          "host B/R 0.061 < 0.22",
+          "blue_starvation B=2.4 lum=0.0"
+        ]
+      ],
+      [
+        54.0,
+        [
+          "blue_starvation_fraction 1.000 > 0.5",
+          "host B/R 0.050 < 0.22",
+          "blue_starvation B=2.2 lum=0.0"
+        ]
+      ],
+      [
+        55.0,
+        [
+          "blue_starvation_fraction 0.999 > 0.5",
+          "host B/R 0.058 < 0.22",
+          "blue_starvation B=2.6 lum=0.0"
+        ]
+      ],
+      [
+        56.0,
+        [
+          "blue_starvation_fraction 0.999 > 0.5",
+          "host B/R 0.069 < 0.22",
+          "blue_starvation B=3.2 lum=0.0"
+        ]
+      ],
+      [
+        57.0,
+        [
+          "blue_starvation_fraction 1.000 > 0.5",
+          "host B/R 0.069 < 0.22",
+          "blue_starvation B=3.2 lum=0.0"
+        ]
+      ],
+      [
+        58.0,
+        [
+          "blue_starvation_fraction 0.999 > 0.5",
+          "host B/R 0.067 < 0.22",
+          "blue_starvation B=3.1 lum=0.0"
+        ]
+      ],
+      [
+        59.0,
+        [
+          "blue_starvation_fraction 0.997 > 0.5",
+          "host B/R 0.069 < 0.22",
+          "blue_starvation B=3.4 lum=0.0"
+        ]
+      ],
+      [
+        60.0,
+        [
+          "blue_starvation_fraction 0.997 > 0.5",
+          "host B/R 0.082 < 0.22",
+          "blue_starvation B=4.1 lum=0.0"
+        ]
+      ],
+      [
+        61.0,
+        [
+          "blue_starvation_fraction 0.998 > 0.5",
+          "host B/R 0.103 < 0.22",
+          "blue_starvation B=7.0 lum=0.0"
+        ]
+      ],
+      [
+        62.0,
+        [
+          "blue_starvation B=6.5 lum=0.0"
+        ]
+      ],
+      [
+        63.0,
+        [
+          "blue_starvation B=6.5 lum=0.0"
+        ]
+      ],
+      [
+        64.0,
+        [
+          "blue_starvation B=6.5 lum=0.0"
+        ]
+      ],
+      [
+        65.0,
+        [
+          "blue_starvation B=6.5 lum=0.0"
+        ]
+      ],
+      [
+        66.0,
+        [
+          "blue_starvation B=6.5 lum=0.0"
+        ]
+      ],
+      [
+        67.0,
+        [
+          "blue_starvation B=6.5 lum=0.0"
+        ]
+      ]
+    ],
+    "grey_drift_over": 0.2701
+  },
+  "json_self_report_pass": null,
+  "coherence": "NO_JSON",
+  "frame_verdict": "FRAME-FAIL",
+  "per_frame": [
+    {
+      "t_s": 0.0,
+      "frame": "frame_0001.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0067,
+      "grey_balance": 0.2717,
+      "blue_starvation": 0.9947,
+      "host_br_ratio": 0.0868,
+      "host_blue_mean": 4.59,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 1.0,
+      "frame": "frame_0002.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0049,
+      "grey_balance": 0.2711,
+      "blue_starvation": 0.9943,
+      "host_br_ratio": 0.0851,
+      "host_blue_mean": 4.48,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 2.0,
+      "frame": "frame_0003.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0047,
+      "grey_balance": 0.2738,
+      "blue_starvation": 0.9874,
+      "host_br_ratio": 0.106,
+      "host_blue_mean": 6.23,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 3.0,
+      "frame": "frame_0004.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0034,
+      "grey_balance": 0.2751,
+      "blue_starvation": 0.986,
+      "host_br_ratio": 0.1006,
+      "host_blue_mean": 5.77,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 4.0,
+      "frame": "frame_0005.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0008,
+      "grey_balance": 0.2777,
+      "blue_starvation": 0.983,
+      "host_br_ratio": 0.1125,
+      "host_blue_mean": 6.85,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 5.0,
+      "frame": "frame_0006.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0029,
+      "grey_balance": 0.2811,
+      "blue_starvation": 0.9881,
+      "host_br_ratio": 0.0933,
+      "host_blue_mean": 5.31,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 6.0,
+      "frame": "frame_0007.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0014,
+      "grey_balance": 0.2841,
+      "blue_starvation": 0.9904,
+      "host_br_ratio": 0.0998,
+      "host_blue_mean": 5.47,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 7.0,
+      "frame": "frame_0008.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0003,
+      "grey_balance": 0.2874,
+      "blue_starvation": 0.9899,
+      "host_br_ratio": 0.0961,
+      "host_blue_mean": 5.35,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 8.0,
+      "frame": "frame_0009.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2864,
+      "blue_starvation": 0.9996,
+      "host_br_ratio": 0.0656,
+      "host_blue_mean": 3.01,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 9.0,
+      "frame": "frame_0010.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2884,
+      "blue_starvation": 0.9989,
+      "host_br_ratio": 0.0653,
+      "host_blue_mean": 3.01,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 10.0,
+      "frame": "frame_0011.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2895,
+      "blue_starvation": 0.9993,
+      "host_br_ratio": 0.065,
+      "host_blue_mean": 3.08,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 11.0,
+      "frame": "frame_0012.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2915,
+      "blue_starvation": 0.9983,
+      "host_br_ratio": 0.0857,
+      "host_blue_mean": 4.5,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 12.0,
+      "frame": "frame_0013.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2968,
+      "blue_starvation": 1.0,
+      "host_br_ratio": 0.0701,
+      "host_blue_mean": 3.56,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 13.0,
+      "frame": "frame_0014.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.302,
+      "blue_starvation": 0.999,
+      "host_br_ratio": 0.0717,
+      "host_blue_mean": 3.73,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 14.0,
+      "frame": "frame_0015.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.3082,
+      "blue_starvation": 0.999,
+      "host_br_ratio": 0.079,
+      "host_blue_mean": 4.44,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 15.0,
+      "frame": "frame_0016.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.3117,
+      "blue_starvation": 0.9987,
+      "host_br_ratio": 0.0838,
+      "host_blue_mean": 4.84,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 16.0,
+      "frame": "frame_0017.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2883,
+      "blue_starvation": 1.0,
+      "host_br_ratio": 0.0675,
+      "host_blue_mean": 3.05,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 17.0,
+      "frame": "frame_0018.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2938,
+      "blue_starvation": 0.9978,
+      "host_br_ratio": 0.071,
+      "host_blue_mean": 3.39,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 18.0,
+      "frame": "frame_0019.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2958,
+      "blue_starvation": 0.9982,
+      "host_br_ratio": 0.0692,
+      "host_blue_mean": 3.28,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 19.0,
+      "frame": "frame_0020.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2955,
+      "blue_starvation": 0.9967,
+      "host_br_ratio": 0.0704,
+      "host_blue_mean": 3.39,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 20.0,
+      "frame": "frame_0021.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.3001,
+      "blue_starvation": 0.9924,
+      "host_br_ratio": 0.0812,
+      "host_blue_mean": 4.11,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 21.0,
+      "frame": "frame_0022.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.3008,
+      "blue_starvation": 0.9906,
+      "host_br_ratio": 0.0949,
+      "host_blue_mean": 4.95,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 22.0,
+      "frame": "frame_0023.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.3038,
+      "blue_starvation": 0.9956,
+      "host_br_ratio": 0.0781,
+      "host_blue_mean": 3.89,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 23.0,
+      "frame": "frame_0024.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.285,
+      "blue_starvation": 1.0,
+      "host_br_ratio": 0.0634,
+      "host_blue_mean": 2.92,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 24.0,
+      "frame": "frame_0025.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2863,
+      "blue_starvation": 0.9993,
+      "host_br_ratio": 0.0652,
+      "host_blue_mean": 3.03,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 25.0,
+      "frame": "frame_0026.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2893,
+      "blue_starvation": 1.0,
+      "host_br_ratio": 0.0724,
+      "host_blue_mean": 3.58,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 26.0,
+      "frame": "frame_0027.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.288,
+      "blue_starvation": 1.0,
+      "host_br_ratio": 0.0651,
+      "host_blue_mean": 3.11,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 27.0,
+      "frame": "frame_0028.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2915,
+      "blue_starvation": 0.9996,
+      "host_br_ratio": 0.065,
+      "host_blue_mean": 3.13,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 28.0,
+      "frame": "frame_0029.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2937,
+      "blue_starvation": 0.9982,
+      "host_br_ratio": 0.0673,
+      "host_blue_mean": 3.27,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 29.0,
+      "frame": "frame_0030.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2983,
+      "blue_starvation": 0.9971,
+      "host_br_ratio": 0.0744,
+      "host_blue_mean": 3.79,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 30.0,
+      "frame": "frame_0031.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2886,
+      "blue_starvation": 0.9982,
+      "host_br_ratio": 0.0688,
+      "host_blue_mean": 3.19,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 31.0,
+      "frame": "frame_0032.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2926,
+      "blue_starvation": 0.9945,
+      "host_br_ratio": 0.0767,
+      "host_blue_mean": 3.64,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 32.0,
+      "frame": "frame_0033.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2957,
+      "blue_starvation": 0.9934,
+      "host_br_ratio": 0.0834,
+      "host_blue_mean": 4.28,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 33.0,
+      "frame": "frame_0034.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2965,
+      "blue_starvation": 0.992,
+      "host_br_ratio": 0.0715,
+      "host_blue_mean": 3.54,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 34.0,
+      "frame": "frame_0035.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2951,
+      "blue_starvation": 0.9827,
+      "host_br_ratio": 0.0908,
+      "host_blue_mean": 4.67,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 35.0,
+      "frame": "frame_0036.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2956,
+      "blue_starvation": 0.9948,
+      "host_br_ratio": 0.0696,
+      "host_blue_mean": 3.21,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 36.0,
+      "frame": "frame_0037.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.296,
+      "blue_starvation": 0.9925,
+      "host_br_ratio": 0.0761,
+      "host_blue_mean": 3.64,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 37.0,
+      "frame": "frame_0038.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2956,
+      "blue_starvation": 0.9934,
+      "host_br_ratio": 0.0689,
+      "host_blue_mean": 3.2,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 38.0,
+      "frame": "frame_0039.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2847,
+      "blue_starvation": 0.9985,
+      "host_br_ratio": 0.0591,
+      "host_blue_mean": 2.62,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 39.0,
+      "frame": "frame_0040.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2837,
+      "blue_starvation": 1.0,
+      "host_br_ratio": 0.06,
+      "host_blue_mean": 2.62,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 40.0,
+      "frame": "frame_0041.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2844,
+      "blue_starvation": 0.9992,
+      "host_br_ratio": 0.0639,
+      "host_blue_mean": 2.78,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 41.0,
+      "frame": "frame_0042.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2884,
+      "blue_starvation": 0.997,
+      "host_br_ratio": 0.0813,
+      "host_blue_mean": 3.94,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 42.0,
+      "frame": "frame_0043.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2901,
+      "blue_starvation": 0.9985,
+      "host_br_ratio": 0.0628,
+      "host_blue_mean": 2.85,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 43.0,
+      "frame": "frame_0044.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2891,
+      "blue_starvation": 1.0,
+      "host_br_ratio": 0.0644,
+      "host_blue_mean": 2.74,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 44.0,
+      "frame": "frame_0045.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2912,
+      "blue_starvation": 0.9972,
+      "host_br_ratio": 0.0897,
+      "host_blue_mean": 4.84,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 45.0,
+      "frame": "frame_0046.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2925,
+      "blue_starvation": 0.9973,
+      "host_br_ratio": 0.0752,
+      "host_blue_mean": 3.4,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 46.0,
+      "frame": "frame_0047.jpg",
+      "magenta": 0.0035,
+      "yellow_green": 0.0,
+      "grey_balance": 0.282,
+      "blue_starvation": 1.0,
+      "host_br_ratio": 0.062,
+      "host_blue_mean": 2.61,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 47.0,
+      "frame": "frame_0048.jpg",
+      "magenta": 0.0042,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2828,
+      "blue_starvation": 0.9981,
+      "host_br_ratio": 0.079,
+      "host_blue_mean": 3.52,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 48.0,
+      "frame": "frame_0049.jpg",
+      "magenta": 0.0041,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2838,
+      "blue_starvation": 0.9996,
+      "host_br_ratio": 0.065,
+      "host_blue_mean": 2.65,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 49.0,
+      "frame": "frame_0050.jpg",
+      "magenta": 0.0044,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2836,
+      "blue_starvation": 1.0,
+      "host_br_ratio": 0.065,
+      "host_blue_mean": 2.63,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 50.0,
+      "frame": "frame_0051.jpg",
+      "magenta": 0.0041,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2847,
+      "blue_starvation": 0.9996,
+      "host_br_ratio": 0.071,
+      "host_blue_mean": 2.95,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 51.0,
+      "frame": "frame_0052.jpg",
+      "magenta": 0.0044,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2847,
+      "blue_starvation": 1.0,
+      "host_br_ratio": 0.0589,
+      "host_blue_mean": 2.29,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 52.0,
+      "frame": "frame_0053.jpg",
+      "magenta": 0.004,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2863,
+      "blue_starvation": 0.9996,
+      "host_br_ratio": 0.0585,
+      "host_blue_mean": 2.26,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 53.0,
+      "frame": "frame_0054.jpg",
+      "magenta": 0.0037,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2892,
+      "blue_starvation": 1.0,
+      "host_br_ratio": 0.0611,
+      "host_blue_mean": 2.42,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 54.0,
+      "frame": "frame_0055.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2819,
+      "blue_starvation": 1.0,
+      "host_br_ratio": 0.0503,
+      "host_blue_mean": 2.23,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 55.0,
+      "frame": "frame_0056.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.285,
+      "blue_starvation": 0.9989,
+      "host_br_ratio": 0.0583,
+      "host_blue_mean": 2.6,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 56.0,
+      "frame": "frame_0057.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2866,
+      "blue_starvation": 0.9993,
+      "host_br_ratio": 0.0685,
+      "host_blue_mean": 3.16,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 57.0,
+      "frame": "frame_0058.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2885,
+      "blue_starvation": 0.9996,
+      "host_br_ratio": 0.0685,
+      "host_blue_mean": 3.16,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 58.0,
+      "frame": "frame_0059.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2899,
+      "blue_starvation": 0.9985,
+      "host_br_ratio": 0.0669,
+      "host_blue_mean": 3.12,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 59.0,
+      "frame": "frame_0060.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2932,
+      "blue_starvation": 0.9971,
+      "host_br_ratio": 0.0692,
+      "host_blue_mean": 3.35,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 60.0,
+      "frame": "frame_0061.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.2977,
+      "blue_starvation": 0.9972,
+      "host_br_ratio": 0.0818,
+      "host_blue_mean": 4.14,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 61.0,
+      "frame": "frame_0062.jpg",
+      "magenta": 0.0,
+      "yellow_green": 0.0,
+      "grey_balance": 0.3062,
+      "blue_starvation": 0.9982,
+      "host_br_ratio": 0.103,
+      "host_blue_mean": 7.0,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 62.0,
+      "frame": "frame_0063.jpg",
+      "magenta": 0.0782,
+      "yellow_green": 0.0,
+      "grey_balance": 0.0416,
+      "blue_starvation": 0.0091,
+      "host_br_ratio": 0.7087,
+      "host_blue_mean": 6.48,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 63.0,
+      "frame": "frame_0064.jpg",
+      "magenta": 0.0782,
+      "yellow_green": 0.0,
+      "grey_balance": 0.0416,
+      "blue_starvation": 0.0091,
+      "host_br_ratio": 0.7084,
+      "host_blue_mean": 6.48,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 64.0,
+      "frame": "frame_0065.jpg",
+      "magenta": 0.0782,
+      "yellow_green": 0.0,
+      "grey_balance": 0.0416,
+      "blue_starvation": 0.0091,
+      "host_br_ratio": 0.7084,
+      "host_blue_mean": 6.48,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 65.0,
+      "frame": "frame_0066.jpg",
+      "magenta": 0.0717,
+      "yellow_green": 0.0,
+      "grey_balance": 0.0417,
+      "blue_starvation": 0.0,
+      "host_br_ratio": 0.6968,
+      "host_blue_mean": 6.51,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 66.0,
+      "frame": "frame_0067.jpg",
+      "magenta": 0.0717,
+      "yellow_green": 0.0,
+      "grey_balance": 0.0417,
+      "blue_starvation": 0.0,
+      "host_br_ratio": 0.6968,
+      "host_blue_mean": 6.51,
+      "color_cast_pass": false
+    },
+    {
+      "t_s": 67.0,
+      "frame": "frame_0068.jpg",
+      "magenta": 0.0717,
+      "yellow_green": 0.0,
+      "grey_balance": 0.0417,
+      "blue_starvation": 0.0,
+      "host_br_ratio": 0.6968,
+      "host_blue_mean": 6.51,
+      "color_cast_pass": false
+    }
+  ]
+}

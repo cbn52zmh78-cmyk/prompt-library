@@ -73,6 +73,12 @@ LAMP_LOCK_PROMPT = (
     "Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only, "
     "no magenta purple ambient, no cool fill, no glasses purple reflection."
 )
+ARCHIVE_NEUTRAL_GENERATION_LOCK = (
+    "GENERATION LOCK Archive-neutral (#194): neutral balanced 5000K ambient key — even RGB, "
+    "blue channel preserved in skin and shadow mids (B≥40); brass desk lamp 3200K as motivated "
+    "practical ONLY as localized warm pool on desk surface and lamp shade, NOT full-frame amber "
+    "gel; no global yellow-green cast; no blue-starved shadows; natural skin tone at source."
+)
 GLASSES_LOCK_PROMPT = "Reading glasses pushed up into hair — same placement every frame."
 AUDIO_SILENCE_DB = -45.0
 LOUDNORM_I = -16.0
@@ -90,6 +96,14 @@ CLINICAL_NEUTRAL_CLAMP_VF = f"{NEUTRAL_WB_VF},{MAGENTA_CLAMP_VF},{SKIN_NEUTRAL_V
 WARM_GOLD_CLAMP_VF = ARCHIVE_NEUTRAL_CLAMP_VF
 MAGENTA_SCORE_MAX = 0.42
 YELLOW_GREEN_SCORE_MAX = 0.12
+import numpy as np  # noqa: E402
+
+from color_cast_qa import (  # noqa: E402
+    color_cast_breaches,
+    color_cast_passes,
+    measure_color_cast,
+)
+CLINICAL_CHANNEL_BALANCE_MAX = 0.12  # #199 — absolute host CCB; fails +66 legacy false-pass frames
 LABEL_CHIP_COLORS = {
     "RECONSTRUCTED PRONUNCIATION": (140, 88, 28, 245),
     "CLASSICAL LATIN": (40, 48, 62, 235),
@@ -931,6 +945,7 @@ class SeamlessOptions:
     reground_interval: int = REGROUND_EVERY_N
     magenta_clamp: bool = True
     neutral_grade: bool = False
+    neutral_generation: bool = False
 
 
 EXTEND_API_FINDING = {
@@ -960,6 +975,7 @@ def get_seamless_options(script: dict[str, Any], args: argparse.Namespace) -> Se
         reground_interval=int(seam.get("reground_interval", REGROUND_EVERY_N)),
         magenta_clamp=bool(seam.get("magenta_clamp", True)),
         neutral_grade=bool(seam.get("neutral_grade", False)),
+        neutral_generation=bool(seam.get("neutral_generation", False)),
     )
 
 
@@ -968,11 +984,14 @@ def apply_seamless_prompt(shot: dict[str, Any], refs: dict[str, Any], opts: Seam
     base = shot.get("video_prompt", "")
     locks: list[str] = []
     archive = "archive" in str(refs.get("set_file") or "").lower()
-    kelvin_lock = _kelvin_lock_for_prompt(base, refs)
-    if kelvin_lock:
-        locks.append(kelvin_lock)
-    elif opts.lamp_lock and archive and "3200K" not in base:
-        locks.append(LAMP_LOCK_PROMPT)
+    if opts.neutral_generation and archive:
+        locks.append(ARCHIVE_NEUTRAL_GENERATION_LOCK)
+    else:
+        kelvin_lock = _kelvin_lock_for_prompt(base, refs)
+        if kelvin_lock:
+            locks.append(kelvin_lock)
+        elif opts.lamp_lock and archive and "3200K" not in base:
+            locks.append(LAMP_LOCK_PROMPT)
     if opts.glasses_lock and archive and "glasses" not in base.lower():
         locks.append(GLASSES_LOCK_PROMPT)
     baked = "CONTINUITY LOCK @" in base and "gesture peak" in base.lower()
@@ -1337,6 +1356,28 @@ def probe_magenta_score(video: Path, at_s: float | None = None) -> float:
     return magenta_n / total_n if total_n else 0.0
 
 
+def probe_clinical_channel_balance(video: Path, at_s: float | None = None) -> float:
+    """#199 absolute host RGB imbalance — catches blue-deficit casts yg gate misses."""
+    from PIL import Image
+
+    if str(Path(__file__).resolve().parent) not in sys.path:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import color_cast_qa as cc  # noqa: WPS433
+
+    ff = _ffmpeg_exe()
+    at_s = at_s if at_s is not None else max(0.0, probe_duration(video) * 0.5)
+    jpg = video.with_suffix(".ccb_probe.jpg")
+    subprocess.run(
+        [ff, "-y", "-ss", f"{at_s:.3f}", "-i", str(video), "-frames:v", "1", str(jpg)],
+        check=True,
+        capture_output=True,
+    )
+    img = Image.open(jpg).convert("RGB")
+    score = cc.clinical_channel_balance(np.asarray(img))
+    jpg.unlink(missing_ok=True)
+    return score
+
+
 def probe_yellow_green_score(video: Path, at_s: float | None = None) -> float:
     """Yellow-green cast in non-lamp host region — lower is better (#194)."""
     from PIL import Image
@@ -1363,6 +1404,24 @@ def probe_yellow_green_score(video: Path, at_s: float | None = None) -> float:
                 bias_n += 1
     jpg.unlink(missing_ok=True)
     return bias_n / total_n if total_n else 0.0
+
+
+def probe_color_cast_score(video: Path, at_s: float | None = None) -> dict[str, float]:
+    """Blue-starvation / warm-cast gate — catches casts yellow-green probe misses (#194 T4)."""
+    from PIL import Image
+
+    ff = _ffmpeg_exe()
+    at_s = at_s if at_s is not None else max(0.0, probe_duration(video) * 0.5)
+    jpg = video.with_suffix(".cast_probe.jpg")
+    subprocess.run(
+        [ff, "-y", "-ss", f"{at_s:.3f}", "-i", str(video), "-frames:v", "1", str(jpg)],
+        check=True,
+        capture_output=True,
+    )
+    with Image.open(jpg) as img:
+        metrics = measure_color_cast(np.asarray(img.convert("RGB")))
+    jpg.unlink(missing_ok=True)
+    return metrics
 
 
 def apply_neutral_white_balance_grade(
@@ -2627,7 +2686,7 @@ def qa_check(
                         bad = [(segs[i].stem, mag_scores[i]) for i in range(len(segs)) if mag_scores[i] > MAGENTA_SCORE_MAX]
                         issues.append(f"magenta detected: {bad}")
                 elif _is_clinical_neutral_set(script, refs):
-                    passes.append("clinical/neutral set — magenta probe skipped (grey balance gate)")
+                    passes.append("clinical/neutral set — magenta probe skipped (CCB gate #199)")
                 else:
                     passes.append("neutral set — magenta probe skipped")
                 sync_bad = []
@@ -2641,9 +2700,19 @@ def qa_check(
                     issues.append(f"A/V sync drift: {sync_bad}")
                 else:
                     passes.append("tight A/V sync per shot (duration pinned)")
-                if _is_archive_production(script, refs) or (
-                    _is_clinical_neutral_set(script, refs) and seamless_opts.neutral_grade
-                ):
+                if _is_clinical_neutral_set(script, refs) and seamless_opts.neutral_grade:
+                    ccb_scores = [probe_clinical_channel_balance(p) for p in segs]
+                    if max(ccb_scores) <= CLINICAL_CHANNEL_BALANCE_MAX:
+                        passes.append(
+                            f"clinical channel balance OK "
+                            f"(max CCB {max(ccb_scores):.3f} <= {CLINICAL_CHANNEL_BALANCE_MAX})"
+                        )
+                    else:
+                        issues.append(
+                            f"clinical channel imbalance (#199): "
+                            f"{[(segs[i].stem, round(ccb_scores[i], 4)) for i in range(len(segs)) if ccb_scores[i] > CLINICAL_CHANNEL_BALANCE_MAX]}"
+                        )
+                elif _is_archive_production(script, refs):
                     yg_scores = [probe_yellow_green_score(p) for p in segs]
                     if max(yg_scores) <= YELLOW_GREEN_SCORE_MAX:
                         passes.append(
@@ -2654,6 +2723,30 @@ def qa_check(
                         issues.append(
                             f"yellow-green cast detected: "
                             f"{[(segs[i].stem, yg_scores[i]) for i in range(len(segs)) if yg_scores[i] > YELLOW_GREEN_SCORE_MAX]}"
+                        )
+                    cast_scores = [probe_color_cast_score(p) for p in segs]
+                    cast_bad = [
+                        (segs[i].stem, cast_scores[i])
+                        for i in range(len(segs))
+                        if not color_cast_passes(cast_scores[i])
+                    ]
+                    if not cast_bad:
+                        worst = max(cast_scores, key=lambda m: m["blue_starvation_fraction"])
+                        passes.append(
+                            "generation color-cast clean — "
+                            f"B/R={worst['host_br_ratio']:.3f} "
+                            f"starve={worst['blue_starvation_fraction']:.3f} "
+                            f"Bμ={worst['host_blue_mean']:.1f}"
+                        )
+                    else:
+                        issues.append(
+                            "blue-starved generation cast (#194 T4): "
+                            + str(
+                                [
+                                    (stem, color_cast_breaches(m))
+                                    for stem, m in cast_bad
+                                ]
+                            )
                         )
                     chip_shots = [s for s in shots if _shot_needs_label_chip_burn(s)]
                     if chip_shots and segs:

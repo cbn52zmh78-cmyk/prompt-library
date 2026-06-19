@@ -79,7 +79,8 @@
       "loudnorm": true,
       "pin_audio_sync": true,
       "reground_interval": 2,
-      "magenta_clamp": true
+      "magenta_clamp": true,
+      "neutral_generation": true
     },
     "music_bed": {
       "track_id": "BED-DOC-001",

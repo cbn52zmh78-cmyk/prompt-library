@@ -51,6 +51,15 @@ def test_concat_only_seamless_grade_rejected():
         )
 
 
+def test_neutral_generation_lock_injected_for_archive():
+    opts = rl.SeamlessOptions(neutral_generation=True, lamp_lock=True)
+    refs = {"set_file": "archive_set_reference.jpg", "voice_suffix": "calm documentary voice"}
+    shot = {"video_prompt": "Host at desk.", "speech_text": "Hello."}
+    out = rl.apply_seamless_prompt(shot, refs, opts)
+    assert rl.ARCHIVE_NEUTRAL_GENERATION_LOCK.split(".")[0] in out
+    assert "5000K" in out
+
+
 def test_concat_only_plain_concat_allowed():
     opts = rl.SeamlessOptions(enabled=False, magenta_clamp=False, neutral_grade=False)
     rl.reject_concat_only_seamless_grade(

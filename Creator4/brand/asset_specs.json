@@ -1,0 +1,80 @@
+{
+  "task": "Creator #4",
+  "version": "1.0",
+  "locked_at": "2026-06-19",
+  "name_status": "DRAFT — ClearDesk recommended; see NAME_OPTIONS.md",
+  "render_status": "DOC_ONLY — no raster exports in scope",
+  "parent": {
+    "name": "Upon Tyne Productions",
+    "colors": {
+      "ut-black": "#0D0D0D",
+      "ut-warm-white": "#F5F0E8",
+      "ut-gold": "#C9A84C"
+    }
+  },
+  "channel": {
+    "name": "ClearDesk",
+    "name_alternates": ["Ledger Line", "Process Brief"],
+    "legal_name": "Upon Tyne Operations",
+    "slug": "cleardesk-ops",
+    "subtitle": "Compliance, explained clearly.",
+    "cta": "Follow ClearDesk — one process at a time.",
+    "legal_line": "Educational content only — not legal, tax, or professional advice.",
+    "signature_beat": "What does this requirement mean — and what would good records look like?",
+    "host_lock": "STUDIO/Cast/Casting_Bible/lock_cards/Serena-001.md",
+    "host_reference_plate": "STUDIO/Cast/actors_roster/female/north_america/Serena_Blake/01_casting_shots/casting_turnaround_v1.jpg",
+    "set_lock": "@Set-Studio-Interior-001",
+    "style_lock": "@Style-Professional-Clean-001",
+    "format_lock": "explainer-ad",
+    "colors": {
+      "cd-bg": "#F7F5F2",
+      "cd-surface": "#FFFFFF",
+      "cd-title": "#1E3A5F",
+      "cd-accent": "#2A7B7B",
+      "cd-accent-soft": "#5A9E9E",
+      "cd-body": "#4A5568",
+      "cd-cta": "#1E6B6B",
+      "cd-border": "#D8DEE6",
+      "cd-disclaimer": "#6B7280",
+      "label-public-source": "#2E6B5A",
+      "label-process": "#2A7B7B",
+      "label-illustrative": "#8A6B2A",
+      "label-not-jurisdiction": "#5A6470",
+      "label-not-legal-advice": "#8B3A3A"
+    },
+    "typography": {
+      "wordmark": "IBM Plex Sans 600",
+      "body": "Inter 400",
+      "citation": "IBM Plex Mono 400"
+    }
+  },
+  "format": {
+    "format_id": "explainer-ad",
+    "target_seconds": { "min": 30, "default": 45, "max": 54 },
+    "intake_block": "compliance_subject",
+    "shot_ids": ["01_hook", "02_pain", "03_solution", "04_benefit_a", "05_benefit_b", "06_cta"]
+  },
+  "assets": [
+    {
+      "id": "youtube_banner",
+      "canvas_px": [2560, 1440],
+      "export": "Creator4/brand/export/youtube_banner_2560x1440.jpg",
+      "status": "deferred"
+    },
+    {
+      "id": "channel_avatar",
+      "canvas_px": [800, 800],
+      "export": "Creator4/brand/export/channel_avatar_800.png",
+      "status": "deferred"
+    },
+    {
+      "id": "channel_wordmark",
+      "text": "ClearDesk",
+      "exports": [
+        "Creator4/brand/export/cleardesk_wordmark.svg",
+        "Creator4/brand/export/cleardesk_wordmark_1x.png"
+      ],
+      "status": "deferred"
+    }
+  ]
+}

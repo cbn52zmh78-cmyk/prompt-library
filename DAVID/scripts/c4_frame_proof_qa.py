@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-C4 Frame-Proof QA verifier (#195).
+C4 Frame-Proof QA verifier (#195 + #194 T4 color-cast gate).
 
 Why this exists
 ---------------
@@ -19,10 +19,13 @@ This verifier does NOT trust the JSON. It:
 
 A C4 colour verdict is issued ONLY from this frame measurement, never from the JSON alone.
 
-Thresholds mirror render_longform.py:
-    magenta fraction      <= 0.42
-    yellow-green fraction <= 0.12
-    grey-balance drift (range across timeline) <= 0.12
+Thresholds mirror render_longform.py / color_cast_qa.py:
+    magenta fraction           <= 0.42
+    yellow-green fraction      <= 0.12
+    grey-balance drift (range) <= 0.12
+    blue-starvation fraction   <= 0.50  (#194 T4 — catches B≈8 warm casts)
+    host B/R ratio             >= 0.22
+    host B mean                >= 25
 
 Tooling: ffmpeg via `imageio_ffmpeg` (no PATH ffmpeg / ffprobe needed); Pillow + numpy.
 
@@ -41,6 +44,15 @@ from pathlib import Path
 
 import numpy as np
 from PIL import Image
+
+from color_cast_qa import (
+    BLUE_STARVATION_FRACTION_MAX,
+    HOST_BLUE_MEAN_MIN,
+    HOST_BR_RATIO_MIN,
+    color_cast_breaches,
+    color_cast_passes,
+    measure_color_cast,
+)
 
 MAGENTA_SCORE_MAX = 0.42
 YELLOW_GREEN_SCORE_MAX = 0.12
@@ -113,12 +125,19 @@ def verify(master: Path, fps: float) -> dict:
     rows = []
     for i, fp in enumerate(frames):
         arr = np.asarray(Image.open(fp).convert("RGB"))
+        cast = measure_color_cast(arr)
         rows.append({
             "t_s": round(i / fps, 2),
             "frame": fp.name,
             "magenta": round(magenta_fraction(arr), 4),
             "yellow_green": round(yellow_green_fraction(arr), 4),
             "grey_balance": round(grey_balance(arr), 4),
+            "blue_starvation": round(cast["blue_starvation_fraction"], 4),
+            "host_br_ratio": round(cast["host_br_ratio"], 4),
+            "host_blue_mean": round(cast["host_blue_mean"], 2),
+            "clinical_channel_balance": round(cast["clinical_channel_balance"], 4),
+            "color_cast_pass": color_cast_passes(cast),
+            "_cast_metrics": cast,
         })
 
     mags = [r["magenta"] for r in rows]
@@ -128,8 +147,14 @@ def verify(master: Path, fps: float) -> dict:
 
     mag_bad = [r for r in rows if r["magenta"] > MAGENTA_SCORE_MAX]
     yg_bad = [r for r in rows if r["yellow_green"] > YELLOW_GREEN_SCORE_MAX]
+    cast_bad = [r for r in rows if not r["color_cast_pass"]]
 
-    color_pass = not mag_bad and not yg_bad and grey_drift <= GREY_BALANCE_DRIFT_MAX
+    color_pass = (
+        not mag_bad
+        and not yg_bad
+        and not cast_bad
+        and grey_drift <= GREY_BALANCE_DRIFT_MAX
+    )
 
     # ── coherence vs self-reported JSON ──────────────────────────────────────
     qa_path = prod_dir / "qa_report.json"
@@ -145,6 +170,10 @@ def verify(master: Path, fps: float) -> dict:
         else:
             coherence = "JSON_STRICTER"            # JSON fails but frames clean (rare)
 
+    starves = [r["blue_starvation"] for r in rows]
+    brs = [r["host_br_ratio"] for r in rows]
+    bmeans = [r["host_blue_mean"] for r in rows]
+
     return {
         "master": str(master),
         "frames_checked": len(rows),
@@ -154,21 +183,32 @@ def verify(master: Path, fps: float) -> dict:
             "magenta_max": MAGENTA_SCORE_MAX,
             "yellow_green_max": YELLOW_GREEN_SCORE_MAX,
             "grey_balance_drift_max": GREY_BALANCE_DRIFT_MAX,
+            "blue_starvation_max": BLUE_STARVATION_FRACTION_MAX,
+            "host_br_ratio_min": HOST_BR_RATIO_MIN,
+            "host_blue_mean_min": HOST_BLUE_MEAN_MIN,
         },
         "measured": {
             "magenta_max": max(mags), "magenta_mean": round(float(np.mean(mags)), 4),
             "yellow_green_max": max(ygs), "yellow_green_mean": round(float(np.mean(ygs)), 4),
             "grey_balance_drift": round(grey_drift, 4),
+            "blue_starvation_max": max(starves),
+            "host_br_ratio_min": min(brs),
+            "host_blue_mean_min": min(bmeans),
+            "color_cast_fail_frames": len(cast_bad),
         },
         "breaches": {
             "magenta": [(r["t_s"], r["magenta"]) for r in mag_bad],
             "yellow_green": [(r["t_s"], r["yellow_green"]) for r in yg_bad],
+            "color_cast": [
+                (r["t_s"], color_cast_breaches(r["_cast_metrics"]))
+                for r in cast_bad
+            ],
             "grey_drift_over": round(grey_drift, 4) if grey_drift > GREY_BALANCE_DRIFT_MAX else None,
         },
         "json_self_report_pass": json_pass,
         "coherence": coherence,
         "frame_verdict": "FRAME-PASS" if color_pass else "FRAME-FAIL",
-        "per_frame": rows,
+        "per_frame": [{k: v for k, v in r.items() if k != "_cast_metrics"} for r in rows],
     }
 
 
@@ -201,12 +241,22 @@ def main() -> int:
     else:
         m = result.get("measured", {})
         print(f"\n[{result['frame_verdict']}] {master.name}  ({result['frames_checked']} frames @ {args.fps}fps)")
-        print(f"  magenta      max {m.get('magenta_max')}  (<= {MAGENTA_SCORE_MAX})")
-        print(f"  yellow-green max {m.get('yellow_green_max')}  (<= {YELLOW_GREEN_SCORE_MAX})")
-        print(f"  grey drift       {m.get('grey_balance_drift')}  (<= {GREY_BALANCE_DRIFT_MAX})")
+        print(f"  magenta           max {m.get('magenta_max')}  (<= {MAGENTA_SCORE_MAX})")
+        print(f"  yellow-green      max {m.get('yellow_green_max')}  (<= {YELLOW_GREEN_SCORE_MAX})  [legacy — misses B-starved warm cast]")
+        print(f"  blue-starvation   max {m.get('blue_starvation_max')}  (<= {BLUE_STARVATION_FRACTION_MAX})")
+        print(f"  host B/R          min {m.get('host_br_ratio_min')}  (>= {HOST_BR_RATIO_MIN})")
+        print(f"  host B mean       min {m.get('host_blue_mean_min')}  (>= {HOST_BLUE_MEAN_MIN})")
+        print(f"  color_cast fails  {m.get('color_cast_fail_frames')} frames")
+        print(f"  grey drift            {m.get('grey_balance_drift')}  (<= {GREY_BALANCE_DRIFT_MAX})")
         print(f"  json self-report pass={result.get('json_self_report_pass')}  ->  coherence: {result['coherence']}")
         for axis, items in result.get("breaches", {}).items():
-            if items:
+            if not items:
+                continue
+            if isinstance(items, list):
+                preview = items[:5]
+                suffix = "..." if len(items) > 5 else ""
+                print(f"  BREACH {axis}: {preview}{suffix}")
+            else:
                 print(f"  BREACH {axis}: {items}")
         print(f"  frame proof: {result['frame_proof_dir']}")
         print(f"  report: {out}")
