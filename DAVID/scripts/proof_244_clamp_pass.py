@@ -2,7 +2,10 @@
 """T4 #244 — single-pass saturation clamp proof on real per-shot _processed pass (480p).
 
 Runs process_shot_segment (not reassembly) on raw chain segments, reports before/after
-magenta + host_blue_mean per shot. HOLD — no commit; proof_218 stays HELD.
+magenta + host_blue_mean per shot. #244-B adds clamp-burden guard: flags when raw−graded
+magenta exceeds threshold → GENERATION DEFECT even if final metric passes.
+
+HOLD — no commit; proof_218 stays HELD.
 """
 from __future__ import annotations
 
@@ -24,6 +27,9 @@ DEFAULT_SCRIPT = SCRIPTS / "longform_scripts" / "david_latin_corpus_v1_script.js
 DEFAULT_PROD = ROOT / "productions" / "david_latin_corpus_v1_longform_v1"
 DEFAULT_SHOTS = ("01_cold_open", "05_method")
 MAGENTA_MAX = rl.MAGENTA_SCORE_MAX
+# #244-B — single-pass clamp burden ceiling (raw_magenta − graded_magenta)
+CLAMP_BURDEN_MAX = 0.20
+GENERATION_DEFECT_LABEL = "GENERATION DEFECT — clamp masking"
 
 
 def scale_to_480p(src: Path, dst: Path) -> Path:
@@ -57,6 +63,31 @@ def verdict_state(after_mag: float, before_mag: float) -> str:
     return "YELLOW"
 
 
+def clamp_burden_guard(raw_magenta: float, graded_magenta: float) -> dict:
+    """#244-B — detect clamp masking a generation defect (calibrated vs T1 single-pass)."""
+    burden = round(raw_magenta - graded_magenta, 4)
+    masked = burden > CLAMP_BURDEN_MAX
+    return {
+        "clamp_burden": burden,
+        "clamp_burden_max": CLAMP_BURDEN_MAX,
+        "generation_defect": masked,
+        "generation_defect_label": GENERATION_DEFECT_LABEL if masked else None,
+        "generation_defect_reason": (
+            f"raw−graded magenta {burden:.4f} > {CLAMP_BURDEN_MAX} — clamp masking bad generation"
+            if masked
+            else None
+        ),
+    }
+
+
+def overall_state(rows: list[dict]) -> str:
+    if any(r.get("generation_defect") for r in rows):
+        return "RED"
+    if any(r["metric_verdict"] == "RED" for r in rows):
+        return "RED"
+    return "AMBER"
+
+
 def run_proof(
     *,
     script_path: Path,
@@ -64,6 +95,7 @@ def run_proof(
     shot_ids: tuple[str, ...],
     resolution_label: str = "480p",
     force: bool = False,
+    metrics_only: bool = False,
 ) -> dict:
     script = json.loads(script_path.read_text(encoding="utf-8"))
     refs = rl.resolve_refs(script)
@@ -108,7 +140,7 @@ def run_proof(
         before = shot_metrics(scaled)
         processed = work_dir / f"chain_{sid}_{resolution_label}_processed.mp4"
         marker = processed.with_suffix(processed.suffix + ".clamp244.json")
-        if force:
+        if force and not metrics_only:
             for stale in (
                 processed,
                 marker,
@@ -120,10 +152,17 @@ def run_proof(
             ):
                 stale.unlink(missing_ok=True)
 
-        rl.process_shot_segment(
-            scaled, processed, shot, refs, opts, work_dir, color_ref,
-        )
+        if metrics_only:
+            if not processed.is_file():
+                raise FileNotFoundError(
+                    f"--metrics-only: missing processed output {processed} (run without --metrics-only first)"
+                )
+        else:
+            rl.process_shot_segment(
+                scaled, processed, shot, refs, opts, work_dir, color_ref,
+            )
         after = shot_metrics(processed)
+        guard = clamp_burden_guard(before["magenta"], after["magenta"])
         clamp_marker = None
         for candidate in (
             marker,
@@ -147,20 +186,27 @@ def run_proof(
                 "magenta": round(after["magenta"] - before["magenta"], 4),
                 "host_blue_mean": round(after["host_blue_mean"] - before["host_blue_mean"], 1),
             },
-            "verdict": verdict_state(after["magenta"], before["magenta"]),
+            "metric_verdict": verdict_state(after["magenta"], before["magenta"]),
             "clamp_marker": clamp_marker,
+            **guard,
         })
 
-    overall = "RED" if any(r["verdict"] == "RED" for r in rows) else "AMBER"
+    gen_defects = [r for r in rows if r.get("generation_defect")]
     report = {
-        "issue": 244,
-        "state": overall,
-        "target": "AMBER on validated single-pass; GREEN after dual-verify + #218",
+        "issue": "244-B",
+        "state": overall_state(rows),
+        "target": "GREEN only when raw generation clean + dual-verify + #218",
         "proof_218": "HELD",
         "commit": "HOLD — NEXUS + human-eye sign-off required",
         "clamp_method": "saturation-reduction",
         "clamp_baseline": {"gamma_b": 0.90, "saturation": 0.93},
         "clamp_ceiling": "Safety net — cannot pass raw-magenta 0.634 alone",
+        "clamp_burden_guard": {
+            "threshold": CLAMP_BURDEN_MAX,
+            "label": GENERATION_DEFECT_LABEL,
+            "calibrated_for": "T1 single-pass",
+            "defect_count": len(gen_defects),
+        },
         "magenta_max": MAGENTA_MAX,
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "script": str(script_path.relative_to(ROOT)),
@@ -178,6 +224,11 @@ def main() -> int:
     parser.add_argument("--production", type=Path, default=DEFAULT_PROD)
     parser.add_argument("--shots", nargs="+", default=list(DEFAULT_SHOTS))
     parser.add_argument("--force", action="store_true", help="Re-run process_shot_segment from scratch")
+    parser.add_argument(
+        "--metrics-only",
+        action="store_true",
+        help="Re-score existing proof outputs only (no render / no process_shot_segment)",
+    )
     args = parser.parse_args()
 
     report = run_proof(
@@ -185,15 +236,23 @@ def main() -> int:
         prod_dir=args.production,
         shot_ids=tuple(args.shots),
         force=args.force,
+        metrics_only=args.metrics_only,
     )
-    print(f"T4 #244 clamp proof — state={report['state']}  commit={report['commit']}")
+    guard = report["clamp_burden_guard"]
+    print(
+        f"T4 #244-B clamp proof — state={report['state']}  "
+        f"gen_defects={guard['defect_count']}/{len(report['shots'])}  "
+        f"commit={report['commit']}"
+    )
     print(f"Report: {args.production / 'proof_244' / 'proof_244_clamp_report.json'}")
     for row in report["shots"]:
         b, a = row["before"], row["after"]
+        defect = f"  ⚠ {row['generation_defect_label']}" if row.get("generation_defect") else ""
         print(
             f"  {row['shot_id']}: magenta {b['magenta']:.4f} → {a['magenta']:.4f}  "
+            f"(burden {row['clamp_burden']:.4f})  "
             f"Bμ {b['host_blue_mean']:.1f} → {a['host_blue_mean']:.1f}  "
-            f"verdict={row['verdict']}"
+            f"metric={row['metric_verdict']}{defect}"
         )
     return 0 if report["state"] != "RED" else 1
 
