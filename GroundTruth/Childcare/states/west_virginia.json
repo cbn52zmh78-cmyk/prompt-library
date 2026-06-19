@@ -1,0 +1,109 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "West Virginia",
+  "state_code": "WV",
+  "state_slug": "west_virginia",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:13:38.996591+00:00",
+  "status": "PARKED",
+  "primary_source": "West Virginia CSR Child Care",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "group_size": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "ratios",
+      "status": "PARKED",
+      "source_checked": "West Virginia CSR Child Care"
+    },
+    {
+      "domain": "group_size",
+      "status": "PARKED"
+    },
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": [
+    {
+      "source_id": "west_virginia_west_virginia_csr_child_care",
+      "state": "West Virginia",
+      "source": "West Virginia CSR Child Care",
+      "url": "https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=15418&Format=PDF",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 78979,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    },
+    {
+      "source_id": "west_virginia_west_virginia_child_care_regulations_fallback_",
+      "state": "West Virginia",
+      "source": "West Virginia Child Care Regulations (fallback)",
+      "url": "https://dhhr.wv.gov/bcf/childcare/Pages/default.aspx",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 9751,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    },
+    {
+      "source_id": "west_virginia_childcare_gov_west_virginia",
+      "state": "West Virginia",
+      "source": "Childcare.gov — West Virginia",
+      "url": "https://www.childcare.gov/state-resources/west-virginia/understanding-and-finding-child-care-resources",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 66449,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    }
+  ]
+}

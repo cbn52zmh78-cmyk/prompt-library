@@ -1,0 +1,109 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "Texas",
+  "state_code": "TX",
+  "state_slug": "texas",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:13:34.177948+00:00",
+  "status": "PARKED",
+  "primary_source": "Texas 26 TAC §746.1301",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "group_size": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "ratios",
+      "status": "PARKED",
+      "source_checked": "Texas 26 TAC §746.1301"
+    },
+    {
+      "domain": "group_size",
+      "status": "PARKED"
+    },
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": [
+    {
+      "source_id": "texas_texas_26_tac_746_1301",
+      "state": "Texas",
+      "source": "Texas 26 TAC §746.1301",
+      "url": "https://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=3&ti=26&pt=1&ch=746&sch=H&sec=746.1301&rl=Y",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 2517,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "tertiary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    },
+    {
+      "source_id": "texas_texas_child_care_regulations_fallback_",
+      "state": "Texas",
+      "source": "Texas Child Care Regulations (fallback)",
+      "url": "https://www.hhs.texas.gov/providers/child-care-regulation",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 81392,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    },
+    {
+      "source_id": "texas_childcare_gov_texas",
+      "state": "Texas",
+      "source": "Childcare.gov — Texas",
+      "url": "https://www.childcare.gov/state-resources/texas/understanding-and-finding-child-care-resources",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 68506,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "Wisconsin",
+  "state_code": "WI",
+  "state_slug": "wisconsin",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:13:39.714135+00:00",
+  "status": "PARTIAL",
+  "primary_source": "Wisconsin DCF-P-2436 Licensed Center Ratios",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "HARVESTED",
+      "fact_count": 6,
+      "facts": [
+        {
+          "fact_id": "wisconsin-childcare-ratios-1",
+          "category": "ratios",
+          "text": "Wisconsin licensed child care center (DCF 251) staff:child ratio for birth to 18 months: 1:4; maximum group size 8.",
+          "citation": {
+            "source": "Wisconsin DCF-P-2436 Licensed Center Ratios",
+            "url": "https://dcf.wisconsin.gov/files/publications/pdf/2436.pdf",
+            "agency": "Wisconsin DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "wisconsin-childcare-ratios-2",
+          "category": "ratios",
+          "text": "Wisconsin licensed child care center (DCF 251) staff:child ratio for 18 months to 2½ years: 1:7; maximum group size 14.",
+          "citation": {
+            "source": "Wisconsin DCF-P-2436 Licensed Center Ratios",
+            "url": "https://dcf.wisconsin.gov/files/publications/pdf/2436.pdf",
+            "agency": "Wisconsin DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "wisconsin-childcare-ratios-3",
+          "category": "ratios",
+          "text": "Wisconsin licensed child care center (DCF 251) staff:child ratio for 2½ to 3 years: 1:8; maximum group size 16.",
+          "citation": {
+            "source": "Wisconsin DCF-P-2436 Licensed Center Ratios",
+            "url": "https://dcf.wisconsin.gov/files/publications/pdf/2436.pdf",
+            "agency": "Wisconsin DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "wisconsin-childcare-ratios-4",
+          "category": "ratios",
+          "text": "Wisconsin licensed child care center (DCF 251) staff:child ratio for 3 years: 1:10; maximum group size 20.",
+          "citation": {
+            "source": "Wisconsin DCF-P-2436 Licensed Center Ratios",
+            "url": "https://dcf.wisconsin.gov/files/publications/pdf/2436.pdf",
+            "agency": "Wisconsin DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "wisconsin-childcare-ratios-5",
+          "category": "ratios",
+          "text": "Wisconsin licensed child care center (DCF 251) staff:child ratio for 4 years: 1:13; maximum group size 26.",
+          "citation": {
+            "source": "Wisconsin DCF-P-2436 Licensed Center Ratios",
+            "url": "https://dcf.wisconsin.gov/files/publications/pdf/2436.pdf",
+            "agency": "Wisconsin DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "wisconsin-childcare-ratios-6",
+          "category": "ratios",
+          "text": "Wisconsin licensed child care center (DCF 251) staff:child ratio for 5 years and over: 1:18; maximum group size 36.",
+          "citation": {
+            "source": "Wisconsin DCF-P-2436 Licensed Center Ratios",
+            "url": "https://dcf.wisconsin.gov/files/publications/pdf/2436.pdf",
+            "agency": "Wisconsin DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        }
+      ]
+    },
+    "group_size": {
+      "status": "HARVESTED",
+      "fact_count": 6,
+      "facts": [
+        {
+          "fact_id": "wisconsin-childcare-group-size-1",
+          "category": "group_size",
+          "text": "Wisconsin child care center maximum group size for birth to 18 months: 8 children.",
+          "citation": {
+            "source": "Wisconsin DCF-P-2436 Licensed Center Ratios",
+            "url": "https://dcf.wisconsin.gov/files/publications/pdf/2436.pdf",
+            "agency": "Wisconsin DCF",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "wisconsin-childcare-group-size-2",
+          "category": "group_size",
+          "text": "Wisconsin child care center maximum group size for 18 months to 2½ years: 14 children.",
+          "citation": {
+            "source": "Wisconsin DCF-P-2436 Licensed Center Ratios",
+            "url": "https://dcf.wisconsin.gov/files/publications/pdf/2436.pdf",
+            "agency": "Wisconsin DCF",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "wisconsin-childcare-group-size-3",
+          "category": "group_size",
+          "text": "Wisconsin child care center maximum group size for 2½ to 3 years: 16 children.",
+          "citation": {
+            "source": "Wisconsin DCF-P-2436 Licensed Center Ratios",
+            "url": "https://dcf.wisconsin.gov/files/publications/pdf/2436.pdf",
+            "agency": "Wisconsin DCF",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "wisconsin-childcare-group-size-4",
+          "category": "group_size",
+          "text": "Wisconsin child care center maximum group size for 3 years: 20 children.",
+          "citation": {
+            "source": "Wisconsin DCF-P-2436 Licensed Center Ratios",
+            "url": "https://dcf.wisconsin.gov/files/publications/pdf/2436.pdf",
+            "agency": "Wisconsin DCF",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "wisconsin-childcare-group-size-5",
+          "category": "group_size",
+          "text": "Wisconsin child care center maximum group size for 4 years: 26 children.",
+          "citation": {
+            "source": "Wisconsin DCF-P-2436 Licensed Center Ratios",
+            "url": "https://dcf.wisconsin.gov/files/publications/pdf/2436.pdf",
+            "agency": "Wisconsin DCF",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "wisconsin-childcare-group-size-6",
+          "category": "group_size",
+          "text": "Wisconsin child care center maximum group size for 5 years and over: 36 children.",
+          "citation": {
+            "source": "Wisconsin DCF-P-2436 Licensed Center Ratios",
+            "url": "https://dcf.wisconsin.gov/files/publications/pdf/2436.pdf",
+            "agency": "Wisconsin DCF",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        }
+      ]
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": []
+}

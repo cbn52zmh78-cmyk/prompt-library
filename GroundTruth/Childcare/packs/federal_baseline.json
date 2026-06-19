@@ -1,0 +1,26 @@
+{
+  "artifact": "groundtruth_childcare_federal_baseline",
+  "version": "1.0",
+  "issue": 279,
+  "retrieved_date": "2026-06-19",
+  "facts": [
+    {
+      "fact_id": "federal-ccdf-background-checks",
+      "category": "background_checks",
+      "text": "Federal CCDF law requires states to establish comprehensive background-check systems covering state criminal registry, state sex-offender registry, state child-abuse registry, and FBI fingerprint checks for child care staff (CCDF statutory background-check requirements).",
+      "citation": {
+        "source": "ACF — CCDF Background Check Requirements",
+        "url": "https://www.acf.hhs.gov/cb/resource/implementing-child-care-development-fund-ccdf-background-check-requirements",
+        "agency": "ACF / OCC",
+        "category": "background_checks",
+        "tier": "primary",
+        "retrieved_date": "2026-06-19"
+      },
+      "grade": {
+        "status": "FOUND",
+        "tier": "primary",
+        "category": "background_checks"
+      }
+    }
+  ]
+}

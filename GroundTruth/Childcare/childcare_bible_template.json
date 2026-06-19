@@ -1,0 +1,29 @@
+{
+  "artifact": "groundtruth_childcare_bible_template",
+  "version": "1.0",
+  "lane": "Childcare",
+  "category": "childcare_licensing",
+  "tier": "B",
+  "issue": 279,
+  "citation_standard": "STD-CITE-001",
+  "pinned_output_dir": "GroundTruth/Childcare",
+  "generated_at": "2026-06-19T16:13:41.829408+00:00",
+  "as_of_date": "2026-06-19",
+  "disclaimer": "Child care staff-to-child ratios, group-size caps, staff qualifications, and background-check requirements compiled from cited state regulatory sources — informational only; not legal advice.",
+  "policy": "Public .gov and LII mirror sources only; HTTP 403/404/502 PARKED without bypass; gaps shown as PARKED — never silently omitted; STD-CITE-001 citation + source grade on every fact.",
+  "domains": [
+    "ratios",
+    "group_size",
+    "staff_qualifications",
+    "background_checks"
+  ],
+  "source_layers": {
+    "state_admin_code": "Primary ratio and licensing rule text",
+    "state_agency_portal": "Secondary regulator hub and manuals",
+    "lii_mirror": "Secondary when state CMS blocks fetch",
+    "childcare_gov": "Tertiary routing hub per state",
+    "federal_ccdf": "Federal CCDF background-check baseline (see packs/federal_baseline.json)"
+  },
+  "harvester": "Stonebridge/Operations/Scripts/harvest_groundtruth_279_r3_childcare_ratios.py",
+  "state_pack_pattern": "GroundTruth/Childcare/states/{state_slug}.json"
+}

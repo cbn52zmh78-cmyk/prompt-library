@@ -1,0 +1,161 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "Virginia",
+  "state_code": "VA",
+  "state_slug": "virginia",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:13:37.365240+00:00",
+  "status": "PARTIAL",
+  "primary_source": "Virginia 8VAC20-780-350 Staff-to-children ratio and group size",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "HARVESTED",
+      "fact_count": 6,
+      "facts": [
+        {
+          "fact_id": "virginia-childcare-ratios-1",
+          "category": "ratios",
+          "text": "Virginia licensed child care center staff:child ratio for Birth up to 16 months: 1:4.",
+          "citation": {
+            "source": "Virginia 8VAC20-780-350 Staff-to-children ratio and group size",
+            "url": "https://www.law.cornell.edu/regulations/virginia/8VAC20-780-350",
+            "agency": "Virginia DSS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "virginia-childcare-ratios-2",
+          "category": "ratios",
+          "text": "Virginia licensed child care center staff:child ratio for 16 months up to 24 months: 1:5.",
+          "citation": {
+            "source": "Virginia 8VAC20-780-350 Staff-to-children ratio and group size",
+            "url": "https://www.law.cornell.edu/regulations/virginia/8VAC20-780-350",
+            "agency": "Virginia DSS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "virginia-childcare-ratios-3",
+          "category": "ratios",
+          "text": "Virginia licensed child care center staff:child ratio for 2 year olds: 1:8.",
+          "citation": {
+            "source": "Virginia 8VAC20-780-350 Staff-to-children ratio and group size",
+            "url": "https://www.law.cornell.edu/regulations/virginia/8VAC20-780-350",
+            "agency": "Virginia DSS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "virginia-childcare-ratios-4",
+          "category": "ratios",
+          "text": "Virginia licensed child care center staff:child ratio for 3 year olds up to school age eligible: 1:10.",
+          "citation": {
+            "source": "Virginia 8VAC20-780-350 Staff-to-children ratio and group size",
+            "url": "https://www.law.cornell.edu/regulations/virginia/8VAC20-780-350",
+            "agency": "Virginia DSS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "virginia-childcare-ratios-5",
+          "category": "ratios",
+          "text": "Virginia licensed child care center staff:child ratio for School age eligible up to 9 years: 1:18.",
+          "citation": {
+            "source": "Virginia 8VAC20-780-350 Staff-to-children ratio and group size",
+            "url": "https://www.law.cornell.edu/regulations/virginia/8VAC20-780-350",
+            "agency": "Virginia DSS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "virginia-childcare-ratios-6",
+          "category": "ratios",
+          "text": "Virginia licensed child care center staff:child ratio for 9 years through 12 years: 1:20.",
+          "citation": {
+            "source": "Virginia 8VAC20-780-350 Staff-to-children ratio and group size",
+            "url": "https://www.law.cornell.edu/regulations/virginia/8VAC20-780-350",
+            "agency": "Virginia DSS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        }
+      ]
+    },
+    "group_size": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "group_size",
+      "status": "PARTIAL"
+    },
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": []
+}

@@ -1,0 +1,108 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "Vermont",
+  "state_code": "VT",
+  "state_slug": "vermont",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:13:36.932828+00:00",
+  "status": "PARKED",
+  "primary_source": "Vermont 33 V.S.A. §851",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "group_size": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "ratios",
+      "status": "PARKED",
+      "source_checked": "Vermont 33 V.S.A. §851"
+    },
+    {
+      "domain": "group_size",
+      "status": "PARKED"
+    },
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": [
+    {
+      "source_id": "vermont_vermont_33_v_s_a_851",
+      "state": "Vermont",
+      "source": "Vermont 33 V.S.A. §851",
+      "url": "https://legislature.vermont.gov/statutes/section/33/035/00851",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 57685,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    },
+    {
+      "source_id": "vermont_vermont_child_care_regulations_fallback_",
+      "state": "Vermont",
+      "source": "Vermont Child Care Regulations (fallback)",
+      "url": "https://dcf.vermont.gov/cdd/licensing",
+      "extractor": "generic",
+      "status": "PARKED",
+      "http_status": null,
+      "bytes": 0,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "park_reason": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1081)>"
+    },
+    {
+      "source_id": "vermont_childcare_gov_vermont",
+      "state": "Vermont",
+      "source": "Childcare.gov — Vermont",
+      "url": "https://www.childcare.gov/state-resources/vermont/understanding-and-finding-child-care-resources",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 67345,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    }
+  ]
+}

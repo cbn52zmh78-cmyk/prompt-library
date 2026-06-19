@@ -3460,6 +3460,15 @@ def main() -> int:
     seamless_opts = _apply_grade_policy(script, refs, seamless_opts)
     if not args.skip_generation_gate:
         assert_generation_reference_gate(script, refs, seamless_opts=seamless_opts)
+    if not getattr(args, "skip_t243_gate", False):
+        from t243_pre_render_gate import assert_t243_pre_render_gate  # noqa: WPS433
+
+        assert_t243_pre_render_gate(
+            script,
+            refs,
+            seamless_opts=seamless_opts,
+            production_dir=resolve_production_dir(script) if seamless_opts.enabled else None,
+        )
     reject_concat_only_seamless_grade(
         concat_only=args.concat_only,
         seamless_opts=seamless_opts,
