@@ -170,6 +170,7 @@ _LINT_DEFAULT_ROOTS = (
     "DAVID/scripts", "Science/scripts", "History/scripts", "History/src",
     "Nexus/scripts", "Studio", "artifacts", "agent-tools", "tools",
     "Content_Production",
+    "Stonebridge/Operations/Scripts",
 )
 
 

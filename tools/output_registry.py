@@ -63,6 +63,7 @@ CANONICAL_TOP: dict[str, str] = {
     "tests": "tests",
     "terminals": "terminals",
     "scripts": "scripts",
+    "groundtruth": "GroundTruth",
 }
 
 LEDGER_PATH = WORKSPACE / "data" / "output_ledger.jsonl"
@@ -128,6 +129,29 @@ _KINDS: tuple[OutputKind, ...] = (
     # ---- science groundtruth (was drifting to ad-hoc Science/ sub-dirs) -------
     OutputKind("groundtruth_pack", "Science/groundtruth_poc", "{filename}",
                description="GroundTruth POC packs / knowledge-gate reports / papers."),
+    # ---- compliance GroundTruth (#282) ------------------------------------------
+    OutputKind("groundtruth_compliance", "GroundTruth/Compliance", is_dir=True,
+               description="Workspace GroundTruth compliance corpus root."),
+    OutputKind("groundtruth_compliance_file", "GroundTruth/Compliance", "{filename}",
+               description="Top-level compliance corpus artifacts (INDEX, templates, triage)."),
+    OutputKind("groundtruth_compliance_lane", "GroundTruth/Compliance/lanes/{lane_slug}", is_dir=True,
+               description="Compliance lane directory (workspace mirror)."),
+    OutputKind("groundtruth_compliance_lane_file", "GroundTruth/Compliance/lanes/{lane_slug}", "{subpath}",
+               description="Lane artifact (states/pa.json, cited_data_pack.json, …)."),
+    OutputKind("groundtruth_compliance_bible", "GroundTruth/Compliance/lanes/{lane_slug}/bibles", "{filename}",
+               description="Compliance knowledge bible deliverables."),
+    OutputKind("stonebridge_groundtruth_compliance",
+               "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance", is_dir=True,
+               description="Stonebridge-authoritative compliance corpus."),
+    OutputKind("stonebridge_groundtruth_compliance_file",
+               "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance", "{filename}",
+               description="Stonebridge compliance corpus artifact."),
+    OutputKind("stonebridge_groundtruth_lane",
+               "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/{lane_slug}",
+               is_dir=True, description="Stonebridge compliance lane directory."),
+    OutputKind("stonebridge_groundtruth_lane_file",
+               "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/{lane_slug}",
+               "{subpath}", description="Stonebridge lane artifact."),
     OutputKind("science_corpus", "Science/corpus", "{filename}",
                description="Science fact-base corpora."),
     OutputKind("science_report", "Science/reports", "{filename}",
