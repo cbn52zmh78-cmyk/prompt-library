@@ -1,0 +1,51 @@
+{
+  "project_id": "harbor_light",
+  "source": "Content_Production/SCRIBE/examples/harbor_light_manuscript.md",
+  "doc_kind": "prose",
+  "meta": {
+    "title": "Harbor Light",
+    "author": "SCRIBE (ghostwritten for client)",
+    "client": "Private client #2026-014",
+    "genre": "literary fiction",
+    "doc_kind": "prose",
+    "client_deliverable": true,
+    "ip_attestation": true,
+    "originality_attestation": true,
+    "human_signoff": true,
+    "sources": [
+      "client interview notes 2026",
+      "Tyne & Wear Archives public records"
+    ]
+  },
+  "gate": {
+    "gate": "editorial",
+    "applies": true,
+    "verdict": "GREEN",
+    "status": "PASS",
+    "blocked": false,
+    "requires_human_signoff": false,
+    "human_signoff": true,
+    "hard_stops": [],
+    "warnings": [],
+    "counsel_flags": [],
+    "notes": [
+      "Editorial Gate: client-deliverable editorial rails apply.",
+      "[IP] client IP ownership asserted (work-for-hire / rights assigned).",
+      "[ORIGINALITY] originality attested.",
+      "[COVERAGE] no inflated promises; coverage reads as honest.",
+      "[DEFAMATION] no unhedged derogatory factual claims about real persons detected.",
+      "[STRUCTURE] 4 structural division(s) over 281 words.",
+      "Editorial Gate: all seven rails clear."
+    ],
+    "checklist": {
+      "row_1_client_ip": "PASS",
+      "row_2_originality": "PASS",
+      "row_3_honest_coverage": "PASS",
+      "row_4_no_defamation": "PASS",
+      "row_5_format": "PASS",
+      "row_6_structure": "PASS",
+      "row_7_genre": "PASS"
+    }
+  },
+  "at": "2026-06-19T08:23:17.625057+00:00"
+}

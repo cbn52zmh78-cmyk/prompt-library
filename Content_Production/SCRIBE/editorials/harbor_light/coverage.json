@@ -1,0 +1,35 @@
+{
+  "kind": "prose",
+  "title": "Harbor Light",
+  "author": "SCRIBE (ghostwritten for client)",
+  "word_count": 281,
+  "est_reading_min": 1,
+  "paragraph_count": 6,
+  "sentence_count": 15,
+  "unit_label": "chapter",
+  "unit_count": 3,
+  "units": [
+    {
+      "index": 1,
+      "heading": "Chapter 1 — The Tide Returns",
+      "words": 92
+    },
+    {
+      "index": 2,
+      "heading": "Chapter 2 — Salt and Memory",
+      "words": 73
+    },
+    {
+      "index": 3,
+      "heading": "Chapter 3 — The Light Keeps",
+      "words": 69
+    }
+  ],
+  "named_entities": [
+    [
+      "Elena",
+      3
+    ]
+  ],
+  "prepared_on": "2026-06-19"
+}
