@@ -1,0 +1,272 @@
+{
+  "slug": "science_galaxy_formation_v1",
+  "title": "Observable — How Galaxies Form",
+  "format_id": "science-explainer",
+  "target_seconds": 54,
+  "intake": {
+    "format_id": "science-explainer",
+    "actor_id": "Julian-001",
+    "set_id": "@Set-Seamless-Neutral-001",
+    "style_id": "@Style-Cool-Clinical-001",
+    "source": "STUDIO/Pipeline/production_intake.py",
+    "gate_0": {
+      "version": "1.3",
+      "verdict": "YELLOW",
+      "blocked": false,
+      "requires_human_signoff": true,
+      "human_signoff": true,
+      "target_rating": "PG",
+      "channels": [
+        "social",
+        "streaming"
+      ],
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_galaxy_formation_v1_20260619_011000.json",
+      "checklist_domains": {
+        "row_1_synthetic_ownership": "MANUAL",
+        "row_2_music_sync": "PASS",
+        "row_3_no_real_likeness": "MANUAL",
+        "row_4_target_channel": "PASS",
+        "row_5_age_documentation": "N/A",
+        "row_6_ai_disclosure": "PASS"
+      },
+      "hard_stops": [],
+      "counsel_flags": [],
+      "distribution_flags": [],
+      "warnings": [
+        "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
+      ],
+      "rating_flags": [],
+      "cara_status": "COMPLIANT",
+      "music_bed_id": "BED-COS-002",
+      "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
+      "row_2_music_sync": "PASS",
+      "notes": [
+        "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
+        "Social = mass dissemination. Platform AI-label + community guidelines apply.",
+        "Row 2: Manifest-cleared music bed(s): BED-COS-002 (STUDIO/Music_Sound/clearance_manifest.json)",
+        "Science Gate: illustrative-not-simulation policy applies.",
+        "Revise and re-submit to Legal Gate (Gate 0)."
+      ],
+      "brief_source": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Pipeline\\Concepts\\astro_mini_slate\\science_galaxy_formation_v1_brief.txt"
+    },
+    "libraries": {
+      "formats": "Production_Templates_v1.json (#98)",
+      "sets": "Set_Library_v1.json (#99)",
+      "styles": "Style_Library_v1.json (#99)",
+      "casting": "Casting_Bible/registry/casting_registry.json"
+    },
+    "duration_clamp": {
+      "applied": true,
+      "policy": "seamless_7_9",
+      "lo": 7,
+      "hi": 9,
+      "shots_clamped": 1
+    },
+    "science_subject": {
+      "subject_id": "GAL-FORM-001",
+      "domain": "Astrophysics — Galaxy Formation & Cosmology",
+      "phenomenon": "How Galaxies Form",
+      "field": "astrophysics",
+      "key_measurement": "Planck 2018 ΛCDM: Ω_m ≈ 0.315, H₀ ≈ 67.4 km/s/Mpc; JWST detects galaxies within ~400 Myr after Big Bang",
+      "visualization_ref": "Science/reference_plates/astro/galaxy_reference.jpg",
+      "visualization_prompt": "scientific visualization galaxy formation in expanding universe, dark matter halo skeleton, baryonic gas cooling into disk, minor merger building stellar halo, spiral structure emergence, NOT TO SCALE cosmological simulation, 16:9 fidelity",
+      "principle_set": "astrophysics_fidelity",
+      "plate_id": "@Sci-Galaxy-001",
+      "institutions": [
+        "NASA",
+        "ESA",
+        "Planck Collaboration",
+        "James Webb Space Telescope"
+      ],
+      "sources": [
+        {
+          "citation": "Planck Collaboration, Planck 2018 results. VI. Cosmological parameters, A&A 641, A6 (2020)",
+          "url": "https://www.aanda.org/articles/aa/full_html/2020/09/aa33913-18/aa33913-18.html",
+          "type": "primary",
+          "notes": "ΛCDM parameters constraining structure formation timescales"
+        },
+        {
+          "citation": "NASA Webb Mission — Early Universe & Galaxy Evolution science themes",
+          "url": "https://science.nasa.gov/mission/webb/science-overview/",
+          "type": "secondary",
+          "notes": "JWST observational program for high-redshift galaxies"
+        },
+        {
+          "citation": "ESA/Hubble — Galaxy formation and evolution (hierarchical merging, star-formation history)",
+          "url": "https://esahubble.org/science/galaxies/",
+          "type": "secondary",
+          "notes": "Observational synthesis of galaxy populations and mergers"
+        }
+      ],
+      "principle_selection_reason": "field:astrophysics"
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "voice_suffix": "clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only",
+    "use_identity_lock": false,
+    "avatar_reference": "STUDIO/Cast/actors_roster/male/north_america/Julian_Cross/01_casting_shots/casting_turnaround_v1.jpg",
+    "set_reference": "STUDIO/Pipeline/references/seamless_neutral_grey_reference.jpg",
+    "visualization_reference": "Science/reference_plates/astro/galaxy_reference.jpg",
+    "seamless": {
+      "primary": "extend",
+      "xfade_s": 0.2,
+      "match_color": true,
+      "cut_on_motion": true,
+      "lamp_lock": true,
+      "glasses_lock": true,
+      "loudnorm": true,
+      "pin_audio_sync": true,
+      "reground_interval": 2,
+      "magenta_clamp": true
+    },
+    "music_bed": {
+      "track_id": "BED-COS-002",
+      "manifest": "STUDIO/Music_Sound/clearance_manifest.json"
+    }
+  },
+  "shots": [
+    {
+      "id": "01_hook",
+      "duration": 7,
+      "t_start": 0,
+      "t_end": 7,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter addresses camera on seamless neutral, crisp science hook. Camera: locked medium, direct address. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"The night sky looks peaceful — but every galaxy is a collision story written across billions of years. How did islands of a trillion stars grow from nearly uniform gas?\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "The night sky looks peaceful — but every galaxy is a collision story written across billions of years. How did islands of a trillion stars grow from nearly uniform gas?",
+      "on_screen": "Observable · How Galaxies Form"
+    },
+    {
+      "id": "02_phenomenon",
+      "duration": 9,
+      "t_start": 7,
+      "t_end": 16,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter explains the phenomenon plainly, motivated gesture, clinical lighting. Camera: slow push-in medium. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"In our standard model, invisible dark matter clumps first, forming gravitational scaffolds. Ordinary gas falls in, cools, and condenses into stars. Small galaxies merge into larger ones — spirals, ellipticals, and messy intermediates along the way.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "In our standard model, invisible dark matter clumps first, forming gravitational scaffolds. Ordinary gas falls in, cools, and condenses into stars. Small galaxies merge into larger ones — spirals, ellipticals, and messy intermediates along the way."
+    },
+    {
+      "id": "03_how_we_know",
+      "duration": 9,
+      "t_start": 16,
+      "t_end": 25,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter cites measurement, experiment, or observation chain — evidence-forward tone. Camera: medium — gesture to evidence. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"The cosmic microwave background — mapped by Planck — shows tiny density ripples that seeded structure. JWST now images surprisingly mature galaxies when the universe was only a few hundred million years old. Hubble deep fields show mergers frozen in mid-collision.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "The cosmic microwave background — mapped by Planck — shows tiny density ripples that seeded structure. JWST now images surprisingly mature galaxies when the universe was only a few hundred million years old. Hubble deep fields show mergers frozen in mid-collision."
+    },
+    {
+      "id": "04_visualization_payoff",
+      "duration": 9,
+      "t_start": 25,
+      "t_end": 34,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter narrates over locked @2 science visualization — see attached render for phenomenon geometry; accurate color, on-screen NOT TO SCALE when illustrative. Camera: locked medium beside or over @2 visualization plate. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"This cosmological simulation compresses eons: a dark matter halo gathers gas, stars ignite, and a disk galaxy assembles through mergers — a model tuned to ΛCDM, not a single telescope movie.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "This cosmological simulation compresses eons: a dark matter halo gathers gas, stars ignite, and a disk galaxy assembles through mergers — a model tuned to ΛCDM, not a single telescope movie.",
+      "on_screen_labels": [
+        "SCIENCE VISUALIZATION",
+        "SIMULATION",
+        "NOT TO SCALE"
+      ],
+      "reference_slots": {
+        "@2": "visualization"
+      },
+      "science_subject_ref": "GAL-FORM-001",
+      "visualization_prompt": "ΛCDM galaxy formation simulation: expanding universe backdrop, dark matter filament, halo accretion, gas cooling into rotating disk, minor merger event, spiral arms forming, documentary cosmology fidelity",
+      "visualization_ref": "Science/reference_plates/astro/galaxy_reference.jpg",
+      "duration_raw": 10
+    },
+    {
+      "id": "05_significance",
+      "duration": 9,
+      "t_start": 34,
+      "t_end": 43,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter lands significance — real-world stakes or deeper insight; end on gesture peak. Camera: warm medium-close, inviting settle. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Galaxies are the universe's architecture. Understanding how they form tells us what dark matter is, how fast the cosmos expands, and how the elements that make us were distributed across space and time.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Galaxies are the universe's architecture. Understanding how they form tells us what dark matter is, how fast the cosmos expands, and how the elements that make us were distributed across space and time."
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 6,
+    "card_type": "sources",
+    "title": "Sources — How Galaxies Form",
+    "subtitle": "Astrophysics — Galaxy Formation & Cosmology",
+    "footer": "Planck Collaboration, Planck 2018 results. VI. Cosmological parameter… · NASA Webb Mission — Early Universe & Galaxy Evolution science themes · ESA/Hubble — Galaxy formation and evolution (hierarchical merging, st…",
+    "lines": [
+      "SUBJECT: How Galaxies Form (GAL-FORM-001)",
+      "EVIDENCE: Planck ΛCDM (2018); JWST early galaxies; Hubble merger surveys",
+      "VIZ: Cosmological N-body/hydro simulation — NOT TO SCALE"
+    ],
+    "sources": [
+      {
+        "citation": "Planck Collaboration, Planck 2018 results. VI. Cosmological parameters, A&A 641, A6 (2020)",
+        "url": "https://www.aanda.org/articles/aa/full_html/2020/09/aa33913-18/aa33913-18.html",
+        "type": "primary",
+        "notes": "ΛCDM parameters constraining structure formation timescales"
+      },
+      {
+        "citation": "NASA Webb Mission — Early Universe & Galaxy Evolution science themes",
+        "url": "https://science.nasa.gov/mission/webb/science-overview/",
+        "type": "secondary",
+        "notes": "JWST observational program for high-redshift galaxies"
+      },
+      {
+        "citation": "ESA/Hubble — Galaxy formation and evolution (hierarchical merging, star-formation history)",
+        "url": "https://esahubble.org/science/galaxies/",
+        "type": "secondary",
+        "notes": "Observational synthesis of galaxy populations and mergers"
+      }
+    ],
+    "science_subject_id": "GAL-FORM-001"
+  },
+  "qa_rules": {
+    "require_identity_lock": false,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": false,
+    "min_shots": 5
+  },
+  "production_meta": {
+    "set_id": "@Set-Seamless-Neutral-001",
+    "style_id": "@Style-Cool-Clinical-001",
+    "identity_anchor": "@Julian-001",
+    "pacing": {
+      "words_per_second": 2.6,
+      "beat_gap_s": 0.35,
+      "register": "clear science communication, wonder without hype",
+      "pause_on": [
+        "measurement beats",
+        "visualization reveals",
+        "significance landings"
+      ]
+    },
+    "camera": {
+      "primary": "locked medium on seamless neutral — presenter direct to camera",
+      "secondary": "full-frame @2 science visualization payoff",
+      "forbidden": [
+        "handheld jitter",
+        "beauty-filter smoothing",
+        "misleading scale without label"
+      ]
+    },
+    "target_rating": "PG",
+    "science_subject": {
+      "subject_id": "GAL-FORM-001",
+      "domain": "Astrophysics — Galaxy Formation & Cosmology",
+      "phenomenon": "How Galaxies Form",
+      "field": "astrophysics",
+      "principle_set": "astrophysics_fidelity",
+      "key_measurement": "Planck 2018 ΛCDM: Ω_m ≈ 0.315, H₀ ≈ 67.4 km/s/Mpc; JWST detects galaxies within ~400 Myr after Big Bang",
+      "source_count": 3,
+      "has_visualization_ref": true,
+      "plate_id": "@Sci-Galaxy-001"
+    },
+    "principle_set": "astrophysics_fidelity"
+  },
+  "batch": {
+    "batch_id": "T4_181_science_astro",
+    "phase": "draft_480p",
+    "resolution": "480p"
+  }
+}

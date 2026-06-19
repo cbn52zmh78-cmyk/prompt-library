@@ -1,0 +1,268 @@
+{
+  "slug": "science_dna_replication_v1",
+  "title": "Observable — How DNA Copies Itself",
+  "format_id": "science-explainer",
+  "target_seconds": 54,
+  "intake": {
+    "format_id": "science-explainer",
+    "actor_id": "Julian-001",
+    "set_id": "@Set-Seamless-Neutral-001",
+    "style_id": "@Style-Cool-Clinical-001",
+    "source": "STUDIO/Pipeline/production_intake.py",
+    "gate_0": {
+      "version": "1.3",
+      "verdict": "GREEN",
+      "blocked": false,
+      "requires_human_signoff": false,
+      "human_signoff": true,
+      "target_rating": "PG",
+      "channels": [
+        "social",
+        "streaming"
+      ],
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_GREEN_science_dna_replication_v1_20260619_010925.json",
+      "checklist_domains": {
+        "row_1_synthetic_ownership": "MANUAL",
+        "row_2_music_sync": "PASS",
+        "row_3_no_real_likeness": "MANUAL",
+        "row_4_target_channel": "PASS",
+        "row_5_age_documentation": "N/A",
+        "row_6_ai_disclosure": "MANUAL"
+      },
+      "hard_stops": [],
+      "counsel_flags": [],
+      "distribution_flags": [],
+      "warnings": [],
+      "rating_flags": [],
+      "cara_status": "COMPLIANT",
+      "music_bed_id": "BED-CLI-002",
+      "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
+      "row_2_music_sync": "PASS",
+      "notes": [
+        "Social = mass dissemination. Platform AI-label + community guidelines apply.",
+        "Row 2: Manifest-cleared music bed(s): BED-CLI-002 (STUDIO/Music_Sound/clearance_manifest.json)",
+        "Gate 0 cleared for Development/Pre-Production subject to ongoing review."
+      ],
+      "brief_source": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Pipeline\\Concepts\\molecular_mini_slate\\science_dna_replication_v1_brief.txt"
+    },
+    "libraries": {
+      "formats": "Production_Templates_v1.json (#98)",
+      "sets": "Set_Library_v1.json (#99)",
+      "styles": "Style_Library_v1.json (#99)",
+      "casting": "Casting_Bible/registry/casting_registry.json"
+    },
+    "duration_clamp": {
+      "applied": true,
+      "policy": "seamless_7_9",
+      "lo": 7,
+      "hi": 9,
+      "shots_clamped": 1
+    },
+    "science_subject": {
+      "subject_id": "DNA-REP-001",
+      "domain": "Molecular Biology — DNA Replication",
+      "phenomenon": "Semi-discontinuous replication at the fork",
+      "field": "biology",
+      "key_measurement": "B-DNA helical geometry from X-ray crystallography (PDB 1BNA, Drew et al. 1981); semi-conservative replication demonstrated by Meselson & Stahl (1958); proofreading drives error rates to ~1 in 10^9–10^10 bases",
+      "visualization_ref": "Science/reference_plates/molecular/images/dna-double-helix_1BNA_rcsb_assembly.jpeg",
+      "visualization_prompt": "Scientific molecular visualization, DNA replication fork — right-handed antiparallel B-DNA parent duplex (geometry per PDB 1BNA) unwound at a Y-shaped fork, DNA polymerase on a ring-shaped sliding clamp building a continuous leading strand and a discontinuous lagging strand of Okazaki fragments, single-strand binding proteins on exposed strands, crowded aqueous nucleoplasm, neutral dark background, accurate relative scale, no anthropomorphic faces, no straight-line directed motion, time-compression implied, Jantzen molecular-cellular fidelity, 16:9, ILLUSTRATIVE NOT TO SCALE label lower corner",
+      "principle_set": "jantzen_molecular_cellular",
+      "plate_id": "@Sci-DNA-001",
+      "institutions": [
+        "RCSB Protein Data Bank",
+        "EBI PDBe"
+      ],
+      "sources": [
+        {
+          "citation": "Drew HR, Wing RM, Takano T, Broka C, Dickerson RE. Structure of a B-DNA dodecamer: conformation and dynamics. PNAS. 1981;78(4):2179-2183 (PDB 1BNA)",
+          "url": "https://www.rcsb.org/structure/1BNA",
+          "type": "primary",
+          "notes": "Canonical right-handed antiparallel B-DNA geometry — CC0 coordinates"
+        },
+        {
+          "citation": "Meselson M, Stahl FW. The replication of DNA in Escherichia coli. PNAS. 1958;44(7):671-682",
+          "url": "https://doi.org/10.1073/pnas.44.7.671",
+          "type": "primary",
+          "notes": "Density-gradient experiment proving semi-conservative replication"
+        },
+        {
+          "citation": "Alberts B, et al. Molecular Biology of the Cell, 7th ed., Ch. 5 — DNA Replication (leading/lagging strand, Okazaki fragments)",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/",
+          "type": "secondary",
+          "notes": "Established textbook consensus for fork topology"
+        }
+      ],
+      "principle_selection_reason": "explicit"
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "voice_suffix": "clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only",
+    "use_identity_lock": false,
+    "avatar_reference": "STUDIO/Cast/actors_roster/male/north_america/Julian_Cross/01_casting_shots/casting_turnaround_v1.jpg",
+    "set_reference": "STUDIO/Pipeline/references/seamless_neutral_grey_reference.jpg",
+    "visualization_reference": "Science/reference_plates/molecular/images/dna-double-helix_1BNA_rcsb_assembly.jpeg",
+    "seamless": {
+      "primary": "extend",
+      "xfade_s": 0.2,
+      "match_color": true,
+      "cut_on_motion": true,
+      "lamp_lock": true,
+      "glasses_lock": true,
+      "loudnorm": true,
+      "pin_audio_sync": true,
+      "reground_interval": 2,
+      "magenta_clamp": true
+    },
+    "music_bed": {
+      "track_id": "BED-CLI-002",
+      "manifest": "STUDIO/Music_Sound/clearance_manifest.json"
+    }
+  },
+  "shots": [
+    {
+      "id": "01_hook",
+      "duration": 7,
+      "t_start": 0,
+      "t_end": 7,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter addresses camera on seamless neutral, crisp science hook. Camera: locked medium, direct address. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Every time one of your cells divides, it copies three billion letters of DNA — and it almost never makes a mistake. How?\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Every time one of your cells divides, it copies three billion letters of DNA — and it almost never makes a mistake. How?",
+      "on_screen": "Observable · How DNA Copies Itself"
+    },
+    {
+      "id": "02_phenomenon",
+      "duration": 9,
+      "t_start": 7,
+      "t_end": 16,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter explains the phenomenon plainly, motivated gesture, clinical lighting. Camera: slow push-in medium. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"The double helix splits down the middle, and each old strand becomes a template for a new one — so every copy keeps one original strand. That's called semi-conservative. But the two strands run in opposite directions, so only one is copied smoothly; the other is built backwards in short pieces called Okazaki fragments, then stitched together.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "The double helix splits down the middle, and each old strand becomes a template for a new one — so every copy keeps one original strand. That's called semi-conservative. But the two strands run in opposite directions, so only one is copied smoothly; the other is built backwards in short pieces called Okazaki fragments, then stitched together."
+    },
+    {
+      "id": "03_how_we_know",
+      "duration": 9,
+      "t_start": 16,
+      "t_end": 25,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter cites measurement, experiment, or observation chain — evidence-forward tone. Camera: medium — gesture to evidence. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"We're not guessing. In nineteen fifty-eight, Meselson and Stahl tracked DNA by weight and proved the semi-conservative pattern. And the helix itself was pinned down atom by atom with X-ray crystallography — the B-DNA coordinates are public.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "We're not guessing. In nineteen fifty-eight, Meselson and Stahl tracked DNA by weight and proved the semi-conservative pattern. And the helix itself was pinned down atom by atom with X-ray crystallography — the B-DNA coordinates are public."
+    },
+    {
+      "id": "04_visualization_payoff",
+      "duration": 9,
+      "t_start": 25,
+      "t_end": 34,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter narrates over locked @2 science visualization — see attached render for phenomenon geometry; accurate color, on-screen NOT TO SCALE when illustrative. Camera: locked medium beside or over @2 visualization plate. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Here is the fork: a right-handed helix unwinding, one strand copied continuously, the other in fragments. This is a structural model, sped up and not to scale — and it's driven by random molecular motion and chemical energy, not a machine marching with purpose.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Here is the fork: a right-handed helix unwinding, one strand copied continuously, the other in fragments. This is a structural model, sped up and not to scale — and it's driven by random molecular motion and chemical energy, not a machine marching with purpose.",
+      "on_screen_labels": [
+        "SCIENCE VISUALIZATION",
+        "ILLUSTRATIVE",
+        "NOT A SIMULATION",
+        "STRUCTURAL MODEL — PDB 1BNA",
+        "NOT TO SCALE"
+      ],
+      "reference_slots": {
+        "@2": "visualization"
+      },
+      "science_subject_ref": "DNA-REP-001",
+      "visualization_prompt": "DNA replication fork, right-handed antiparallel B-DNA per PDB 1BNA, leading continuous strand and lagging Okazaki fragments, single-strand binding proteins, crowded nucleoplasm, no faces, Jantzen molecular-cellular fidelity",
+      "visualization_ref": "Science/reference_plates/molecular/images/dna-double-helix_1BNA_rcsb_assembly.jpeg",
+      "duration_raw": 10
+    },
+    {
+      "id": "05_significance",
+      "duration": 9,
+      "t_start": 34,
+      "t_end": 43,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter lands significance — real-world stakes or deeper insight; end on gesture peak. Camera: warm medium-close, inviting settle. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"This copying is why you grow, heal, and inherit traits — and the rare error that slips past proofreading is the raw material of both disease and evolution. Precision and imperfection, in the same machinery.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "This copying is why you grow, heal, and inherit traits — and the rare error that slips past proofreading is the raw material of both disease and evolution. Precision and imperfection, in the same machinery."
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 6,
+    "card_type": "sources",
+    "title": "Sources — Semi-discontinuous replication at the fork",
+    "subtitle": "Molecular Biology — DNA Replication",
+    "footer": "Drew HR, Wing RM, Takano T, Broka C, Dickerson RE. Structure of a B-D… · Meselson M, Stahl FW. The replication of DNA in Escherichia coli. PNA… · Alberts B, et al. Molecular Biology of the Cell, 7th ed., Ch. 5 — DNA…",
+    "lines": [
+      "SUBJECT: DNA replication fork (DNA-REP-001)",
+      "EVIDENCE: B-DNA geometry PDB 1BNA (Drew/Dickerson 1981); semi-conservative replication (Meselson & Stahl 1958)",
+      "VIZ: Illustrative structural model — labeled NOT TO SCALE; time-compressed; Jantzen molecular fidelity"
+    ],
+    "sources": [
+      {
+        "citation": "Drew HR, Wing RM, Takano T, Broka C, Dickerson RE. Structure of a B-DNA dodecamer: conformation and dynamics. PNAS. 1981;78(4):2179-2183 (PDB 1BNA)",
+        "url": "https://www.rcsb.org/structure/1BNA",
+        "type": "primary",
+        "notes": "Canonical right-handed antiparallel B-DNA geometry — CC0 coordinates"
+      },
+      {
+        "citation": "Meselson M, Stahl FW. The replication of DNA in Escherichia coli. PNAS. 1958;44(7):671-682",
+        "url": "https://doi.org/10.1073/pnas.44.7.671",
+        "type": "primary",
+        "notes": "Density-gradient experiment proving semi-conservative replication"
+      },
+      {
+        "citation": "Alberts B, et al. Molecular Biology of the Cell, 7th ed., Ch. 5 — DNA Replication (leading/lagging strand, Okazaki fragments)",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK26850/",
+        "type": "secondary",
+        "notes": "Established textbook consensus for fork topology"
+      }
+    ],
+    "science_subject_id": "DNA-REP-001"
+  },
+  "qa_rules": {
+    "require_identity_lock": false,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": false,
+    "min_shots": 5
+  },
+  "production_meta": {
+    "set_id": "@Set-Seamless-Neutral-001",
+    "style_id": "@Style-Cool-Clinical-001",
+    "identity_anchor": "@Julian-001",
+    "pacing": {
+      "words_per_second": 2.6,
+      "beat_gap_s": 0.35,
+      "register": "clear science communication, wonder without hype",
+      "pause_on": [
+        "measurement beats",
+        "visualization reveals",
+        "significance landings"
+      ]
+    },
+    "camera": {
+      "primary": "locked medium on seamless neutral — presenter direct to camera",
+      "secondary": "full-frame @2 science visualization payoff",
+      "forbidden": [
+        "handheld jitter",
+        "beauty-filter smoothing",
+        "misleading scale without label"
+      ]
+    },
+    "target_rating": "PG",
+    "science_subject": {
+      "subject_id": "DNA-REP-001",
+      "domain": "Molecular Biology — DNA Replication",
+      "phenomenon": "Semi-discontinuous replication at the fork",
+      "field": "biology",
+      "principle_set": "jantzen_molecular_cellular",
+      "key_measurement": "B-DNA helical geometry from X-ray crystallography (PDB 1BNA, Drew et al. 1981); semi-conservative replication demonstrated by Meselson & Stahl (1958); proofreading drives error rates to ~1 in 10^9–10^10 bases",
+      "source_count": 3,
+      "has_visualization_ref": true,
+      "plate_id": "@Sci-DNA-001"
+    },
+    "principle_set": "jantzen_molecular_cellular"
+  },
+  "batch": {
+    "batch_id": "T4_181_science_molecular",
+    "phase": "draft_480p",
+    "resolution": "480p"
+  }
+}
