@@ -1,0 +1,265 @@
+{
+  "title": "PI STORY",
+  "author": "Upon Tyne — for Benjamin Cartwright",
+  "source_format": "Feature screenplay (Fountain source)",
+  "page_count": 8,
+  "est_runtime_min": 8,
+  "scene_count": 15,
+  "setting_mix": {
+    "INT": 9,
+    "EXT": 6
+  },
+  "time_of_day_mix": {
+    "NIGHT": 8,
+    "CONTINUOUS": 7
+  },
+  "locations": [
+    [
+      "NEIGHBORHOOD BAR",
+      3
+    ],
+    [
+      "NEIGHBORHOOD STREET",
+      2
+    ],
+    [
+      "CORNER BODEGA",
+      1
+    ],
+    [
+      "STREET CORNER - HOT DOG CART",
+      1
+    ],
+    [
+      "SIDE STREET",
+      1
+    ],
+    [
+      "SMALL CAFÉ",
+      1
+    ],
+    [
+      "CAFÉ",
+      1
+    ],
+    [
+      "ABANDONED APARTMENT",
+      1
+    ],
+    [
+      "SUV - MOVING",
+      1
+    ],
+    [
+      "SMALL BUSINESS - STOREFRONT",
+      1
+    ],
+    [
+      "THE CLUB",
+      1
+    ],
+    [
+      "NEIGHBORHOOD BAR - RESTROOM",
+      1
+    ]
+  ],
+  "characters": [
+    {
+      "name": "THE PI",
+      "dialogue_blocks": 13,
+      "dialogue_words": 52,
+      "scenes": 6
+    },
+    {
+      "name": "THE CI",
+      "dialogue_blocks": 5,
+      "dialogue_words": 31,
+      "scenes": 1
+    },
+    {
+      "name": "THE HITMAN",
+      "dialogue_blocks": 5,
+      "dialogue_words": 17,
+      "scenes": 3
+    },
+    {
+      "name": "THE BAR OWNER",
+      "dialogue_blocks": 4,
+      "dialogue_words": 44,
+      "scenes": 1
+    },
+    {
+      "name": "FEMME FATALE",
+      "dialogue_blocks": 4,
+      "dialogue_words": 31,
+      "scenes": 1
+    },
+    {
+      "name": "FEMALE MOB BOSS",
+      "dialogue_blocks": 3,
+      "dialogue_words": 21,
+      "scenes": 1
+    },
+    {
+      "name": "YOUNG BEAT COP",
+      "dialogue_blocks": 2,
+      "dialogue_words": 22,
+      "scenes": 1
+    },
+    {
+      "name": "CREW #1",
+      "dialogue_blocks": 2,
+      "dialogue_words": 25,
+      "scenes": 1
+    },
+    {
+      "name": "CREW #2",
+      "dialogue_blocks": 1,
+      "dialogue_words": 4,
+      "scenes": 1
+    }
+  ],
+  "dialogue_blocks": 39,
+  "action_elements": 73,
+  "dialogue_action_ratio": 0.534,
+  "scene_count_detail": [
+    {
+      "heading": "INT. NEIGHBORHOOD BAR — NIGHT",
+      "setting": "INT",
+      "location": "NEIGHBORHOOD BAR",
+      "time_of_day": "NIGHT",
+      "characters": [
+        "THE BAR OWNER",
+        "THE PI"
+      ]
+    },
+    {
+      "heading": "EXT. NEIGHBORHOOD STREET — CONTINUOUS",
+      "setting": "EXT",
+      "location": "NEIGHBORHOOD STREET",
+      "time_of_day": "CONTINUOUS",
+      "characters": []
+    },
+    {
+      "heading": "INT. CORNER BODEGA — CONTINUOUS",
+      "setting": "INT",
+      "location": "CORNER BODEGA",
+      "time_of_day": "CONTINUOUS",
+      "characters": []
+    },
+    {
+      "heading": "EXT. STREET CORNER — HOT DOG CART — CONTINUOUS",
+      "setting": "EXT",
+      "location": "STREET CORNER - HOT DOG CART",
+      "time_of_day": "CONTINUOUS",
+      "characters": [
+        "THE PI",
+        "YOUNG BEAT COP"
+      ]
+    },
+    {
+      "heading": "EXT. SIDE STREET — CONTINUOUS",
+      "setting": "EXT",
+      "location": "SIDE STREET",
+      "time_of_day": "CONTINUOUS",
+      "characters": [
+        "THE CI",
+        "THE PI"
+      ]
+    },
+    {
+      "heading": "INT. SMALL CAFÉ — NIGHT",
+      "setting": "INT",
+      "location": "SMALL CAFÉ",
+      "time_of_day": "NIGHT",
+      "characters": [
+        "FEMME FATALE",
+        "THE PI"
+      ]
+    },
+    {
+      "heading": "EXT. CAFÉ — CONTINUOUS",
+      "setting": "EXT",
+      "location": "CAFÉ",
+      "time_of_day": "CONTINUOUS",
+      "characters": []
+    },
+    {
+      "heading": "INT. ABANDONED APARTMENT — NIGHT",
+      "setting": "INT",
+      "location": "ABANDONED APARTMENT",
+      "time_of_day": "NIGHT",
+      "characters": []
+    },
+    {
+      "heading": "INT. SUV — MOVING — NIGHT",
+      "setting": "INT",
+      "location": "SUV - MOVING",
+      "time_of_day": "NIGHT",
+      "characters": [
+        "CREW #1",
+        "CREW #2",
+        "THE HITMAN"
+      ]
+    },
+    {
+      "heading": "EXT. SMALL BUSINESS — STOREFRONT — NIGHT",
+      "setting": "EXT",
+      "location": "SMALL BUSINESS - STOREFRONT",
+      "time_of_day": "NIGHT",
+      "characters": []
+    },
+    {
+      "heading": "INT. THE CLUB — NIGHT",
+      "setting": "INT",
+      "location": "THE CLUB",
+      "time_of_day": "NIGHT",
+      "characters": [
+        "FEMALE MOB BOSS",
+        "THE HITMAN"
+      ]
+    },
+    {
+      "heading": "EXT. NEIGHBORHOOD STREET — NIGHT",
+      "setting": "EXT",
+      "location": "NEIGHBORHOOD STREET",
+      "time_of_day": "NIGHT",
+      "characters": []
+    },
+    {
+      "heading": "INT. NEIGHBORHOOD BAR — NIGHT",
+      "setting": "INT",
+      "location": "NEIGHBORHOOD BAR",
+      "time_of_day": "NIGHT",
+      "characters": [
+        "THE HITMAN",
+        "THE PI"
+      ]
+    },
+    {
+      "heading": "INT. NEIGHBORHOOD BAR — RESTROOM — CONTINUOUS",
+      "setting": "INT",
+      "location": "NEIGHBORHOOD BAR - RESTROOM",
+      "time_of_day": "CONTINUOUS",
+      "characters": []
+    },
+    {
+      "heading": "INT. NEIGHBORHOOD BAR — CONTINUOUS",
+      "setting": "INT",
+      "location": "NEIGHBORHOOD BAR",
+      "time_of_day": "CONTINUOUS",
+      "characters": [
+        "THE PI"
+      ]
+    }
+  ],
+  "structure_sections": [],
+  "synopses": [],
+  "logline": "",
+  "synopsis": "",
+  "prepared_on": "",
+  "kind": "screenplay",
+  "unit_label": "scene",
+  "unit_count": 15,
+  "word_count": 247
+}

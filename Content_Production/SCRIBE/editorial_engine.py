@@ -44,7 +44,7 @@ for _p in (str(HERE), str(GATE_DIR)):
     if _p not in sys.path:
         sys.path.insert(0, _p)
 
-from editorial_gate import evaluate_editorial_gate  # noqa: E402
+from editorial_gate import evaluate_editorial_gate, save_editorial_report  # noqa: E402
 
 STAGES = ["intake", "coverage", "architecture", "development", "draft", "revision", "deliver"]
 
@@ -314,10 +314,16 @@ def coverage_for(project: EditorialProject) -> tuple[dict[str, Any], str]:
 
 # --------------------------------------------------------------------------- stages
 def stage_intake(p: EditorialProject) -> dict[str, Any]:
-    gate = evaluate_editorial_gate(p.text, p.meta).to_dict()
+    result = evaluate_editorial_gate(p.text, p.meta)
+    gate = result.to_dict()
+    report = save_editorial_report(result, project=p.project_id, source_text=p.text, stage="intake")
+    if report:
+        gate["report_path"] = _rel(report["md"])
+        gate["report_json"] = _rel(report["json"])
     blocked = gate.get("blocked")
     p.record("intake", "blocked" if blocked else "done",
-             gate_verdict=gate.get("verdict"), doc_kind=p.doc_kind)
+             gate_verdict=gate.get("verdict"), doc_kind=p.doc_kind,
+             gate_report=gate.get("report_path"))
     _write_json(p.out_dir / "intake.json",
                 {"project_id": p.project_id, "source": _rel(p.source), "doc_kind": p.doc_kind,
                  "meta": p.meta, "gate": gate, "at": _utc_now()})
@@ -427,7 +433,12 @@ def stage_revision(p: EditorialProject, draft_rec: dict[str, Any], revision_roun
 
 
 def stage_deliver(p: EditorialProject, *, dry_run: bool) -> tuple[dict[str, Any], int]:
-    gate = evaluate_editorial_gate(p.text, p.meta).to_dict()
+    result = evaluate_editorial_gate(p.text, p.meta)
+    gate = result.to_dict()
+    report = save_editorial_report(result, project=p.project_id, source_text=p.text, stage="deliver")
+    if report:
+        gate["report_path"] = _rel(report["md"])
+        gate["report_json"] = _rel(report["json"])
     deliverable = bool(p.meta.get("client_deliverable"))
     signed = bool(p.meta.get("human_signoff")) or bool(gate.get("human_signoff"))
 
@@ -625,6 +636,12 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: Optional[list[str]] = None) -> int:
+    # Windows consoles default to cp1252; engine summaries use arrow/status glyphs.
+    for _stream in (sys.stdout, sys.stderr):
+        try:
+            _stream.reconfigure(encoding="utf-8", errors="replace")  # type: ignore[union-attr]
+        except Exception:
+            pass
     args = build_parser().parse_args(argv)
     return args.func(args)
 

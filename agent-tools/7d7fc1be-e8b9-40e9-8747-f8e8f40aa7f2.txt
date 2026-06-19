@@ -1,0 +1,827 @@
+
+<meta name="description" content="From our vantage point on Earth, the Sun may appear like an unchanging source of 
+light and heat in the sky. But the Sun is a dynamic star, constantly changing"/>
+<meta property="og:description" content="From our vantage point on Earth, the Sun may appear like an unchanging source 
+of light and heat in the sky. But the Sun is a dynamic star, constantly changing" />
+<meta property="article:section" content="The Solar System" />
+<meta property="og:image:alt" content="Sun with solar flare" />
+<meta name="twitter:description" content="From our vantage point on Earth, the Sun may appear like an unchanging 
+source of light and heat in the sky. But the Sun is a dynamic star, constantly changing" />
+<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":"Or
+ganization","@id":"https://science.nasa.gov/#organization","name":"NASA","sameAs":["https://www.facebook.com/NASA","htt
+ps://twitter.com/NASA"],"logo":{"@type":"ImageObject","@id":"https://science.nasa.gov/#logo","url":"https://assets.scie
+nce.nasa.gov/dynamicimage/assets/science/psd/solar/bosf/images/editor-page-nasa-logo-250s.png","contentUrl":"https://as
+sets.science.nasa.gov/dynamicimage/assets/science/psd/solar/bosf/images/editor-page-nasa-logo-250s.png","caption":"NASA
+ Science","inLanguage":"en-US","width":"250","height":"250"}},{"@type":"WebSite","@id":"https://science.nasa.gov/#websi
+te","url":"https://science.nasa.gov","name":"NASA Science","alternateName":"National Aeronautics and Space 
+Administration Science","publisher":{"@id":"https://science.nasa.gov/#organization"},"inLanguage":"en-US"},{"@type":"Im
+ageObject","@id":"https://science.nasa.gov/wp-content/uploads/2023/10/sun-gallery.jpg","url":"https://science.nasa.gov/
+wp-content/uploads/2023/10/sun-gallery.jpg","width":"300","height":"230","caption":"Sun with solar flare","inLanguage":
+"en-US"},{"@type":"WebPage","@id":"https://science.nasa.gov/sun/facts/#webpage","url":"https://science.nasa.gov/sun/fac
+ts/","name":"Sun: Facts - NASA Science","datePublished":"2017-11-14T00:28:23-05:00","dateModified":"2025-04-22T17:20:49
+-04:00","isPartOf":{"@id":"https://science.nasa.gov/#website"},"primaryImageOfPage":{"@id":"https://science.nasa.gov/wp
+-content/uploads/2023/10/sun-gallery.jpg"},"inLanguage":"en-US"},{"@type":"Person","@id":"https://science.nasa.gov/auth
+or/alicia-cermakjpl-nasa-gov/","name":"Alicia Cermak","url":"https://science.nasa.gov/author/alicia-cermakjpl-nasa-gov/
+","image":{"@type":"ImageObject","@id":"https://science.nasa.gov/wp-content/uploads/2024/08/cropped-alicia-cermak-96x96
+.png","url":"https://science.nasa.gov/wp-content/uploads/2024/08/cropped-alicia-cermak-96x96.png","caption":"Alicia 
+Cermak","inLanguage":"en-US"},"worksFor":{"@id":"https://science.nasa.gov/#organization"}},{"headline":"Sun: Facts - 
+NASA Science","description":"From our vantage point on Earth, the Sun may appear like an unchanging source of light 
+and heat in the sky. But the Sun is a dynamic star, constantly changing","datePublished":"2017-11-14T00:28:23-05:00","d
+ateModified":"2025-04-22T17:20:49-04:00","image":{"@id":"https://science.nasa.gov/wp-content/uploads/2023/10/sun-galler
+y.jpg"},"author":{"@id":"https://science.nasa.gov/author/alicia-cermakjpl-nasa-gov/","name":"Alicia 
+Cermak"},"@type":"Article","name":"Sun: Facts - NASA Science","articleSection":"The Solar System, The Sun","@id":"https
+://science.nasa.gov/sun/facts/#schema-5580255","isPartOf":{"@id":"https://science.nasa.gov/sun/facts/#webpage"},"publis
+her":{"@id":"https://science.nasa.gov/#organization"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"https://science.n
+asa.gov/sun/facts/#webpage"}},{"@type":"VideoObject","name":"Decades of Sun from ESA &amp; NASA\u2019s 
+SOHO","description":"December 2, 2020 marks the 25th anniversary of the Solar and Heliospheric Observatory, or SOHO 
+\u2014 a joint mission of the European Space Agency and NASA. Since...","uploadDate":"2020-12-02T08:56:18-08:00","thumb
+nailUrl":"https://science.nasa.gov/wp-content/uploads/2023/10/sun-gallery.jpg","embedUrl":"https://www.youtube.com/embe
+d/o-DHwNFDgOU","duration":"PT47M41S","width":"1280","height":"720","isFamilyFriendly":"True","@id":"https://science.nas
+a.gov/sun/facts/#schema-5580256","isPartOf":{"@id":"https://science.nasa.gov/sun/facts/#webpage"},"publisher":{"@id":"h
+ttps://science.nasa.gov/#organization"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"https://science.nasa.gov/sun/fa
+cts/#webpage"}}]}</script>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-sync
+ed-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-
+admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:
+#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media 
+(min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root 
+.has-very-light-gray-background-color{background-color:#eee}:root 
+.has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root 
+.has-very-dark-gray-color{color:#313131}:root 
+.has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root 
+.has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root 
+.has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root 
+.has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root 
+.has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root 
+.has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-bac
+kground{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--fon
+t-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{fo
+nt-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text
+-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-te
+xt{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-lef
+t{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex
+-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);hei
+ght:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-tex
+t:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:no
+rmal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html 
+:where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html 
+:where([style*=border-right-color]){border-right-style:solid}html 
+:where([style*=border-bottom-color]){border-bottom-style:solid}html 
+:where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html 
+:where([style*=border-top-width]){border-top-style:solid}html 
+:where([style*=border-right-width]){border-right-style:solid}html 
+:where([style*=border-bottom-width]){border-bottom-style:solid}html 
+:where([style*=border-left-width]){border-left-style:solid}html 
+:where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html 
+:where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media 
+screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+.wp-block-image>a,.wp-block-image>figure>a{display:inline-block}.wp-block-image 
+img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}@media not 
+(prefers-reduced-motion){.wp-block-image img.hide{visibility:hidden}.wp-block-image 
+img.show{animation:show-content-image .4s}}.wp-block-image[style*=border-radius] 
+img,.wp-block-image[style*=border-radius]>a{border-radius:inherit}.wp-block-image.has-custom-border img{box-sizing:bord
+er-box}.wp-block-image.aligncenter{text-align:center}.wp-block-image.alignfull>a,.wp-block-image.alignwide>a{width:100%
+}.wp-block-image.alignfull img,.wp-block-image.alignwide img{height:auto;width:100%}.wp-block-image 
+.aligncenter,.wp-block-image .alignleft,.wp-block-image .alignright,.wp-block-image.aligncenter,.wp-block-image.alignle
+ft,.wp-block-image.alignright{display:table}.wp-block-image .aligncenter>figcaption,.wp-block-image 
+.alignleft>figcaption,.wp-block-image .alignright>figcaption,.wp-block-image.aligncenter>figcaption,.wp-block-image.ali
+gnleft>figcaption,.wp-block-image.alignright>figcaption{caption-side:bottom;display:table-caption}.wp-block-image 
+.alignleft{float:left;margin:.5em 1em .5em 0}.wp-block-image .alignright{float:right;margin:.5em 0 .5em 
+1em}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image 
+:where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-image.is-style-circle-mask 
+img{border-radius:9999px}@supports ((-webkit-mask-image:none) or (mask-image:none)) or 
+(-webkit-mask-image:none){.wp-block-image.is-style-circle-mask 
+img{border-radius:0;-webkit-mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" 
+xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" 
+r="50"/></svg>');mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" 
+xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-mode:alpha;-webkit-mask-position:cente
+r;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain}
+}:root :where(.wp-block-image.is-style-rounded img,.wp-block-image .is-style-rounded 
+img){border-radius:9999px}.wp-block-image 
+figure{margin:0}.wp-lightbox-container{display:flex;flex-direction:column;position:relative}.wp-lightbox-container 
+img{cursor:zoom-in}.wp-lightbox-container img:hover+button{opacity:1}.wp-lightbox-container 
+button{align-items:center;backdrop-filter:blur(16px) saturate(180%);background-color:#5a5a5a40;border:none;border-radiu
+s:4px;cursor:zoom-in;display:flex;height:20px;justify-content:center;opacity:0;padding:0;position:absolute;right:16px;t
+ext-align:center;top:16px;width:20px;z-index:100}@media not (prefers-reduced-motion){.wp-lightbox-container 
+button{transition:opacity .2s ease}}.wp-lightbox-container button:focus-visible{outline:3px auto #5a5a5a40;outline:3px 
+auto -webkit-focus-ring-color;outline-offset:3px}.wp-lightbox-container 
+button:hover{cursor:pointer;opacity:1}.wp-lightbox-container button:focus{opacity:1}.wp-lightbox-container 
+button:focus,.wp-lightbox-container button:hover,.wp-lightbox-container button:not(:hover):not(:active):not(.has-backgr
+ound){background-color:#5a5a5a40;border:none}.wp-lightbox-overlay{box-sizing:border-box;cursor:zoom-out;height:100vh;le
+ft:0;overflow:hidden;position:fixed;top:0;visibility:hidden;width:100%;z-index:100000}.wp-lightbox-overlay .close-butto
+n{align-items:center;cursor:pointer;display:flex;justify-content:center;min-height:40px;min-width:40px;padding:0;positi
+on:absolute;right:calc(env(safe-area-inset-right) + 16px);top:calc(env(safe-area-inset-top) + 
+16px);z-index:5000000}.wp-lightbox-overlay .close-button:focus,.wp-lightbox-overlay 
+.close-button:hover,.wp-lightbox-overlay 
+.close-button:not(:hover):not(:active):not(.has-background){background:none;border:none}.wp-lightbox-overlay .lightbox-
+image-container{height:var(--wp--lightbox-container-height);left:50%;overflow:hidden;position:absolute;top:50%;transfor
+m:translate(-50%,-50%);transform-origin:top 
+left;width:var(--wp--lightbox-container-width);z-index:9999999999}.wp-lightbox-overlay .wp-block-image{align-items:cent
+er;box-sizing:border-box;display:flex;height:100%;justify-content:center;margin:0;position:relative;transform-origin:0 
+0;width:100%;z-index:3000000}.wp-lightbox-overlay .wp-block-image img{height:var(--wp--lightbox-image-height);min-heigh
+t:var(--wp--lightbox-image-height);min-width:var(--wp--lightbox-image-width);width:var(--wp--lightbox-image-width)}.wp-
+lightbox-overlay .wp-block-image figcaption{display:none}.wp-lightbox-overlay 
+button{background:none;border:none}.wp-lightbox-overlay .scrim{background-color:#fff;height:100%;opacity:.9;position:ab
+solute;width:100%;z-index:2000000}.wp-lightbox-overlay.active{visibility:visible}@media not 
+(prefers-reduced-motion){.wp-lightbox-overlay.active{animation:turn-on-visibility .25s 
+both}.wp-lightbox-overlay.active img{animation:turn-on-visibility .35s 
+both}.wp-lightbox-overlay.show-closing-animation:not(.active){animation:turn-off-visibility .35s 
+both}.wp-lightbox-overlay.show-closing-animation:not(.active) img{animation:turn-off-visibility .25s 
+both}.wp-lightbox-overlay.zoom.active{animation:none;opacity:1;visibility:visible}.wp-lightbox-overlay.zoom.active 
+.lightbox-image-container{animation:lightbox-zoom-in .4s}.wp-lightbox-overlay.zoom.active .lightbox-image-container 
+img{animation:none}.wp-lightbox-overlay.zoom.active .scrim{animation:turn-on-visibility .4s forwards}.wp-lightbox-overl
+ay.zoom.show-closing-animation:not(.active){animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active
+) .lightbox-image-container{animation:lightbox-zoom-out 
+.4s}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container 
+img{animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .scrim{animation:turn-off-visibility 
+.4s forwards}}@keyframes 
+show-content-image{0%{visibility:hidden}99%{visibility:hidden}to{visibility:visible}}@keyframes 
+turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacit
+y:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc((-100vw 
++ var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + 
+var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) 
+scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) 
+scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc((-100vw + 
+var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + 
+var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}
+<meta name="searchgov_custom2" content="The Solar System, The Sun"/>
+<meta name="keywords" content="The Solar System, The Sun"/>
+<meta name="google-site-verification" content="FPf3JviUYpAZPGOV51pOmZC43TaCwVffwZYQyzLfK-M" /><script 
+type="application/ld+json" 
+class="wp-parsely-metadata">{"@context":"https:\/\/schema.org","@type":"NewsArticle","headline":"Sun: Facts","url":"htt
+ps:\/\/science.nasa.gov\/sun\/facts\/","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/science.nasa.gov\/sun\/fa
+cts\/"},"thumbnailUrl":"https:\/\/science.nasa.gov\/wp-content\/uploads\/2023\/10\/sun-gallery.jpg?w=150&h=150&crop=1",
+"image":{"@type":"ImageObject","url":"https:\/\/science.nasa.gov\/wp-content\/uploads\/2023\/10\/sun-gallery.jpg"},"art
+icleSection":"The Sun","author":[{"@type":"Person","name":"NASA Science Editorial Team"}],"creator":["NASA Science 
+Editorial Team"],"publisher":{"@type":"Organization","name":"NASA 
+Science","logo":"https:\/\/science.nasa.gov\/wp-content\/uploads\/2023\/07\/nasa-logo-web-rgb.webp"},"keywords":["The 
+Solar System","The Sun"],"dateCreated":"2017-11-14T05:28:23Z","datePublished":"2017-11-14T05:28:23Z","dateModified":"20
+25-04-22T21:20:49Z"}</script>
+<a href="https://www.nasa.gov/news/" target="_self" class="button-primary button-primary-md button-light 
+margin-bottom-3">
+<a href="https://www.nasa.gov/multimedia/" target="_self" class="button-primary button-primary-md button-light 
+margin-bottom-3">
+<li class="hds-global-menu-item hds-global-menu-item-trigger usa-nav__submenu-item usa-current" 
+submenu-id="global-nav-home"><a href="https://science.nasa.gov/"><span>Home</span><svg width="6" height="8" viewBox="0 
+0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.05516 
+4L0.800049 0.767159L1.57249 0L5.60005 4L1.57249 8L0.800049 7.23284L4.05516 4Z"/></svg></a></li><li 
+class="hds-global-menu-item hds-global-menu-item-trigger usa-nav__submenu-item " submenu-id="global-nav-missions"><a 
+href="https://science.nasa.gov/nasa-missions/"><span>Missions</span><svg width="6" height="8" viewBox="0 0 6 8" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.05516 4L0.800049 
+0.767159L1.57249 0L5.60005 4L1.57249 8L0.800049 7.23284L4.05516 4Z"/></svg></a></li><li class="hds-global-menu-item 
+hds-global-menu-item-trigger usa-nav__submenu-item " submenu-id="global-nav-humans-in-space"><a 
+href="https://science.nasa.gov/humans-in-space/"><span>Humans in Space</span><svg width="6" height="8" viewBox="0 0 6 
+8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.05516 4L0.800049 
+0.767159L1.57249 0L5.60005 4L1.57249 8L0.800049 7.23284L4.05516 4Z"/></svg></a></li><li class="hds-global-menu-item 
+hds-global-menu-item-trigger usa-nav__submenu-item " submenu-id="global-nav-earth-climate"><a 
+href="https://science.nasa.gov/earth/"><span>Earth</span><svg width="6" height="8" viewBox="0 0 6 8" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.05516 4L0.800049 
+0.767159L1.57249 0L5.60005 4L1.57249 8L0.800049 7.23284L4.05516 4Z"/></svg></a></li><li class="hds-global-menu-item 
+hds-global-menu-item-trigger usa-nav__submenu-item " submenu-id="global-nav-solar-system"><a 
+href="https://science.nasa.gov/solar-system/"><span>The Solar System</span><svg width="6" height="8" viewBox="0 0 6 8" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.05516 4L0.800049 
+0.767159L1.57249 0L5.60005 4L1.57249 8L0.800049 7.23284L4.05516 4Z"/></svg></a></li><li class="hds-global-menu-item 
+hds-global-menu-item-trigger usa-nav__submenu-item " submenu-id="global-nav-universe"><a 
+href="https://science.nasa.gov/universe/"><span>The Universe</span><svg width="6" height="8" viewBox="0 0 6 8" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.05516 4L0.800049 
+0.767159L1.57249 0L5.60005 4L1.57249 8L0.800049 7.23284L4.05516 4Z"/></svg></a></li><li class="hds-global-menu-item 
+hds-global-menu-item-trigger usa-nav__submenu-item " submenu-id="global-nav-science"><a 
+href="https://science.nasa.gov/"><span>Science</span><svg width="6" height="8" viewBox="0 0 6 8" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.05516 4L0.800049 
+0.767159L1.57249 0L5.60005 4L1.57249 8L0.800049 7.23284L4.05516 4Z"/></svg></a></li><li class="hds-global-menu-item 
+hds-global-menu-item-trigger usa-nav__submenu-item " submenu-id="global-nav-aeronautics"><a 
+href="https://science.nasa.gov/aeronautics/"><span>Aeronautics</span><svg width="6" height="8" viewBox="0 0 6 8" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.05516 4L0.800049 
+0.767159L1.57249 0L5.60005 4L1.57249 8L0.800049 7.23284L4.05516 4Z"/></svg></a></li><li class="hds-global-menu-item 
+hds-global-menu-item-trigger usa-nav__submenu-item " submenu-id="global-nav-technology"><a 
+href="https://science.nasa.gov/technology/"><span>Technology</span><svg width="6" height="8" viewBox="0 0 6 8" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.05516 4L0.800049 
+0.767159L1.57249 0L5.60005 4L1.57249 8L0.800049 7.23284L4.05516 4Z"/></svg></a></li><li class="hds-global-menu-item 
+hds-global-menu-item-trigger usa-nav__submenu-item " submenu-id="global-nav-learning-resources"><a 
+href="https://science.nasa.gov/learning-resources/"><span>Learning Resources</span><svg width="6" height="8" 
+viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" 
+d="M4.05516 4L0.800049 0.767159L1.57249 0L5.60005 4L1.57249 8L0.800049 7.23284L4.05516 4Z"/></svg></a></li><li 
+class="hds-global-menu-item hds-global-menu-item-trigger usa-nav__submenu-item " submenu-id="global-nav-about-nasa"><a 
+href="https://science.nasa.gov/about/"><span>About NASA</span><svg width="6" height="8" viewBox="0 0 6 8" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.05516 4L0.800049 
+0.767159L1.57249 0L5.60005 4L1.57249 8L0.800049 7.23284L4.05516 4Z"/></svg></a></li><li class="hds-global-menu-item 
+hds-global-menu-item-trigger usa-nav__submenu-item " submenu-id="global-nav-espanol"><a 
+href="https://science.nasa.gov/es/"><span>Español</span><svg width="6" height="8" viewBox="0 0 6 8" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.05516 4L0.800049 
+0.767159L1.57249 0L5.60005 4L1.57249 8L0.800049 7.23284L4.05516 4Z"/></svg></a></li><hr 
+class="border-color-carbon-60-important display-block desktop:display-none margin-y-3" >
+<div class="global-nav__home global-nav__features global-nav__col grid-col-9 desktop:padding-left-105"><h3 
+class="heading-12 color-carbon-40 text-uppercase margin-bottom-2">Highlights</h3><div class="grid-row"><a 
+href="https://science.nasa.gov/missions/fermi/nasas-fermi-sibling-supernova-remnants/" class="hds-content-card 
+hds-content-card-home grid-col-12 desktop:grid-col-4 color-spacesuit-white padding-x-0 desktop:padding-right-3 
+margin-bottom-4" target="_self"><div class="grid-col margin-bottom-2"><div class="bg-carbon-black minh-mobile"><img 
+loading="lazy" src="https://assets.science.nasa.gov/dynamicimage/assets/science/missions/glast/news/2026/sibling-snrs/I
+C443_IR_opt_UV_narrow_sml.jpg?w=1024" alt="NASA’s Fermi Mission Uncovers Possible Sibling Supernova Remnants" 
+class="hds-media-background z-100" /></div></div><div class="grid-col padding-left-0"><div class="label 
+margin-bottom-1">6 min read</div><div class="margin-bottom-2"><h3 class="heading-16 line-height-md">NASA’s Fermi 
+Mission Uncovers Possible Sibling Supernova Remnants</h3></div><div class="heading-12 display-flex flex-align-center 
+font-weight-bold text-uppercase margin-bottom-1 color-carbon-40"><span class="display-flex flex-align-center 
+margin-right-2"><svg version="1.1" class="square-2 margin-right-1" xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" 
+style="enable-background:new 0 0 16 16;" xml:space="preserve"><g><g><path 
+d="M8,0C3.5,0-0.1,3.7,0,8.2C0.1,12.5,3.6,16,8,16c4.4,0,8-3.6,8-8C16,3.5,12.4,0,8,0z M8,15.2 
+C4,15.2,0.8,12,0.8,8C0.8,4,4,0.8,8,0.8c3.9,0,7.2,3.2,7.2,7.1C15.2,11.9,12,15.2,8,15.2z"></path><path 
+d="M5.6,12c0.8-0.8,1.6-1.6,2.4-2.4c0.8,0.8,1.6,1.6,2.4,2.4c0-2.7,0-5.3,0-8C8.8,4,7.2,4,5.6,4 
+C5.6,6.7,5.6,9.3,5.6,12z"></path></g></g></svg><span>article</span></span><span>2 days ago</span></div></div></a><a 
+href="https://science.nasa.gov/missions/webb/nasa-webb-hubble-reveal-history-of-relic-of-milky-ways-formation/" 
+class="hds-content-card hds-content-card-home grid-col-12 desktop:grid-col-4 color-spacesuit-white padding-x-0 
+desktop:padding-right-3 margin-bottom-4" target="_self"><div class="grid-col margin-bottom-2"><div 
+class="bg-carbon-black minh-mobile"><img loading="lazy" src="https://assets.science.nasa.gov/dynamicimage/assets/scienc
+e/missions/webb/science/2026/06/STScI-01KTV7RPWZFWRPJZGXFCJHC3SQ.png?w=1024" alt="NASA Webb, Hubble Reveal History of 
+Relic of Milky Way’s Formation" class="hds-media-background z-100" /></div></div><div class="grid-col 
+padding-left-0"><div class="label margin-bottom-1">7 min read</div><div class="margin-bottom-2"><h3 class="heading-16 
+line-height-md">NASA Webb, Hubble Reveal History of Relic of Milky Way’s Formation</h3></div><div class="heading-12 
+display-flex flex-align-center font-weight-bold text-uppercase margin-bottom-1 color-carbon-40"><span 
+class="display-flex flex-align-center margin-right-2"><svg version="1.1" class="square-2 margin-right-1" 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" 
+height="16px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve"><g><g><path 
+d="M8,0C3.5,0-0.1,3.7,0,8.2C0.1,12.5,3.6,16,8,16c4.4,0,8-3.6,8-8C16,3.5,12.4,0,8,0z M8,15.2 
+C4,15.2,0.8,12,0.8,8C0.8,4,4,0.8,8,0.8c3.9,0,7.2,3.2,7.2,7.1C15.2,11.9,12,15.2,8,15.2z"></path><path 
+d="M5.6,12c0.8-0.8,1.6-1.6,2.4-2.4c0.8,0.8,1.6,1.6,2.4,2.4c0-2.7,0-5.3,0-8C8.8,4,7.2,4,5.6,4 
+C5.6,6.7,5.6,9.3,5.6,12z"></path></g></g></svg><span>article</span></span><span>3 days ago</span></div></div></a><a 
+href="https://science.nasa.gov/solar-system/whats-up-june-2026-skywatching-tips-from-nasa/" class="hds-content-card 
+hds-content-card-home grid-col-12 desktop:grid-col-4 color-spacesuit-white padding-x-0 desktop:padding-right-3 
+margin-bottom-4" target="_self"><div class="grid-col margin-bottom-2"><div class="bg-carbon-black minh-mobile"><img 
+loading="lazy" src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar-system/skywatching/2026/june/
+55129740863_8d1388b2d2_o.jpg?w=1024" alt="What’s Up: June 2026 Skywatching Tips from NASA" 
+class="hds-media-background z-100" /></div></div><div class="grid-col padding-left-0"><div class="label 
+margin-bottom-1">4 min read</div><div class="margin-bottom-2"><h3 class="heading-16 line-height-md">What’s Up: June 
+2026 Skywatching Tips from NASA</h3></div><div class="heading-12 display-flex flex-align-center font-weight-bold 
+text-uppercase margin-bottom-1 color-carbon-40"><span class="display-flex flex-align-center margin-right-2"><svg 
+version="1.1" class="square-2 margin-right-1" xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" 
+style="enable-background:new 0 0 16 16;" xml:space="preserve"><g><g><path 
+d="M8,0C3.5,0-0.1,3.7,0,8.2C0.1,12.5,3.6,16,8,16c4.4,0,8-3.6,8-8C16,3.5,12.4,0,8,0z M8,15.2 
+C4,15.2,0.8,12,0.8,8C0.8,4,4,0.8,8,0.8c3.9,0,7.2,3.2,7.2,7.1C15.2,11.9,12,15.2,8,15.2z"></path><path 
+d="M5.6,12c0.8-0.8,1.6-1.6,2.4-2.4c0.8,0.8,1.6,1.6,2.4,2.4c0-2.7,0-5.3,0-8C8.8,4,7.2,4,5.6,4 
+C5.6,6.7,5.6,9.3,5.6,12z"></path></g></g></svg><span>article</span></span><span>3 weeks 
+ago</span></div></div></a></div></div><div class="global-nav__secondary global-nav__col grid-col-5 
+desktop:padding-left-105" hidden>
+<div class="global-nav__secondary-submenu" submenu-id="global-nav-missions"><a 
+href="https://science.nasa.gov/nasa-missions/" target="_self" class="button-primary button-primary-md button-light 
+margin-bottom-3"><h3 class="heading-22 padding-right-2 line-height-alt-1 margin-0">Missions</h3><svg viewBox="0 0 32 
+32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a><ul class="global-nav__secondary-list usa-nav__submenu-list"><li 
+class="usa-nav__submenu-item"><a href="https://www.nasa.gov/missions/" target="_self"><span>Search All NASA 
+Missions</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://www.nasa.gov/a-to-z-of-nasa-missions/" target="_self"><span>A to Z List 
+of Missions</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://www.nasa.gov/events/" target="_self"><span>Upcoming Launches and 
+Landings</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://www.nasa.gov/humans-in-space/spaceships-and-rockets/" 
+target="_self"><span>Spaceships and Rockets</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/communicating-with-missions/" target="_self"><span>Communicating with Missions</span><svg 
+viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" 
+cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 
+4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/humans-in-space/artemis/" target="_self"><span>Artemis</span><svg viewBox="0 0 32 32" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/mission/webb/" target="_self"><span>James Webb Space Telescope</span><svg viewBox="0 0 
+32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/mission/hubble/" target="_self"><span>Hubble Space Telescope</span><svg viewBox="0 0 32 
+32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/international-space-station/" target="_self"><span>International Space Station</span><svg 
+viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" 
+cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 
+4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/mission/osiris-rex/" target="_self"><span>OSIRIS-REx</span><svg viewBox="0 0 32 32" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li></ul></div><div class="global-nav__secondary-submenu" 
+submenu-id="global-nav-humans-in-space"><a href="https://science.nasa.gov/humans-in-space/" target="_self" 
+class="button-primary button-primary-md button-light margin-bottom-3"><h3 class="heading-22 padding-right-2 
+line-height-alt-1 margin-0">Humans in Space</h3><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a><ul class="global-nav__secondary-list usa-nav__submenu-list"><li 
+class="usa-nav__submenu-item"><a href="https://www.nasa.gov/humans-in-space/why-go-to-space/" target="_self"><span>Why 
+Go to Space</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://www.nasa.gov/humans-in-space/astronauts/" 
+target="_self"><span>Astronauts</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://www.nasa.gov/humans-in-space/commercial-space/" 
+target="_self"><span>Commercial Space</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/humans-in-space/destinations/" target="_self"><span>Destinations</span><svg viewBox="0 0 32 
+32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/humans-in-space/spaceships-and-rockets/" target="_self"><span>Spaceships and 
+Rockets</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://www.nasa.gov/humans-in-space/living-in-space/" 
+target="_self"><span>Living in Space</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li></ul></div><div class="global-nav__secondary-submenu" 
+submenu-id="global-nav-earth-climate"><a href="https://science.nasa.gov/earth/" target="_self" class="button-primary 
+button-primary-md button-light margin-bottom-3"><h3 class="heading-22 padding-right-2 line-height-alt-1 
+margin-0">Earth</h3><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a><ul 
+class="global-nav__secondary-list usa-nav__submenu-list"><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/earth/explore/" target="_self"><span>Explore Earth Science</span><svg viewBox="0 0 32 
+32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/climate-change/" target="_self"><span>Climate Change</span><svg viewBox="0 0 32 32" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/earth/facts/" target="_self"><span>Earth, Our Planet</span><svg viewBox="0 0 32 32" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/earth/in-action/" target="_self"><span>Earth Science in Action</span><svg viewBox="0 0 
+32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/earth/multimedia/" target="_self"><span>Earth Multimedia</span><svg viewBox="0 0 32 32" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/earth/data/" target="_self"><span>Earth Data</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/earth-science/" target="_self"><span>Earth Science Researchers</span><svg viewBox="0 0 
+32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li></ul></div><div class="global-nav__secondary-submenu" 
+submenu-id="global-nav-solar-system"><a href="https://science.nasa.gov/solar-system/" target="_self" 
+class="button-primary button-primary-md button-light margin-bottom-3"><h3 class="heading-22 padding-right-2 
+line-height-alt-1 margin-0">The Solar System</h3><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a><ul class="global-nav__secondary-list usa-nav__submenu-list"><li 
+class="usa-nav__submenu-item"><a href="https://science.nasa.gov/sun/" target="_self"><span>The Sun</span><svg 
+viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" 
+cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 
+4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/mercury/" target="_self"><span>Mercury</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/venus/" target="_self"><span>Venus</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/earth/" target="_self"><span>Earth</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/moon/" target="_self"><span>The Moon</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/mars/" target="_self"><span>Mars</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/jupiter/" target="_self"><span>Jupiter</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/saturn/" target="_self"><span>Saturn</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/uranus/" target="_self"><span>Uranus</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/neptune/" target="_self"><span>Neptune</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/dwarf-planets/" target="_self"><span>Pluto &amp; Dwarf Planets</span><svg viewBox="0 0 
+32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/asteroids-comets-meteors/" target="_self"><span>Asteroids, Comets &amp; 
+Meteors</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://science.nasa.gov/solar-system/kuiper-belt/" target="_self"><span>The 
+Kuiper Belt</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://science.nasa.gov/solar-system/oort-cloud/" target="_self"><span>The 
+Oort Cloud</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://science.nasa.gov/skywatching/" 
+target="_self"><span>Skywatching</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li></ul></div><div 
+class="global-nav__secondary-submenu" submenu-id="global-nav-universe"><a href="https://science.nasa.gov/universe/" 
+target="_self" class="button-primary button-primary-md button-light margin-bottom-3"><h3 class="heading-22 
+padding-right-2 line-height-alt-1 margin-0">The Universe</h3><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a><ul class="global-nav__secondary-list usa-nav__submenu-list"><li 
+class="usa-nav__submenu-item"><a href="https://science.nasa.gov/exoplanets/" 
+target="_self"><span>Exoplanets</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://science.nasa.gov/universe/search-for-life/" target="_self"><span>The 
+Search for Life in the Universe</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://science.nasa.gov/universe/stars/" target="_self"><span>Stars</span><svg 
+viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" 
+cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 
+4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/universe/galaxies/" target="_self"><span>Galaxies</span><svg viewBox="0 0 32 32" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/universe/black-holes/" target="_self"><span>Black Holes</span><svg viewBox="0 0 32 32" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/universe/the-big-bang/" target="_self"><span>The Big Bang</span><svg viewBox="0 0 32 
+32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/dark-matter/" target="_self"><span>Dark Matter</span><svg viewBox="0 0 32 32" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/dark-energy/" target="_self"><span>Dark Energy</span><svg viewBox="0 0 32 32" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li></ul></div><div class="global-nav__secondary-submenu" 
+submenu-id="global-nav-science"><a href="https://science.nasa.gov/" target="_self" class="button-primary 
+button-primary-md button-light margin-bottom-3"><h3 class="heading-22 padding-right-2 line-height-alt-1 
+margin-0">Science</h3><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a><ul 
+class="global-nav__secondary-list usa-nav__submenu-list"><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/earth-science/" target="_self"><span>Earth Science</span><svg viewBox="0 0 32 32" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/planetary-science/" target="_self"><span>Planetary Science</span><svg viewBox="0 0 32 
+32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/astrophysics/" target="_self"><span>Astrophysics &amp; Space Science</span><svg 
+viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" 
+cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 
+4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/heliophysics/" target="_self"><span>The Sun &amp; Heliophysics</span><svg viewBox="0 0 
+32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/biological-physical/" target="_self"><span>Biological &amp; Physical 
+Sciences</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://science.nasa.gov/lunar-science/" target="_self"><span>Lunar 
+Science</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://science.nasa.gov/citizen-science/" target="_self"><span>Citizen 
+Science</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://science.nasa.gov/astromaterials/" 
+target="_self"><span>Astromaterials</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/aeronautics-research/" target="_self"><span>Aeronautics Research</span><svg viewBox="0 0 32 
+32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/human-space-travel-research/" target="_self"><span>Human Space Travel Research</span><svg 
+viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" 
+cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 
+4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li></ul></div><div 
+class="global-nav__secondary-submenu" submenu-id="global-nav-aeronautics"><a 
+href="https://science.nasa.gov/aeronautics/" target="_self" class="button-primary button-primary-md button-light 
+margin-bottom-3"><h3 class="heading-22 padding-right-2 line-height-alt-1 margin-0">Aeronautics</h3><svg viewBox="0 0 
+32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a><ul class="global-nav__secondary-list usa-nav__submenu-list"><li 
+class="usa-nav__submenu-item"><a href="https://www.nasa.gov/aeronautics/science-in-the-air/" 
+target="_self"><span>Science in the Air</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/aeronautics/aircraft/" target="_self"><span>NASA Aircraft</span><svg viewBox="0 0 32 32" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/aeronautics/flight-innovation/" target="_self"><span>Flight Innovation</span><svg 
+viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" 
+cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 
+4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/aeronautics/supersonic-flight/" target="_self"><span>Supersonic Flight</span><svg 
+viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" 
+cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 
+4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/aeronautics/air-traffic-solutions/" target="_self"><span>Air Traffic Solutions</span><svg 
+viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" 
+cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 
+4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/aeronautics/green-aero-tech/" target="_self"><span>Green Aviation Tech</span><svg 
+viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" 
+cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 
+4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/aeronautics/drones-and-you/" target="_self"><span>Drones &amp; You</span><svg viewBox="0 0 
+32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li></ul></div><div class="global-nav__secondary-submenu" 
+submenu-id="global-nav-technology"><a href="https://science.nasa.gov/technology/" target="_self" class="button-primary 
+button-primary-md button-light margin-bottom-3"><h3 class="heading-22 padding-right-2 line-height-alt-1 
+margin-0">Technology</h3><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a><ul 
+class="global-nav__secondary-list usa-nav__submenu-list"><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/technology-transfer-spinoffs/" target="_self"><span>Technology Transfer &amp; 
+Spinoffs</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://www.nasa.gov/space-travel-technology/" target="_self"><span>Space 
+Travel Technology</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://www.nasa.gov/space-living-technology/" target="_self"><span>Technology 
+Living in Space</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://www.nasa.gov/manufacturing-and-materials/" 
+target="_self"><span>Manufacturing and Materials</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/robotics/" target="_self"><span>Robotics</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/science-instruments/" target="_self"><span>Science Instruments</span><svg viewBox="0 0 32 
+32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/computing/" target="_self"><span>Computing</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li></ul></div><div class="global-nav__secondary-submenu" 
+submenu-id="global-nav-learning-resources"><a href="https://science.nasa.gov/learning-resources/" target="_self" 
+class="button-primary button-primary-md button-light margin-bottom-3"><h3 class="heading-22 padding-right-2 
+line-height-alt-1 margin-0">Learning Resources</h3><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a><ul class="global-nav__secondary-list usa-nav__submenu-list"><li 
+class="usa-nav__submenu-item"><a href="https://www.nasa.gov/learning-resources/for-kids-and-students/" 
+target="_self"><span>For Kids and Students</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/learning-resources/for-educators/" target="_self"><span>For Educators</span><svg viewBox="0 
+0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/learning-resources/colleges-and-universities/" target="_self"><span>For Colleges and 
+Universities</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://www.nasa.gov/learning-resources/for-professionals/" 
+target="_self"><span>For Professionals</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://science.nasa.gov/for-everyone/" target="_self"><span>Science for Everyone</span><svg viewBox="0 0 32 32" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/learning-resources/requests-for-exhibits-artifacts-or-speakers/" 
+target="_self"><span>Requests for Exhibits, Artifacts, or Speakers</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/learning-resources/stem-engagement-at-nasa/" target="_self"><span>STEM Engagement at 
+NASA</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li></ul></div><div 
+class="global-nav__secondary-submenu" submenu-id="global-nav-about-nasa"><a href="https://science.nasa.gov/about/" 
+target="_self" class="button-primary button-primary-md button-light margin-bottom-3"><h3 class="heading-22 
+padding-right-2 line-height-alt-1 margin-0">About NASA</h3><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a><ul class="global-nav__secondary-list usa-nav__submenu-list"><li 
+class="usa-nav__submenu-item"><a href="https://www.nasa.gov/nasa-impacts/" target="_self"><span>NASA&#039;s 
+Impacts</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://www.nasa.gov/nasa-centers-and-facilities/" target="_self"><span>Centers 
+and Facilities</span><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li 
+class="usa-nav__submenu-item"><a href="https://www.nasa.gov/nasa-directorates/" 
+target="_self"><span>Directorates</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/nasa-organization/" target="_self"><span>Organizations</span><svg viewBox="0 0 32 32" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/people-of-nasa/" target="_self"><span>People of NASA</span><svg viewBox="0 0 32 32" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/careers/" target="_self"><span>Careers</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/learning-resources/nasa-internship-programs/" target="_self"><span>Internships</span><svg 
+viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" 
+cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 
+4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/history/" target="_self"><span>Our History</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/doing-business-with-nasa/" target="_self"><span>Doing Business with NASA</span><svg 
+viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" 
+cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 
+4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/get-involved/" target="_self"><span>Get Involved</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/contact-nasa/" target="_self"><span>Contact</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li></ul></div><div class="global-nav__secondary-submenu" 
+submenu-id="global-nav-espanol"><a href="https://science.nasa.gov/es/" target="_self" class="button-primary 
+button-primary-md button-light margin-bottom-3"><h3 class="heading-22 padding-right-2 line-height-alt-1 margin-0">NASA 
+en Español</h3><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a><ul 
+class="global-nav__secondary-list usa-nav__submenu-list"><li class="usa-nav__submenu-item"><a 
+href="https://ciencia.nasa.gov/" target="_self"><span>Ciencia</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/espanol/aeronautica-en-espanol/" target="_self"><span>Aeronáutica</span><svg viewBox="0 0 
+32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://ciencia.nasa.gov/tierra" target="_self"><span>Ciencias Terrestres</span><svg viewBox="0 0 32 32" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://ciencia.nasa.gov/sistema-solar" target="_self"><span>Sistema Solar</span><svg viewBox="0 0 32 32" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://ciencia.nasa.gov/universo" target="_self"><span>Universo</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li></ul></div><div class="global-nav__secondary-submenu" 
+submenu-id="media"><a href="https://science.nasa.gov/news/" target="_self" class="button-primary button-primary-md 
+button-light margin-bottom-3"><h3 class="heading-22 padding-right-2 line-height-alt-1 margin-0">News &amp; 
+Events</h3><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a><ul 
+class="global-nav__secondary-list usa-nav__submenu-list"><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/news/recently-published/" target="_self"><span>Recently Published</span><svg viewBox="0 0 
+32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/plus/" target="_self"><span>Video Series on NASA+</span><svg viewBox="0 0 32 32" 
+fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/podcasts-and-audio/" target="_self"><span>Podcasts &amp; Audio</span><svg viewBox="0 0 32 
+32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/nasa-blogs/" target="_self"><span>Blogs</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/newsletters/" target="_self"><span>Newsletters</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/socialmedia/" target="_self"><span>Social Media</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/news/nasa-media-contacts/" target="_self"><span>Media Resources</span><svg viewBox="0 0 32 
+32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li></ul></div><div class="global-nav__secondary-submenu" 
+submenu-id="galleries"><a href="https://science.nasa.gov/multimedia/" target="_self" class="button-primary 
+button-primary-md button-light margin-bottom-3"><h3 class="heading-22 padding-right-2 line-height-alt-1 
+margin-0">Multimedia</h3><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle 
+class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 
+16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" class="color-spacesuit-white"></path></svg></a><ul 
+class="global-nav__secondary-list usa-nav__submenu-list"><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/images/" target="_self"><span>Images</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/plus/" target="_self"><span>Videos on NASA+</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/nasa-interactive-features/" target="_self"><span>Interactives</span><svg viewBox="0 0 32 
+32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" 
+r="16"></circle><path d="M8 16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/apps/" target="_self"><span>NASA Apps</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/podcasts/" target="_self"><span>Podcasts</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/ebooks/" target="_self"><span>e-Books</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li><li class="usa-nav__submenu-item"><a 
+href="https://www.nasa.gov/learning-resources/search/?terms=8058%2C8059%2C8061%2C8062%2C8068" 
+target="_self"><span>STEM Multimedia</span><svg viewBox="0 0 32 32" fill="none" 
+xmlns="http://www.w3.org/2000/svg"><circle class="button-primary-circle" cx="16" cy="16" r="16"></circle><path d="M8 
+16.956h12.604l-3.844 4.106 1.252 1.338L24 16l-5.988-6.4-1.252 1.338 3.844 4.106H8v1.912z" 
+class="color-spacesuit-white"></path></svg></a></li></ul></div></div>
+<div class="global-nav__tertiary-submenu global-nav__wrapper" style="max-width: 440px" 
+submenu-id="global-nav-missions"><h3 class="heading-12 color-carbon-40 text-uppercase margin-bottom-2">Highlights</h3>
+</div><div class="global-nav__tertiary-submenu global-nav__wrapper" style="max-width: 440px" 
+submenu-id="global-nav-humans-in-space"><h3 class="heading-12 color-carbon-40 text-uppercase 
+margin-bottom-2">Highlights</h3>
+<a href="https://www.nasa.gov/learning-resources/for-colleges-universities/nasa-stem-projects/in-flight-education-downl
+inks/nasa-astronauts-to-answer-questions-from-new-jersey-students/" class="hds-content-card hds-content-card-3 
+grid-row color-spacesuit-white margin-bottom-4" target="_self">
+</div><div class="global-nav__tertiary-submenu global-nav__wrapper" style="max-width: 440px" 
+submenu-id="global-nav-earth-climate"><h3 class="heading-12 color-carbon-40 text-uppercase 
+margin-bottom-2">Highlights</h3>
+</div><div class="global-nav__tertiary-submenu global-nav__wrapper" style="max-width: 440px" 
+submenu-id="global-nav-solar-system"><h3 class="heading-12 color-carbon-40 text-uppercase 
+margin-bottom-2">Highlights</h3>
+<a href="https://www.nasa.gov/solar-system/moon/nasa-testing-advanced-capabilities-for-moon-mars-rovers/" 
+class="hds-content-card hds-content-card-3 grid-row color-spacesuit-white margin-bottom-4" target="_self">
+<img loading="lazy" 
+src="https://www.nasa.gov/wp-content/uploads/2026/06/pia26701-ernest-twilight-16x9-1.jpg?w=1024" alt="NASA Testing 
+Advanced Capabilities for Moon, Mars Rovers" class="hds-media-background z-100" /></div>
+</div><div class="global-nav__tertiary-submenu global-nav__wrapper" style="max-width: 440px" 
+submenu-id="global-nav-universe"><h3 class="heading-12 color-carbon-40 text-uppercase margin-bottom-2">Highlights</h3>
+</div><div class="global-nav__tertiary-submenu global-nav__wrapper" style="max-width: 440px" 
+submenu-id="global-nav-science"><h3 class="heading-12 color-carbon-40 text-uppercase margin-bottom-2">Highlights</h3>
+</div><div class="global-nav__tertiary-submenu global-nav__wrapper" style="max-width: 440px" 
+submenu-id="global-nav-aeronautics"><h3 class="heading-12 color-carbon-40 text-uppercase 
+margin-bottom-2">Highlights</h3>
+<a href="https://www.nasa.gov/aeronautics/x-59-first-supersonic-flight/" class="hds-content-card hds-content-card-3 
+grid-row color-spacesuit-white margin-bottom-4" target="_self">
+<img loading="lazy" 
+src="https://www.nasa.gov/wp-content/uploads/2026/06/x59-first-supersonic-flight-m-1-077-clean-high.jpg?w=1024" 
+alt="NASA&#8217;s X-59 Aircraft Flies Supersonic for First Time" class="hds-media-background z-100" /></div>
+<a href="https://www.nasa.gov/aeronautics-flight-log/" class="hds-content-card hds-content-card-3 grid-row 
+color-spacesuit-white margin-bottom-4" target="_self">
+<img loading="lazy" src="https://www.nasa.gov/wp-content/uploads/2026/03/web-flight-log-16x9-6.jpg?w=1024" 
+alt="Aeronautics  Flight Log Experience" class="hds-media-background z-100" /></div>
+<h3 class="heading-16 line-height-md">Aeronautics  Flight Log Experience</h3>
+<a href="https://www.nasa.gov/aeronautics/aeronautics-stem/build-a-flight-log/" class="hds-content-card 
+hds-content-card-3 grid-row color-spacesuit-white margin-bottom-4" target="_self">
+<img loading="lazy" src="https://www.nasa.gov/wp-content/uploads/2025/10/flight-log-passport-image.png?w=1024" 
+alt="Build a Flight Log" class="hds-media-background z-100" /></div>
+<h3 class="heading-16 line-height-md">Build a Flight Log</h3>
+</div><div class="global-nav__tertiary-submenu global-nav__wrapper" style="max-width: 440px" 
+submenu-id="global-nav-technology"><h3 class="heading-12 color-carbon-40 text-uppercase 
+margin-bottom-2">Highlights</h3>
+
+

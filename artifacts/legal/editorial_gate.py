@@ -27,8 +27,11 @@ list?). A requirement is satisfied by EITHER the prose or the meta.
 
 from __future__ import annotations
 
+import json
 import re
 from dataclasses import dataclass, field
+from datetime import datetime
+from pathlib import Path
 from typing import Any, Optional
 
 # --------------------------------------------------------------------------- triggers
@@ -290,6 +293,92 @@ def evaluate_editorial_gate(text: str, meta: Optional[dict[str, Any]] = None) ->
 
     res.human_signoff = _truthy(meta.get("human_signoff"))
     return res
+
+
+# --------------------------------------------------------------------------- report sink
+def save_editorial_report(
+    gate: Any,
+    project: str = "Untitled",
+    *,
+    source_text: str = "",
+    stage: Optional[str] = None,
+) -> Optional[dict[str, Path]]:
+    """Route the Editorial Gate report to the shared ``Studio/Legal/Gate_Reports`` sink.
+
+    Mirrors ``legal_gate.LegalGate.save_report`` so editorial forms auto-route exactly
+    like every other lane: a ``GATE_<verdict>_<slug>_<stamp>_editorial.md`` lands in the
+    shared sink, with a JSON companion in ``Producers_Office/Editorial_Gate``.
+
+    ``gate`` may be an :class:`EditorialGateResult` or its ``to_dict()`` form. Returns
+    ``{"md": Path, "json": Path}``, or ``None`` if the workspace path helpers are
+    unavailable (e.g. the gate is exercised standalone in a bare checkout).
+    """
+    g = gate.to_dict() if hasattr(gate, "to_dict") else dict(gate)
+
+    artifacts = Path(__file__).resolve().parents[1]  # .../artifacts
+    import sys
+
+    if str(artifacts) not in sys.path:
+        sys.path.insert(0, str(artifacts))
+    try:
+        from lib.bootstrap import ensure_paths
+
+        ensure_paths()
+        from lib.studio_paths import producers_path, studio_path
+    except Exception:
+        return None
+
+    stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    safe = re.sub(r"[^a-zA-Z0-9_]", "_", str(project))[:40] or "untitled"
+    verdict = g.get("verdict", "GREEN")
+
+    md_path = studio_path("Legal", "Gate_Reports", f"GATE_{verdict}_{safe}_{stamp}_editorial.md")
+    json_path = producers_path("Editorial_Gate", f"GATE_{verdict}_{safe}_{stamp}.json")
+
+    signoff = (
+        "yes" if g.get("human_signoff")
+        else ("required" if g.get("requires_human_signoff") else "not required")
+    )
+    lines = [
+        f"# Editorial Gate — {verdict}",
+        f"**Project:** {project}",
+        "**Gate:** editorial (issue #212)",
+        f"**Stage:** {stage or 'n/a'}",
+        f"**Status:** {g.get('status')}",
+        f"**Human sign-off:** {signoff}",
+        f"**Time:** {stamp}",
+        "",
+        "## Editorial Rails",
+    ]
+    for row, val in (g.get("checklist") or {}).items():
+        icon = {"PASS": "✅", "CAUTION": "⚠️", "FAIL": "🛑"}.get(val, "•")
+        lines.append(f"- {icon} `{row}` → {val}")
+    lines.append("")
+    for header, key, mark in (
+        ("HARD STOPS (NO OVERRIDE)", "hard_stops", "🛑"),
+        ("COUNSEL REQUIRED", "counsel_flags", "⚖️"),
+        ("WARNINGS", "warnings", "⚠️"),
+        ("NOTES", "notes", "•"),
+    ):
+        items = g.get(key) or []
+        if items:
+            lines.append(f"## {header}")
+            lines.extend(f"- {mark} {x}" for x in items)
+            lines.append("")
+    md_path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+
+    payload = dict(g)
+    payload.update(
+        {
+            "project": project,
+            "stage": stage,
+            "timestamp": stamp,
+            "source_excerpt": (source_text or "")[:500],
+            "shared_report": str(md_path),
+        }
+    )
+    json_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+    return {"md": md_path, "json": json_path}
 
 
 if __name__ == "__main__":  # pragma: no cover - smoke

@@ -15,13 +15,20 @@ sys.path.insert(0, str(NEXUS))
 
 from nexus.intake_router import (  # noqa: E402
     build_dispatch_plan,
+    load_auto_route_schema,
     load_workflow_template,
     parse_auto_route_block,
     route_intake_form,
+    service_required_fields,
+    validate_auto_route_schema,
+    validate_completeness,
 )
 
 EDITORIAL_FORM = NEXUS / "Intake_Forms/md/editorial_screenplay_manuscript_dev_intake_v1.md"
 PI_STORY_FILLED = NEXUS / "Intake_Forms/examples/pi_story_editorial_filled_v1.json"
+VIDEO_FILLED = NEXUS / "Intake_Forms/examples/video_explainer_filled_v1.json"
+STONEBRIDGE_FILLED = NEXUS / "Intake_Forms/examples/stonebridge_compliance_filled_v1.json"
+SCHEMA_FILE = NEXUS / "Intake_Forms/schema/auto_route.schema.json"
 TEMPLATES = NEXUS / "Workflows/templates"
 INDEX = NEXUS / "Workflows/INDEX.json"
 ROUTER = NEXUS / "nexus/intake_router.py"
@@ -133,3 +140,109 @@ def test_cli_emits_dispatch_json(tmp_path: Path):
     plan = json.loads(out.read_text(encoding="utf-8"))
     assert plan["message_type"] == "dispatch_plan"
     assert plan["steps"][-1]["step"] == "12_package_deliverable"
+
+
+# ===================================================== #217 schema + validation
+
+def test_auto_route_schema_is_wellformed_with_service_enum():
+    schema = load_auto_route_schema(schema_path=SCHEMA_FILE)
+    assert schema["type"] == "object"
+    assert schema["required"] == ["service_id"]
+    enum = schema["properties"]["service_id"]["enum"]
+    assert len(enum) == 11
+    assert "editorial.screenplay_dev" in enum and "stonebridge.compliance_records" in enum
+
+
+def test_schema_accepts_valid_auto_route():
+    good = {
+        "service_id": "video.explainer_ugc_ad",
+        "lane": "STUDIO",
+        "gates": ["gate_0"],
+        "owner_terminals": ["production_intake", "T1"],
+        "routing_map_row": 6,
+        "form_version": "v1",
+    }
+    res = validate_auto_route_schema(good, schema_path=SCHEMA_FILE)
+    assert res["valid"] is True and res["errors"] == []
+
+
+def test_schema_rejects_bad_service_unknown_key_and_gate():
+    bad = {
+        "service_id": "video.not_a_service",   # not in enum
+        "gates": ["made_up_gate"],             # not in gate enum
+        "routing_map_row": 99,                 # out of range
+        "mystery_field": "x",                  # additionalProperties: false
+    }
+    res = validate_auto_route_schema(bad, schema_path=SCHEMA_FILE)
+    assert res["valid"] is False
+    joined = " ".join(res["errors"])
+    assert "service_id" in joined and "gates[0]" in joined
+    assert "routing_map_row" in joined and "mystery_field" in joined
+
+
+def test_schema_requires_service_id():
+    res = validate_auto_route_schema({"lane": "Editorial"}, schema_path=SCHEMA_FILE)
+    assert res["valid"] is False
+    assert any("service_id" in e for e in res["errors"])
+
+
+def test_incomplete_submission_is_flagged_with_missing_fields():
+    payload = json.loads(VIDEO_FILLED.read_text(encoding="utf-8"))
+    # Drop a required service field + a master-envelope field.
+    payload.pop("call_to_action", None)
+    payload.pop("deadline", None)
+    ctx = {k: v for k, v in payload.items() if k != "auto_route"}
+    val = validate_completeness(payload["auto_route"], ctx)
+    assert val["complete"] is False
+    assert "call_to_action" in val["missing_service_fields"]
+    assert "deadline" in val["missing_envelope"]
+
+    plan = build_dispatch_plan(payload["auto_route"], form_context=ctx)
+    assert plan["status"] == "BLOCKED_INCOMPLETE"
+    assert plan["dispatch_authorization"]["ready_to_dispatch"] is False
+    assert plan["dispatch_authorization"]["block_reasons"]
+
+
+def test_service_required_fields_lookup():
+    req = service_required_fields("video.explainer_ugc_ad")
+    assert "project_title" in req["master_envelope"]
+    assert "call_to_action" in req["service"]
+
+
+def test_three_dry_run_routes_complete_and_no_auto_execute():
+    for filled, service_id, lane, last_step in [
+        (PI_STORY_FILLED, "editorial.screenplay_dev", "Editorial", "12_package_deliverable"),
+        (VIDEO_FILLED, "video.explainer_ugc_ad", "STUDIO", "06_package_upload_kit"),
+        (STONEBRIDGE_FILLED, "stonebridge.compliance_records", "Stonebridge", "06_package_deliverable"),
+    ]:
+        if not filled.is_file():
+            pytest.skip(f"{filled.name} missing")
+        plan = route_intake_form(filled)
+        assert plan["service_id"] == service_id
+        assert plan["lane"] == lane
+        assert plan["status"] in ("READY", "READY_WITH_WARNINGS")
+        assert plan["validation"]["auto_route_schema"]["valid"] is True
+        assert plan["validation"]["complete"] is True
+        assert plan["steps"][-1]["step"] == last_step
+        # No auto-execution — every plan awaits human approval (#217 dry-run discipline).
+        auth = plan["dispatch_authorization"]
+        assert auth["auto_execute"] is False and auth["requires_human_approval"] is True
+
+
+def test_stonebridge_route_carries_money_and_legal_gates():
+    if not STONEBRIDGE_FILLED.is_file():
+        pytest.skip("stonebridge filled form missing")
+    plan = route_intake_form(STONEBRIDGE_FILLED)
+    gates = [s["gate"] for s in plan["steps"] if s.get("gate")]
+    assert "gate_0_legal" in gates and "money_gate" in gates
+
+
+def test_emitted_dispatch_plans_exist_and_are_well_formed():
+    dispatches = NEXUS / "Workflows/dispatches"
+    for name in ("pi_story_editorial", "video_explainer", "stonebridge_compliance"):
+        path = dispatches / f"{name}_dispatch_v1.json"
+        assert path.is_file(), f"missing dispatch: {path}"
+        plan = json.loads(path.read_text(encoding="utf-8"))
+        assert plan["message_type"] == "dispatch_plan"
+        assert plan["dispatch_authorization"]["auto_execute"] is False
+        assert plan["validation"]["auto_route_schema"]["valid"] is True
