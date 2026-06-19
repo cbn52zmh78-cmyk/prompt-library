@@ -30,6 +30,7 @@ from typing import Any, Optional
 ROOT = Path(__file__).resolve().parents[2]
 DAVID = ROOT / "DAVID"
 PIPELINE = ROOT / "STUDIO" / "Pipeline"
+SCIENCE_SCRIPTS = ROOT / "Science" / "scripts"
 INTAKE = PIPELINE / "production_intake.py"
 RENDER = DAVID / "scripts" / "render_longform.py"
 
@@ -60,6 +61,43 @@ def _import_intake():
     import production_intake as intake  # noqa: WPS433
 
     return intake
+
+
+def _import_honesty_rail():
+    """The #158 science honesty rail (illustrative-label + cited-source machine QA)."""
+    if str(SCIENCE_SCRIPTS) not in sys.path:
+        sys.path.insert(0, str(SCIENCE_SCRIPTS))
+    import science_honesty_rail as rail  # noqa: WPS433
+
+    return rail
+
+
+def science_review(script: dict[str, Any], gate: dict[str, Any]) -> dict[str, Any]:
+    """Science Gate (from Gate 0) + honesty rail (#158) for a science production.
+
+    Non-science productions short-circuit to applies=False so DAVID episodes run
+    the identical loop untouched. For science episodes this surfaces, into the
+    manifest, the Science-Gate signal carried in the Gate-0 stamp AND a hard
+    illustrative-not-simulation + cited-source check on the draft script — the
+    same automated honesty discipline, machine-enforced.
+    """
+    rail = _import_honesty_rail()
+    if not rail.is_science_production(script):
+        return {"applies": False, "passed": True, "science_gate": None, "honesty_rail": None}
+
+    sci_warnings = [str(w) for w in (gate.get("warnings") or []) if "[SCIENCE]" in str(w)]
+    science_gate = {
+        "verdict": gate.get("verdict"),
+        "warnings": sci_warnings,
+        "status": "CAUTION" if sci_warnings else "PASS",
+    }
+    hr = rail.evaluate(script)
+    return {
+        "applies": True,
+        "science_gate": science_gate,
+        "honesty_rail": hr.to_dict(),
+        "passed": hr.passed,
+    }
 
 
 def discover_concepts(concepts_dir: Path) -> list[Path]:
@@ -239,12 +277,17 @@ def classify_item(
     render_result: Optional[dict[str, Any]],
     qa: Optional[dict[str, Any]],
     dry_run: bool,
+    science: Optional[dict[str, Any]] = None,
 ) -> str:
     can_render, gate_status = gate_allows_render(gate)
     if gate_status == "skipped_red":
         return "skipped_red"
     if gate_status == "needs_signoff":
         return "needs_signoff"
+    # Honesty rail is a static content gate — it fails a dishonest science episode
+    # even in dry-run, before any render budget is spent.
+    if science and science.get("applies") and not science.get("passed"):
+        return "honesty_fail"
     if dry_run:
         return "pending"
     if not render_result or render_result.get("exit_code") != 0:
@@ -266,13 +309,16 @@ def build_item_row(
     render_result: Optional[dict[str, Any]] = None,
     qa: Optional[dict[str, Any]] = None,
     dry_run: bool = False,
+    science: Optional[dict[str, Any]] = None,
 ) -> dict[str, Any]:
     prod_dir = None
     if script_path and script_path.is_file():
         script = json.loads(script_path.read_text(encoding="utf-8"))
         prod_dir = resolve_production_dir(script)
 
-    promote_eligible = status == "pass" and bool(qa and qa.get("pass"))
+    science = science or {"applies": False, "passed": True}
+    honest = science.get("passed", True)
+    promote_eligible = status == "pass" and bool(qa and qa.get("pass")) and honest
 
     return {
         "slug": json.loads(concept_path.read_text(encoding="utf-8"))["slug"],
@@ -297,6 +343,10 @@ def build_item_row(
         "render_exit": render_result.get("exit_code") if render_result else None,
         "render_mode": render_result.get("mode") if render_result else None,
         "render_attempts": render_result.get("attempts") if render_result else None,
+        "science_applies": science.get("applies", False),
+        "science_gate": science.get("science_gate"),
+        "honesty_rail": science.get("honesty_rail"),
+        "honesty_pass": honest if science.get("applies") else None,
         "promote_eligible": promote_eligible,
         "promote_command": (
             _promote_command_for(script_path) if promote_eligible and script_path else None
@@ -318,6 +368,16 @@ def summarize_manifest(items: list[dict[str, Any]]) -> dict[str, int]:
         status = item.get("status", "unknown")
         counts[status] = counts.get(status, 0) + 1
     return counts
+
+
+def summarize_science(items: list[dict[str, Any]]) -> dict[str, int]:
+    """Per-batch honesty-rail roll-up across the science episodes in the slate."""
+    science = [i for i in items if i.get("science_applies")]
+    return {
+        "science_episodes": len(science),
+        "honesty_pass": sum(1 for i in science if i.get("honesty_pass")),
+        "honesty_fail": sum(1 for i in science if i.get("honesty_pass") is False),
+    }
 
 
 def write_manifest(manifest: dict[str, Any], path: Path) -> Path:
@@ -368,6 +428,15 @@ def cmd_run(args: argparse.Namespace) -> int:
         draft_script = patch_resolution(script, DRAFT_RES, phase="draft_480p", batch_id=batch_id)
         script_path = write_script(draft_script, scripts_dir / f"{slug}_480p_script.json")
 
+        # Science Gate + honesty rail (#158) — no-op for DAVID episodes, hard QA for science.
+        science = science_review(draft_script, gate)
+        if science["applies"]:
+            hr = science["honesty_rail"]
+            print(f"  🔬 science: honesty_rail={hr['status']} "
+                  f"sources={len(hr.get('sources', []))} science_gate={science['science_gate']['status']}")
+            for f in hr.get("failures", []):
+                print(f"      x {f}")
+
         can_render, gate_status = gate_allows_render(gate)
         if not can_render:
             row = build_item_row(
@@ -379,6 +448,7 @@ def cmd_run(args: argparse.Namespace) -> int:
                 resolution=DRAFT_RES,
                 phase="draft_480p",
                 dry_run=args.dry_run,
+                science=science,
             )
             items.append(row)
             print(f"  ⚠️  {gate.get('verdict')} — render skipped (unsigned Gate 0)")
@@ -387,8 +457,9 @@ def cmd_run(args: argparse.Namespace) -> int:
         render_result = None
         qa = None
         if args.dry_run:
-            status = "pending"
-            print(f"  ○ dry-run — would render at {DRAFT_RES}")
+            status = classify_item(gate=gate, render_result=None, qa=None,
+                                   dry_run=True, science=science)
+            print(f"  ○ dry-run — would render at {DRAFT_RES} (status={status})")
         else:
             print(f"  ▶ render {DRAFT_RES} …")
             render_result = render_script(
@@ -401,7 +472,8 @@ def cmd_run(args: argparse.Namespace) -> int:
             )
             prod_dir = resolve_production_dir(draft_script)
             qa = read_qa_report(prod_dir)
-            status = classify_item(gate=gate, render_result=render_result, qa=qa, dry_run=False)
+            status = classify_item(gate=gate, render_result=render_result, qa=qa,
+                                   dry_run=False, science=science)
             icon = "✅" if status == "pass" else "✗"
             print(f"  {icon} render exit={render_result.get('exit_code')} qa_pass={qa.get('pass') if qa else None}")
 
@@ -416,6 +488,7 @@ def cmd_run(args: argparse.Namespace) -> int:
             render_result=render_result,
             qa=qa,
             dry_run=args.dry_run,
+            science=science,
         )
         items.append(row)
 
@@ -428,6 +501,7 @@ def cmd_run(args: argparse.Namespace) -> int:
         "resolution": DRAFT_RES,
         "items": items,
         "summary": summarize_manifest(items),
+        "science_summary": summarize_science(items),
         "promote_command": (
             None
             if args.dry_run
@@ -438,6 +512,8 @@ def cmd_run(args: argparse.Namespace) -> int:
 
     print(f"\n[batch] manifest → {manifest_path}")
     print(f"[batch] summary: {manifest['summary']}")
+    if manifest["science_summary"]["science_episodes"]:
+        print(f"[batch] science: {manifest['science_summary']}")
     if not args.dry_run and manifest["promote_command"]:
         print(f"[batch] next: {manifest['promote_command']}")
 

@@ -55,6 +55,9 @@ def test_sky_blue_round_trip():
     ]
 
     viz = next(s for s in script["shots"] if s["id"] == "04_visualization_payoff")
+    assert viz["duration"] == 9
+    assert viz.get("duration_raw") == 10
+    assert script["intake"].get("duration_clamp", {}).get("applied") is True
     assert viz["on_screen_labels"] == ["SCIENCE VISUALIZATION", "NOT TO SCALE"]
     assert viz["reference_slots"] == {"@2": "visualization"}
     assert viz.get("science_subject_ref") == "rayleigh_scattering"

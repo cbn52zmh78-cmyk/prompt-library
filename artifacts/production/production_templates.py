@@ -25,6 +25,11 @@ from lib.bootstrap import ensure_paths
 ensure_paths()
 from lib.studio_paths import pipeline_path
 
+_PIPELINE = Path(__file__).resolve().parents[2] / "STUDIO" / "Pipeline"
+if str(_PIPELINE) not in sys.path:
+    sys.path.insert(0, str(_PIPELINE))
+from shot_duration import apply_duration_clamp_to_shots, should_clamp_shot_durations  # noqa: E402
+
 SYNTHETIC_GUARD = "synthetic host only"
 TEMPLATES_FILE = "Production_Templates/Production_Templates_v1.json"
 SET_LIBRARY = "Set_Library_v1.json"
@@ -237,6 +242,9 @@ def build_longform_script(
             shot["on_screen_labels"] = beat["on_screen_labels"]
         shots.append(shot)
         t += duration
+
+    if should_clamp_shot_durations(seamless):
+        shots, _ = apply_duration_clamp_to_shots(shots)
 
     brand = brand or {}
     prov_template = fmt.get("provenance_card", {"enabled": False})

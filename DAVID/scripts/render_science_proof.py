@@ -18,6 +18,18 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
+WORKSPACE = ROOT.parent
+PIPELINE_DIR = WORKSPACE / "STUDIO" / "Pipeline"
+if str(PIPELINE_DIR) not in sys.path:
+    sys.path.insert(0, str(PIPELINE_DIR))
+
+from shot_duration import (  # noqa: E402
+    av_sync_drift_label,
+    check_shot_duration_band,
+    effective_shot_duration,
+    seamless_chain_enabled,
+)
+
 SCRIPTS = Path(__file__).resolve().parent / "longform_scripts"
 FFMPEG: str | None = None
 
@@ -304,12 +316,29 @@ def qa_check(
     else:
         issues.append(f"fewer than {min_shots} shots")
 
+    seamless = seamless_chain_enabled(script.get("config", {}).get("seamless"))
+    for s in script["shots"]:
+        if band := check_shot_duration_band(s, seamless=seamless):
+            issues.append(band)
+
     for s in narration_shots:
         if not s.get("speech_text"):
             issues.append(f"{s['id']}: missing speech_text narration")
         timing = s.get("t_end", 0) - s.get("t_start", 0)
         if abs(timing - s.get("duration", 0)) > 0.5:
             issues.append(f"{s['id']}: timing mismatch")
+
+    if seamless and burned_paths:
+        sync_bad = []
+        for shot, path in zip(script["shots"], burned_paths):
+            if path.is_file():
+                label = av_sync_drift_label(shot, probe_duration(path), seamless=True)
+                if label:
+                    sync_bad.append(label)
+        if sync_bad:
+            issues.append(f"A/V sync drift: {sync_bad}")
+        else:
+            passes.append("tight A/V sync per shot (script-clamped duration)")
 
     viz_shots = [s for s in script["shots"] if s.get("role") == "visualization"]
     if viz_shots:
@@ -444,14 +473,16 @@ def render_proof(
         if not (raw_path.is_file() and raw_path.stat().st_size > 10000) and not concat_only:
             if client is None:
                 raise RuntimeError("API client required for video generation")
-            print(f"[science-proof] rendering {sid} ({shot['duration']}s, {resolution})…")
+            seamless = seamless_chain_enabled(cfg.get("seamless"))
+            api_dur = effective_shot_duration(shot, seamless=seamless)
+            print(f"[science-proof] rendering {sid} ({api_dur}s, {resolution})…")
             image_url = shot.get("image_url") or avatar_url
             if not image_url:
                 raise RuntimeError("image_url required — re-run render_host_identity.py")
             kwargs: dict[str, Any] = {
                 "prompt": shot["video_prompt"],
                 "model": model,
-                "duration": shot["duration"],
+                "duration": api_dur,
                 "resolution": resolution,
                 "image_url": image_url,
             }

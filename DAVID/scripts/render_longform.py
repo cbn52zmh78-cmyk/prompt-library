@@ -34,6 +34,17 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 WORKSPACE = ROOT.parent
+PIPELINE_DIR = WORKSPACE / "STUDIO" / "Pipeline"
+if str(PIPELINE_DIR) not in sys.path:
+    sys.path.insert(0, str(PIPELINE_DIR))
+
+from shot_duration import (  # noqa: E402
+    av_sync_drift_label,
+    check_shot_duration_band,
+    clamp_shot_duration,
+    effective_shot_duration,
+)
+
 DEFAULT_LOCK = ROOT / "productions" / "host_identity_v1" / "david_identity_lock.json"
 FFMPEG: str | None = None
 
@@ -674,7 +685,7 @@ def build_imagine_pack(
         "shots": [
             {
                 "shot_id": s["id"],
-                "duration": clamp_shot_duration(s["duration"]) if use_seamless else s["duration"],
+                "duration": effective_shot_duration(s, seamless=use_seamless),
                 "image_url": resolve_shot_image_url(s, refs),
                 "video_prompt": (
                     apply_seamless_prompt(s, refs, seamless_opts)
@@ -875,10 +886,6 @@ def get_seamless_options(script: dict[str, Any], args: argparse.Namespace) -> Se
         reground_interval=int(seam.get("reground_interval", REGROUND_EVERY_N)),
         magenta_clamp=bool(seam.get("magenta_clamp", True)),
     )
-
-
-def clamp_shot_duration(duration: int, lo: int = 7, hi: int = 9) -> int:
-    return max(lo, min(hi, int(duration)))
 
 
 def apply_seamless_prompt(shot: dict[str, Any], refs: dict[str, Any], opts: SeamlessOptions) -> str:
@@ -1345,7 +1352,11 @@ def process_shot_segment(
     work = shots_dir
     cur = video
     dark_scene = _is_dark_scene(refs, shot=shot)
-    target_dur = float(clamp_shot_duration(shot.get("duration", probe_duration(cur))))
+    target_dur = float(
+        effective_shot_duration(shot, seamless=True)
+        if shot.get("duration") is not None
+        else clamp_shot_duration(probe_duration(cur))
+    )
 
     if opts.magenta_clamp or opts.match_color:
         clamped = work / f"{video.stem}_clamped.mp4"
@@ -1410,7 +1421,7 @@ def tighten_chain_loudness(
                 continue
             leveled = shots_dir / f"{seg.stem}_lvl{iteration}.mp4"
             _remux_av(seg, leveled, af=f"volume={gain_db:.2f}dB")
-            target_dur = float(clamp_shot_duration(shot.get("duration", probe_duration(leveled))))
+            target_dur = float(effective_shot_duration(shot, seamless=True))
             pinned = shots_dir / f"{seg.stem}_lvl{iteration}_pin.mp4"
             pin_av_to_duration(leveled, pinned, target_dur)
             staging = shots_dir / f"{seg.stem}__lvl_staging.mp4"
@@ -1720,7 +1731,7 @@ def render_frame_chain_performance(
         sid = shot["id"]
         seg_path = shots_dir / f"chain_{sid}.mp4"
         proc_path = shots_dir / f"chain_{sid}_processed.mp4"
-        dur = clamp_shot_duration(shot.get("duration", 8))
+        dur = effective_shot_duration(shot, seamless=True)
         prompt = apply_seamless_prompt(shot, refs, opts)
         regen = force or sid in force_ids
 
@@ -1904,7 +1915,7 @@ def render_extend_performance(
 
     # First segment
     shot0 = shots[0]
-    dur0 = clamp_shot_duration(shot0.get("duration", 8))
+    dur0 = effective_shot_duration(shot0, seamless=True)
     prompt0 = apply_seamless_prompt(shot0, refs, opts)
     image_url0 = resolve_shot_image_url(shot0, refs)
     print(f"[seamless] extend step 1/{len(shots)} {shot0['id']} ({dur0}s)…")
@@ -1925,7 +1936,7 @@ def render_extend_performance(
         return out_path, step_urls, "generate_only"
 
     shot1 = shots[1]
-    dur1 = clamp_shot_duration(shot1.get("duration", 8))
+    dur1 = effective_shot_duration(shot1, seamless=True)
     prompt1 = apply_seamless_prompt(shot1, refs, opts)
     try:
         print(f"[seamless] extend step 2/{len(shots)} {shot1['id']} ({dur1}s)…")
@@ -1942,7 +1953,7 @@ def render_extend_performance(
 
         for i, shot in enumerate(shots[2:], start=3):
             sid = shot["id"]
-            dur = clamp_shot_duration(shot.get("duration", 8))
+            dur = effective_shot_duration(shot, seamless=True)
             prompt = apply_seamless_prompt(shot, refs, opts)
             print(f"[seamless] extend step {i}/{len(shots)} {sid} ({dur}s)…")
             _api_pace()
@@ -2136,10 +2147,11 @@ def qa_check(
                     passes.append("neutral set — magenta probe skipped")
                 sync_bad = []
                 for p, shot in zip(segs, shots[: len(segs)]):
-                    expected = float(clamp_shot_duration(shot.get("duration", 0)))
-                    delta = probe_av_duration_delta(p, expected)
-                    if delta > 0.12:
-                        sync_bad.append(f"{shot['id']}:{delta:.3f}s")
+                    label = av_sync_drift_label(
+                        shot, probe_duration(p), seamless=seamless_opts.enabled
+                    )
+                    if label:
+                        sync_bad.append(label)
                 if sync_bad:
                     issues.append(f"A/V sync drift: {sync_bad}")
                 else:
@@ -2167,10 +2179,9 @@ def qa_check(
             except Exception as exc:
                 issues.append(f"post-process QA probe failed: {exc}")
         for s in shots:
-            raw_dur = s.get("duration", 0)
-            dur = clamp_shot_duration(raw_dur) if seamless_opts.enabled else raw_dur
-            if dur < 7 or dur > 9:
-                issues.append(f"{s['id']}: duration {dur}s outside 7–9s seamless band")
+            band_issue = check_shot_duration_band(s, seamless=seamless_opts.enabled)
+            if band_issue:
+                issues.append(band_issue)
         if comparison_path and comparison_path.is_file():
             passes.append(f"side-by-side: {comparison_path.name}")
 

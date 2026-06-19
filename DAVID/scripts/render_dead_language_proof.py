@@ -18,6 +18,18 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
+WORKSPACE = ROOT.parent
+PIPELINE_DIR = WORKSPACE / "STUDIO" / "Pipeline"
+if str(PIPELINE_DIR) not in sys.path:
+    sys.path.insert(0, str(PIPELINE_DIR))
+
+from shot_duration import (  # noqa: E402
+    av_sync_drift_label,
+    check_shot_duration_band,
+    effective_shot_duration,
+    seamless_chain_enabled,
+)
+
 SCRIPTS = Path(__file__).resolve().parent / "longform_scripts"
 FFMPEG: str | None = None
 
@@ -335,6 +347,23 @@ def qa_check(
     else:
         issues.append(f"fewer than {min_shots} {speech_lang} speech shots")
 
+    seamless = seamless_chain_enabled(script.get("config", {}).get("seamless"))
+    for s in script["shots"]:
+        if band := check_shot_duration_band(s, seamless=seamless):
+            issues.append(band)
+
+    if seamless and burned_paths:
+        sync_bad = []
+        for shot, path in zip(script["shots"], burned_paths):
+            if path.is_file():
+                label = av_sync_drift_label(shot, probe_duration(path), seamless=True)
+                if label:
+                    sync_bad.append(label)
+        if sync_bad:
+            issues.append(f"A/V sync drift: {sync_bad}")
+        else:
+            passes.append("tight A/V sync per shot (script-clamped duration)")
+
     english_period_langs = {"tudor-english", "early-modern-english", "old-english", "middle-english"}
     for s in lang_shots:
         speech = s.get("speech_text", "")
@@ -484,12 +513,14 @@ def render_proof(
         if not (raw_path.is_file() and raw_path.stat().st_size > 10000) and not concat_only:
             if client is None:
                 raise RuntimeError("API client required for video generation")
-            print(f"[proof] rendering {sid} ({shot['duration']}s, {resolution})…")
+            seamless = seamless_chain_enabled(cfg.get("seamless"))
+            api_dur = effective_shot_duration(shot, seamless=seamless)
+            print(f"[proof] rendering {sid} ({api_dur}s, {resolution})…")
             resp = client.video.generate(
                 prompt=shot["video_prompt"],
                 model=model,
                 image_url=avatar_url,
-                duration=shot["duration"],
+                duration=api_dur,
                 resolution=resolution,
             )
             _download(resp.url, raw_path)
