@@ -13,800 +13,432 @@
     "rgb_skew_max": 0.12
   },
   "measured": {
-    "magenta_max": 0.125,
-    "magenta_mean": 0.0179,
-    "yellow_green_max": 0.2249,
-    "yellow_green_mean": 0.1384,
-    "grey_balance_drift": 0.2109,
-    "blue_starvation_max": 0.7679,
-    "host_br_ratio_min": 0.2796,
-    "host_blue_mean_min": 5.41,
-    "rgb_skew_max": 0.2507,
-    "color_cast_fail_frames": 59,
-    "join_issues": 28
+    "magenta_max": 0.6737,
+    "magenta_mean": 0.3415,
+    "yellow_green_max": 0.1897,
+    "yellow_green_mean": 0.0653,
+    "grey_balance_drift": 0.1116,
+    "blue_starvation_max": 0.3803,
+    "host_br_ratio_min": 0.7172,
+    "host_blue_mean_min": 23.27,
+    "rgb_skew_max": 0.0818,
+    "color_cast_fail_frames": 6,
+    "join_issues": 30
   },
   "join_issues": [
     {
-      "t_s": 2.0,
-      "kind": "join_spike",
-      "frame_mad": 18.53,
-      "skew_jump": 0.0027
-    },
-    {
-      "t_s": 3.0,
-      "kind": "join_spike",
-      "frame_mad": 19.26,
-      "skew_jump": 0.0006
-    },
-    {
       "t_s": 4.0,
       "kind": "join_spike",
-      "frame_mad": 22.37,
-      "skew_jump": 0.0015
+      "frame_mad": 18.99,
+      "skew_jump": 0.0003
     },
     {
       "t_s": 5.0,
       "kind": "join_spike",
-      "frame_mad": 21.49,
-      "skew_jump": 0.0008
-    },
-    {
-      "t_s": 6.0,
-      "kind": "join_spike",
-      "frame_mad": 22.2,
-      "skew_jump": 0.0038
-    },
-    {
-      "t_s": 7.0,
-      "kind": "join_spike",
-      "frame_mad": 22.55,
-      "skew_jump": 0.0002
+      "frame_mad": 18.06,
+      "skew_jump": 0.0013
     },
     {
       "t_s": 8.0,
-      "kind": "join_color_seam",
-      "frame_mad": 26.66,
-      "skew_jump": 0.1625
+      "kind": "hard_cut",
+      "frame_mad": 32.71,
+      "skew_jump": 0.089
     },
     {
       "t_s": 11.0,
       "kind": "join_spike",
-      "frame_mad": 19.95,
-      "skew_jump": 0.0073
+      "frame_mad": 22.15,
+      "skew_jump": 0.0074
     },
     {
       "t_s": 12.0,
       "kind": "join_spike",
-      "frame_mad": 20.48,
-      "skew_jump": 0.0038
+      "frame_mad": 22.6,
+      "skew_jump": 0.0024
+    },
+    {
+      "t_s": 13.0,
+      "kind": "join_spike",
+      "frame_mad": 18.2,
+      "skew_jump": 0.002
     },
     {
       "t_s": 14.0,
       "kind": "join_spike",
-      "frame_mad": 18.26,
-      "skew_jump": 0.0014
+      "frame_mad": 20.22,
+      "skew_jump": 0.0006
     },
     {
       "t_s": 15.0,
       "kind": "join_color_seam",
-      "frame_mad": 28.68,
-      "skew_jump": 0.0522
+      "frame_mad": 30.86,
+      "skew_jump": 0.0607
     },
     {
       "t_s": 16.0,
       "kind": "join_color_seam",
-      "frame_mad": 19.85,
-      "skew_jump": 0.0398
+      "frame_mad": 21.19,
+      "skew_jump": 0.0346
     },
     {
       "t_s": 17.0,
       "kind": "join_spike",
-      "frame_mad": 21.43,
-      "skew_jump": 0.0035
+      "frame_mad": 22.81,
+      "skew_jump": 0.0016
     },
     {
       "t_s": 18.0,
       "kind": "join_spike",
-      "frame_mad": 22.44,
-      "skew_jump": 0.001
+      "frame_mad": 23.81,
+      "skew_jump": 0.0007
     },
     {
       "t_s": 19.0,
       "kind": "join_spike",
-      "frame_mad": 21.89,
-      "skew_jump": 0.0015
+      "frame_mad": 23.26,
+      "skew_jump": 0.0005
     },
     {
       "t_s": 20.0,
       "kind": "join_spike",
-      "frame_mad": 21.81,
-      "skew_jump": 0.0005
+      "frame_mad": 23.16,
+      "skew_jump": 0.0002
     },
     {
       "t_s": 21.0,
       "kind": "join_spike",
-      "frame_mad": 22.22,
-      "skew_jump": 0.002
+      "frame_mad": 23.48,
+      "skew_jump": 0.001
     },
     {
       "t_s": 22.0,
       "kind": "join_spike",
-      "frame_mad": 20.69,
+      "frame_mad": 21.77,
       "skew_jump": 0.0006
+    },
+    {
+      "t_s": 23.0,
+      "kind": "skew_discontinuity",
+      "frame_mad": 17.51,
+      "skew_jump": 0.0839
     },
     {
       "t_s": 30.0,
       "kind": "hard_cut",
-      "frame_mad": 40.6,
-      "skew_jump": 0.0873
+      "frame_mad": 43.46,
+      "skew_jump": 0.0897
+    },
+    {
+      "t_s": 34.0,
+      "kind": "join_spike",
+      "frame_mad": 18.22,
+      "skew_jump": 0.0009
+    },
+    {
+      "t_s": 35.0,
+      "kind": "join_spike",
+      "frame_mad": 18.3,
+      "skew_jump": 0.0002
     },
     {
       "t_s": 37.0,
       "kind": "join_color_seam",
-      "frame_mad": 18.51,
-      "skew_jump": 0.0698
+      "frame_mad": 20.03,
+      "skew_jump": 0.0756
     },
     {
       "t_s": 45.0,
       "kind": "hard_cut",
-      "frame_mad": 36.43,
-      "skew_jump": 0.0866
+      "frame_mad": 38.23,
+      "skew_jump": 0.0849
+    },
+    {
+      "t_s": 49.0,
+      "kind": "join_spike",
+      "frame_mad": 18.07,
+      "skew_jump": 0.0004
     },
     {
       "t_s": 51.0,
       "kind": "join_spike",
-      "frame_mad": 18.93,
-      "skew_jump": 0.0016
+      "frame_mad": 20.66,
+      "skew_jump": 0.0004
     },
     {
       "t_s": 52.0,
       "kind": "join_spike",
-      "frame_mad": 20.74,
-      "skew_jump": 0.0001
+      "frame_mad": 22.59,
+      "skew_jump": 0.0003
+    },
+    {
+      "t_s": 53.0,
+      "kind": "join_spike",
+      "frame_mad": 19.96,
+      "skew_jump": 0.0091
     },
     {
       "t_s": 57.0,
       "kind": "join_spike",
-      "frame_mad": 24.01,
-      "skew_jump": 0.0067
+      "frame_mad": 25.61,
+      "skew_jump": 0.0027
     },
     {
       "t_s": 58.0,
       "kind": "join_spike",
-      "frame_mad": 29.43,
-      "skew_jump": 0.0097
+      "frame_mad": 32.55,
+      "skew_jump": 0.009
     },
     {
       "t_s": 59.0,
       "kind": "join_spike",
-      "frame_mad": 25.67,
-      "skew_jump": 0.0004
+      "frame_mad": 28.7,
+      "skew_jump": 0.0006
     },
     {
       "t_s": 60.0,
       "kind": "join_spike",
-      "frame_mad": 22.83,
-      "skew_jump": 0.0085
+      "frame_mad": 25.82,
+      "skew_jump": 0.0017
     },
     {
       "t_s": 61.0,
       "kind": "hard_cut",
-      "frame_mad": 49.68,
-      "skew_jump": 0.1865
+      "frame_mad": 47.58,
+      "skew_jump": 0.0995
     }
   ],
   "breaches": {
-    "magenta": [],
-    "yellow_green": [
+    "magenta": [
       [
-        8.0,
-        0.1285
+        0.0,
+        0.6737
       ],
       [
-        9.0,
-        0.1395
+        1.0,
+        0.6643
       ],
       [
-        10.0,
-        0.1311
+        2.0,
+        0.6589
       ],
       [
-        11.0,
-        0.1356
+        3.0,
+        0.6474
       ],
       [
-        12.0,
-        0.1377
+        4.0,
+        0.6338
       ],
       [
-        13.0,
-        0.1365
+        5.0,
+        0.6214
       ],
       [
-        14.0,
-        0.1551
+        6.0,
+        0.6413
       ],
       [
-        15.0,
-        0.133
+        7.0,
+        0.6431
       ],
       [
         16.0,
-        0.2234
+        0.588
       ],
       [
         17.0,
-        0.2214
+        0.589
       ],
       [
         18.0,
-        0.2133
+        0.5929
       ],
       [
         19.0,
-        0.209
+        0.6027
       ],
       [
         20.0,
-        0.1928
+        0.5992
       ],
       [
         21.0,
-        0.1959
+        0.6439
       ],
       [
         22.0,
-        0.1956
-      ],
-      [
-        23.0,
-        0.1339
-      ],
-      [
-        24.0,
-        0.1607
-      ],
-      [
-        25.0,
-        0.1469
-      ],
-      [
-        26.0,
-        0.1246
-      ],
-      [
-        27.0,
-        0.1236
+        0.644
       ],
       [
         30.0,
-        0.2249
+        0.5681
       ],
       [
         31.0,
-        0.2013
+        0.5848
       ],
       [
         32.0,
-        0.1992
+        0.5789
       ],
       [
         33.0,
-        0.2056
+        0.5806
       ],
       [
         34.0,
-        0.2045
+        0.5729
       ],
       [
         35.0,
-        0.1989
+        0.5798
       ],
       [
         36.0,
-        0.1961
-      ],
-      [
-        37.0,
-        0.1428
-      ],
-      [
-        38.0,
-        0.1318
-      ],
-      [
-        39.0,
-        0.1253
-      ],
-      [
-        40.0,
-        0.1312
-      ],
-      [
-        44.0,
-        0.1323
+        0.5679
       ],
       [
         45.0,
-        0.2238
+        0.5598
       ],
       [
         46.0,
-        0.2246
+        0.5802
       ],
       [
         47.0,
-        0.2073
+        0.5845
       ],
       [
         48.0,
-        0.2081
+        0.5699
       ],
       [
         49.0,
-        0.1992
+        0.5713
       ],
       [
         50.0,
-        0.1849
+        0.5684
       ],
       [
         51.0,
-        0.178
+        0.5821
       ],
       [
         52.0,
-        0.1741
+        0.6101
       ],
       [
         53.0,
-        0.1826
+        0.5019
+      ]
+    ],
+    "yellow_green": [
+      [
+        8.0,
+        0.165
+      ],
+      [
+        9.0,
+        0.1754
+      ],
+      [
+        10.0,
+        0.1551
+      ],
+      [
+        11.0,
+        0.1532
+      ],
+      [
+        12.0,
+        0.148
+      ],
+      [
+        13.0,
+        0.1612
+      ],
+      [
+        14.0,
+        0.1677
+      ],
+      [
+        23.0,
+        0.1565
+      ],
+      [
+        24.0,
+        0.1571
+      ],
+      [
+        25.0,
+        0.1801
+      ],
+      [
+        26.0,
+        0.1494
+      ],
+      [
+        27.0,
+        0.1309
       ],
       [
         54.0,
-        0.1337
+        0.1839
       ],
       [
         55.0,
-        0.142
+        0.1817
       ],
       [
         56.0,
-        0.1482
+        0.1897
       ],
       [
         57.0,
-        0.1251
+        0.1871
       ]
     ],
     "color_cast": [
       [
-        8.0,
-        [
-          "rgb_skew 0.2279 > 0.12",
-          "blue_starvation_fraction 0.755 > 0.5"
-        ]
-      ],
-      [
-        9.0,
-        [
-          "rgb_skew 0.2302 > 0.12",
-          "blue_starvation_fraction 0.752 > 0.5"
-        ]
-      ],
-      [
-        10.0,
-        [
-          "rgb_skew 0.2320 > 0.12",
-          "blue_starvation_fraction 0.741 > 0.5"
-        ]
-      ],
-      [
-        11.0,
-        [
-          "rgb_skew 0.2393 > 0.12",
-          "clinical_channel_balance 0.2692 > 0.12",
-          "blue_starvation_fraction 0.710 > 0.5"
-        ]
-      ],
-      [
-        12.0,
-        [
-          "rgb_skew 0.2355 > 0.12",
-          "blue_starvation_fraction 0.719 > 0.5"
-        ]
-      ],
-      [
-        13.0,
-        [
-          "rgb_skew 0.2350 > 0.12",
-          "blue_starvation_fraction 0.714 > 0.5"
-        ]
-      ],
-      [
-        14.0,
-        [
-          "rgb_skew 0.2365 > 0.12",
-          "clinical_channel_balance 0.2633 > 0.12",
-          "blue_starvation_fraction 0.717 > 0.5"
-        ]
-      ],
-      [
-        15.0,
-        [
-          "rgb_skew 0.1843 > 0.12",
-          "blue_starvation_fraction 0.629 > 0.5"
-        ]
-      ],
-      [
-        16.0,
-        [
-          "rgb_skew 0.1445 > 0.12",
-          "blue_starvation_fraction 0.598 > 0.5"
-        ]
-      ],
-      [
-        17.0,
-        [
-          "rgb_skew 0.1480 > 0.12",
-          "blue_starvation_fraction 0.590 > 0.5"
-        ]
-      ],
-      [
-        18.0,
-        [
-          "rgb_skew 0.1490 > 0.12",
-          "blue_starvation_fraction 0.562 > 0.5"
-        ]
-      ],
-      [
-        19.0,
-        [
-          "rgb_skew 0.1506 > 0.12",
-          "blue_starvation_fraction 0.559 > 0.5"
-        ]
-      ],
-      [
-        20.0,
-        [
-          "rgb_skew 0.1510 > 0.12",
-          "blue_starvation_fraction 0.547 > 0.5"
-        ]
-      ],
-      [
-        21.0,
-        [
-          "rgb_skew 0.1530 > 0.12",
-          "blue_starvation_fraction 0.538 > 0.5"
-        ]
-      ],
-      [
-        22.0,
-        [
-          "rgb_skew 0.1536 > 0.12",
-          "blue_starvation_fraction 0.518 > 0.5"
-        ]
-      ],
-      [
-        23.0,
-        [
-          "rgb_skew 0.2295 > 0.12",
-          "blue_starvation_fraction 0.702 > 0.5"
-        ]
-      ],
-      [
-        24.0,
-        [
-          "rgb_skew 0.2293 > 0.12",
-          "blue_starvation_fraction 0.692 > 0.5"
-        ]
-      ],
-      [
-        25.0,
-        [
-          "rgb_skew 0.2278 > 0.12",
-          "blue_starvation_fraction 0.715 > 0.5"
-        ]
-      ],
-      [
-        26.0,
-        [
-          "rgb_skew 0.2333 > 0.12",
-          "blue_starvation_fraction 0.702 > 0.5"
-        ]
-      ],
-      [
-        27.0,
-        [
-          "rgb_skew 0.2332 > 0.12",
-          "clinical_channel_balance 0.2614 > 0.12",
-          "blue_starvation_fraction 0.682 > 0.5"
-        ]
-      ],
-      [
-        28.0,
-        [
-          "rgb_skew 0.2309 > 0.12",
-          "clinical_channel_balance 0.2594 > 0.12",
-          "blue_starvation_fraction 0.669 > 0.5"
-        ]
-      ],
-      [
-        29.0,
-        [
-          "rgb_skew 0.2310 > 0.12",
-          "clinical_channel_balance 0.2589 > 0.12",
-          "blue_starvation_fraction 0.670 > 0.5"
-        ]
-      ],
-      [
-        30.0,
-        [
-          "rgb_skew 0.1437 > 0.12",
-          "blue_starvation_fraction 0.599 > 0.5"
-        ]
-      ],
-      [
-        31.0,
-        [
-          "rgb_skew 0.1455 > 0.12",
-          "blue_starvation_fraction 0.603 > 0.5"
-        ]
-      ],
-      [
-        32.0,
-        [
-          "rgb_skew 0.1455 > 0.12",
-          "blue_starvation_fraction 0.585 > 0.5"
-        ]
-      ],
-      [
-        33.0,
-        [
-          "rgb_skew 0.1446 > 0.12",
-          "blue_starvation_fraction 0.561 > 0.5"
-        ]
-      ],
-      [
-        34.0,
-        [
-          "rgb_skew 0.1466 > 0.12",
-          "blue_starvation_fraction 0.589 > 0.5"
-        ]
-      ],
-      [
-        35.0,
-        [
-          "rgb_skew 0.1480 > 0.12",
-          "blue_starvation_fraction 0.583 > 0.5"
-        ]
-      ],
-      [
-        36.0,
-        [
-          "rgb_skew 0.1491 > 0.12",
-          "blue_starvation_fraction 0.582 > 0.5"
-        ]
-      ],
-      [
-        37.0,
-        [
-          "rgb_skew 0.2189 > 0.12",
-          "blue_starvation_fraction 0.757 > 0.5",
-          "host B mean 22.1 < 25.0"
-        ]
-      ],
-      [
-        38.0,
-        [
-          "rgb_skew 0.2214 > 0.12",
-          "blue_starvation_fraction 0.742 > 0.5",
-          "host B mean 23.7 < 25.0"
-        ]
-      ],
-      [
-        39.0,
-        [
-          "rgb_skew 0.2229 > 0.12",
-          "blue_starvation_fraction 0.743 > 0.5",
-          "host B mean 23.9 < 25.0"
-        ]
-      ],
-      [
-        40.0,
-        [
-          "rgb_skew 0.2242 > 0.12",
-          "blue_starvation_fraction 0.738 > 0.5",
-          "host B mean 24.2 < 25.0"
-        ]
-      ],
-      [
-        41.0,
-        [
-          "rgb_skew 0.2251 > 0.12",
-          "blue_starvation_fraction 0.746 > 0.5",
-          "host B mean 23.9 < 25.0"
-        ]
-      ],
-      [
-        42.0,
-        [
-          "rgb_skew 0.2286 > 0.12",
-          "blue_starvation_fraction 0.745 > 0.5",
-          "host B mean 24.4 < 25.0"
-        ]
-      ],
-      [
-        43.0,
-        [
-          "rgb_skew 0.2277 > 0.12",
-          "blue_starvation_fraction 0.751 > 0.5",
-          "host B mean 23.9 < 25.0"
-        ]
-      ],
-      [
-        44.0,
-        [
-          "rgb_skew 0.2278 > 0.12",
-          "blue_starvation_fraction 0.728 > 0.5"
-        ]
-      ],
-      [
-        45.0,
-        [
-          "rgb_skew 0.1412 > 0.12",
-          "blue_starvation_fraction 0.602 > 0.5"
-        ]
-      ],
-      [
-        46.0,
-        [
-          "rgb_skew 0.1429 > 0.12",
-          "blue_starvation_fraction 0.592 > 0.5"
-        ]
-      ],
-      [
-        47.0,
-        [
-          "rgb_skew 0.1440 > 0.12",
-          "blue_starvation_fraction 0.588 > 0.5"
-        ]
-      ],
-      [
-        48.0,
-        [
-          "rgb_skew 0.1448 > 0.12",
-          "blue_starvation_fraction 0.589 > 0.5"
-        ]
-      ],
-      [
-        49.0,
-        [
-          "rgb_skew 0.1469 > 0.12",
-          "blue_starvation_fraction 0.584 > 0.5"
-        ]
-      ],
-      [
-        50.0,
-        [
-          "rgb_skew 0.1477 > 0.12",
-          "blue_starvation_fraction 0.566 > 0.5"
-        ]
-      ],
-      [
-        51.0,
-        [
-          "rgb_skew 0.1493 > 0.12",
-          "blue_starvation_fraction 0.569 > 0.5"
-        ]
-      ],
-      [
-        52.0,
-        [
-          "rgb_skew 0.1494 > 0.12",
-          "blue_starvation_fraction 0.568 > 0.5"
-        ]
-      ],
-      [
-        53.0,
-        [
-          "rgb_skew 0.1701 > 0.12",
-          "blue_starvation_fraction 0.631 > 0.5"
-        ]
-      ],
-      [
-        54.0,
-        [
-          "rgb_skew 0.2231 > 0.12",
-          "blue_starvation_fraction 0.768 > 0.5",
-          "host B mean 22.5 < 25.0"
-        ]
-      ],
-      [
-        55.0,
-        [
-          "rgb_skew 0.2235 > 0.12",
-          "blue_starvation_fraction 0.762 > 0.5",
-          "host B mean 22.9 < 25.0"
-        ]
-      ],
-      [
-        56.0,
-        [
-          "rgb_skew 0.2254 > 0.12",
-          "blue_starvation_fraction 0.751 > 0.5",
-          "host B mean 24.1 < 25.0"
-        ]
-      ],
-      [
-        57.0,
-        [
-          "rgb_skew 0.2321 > 0.12",
-          "blue_starvation_fraction 0.739 > 0.5"
-        ]
-      ],
-      [
-        58.0,
-        [
-          "rgb_skew 0.2418 > 0.12",
-          "clinical_channel_balance 0.2736 > 0.12",
-          "blue_starvation_fraction 0.706 > 0.5"
-        ]
-      ],
-      [
-        59.0,
-        [
-          "rgb_skew 0.2422 > 0.12",
-          "clinical_channel_balance 0.2769 > 0.12",
-          "blue_starvation_fraction 0.654 > 0.5"
-        ]
-      ],
-      [
-        60.0,
-        [
-          "rgb_skew 0.2507 > 0.12",
-          "clinical_channel_balance 0.2871 > 0.12",
-          "blue_starvation_fraction 0.639 > 0.5"
-        ]
-      ],
-      [
         61.0,
         [
-          "blue_starvation B=5.4 lum=20.3"
+          "host B mean 23.3 < 25.0"
         ]
       ],
       [
         62.0,
         [
-          "blue_starvation B=5.4 lum=20.3"
+          "host B mean 23.3 < 25.0"
         ]
       ],
       [
         63.0,
         [
-          "blue_starvation B=5.4 lum=20.3"
+          "host B mean 23.3 < 25.0"
         ]
       ],
       [
         64.0,
         [
-          "blue_starvation B=5.4 lum=20.3"
+          "host B mean 23.3 < 25.0"
         ]
       ],
       [
         65.0,
         [
-          "blue_starvation B=5.4 lum=20.3"
+          "host B mean 23.3 < 25.0"
         ]
       ],
       [
         66.0,
         [
-          "blue_starvation B=5.4 lum=20.3"
+          "host B mean 23.3 < 25.0"
         ]
       ]
     ],
-    "grey_drift_over": 0.2109
+    "grey_drift_over": null
   },
   "json_self_report_pass": false,
   "coherence": "COHERENT",
@@ -815,872 +447,872 @@
     {
       "t_s": 0.0,
       "frame": "frame_0001.jpg",
-      "magenta": 0.1163,
-      "yellow_green": 0.1076,
-      "grey_balance": 0.0928,
-      "blue_starvation": 0.375,
-      "host_br_ratio": 0.7631,
-      "host_blue_mean": 40.17,
-      "rgb_skew": 0.0611,
-      "clinical_channel_balance": 0.0675,
+      "magenta": 0.6737,
+      "yellow_green": 0.0119,
+      "grey_balance": 0.0213,
+      "blue_starvation": 0.0708,
+      "host_br_ratio": 1.0673,
+      "host_blue_mean": 54.21,
+      "rgb_skew": -0.0244,
+      "clinical_channel_balance": 0.0278,
       "color_cast_pass": true
     },
     {
       "t_s": 1.0,
       "frame": "frame_0002.jpg",
-      "magenta": 0.1164,
-      "yellow_green": 0.1032,
-      "grey_balance": 0.0945,
-      "blue_starvation": 0.3744,
-      "host_br_ratio": 0.761,
-      "host_blue_mean": 42.3,
-      "rgb_skew": 0.0621,
-      "clinical_channel_balance": 0.0698,
+      "magenta": 0.6643,
+      "yellow_green": 0.015,
+      "grey_balance": 0.0209,
+      "blue_starvation": 0.0708,
+      "host_br_ratio": 1.0527,
+      "host_blue_mean": 55.85,
+      "rgb_skew": -0.0237,
+      "clinical_channel_balance": 0.0295,
       "color_cast_pass": true
     },
     {
       "t_s": 2.0,
       "frame": "frame_0003.jpg",
-      "magenta": 0.1154,
-      "yellow_green": 0.0934,
-      "grey_balance": 0.0967,
-      "blue_starvation": 0.3566,
-      "host_br_ratio": 0.7478,
-      "host_blue_mean": 45.1,
-      "rgb_skew": 0.0648,
-      "clinical_channel_balance": 0.0747,
+      "magenta": 0.6589,
+      "yellow_green": 0.0156,
+      "grey_balance": 0.0205,
+      "blue_starvation": 0.068,
+      "host_br_ratio": 1.0332,
+      "host_blue_mean": 56.73,
+      "rgb_skew": -0.0217,
+      "clinical_channel_balance": 0.0298,
       "color_cast_pass": true
     },
     {
       "t_s": 3.0,
       "frame": "frame_0004.jpg",
-      "magenta": 0.1179,
-      "yellow_green": 0.0837,
-      "grey_balance": 0.0988,
-      "blue_starvation": 0.3432,
-      "host_br_ratio": 0.7497,
-      "host_blue_mean": 46.63,
-      "rgb_skew": 0.0641,
-      "clinical_channel_balance": 0.0736,
+      "magenta": 0.6474,
+      "yellow_green": 0.0163,
+      "grey_balance": 0.0218,
+      "blue_starvation": 0.0666,
+      "host_br_ratio": 1.0158,
+      "host_blue_mean": 57.32,
+      "rgb_skew": -0.0201,
+      "clinical_channel_balance": 0.0301,
       "color_cast_pass": true
     },
     {
       "t_s": 4.0,
       "frame": "frame_0005.jpg",
-      "magenta": 0.1237,
-      "yellow_green": 0.0891,
-      "grey_balance": 0.0977,
-      "blue_starvation": 0.3548,
-      "host_br_ratio": 0.7544,
-      "host_blue_mean": 48.16,
-      "rgb_skew": 0.0626,
-      "clinical_channel_balance": 0.0717,
+      "magenta": 0.6338,
+      "yellow_green": 0.017,
+      "grey_balance": 0.0219,
+      "blue_starvation": 0.0617,
+      "host_br_ratio": 1.0095,
+      "host_blue_mean": 59.07,
+      "rgb_skew": -0.0198,
+      "clinical_channel_balance": 0.0322,
       "color_cast_pass": true
     },
     {
       "t_s": 5.0,
       "frame": "frame_0006.jpg",
-      "magenta": 0.1242,
-      "yellow_green": 0.0886,
-      "grey_balance": 0.0948,
-      "blue_starvation": 0.3337,
-      "host_br_ratio": 0.7639,
-      "host_blue_mean": 49.46,
-      "rgb_skew": 0.0618,
-      "clinical_channel_balance": 0.0707,
+      "magenta": 0.6214,
+      "yellow_green": 0.0198,
+      "grey_balance": 0.0224,
+      "blue_starvation": 0.0598,
+      "host_br_ratio": 0.9948,
+      "host_blue_mean": 60.85,
+      "rgb_skew": -0.0185,
+      "clinical_channel_balance": 0.0332,
       "color_cast_pass": true
     },
     {
       "t_s": 6.0,
       "frame": "frame_0007.jpg",
-      "magenta": 0.1229,
-      "yellow_green": 0.0749,
-      "grey_balance": 0.0932,
-      "blue_starvation": 0.3303,
-      "host_br_ratio": 0.7415,
-      "host_blue_mean": 48.38,
-      "rgb_skew": 0.0656,
-      "clinical_channel_balance": 0.0765,
+      "magenta": 0.6413,
+      "yellow_green": 0.0185,
+      "grey_balance": 0.0253,
+      "blue_starvation": 0.0625,
+      "host_br_ratio": 0.9874,
+      "host_blue_mean": 62.26,
+      "rgb_skew": -0.0174,
+      "clinical_channel_balance": 0.034,
       "color_cast_pass": true
     },
     {
       "t_s": 7.0,
       "frame": "frame_0008.jpg",
-      "magenta": 0.125,
-      "yellow_green": 0.069,
-      "grey_balance": 0.0966,
-      "blue_starvation": 0.3268,
-      "host_br_ratio": 0.738,
-      "host_blue_mean": 47.69,
-      "rgb_skew": 0.0654,
-      "clinical_channel_balance": 0.0769,
+      "magenta": 0.6431,
+      "yellow_green": 0.0181,
+      "grey_balance": 0.0248,
+      "blue_starvation": 0.0586,
+      "host_br_ratio": 0.9823,
+      "host_blue_mean": 63.93,
+      "rgb_skew": -0.0167,
+      "clinical_channel_balance": 0.0351,
       "color_cast_pass": true
     },
     {
       "t_s": 8.0,
       "frame": "frame_0009.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1285,
-      "grey_balance": 0.2728,
-      "blue_starvation": 0.755,
-      "host_br_ratio": 0.2922,
-      "host_blue_mean": 25.28,
-      "rgb_skew": 0.2279,
-      "clinical_channel_balance": 0.254,
-      "color_cast_pass": false
+      "magenta": 0.1016,
+      "yellow_green": 0.165,
+      "grey_balance": 0.0972,
+      "blue_starvation": 0.3803,
+      "host_br_ratio": 0.7359,
+      "host_blue_mean": 52.22,
+      "rgb_skew": 0.0723,
+      "clinical_channel_balance": 0.0816,
+      "color_cast_pass": true
     },
     {
       "t_s": 9.0,
       "frame": "frame_0010.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1395,
-      "grey_balance": 0.2769,
-      "blue_starvation": 0.7525,
-      "host_br_ratio": 0.2936,
-      "host_blue_mean": 25.88,
-      "rgb_skew": 0.2302,
-      "clinical_channel_balance": 0.257,
-      "color_cast_pass": false
+      "magenta": 0.103,
+      "yellow_green": 0.1754,
+      "grey_balance": 0.1009,
+      "blue_starvation": 0.3746,
+      "host_br_ratio": 0.7276,
+      "host_blue_mean": 52.47,
+      "rgb_skew": 0.0756,
+      "clinical_channel_balance": 0.0854,
+      "color_cast_pass": true
     },
     {
       "t_s": 10.0,
       "frame": "frame_0011.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1311,
-      "grey_balance": 0.2758,
-      "blue_starvation": 0.7409,
-      "host_br_ratio": 0.2986,
-      "host_blue_mean": 26.91,
-      "rgb_skew": 0.232,
-      "clinical_channel_balance": 0.2597,
-      "color_cast_pass": false
+      "magenta": 0.1171,
+      "yellow_green": 0.1551,
+      "grey_balance": 0.0992,
+      "blue_starvation": 0.3612,
+      "host_br_ratio": 0.7345,
+      "host_blue_mean": 55.05,
+      "rgb_skew": 0.0731,
+      "clinical_channel_balance": 0.0855,
+      "color_cast_pass": true
     },
     {
       "t_s": 11.0,
       "frame": "frame_0012.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1356,
-      "grey_balance": 0.2799,
-      "blue_starvation": 0.7104,
-      "host_br_ratio": 0.3129,
-      "host_blue_mean": 29.89,
-      "rgb_skew": 0.2393,
-      "clinical_channel_balance": 0.2692,
-      "color_cast_pass": false
+      "magenta": 0.1146,
+      "yellow_green": 0.1532,
+      "grey_balance": 0.1028,
+      "blue_starvation": 0.3042,
+      "host_br_ratio": 0.7191,
+      "host_blue_mean": 58.15,
+      "rgb_skew": 0.0805,
+      "clinical_channel_balance": 0.0952,
+      "color_cast_pass": true
     },
     {
       "t_s": 12.0,
       "frame": "frame_0013.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1377,
-      "grey_balance": 0.2798,
-      "blue_starvation": 0.7192,
-      "host_br_ratio": 0.3066,
-      "host_blue_mean": 28.47,
-      "rgb_skew": 0.2355,
-      "clinical_channel_balance": 0.2629,
-      "color_cast_pass": false
+      "magenta": 0.1192,
+      "yellow_green": 0.148,
+      "grey_balance": 0.103,
+      "blue_starvation": 0.3141,
+      "host_br_ratio": 0.7252,
+      "host_blue_mean": 56.41,
+      "rgb_skew": 0.078,
+      "clinical_channel_balance": 0.0906,
+      "color_cast_pass": true
     },
     {
       "t_s": 13.0,
       "frame": "frame_0014.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1365,
-      "grey_balance": 0.2785,
-      "blue_starvation": 0.7141,
-      "host_br_ratio": 0.3082,
-      "host_blue_mean": 28.63,
-      "rgb_skew": 0.235,
-      "clinical_channel_balance": 0.2623,
-      "color_cast_pass": false
+      "magenta": 0.1213,
+      "yellow_green": 0.1612,
+      "grey_balance": 0.101,
+      "blue_starvation": 0.3355,
+      "host_br_ratio": 0.7327,
+      "host_blue_mean": 56.83,
+      "rgb_skew": 0.0761,
+      "clinical_channel_balance": 0.088,
+      "color_cast_pass": true
     },
     {
       "t_s": 14.0,
       "frame": "frame_0015.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1551,
-      "grey_balance": 0.2783,
-      "blue_starvation": 0.7168,
-      "host_br_ratio": 0.3119,
-      "host_blue_mean": 29.39,
-      "rgb_skew": 0.2365,
-      "clinical_channel_balance": 0.2633,
-      "color_cast_pass": false
+      "magenta": 0.1249,
+      "yellow_green": 0.1677,
+      "grey_balance": 0.1005,
+      "blue_starvation": 0.3216,
+      "host_br_ratio": 0.7342,
+      "host_blue_mean": 57.85,
+      "rgb_skew": 0.0767,
+      "clinical_channel_balance": 0.0882,
+      "color_cast_pass": true
     },
     {
       "t_s": 15.0,
       "frame": "frame_0016.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.133,
-      "grey_balance": 0.225,
-      "blue_starvation": 0.6294,
-      "host_br_ratio": 0.3821,
-      "host_blue_mean": 27.61,
-      "rgb_skew": 0.1843,
-      "clinical_channel_balance": 0.2024,
-      "color_cast_pass": false
+      "magenta": 0.2621,
+      "yellow_green": 0.0266,
+      "grey_balance": 0.0385,
+      "blue_starvation": 0.1695,
+      "host_br_ratio": 0.9053,
+      "host_blue_mean": 58.59,
+      "rgb_skew": 0.0159,
+      "clinical_channel_balance": 0.0193,
+      "color_cast_pass": true
     },
     {
       "t_s": 16.0,
       "frame": "frame_0017.jpg",
-      "magenta": 0.0081,
-      "yellow_green": 0.2234,
-      "grey_balance": 0.1793,
-      "blue_starvation": 0.5983,
-      "host_br_ratio": 0.4827,
-      "host_blue_mean": 29.15,
-      "rgb_skew": 0.1445,
-      "clinical_channel_balance": 0.1567,
-      "color_cast_pass": false
+      "magenta": 0.588,
+      "yellow_green": 0.0274,
+      "grey_balance": 0.0044,
+      "blue_starvation": 0.0742,
+      "host_br_ratio": 1.0507,
+      "host_blue_mean": 59.08,
+      "rgb_skew": -0.0187,
+      "clinical_channel_balance": 0.0212,
+      "color_cast_pass": true
     },
     {
       "t_s": 17.0,
       "frame": "frame_0018.jpg",
-      "magenta": 0.0128,
-      "yellow_green": 0.2214,
-      "grey_balance": 0.1826,
-      "blue_starvation": 0.5903,
-      "host_br_ratio": 0.4814,
-      "host_blue_mean": 31.25,
-      "rgb_skew": 0.148,
-      "clinical_channel_balance": 0.1619,
-      "color_cast_pass": false
+      "magenta": 0.589,
+      "yellow_green": 0.0237,
+      "grey_balance": 0.006,
+      "blue_starvation": 0.069,
+      "host_br_ratio": 1.033,
+      "host_blue_mean": 61.62,
+      "rgb_skew": -0.0171,
+      "clinical_channel_balance": 0.018,
+      "color_cast_pass": true
     },
     {
       "t_s": 18.0,
       "frame": "frame_0019.jpg",
-      "magenta": 0.0135,
-      "yellow_green": 0.2133,
-      "grey_balance": 0.1839,
-      "blue_starvation": 0.5623,
-      "host_br_ratio": 0.4927,
-      "host_blue_mean": 33.46,
-      "rgb_skew": 0.149,
-      "clinical_channel_balance": 0.1631,
-      "color_cast_pass": false
+      "magenta": 0.5929,
+      "yellow_green": 0.0275,
+      "grey_balance": 0.0073,
+      "blue_starvation": 0.0633,
+      "host_br_ratio": 1.0269,
+      "host_blue_mean": 64.29,
+      "rgb_skew": -0.0178,
+      "clinical_channel_balance": 0.0183,
+      "color_cast_pass": true
     },
     {
       "t_s": 19.0,
       "frame": "frame_0020.jpg",
-      "magenta": 0.0101,
-      "yellow_green": 0.209,
-      "grey_balance": 0.1856,
-      "blue_starvation": 0.559,
-      "host_br_ratio": 0.4966,
-      "host_blue_mean": 34.63,
-      "rgb_skew": 0.1506,
-      "clinical_channel_balance": 0.165,
-      "color_cast_pass": false
+      "magenta": 0.6027,
+      "yellow_green": 0.0265,
+      "grey_balance": 0.008,
+      "blue_starvation": 0.0622,
+      "host_br_ratio": 1.0178,
+      "host_blue_mean": 65.65,
+      "rgb_skew": -0.0173,
+      "clinical_channel_balance": 0.0174,
+      "color_cast_pass": true
     },
     {
       "t_s": 20.0,
       "frame": "frame_0021.jpg",
-      "magenta": 0.0103,
-      "yellow_green": 0.1928,
-      "grey_balance": 0.1859,
-      "blue_starvation": 0.5467,
-      "host_br_ratio": 0.5044,
-      "host_blue_mean": 35.62,
-      "rgb_skew": 0.151,
-      "clinical_channel_balance": 0.1662,
-      "color_cast_pass": false
+      "magenta": 0.5992,
+      "yellow_green": 0.0272,
+      "grey_balance": 0.0072,
+      "blue_starvation": 0.0614,
+      "host_br_ratio": 1.0105,
+      "host_blue_mean": 66.78,
+      "rgb_skew": -0.0175,
+      "clinical_channel_balance": 0.0198,
+      "color_cast_pass": true
     },
     {
       "t_s": 21.0,
       "frame": "frame_0022.jpg",
-      "magenta": 0.0097,
-      "yellow_green": 0.1959,
-      "grey_balance": 0.1871,
-      "blue_starvation": 0.5379,
-      "host_br_ratio": 0.4986,
-      "host_blue_mean": 36.63,
-      "rgb_skew": 0.153,
-      "clinical_channel_balance": 0.1689,
-      "color_cast_pass": false
+      "magenta": 0.6439,
+      "yellow_green": 0.0188,
+      "grey_balance": 0.0118,
+      "blue_starvation": 0.0636,
+      "host_br_ratio": 0.999,
+      "host_blue_mean": 68.06,
+      "rgb_skew": -0.0165,
+      "clinical_channel_balance": 0.0212,
+      "color_cast_pass": true
     },
     {
       "t_s": 22.0,
       "frame": "frame_0023.jpg",
-      "magenta": 0.0123,
-      "yellow_green": 0.1956,
-      "grey_balance": 0.186,
-      "blue_starvation": 0.5181,
-      "host_br_ratio": 0.5062,
-      "host_blue_mean": 37.94,
-      "rgb_skew": 0.1536,
-      "clinical_channel_balance": 0.1699,
-      "color_cast_pass": false
+      "magenta": 0.644,
+      "yellow_green": 0.0177,
+      "grey_balance": 0.0131,
+      "blue_starvation": 0.0625,
+      "host_br_ratio": 1.002,
+      "host_blue_mean": 69.37,
+      "rgb_skew": -0.0159,
+      "clinical_channel_balance": 0.022,
+      "color_cast_pass": true
     },
     {
       "t_s": 23.0,
       "frame": "frame_0024.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1339,
-      "grey_balance": 0.2686,
-      "blue_starvation": 0.7023,
-      "host_br_ratio": 0.3145,
-      "host_blue_mean": 28.4,
-      "rgb_skew": 0.2295,
-      "clinical_channel_balance": 0.2534,
-      "color_cast_pass": false
+      "magenta": 0.1223,
+      "yellow_green": 0.1565,
+      "grey_balance": 0.0964,
+      "blue_starvation": 0.3317,
+      "host_br_ratio": 0.7616,
+      "host_blue_mean": 57.39,
+      "rgb_skew": 0.0681,
+      "clinical_channel_balance": 0.0767,
+      "color_cast_pass": true
     },
     {
       "t_s": 24.0,
       "frame": "frame_0025.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1607,
-      "grey_balance": 0.2689,
-      "blue_starvation": 0.692,
-      "host_br_ratio": 0.3223,
-      "host_blue_mean": 29.03,
-      "rgb_skew": 0.2293,
-      "clinical_channel_balance": 0.2521,
-      "color_cast_pass": false
+      "magenta": 0.1192,
+      "yellow_green": 0.1571,
+      "grey_balance": 0.0978,
+      "blue_starvation": 0.3136,
+      "host_br_ratio": 0.7626,
+      "host_blue_mean": 57.41,
+      "rgb_skew": 0.07,
+      "clinical_channel_balance": 0.0781,
+      "color_cast_pass": true
     },
     {
       "t_s": 25.0,
       "frame": "frame_0026.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1469,
-      "grey_balance": 0.2678,
-      "blue_starvation": 0.7148,
-      "host_br_ratio": 0.308,
-      "host_blue_mean": 26.91,
-      "rgb_skew": 0.2278,
-      "clinical_channel_balance": 0.2507,
-      "color_cast_pass": false
+      "magenta": 0.1229,
+      "yellow_green": 0.1801,
+      "grey_balance": 0.0969,
+      "blue_starvation": 0.3217,
+      "host_br_ratio": 0.7642,
+      "host_blue_mean": 55.36,
+      "rgb_skew": 0.0681,
+      "clinical_channel_balance": 0.0757,
+      "color_cast_pass": true
     },
     {
       "t_s": 26.0,
       "frame": "frame_0027.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1246,
-      "grey_balance": 0.2742,
-      "blue_starvation": 0.7015,
-      "host_br_ratio": 0.3145,
-      "host_blue_mean": 29.1,
-      "rgb_skew": 0.2333,
-      "clinical_channel_balance": 0.2601,
-      "color_cast_pass": false
+      "magenta": 0.1169,
+      "yellow_green": 0.1494,
+      "grey_balance": 0.1004,
+      "blue_starvation": 0.3165,
+      "host_br_ratio": 0.7471,
+      "host_blue_mean": 57.85,
+      "rgb_skew": 0.0721,
+      "clinical_channel_balance": 0.0833,
+      "color_cast_pass": true
     },
     {
       "t_s": 27.0,
       "frame": "frame_0028.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1236,
-      "grey_balance": 0.2782,
-      "blue_starvation": 0.6823,
-      "host_br_ratio": 0.3267,
-      "host_blue_mean": 31.08,
-      "rgb_skew": 0.2332,
-      "clinical_channel_balance": 0.2614,
-      "color_cast_pass": false
+      "magenta": 0.1168,
+      "yellow_green": 0.1309,
+      "grey_balance": 0.1041,
+      "blue_starvation": 0.2921,
+      "host_br_ratio": 0.7465,
+      "host_blue_mean": 59.24,
+      "rgb_skew": 0.0739,
+      "clinical_channel_balance": 0.0866,
+      "color_cast_pass": true
     },
     {
       "t_s": 28.0,
       "frame": "frame_0029.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1127,
-      "grey_balance": 0.2828,
-      "blue_starvation": 0.6693,
-      "host_br_ratio": 0.3314,
-      "host_blue_mean": 31.46,
-      "rgb_skew": 0.2309,
-      "clinical_channel_balance": 0.2594,
-      "color_cast_pass": false
+      "magenta": 0.1293,
+      "yellow_green": 0.1195,
+      "grey_balance": 0.106,
+      "blue_starvation": 0.2987,
+      "host_br_ratio": 0.7553,
+      "host_blue_mean": 59.39,
+      "rgb_skew": 0.0716,
+      "clinical_channel_balance": 0.0834,
+      "color_cast_pass": true
     },
     {
       "t_s": 29.0,
       "frame": "frame_0030.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1115,
-      "grey_balance": 0.2822,
-      "blue_starvation": 0.6701,
-      "host_br_ratio": 0.3329,
-      "host_blue_mean": 31.53,
-      "rgb_skew": 0.231,
-      "clinical_channel_balance": 0.2589,
-      "color_cast_pass": false
+      "magenta": 0.1309,
+      "yellow_green": 0.1012,
+      "grey_balance": 0.1049,
+      "blue_starvation": 0.2798,
+      "host_br_ratio": 0.7555,
+      "host_blue_mean": 59.51,
+      "rgb_skew": 0.072,
+      "clinical_channel_balance": 0.0839,
+      "color_cast_pass": true
     },
     {
       "t_s": 30.0,
       "frame": "frame_0031.jpg",
-      "magenta": 0.006,
-      "yellow_green": 0.2249,
-      "grey_balance": 0.1773,
-      "blue_starvation": 0.5988,
-      "host_br_ratio": 0.4772,
-      "host_blue_mean": 27.39,
-      "rgb_skew": 0.1437,
-      "clinical_channel_balance": 0.1557,
-      "color_cast_pass": false
+      "magenta": 0.5681,
+      "yellow_green": 0.034,
+      "grey_balance": 0.0029,
+      "blue_starvation": 0.0931,
+      "host_br_ratio": 1.056,
+      "host_blue_mean": 56.82,
+      "rgb_skew": -0.0176,
+      "clinical_channel_balance": 0.0206,
+      "color_cast_pass": true
     },
     {
       "t_s": 31.0,
       "frame": "frame_0032.jpg",
-      "magenta": 0.0091,
-      "yellow_green": 0.2013,
-      "grey_balance": 0.1777,
-      "blue_starvation": 0.6031,
-      "host_br_ratio": 0.4751,
-      "host_blue_mean": 28.05,
-      "rgb_skew": 0.1455,
-      "clinical_channel_balance": 0.1588,
-      "color_cast_pass": false
+      "magenta": 0.5848,
+      "yellow_green": 0.0228,
+      "grey_balance": 0.0059,
+      "blue_starvation": 0.081,
+      "host_br_ratio": 1.0423,
+      "host_blue_mean": 57.88,
+      "rgb_skew": -0.0176,
+      "clinical_channel_balance": 0.0191,
+      "color_cast_pass": true
     },
     {
       "t_s": 32.0,
       "frame": "frame_0033.jpg",
-      "magenta": 0.009,
-      "yellow_green": 0.1992,
-      "grey_balance": 0.1784,
-      "blue_starvation": 0.5849,
-      "host_br_ratio": 0.4779,
-      "host_blue_mean": 28.59,
-      "rgb_skew": 0.1455,
-      "clinical_channel_balance": 0.16,
-      "color_cast_pass": false
+      "magenta": 0.5789,
+      "yellow_green": 0.0268,
+      "grey_balance": 0.0055,
+      "blue_starvation": 0.0878,
+      "host_br_ratio": 1.037,
+      "host_blue_mean": 58.14,
+      "rgb_skew": -0.0165,
+      "clinical_channel_balance": 0.0171,
+      "color_cast_pass": true
     },
     {
       "t_s": 33.0,
       "frame": "frame_0034.jpg",
-      "magenta": 0.0118,
-      "yellow_green": 0.2056,
-      "grey_balance": 0.1785,
-      "blue_starvation": 0.5608,
-      "host_br_ratio": 0.4902,
-      "host_blue_mean": 29.62,
-      "rgb_skew": 0.1446,
-      "clinical_channel_balance": 0.1588,
-      "color_cast_pass": false
+      "magenta": 0.5806,
+      "yellow_green": 0.025,
+      "grey_balance": 0.0065,
+      "blue_starvation": 0.0676,
+      "host_br_ratio": 1.0373,
+      "host_blue_mean": 59.17,
+      "rgb_skew": -0.0173,
+      "clinical_channel_balance": 0.018,
+      "color_cast_pass": true
     },
     {
       "t_s": 34.0,
       "frame": "frame_0035.jpg",
-      "magenta": 0.0107,
-      "yellow_green": 0.2045,
-      "grey_balance": 0.1808,
-      "blue_starvation": 0.5895,
-      "host_br_ratio": 0.4789,
-      "host_blue_mean": 29.26,
-      "rgb_skew": 0.1466,
-      "clinical_channel_balance": 0.1606,
-      "color_cast_pass": false
+      "magenta": 0.5729,
+      "yellow_green": 0.0296,
+      "grey_balance": 0.0067,
+      "blue_starvation": 0.0714,
+      "host_br_ratio": 1.0343,
+      "host_blue_mean": 59.51,
+      "rgb_skew": -0.0182,
+      "clinical_channel_balance": 0.0193,
+      "color_cast_pass": true
     },
     {
       "t_s": 35.0,
       "frame": "frame_0036.jpg",
-      "magenta": 0.01,
-      "yellow_green": 0.1989,
-      "grey_balance": 0.1816,
-      "blue_starvation": 0.5833,
-      "host_br_ratio": 0.4754,
-      "host_blue_mean": 29.15,
-      "rgb_skew": 0.148,
-      "clinical_channel_balance": 0.1617,
-      "color_cast_pass": false
+      "magenta": 0.5798,
+      "yellow_green": 0.0328,
+      "grey_balance": 0.0069,
+      "blue_starvation": 0.0736,
+      "host_br_ratio": 1.0252,
+      "host_blue_mean": 59.78,
+      "rgb_skew": -0.0185,
+      "clinical_channel_balance": 0.0196,
+      "color_cast_pass": true
     },
     {
       "t_s": 36.0,
       "frame": "frame_0037.jpg",
-      "magenta": 0.0097,
-      "yellow_green": 0.1961,
-      "grey_balance": 0.1815,
-      "blue_starvation": 0.5817,
-      "host_br_ratio": 0.4783,
-      "host_blue_mean": 29.88,
-      "rgb_skew": 0.1491,
-      "clinical_channel_balance": 0.1629,
-      "color_cast_pass": false
+      "magenta": 0.5679,
+      "yellow_green": 0.0267,
+      "grey_balance": 0.0071,
+      "blue_starvation": 0.0769,
+      "host_br_ratio": 1.0223,
+      "host_blue_mean": 60.62,
+      "rgb_skew": -0.0178,
+      "clinical_channel_balance": 0.0186,
+      "color_cast_pass": true
     },
     {
       "t_s": 37.0,
       "frame": "frame_0038.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1428,
-      "grey_balance": 0.2604,
-      "blue_starvation": 0.7567,
-      "host_br_ratio": 0.2808,
-      "host_blue_mean": 22.05,
-      "rgb_skew": 0.2189,
-      "clinical_channel_balance": 0.2391,
-      "color_cast_pass": false
+      "magenta": 0.1328,
+      "yellow_green": 0.0704,
+      "grey_balance": 0.0873,
+      "blue_starvation": 0.3135,
+      "host_br_ratio": 0.7742,
+      "host_blue_mean": 47.5,
+      "rgb_skew": 0.0578,
+      "clinical_channel_balance": 0.0665,
+      "color_cast_pass": true
     },
     {
       "t_s": 38.0,
       "frame": "frame_0039.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1318,
-      "grey_balance": 0.2653,
-      "blue_starvation": 0.7423,
-      "host_br_ratio": 0.2905,
-      "host_blue_mean": 23.66,
-      "rgb_skew": 0.2214,
-      "clinical_channel_balance": 0.2441,
-      "color_cast_pass": false
+      "magenta": 0.1357,
+      "yellow_green": 0.0706,
+      "grey_balance": 0.0925,
+      "blue_starvation": 0.3115,
+      "host_br_ratio": 0.7624,
+      "host_blue_mean": 48.54,
+      "rgb_skew": 0.0619,
+      "clinical_channel_balance": 0.0726,
+      "color_cast_pass": true
     },
     {
       "t_s": 39.0,
       "frame": "frame_0040.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1253,
-      "grey_balance": 0.2684,
-      "blue_starvation": 0.743,
-      "host_br_ratio": 0.2908,
-      "host_blue_mean": 23.9,
-      "rgb_skew": 0.2229,
-      "clinical_channel_balance": 0.2456,
-      "color_cast_pass": false
+      "magenta": 0.1339,
+      "yellow_green": 0.068,
+      "grey_balance": 0.0942,
+      "blue_starvation": 0.3147,
+      "host_br_ratio": 0.7594,
+      "host_blue_mean": 49.13,
+      "rgb_skew": 0.0616,
+      "clinical_channel_balance": 0.0726,
+      "color_cast_pass": true
     },
     {
       "t_s": 40.0,
       "frame": "frame_0041.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1312,
-      "grey_balance": 0.2691,
-      "blue_starvation": 0.738,
-      "host_br_ratio": 0.2918,
-      "host_blue_mean": 24.18,
-      "rgb_skew": 0.2242,
-      "clinical_channel_balance": 0.2474,
-      "color_cast_pass": false
+      "magenta": 0.1374,
+      "yellow_green": 0.0714,
+      "grey_balance": 0.0947,
+      "blue_starvation": 0.3036,
+      "host_br_ratio": 0.7557,
+      "host_blue_mean": 49.38,
+      "rgb_skew": 0.0632,
+      "clinical_channel_balance": 0.0744,
+      "color_cast_pass": true
     },
     {
       "t_s": 41.0,
       "frame": "frame_0042.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1169,
-      "grey_balance": 0.2686,
-      "blue_starvation": 0.7462,
-      "host_br_ratio": 0.2874,
-      "host_blue_mean": 23.87,
-      "rgb_skew": 0.2251,
-      "clinical_channel_balance": 0.2483,
-      "color_cast_pass": false
+      "magenta": 0.1365,
+      "yellow_green": 0.0685,
+      "grey_balance": 0.0955,
+      "blue_starvation": 0.2929,
+      "host_br_ratio": 0.7509,
+      "host_blue_mean": 49.62,
+      "rgb_skew": 0.0629,
+      "clinical_channel_balance": 0.0748,
+      "color_cast_pass": true
     },
     {
       "t_s": 42.0,
       "frame": "frame_0043.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1062,
-      "grey_balance": 0.2728,
-      "blue_starvation": 0.7446,
-      "host_br_ratio": 0.2849,
-      "host_blue_mean": 24.38,
-      "rgb_skew": 0.2286,
-      "clinical_channel_balance": 0.2542,
-      "color_cast_pass": false
+      "magenta": 0.132,
+      "yellow_green": 0.0656,
+      "grey_balance": 0.0974,
+      "blue_starvation": 0.2864,
+      "host_br_ratio": 0.7407,
+      "host_blue_mean": 50.31,
+      "rgb_skew": 0.0648,
+      "clinical_channel_balance": 0.0784,
+      "color_cast_pass": true
     },
     {
       "t_s": 43.0,
       "frame": "frame_0044.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1078,
-      "grey_balance": 0.2735,
-      "blue_starvation": 0.7512,
-      "host_br_ratio": 0.2828,
-      "host_blue_mean": 23.89,
-      "rgb_skew": 0.2277,
-      "clinical_channel_balance": 0.2528,
-      "color_cast_pass": false
+      "magenta": 0.1394,
+      "yellow_green": 0.0569,
+      "grey_balance": 0.0997,
+      "blue_starvation": 0.2884,
+      "host_br_ratio": 0.7382,
+      "host_blue_mean": 49.34,
+      "rgb_skew": 0.0659,
+      "clinical_channel_balance": 0.0795,
+      "color_cast_pass": true
     },
     {
       "t_s": 44.0,
       "frame": "frame_0045.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1323,
-      "grey_balance": 0.2715,
-      "blue_starvation": 0.7282,
-      "host_br_ratio": 0.2983,
-      "host_blue_mean": 25.33,
-      "rgb_skew": 0.2278,
-      "clinical_channel_balance": 0.2519,
-      "color_cast_pass": false
+      "magenta": 0.1442,
+      "yellow_green": 0.0567,
+      "grey_balance": 0.0994,
+      "blue_starvation": 0.2846,
+      "host_br_ratio": 0.7464,
+      "host_blue_mean": 51.13,
+      "rgb_skew": 0.066,
+      "clinical_channel_balance": 0.0795,
+      "color_cast_pass": true
     },
     {
       "t_s": 45.0,
       "frame": "frame_0046.jpg",
-      "magenta": 0.0083,
-      "yellow_green": 0.2238,
-      "grey_balance": 0.1767,
-      "blue_starvation": 0.6019,
-      "host_br_ratio": 0.4795,
-      "host_blue_mean": 26.73,
-      "rgb_skew": 0.1412,
-      "clinical_channel_balance": 0.1535,
-      "color_cast_pass": false
+      "magenta": 0.5598,
+      "yellow_green": 0.034,
+      "grey_balance": 0.002,
+      "blue_starvation": 0.0857,
+      "host_br_ratio": 1.0619,
+      "host_blue_mean": 56.8,
+      "rgb_skew": -0.0189,
+      "clinical_channel_balance": 0.0224,
+      "color_cast_pass": true
     },
     {
       "t_s": 46.0,
       "frame": "frame_0047.jpg",
-      "magenta": 0.0121,
-      "yellow_green": 0.2246,
-      "grey_balance": 0.1782,
-      "blue_starvation": 0.5917,
-      "host_br_ratio": 0.4825,
-      "host_blue_mean": 28.12,
-      "rgb_skew": 0.1429,
-      "clinical_channel_balance": 0.1567,
-      "color_cast_pass": false
+      "magenta": 0.5802,
+      "yellow_green": 0.0259,
+      "grey_balance": 0.0049,
+      "blue_starvation": 0.0788,
+      "host_br_ratio": 1.0467,
+      "host_blue_mean": 58.7,
+      "rgb_skew": -0.0183,
+      "clinical_channel_balance": 0.0204,
+      "color_cast_pass": true
     },
     {
       "t_s": 47.0,
       "frame": "frame_0048.jpg",
-      "magenta": 0.0141,
-      "yellow_green": 0.2073,
-      "grey_balance": 0.1815,
-      "blue_starvation": 0.5878,
-      "host_br_ratio": 0.4784,
-      "host_blue_mean": 27.85,
-      "rgb_skew": 0.144,
-      "clinical_channel_balance": 0.1588,
-      "color_cast_pass": false
+      "magenta": 0.5845,
+      "yellow_green": 0.0257,
+      "grey_balance": 0.0057,
+      "blue_starvation": 0.0777,
+      "host_br_ratio": 1.0363,
+      "host_blue_mean": 58.51,
+      "rgb_skew": -0.0176,
+      "clinical_channel_balance": 0.019,
+      "color_cast_pass": true
     },
     {
       "t_s": 48.0,
       "frame": "frame_0049.jpg",
-      "magenta": 0.013,
-      "yellow_green": 0.2081,
-      "grey_balance": 0.1835,
-      "blue_starvation": 0.5894,
-      "host_br_ratio": 0.4785,
-      "host_blue_mean": 28.22,
-      "rgb_skew": 0.1448,
-      "clinical_channel_balance": 0.1593,
-      "color_cast_pass": false
+      "magenta": 0.5699,
+      "yellow_green": 0.029,
+      "grey_balance": 0.0059,
+      "blue_starvation": 0.0786,
+      "host_br_ratio": 1.0324,
+      "host_blue_mean": 58.89,
+      "rgb_skew": -0.0178,
+      "clinical_channel_balance": 0.019,
+      "color_cast_pass": true
     },
     {
       "t_s": 49.0,
       "frame": "frame_0050.jpg",
-      "magenta": 0.0121,
-      "yellow_green": 0.1992,
-      "grey_balance": 0.1858,
-      "blue_starvation": 0.5839,
-      "host_br_ratio": 0.4754,
-      "host_blue_mean": 28.93,
-      "rgb_skew": 0.1469,
-      "clinical_channel_balance": 0.1624,
-      "color_cast_pass": false
+      "magenta": 0.5713,
+      "yellow_green": 0.0256,
+      "grey_balance": 0.0064,
+      "blue_starvation": 0.0638,
+      "host_br_ratio": 1.0158,
+      "host_blue_mean": 60.2,
+      "rgb_skew": -0.0174,
+      "clinical_channel_balance": 0.0176,
+      "color_cast_pass": true
     },
     {
       "t_s": 50.0,
       "frame": "frame_0051.jpg",
-      "magenta": 0.0132,
-      "yellow_green": 0.1849,
-      "grey_balance": 0.1866,
-      "blue_starvation": 0.5658,
-      "host_br_ratio": 0.4781,
-      "host_blue_mean": 29.7,
-      "rgb_skew": 0.1477,
-      "clinical_channel_balance": 0.1639,
-      "color_cast_pass": false
+      "magenta": 0.5684,
+      "yellow_green": 0.0288,
+      "grey_balance": 0.0077,
+      "blue_starvation": 0.0667,
+      "host_br_ratio": 1.0077,
+      "host_blue_mean": 60.68,
+      "rgb_skew": -0.0171,
+      "clinical_channel_balance": 0.0174,
+      "color_cast_pass": true
     },
     {
       "t_s": 51.0,
       "frame": "frame_0052.jpg",
-      "magenta": 0.013,
-      "yellow_green": 0.178,
-      "grey_balance": 0.1871,
-      "blue_starvation": 0.5687,
-      "host_br_ratio": 0.4763,
-      "host_blue_mean": 30.76,
-      "rgb_skew": 0.1493,
-      "clinical_channel_balance": 0.1659,
-      "color_cast_pass": false
+      "magenta": 0.5821,
+      "yellow_green": 0.0287,
+      "grey_balance": 0.0082,
+      "blue_starvation": 0.0718,
+      "host_br_ratio": 1.0047,
+      "host_blue_mean": 62.38,
+      "rgb_skew": -0.0167,
+      "clinical_channel_balance": 0.0191,
+      "color_cast_pass": true
     },
     {
       "t_s": 52.0,
       "frame": "frame_0053.jpg",
-      "magenta": 0.0115,
-      "yellow_green": 0.1741,
-      "grey_balance": 0.1883,
-      "blue_starvation": 0.5681,
-      "host_br_ratio": 0.4798,
-      "host_blue_mean": 30.87,
-      "rgb_skew": 0.1494,
-      "clinical_channel_balance": 0.1659,
-      "color_cast_pass": false
+      "magenta": 0.6101,
+      "yellow_green": 0.038,
+      "grey_balance": 0.0088,
+      "blue_starvation": 0.0699,
+      "host_br_ratio": 1.0008,
+      "host_blue_mean": 62.41,
+      "rgb_skew": -0.017,
+      "clinical_channel_balance": 0.0176,
+      "color_cast_pass": true
     },
     {
       "t_s": 53.0,
       "frame": "frame_0054.jpg",
-      "magenta": 0.0004,
-      "yellow_green": 0.1826,
-      "grey_balance": 0.2058,
-      "blue_starvation": 0.6314,
-      "host_br_ratio": 0.4134,
-      "host_blue_mean": 27.31,
-      "rgb_skew": 0.1701,
-      "clinical_channel_balance": 0.1865,
-      "color_cast_pass": false
+      "magenta": 0.5019,
+      "yellow_green": 0.0351,
+      "grey_balance": 0.0136,
+      "blue_starvation": 0.0984,
+      "host_br_ratio": 0.978,
+      "host_blue_mean": 60.79,
+      "rgb_skew": -0.0079,
+      "clinical_channel_balance": 0.008,
+      "color_cast_pass": true
     },
     {
       "t_s": 54.0,
       "frame": "frame_0055.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1337,
-      "grey_balance": 0.2674,
-      "blue_starvation": 0.7679,
-      "host_br_ratio": 0.2796,
-      "host_blue_mean": 22.55,
-      "rgb_skew": 0.2231,
-      "clinical_channel_balance": 0.2459,
-      "color_cast_pass": false
+      "magenta": 0.1086,
+      "yellow_green": 0.1839,
+      "grey_balance": 0.0987,
+      "blue_starvation": 0.36,
+      "host_br_ratio": 0.7491,
+      "host_blue_mean": 49.95,
+      "rgb_skew": 0.0672,
+      "clinical_channel_balance": 0.0748,
+      "color_cast_pass": true
     },
     {
       "t_s": 55.0,
       "frame": "frame_0056.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.142,
-      "grey_balance": 0.2708,
-      "blue_starvation": 0.7617,
-      "host_br_ratio": 0.2833,
-      "host_blue_mean": 22.94,
-      "rgb_skew": 0.2235,
-      "clinical_channel_balance": 0.2468,
-      "color_cast_pass": false
+      "magenta": 0.1107,
+      "yellow_green": 0.1817,
+      "grey_balance": 0.1008,
+      "blue_starvation": 0.3703,
+      "host_br_ratio": 0.7446,
+      "host_blue_mean": 49.98,
+      "rgb_skew": 0.0677,
+      "clinical_channel_balance": 0.0754,
+      "color_cast_pass": true
     },
     {
       "t_s": 56.0,
       "frame": "frame_0057.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1482,
-      "grey_balance": 0.2712,
-      "blue_starvation": 0.7508,
-      "host_br_ratio": 0.2904,
-      "host_blue_mean": 24.12,
-      "rgb_skew": 0.2254,
-      "clinical_channel_balance": 0.249,
-      "color_cast_pass": false
+      "magenta": 0.1175,
+      "yellow_green": 0.1897,
+      "grey_balance": 0.1008,
+      "blue_starvation": 0.374,
+      "host_br_ratio": 0.7469,
+      "host_blue_mean": 51.9,
+      "rgb_skew": 0.0679,
+      "clinical_channel_balance": 0.0764,
+      "color_cast_pass": true
     },
     {
       "t_s": 57.0,
       "frame": "frame_0058.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1251,
-      "grey_balance": 0.2723,
-      "blue_starvation": 0.7391,
-      "host_br_ratio": 0.2851,
-      "host_blue_mean": 25.02,
-      "rgb_skew": 0.2321,
-      "clinical_channel_balance": 0.2583,
-      "color_cast_pass": false
+      "magenta": 0.1173,
+      "yellow_green": 0.1871,
+      "grey_balance": 0.1002,
+      "blue_starvation": 0.3513,
+      "host_br_ratio": 0.7301,
+      "host_blue_mean": 53.3,
+      "rgb_skew": 0.0706,
+      "clinical_channel_balance": 0.0811,
+      "color_cast_pass": true
     },
     {
       "t_s": 58.0,
       "frame": "frame_0059.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.0924,
-      "grey_balance": 0.2739,
-      "blue_starvation": 0.7058,
-      "host_br_ratio": 0.3082,
-      "host_blue_mean": 29.69,
-      "rgb_skew": 0.2418,
-      "clinical_channel_balance": 0.2736,
-      "color_cast_pass": false
+      "magenta": 0.1272,
+      "yellow_green": 0.0909,
+      "grey_balance": 0.0998,
+      "blue_starvation": 0.2684,
+      "host_br_ratio": 0.7172,
+      "host_blue_mean": 58.46,
+      "rgb_skew": 0.0796,
+      "clinical_channel_balance": 0.0963,
+      "color_cast_pass": true
     },
     {
       "t_s": 59.0,
       "frame": "frame_0060.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.0967,
-      "grey_balance": 0.2851,
-      "blue_starvation": 0.6544,
-      "host_br_ratio": 0.334,
-      "host_blue_mean": 33.23,
-      "rgb_skew": 0.2422,
-      "clinical_channel_balance": 0.2769,
-      "color_cast_pass": false
+      "magenta": 0.1374,
+      "yellow_green": 0.0534,
+      "grey_balance": 0.1067,
+      "blue_starvation": 0.2358,
+      "host_br_ratio": 0.7258,
+      "host_blue_mean": 61.88,
+      "rgb_skew": 0.0801,
+      "clinical_channel_balance": 0.0992,
+      "color_cast_pass": true
     },
     {
       "t_s": 60.0,
       "frame": "frame_0061.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.1189,
-      "grey_balance": 0.2912,
-      "blue_starvation": 0.6387,
-      "host_br_ratio": 0.3433,
-      "host_blue_mean": 36.84,
-      "rgb_skew": 0.2507,
-      "clinical_channel_balance": 0.2871,
-      "color_cast_pass": false
+      "magenta": 0.1549,
+      "yellow_green": 0.0416,
+      "grey_balance": 0.1136,
+      "blue_starvation": 0.2079,
+      "host_br_ratio": 0.7305,
+      "host_blue_mean": 67.8,
+      "rgb_skew": 0.0818,
+      "clinical_channel_balance": 0.1043,
+      "color_cast_pass": true
     },
     {
       "t_s": 61.0,
       "frame": "frame_0062.jpg",
-      "magenta": 0.0,
+      "magenta": 0.0655,
       "yellow_green": 0.0,
-      "grey_balance": 0.0803,
-      "blue_starvation": 0.0463,
-      "host_br_ratio": 0.6406,
-      "host_blue_mean": 5.44,
-      "rgb_skew": 0.0642,
-      "clinical_channel_balance": 0.0794,
+      "grey_balance": 0.0238,
+      "blue_starvation": 0.0189,
+      "host_br_ratio": 0.7461,
+      "host_blue_mean": 23.29,
+      "rgb_skew": -0.0177,
+      "clinical_channel_balance": 0.0268,
       "color_cast_pass": false
     },
     {
       "t_s": 62.0,
       "frame": "frame_0063.jpg",
-      "magenta": 0.0,
+      "magenta": 0.0655,
       "yellow_green": 0.0,
-      "grey_balance": 0.0803,
-      "blue_starvation": 0.0463,
-      "host_br_ratio": 0.6403,
-      "host_blue_mean": 5.44,
-      "rgb_skew": 0.0642,
-      "clinical_channel_balance": 0.0794,
+      "grey_balance": 0.0238,
+      "blue_starvation": 0.0189,
+      "host_br_ratio": 0.7461,
+      "host_blue_mean": 23.29,
+      "rgb_skew": -0.0177,
+      "clinical_channel_balance": 0.0268,
       "color_cast_pass": false
     },
     {
       "t_s": 63.0,
       "frame": "frame_0064.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.0093,
-      "grey_balance": 0.0804,
-      "blue_starvation": 0.037,
-      "host_br_ratio": 0.642,
-      "host_blue_mean": 5.41,
-      "rgb_skew": 0.0643,
-      "clinical_channel_balance": 0.0795,
+      "magenta": 0.0642,
+      "yellow_green": 0.0,
+      "grey_balance": 0.0237,
+      "blue_starvation": 0.0183,
+      "host_br_ratio": 0.7546,
+      "host_blue_mean": 23.27,
+      "rgb_skew": -0.0176,
+      "clinical_channel_balance": 0.0268,
       "color_cast_pass": false
     },
     {
       "t_s": 64.0,
       "frame": "frame_0065.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.0093,
-      "grey_balance": 0.0804,
-      "blue_starvation": 0.037,
-      "host_br_ratio": 0.642,
-      "host_blue_mean": 5.41,
-      "rgb_skew": 0.0643,
-      "clinical_channel_balance": 0.0795,
+      "magenta": 0.0642,
+      "yellow_green": 0.0,
+      "grey_balance": 0.0237,
+      "blue_starvation": 0.0183,
+      "host_br_ratio": 0.7546,
+      "host_blue_mean": 23.27,
+      "rgb_skew": -0.0176,
+      "clinical_channel_balance": 0.0268,
       "color_cast_pass": false
     },
     {
       "t_s": 65.0,
       "frame": "frame_0066.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.0093,
-      "grey_balance": 0.0804,
-      "blue_starvation": 0.037,
-      "host_br_ratio": 0.642,
-      "host_blue_mean": 5.41,
-      "rgb_skew": 0.0643,
-      "clinical_channel_balance": 0.0795,
+      "magenta": 0.0642,
+      "yellow_green": 0.0,
+      "grey_balance": 0.0237,
+      "blue_starvation": 0.0183,
+      "host_br_ratio": 0.7546,
+      "host_blue_mean": 23.27,
+      "rgb_skew": -0.0176,
+      "clinical_channel_balance": 0.0268,
       "color_cast_pass": false
     },
     {
       "t_s": 66.0,
       "frame": "frame_0067.jpg",
-      "magenta": 0.0,
-      "yellow_green": 0.0093,
-      "grey_balance": 0.0804,
-      "blue_starvation": 0.037,
-      "host_br_ratio": 0.642,
-      "host_blue_mean": 5.41,
-      "rgb_skew": 0.0643,
-      "clinical_channel_balance": 0.0795,
+      "magenta": 0.0642,
+      "yellow_green": 0.0,
+      "grey_balance": 0.0237,
+      "blue_starvation": 0.0183,
+      "host_br_ratio": 0.7546,
+      "host_blue_mean": 23.27,
+      "rgb_skew": -0.0176,
+      "clinical_channel_balance": 0.0268,
       "color_cast_pass": false
     }
   ]
