@@ -263,7 +263,7 @@ def probe_video_midframe(video: Path, at_s: float | None = None) -> dict[str, fl
             if "Duration:" in line:
                 t = line.split("Duration:", 1)[1].split(",")[0].strip()
                 h, m, s = t.split(":")
-                dur = max(0.5, int(h) * 3600 + int(m) * 60 + float(s) * 0.5)
+                dur = max(0.5, (int(h) * 3600 + int(m) * 60 + float(s)) * 0.5)
                 break
         at_s = dur
     with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as tmp:
