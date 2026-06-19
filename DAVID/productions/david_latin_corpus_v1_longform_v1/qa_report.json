@@ -1,6 +1,6 @@
 {
   "slug": "david_latin_corpus_v1",
-  "qa_at": "2026-06-19T13:38:21.807114+00:00",
+  "qa_at": "2026-06-19T14:19:09.628883+00:00",
   "pass": false,
   "passes": [
     "host identity lock LOADED",
@@ -16,19 +16,19 @@
     "@David-001 continuity prefix embedded in video_prompt",
     "xfade chain + synced audio crossfade at joins",
     "re-concat join preserved: xfade_chain (0.35s)",
-    "audio PRESENT (david_david_latin_corpus_v1_seamless_v1.mp4 mean -27.0 dB)",
+    "audio PRESENT (david_david_latin_corpus_v1_seamless_v1.mp4 mean -27.1 dB)",
     "loudnorm two-pass target I=-16.0 LUFS per shot",
     "audio pinned to exact shot duration (no stretch/offset)",
-    "flat loudness across shots (spread 0.07 LU)",
-    "zero magenta (max score 0.122 <= 0.42)",
+    "flat loudness across shots (spread 0.06 LU)",
+    "zero magenta (max score 0.141 <= 0.42)",
     "tight A/V sync per shot (duration pinned)",
-    "neutral WB — yellow-green suppressed (max 0.096 <= 0.12)",
     "pronunciation chip overlay burned (high-contrast #194)",
     "lamp warm ratio stable across segments (Δ=0.000)"
   ],
   "issues": [
-    "final output bypassed grade/xfade path (#244 T4): ['rgb_skew 0.2542 > 0.12', 'blue_starvation_fraction 1.000 > 0.5', 'host B/R 0.029 < 0.22', 'blue_starvation B=2.1 lum=57.5']",
-    "blue-starved generation cast (#194 T4): [('chain_02_stakes_processed', ['rgb_skew 0.2270 > 0.12', 'blue_starvation_fraction 0.987 > 0.5', 'host B/R 0.097 < 0.22', 'blue_starvation B=5.7 lum=55.0']), ('chain_03_signature_question_processed', ['rgb_skew 0.2172 > 0.12', 'blue_starvation_fraction 0.989 > 0.5', 'host B/R 0.092 < 0.22', 'blue_starvation B=4.9 lum=52.1']), ('chain_04_proof_beat_processed', ['rgb_skew 0.2172 > 0.12', 'blue_starvation_fraction 0.994 > 0.5', 'host B/R 0.081 < 0.22', 'blue_starvation B=4.4 lum=51.7']), ('chain_05_method_processed', ['rgb_skew 0.2125 > 0.12', 'blue_starvation_fraction 0.997 > 0.5', 'host B/R 0.092 < 0.22', 'blue_starvation B=4.7 lum=51.0']), ('chain_06_honesty_processed', ['rgb_skew 0.2228 > 0.12', 'blue_starvation_fraction 0.983 > 0.5', 'host B/R 0.104 < 0.22', 'blue_starvation B=5.9 lum=54.4']), ('chain_07_demonstration_processed', ['rgb_skew 0.2000 > 0.12', 'blue_starvation_fraction 0.990 > 0.5', 'host B/R 0.130 < 0.22', 'blue_starvation B=7.1 lum=50.2']), ('chain_08_invitation_processed', ['rgb_skew 0.2251 > 0.12', 'blue_starvation_fraction 0.979 > 0.5', 'host B/R 0.107 < 0.22', 'blue_starvation B=6.3 lum=55.2'])]"
+    "final output bypassed grade/xfade path (#244 T4): ['rgb_skew 0.1447 > 0.12', 'blue_starvation_fraction 0.556 > 0.5']",
+    "yellow-green cast detected: [('chain_02_stakes_processed', 0.19581610313792264), ('chain_04_proof_beat_processed', 0.1702127659574468), ('chain_06_honesty_processed', 0.19053457577243746), ('chain_08_invitation_processed', 0.18011390602752728)]",
+    "blue-starved generation cast (#194 T4): [('chain_02_stakes_processed', ['rgb_skew 0.1661 > 0.12']), ('chain_04_proof_beat_processed', ['rgb_skew 0.1540 > 0.12']), ('chain_06_honesty_processed', ['rgb_skew 0.1529 > 0.12', 'blue_starvation_fraction 0.500 > 0.5']), ('chain_08_invitation_processed', ['rgb_skew 0.1543 > 0.12', 'blue_starvation_fraction 0.514 > 0.5'])]"
   ],
   "shot_count": 8,
   "segment_count": 2,
