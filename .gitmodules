@@ -4,9 +4,6 @@
 [submodule "FLASH"]
 	path = FLASH
 	url = https://github.com/cbn52zmh78-cmyk/FLASH.git
-[submodule "GFE"]
-	path = GFE
-	url = https://github.com/cbn52zmh78-cmyk/GFE.git
 [submodule "History"]
 	path = History
 	url = https://github.com/cbn52zmh78-cmyk/HISTORY.git
