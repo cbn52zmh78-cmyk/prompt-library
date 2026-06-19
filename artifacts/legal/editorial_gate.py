@@ -378,6 +378,22 @@ def save_editorial_report(
         }
     )
     json_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    # #259 path-stamping: record this report in the canonical output ledger so the
+    # validator can prove it lives in its registered sink (best-effort, non-fatal).
+    try:
+        tools = Path(__file__).resolve().parents[2] / "tools"
+        if str(tools) not in sys.path:
+            sys.path.insert(0, str(tools))
+        from output_registry import make_stamp, record_ledger
+
+        record_ledger(make_stamp(
+            "gate_report", md_path,
+            extra={"verdict": verdict, "project": str(project), "gate": "editorial", "stage": stage},
+        ))
+    except Exception:
+        pass
+
     return {"md": md_path, "json": json_path}
 
 
