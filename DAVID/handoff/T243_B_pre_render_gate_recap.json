@@ -1,0 +1,29 @@
+{
+  "issue": "243-B",
+  "handoff_from": "T1",
+  "handoff_to": "T4",
+  "generated_at": "2026-06-19T18:00:00+00:00",
+  "state": "GREEN",
+  "no_render": true,
+  "constants_commit": "HOLD — manual + NEXUS sign-off only",
+  "recap": {
+    "did": [
+      "Formalized T243 pre-render gate spec at Nexus/gates/T243_pre_render_gate.json",
+      "Added DAVID/scripts/t243_pre_render_gate.py — one-line PASS/FAIL emitter for T4",
+      "Wired assert_t243_pre_render_gate() into render_longform.py (--skip-t243-gate dev bypass)",
+      "Checklist: clamp idempotent · single-pass confirmed · refs neutral · xfade/seam present"
+    ],
+    "emitter": {
+      "pass": "T243_PRE_RENDER_GATE PASS",
+      "fail": "T243_PRE_RENDER_GATE FAIL: {reasons}",
+      "command": "python DAVID/scripts/t243_pre_render_gate.py --script <script.json> [--production <dir>]",
+      "json_report": "python DAVID/scripts/t243_pre_render_gate.py --script <script.json> --json"
+    },
+    "next": [
+      "T4: call emitter before sanctioned test render; block on FAIL",
+      "T1: regen refs (render_host_identity.py --force-refs --refs-only) until refs_neutral passes",
+      "NEXUS: sign off gate thresholds before constant commit"
+    ]
+  },
+  "tests": "tests/test_t243_pre_render_gate.py"
+}

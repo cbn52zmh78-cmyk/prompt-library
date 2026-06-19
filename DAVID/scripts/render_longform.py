@@ -3395,6 +3395,11 @@ def main() -> int:
         action="store_true",
         help="Bypass T243 avatar/set blue-channel pre-render gate (dev only)",
     )
+    parser.add_argument(
+        "--skip-t243-gate",
+        action="store_true",
+        help="Bypass T243-B formal pre-render checklist gate (dev only)",
+    )
     parser.add_argument("--seamless", action="store_true", help="STUDIO v1.1 extend-primary + xfade joins")
     parser.add_argument("--match-color", action="store_true", help="Histogram-match before frame-chain joins")
     parser.add_argument("--cut-on-motion", action="store_true", help="Trim tail stillness before card join")
