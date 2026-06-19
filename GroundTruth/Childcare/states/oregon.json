@@ -1,0 +1,108 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "Oregon",
+  "state_code": "OR",
+  "state_slug": "oregon",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:13:30.248015+00:00",
+  "status": "PARKED",
+  "primary_source": "Oregon OAR Child Care Rules",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "group_size": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "ratios",
+      "status": "PARKED",
+      "source_checked": "Oregon OAR Child Care Rules"
+    },
+    {
+      "domain": "group_size",
+      "status": "PARKED"
+    },
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": [
+    {
+      "source_id": "oregon_oregon_oar_child_care_rules",
+      "state": "Oregon",
+      "source": "Oregon OAR Child Care Rules",
+      "url": "https://secure.sos.state.or.us/oard/viewSingleRule.action?ruleVrsnRsn=280451",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 16691,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "tertiary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    },
+    {
+      "source_id": "oregon_oregon_child_care_regulations_fallback_",
+      "state": "Oregon",
+      "source": "Oregon Child Care Regulations (fallback)",
+      "url": "https://www.oregon.gov/ode/students-and-family/childcare/Pages/default.aspx",
+      "extractor": "generic",
+      "status": "PARKED",
+      "http_status": 404,
+      "bytes": 87934,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "park_reason": "HTTP 404"
+    },
+    {
+      "source_id": "oregon_childcare_gov_oregon",
+      "state": "Oregon",
+      "source": "Childcare.gov — Oregon",
+      "url": "https://www.childcare.gov/state-resources/oregon/understanding-and-finding-child-care-resources",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 67878,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    }
+  ]
+}

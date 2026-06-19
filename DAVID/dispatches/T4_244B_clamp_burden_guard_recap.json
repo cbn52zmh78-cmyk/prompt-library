@@ -1,0 +1,73 @@
+{
+  "message_type": "recap_vcs",
+  "issue": "244-B",
+  "title": "T4 #244-B — clamp-burden guard (generation defect detection)",
+  "generated_at": "2026-06-19T16:30:00+00:00",
+  "status": "HOLD",
+  "verdict": "RED",
+  "owner_terminal": "T4",
+  "lane": "DAVID",
+  "no_render": true,
+  "commit": {
+    "allowed": false,
+    "reason": "HOLD — human-eye + NEXUS sign-off required before ANY commit",
+    "cron": "PAUSED — Nexus/gates/T4_244_HARD_COMMIT_PAUSE.json state=ACTIVE"
+  },
+  "recap": {
+    "did": [
+      "Extended proof_244_clamp_pass.py with clamp-burden guard (threshold raw−graded magenta > 0.20)",
+      "Emits GENERATION DEFECT — clamp masking when burden exceeds ceiling — even if graded metric passes",
+      "Calibrated vs T1 single-pass; --metrics-only mode re-scores existing proof outputs without render"
+    ],
+    "state": "RED — 2/2 proof shots flagged GENERATION DEFECT (clamp masking); graded metric alone would false-pass",
+    "next": [
+      "Human-eye confirm proof_244 outputs show visible cast despite graded pass",
+      "NEXUS sign-off on guard threshold (0.20) and RED state",
+      "DAVID #218 — fix raw magenta at generation; clamp remains safety net only",
+      "GREEN only after generation clean + dual-verify"
+    ]
+  },
+  "clamp_burden_guard": {
+    "threshold": 0.20,
+    "formula": "raw_magenta - graded_magenta",
+    "label": "GENERATION DEFECT — clamp masking",
+    "calibrated_for": "T1 single-pass",
+    "defect_count": 2,
+    "shot_count": 2
+  },
+  "proof": {
+    "resolution": "480p",
+    "pass_type": "metrics-only re-score (no render)",
+    "report": "DAVID/productions/david_latin_corpus_v1_longform_v1/proof_244/proof_244_clamp_report.json",
+    "shots": [
+      {
+        "shot_id": "01_cold_open",
+        "raw_magenta": 0.6388,
+        "graded_magenta": 0.2881,
+        "clamp_burden": 0.3507,
+        "metric_verdict": "AMBER",
+        "generation_defect": true,
+        "generation_defect_label": "GENERATION DEFECT — clamp masking"
+      },
+      {
+        "shot_id": "05_method",
+        "raw_magenta": 0.6652,
+        "graded_magenta": 0.3057,
+        "clamp_burden": 0.3595,
+        "metric_verdict": "AMBER",
+        "generation_defect": true,
+        "generation_defect_label": "GENERATION DEFECT — clamp masking"
+      }
+    ],
+    "proof_218": "HELD"
+  },
+  "pairs_with": [218, 244],
+  "vcs_commit_draft": {
+    "subject": "T4 #244-B: clamp-burden guard — GENERATION DEFECT detection (HOLD)",
+    "body": "RECAP\n- Did: proof_244_clamp_pass.py clamp-burden guard (raw−graded > 0.20 → GENERATION DEFECT); metrics-only re-score; no render\n- State: RED — 2/2 shots clamp masking (burden 0.351/0.360) despite graded AMBER; HOLD human-eye+NEXUS; proof_218 HELD\n- Next: #218 generation magenta fix; dual-verify; GREEN only when raw generation clean\n\nGuard stops clamp from silently hiding bad generation. Cron PAUSED."
+  },
+  "artifacts": [
+    "DAVID/scripts/proof_244_clamp_pass.py",
+    "DAVID/productions/david_latin_corpus_v1_longform_v1/proof_244/proof_244_clamp_report.json"
+  ]
+}

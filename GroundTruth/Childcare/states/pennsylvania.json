@@ -1,0 +1,266 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "Pennsylvania",
+  "state_code": "PA",
+  "state_slug": "pennsylvania",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:13:30.772497+00:00",
+  "status": "PARTIAL",
+  "primary_source": "Pennsylvania 55 Pa. Code §3270.51",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "HARVESTED",
+      "fact_count": 6,
+      "facts": [
+        {
+          "fact_id": "pennsylvania-childcare-ratios-1",
+          "category": "ratios",
+          "text": "Pennsylvania child care center similar-age staff:child ratio for Infant: 1:4; maximum group size 8; 2 staff required at maximum group size.",
+          "citation": {
+            "source": "Pennsylvania 55 Pa. Code §3270.51",
+            "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/055/chapter3270/s3270.51.html",
+            "agency": "Pennsylvania DHS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "pennsylvania-childcare-ratios-2",
+          "category": "ratios",
+          "text": "Pennsylvania child care center similar-age staff:child ratio for Young toddler: 1:5; maximum group size 10; 2 staff required at maximum group size.",
+          "citation": {
+            "source": "Pennsylvania 55 Pa. Code §3270.51",
+            "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/055/chapter3270/s3270.51.html",
+            "agency": "Pennsylvania DHS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "pennsylvania-childcare-ratios-3",
+          "category": "ratios",
+          "text": "Pennsylvania child care center similar-age staff:child ratio for Older toddler: 1:6; maximum group size 12; 2 staff required at maximum group size.",
+          "citation": {
+            "source": "Pennsylvania 55 Pa. Code §3270.51",
+            "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/055/chapter3270/s3270.51.html",
+            "agency": "Pennsylvania DHS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "pennsylvania-childcare-ratios-4",
+          "category": "ratios",
+          "text": "Pennsylvania child care center similar-age staff:child ratio for Preschool: 1:10; maximum group size 20; 2 staff required at maximum group size.",
+          "citation": {
+            "source": "Pennsylvania 55 Pa. Code §3270.51",
+            "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/055/chapter3270/s3270.51.html",
+            "agency": "Pennsylvania DHS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "pennsylvania-childcare-ratios-5",
+          "category": "ratios",
+          "text": "Pennsylvania child care center similar-age staff:child ratio for Young school-age: 1:12; maximum group size 24; 2 staff required at maximum group size.",
+          "citation": {
+            "source": "Pennsylvania 55 Pa. Code §3270.51",
+            "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/055/chapter3270/s3270.51.html",
+            "agency": "Pennsylvania DHS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "pennsylvania-childcare-ratios-6",
+          "category": "ratios",
+          "text": "Pennsylvania child care center similar-age staff:child ratio for Older school-age: 1:15; maximum group size 30; 2 staff required at maximum group size.",
+          "citation": {
+            "source": "Pennsylvania 55 Pa. Code §3270.51",
+            "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/055/chapter3270/s3270.51.html",
+            "agency": "Pennsylvania DHS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        }
+      ]
+    },
+    "group_size": {
+      "status": "HARVESTED",
+      "fact_count": 6,
+      "facts": [
+        {
+          "fact_id": "pennsylvania-childcare-group-size-1",
+          "category": "group_size",
+          "text": "Pennsylvania child care center maximum group size for Infant: 8 children.",
+          "citation": {
+            "source": "Pennsylvania 55 Pa. Code §3270.51",
+            "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/055/chapter3270/s3270.51.html",
+            "agency": "Pennsylvania DHS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "pennsylvania-childcare-group-size-2",
+          "category": "group_size",
+          "text": "Pennsylvania child care center maximum group size for Young toddler: 10 children.",
+          "citation": {
+            "source": "Pennsylvania 55 Pa. Code §3270.51",
+            "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/055/chapter3270/s3270.51.html",
+            "agency": "Pennsylvania DHS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "pennsylvania-childcare-group-size-3",
+          "category": "group_size",
+          "text": "Pennsylvania child care center maximum group size for Older toddler: 12 children.",
+          "citation": {
+            "source": "Pennsylvania 55 Pa. Code §3270.51",
+            "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/055/chapter3270/s3270.51.html",
+            "agency": "Pennsylvania DHS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "pennsylvania-childcare-group-size-4",
+          "category": "group_size",
+          "text": "Pennsylvania child care center maximum group size for Preschool: 20 children.",
+          "citation": {
+            "source": "Pennsylvania 55 Pa. Code §3270.51",
+            "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/055/chapter3270/s3270.51.html",
+            "agency": "Pennsylvania DHS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "pennsylvania-childcare-group-size-5",
+          "category": "group_size",
+          "text": "Pennsylvania child care center maximum group size for Young school-age: 24 children.",
+          "citation": {
+            "source": "Pennsylvania 55 Pa. Code §3270.51",
+            "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/055/chapter3270/s3270.51.html",
+            "agency": "Pennsylvania DHS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "pennsylvania-childcare-group-size-6",
+          "category": "group_size",
+          "text": "Pennsylvania child care center maximum group size for Older school-age: 30 children.",
+          "citation": {
+            "source": "Pennsylvania 55 Pa. Code §3270.51",
+            "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/055/chapter3270/s3270.51.html",
+            "agency": "Pennsylvania DHS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        }
+      ]
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": []
+}

@@ -1,0 +1,108 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "Rhode Island",
+  "state_code": "RI",
+  "state_slug": "rhode_island",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:13:31.831522+00:00",
+  "status": "PARKED",
+  "primary_source": "Rhode Island 500-RICR-70-00-1",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "group_size": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "ratios",
+      "status": "PARKED",
+      "source_checked": "Rhode Island 500-RICR-70-00-1"
+    },
+    {
+      "domain": "group_size",
+      "status": "PARKED"
+    },
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": [
+    {
+      "source_id": "rhode_island_rhode_island_500_ricr_70_00_1",
+      "state": "Rhode Island",
+      "source": "Rhode Island 500-RICR-70-00-1",
+      "url": "https://rules.sos.ri.gov/regulations/part/500-70-00-1",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 31950,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    },
+    {
+      "source_id": "rhode_island_rhode_island_child_care_regulations_fallback_",
+      "state": "Rhode Island",
+      "source": "Rhode Island Child Care Regulations (fallback)",
+      "url": "https://dhs.ri.gov/programs-and-services/child-care/child-care-licensing",
+      "extractor": "generic",
+      "status": "PARKED",
+      "http_status": 404,
+      "bytes": 60031,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "park_reason": "HTTP 404"
+    },
+    {
+      "source_id": "rhode_island_childcare_gov_rhode_island",
+      "state": "Rhode Island",
+      "source": "Childcare.gov — Rhode Island",
+      "url": "https://www.childcare.gov/state-resources/rhode-island/understanding-and-finding-child-care-resources",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 67794,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    }
+  ]
+}

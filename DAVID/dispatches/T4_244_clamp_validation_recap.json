@@ -19,7 +19,7 @@
       "Paused hard-commit cron (.wave_commit.ps1 + tools/git_auto_pusher.py gated on T4_244_HARD_COMMIT_PAUSE)",
       "Ran REAL per-shot _processed pass (NOT reassembly) on 01_cold_open + 05_method at 480p via proof_244_clamp_pass.py --force"
     ],
-    "state": "AMBER — single-pass metrics pass magenta gate; awaiting human-eye + NEXUS dual-verify",
+    "state": "SUPERSEDED by #244-B — graded metric AMBER but clamp-burden guard flags RED (2/2 GENERATION DEFECT)",
     "next": [
       "Human-eye review proof_244/shots/*_480p_processed.mp4",
       "NEXUS sign-off to lift HOLD",

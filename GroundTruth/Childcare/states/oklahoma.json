@@ -1,0 +1,107 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "Oklahoma",
+  "state_code": "OK",
+  "state_slug": "oklahoma",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:13:28.125436+00:00",
+  "status": "PARKED",
+  "primary_source": "Oklahoma Child Care Licensing",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "group_size": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "ratios",
+      "status": "PARKED",
+      "source_checked": "Oklahoma Child Care Licensing"
+    },
+    {
+      "domain": "group_size",
+      "status": "PARKED"
+    },
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": [
+    {
+      "source_id": "oklahoma_oklahoma_child_care_licensing",
+      "state": "Oklahoma",
+      "source": "Oklahoma Child Care Licensing",
+      "url": "https://oklahoma.gov/okdhs/services/childcare/childcarelicensing.html",
+      "extractor": "generic",
+      "status": "PARKED",
+      "http_status": 404,
+      "bytes": 48432,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "park_reason": "HTTP 404"
+    },
+    {
+      "source_id": "oklahoma_oklahoma_child_care_regulations_fallback_",
+      "state": "Oklahoma",
+      "source": "Oklahoma Child Care Regulations (fallback)",
+      "url": "https://oklahoma.gov/okdhs/services/childcare/index.html",
+      "extractor": "generic",
+      "status": "PARKED",
+      "http_status": 404,
+      "bytes": 48432,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "park_reason": "HTTP 404"
+    },
+    {
+      "source_id": "oklahoma_childcare_gov_oklahoma",
+      "state": "Oklahoma",
+      "source": "Childcare.gov — Oklahoma",
+      "url": "https://www.childcare.gov/state-resources/oklahoma/understanding-and-finding-child-care-resources",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 68455,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    }
+  ]
+}

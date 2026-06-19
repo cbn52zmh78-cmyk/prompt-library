@@ -1,0 +1,338 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "Ohio",
+  "state_code": "OH",
+  "state_slug": "ohio",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:13:27.536428+00:00",
+  "status": "PARTIAL",
+  "primary_source": "Ohio OAC 5180:2-12-18 Appendix A",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "HARVESTED",
+      "fact_count": 8,
+      "facts": [
+        {
+          "fact_id": "ohio-childcare-ratios-1",
+          "category": "ratios",
+          "text": "Ohio licensed child care center staff:child ratio for young infants (birth to under 12 months): 1:5; maximum group size 12.",
+          "citation": {
+            "source": "Ohio OAC 5180:2-12-18 Appendix A",
+            "url": "https://codes.ohio.gov/assets/laws/administrative-code/pdfs/5180/2/12/5180%242-12-18_PH_FF_A_APP1_20211005_0839.pdf",
+            "agency": "Ohio JFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "ohio-childcare-ratios-2",
+          "category": "ratios",
+          "text": "Ohio licensed child care center staff:child ratio for older infants (12–18 months): 1:6; maximum group size 12.",
+          "citation": {
+            "source": "Ohio OAC 5180:2-12-18 Appendix A",
+            "url": "https://codes.ohio.gov/assets/laws/administrative-code/pdfs/5180/2/12/5180%242-12-18_PH_FF_A_APP1_20211005_0839.pdf",
+            "agency": "Ohio JFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "ohio-childcare-ratios-3",
+          "category": "ratios",
+          "text": "Ohio licensed child care center staff:child ratio for young toddlers (18 months to under 2½ years): 1:7; maximum group size 14.",
+          "citation": {
+            "source": "Ohio OAC 5180:2-12-18 Appendix A",
+            "url": "https://codes.ohio.gov/assets/laws/administrative-code/pdfs/5180/2/12/5180%242-12-18_PH_FF_A_APP1_20211005_0839.pdf",
+            "agency": "Ohio JFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "ohio-childcare-ratios-4",
+          "category": "ratios",
+          "text": "Ohio licensed child care center staff:child ratio for older toddlers (2½ to under 3 years): 1:8; maximum group size 16.",
+          "citation": {
+            "source": "Ohio OAC 5180:2-12-18 Appendix A",
+            "url": "https://codes.ohio.gov/assets/laws/administrative-code/pdfs/5180/2/12/5180%242-12-18_PH_FF_A_APP1_20211005_0839.pdf",
+            "agency": "Ohio JFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "ohio-childcare-ratios-5",
+          "category": "ratios",
+          "text": "Ohio licensed child care center staff:child ratio for young preschoolers (3 to under 4 years): 1:12; maximum group size 24.",
+          "citation": {
+            "source": "Ohio OAC 5180:2-12-18 Appendix A",
+            "url": "https://codes.ohio.gov/assets/laws/administrative-code/pdfs/5180/2/12/5180%242-12-18_PH_FF_A_APP1_20211005_0839.pdf",
+            "agency": "Ohio JFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "ohio-childcare-ratios-6",
+          "category": "ratios",
+          "text": "Ohio licensed child care center staff:child ratio for older preschoolers (4 years, pre-K): 1:14; maximum group size 28.",
+          "citation": {
+            "source": "Ohio OAC 5180:2-12-18 Appendix A",
+            "url": "https://codes.ohio.gov/assets/laws/administrative-code/pdfs/5180/2/12/5180%242-12-18_PH_FF_A_APP1_20211005_0839.pdf",
+            "agency": "Ohio JFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "ohio-childcare-ratios-7",
+          "category": "ratios",
+          "text": "Ohio licensed child care center staff:child ratio for young school-age (K–under 11 years): 1:18; maximum group size 36.",
+          "citation": {
+            "source": "Ohio OAC 5180:2-12-18 Appendix A",
+            "url": "https://codes.ohio.gov/assets/laws/administrative-code/pdfs/5180/2/12/5180%242-12-18_PH_FF_A_APP1_20211005_0839.pdf",
+            "agency": "Ohio JFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "ohio-childcare-ratios-8",
+          "category": "ratios",
+          "text": "Ohio licensed child care center staff:child ratio for older school-age (11–under 15 years): 1:20; maximum group size 40.",
+          "citation": {
+            "source": "Ohio OAC 5180:2-12-18 Appendix A",
+            "url": "https://codes.ohio.gov/assets/laws/administrative-code/pdfs/5180/2/12/5180%242-12-18_PH_FF_A_APP1_20211005_0839.pdf",
+            "agency": "Ohio JFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        }
+      ]
+    },
+    "group_size": {
+      "status": "HARVESTED",
+      "fact_count": 8,
+      "facts": [
+        {
+          "fact_id": "ohio-childcare-group-size-1",
+          "category": "group_size",
+          "text": "Ohio child care center maximum group size for young infants (birth to under 12 months): 12 children.",
+          "citation": {
+            "source": "Ohio OAC 5180:2-12-18 Appendix A",
+            "url": "https://codes.ohio.gov/assets/laws/administrative-code/pdfs/5180/2/12/5180%242-12-18_PH_FF_A_APP1_20211005_0839.pdf",
+            "agency": "Ohio JFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "ohio-childcare-group-size-2",
+          "category": "group_size",
+          "text": "Ohio child care center maximum group size for older infants (12–18 months): 12 children.",
+          "citation": {
+            "source": "Ohio OAC 5180:2-12-18 Appendix A",
+            "url": "https://codes.ohio.gov/assets/laws/administrative-code/pdfs/5180/2/12/5180%242-12-18_PH_FF_A_APP1_20211005_0839.pdf",
+            "agency": "Ohio JFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "ohio-childcare-group-size-3",
+          "category": "group_size",
+          "text": "Ohio child care center maximum group size for young toddlers (18 months to under 2½ years): 14 children.",
+          "citation": {
+            "source": "Ohio OAC 5180:2-12-18 Appendix A",
+            "url": "https://codes.ohio.gov/assets/laws/administrative-code/pdfs/5180/2/12/5180%242-12-18_PH_FF_A_APP1_20211005_0839.pdf",
+            "agency": "Ohio JFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "ohio-childcare-group-size-4",
+          "category": "group_size",
+          "text": "Ohio child care center maximum group size for older toddlers (2½ to under 3 years): 16 children.",
+          "citation": {
+            "source": "Ohio OAC 5180:2-12-18 Appendix A",
+            "url": "https://codes.ohio.gov/assets/laws/administrative-code/pdfs/5180/2/12/5180%242-12-18_PH_FF_A_APP1_20211005_0839.pdf",
+            "agency": "Ohio JFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "ohio-childcare-group-size-5",
+          "category": "group_size",
+          "text": "Ohio child care center maximum group size for young preschoolers (3 to under 4 years): 24 children.",
+          "citation": {
+            "source": "Ohio OAC 5180:2-12-18 Appendix A",
+            "url": "https://codes.ohio.gov/assets/laws/administrative-code/pdfs/5180/2/12/5180%242-12-18_PH_FF_A_APP1_20211005_0839.pdf",
+            "agency": "Ohio JFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "ohio-childcare-group-size-6",
+          "category": "group_size",
+          "text": "Ohio child care center maximum group size for older preschoolers (4 years, pre-K): 28 children.",
+          "citation": {
+            "source": "Ohio OAC 5180:2-12-18 Appendix A",
+            "url": "https://codes.ohio.gov/assets/laws/administrative-code/pdfs/5180/2/12/5180%242-12-18_PH_FF_A_APP1_20211005_0839.pdf",
+            "agency": "Ohio JFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "ohio-childcare-group-size-7",
+          "category": "group_size",
+          "text": "Ohio child care center maximum group size for young school-age (K–under 11 years): 36 children.",
+          "citation": {
+            "source": "Ohio OAC 5180:2-12-18 Appendix A",
+            "url": "https://codes.ohio.gov/assets/laws/administrative-code/pdfs/5180/2/12/5180%242-12-18_PH_FF_A_APP1_20211005_0839.pdf",
+            "agency": "Ohio JFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "ohio-childcare-group-size-8",
+          "category": "group_size",
+          "text": "Ohio child care center maximum group size for older school-age (11–under 15 years): 40 children.",
+          "citation": {
+            "source": "Ohio OAC 5180:2-12-18 Appendix A",
+            "url": "https://codes.ohio.gov/assets/laws/administrative-code/pdfs/5180/2/12/5180%242-12-18_PH_FF_A_APP1_20211005_0839.pdf",
+            "agency": "Ohio JFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        }
+      ]
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": []
+}
