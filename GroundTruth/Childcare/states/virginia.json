@@ -8,7 +8,7 @@
   "state_code": "VA",
   "state_slug": "virginia",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:13:37.365240+00:00",
+  "generated_at": "2026-06-19T16:15:29.313387+00:00",
   "status": "PARTIAL",
   "primary_source": "Virginia 8VAC20-780-350 Staff-to-children ratio and group size",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
@@ -20,7 +20,7 @@
         {
           "fact_id": "virginia-childcare-ratios-1",
           "category": "ratios",
-          "text": "Virginia licensed child care center staff:child ratio for Birth up to 16 months: 1:4.",
+          "text": "Virginia licensed child care center staff:child ratio for Birth up to 16 months: 1:4; maximum group size 12.",
           "citation": {
             "source": "Virginia 8VAC20-780-350 Staff-to-children ratio and group size",
             "url": "https://www.law.cornell.edu/regulations/virginia/8VAC20-780-350",
@@ -38,7 +38,7 @@
         {
           "fact_id": "virginia-childcare-ratios-2",
           "category": "ratios",
-          "text": "Virginia licensed child care center staff:child ratio for 16 months up to 24 months: 1:5.",
+          "text": "Virginia licensed child care center staff:child ratio for 16 months up to 24 months: 1:5; maximum group size 15.",
           "citation": {
             "source": "Virginia 8VAC20-780-350 Staff-to-children ratio and group size",
             "url": "https://www.law.cornell.edu/regulations/virginia/8VAC20-780-350",
@@ -56,7 +56,7 @@
         {
           "fact_id": "virginia-childcare-ratios-3",
           "category": "ratios",
-          "text": "Virginia licensed child care center staff:child ratio for 2 year olds: 1:8.",
+          "text": "Virginia licensed child care center staff:child ratio for 2 year olds: 1:8; maximum group size 24.",
           "citation": {
             "source": "Virginia 8VAC20-780-350 Staff-to-children ratio and group size",
             "url": "https://www.law.cornell.edu/regulations/virginia/8VAC20-780-350",
@@ -74,7 +74,7 @@
         {
           "fact_id": "virginia-childcare-ratios-4",
           "category": "ratios",
-          "text": "Virginia licensed child care center staff:child ratio for 3 year olds up to school age eligible: 1:10.",
+          "text": "Virginia licensed child care center staff:child ratio for 3 year olds up to school age eligible: 1:10; maximum group size 30.",
           "citation": {
             "source": "Virginia 8VAC20-780-350 Staff-to-children ratio and group size",
             "url": "https://www.law.cornell.edu/regulations/virginia/8VAC20-780-350",
@@ -128,9 +128,82 @@
       ]
     },
     "group_size": {
-      "status": "PARKED",
-      "fact_count": 0,
-      "facts": []
+      "status": "HARVESTED",
+      "fact_count": 4,
+      "facts": [
+        {
+          "fact_id": "virginia-childcare-group-size-1",
+          "category": "group_size",
+          "text": "Virginia child care center maximum group size for Birth up to 16 months: 12 children.",
+          "citation": {
+            "source": "Virginia 8VAC20-780-350 Staff-to-children ratio and group size",
+            "url": "https://www.law.cornell.edu/regulations/virginia/8VAC20-780-350",
+            "agency": "Virginia DSS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "virginia-childcare-group-size-2",
+          "category": "group_size",
+          "text": "Virginia child care center maximum group size for 16 months up to 24 months: 15 children.",
+          "citation": {
+            "source": "Virginia 8VAC20-780-350 Staff-to-children ratio and group size",
+            "url": "https://www.law.cornell.edu/regulations/virginia/8VAC20-780-350",
+            "agency": "Virginia DSS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "virginia-childcare-group-size-3",
+          "category": "group_size",
+          "text": "Virginia child care center maximum group size for 2 year olds: 24 children.",
+          "citation": {
+            "source": "Virginia 8VAC20-780-350 Staff-to-children ratio and group size",
+            "url": "https://www.law.cornell.edu/regulations/virginia/8VAC20-780-350",
+            "agency": "Virginia DSS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "virginia-childcare-group-size-4",
+          "category": "group_size",
+          "text": "Virginia child care center maximum group size for 3 year olds up to school age eligible: 30 children.",
+          "citation": {
+            "source": "Virginia 8VAC20-780-350 Staff-to-children ratio and group size",
+            "url": "https://www.law.cornell.edu/regulations/virginia/8VAC20-780-350",
+            "agency": "Virginia DSS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        }
+      ]
     },
     "staff_qualifications": {
       "status": "PARKED",
@@ -144,10 +217,6 @@
     }
   },
   "gaps": [
-    {
-      "domain": "group_size",
-      "status": "PARTIAL"
-    },
     {
       "domain": "staff_qualifications",
       "status": "PARKED"
