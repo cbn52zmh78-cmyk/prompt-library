@@ -32,3 +32,6 @@ artifacts/**/.streamlit/
 *.egg-info/
 dist/
 build/
+
+# Test scratch dirs (e.g. _t173_tmp, _t212_tmp) created by test suites
+**/_t[0-9]*_tmp/

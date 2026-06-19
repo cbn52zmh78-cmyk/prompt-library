@@ -164,6 +164,10 @@ def _cleanup():
         shutil.rmtree(_TMP, ignore_errors=True)
 
 
+def teardown_module(module=None):  # pytest calls this; keeps scratch out of the repo
+    _cleanup()
+
+
 def _standalone() -> int:
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_") and callable(v)]
     failures = 0
