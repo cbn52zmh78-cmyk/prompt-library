@@ -1,5 +1,5 @@
 {
-  "issue": "244-B",
+  "issue": "244-C",
   "state": "RED",
   "target": "GREEN only when raw generation clean + dual-verify + #218",
   "proof_218": "HELD",
@@ -16,8 +16,16 @@
     "calibrated_for": "T1 single-pass",
     "defect_count": 2
   },
+  "green_criteria": {
+    "gate": "Nexus\\gates\\T4_244_GREEN_criteria.json",
+    "metric_pass_count": 0,
+    "shot_count": 2,
+    "human_eye": "PENDING",
+    "green_pass": false,
+    "stand_by": "T4 STANDING BY for DAVID #218 re-gen"
+  },
   "magenta_max": 0.42,
-  "generated_at": "2026-06-19T16:13:28.769113+00:00",
+  "generated_at": "2026-06-19T16:15:43.216400+00:00",
   "script": "scripts\\longform_scripts\\david_latin_corpus_v1_script.json",
   "production": "productions\\david_latin_corpus_v1_longform_v1",
   "shots": [
@@ -50,6 +58,29 @@
         "vf": "eq=gamma_r=1.00:gamma_g=0.98:gamma_b=0.90:saturation=0.93:brightness=0.00",
         "magenta": 0.2881,
         "host_blue_mean": 47.8
+      },
+      "green_gate": {
+        "metric_pass": false,
+        "human_eye": "PENDING",
+        "green_pass": false,
+        "checks": {
+          "raw_magenta": false,
+          "graded_magenta": true,
+          "clamp_burden": false,
+          "host_blue_mean": true
+        },
+        "failures": [
+          "raw_magenta",
+          "clamp_burden"
+        ],
+        "thresholds": {
+          "raw_magenta_max": 0.42,
+          "graded_magenta_max": 0.42,
+          "clamp_burden_max": 0.2,
+          "host_blue_mean_min": 40.0,
+          "host_blue_mean_max": 70.0
+        },
+        "criteria_gate": "Nexus\\gates\\T4_244_GREEN_criteria.json"
       },
       "clamp_burden": 0.3507,
       "clamp_burden_max": 0.2,
@@ -86,6 +117,29 @@
         "vf": "eq=gamma_r=1.00:gamma_g=0.98:gamma_b=0.90:saturation=0.93:brightness=0.00",
         "magenta": 0.3057,
         "host_blue_mean": 45.9
+      },
+      "green_gate": {
+        "metric_pass": false,
+        "human_eye": "PENDING",
+        "green_pass": false,
+        "checks": {
+          "raw_magenta": false,
+          "graded_magenta": true,
+          "clamp_burden": false,
+          "host_blue_mean": true
+        },
+        "failures": [
+          "raw_magenta",
+          "clamp_burden"
+        ],
+        "thresholds": {
+          "raw_magenta_max": 0.42,
+          "graded_magenta_max": 0.42,
+          "clamp_burden_max": 0.2,
+          "host_blue_mean_min": 40.0,
+          "host_blue_mean_max": 70.0
+        },
+        "criteria_gate": "Nexus\\gates\\T4_244_GREEN_criteria.json"
       },
       "clamp_burden": 0.3595,
       "clamp_burden_max": 0.2,
