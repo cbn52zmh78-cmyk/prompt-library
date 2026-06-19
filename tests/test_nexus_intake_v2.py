@@ -20,9 +20,14 @@ from nexus.identifiers import (  # noqa: E402
     uuid7,
 )
 from nexus.submissions import SubmissionStore, content_hash  # noqa: E402
+from nexus.intake_router import (  # noqa: E402
+    parse_auto_route_block,
+    validate_auto_route_schema,
+)
 
 EXAMPLES = NEXUS / "Intake_Forms/examples"
 V2_EXAMPLES = EXAMPLES / "v2"
+MD_FORMS = NEXUS / "Intake_Forms/md"
 SUBMISSION_SCHEMA = NEXUS / "Intake_Forms/schema/submission.schema.json"
 THREE = ["pi_story_editorial", "video_explainer", "stonebridge_compliance"]
 
