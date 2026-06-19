@@ -1,0 +1,151 @@
+{
+  "batch_id": "t173",
+  "phase": "draft_480p",
+  "generated_at": "2026-06-19T06:50:08.299709+00:00",
+  "concepts_dir": "DAVID/scripts/_t173_tmp/concepts",
+  "dry_run": true,
+  "resolution": "480p",
+  "items": [
+    {
+      "slug": "david_ep",
+      "concept_path": "DAVID/scripts/_t173_tmp/concepts/david_ep.concept.json",
+      "script_path": "DAVID/scripts/_t173_tmp/batch/scripts/david_ep_480p_script.json",
+      "production_dir": "DAVID/productions/david_ep_longform_v1",
+      "gate_0_verdict": "GREEN",
+      "gate_0_signed": true,
+      "gate_0_report": null,
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": null,
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": false,
+      "science_gate": null,
+      "honesty_rail": null,
+      "honesty_pass": null,
+      "promote_eligible": false,
+      "promote_command": null
+    },
+    {
+      "slug": "sci_bad",
+      "concept_path": "DAVID/scripts/_t173_tmp/concepts/sci_bad.concept.json",
+      "script_path": "DAVID/scripts/_t173_tmp/batch/scripts/sci_bad_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/sci_bad_longform_v1",
+      "gate_0_verdict": "GREEN",
+      "gate_0_signed": true,
+      "gate_0_report": null,
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "honesty_fail",
+      "dry_run": true,
+      "qa_report_path": null,
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "GREEN",
+        "warnings": [],
+        "status": "PASS"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "FAILED",
+        "passed": false,
+        "failures": [
+          "missing illustrative-not-simulation label — no on-screen disclosure that visuals are educational illustration (e.g. 'illustrative', 'not to scale', 'not a simulation')",
+          "missing cited source — provenance card has no non-empty citation (name a mission dataset, peer-reviewed paper, catalog, or repository)"
+        ],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": false
+          },
+          {
+            "name": "cited_source",
+            "ok": false
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": []
+      },
+      "honesty_pass": false,
+      "promote_eligible": false,
+      "promote_command": null
+    },
+    {
+      "slug": "sci_ok",
+      "concept_path": "DAVID/scripts/_t173_tmp/concepts/sci_ok.concept.json",
+      "script_path": "DAVID/scripts/_t173_tmp/batch/scripts/sci_ok_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/sci_ok_longform_v1",
+      "gate_0_verdict": "GREEN",
+      "gate_0_signed": true,
+      "gate_0_report": null,
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": null,
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "GREEN",
+        "warnings": [],
+        "status": "PASS"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "NASA/ESA Hubble, composite"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null
+    }
+  ],
+  "summary": {
+    "pending": 2,
+    "honesty_fail": 1
+  },
+  "science_summary": {
+    "science_episodes": 2,
+    "honesty_pass": 1,
+    "honesty_fail": 1
+  },
+  "promote_command": null
+}

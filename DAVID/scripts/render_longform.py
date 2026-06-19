@@ -62,6 +62,10 @@ DEFAULT_END_GUARD = (
 )
 HOST_PERFORMANCE_NAME = "host_performance_extend.mp4"
 API_PACE_S = 1.25  # xAI video rate limit ~1 req/s
+# #194 — neutral WB base; lamp warm is localized (not full-frame tint)
+NEUTRAL_WB_VF = "eq=gamma_r=1.00:gamma_g=0.92:gamma_b=1.04:saturation=0.93:brightness=0.00"
+SKIN_NEUTRAL_VF = "eq=contrast=1.02:saturation=0.96"
+LAMP_ACCENT_VF = "eq=gamma_r=1.10:gamma_g=1.02:gamma_b=0.82:saturation=1.08"
 LAMP_LOCK_VF = (
     "eq=gamma_r=1.06:gamma_g=1.02:gamma_b=0.88:saturation=1.10:brightness=0.02"
 )
@@ -81,8 +85,14 @@ MAGENTA_CLAMP_STRONG_VF = (
 DARK_SCENE_MAGENTA_CLAMP_VF = (
     "eq=gamma_r=1.14:gamma_g=1.05:gamma_b=0.68:saturation=0.94:brightness=0.02"
 )
-WARM_GOLD_CLAMP_VF = f"{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}"
+ARCHIVE_NEUTRAL_CLAMP_VF = f"{NEUTRAL_WB_VF},{MAGENTA_CLAMP_VF},{SKIN_NEUTRAL_VF}"
+WARM_GOLD_CLAMP_VF = ARCHIVE_NEUTRAL_CLAMP_VF
 MAGENTA_SCORE_MAX = 0.42
+YELLOW_GREEN_SCORE_MAX = 0.12
+LABEL_CHIP_COLORS = {
+    "RECONSTRUCTED PRONUNCIATION": (140, 88, 28, 245),
+    "CLASSICAL LATIN": (40, 48, 62, 235),
+}
 LOUDNESS_SPREAD_MAX_LU = 1.5
 REGROUND_EVERY_N = 2
 LOUDNORM_LRA_TIGHT = 7.0
@@ -96,6 +106,18 @@ WAREHOUSE_KELVIN_LOCK_PROMPT = (
     "no magenta brick bounce, no cool fill contamination, no purple ambient."
 )
 _SET_LIBRARY_CACHE: dict[str, Any] | None = None
+_LOG_STREAM = sys.stderr  # progress logs — keep stdout for manifest JSON (#193)
+
+
+def _log(*args: Any, **kwargs: Any) -> None:
+    """Progress logging on stderr so piped batch runs do not fill stdout."""
+    kwargs.setdefault("file", _LOG_STREAM)
+    print(*args, **kwargs)
+
+
+def resolve_render_exit_code(result: dict[str, Any]) -> int:
+    """Return process exit code from QA verdict (#193): 0 when pass, else 1."""
+    return 0 if (result.get("qa") or {}).get("pass") is True else 1
 
 
 def _load_grok_token() -> str:
@@ -179,6 +201,11 @@ def _identity_anchor(script: dict[str, Any]) -> str:
 def _is_archive_production(script: dict[str, Any], refs: dict[str, Any]) -> bool:
     set_file = str(refs.get("set_file") or "")
     return "archive" in set_file.lower() or script.get("format_id") == "documentary-host"
+
+
+def _refs_is_archive(refs: dict[str, Any]) -> bool:
+    set_file = str(refs.get("set_file") or "").lower()
+    return "archive" in set_file or refs.get("format_id") == "documentary-host"
 
 
 def _is_clinical_neutral_set(script: dict[str, Any], refs: dict[str, Any]) -> bool:
@@ -316,12 +343,20 @@ def _effective_reground_interval(
     return opts.reground_interval
 
 
-def _magenta_clamp_vf(*, dark_scene: bool, lamp_lock: bool, strong: bool = False) -> str:
+def _magenta_clamp_vf(
+    *,
+    dark_scene: bool,
+    lamp_lock: bool,
+    strong: bool = False,
+    archive_neutral: bool = False,
+) -> str:
+    if archive_neutral and not dark_scene:
+        return ARCHIVE_NEUTRAL_CLAMP_VF if not strong else f"{ARCHIVE_NEUTRAL_CLAMP_VF},{MAGENTA_CLAMP_STRONG_VF}"
     if strong or dark_scene:
         base = MAGENTA_CLAMP_STRONG_VF if strong else DARK_SCENE_MAGENTA_CLAMP_VF
     else:
         base = MAGENTA_CLAMP_VF
-    if lamp_lock:
+    if lamp_lock and not archive_neutral:
         return f"{base},{LAMP_LOCK_VF}"
     return base
 
@@ -1080,7 +1115,7 @@ def loudnorm_two_pass(
     )
     stats = _parse_loudnorm_json(r1.stderr or "")
     if not stats:
-        print("[audio] loudnorm measure failed; dynaudnorm fallback")
+        _log("[audio] loudnorm measure failed; dynaudnorm fallback")
         _remux_av(video, out, af="dynaudnorm=f=150:g=15:p=0.95:m=100:s=12")
         return out
     apply_af = (
@@ -1132,6 +1167,42 @@ def chain_segment_paths(shots_dir: Path, shots: list[dict[str, Any]]) -> list[Pa
         raw = shots_dir / f"chain_{s['id']}.mp4"
         paths.append(proc if proc.is_file() and proc.stat().st_size > 10000 else raw)
     return paths
+
+
+def _chain_cache_status(
+    shots_dir: Path,
+    shots: list[dict[str, Any]],
+) -> tuple[bool, bool, int, int, list[Path]]:
+    """Return (all_present, any_present, present_count, total, segment_paths)."""
+    chain_segs = chain_segment_paths(shots_dir, shots)
+    present = [p for p in chain_segs if p.is_file() and p.stat().st_size > 10000]
+    total = len(chain_segs)
+    n = len(present)
+    return n == total and total > 0, n > 0, n, total, chain_segs
+
+
+def _persist_extend_state(
+    state_path: Path,
+    *,
+    mode: str,
+    opts: SeamlessOptions,
+    segment_count: int,
+    join_mode: str,
+) -> None:
+    state_path.write_text(
+        json.dumps({
+            "mode": mode,
+            "extend_api": {**EXTEND_API_FINDING, "continuity_mode": mode},
+            "segments": segment_count,
+            "join_mode": join_mode,
+            "xfade_s": opts.xfade_s,
+            "assembly": (
+                f"{join_mode}_{opts.xfade_s}s_loudnorm={opts.loudnorm}"
+                f"_pin_sync={opts.pin_audio_sync}_magenta_clamp={opts.magenta_clamp}"
+            ),
+        }),
+        encoding="utf-8",
+    )
 
 
 def _probe_grey_balance(video: Path, at_s: float | None = None) -> float:
@@ -1250,7 +1321,7 @@ def apply_per_shot_magenta_clamp(
         if r.returncode == 0:
             cur = staged
         else:
-            print("[seamless] per-shot histogram clamp failed; eq-only fallback")
+            _log("[seamless] per-shot histogram clamp failed; eq-only fallback")
             use_histogram = False
 
     if not use_histogram:
@@ -1269,7 +1340,7 @@ def apply_per_shot_magenta_clamp(
         if not _run_video_eq_pass(cur, strong_out, strong_vf):
             break
         cur = strong_out
-        print(f"[magenta] within-clip strong pass {pass_n + 1}/{max_strong} (score was {mag:.3f})")
+        _log(f"[magenta] within-clip strong pass {pass_n + 1}/{max_strong} (score was {mag:.3f})")
 
     staging = out.with_name(f"{out.stem}__clamp_staging.mp4")
     if staging.exists():
@@ -1326,7 +1397,7 @@ def match_color_segment(
         ]
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode != 0:
-        print("[seamless] match-color filter unavailable; warm-gold + magenta clamp fallback")
+        _log("[seamless] match-color filter unavailable; warm-gold + magenta clamp fallback")
         vf = WARM_GOLD_CLAMP_VF if lamp_lock else MAGENTA_CLAMP_VF
         cmd_eq = [
             ff, "-y", "-i", str(target), "-vf", vf,
@@ -1411,7 +1482,7 @@ def tighten_chain_loudness(
         spread = values[-1] - values[0]
         if spread <= LOUDNESS_SPREAD_MAX_LU:
             if iteration:
-                print(f"[audio] chain loudness converged (spread {spread:.2f} LU)")
+                _log(f"[audio] chain loudness converged (spread {spread:.2f} LU)")
             return updated
 
         target_i = values[len(values) // 2]
@@ -1430,11 +1501,74 @@ def tighten_chain_loudness(
             shutil.move(str(pinned), str(staging))
             os.replace(staging, seg)
             updated[idx] = seg
-            print(
+            _log(
                 f"[audio] chain level pass {iteration + 1} {seg.name}: "
                 f"{il:.2f} → {target_i:.2f} LUFS (gain {gain_db:+.2f} dB)"
             )
     return updated
+
+
+def _assemble_xfade_chain(
+    segments: list[Path],
+    shots: list[dict[str, Any]],
+    out_path: Path,
+    *,
+    opts: SeamlessOptions,
+    shots_dir: Path,
+    color_ref: Path | None,
+    label: str = "xfade chain",
+) -> Path:
+    """Re-concat/clamp/sync path — loudness-tighten then mandatory xfade when N>=2 (#193)."""
+    segs = [p for p in segments if p.is_file() and p.stat().st_size > 10000]
+    if not segs:
+        raise ValueError("_assemble_xfade_chain: no valid segments")
+    if opts.loudnorm and len(segs) >= 2:
+        segs = tighten_chain_loudness(segs, shots, shots_dir)
+    if len(segs) == 1:
+        shutil.copy2(segs[0], out_path)
+        return out_path
+    if opts.enabled:
+        _log(
+            f"[seamless] {label} joining {len(segs)} segments "
+            f"(xfade={opts.xfade_s}s, audio=synced)"
+        )
+        concat_xfade_chain(
+            segs,
+            out_path,
+            xfade_s=opts.xfade_s,
+            match_color=opts.match_color,
+            cut_on_motion=opts.cut_on_motion,
+            lamp_lock=opts.lamp_lock,
+            color_ref=color_ref,
+            work_dir=shots_dir,
+        )
+        return out_path
+    raise RuntimeError(
+        "_assemble_xfade_chain: multi-segment re-concat requires seamless xfade "
+        f"({len(segs)} segments, opts.enabled=False)"
+    )
+
+
+def _reconcat_seamless_chain(
+    segments: list[Path],
+    shots: list[dict[str, Any]],
+    out_path: Path,
+    *,
+    opts: SeamlessOptions,
+    shots_dir: Path,
+    color_ref: Path | None,
+    label: str = "reconcat",
+) -> Path:
+    """Clamp/sync/loudness re-concat entry — always preserves xfade joins (#193 extended)."""
+    return _assemble_xfade_chain(
+        segments,
+        shots,
+        out_path,
+        opts=opts,
+        shots_dir=shots_dir,
+        color_ref=color_ref,
+        label=label,
+    )
 
 
 def has_audio_stream(video: Path) -> bool:
@@ -1561,7 +1695,7 @@ def ensure_segment_audio(
     speech = shot.get("speech_text", "").strip()
     if not speech:
         return video
-    print(f"[audio] silent segment {video.name} — TTS fallback for speech")
+    _log(f"[audio] silent segment {video.name} — TTS fallback for speech")
     wav = work_dir / f"{video.stem}_tts.wav"
     synthesize_speech_wav(speech, wav, refs.get("voice_suffix", ""))
     out = work_dir / f"{video.stem}_muxed.mp4"
@@ -1741,7 +1875,7 @@ def render_frame_chain_performance(
             and not regen
             and not concat_only
         ):
-            print(f"[seamless] reusing processed {proc_path.name}")
+            _log(f"[seamless] reusing processed {proc_path.name}")
             segments.append(proc_path)
             continue
 
@@ -1761,7 +1895,7 @@ def render_frame_chain_performance(
             if mag <= MAGENTA_SCORE_MAX:
                 segments.append(proc_path)
                 continue
-            print(f"[magenta] cached {sid} score={mag:.3f} — re-roll")
+            _log(f"[magenta] cached {sid} score={mag:.3f} — re-roll")
             regen = True
 
         if concat_only:
@@ -1769,7 +1903,7 @@ def render_frame_chain_performance(
 
         if i == 0 and seed_segment and seed_segment.is_file() and not regen:
             shutil.copy2(seed_segment, seg_path)
-            print(f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} — reusing extend seed")
+            _log(f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} — reusing extend seed")
 
         magenta_ok = not magenta_reroll
         max_attempts = _magenta_reroll_attempts(refs, shot) if magenta_reroll else 1
@@ -1787,13 +1921,13 @@ def render_frame_chain_performance(
                             src = "dark-set avatar re-ground (Kelvin locked)"
                         else:
                             src = "talent re-ground" if i > 0 else "locked talent avatar"
-                        print(f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} ({dur}s) ← {src}")
+                        _log(f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} ({dur}s) ← {src}")
                     else:
                         frame_jpg = frames_dir / f"frame_after_{segments[-1].stem}.jpg"
                         extract_last_frame(segments[-1], frame_jpg)
                         _api_pace()
                         image_url = upload_image_url(client, frame_jpg)
-                        print(f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} ({dur}s) ← last frame")
+                        _log(f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} ({dur}s) ← last frame")
 
                     _api_pace()
                     resp = client.video.generate(
@@ -1813,33 +1947,33 @@ def render_frame_chain_performance(
                 if mag <= MAGENTA_SCORE_MAX:
                     magenta_ok = True
                     break
-                print(f"[magenta] {sid} score={mag:.3f} — re-roll attempt {attempt + 2}/{max_attempts}")
+                _log(f"[magenta] {sid} score={mag:.3f} — re-roll attempt {attempt + 2}/{max_attempts}")
                 regen = True
             else:
                 magenta_ok = True
                 break
 
         if magenta_reroll and not magenta_ok and proc_path.is_file():
-            print(f"[magenta] {sid} still elevated after {max_attempts} attempts — keeping best-effort clamp")
+            _log(f"[magenta] {sid} still elevated after {max_attempts} attempts — keeping best-effort clamp")
 
         segments.append(proc_path)
 
-    if opts.loudnorm and len(segments) >= 2:
-        segments = tighten_chain_loudness(segments, shots, shots_dir)
-
-    if len(segments) == 1:
-        shutil.copy2(segments[0], out_path)
-    else:
-        print(f"[seamless] xfade chain joining {len(segments)} segments (xfade={opts.xfade_s}s, audio=synced)")
-        concat_xfade_chain(
-            segments,
-            out_path,
-            xfade_s=opts.xfade_s,
-            match_color=opts.match_color,
-            cut_on_motion=opts.cut_on_motion,
-            lamp_lock=opts.lamp_lock,
-            color_ref=color_ref,
-            work_dir=shots_dir,
+    _reconcat_seamless_chain(
+        segments,
+        shots,
+        out_path,
+        opts=opts,
+        shots_dir=shots_dir,
+        color_ref=color_ref,
+        label="frame-chain reconcat",
+    )
+    if opts.enabled and len(shots) >= 2:
+        _persist_extend_state(
+            shots_dir / "extend_state.json",
+            mode="frame_chain",
+            opts=opts,
+            segment_count=len(shots),
+            join_mode="xfade_chain",
         )
     return out_path, step_urls, "frame_chain"
 
@@ -1859,8 +1993,7 @@ def render_extend_performance(
 ) -> tuple[Path, list[str], str]:
     """PRIMARY path — Grok Imagine EXTEND when supported; else frame-chain fallback."""
     state_path = shots_dir / "extend_state.json"
-    chain_segs = chain_segment_paths(shots_dir, shots)
-    have_chain = all(p.is_file() and p.stat().st_size > 10000 for p in chain_segs)
+    have_chain, any_chain, present_n, total_n, chain_segs = _chain_cache_status(shots_dir, shots)
     color_ref = resolve_color_reference(refs, shots_dir)
 
     regen_any = force or bool(force_shots)
@@ -1871,39 +2004,43 @@ def render_extend_performance(
             concat_only=True, force=force, force_shots=force_shots,
         )
     if have_chain and not regen_any:
-        print(f"[seamless] xfade chain reassembly from {len(chain_segs)} cached segments")
-        if len(chain_segs) == 1:
-            shutil.copy2(chain_segs[0], out_path)
-        else:
-            concat_xfade_chain(
-                chain_segs,
-                out_path,
-                xfade_s=opts.xfade_s,
-                match_color=opts.match_color,
-                cut_on_motion=opts.cut_on_motion,
-                lamp_lock=opts.lamp_lock,
-                color_ref=color_ref,
-                work_dir=shots_dir,
-            )
+        _log(f"[seamless] xfade chain reassembly from {len(chain_segs)} cached segments")
+        _reconcat_seamless_chain(
+            chain_segs,
+            shots,
+            out_path,
+            opts=opts,
+            shots_dir=shots_dir,
+            color_ref=color_ref,
+            label="cached reassembly",
+        )
         mode = "frame_chain"
         if state_path.is_file():
             mode = json.loads(state_path.read_text(encoding="utf-8")).get("mode", mode)
-        state_path.write_text(
-            json.dumps({
-                "mode": mode,
-                "extend_api": {**EXTEND_API_FINDING, "continuity_mode": mode},
-                "segments": len(chain_segs),
-                "assembly": (
-                    f"xfade_chain_{opts.xfade_s}s_loudnorm={opts.loudnorm}"
-                    f"_pin_sync={opts.pin_audio_sync}_magenta_clamp={opts.magenta_clamp}"
-                ),
-            }),
-            encoding="utf-8",
+        _persist_extend_state(
+            state_path,
+            mode=mode,
+            opts=opts,
+            segment_count=len(chain_segs),
+            join_mode="xfade_chain",
         )
         return out_path, [], mode
 
-    if out_path.exists() and out_path.stat().st_size > 10000 and not force and not have_chain:
-        print(f"[seamless] reusing performance {out_path.name}")
+    if any_chain and not have_chain:
+        _log(
+            f"[seamless] partial chain cache ({present_n}/{total_n}) — "
+            "xfade reassembly via frame-chain (no stale host reuse)"
+        )
+        return render_frame_chain_performance(
+            shots, client, refs, opts, shots_dir, out_path,
+            script=script,
+            concat_only=False,
+            force=force,
+            force_shots=force_shots,
+        )
+
+    if out_path.exists() and out_path.stat().st_size > 10000 and not force and not any_chain:
+        _log(f"[seamless] reusing performance {out_path.name} (no per-shot chain cache)")
         mode = "cached"
         if state_path.is_file():
             mode = json.loads(state_path.read_text(encoding="utf-8")).get("mode", mode)
@@ -1918,7 +2055,7 @@ def render_extend_performance(
     dur0 = effective_shot_duration(shot0, seamless=True)
     prompt0 = apply_seamless_prompt(shot0, refs, opts)
     image_url0 = resolve_shot_image_url(shot0, refs)
-    print(f"[seamless] extend step 1/{len(shots)} {shot0['id']} ({dur0}s)…")
+    _log(f"[seamless] extend step 1/{len(shots)} {shot0['id']} ({dur0}s)…")
     _api_pace()
     resp = client.video.generate(
         prompt=prompt0,
@@ -1939,7 +2076,7 @@ def render_extend_performance(
     dur1 = effective_shot_duration(shot1, seamless=True)
     prompt1 = apply_seamless_prompt(shot1, refs, opts)
     try:
-        print(f"[seamless] extend step 2/{len(shots)} {shot1['id']} ({dur1}s)…")
+        _log(f"[seamless] extend step 2/{len(shots)} {shot1['id']} ({dur1}s)…")
         _api_pace()
         resp = client.video.extend(
             prompt=prompt1,
@@ -1955,7 +2092,7 @@ def render_extend_performance(
             sid = shot["id"]
             dur = effective_shot_duration(shot, seamless=True)
             prompt = apply_seamless_prompt(shot, refs, opts)
-            print(f"[seamless] extend step {i}/{len(shots)} {sid} ({dur}s)…")
+            _log(f"[seamless] extend step {i}/{len(shots)} {sid} ({dur}s)…")
             _api_pace()
             resp = client.video.extend(
                 prompt=prompt,
@@ -1981,7 +2118,7 @@ def render_extend_performance(
     except Exception as exc:
         if not _extend_not_supported(exc):
             raise
-        print("[seamless] EXTEND unavailable on grok-imagine-video-1.5 — frame-chain fallback (STUDIO v1.1 §2)")
+        _log("[seamless] EXTEND unavailable on grok-imagine-video-1.5 — frame-chain fallback (STUDIO v1.1 §2)")
         seed = shots_dir / f"chain_{shot0['id']}.mp4"
         if out_path.is_file():
             shutil.copy2(out_path, seed)
@@ -1991,15 +2128,12 @@ def render_extend_performance(
             concat_only=False, force=force, force_shots=force_shots,
             seed_segment=seed if not regen_any else None,
         )
-        state_path.write_text(
-            json.dumps({
-                "mode": "frame_chain",
-                "urls": result[1],
-                "extend_api": {**EXTEND_API_FINDING, "continuity_mode": "frame_chain"},
-                "segments": len(shots),
-                "assembly": f"xfade_chain_{opts.xfade_s}s_match_color={opts.match_color}_cut_on_motion={opts.cut_on_motion}",
-            }),
-            encoding="utf-8",
+        _persist_extend_state(
+            state_path,
+            mode="frame_chain",
+            opts=opts,
+            segment_count=len(shots),
+            join_mode="xfade_chain",
         )
         return result
 
@@ -2101,6 +2235,20 @@ def qa_check(
         else:
             issues.append(f"shots missing {anchor} continuity in video_prompt")
         passes.append("xfade chain + synced audio crossfade at joins")
+        chain_count = len([p for p in (chain_segments or []) if p.is_file()])
+        if chain_count >= 2 and extend_path:
+            state_path = extend_path.parent / "extend_state.json"
+            if state_path.is_file():
+                st = json.loads(state_path.read_text(encoding="utf-8"))
+                if st.get("join_mode") == "xfade_chain":
+                    passes.append(
+                        f"re-concat join preserved: xfade_chain "
+                        f"({st.get('xfade_s', seamless_opts.xfade_s)}s)"
+                    )
+                else:
+                    issues.append(
+                        f"re-concat stripped seamless xfade (join_mode={st.get('join_mode')})"
+                    )
         check_path = final_path if final_path and final_path.is_file() else extend_path
         audio_ok = False
         if check_path and check_path.is_file():
@@ -2289,7 +2437,7 @@ def render_longform(
             final_mp4 = seamless_out
 
         rendered = [p for p in [host_mp4, card_mp4] if p]
-        print(f"[seamless] final → {final_mp4}")
+        _log(f"[seamless] final → {final_mp4}")
         chain_segments = chain_segment_paths(shots_dir, perf_shots)
 
         compare_v1 = script.get("config", {}).get("compare_v1")
@@ -2299,7 +2447,7 @@ def render_longform(
                 comparison_path = prod_dir / "output" / f"david_{slug}_v1_vs_v2.mp4"
                 try:
                     build_side_by_side(v1_path, final_mp4, comparison_path, "v1 hard-cut", "v2 seamless")
-                    print(f"[seamless] comparison → {comparison_path}")
+                    _log(f"[seamless] comparison → {comparison_path}")
                 except subprocess.CalledProcessError:
                     comparison_path = prod_dir / "output" / f"david_{slug}_v1_vs_v2_nolabel.mp4"
                     subprocess.run(
@@ -2313,7 +2461,7 @@ def render_longform(
                         check=True,
                         capture_output=True,
                     )
-                    print(f"[seamless] comparison (no labels) → {comparison_path}")
+                    _log(f"[seamless] comparison (no labels) → {comparison_path}")
 
         qa = qa_check(
             script, refs, rendered,
@@ -2353,7 +2501,7 @@ def render_longform(
             and sid not in force_shots
         )
         if reuse:
-            print(f"[longform] reusing {out.name}")
+            _log(f"[longform] reusing {out.name}")
             rendered.append(out)
             continue
 
@@ -2367,7 +2515,7 @@ def render_longform(
 
         prompt = ensure_voice_in_prompt(shot["video_prompt"], refs["voice_suffix"])
         image_url = resolve_shot_image_url(shot, refs)
-        print(f"[longform] rendering {sid} ({shot['duration']}s)…")
+        _log(f"[longform] rendering {sid} ({shot['duration']}s)…")
         _api_pace()
         vid = client.video.generate(
             prompt=prompt,
@@ -2388,7 +2536,7 @@ def render_longform(
         rendered.append(prov_mp4)
 
     concat_videos(rendered, final_mp4)
-    print(f"[longform] final → {final_mp4}")
+    _log(f"[longform] final → {final_mp4}")
 
     qa = qa_check(script, refs, rendered)
     qa_path = prod_dir / "qa_report.json"
@@ -2471,8 +2619,8 @@ def main() -> int:
         out.write_text(json.dumps(pack, indent=2, ensure_ascii=False), encoding="utf-8")
         script_out = prod_dir / f"{script.get('slug', 'longform')}_script.json"
         script_out.write_text(json.dumps(script, indent=2, ensure_ascii=False), encoding="utf-8")
-        print(f"Script only → {script_out}")
-        print(f"Imagine pack → {out}")
+        _log(f"Script only → {script_out}")
+        _log(f"Imagine pack → {out}")
         return 0
 
     client = None
@@ -2509,13 +2657,17 @@ def main() -> int:
     }
     prod_dir = Path(result["production_dir"])
     manifest_path = prod_dir / "manifest.json"
+    exit_code = resolve_render_exit_code(result)
     if args.package and result["qa"]["pass"]:
-        pkg = _run_package_stage(prod_dir)
-        manifest["upload_kit"] = pkg["upload_kit"]
-        manifest["packaged_at"] = pkg["manifest"]["packaged_at"]
+        try:
+            pkg = _run_package_stage(prod_dir)
+            manifest["upload_kit"] = pkg["upload_kit"]
+            manifest["packaged_at"] = pkg["manifest"]["packaged_at"]
+        except Exception as exc:
+            _log(f"[longform] package stage failed (QA still {'pass' if exit_code == 0 else 'fail'}): {exc}")
     manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
     print(json.dumps(manifest, indent=2, ensure_ascii=False))
-    return 0 if result["qa"]["pass"] else 1
+    return exit_code
 
 
 if __name__ == "__main__":

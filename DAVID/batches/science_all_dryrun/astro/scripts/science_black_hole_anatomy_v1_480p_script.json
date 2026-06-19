@@ -1,0 +1,271 @@
+{
+  "slug": "science_black_hole_anatomy_v1",
+  "title": "Observable — Anatomy of a Black Hole",
+  "format_id": "science-explainer",
+  "target_seconds": 54,
+  "intake": {
+    "format_id": "science-explainer",
+    "actor_id": "Julian-001",
+    "set_id": "@Set-Seamless-Neutral-001",
+    "style_id": "@Style-Cool-Clinical-001",
+    "source": "STUDIO/Pipeline/production_intake.py",
+    "gate_0": {
+      "version": "1.3",
+      "verdict": "YELLOW",
+      "blocked": false,
+      "requires_human_signoff": true,
+      "human_signoff": true,
+      "target_rating": "PG",
+      "channels": [
+        "social",
+        "streaming"
+      ],
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_black_hole_anatomy_v1_20260619_015006.json",
+      "checklist_domains": {
+        "row_1_synthetic_ownership": "MANUAL",
+        "row_2_music_sync": "PASS",
+        "row_3_no_real_likeness": "MANUAL",
+        "row_4_target_channel": "PASS",
+        "row_5_age_documentation": "N/A",
+        "row_6_ai_disclosure": "PASS"
+      },
+      "hard_stops": [],
+      "counsel_flags": [],
+      "distribution_flags": [],
+      "warnings": [
+        "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
+      ],
+      "rating_flags": [],
+      "cara_status": "COMPLIANT",
+      "music_bed_id": "BED-COS-002",
+      "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
+      "row_2_music_sync": "PASS",
+      "notes": [
+        "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
+        "Social = mass dissemination. Platform AI-label + community guidelines apply.",
+        "Row 2: Manifest-cleared music bed(s): BED-COS-002 (STUDIO/Music_Sound/clearance_manifest.json)",
+        "Science Gate: illustrative-not-simulation policy applies.",
+        "Revise and re-submit to Legal Gate (Gate 0)."
+      ],
+      "brief_source": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Pipeline\\Concepts\\astro_mini_slate\\science_black_hole_anatomy_v1_brief.txt"
+    },
+    "libraries": {
+      "formats": "Production_Templates_v1.json (#98)",
+      "sets": "Set_Library_v1.json (#99)",
+      "styles": "Style_Library_v1.json (#99)",
+      "casting": "Casting_Bible/registry/casting_registry.json"
+    },
+    "duration_clamp": {
+      "applied": true,
+      "policy": "seamless_7_9",
+      "lo": 7,
+      "hi": 9,
+      "shots_clamped": 1
+    },
+    "science_subject": {
+      "subject_id": "BH-ANAT-001",
+      "domain": "Astrophysics — Black Holes",
+      "phenomenon": "Anatomy of a Black Hole",
+      "field": "astrophysics",
+      "key_measurement": "M87* shadow diameter ~42 μas (EHT 2019); GW150914 final black-hole mass ~62 M☉ (chirp mass ~28 M☉)",
+      "visualization_ref": "Science/reference_plates/astro/black_hole_reference.jpg",
+      "visualization_prompt": "photorealistic scientific visualization, supermassive black hole with dark central shadow, thin relativistic accretion disk with temperature gradient, Doppler beaming on inclined disk, gravitational lensing of background starfield, photon ring, NOT TO SCALE illustrative geometry, 16:9 astrophysics fidelity",
+      "principle_set": "astrophysics_fidelity",
+      "plate_id": "@Sci-BlackHole-001",
+      "institutions": [
+        "Event Horizon Telescope Collaboration",
+        "LIGO Scientific Collaboration",
+        "NASA"
+      ],
+      "sources": [
+        {
+          "citation": "Event Horizon Telescope Collaboration et al., First M87 Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole, ApJ 875, L1 (2019)",
+          "url": "https://iopscience.iop.org/article/10.3847/2041-8213/ab0ec7",
+          "type": "primary",
+          "notes": "Direct radio interferometry image of M87* shadow"
+        },
+        {
+          "citation": "Abbott, B. P. et al. (LIGO Scientific Collaboration), Observation of Gravitational Waves from a Binary Black Hole Merger, Phys. Rev. Lett. 116, 061102 (2016)",
+          "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.061102",
+          "type": "primary",
+          "notes": "GW150914 — stellar-mass merger detected via spacetime strain"
+        },
+        {
+          "citation": "NASA Science — Black Holes overview (event horizon, no escape for light)",
+          "url": "https://science.nasa.gov/universe/black-holes/",
+          "type": "secondary",
+          "notes": "Public-facing synthesis aligned with GR textbook definitions"
+        }
+      ],
+      "principle_selection_reason": "field:astrophysics"
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "voice_suffix": "clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only",
+    "use_identity_lock": false,
+    "avatar_reference": "STUDIO/Cast/actors_roster/male/north_america/Julian_Cross/01_casting_shots/casting_turnaround_v1.jpg",
+    "set_reference": "STUDIO/Pipeline/references/seamless_neutral_grey_reference.jpg",
+    "visualization_reference": "Science/reference_plates/astro/black_hole_reference.jpg",
+    "seamless": {
+      "primary": "extend",
+      "xfade_s": 0.2,
+      "match_color": true,
+      "cut_on_motion": true,
+      "lamp_lock": true,
+      "glasses_lock": true,
+      "loudnorm": true,
+      "pin_audio_sync": true,
+      "reground_interval": 2,
+      "magenta_clamp": true
+    },
+    "music_bed": {
+      "track_id": "BED-COS-002",
+      "manifest": "STUDIO/Music_Sound/clearance_manifest.json"
+    }
+  },
+  "shots": [
+    {
+      "id": "01_hook",
+      "duration": 7,
+      "t_start": 0,
+      "t_end": 7,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter addresses camera on seamless neutral, crisp science hook. Camera: locked medium, direct address. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"What if you crossed a boundary where even light cannot climb back out? That is not science fiction — it is what a black hole does to spacetime.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "What if you crossed a boundary where even light cannot climb back out? That is not science fiction — it is what a black hole does to spacetime.",
+      "on_screen": "Observable · Anatomy of a Black Hole"
+    },
+    {
+      "id": "02_phenomenon",
+      "duration": 9,
+      "t_start": 7,
+      "t_end": 16,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter explains the phenomenon plainly, motivated gesture, clinical lighting. Camera: slow push-in medium. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"A black hole is not a hole you fall through. It is mass so compressed that gravity curves space and time into a one-way boundary — the event horizon — with a dark shadow at the center and, often, a blazing accretion disk around it.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "A black hole is not a hole you fall through. It is mass so compressed that gravity curves space and time into a one-way boundary — the event horizon — with a dark shadow at the center and, often, a blazing accretion disk around it."
+    },
+    {
+      "id": "03_how_we_know",
+      "duration": 9,
+      "t_start": 16,
+      "t_end": 25,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter cites measurement, experiment, or observation chain — evidence-forward tone. Camera: medium — gesture to evidence. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"In twenty nineteen, the Event Horizon Telescope resolved the shadow of M87's supermassive black hole — forty-two micro-arcseconds wide. LIGO has heard stellar-mass black holes merge, rippling spacetime itself. We observe the shadow and the waves — not the singularity inside.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "In twenty nineteen, the Event Horizon Telescope resolved the shadow of M87's supermassive black hole — forty-two micro-arcseconds wide. LIGO has heard stellar-mass black holes merge, rippling spacetime itself. We observe the shadow and the waves — not the singularity inside."
+    },
+    {
+      "id": "04_visualization_payoff",
+      "duration": 9,
+      "t_start": 25,
+      "t_end": 34,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter narrates over locked @2 science visualization — see attached render for phenomenon geometry; accurate color, on-screen NOT TO SCALE when illustrative. Camera: locked medium beside or over @2 visualization plate. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"This visualization shows what general relativity predicts: a dark shadow, a thin relativistic disk with Doppler beaming, and bent starlight around the photon sphere — illustrative geometry, not a photograph.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "This visualization shows what general relativity predicts: a dark shadow, a thin relativistic disk with Doppler beaming, and bent starlight around the photon sphere — illustrative geometry, not a photograph.",
+      "on_screen_labels": [
+        "SCIENCE VISUALIZATION",
+        "SIMULATION",
+        "NOT TO SCALE"
+      ],
+      "reference_slots": {
+        "@2": "visualization"
+      },
+      "science_subject_ref": "BH-ANAT-001",
+      "visualization_prompt": "Kerr black hole cross-section with labeled event horizon and photon sphere, inclined accretion disk with temperature gradient and Doppler beaming, lensed background stars, documentary astrophysics fidelity",
+      "visualization_ref": "Science/reference_plates/astro/black_hole_reference.jpg",
+      "duration_raw": 10
+    },
+    {
+      "id": "05_significance",
+      "duration": 9,
+      "t_start": 34,
+      "t_end": 43,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter lands significance — real-world stakes or deeper insight; end on gesture peak. Camera: warm medium-close, inviting settle. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Black holes are cosmic laboratories. They test Einstein in extreme gravity, power quasars across the universe, and remind us that empty-looking sky can hide the most violent objects in nature.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Black holes are cosmic laboratories. They test Einstein in extreme gravity, power quasars across the universe, and remind us that empty-looking sky can hide the most violent objects in nature."
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 6,
+    "card_type": "sources",
+    "title": "Sources — Anatomy of a Black Hole",
+    "subtitle": "Astrophysics — Black Holes",
+    "footer": "Event Horizon Telescope Collaboration et al., First M87 Event Horizon… · Abbott, B. P. et al. (LIGO Scientific Collaboration), Observation of … · NASA Science — Black Holes overview (event horizon, no escape for light)",
+    "lines": [
+      "SUBJECT: Anatomy of a Black Hole (BH-ANAT-001)",
+      "EVIDENCE: EHT M87* shadow (2019); LIGO GW150914 (2016)",
+      "VIZ: Illustrative GR simulation — labeled NOT TO SCALE; not photographic"
+    ],
+    "sources": [
+      {
+        "citation": "Event Horizon Telescope Collaboration et al., First M87 Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole, ApJ 875, L1 (2019)",
+        "url": "https://iopscience.iop.org/article/10.3847/2041-8213/ab0ec7",
+        "type": "primary",
+        "notes": "Direct radio interferometry image of M87* shadow"
+      },
+      {
+        "citation": "Abbott, B. P. et al. (LIGO Scientific Collaboration), Observation of Gravitational Waves from a Binary Black Hole Merger, Phys. Rev. Lett. 116, 061102 (2016)",
+        "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.061102",
+        "type": "primary",
+        "notes": "GW150914 — stellar-mass merger detected via spacetime strain"
+      },
+      {
+        "citation": "NASA Science — Black Holes overview (event horizon, no escape for light)",
+        "url": "https://science.nasa.gov/universe/black-holes/",
+        "type": "secondary",
+        "notes": "Public-facing synthesis aligned with GR textbook definitions"
+      }
+    ],
+    "science_subject_id": "BH-ANAT-001"
+  },
+  "qa_rules": {
+    "require_identity_lock": false,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": false,
+    "min_shots": 5
+  },
+  "production_meta": {
+    "set_id": "@Set-Seamless-Neutral-001",
+    "style_id": "@Style-Cool-Clinical-001",
+    "identity_anchor": "@Julian-001",
+    "pacing": {
+      "words_per_second": 2.6,
+      "beat_gap_s": 0.35,
+      "register": "clear science communication, wonder without hype",
+      "pause_on": [
+        "measurement beats",
+        "visualization reveals",
+        "significance landings"
+      ]
+    },
+    "camera": {
+      "primary": "locked medium on seamless neutral — presenter direct to camera",
+      "secondary": "full-frame @2 science visualization payoff",
+      "forbidden": [
+        "handheld jitter",
+        "beauty-filter smoothing",
+        "misleading scale without label"
+      ]
+    },
+    "target_rating": "PG",
+    "science_subject": {
+      "subject_id": "BH-ANAT-001",
+      "domain": "Astrophysics — Black Holes",
+      "phenomenon": "Anatomy of a Black Hole",
+      "field": "astrophysics",
+      "principle_set": "astrophysics_fidelity",
+      "key_measurement": "M87* shadow diameter ~42 μas (EHT 2019); GW150914 final black-hole mass ~62 M☉ (chirp mass ~28 M☉)",
+      "source_count": 3,
+      "has_visualization_ref": true,
+      "plate_id": "@Sci-BlackHole-001"
+    },
+    "principle_set": "astrophysics_fidelity"
+  },
+  "batch": {
+    "batch_id": "science_all_dryrun_astro",
+    "phase": "draft_480p",
+    "resolution": "480p"
+  }
+}

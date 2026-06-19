@@ -1,0 +1,32 @@
+{
+  "slug": "sci_bad",
+  "format_id": "science-explainer",
+  "config": {
+    "visualization_reference": "Science/reference_plates/astro/x.jpg",
+    "resolution": "480p"
+  },
+  "shots": [
+    {
+      "id": "01_hook",
+      "role": "presenter",
+      "speech_text": "Hook."
+    },
+    {
+      "id": "02_at2_viz_payoff",
+      "role": "visualization",
+      "reference_slots": {
+        "@2": "visualization"
+      },
+      "speech_text": "Here is the attached visualization.",
+      "on_screen_labels": []
+    }
+  ],
+  "provenance_card": {
+    "sources": []
+  },
+  "batch": {
+    "batch_id": "t173",
+    "phase": "draft_480p",
+    "resolution": "480p"
+  }
+}

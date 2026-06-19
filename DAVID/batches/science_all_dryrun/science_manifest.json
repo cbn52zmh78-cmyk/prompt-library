@@ -1,0 +1,760 @@
+{
+  "batch_id": "science_all_dryrun",
+  "kind": "science_combined_manifest",
+  "generated_at": "2026-06-19T06:50:07.044732+00:00",
+  "dry_run": true,
+  "repair": false,
+  "resolution": "480p",
+  "slates": [
+    {
+      "slate": "astro",
+      "title": "Astrophysics mini-slate (#153 Observable launch)",
+      "ready": true,
+      "blocked_slugs": [],
+      "repaired": [],
+      "readiness": {
+        "slate": "astro",
+        "title": "Astrophysics mini-slate (#153 Observable launch)",
+        "concepts_dir": "STUDIO/Pipeline/Concepts/astro_mini_slate",
+        "episode_count": 3,
+        "ready_count": 3,
+        "ready": true,
+        "blocked_slugs": [],
+        "episodes": [
+          {
+            "slug": "science_black_hole_anatomy_v1",
+            "concept_path": "STUDIO/Pipeline/Concepts/astro_mini_slate/science_black_hole_anatomy_v1.concept.json",
+            "plate_slug": "black-hole",
+            "plate_id": "@Sci-BlackHole-001",
+            "subject_domain": "Astrophysics — Black Holes",
+            "domain": "astro",
+            "visualization_ref": "Science/reference_plates/astro/black_hole_reference.jpg",
+            "harvest_ok": true,
+            "ref_bytes": 245907,
+            "ref_ok": true,
+            "ready": true,
+            "reasons": []
+          },
+          {
+            "slug": "science_galaxy_formation_v1",
+            "concept_path": "STUDIO/Pipeline/Concepts/astro_mini_slate/science_galaxy_formation_v1.concept.json",
+            "plate_slug": "galaxy",
+            "plate_id": "@Sci-Galaxy-001",
+            "subject_domain": "Astrophysics — Galaxy Formation & Cosmology",
+            "domain": "astro",
+            "visualization_ref": "Science/reference_plates/astro/galaxy_reference.jpg",
+            "harvest_ok": true,
+            "ref_bytes": 244108,
+            "ref_ok": true,
+            "ready": true,
+            "reasons": []
+          },
+          {
+            "slug": "science_star_lifecycle_v1",
+            "concept_path": "STUDIO/Pipeline/Concepts/astro_mini_slate/science_star_lifecycle_v1.concept.json",
+            "plate_slug": "supernova",
+            "plate_id": "@Sci-Supernova-001",
+            "subject_domain": "Astrophysics — Stellar Evolution",
+            "domain": "astro",
+            "visualization_ref": "Science/reference_plates/astro/supernova_reference.jpg",
+            "harvest_ok": true,
+            "ref_bytes": 7722867,
+            "ref_ok": true,
+            "ready": true,
+            "reasons": []
+          }
+        ],
+        "checked_at": "2026-06-19T06:50:06.515747+00:00"
+      },
+      "manifest": "DAVID/batches/science_all_dryrun/astro/manifest.json",
+      "summary": {
+        "pending": 3
+      },
+      "science_summary": {
+        "science_episodes": 3,
+        "honesty_pass": 3,
+        "honesty_fail": 0
+      },
+      "batch_rc": 0,
+      "ran": true
+    },
+    {
+      "slate": "molecular",
+      "title": "Molecular biology mini-slate (#160/#172)",
+      "ready": true,
+      "blocked_slugs": [],
+      "repaired": [],
+      "readiness": {
+        "slate": "molecular",
+        "title": "Molecular biology mini-slate (#160/#172)",
+        "concepts_dir": "STUDIO/Pipeline/Concepts/molecular_mini_slate",
+        "episode_count": 3,
+        "ready_count": 3,
+        "ready": true,
+        "blocked_slugs": [],
+        "episodes": [
+          {
+            "slug": "science_dna_replication_v1",
+            "concept_path": "STUDIO/Pipeline/Concepts/molecular_mini_slate/science_dna_replication_v1.concept.json",
+            "plate_slug": "dna-double-helix",
+            "plate_id": "@Sci-DNA-001",
+            "subject_domain": "Molecular Biology — DNA Replication",
+            "domain": "molecular",
+            "visualization_ref": "Science/reference_plates/molecular/images/dna-double-helix_1BNA_rcsb_assembly.jpeg",
+            "harvest_ok": true,
+            "ref_bytes": 37106,
+            "ref_ok": true,
+            "ready": true,
+            "reasons": []
+          },
+          {
+            "slug": "science_immune_checkpoint_v1",
+            "concept_path": "STUDIO/Pipeline/Concepts/molecular_mini_slate/science_immune_checkpoint_v1.concept.json",
+            "plate_slug": "pd1-pdl1-complex",
+            "plate_id": "@Sci-ImmuneCheckpoint-001",
+            "subject_domain": "Molecular Immunology — Immune Checkpoints",
+            "domain": "molecular",
+            "visualization_ref": "Science/reference_plates/molecular/images/pd1-pdl1-complex_4ZQK_rcsb_assembly.jpeg",
+            "harvest_ok": true,
+            "ref_bytes": 50281,
+            "ref_ok": true,
+            "ready": true,
+            "reasons": []
+          },
+          {
+            "slug": "science_protein_folding_v1",
+            "concept_path": "STUDIO/Pipeline/Concepts/molecular_mini_slate/science_protein_folding_v1.concept.json",
+            "plate_slug": "protein-hemoglobin",
+            "plate_id": "@Sci-Protein-001",
+            "subject_domain": "Molecular Biophysics — Protein Folding",
+            "domain": "molecular",
+            "visualization_ref": "Science/reference_plates/molecular/images/protein-hemoglobin_4HHB_rcsb_assembly.jpeg",
+            "harvest_ok": true,
+            "ref_bytes": 86173,
+            "ref_ok": true,
+            "ready": true,
+            "reasons": []
+          }
+        ],
+        "checked_at": "2026-06-19T06:50:06.753336+00:00"
+      },
+      "manifest": "DAVID/batches/science_all_dryrun/molecular/manifest.json",
+      "summary": {
+        "pending": 3
+      },
+      "science_summary": {
+        "science_episodes": 3,
+        "honesty_pass": 3,
+        "honesty_fail": 0
+      },
+      "batch_rc": 0,
+      "ran": true
+    },
+    {
+      "slate": "chem_physics",
+      "title": "Chemistry & physics mini-slate (#180)",
+      "ready": true,
+      "blocked_slugs": [],
+      "repaired": [],
+      "readiness": {
+        "slate": "chem_physics",
+        "title": "Chemistry & physics mini-slate (#180)",
+        "concepts_dir": "STUDIO/Pipeline/Concepts/chem_physics_mini_slate",
+        "episode_count": 3,
+        "ready_count": 3,
+        "ready": true,
+        "blocked_slugs": [],
+        "episodes": [
+          {
+            "slug": "science_covalent_bonding_v1",
+            "concept_path": "STUDIO/Pipeline/Concepts/chem_physics_mini_slate/science_covalent_bonding_v1.concept.json",
+            "plate_slug": "covalent-bonding",
+            "plate_id": "@Sci-ChemBond-001",
+            "subject_domain": "Chemistry — Chemical Bonding",
+            "domain": "chemistry",
+            "visualization_ref": "Science/reference_plates/chemistry/covalent_bonding_reference.jpg",
+            "harvest_ok": true,
+            "ref_bytes": 45371,
+            "ref_ok": true,
+            "ready": true,
+            "reasons": []
+          },
+          {
+            "slug": "science_electromagnetism_v1",
+            "concept_path": "STUDIO/Pipeline/Concepts/chem_physics_mini_slate/science_electromagnetism_v1.concept.json",
+            "plate_slug": "electromagnetic-field-lines",
+            "plate_id": "@Sci-EMField-001",
+            "subject_domain": "Physics — Electromagnetism",
+            "domain": "physics",
+            "visualization_ref": "Science/reference_plates/physics/images/electromagnetic-field-lines_harvest.jpg",
+            "harvest_ok": true,
+            "ref_bytes": 257099,
+            "ref_ok": true,
+            "ready": true,
+            "reasons": []
+          },
+          {
+            "slug": "science_ionic_crystal_v1",
+            "concept_path": "STUDIO/Pipeline/Concepts/chem_physics_mini_slate/science_ionic_crystal_v1.concept.json",
+            "plate_slug": "crystal-lattice",
+            "plate_id": "@Sci-CrystalLattice-001",
+            "subject_domain": "Chemistry — Ionic Crystals",
+            "domain": "chemistry",
+            "visualization_ref": "Science/reference_plates/chemistry/images/crystal-lattice_harvest.jpeg",
+            "harvest_ok": true,
+            "ref_bytes": 33837,
+            "ref_ok": true,
+            "ready": true,
+            "reasons": []
+          }
+        ],
+        "checked_at": "2026-06-19T06:50:06.899297+00:00"
+      },
+      "manifest": "DAVID/batches/science_all_dryrun/chem_physics/manifest.json",
+      "summary": {
+        "pending": 3
+      },
+      "science_summary": {
+        "science_episodes": 3,
+        "honesty_pass": 3,
+        "honesty_fail": 0
+      },
+      "batch_rc": 0,
+      "ran": true
+    }
+  ],
+  "items": [
+    {
+      "slug": "science_black_hole_anatomy_v1",
+      "concept_path": "STUDIO/Pipeline/Concepts/astro_mini_slate/science_black_hole_anatomy_v1.concept.json",
+      "script_path": "DAVID/batches/science_all_dryrun/astro/scripts/science_black_hole_anatomy_v1_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/science_black_hole_anatomy_v1_longform_v1",
+      "gate_0_verdict": "YELLOW",
+      "gate_0_signed": true,
+      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_black_hole_anatomy_v1_20260619_015006.json",
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": "STUDIO/Productions/Editorial/science_black_hole_anatomy_v1_longform_v1/qa_report.json",
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "YELLOW",
+        "warnings": [
+          "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
+        ],
+        "status": "CAUTION"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "Event Horizon Telescope Collaboration et al., First M87 Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole, ApJ 875, L1 (2019)",
+          "Abbott, B. P. et al. (LIGO Scientific Collaboration), Observation of Gravitational Waves from a Binary Black Hole Merger, Phys. Rev. Lett. 116, 061102 (2016)",
+          "NASA Science — Black Holes overview (event horizon, no escape for light)"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null,
+      "slate": "astro"
+    },
+    {
+      "slug": "science_galaxy_formation_v1",
+      "concept_path": "STUDIO/Pipeline/Concepts/astro_mini_slate/science_galaxy_formation_v1.concept.json",
+      "script_path": "DAVID/batches/science_all_dryrun/astro/scripts/science_galaxy_formation_v1_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/science_galaxy_formation_v1_longform_v1",
+      "gate_0_verdict": "YELLOW",
+      "gate_0_signed": true,
+      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_galaxy_formation_v1_20260619_015006.json",
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": "STUDIO/Productions/Editorial/science_galaxy_formation_v1_longform_v1/qa_report.json",
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "YELLOW",
+        "warnings": [
+          "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
+        ],
+        "status": "CAUTION"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "Planck Collaboration, Planck 2018 results. VI. Cosmological parameters, A&A 641, A6 (2020)",
+          "NASA Webb Mission — Early Universe & Galaxy Evolution science themes",
+          "ESA/Hubble — Galaxy formation and evolution (hierarchical merging, star-formation history)"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null,
+      "slate": "astro"
+    },
+    {
+      "slug": "science_star_lifecycle_v1",
+      "concept_path": "STUDIO/Pipeline/Concepts/astro_mini_slate/science_star_lifecycle_v1.concept.json",
+      "script_path": "DAVID/batches/science_all_dryrun/astro/scripts/science_star_lifecycle_v1_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/science_star_lifecycle_v1_longform_v1",
+      "gate_0_verdict": "YELLOW",
+      "gate_0_signed": true,
+      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_star_lifecycle_v1_20260619_015006.json",
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": "STUDIO/Productions/Editorial/science_star_lifecycle_v1_longform_v1/qa_report.json",
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "YELLOW",
+        "warnings": [
+          "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
+        ],
+        "status": "CAUTION"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "NASA Science — Stars: Life and Death (stellar evolution stages, mass-dependent endpoints)",
+          "ESA/Hubble — Stellar evolution and star formation (HR diagram, main sequence, giants)",
+          "Chandrasekhar, S., The Maximum Mass of Ideal White Dwarfs, ApJ 74, 81 (1931)"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null,
+      "slate": "astro"
+    },
+    {
+      "slug": "science_dna_replication_v1",
+      "concept_path": "STUDIO/Pipeline/Concepts/molecular_mini_slate/science_dna_replication_v1.concept.json",
+      "script_path": "DAVID/batches/science_all_dryrun/molecular/scripts/science_dna_replication_v1_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/science_dna_replication_v1_longform_v1",
+      "gate_0_verdict": "GREEN",
+      "gate_0_signed": true,
+      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_GREEN_science_dna_replication_v1_20260619_015006.json",
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": "STUDIO/Productions/Editorial/science_dna_replication_v1_longform_v1/qa_report.json",
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "GREEN",
+        "warnings": [],
+        "status": "PASS"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "Drew HR, Wing RM, Takano T, Broka C, Dickerson RE. Structure of a B-DNA dodecamer: conformation and dynamics. PNAS. 1981;78(4):2179-2183 (PDB 1BNA)",
+          "Meselson M, Stahl FW. The replication of DNA in Escherichia coli. PNAS. 1958;44(7):671-682",
+          "Alberts B, et al. Molecular Biology of the Cell, 7th ed., Ch. 5 — DNA Replication (leading/lagging strand, Okazaki fragments)"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null,
+      "slate": "molecular"
+    },
+    {
+      "slug": "science_immune_checkpoint_v1",
+      "concept_path": "STUDIO/Pipeline/Concepts/molecular_mini_slate/science_immune_checkpoint_v1.concept.json",
+      "script_path": "DAVID/batches/science_all_dryrun/molecular/scripts/science_immune_checkpoint_v1_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/science_immune_checkpoint_v1_longform_v1",
+      "gate_0_verdict": "YELLOW",
+      "gate_0_signed": true,
+      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_immune_checkpoint_v1_20260619_015006.json",
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": "STUDIO/Productions/Editorial/science_immune_checkpoint_v1_longform_v1/qa_report.json",
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "YELLOW",
+        "warnings": [],
+        "status": "PASS"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "Zak KM, Kitel R, Przetocka S, et al. Structure of the Complex of Human Programmed Death 1, PD-1, and Its Ligand PD-L1. Structure. 2015;23(12):2341-2348 (PDB 4ZQK, 2.0 Å)",
+          "Sharpe AH, Pauken KE. The diverse functions of the PD1 inhibitory pathway. Nat Rev Immunol. 2018;18(3):153-167"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null,
+      "slate": "molecular"
+    },
+    {
+      "slug": "science_protein_folding_v1",
+      "concept_path": "STUDIO/Pipeline/Concepts/molecular_mini_slate/science_protein_folding_v1.concept.json",
+      "script_path": "DAVID/batches/science_all_dryrun/molecular/scripts/science_protein_folding_v1_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/science_protein_folding_v1_longform_v1",
+      "gate_0_verdict": "YELLOW",
+      "gate_0_signed": true,
+      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_protein_folding_v1_20260619_015006.json",
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": "STUDIO/Productions/Editorial/science_protein_folding_v1_longform_v1/qa_report.json",
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "YELLOW",
+        "warnings": [],
+        "status": "PASS"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "Fermi G, Perutz MF, Shaanan B, Fourme R. The crystal structure of human deoxyhaemoglobin at 1.74 Å resolution. J Mol Biol. 1984;175(2):159-174 (PDB 4HHB)",
+          "Anfinsen CB. Principles that govern the folding of protein chains. Science. 1973;181(4096):223-230",
+          "Dill KA, Chan HS. From Levinthal to pathways to funnels. Nat Struct Biol. 1997;4(1):10-19"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null,
+      "slate": "molecular"
+    },
+    {
+      "slug": "science_covalent_bonding_v1",
+      "concept_path": "STUDIO/Pipeline/Concepts/chem_physics_mini_slate/science_covalent_bonding_v1.concept.json",
+      "script_path": "DAVID/batches/science_all_dryrun/chem_physics/scripts/science_covalent_bonding_v1_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/science_covalent_bonding_v1_longform_v1",
+      "gate_0_verdict": "YELLOW",
+      "gate_0_signed": true,
+      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_covalent_bonding_v1_20260619_015006.json",
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": null,
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "YELLOW",
+        "warnings": [
+          "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
+        ],
+        "status": "CAUTION"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "NIST Standard Reference Database 69 — NIST Chemistry WebBook, water (H₂O), InChI=1S/H2O/h1H2",
+          "Pauling, L. The Nature of the Chemical Bond, 3rd ed. (1960) — covalent bond as shared electron pair",
+          "OpenStax Chemistry 2e, Ch. 7 — Covalent bonding and molecular geometry"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null,
+      "slate": "chem_physics"
+    },
+    {
+      "slug": "science_electromagnetism_v1",
+      "concept_path": "STUDIO/Pipeline/Concepts/chem_physics_mini_slate/science_electromagnetism_v1.concept.json",
+      "script_path": "DAVID/batches/science_all_dryrun/chem_physics/scripts/science_electromagnetism_v1_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/science_electromagnetism_v1_longform_v1",
+      "gate_0_verdict": "YELLOW",
+      "gate_0_signed": true,
+      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_electromagnetism_v1_20260619_015006.json",
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": null,
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "YELLOW",
+        "warnings": [
+          "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
+        ],
+        "status": "CAUTION"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "NASA — Magnetospheric Multiscale (MMS) mission imagery, magnetic reconnection in Earth's magnetosphere (2014)",
+          "Maxwell, J. C. A Dynamical Theory of the Electromagnetic Field (1865) — unified electric and magnetic phenomena",
+          "NASA Space Place — Earth's magnetosphere protects from solar wind"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null,
+      "slate": "chem_physics"
+    },
+    {
+      "slug": "science_ionic_crystal_v1",
+      "concept_path": "STUDIO/Pipeline/Concepts/chem_physics_mini_slate/science_ionic_crystal_v1.concept.json",
+      "script_path": "DAVID/batches/science_all_dryrun/chem_physics/scripts/science_ionic_crystal_v1_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/science_ionic_crystal_v1_longform_v1",
+      "gate_0_verdict": "YELLOW",
+      "gate_0_signed": true,
+      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_ionic_crystal_v1_20260619_015007.json",
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": null,
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "YELLOW",
+        "warnings": [
+          "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
+        ],
+        "status": "CAUTION"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "Crystallography Open Database entry 1000040 — NaCl rock-salt structure",
+          "RCSB PDB — assembly visualization reference (1NAG assembly image, CC0)",
+          "OpenStax Chemistry 2e, Ch. 10 — Solids and crystal structures"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null,
+      "slate": "chem_physics"
+    }
+  ],
+  "summary": {
+    "pending": 9
+  },
+  "science_summary": {
+    "science_episodes": 9,
+    "honesty_pass": 9,
+    "honesty_fail": 0
+  },
+  "by_domain": {
+    "astro": {
+      "episodes": 3,
+      "honesty_pass": 3,
+      "honesty_fail": 0
+    },
+    "molecular": {
+      "episodes": 3,
+      "honesty_pass": 3,
+      "honesty_fail": 0
+    },
+    "chem_physics": {
+      "episodes": 3,
+      "honesty_pass": 3,
+      "honesty_fail": 0
+    }
+  },
+  "ready": true
+}

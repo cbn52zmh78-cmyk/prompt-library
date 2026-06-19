@@ -1,0 +1,187 @@
+{
+  "batch_id": "science_all_dryrun_chem_physics",
+  "phase": "draft_480p",
+  "generated_at": "2026-06-19T06:50:07.024386+00:00",
+  "concepts_dir": "STUDIO/Pipeline/Concepts/chem_physics_mini_slate",
+  "dry_run": true,
+  "resolution": "480p",
+  "items": [
+    {
+      "slug": "science_covalent_bonding_v1",
+      "concept_path": "STUDIO/Pipeline/Concepts/chem_physics_mini_slate/science_covalent_bonding_v1.concept.json",
+      "script_path": "DAVID/batches/science_all_dryrun/chem_physics/scripts/science_covalent_bonding_v1_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/science_covalent_bonding_v1_longform_v1",
+      "gate_0_verdict": "YELLOW",
+      "gate_0_signed": true,
+      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_covalent_bonding_v1_20260619_015006.json",
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": null,
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "YELLOW",
+        "warnings": [
+          "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
+        ],
+        "status": "CAUTION"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "NIST Standard Reference Database 69 — NIST Chemistry WebBook, water (H₂O), InChI=1S/H2O/h1H2",
+          "Pauling, L. The Nature of the Chemical Bond, 3rd ed. (1960) — covalent bond as shared electron pair",
+          "OpenStax Chemistry 2e, Ch. 7 — Covalent bonding and molecular geometry"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null
+    },
+    {
+      "slug": "science_electromagnetism_v1",
+      "concept_path": "STUDIO/Pipeline/Concepts/chem_physics_mini_slate/science_electromagnetism_v1.concept.json",
+      "script_path": "DAVID/batches/science_all_dryrun/chem_physics/scripts/science_electromagnetism_v1_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/science_electromagnetism_v1_longform_v1",
+      "gate_0_verdict": "YELLOW",
+      "gate_0_signed": true,
+      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_electromagnetism_v1_20260619_015006.json",
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": null,
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "YELLOW",
+        "warnings": [
+          "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
+        ],
+        "status": "CAUTION"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "NASA — Magnetospheric Multiscale (MMS) mission imagery, magnetic reconnection in Earth's magnetosphere (2014)",
+          "Maxwell, J. C. A Dynamical Theory of the Electromagnetic Field (1865) — unified electric and magnetic phenomena",
+          "NASA Space Place — Earth's magnetosphere protects from solar wind"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null
+    },
+    {
+      "slug": "science_ionic_crystal_v1",
+      "concept_path": "STUDIO/Pipeline/Concepts/chem_physics_mini_slate/science_ionic_crystal_v1.concept.json",
+      "script_path": "DAVID/batches/science_all_dryrun/chem_physics/scripts/science_ionic_crystal_v1_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/science_ionic_crystal_v1_longform_v1",
+      "gate_0_verdict": "YELLOW",
+      "gate_0_signed": true,
+      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_ionic_crystal_v1_20260619_015007.json",
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": null,
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "YELLOW",
+        "warnings": [
+          "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
+        ],
+        "status": "CAUTION"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "Crystallography Open Database entry 1000040 — NaCl rock-salt structure",
+          "RCSB PDB — assembly visualization reference (1NAG assembly image, CC0)",
+          "OpenStax Chemistry 2e, Ch. 10 — Solids and crystal structures"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null
+    }
+  ],
+  "summary": {
+    "pending": 3
+  },
+  "science_summary": {
+    "science_episodes": 3,
+    "honesty_pass": 3,
+    "honesty_fail": 0
+  },
+  "promote_command": null
+}

@@ -1,0 +1,187 @@
+{
+  "batch_id": "science_all_dryrun_astro",
+  "phase": "draft_480p",
+  "generated_at": "2026-06-19T06:50:06.719541+00:00",
+  "concepts_dir": "STUDIO/Pipeline/Concepts/astro_mini_slate",
+  "dry_run": true,
+  "resolution": "480p",
+  "items": [
+    {
+      "slug": "science_black_hole_anatomy_v1",
+      "concept_path": "STUDIO/Pipeline/Concepts/astro_mini_slate/science_black_hole_anatomy_v1.concept.json",
+      "script_path": "DAVID/batches/science_all_dryrun/astro/scripts/science_black_hole_anatomy_v1_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/science_black_hole_anatomy_v1_longform_v1",
+      "gate_0_verdict": "YELLOW",
+      "gate_0_signed": true,
+      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_black_hole_anatomy_v1_20260619_015006.json",
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": "STUDIO/Productions/Editorial/science_black_hole_anatomy_v1_longform_v1/qa_report.json",
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "YELLOW",
+        "warnings": [
+          "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
+        ],
+        "status": "CAUTION"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "Event Horizon Telescope Collaboration et al., First M87 Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole, ApJ 875, L1 (2019)",
+          "Abbott, B. P. et al. (LIGO Scientific Collaboration), Observation of Gravitational Waves from a Binary Black Hole Merger, Phys. Rev. Lett. 116, 061102 (2016)",
+          "NASA Science — Black Holes overview (event horizon, no escape for light)"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null
+    },
+    {
+      "slug": "science_galaxy_formation_v1",
+      "concept_path": "STUDIO/Pipeline/Concepts/astro_mini_slate/science_galaxy_formation_v1.concept.json",
+      "script_path": "DAVID/batches/science_all_dryrun/astro/scripts/science_galaxy_formation_v1_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/science_galaxy_formation_v1_longform_v1",
+      "gate_0_verdict": "YELLOW",
+      "gate_0_signed": true,
+      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_galaxy_formation_v1_20260619_015006.json",
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": "STUDIO/Productions/Editorial/science_galaxy_formation_v1_longform_v1/qa_report.json",
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "YELLOW",
+        "warnings": [
+          "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
+        ],
+        "status": "CAUTION"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "Planck Collaboration, Planck 2018 results. VI. Cosmological parameters, A&A 641, A6 (2020)",
+          "NASA Webb Mission — Early Universe & Galaxy Evolution science themes",
+          "ESA/Hubble — Galaxy formation and evolution (hierarchical merging, star-formation history)"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null
+    },
+    {
+      "slug": "science_star_lifecycle_v1",
+      "concept_path": "STUDIO/Pipeline/Concepts/astro_mini_slate/science_star_lifecycle_v1.concept.json",
+      "script_path": "DAVID/batches/science_all_dryrun/astro/scripts/science_star_lifecycle_v1_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/science_star_lifecycle_v1_longform_v1",
+      "gate_0_verdict": "YELLOW",
+      "gate_0_signed": true,
+      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_star_lifecycle_v1_20260619_015006.json",
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": "STUDIO/Productions/Editorial/science_star_lifecycle_v1_longform_v1/qa_report.json",
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "YELLOW",
+        "warnings": [
+          "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
+        ],
+        "status": "CAUTION"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "NASA Science — Stars: Life and Death (stellar evolution stages, mass-dependent endpoints)",
+          "ESA/Hubble — Stellar evolution and star formation (HR diagram, main sequence, giants)",
+          "Chandrasekhar, S., The Maximum Mass of Ideal White Dwarfs, ApJ 74, 81 (1931)"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null
+    }
+  ],
+  "summary": {
+    "pending": 3
+  },
+  "science_summary": {
+    "science_episodes": 3,
+    "honesty_pass": 3,
+    "honesty_fail": 0
+  },
+  "promote_command": null
+}

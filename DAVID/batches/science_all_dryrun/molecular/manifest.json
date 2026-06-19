@@ -1,0 +1,180 @@
+{
+  "batch_id": "science_all_dryrun_molecular",
+  "phase": "draft_480p",
+  "generated_at": "2026-06-19T06:50:06.881889+00:00",
+  "concepts_dir": "STUDIO/Pipeline/Concepts/molecular_mini_slate",
+  "dry_run": true,
+  "resolution": "480p",
+  "items": [
+    {
+      "slug": "science_dna_replication_v1",
+      "concept_path": "STUDIO/Pipeline/Concepts/molecular_mini_slate/science_dna_replication_v1.concept.json",
+      "script_path": "DAVID/batches/science_all_dryrun/molecular/scripts/science_dna_replication_v1_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/science_dna_replication_v1_longform_v1",
+      "gate_0_verdict": "GREEN",
+      "gate_0_signed": true,
+      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_GREEN_science_dna_replication_v1_20260619_015006.json",
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": "STUDIO/Productions/Editorial/science_dna_replication_v1_longform_v1/qa_report.json",
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "GREEN",
+        "warnings": [],
+        "status": "PASS"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "Drew HR, Wing RM, Takano T, Broka C, Dickerson RE. Structure of a B-DNA dodecamer: conformation and dynamics. PNAS. 1981;78(4):2179-2183 (PDB 1BNA)",
+          "Meselson M, Stahl FW. The replication of DNA in Escherichia coli. PNAS. 1958;44(7):671-682",
+          "Alberts B, et al. Molecular Biology of the Cell, 7th ed., Ch. 5 — DNA Replication (leading/lagging strand, Okazaki fragments)"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null
+    },
+    {
+      "slug": "science_immune_checkpoint_v1",
+      "concept_path": "STUDIO/Pipeline/Concepts/molecular_mini_slate/science_immune_checkpoint_v1.concept.json",
+      "script_path": "DAVID/batches/science_all_dryrun/molecular/scripts/science_immune_checkpoint_v1_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/science_immune_checkpoint_v1_longform_v1",
+      "gate_0_verdict": "YELLOW",
+      "gate_0_signed": true,
+      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_immune_checkpoint_v1_20260619_015006.json",
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": "STUDIO/Productions/Editorial/science_immune_checkpoint_v1_longform_v1/qa_report.json",
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "YELLOW",
+        "warnings": [],
+        "status": "PASS"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "Zak KM, Kitel R, Przetocka S, et al. Structure of the Complex of Human Programmed Death 1, PD-1, and Its Ligand PD-L1. Structure. 2015;23(12):2341-2348 (PDB 4ZQK, 2.0 Å)",
+          "Sharpe AH, Pauken KE. The diverse functions of the PD1 inhibitory pathway. Nat Rev Immunol. 2018;18(3):153-167"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null
+    },
+    {
+      "slug": "science_protein_folding_v1",
+      "concept_path": "STUDIO/Pipeline/Concepts/molecular_mini_slate/science_protein_folding_v1.concept.json",
+      "script_path": "DAVID/batches/science_all_dryrun/molecular/scripts/science_protein_folding_v1_480p_script.json",
+      "production_dir": "STUDIO/Productions/Editorial/science_protein_folding_v1_longform_v1",
+      "gate_0_verdict": "YELLOW",
+      "gate_0_signed": true,
+      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_protein_folding_v1_20260619_015006.json",
+      "intake_exit": 0,
+      "phase": "draft_480p",
+      "resolution": "480p",
+      "status": "pending",
+      "dry_run": true,
+      "qa_report_path": "STUDIO/Productions/Editorial/science_protein_folding_v1_longform_v1/qa_report.json",
+      "qa_pass": null,
+      "qa_issues": [],
+      "render_exit": null,
+      "render_mode": null,
+      "render_attempts": null,
+      "science_applies": true,
+      "science_gate": {
+        "verdict": "YELLOW",
+        "warnings": [],
+        "status": "PASS"
+      },
+      "honesty_rail": {
+        "applies": true,
+        "status": "PASS",
+        "passed": true,
+        "failures": [],
+        "checks": [
+          {
+            "name": "illustrative_label",
+            "ok": true
+          },
+          {
+            "name": "cited_source",
+            "ok": true
+          },
+          {
+            "name": "no_simulation_overclaims",
+            "ok": true
+          }
+        ],
+        "sources": [
+          "Fermi G, Perutz MF, Shaanan B, Fourme R. The crystal structure of human deoxyhaemoglobin at 1.74 Å resolution. J Mol Biol. 1984;175(2):159-174 (PDB 4HHB)",
+          "Anfinsen CB. Principles that govern the folding of protein chains. Science. 1973;181(4096):223-230",
+          "Dill KA, Chan HS. From Levinthal to pathways to funnels. Nat Struct Biol. 1997;4(1):10-19"
+        ]
+      },
+      "honesty_pass": true,
+      "promote_eligible": false,
+      "promote_command": null
+    }
+  ],
+  "summary": {
+    "pending": 3
+  },
+  "science_summary": {
+    "science_episodes": 3,
+    "honesty_pass": 3,
+    "honesty_fail": 0
+  },
+  "promote_command": null
+}

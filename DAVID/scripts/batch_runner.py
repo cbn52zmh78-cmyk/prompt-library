@@ -198,6 +198,36 @@ def read_qa_report(prod_dir: Path) -> Optional[dict[str, Any]]:
     return json.loads(qa_path.read_text(encoding="utf-8"))
 
 
+def parse_render_manifest(output: str) -> Optional[dict[str, Any]]:
+    """Parse the final manifest JSON blob from render_longform stdout (#193)."""
+    text = (output or "").strip()
+    if not text:
+        return None
+    # Manifest is multiline; anchor on a top-level field to avoid nested `{` in qa.extend_api.
+    anchor = text.rfind('"completed_at"')
+    if anchor < 0:
+        anchor = text.rfind('"production_dir"')
+    if anchor < 0:
+        anchor = text.rfind('"qa"')
+    if anchor < 0:
+        return None
+    start = text.rfind("{", 0, anchor)
+    if start < 0:
+        return None
+    try:
+        return json.loads(text[start:])
+    except json.JSONDecodeError:
+        return None
+
+
+def qa_from_render_output(output: str) -> Optional[dict[str, Any]]:
+    manifest = parse_render_manifest(output)
+    if not manifest:
+        return None
+    qa = manifest.get("qa")
+    return qa if isinstance(qa, dict) else None
+
+
 def render_script(
     script_path: Path,
     *,
@@ -243,13 +273,19 @@ def render_script(
         )
         last_out = (proc.stdout or "") + (proc.stderr or "")
 
-        if proc.returncode == 0:
+        exit_code = proc.returncode
+        manifest_qa = qa_from_render_output(last_out)
+        if manifest_qa and manifest_qa.get("pass") is True:
+            exit_code = 0
+
+        if exit_code == 0:
             return {
                 "exit_code": 0,
                 "mode": "concat-only" if concat_only else "full",
                 "concat_only": concat_only,
                 "attempts": attempt,
                 "output": last_out[-4000:],
+                "qa_from_stdout": manifest_qa,
             }
 
         combined = last_out
@@ -471,7 +507,11 @@ def cmd_run(args: argparse.Namespace) -> int:
                 backoff_max=args.backoff_max,
             )
             prod_dir = resolve_production_dir(draft_script)
-            qa = read_qa_report(prod_dir)
+            qa = None
+            if render_result.get("exit_code") == 0:
+                qa = render_result.get("qa_from_stdout") or read_qa_report(prod_dir)
+            else:
+                qa = qa_from_render_output(render_result.get("output", ""))
             status = classify_item(gate=gate, render_result=render_result, qa=qa,
                                    dry_run=False, science=science)
             icon = "✅" if status == "pass" else "✗"
