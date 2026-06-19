@@ -1,0 +1,29 @@
+{
+  "platform": "youtube",
+  "video_duration_s": 68.05,
+  "trigger_at_s": 48.05,
+  "trigger_lead_s": 20.0,
+  "elements": [
+    {
+      "type": "subscribe",
+      "position": "bottom_left",
+      "start_s": 48.0,
+      "duration_s": 20.0
+    },
+    {
+      "type": "best_for_viewer",
+      "position": "top_right",
+      "start_s": 48.0,
+      "duration_s": 20.0,
+      "placeholder": "NEXT_VIDEO_ID"
+    },
+    {
+      "type": "playlist",
+      "position": "center",
+      "start_s": 48.0,
+      "duration_s": 20.0,
+      "playlist": "DAVID · The Archive"
+    }
+  ],
+  "editor_notes": "Import elements in YouTube Studio → Editor → End screen. Align subscribe + suggested video to final 20s; provenance card is the natural outro."
+}

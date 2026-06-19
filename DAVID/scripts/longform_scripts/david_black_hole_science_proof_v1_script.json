@@ -55,11 +55,11 @@
       "t_end": 10,
       "role": "host",
       "use_avatar": true,
-      "speech_text": "What does a black hole actually look like? Not a hole you could fall through — a shadow, smaller than the event horizon itself.",
+      "speech_text": "What does a black hole actually look like? Not a hole you could fall through — a shadow about two and a half times wider than the event horizon, enlarged by gravitational lensing.",
       "on_screen": "Black hole shadow · M87*",
       "on_screen_labels": ["HOW WE KNOW"],
       "overlay_detail": "EHT 2019",
-      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line. The Archive host speaks directly to camera with measured clear science narration voice, lip-synced, delivering: \"What does a black hole actually look like? Not a hole you could fall through — a shadow, smaller than the event horizon itself.\" Wonder without hype, precise accessible diction, documentary trust. Medium shot, warm brass lamp 3200K. synthetic host only."
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line. The Archive host speaks directly to camera with measured clear science narration voice, lip-synced, delivering: \"What does a black hole actually look like? Not a hole you could fall through — a shadow about two and a half times wider than the event horizon, enlarged by gravitational lensing.\" Wonder without hype, precise accessible diction, documentary trust. Medium shot, warm brass lamp 3200K. synthetic host only."
     },
     {
       "id": "02_how_we_know",

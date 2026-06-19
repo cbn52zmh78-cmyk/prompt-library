@@ -2136,7 +2136,8 @@ def qa_check(
                     passes.append("neutral set — magenta probe skipped")
                 sync_bad = []
                 for p, shot in zip(segs, shots[: len(segs)]):
-                    delta = probe_av_duration_delta(p, float(shot.get("duration", 0)))
+                    expected = float(clamp_shot_duration(shot.get("duration", 0)))
+                    delta = probe_av_duration_delta(p, expected)
                     if delta > 0.12:
                         sync_bad.append(f"{shot['id']}:{delta:.3f}s")
                 if sync_bad:

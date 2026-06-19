@@ -20,7 +20,7 @@
         "social",
         "streaming"
       ],
-      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_star_lifecycle_v1_20260618_235648.json",
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_star_lifecycle_v1_20260619_002227.json",
       "checklist_domains": {
         "row_1_synthetic_ownership": "MANUAL",
         "row_2_music_sync": "PASS",
@@ -60,7 +60,7 @@
       "domain": "Astrophysics — Stellar Evolution",
       "phenomenon": "Life & Death of a Star",
       "key_measurement": "Chandrasekhar limit ~1.4 M☉ (white dwarf); iron-core collapse triggers Type II supernova",
-      "visualization_ref": null,
+      "visualization_ref": "Science/reference_plates/astro/supernova_reference.jpg",
       "visualization_prompt": "scientific visualization stellar evolution sequence, protostar in molecular cloud, main-sequence star, red giant envelope expansion, planetary nebula or core-collapse supernova branch by mass, NOT TO SCALE time-compressed, 16:9 documentary fidelity",
       "institutions": [
         "NASA",
@@ -97,6 +97,7 @@
     "use_identity_lock": false,
     "avatar_reference": "STUDIO/Cast/actors_roster/male/north_america/Julian_Cross/01_casting_shots/casting_turnaround_v1.jpg",
     "set_reference": "STUDIO/Pipeline/references/seamless_neutral_grey_reference.jpg",
+    "visualization_reference": "Science/reference_plates/astro/supernova_reference.jpg",
     "seamless": {
       "primary": "extend",
       "xfade_s": 0.2,
@@ -154,7 +155,8 @@
         "@2": "visualization"
       },
       "science_subject_ref": "STAR-LIFE-001",
-      "visualization_prompt": "stellar evolution montage: molecular cloud collapse, main-sequence G-type star, red giant with concentric shells, Type II supernova flash and expanding remnant, labeled mass branches, documentary astrophysics fidelity"
+      "visualization_prompt": "stellar evolution montage: molecular cloud collapse, main-sequence G-type star, red giant with concentric shells, Type II supernova flash and expanding remnant, labeled mass branches, documentary astrophysics fidelity",
+      "visualization_ref": "Science/reference_plates/astro/supernova_reference.jpg"
     },
     {
       "id": "05_significance",
@@ -236,7 +238,7 @@
       "phenomenon": "Life & Death of a Star",
       "key_measurement": "Chandrasekhar limit ~1.4 M☉ (white dwarf); iron-core collapse triggers Type II supernova",
       "source_count": 3,
-      "has_visualization_ref": false
+      "has_visualization_ref": true
     }
   }
 }

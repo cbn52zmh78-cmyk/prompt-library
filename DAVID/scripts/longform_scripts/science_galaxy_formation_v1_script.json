@@ -20,7 +20,7 @@
         "social",
         "streaming"
       ],
-      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_galaxy_formation_v1_20260618_235648.json",
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_galaxy_formation_v1_20260619_002227.json",
       "checklist_domains": {
         "row_1_synthetic_ownership": "MANUAL",
         "row_2_music_sync": "PASS",
@@ -60,7 +60,7 @@
       "domain": "Astrophysics — Galaxy Formation & Cosmology",
       "phenomenon": "How Galaxies Form",
       "key_measurement": "Planck 2018 ΛCDM: Ω_m ≈ 0.315, H₀ ≈ 67.4 km/s/Mpc; JWST detects galaxies within ~400 Myr after Big Bang",
-      "visualization_ref": null,
+      "visualization_ref": "Science/reference_plates/astro/galaxy_reference.jpg",
       "visualization_prompt": "scientific visualization galaxy formation in expanding universe, dark matter halo skeleton, baryonic gas cooling into disk, minor merger building stellar halo, spiral structure emergence, NOT TO SCALE cosmological simulation, 16:9 fidelity",
       "institutions": [
         "NASA",
@@ -98,6 +98,7 @@
     "use_identity_lock": false,
     "avatar_reference": "STUDIO/Cast/actors_roster/male/north_america/Julian_Cross/01_casting_shots/casting_turnaround_v1.jpg",
     "set_reference": "STUDIO/Pipeline/references/seamless_neutral_grey_reference.jpg",
+    "visualization_reference": "Science/reference_plates/astro/galaxy_reference.jpg",
     "seamless": {
       "primary": "extend",
       "xfade_s": 0.2,
@@ -155,7 +156,8 @@
         "@2": "visualization"
       },
       "science_subject_ref": "GAL-FORM-001",
-      "visualization_prompt": "ΛCDM galaxy formation simulation: expanding universe backdrop, dark matter filament, halo accretion, gas cooling into rotating disk, minor merger event, spiral arms forming, documentary cosmology fidelity"
+      "visualization_prompt": "ΛCDM galaxy formation simulation: expanding universe backdrop, dark matter filament, halo accretion, gas cooling into rotating disk, minor merger event, spiral arms forming, documentary cosmology fidelity",
+      "visualization_ref": "Science/reference_plates/astro/galaxy_reference.jpg"
     },
     {
       "id": "05_significance",
@@ -237,7 +239,7 @@
       "phenomenon": "How Galaxies Form",
       "key_measurement": "Planck 2018 ΛCDM: Ω_m ≈ 0.315, H₀ ≈ 67.4 km/s/Mpc; JWST detects galaxies within ~400 Myr after Big Bang",
       "source_count": 3,
-      "has_visualization_ref": false
+      "has_visualization_ref": true
     }
   }
 }

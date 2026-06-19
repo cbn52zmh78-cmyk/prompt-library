@@ -1,0 +1,37 @@
+{
+  "status": "HANDOFF",
+  "title_overlay": "DAVID · THE ARCHIVE",
+  "subtitle_overlay": "Dead languages, actually pronounced.",
+  "aspect_ratio": "16:9",
+  "target_px": [
+    1280,
+    720
+  ],
+  "candidates": [
+    {
+      "file": "candidate_peak_frame.jpg",
+      "shot_id": "05_method",
+      "at_s": 34.6,
+      "role": "primary"
+    },
+    {
+      "file": "candidate_establishing_frame.jpg",
+      "shot_id": "01_cold_open",
+      "at_s": 4.0,
+      "role": "alternate"
+    },
+    {
+      "file": "provenance_reference.png",
+      "shot_id": "provenance_card",
+      "role": "credit_reference"
+    }
+  ],
+  "prompt": "YouTube thumbnail, cinematic high-contrast, title-safe negative space left third, DAVID · The Archive, dramatic set, synthetic performer , no real person likeness, bold readable mood, film grain, no clutter, SFW",
+  "design_notes": [
+    "Use candidate_peak_frame.jpg as base unless art-directed override",
+    "Keep face in right two-thirds; title text in left third",
+    "Warehouse window light 4800K warm key; deep shadows",
+    "Export PNG 1280×720 under 2MB"
+  ],
+  "delivery_filename": "thumbnail_1280x720.png"
+}

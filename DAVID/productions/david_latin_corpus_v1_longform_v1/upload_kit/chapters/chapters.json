@@ -1,0 +1,59 @@
+{
+  "chapters": [
+    {
+      "shot_id": "01_cold_open",
+      "start_s": 0.0,
+      "label": "Cold Open",
+      "youtube": "00:00 Cold Open"
+    },
+    {
+      "shot_id": "02_stakes",
+      "start_s": 8.0,
+      "label": "Stakes",
+      "youtube": "00:08 Stakes"
+    },
+    {
+      "shot_id": "03_signature_question",
+      "start_s": 15.8,
+      "label": "Signature Question",
+      "youtube": "00:15 Signature Question"
+    },
+    {
+      "shot_id": "04_proof_beat",
+      "start_s": 23.6,
+      "label": "Proof Beat",
+      "youtube": "00:23 Proof Beat"
+    },
+    {
+      "shot_id": "05_method",
+      "start_s": 30.4,
+      "label": "Method",
+      "youtube": "00:30 Method"
+    },
+    {
+      "shot_id": "06_honesty",
+      "start_s": 38.2,
+      "label": "Honesty",
+      "youtube": "00:38 Honesty"
+    },
+    {
+      "shot_id": "07_demonstration",
+      "start_s": 46.0,
+      "label": "Demonstration",
+      "youtube": "00:46 Demonstration"
+    },
+    {
+      "shot_id": "08_invitation",
+      "start_s": 54.8,
+      "label": "Invitation",
+      "youtube": "00:54 Invitation"
+    },
+    {
+      "shot_id": "provenance_card",
+      "start_s": 63.8,
+      "label": "DAVID · The Archive",
+      "youtube": "01:03 DAVID · The Archive"
+    }
+  ],
+  "xfade_s": 0.2
+}

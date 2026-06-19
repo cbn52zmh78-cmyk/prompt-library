@@ -1,0 +1,17 @@
+{
+  "packaged_at": "2026-06-19T05:25:13.492758+00:00",
+  "slug": "david_latin_corpus_v1",
+  "format_id": "documentary-host",
+  "production_dir": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_corpus_v1_longform_v1",
+  "source_video": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_corpus_v1_longform_v1\\output\\david_david_latin_corpus_v1_seamless_v1.mp4",
+  "video_duration_s": 68.05,
+  "qa_pass": true,
+  "paths": {
+    "video": "video\\david_david_latin_corpus_v1_seamless_v1.mp4",
+    "seo": "seo/seo.json",
+    "chapters": "chapters/youtube_chapters.txt",
+    "end_screen": "end_screen/end_screen.json",
+    "thumbnail_brief": "thumbnail/THUMBNAIL_BRIEF.json",
+    "checklist": "CHECKLIST.md"
+  }
+}
