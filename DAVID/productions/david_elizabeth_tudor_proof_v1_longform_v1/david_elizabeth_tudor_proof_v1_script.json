@@ -1,0 +1,140 @@
+{
+  "slug": "david_elizabeth_tudor_proof_v1",
+  "title": "DAVID — Elizabeth I Tudor English Pronunciation Proof (Tilbury 1588)",
+  "format_id": "historical-figure-documentary",
+  "target_seconds": 27,
+  "concept": "480p marquee proof — DAVID speaks attested Tudor English with code-burned labels, IPA, sources card",
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "output_filename": "david_elizabeth_tudor_proof_480p_v1.mp4",
+    "voice_suffix": "mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only",
+    "identity_lock": "productions/host_identity_v1/david_identity_lock.json",
+    "avatar_reference": "productions/host_identity_v1/references/david_avatar_reference.jpg",
+    "set_reference": "productions/host_identity_v1/references/archive_set_reference.jpg"
+  },
+  "historical_figure": {
+    "figure_id": "ELZ-001",
+    "name": "Elizabeth I",
+    "birth_year": 1533,
+    "death_year": 1603,
+    "era": "Tudor England",
+    "period_language": "tudor-english",
+    "sources": [
+      {
+        "citation": "Elizabeth I: Collected Works (University of Chicago Press) — Tilbury speech, 9 August 1588",
+        "type": "primary"
+      },
+      {
+        "citation": "William Camden, Annales rerum Anglicarum et Hibernicarum (1615) — Tilbury transmission",
+        "type": "primary"
+      },
+      {
+        "citation": "British Library, Armada collection — state papers and contemporary copies",
+        "type": "primary",
+        "url": "https://www.bl.uk/collection-guides/armada"
+      }
+    ]
+  },
+  "corpus": {
+    "language": "tudor-english",
+    "corpus_id": "elizabeth-tilbury-weak-feeble-woman",
+    "attested_text": "I know I have the body of a weak and feeble woman; but I have the heart and stomach of a king, and of a king of England too.",
+    "attested_text_spoken": "I know I have the body of a weak and feeble woman, but I have the heart and stomach of a king, and of a king of England too.",
+    "translation": "I know I have the body of a weak and feeble woman; but I have the heart and stomach of a king, and of a king of England too.",
+    "text_confidence": "attested",
+    "pronunciation_model": "reconstructed Early Modern English (Tudor court register, c. 1588)",
+    "line_ipa": "[aɪ nəʊ aɪ hæv ðə ˈbɒdi əv ə wiːk ənd ˈfiːbl ˈwʊmən, bət aɪ hæv ðə hɑːt ənd ˈstʌmək əv ə kɪŋ, ənd əv ə kɪŋ əv ˈɪŋɡlənd tuː]",
+    "text_source": "Elizabeth I, Tilbury address, 9 August 1588; Camden / Collected Works"
+  },
+  "on_screen_labels": {
+    "text": "attested text",
+    "pronunciation": "reconstructed pronunciation"
+  },
+  "shots": [
+    {
+      "id": "01_tilbury_line_slow",
+      "duration": 10,
+      "t_start": 0,
+      "t_end": 10,
+      "role": "host",
+      "speech_lang": "tudor-english",
+      "speech_text": "I know I have the body of a weak and feeble woman, but I have the heart and stomach of a king, and of a king of England too.",
+      "speech_ipa": "[aɪ nəʊ aɪ hæv ðə ˈbɒdi əv ə wiːk ənd ˈfiːbl ˈwʊmən, bət aɪ hæv ðə hɑːt ənd ˈstʌmək əv ə kɪŋ, ənd əv ə kɪŋ əv ˈɪŋɡlənd tuː]",
+      "on_screen": "I know I have the body of a weak and feeble woman; but I have the heart and stomach of a king, and of a king of England too.",
+      "on_screen_labels": [
+        "ATTESTED TEXT",
+        "RECONSTRUCTED PRONUNCIATION"
+      ],
+      "overlay_ipa": true,
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line. The Archive host speaks slowly in reconstructed Tudor English (Early Modern pronunciation, c. 1588), lip-synced, delivering Elizabeth I's attested Tilbury line: \"I know I have the body of a weak and feeble woman, but I have the heart and stomach of a king, and of a king of England too.\" Speech MUST be period Tudor English not modern commentary. Medium shot at worktable, warm brass lamp 3200K, documentary gravitas. mid-low resonant unhurried voice, precise diction, synthetic host only."
+    },
+    {
+      "id": "02_lesson_stomach",
+      "duration": 6,
+      "t_start": 10,
+      "t_end": 16,
+      "role": "host",
+      "speech_lang": "tudor-english",
+      "speech_text": "heart and stomach of a king",
+      "speech_ipa": "[hɑːt ənd ˈstʌmək əv ə kɪŋ]",
+      "on_screen": "heart and stomach of a king",
+      "on_screen_labels": [
+        "ATTESTED TEXT",
+        "RECONSTRUCTED PRONUNCIATION"
+      ],
+      "overlay_detail": "stomach = courage (EME)",
+      "overlay_ipa": true,
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp. Host voices the attested Tilbury phrase in reconstructed Tudor English, lip-synced, emphasizing \"heart and stomach of a king\" with period pronunciation. Micro-lesson energy, steady medium shot. Speech MUST be Tudor English. synthetic host only."
+    },
+    {
+      "id": "03_tilbury_full",
+      "duration": 6,
+      "t_start": 16,
+      "t_end": 22,
+      "role": "host",
+      "speech_lang": "tudor-english",
+      "speech_text": "I know I have the body of a weak and feeble woman, but I have the heart and stomach of a king, and of a king of England too.",
+      "speech_ipa": "[aɪ nəʊ aɪ hæv ðə ˈbɒdi əv ə wiːk ənd ˈfiːbl ˈwʊmən, bət aɪ hæv ðə hɑːt ənd ˈstʌmək əv ə kɪŋ, ənd əv ə kɪŋ əv ˈɪŋɡlənd tuː]",
+      "on_screen": "I know I have the body of a weak and feeble woman; but I have the heart and stomach of a king, and of a king of England too.",
+      "on_screen_labels": [
+        "ATTESTED TEXT",
+        "RECONSTRUCTED PRONUNCIATION"
+      ],
+      "overlay_ipa": true,
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp. Host delivers the full attested Tilbury line confidently in reconstructed Tudor English, lip-synced. Medium close-up, clear period English speech. synthetic host only."
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 5,
+    "card_type": "sources",
+    "title": "DAVID · SOURCES · Elizabeth I",
+    "subtitle": "Tudor English · Tilbury 1588",
+    "footer": "attested text · reconstructed pronunciation — Royal Tongues",
+    "sources": [
+      {
+        "citation": "Elizabeth I: Collected Works (University of Chicago Press) — Tilbury speech, 9 August 1588",
+        "type": "primary"
+      },
+      {
+        "citation": "William Camden, Annales rerum Anglicarum et Hibernicarum (1615)",
+        "type": "primary"
+      },
+      {
+        "citation": "British Library, Armada collection — state papers",
+        "type": "primary"
+      }
+    ]
+  },
+  "qa_rules": {
+    "require_identity_lock": true,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": true,
+    "require_overlay_burn": true,
+    "min_shots": 3,
+    "duration_lo_s": 20,
+    "duration_hi_s": 32
+  }
+}

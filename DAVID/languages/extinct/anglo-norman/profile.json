@@ -1,0 +1,17 @@
+{
+  "id": "anglo-norman",
+  "name": "Anglo-Norman",
+  "status": "extinct",
+  "revival_tier": "medium",
+  "family": "Romance (Oïl)",
+  "period": "c. 1066–c. 1500 CE",
+  "script": "Latin alphabet (Anglo-Norman orthography)",
+  "region": "England, Angevin courts, Norman-French administration",
+  "training_readiness": "good",
+  "primary_sources": [
+    "Marie de France, Lais (c. 1170–1200)",
+    "Anglo-Norman chronicles and charter tradition",
+    "Richard I, Ja nus hons pris (attested lyric tradition)",
+    "Crusade acclamation Deus le volt (chronicle corpus)"
+  ]
+}

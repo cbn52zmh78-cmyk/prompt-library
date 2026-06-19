@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Legal Gate v1.3 — Producer Hard Stop (aligned to Gate_0_Checklist.md v1.1)
+Legal Gate v1.4 — Producer Hard Stop (aligned to Gate_0_Checklist.md v1.1)
 
 Gate 0: FIRST action on every scene, video, brief, or client ask.
 
@@ -27,6 +27,7 @@ from lib.bootstrap import ensure_paths
 
 ensure_paths()
 from lib.studio_paths import producers_path, studio_path
+from historical_figure_gate import evaluate_historical_figure_gate  # noqa: E402
 from music_clearance import music_row2_status  # noqa: E402
 
 VALID_RATINGS = ("G", "PG", "PG-13", "R")
@@ -148,6 +149,17 @@ REQUIRED_AGE_PATTERN = re.compile(
     r"\b\d{2}-year-old\b|\b\d{2} year old\b|\bage[:\s]+\d{2}\b",
     re.I,
 )
+NEGATED_GUARD_PREFIX = re.compile(r"\bno[\s-]|non[\s-]|zero[\s-]|without[\s-]", re.I)
+
+
+def _affirmed_pattern_match(pattern: str, text: str) -> bool:
+    """True when pattern matches and match is not negated (e.g. 'no NSFW' is not an NSFW flag)."""
+    for match in re.finditer(pattern, text, re.I):
+        prefix = text[max(0, match.start() - 12) : match.start()]
+        if NEGATED_GUARD_PREFIX.search(prefix):
+            continue
+        return True
+    return False
 
 
 @dataclass
@@ -164,6 +176,7 @@ class GateResult:
     cara_status: str = ""
     notes: list[str] = field(default_factory=list)
     checklist_domains: dict[str, str] = field(default_factory=dict)
+    historical_figure_gate: dict = field(default_factory=dict)
 
     def blocked(self) -> bool:
         return self.verdict == "RED"
@@ -182,6 +195,7 @@ class GateResult:
             "cara_status": self.cara_status,
             "notes": self.notes,
             "checklist_domains": self.checklist_domains,
+            "historical_figure_gate": self.historical_figure_gate,
             "timestamp": datetime.now().isoformat(),
         }
 
@@ -352,7 +366,7 @@ class LegalGate:
                 result.warnings.append(f"Unknown channel '{channel}' — valid: {', '.join(VALID_CHANNELS)}")
                 continue
             for pattern, msg in CHANNEL_CHECKS.get(channel, []):
-                if re.search(pattern, lower, re.I):
+                if _affirmed_pattern_match(pattern, lower):
                     # Row 6: disclosure planned satisfies social AI-label obligation at Gate 0
                     if (
                         channel == "social"
@@ -420,6 +434,14 @@ class LegalGate:
                     "Numerical performer age not stated — required per Age Policy + Intimacy Protocol v1.3"
                 )
 
+        # ── Historical Figure Gate (safety spine #147) ───────────────────
+        hist = evaluate_historical_figure_gate(text)
+        result.historical_figure_gate = hist.to_dict()
+        if hist.applies:
+            result.hard_stops.extend(hist.hard_stops)
+            result.warnings.extend(hist.warnings)
+            result.notes.extend(hist.notes)
+
         # ── Verdict ───────────────────────────────────────────────────────
         if result.hard_stops:
             result.verdict = "RED"
@@ -478,6 +500,17 @@ class LegalGate:
             lines.append("## WARNINGS")
             lines.extend(f"- {x}" for x in result.warnings)
             lines.append("")
+        if result.historical_figure_gate.get("applies"):
+            lines.append("## Historical Figure Gate (#147)")
+            hfg = result.historical_figure_gate
+            lines.append(f"- **status:** {hfg.get('status')}")
+            if hfg.get("death_year") is not None:
+                lines.append(f"- **death_year:** {hfg['death_year']}")
+            for msg in hfg.get("hard_stops", []):
+                lines.append(f"- 🛑 {msg}")
+            for msg in hfg.get("warnings", []):
+                lines.append(f"- ⚠️ {msg}")
+            lines.append("")
         if result.checklist_domains:
             lines.append("## Checklist Domains (Gate 0 v1.1)")
             for key in (
@@ -501,7 +534,7 @@ def main() -> int:
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="Legal Gate v1.3 — Gate 0: AI + mass dissemination + v1.1 checklist domains (RUN FIRST)"
+        description="Legal Gate v1.4 — Gate 0: AI + mass dissemination + historical figure spine (RUN FIRST)"
     )
     parser.add_argument("--project", required=True, help="Project / slate ID")
     parser.add_argument("--text", help="Inline brief, prompt, or scene description")

@@ -1,0 +1,47 @@
+{
+  "language": "tudor-english",
+  "texts": [
+    {
+      "id": "elizabeth-tilbury-weak-feeble-woman",
+      "title": "Tilbury speech — heart and stomach of a king",
+      "type": "public_address",
+      "date_ce": 1588,
+      "source": "Elizabeth I, Tilbury address, 9 August 1588; transmitted in Camden, Annales (1615) and Collected Works scholarly editions",
+      "transliteration": "I know I have the body of a weak and feeble woman; but I have the heart and stomach of a king, and of a king of England too.",
+      "translation": "I know I have the body of a weak and feeble woman; but I have the heart and stomach of a king, and of a king of England too.",
+      "confidence": "attested",
+      "line_ipa": "[aɪ nəʊ aɪ hæv ðə ˈbɒdi əv ə wiːk ənd ˈfiːbl ˈwʊmən, bət aɪ hæv ðə hɑːt ənd ˈstʌmək əv ə kɪŋ, ənd əv ə kɪŋ əv ˈɪŋɡlənd tuː]",
+      "pronunciation_model": "reconstructed Early Modern English (Tudor court register, c. 1588)",
+      "history_links": ["elizabeth-i"],
+      "notes": "Attested wartime address; manuscript variants exist — this line follows standard scholarly edition wording."
+    },
+    {
+      "id": "elizabeth-tilbury-opening",
+      "title": "Tilbury speech — loyal hearts",
+      "type": "public_address",
+      "date_ce": 1588,
+      "source": "Elizabeth I, Tilbury address, 9 August 1588; Camden / Collected Works tradition",
+      "transliteration": "I thank my loyal people, and from my heart I assure you that no prince ever loved his subjects better.",
+      "translation": "I thank my loyal people, and from my heart I assure you that no prince ever loved his subjects better.",
+      "confidence": "attested",
+      "line_ipa": "[aɪ θæŋk maɪ ˈlɔɪəl ˈpiːpl, ənd frɒm maɪ hɑːt aɪ əˈʃʊə juː ðæt nəʊ prɪns ˈɛvə lʌvd hɪz ˈsʌbdʒɪkts ˈbɛtə]",
+      "pronunciation_model": "reconstructed Early Modern English (Tudor court register, c. 1588)",
+      "history_links": ["elizabeth-i"],
+      "notes": "Attested Tilbury passage; wording follows near-contemporary historiographic transmission."
+    },
+    {
+      "id": "elizabeth-golden-speech-crown",
+      "title": "Golden Speech (1601) — crown and glory",
+      "type": "parliamentary_speech",
+      "date_ce": 1601,
+      "source": "Elizabeth I, Golden Speech to Parliament, 30 November 1601; parliamentary record / Collected Works",
+      "transliteration": "To be a king and wear a crown is a thing more glorious to them that see it than it is pleasant to them that bear it.",
+      "translation": "To be a king and wear a crown is a thing more glorious to them that see it than it is pleasant to them that bear it.",
+      "confidence": "attested",
+      "line_ipa": "[tuː biː ə kɪŋ ənd weər ə kraʊn ɪz ə θɪŋ mɔː ˈɡlɔːriəs tuː ðəm ðæt siː ɪt ðæn ɪt ɪz ˈplɛznt tuː ðəm ðæt beər ɪt]",
+      "pronunciation_model": "reconstructed Early Modern English (parliamentary register, c. 1601)",
+      "history_links": ["elizabeth-i"],
+      "notes": "Attested parliamentary speech; securely documented in period transmission."
+    }
+  ]
+}

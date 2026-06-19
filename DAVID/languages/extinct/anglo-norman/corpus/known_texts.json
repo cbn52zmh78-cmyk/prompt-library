@@ -1,0 +1,59 @@
+{
+  "language": "anglo-norman",
+  "texts": [
+    {
+      "id": "richard-ja-nus-hons-pris-1",
+      "title": "Ja nus hons pris — opening stanza",
+      "type": "lyric_poetry",
+      "date_ce": 1192,
+      "source": "Richard I, prison song; Chansonnier tradition (e.g. BnF fr. 1598, Chansonnier d'Arras)",
+      "transliteration": "Ja nus hons pris ne dira sa raison",
+      "translation": "No captive man can tell his tale truly",
+      "confidence": "attested",
+      "line_ipa": "[ʒa nys õs pris nə diˈra sa raˈzũ]",
+      "pronunciation_model": "reconstructed Anglo-Norman / Old French (12th-c. Oïl register)",
+      "history_links": ["richard-i"],
+      "notes": "Attested lyric attributed to Richard I in manuscript tradition; not a chronicle quotation of spoken dialogue."
+    },
+    {
+      "id": "crusade-deus-le-volt",
+      "title": "Crusade acclamation — Deus le volt",
+      "type": "formula",
+      "date_ce": 1187,
+      "source": "Crusade chronicle corpus (Itinerarium Regis Ricardi; Roger of Hoveden tradition)",
+      "transliteration": "Deus le volt",
+      "translation": "God wills it",
+      "confidence": "attested",
+      "line_ipa": "[dø lə ˈvɔlt]",
+      "pronunciation_model": "reconstructed Anglo-Norman crusade-shout register",
+      "history_links": ["richard-i"],
+      "notes": "Attested crusade formula in Latin and vernacular chronicle transmission; pronunciation reconstructed."
+    },
+    {
+      "id": "marie-de-france-lais-prologue",
+      "title": "Marie de France, Lais — authorial prologue",
+      "type": "literary_prose",
+      "date_ce": 1180,
+      "source": "Marie de France, Lais, General Prologue",
+      "transliteration": "Li nom est Marie, e si sui de France",
+      "translation": "My name is Marie, and I am from France",
+      "confidence": "attested",
+      "line_ipa": "[li nɔm ɛst maˈri e si sy də ˈfrãːsə]",
+      "pronunciation_model": "reconstructed Anglo-Norman literary register (c. 1170–1200)",
+      "history_links": ["eleanor-of-aquitaine", "marie-de-france"],
+      "notes": "Attested Anglo-Norman authorial statement; period court literary corpus — not Eleanor of Aquitaine's direct speech."
+    },
+    {
+      "id": "eleanor-charter-voice-note",
+      "title": "Eleanor of Aquitaine — surviving voice register",
+      "type": "meta",
+      "date_ce": 1204,
+      "source": "Eleanor's surviving documents (charters, letters) — predominantly Latin",
+      "transliteration": "—",
+      "translation": "Eleanor's attested words survive chiefly in Latin charters and chronicle paraphrase, not Anglo-Norman direct speech.",
+      "confidence": "attested",
+      "history_links": ["eleanor-of-aquitaine"],
+      "notes": "Corpus honesty marker: do not invent Anglo-Norman quotations attributed to Eleanor."
+    }
+  ]
+}

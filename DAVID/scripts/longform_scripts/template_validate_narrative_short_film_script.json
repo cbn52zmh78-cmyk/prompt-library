@@ -9,6 +9,42 @@
     "set_id": "@Set-Warehouse-Industrial-001",
     "style_id": "@Style-Cinematic-001",
     "source": "STUDIO/Pipeline/production_intake.py",
+    "gate_0": {
+      "version": "1.3",
+      "verdict": "GREEN",
+      "blocked": false,
+      "requires_human_signoff": false,
+      "human_signoff": false,
+      "target_rating": "PG-13",
+      "channels": [
+        "social"
+      ],
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_GREEN_template_validate_narrative_short_film_20260618_232906.json",
+      "checklist_domains": {
+        "row_1_synthetic_ownership": "PASS",
+        "row_2_music_sync": "MANUAL",
+        "row_3_no_real_likeness": "PASS",
+        "row_4_target_channel": "PASS",
+        "row_5_age_documentation": "PASS",
+        "row_6_ai_disclosure": "PASS"
+      },
+      "hard_stops": [],
+      "counsel_flags": [],
+      "distribution_flags": [],
+      "warnings": [],
+      "rating_flags": [],
+      "cara_status": "COMPLIANT",
+      "music_bed_id": null,
+      "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
+      "row_2_music_sync": "MANUAL",
+      "notes": [
+        "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
+        "Social = mass dissemination. Platform AI-label + community guidelines apply.",
+        "Row 1: STUDIO Casting Bible synthetic cast — Upon Tyne ownership; no third-party likeness license.",
+        "Gate 0 cleared for Development/Pre-Production subject to ongoing review."
+      ],
+      "brief_source": "composed"
+    },
     "libraries": {
       "formats": "Production_Templates_v1.json (#98)",
       "sets": "Set_Library_v1.json (#99)",

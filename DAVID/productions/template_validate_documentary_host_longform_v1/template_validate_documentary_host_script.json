@@ -114,5 +114,55 @@
     "require_reconstructed_labels": false,
     "min_shots": 6
   },
-  "format_id": "documentary-host"
+  "format_id": "documentary-host",
+  "intake": {
+    "format_id": "documentary-host",
+    "actor_id": "David-001",
+    "set_id": "@Set-Archive-001",
+    "style_id": "@Style-Documentary-Prestige-001",
+    "source": "STUDIO/Pipeline/production_intake.py",
+    "gate_0": {
+      "version": "1.3",
+      "verdict": "YELLOW",
+      "blocked": false,
+      "requires_human_signoff": true,
+      "human_signoff": true,
+      "target_rating": "PG-13",
+      "channels": [
+        "social"
+      ],
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_template_validate_documentary_host_20260618_232905.json",
+      "checklist_domains": {
+        "row_1_synthetic_ownership": "MANUAL",
+        "row_2_music_sync": "MANUAL",
+        "row_3_no_real_likeness": "MANUAL",
+        "row_4_target_channel": "PASS",
+        "row_5_age_documentation": "MANUAL",
+        "row_6_ai_disclosure": "PASS"
+      },
+      "hard_stops": [],
+      "counsel_flags": [],
+      "distribution_flags": [],
+      "warnings": [
+        "Numerical performer age not stated — required per Age Policy + Intimacy Protocol v1.3"
+      ],
+      "rating_flags": [],
+      "cara_status": "COMPLIANT",
+      "music_bed_id": null,
+      "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
+      "row_2_music_sync": "MANUAL",
+      "notes": [
+        "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
+        "Social = mass dissemination. Platform AI-label + community guidelines apply.",
+        "Revise and re-submit to Legal Gate (Gate 0)."
+      ],
+      "brief_source": "composed"
+    },
+    "libraries": {
+      "formats": "Production_Templates_v1.json (#98)",
+      "sets": "Set_Library_v1.json (#99)",
+      "styles": "Style_Library_v1.json (#99)",
+      "casting": "Casting_Bible/registry/casting_registry.json"
+    }
+  }
 }

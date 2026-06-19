@@ -687,7 +687,46 @@ def render_provenance_card(script: dict[str, Any], out_path: Path) -> None:
         title_font = warn_font = body_font = small_font = ImageFont.load_default()
 
     card_type = prov.get("card_type", "provenance")
-    if card_type == "closing":
+    if card_type == "sources":
+        draw.rectangle([(40, 40), (w - 40, h - 40)], outline=(90, 140, 180), width=4)
+        banner = prov.get("banner", "HISTORICAL SOURCES")
+        if banner:
+            draw.rectangle([(55, 55), (w - 55, 110)], fill=(25, 45, 70))
+            draw.text((70, 62), banner, fill=(180, 210, 240), font=warn_font)
+            y_title = 130
+        else:
+            y_title = 70
+
+        draw.text((70, y_title), prov.get("title", "SOURCES"), fill=(220, 190, 120), font=title_font)
+        if prov.get("subtitle"):
+            draw.text((70, y_title + 50), prov["subtitle"], fill=(240, 240, 245), font=body_font)
+
+        rules = prov.get("render_rules") or {}
+        max_lines = int(rules.get("max_lines_on_card", 6))
+        trunc = int(rules.get("truncate_citation_chars", 88))
+        pfx_p = rules.get("primary_prefix", "P")
+        pfx_s = rules.get("secondary_prefix", "S")
+
+        y = y_title + (100 if prov.get("subtitle") else 60)
+        for src in prov.get("sources", [])[:max_lines]:
+            cite = str(src.get("citation", "")).strip()
+            if len(cite) > trunc:
+                cite = cite[: trunc - 1] + "…"
+            kind = str(src.get("type", "secondary")).lower()
+            prefix = pfx_p if kind == "primary" else pfx_s
+            line = f"{prefix}: {cite}"
+            for wrapped in textwrap.wrap(line, width=78):
+                draw.text((70, y), wrapped, fill=(200, 205, 215), font=small_font)
+                y += 26
+            if y > h - 120:
+                break
+
+        footer = prov.get("footer", "")
+        if footer:
+            for wrapped in textwrap.wrap(footer, width=70):
+                draw.text((70, h - 90), wrapped, fill=(255, 180, 90), font=small_font)
+                break
+    elif card_type == "closing":
         draw.rectangle([(40, 40), (w - 40, h - 40)], outline=(180, 150, 90), width=3)
         title = prov.get("title", "DAVID · The Archive")
         subtitle = prov.get("subtitle", "")

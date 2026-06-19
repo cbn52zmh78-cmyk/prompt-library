@@ -1,0 +1,17 @@
+{
+  "id": "tudor-english",
+  "name": "Tudor English (Early Modern English)",
+  "status": "extinct",
+  "revival_tier": "high",
+  "family": "West Germanic",
+  "period": "c. 1485–1603 CE",
+  "script": "Latin alphabet (Early Modern orthography)",
+  "region": "England, Tudor court and parliamentary record",
+  "training_readiness": "excellent",
+  "primary_sources": [
+    "Elizabeth I: Collected Works (University of Chicago Press)",
+    "William Camden, Annales (1615) — Tilbury transmission",
+    "British Library Armada state papers",
+    "Parliamentary Golden Speech record (1601)"
+  ]
+}

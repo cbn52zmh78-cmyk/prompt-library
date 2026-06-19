@@ -1,0 +1,246 @@
+{
+  "slug": "david_elizabeth_tudor_v1",
+  "title": "DAVID — Elizabeth I: The Tilbury Speech in Her Own English",
+  "format_id": "historical-figure-documentary",
+  "target_seconds": 54,
+  "intake": {
+    "format_id": "historical-figure-documentary",
+    "actor_id": "David-001",
+    "set_id": "@Set-Archive-001",
+    "style_id": "@Style-Documentary-Prestige-001",
+    "source": "STUDIO/Pipeline/production_intake.py",
+    "gate_0": {
+      "version": "1.3",
+      "verdict": "GREEN",
+      "blocked": false,
+      "requires_human_signoff": false,
+      "human_signoff": true,
+      "target_rating": "PG",
+      "channels": [
+        "social",
+        "streaming"
+      ],
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_GREEN_david_elizabeth_tudor_v1_20260618_232918.json",
+      "checklist_domains": {
+        "row_1_synthetic_ownership": "MANUAL",
+        "row_2_music_sync": "PASS",
+        "row_3_no_real_likeness": "MANUAL",
+        "row_4_target_channel": "PASS",
+        "row_5_age_documentation": "N/A",
+        "row_6_ai_disclosure": "PASS"
+      },
+      "hard_stops": [],
+      "counsel_flags": [],
+      "distribution_flags": [],
+      "warnings": [],
+      "rating_flags": [],
+      "cara_status": "COMPLIANT",
+      "music_bed_id": "BED-DOC-001",
+      "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
+      "row_2_music_sync": "PASS",
+      "notes": [
+        "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
+        "Social = mass dissemination. Platform AI-label + community guidelines apply.",
+        "Row 2: Manifest-cleared music bed(s): BED-DOC-001 (STUDIO/Music_Sound/clearance_manifest.json)",
+        "Historical Figure Gate: pre-1900 subject (died 1603); recency clear.",
+        "Gate 0 cleared for Development/Pre-Production subject to ongoing review."
+      ],
+      "brief_source": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Pipeline\\Concepts\\royal_tongues\\david_elizabeth_tudor_v1_brief.txt"
+    },
+    "libraries": {
+      "formats": "Production_Templates_v1.json (#98)",
+      "sets": "Set_Library_v1.json (#99)",
+      "styles": "Style_Library_v1.json (#99)",
+      "casting": "Casting_Bible/registry/casting_registry.json"
+    },
+    "historical_figure": {
+      "figure_id": "ELZ-001",
+      "name": "Elizabeth I",
+      "death_year": 1603,
+      "era": "Tudor England",
+      "period_language": "early-modern-english",
+      "birth_year": 1533,
+      "sources": [
+        {
+          "citation": "Elizabeth I: Collected Works (University of Chicago Press) — Tilbury speech, 9 August 1588",
+          "url": null,
+          "type": "primary",
+          "notes": "Standard scholarly edition of attested speeches and letters",
+          "supports": null
+        },
+        {
+          "citation": "William Camden, Annales rerum Anglicarum et Hibernicarum (1615) — early transmission of Tilbury address",
+          "url": null,
+          "type": "primary",
+          "notes": "Near-contemporary historiographic record",
+          "supports": null
+        },
+        {
+          "citation": "British Library, Armada collection — state papers and contemporary copies of Elizabeth's wartime addresses",
+          "url": "https://www.bl.uk/collection-guides/armada",
+          "type": "primary",
+          "notes": "Manuscript and state-paper tradition",
+          "supports": null
+        }
+      ]
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "voice_suffix": "mid-low resonant unhurried voice, precise diction, documentary gravitas, biography register, accessible never stuffy, synthetic host only",
+    "identity_lock": "productions/host_identity_v1/david_identity_lock.json",
+    "avatar_reference": "productions/host_identity_v1/references/david_avatar_reference.jpg",
+    "set_reference": "DAVID/productions/host_identity_v1/references/archive_set_reference.jpg",
+    "seamless": {
+      "primary": "extend",
+      "xfade_s": 0.2,
+      "match_color": true,
+      "cut_on_motion": true,
+      "lamp_lock": true,
+      "glasses_lock": true,
+      "loudnorm": true,
+      "pin_audio_sync": true,
+      "reground_interval": 2,
+      "magenta_clamp": true
+    },
+    "music_bed": {
+      "track_id": "BED-DOC-001",
+      "manifest": "STUDIO/Music_Sound/clearance_manifest.json"
+    }
+  },
+  "shots": [
+    {
+      "id": "01_cold_open",
+      "duration": 8,
+      "t_start": 0,
+      "t_end": 8,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host seated at Archive worktable, warm brass lamplight, names the historical figure and episode promise. Camera: slow gentle push-in medium. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"I am DAVID. Tonight, Elizabeth the First — the queen who faced the Armada and left us her own words, attested on paper.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, biography register, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "I am DAVID. Tonight, Elizabeth the First — the queen who faced the Armada and left us her own words, attested on paper.",
+      "on_screen": "DAVID · The Archive · Royal Tongues"
+    },
+    {
+      "id": "02_who_they_were",
+      "duration": 9,
+      "t_start": 8,
+      "t_end": 17,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host delivers concise biography — birth, role, defining achievement — manuscripts behind. Camera: locked medium, slight lean. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"Born fifteen thirty-three, daughter of Anne Boleyn, crowned fifteen fifty-nine after half a sister's reign. Forty-four years on the throne — the long Elizabethan peace that was never quite peace.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, biography register, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "Born fifteen thirty-three, daughter of Anne Boleyn, crowned fifteen fifty-nine after half a sister's reign. Forty-four years on the throne — the long Elizabethan peace that was never quite peace."
+    },
+    {
+      "id": "03_their_world",
+      "duration": 9,
+      "t_start": 17,
+      "t_end": 26,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host situates the figure in era and place — political, cultural, or scientific context. Camera: medium — gesture to map or codex. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"Her world was Early Modern English in proclamation and prayer book, Latin in diplomacy, and a court culture that turned speech into propaganda when invasion threatened.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, biography register, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "Her world was Early Modern English in proclamation and prayer book, Latin in diplomacy, and a court culture that turned speech into propaganda when invasion threatened."
+    },
+    {
+      "id": "04_period_line",
+      "duration": 10,
+      "t_start": 26,
+      "t_end": 36,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host delivers one line in the figure's period language; on-screen attestation label visible. Camera: medium-close — deliberate delivery. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"I know I have the body of a weak and feeble woman — but I have the heart and stomach of a king, and of a king of England too.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, biography register, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "I know I have the body of a weak and feeble woman — but I have the heart and stomach of a king, and of a king of England too.",
+      "speech_ipa": "/aɪ nəʊ aɪ hæv ðə ˈbɒdi əv ə wiːk ənd ˈfiːbl ˈwʊmən/",
+      "on_screen": "ATTESTED · Tudor English · Tilbury 1588",
+      "on_screen_labels": [
+        "ATTESTED",
+        "PERIOD LANGUAGE"
+      ],
+      "speech_lang": "early-modern-english",
+      "historical_figure_ref": "ELZ-001"
+    },
+    {
+      "id": "05_legacy",
+      "duration": 9,
+      "t_start": 36,
+      "t_end": 45,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host on legacy and influence — what changed because they lived; end on gesture peak. Camera: warm close, inviting settle. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"She died in sixteen oh-three — no heir, Stuart succession, legend intact. What we can say attested is what she wrote and what her clerks copied.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, biography register, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "She died in sixteen oh-three — no heir, Stuart succession, legend intact. What we can say attested is what she wrote and what her clerks copied."
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 6,
+    "card_type": "sources",
+    "title": "Sources — Elizabeth I",
+    "subtitle": "Tudor England · d. 1603",
+    "footer": "Elizabeth I: Collected Works (University of Chicago Press) — Tilbury … · William Camden, Annales rerum Anglicarum et Hibernicarum (1615) — ear… · British Library, Armada collection — state papers and contemporary co…",
+    "lines": [
+      "FIGURE: Elizabeth I (ELZ-001) · d. 1603",
+      "PERIOD LINE: Tilbury speech excerpt — attested text, reconstructed Early Modern pronunciation",
+      "PRONUNCIATION: Scholarly Early Modern English — not original audio"
+    ],
+    "sources": [
+      {
+        "citation": "Elizabeth I: Collected Works (University of Chicago Press) — Tilbury speech, 9 August 1588",
+        "url": null,
+        "type": "primary",
+        "notes": "Standard scholarly edition of attested speeches and letters",
+        "supports": null
+      },
+      {
+        "citation": "William Camden, Annales rerum Anglicarum et Hibernicarum (1615) — early transmission of Tilbury address",
+        "url": null,
+        "type": "primary",
+        "notes": "Near-contemporary historiographic record",
+        "supports": null
+      },
+      {
+        "citation": "British Library, Armada collection — state papers and contemporary copies of Elizabeth's wartime addresses",
+        "url": "https://www.bl.uk/collection-guides/armada",
+        "type": "primary",
+        "notes": "Manuscript and state-paper tradition",
+        "supports": null
+      }
+    ],
+    "historical_figure_id": "ELZ-001"
+  },
+  "qa_rules": {
+    "require_identity_lock": true,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": true,
+    "min_shots": 5
+  },
+  "production_meta": {
+    "set_id": "@Set-Archive-001",
+    "style_id": "@Style-Documentary-Prestige-001",
+    "identity_anchor": "@David-001",
+    "pacing": {
+      "words_per_second": 2.4,
+      "beat_gap_s": 0.45,
+      "register": "prestige biography, evidence-forward",
+      "pause_on": [
+        "death dates",
+        "period-language lines",
+        "source citations",
+        "legacy beats"
+      ]
+    },
+    "camera": {
+      "primary": "slow motivated push-in medium at Archive desk",
+      "secondary": "insert B-roll of manuscripts, maps, or era objects",
+      "forbidden": [
+        "snap zoom",
+        "beauty-filter smoothing",
+        "dramatic reenactment cutaways"
+      ]
+    },
+    "target_rating": "PG",
+    "historical_figure": {
+      "figure_id": "ELZ-001",
+      "name": "Elizabeth I",
+      "death_year": 1603,
+      "era": "Tudor England",
+      "period_language": "early-modern-english",
+      "source_count": 3
+    }
+  }
+}

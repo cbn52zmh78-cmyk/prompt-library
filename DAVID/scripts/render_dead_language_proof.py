@@ -64,6 +64,18 @@ def _download(url: str, dest: Path) -> None:
         dest.write_bytes(r.read())
 
 
+def resolve_corpus_path(language: str) -> Path | None:
+    """Locate known_texts.json for a language id under languages/dead or languages/extinct."""
+    lang = (language or "").strip()
+    if not lang:
+        return None
+    for bucket in ("dead", "extinct", "reconstructed", "undeciphered"):
+        candidate = ROOT / "languages" / bucket / lang / "corpus" / "known_texts.json"
+        if candidate.is_file():
+            return candidate
+    return None
+
+
 def load_identity_lock(path: Path) -> dict[str, Any]:
     lock = json.loads(path.read_text(encoding="utf-8"))
     if lock.get("status") != "LOCKED":
@@ -185,6 +197,8 @@ def render_provenance_card(script: dict[str, Any], out_path: Path) -> None:
 
     corpus = script.get("corpus", {})
     prov_cfg = script.get("provenance_card", {})
+    hf = script.get("historical_figure", {})
+    card_type = prov_cfg.get("card_type", "provenance")
     w, h = PROOF_W, PROOF_H
     img = Image.new("RGB", (w, h), (12, 14, 20))
     draw = ImageDraw.Draw(img)
@@ -196,21 +210,49 @@ def render_provenance_card(script: dict[str, Any], out_path: Path) -> None:
     draw.rectangle([(200, 36), (w - 36, 78)], fill=(140, 88, 28))
     draw.text((212, 44), "RECONSTRUCTED PRONUNCIATION", fill=(255, 255, 255), font=small_font)
 
-    draw.text((48, 92), prov_cfg.get("title", "DAVID · PROVENANCE"), fill=(220, 190, 120), font=title_font)
-    draw.text((48, 122), prov_cfg.get("subtitle", ""), fill=(240, 240, 245), font=body_font)
+    if card_type == "sources" and hf:
+        title = prov_cfg.get("title") or f"DAVID · SOURCES · {hf.get('name', '')}"
+        subtitle = prov_cfg.get("subtitle") or f"{hf.get('era', '')} · d. {hf.get('death_year', '')}"
+    else:
+        title = prov_cfg.get("title", "DAVID · PROVENANCE")
+        subtitle = prov_cfg.get("subtitle", "")
 
-    lines = [
+    draw.text((48, 92), title, fill=(220, 190, 120), font=title_font)
+    draw.text((48, 122), subtitle, fill=(240, 240, 245), font=body_font)
+
+    corpus_rel = ""
+    corpus_file = resolve_corpus_path(corpus.get("language", ""))
+    if corpus_file:
+        try:
+            corpus_rel = str(corpus_file.relative_to(ROOT)).replace("\\", "/")
+        except ValueError:
+            corpus_rel = str(corpus_file)
+
+    lines: list[str] = []
+    if hf:
+        lines.append(f"FIGURE: {hf.get('name', '')} ({hf.get('figure_id', '')})")
+    lines.extend([
         f"TEXT [attested]: {corpus.get('text_source', '')}",
         f"LINE: {corpus.get('attested_text', '')}",
         f"IPA [reconstructed]: {corpus.get('line_ipa', '')}",
         f"MODEL: {corpus.get('pronunciation_model', '')}",
         f"TRANSLATION: {corpus.get('translation', '')}",
-        "SOURCES: Wikipedia / Wiktionary (CC BY-SA), Wikidata (CC0)",
-        f"CORPUS: languages/dead/classical-latin/corpus/known_texts.json · {corpus.get('corpus_id', '')}",
-    ]
+    ])
+    if card_type == "sources":
+        for src in (prov_cfg.get("sources") or hf.get("sources") or [])[:3]:
+            cite = str(src.get("citation", "")).strip()
+            if cite:
+                lines.append(f"SOURCE: {cite}")
+    else:
+        lines.append("SOURCES: Wikipedia / Wiktionary (CC BY-SA), Wikidata (CC0)")
+    if corpus_rel:
+        lines.append(f"CORPUS: {corpus_rel} · {corpus.get('corpus_id', '')}")
+
     y = 158
     for line in lines:
         for wrapped in textwrap.wrap(line, width=58):
+            if y > h - 72:
+                break
             draw.text((48, y), wrapped, fill=(200, 205, 215), font=small_font)
             y += 22
 
@@ -285,15 +327,20 @@ def qa_check(
     else:
         issues.append("host identity not LOCKED")
 
-    latin_shots = [s for s in script["shots"] if s.get("speech_lang") == "classical-latin"]
-    if len(latin_shots) >= 3:
-        passes.append(f"Latin demonstration shots: {len(latin_shots)}")
+    speech_lang = corpus.get("language") or script["shots"][0].get("speech_lang", "")
+    lang_shots = [s for s in script["shots"] if s.get("speech_lang") == speech_lang]
+    min_shots = rules.get("min_shots", 3)
+    if len(lang_shots) >= min_shots:
+        passes.append(f"{speech_lang} demonstration shots: {len(lang_shots)}")
     else:
-        issues.append("fewer than 3 Latin speech shots")
+        issues.append(f"fewer than {min_shots} {speech_lang} speech shots")
 
-    for s in latin_shots:
+    english_period_langs = {"tudor-english", "early-modern-english", "old-english", "middle-english"}
+    for s in lang_shots:
         speech = s.get("speech_text", "")
-        if re.search(r"\b(the|and|is|what|how)\b", speech, re.I):
+        if speech_lang not in english_period_langs and re.search(
+            r"\b(the|and|is|what|how)\b", speech, re.I
+        ):
             issues.append(f"{s['id']}: English function words in speech_text")
         if not s.get("speech_ipa"):
             issues.append(f"{s['id']}: missing speech_ipa")
@@ -309,14 +356,18 @@ def qa_check(
         if abs(timing - s.get("duration", 0)) > 0.5:
             issues.append(f"{s['id']}: timing mismatch t_start/t_end vs duration")
 
-    corpus_path = ROOT / "languages" / "dead" / "classical-latin" / "corpus" / "known_texts.json"
-    if corpus_path.is_file():
+    corpus_path = resolve_corpus_path(corpus.get("language", ""))
+    if corpus_path and corpus_path.is_file():
         known = json.loads(corpus_path.read_text(encoding="utf-8"))
         entry = next((t for t in known.get("texts", []) if t.get("id") == corpus.get("corpus_id")), None)
         if entry and entry.get("transliteration") == corpus.get("attested_text"):
-            passes.append("attested_text matches corpus transliteration (Virgil Aeneid 1.1)")
+            passes.append(f"attested_text matches corpus transliteration ({corpus.get('corpus_id')})")
         elif entry:
             issues.append("attested_text mismatch vs corpus")
+        if entry and entry.get("confidence") == "attested":
+            passes.append("corpus entry confidence: attested")
+        if entry and entry.get("type") == "meta":
+            issues.append("corpus_id points to meta entry — not speakable attested line")
     else:
         issues.append("corpus file missing")
 
@@ -369,7 +420,18 @@ def qa_check(
 
     prov = script.get("provenance_card", {})
     if prov.get("enabled"):
-        passes.append(f"provenance card enabled ({prov.get('duration_s', 5)}s)")
+        card_label = prov.get("card_type", "provenance")
+        passes.append(f"{card_label} card enabled ({prov.get('duration_s', 5)}s)")
+        if prov.get("card_type") == "sources":
+            src_count = len(prov.get("sources") or script.get("historical_figure", {}).get("sources") or [])
+            if src_count >= 2:
+                passes.append(f"sources card entries: {src_count}")
+            else:
+                issues.append("sources card missing citations")
+
+    hf = script.get("historical_figure", {})
+    if hf.get("figure_id"):
+        passes.append(f"historical figure: {hf.get('figure_id')}")
 
     return {
         "slug": script.get("slug"),
@@ -458,7 +520,8 @@ def render_proof(
     provenance_to_video(prov_png, prov_mp4, prov_dur)
     burned_parts.append(prov_mp4)
 
-    final_mp4 = out_dir / f"david_latin_pronunciation_proof_480p_v1.mp4"
+    out_name = cfg.get("output_filename") or f"{slug}_480p_v1.mp4"
+    final_mp4 = out_dir / out_name
     concat_videos(burned_parts, final_mp4)
     print(f"[proof] final → {final_mp4}")
 

@@ -1,0 +1,238 @@
+{
+  "slug": "david_hypatia_60s",
+  "title": "DAVID — Hypatia of Alexandria",
+  "format_id": "historical-figure-documentary",
+  "target_seconds": 54,
+  "intake": {
+    "format_id": "historical-figure-documentary",
+    "actor_id": "David-001",
+    "set_id": "@Set-Archive-001",
+    "style_id": "@Style-Documentary-Prestige-001",
+    "source": "STUDIO/Pipeline/production_intake.py",
+    "gate_0": {
+      "version": "1.3",
+      "verdict": "YELLOW",
+      "blocked": false,
+      "requires_human_signoff": true,
+      "human_signoff": true,
+      "target_rating": "PG",
+      "channels": [
+        "social",
+        "educational"
+      ],
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_david_hypatia_60s_20260618_232921.json",
+      "checklist_domains": {
+        "row_1_synthetic_ownership": "MANUAL",
+        "row_2_music_sync": "MANUAL",
+        "row_3_no_real_likeness": "MANUAL",
+        "row_4_target_channel": "PASS",
+        "row_5_age_documentation": "MANUAL",
+        "row_6_ai_disclosure": "PASS"
+      },
+      "hard_stops": [],
+      "counsel_flags": [],
+      "distribution_flags": [],
+      "warnings": [
+        "Unknown channel 'educational' — valid: social, streaming, theatrical, festival, client",
+        "Numerical performer age not stated — required per Age Policy + Intimacy Protocol v1.3"
+      ],
+      "rating_flags": [],
+      "cara_status": "COMPLIANT",
+      "music_bed_id": null,
+      "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
+      "row_2_music_sync": "MANUAL",
+      "notes": [
+        "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
+        "Social = mass dissemination. Platform AI-label + community guidelines apply.",
+        "Historical Figure Gate: pre-1900 subject (died 415); recency clear.",
+        "Revise and re-submit to Legal Gate (Gate 0)."
+      ],
+      "brief_source": "composed"
+    },
+    "libraries": {
+      "formats": "Production_Templates_v1.json (#98)",
+      "sets": "Set_Library_v1.json (#99)",
+      "styles": "Style_Library_v1.json (#99)",
+      "casting": "Casting_Bible/registry/casting_registry.json"
+    },
+    "historical_figure": {
+      "figure_id": "hypatia_alexandria",
+      "name": "Hypatia of Alexandria",
+      "death_year": 415,
+      "era": "Late Roman Alexandria / Neoplatonism",
+      "period_language": "Ancient Greek",
+      "birth_year": 360,
+      "sources": [
+        {
+          "citation": "Socrates Scholasticus, Ecclesiastical History VII.15 (Hypatia, philosopher of Alexandria)",
+          "url": "https://en.wikisource.org/wiki/Ecclesiastical_History_(Scholasticus)/Book_VII",
+          "type": "primary",
+          "notes": null,
+          "supports": null
+        },
+        {
+          "citation": "Damascius, Life of Isidore (fragmentary notice of Hypatia)",
+          "url": null,
+          "type": "primary",
+          "notes": null,
+          "supports": null
+        },
+        {
+          "citation": "Watts, Edward J. — Hypatia: The Life and Legend of an Ancient Philosopher (Oxford, 2017)",
+          "url": null,
+          "type": "secondary",
+          "notes": null,
+          "supports": null
+        }
+      ]
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "voice_suffix": "mid-low resonant unhurried voice, precise diction, documentary gravitas, biography register, accessible never stuffy, synthetic host only",
+    "identity_lock": "productions/host_identity_v1/david_identity_lock.json",
+    "avatar_reference": "productions/host_identity_v1/references/david_avatar_reference.jpg",
+    "set_reference": "DAVID/productions/host_identity_v1/references/archive_set_reference.jpg",
+    "seamless": {
+      "primary": "extend",
+      "xfade_s": 0.2,
+      "match_color": true,
+      "cut_on_motion": true,
+      "lamp_lock": true,
+      "glasses_lock": true,
+      "loudnorm": true,
+      "pin_audio_sync": true,
+      "reground_interval": 2,
+      "magenta_clamp": true
+    }
+  },
+  "shots": [
+    {
+      "id": "01_cold_open",
+      "duration": 8,
+      "t_start": 0,
+      "t_end": 8,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host seated at Archive worktable, warm brass lamplight, names the historical figure and episode promise. Camera: slow gentle push-in medium. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"Tonight: Hypatia of Alexandria — mathematician, philosopher, and the most famous woman of late antiquity.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, biography register, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "Tonight: Hypatia of Alexandria — mathematician, philosopher, and the most famous woman of late antiquity.",
+      "on_screen": "Hypatia · d. 415 CE"
+    },
+    {
+      "id": "02_who_they_were",
+      "duration": 9,
+      "t_start": 8,
+      "t_end": 17,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host delivers concise biography — birth, role, defining achievement — manuscripts behind. Camera: locked medium, slight lean. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"She taught Neoplatonism in Alexandria, edited Ptolemy, and advised the city's prefect — a public intellectual in a city tearing itself apart.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, biography register, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "She taught Neoplatonism in Alexandria, edited Ptolemy, and advised the city's prefect — a public intellectual in a city tearing itself apart."
+    },
+    {
+      "id": "03_their_world",
+      "duration": 9,
+      "t_start": 17,
+      "t_end": 26,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host situates the figure in era and place — political, cultural, or scientific context. Camera: medium — gesture to map or codex. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"Her world was Roman Egypt in the early fifth century: pagan temples closed, Christian factions armed, and the Library's tradition living on in private lecture halls.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, biography register, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "Her world was Roman Egypt in the early fifth century: pagan temples closed, Christian factions armed, and the Library's tradition living on in private lecture halls."
+    },
+    {
+      "id": "04_period_line",
+      "duration": 10,
+      "t_start": 26,
+      "t_end": 36,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host delivers one line in the figure's period language; on-screen attestation label visible. Camera: medium-close — deliberate delivery. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"Ἡ θεία γνῶσις φωτίζει τὸν νοῦν — divine knowledge illuminates the mind.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, biography register, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "Ἡ θεία γνῶσις φωτίζει τὸν νοῦν — divine knowledge illuminates the mind.",
+      "speech_ipa": "[reconstructed Ancient Greek — scholarly approximation]",
+      "on_screen_labels": [
+        "RECONSTRUCTED",
+        "PERIOD LANGUAGE"
+      ],
+      "speech_lang": "Ancient Greek",
+      "historical_figure_ref": "hypatia_alexandria"
+    },
+    {
+      "id": "05_legacy",
+      "duration": 9,
+      "t_start": 36,
+      "t_end": 45,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host on legacy and influence — what changed because they lived; end on gesture peak. Camera: warm close, inviting settle. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"She became a symbol — of learning, of tolerance, and of what a city loses when debate turns to violence. Her story outlived the empire that killed her.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, biography register, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "She became a symbol — of learning, of tolerance, and of what a city loses when debate turns to violence. Her story outlived the empire that killed her."
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 6,
+    "card_type": "sources",
+    "title": "Sources — Hypatia of Alexandria",
+    "subtitle": "Late Roman Alexandria / Neoplatonism · d. 415",
+    "footer": "Socrates Scholasticus, Ecclesiastical History VII.15 (Hypatia, philos… · Damascius, Life of Isidore (fragmentary notice of Hypatia) · Watts, Edward J. — Hypatia: The Life and Legend of an Ancient Philoso…",
+    "sources": [
+      {
+        "citation": "Socrates Scholasticus, Ecclesiastical History VII.15 (Hypatia, philosopher of Alexandria)",
+        "url": "https://en.wikisource.org/wiki/Ecclesiastical_History_(Scholasticus)/Book_VII",
+        "type": "primary",
+        "notes": null,
+        "supports": null
+      },
+      {
+        "citation": "Damascius, Life of Isidore (fragmentary notice of Hypatia)",
+        "url": null,
+        "type": "primary",
+        "notes": null,
+        "supports": null
+      },
+      {
+        "citation": "Watts, Edward J. — Hypatia: The Life and Legend of an Ancient Philosopher (Oxford, 2017)",
+        "url": null,
+        "type": "secondary",
+        "notes": null,
+        "supports": null
+      }
+    ],
+    "historical_figure_id": "hypatia_alexandria"
+  },
+  "qa_rules": {
+    "require_identity_lock": true,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": true,
+    "min_shots": 5
+  },
+  "production_meta": {
+    "set_id": "@Set-Archive-001",
+    "style_id": "@Style-Documentary-Prestige-001",
+    "identity_anchor": "@David-001",
+    "pacing": {
+      "words_per_second": 2.4,
+      "beat_gap_s": 0.45,
+      "register": "prestige biography, evidence-forward",
+      "pause_on": [
+        "death dates",
+        "period-language lines",
+        "source citations",
+        "legacy beats"
+      ]
+    },
+    "camera": {
+      "primary": "slow motivated push-in medium at Archive desk",
+      "secondary": "insert B-roll of manuscripts, maps, or era objects",
+      "forbidden": [
+        "snap zoom",
+        "beauty-filter smoothing",
+        "dramatic reenactment cutaways"
+      ]
+    },
+    "target_rating": "PG",
+    "historical_figure": {
+      "figure_id": "hypatia_alexandria",
+      "name": "Hypatia of Alexandria",
+      "death_year": 415,
+      "era": "Late Roman Alexandria / Neoplatonism",
+      "period_language": "Ancient Greek",
+      "source_count": 3
+    }
+  }
+}
