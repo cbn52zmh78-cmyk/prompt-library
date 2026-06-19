@@ -20,7 +20,7 @@
         "social",
         "streaming"
       ],
-      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_electromagnetism_v1_20260619_011922.json",
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_electromagnetism_v1_20260619_020036.json",
       "checklist_domains": {
         "row_1_synthetic_ownership": "MANUAL",
         "row_2_music_sync": "PASS",
@@ -37,13 +37,13 @@
       ],
       "rating_flags": [],
       "cara_status": "COMPLIANT",
-      "music_bed_id": "BED-PHY-002",
+      "music_bed_id": "BED-HIW-002",
       "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
       "row_2_music_sync": "PASS",
       "notes": [
         "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
         "Social = mass dissemination. Platform AI-label + community guidelines apply.",
-        "Row 2: Manifest-cleared music bed(s): BED-PHY-002 (STUDIO/Music_Sound/clearance_manifest.json)",
+        "Row 2: Manifest-cleared music bed(s): BED-HIW-002 (STUDIO/Music_Sound/clearance_manifest.json)",
         "Science Gate: illustrative-not-simulation policy applies.",
         "Revise and re-submit to Legal Gate (Gate 0)."
       ],
@@ -121,7 +121,7 @@
       "magenta_clamp": true
     },
     "music_bed": {
-      "track_id": "BED-PHY-002",
+      "track_id": "BED-HIW-002",
       "manifest": "STUDIO/Music_Sound/clearance_manifest.json"
     }
   },

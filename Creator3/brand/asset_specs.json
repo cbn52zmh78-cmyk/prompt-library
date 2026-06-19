@@ -1,0 +1,75 @@
+{
+  "task": "#186",
+  "version": "1.0",
+  "locked_at": "2026-06-19",
+  "name_status": "DRAFT — Blueprint recommended; see NAME_OPTIONS_v186.md",
+  "parent": {
+    "name": "Upon Tyne Productions",
+    "tagline_draft": "Directed. Not generated.",
+    "colors": {
+      "ut-black": "#0D0D0D",
+      "ut-warm-white": "#F5F0E8",
+      "ut-gold": "#C9A84C"
+    }
+  },
+  "channel": {
+    "name": "Blueprint",
+    "name_alternates": ["Datum", "Clearance", "Draftline", "Assembly", "Field Manual"],
+    "legal_name": "Upon Tyne Technical",
+    "slug": "blueprint-systems",
+    "subtitle": "Built logic, part by part.",
+    "cta": "Follow Blueprint — one system at a time.",
+    "signature_beat": "How is it built — and what does each part do?",
+    "host_lock": "STUDIO/Cast/Casting_Bible/lock_cards/Elijah-001.md",
+    "host_reference_plate": "STUDIO/Cast/actors_roster/male/north_america/Elijah_Brooks/01_casting_shots/casting_turnaround_v1.jpg",
+    "set_lock_v1": "@Set-Warehouse-Industrial-001",
+    "set_lock_target": "@Set-Blueprint-Bench-001",
+    "style_lock": "@Style-Blueprint-Technical-001",
+    "format_lock": "technical-explainer",
+    "colors": {
+      "bp-bg": "#0A1628",
+      "bp-surface": "#122038",
+      "bp-title": "#E8F2FA",
+      "bp-line": "#3DB8E8",
+      "bp-line-dim": "#2A7A9E",
+      "bp-body": "#9BB0C8",
+      "bp-cta": "#5EC4E8",
+      "bp-grid": "#1A3050",
+      "bp-dimension": "#C9A84C",
+      "label-as-built": "#2E8A6E",
+      "label-spec": "#3DB8E8",
+      "label-exploded": "#6A5080",
+      "label-illustrative": "#8A6B2A",
+      "label-not-to-scale": "#5A6470"
+    },
+    "typography": {
+      "wordmark": "IBM Plex Sans 600",
+      "body": "Inter 400",
+      "spec": "IBM Plex Mono 400"
+    }
+  },
+  "assets": [
+    {
+      "id": "youtube_banner",
+      "canvas_px": [2560, 1440],
+      "safe_tv_px": [1546, 423],
+      "export": "Creator3/brand/export/youtube_banner_2560x1440.jpg",
+      "status": "pending"
+    },
+    {
+      "id": "channel_avatar",
+      "canvas_px": [800, 800],
+      "export": "Creator3/brand/export/channel_avatar_800.png",
+      "status": "pending"
+    },
+    {
+      "id": "channel_wordmark",
+      "text": "Blueprint",
+      "exports": [
+        "Creator3/brand/export/blueprint_wordmark.svg",
+        "Creator3/brand/export/blueprint_wordmark_1x.png"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -48,13 +48,34 @@ def _resolve_script(slug: str) -> Path | None:
 
 
 def _parse_manifest(stdout: str) -> dict | None:
-    for line in reversed(stdout.splitlines()):
-        line = line.strip()
-        if line.startswith("{") and '"qa"' in line:
-            try:
-                return json.loads(line)
-            except json.JSONDecodeError:
-                continue
+    text = stdout.strip()
+    if not text:
+        return None
+    # render_longform prints pretty-printed JSON blob on stdout
+    start = text.find("{")
+    if start < 0:
+        return None
+    try:
+        return json.loads(text[start:])
+    except json.JSONDecodeError:
+        for line in reversed(text.splitlines()):
+            line = line.strip()
+            if line.startswith("{") and '"qa"' in line:
+                try:
+                    return json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+    return None
+
+
+def _qa_from_production(slug: str) -> dict | None:
+    for base in (
+        ROOT / "DAVID/productions" / f"{slug}_longform_v1",
+        ROOT / "STUDIO/Productions/Editorial" / f"{slug}_longform_v1",
+    ):
+        qa_path = base / "qa_report.json"
+        if qa_path.is_file():
+            return json.loads(qa_path.read_text(encoding="utf-8"))
     return None
 
 
@@ -77,7 +98,7 @@ def run_scope(slug: str, *, package: bool = False) -> dict:
         text=True, encoding="utf-8", errors="replace",
     )
     manifest = _parse_manifest(proc.stdout) or {}
-    qa = manifest.get("qa") or {}
+    qa = manifest.get("qa") or _qa_from_production(slug) or {}
     passes = qa.get("passes") or []
     row.update(
         status="pass" if proc.returncode == 0 and qa.get("pass") else "fail",

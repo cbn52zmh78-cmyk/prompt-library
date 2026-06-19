@@ -1,0 +1,53 @@
+{
+  "task": "#186",
+  "locked_at": "2026-06-19",
+  "status": "DRAFT_LOCK",
+  "channel": "Creator #3 [Blueprint]",
+  "character": {
+    "actor_id": "Elijah-001",
+    "stage_name": "Elijah Brooks",
+    "role": "technical systems communicator",
+    "core_question": "How is it built — and what does each part do?",
+    "age_locked": 37,
+    "wardrobe_episode": "dark henley or chore jacket, work trousers — NOT gym casting kit",
+    "set_id_v1": "@Set-Warehouse-Industrial-001",
+    "set_id_target": "@Set-Blueprint-Bench-001",
+    "style_id": "@Style-Blueprint-Technical-001",
+    "format_id": "technical-explainer"
+  },
+  "references": {
+    "casting_plate": {
+      "file": "STUDIO/Cast/actors_roster/male/north_america/Elijah_Brooks/01_casting_shots/casting_turnaround_v1.jpg",
+      "lock_card": "STUDIO/Cast/Casting_Bible/lock_cards/Elijah-001.md",
+      "reuse": "v1 banner/avatar crop from center panel; workwear via image_edit from plate"
+    },
+    "set_reference_v1": {
+      "file": "STUDIO/Pipeline/references/warehouse_industrial_reference.jpg",
+      "set_id": "@Set-Warehouse-Industrial-001"
+    }
+  },
+  "voice": {
+    "register": "deep measured baritone",
+    "pace": "unhurried, authoritative",
+    "tone": "quiet authority; systems walk-through",
+    "signature_beat": "How is it built — and what does each part do?",
+    "prompt_suffix": "Deep measured baritone; stillness fills frame; voice low."
+  },
+  "continuity_lock_verbatim": "CONTINUITY LOCK @Elijah-001: identical presenter face, workwear wardrobe, blueprint bench set, same eye-line to camera — seamless continuation of prior take, zero jump cut.",
+  "episode_reuse": {
+    "host_shots": "Lead every prompt with 37-year-old Elijah Brooks; workwear; warehouse or blueprint bench set",
+    "diagram_payoff": "Label AS-BUILT / SPEC / EXPLODED VIEW / NOT TO SCALE on technical diagram beats",
+    "on_screen_label": "Blueprint · Built logic, part by part.",
+    "brand_fields": {
+      "title": "Blueprint",
+      "subtitle": "Built logic, part by part.",
+      "cta": "Follow Blueprint — one system at a time."
+    }
+  },
+  "guardrails": [
+    "synthetic only — no real-person likeness",
+    "educational content — not professional engineering certification",
+    "sources cited per episode; AI disclosure in description",
+    "never use DAVID or Observable marks on Creator #3 deliverables"
+  ]
+}

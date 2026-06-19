@@ -85,44 +85,48 @@ def infer_slug(prod_dir: Path, qa: dict[str, Any], manifest: dict[str, Any] | No
     return name
 
 
+COLOR_ISSUE_KEYS = (
+    "magenta detected",
+    "yellow-green cast",
+    "hue drift across",
+    "hue drift detected",
+    "lamp hue drift",
+    "grey_balance",
+    "loudness spread",
+)
+SEAM_ISSUE_KEYS = (
+    "a/v sync drift",
+    "re-concat stripped",
+    "missing host performance",
+    "hard cut",
+)
+
+
+def _issue_hits(issues: list[str], keys: tuple[str, ...]) -> list[str]:
+    return [i for i in issues if any(k in i.lower() for k in keys)]
+
+
 def parse_seam_color(qa: dict[str, Any]) -> dict[str, Any]:
     passes = qa.get("passes") or []
     issues = qa.get("issues") or []
-    text = " ".join(passes + issues).lower()
+    pass_text = " ".join(passes).lower()
 
-    seam_ok = qa.get("pass", False) and not any(
-        k in text for k in ("re-concat stripped", "missing host performance", "a/v sync drift", "hard cut")
-    ) and any(k in text for k in ("xfade chain", "seamless mode active", "re-concat join preserved"))
+    color_hits = _issue_hits(issues, COLOR_ISSUE_KEYS)
+    seam_hits = _issue_hits(issues, SEAM_ISSUE_KEYS)
 
-    color_ok = qa.get("pass", False) and not any(
-        k in text
-        for k in (
-            "magenta",
-            "yellow-green",
-            "hue drift",
-            "lamp hue drift",
-            "grey_balance",
-            "loudness spread",
-        )
+    seamless_on = qa.get("seamless") or "seamless mode active" in pass_text
+    seam_joins = any(
+        k in pass_text for k in ("xfade chain", "re-concat join preserved", "extend chain")
     )
 
-    loudness_issue = next((i for i in issues if "loudness spread" in i.lower()), None)
-    magenta_issue = next((i for i in issues if "magenta" in i.lower() or "hue drift" in i.lower()), None)
-    seam_issue = next(
-        (
-            i
-            for i in issues
-            if any(k in i.lower() for k in ("sync drift", "re-concat stripped", "missing host performance"))
-        ),
-        None,
-    )
+    color_ok = qa.get("pass", False) and not color_hits
+    seam_ok = qa.get("pass", False) and not seam_hits and (not seamless_on or seam_joins)
 
     return {
-        "seam_ok": seam_ok if qa.get("pass") is not None else None,
-        "color_ok": color_ok if qa.get("pass") is not None else None,
-        "loudness_issue": loudness_issue,
-        "color_issue": magenta_issue or loudness_issue,
-        "seam_issue": seam_issue,
+        "seam_ok": seam_ok,
+        "color_ok": color_ok,
+        "color_issues": color_hits,
+        "seam_issues": seam_hits,
     }
 
 
@@ -204,7 +208,10 @@ def discover_productions() -> list[Path]:
         for qa_path in root.rglob("qa_report.json"):
             if any(part in SKIP_DIR_PARTS for part in qa_path.parts):
                 continue
-            found.append(qa_path.parent)
+            prod = qa_path.parent
+            if prod.name == "output":
+                prod = prod.parent
+            found.append(prod)
     # Dedupe; keep most recently qa'd per slug
     by_slug: dict[str, Path] = {}
     for prod in found:
@@ -246,13 +253,15 @@ def audit_row(prod_dir: Path, *, live: bool) -> dict[str, Any]:
         except (json.JSONDecodeError, OSError):
             pass
 
-    needs_rerender = not qa.get("pass", False) or not sc["seam_ok"] or not sc["color_ok"]
-    if qa.get("pass") and sc["seam_ok"] and sc["color_ok"]:
-        verdict = "CLEAN"
-    elif qa.get("pass") and (not sc["seam_ok"] or not sc["color_ok"]):
-        verdict = "MARGINAL"
-    else:
+    if not qa.get("pass", False):
         verdict = "NEEDS_RE-RENDER"
+        needs_rerender = True
+    elif sc["seam_ok"] and sc["color_ok"]:
+        verdict = "CLEAN"
+        needs_rerender = False
+    else:
+        verdict = "MARGINAL"
+        needs_rerender = True
 
     row: dict[str, Any] = {
         "slug": slug,

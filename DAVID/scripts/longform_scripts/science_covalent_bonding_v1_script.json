@@ -20,7 +20,7 @@
         "social",
         "streaming"
       ],
-      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_covalent_bonding_v1_20260619_011921.json",
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_covalent_bonding_v1_20260619_020035.json",
       "checklist_domains": {
         "row_1_synthetic_ownership": "MANUAL",
         "row_2_music_sync": "PASS",
@@ -37,13 +37,13 @@
       ],
       "rating_flags": [],
       "cara_status": "COMPLIANT",
-      "music_bed_id": "BED-CHE-002",
+      "music_bed_id": "BED-HIW-002",
       "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
       "row_2_music_sync": "PASS",
       "notes": [
         "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
         "Social = mass dissemination. Platform AI-label + community guidelines apply.",
-        "Row 2: Manifest-cleared music bed(s): BED-CHE-002 (STUDIO/Music_Sound/clearance_manifest.json)",
+        "Row 2: Manifest-cleared music bed(s): BED-HIW-002 (STUDIO/Music_Sound/clearance_manifest.json)",
         "Science Gate: illustrative-not-simulation policy applies.",
         "Revise and re-submit to Legal Gate (Gate 0)."
       ],
@@ -68,7 +68,7 @@
       "phenomenon": "Covalent bonding in water (H₂O)",
       "field": "chemistry",
       "key_measurement": "O–H bond length ~0.958 Å; H–O–H angle ~104.5° (NIST Chemistry WebBook, H₂O)",
-      "visualization_ref": "Science/reference_plates/chemistry/images/covalent-bonding_harvest.png",
+      "visualization_ref": "Science/reference_plates/chemistry/covalent_bonding_reference.jpg",
       "visualization_prompt": "Scientific chemistry visualization, water molecule H2O with shared electron pair density between oxygen and two hydrogens, bent geometry ~104.5 degrees, partial negative on oxygen and partial positive on hydrogens, ball-and-stick with transparent electron cloud lobes, neutral dark background, accurate relative angles, NOT TO SCALE on electron cloud exaggeration, 16:9 documentary fidelity",
       "principle_set": "jantzen_molecular_cellular",
       "plate_id": "@Sci-ChemBond-001",
@@ -106,7 +106,7 @@
     "use_identity_lock": false,
     "avatar_reference": "STUDIO/Cast/actors_roster/male/north_america/Julian_Cross/01_casting_shots/casting_turnaround_v1.jpg",
     "set_reference": "STUDIO/Pipeline/references/seamless_neutral_grey_reference.jpg",
-    "visualization_reference": "Science/reference_plates/chemistry/images/covalent-bonding_harvest.png",
+    "visualization_reference": "Science/reference_plates/chemistry/covalent_bonding_reference.jpg",
     "seamless": {
       "primary": "extend",
       "xfade_s": 0.2,
@@ -120,7 +120,7 @@
       "magenta_clamp": true
     },
     "music_bed": {
-      "track_id": "BED-CHE-002",
+      "track_id": "BED-HIW-002",
       "manifest": "STUDIO/Music_Sound/clearance_manifest.json"
     }
   },
@@ -171,7 +171,7 @@
       },
       "science_subject_ref": "COV-BOND-001",
       "visualization_prompt": "Water molecule covalent bonding diagram, bent H-O-H geometry 104.5 degrees, polar electron density shift toward oxygen, ball-and-stick plus transparent lobes, chemistry education fidelity",
-      "visualization_ref": "Science/reference_plates/chemistry/images/covalent-bonding_harvest.png",
+      "visualization_ref": "Science/reference_plates/chemistry/covalent_bonding_reference.jpg",
       "duration_raw": 10
     },
     {

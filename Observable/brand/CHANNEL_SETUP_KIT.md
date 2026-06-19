@@ -16,7 +16,7 @@
 | Banner (2560×1440) | ✅ Rendered — `brand/export/youtube_banner_2560x1440.jpg` |
 | Wordmark + monogram | ✅ Rendered — `brand/export/observable_wordmark*.{svg,png}`, `observable_monogram_O_800.png` |
 | Lower-third / end-card templates | ✅ Rendered — `brand/templates/` |
-| Intro sting (4s) | ⛔ **NOT RENDERED** — `brand/export/intro_sting_4s_1080p.mp4` |
+| Intro sting (4s) | ⏳ **QUEUED OBSERVATORY** — `STUDIO/Producers_Office/OBSERVATORY/handoffs/OBSERVABLE_intro_sting_4s_handoff_v186.json` |
 | First episode package | ⏳ In production (astro/chem slate; e.g. star lifecycle #184) — no upload_kit SHIP-cleared yet |
 | Live links / business email | ⛔ TBD (placeholders in About) |
 
@@ -106,7 +106,7 @@ When an episode's `upload_kit/` is gated GREEN + QA-pass, follow its own `CHECKL
 
 ## 8. Open TODOs before "go live"
 
-- [ ] (Optional) Render intro sting `brand/export/intro_sting_4s_1080p.mp4`
+- [ ] OBSERVATORY: render intro sting per `STUDIO/Producers_Office/OBSERVATORY/handoffs/OBSERVABLE_intro_sting_4s_handoff_v186.json` → `brand/export/intro_sting_4s_1080p.mp4`
 - [ ] Confirm handle `@ObservableScience` available; claim it
 - [ ] Insert business email + live links in About
 - [ ] Create the 5 playlists
