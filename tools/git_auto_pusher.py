@@ -6,10 +6,30 @@ Run this in one dedicated terminal.
 """
 
 import argparse
+import json
 import subprocess
 import time
 import datetime
 import sys
+from pathlib import Path
+
+HARD_COMMIT_PAUSE_GATE = Path(__file__).resolve().parents[1] / "Nexus" / "gates" / "T4_244_HARD_COMMIT_PAUSE.json"
+
+
+def hard_commit_paused() -> str | None:
+    """Return pause reason when T4 #244 gate is ACTIVE; else None."""
+    if not HARD_COMMIT_PAUSE_GATE.is_file():
+        return None
+    try:
+        gate = json.loads(HARD_COMMIT_PAUSE_GATE.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return f"T4 #244 gate unreadable — manual commit only ({HARD_COMMIT_PAUSE_GATE})"
+    if gate.get("state") == "ACTIVE":
+        return (
+            f"T4 #{gate.get('issue', 244)} HARD COMMIT PAUSED "
+            f"(verdict={gate.get('verdict', 'RED')}) — NEXUS sign-off required"
+        )
+    return None
 
 def run_git(args, cwd):
     """Run a git command and return output or None on error."""
@@ -47,6 +67,13 @@ def stage_all_changes(repo_path):
     return run_git(["add", "-A", "--", "."], repo_path) is not None
 
 def auto_commit_push(repo_path, interval_minutes):
+    pause = hard_commit_paused()
+    if pause:
+        print(f" Git Auto Pusher BLOCKED — {pause}")
+        print(f"   Gate: {HARD_COMMIT_PAUSE_GATE}")
+        print("   Manual commit only until gate state != ACTIVE.\n")
+        sys.exit(0)
+
     print(f" Git Auto Pusher started")
     print(f"   Repo: {repo_path}")
     print(f"   Interval: {interval_minutes} minutes")
@@ -59,6 +86,12 @@ def auto_commit_push(repo_path, interval_minutes):
             if status is None:
                 print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] Git status failed. Retrying...\n")
                 time.sleep(60)
+                continue
+
+            pause = hard_commit_paused()
+            if pause:
+                print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] {pause}")
+                time.sleep(interval_minutes * 60)
                 continue
 
             if status:

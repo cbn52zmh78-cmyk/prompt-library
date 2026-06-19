@@ -1,0 +1,69 @@
+{
+  "issue": 244,
+  "state": "AMBER",
+  "target": "AMBER on validated single-pass; GREEN after dual-verify + #218",
+  "proof_218": "HELD",
+  "commit": "HOLD \u2014 NEXUS + human-eye sign-off required",
+  "clamp_method": "saturation-reduction",
+  "clamp_baseline": {
+    "gamma_b": 0.9,
+    "saturation": 0.93
+  },
+  "clamp_ceiling": "Safety net \u2014 cannot pass raw-magenta 0.634 alone",
+  "magenta_max": 0.42,
+  "generated_at": "2026-06-19T15:51:46.986959+00:00",
+  "script": "scripts\\longform_scripts\\david_latin_corpus_v1_script.json",
+  "production": "productions\\david_latin_corpus_v1_longform_v1",
+  "shots": [
+    {
+      "shot_id": "01_cold_open",
+      "resolution": "480p",
+      "clamp_vf": "eq=gamma_r=1.00:gamma_g=0.98:gamma_b=0.90:saturation=0.93:brightness=0.00",
+      "clamp_stage": "process_shot_segment",
+      "raw_chain": "productions\\david_latin_corpus_v1_longform_v1\\shots\\chain_01_cold_open.mp4",
+      "scaled_input": "productions\\david_latin_corpus_v1_longform_v1\\proof_244\\shots\\chain_01_cold_open_480p.mp4",
+      "processed_output": "productions\\david_latin_corpus_v1_longform_v1\\proof_244\\shots\\chain_01_cold_open_480p_processed.mp4",
+      "before": {
+        "magenta": 0.6388,
+        "host_blue_mean": 58.1,
+        "host_br_ratio": 1.006
+      },
+      "after": {
+        "magenta": 0.2881,
+        "host_blue_mean": 47.8,
+        "host_br_ratio": 0.898
+      },
+      "delta": {
+        "magenta": -0.3507,
+        "host_blue_mean": -10.3
+      },
+      "verdict": "AMBER",
+      "clamp_marker": null
+    },
+    {
+      "shot_id": "05_method",
+      "resolution": "480p",
+      "clamp_vf": "eq=gamma_r=1.00:gamma_g=0.98:gamma_b=0.90:saturation=0.93:brightness=0.00",
+      "clamp_stage": "process_shot_segment",
+      "raw_chain": "productions\\david_latin_corpus_v1_longform_v1\\shots\\chain_05_method.mp4",
+      "scaled_input": "productions\\david_latin_corpus_v1_longform_v1\\proof_244\\shots\\chain_05_method_480p.mp4",
+      "processed_output": "productions\\david_latin_corpus_v1_longform_v1\\proof_244\\shots\\chain_05_method_480p_processed.mp4",
+      "before": {
+        "magenta": 0.6652,
+        "host_blue_mean": 56.2,
+        "host_br_ratio": 1.043
+      },
+      "after": {
+        "magenta": 0.3057,
+        "host_blue_mean": 45.9,
+        "host_br_ratio": 0.931
+      },
+      "delta": {
+        "magenta": -0.3595,
+        "host_blue_mean": -10.3
+      },
+      "verdict": "AMBER",
+      "clamp_marker": null
+    }
+  ]
+}

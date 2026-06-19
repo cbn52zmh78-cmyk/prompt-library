@@ -120,7 +120,13 @@ MAGENTA_CLAMP_STRONG_VF = (
 DARK_SCENE_MAGENTA_CLAMP_VF = (
     "eq=gamma_r=1.14:gamma_g=1.05:gamma_b=0.68:saturation=0.94:brightness=0.02"
 )
-ARCHIVE_NEUTRAL_CLAMP_VF = f"{NEUTRAL_WB_VF},{MAGENTA_CLAMP_VF},{SKIN_NEUTRAL_VF}"
+# #244 T4 — saturation-reduction safety net (single-pass; ceiling ≠ raw-magenta 0.634 fix alone)
+MAGENTA_SATURATION_CLAMP_VF = (
+    "eq=gamma_r=1.00:gamma_g=0.98:gamma_b=0.90:saturation=0.93:brightness=0.00"
+)
+CLAMP_STAGE_ISSUE = 244
+CLAMP_STAGE_NAME = "process_shot_segment"
+ARCHIVE_NEUTRAL_CLAMP_VF = MAGENTA_SATURATION_CLAMP_VF
 CLINICAL_NEUTRAL_CLAMP_VF = f"{NEUTRAL_WB_VF},{MAGENTA_CLAMP_VF},{SKIN_NEUTRAL_VF}"
 WARM_GOLD_CLAMP_VF = ARCHIVE_NEUTRAL_CLAMP_VF
 MAGENTA_SCORE_MAX = 0.42
@@ -440,6 +446,40 @@ def _effective_reground_interval(
     return opts.reground_interval
 
 
+def _clamp_stage_marker(out: Path) -> Path:
+    return out.with_suffix(out.suffix + ".clamp244.json")
+
+
+def _clamp_already_applied(out: Path) -> bool:
+    marker = _clamp_stage_marker(out)
+    if not marker.is_file():
+        return False
+    try:
+        data = json.loads(marker.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return False
+    return (
+        data.get("issue") == CLAMP_STAGE_ISSUE
+        and data.get("stage") == CLAMP_STAGE_NAME
+        and data.get("vf") == MAGENTA_SATURATION_CLAMP_VF
+        and out.is_file()
+        and out.stat().st_size > 10_000
+    )
+
+
+def _write_clamp_stage_marker(out: Path, *, magenta: float, host_b: float) -> None:
+    _clamp_stage_marker(out).write_text(
+        json.dumps({
+            "issue": CLAMP_STAGE_ISSUE,
+            "stage": CLAMP_STAGE_NAME,
+            "vf": MAGENTA_SATURATION_CLAMP_VF,
+            "magenta": round(magenta, 4),
+            "host_blue_mean": round(host_b, 1),
+        }, indent=2),
+        encoding="utf-8",
+    )
+
+
 def _magenta_clamp_vf(
     *,
     dark_scene: bool,
@@ -448,7 +488,7 @@ def _magenta_clamp_vf(
     archive_neutral: bool = False,
 ) -> str:
     if archive_neutral and not dark_scene:
-        return ARCHIVE_NEUTRAL_CLAMP_VF if not strong else f"{ARCHIVE_NEUTRAL_CLAMP_VF},{MAGENTA_CLAMP_STRONG_VF}"
+        return MAGENTA_SATURATION_CLAMP_VF
     if strong or dark_scene:
         base = MAGENTA_CLAMP_STRONG_VF if strong else DARK_SCENE_MAGENTA_CLAMP_VF
     else:
@@ -1754,71 +1794,89 @@ def apply_per_shot_magenta_clamp(
     dark_scene: bool = False,
     lamp_lock: bool = True,
     archive_neutral: bool = False,
+    neutral_generation: bool = False,
 ) -> Path:
-    """Per-shot magenta suppression — within-clip, independent of --match-color joins."""
-    ff = _ffmpeg_exe()
+    """Per-shot magenta suppression — #244 single-pass at process_shot_segment only."""
     out.parent.mkdir(parents=True, exist_ok=True)
+    if archive_neutral and _clamp_already_applied(out):
+        _log(f"[#244] clamp idempotent skip — already stamped {out.name}")
+        return out
+
     clamp_vf = _magenta_clamp_vf(
         dark_scene=dark_scene, lamp_lock=lamp_lock, archive_neutral=archive_neutral,
     )
-    cur = video
     staged = out.with_name(f"{out.stem}_clamp_stage.mp4")
 
-    # Dark/high-contrast: eq-only within-clip — avatar histogram match drifts magenta.
-    use_histogram = (
-        not dark_scene
-        and color_ref.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp")
-    )
-    if use_histogram:
-        vfilter = (
-            "[0:v][1:v]histogrammatching=pattern=1:strength=0.55[matched];"
-            f"[matched]{clamp_vf}[outv]"
-        )
-        hist_cmd = [
-            ff, "-y", "-i", str(video), "-loop", "1", "-i", str(color_ref),
-            "-filter_complex", vfilter,
-            "-map", "[outv]", "-c:v", "libx264", "-pix_fmt", "yuv420p",
-        ]
-        if has_audio_stream(video):
-            hist_cmd.extend(["-map", "0:1", "-c:a", "aac", "-b:a", "192k"])
-        hist_cmd.extend(["-shortest", str(staged)])
-        r = subprocess.run(hist_cmd, capture_output=True, text=True)
-        if r.returncode == 0:
-            cur = staged
-        else:
-            _log("[seamless] per-shot histogram clamp failed; eq-only fallback")
-            use_histogram = False
-
-    if not use_histogram:
+    # #244 Archive-neutral: ONE saturation-reduction eq pass — no histogram stack, no strong loop.
+    if archive_neutral and not dark_scene:
         if not _run_video_eq_pass(video, staged, clamp_vf):
             shutil.copy2(video, out)
             return out
         cur = staged
-
-    max_strong = 4 if dark_scene else 2
-    for pass_n in range(max_strong):
-        mag = probe_magenta_score(cur)
-        if mag <= MAGENTA_SCORE_MAX:
-            break
-        strong_vf = _magenta_clamp_vf(
-            dark_scene=True, lamp_lock=lamp_lock, strong=True, archive_neutral=archive_neutral,
+    else:
+        ff = _ffmpeg_exe()
+        cur = video
+        use_histogram = (
+            not dark_scene
+            and color_ref.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp")
         )
-        strong_out = out.with_name(f"{out.stem}_strong{pass_n}.mp4")
-        if not _run_video_eq_pass(cur, strong_out, strong_vf):
-            break
-        cur = strong_out
-        _log(f"[magenta] within-clip strong pass {pass_n + 1}/{max_strong} (score was {mag:.3f})")
+        if use_histogram:
+            vfilter = (
+                "[0:v][1:v]histogrammatching=pattern=1:strength=0.55[matched];"
+                f"[matched]{clamp_vf}[outv]"
+            )
+            hist_cmd = [
+                ff, "-y", "-i", str(video), "-loop", "1", "-i", str(color_ref),
+                "-filter_complex", vfilter,
+                "-map", "[outv]", "-c:v", "libx264", "-pix_fmt", "yuv420p",
+            ]
+            if has_audio_stream(video):
+                hist_cmd.extend(["-map", "0:1", "-c:a", "aac", "-b:a", "192k"])
+            hist_cmd.extend(["-shortest", str(staged)])
+            r = subprocess.run(hist_cmd, capture_output=True, text=True)
+            if r.returncode == 0:
+                cur = staged
+            else:
+                _log("[seamless] per-shot histogram clamp failed; eq-only fallback")
+                use_histogram = False
 
-    if archive_neutral and not dark_scene:
-        accented = out.with_name(f"{out.stem}_lamp_accent.mp4")
-        apply_lamp_accent_local(cur, accented)
-        cur = accented
+        if not use_histogram:
+            if not _run_video_eq_pass(video, staged, clamp_vf):
+                shutil.copy2(video, out)
+                return out
+            cur = staged
+
+        max_strong = 4 if dark_scene else 2
+        for pass_n in range(max_strong):
+            mag = probe_magenta_score(cur)
+            if mag <= MAGENTA_SCORE_MAX:
+                break
+            strong_vf = _magenta_clamp_vf(
+                dark_scene=True, lamp_lock=lamp_lock, strong=True, archive_neutral=False,
+            )
+            strong_out = out.with_name(f"{out.stem}_strong{pass_n}.mp4")
+            if not _run_video_eq_pass(cur, strong_out, strong_vf):
+                break
+            cur = strong_out
+            _log(f"[magenta] within-clip strong pass {pass_n + 1}/{max_strong} (score was {mag:.3f})")
+
+        if archive_neutral and not dark_scene and not neutral_generation:
+            accented = out.with_name(f"{out.stem}_lamp_accent.mp4")
+            apply_lamp_accent_local(cur, accented)
+            cur = accented
 
     staging = out.with_name(f"{out.stem}__clamp_staging.mp4")
     if staging.exists():
         staging.unlink(missing_ok=True)
     shutil.move(str(cur), str(staging))
     os.replace(staging, out)
+    if archive_neutral:
+        cast = probe_color_cast_score(out)
+        _write_clamp_stage_marker(
+            out,
+            magenta=probe_magenta_score(out),
+            host_b=cast.get("host_blue_mean", 0.0),
+        )
     return out
 
 
@@ -1831,34 +1889,37 @@ def match_color_segment(
     color_ref: Path | None = None,
     archive_neutral: bool = False,
     neutral_grade: bool = False,
+    skip_post_clamp: bool = False,
 ) -> Path:
     """Match *target* to locked *color_ref* (David-001), not drifted prior segment."""
     ff = _ffmpeg_exe()
     out.parent.mkdir(parents=True, exist_ok=True)
     ref = color_ref or reference
-    if neutral_grade:
+    if skip_post_clamp:
+        post_vf = None
+    elif neutral_grade:
         post_vf = CLINICAL_NEUTRAL_CLAMP_VF
     elif archive_neutral:
-        post_vf = WARM_GOLD_CLAMP_VF
+        post_vf = None  # #244 — clamp already applied in process_shot_segment
     elif lamp_lock:
         post_vf = f"{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}"
     else:
         post_vf = MAGENTA_CLAMP_VF
     if ref.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp"):
-        if lamp_lock:
+        if post_vf:
             vfilter = (
                 f"[0:v][1:v]histogrammatching=pattern=1:strength=0.62[matched];"
                 f"[matched]{post_vf}[outv]"
             )
         else:
-            vfilter = f"[0:v][1:v]histogrammatching=pattern=1:strength=0.62[matched];[matched]{MAGENTA_CLAMP_VF}[outv]"
+            vfilter = "[0:v][1:v]histogrammatching=pattern=1:strength=0.62[outv]"
         cmd = [
             ff, "-y", "-i", str(target), "-loop", "1", "-i", str(ref),
             "-filter_complex", vfilter,
             "-map", "[outv]", "-map", "0:a?", "-c:v", "libx264", "-pix_fmt", "yuv420p",
             "-c:a", "copy", "-shortest", str(out),
         ]
-    elif lamp_lock:
+    elif lamp_lock and post_vf:
         vfilter = (
             f"[0:v][1:v]histogrammatching=pattern=1:strength=0.55[matched];"
             f"[matched]{post_vf}[outv]"
@@ -1879,20 +1940,31 @@ def match_color_segment(
         ]
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode != 0:
-        if neutral_grade:
+        if skip_post_clamp:
+            _log("[#244] match-color failed; pass-through (clamp already at process_shot_segment)")
+            shutil.copy2(target, out)
+        elif neutral_grade:
             _log("[seamless] match-color filter unavailable; clinical neutral WB fallback")
             vf = CLINICAL_NEUTRAL_CLAMP_VF
+            cmd_eq = [
+                ff, "-y", "-i", str(target), "-vf", vf,
+                "-c:v", "libx264", "-pix_fmt", "yuv420p",
+                "-map", "0:v", "-map", "0:a?", "-c:a", "copy", str(out),
+            ]
+            r2 = subprocess.run(cmd_eq, capture_output=True, text=True)
+            if r2.returncode != 0:
+                shutil.copy2(target, out)
         else:
             _log("[seamless] match-color filter unavailable; warm-gold + magenta clamp fallback")
             vf = WARM_GOLD_CLAMP_VF if lamp_lock else MAGENTA_CLAMP_VF
-        cmd_eq = [
-            ff, "-y", "-i", str(target), "-vf", vf,
-            "-c:v", "libx264", "-pix_fmt", "yuv420p",
-            "-map", "0:v", "-map", "0:a?", "-c:a", "copy", str(out),
-        ]
-        r2 = subprocess.run(cmd_eq, capture_output=True, text=True)
-        if r2.returncode != 0:
-            shutil.copy2(target, out)
+            cmd_eq = [
+                ff, "-y", "-i", str(target), "-vf", vf,
+                "-c:v", "libx264", "-pix_fmt", "yuv420p",
+                "-map", "0:v", "-map", "0:a?", "-c:a", "copy", str(out),
+            ]
+            r2 = subprocess.run(cmd_eq, capture_output=True, text=True)
+            if r2.returncode != 0:
+                shutil.copy2(target, out)
     return out
 
 
@@ -1909,7 +1981,11 @@ def process_shot_segment(
     work = shots_dir
     cur = video
     dark_scene = _is_dark_scene(refs, shot=shot)
-    archive_neutral = _refs_is_archive(refs) and opts.lamp_lock and not dark_scene
+    archive_neutral = (
+        _refs_is_archive(refs)
+        and not dark_scene
+        and (opts.neutral_generation or opts.lamp_lock)
+    )
     target_dur = float(
         effective_shot_duration(shot, seamless=True)
         if shot.get("duration") is not None
@@ -1921,6 +1997,7 @@ def process_shot_segment(
         or opts.match_color
         or opts.neutral_grade
         or (opts.enabled and opts.lamp_lock and _refs_is_archive(refs))
+        or (opts.enabled and opts.neutral_generation and _refs_is_archive(refs))
     )
     if needs_grade:
         clamped = work / f"{video.stem}_clamped.mp4"
@@ -1931,6 +2008,7 @@ def process_shot_segment(
                 cur, clamped, color_ref,
                 dark_scene=dark_scene, lamp_lock=opts.lamp_lock,
                 archive_neutral=archive_neutral,
+                neutral_generation=opts.neutral_generation,
             )
         cur = clamped
 
@@ -1962,6 +2040,13 @@ def process_shot_segment(
         staging.unlink(missing_ok=True)
     shutil.move(str(cur), str(staging))
     os.replace(staging, out)
+    if archive_neutral and needs_grade and not opts.neutral_grade:
+        cast = probe_color_cast_score(out)
+        _write_clamp_stage_marker(
+            out,
+            magenta=probe_magenta_score(out),
+            host_b=cast.get("host_blue_mean", 0.0),
+        )
     return out
 
 
@@ -2046,6 +2131,8 @@ def _assemble_xfade_chain(
             cut_on_motion=opts.cut_on_motion,
             lamp_lock=opts.lamp_lock,
             neutral_grade=opts.neutral_grade,
+            neutral_generation=opts.neutral_generation,
+            magenta_clamp=opts.magenta_clamp,
             color_ref=color_ref,
             work_dir=shots_dir,
         )
@@ -2259,6 +2346,8 @@ def _write_seamless_final(
             cut_on_motion=False,
             lamp_lock=opts.lamp_lock,
             neutral_grade=opts.neutral_grade,
+            neutral_generation=opts.neutral_generation,
+            magenta_clamp=opts.magenta_clamp,
             color_ref=color_ref,
             work_dir=shots_dir,
         )
@@ -2281,6 +2370,8 @@ def concat_xfade_two(
     cut_on_motion: bool = False,
     lamp_lock: bool = True,
     neutral_grade: bool = False,
+    neutral_generation: bool = False,
+    magenta_clamp: bool = True,
     color_ref: Path | None = None,
     work_dir: Path | None = None,
 ) -> Path:
@@ -2295,16 +2386,18 @@ def concat_xfade_two(
         matched = work / f"{right.stem}_matched_{out.stem}.mp4"
         ref = color_ref or left
         archive_neutral = (
-            lamp_lock
+            (lamp_lock or neutral_generation)
             and not neutral_grade
             and any(k in str(ref).lower() for k in ("archive", "david_identity", "david_avatar"))
         )
+        skip_post_clamp = archive_neutral and magenta_clamp
         match_color_segment(
             left, right, matched,
             lamp_lock=lamp_lock, color_ref=ref, archive_neutral=archive_neutral,
             neutral_grade=neutral_grade,
+            skip_post_clamp=skip_post_clamp,
         )
-        if archive_neutral:
+        if archive_neutral and not neutral_generation:
             accented = work / f"{right.stem}_matched_accent_{out.stem}.mp4"
             apply_lamp_accent_local(matched, accented)
             b = accented
@@ -2334,6 +2427,8 @@ def concat_xfade_chain(
     cut_on_motion: bool = False,
     lamp_lock: bool = True,
     neutral_grade: bool = False,
+    neutral_generation: bool = False,
+    magenta_clamp: bool = True,
     color_ref: Path | None = None,
     work_dir: Path | None = None,
 ) -> Path:
@@ -2356,6 +2451,8 @@ def concat_xfade_chain(
             cut_on_motion=cut_on_motion,
             lamp_lock=lamp_lock,
             neutral_grade=neutral_grade,
+            neutral_generation=neutral_generation,
+            magenta_clamp=magenta_clamp,
             color_ref=color_ref,
             work_dir=work,
         )

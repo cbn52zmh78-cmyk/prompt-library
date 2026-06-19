@@ -2,6 +2,22 @@ $ErrorActionPreference = 'Stop'
 $root = 'C:\Users\NCG\Videos\Grok Projects'
 Set-Location $root
 
+# T4 #244 — HARD COMMIT PAUSED until NEXUS sign-off closes issue
+$pauseGate = Join-Path $root 'Nexus\gates\T4_244_HARD_COMMIT_PAUSE.json'
+if (Test-Path $pauseGate) {
+    try {
+        $gate = Get-Content $pauseGate -Raw | ConvertFrom-Json
+        if ($gate.state -eq 'ACTIVE') {
+            Write-Host "HARD COMMIT PAUSED — T4 #244 ($($gate.gate)) state=$($gate.state) verdict=$($gate.verdict)"
+            Write-Host "Manual commit only; requires NEXUS sign-off. Gate: $pauseGate"
+            exit 0
+        }
+    } catch {
+        Write-Host "HARD COMMIT PAUSED — T4 #244 gate unreadable; manual commit only. Gate: $pauseGate"
+        exit 0
+    }
+}
+
 function Commit-Repo {
     param(
         [string]$RepoPath,
