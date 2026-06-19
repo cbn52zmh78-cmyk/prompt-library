@@ -4,9 +4,12 @@ Detects generation-source casts post-grade cannot fix:
   - Legacy yellow-green (g>r) misses warm/blue-deficit host (yg≈0.007, CCB≈0.30).
   - Blue-starvation (B≈8) on low-key archive masters (proof_194 trap).
 
-Primary clinical gate (@Set-Seamless-Neutral-001):
-  clinical_channel_balance (CCB) — absolute host |R−G|/255 + |B−G|/255; FAIL > 0.12
-  on skin-tones (lum 80–220). Proven to fail all +66 legacy false-pass proof frames.
+Primary host gate (archive + clinical):
+  rgb_skew — ((R+G)/2 − B) / 255 on host crop; warm/blue-deficit casts FAIL > 0.12.
+  Catches proof_194 frames the legacy yg gate passed at ~0.007.
+
+Clinical seamless (@Set-Seamless-Neutral-001):
+  clinical_channel_balance (CCB) — |R−G|/255 + |B−G|/255; FAIL > 0.12 on lum 80–220.
 """
 
 from __future__ import annotations
@@ -19,6 +22,7 @@ YELLOW_GREEN_SCORE_MAX = 0.12
 YELLOW_GREEN_LEGACY_PASS_MAX = 0.012  # +66 cohort: legacy gate passed at ~0.007
 GREY_CAST_COHORT_MIN = 0.20  # T4 #199 audit: visible cast missed by yg-only
 CLINICAL_CHANNEL_BALANCE_MAX = 0.12
+RGB_SKEW_MAX = 0.12  # (R+G)/2−B on host; proof_194 after ≈0.20, neutral ref ≈0.06
 
 # Low-key archive / concat-only trap (Latin proof_194: host B≈5–8).
 BLUE_STARVATION_FRACTION_MAX = 0.50
@@ -68,6 +72,12 @@ def blue_deficit_index(arr: np.ndarray) -> float:
     return (min(r, g) - b) / 255.0
 
 
+def rgb_skew_index(arr: np.ndarray) -> float:
+    """Warm/blue-deficit host skew: ((R+G)/2 − B) / 255 — fails proof_194, passes neutral."""
+    r, g, b, _ = host_channel_means(arr)
+    return ((r + g) / 2.0 - b) / 255.0
+
+
 def measure_color_cast(arr: np.ndarray) -> dict[str, float]:
     """Host-region color-cast metrics from RGB uint8 array."""
     region = host_region(arr).astype(np.float64)
@@ -78,6 +88,7 @@ def measure_color_cast(arr: np.ndarray) -> dict[str, float]:
             "host_br_ratio": 1.0,
             "host_blue_mean": 255.0,
             "warm_cast_index": 0.0,
+            "rgb_skew": 0.0,
             "clinical_channel_balance": 0.0,
             "yellow_green": 0.0,
             "lum": 0.0,
@@ -98,6 +109,7 @@ def measure_color_cast(arr: np.ndarray) -> dict[str, float]:
         "host_br_ratio": br,
         "host_blue_mean": b,
         "warm_cast_index": (r - b) / 255.0,
+        "rgb_skew": rgb_skew_index(arr),
         "clinical_channel_balance": clinical_channel_balance(arr),
         "yellow_green": yellow_green_fraction(arr),
         "lum": lum,
@@ -107,6 +119,9 @@ def measure_color_cast(arr: np.ndarray) -> dict[str, float]:
 def color_cast_breaches(metrics: dict[str, float]) -> list[str]:
     issues: list[str] = []
     lum = metrics.get("lum", 0.0)
+    skew = metrics.get("rgb_skew", 0.0)
+    if skew > RGB_SKEW_MAX:
+        issues.append(f"rgb_skew {skew:.4f} > {RGB_SKEW_MAX}")
     ccb = metrics.get("clinical_channel_balance", 0.0)
     if 80 <= lum <= 220 and ccb > CLINICAL_CHANNEL_BALANCE_MAX:
         issues.append(f"clinical_channel_balance {ccb:.4f} > {CLINICAL_CHANNEL_BALANCE_MAX}")
@@ -138,6 +153,7 @@ def evaluate_clinical_cast(arr: np.ndarray) -> dict[str, Any]:
         "b_mean": round(b, 1),
         "lum": round(m["lum"], 1),
         "yellow_green": round(m["yellow_green"], 4),
+        "rgb_skew": round(m["rgb_skew"], 4),
         "clinical_channel_balance": round(m["clinical_channel_balance"], 4),
         "blue_deficit": round(blue_deficit_index(arr), 4),
         "blue_starvation": any("blue_starvation" in b for b in breaches),

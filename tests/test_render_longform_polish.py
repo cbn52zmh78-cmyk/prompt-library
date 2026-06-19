@@ -16,7 +16,13 @@ if str(DAVID_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(DAVID_SCRIPTS))
 
 import render_longform as rl  # noqa: E402
-from render_longform import SeamlessOptions, resolve_render_exit_code  # noqa: E402
+from render_longform import (  # noqa: E402
+    DEFAULT_XFADE_S,
+    MIN_XFADE_S,
+    SeamlessOptions,
+    resolve_render_exit_code,
+    resolve_xfade_s,
+)
 
 STAR_SCRIPT = (
     ROOT
@@ -24,6 +30,61 @@ STAR_SCRIPT = (
 )
 STAR_PROD = ROOT / "STUDIO/Productions/Editorial/science_star_lifecycle_v1_longform_v1"
 RENDER = DAVID_SCRIPTS / "render_longform.py"
+
+
+def test_resolve_xfade_s_floors_legacy_0_2():
+    assert resolve_xfade_s(cli=None, script_seam={"xfade_s": 0.2}) == MIN_XFADE_S
+    assert resolve_xfade_s(cli=0.2, script_seam={}) == MIN_XFADE_S
+    assert resolve_xfade_s(cli=None, script_seam={}) == DEFAULT_XFADE_S
+
+
+def test_write_seamless_final_uses_host_join_not_raw_host(tmp_path: Path):
+    host = tmp_path / "host_performance_extend.mp4"
+    trimmed = tmp_path / "host_performance_trimmed.mp4"
+    out = tmp_path / "david_slug_seamless_v1.mp4"
+    host.write_bytes(b"raw" * 5_000)
+    trimmed.write_bytes(b"trim" * 5_000)
+    opts = SeamlessOptions(enabled=True, xfade_s=DEFAULT_XFADE_S)
+
+    rl._write_seamless_final(trimmed, None, out, opts=opts, color_ref=None, shots_dir=tmp_path)
+    assert out.read_bytes() == trimmed.read_bytes()
+    assert out.read_bytes() != host.read_bytes()
+
+
+def test_stale_host_without_xfade_state_forces_frame_chain(tmp_path: Path):
+    shots_dir = tmp_path / "shots"
+    shots_dir.mkdir()
+    shots = [
+        {"id": "01_hook", "duration": 8, "video_prompt": "CONTINUITY LOCK @David-001"},
+        {"id": "02_stakes", "duration": 9, "video_prompt": "CONTINUITY LOCK @David-001"},
+    ]
+    host = shots_dir / "host_performance_extend.mp4"
+    host.write_bytes(b"stale-ungraded" * 800)
+    out_path = host
+    opts = SeamlessOptions(enabled=True, loudnorm=True)
+    refs = {
+        "avatar_file": str(ROOT / "STUDIO/Pipeline/references/seamless_neutral_reference.jpg"),
+        "avatar_url": "https://example.invalid/avatar.jpg",
+        "model_video": "grok-imagine-video-1.5",
+        "resolution": "480p",
+        "voice_suffix": "voice synthetic host only",
+        "set_file": str(ROOT / "DAVID/productions/host_identity_v1/references/archive_set_reference.jpg"),
+    }
+
+    with (
+        patch.object(rl, "resolve_color_reference", return_value=None),
+        patch.object(rl, "render_frame_chain_performance", return_value=(out_path, [], "frame_chain")) as fc,
+    ):
+        rl.render_extend_performance(
+            shots,
+            client=None,
+            refs=refs,
+            opts=opts,
+            out_path=out_path,
+            shots_dir=shots_dir,
+            concat_only=False,
+        )
+    fc.assert_called_once()
 
 
 def test_apply_grade_policy_disables_lamp_lock_for_clinical_neutral():

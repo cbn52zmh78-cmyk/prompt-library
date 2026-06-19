@@ -49,10 +49,12 @@ from color_cast_qa import (
     BLUE_STARVATION_FRACTION_MAX,
     HOST_BLUE_MEAN_MIN,
     HOST_BR_RATIO_MIN,
+    RGB_SKEW_MAX,
     color_cast_breaches,
     color_cast_passes,
     measure_color_cast,
 )
+from frame_level_color_seam_qa import detect_join_issues
 
 MAGENTA_SCORE_MAX = 0.42
 YELLOW_GREEN_SCORE_MAX = 0.12
@@ -135,6 +137,7 @@ def verify(master: Path, fps: float) -> dict:
             "blue_starvation": round(cast["blue_starvation_fraction"], 4),
             "host_br_ratio": round(cast["host_br_ratio"], 4),
             "host_blue_mean": round(cast["host_blue_mean"], 2),
+            "rgb_skew": round(cast["rgb_skew"], 4),
             "clinical_channel_balance": round(cast["clinical_channel_balance"], 4),
             "color_cast_pass": color_cast_passes(cast),
             "_cast_metrics": cast,
@@ -173,6 +176,13 @@ def verify(master: Path, fps: float) -> dict:
     starves = [r["blue_starvation"] for r in rows]
     brs = [r["host_br_ratio"] for r in rows]
     bmeans = [r["host_blue_mean"] for r in rows]
+    skews = [r["rgb_skew"] for r in rows]
+    arrays = [np.asarray(Image.open(proof_dir / r["frame"]).convert("RGB")) for r in rows]
+    join_issues = detect_join_issues(arrays, fps)
+
+    color_pass = color_pass and not any(
+        j["kind"] in ("hard_cut", "join_color_seam", "skew_discontinuity") for j in join_issues
+    )
 
     return {
         "master": str(master),
@@ -186,6 +196,7 @@ def verify(master: Path, fps: float) -> dict:
             "blue_starvation_max": BLUE_STARVATION_FRACTION_MAX,
             "host_br_ratio_min": HOST_BR_RATIO_MIN,
             "host_blue_mean_min": HOST_BLUE_MEAN_MIN,
+            "rgb_skew_max": RGB_SKEW_MAX,
         },
         "measured": {
             "magenta_max": max(mags), "magenta_mean": round(float(np.mean(mags)), 4),
@@ -194,8 +205,11 @@ def verify(master: Path, fps: float) -> dict:
             "blue_starvation_max": max(starves),
             "host_br_ratio_min": min(brs),
             "host_blue_mean_min": min(bmeans),
+            "rgb_skew_max": max(skews),
             "color_cast_fail_frames": len(cast_bad),
+            "join_issues": len(join_issues),
         },
+        "join_issues": join_issues,
         "breaches": {
             "magenta": [(r["t_s"], r["magenta"]) for r in mag_bad],
             "yellow_green": [(r["t_s"], r["yellow_green"]) for r in yg_bad],
@@ -246,7 +260,9 @@ def main() -> int:
         print(f"  blue-starvation   max {m.get('blue_starvation_max')}  (<= {BLUE_STARVATION_FRACTION_MAX})")
         print(f"  host B/R          min {m.get('host_br_ratio_min')}  (>= {HOST_BR_RATIO_MIN})")
         print(f"  host B mean       min {m.get('host_blue_mean_min')}  (>= {HOST_BLUE_MEAN_MIN})")
+        print(f"  rgb_skew          max {m.get('rgb_skew_max')}  (<= {RGB_SKEW_MAX})")
         print(f"  color_cast fails  {m.get('color_cast_fail_frames')} frames")
+        print(f"  join issues       {m.get('join_issues')}")
         print(f"  grey drift            {m.get('grey_balance_drift')}  (<= {GREY_BALANCE_DRIFT_MAX})")
         print(f"  json self-report pass={result.get('json_self_report_pass')}  ->  coherence: {result['coherence']}")
         for axis, items in result.get("breaches", {}).items():

@@ -1,0 +1,58 @@
+{
+  "issue": 243,
+  "handoff_to": "T1",
+  "status": "SPEC_LOCKED",
+  "no_render": true,
+  "problem": "Generation source blue-starved (B≈8/255). Post-grade cannot restore collapsed blue channel.",
+  "fix": "Rewrite all generation prompts: balanced/neutral white key (5000K) with real blue in skin/shadows; brass lamp 3200K = localized desk accent pool only.",
+  "kelvin_stack": {
+    "ambient_key": 5000,
+    "fill_bounce": 5200,
+    "fill_ratio_max": 0.25,
+    "lamp_accent": 3200,
+    "lamp_coverage_max_pct": 30,
+    "lamp_placement": "desk quadrant lower-right — desk surface, codex page, lamp shade only; NOT face, NOT shelves, NOT full frame"
+  },
+  "qa_generation_targets": {
+    "host_blue_mean_min": 40,
+    "host_br_ratio_min": 0.35,
+    "blue_starvation_fraction_max": 0.30
+  },
+  "blocks": {
+    "david_identity_lighting_lock": "LIGHTING LOCK @David-001 (#243): neutral balanced 5000K white key on face, neck, and charcoal sweater — natural documentary skin with intact blue channel (RGB balanced; B≥40/255 in midtones, B/R≥0.35); soft 5200K shelf-bounce fill at ≤25% intensity under key; brass desk lamp 3200K is a tight motivated practical accent ONLY on the desk quadrant (worktable surface, open codex, lamp shade) — warm pool ≤30% of frame, NEVER a global amber wash on face, sweater, walls, or shadows; no yellow-green cast; no blue-starved shadows (B must not collapse below 25 in host mids); no magenta purple ambient; no glasses purple reflection; reading glasses pushed up into hair — same placement every frame.",
+    "archive_set_lighting_lock": "LIGHTING LOCK @Set-Archive-001 (#243): neutral balanced 5000K ambient key fills the Archive interior — even RGB, blue channel preserved in skin-tones and shadow mids; soft 5200K manuscript-shelf bounce at ≤25% under key. Brass desk lamp 3200K is a motivated practical ONLY: localized warm pool on desk surface, open codex page, and lamp shade within the desk quadrant (≈lower-right 40% of frame) — NOT full-frame amber gel, NOT global wash on host face, shelves, or background. Deep scholarly shadows retain neutral warm-grey with blue present (#3A3530), not orange mud or collapsed B. No yellow-green global cast. No blue-starved generation. No magenta cast. No teal neon spill.",
+    "archive_set_color_guard": "GENERATION LOCK Archive-neutral (#243): balanced white balance 4800–5200K base; natural skin midtones with intact blue channel (B≥40 in mids); wood burnt umber #3D2B1F to #5C4033; parchment cream #F5F0E6; shadow neutral warm-grey #3A3530; brass lamp warmth localized to desk pool only — forbid dominant amber 3200K full-frame, forbid yellow-green global cast, forbid blue-starved generation (B<25 in host mids), forbid magenta cast, forbid global orange skin push.",
+    "style_grade_lock": "GRADE LOCK Documentary-Prestige (#243): natural skin at generation — neutral WB, blue channel preserved; post grade may add +3% amber warmth LOCAL to lamp-side cheek and desk only — forbid global orange push, forbid yellow-green cast, forbid blue-starved shadows, forbid magenta midtones.",
+    "shared_per_shot_lighting_clause": "Neutral balanced 5000K ambient key on host — natural skin, blue channel intact; brass desk lamp 3200K localized warm pool on desk quadrant only (desk, codex, lamp shade), NOT global amber wash on face or room; soft 5200K shelf bounce ≤25%; no yellow-green cast; no blue-starved shadows; no magenta ambient. Motivated practical accent only — no unmotivated beauty dish, no fashion rim."
+  },
+  "identity_lock_paths": {
+    "david_identity_lock": "DAVID/productions/host_identity_v1/david_identity_lock.json",
+    "set_library": "STUDIO/Pipeline/Set_Library_v1.json",
+    "style_library": "STUDIO/Pipeline/Style_Library_v1.json",
+    "latin_script": "DAVID/scripts/longform_scripts/david_latin_corpus_v1_script.json"
+  },
+  "reference_prompts": {
+    "archive_set_reference": "The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Neutral balanced 5000K ambient light with real blue present in shadow neutrals; floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp casting a tight localized 3200K warm pool on the desk surface and lamp shade only — NOT a global amber wash. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting with balanced white balance.",
+    "david_avatar_reference": "DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Neutral balanced 5000K key on face with natural blue in skin midtones; brass desk lamp 3200K visible as localized warm accent on desk beside him, not washing his face amber; manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only."
+  },
+  "per_shot_lighting_clauses": {
+    "01_cold_open": "Host seated at Archive worktable under neutral 5000K ambient key, speaks calmly to camera; brass lamp warm pool visible on desk and codex only. Camera: slow gentle push-in medium. LIGHTING: Neutral balanced 5000K ambient key on host — natural skin, blue channel intact; brass desk lamp 3200K localized warm pool on desk quadrant only (desk, codex, lamp shade), NOT global amber wash on face or room; soft 5200K shelf bounce ≤25%; no yellow-green cast; no blue-starved shadows; no magenta ambient.",
+    "02_stakes": "Same take continues — host reflects, manuscripts behind, same desk; lamp accent unchanged on desk only. Camera: locked medium. LIGHTING: [shared — identical stack, zero hue drift from prior segment].",
+    "03_signature_question": "Host leans slightly toward camera, intent, signature question moment; face lit by neutral key, not lamp wash. Camera: slight lean toward camera. LIGHTING: Neutral 5000K key holds on face through lean; lamp 3200K pool stays desk-localized; no amber follow on skin; blue channel preserved in close mids.",
+    "04_proof_beat": "Steady close-up, knowing pause, second half of signature beat; skin mids must retain blue at close range. Camera: steady close-up. LIGHTING: Close-up under same neutral 5000K key — B≥40 in face mids; lamp pool edge may graze codex, not cheeks; no warm close-up wash.",
+    "05_method": "Host gestures to open codex on worktable; lamp pool may kiss codex page edges, not gesture hand skin. Camera: medium — gesture to evidence. LIGHTING: Neutral key on host; 3200K accent on codex page and desk within lamp cone; hands/face stay neutral-balanced.",
+    "06_honesty": "Host direct to camera, calm authority on attested vs reconstructed. Camera: direct to camera. LIGHTING: [shared — neutral authority framing; no warmth push on delivery close].",
+    "07_demonstration": "Host delivers pronunciation excerpt; on-screen label chips must read under neutral key (not washed). Camera: medium — deliberate pace. LIGHTING: Neutral 5000K key for chip legibility; lamp accent on desk/codex only; forbid yellow-green chip wash.",
+    "08_invitation": "Inviting close, slight smile, gentle settle; warmth emotional via expression not gel. Camera: inviting close. LIGHTING: Neutral inviting close — 5000K skin key with blue intact; lamp warmth visible on desk surface only, NOT 'warm close' gel on face; finish gesture under neutral key."
+  },
+  "strings_to_purge_from_prompts": [
+    "Warm gold brass desk lamp 3200K key light locked",
+    "amber pool only on desk and face",
+    "dominant amber 3200K",
+    "warm brass lamplight",
+    "Warm inviting close",
+    "shadows warm-neutral not blue",
+    "no blue fill"
+  ],
+  "runtime_injection": "render_longform.py ARCHIVE_NEUTRAL_GENERATION_LOCK when seamless.neutral_generation=true"
+}

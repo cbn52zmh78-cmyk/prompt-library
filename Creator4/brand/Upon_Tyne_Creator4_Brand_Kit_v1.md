@@ -1,6 +1,6 @@
 # Upon Tyne + Creator #4 Brand Kit v1
 
-**Working name:** ClearDesk · **Status:** DRAFT LOCK (doc only — no render)  
+**Task:** #206 · **Working name:** ClearDesk · **Status:** LOCKED v1 (doc only — no render)  
 **Parent:** Upon Tyne Productions · **Legal lane:** Upon Tyne Operations · **Date:** 2026-06-19
 
 ---

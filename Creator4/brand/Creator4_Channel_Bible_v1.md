@@ -1,7 +1,7 @@
 # Creator #4 Channel Bible v1 — Compliance / Back-Office Explainers
 
-**Working title:** ClearDesk (see `NAME_OPTIONS.md`) · **Parent:** Upon Tyne Productions  
-**Date:** 2026-06-19 · **Status:** DRAFT LOCK — doc only, no render
+**Task:** #206 · **Working title:** ClearDesk (see `NAME_OPTIONS.md`) · **Parent:** Upon Tyne Productions  
+**Date:** 2026-06-19 · **Status:** LOCKED v1 — doc/brand only, no render
 
 ---
 
@@ -177,5 +177,6 @@ Every concept **must** include:
 | Version | Date | Change |
 |---------|------|--------|
 | 1.0 | 2026-06-19 | Creator #4 bible — ClearDesk rec, Serena-001, explainer-ad reuse, compliance identity |
+| 1.1 | 2026-06-19 | #206 — positioning doc, concept template, task stamp |
 
 *Upon Tyne Productions / Creator #4 — processes explained, records clarified, advice boundaries respected.*

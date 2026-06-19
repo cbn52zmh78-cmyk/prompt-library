@@ -13,13 +13,15 @@
   "references": {
     "archive_set": {
       "file": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\references\\archive_set_reference.jpg",
-      "prompt": "The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting.",
+      "prompt": "The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Neutral balanced 5000K ambient light with real blue present in shadow neutrals; floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp casting a tight localized 3200K warm pool on the desk surface and lamp shade only — NOT a global amber wash. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting with balanced white balance.",
+      "lighting_lock": "LIGHTING LOCK @Set-Archive-001 (#243): neutral balanced 5000K ambient key — blue preserved in shadows; brass lamp 3200K localized desk pool only, not full-frame amber.",
       "reuse": "environment plate @1 — same set every episode"
     },
     "david_avatar": {
       "file": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\references\\david_avatar_reference.jpg",
       "url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
-      "prompt": "DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only.",
+      "prompt": "DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Neutral balanced 5000K key on face with natural blue in skin midtones; brass desk lamp 3200K visible as localized warm accent on desk beside him, not washing his face amber; manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only.",
+      "lighting_lock": "LIGHTING LOCK @David-001 (#243): neutral balanced 5000K white key on face and sweater — natural skin, blue channel intact (B≥40 mids); brass lamp 3200K tight desk accent pool only, never global amber wash on face; soft 5200K shelf bounce ≤25%; no blue-starved shadows; no yellow-green cast; no magenta ambient.",
       "reuse": "host reference @2 — image_to_video frame 1 every DAVID host shot"
     }
   },
@@ -41,8 +43,8 @@
     "duration_s": 18,
     "speech": "What did they actually say? … And how do we prove it?",
     "shot_prompts": {
-      "01_what_did_they_say": "The Archive keeper host speaks directly to camera with measured documentary gravitas, lip-synced, mid-low resonant unhurried voice, precise diction, Attenborough-calm. He asks: 'What did they actually say?' Medium shot, still grounded at worktable near open codex, warm brass lamp key light, calm attentive eyes. Synthetic host only.",
-      "02_how_do_we_prove_it": "The Archive keeper host continues speaking to camera, lip-synced, same mid-low resonant unhurried voice. After a brief thoughtful pause he asks: 'And how do we prove it?' Subtle slow push-in to medium-close, quiet conviction, hands still, warm lamp light. Synthetic host only, documentary trust signal."
+      "01_what_did_they_say": "The Archive keeper host speaks directly to camera with measured documentary gravitas, lip-synced, mid-low resonant unhurried voice, precise diction, Attenborough-calm. He asks: 'What did they actually say?' Medium shot, still grounded at worktable near open codex, neutral balanced 5000K key on face with blue intact, brass lamp warm accent on desk only, calm attentive eyes. Synthetic host only.",
+      "02_how_do_we_prove_it": "The Archive keeper host continues speaking to camera, lip-synced, same mid-low resonant unhurried voice. After a brief thoughtful pause he asks: 'And how do we prove it?' Subtle slow push-in to medium-close, quiet conviction, hands still, neutral 5000K skin key — lamp warmth on desk surface only, not face wash. Synthetic host only, documentary trust signal."
     },
     "model": "grok-imagine-video-1.5",
     "on_screen_caption": "DAVID · The Archive"

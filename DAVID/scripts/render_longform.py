@@ -74,10 +74,12 @@ LAMP_LOCK_PROMPT = (
     "no magenta purple ambient, no cool fill, no glasses purple reflection."
 )
 ARCHIVE_NEUTRAL_GENERATION_LOCK = (
-    "GENERATION LOCK Archive-neutral (#194): neutral balanced 5000K ambient key — even RGB, "
-    "blue channel preserved in skin and shadow mids (B≥40); brass desk lamp 3200K as motivated "
-    "practical ONLY as localized warm pool on desk surface and lamp shade, NOT full-frame amber "
-    "gel; no global yellow-green cast; no blue-starved shadows; natural skin tone at source."
+    "LIGHTING LOCK @David-001 (#243): neutral balanced 5000K white key on face, neck, and charcoal "
+    "sweater — natural documentary skin with intact blue channel (B≥40/255 mids, B/R≥0.35); soft "
+    "5200K shelf-bounce fill ≤25%; brass desk lamp 3200K tight motivated accent ONLY on desk "
+    "quadrant (worktable, codex, lamp shade) — warm pool ≤30% frame, NEVER global amber wash on "
+    "face, sweater, walls, or shadows; no yellow-green cast; no blue-starved shadows; no magenta "
+    "purple ambient."
 )
 GLASSES_LOCK_PROMPT = "Reading glasses pushed up into hair — same placement every frame."
 AUDIO_SILENCE_DB = -45.0
@@ -111,6 +113,10 @@ LABEL_CHIP_COLORS = {
 LOUDNESS_SPREAD_MAX_LU = 1.5
 REGROUND_EVERY_N = 2
 LOUDNORM_LRA_TIGHT = 7.0
+# Frame-chain joins: 0.2s @24fps ≈5 blended frames — reads as hard-cut on 7–9s shots.
+DEFAULT_XFADE_S = 0.45
+MIN_XFADE_S = 0.35
+MAX_XFADE_S = 0.75
 SET_LIBRARY_PATH = WORKSPACE / "STUDIO" / "Pipeline" / "Set_Library_v1.json"
 DARK_SCENE_KEYWORDS = (
     "warehouse", "industrial", "dusk", "shadow", "darkness", "dramatic",
@@ -932,10 +938,17 @@ def concat_videos(parts: list[Path], out: Path, *, seamless: bool = False) -> No
     list_file.unlink(missing_ok=True)
 
 
+def resolve_xfade_s(*, cli: float | None, script_seam: dict[str, Any] | None = None) -> float:
+    """Clamp cross-dissolve to perceptible range for frame-chain continuity."""
+    seam = script_seam or {}
+    raw = float(cli if cli is not None else seam.get("xfade_s", DEFAULT_XFADE_S))
+    return max(MIN_XFADE_S, min(MAX_XFADE_S, raw))
+
+
 @dataclass
 class SeamlessOptions:
     enabled: bool = False
-    xfade_s: float = 0.2
+    xfade_s: float = DEFAULT_XFADE_S
     match_color: bool = False
     cut_on_motion: bool = False
     lamp_lock: bool = True
@@ -965,7 +978,7 @@ def get_seamless_options(script: dict[str, Any], args: argparse.Namespace) -> Se
     auto = seam.get("primary") in ("extend", "extend_chain", True)
     return SeamlessOptions(
         enabled=bool(getattr(args, "seamless", False) or auto),
-        xfade_s=float(getattr(args, "xfade", None) or seam.get("xfade_s", 0.2)),
+        xfade_s=resolve_xfade_s(cli=getattr(args, "xfade", None), script_seam=seam),
         match_color=getattr(args, "match_color", False) or bool(seam.get("match_color")),
         cut_on_motion=getattr(args, "cut_on_motion", False) or bool(seam.get("cut_on_motion")),
         lamp_lock=bool(seam.get("lamp_lock", True)),
@@ -1788,7 +1801,13 @@ def process_shot_segment(
         else clamp_shot_duration(probe_duration(cur))
     )
 
-    if opts.magenta_clamp or opts.match_color:
+    needs_grade = (
+        opts.magenta_clamp
+        or opts.match_color
+        or opts.neutral_grade
+        or (opts.enabled and opts.lamp_lock and _refs_is_archive(refs))
+    )
+    if needs_grade:
         clamped = work / f"{video.stem}_clamped.mp4"
         if opts.neutral_grade:
             apply_neutral_white_balance_grade(cur, clamped, color_ref)
@@ -2104,12 +2123,45 @@ def probe_lamp_warm_ratio(video: Path, at_s: float | None = None) -> float:
     return rs / gs / n if n else 1.0
 
 
+def _write_seamless_final(
+    host_join: Path,
+    card_mp4: Path | None,
+    seamless_out: Path,
+    *,
+    opts: SeamlessOptions,
+    color_ref: Path | None,
+    shots_dir: Path,
+) -> Path:
+    """Write graded+xfaded host (and optional card join) to the published output path."""
+    seamless_out.parent.mkdir(parents=True, exist_ok=True)
+    if card_mp4 and card_mp4.is_file():
+        concat_xfade_two(
+            host_join,
+            card_mp4,
+            seamless_out,
+            xfade_s=opts.xfade_s,
+            match_color=opts.match_color,
+            cut_on_motion=False,
+            lamp_lock=opts.lamp_lock,
+            neutral_grade=opts.neutral_grade,
+            color_ref=color_ref,
+            work_dir=shots_dir,
+        )
+        _log(
+            f"[seamless] final mux: xfade({opts.xfade_s}s) host+card → {seamless_out.name}"
+        )
+        return seamless_out
+    shutil.copy2(host_join, seamless_out)
+    _log(f"[seamless] final mux: graded xfade host → {seamless_out.name}")
+    return seamless_out
+
+
 def concat_xfade_two(
     left: Path,
     right: Path,
     out: Path,
     *,
-    xfade_s: float = 0.2,
+    xfade_s: float = DEFAULT_XFADE_S,
     match_color: bool = False,
     cut_on_motion: bool = False,
     lamp_lock: bool = True,
@@ -2162,7 +2214,7 @@ def concat_xfade_chain(
     segments: list[Path],
     out: Path,
     *,
-    xfade_s: float = 0.2,
+    xfade_s: float = DEFAULT_XFADE_S,
     match_color: bool = False,
     cut_on_motion: bool = False,
     lamp_lock: bool = True,
@@ -2170,7 +2222,7 @@ def concat_xfade_chain(
     color_ref: Path | None = None,
     work_dir: Path | None = None,
 ) -> Path:
-    """Chain 0.2s xfade + synced audio crossfade joins across N segments."""
+    """Chain xfade + synced audio crossfade joins across N segments."""
     if not segments:
         raise ValueError("concat_xfade_chain: no segments")
     work = work_dir or out.parent
@@ -2430,11 +2482,35 @@ def render_extend_performance(
         )
 
     if out_path.exists() and out_path.stat().st_size > 10000 and not force and not any_chain:
-        _log(f"[seamless] reusing performance {out_path.name} (no per-shot chain cache)")
         mode = "cached"
+        join_mode = ""
+        xfade_cached = opts.xfade_s
         if state_path.is_file():
-            mode = json.loads(state_path.read_text(encoding="utf-8")).get("mode", mode)
-        return out_path, [], mode
+            st = json.loads(state_path.read_text(encoding="utf-8"))
+            mode = st.get("mode", mode)
+            join_mode = st.get("join_mode", "")
+            xfade_cached = float(st.get("xfade_s", opts.xfade_s))
+        if join_mode == "xfade_chain":
+            _log(
+                f"[seamless] reusing xfade-assembled {out_path.name} "
+                f"(join_mode={join_mode}, xfade={xfade_cached}s)"
+            )
+            return out_path, [], mode
+        _log(
+            "[seamless] stale host without xfade_chain provenance — "
+            "forcing frame-chain rebuild (grade+xfade)"
+        )
+        seed = shots_dir / f"chain_{shots[0]['id']}.mp4"
+        if out_path.is_file() and not seed.is_file():
+            shutil.copy2(out_path, seed)
+        return render_frame_chain_performance(
+            shots, client, refs, opts, shots_dir, out_path,
+            script=script,
+            concat_only=False,
+            force=force,
+            force_shots=force_shots,
+            seed_segment=seed if seed.is_file() else None,
+        )
 
     gen_model = refs["model_video"]
     extend_model = refs.get("extend_model") or gen_model
@@ -2640,6 +2716,28 @@ def qa_check(
                         f"re-concat stripped seamless xfade (join_mode={st.get('join_mode')})"
                     )
         check_path = final_path if final_path and final_path.is_file() else extend_path
+        if (
+            final_path
+            and final_path.is_file()
+            and _is_archive_production(script, refs)
+            and not _is_clinical_neutral_set(script, refs)
+        ):
+            try:
+                final_cast = probe_color_cast_score(final_path)
+                if color_cast_passes(final_cast):
+                    passes.append(
+                        "final mux color-cast T4 clean (#244) — "
+                        f"B/R={final_cast['host_br_ratio']:.3f} "
+                        f"starve={final_cast['blue_starvation_fraction']:.3f} "
+                        f"Bμ={final_cast['host_blue_mean']:.1f}"
+                    )
+                else:
+                    issues.append(
+                        "final output bypassed grade/xfade path (#244 T4): "
+                        + str(color_cast_breaches(final_cast))
+                    )
+            except Exception as exc:
+                issues.append(f"final color-cast probe failed (#244): {exc}")
         audio_ok = False
         if check_path and check_path.is_file():
             if has_audio_stream(check_path):
@@ -2884,25 +2982,24 @@ def render_longform(
             host_join = trimmed_host
 
         color_ref = resolve_color_reference(refs, shots_dir)
-        if card_mp4:
-            seamless_out = prod_dir / "output" / f"{prefix}_{slug}_seamless_v1.mp4"
-            concat_xfade_two(
-                host_join,
-                card_mp4,
-                seamless_out,
-                xfade_s=opts.xfade_s,
-                match_color=opts.match_color,
-                cut_on_motion=False,
-                lamp_lock=opts.lamp_lock,
-                neutral_grade=opts.neutral_grade,
-                color_ref=color_ref,
-                work_dir=shots_dir,
-            )
-            final_mp4 = seamless_out
-        elif opts.enabled:
-            seamless_out = prod_dir / "output" / f"{prefix}_{slug}_seamless_v1.mp4"
-            shutil.copy2(host_mp4, seamless_out)
-            final_mp4 = seamless_out
+        seamless_out = prod_dir / "output" / f"{prefix}_{slug}_seamless_v1.mp4"
+        final_mp4 = _write_seamless_final(
+            host_join,
+            card_mp4,
+            seamless_out,
+            opts=opts,
+            color_ref=color_ref,
+            shots_dir=shots_dir,
+        )
+        assembly_provenance = {
+            "host_source": str(host_join),
+            "host_performance": str(host_mp4),
+            "card_joined": bool(card_mp4),
+            "join_mode": "xfade_chain",
+            "xfade_s": opts.xfade_s,
+            "graded_segments": True,
+            "output_mux": str(final_mp4),
+        }
 
         rendered = [p for p in [host_mp4, card_mp4] if p]
         _log(f"[seamless] final → {final_mp4}")
@@ -2955,6 +3052,7 @@ def render_longform(
             "qa": qa,
             "segments": [str(p) for p in rendered if p],
             "seamless": True,
+            "assembly": assembly_provenance,
         }
 
     rendered: list[Path] = []
@@ -3047,7 +3145,12 @@ def main() -> int:
     parser.add_argument("--seamless", action="store_true", help="STUDIO v1.1 extend-primary + xfade joins")
     parser.add_argument("--match-color", action="store_true", help="Histogram-match before frame-chain joins")
     parser.add_argument("--cut-on-motion", action="store_true", help="Trim tail stillness before card join")
-    parser.add_argument("--xfade", type=float, default=None, help="Crossfade seconds (default 0.2)")
+    parser.add_argument(
+        "--xfade",
+        type=float,
+        default=None,
+        help=f"Crossfade seconds (default {DEFAULT_XFADE_S}, min {MIN_XFADE_S})",
+    )
     args = parser.parse_args()
 
     script_path = args.script if args.script.is_absolute() else Path.cwd() / args.script

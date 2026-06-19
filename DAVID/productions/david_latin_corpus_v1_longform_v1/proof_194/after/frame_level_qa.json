@@ -1,0 +1,239 @@
+{
+  "master": "DAVID\\productions\\david_latin_corpus_v1_longform_v1\\proof_194\\after\\master_full_rerender_v2.mp4",
+  "source": "ffmpeg_extracted",
+  "frames_checked": 136,
+  "fps_sampled": 2.0,
+  "frame_proof_dir": "DAVID\\productions\\david_latin_corpus_v1_longform_v1\\proof_194\\after\\frame_proof",
+  "thresholds": {
+    "rgb_skew_max": 0.12,
+    "join_mad_spike_min": 18.0,
+    "hard_cut_mad_min": 30.0,
+    "skew_jump_at_join_min": 0.08,
+    "legacy_yg_pass_max": 0.012
+  },
+  "measured": {
+    "rgb_skew_max": 0.2446,
+    "rgb_skew_mean": 0.196,
+    "yellow_green_max": 0.0056,
+    "color_fail_frames": 136,
+    "legacy_false_pass_frames": 136,
+    "join_issues": 7,
+    "hard_cuts": 1
+  },
+  "join_issues": [
+    {
+      "t_s": 8.0,
+      "kind": "join_color_seam",
+      "frame_mad": 25.43,
+      "skew_jump": 0.0245
+    },
+    {
+      "t_s": 15.5,
+      "kind": "join_color_seam",
+      "frame_mad": 26.22,
+      "skew_jump": 0.0278
+    },
+    {
+      "t_s": 23.5,
+      "kind": "join_spike",
+      "frame_mad": 20.23,
+      "skew_jump": 0.0021
+    },
+    {
+      "t_s": 30.0,
+      "kind": "join_color_seam",
+      "frame_mad": 22.35,
+      "skew_jump": 0.0265
+    },
+    {
+      "t_s": 38.0,
+      "kind": "join_spike",
+      "frame_mad": 22.63,
+      "skew_jump": 0.0073
+    },
+    {
+      "t_s": 54.5,
+      "kind": "join_spike",
+      "frame_mad": 21.5,
+      "skew_jump": 0.0146
+    },
+    {
+      "t_s": 62.0,
+      "kind": "hard_cut",
+      "frame_mad": 33.6,
+      "skew_jump": 0.1678
+    }
+  ],
+  "color_failures": [
+    {
+      "t_s": 0.0,
+      "frame": "frame_0001.jpg",
+      "rgb_skew": 0.2159,
+      "issues": [
+        "rgb_skew 0.2159 > 0.12",
+        "blue_starvation_fraction 0.993 > 0.5",
+        "host B/R 0.087 < 0.22",
+        "blue_starvation B=4.7 lum=51.7"
+      ]
+    },
+    {
+      "t_s": 0.5,
+      "frame": "frame_0002.jpg",
+      "rgb_skew": 0.2183,
+      "issues": [
+        "rgb_skew 0.2183 > 0.12",
+        "blue_starvation_fraction 0.993 > 0.5",
+        "host B/R 0.088 < 0.22",
+        "blue_starvation B=4.8 lum=52.3"
+      ]
+    },
+    {
+      "t_s": 1.0,
+      "frame": "frame_0003.jpg",
+      "rgb_skew": 0.2192,
+      "issues": [
+        "rgb_skew 0.2192 > 0.12",
+        "blue_starvation_fraction 0.991 > 0.5",
+        "host B/R 0.093 < 0.22",
+        "blue_starvation B=5.1 lum=52.8"
+      ]
+    },
+    {
+      "t_s": 1.5,
+      "frame": "frame_0004.jpg",
+      "rgb_skew": 0.2196,
+      "issues": [
+        "rgb_skew 0.2196 > 0.12",
+        "blue_starvation_fraction 0.988 > 0.5",
+        "host B/R 0.095 < 0.22",
+        "blue_starvation B=5.3 lum=53.1"
+      ]
+    },
+    {
+      "t_s": 2.0,
+      "frame": "frame_0005.jpg",
+      "rgb_skew": 0.2258,
+      "issues": [
+        "rgb_skew 0.2258 > 0.12",
+        "blue_starvation_fraction 0.983 > 0.5",
+        "host B/R 0.114 < 0.22",
+        "blue_starvation B=6.8 lum=55.8"
+      ]
+    },
+    {
+      "t_s": 2.5,
+      "frame": "frame_0006.jpg",
+      "rgb_skew": 0.2268,
+      "issues": [
+        "rgb_skew 0.2268 > 0.12",
+        "blue_starvation_fraction 0.989 > 0.5",
+        "host B/R 0.115 < 0.22",
+        "blue_starvation B=7.0 lum=56.2"
+      ]
+    },
+    {
+      "t_s": 3.0,
+      "frame": "frame_0007.jpg",
+      "rgb_skew": 0.2221,
+      "issues": [
+        "rgb_skew 0.2221 > 0.12",
+        "blue_starvation_fraction 0.987 > 0.5",
+        "host B/R 0.101 < 0.22",
+        "blue_starvation B=5.8 lum=54.1"
+      ]
+    },
+    {
+      "t_s": 3.5,
+      "frame": "frame_0008.jpg",
+      "rgb_skew": 0.2215,
+      "issues": [
+        "rgb_skew 0.2215 > 0.12",
+        "blue_starvation_fraction 0.984 > 0.5",
+        "host B/R 0.102 < 0.22",
+        "blue_starvation B=5.8 lum=54.0"
+      ]
+    },
+    {
+      "t_s": 4.0,
+      "frame": "frame_0009.jpg",
+      "rgb_skew": 0.2222,
+      "issues": [
+        "rgb_skew 0.2222 > 0.12",
+        "blue_starvation_fraction 0.984 > 0.5",
+        "host B/R 0.104 < 0.22",
+        "blue_starvation B=6.0 lum=54.2"
+      ]
+    },
+    {
+      "t_s": 4.5,
+      "frame": "frame_0010.jpg",
+      "rgb_skew": 0.2223,
+      "issues": [
+        "rgb_skew 0.2223 > 0.12",
+        "blue_starvation_fraction 0.986 > 0.5",
+        "host B/R 0.100 < 0.22",
+        "blue_starvation B=5.7 lum=54.0"
+      ]
+    }
+  ],
+  "legacy_false_pass_sample": [
+    {
+      "t_s": 0.0,
+      "frame": "frame_0001.jpg",
+      "r_mean": 65.7,
+      "g_mean": 53.8,
+      "b_mean": 4.7,
+      "rgb_skew": 0.2159,
+      "yellow_green": 0.0056,
+      "legacy_yg_pass": true,
+      "lum": 51.7,
+      "host_blue_mean": 4.7,
+      "color_pass": false,
+      "color_issues": [
+        "rgb_skew 0.2159 > 0.12",
+        "blue_starvation_fraction 0.993 > 0.5",
+        "host B/R 0.087 < 0.22",
+        "blue_starvation B=4.7 lum=51.7"
+      ]
+    },
+    {
+      "t_s": 0.5,
+      "frame": "frame_0002.jpg",
+      "r_mean": 66.6,
+      "g_mean": 54.3,
+      "b_mean": 4.8,
+      "rgb_skew": 0.2183,
+      "yellow_green": 0.005,
+      "legacy_yg_pass": true,
+      "lum": 52.3,
+      "host_blue_mean": 4.8,
+      "color_pass": false,
+      "color_issues": [
+        "rgb_skew 0.2183 > 0.12",
+        "blue_starvation_fraction 0.993 > 0.5",
+        "host B/R 0.088 < 0.22",
+        "blue_starvation B=4.8 lum=52.3"
+      ]
+    },
+    {
+      "t_s": 1.0,
+      "frame": "frame_0003.jpg",
+      "r_mean": 67.3,
+      "g_mean": 54.7,
+      "b_mean": 5.1,
+      "rgb_skew": 0.2192,
+      "yellow_green": 0.0037,
+      "legacy_yg_pass": true,
+      "lum": 52.8,
+      "host_blue_mean": 5.1,
+      "color_pass": false,
+      "color_issues": [
+        "rgb_skew 0.2192 > 0.12",
+        "blue_starvation_fraction 0.991 > 0.5",
+        "host B/R 0.093 < 0.22",
+        "blue_starvation B=5.1 lum=52.8"
+      ]
+    }
+  ],
+  "verdict": "FAIL"
+}
