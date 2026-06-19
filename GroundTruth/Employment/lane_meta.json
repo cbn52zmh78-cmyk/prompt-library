@@ -1,23 +1,47 @@
 {
-  "lane": "R4-B",
-  "task": "R4-B — Employment/Labor compliance source-gather seed",
-  "vertical": "Employment / Labor",
-  "slug": "employment_labor",
-  "origin_repo": "GroundTruth",
-  "pack_kind": "source_gather_seed",
-  "canonical_pack": "Stonebridge/Operations/Compliance_Research/groundtruth/Employment/employment_labor_knowledge_bible_seed_v1.json",
-  "federal_fact_count": 15,
-  "state_count": 5,
-  "state_codes": [
+  "lane": "R4-C",
+  "parent_task": "R4-B",
+  "task": "R4-C — Employment/Labor compliance depth (10 states)",
+  "deepening_issues": [
+    "R4-B",
+    "R4-C"
+  ],
+  "state_tranche_1": [
     "CA",
     "TX",
     "NY",
     "FL",
     "PA"
   ],
-  "source_count": 28,
-  "harvested_sources": 15,
-  "parked_sources": 13,
+  "state_tranche_2": [
+    "IL",
+    "OH",
+    "GA",
+    "NC",
+    "MI"
+  ],
+  "vertical": "Employment / Labor",
+  "slug": "employment_labor",
+  "origin_repo": "GroundTruth",
+  "pack_kind": "source_gather_seed",
+  "canonical_pack": "Stonebridge/Operations/Compliance_Research/groundtruth/Employment/employment_labor_knowledge_bible_seed_v1.json",
+  "federal_fact_count": 15,
+  "state_count": 10,
+  "state_codes": [
+    "CA",
+    "TX",
+    "NY",
+    "FL",
+    "PA",
+    "IL",
+    "OH",
+    "GA",
+    "NC",
+    "MI"
+  ],
+  "source_count": 53,
+  "harvested_sources": 22,
+  "parked_sources": 31,
   "retrieved_date": "2026-06-19",
   "state_roots": [
     "GroundTruth/Employment/states"
@@ -64,6 +88,51 @@
       "status_counts": {
         "FOUND": 4,
         "REQUIRES_CONFIRMATION": 1,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    "Illinois": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 5,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    "Ohio": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 4,
+        "REQUIRES_CONFIRMATION": 1,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    "Georgia": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 4,
+        "REQUIRES_CONFIRMATION": 1,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    "North Carolina": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 5,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    "Michigan": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 5,
+        "REQUIRES_CONFIRMATION": 0,
         "NOT FOUND": 0,
         "ACCESS_RESTRICTED": 0
       }

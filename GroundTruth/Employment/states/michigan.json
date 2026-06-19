@@ -2,11 +2,11 @@
   "artifact": "employment_labor_state_pack",
   "version": "1.0",
   "lane": "R4-C",
-  "task": "R4-C — State employment/labor overlay (California)",
-  "state": "California",
-  "state_code": "CA",
-  "state_slug": "california",
-  "generated_at": "2026-06-19T16:37:19.726876+00:00",
+  "task": "R4-C — State employment/labor overlay (Michigan)",
+  "state": "Michigan",
+  "state_code": "MI",
+  "state_slug": "michigan",
+  "generated_at": "2026-06-19T16:37:33.228913+00:00",
   "retrieved_date": "2026-06-19",
   "disclaimer": "Operational employment/labor compliance research and cited public-records compilation — not legal advice. Confirm wage-hour, OSHA, EEOC, and state labor obligations with licensed counsel and the relevant agency before relying on any fact for operations or filings.",
   "policy": "Public statute/agency sources only; gaps explicit.",
@@ -20,29 +20,29 @@
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-CA-MIN-001",
-            "text": "California minimum wage and overtime rules are set by Labor Code and IWC wage orders; employers must pay the higher of federal or state minimum and follow daily overtime after 8 hours and double-time rules for extended shifts.",
+            "fact_id": "EL-MI-MIN-001",
+            "text": "Michigan Improved Workforce Opportunity Wage Act sets state minimum wage and tipped minimum rates above the federal floor where applicable.",
             "status": "FOUND",
-            "category": "wage_overtime",
+            "category": "minimum_wage",
             "citation": {
-              "source": "Cal. Labor Code §§510, 1182.12",
-              "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=510.&lawCode=LAB",
-              "agency": "California DIR / Legislature",
-              "jurisdiction": "California",
+              "source": "MCL 408.414 — Minimum wage",
+              "url": "https://www.michigan.gov/lara/bureaus-agencies/ber/wage-and-hour/minimum-wage",
+              "agency": "Michigan Department of Labor & Economic Opportunity",
+              "jurisdiction": "Michigan",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
           },
           {
-            "fact_id": "EL-CA-MIN-002",
-            "text": "Meal and rest break requirements apply to nonexempt employees; failure to provide compliant breaks triggers premium pay obligations under state law.",
+            "fact_id": "EL-MI-MIN-002",
+            "text": "Nonexempt employees receive overtime at 1.5× regular rate after 40 hours in a workweek under state wage-hour rules aligned with FLSA.",
             "status": "FOUND",
-            "category": "meal_rest",
+            "category": "overtime",
             "citation": {
-              "source": "Cal. Labor Code §§226.7, 512",
-              "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=512.&lawCode=LAB",
-              "agency": "California DIR / Legislature",
-              "jurisdiction": "California",
+              "source": "Michigan Wage and Hour Division",
+              "url": "https://www.michigan.gov/lara/bureaus-agencies/ber/wage-and-hour",
+              "agency": "Michigan LEO — Wage and Hour",
+              "jurisdiction": "Michigan",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
@@ -58,15 +58,15 @@
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-CA-ANT-001",
-            "text": "The Fair Employment and Housing Act (FEHA) prohibits harassment and discrimination in employment based on protected classes including race, religion, sex, disability, age, and others; DFEH/CRD enforces.",
+            "fact_id": "EL-MI-ANT-001",
+            "text": "The Elliott-Larsen Civil Rights Act prohibits employment discrimination based on religion, race, color, national origin, age, sex, height, weight, familial status, or marital status.",
             "status": "FOUND",
-            "category": "feha",
+            "category": "elcra",
             "citation": {
-              "source": "Cal. Gov. Code §12940",
-              "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12940.&lawCode=GOV",
-              "agency": "California Civil Rights Department",
-              "jurisdiction": "California",
+              "source": "MCL 37.2202 — ELCRA",
+              "url": "https://www.michigan.gov/mdcr/employment",
+              "agency": "Michigan Department of Civil Rights",
+              "jurisdiction": "Michigan",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
@@ -82,15 +82,15 @@
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-CA-WOR-001",
-            "text": "California employers must secure workers' compensation insurance or qualify as self-insured before hiring employees; failure to carry coverage is a criminal misdemeanor.",
+            "fact_id": "EL-MI-WOR-001",
+            "text": "Michigan employers must secure workers' compensation insurance for employees or qualify as self-insured; agricultural employers with 3+ employees 35+ days/year must cover.",
             "status": "FOUND",
             "category": "wc_mandatory",
             "citation": {
-              "source": "Cal. Labor Code §3700",
-              "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=3700.&lawCode=LAB",
-              "agency": "California DWC",
-              "jurisdiction": "California",
+              "source": "Michigan WC — Employer coverage",
+              "url": "https://www.michigan.gov/leo/bureaus-agencies/wdca/employers",
+              "agency": "Michigan Workers' Disability Compensation Agency",
+              "jurisdiction": "Michigan",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
@@ -106,15 +106,15 @@
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-CA-PAI-001",
-            "text": "Employers must provide paid sick leave accrual or front-loading under the Healthy Workplaces, Healthy Families Act; poster and wage-statement requirements apply.",
+            "fact_id": "EL-MI-PAI-001",
+            "text": "Michigan Paid Medical Leave Act requires eligible employees to earn one hour of sick time per 35 hours worked (or front-load); poster and recordkeeping required.",
             "status": "FOUND",
             "category": "paid_sick_leave",
             "citation": {
-              "source": "Cal. Labor Code §§246, 247",
-              "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=246.&lawCode=LAB",
-              "agency": "California DIR",
-              "jurisdiction": "California",
+              "source": "MCL 408.961 — Paid Medical Leave Act",
+              "url": "https://www.michigan.gov/lara/bureaus-agencies/ber/wage-and-hour/paid-medical-leave-act",
+              "agency": "Michigan LEO — Wage and Hour",
+              "jurisdiction": "Michigan",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
@@ -130,15 +130,15 @@
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-CA-UNE-001",
-            "text": "Employers with California wages must register with EDD for unemployment and disability insurance, file quarterly wage reports, and display mandatory workplace posters.",
+            "fact_id": "EL-MI-UNE-001",
+            "text": "Employers must register with Michigan UIA for unemployment insurance tax and file quarterly wage reports.",
             "status": "FOUND",
             "category": "ui_registration",
             "citation": {
-              "source": "California EDD — New employer registration",
-              "url": "https://edd.ca.gov/en/payroll_taxes/",
-              "agency": "California Employment Development Department",
-              "jurisdiction": "California",
+              "source": "Michigan UIA — Employer registration",
+              "url": "https://www.michigan.gov/uia/employers",
+              "agency": "Michigan Unemployment Insurance Agency",
+              "jurisdiction": "Michigan",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }

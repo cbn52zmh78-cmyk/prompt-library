@@ -1,7 +1,10 @@
 {
   "artifact": "groundtruth_employment_index",
-  "version": "1.0",
-  "task": "R4-B",
+  "version": "1.1",
+  "task": "R4-C",
+  "parent_task": "R4-B",
+  "sku": "R4C-EL-DEPTH-10-v1",
+  "product_status": "DEPTH_10",
   "lane": "Employment / Labor",
   "tier": "A",
   "slug": "employment_labor",
@@ -20,15 +23,34 @@
     "TX",
     "NY",
     "FL",
+    "PA",
+    "IL",
+    "OH",
+    "GA",
+    "NC",
+    "MI"
+  ],
+  "state_tranche_1": [
+    "CA",
+    "TX",
+    "NY",
+    "FL",
     "PA"
+  ],
+  "state_tranche_2": [
+    "IL",
+    "OH",
+    "GA",
+    "NC",
+    "MI"
   ],
   "summary": {
     "federal_facts": 15,
-    "state_facts": 29,
-    "total_facts": 44,
-    "state_count": 5,
-    "harvested_sources": 15,
-    "parked_sources": 13,
+    "state_facts": 59,
+    "total_facts": 74,
+    "state_count": 10,
+    "harvested_sources": 22,
+    "parked_sources": 31,
     "cross_sell_verticals": [
       "construction",
       "healthcare",
@@ -95,7 +117,67 @@
         "NOT FOUND": 0,
         "ACCESS_RESTRICTED": 0
       }
+    },
+    {
+      "state": "Illinois",
+      "state_code": "IL",
+      "file": "states/illinois.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 5,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    {
+      "state": "Ohio",
+      "state_code": "OH",
+      "file": "states/ohio.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 4,
+        "REQUIRES_CONFIRMATION": 1,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    {
+      "state": "Georgia",
+      "state_code": "GA",
+      "file": "states/georgia.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 4,
+        "REQUIRES_CONFIRMATION": 1,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    {
+      "state": "North Carolina",
+      "state_code": "NC",
+      "file": "states/north_carolina.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 5,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    {
+      "state": "Michigan",
+      "state_code": "MI",
+      "file": "states/michigan.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 5,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
     }
   ],
-  "recap": "GroundTruth/Employment/dispatches/R4_B_employment_labor_recap.json"
+  "recap": "GroundTruth/Employment/dispatches/R4_C_employment_labor_recap.json"
 }

@@ -2,11 +2,11 @@
   "artifact": "employment_labor_state_pack",
   "version": "1.0",
   "lane": "R4-C",
-  "task": "R4-C — State employment/labor overlay (Texas)",
-  "state": "Texas",
-  "state_code": "TX",
-  "state_slug": "texas",
-  "generated_at": "2026-06-19T16:37:21.721638+00:00",
+  "task": "R4-C — State employment/labor overlay (Georgia)",
+  "state": "Georgia",
+  "state_code": "GA",
+  "state_slug": "georgia",
+  "generated_at": "2026-06-19T16:37:31.661969+00:00",
   "retrieved_date": "2026-06-19",
   "disclaimer": "Operational employment/labor compliance research and cited public-records compilation — not legal advice. Confirm wage-hour, OSHA, EEOC, and state labor obligations with licensed counsel and the relevant agency before relying on any fact for operations or filings.",
   "policy": "Public statute/agency sources only; gaps explicit.",
@@ -20,29 +20,29 @@
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-TX-MIN-001",
-            "text": "Texas does not set a state minimum wage above the federal floor; covered employers follow FLSA minimum wage and overtime unless a higher federal contract or local rule applies.",
+            "fact_id": "EL-GA-MIN-001",
+            "text": "Georgia does not set a state minimum wage above the federal $7.25 for most private employers; covered employers follow FLSA minimum wage and overtime rules.",
             "status": "FOUND",
             "category": "minimum_wage",
             "citation": {
-              "source": "Texas Workforce Commission — Texas Minimum Wage Law",
-              "url": "https://www.twc.texas.gov/businesses/texas-minimum-wage-law",
-              "agency": "Texas Workforce Commission",
-              "jurisdiction": "Texas",
+              "source": "Georgia DOL — Minimum wage",
+              "url": "https://dol.georgia.gov/minimum-wage",
+              "agency": "Georgia Department of Labor",
+              "jurisdiction": "Georgia",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
           },
           {
-            "fact_id": "EL-TX-MIN-002",
-            "text": "Texas Payday Law requires employers to pay wages at least twice monthly for non-exempt employees and on schedule for exempt employees; final pay timing rules apply on separation.",
+            "fact_id": "EL-GA-MIN-002",
+            "text": "Georgia employers must pay wages when due under state payday laws; final wages timing applies on separation.",
             "status": "FOUND",
             "category": "payday_law",
             "citation": {
-              "source": "Texas Workforce Commission — Payday Law",
-              "url": "https://www.twc.texas.gov/businesses/payday-law",
-              "agency": "Texas Workforce Commission",
-              "jurisdiction": "Texas",
+              "source": "Georgia OCGA §34-7-2 — Wage payments",
+              "url": "https://law.justia.com/codes/georgia/title-34/chapter-7/section-34-7-2/",
+              "agency": "Georgia Department of Labor",
+              "jurisdiction": "Georgia",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
@@ -54,19 +54,19 @@
       "anti_discrimination": {
         "domain": "anti_discrimination",
         "label": "Anti Discrimination",
-        "status": "FOUND",
+        "status": "REQUIRES_CONFIRMATION",
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-TX-ANT-001",
-            "text": "Chapter 21 of the Texas Labor Code prohibits employment discrimination based on race, color, disability, religion, sex, national origin, and age; TWC Civil Rights Division enforces for smaller employers.",
-            "status": "FOUND",
-            "category": "chapter_21",
+            "fact_id": "EL-GA-ANT-001",
+            "text": "The Georgia Fair Employment Practices Act of 1978 prohibits public-employer discrimination; private employers with 15+ employees are covered by federal Title VII enforced by EEOC.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "fepa",
             "citation": {
-              "source": "Tex. Labor Code Ch. 21",
-              "url": "https://statutes.capitol.texas.gov/Docs/LA/htm/LA.21.htm",
-              "agency": "Texas Workforce Commission",
-              "jurisdiction": "Texas",
+              "source": "Georgia OCGA §45-19-20 et seq.",
+              "url": "https://law.justia.com/codes/georgia/title-45/chapter-19/",
+              "agency": "Georgia Commission on Equal Opportunity",
+              "jurisdiction": "Georgia",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
@@ -82,15 +82,15 @@
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-TX-WOR-001",
-            "text": "Private employers in Texas may elect workers' compensation coverage; non-subscribers lose common-law defenses and must notify employees and post notices of non-coverage.",
+            "fact_id": "EL-GA-WOR-001",
+            "text": "Georgia employers with three or more employees must provide workers' compensation insurance; construction subcontractors may trigger coverage at one employee.",
             "status": "FOUND",
-            "category": "wc_elective",
+            "category": "wc_mandatory",
             "citation": {
-              "source": "Texas DWC — Workers' compensation coverage",
-              "url": "https://www.tdi.texas.gov/wc/employer/",
-              "agency": "Texas Department of Insurance — DWC",
-              "jurisdiction": "Texas",
+              "source": "Georgia SBWC — Coverage requirements",
+              "url": "https://sbwc.georgia.gov/employers/coverage-requirements",
+              "agency": "Georgia State Board of Workers' Compensation",
+              "jurisdiction": "Georgia",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
@@ -102,19 +102,19 @@
       "paid_leave_posting": {
         "domain": "paid_leave_posting",
         "label": "Paid Leave Posting",
-        "status": "REQUIRES_CONFIRMATION",
+        "status": "FOUND",
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-TX-PAI-001",
-            "text": "Texas has no statewide paid sick leave mandate for private employers; local paid-sick ordinances have been preempted — confirm current preemption statute before relying on municipal rules.",
-            "status": "REQUIRES_CONFIRMATION",
+            "fact_id": "EL-GA-PAI-001",
+            "text": "Georgia has no statewide paid sick leave mandate for private employers; federal FMLA applies to covered employers.",
+            "status": "FOUND",
             "category": "paid_leave",
             "citation": {
-              "source": "Texas Legislature — paid leave preemption (verify current)",
-              "url": "https://statutes.capitol.texas.gov/",
-              "agency": "Texas Legislature",
-              "jurisdiction": "Texas",
+              "source": "Georgia DOL — employer resources",
+              "url": "https://dol.georgia.gov/employers",
+              "agency": "Georgia Department of Labor",
+              "jurisdiction": "Georgia",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
@@ -130,15 +130,15 @@
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-TX-UNE-001",
-            "text": "Employers liable under the Texas Unemployment Compensation Act must register with TWC, report wages quarterly, and pay unemployment tax.",
+            "fact_id": "EL-GA-UNE-001",
+            "text": "Employers must register for Georgia unemployment insurance tax, file quarterly reports, and post UI workplace notices.",
             "status": "FOUND",
             "category": "ui_registration",
             "citation": {
-              "source": "Texas Workforce Commission — Unemployment tax registration",
-              "url": "https://www.twc.texas.gov/businesses/unemployment-tax-registration",
-              "agency": "Texas Workforce Commission",
-              "jurisdiction": "Texas",
+              "source": "Georgia DOL — UI tax for employers",
+              "url": "https://dol.georgia.gov/employers/unemployment-insurance-tax",
+              "agency": "Georgia Department of Labor",
+              "jurisdiction": "Georgia",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }

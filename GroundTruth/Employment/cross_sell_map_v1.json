@@ -1,7 +1,9 @@
 {
   "artifact": "employment_labor_cross_sell_map",
-  "version": "1.0",
-  "task": "R4-B",
+  "version": "1.1",
+  "task": "R4-C",
+  "parent_task": "R4-B",
+  "state_depth": 10,
   "verticals": {
     "construction": {
       "label": "Construction & Trades",
@@ -9,7 +11,7 @@
       "employment_hooks": [
         "OSHA 29 CFR Part 1926 construction standards + General Duty Clause",
         "FLSA prevailing-wage overlays on federal/public works (Davis-Bacon — separate lane)",
-        "State workers' compensation mandatory in all five seed states",
+        "State workers' compensation mandatory in all ten depth states",
         "Child-labor hazardous occupation orders for under-18 workers on job sites"
       ]
     },

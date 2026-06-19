@@ -1,0 +1,87 @@
+{
+  "message_type": "recap_vcs",
+  "issue": "R4-C",
+  "parent_issue": "R4-B",
+  "title": "R4-C — Employment/Labor depth expansion (+5 states → 10 total)",
+  "generated_at": "2026-06-19T16:37:33.240783+00:00",
+  "status": "COMPLETE",
+  "verdict": "GREEN",
+  "owner_terminal": "R4",
+  "lane": "Employment / Labor",
+  "pinned_lane": "GroundTruth/Employment",
+  "recap": {
+    "did": [
+      "Expanded state overlays with tranche-2: IL, OH, GA, NC, MI (next 5 high-volume by population)",
+      "Total depth: 10 states (CA, TX, NY, FL, PA + IL, OH, GA, NC, MI)",
+      "Same 8-section bible template; seed bumped to depth_10_states / R4C-EL-DEPTH-10-v1 sellable SKU",
+      "Re-harvested federal + all state packs; pinned GroundTruth/Employment/"
+    ],
+    "state": "Federal 15 facts across 3 domains (FOUND 3); state 59 facts across 10 states (FOUND 46, REQUIRES_CONFIRMATION 4)",
+    "next": [
+      "Expand to remaining 40 states on client intake (R4C-EL-50-v1)",
+      "Wire R4C-EL-DEPTH-10-v1 SKU into Nexus intake",
+      "Add Davis-Bacon / prevailing wage cross-lane pointer for public-works construction"
+    ]
+  },
+  "metrics": {
+    "federal_domains": 3,
+    "federal_facts": 15,
+    "federal_status_roll": {
+      "FOUND": 3,
+      "REQUIRES_CONFIRMATION": 0,
+      "NOT FOUND": 0,
+      "ACCESS_RESTRICTED": 0
+    },
+    "state_count": 10,
+    "state_tranche_1": [
+      "CA",
+      "TX",
+      "NY",
+      "FL",
+      "PA"
+    ],
+    "state_tranche_2": [
+      "IL",
+      "OH",
+      "GA",
+      "NC",
+      "MI"
+    ],
+    "state_facts": 59,
+    "state_status_roll": {
+      "FOUND": 46,
+      "REQUIRES_CONFIRMATION": 4,
+      "NOT FOUND": 0,
+      "ACCESS_RESTRICTED": 0
+    },
+    "cross_sell_verticals": [
+      "construction",
+      "healthcare",
+      "childcare"
+    ],
+    "sku": "R4C-EL-DEPTH-10-v1"
+  },
+  "vcs_commit_draft": {
+    "subject": "R4-C: Employment/Labor depth — +5 states (10 total)",
+    "body": "RECAP\n- Did: Tranche-2 IL/OH/GA/NC/MI; total 10-state depth (59 state facts + 15 federal); bible seed v1.1\n- State: GREEN — R4C-EL-DEPTH-10-v1 sellable SKU; same 8-section template\n- Next: Nexus intake wire; 50-state expansion on demand\n\nCEILING: Local paid-leave ordinances REQUIRES_CONFIRMATION; no Lexis/paywall sources."
+  },
+  "artifacts": [
+    "GroundTruth/Employment/federal_employment_labor_baseline.json",
+    "GroundTruth/Employment/states/california.json",
+    "GroundTruth/Employment/states/texas.json",
+    "GroundTruth/Employment/states/new_york.json",
+    "GroundTruth/Employment/states/florida.json",
+    "GroundTruth/Employment/states/pennsylvania.json",
+    "GroundTruth/Employment/states/illinois.json",
+    "GroundTruth/Employment/states/ohio.json",
+    "GroundTruth/Employment/states/georgia.json",
+    "GroundTruth/Employment/states/north_carolina.json",
+    "GroundTruth/Employment/states/michigan.json",
+    "GroundTruth/Employment/compliance_bible_template_v1.json",
+    "GroundTruth/Employment/employment_labor_knowledge_bible_seed_v1.json",
+    "GroundTruth/Employment/source_register.json",
+    "GroundTruth/Employment/cross_sell_map_v1.json",
+    "GroundTruth/Employment/lane_meta.json",
+    "GroundTruth/Employment/INDEX.json"
+  ]
+}

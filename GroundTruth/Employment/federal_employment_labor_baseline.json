@@ -1,10 +1,10 @@
 {
   "artifact": "federal_employment_labor_baseline",
   "version": "1.0",
-  "lane": "R4-B",
-  "task": "R4-B — Federal employment/labor baseline (DOL FLSA, OSHA, EEOC hiring)",
+  "lane": "R4-C",
+  "task": "R4-C — Federal employment/labor baseline (DOL FLSA, OSHA, EEOC hiring)",
   "jurisdiction": "Federal",
-  "generated_at": "2026-06-19T16:20:18.283812+00:00",
+  "generated_at": "2026-06-19T16:37:18.012571+00:00",
   "retrieved_date": "2026-06-19",
   "disclaimer": "Operational employment/labor compliance research and cited public-records compilation — not legal advice. Confirm wage-hour, OSHA, EEOC, and state labor obligations with licensed counsel and the relevant agency before relying on any fact for operations or filings.",
   "policy": "Public .gov / eCFR sources only; HTTP 403 = park; gaps explicit.",

@@ -2,11 +2,11 @@
   "artifact": "employment_labor_state_pack",
   "version": "1.0",
   "lane": "R4-C",
-  "task": "R4-C — State employment/labor overlay (California)",
-  "state": "California",
-  "state_code": "CA",
-  "state_slug": "california",
-  "generated_at": "2026-06-19T16:37:19.726876+00:00",
+  "task": "R4-C — State employment/labor overlay (Illinois)",
+  "state": "Illinois",
+  "state_code": "IL",
+  "state_slug": "illinois",
+  "generated_at": "2026-06-19T16:37:27.704397+00:00",
   "retrieved_date": "2026-06-19",
   "disclaimer": "Operational employment/labor compliance research and cited public-records compilation — not legal advice. Confirm wage-hour, OSHA, EEOC, and state labor obligations with licensed counsel and the relevant agency before relying on any fact for operations or filings.",
   "policy": "Public statute/agency sources only; gaps explicit.",
@@ -20,29 +20,29 @@
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-CA-MIN-001",
-            "text": "California minimum wage and overtime rules are set by Labor Code and IWC wage orders; employers must pay the higher of federal or state minimum and follow daily overtime after 8 hours and double-time rules for extended shifts.",
+            "fact_id": "EL-IL-MIN-001",
+            "text": "Illinois Minimum Wage Law sets a state minimum wage above the federal floor; employers must pay the higher applicable rate and comply with overtime after 40 hours in a workweek.",
             "status": "FOUND",
-            "category": "wage_overtime",
+            "category": "minimum_wage",
             "citation": {
-              "source": "Cal. Labor Code §§510, 1182.12",
-              "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=510.&lawCode=LAB",
-              "agency": "California DIR / Legislature",
-              "jurisdiction": "California",
+              "source": "820 ILCS 105/ — Illinois Minimum Wage Law",
+              "url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=56&ChapterID=2",
+              "agency": "Illinois Department of Labor",
+              "jurisdiction": "Illinois",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
           },
           {
-            "fact_id": "EL-CA-MIN-002",
-            "text": "Meal and rest break requirements apply to nonexempt employees; failure to provide compliant breaks triggers premium pay obligations under state law.",
+            "fact_id": "EL-IL-MIN-002",
+            "text": "Illinois requires meal periods for employees working 7.5+ hours and additional break rules for hotel room attendants and other listed occupations.",
             "status": "FOUND",
             "category": "meal_rest",
             "citation": {
-              "source": "Cal. Labor Code §§226.7, 512",
-              "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=512.&lawCode=LAB",
-              "agency": "California DIR / Legislature",
-              "jurisdiction": "California",
+              "source": "820 ILCS 140/ — One Day Rest in Seven Act",
+              "url": "https://www2.illinois.gov/idol/Laws-Rules/CONMED/Pages/default.aspx",
+              "agency": "Illinois Department of Labor",
+              "jurisdiction": "Illinois",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
@@ -58,15 +58,15 @@
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-CA-ANT-001",
-            "text": "The Fair Employment and Housing Act (FEHA) prohibits harassment and discrimination in employment based on protected classes including race, religion, sex, disability, age, and others; DFEH/CRD enforces.",
+            "fact_id": "EL-IL-ANT-001",
+            "text": "The Illinois Human Rights Act prohibits discrimination in employment based on protected classes including race, color, religion, sex, national origin, ancestry, age, disability, and others; IDHR enforces.",
             "status": "FOUND",
-            "category": "feha",
+            "category": "ihra",
             "citation": {
-              "source": "Cal. Gov. Code §12940",
-              "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12940.&lawCode=GOV",
-              "agency": "California Civil Rights Department",
-              "jurisdiction": "California",
+              "source": "775 ILCS 5/ — Illinois Human Rights Act",
+              "url": "https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2206&ChapterID=63",
+              "agency": "Illinois Department of Human Rights",
+              "jurisdiction": "Illinois",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
@@ -82,15 +82,15 @@
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-CA-WOR-001",
-            "text": "California employers must secure workers' compensation insurance or qualify as self-insured before hiring employees; failure to carry coverage is a criminal misdemeanor.",
+            "fact_id": "EL-IL-WOR-001",
+            "text": "Illinois employers must provide workers' compensation insurance covering medical expenses and wage replacement for work-related injuries; failure to insure is a Class 4 felony.",
             "status": "FOUND",
             "category": "wc_mandatory",
             "citation": {
-              "source": "Cal. Labor Code §3700",
-              "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=3700.&lawCode=LAB",
-              "agency": "California DWC",
-              "jurisdiction": "California",
+              "source": "820 ILCS 305/ — Workers' Compensation Act",
+              "url": "https://www2.illinois.gov/ides/employer/Pages/workers_compensation.aspx",
+              "agency": "Illinois Workers' Compensation Commission",
+              "jurisdiction": "Illinois",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
@@ -106,15 +106,15 @@
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-CA-PAI-001",
-            "text": "Employers must provide paid sick leave accrual or front-loading under the Healthy Workplaces, Healthy Families Act; poster and wage-statement requirements apply.",
+            "fact_id": "EL-IL-PAI-001",
+            "text": "The Paid Leave for All Workers Act requires most Illinois employers to provide paid leave for any reason; accrual and front-loading rules apply by employer size.",
             "status": "FOUND",
-            "category": "paid_sick_leave",
+            "category": "paid_leave",
             "citation": {
-              "source": "Cal. Labor Code §§246, 247",
-              "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=246.&lawCode=LAB",
-              "agency": "California DIR",
-              "jurisdiction": "California",
+              "source": "820 ILCS 192/ — Paid Leave for All Workers Act",
+              "url": "https://www2.illinois.gov/idol/Laws-Rules/FLS/Pages/paidleave.aspx",
+              "agency": "Illinois Department of Labor",
+              "jurisdiction": "Illinois",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
@@ -130,15 +130,15 @@
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-CA-UNE-001",
-            "text": "Employers with California wages must register with EDD for unemployment and disability insurance, file quarterly wage reports, and display mandatory workplace posters.",
+            "fact_id": "EL-IL-UNE-001",
+            "text": "Employers must register with IDES for unemployment insurance, report wages quarterly, and pay UI taxes on covered employment.",
             "status": "FOUND",
             "category": "ui_registration",
             "citation": {
-              "source": "California EDD — New employer registration",
-              "url": "https://edd.ca.gov/en/payroll_taxes/",
-              "agency": "California Employment Development Department",
-              "jurisdiction": "California",
+              "source": "Illinois IDES — Employer UI registration",
+              "url": "https://www2.illinois.gov/ides/employer/Pages/default.aspx",
+              "agency": "Illinois Department of Employment Security",
+              "jurisdiction": "Illinois",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }

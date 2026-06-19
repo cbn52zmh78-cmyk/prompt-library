@@ -3,11 +3,11 @@
   "version": "1.0",
   "format": "knowledge_bible_8_section",
   "tier": "A",
-  "lane": "R4-B",
+  "lane": "R4-C",
   "vertical": "Employment / Labor",
   "citation_standard": "STD-CITE-001",
   "knowledge_gate": "Knowledge-Gate-clean",
-  "generated_at": "2026-06-19T16:20:26.709990+00:00",
+  "generated_at": "2026-06-19T16:37:33.231116+00:00",
   "parent_template": "GroundTruth/Compliance/compliance_bible_template_v1.json",
   "disclaimer": "Operational employment/labor compliance research and cited public-records compilation — not legal advice. Confirm wage-hour, OSHA, EEOC, and state labor obligations with licensed counsel and the relevant agency before relying on any fact for operations or filings.",
   "pinned_output_dir": "GroundTruth/Employment",
@@ -89,6 +89,35 @@
         "healthcare",
         "childcare"
       ]
+    },
+    "depth_10_states": {
+      "sku": "R4C-EL-DEPTH-10-v1",
+      "stem": "employment_labor_knowledge_bible_seed_v1",
+      "state_codes": [
+        "CA",
+        "TX",
+        "NY",
+        "FL",
+        "PA",
+        "IL",
+        "OH",
+        "GA",
+        "NC",
+        "MI"
+      ],
+      "tranche_2": [
+        "IL",
+        "OH",
+        "GA",
+        "NC",
+        "MI"
+      ],
+      "cross_sell_verticals": [
+        "construction",
+        "healthcare",
+        "childcare"
+      ],
+      "upsell_to": "R4C-EL-50-v1"
     }
   }
 }

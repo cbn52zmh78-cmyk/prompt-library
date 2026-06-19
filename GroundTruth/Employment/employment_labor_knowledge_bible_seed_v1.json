@@ -1,35 +1,54 @@
 {
   "artifact": "knowledge_bible",
   "format": "8-section",
-  "version": "1.0",
-  "variant": "seed_5_states",
-  "lane": "R4-B",
+  "version": "1.1",
+  "variant": "depth_10_states",
+  "lane": "R4-C",
   "vertical": "Employment / Labor",
-  "sku": "R4B-EL-SEED-5-v1",
-  "product_status": "SEED",
+  "sku": "R4C-EL-DEPTH-10-v1",
+  "product_status": "DEPTH_10",
   "sellable": true,
   "citation_standard": "STD-CITE-001",
   "knowledge_gate": "Knowledge-Gate-clean",
   "template": "GroundTruth/Employment/compliance_bible_template_v1.json",
-  "generated_at": "2026-06-19T16:20:26.713326+00:00",
+  "generated_at": "2026-06-19T16:37:33.233034+00:00",
   "disclaimer": "Operational employment/labor compliance research and cited public-records compilation — not legal advice. Confirm wage-hour, OSHA, EEOC, and state labor obligations with licensed counsel and the relevant agency before relying on any fact for operations or filings.",
   "sections": {
     "1_tldr": {
       "title": "TL;DR / Executive Summary",
-      "coverage": "Federal DOL FLSA wage-hour, OSHA workplace safety, EEOC hiring discrimination + state overlays for CA, TX, NY, FL, PA.",
-      "state_count": 5,
+      "coverage": "Federal DOL FLSA wage-hour, OSHA workplace safety, EEOC hiring discrimination + state overlays for 10 high-volume states (CA, TX, NY, FL, PA, IL, OH, GA, NC, MI).",
+      "state_count": 10,
       "state_codes": [
+        "CA",
+        "TX",
+        "NY",
+        "FL",
+        "PA",
+        "IL",
+        "OH",
+        "GA",
+        "NC",
+        "MI"
+      ],
+      "tranche_1": [
         "CA",
         "TX",
         "NY",
         "FL",
         "PA"
       ],
-      "cited_claims": 44,
+      "tranche_2": [
+        "IL",
+        "OH",
+        "GA",
+        "NC",
+        "MI"
+      ],
+      "cited_claims": 74,
       "gaps_flagged": 0,
       "status_roll": {
-        "FOUND": 42,
-        "REQUIRES_CONFIRMATION": 2
+        "FOUND": 70,
+        "REQUIRES_CONFIRMATION": 4
       },
       "as_of_date": "2026-06-19",
       "cross_sell": [
@@ -66,7 +85,12 @@
           "Texas",
           "New York",
           "Florida",
-          "Pennsylvania"
+          "Pennsylvania",
+          "Illinois",
+          "Ohio",
+          "Georgia",
+          "North Carolina",
+          "Michigan"
         ]
       },
       "methodology": "Curated public-source harvest 2026-06-19. Primary federal = eCFR Title 29 + DOL/OSHA/EEOC .gov; state = statute and agency labor portals.",
@@ -293,28 +317,238 @@
               ]
             }
           }
+        },
+        "Illinois": {
+          "state_code": "IL",
+          "domains": {
+            "minimum_wage_overtime": {
+              "status": "FOUND",
+              "fact_count": 2,
+              "sample_facts": [
+                "Illinois Minimum Wage Law sets a state minimum wage above the federal floor; employers must pay the higher applicable rate and comply with overtime after 40 hours in a workweek.",
+                "Illinois requires meal periods for employees working 7.5+ hours and additional break rules for hotel room attendants and other listed occupations."
+              ]
+            },
+            "anti_discrimination": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "The Illinois Human Rights Act prohibits discrimination in employment based on protected classes including race, color, religion, sex, national origin, ancestry, age, disability, and others; IDHR enforces."
+              ]
+            },
+            "workers_compensation": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Illinois employers must provide workers' compensation insurance covering medical expenses and wage replacement for work-related injuries; failure to insure is a Class 4 felony."
+              ]
+            },
+            "paid_leave_posting": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "The Paid Leave for All Workers Act requires most Illinois employers to provide paid leave for any reason; accrual and front-loading rules apply by employer size."
+              ]
+            },
+            "unemployment_insurance": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Employers must register with IDES for unemployment insurance, report wages quarterly, and pay UI taxes on covered employment."
+              ]
+            }
+          }
+        },
+        "Ohio": {
+          "state_code": "OH",
+          "domains": {
+            "minimum_wage_overtime": {
+              "status": "FOUND",
+              "fact_count": 2,
+              "sample_facts": [
+                "Ohio minimum wage is indexed to inflation under a constitutional amendment; non-tipped employees receive the state rate where it exceeds the federal floor.",
+                "Ohio follows federal FLSA overtime standards for most private employers; state wage-hour division enforces minimum wage and prevailing-wage on public improvements."
+              ]
+            },
+            "anti_discrimination": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Ohio Revised Code Chapter 4112 prohibits employment discrimination based on race, color, religion, sex, military status, national origin, disability, age, and ancestry."
+              ]
+            },
+            "workers_compensation": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Ohio employers with one or more employees must obtain workers' compensation coverage through the state insurance fund or self-insurance/BWC alternative."
+              ]
+            },
+            "paid_leave_posting": {
+              "status": "REQUIRES_CONFIRMATION",
+              "fact_count": 1,
+              "sample_facts": [
+                "Ohio has no statewide paid sick leave mandate for private employers; municipal ordinances may apply — confirm locality (REQUIRES_CONFIRMATION for city rules)."
+              ]
+            },
+            "unemployment_insurance": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Employers must register with Ohio Department of Job and Family Services for unemployment compensation tax and file quarterly wage reports."
+              ]
+            }
+          }
+        },
+        "Georgia": {
+          "state_code": "GA",
+          "domains": {
+            "minimum_wage_overtime": {
+              "status": "FOUND",
+              "fact_count": 2,
+              "sample_facts": [
+                "Georgia does not set a state minimum wage above the federal $7.25 for most private employers; covered employers follow FLSA minimum wage and overtime rules.",
+                "Georgia employers must pay wages when due under state payday laws; final wages timing applies on separation."
+              ]
+            },
+            "anti_discrimination": {
+              "status": "REQUIRES_CONFIRMATION",
+              "fact_count": 1,
+              "sample_facts": [
+                "The Georgia Fair Employment Practices Act of 1978 prohibits public-employer discrimination; private employers with 15+ employees are covered by federal Title VII enforced by EEOC."
+              ]
+            },
+            "workers_compensation": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Georgia employers with three or more employees must provide workers' compensation insurance; construction subcontractors may trigger coverage at one employee."
+              ]
+            },
+            "paid_leave_posting": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Georgia has no statewide paid sick leave mandate for private employers; federal FMLA applies to covered employers."
+              ]
+            },
+            "unemployment_insurance": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Employers must register for Georgia unemployment insurance tax, file quarterly reports, and post UI workplace notices."
+              ]
+            }
+          }
+        },
+        "North Carolina": {
+          "state_code": "NC",
+          "domains": {
+            "minimum_wage_overtime": {
+              "status": "FOUND",
+              "fact_count": 2,
+              "sample_facts": [
+                "North Carolina follows the federal minimum wage of $7.25 for most employees; state Wage and Hour Act incorporates federal standards for overtime.",
+                "Youth employment certificates (YEC) are required for workers under 18 in non-agricultural jobs under state child-labor rules."
+              ]
+            },
+            "anti_discrimination": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "The North Carolina Equal Employment Practices Act declares it against public policy to discriminate in employment based on race, religion, color, national origin, age, sex, or handicap."
+              ]
+            },
+            "workers_compensation": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "North Carolina employers with three or more employees must carry workers' compensation insurance; construction employers with one or more employees must cover."
+              ]
+            },
+            "paid_leave_posting": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "North Carolina has no statewide paid sick leave mandate for private employers; employers must post federal and state workplace notices."
+              ]
+            },
+            "unemployment_insurance": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Employers must register with DES for unemployment insurance tax and file quarterly wage reports."
+              ]
+            }
+          }
+        },
+        "Michigan": {
+          "state_code": "MI",
+          "domains": {
+            "minimum_wage_overtime": {
+              "status": "FOUND",
+              "fact_count": 2,
+              "sample_facts": [
+                "Michigan Improved Workforce Opportunity Wage Act sets state minimum wage and tipped minimum rates above the federal floor where applicable.",
+                "Nonexempt employees receive overtime at 1.5× regular rate after 40 hours in a workweek under state wage-hour rules aligned with FLSA."
+              ]
+            },
+            "anti_discrimination": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "The Elliott-Larsen Civil Rights Act prohibits employment discrimination based on religion, race, color, national origin, age, sex, height, weight, familial status, or marital status."
+              ]
+            },
+            "workers_compensation": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Michigan employers must secure workers' compensation insurance for employees or qualify as self-insured; agricultural employers with 3+ employees 35+ days/year must cover."
+              ]
+            },
+            "paid_leave_posting": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Michigan Paid Medical Leave Act requires eligible employees to earn one hour of sick time per 35 hours worked (or front-load); poster and recordkeeping required."
+              ]
+            },
+            "unemployment_insurance": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Employers must register with Michigan UIA for unemployment insurance tax and file quarterly wage reports."
+              ]
+            }
+          }
         }
       }
     },
     "4_source_register_graded": {
       "title": "Source Register (Graded)",
       "register_path": "GroundTruth/Employment/source_register.json",
-      "primary_count": 28,
-      "harvested_count": 15,
-      "parked_count": 13
+      "primary_count": 53,
+      "harvested_count": 22,
+      "parked_count": 31
     },
     "5_conflict_reconciliation": {
       "title": "Conflicting Sources Reconciliation",
       "items": [
         {
           "topic": "Minimum wage — federal vs state",
-          "assessment": "Employers must pay the higher applicable rate; CA/NY/FL exceed federal floor; TX and PA generally track federal unless local ordinance applies.",
+          "assessment": "Employers must pay the higher applicable rate; CA/NY/FL/IL/MI exceed federal floor; TX/GA/NC track federal unless local ordinance applies.",
           "status": "FOUND"
         },
         {
-          "topic": "OSHA — federal vs Cal/OSHA state plan",
-          "assessment": "California operates a state-plan OSHA program with standards at least as effective as federal; construction employers in CA follow Cal/OSHA Title 8.",
+          "topic": "OSHA — federal vs Cal/OSHA / MI/OSHA state plans",
+          "assessment": "California and Michigan operate state-plan OSHA programs; construction employers in CA follow Cal/OSHA Title 8; MI MIOSHA applies to public and private sector.",
           "status": "REQUIRES_CONFIRMATION"
+        },
+        {
+          "topic": "Paid leave — IL / MI vs no statewide mandate (TX, GA, NC)",
+          "assessment": "Illinois Paid Leave for All Workers and Michigan Paid Medical Leave impose statewide accrual; tranche-2 states without mandate still require federal poster compliance.",
+          "status": "FOUND"
         }
       ]
     },
@@ -325,7 +559,7 @@
     "7_confidence": {
       "title": "Confidence Assessment",
       "overall": "HIGH",
-      "basis": "42/44 facts FOUND; 0 explicit gaps; 13 parked sources."
+      "basis": "70/74 facts FOUND; 0 explicit gaps; 31 parked sources."
     },
     "8_citations": {
       "title": "Full Citation Appendix",

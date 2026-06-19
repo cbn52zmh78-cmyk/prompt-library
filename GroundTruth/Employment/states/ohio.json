@@ -2,11 +2,11 @@
   "artifact": "employment_labor_state_pack",
   "version": "1.0",
   "lane": "R4-C",
-  "task": "R4-C — State employment/labor overlay (Texas)",
-  "state": "Texas",
-  "state_code": "TX",
-  "state_slug": "texas",
-  "generated_at": "2026-06-19T16:37:21.721638+00:00",
+  "task": "R4-C — State employment/labor overlay (Ohio)",
+  "state": "Ohio",
+  "state_code": "OH",
+  "state_slug": "ohio",
+  "generated_at": "2026-06-19T16:37:29.594682+00:00",
   "retrieved_date": "2026-06-19",
   "disclaimer": "Operational employment/labor compliance research and cited public-records compilation — not legal advice. Confirm wage-hour, OSHA, EEOC, and state labor obligations with licensed counsel and the relevant agency before relying on any fact for operations or filings.",
   "policy": "Public statute/agency sources only; gaps explicit.",
@@ -20,29 +20,29 @@
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-TX-MIN-001",
-            "text": "Texas does not set a state minimum wage above the federal floor; covered employers follow FLSA minimum wage and overtime unless a higher federal contract or local rule applies.",
+            "fact_id": "EL-OH-MIN-001",
+            "text": "Ohio minimum wage is indexed to inflation under a constitutional amendment; non-tipped employees receive the state rate where it exceeds the federal floor.",
             "status": "FOUND",
             "category": "minimum_wage",
             "citation": {
-              "source": "Texas Workforce Commission — Texas Minimum Wage Law",
-              "url": "https://www.twc.texas.gov/businesses/texas-minimum-wage-law",
-              "agency": "Texas Workforce Commission",
-              "jurisdiction": "Texas",
+              "source": "Ohio Constitution Art. II §34a / Ohio Minimum Wage",
+              "url": "https://com.ohio.gov/divisions-and-programs/industrial-compliance/wage-and-hour/minimum-wage",
+              "agency": "Ohio Department of Commerce — Industrial Compliance",
+              "jurisdiction": "Ohio",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
           },
           {
-            "fact_id": "EL-TX-MIN-002",
-            "text": "Texas Payday Law requires employers to pay wages at least twice monthly for non-exempt employees and on schedule for exempt employees; final pay timing rules apply on separation.",
+            "fact_id": "EL-OH-MIN-002",
+            "text": "Ohio follows federal FLSA overtime standards for most private employers; state wage-hour division enforces minimum wage and prevailing-wage on public improvements.",
             "status": "FOUND",
-            "category": "payday_law",
+            "category": "overtime",
             "citation": {
-              "source": "Texas Workforce Commission — Payday Law",
-              "url": "https://www.twc.texas.gov/businesses/payday-law",
-              "agency": "Texas Workforce Commission",
-              "jurisdiction": "Texas",
+              "source": "Ohio RC Chapter 4111 — Minimum Fair Wage Standards",
+              "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4111",
+              "agency": "Ohio Department of Commerce",
+              "jurisdiction": "Ohio",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
@@ -58,15 +58,15 @@
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-TX-ANT-001",
-            "text": "Chapter 21 of the Texas Labor Code prohibits employment discrimination based on race, color, disability, religion, sex, national origin, and age; TWC Civil Rights Division enforces for smaller employers.",
+            "fact_id": "EL-OH-ANT-001",
+            "text": "Ohio Revised Code Chapter 4112 prohibits employment discrimination based on race, color, religion, sex, military status, national origin, disability, age, and ancestry.",
             "status": "FOUND",
-            "category": "chapter_21",
+            "category": "civil_rights",
             "citation": {
-              "source": "Tex. Labor Code Ch. 21",
-              "url": "https://statutes.capitol.texas.gov/Docs/LA/htm/LA.21.htm",
-              "agency": "Texas Workforce Commission",
-              "jurisdiction": "Texas",
+              "source": "Ohio RC Ch. 4112 — Civil Rights Commission",
+              "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4112",
+              "agency": "Ohio Civil Rights Commission",
+              "jurisdiction": "Ohio",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
@@ -82,15 +82,15 @@
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-TX-WOR-001",
-            "text": "Private employers in Texas may elect workers' compensation coverage; non-subscribers lose common-law defenses and must notify employees and post notices of non-coverage.",
+            "fact_id": "EL-OH-WOR-001",
+            "text": "Ohio employers with one or more employees must obtain workers' compensation coverage through the state insurance fund or self-insurance/BWC alternative.",
             "status": "FOUND",
-            "category": "wc_elective",
+            "category": "wc_mandatory",
             "citation": {
-              "source": "Texas DWC — Workers' compensation coverage",
-              "url": "https://www.tdi.texas.gov/wc/employer/",
-              "agency": "Texas Department of Insurance — DWC",
-              "jurisdiction": "Texas",
+              "source": "Ohio BWC — Coverage requirements",
+              "url": "https://www.bwc.ohio.gov/employercoverage",
+              "agency": "Ohio Bureau of Workers' Compensation",
+              "jurisdiction": "Ohio",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
@@ -106,15 +106,15 @@
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-TX-PAI-001",
-            "text": "Texas has no statewide paid sick leave mandate for private employers; local paid-sick ordinances have been preempted — confirm current preemption statute before relying on municipal rules.",
+            "fact_id": "EL-OH-PAI-001",
+            "text": "Ohio has no statewide paid sick leave mandate for private employers; municipal ordinances may apply — confirm locality (REQUIRES_CONFIRMATION for city rules).",
             "status": "REQUIRES_CONFIRMATION",
             "category": "paid_leave",
             "citation": {
-              "source": "Texas Legislature — paid leave preemption (verify current)",
-              "url": "https://statutes.capitol.texas.gov/",
-              "agency": "Texas Legislature",
-              "jurisdiction": "Texas",
+              "source": "Ohio Department of Commerce — wage-hour",
+              "url": "https://com.ohio.gov/divisions-and-programs/industrial-compliance/wage-and-hour",
+              "agency": "Ohio Department of Commerce",
+              "jurisdiction": "Ohio",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
@@ -130,15 +130,15 @@
         "probe_result": "curated_public_sources",
         "cited_facts": [
           {
-            "fact_id": "EL-TX-UNE-001",
-            "text": "Employers liable under the Texas Unemployment Compensation Act must register with TWC, report wages quarterly, and pay unemployment tax.",
+            "fact_id": "EL-OH-UNE-001",
+            "text": "Employers must register with Ohio Department of Job and Family Services for unemployment compensation tax and file quarterly wage reports.",
             "status": "FOUND",
             "category": "ui_registration",
             "citation": {
-              "source": "Texas Workforce Commission — Unemployment tax registration",
-              "url": "https://www.twc.texas.gov/businesses/unemployment-tax-registration",
-              "agency": "Texas Workforce Commission",
-              "jurisdiction": "Texas",
+              "source": "Ohio JFS — Unemployment compensation for employers",
+              "url": "https://jfs.ohio.gov/ouio/uctax/",
+              "agency": "Ohio Department of Job and Family Services",
+              "jurisdiction": "Ohio",
               "tier": "agency_primary",
               "retrieved_date": "2026-06-19"
             }
