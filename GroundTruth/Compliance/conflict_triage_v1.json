@@ -4,46 +4,47 @@
   "task": "T5-280-B",
   "as_of_date": "2026-06-19",
   "input_conflict_count": 706,
-  "trivial_count": 85,
-  "substantive_count": 621,
-  "facts_collapsed": 291,
+  "trivial_count": 143,
+  "substantive_count": 563,
+  "facts_collapsed": 235,
   "by_reason": {
     "TRIVIAL": {
-      "wording_substring": 60,
-      "wording_high_similarity": 25
+      "wording_substring": 74,
+      "wording_high_similarity": 65,
+      "wording_portal_pointer": 4
     },
     "SUBSTANTIVE": {
-      "url_multifact_distinct": 387,
-      "number_delta": 144,
-      "low_similarity_borderline": 69,
-      "requirement_polarity": 16,
+      "url_multifact_distinct": 388,
+      "number_delta": 85,
+      "low_similarity_borderline": 73,
+      "requirement_polarity": 12,
       "number_or_requirement_delta": 5
     }
   },
   "by_lane": {
     "R1": {
-      "trivial": 16,
-      "substantive": 95
+      "trivial": 18,
+      "substantive": 93
     },
     "R2": {
-      "trivial": 37,
-      "substantive": 73
+      "trivial": 53,
+      "substantive": 57
     },
     "R3": {
-      "trivial": 2,
-      "substantive": 120
+      "trivial": 20,
+      "substantive": 102
     },
     "R4": {
-      "trivial": 20,
-      "substantive": 212
+      "trivial": 34,
+      "substantive": 198
     },
     "R5": {
       "trivial": 0,
       "substantive": 20
     },
     "R6": {
-      "trivial": 10,
-      "substantive": 101
+      "trivial": 18,
+      "substantive": 93
     }
   },
   "policy": "TRIVIAL = POC-vs-lane wording or scrape-fragment sameness; auto-collapse to recommended variant. SUBSTANTIVE = distinct facts, number/requirement deltas; assessment + retain or pick variant. No fabricated synthesis.",
@@ -1014,12 +1015,10 @@
         "(c) the department may suspend or revoke a license or approval for a violation of this section or rules adopted by the commission. (1945, c. 829, s. 1; 1957, c. 1357, s. 1; 1973, c. 476, s. 128; 1983, c. 891, s. 2; 1987, c. 543, s. 1; 1989, c. 727, s. 143; 1997-443, s. 11a.79; 1998-136, s. 1; 2001-109, s. 1; 2001-487, s. 84(a); 2011-226, s. 1.)"
       ],
       "variant_count": 3,
-      "classification": "SUBSTANTIVE",
-      "reason": "requirement_polarity",
+      "classification": "TRIVIAL",
+      "reason": "wording_substring",
       "recommended_canonical_variant": "(c) the department may suspend or revoke a license or approval for a violation of this section or rules adopted by the commission. (1945, c. 829, s. 1; 1957, c. 1357, s. 1; 1973, c. 476, s. 128; 1983, c. 891, s. 2; 1987, c. 543, s. 1; 1989, c. 727, s. 143; 1997-443, s. 11a.79; 1998-136, s. 1; 2001-109, s. 1; 2001-487, s. 84(a); 2011-226, s. 1.)",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (requirement_polarity). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R1",
@@ -1346,12 +1345,10 @@
         "you have indicated interest in obtaining a temporary food establishment license. to be eligible for a"
       ],
       "variant_count": 2,
-      "classification": "SUBSTANTIVE",
-      "reason": "low_similarity_borderline",
+      "classification": "TRIVIAL",
+      "reason": "wording_portal_pointer",
       "recommended_canonical_variant": "you have indicated interest in obtaining a temporary food establishment license. to be eligible for a",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (low_similarity_borderline). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R1",
@@ -2167,10 +2164,10 @@
       ],
       "variant_count": 4,
       "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "reason": "low_similarity_borderline",
       "recommended_canonical_variant": "- remove the following sections from the 2021 international mechanical code – table 1104.3.2, 1109.4, 1109.4.1, 1109.4.2, 1109.7, 1110.5.1, 1110.5.2, 1110.6, 1110.7.",
       "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
+      "assessment": "Materially different content under shared URL (low_similarity_borderline). Recommended canonical variant is the longest cited harvest text; confirm at source.",
       "collapse": false
     },
     {
@@ -2186,12 +2183,10 @@
         "the residential committee was created in 1999 to license the builders of new homes in arkansas to further protect the health, safety and welfare of arkansans."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_substring",
       "recommended_canonical_variant": "the residential committee was created in 1999 to license the builders of new homes in arkansas to further protect the health, safety and welfare of arkansans.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R2",
@@ -2242,12 +2237,10 @@
         "the office of the state fire marshal, under the department of forestry and fire management, is responsible for inspecting 15,000 state and county-owned buildings. each year, deputy fire marshal's inspect nearly 3,200 buildings, including schools."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_substring",
       "recommended_canonical_variant": "the office of the state fire marshal, under the department of forestry and fire management, is responsible for inspecting 15,000 state and county-owned buildings. each year, deputy fire marshal's inspect nearly 3,200 buildings, including schools.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R2",
@@ -2435,10 +2428,10 @@
       ],
       "variant_count": 4,
       "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "reason": "low_similarity_borderline",
       "recommended_canonical_variant": "the florida building commission (sections 553.76 and 553.77, f.s.)",
       "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
+      "assessment": "Materially different content under shared URL (low_similarity_borderline). Recommended canonical variant is the longest cited harvest text; confirm at source.",
       "collapse": false
     },
     {
@@ -2899,12 +2892,10 @@
         "the american society of heating, refrigerating and air-conditioning engineers (ashrae) standards:"
       ],
       "variant_count": 3,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "2019 ashrae 62.2 (ventilation and acceptable indoor air quality in low-rise residential buildings)",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R2",
@@ -3120,12 +3111,10 @@
         "subscribe to esd events and news featured news dli launches first online prevailing wage surveys for construction and nonconstruction occupations april 22, 2026 helena, mont."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_substring",
       "recommended_canonical_variant": "subscribe to esd events and news featured news dli launches first online prevailing wage surveys for construction and nonconstruction occupations april 22, 2026 helena, mont.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R2",
@@ -3196,12 +3185,10 @@
         "2011 north carolina state electrical code amendments"
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "*the 2020 electrical code was effective from november 1, 2021 and is currently effective.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R2",
@@ -3236,12 +3223,10 @@
         "2012 administrative 2012 building 2012 energy conservation 2012 fire prevention 2012 fuel gas 2012 mechanical 2012 plumbing 2018 codes the following 2018 codes were effective from january 1, 2019 and are currently effective."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "2009 administrative 2009 building 2009 energy conservation 2009 fire prevention 2009 fuel gas 2009 mechanical 2009 plumbing 2012 codes the following 2012 codes were effective from september 1, 2011 through december 31, 2018.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R2",
@@ -3256,12 +3241,10 @@
         "2012 administrative 2012 building 2012 energy conservation 2012 fire prevention 2012 fuel gas 2012 mechanical 2012 plumbing 2018 codes the following 2018 codes were effective from january 1, 2019 and are currently effective."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "2009 administrative 2009 building 2009 energy conservation 2009 fire prevention 2009 fuel gas 2009 mechanical 2009 plumbing 2012 codes the following 2012 codes were effective from september 1, 2011 through december 31, 2018.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R2",
@@ -3329,12 +3312,10 @@
         "chapter 1 - regulations pursuant to the nebraska natural gas pipeline safety act of 1969"
       ],
       "variant_count": 2,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "81-542 nebraska natural gas pipeline safety act of 1969",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R2",
@@ -3422,12 +3403,10 @@
         "2021 new mexico residential building code nmac 14.7.3"
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "2021 new mexico commercial energy code nmac 14.7.9 (effective 7.30.2024)",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R2",
@@ -3463,10 +3442,10 @@
       ],
       "variant_count": 4,
       "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "reason": "low_similarity_borderline",
       "recommended_canonical_variant": "buildings 311 search all nyc.gov websites menu text-size search search search updates & news local law 10 of 2026 makes updates to sst program effective may 3, 2026 effective may 3, 2026, local law 10 (ll10) of 2026 updates the site safety training (sst) program by requiring training focused on mental health and wellness, suicide risk and prevention, and alcohol and substance misuse on construction sites.",
       "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
+      "assessment": "Materially different content under shared URL (low_similarity_borderline). Recommended canonical variant is the longest cited harvest text; confirm at source.",
       "collapse": false
     },
     {
@@ -3765,12 +3744,10 @@
         "the current requirements for the licensure of contractors, home improvement contractors, limited licensed electricians, and limited licensed plumbers can be found in tennessee code annotated, title 62, chapter 6."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_substring",
       "recommended_canonical_variant": "the board for licensing contractors was established in 1931 to regulate contractors in the state of tennessee. the current requirements for the licensure of contractors, home improvement contractors, limited licensed electricians, and limited licensed plumbers can be found in tennessee code annotated, title 62, chapter 6.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R2",
@@ -3785,12 +3762,10 @@
         "the current requirements for the licensure of contractors, home improvement contractors, limited licensed electricians, and limited licensed plumbers can be found in tennessee code annotated, title 62, chapter 6."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_substring",
       "recommended_canonical_variant": "the board for licensing contractors was established in 1931 to regulate contractors in the state of tennessee. the current requirements for the licensure of contractors, home improvement contractors, limited licensed electricians, and limited licensed plumbers can be found in tennessee code annotated, title 62, chapter 6.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R2",
@@ -3823,12 +3798,10 @@
         "the current requirements for the licensure of contractors, home improvement contractors, limited licensed electricians, and limited licensed plumbers can be found in tennessee code annotated, title 62, chapter 6."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_substring",
       "recommended_canonical_variant": "the board for licensing contractors was established in 1931 to regulate contractors in the state of tennessee. the current requirements for the licensure of contractors, home improvement contractors, limited licensed electricians, and limited licensed plumbers can be found in tennessee code annotated, title 62, chapter 6.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R2",
@@ -3841,12 +3814,10 @@
         "modifications to requirements for storm shelters"
       ],
       "variant_count": 2,
-      "classification": "SUBSTANTIVE",
-      "reason": "low_similarity_borderline",
+      "classification": "TRIVIAL",
+      "reason": "wording_portal_pointer",
       "recommended_canonical_variant": "modifications to iebc related to storm shelters and repairs to damaged structures",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (low_similarity_borderline). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R2",
@@ -3875,12 +3846,10 @@
         "there are 2 exceptions to this as follows: some manufacturers chose to start constructing to these codes prior to the july 1, 2024 effective date, so if the approved plans identify the applicable mandatory building codes as the 2021 international codes, the 2015 international energy conservation code, and the 2020 nec, then the on-site construction will be performed to these code editions."
       ],
       "variant_count": 2,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "there are 2 exceptions to this as follows: some manufacturers chose to start constructing to these codes prior to the july 1, 2024 effective date, so if the approved plans identify the applicable mandatory building codes as the 2021 international codes, the 2015 international energy conservation code, and the 2020 nec, then the on-site construction will be performed to these code editions.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R2",
@@ -4022,12 +3991,10 @@
         "the washington state building code is comprised of several different codes. most are national model codes adopted by reference and amended at the state level. others, such as the washington state energy code, are state-written state-specific codes."
       ],
       "variant_count": 2,
-      "classification": "SUBSTANTIVE",
-      "reason": "low_similarity_borderline",
+      "classification": "TRIVIAL",
+      "reason": "wording_portal_pointer",
       "recommended_canonical_variant": "the washington state building code is comprised of several different codes. most are national model codes adopted by reference and amended at the state level. others, such as the washington state energy code, are state-written state-specific codes.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (low_similarity_borderline). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R2",
@@ -4112,12 +4079,10 @@
         "plans shall be submitted to the department of fire prevention and electrical safety for review and approval"
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_substring",
       "recommended_canonical_variant": "all new plan review submissions from june 28, 2024 must be compliant with the adopted state codes and referenced standards: 2024 international fire code, 2024 international building code, 2024 international fuel & gas code, 2024 international mechanical code, 2024 international existing building code and the 2023 edition of the national electrical code.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R2",
@@ -4449,12 +4414,10 @@
         "florida licensed child care center staff:child ratio for 4 years to under 5 years: 1:20."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "florida licensed child care center staff:child ratio for 2 years to under 3 years: 1:11.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -4529,12 +4492,10 @@
         "georgia child care center staff:child ratio for six (6) years and older: 1:25; maximum group size 50."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "georgia child care center staff:child ratio for six (6) years and older: 1:25; maximum group size 50.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -4568,12 +4529,10 @@
         "medical board portal pointer for licensure routing only — not clinical guidance."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "atlanta, ga gcmb meeting week (full board and committee meetings) september 3 7:30 a.m.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -4628,12 +4587,10 @@
         "iowa child care center minimum staff:child ratio for 3 years: 1:10."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "iowa child care center minimum staff:child ratio for 2 weeks to 2 years: 1:4.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -4708,12 +4665,10 @@
         "illinois licensed child care center staff:child ratio for school-age: kindergartners present: 1:20; maximum group size 30."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "illinois licensed child care center staff:child ratio for infants (6 weeks through 14 months): 1:4; maximum group size 12.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -4767,12 +4722,10 @@
         "indiana licensed child care center staff:child ratio for 30–36 months: 1:7; maximum group size 14."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "indiana licensed child care center staff:child ratio for 30–36 months: 1:7; maximum group size 14.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -4866,12 +4819,10 @@
         "kentucky type i child care center staff:child ratio for school-age (5–7 years): 1:15; maximum group size 30."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "kentucky type i child care center staff:child ratio for school-age (5–7 years): 1:15; maximum group size 30.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -5142,12 +5093,10 @@
         "minnesota child care center staff:child ratio for toddler (16–33 months): 1:7; maximum group size 14."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "minnesota child care center staff:child ratio for infant (6 weeks–16 months): 1:4; maximum group size 8.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -5218,12 +5167,10 @@
         "missouri child care center staff:child ratio for birth to 36 months (infant/toddler/2yo): 1:4; maximum group size 8."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "missouri child care center staff:child ratio for 24–36 months only: 1:8; maximum group size 16.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -5378,12 +5325,10 @@
         "north carolina child care center staff:child ratio for 12 to 24 months: 1:6; maximum group size 18."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "north carolina child care center staff:child ratio for 12 to 24 months (enhanced): 1:5; maximum group size 15.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -5576,12 +5521,10 @@
         "new jersey child care center staff:child ratio for 4 years: 1:10; maximum group size 4."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "new jersey child care center staff:child ratio for 2 years: 1:3; maximum group size 21.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -5656,12 +5599,10 @@
         "nevada child care staff:child ratio for under 3 years (night): 1:6; maximum group size 12."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "nevada child care staff:child ratio for under 3 years (night): 1:6; maximum group size 12.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -5789,12 +5730,10 @@
         "ohio licensed child care center staff:child ratio for older toddlers (2½ to under 3 years): 1:8; maximum group size 16."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "ohio licensed child care center staff:child ratio for older school-age (11–under 15 years): 1:20; maximum group size 40.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -5887,12 +5826,10 @@
         "pennsylvania child care center similar-age staff:child ratio for preschool: 1:10; maximum group size 20; 2 staff required at maximum group size."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "pennsylvania child care center similar-age staff:child ratio for older school-age: 1:15; maximum group size 30; 2 staff required at maximum group size.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -5985,12 +5922,10 @@
         "rhode island health club / fitness contract registration official portal: health clubs | dept. of business regulation."
       ],
       "variant_count": 2,
-      "classification": "SUBSTANTIVE",
-      "reason": "low_similarity_borderline",
+      "classification": "TRIVIAL",
+      "reason": "wording_portal_pointer",
       "recommended_canonical_variant": "laws § 5-50-3 , those intending to open a health club with an initiation fee as a condition of a contract in the state of rhode island must submit a bond to the department of business regulation.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (low_similarity_borderline). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -6125,10 +6060,10 @@
       ],
       "variant_count": 4,
       "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "reason": "low_similarity_borderline",
       "recommended_canonical_variant": "the current requirements for the licensure of cosmetologist, aestheticians, manicurists, natural hair stylists, eyelash specialists, cosmetology shops, cosmetology and specialty schools, and instructors can be found in tennessee code annotated, title 62, chapter 4.",
       "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
+      "assessment": "Materially different content under shared URL (low_similarity_borderline). Recommended canonical variant is the longest cited harvest text; confirm at source.",
       "collapse": false
     },
     {
@@ -6203,12 +6138,10 @@
         "utah licensed child care center staff:child ratio for infants 0–11 months: 1:4; maximum group size 8."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "utah licensed child care center staff:child ratio for infants 0–11 months: 1:4; maximum group size 8.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -6341,12 +6274,10 @@
         "washington licensed child care center staff:child ratio for school-age (5–12 years): 1:15; maximum group size 30."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "washington licensed child care center staff:child ratio for preschoolers (30 months–6 years): 1:10; maximum group size 20.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -6421,12 +6352,10 @@
         "wisconsin licensed child care center (dcf 251) staff:child ratio for 4 years: 1:13; maximum group size 26."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "wisconsin licensed child care center (dcf 251) staff:child ratio for 18 months to 2½ years: 1:7; maximum group size 14.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R3",
@@ -7136,12 +7065,10 @@
         "bachelor’s degree from a regionally accredited baccalaureate granting college."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "33 semester hours of non-duplicative accounting coursework at the undergraduate or graduate level as follows:",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R4",
@@ -7176,12 +7103,10 @@
         "licensetype: independent level real estate broker - responsible broker"
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "[json api response — 836 records from https://data.colorado.gov/resource/4zse-6bnw.json?licensetype=independent level real estate broker - responsible broker&$limit=1000]",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R4",
@@ -7296,12 +7221,10 @@
         "this application is for an individual who has taken pre-license real estate broker courses from a connecticut approved school."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "15-hour classroom course in real estate brokerage principles and practices.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R4",
@@ -7686,12 +7609,10 @@
         "columbus board of realtors – 2512 warm springs rd, columbus, ga 31904"
       ],
       "variant_count": 3,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "2021 broker management responsibilities: managing licensees & license law compliance part ii",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R4",
@@ -7705,12 +7626,10 @@
         "columbus board of realtors – 2512 warm springs rd, columbus, ga 31904"
       ],
       "variant_count": 3,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "2021 broker management responsibilities: managing licensees & license law compliance part ii",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R4",
@@ -7861,12 +7780,10 @@
         "when a real estate brokerage firm closes, the principal broker or a designated representative shall follow procedures as provided in 193e-chapter 8."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "requirement_polarity",
+      "classification": "TRIVIAL",
+      "reason": "wording_substring",
       "recommended_canonical_variant": "when a real estate brokerage firm closes, the principal broker or a designated representative shall follow procedures as provided in 193e-chapter 8.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (requirement_polarity). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R4",
@@ -7961,12 +7878,10 @@
         "to obtain your salesperson license, you are required to complete 90 hours of prelicense education which include:"
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "(45 hours) – this course is the study of the knowledge and applied skills involved in listing, selling, buying, and closing real property transactions.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R4",
@@ -8220,12 +8135,10 @@
         "licensure; application; fingerprinting; criminal history record check; fees; qualifications; examination."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "(1) any applicant who qualifies for licensure as a salesperson shall submit the application accompanied by evidence of compliance with k.s.a.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R4",
@@ -8711,12 +8624,10 @@
         "article - business occupations and professions"
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "requirement_polarity",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "(1) shall be employed by or have another contractual relationship with the corporation, limited liability company, or partnership;",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (requirement_polarity). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R4",
@@ -9011,12 +8922,10 @@
         "when the owner fails or is unable to consummate a real estate transaction, through no fault of the purchaser, the listing broker may not claim any portion of any trust funds deposited with the broker by the purchaser, absent a separate agreement with the purchaser."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "requirement_polarity",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "when the owner fails or is unable to consummate a real estate transaction, through no fault of the purchaser, the listing broker may not claim any portion of any trust funds deposited with the broker by the purchaser, absent a separate agreement with the purchaser.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (requirement_polarity). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R4",
@@ -9071,12 +8980,10 @@
         "is any person, partnership, limited partnership, limited liability company, association, professional corporation, or corporation, foreign or domestic who, for another, and for a compensation or valuable consideration, does, or attempts to do, any or all of the following:"
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "(3) negotiates or offers or agrees to negotiate the sale, exchange, purchase, rental or leasing of real estate;",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R4",
@@ -9091,12 +8998,10 @@
         "is any person, partnership, limited partnership, limited liability company, association, professional corporation, or corporation, foreign or domestic who, for another, and for a compensation or valuable consideration, does, or attempts to do, any or all of the following:"
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "(3) negotiates or offers or agrees to negotiate the sale, exchange, purchase, rental or leasing of real estate;",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R4",
@@ -9109,12 +9014,10 @@
         "july 7-9 - 38th annual summer school for lawyers…"
       ],
       "variant_count": 2,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_substring",
       "recommended_canonical_variant": "[source: playwright] bar convention 2026 read our latest magazine on demand cle law day art contest home page for the public for attorneys news bar ethics opinions now searchable… [+] update your contact info… [+] upcoming events july 7-9 - 38th annual summer school for lawyers… [+] july 7-9 - annual meeting… [+]",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R4",
@@ -9287,10 +9190,10 @@
       ],
       "variant_count": 4,
       "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
-      "recommended_canonical_variant": "ethics subcommittee meeting: 2025 feo 3 (client consent to annual rate increase)",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
+      "reason": "url_multifact_distinct",
+      "recommended_canonical_variant": null,
+      "retain_all_variants": true,
+      "assessment": "Distinct facts share the same portal URL — not a POC-vs-lane wording conflict. Retain all variants; no collapse.",
       "collapse": false
     },
     {
@@ -10081,10 +9984,10 @@
       ],
       "variant_count": 4,
       "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "reason": "low_similarity_borderline",
       "recommended_canonical_variant": "after statehood in november 1907, the association was recognized by the oklahoma legislature until it repealed the enacting legislation in 1938.",
       "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
+      "assessment": "Materially different content under shared URL (low_similarity_borderline). Recommended canonical variant is the longest cited harvest text; confirm at source.",
       "collapse": false
     },
     {
@@ -10504,12 +10407,10 @@
         "the mission of the tennessee real estate commission is to protect the public health, safety and welfare through the regulation of real estate brokers and affiliate brokers, real estate firms, rental location agents, time-share salespersons and developments, vacation clubs and vacation lodging services."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_substring",
       "recommended_canonical_variant": "the current requirements for the licensure of these regulated professions can be found in tennessee code annotated, title 62, chapter 13.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R4",
@@ -11635,12 +11536,10 @@
         "security guard agency license issued only to a qualifying party (qp) who meets standards; agency name must receive dps pre-approval before filing with arizona corporation commission or secretary of state (aac r13-6-207; a.r.s. § 32-2612)."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "security guard agency license issued only to a qualifying party (qp) who meets standards; agency name must receive dps pre-approval before filing with arizona corporation commission or secretary of state (aac r13-6-207; a.r.s. § 32-2612).",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R6",
@@ -11930,12 +11829,10 @@
         "failure to renew a company license by july 31 shall have the same effect as a revocation of said license."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "(2) a penalty fee as determined by the board shall be applicable to any applicant renewing their company license after june 30 and through july 31 of the renewal period.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R6",
@@ -12267,10 +12164,10 @@
       ],
       "variant_count": 4,
       "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "reason": "low_similarity_borderline",
       "recommended_canonical_variant": "maryland requires a security guard certification for individuals employed or seeking employment with a licensed security guard agency or employer. the certification is issued by the maryland department of state police licensing division under title 19 of the business occupations",
       "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
+      "assessment": "Materially different content under shared URL (low_similarity_borderline). Recommended canonical variant is the longest cited harvest text; confirm at source.",
       "collapse": false
     },
     {
@@ -12779,12 +12676,10 @@
         "new jersey security licensing portal: sora hub."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_substring",
       "recommended_canonical_variant": "new jersey security licensing falls under the new jersey state police (njsp) private detective unit (pdu) rather than consumer affairs. it covers sora requirements for unarmed (2-year) and armed (1-year) officers, agency owner rules, and e-sora id rollout. primary access occurs t",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R6",
@@ -12799,12 +12694,10 @@
         "new mexico ccd licenses integrated cannabis microbusinesses, producers, and retailers for adult-use and medical markets."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "cannabis control division – notice of rule hearing and proposed rulemaking – september 3, 2025 the new mexico regulation and licensing department (rld), cannabis control division (ccd), will hold a public rule hearing on september 3, 2025, at 9:00 a.m.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R6",
@@ -12819,12 +12712,10 @@
         "standard application processing takes 1-3 weeks from receipt; background issues require court disposition documents or delays occur."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_substring",
       "recommended_canonical_variant": "standard application processing takes 1-3 weeks from receipt; background issues require court disposition documents or delays occur.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R6",
@@ -12974,12 +12865,10 @@
         "ohio security licensing under this scrape covers the regulation of private investigators and security guard providers through ohio revised code chapter 4749. it defines key terms including \"private investigator,\" \"business of private investigation,\" \"security guard provider,\" and"
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "ohio security licensing under this scrape covers the regulation of private investigators and security guard providers through ohio revised code chapter 4749. it defines key terms including \"private investigator,\" \"business of private investigation,\" \"security guard provider,\" and",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R6",
@@ -12994,12 +12883,10 @@
         "oklahoma omma licenses medical marijuana growers, processors, dispensaries, and transporters."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_substring",
       "recommended_canonical_variant": "garvin created the oklahoma medical marijuana authority executive advisory council (omma eac) to provide recommendations regarding changes to state policy, rules or statutes.</p>\\n\"}}\" id=\"text-ad140e3bcb\" class=\"cmp-text\"> hb 1349 by rep.",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R6",
@@ -13015,10 +12902,10 @@
       ],
       "variant_count": 4,
       "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "reason": "low_similarity_borderline",
       "recommended_canonical_variant": "oklahoma attorney general (049) skip to main content state agencies --> --> about about bio !font awesome free 6.5.1 by @fontawesome - https://fontawesome.com license - https://fontawesome.com/license/free copyright 2024 fonticons, inc.",
       "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
+      "assessment": "Materially different content under shared URL (low_similarity_borderline). Recommended canonical variant is the longest cited harvest text; confirm at source.",
       "collapse": false
     },
     {
@@ -13370,12 +13257,10 @@
         "tennessee security licensing portal: tennessee private protective services (."
       ],
       "variant_count": 4,
-      "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "classification": "TRIVIAL",
+      "reason": "wording_high_similarity",
       "recommended_canonical_variant": "armed security guard: age 21+, u.s. citizen or resident alien, same criminal history rules, background check via identogo, 4 hours orientation training plus 8 hours firearms classroom and 4 hours marksmanship (70% score), $130 initial fee via core; must receiv",
-      "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
-      "collapse": false
+      "collapse": true
     },
     {
       "lane": "R6",
@@ -13529,10 +13414,10 @@
       ],
       "variant_count": 4,
       "classification": "SUBSTANTIVE",
-      "reason": "number_delta",
+      "reason": "low_similarity_borderline",
       "recommended_canonical_variant": "firearms endorsement available for $24 (per manual note) and must be renewed every 12 months if access to firearms is needed.",
       "retain_all_variants": false,
-      "assessment": "Materially different content under shared URL (number_delta). Recommended canonical variant is the longest cited harvest text; confirm at source.",
+      "assessment": "Materially different content under shared URL (low_similarity_borderline). Recommended canonical variant is the longest cited harvest text; confirm at source.",
       "collapse": false
     },
     {

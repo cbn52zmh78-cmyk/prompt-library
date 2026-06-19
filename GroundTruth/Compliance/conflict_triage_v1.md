@@ -5,32 +5,33 @@ _Task T5-280-B · 2026-06-19_
 ## Counts
 
 - **Input conflicts:** 706
-- **TRIVIAL (auto-collapse):** 85
-- **SUBSTANTIVE:** 621
-- **Facts collapsed:** 291
+- **TRIVIAL (auto-collapse):** 143
+- **SUBSTANTIVE:** 563
+- **Facts collapsed:** 235
 
 ### By reason
 
 | Class | Reason | Count |
 |-------|--------|------:|
-| TRIVIAL | wording_substring | 60 |
-| TRIVIAL | wording_high_similarity | 25 |
-| SUBSTANTIVE | url_multifact_distinct | 387 |
-| SUBSTANTIVE | number_delta | 144 |
-| SUBSTANTIVE | low_similarity_borderline | 69 |
-| SUBSTANTIVE | requirement_polarity | 16 |
+| TRIVIAL | wording_substring | 74 |
+| TRIVIAL | wording_high_similarity | 65 |
+| TRIVIAL | wording_portal_pointer | 4 |
+| SUBSTANTIVE | url_multifact_distinct | 388 |
+| SUBSTANTIVE | number_delta | 85 |
+| SUBSTANTIVE | low_similarity_borderline | 73 |
+| SUBSTANTIVE | requirement_polarity | 12 |
 | SUBSTANTIVE | number_or_requirement_delta | 5 |
 
 ### By lane
 
 | Lane | Trivial | Substantive |
 |------|--------:|------------:|
-| R1 | 16 | 95 |
-| R2 | 37 | 73 |
-| R3 | 2 | 120 |
-| R4 | 20 | 212 |
+| R1 | 18 | 93 |
+| R2 | 53 | 57 |
+| R3 | 20 | 102 |
+| R4 | 34 | 198 |
 | R5 | 0 | 20 |
-| R6 | 10 | 101 |
+| R6 | 18 | 93 |
 
 ## Substantive sample (assessment required)
 
