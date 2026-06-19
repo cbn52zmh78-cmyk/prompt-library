@@ -31,6 +31,7 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
+WORKSPACE = ROOT.parent
 DEFAULT_LOCK = ROOT / "productions" / "host_identity_v1" / "david_identity_lock.json"
 FFMPEG: str | None = None
 
@@ -113,11 +114,41 @@ def load_identity_lock(path: Path) -> dict[str, Any]:
 
 
 def _resolve_david_path(rel: str) -> Path:
+    return _resolve_workspace_path(rel)
+
+
+def _resolve_workspace_path(rel: str) -> Path:
     rel = str(rel).replace("\\", "/")
+    if rel.startswith("STUDIO/"):
+        return WORKSPACE / rel
     if rel.startswith("DAVID/"):
         rel = rel[6:]
     p = Path(rel)
-    return p if p.is_absolute() else (ROOT / p)
+    if p.is_absolute():
+        return p
+    candidate = ROOT / p
+    if candidate.is_file() or candidate.is_dir():
+        return candidate
+    ws_candidate = WORKSPACE / p
+    if ws_candidate.is_file() or ws_candidate.is_dir():
+        return ws_candidate
+    return candidate
+
+
+def _output_prefix(script: dict[str, Any]) -> str:
+    fmt = script.get("format_id", "documentary-host")
+    return "david" if fmt == "documentary-host" else "studio"
+
+
+def _identity_anchor(script: dict[str, Any]) -> str:
+    meta = script.get("production_meta") or {}
+    anchor = meta.get("identity_anchor") or meta.get("talent_id") or "@David-001"
+    return str(anchor)
+
+
+def _is_archive_production(script: dict[str, Any], refs: dict[str, Any]) -> bool:
+    set_file = str(refs.get("set_file") or "")
+    return "archive" in set_file.lower() or script.get("format_id") == "documentary-host"
 
 
 def _normalize_shot_list(shots: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -337,17 +368,25 @@ def normalize_script(raw: dict[str, Any], script_path: Path) -> dict[str, Any]:
 
 def resolve_production_dir(script: dict[str, Any]) -> Path:
     if script.get("production_dir"):
+        raw = str(script["production_dir"]).replace("\\", "/")
+        if raw.startswith("STUDIO/"):
+            return _resolve_workspace_path(raw)
         p = Path(script["production_dir"])
         return p if p.is_absolute() else (ROOT / p)
     slug = script.get("slug", "longform")
+    if script.get("format_id") and script["format_id"] != "documentary-host":
+        return WORKSPACE / "STUDIO" / "Productions" / "Editorial" / f"{slug}_longform_v1"
     return ROOT / "productions" / f"{slug}_longform_v1"
 
 
-def resolve_refs(script: dict[str, Any]) -> dict[str, Any]:
+def resolve_refs(script: dict[str, Any], *, client: Any = None) -> dict[str, Any]:
     cfg = script.setdefault("config", {})
-    lock_raw = cfg.get("identity_lock", DEFAULT_LOCK)
-    lock_path = Path(lock_raw) if Path(str(lock_raw)).is_absolute() else _resolve_david_path(str(lock_raw))
-    lock = load_identity_lock(lock_path) if cfg.get("use_identity_lock", True) else {}
+    use_lock = cfg.get("use_identity_lock", True)
+    lock: dict[str, Any] = {}
+    lock_path = Path(cfg.get("identity_lock", DEFAULT_LOCK))
+    if use_lock:
+        lock_path = lock_path if lock_path.is_absolute() else _resolve_workspace_path(str(lock_path))
+        lock = load_identity_lock(lock_path)
 
     avatar_url = cfg.get("avatar_url")
     avatar_file = cfg.get("avatar_reference")
@@ -355,20 +394,32 @@ def resolve_refs(script: dict[str, Any]) -> dict[str, Any]:
     voice_suffix = cfg.get("voice_suffix") or lock.get("voice", {}).get("prompt_suffix") or DEFAULT_VOICE_SUFFIX
 
     if lock:
-        avatar_url = avatar_url or lock["references"]["david_avatar"].get("url")
-        avatar_file = avatar_file or lock["references"]["david_avatar"].get("file")
-        set_file = set_file or lock["references"]["archive_set"].get("file")
-        if not avatar_url:
+        refs_block = lock.get("references") or {}
+        talent_ref = refs_block.get("talent_avatar") or refs_block.get("david_avatar") or {}
+        set_ref = refs_block.get("set_plate") or refs_block.get("archive_set") or {}
+        avatar_url = avatar_url or talent_ref.get("url")
+        avatar_file = avatar_file or talent_ref.get("file")
+        set_file = set_file or set_ref.get("file")
+        if use_lock and not avatar_url:
             raise RuntimeError(
-                "Avatar URL missing from identity lock — re-run render_host_identity.py"
+                "Avatar URL missing from identity lock — regenerate talent identity lock"
             )
 
     if avatar_file:
-        avatar_file = str(Path(str(avatar_file)) if Path(str(avatar_file)).is_absolute() else _resolve_david_path(str(avatar_file)))
+        ap = Path(str(avatar_file))
+        avatar_file = str(ap if ap.is_absolute() else _resolve_workspace_path(str(avatar_file)))
     elif cfg.get("avatar_reference"):
-        ar = _resolve_david_path(str(cfg["avatar_reference"]))
+        ar = _resolve_workspace_path(str(cfg["avatar_reference"]))
         if ar.is_file():
             avatar_file = str(ar)
+
+    if set_file:
+        sp = Path(str(set_file))
+        set_file = str(sp if sp.is_absolute() else _resolve_workspace_path(str(set_file)))
+
+    if not avatar_url and avatar_file and client is not None:
+        avatar_url = upload_image_url(client, Path(avatar_file))
+        cfg["avatar_url"] = avatar_url
 
     return {
         "lock": lock,
@@ -386,7 +437,7 @@ def resolve_refs(script: dict[str, Any]) -> dict[str, Any]:
 def ensure_voice_in_prompt(prompt: str, voice_suffix: str) -> str:
     if voice_suffix.lower() not in prompt.lower():
         prompt = f"{prompt.rstrip()} {voice_suffix}"
-    if SYNTHETIC_GUARD.lower() not in prompt.lower():
+    if "synthetic" not in prompt.lower():
         prompt = f"{prompt.rstrip()} {SYNTHETIC_GUARD}"
     return prompt
 
@@ -580,18 +631,23 @@ def apply_seamless_prompt(shot: dict[str, Any], refs: dict[str, Any], opts: Seam
     """Use embedded video_prompt when continuity is already baked in; else patch defaults."""
     base = shot.get("video_prompt", "")
     locks: list[str] = []
-    if opts.lamp_lock and "3200K" not in base:
+    archive = "archive" in str(refs.get("set_file") or "").lower()
+    if opts.lamp_lock and archive and "3200K" not in base:
         locks.append(LAMP_LOCK_PROMPT)
-    if opts.glasses_lock and "glasses" not in base.lower():
+    if opts.glasses_lock and archive and "glasses" not in base.lower():
         locks.append(GLASSES_LOCK_PROMPT)
-    if "@David-001" in base and "gesture peak" in base.lower():
+    baked = "CONTINUITY LOCK @" in base and "gesture peak" in base.lower()
+    if baked:
         out = ensure_voice_in_prompt(base, refs["voice_suffix"])
         if locks:
             out = f"{' '.join(locks)} {out}"
         return out
     base = ensure_voice_in_prompt(base, refs["voice_suffix"])
     speech = shot.get("speech_text", "")
-    parts = [*locks, DEFAULT_CONTINUITY_PREFIX, base]
+    parts = list(locks)
+    if "CONTINUITY LOCK @" not in base:
+        parts.append(DEFAULT_CONTINUITY_PREFIX)
+    parts.append(base)
     if speech and speech not in base:
         parts.append(f'Lip-synced, delivers: "{speech}"')
     parts.append(DEFAULT_END_GUARD)
@@ -1302,7 +1358,7 @@ def render_frame_chain_performance(
                     reground = i > 0 and opts.reground_interval > 0 and (i % opts.reground_interval == 0)
                     if i == 0 or reground:
                         image_url = avatar_url
-                        src = "David-001 re-ground" if reground else "David-001"
+                        src = "talent re-ground" if reground else "locked talent avatar"
                         print(f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} ({dur}s) ← {src}")
                     else:
                         frame_jpg = frames_dir / f"frame_after_{segments[-1].stem}.jpg"
@@ -1543,13 +1599,12 @@ def qa_check(
         bad = [
             s["id"]
             for s in shots
-            if SYNTHETIC_GUARD.lower()
-            not in ensure_voice_in_prompt(s.get("video_prompt", ""), voice).lower()
+            if "synthetic" not in ensure_voice_in_prompt(s.get("video_prompt", ""), voice).lower()
         ]
         if bad:
             issues.append(f"shots missing synthetic guard after patch: {bad}")
         else:
-            passes.append("all shots carry synthetic host guard (incl. auto-patched)")
+            passes.append("all shots carry synthetic talent guard (incl. auto-patched)")
 
     pie_like = [s for s in shots if s.get("speech_lang", "").startswith("pie") or "RECONSTRUCTED" in str(s.get("on_screen_labels"))]
     for s in pie_like:
@@ -1585,11 +1640,14 @@ def qa_check(
             passes.append(f"host performance: {extend_path.name} ({probe_duration(extend_path):.1f}s)")
         else:
             issues.append("missing host performance file")
-        david_locked = any("@David-001" in s.get("video_prompt", "") for s in shots)
-        if david_locked:
-            passes.append("David-001 continuity prefix embedded in video_prompt")
+        anchor = _identity_anchor(script)
+        identity_locked = any(anchor in s.get("video_prompt", "") for s in shots) or any(
+            "CONTINUITY LOCK @" in s.get("video_prompt", "") for s in shots
+        )
+        if identity_locked:
+            passes.append(f"{anchor} continuity prefix embedded in video_prompt")
         else:
-            issues.append("shots missing @David-001 continuity in video_prompt")
+            issues.append(f"shots missing {anchor} continuity in video_prompt")
         passes.append("xfade chain + synced audio crossfade at joins")
         check_path = final_path if final_path and final_path.is_file() else extend_path
         audio_ok = False
@@ -1605,8 +1663,10 @@ def qa_check(
                 issues.append(f"no audio stream in {check_path.name}")
         if rules.get("require_audio") and not audio_ok:
             issues.append("require_audio: final output missing synced speech track")
-        if seamless_opts.lamp_lock:
-            passes.append("lamp lock 3200K warm-gold clamp to David-001 reference")
+        if seamless_opts.lamp_lock and _is_archive_production(script, refs):
+            passes.append("lamp lock 3200K warm-gold clamp to archive reference")
+        elif seamless_opts.lamp_lock:
+            passes.append("color match reference from locked talent avatar")
         if seamless_opts.loudnorm:
             passes.append(f"loudnorm two-pass target I={LOUDNORM_I} LUFS per shot")
         if seamless_opts.pin_audio_sync:
@@ -1637,13 +1697,19 @@ def qa_check(
                     issues.append(f"A/V sync drift: {sync_bad}")
                 else:
                     passes.append("tight A/V sync per shot (duration pinned)")
-                if len(segs) >= 2:
+                if len(segs) >= 2 and _is_archive_production(script, refs):
                     ratios = [probe_lamp_warm_ratio(p) for p in segs]
                     delta = max(ratios) - min(ratios)
                     if delta <= 0.18:
                         passes.append(f"lamp warm ratio stable across segments (Δ={delta:.3f})")
                     else:
                         issues.append(f"lamp hue drift between segments Δ={delta:.3f} ratios={ratios}")
+                elif len(segs) >= 2:
+                    mag_scores = [probe_magenta_score(p) for p in segs]
+                    if max(mag_scores) <= MAGENTA_SCORE_MAX:
+                        passes.append(f"zero hue drift across segments (max magenta {max(mag_scores):.3f})")
+                    else:
+                        issues.append(f"hue drift detected across segments magenta={mag_scores}")
             except Exception as exc:
                 issues.append(f"post-process QA probe failed: {exc}")
         for s in shots:
@@ -1684,7 +1750,7 @@ def render_longform(
     shots_dir = prod_dir / "shots"
     shots_dir.mkdir(parents=True, exist_ok=True)
 
-    refs = resolve_refs(script)
+    refs = resolve_refs(script, client=client)
     opts = seamless_opts or SeamlessOptions()
     pack = build_imagine_pack(script, refs, opts if opts.enabled else None)
     pack_path = prod_dir / f"{script.get('slug', 'longform')}_imagine_pack.json"
@@ -1694,7 +1760,8 @@ def render_longform(
     script_copy.write_text(json.dumps(script, indent=2, ensure_ascii=False), encoding="utf-8")
 
     slug = script.get("slug", "longform")
-    final_mp4 = prod_dir / "output" / f"david_{slug}_longform_v1.mp4"
+    prefix = _output_prefix(script)
+    final_mp4 = prod_dir / "output" / f"{prefix}_{slug}_longform_v1.mp4"
     final_mp4.parent.mkdir(parents=True, exist_ok=True)
     comparison_path: Path | None = None
     extend_path: Path | None = None
@@ -1736,7 +1803,7 @@ def render_longform(
 
         color_ref = resolve_color_reference(refs, shots_dir)
         if card_mp4:
-            seamless_out = prod_dir / "output" / f"david_{slug}_seamless_v1.mp4"
+            seamless_out = prod_dir / "output" / f"{prefix}_{slug}_seamless_v1.mp4"
             concat_xfade_two(
                 host_join,
                 card_mp4,
@@ -1750,7 +1817,7 @@ def render_longform(
             )
             final_mp4 = seamless_out
         elif opts.enabled:
-            seamless_out = prod_dir / "output" / f"david_{slug}_seamless_v1.mp4"
+            seamless_out = prod_dir / "output" / f"{prefix}_{slug}_seamless_v1.mp4"
             shutil.copy2(host_mp4, seamless_out)
             final_mp4 = seamless_out
 

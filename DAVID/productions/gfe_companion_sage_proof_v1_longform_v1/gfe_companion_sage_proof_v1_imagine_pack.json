@@ -1,0 +1,103 @@
+{
+  "slug": "gfe_companion_sage_proof_v1",
+  "title": "STUDIO Companion Proof — Sage SFW Check-In",
+  "model_video": "grok-imagine-video-1.5",
+  "resolution": "720p",
+  "aspect_ratio": "16:9",
+  "host_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Productions\\Companion\\gfe_companion_sage_proof_v1_longform_v1\\references\\sage_companion_avatar_reference.jpg",
+  "avatar_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-5f94bc39-f85c-4651-8037-c8b4b5d2d58a.jpeg",
+  "set_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Pipeline\\references\\modern_apartment_reference.jpg",
+  "voice_suffix": "warm approachable conversational voice, attentive listener energy, natural breath, synthetic companion only",
+  "seamless": true,
+  "shots": [
+    {
+      "shot_id": "01_greeting",
+      "duration": 7,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-5f94bc39-f85c-4651-8037-c8b4b5d2d58a.jpeg",
+      "video_prompt": "CONTINUITY LOCK @SageGFE-001: identical companion face, wardrobe, apartment set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Modern-Apartment-001: identical modern apartment — same window position camera-left, same oak floor grain direction, same linen sofa tone, same kitchen blur background, same plant placement — seamless continuation, zero jump cut. STYLE LOCK @Style-Soft-Warm-001: soft-warm grade — diffused wrap light, creamy highlights, gentle contrast, approachable intimacy, lifestyle editorial not clinical, no harsh specular, no cold blue fill. Companion greets viewer warmly, relaxed posture on linen sofa, soft window daylight, fully clothed cream sweater, friendly eye-line to camera, PG medium-close framing. static medium-close, soft window light Soft window daylight 5200K key locked — sheer curtain diffusion, gentle fill from interior bounce 4800K max 20%, zero hue drift, no magenta daylight, no purple shadow. Soft wrap key 4500–5200K per set lock — diffusion mandatory, shadow transition gradual, no hard nose shadow. COLOR LOCK Modern-Apartment: palette warm white #FAF8F5, oak #C4A77D, soft grey textiles #B8B5B0, foliage muted green #6B7F5E — no teal push, no pink wall bounce, no saturated LED accent. GRADE LOCK Soft-Warm: palette cream #FAF6F0, blush skin +5% warmth, shadows latte #C9B8A8 — forbid magenta blush, forbid purple shadow, forbid cool 7000K fill, forbid oversaturated orange. Gentle float or static medium-close; micro-push only. Lip-synced, delivers: \"Hey — glad you dropped in today.\" warm approachable conversational voice, attentive listener energy, natural breath, synthetic companion only Finish on soft gesture peak (breath, smile, hand settle), never hold dead stillness or dead frame. SFW PG only — fully clothed, no suggestive framing, no lingerie, supportive friend energy.",
+      "speech_text": "Hey — glad you dropped in today.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 0,
+        "end_s": 6
+      }
+    },
+    {
+      "shot_id": "02_check_in",
+      "duration": 7,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-5f94bc39-f85c-4651-8037-c8b4b5d2d58a.jpeg",
+      "video_prompt": "CONTINUITY LOCK @SageGFE-001: identical companion face, wardrobe, apartment set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Modern-Apartment-001: identical modern apartment — same window position camera-left, same oak floor grain direction, same linen sofa tone, same kitchen blur background, same plant placement — seamless continuation, zero jump cut. STYLE LOCK @Style-Soft-Warm-001: soft-warm grade — diffused wrap light, creamy highlights, gentle contrast, approachable intimacy, lifestyle editorial not clinical, no harsh specular, no cold blue fill. Companion listens attentively, gentle nod, empathetic micro-expressions, same apartment sofa, supportive friend energy, no romantic staging. gentle float, same framing Soft window daylight 5200K key locked — sheer curtain diffusion, gentle fill from interior bounce 4800K max 20%, zero hue drift, no magenta daylight, no purple shadow. Soft wrap key 4500–5200K per set lock — diffusion mandatory, shadow transition gradual, no hard nose shadow. COLOR LOCK Modern-Apartment: palette warm white #FAF8F5, oak #C4A77D, soft grey textiles #B8B5B0, foliage muted green #6B7F5E — no teal push, no pink wall bounce, no saturated LED accent. GRADE LOCK Soft-Warm: palette cream #FAF6F0, blush skin +5% warmth, shadows latte #C9B8A8 — forbid magenta blush, forbid purple shadow, forbid cool 7000K fill, forbid oversaturated orange. Gentle float or static medium-close; micro-push only. Lip-synced, delivers: \"How has your week been feeling so far?\" warm approachable conversational voice, attentive listener energy, natural breath, synthetic companion only Finish on soft gesture peak (breath, smile, hand settle), never hold dead stillness or dead frame. SFW PG only — fully clothed, no suggestive framing, no lingerie, supportive friend energy.",
+      "speech_text": "How has your week been feeling so far?",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 6,
+        "end_s": 13
+      }
+    },
+    {
+      "shot_id": "03_core_message",
+      "duration": 8,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-5f94bc39-f85c-4651-8037-c8b4b5d2d58a.jpeg",
+      "video_prompt": "CONTINUITY LOCK @SageGFE-001: identical companion face, wardrobe, apartment set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Modern-Apartment-001: identical modern apartment — same window position camera-left, same oak floor grain direction, same linen sofa tone, same kitchen blur background, same plant placement — seamless continuation, zero jump cut. STYLE LOCK @Style-Soft-Warm-001: soft-warm grade — diffused wrap light, creamy highlights, gentle contrast, approachable intimacy, lifestyle editorial not clinical, no harsh specular, no cold blue fill. Companion shares calm thought, open hand gesture at chest level, trustworthy tone, fully clothed, static medium-close, soft-warm grade. slow micro-push-in Soft window daylight 5200K key locked — sheer curtain diffusion, gentle fill from interior bounce 4800K max 20%, zero hue drift, no magenta daylight, no purple shadow. Soft wrap key 4500–5200K per set lock — diffusion mandatory, shadow transition gradual, no hard nose shadow. COLOR LOCK Modern-Apartment: palette warm white #FAF8F5, oak #C4A77D, soft grey textiles #B8B5B0, foliage muted green #6B7F5E — no teal push, no pink wall bounce, no saturated LED accent. GRADE LOCK Soft-Warm: palette cream #FAF6F0, blush skin +5% warmth, shadows latte #C9B8A8 — forbid magenta blush, forbid purple shadow, forbid cool 7000K fill, forbid oversaturated orange. Gentle float or static medium-close; micro-push only. Lip-synced, delivers: \"Small pauses count — you do not have to sprint through everything.\" warm approachable conversational voice, attentive listener energy, natural breath, synthetic companion only Finish on soft gesture peak (breath, smile, hand settle), never hold dead stillness or dead frame. SFW PG only — fully clothed, no suggestive framing, no lingerie, supportive friend energy.",
+      "speech_text": "Small pauses count — you do not have to sprint through everything.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 13,
+        "end_s": 21
+      }
+    },
+    {
+      "shot_id": "04_reflective_pause",
+      "duration": 7,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-5f94bc39-f85c-4651-8037-c8b4b5d2d58a.jpeg",
+      "video_prompt": "CONTINUITY LOCK @SageGFE-001: identical companion face, wardrobe, apartment set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Modern-Apartment-001: identical modern apartment — same window position camera-left, same oak floor grain direction, same linen sofa tone, same kitchen blur background, same plant placement — seamless continuation, zero jump cut. STYLE LOCK @Style-Soft-Warm-001: soft-warm grade — diffused wrap light, creamy highlights, gentle contrast, approachable intimacy, lifestyle editorial not clinical, no harsh specular, no cold blue fill. Brief reflective pause, soft inhale, inviting viewer reflection, hold medium-close, no suggestive framing. Soft window daylight 5200K key locked — sheer curtain diffusion, gentle fill from interior bounce 4800K max 20%, zero hue drift, no magenta daylight, no purple shadow. Soft wrap key 4500–5200K per set lock — diffusion mandatory, shadow transition gradual, no hard nose shadow. COLOR LOCK Modern-Apartment: palette warm white #FAF8F5, oak #C4A77D, soft grey textiles #B8B5B0, foliage muted green #6B7F5E — no teal push, no pink wall bounce, no saturated LED accent. GRADE LOCK Soft-Warm: palette cream #FAF6F0, blush skin +5% warmth, shadows latte #C9B8A8 — forbid magenta blush, forbid purple shadow, forbid cool 7000K fill, forbid oversaturated orange. Gentle float or static medium-close; micro-push only. Lip-synced, delivers: \"Take one slow breath with me.\" warm approachable conversational voice, attentive listener energy, natural breath, synthetic companion only Finish on soft gesture peak (breath, smile, hand settle), never hold dead stillness or dead frame. SFW PG only — fully clothed, no suggestive framing, no lingerie, supportive friend energy.",
+      "speech_text": "Take one slow breath with me.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 21,
+        "end_s": 27
+      }
+    },
+    {
+      "shot_id": "05_encouragement",
+      "duration": 7,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-5f94bc39-f85c-4651-8037-c8b4b5d2d58a.jpeg",
+      "video_prompt": "CONTINUITY LOCK @SageGFE-001: identical companion face, wardrobe, apartment set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Modern-Apartment-001: identical modern apartment — same window position camera-left, same oak floor grain direction, same linen sofa tone, same kitchen blur background, same plant placement — seamless continuation, zero jump cut. STYLE LOCK @Style-Soft-Warm-001: soft-warm grade — diffused wrap light, creamy highlights, gentle contrast, approachable intimacy, lifestyle editorial not clinical, no harsh specular, no cold blue fill. Encouraging close, genuine warm smile, supportive hand gesture, same wardrobe and set continuity. micro-push, warm smile Soft window daylight 5200K key locked — sheer curtain diffusion, gentle fill from interior bounce 4800K max 20%, zero hue drift, no magenta daylight, no purple shadow. Soft wrap key 4500–5200K per set lock — diffusion mandatory, shadow transition gradual, no hard nose shadow. COLOR LOCK Modern-Apartment: palette warm white #FAF8F5, oak #C4A77D, soft grey textiles #B8B5B0, foliage muted green #6B7F5E — no teal push, no pink wall bounce, no saturated LED accent. GRADE LOCK Soft-Warm: palette cream #FAF6F0, blush skin +5% warmth, shadows latte #C9B8A8 — forbid magenta blush, forbid purple shadow, forbid cool 7000K fill, forbid oversaturated orange. Gentle float or static medium-close; micro-push only. Lip-synced, delivers: \"You're doing better than you think.\" warm approachable conversational voice, attentive listener energy, natural breath, synthetic companion only Finish on soft gesture peak (breath, smile, hand settle), never hold dead stillness or dead frame. SFW PG only — fully clothed, no suggestive framing, no lingerie, supportive friend energy.",
+      "speech_text": "You're doing better than you think.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 27,
+        "end_s": 34
+      }
+    },
+    {
+      "shot_id": "06_soft_close",
+      "duration": 7,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-5f94bc39-f85c-4651-8037-c8b4b5d2d58a.jpeg",
+      "video_prompt": "CONTINUITY LOCK @SageGFE-001: identical companion face, wardrobe, apartment set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Modern-Apartment-001: identical modern apartment — same window position camera-left, same oak floor grain direction, same linen sofa tone, same kitchen blur background, same plant placement — seamless continuation, zero jump cut. STYLE LOCK @Style-Soft-Warm-001: soft-warm grade — diffused wrap light, creamy highlights, gentle contrast, approachable intimacy, lifestyle editorial not clinical, no harsh specular, no cold blue fill. Soft sign-off, small wave, warm eye contact, gesture peak for seamless join, fully clothed companion, PG SFW close. gentle settle, hold eye-line Soft window daylight 5200K key locked — sheer curtain diffusion, gentle fill from interior bounce 4800K max 20%, zero hue drift, no magenta daylight, no purple shadow. Soft wrap key 4500–5200K per set lock — diffusion mandatory, shadow transition gradual, no hard nose shadow. COLOR LOCK Modern-Apartment: palette warm white #FAF8F5, oak #C4A77D, soft grey textiles #B8B5B0, foliage muted green #6B7F5E — no teal push, no pink wall bounce, no saturated LED accent. GRADE LOCK Soft-Warm: palette cream #FAF6F0, blush skin +5% warmth, shadows latte #C9B8A8 — forbid magenta blush, forbid purple shadow, forbid cool 7000K fill, forbid oversaturated orange. Gentle float or static medium-close; micro-push only. Lip-synced, delivers: \"I'll be here when you need a calm check-in.\" warm approachable conversational voice, attentive listener energy, natural breath, synthetic companion only Finish on soft gesture peak (breath, smile, hand settle), never hold dead stillness or dead frame. SFW PG only — fully clothed, no suggestive framing, no lingerie, supportive friend energy.",
+      "speech_text": "I'll be here when you need a calm check-in.",
+      "speech_ipa": null,
+      "on_screen": "Synthetic companion — AI generated performer",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 34,
+        "end_s": 40
+      }
+    }
+  ],
+  "provenance_shot": {
+    "type": "code_rendered_png",
+    "duration_s": 7,
+    "enabled": false
+  }
+}

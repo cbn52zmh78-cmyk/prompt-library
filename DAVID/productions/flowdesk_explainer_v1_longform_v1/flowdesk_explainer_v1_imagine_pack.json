@@ -1,0 +1,103 @@
+{
+  "slug": "flowdesk_explainer_v1",
+  "title": "STUDIO Sample — FlowDesk Explainer Ad",
+  "model_video": "grok-imagine-video-1.5",
+  "resolution": "720p",
+  "aspect_ratio": "16:9",
+  "host_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Productions\\Editorial\\flowdesk_explainer_v1_longform_v1\\references\\amara_presenter_avatar_reference.jpg",
+  "avatar_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-516ae40c-ade1-454b-a5db-d036b451dd6e.jpeg",
+  "set_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Pipeline\\references\\seamless_neutral_grey_reference.jpg",
+  "voice_suffix": "clear confident presenter voice, brisk diction, trustworthy product tone, London crisp warmth, synthetic presenter only",
+  "seamless": true,
+  "shots": [
+    {
+      "shot_id": "01_hook",
+      "duration": 7,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-516ae40c-ade1-454b-a5db-d036b451dd6e.jpeg",
+      "video_prompt": "CONTINUITY LOCK @Amara-001: identical presenter face, wardrobe, neutral set, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter addresses camera directly, crisp opener, neutral grey seamless backdrop. locked medium, snap attention Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Still drowning in scattered notes?\" clear confident presenter voice, brisk diction, trustworthy product tone, synthetic presenter only Finish on presentational gesture peak, never hold dead stillness or dead frame. clear confident presenter voice, brisk diction, trustworthy product tone, London crisp warmth, synthetic presenter only",
+      "speech_text": "Still drowning in scattered notes?",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 0,
+        "end_s": 7
+      }
+    },
+    {
+      "shot_id": "02_pain",
+      "duration": 7,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-516ae40c-ade1-454b-a5db-d036b451dd6e.jpeg",
+      "video_prompt": "CONTINUITY LOCK @Amara-001: identical presenter face, wardrobe, neutral set, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter names the pain point, empathetic but brisk, same framing. same framing, slight lean Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Every tab steals your focus.\" clear confident presenter voice, brisk diction, trustworthy product tone, synthetic presenter only Finish on presentational gesture peak, never hold dead stillness or dead frame. clear confident presenter voice, brisk diction, trustworthy product tone, London crisp warmth, synthetic presenter only",
+      "speech_text": "Every tab steals your focus.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 7,
+        "end_s": 14
+      }
+    },
+    {
+      "shot_id": "03_solution",
+      "duration": 8,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-516ae40c-ade1-454b-a5db-d036b451dd6e.jpeg",
+      "video_prompt": "CONTINUITY LOCK @Amara-001: identical presenter face, wardrobe, neutral set, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Solution reveal — open palm gesture, clean clinical lighting, confident smile. slow push to product or presenter Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"FlowDesk gathers ideas in one calm workspace.\" clear confident presenter voice, brisk diction, trustworthy product tone, synthetic presenter only Finish on presentational gesture peak, never hold dead stillness or dead frame. clear confident presenter voice, brisk diction, trustworthy product tone, London crisp warmth, synthetic presenter only",
+      "speech_text": "FlowDesk gathers ideas in one calm workspace.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 14,
+        "end_s": 22
+      }
+    },
+    {
+      "shot_id": "04_benefit_a",
+      "duration": 7,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-516ae40c-ade1-454b-a5db-d036b451dd6e.jpeg",
+      "video_prompt": "CONTINUITY LOCK @Amara-001: identical presenter face, wardrobe, neutral set, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. First benefit with presentational hand gesture, locked axis. locked, gesture to feature Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Capture thoughts instantly, anywhere.\" clear confident presenter voice, brisk diction, trustworthy product tone, synthetic presenter only Finish on presentational gesture peak, never hold dead stillness or dead frame. clear confident presenter voice, brisk diction, trustworthy product tone, London crisp warmth, synthetic presenter only",
+      "speech_text": "Capture thoughts instantly, anywhere.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 22,
+        "end_s": 29
+      }
+    },
+    {
+      "shot_id": "05_benefit_b",
+      "duration": 7,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-516ae40c-ade1-454b-a5db-d036b451dd6e.jpeg",
+      "video_prompt": "CONTINUITY LOCK @Amara-001: identical presenter face, wardrobe, neutral set, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Second benefit, maintain axis and lighting continuity. locked, same axis Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Find what you need in seconds.\" clear confident presenter voice, brisk diction, trustworthy product tone, synthetic presenter only Finish on presentational gesture peak, never hold dead stillness or dead frame. clear confident presenter voice, brisk diction, trustworthy product tone, London crisp warmth, synthetic presenter only",
+      "speech_text": "Find what you need in seconds.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 29,
+        "end_s": 36
+      }
+    },
+    {
+      "shot_id": "06_cta",
+      "duration": 7,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-516ae40c-ade1-454b-a5db-d036b451dd6e.jpeg",
+      "video_prompt": "CONTINUITY LOCK @Amara-001: identical presenter face, wardrobe, neutral set, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Clear CTA, open-palm invite, end on gesture peak. medium-close, direct address Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Try FlowDesk free at flowdesk dot app.\" clear confident presenter voice, brisk diction, trustworthy product tone, synthetic presenter only Finish on presentational gesture peak, never hold dead stillness or dead frame. clear confident presenter voice, brisk diction, trustworthy product tone, London crisp warmth, synthetic presenter only",
+      "speech_text": "Try FlowDesk free at flowdesk dot app.",
+      "speech_ipa": null,
+      "on_screen": "FlowDesk · flowdesk.app",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 36,
+        "end_s": 43
+      }
+    }
+  ],
+  "provenance_shot": {
+    "type": "code_rendered_png",
+    "duration_s": 4,
+    "enabled": true
+  }
+}
