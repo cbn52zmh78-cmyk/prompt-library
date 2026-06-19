@@ -1,0 +1,714 @@
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Nexus: 665f5e6
+[main d913f38] Hard commit: 2026-06-19 04:21:22
+ 10 files changed, 18765 insertions(+), 230 deletions(-)
+ create mode 100644 fields/planetary_science/data/groundtruth_solar_system_canonical_pack_v1.json
+ create mode 100644 fields/planetary_science/data/groundtruth_solar_system_canonical_source_register_v1.json
+ create mode 100644 groundtruth_poc/groundtruth_solar_system_paper_v2.json
+ create mode 100644 groundtruth_poc/groundtruth_solar_system_paper_v2.pdf
+ create mode 100644 scripts/groundtruth_poc_paper_build_v2.py
+Science: d913f38
+[main 449f115] Hard commit: 2026-06-19 04:21:22
+ 140 files changed, 11473 insertions(+)
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Arizona_State_Board_of_Accountancy/2026-06-19_0416.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Arizona_State_Board_of_Accountancy/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Arkansas_State_Board_of_Accountancy/2026-06-19_0416.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Arkansas_State_Board_of_Accountancy/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/California_State_Board_of_Accountancy/2026-06-19_0416.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/California_State_Board_of_Accountancy/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Colorado_State_Board_of_Accountancy/2026-06-19_0417.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Colorado_State_Board_of_Accountancy/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Connecticut_State_Board_of_Accountancy/2026-06-19_0417.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Connecticut_State_Board_of_Accountancy/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Delaware_State_Board_of_Accountancy/2026-06-19_0417.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Delaware_State_Board_of_Accountancy/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Florida_State_Board_of_Accountancy/2026-06-19_0418.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Florida_State_Board_of_Accountancy/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Georgia_State_Board_of_Accountancy/2026-06-19_0418.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Georgia_State_Board_of_Accountancy/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Hawaii_State_Board_of_Accountancy/2026-06-19_0418.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Hawaii_State_Board_of_Accountancy/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Idaho_State_Board_of_Accountancy/2026-06-19_0419.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Idaho_State_Board_of_Accountancy/latest.txt
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/Arkansas_Securities_Department_\342\200\224_Securities_Regulation/2026-06-19_0416.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/Arkansas_Securities_Department_\342\200\224_Securities_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/California_Department_of_Financial_Protection_and_Innovation_\342\200\224_Securities_Regulation/2026-06-19_0416.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/California_Department_of_Financial_Protection_and_Innovation_\342\200\224_Securities_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/Colorado_Division_of_Securities_\342\200\224_Securities_Regulation/2026-06-19_0417.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/Colorado_Division_of_Securities_\342\200\224_Securities_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/Connecticut_Department_of_Banking_\342\200\224_Securities_Regulation/2026-06-19_0417.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/Connecticut_Department_of_Banking_\342\200\224_Securities_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/Delaware_Office_of_the_State_Bank_Commissioner_\342\200\224_Securities_Regulation/2026-06-19_0417.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/Delaware_Office_of_the_State_Bank_Commissioner_\342\200\224_Securities_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/Florida_Office_of_Financial_Regulation_\342\200\224_Securities_Regulation/2026-06-19_0418.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/Florida_Office_of_Financial_Regulation_\342\200\224_Securities_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/Hawaii_Division_of_Financial_Institutions_-_Securities_\342\200\224_Securities_Regulation/2026-06-19_0418.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/Hawaii_Division_of_Financial_Institutions_-_Securities_\342\200\224_Securities_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/Idaho_Department_of_Finance_\342\200\224_Securities_Regulation/2026-06-19_0419.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/Idaho_Department_of_Finance_\342\200\224_Securities_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Arkansas_Insurance_Department_\342\200\224_Insurance_Regulation/2026-06-19_0416.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Arkansas_Insurance_Department_\342\200\224_Insurance_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/California_Department_of_Insurance_\342\200\224_Insurance_Regulation/2026-06-19_0416.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/California_Department_of_Insurance_\342\200\224_Insurance_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Connecticut_Insurance_Department_\342\200\224_Insurance_Regulation/2026-06-19_0417.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Connecticut_Insurance_Department_\342\200\224_Insurance_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Delaware_Department_of_Insurance_\342\200\224_Insurance_Regulation/2026-06-19_0417.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Delaware_Department_of_Insurance_\342\200\224_Insurance_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Florida_Office_of_Insurance_Regulation_\342\200\224_Insurance_Regulation/2026-06-19_0418.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Florida_Office_of_Insurance_Regulation_\342\200\224_Insurance_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Georgia_Office_of_the_Commissioner_of_Insurance_\342\200\224_Insurance_Regulation/2026-06-19_0418.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Georgia_Office_of_the_Commissioner_of_Insurance_\342\200\224_Insurance_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Hawaii_Insurance_Division_\342\200\224_Insurance_Regulation/2026-06-19_0418.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Hawaii_Insurance_Division_\342\200\224_Insurance_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Idaho_Department_of_Insurance_\342\200\224_Insurance_Regulation/2026-06-19_0419.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Idaho_Department_of_Insurance_\342\200\224_Insurance_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Illinois_Department_of_Insurance_\342\200\224_Insurance_Regulation/2026-06-19_0419.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Illinois_Department_of_Insurance_\342\200\224_Insurance_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/Arkansas_Bar_Association_\342\200\224_Lawyer_Licensing/2026-06-19_0416.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/Arkansas_Bar_Association_\342\200\224_Lawyer_Licensing/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/Colorado_Supreme_Court_\342\200\224_Attorney_Regulation_\342\200\224_Lawyer_Licensing/2026-06-19_0417.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/Colorado_Supreme_Court_\342\200\224_Attorney_Regulation_\342\200\224_Lawyer_Licensing/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/Delaware_Board_of_Bar_Examiners_\342\200\224_Lawyer_Licensing/2026-06-19_0418.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/Delaware_Board_of_Bar_Examiners_\342\200\224_Lawyer_Licensing/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/Idaho_State_Bar_\342\200\224_Lawyer_Licensing/2026-06-19_0419.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/Idaho_State_Bar_\342\200\224_Lawyer_Licensing/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/State_Bar_of_Arizona_\342\200\224_Lawyer_Licensing/2026-06-19_0416.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/State_Bar_of_Arizona_\342\200\224_Lawyer_Licensing/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/State_Bar_of_California_\342\200\224_Lawyer_Licensing/2026-06-19_0416.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/State_Bar_of_California_\342\200\224_Lawyer_Licensing/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/State_Bar_of_Georgia_\342\200\224_Lawyer_Licensing/2026-06-19_0418.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/State_Bar_of_Georgia_\342\200\224_Lawyer_Licensing/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/The_Florida_Bar_\342\200\224_Lawyer_Licensing/2026-06-19_0418.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/The_Florida_Bar_\342\200\224_Lawyer_Licensing/latest.txt"
+ create mode 100644 Operations/Compliance_Research/By_State/Arizona/Accounting/2026-06-19_0416.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arizona/Accounting/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arizona/Legal/2026-06-19_0416.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arizona/Legal/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arkansas/Accounting/2026-06-19_0416.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arkansas/Accounting/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arkansas/Financial_Advisors/2026-06-19_0416.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arkansas/Financial_Advisors/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arkansas/Insurance/2026-06-19_0416.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arkansas/Insurance/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arkansas/Legal/2026-06-19_0416.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Arkansas/Legal/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Accounting/2026-06-19_0416.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Accounting/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Financial_Advisors/2026-06-19_0416.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Financial_Advisors/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Insurance/2026-06-19_0416.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Insurance/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Legal/2026-06-19_0416.txt
+ create mode 100644 Operations/Compliance_Research/By_State/California/Legal/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Colorado/Accounting/2026-06-19_0417.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Colorado/Accounting/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Colorado/Financial_Advisors/2026-06-19_0417.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Colorado/Financial_Advisors/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Colorado/Legal/2026-06-19_0417.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Colorado/Legal/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Connecticut/Accounting/2026-06-19_0417.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Connecticut/Accounting/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Connecticut/Financial_Advisors/2026-06-19_0417.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Connecticut/Financial_Advisors/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Connecticut/Insurance/2026-06-19_0417.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Connecticut/Insurance/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Accounting/2026-06-19_0417.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Accounting/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Financial_Advisors/2026-06-19_0417.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Financial_Advisors/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Insurance/2026-06-19_0417.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Insurance/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Legal/2026-06-19_0418.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Delaware/Legal/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Accounting/2026-06-19_0418.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Accounting/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Financial_Advisors/2026-06-19_0418.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Financial_Advisors/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Insurance/2026-06-19_0418.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Insurance/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Legal/2026-06-19_0418.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Florida/Legal/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Georgia/Accounting/2026-06-19_0418.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Georgia/Accounting/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Georgia/Insurance/2026-06-19_0418.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Georgia/Insurance/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Georgia/Legal/2026-06-19_0418.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Georgia/Legal/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Hawaii/Accounting/2026-06-19_0418.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Hawaii/Accounting/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Hawaii/Financial_Advisors/2026-06-19_0418.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Hawaii/Financial_Advisors/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Hawaii/Insurance/2026-06-19_0418.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Hawaii/Insurance/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Idaho/Accounting/2026-06-19_0419.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Idaho/Accounting/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Idaho/Financial_Advisors/2026-06-19_0419.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Idaho/Financial_Advisors/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Idaho/Insurance/2026-06-19_0419.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Idaho/Insurance/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Idaho/Legal/2026-06-19_0419.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Idaho/Legal/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Illinois/Insurance/2026-06-19_0419.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Illinois/Insurance/latest.txt
+Stonebridge: 449f115
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+History: 6277ce6
+[main 92d5a2b] Hard commit: 2026-06-19 04:21:22
+ 5 files changed, 720 insertions(+), 4 deletions(-)
+ create mode 100644 Pipeline/Concepts/compliance_explainer/template_compliance_explainer_v1.concept.json
+ create mode 100644 Pipeline/build_groundtruth_bible_visual_spec.py
+ create mode 100644 Reference_Library/style_bibles/GroundTruth_Bible_Visual_Design_Spec_v1.json
+ create mode 100644 Reference_Library/style_bibles/actors_241_fidelity_review.json
+Studio: 92d5a2b
+[main 678ee39] Hard commit: 2026-06-19 04:21:22
+ 325 files changed, 1366 insertions(+), 53 deletions(-)
+ create mode 100644 Creator4/brand/CHANNEL_POSITIONING_v206.md
+ create mode 100644 DAVID/handoff/T243_neutral_lighting_prompt_spec.json
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0001.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0002.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0003.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0004.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0005.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0006.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0007.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0008.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0009.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0010.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0011.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0012.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0013.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0014.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0015.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0016.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0017.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0018.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0019.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0020.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0021.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0022.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0023.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0024.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0025.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0026.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0027.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0028.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0029.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0030.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0031.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0032.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0033.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0034.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0035.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0036.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0037.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0038.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0039.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0040.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0041.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0042.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0043.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0044.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0045.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0046.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0047.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0048.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0049.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0050.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0051.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0052.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0053.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0054.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0055.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0056.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0057.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0058.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0059.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0060.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0061.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0062.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0063.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0064.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0065.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0066.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0067.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0068.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0069.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0070.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0071.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0072.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0073.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0074.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0075.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0076.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0077.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0078.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0079.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0080.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0081.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0082.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0083.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0084.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0085.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0086.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0087.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0088.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0089.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0090.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0091.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0092.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0093.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0094.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0095.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0096.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0097.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0098.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0099.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0100.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0101.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0102.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0103.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0104.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0105.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0106.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0107.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0108.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0109.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0110.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0111.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0112.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0113.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0114.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0115.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0116.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0117.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0118.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0119.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0120.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0121.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0122.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0123.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0124.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0125.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0126.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0127.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0128.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0129.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0130.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0131.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0132.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0133.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0134.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0135.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_full_probe/f_0136.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0001.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0002.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0003.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0004.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0005.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0006.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0007.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0008.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0009.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0010.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0011.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0012.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0013.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0014.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0015.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0016.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0017.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0018.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0019.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0020.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0021.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0022.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0023.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0024.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0025.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0026.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0027.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0028.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0029.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/_tmp_join_probe/j_0030.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_level_qa.json
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_level_qa_proof.json
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0001.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0002.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0003.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0004.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0005.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0006.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0007.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0008.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0009.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0010.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0011.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0012.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0013.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0014.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0015.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0016.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0017.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0018.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0019.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0020.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0021.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0022.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0023.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0024.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0025.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0026.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0027.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0028.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0029.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0030.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0031.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0032.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0033.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0034.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0035.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0036.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0037.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0038.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0039.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0040.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0041.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0042.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0043.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0044.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0045.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0046.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0047.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0048.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0049.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0050.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0051.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0052.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0053.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0054.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0055.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0056.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0057.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0058.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0059.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0060.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0061.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0062.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0063.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0064.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0065.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0066.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0067.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0068.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0069.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0070.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0071.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0072.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0073.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0074.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0075.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0076.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0077.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0078.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0079.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0080.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0081.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0082.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0083.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0084.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0085.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0086.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0087.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0088.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0089.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0090.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0091.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0092.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0093.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0094.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0095.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0096.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0097.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0098.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0099.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0100.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0101.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0102.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0103.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0104.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0105.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0106.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0107.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0108.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0109.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0110.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0111.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0112.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0113.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0114.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0115.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0116.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0117.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0118.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0119.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0120.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0121.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0122.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0123.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0124.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0125.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0126.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0127.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0128.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0129.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0130.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0131.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0132.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0133.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0134.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0135.jpg
+ create mode 100644 DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/after/frame_proof/frame_0136.jpg
+ create mode 100644 DAVID/scripts/_patch_latin_t243.py
+ create mode 100644 DAVID/scripts/frame_level_color_seam_qa.py
+ create mode 100644 tests/test_frame_level_color_seam_qa.py
+ create mode 100644 tests/test_groundtruth_bible_visual_spec.py
+parent: 678ee39
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+[main 110808d] Hard commit follow-up 1: 2026-06-19 04:21:22
+ 4 files changed, 260 insertions(+)
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Illinois_State_Board_of_Accountancy/2026-06-19_0421.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Illinois_State_Board_of_Accountancy/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Illinois/Accounting/2026-06-19_0421.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Illinois/Accounting/latest.txt
+1 Stonebridge: 110808d
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+[main 1e02f6c] Hard commit follow-up 1: pointers 2026-06-19 04:21:22
+ 3 files changed, 71 insertions(+), 10 deletions(-)
+1 parent: 1e02f6c
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[main 73c8652] Hard commit follow-up 2: 2026-06-19 04:21:22
+ 1 file changed, 142 insertions(+)
+ create mode 100644 scripts/groundtruth_knowledge_gate_v2.py
+2 Science: 73c8652
+[main 60e3578] Hard commit follow-up 2: 2026-06-19 04:21:22
+ 16 files changed, 1084 insertions(+)
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Indiana_State_Board_of_Accountancy/2026-06-19_0421.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Indiana_State_Board_of_Accountancy/latest.txt
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/Indiana_Secretary_of_State_\342\200\224_Securities_Division_\342\200\224_Securities_Regulation/2026-06-19_0421.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/Indiana_Secretary_of_State_\342\200\224_Securities_Division_\342\200\224_Securities_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Indiana_Department_of_Insurance_\342\200\224_Insurance_Regulation/2026-06-19_0421.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Indiana_Department_of_Insurance_\342\200\224_Insurance_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/Illinois_Courts_\342\200\224_Attorney_Registration_\342\200\224_Lawyer_Licensing/2026-06-19_0421.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/Illinois_Courts_\342\200\224_Attorney_Registration_\342\200\224_Lawyer_Licensing/latest.txt"
+ create mode 100644 Operations/Compliance_Research/By_State/Illinois/Legal/2026-06-19_0421.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Illinois/Legal/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Indiana/Accounting/2026-06-19_0421.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Indiana/Accounting/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Indiana/Financial_Advisors/2026-06-19_0421.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Indiana/Financial_Advisors/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Indiana/Insurance/2026-06-19_0421.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Indiana/Insurance/latest.txt
+2 Stonebridge: 60e3578
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[main b31311b] Hard commit follow-up 2: pointers 2026-06-19 04:21:22
+ 8 files changed, 209 insertions(+), 79 deletions(-)
+ delete mode 100644 DAVID/scripts/_patch_latin_t243.py
+2 parent: b31311b
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[main 481ea29] Hard commit follow-up 3: 2026-06-19 04:21:22
+ 12 files changed, 612 insertions(+)
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/Iowa_Insurance_Division_(securities_oversight)_\342\200\224_Securities_Regulation/2026-06-19_0421.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Financial_Advisors/State_Securities/Iowa_Insurance_Division_(securities_oversight)_\342\200\224_Securities_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Iowa_Insurance_Division_\342\200\224_Insurance_Regulation/2026-06-19_0421.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Insurance/Department/Iowa_Insurance_Division_\342\200\224_Insurance_Regulation/latest.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/Indiana_Supreme_Court_\342\200\224_Lawyer_Licensing/2026-06-19_0421.txt"
+ create mode 100644 "Operations/Compliance_Research/By_Category/Legal/Bar_Admission/Indiana_Supreme_Court_\342\200\224_Lawyer_Licensing/latest.txt"
+ create mode 100644 Operations/Compliance_Research/By_State/Indiana/Legal/2026-06-19_0421.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Indiana/Legal/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Iowa/Financial_Advisors/2026-06-19_0421.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Iowa/Financial_Advisors/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Iowa/Insurance/2026-06-19_0421.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Iowa/Insurance/latest.txt
+3 Stonebridge: 481ea29
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[main 66c1d44] Hard commit follow-up 3: pointers 2026-06-19 04:21:22
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+3 parent: 66c1d44
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[main 0ed76ae] Hard commit follow-up 4: 2026-06-19 04:21:22
+ 4 files changed, 108 insertions(+)
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Iowa_State_Board_of_Accountancy/2026-06-19_0421.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Iowa_State_Board_of_Accountancy/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Iowa/Accounting/2026-06-19_0421.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Iowa/Accounting/latest.txt
+4 Stonebridge: 0ed76ae
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[main 6468921] Hard commit follow-up 4: pointers 2026-06-19 04:21:22
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+4 parent: 6468921
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+5 parent: 6468921
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+6 parent: 6468921
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[main 492d42f] Hard commit follow-up 7: 2026-06-19 04:21:22
+ 3 files changed, 153 insertions(+), 84 deletions(-)
+ create mode 100644 groundtruth_poc/groundtruth_knowledge_gate_report_v2.json
+7 Science: 492d42f
+[main f69581d] Hard commit follow-up 7: 2026-06-19 04:21:22
+ 4 files changed, 220 insertions(+)
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Kansas_State_Board_of_Accountancy/2026-06-19_0422.txt
+ create mode 100644 Operations/Compliance_Research/By_Category/Accounting/CPA_Licensing/Kansas_State_Board_of_Accountancy/latest.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Kansas/Accounting/2026-06-19_0422.txt
+ create mode 100644 Operations/Compliance_Research/By_State/Kansas/Accounting/latest.txt
+7 Stonebridge: f69581d
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[main 03728c4] Hard commit follow-up 7: pointers 2026-06-19 04:21:22
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+7 parent: 03728c4
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+8 parent: 03728c4
+ALL CLEAN
+parent=03728c402c16fef6511b5788a5c079b7e26b9b69
+Science=492d42fa32df427b3ca73b0d3f45e8f935a412db
+Stonebridge=f69581d4f8d08a6c2ad0074ebc5f7800166925f9
+Studio=92d5a2bb4ef61af819cd65ed0d8a94c446233c7a
