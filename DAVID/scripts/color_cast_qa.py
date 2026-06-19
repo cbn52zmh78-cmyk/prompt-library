@@ -28,6 +28,10 @@ RGB_SKEW_MAX = 0.12  # (R+G)/2−B on host; proof_194 after ≈0.20, neutral ref
 BLUE_STARVATION_FRACTION_MAX = 0.50
 HOST_BR_RATIO_MIN = 0.22
 HOST_BLUE_MEAN_MIN = 25.0
+# T243 generation-source gate (pre-render) — stricter than post-grade QA
+GENERATION_HOST_BLUE_MEAN_MIN = 40.0
+GENERATION_HOST_BR_RATIO_MIN = 0.35
+GENERATION_BLUE_STARVATION_FRACTION_MAX = 0.30
 BLUE_STARVATION_B_MAX = 12.0
 BLUE_STARVATION_LUM_MAX = 90.0
 
@@ -141,6 +145,63 @@ def color_cast_breaches(metrics: dict[str, float]) -> list[str]:
 
 def color_cast_passes(metrics: dict[str, float]) -> bool:
     return not color_cast_breaches(metrics)
+
+
+def generation_reference_breaches(
+    metrics: dict[str, float],
+    *,
+    host: bool = True,
+) -> list[str]:
+    """T243 pre-render gate — generation stills must carry blue before i2v."""
+    issues: list[str] = []
+    bmean = metrics.get("host_blue_mean", 0.0)
+    br = metrics.get("host_br_ratio", 0.0)
+    starve = metrics.get("blue_starvation_fraction", 1.0)
+    label = "host" if host else "set_shadow"
+    if bmean < GENERATION_HOST_BLUE_MEAN_MIN:
+        issues.append(f"{label} Bμ {bmean:.1f} < {GENERATION_HOST_BLUE_MEAN_MIN}")
+    if br < GENERATION_HOST_BR_RATIO_MIN:
+        issues.append(f"{label} B/R {br:.3f} < {GENERATION_HOST_BR_RATIO_MIN}")
+    if starve > GENERATION_BLUE_STARVATION_FRACTION_MAX:
+        issues.append(
+            f"{label} blue_starvation_fraction {starve:.3f} > "
+            f"{GENERATION_BLUE_STARVATION_FRACTION_MAX}"
+        )
+    return issues
+
+
+def generation_reference_passes(metrics: dict[str, float], *, host: bool = True) -> bool:
+    return not generation_reference_breaches(metrics, host=host)
+
+
+def measure_set_shadow_blue_health(arr: np.ndarray) -> dict[str, float]:
+    """Set plate gate — shadow/mid pixels must retain blue (no global amber wash)."""
+    h, w = arr.shape[:2]
+    region = arr[int(h * 0.25): int(h * 0.92): 4, int(w * 0.12): int(w * 0.88): 4]
+    if region.size == 0:
+        return {
+            "host_blue_mean": 0.0,
+            "host_br_ratio": 0.0,
+            "blue_starvation_fraction": 1.0,
+        }
+    rs = region[..., 0].astype(np.float64)
+    gs = region[..., 1].astype(np.float64)
+    bs = region[..., 2].astype(np.float64)
+    lum = 0.299 * rs + 0.587 * gs + 0.114 * bs
+    valid = (lum >= 35) & (lum <= 160)
+    rv, gv, bv = rs[valid], gs[valid], bs[valid]
+    if rv.size == 0:
+        return {
+            "host_blue_mean": 0.0,
+            "host_br_ratio": 0.0,
+            "blue_starvation_fraction": 1.0,
+        }
+    starved = (bv < 40) | (bv < rv * 0.35)
+    return {
+        "host_blue_mean": float(bv.mean()),
+        "host_br_ratio": float(bv.mean()) / max(float(rv.mean()), 1.0),
+        "blue_starvation_fraction": float(starved.sum()) / float(rv.size),
+    }
 
 
 def evaluate_clinical_cast(arr: np.ndarray) -> dict[str, Any]:
