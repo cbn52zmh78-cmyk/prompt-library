@@ -198,6 +198,16 @@ _KINDS: tuple[OutputKind, ...] = (
                description="Canonical music-clearance manifest pointer."),
     OutputKind("workflow_template", "Nexus/Workflows/templates", "{filename}",
                description="NEXUS workflow templates."),
+    # ---- NEXUS jobs / dispatch (#258 / #283 / #250) ---------------------------
+    OutputKind("nexus_jobs", "Nexus/Jobs", is_dir=True,
+               description="NEXUS lifecycle jobs root (#258/#283)."),
+    OutputKind("nexus_job_folder", "Nexus/Jobs/{stage}/{job_id}", is_dir=True,
+               description="ULID-named job folder at a lifecycle stage."),
+    OutputKind("nexus_dispatch_state", "Nexus/Jobs/{stage}/{job_id}", "dispatch_state.json",
+               description="Dispatch execution state (#250)."),
+    OutputKind("nexus_dispatch_packet",
+               "Nexus/Jobs/{stage}/{job_id}/artifacts/dispatch_packets", "{packet_id}.json",
+               description="Fleet task packet emitted by #250."),
     # ---- ledger ---------------------------------------------------------------
     OutputKind("output_ledger", "data", "output_ledger.jsonl",
                description="Append-only stamp ledger."),
