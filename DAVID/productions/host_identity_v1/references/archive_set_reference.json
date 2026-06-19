@@ -1,6 +1,6 @@
 {
   "path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\references\\archive_set_reference.jpg",
-  "url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-020b03a3-894b-4c88-8ba4-f72a0fb98531.jpeg",
+  "url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-a5e4303b-cbb0-452d-8a2f-7527ede1f580.jpeg",
   "prompt": "The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Neutral balanced 5000K ambient light with real blue present in shadow neutrals; floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp casting a tight localized 3200K warm pool on the desk surface and lamp shade only — NOT a global amber wash. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting with balanced white balance.",
   "lighting_lock": "LIGHTING LOCK @Set-Archive-001 (#243): neutral balanced 5000K ambient key — blue preserved in shadows; brass lamp 3200K localized desk pool only.",
   "model": "grok-imagine-image-quality",

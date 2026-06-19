@@ -94,6 +94,20 @@ ARCHIVE_NEUTRAL_GENERATION_LOCK = (
     "face, sweater, walls, or shadows; no yellow-green cast; no blue-starved shadows; no magenta "
     "purple ambient."
 )
+_ARCHIVE_WARM_PURGE_RE = re.compile(
+    r"Warm gold brass desk lamp 3200K key light locked[^.]*\."
+    r"(?:\s*Motivated practical key only[^.]*\.)?"
+    r"\s*COLOR LOCK Archive: dominant amber 3200K[^.]*\."
+    r"\s*GRADE LOCK Documentary-Prestige: skin warmth \+3% amber max[^.]*\.",
+    re.I,
+)
+_ARCHIVE_NEUTRAL_PROMPT_BLOCK = (
+    "LIGHTING: Neutral balanced 5000K ambient key on host — natural skin, blue channel intact; "
+    "brass desk lamp 3200K localized warm pool on desk quadrant only; soft 5200K shelf bounce ≤25%; "
+    "no yellow-green cast; no blue-starved shadows. "
+    "GENERATION LOCK Archive-neutral (#243): balanced WB 4800–5200K; B≥40 in skin mids; "
+    "forbid dominant amber full-frame; forbid blue-starved generation."
+)
 GLASSES_LOCK_PROMPT = "Reading glasses pushed up into hair — same placement every frame."
 AUDIO_SILENCE_DB = -45.0
 LOUDNORM_I = -16.0
@@ -380,6 +394,15 @@ def _kelvin_lock_for_prompt(base: str, refs: dict[str, Any]) -> str | None:
     return None
 
 
+def purge_archive_warm_prompt_clauses(text: str) -> str:
+    """Strip warm-global Archive clauses before generation (#218)."""
+    out = _ARCHIVE_WARM_PURGE_RE.sub(_ARCHIVE_NEUTRAL_PROMPT_BLOCK, text)
+    out = re.sub(r"\bwarm brass lamplight\b", "neutral ambient light, brass lamp accent on desk only", out, flags=re.I)
+    out = re.sub(r"\bWarm inviting close\b", "Neutral inviting close", out)
+    out = re.sub(r"\bamber pool only on desk and face\b", "localized warm pool on desk quadrant only", out, flags=re.I)
+    return out
+
+
 def _is_dark_scene(
     refs: dict[str, Any],
     *,
@@ -387,6 +410,10 @@ def _is_dark_scene(
     shot: dict[str, Any] | None = None,
 ) -> bool:
     set_file = str(refs.get("set_file") or "").lower()
+    # Archive host desk is NOT a dark-scene grade path (#218) — "shadow" in color guards
+    # must not trigger DARK_SCENE_MAGENTA_CLAMP (gamma_b=0.68 crushes blue).
+    if _refs_is_archive(refs) or "archive" in set_file:
+        return False
     # Clinical seamless sets use "shadow definition" in prompts — not dark-scene grade (#193).
     if any(k in set_file for k in ("cyclorama", "seamless_neutral", "studio_interior")):
         return False
@@ -783,6 +810,23 @@ def resolve_refs(script: dict[str, Any], *, client: Any = None) -> dict[str, Any
         sp = Path(str(set_file))
         set_file = str(sp if sp.is_absolute() else _resolve_workspace_path(str(set_file)))
 
+    def _sidecar_url(image_path: str | None) -> str | None:
+        if not image_path:
+            return None
+        meta = Path(image_path).with_suffix(".json")
+        if not meta.is_file():
+            return None
+        try:
+            return json.loads(meta.read_text(encoding="utf-8")).get("url")
+        except (json.JSONDecodeError, OSError):
+            return None
+
+    # Prefer fresh regen sidecar over stale identity_lock url (#218).
+    sidecar = _sidecar_url(avatar_file)
+    if sidecar:
+        avatar_url = sidecar
+        cfg["avatar_url"] = avatar_url
+
     if not avatar_url and avatar_file and client is not None:
         avatar_url = upload_image_url(client, Path(avatar_file))
         cfg["avatar_url"] = avatar_url
@@ -1064,8 +1108,10 @@ def get_seamless_options(script: dict[str, Any], args: argparse.Namespace) -> Se
 def apply_seamless_prompt(shot: dict[str, Any], refs: dict[str, Any], opts: SeamlessOptions) -> str:
     """Use embedded video_prompt when continuity is already baked in; else patch defaults."""
     base = shot.get("video_prompt", "")
-    locks: list[str] = []
     archive = "archive" in str(refs.get("set_file") or "").lower()
+    if opts.neutral_generation and archive:
+        base = purge_archive_warm_prompt_clauses(base)
+    locks: list[str] = []
     if opts.neutral_generation and archive:
         locks.append(ARCHIVE_NEUTRAL_GENERATION_LOCK)
     else:
@@ -2440,6 +2486,19 @@ def render_frame_chain_performance(
                         image_url = upload_image_url(client, frame_jpg)
                         _log(f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} ({dur}s) ← last frame")
 
+                    prompt_log = shots_dir / f"chain_{sid}_generation_prompt.txt"
+                    prompt_log.write_text(
+                        json.dumps(
+                            {
+                                "shot_id": sid,
+                                "image_url": image_url,
+                                "prompt": prompt,
+                                "neutral_generation": opts.neutral_generation,
+                            },
+                            indent=2,
+                        ),
+                        encoding="utf-8",
+                    )
                     _api_pace()
                     resp = client.video.generate(
                         prompt=prompt,
@@ -2450,6 +2509,11 @@ def render_frame_chain_performance(
                     )
                     step_urls.append(resp.url)
                     _download(resp.url, seg_path)
+                    prompt_log.write_text(
+                        prompt_log.read_text(encoding="utf-8")
+                        + f"\n\nvideo_url: {resp.url}\n",
+                        encoding="utf-8",
+                    )
 
             raw = ensure_segment_audio(seg_path, shot, refs, shots_dir)
             process_shot_segment(raw, proc_path, shot, refs, opts, shots_dir, color_ref)

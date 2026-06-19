@@ -240,3 +240,90 @@ def summarize_color_cast(metrics: dict[str, float]) -> dict[str, Any]:
         "pass": not breaches,
         "breaches": breaches,
     }
+
+
+def probe_video_midframe(video: Path, at_s: float | None = None) -> dict[str, float]:
+    """Extract one frame from video and measure color cast."""
+    import subprocess
+    import tempfile
+
+    from PIL import Image
+
+    try:
+        import imageio_ffmpeg
+
+        ff = imageio_ffmpeg.get_ffmpeg_exe()
+    except ImportError:
+        ff = "ffmpeg"
+    if at_s is None:
+        r = subprocess.run([ff, "-i", str(video)], capture_output=True, text=True)
+        dur = 4.0
+        for line in (r.stderr or "").splitlines():
+            if "Duration:" in line:
+                t = line.split("Duration:", 1)[1].split(",")[0].strip()
+                h, m, s = t.split(":")
+                dur = max(0.5, int(h) * 3600 + int(m) * 60 + float(s) * 0.5)
+                break
+        at_s = dur
+    with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as tmp:
+        jpg = Path(tmp.name)
+    subprocess.run(
+        [ff, "-y", "-ss", f"{at_s:.3f}", "-i", str(video), "-frames:v", "1", str(jpg)],
+        check=True,
+        capture_output=True,
+    )
+    with Image.open(jpg) as img:
+        metrics = measure_color_cast(np.asarray(img.convert("RGB")))
+    jpg.unlink(missing_ok=True)
+    return metrics
+
+
+def main() -> int:
+    import argparse
+    import json
+    from pathlib import Path
+
+    ap = argparse.ArgumentParser(description="Color-cast QA probe (#218/#244)")
+    ap.add_argument("--input", required=True, help="Image or video path")
+    ap.add_argument("--shot", default=None, help="Shot id label for report")
+    ap.add_argument("--generation-gate", action="store_true", help="Use pre-render reference thresholds")
+    ap.add_argument("--json", action="store_true")
+    args = ap.parse_args()
+
+    path = Path(args.input)
+    if not path.is_file():
+        print(f"!! not found: {path}")
+        return 2
+    if path.suffix.lower() in (".mp4", ".mov", ".webm", ".mkv"):
+        metrics = probe_video_midframe(path)
+    else:
+        from PIL import Image
+
+        metrics = measure_color_cast(np.asarray(Image.open(path).convert("RGB")))
+    if args.generation_gate:
+        breaches = generation_reference_breaches(metrics, host=True)
+        ok = not breaches
+    else:
+        breaches = color_cast_breaches(metrics)
+        ok = not breaches
+    report = {
+        "input": str(path),
+        "shot": args.shot,
+        **summarize_color_cast(metrics),
+        "generation_reference_passes": generation_reference_passes(metrics, host=True),
+        "breaches": breaches,
+        "verdict": "PASS" if ok else "FAIL",
+    }
+    if args.json:
+        print(json.dumps(report, indent=2))
+    else:
+        print(f"[{report['verdict']}] {path.name}" + (f" shot={args.shot}" if args.shot else ""))
+        print(f"  Bμ={metrics['host_blue_mean']:.1f}  B/R={metrics['host_br_ratio']:.3f}  "
+              f"rgb_skew={metrics['rgb_skew']:.4f}  starve={metrics['blue_starvation_fraction']:.3f}")
+        if breaches:
+            print(f"  breaches: {breaches}")
+    return 0 if ok else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
