@@ -1,0 +1,68 @@
+{
+  "message_type": "recap_vcs",
+  "task": "R6-D — NC·VA·MI·AZ reachable-host tranche toward sellable pack",
+  "title": "R6-D — NC·VA·MI·AZ all FOUND; IL·NJ·GA parked unchanged",
+  "generated_at": "2026-06-19T23:00:00+00:00",
+  "status": "COMPLETE",
+  "verdict": "GREEN",
+  "lane": "R6",
+  "vertical": "Healthcare Practice",
+  "pinned_lane": "GroundTruth/Compliance/lanes/R6_healthcare_practice",
+  "recap": {
+    "did": [
+      "Added NC·VA·MI·AZ state packs (24 new facts, all FOUND) from reachable .gov hosts: ncleg.gov, law.lis.virginia.gov, legislature.mi.gov, azleg.gov",
+      "North Carolina: § 90-21.20B HIPAA-aligned disclosure + §§ 75-61/75-65 breach notification",
+      "Virginia: § 32.1-127.1:03 health records privacy + § 18.2-186.6 breach notification",
+      "Michigan: MCL 333.26263–26267 medical records access + MCL 445.72 breach (HIPAA safe harbor)",
+      "Arizona: A.R.S. §§ 12-2292 medical records + §§ 18-551/18-552 breach (HIPAA CE/BA exempt)",
+      "Left IL·NJ·GA parked unchanged per lane policy — no re-probe",
+      "Updated source_register v1.3, lane_meta, INDEX, 8-section bible seed (15 states / 79 facts)"
+    ],
+    "state": "15 states / 79 state facts / 114 cited claims — 63/79 state facts FOUND; near sellable product depth",
+    "gaps": {
+      "unchanged_parked": {
+        "Illinois": "ilga.gov 404/500 — PARKED",
+        "New Jersey": "lis.njleg SPA — PARKED",
+        "Georgia": "legis.ga.gov/sos.ga.gov — PARKED"
+      },
+      "federal": ["hhs.gov/hipaa — 403 PARKED"],
+      "other": ["PA 73 P.S. §2301 primary NOT FOUND", "TX Ch.181 SPA", "MA 201 CMR 17 403"]
+    },
+    "next": [
+      "Promote to sellable pack when IL·NJ·GA unblock or substitute with 5 additional high-volume states",
+      "Browser harvest IL·NJ·GA when portals accessible",
+      "Consolidate into canonical compliance pack"
+    ]
+  },
+  "metrics": {
+    "federal_controls": 35,
+    "state_count": 15,
+    "state_facts": 79,
+    "state_facts_found": 63,
+    "r6d_new_facts": 24,
+    "r6d_new_found": 24,
+    "total_cited_claims": 114,
+    "sources_harvested": 36,
+    "sources_parked": 10,
+    "gap_count": 12,
+    "sellable": false,
+    "sellable_proximity": "NEAR"
+  },
+  "vcs_commit_draft": {
+    "subject": "R6-D: +NC/VA/MI/AZ healthcare state tranche (15-state seed, 79 facts)",
+    "body": "RECAP\n- Did: Add NC/VA/MI/AZ (24 FOUND facts); IL/NJ/GA parked unchanged\n- State: 15 states, 79 facts, 63 FOUND\n- Hosts: ncleg, law.lis.virginia, legislature.mi, azleg all 200 OK\n- Next: sellable promotion; unblock IL/NJ/GA or expand"
+  },
+  "artifacts": [
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/states/north_carolina.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/states/virginia.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/states/michigan.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/states/arizona.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/source_register.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/lane_meta.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/INDEX.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/healthcare_practice_knowledge_bible_seed_v1.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/healthcare_practice_knowledge_bible_seed_v1.md",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/dispatches/R6_D_healthcare_practice_recap.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/scripts/probe_r6d_states.py"
+  ]
+}

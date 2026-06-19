@@ -1,0 +1,123 @@
+{
+  "artifact": "healthcare_practice_state_pack",
+  "version": "1.0",
+  "lane": "R6",
+  "task": "R6-D — Healthcare practice state privacy add-on (Michigan medical records access + breach)",
+  "state": "Michigan",
+  "state_code": "MI",
+  "state_slug": "michigan",
+  "generated_at": "2026-06-19T23:00:00+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research — not legal advice. Michigan Identity Theft Protection Act deems HIPAA-compliant entities in compliance for breach notice.",
+  "policy": "Public statute sources only; gaps explicit.",
+  "domains": {
+    "medical_records_privacy": {
+      "domain": "medical_records_privacy",
+      "label": "MCL 333.26261–26267 — Medical Records Access Act",
+      "statute": "MCL 333.26261 et seq.",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Michigan Legislature — legislature.mi.gov",
+        "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-333-26261"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-MI-MR-001",
+          "text": "'Medical record' means information in any form or medium pertaining to a patient's health care, medical history, diagnosis, prognosis, or condition maintained by a health care provider or facility in the course of caring for the patient.",
+          "status": "FOUND",
+          "citation": {
+            "source": "MCL 333.26263(i)",
+            "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-333-26263",
+            "jurisdiction": "Michigan",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-MI-MR-002",
+          "text": "A patient or authorized representative may submit a written request (signed, dated within 60 days) to examine or obtain a copy; the provider or facility must respond within 30 days (60 days if records off-site).",
+          "status": "FOUND",
+          "citation": {
+            "source": "MCL 333.26265(1)-(2)",
+            "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-333-26265",
+            "jurisdiction": "Michigan",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-MI-MR-003",
+          "text": "A health care provider or facility that receives a request for a medical record may not inquire as to the purpose for which the medical record is requested.",
+          "status": "FOUND",
+          "citation": {
+            "source": "MCL 333.26267",
+            "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-333-26267",
+            "jurisdiction": "Michigan",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 3,
+      "gap": null
+    },
+    "data_security_breach": {
+      "domain": "data_security_breach",
+      "label": "MCL 445.72 — Identity Theft Protection Act (breach notice)",
+      "statute": "MCL 445.72",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Michigan Legislature — legislature.mi.gov",
+        "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-445-72"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-MI-BRN-001",
+          "text": "Unless the breach is determined not likely to cause substantial loss, injury, or identity theft, an owner or licensee of database data must notify each affected Michigan resident whose unencrypted personal information was accessed and acquired by an unauthorized person.",
+          "status": "FOUND",
+          "citation": {
+            "source": "MCL 445.72(1)",
+            "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-445-72",
+            "jurisdiction": "Michigan",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-MI-BRN-002",
+          "text": "Notice must be provided without unreasonable delay, subject to scope-determination and law-enforcement delay exceptions.",
+          "status": "FOUND",
+          "citation": {
+            "source": "MCL 445.72(4)",
+            "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-445-72",
+            "jurisdiction": "Michigan",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-MI-BRN-003",
+          "text": "A person or agency that complies with HIPAA (45 CFR parts 160 and 164) for unauthorized-access prevention and customer notice is considered in compliance with MCL 445.72.",
+          "status": "FOUND",
+          "citation": {
+            "source": "MCL 445.72(10)",
+            "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-445-72",
+            "jurisdiction": "Michigan",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 3,
+      "gap": null
+    }
+  },
+  "status_roll": {
+    "FOUND": 6,
+    "REQUIRES_CONFIRMATION": 0,
+    "NOT FOUND": 0,
+    "ACCESS_RESTRICTED": 0,
+    "PARKED": 0
+  },
+  "total_facts": 6
+}

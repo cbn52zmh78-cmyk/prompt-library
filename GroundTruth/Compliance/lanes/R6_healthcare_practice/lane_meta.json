@@ -1,7 +1,7 @@
 {
   "lane": "R6",
   "issue": null,
-  "task": "R6-C — Expand healthcare toward sellable depth (IL · PA · NJ · GA · OH)",
+  "task": "R6-D — NC·VA·MI·AZ reachable-host tranche toward sellable pack",
   "vertical": "Healthcare Practice",
   "slug": "healthcare_practice",
   "origin_repo": "GroundTruth",
@@ -9,65 +9,37 @@
   "canonical_pack": "GroundTruth/Compliance/lanes/R6_healthcare_practice/healthcare_practice_knowledge_bible_seed_v1.json",
   "hipaa_control_map": "GroundTruth/Compliance/lanes/R6_healthcare_practice/hipaa_control_map_seed_v1.json",
   "federal_fact_count": 34,
-  "state_count": 11,
-  "state_slots": 11,
+  "state_count": 15,
+  "state_slots": 15,
   "state_gaps": 8,
-  "state_fact_count": 55,
-  "source_count": 38,
-  "harvested_sources": 28,
+  "state_fact_count": 79,
+  "source_count": 46,
+  "harvested_sources": 36,
   "parked_sources": 10,
-  "product_depth": "11-state tranche (high-volume)",
-  "sellable_threshold_note": "11 states / 55 state facts — approaching product depth; IL·NJ·GA blocks remain",
+  "product_depth": "15-state pack (IL·NJ·GA remain parked)",
+  "sellable_threshold_note": "15 states / 79 state facts / 24 FOUND in R6-D tranche — near sellable; unblock IL·NJ·GA or add 5 more for product grade",
   "retrieved_date": "2026-06-19",
   "state_roots": [
     "GroundTruth/Compliance/lanes/R6_healthcare_practice/states"
   ],
   "state_roll": {
-    "California": {
-      "total_facts": 6,
-      "status_counts": { "FOUND": 6 }
-    },
-    "Texas": {
-      "total_facts": 2,
-      "status_counts": { "FOUND": 1, "ACCESS_RESTRICTED": 1 }
-    },
-    "New York": {
-      "total_facts": 8,
-      "status_counts": { "FOUND": 7, "PARKED": 1 }
-    },
-    "Washington": {
-      "total_facts": 5,
-      "status_counts": { "FOUND": 5 }
-    },
-    "Florida": {
-      "total_facts": 6,
-      "status_counts": { "FOUND": 6 }
-    },
-    "Massachusetts": {
-      "total_facts": 3,
-      "status_counts": { "FOUND": 2, "REQUIRES_CONFIRMATION": 1 }
-    },
-    "Ohio": {
-      "total_facts": 6,
-      "status_counts": { "FOUND": 6 }
-    },
-    "Pennsylvania": {
-      "total_facts": 7,
-      "status_counts": { "FOUND": 6, "NOT FOUND": 1 }
-    },
-    "Illinois": {
-      "total_facts": 4,
-      "status_counts": { "NOT FOUND": 2, "ACCESS_RESTRICTED": 2 }
-    },
-    "New Jersey": {
-      "total_facts": 4,
-      "status_counts": { "NOT FOUND": 1, "PARKED": 3 }
-    },
-    "Georgia": {
-      "total_facts": 4,
-      "status_counts": { "NOT FOUND": 1, "ACCESS_RESTRICTED": 2, "PARKED": 1 }
-    }
+    "California": { "total_facts": 6, "status_counts": { "FOUND": 6 } },
+    "Texas": { "total_facts": 2, "status_counts": { "FOUND": 1, "ACCESS_RESTRICTED": 1 } },
+    "New York": { "total_facts": 8, "status_counts": { "FOUND": 7, "PARKED": 1 } },
+    "Washington": { "total_facts": 5, "status_counts": { "FOUND": 5 } },
+    "Florida": { "total_facts": 6, "status_counts": { "FOUND": 6 } },
+    "Massachusetts": { "total_facts": 3, "status_counts": { "FOUND": 2, "REQUIRES_CONFIRMATION": 1 } },
+    "Ohio": { "total_facts": 6, "status_counts": { "FOUND": 6 } },
+    "Pennsylvania": { "total_facts": 7, "status_counts": { "FOUND": 6, "NOT FOUND": 1 } },
+    "Illinois": { "total_facts": 4, "status_counts": { "NOT FOUND": 2, "ACCESS_RESTRICTED": 2 } },
+    "New Jersey": { "total_facts": 4, "status_counts": { "NOT FOUND": 1, "PARKED": 3 } },
+    "Georgia": { "total_facts": 4, "status_counts": { "NOT FOUND": 1, "ACCESS_RESTRICTED": 2, "PARKED": 1 } },
+    "North Carolina": { "total_facts": 6, "status_counts": { "FOUND": 6 } },
+    "Virginia": { "total_facts": 6, "status_counts": { "FOUND": 6 } },
+    "Michigan": { "total_facts": 6, "status_counts": { "FOUND": 6 } },
+    "Arizona": { "total_facts": 6, "status_counts": { "FOUND": 6 } }
   },
   "pinned_lane": "GroundTruth/Compliance/lanes/R6_healthcare_practice",
-  "prior_task": "R6-B — Close parked HIPAA items + expand states"
+  "prior_task": "R6-C — Expand healthcare toward sellable depth (IL · PA · NJ · GA · OH)",
+  "parked_states_unchanged": ["Illinois", "New Jersey", "Georgia"]
 }

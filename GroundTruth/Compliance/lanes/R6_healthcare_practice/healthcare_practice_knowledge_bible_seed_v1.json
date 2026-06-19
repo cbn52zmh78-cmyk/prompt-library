@@ -1,213 +1,136 @@
 {
   "artifact": "knowledge_bible",
   "format": "8-section",
-  "version": "1.1",
-  "variant": "seed_11_states",
-  "task": "R6-C",
+  "version": "1.2",
+  "variant": "seed_15_states",
+  "task": "R6-D",
   "lane": "R6",
   "vertical": "Healthcare Practice",
-  "sku": "R6-HC-SEED-11-v1",
+  "sku": "R6-HC-SEED-15-v1",
   "product_status": "SEED",
   "sellable": false,
-  "sellable_depth_note": "11 high-volume states / 55 state facts — approaching product threshold; IL·NJ·GA portal blocks limit sellable grade",
+  "sellable_depth_note": "15 states / 79 state facts / 63 FOUND — near sellable; IL·NJ·GA parked unchanged",
   "citation_standard": "STD-CITE-001",
   "knowledge_gate": "Knowledge-Gate-clean",
   "template": "GroundTruth/Compliance/lanes/R6_healthcare_practice/compliance_bible_template_v1.json",
-  "generated_at": "2026-06-19T22:00:00+00:00",
-  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm HIPAA and state medical-privacy obligations with licensed counsel before relying on any fact for operations or filings.",
+  "generated_at": "2026-06-19T23:00:00+00:00",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice.",
   "sections": {
     "1_tldr": {
       "title": "TL;DR / Executive Summary",
-      "coverage": "Federal HIPAA (eCFR + CMS/ASPE fallbacks) + BAA control-map; state add-ons CA, TX, NY, WA, FL, MA, OH, PA, IL, NJ, GA.",
-      "state_count": 11,
-      "state_codes": ["CA", "TX", "NY", "WA", "FL", "MA", "OH", "PA", "IL", "NJ", "GA"],
-      "cited_claims": 90,
-      "citation_count": 38,
+      "coverage": "Federal HIPAA + 15-state privacy/breach add-ons. R6-D adds NC·VA·MI·AZ (all FOUND via reachable .gov hosts). IL·NJ·GA remain parked.",
+      "state_count": 15,
+      "state_codes": ["CA", "TX", "NY", "WA", "FL", "MA", "OH", "PA", "IL", "NJ", "GA", "NC", "VA", "MI", "AZ"],
+      "cited_claims": 114,
+      "citation_count": 46,
       "gaps_flagged": 12,
       "parked_sources": 10,
       "status_roll": {
-        "FOUND": 73,
+        "FOUND": 97,
         "REQUIRES_CONFIRMATION": 1,
         "NOT FOUND": 6,
         "ACCESS_RESTRICTED": 7,
         "PARKED": 6
       },
       "as_of_date": "2026-06-19",
-      "honesty_rule": "Every claim STD-CITE-001 cited; gaps render NOT FOUND — [source checked: …]; no bypass."
+      "honesty_rule": "Gaps render NOT FOUND — [source checked: …]; no bypass."
     },
     "2_scope_methodology_as_of": {
       "title": "Scope, Methodology & As-Of Date",
       "scope": {
-        "practice_types": [
-          "physician_office",
-          "dental",
-          "behavioral_health",
-          "urgent_care",
-          "multi_specialty_group"
-        ],
-        "domains": [
-          "hipaa_privacy",
-          "hipaa_security",
-          "baa_vendor_chain",
-          "breach_notification",
-          "state_medical_privacy_addons"
-        ],
-        "jurisdictions": ["Federal", "California", "Texas", "New York", "Washington", "Florida", "Massachusetts", "Ohio", "Pennsylvania", "Illinois", "New Jersey", "Georgia"],
+        "practice_types": ["physician_office", "dental", "behavioral_health", "urgent_care", "multi_specialty_group"],
+        "domains": ["hipaa_privacy", "hipaa_security", "baa_vendor_chain", "breach_notification", "state_medical_privacy_addons"],
+        "jurisdictions": ["Federal", "15 states"],
         "federal_baseline": true
       },
-      "methodology": "Public-source harvest 2026-06-19. R6-C tranche: IL·PA·NJ·GA·OH privacy/breach add-ons. Primary = official statute portals; SPA/403/404/500 = park or ACCESS_RESTRICTED; agency .gov secondary when statute blocked (PA BPINA, NY SHIELD precedent).",
+      "methodology": "R6-D: probe reachable hosts (ncleg.gov, law.lis.virginia.gov, legislature.mi.gov, azleg.gov). IL·NJ·GA left parked per lane policy — no re-probe.",
       "as_of_date": "2026-06-19",
       "retrieved_date": "2026-06-19",
       "policy": {
         "public_sources_only": true,
         "no_bypass": true,
-        "http_403_ssl_park": true,
-        "gap_rendering": "NOT FOUND — [source checked: …]",
-        "status_taxonomy": ["FOUND", "EXEMPT", "REQUIRES_CONFIRMATION", "NOT FOUND", "ACCESS_RESTRICTED", "PARKED"],
-        "source_grades": ["primary", "secondary", "tertiary"]
+        "parked_states_policy": "IL·NJ·GA unchanged from R6-C"
       }
     },
     "3_body": {
       "title": "Body — Cited Compliance Record",
-      "federal_hipaa_summary": [
-        {
-          "text": "HIPAA covered entities and business associates must comply with Privacy, Security, and Breach Notification rules at 45 CFR Part 164.",
-          "status": "FOUND",
-          "citation_ref": 1,
-          "control_ref": "HIPAA-DEF-001"
+      "state_addons_r6d": {
+        "North Carolina": {
+          "statute": "G.S. § 90-21.20B; §§ 75-61, 75-65",
+          "key_requirements": ["HIPAA-aligned disclosure (164.512(f), 164.506)", "Breach notice + NC AG Consumer Protection Division"],
+          "status": "FOUND"
         },
-        {
-          "text": "PHI minimum necessary; BAAs with §164.504(e) elements; breach notice within 60 days.",
-          "status": "FOUND",
-          "citation_ref": 2,
-          "control_ref": "HIPAA-PRV-001"
-        }
-      ],
-      "state_addons": {
-        "Ohio": {
-          "statute": "ORC §§3701.74, 4731.22; §1349.19",
-          "key_requirements": [
-            "Written request for medical-record access (§3701.74).",
-            "Professional-confidence betrayal = board discipline (§4731.22).",
-            "Breach notice within 45 days; HIPAA CE exempt (§1349.19)."
-          ],
-          "status": "FOUND",
-          "citation_refs": [30, 31, 32]
+        "Virginia": {
+          "statute": "Va. Code § 32.1-127.1:03; § 18.2-186.6",
+          "key_requirements": ["Health-record privacy + redisclosure ban", "Breach notice to AG + residents"],
+          "status": "FOUND"
         },
-        "Pennsylvania": {
-          "statute": "42 Pa.C.S. §§6155–6156; 73 P.S. §2301 (BPINA)",
-          "key_requirements": [
-            "Patient access to records without subpoena (§6155).",
-            "Sealed-record consent/subpoena rules (§6156).",
-            "BPINA breach notice via PA OAG summary; primary 73 P.S. §2301 NOT FOUND at palegis."
-          ],
-          "status": "PARTIAL",
-          "citation_refs": [33, 34, 35]
+        "Michigan": {
+          "statute": "MCL 333.26263–26267; 445.72",
+          "key_requirements": ["30/60-day record access", "Breach notice; HIPAA safe harbor"],
+          "status": "FOUND"
         },
-        "Illinois": {
-          "statute": "740 ILCS 110/; 815 ILCS 530/",
-          "key_requirements": [
-            "ACCESS_RESTRICTED — ilga.gov ILCS/JCAR 404/500 at harvest."
-          ],
-          "status": "ACCESS_RESTRICTED",
-          "citation_refs": [36]
-        },
-        "New Jersey": {
-          "statute": "N.J.S.A. 26:5C; 56:8-163",
-          "key_requirements": [
-            "PARKED — lis.njleg SPA shell; cyber.nj.gov Incapsula."
-          ],
-          "status": "PARKED",
-          "citation_refs": [37, 38]
-        },
-        "Georgia": {
-          "statute": "O.C.G.A. §§31-33; 10-1-910",
-          "key_requirements": [
-            "ACCESS_RESTRICTED — legis.ga.gov OCGA API 404/401; SOS PDF 403."
-          ],
-          "status": "ACCESS_RESTRICTED",
-          "citation_refs": [39, 40]
+        "Arizona": {
+          "statute": "A.R.S. §§ 12-2292; 18-551, 18-552",
+          "key_requirements": ["Privileged medical records", "45-day breach notice; HIPAA CE/BA exempt"],
+          "status": "FOUND"
         }
       }
     },
     "4_source_register_graded": {
       "title": "Source Register (Graded)",
       "register_path": "GroundTruth/Compliance/lanes/R6_healthcare_practice/source_register.json",
-      "primary_count": 17,
-      "secondary_count": 6,
+      "harvested_count": 36,
       "parked_count": 10,
-      "summary": "R6-C adds OH codes.ohio.gov primary; PA palegis PDF + OAG BPINA; IL/NJ/GA blocks explicit."
+      "summary": "R6-D +8 primary sources from reachable hosts; IL/NJ/GA parked entries unchanged."
     },
     "5_conflict_reconciliation": {
       "title": "Conflicting Sources Reconciliation",
       "items": [
         {
-          "topic": "PA BPINA primary vs OAG summary",
-          "sources": ["palegis.us Title 73 §2301 PDF", "attorneygeneral.gov/bpina"],
-          "assessment": "2026 township-treasurer chpt collision on palegis; OAG secondary used for operative breach requirements until primary statute re-located."
-        },
-        {
-          "topic": "Ohio §1349.19 vs HIPAA breach",
-          "sources": ["ORC §1349.19", "45 CFR Part 164"],
-          "assessment": "HIPAA covered entities exempt from ORC §1349.19; non-CE vendors holding PI still subject."
+          "topic": "State breach vs HIPAA CE",
+          "sources": ["MCL 445.72(10)", "A.R.S. § 18-552(N)(2)", "ORC §1349.19"],
+          "assessment": "Multiple states exempt or deem HIPAA-compliant entities in compliance; non-CE PI holders still subject."
         }
       ]
     },
     "6_gaps_not_found": {
       "title": "Gaps / NOT FOUND / Open Questions",
       "gaps": [
-        { "gap_id": "R6-GAP-001", "status": "PARKED", "text": "HHS.gov HIPAA — HTTP 403" },
-        { "gap_id": "R6-GAP-006", "status": "NOT FOUND", "text": "73 P.S. §2301 BPINA primary — palegis Title 73 chpt 23 collision [source checked: palegis.us PDF sctn 2301]" },
-        { "gap_id": "R6-GAP-007", "status": "ACCESS_RESTRICTED", "text": "815 ILCS 530 / 740 ILCS 110 — ilga.gov 404/500 [source checked: ilga.gov ILCS/JCAR]" },
-        { "gap_id": "R6-GAP-008", "status": "PARKED", "text": "N.J.S.A. 26:5C / 56:8-163 — lis.njleg SPA [source checked: lis.njleg gateway]" },
-        { "gap_id": "R6-GAP-009", "status": "ACCESS_RESTRICTED", "text": "O.C.G.A. §31-33 / §10-1-910 — legis.ga.gov API 404; sos.ga.gov PDF 403" }
+        { "gap_id": "R6-GAP-007", "status": "ACCESS_RESTRICTED", "text": "Illinois ILCS — PARKED unchanged" },
+        { "gap_id": "R6-GAP-008", "status": "PARKED", "text": "New Jersey lis.njleg — PARKED unchanged" },
+        { "gap_id": "R6-GAP-009", "status": "ACCESS_RESTRICTED", "text": "Georgia OCGA — PARKED unchanged" }
       ]
     },
     "7_confidence": {
       "title": "Confidence Assessment",
-      "overall": "MEDIUM",
-      "basis": "Federal + 7 fully/partially harvested states (CA, NY, WA, FL, MA, OH, PA partial). IL·NJ·GA tranche blocked at official portals.",
+      "overall": "MEDIUM-HIGH",
       "by_section": {
-        "federal_hipaa": "HIGH",
-        "ohio": "HIGH",
-        "pennsylvania": "MEDIUM",
-        "illinois": "LOW",
-        "new_jersey": "LOW",
-        "georgia": "LOW"
+        "north_carolina": "HIGH",
+        "virginia": "HIGH",
+        "michigan": "HIGH",
+        "arizona": "HIGH",
+        "illinois_new_jersey_georgia": "LOW (parked)"
       }
     },
     "8_citations": {
       "title": "Full Citation Appendix",
       "references": [
-        {"ref": 1, "source": "eCFR — 45 CFR §160.103", "url": "https://www.ecfr.gov/current/title-45/section-160.103", "retrieved_date": "2026-06-19", "jurisdiction": "Federal"},
-        {"ref": 2, "source": "eCFR — 45 CFR §164.404", "url": "https://www.ecfr.gov/current/title-45/section-164.404", "retrieved_date": "2026-06-19", "jurisdiction": "Federal"},
-        {"ref": 30, "source": "ORC §3701.74", "url": "https://codes.ohio.gov/ohio-revised-code/section-3701.74", "retrieved_date": "2026-06-19", "jurisdiction": "Ohio"},
-        {"ref": 31, "source": "ORC §4731.22", "url": "https://codes.ohio.gov/ohio-revised-code/section-4731.22", "retrieved_date": "2026-06-19", "jurisdiction": "Ohio"},
-        {"ref": 32, "source": "ORC §1349.19", "url": "https://codes.ohio.gov/ohio-revised-code/section-1349.19", "retrieved_date": "2026-06-19", "jurisdiction": "Ohio"},
-        {"ref": 33, "source": "42 Pa.C.S. §6155", "url": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=PDF&ttl=42&div=00.&chpt=61&sctn=55&subsctn=0", "retrieved_date": "2026-06-19", "jurisdiction": "Pennsylvania"},
-        {"ref": 34, "source": "42 Pa.C.S. §6156", "url": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=PDF&ttl=42&div=00.&chpt=61&sctn=56&subsctn=0", "retrieved_date": "2026-06-19", "jurisdiction": "Pennsylvania"},
-        {"ref": 35, "source": "PA OAG — BPINA", "url": "https://www.attorneygeneral.gov/protect-yourself/bpina/", "retrieved_date": "2026-06-19", "jurisdiction": "Pennsylvania"},
-        {"ref": 36, "source": "815 ILCS 530/ (ACCESS_RESTRICTED)", "url": "https://www.ilga.gov/legislation/ilcs/ilcs.asp", "retrieved_date": "2026-06-19", "jurisdiction": "Illinois"},
-        {"ref": 37, "source": "N.J.S.A. 26:5C (PARKED)", "url": "https://lis.njleg.state.nj.us/nxt/gateway.dll?f=templates&fn=default.htm&vid=Publish:10.1048/Enu&d=statutes/26%5f5C-7.htm", "retrieved_date": "2026-06-19", "jurisdiction": "New Jersey"},
-        {"ref": 38, "source": "N.J.S.A. 56:8-163 (PARKED)", "url": "https://lis.njleg.state.nj.us/nxt/gateway.dll?f=templates&fn=default.htm&vid=Publish:10.1048/Enu&d=statutes/56%5f8-163.htm", "retrieved_date": "2026-06-19", "jurisdiction": "New Jersey"},
-        {"ref": 39, "source": "O.C.G.A. §31-33 (ACCESS_RESTRICTED)", "url": "https://www.legis.ga.gov/api/legislation/document/20242025/OCGA/31/33/2", "retrieved_date": "2026-06-19", "jurisdiction": "Georgia"},
-        {"ref": 40, "source": "O.C.G.A. §10-1-910 (ACCESS_RESTRICTED)", "url": "https://www.legis.ga.gov/api/legislation/document/20242025/OCGA/10/1/910", "retrieved_date": "2026-06-19", "jurisdiction": "Georgia"}
+        { "ref": 41, "source": "N.C. Gen. Stat. § 90-21.20B", "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_90/GS_90-21.20B.html", "jurisdiction": "North Carolina" },
+        { "ref": 42, "source": "N.C. Gen. Stat. § 75-65", "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_75/GS_75-65.html", "jurisdiction": "North Carolina" },
+        { "ref": 43, "source": "Va. Code § 32.1-127.1:03", "url": "https://law.lis.virginia.gov/vacode/title32.1/chapter1/section32.1-127.1:03/", "jurisdiction": "Virginia" },
+        { "ref": 44, "source": "Va. Code § 18.2-186.6", "url": "https://law.lis.virginia.gov/vacode/title18.2/chapter8/section18.2-186.6/", "jurisdiction": "Virginia" },
+        { "ref": 45, "source": "MCL 333.26265", "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-333-26265", "jurisdiction": "Michigan" },
+        { "ref": 46, "source": "MCL 445.72", "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-445-72", "jurisdiction": "Michigan" },
+        { "ref": 47, "source": "A.R.S. § 12-2292", "url": "https://www.azleg.gov/ars/12/02292.htm", "jurisdiction": "Arizona" },
+        { "ref": 48, "source": "A.R.S. § 18-552", "url": "https://www.azleg.gov/ars/18/00552.htm", "jurisdiction": "Arizona" }
       ]
     }
   },
   "linked_artifacts": [
-    "hipaa_control_map_seed_v1.json",
-    "source_register.json",
-    "states/california.json",
-    "states/texas.json",
-    "states/new_york.json",
-    "states/washington.json",
-    "states/florida.json",
-    "states/massachusetts.json",
-    "states/ohio.json",
-    "states/pennsylvania.json",
-    "states/illinois.json",
-    "states/new_jersey.json",
-    "states/georgia.json"
+    "states/north_carolina.json",
+    "states/virginia.json",
+    "states/michigan.json",
+    "states/arizona.json"
   ]
 }

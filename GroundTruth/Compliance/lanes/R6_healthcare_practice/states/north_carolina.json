@@ -1,0 +1,123 @@
+{
+  "artifact": "healthcare_practice_state_pack",
+  "version": "1.0",
+  "lane": "R6",
+  "task": "R6-D — Healthcare practice state privacy add-on (North Carolina HIPAA-aligned disclosure + breach)",
+  "state": "North Carolina",
+  "state_code": "NC",
+  "state_slug": "north_carolina",
+  "generated_at": "2026-06-19T23:00:00+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research — not legal advice. NC disclosure rules cross-reference HIPAA Part 164; breach notice applies to personal information broadly.",
+  "policy": "Public statute sources only; gaps explicit.",
+  "domains": {
+    "medical_records_privacy": {
+      "domain": "medical_records_privacy",
+      "label": "G.S. 90-21.20B — Access to and disclosure of medical information",
+      "statute": "N.C. Gen. Stat. § 90-21.20B",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "North Carolina General Assembly — ncleg.gov",
+        "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_90/GS_90-21.20B.html"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-NC-MR-001",
+          "text": "A health care provider may disclose protected health information to a law enforcement officer only to the extent permitted under 45 C.F.R. § 164.512(f) and not specifically prohibited by other state or federal law.",
+          "status": "FOUND",
+          "citation": {
+            "source": "N.C. Gen. Stat. § 90-21.20B(a)",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_90/GS_90-21.20B.html",
+            "jurisdiction": "North Carolina",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-NC-MR-002",
+          "text": "A health care provider may disclose protected health information for treatment, payment, or health care operations to the extent permitted under 45 C.F.R. § 164.506 and not specifically prohibited by other state or federal law.",
+          "status": "FOUND",
+          "citation": {
+            "source": "N.C. Gen. Stat. § 90-21.20B(e)",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_90/GS_90-21.20B.html",
+            "jurisdiction": "North Carolina",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-NC-MR-003",
+          "text": "A prosecutor or law enforcement officer receiving identifiable health information under § 90-21.20B shall not redisclose except as necessary to the investigation or otherwise allowed by law.",
+          "status": "FOUND",
+          "citation": {
+            "source": "N.C. Gen. Stat. § 90-21.20B(b)",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_90/GS_90-21.20B.html",
+            "jurisdiction": "North Carolina",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 3,
+      "gap": null
+    },
+    "data_security_breach": {
+      "domain": "data_security_breach",
+      "label": "G.S. 75-61 / 75-65 — Identity Theft Protection Act (breach notification)",
+      "statute": "N.C. Gen. Stat. §§ 75-61, 75-65",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "North Carolina General Assembly — ncleg.gov",
+        "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_75/GS_75-65.html"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-NC-BRN-001",
+          "text": "'Security breach' means unauthorized access to and acquisition of unencrypted and unredacted records or data containing personal information where illegal use has occurred or is reasonably likely, or that creates a material risk of harm to a consumer.",
+          "status": "FOUND",
+          "citation": {
+            "source": "N.C. Gen. Stat. § 75-61(14)",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_75/GS_75-61.html",
+            "jurisdiction": "North Carolina",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-NC-BRN-002",
+          "text": "A business that owns or licenses personal information of NC residents must provide notice to affected persons without unreasonable delay after discovery, consistent with law-enforcement delay and measures to restore data-system integrity.",
+          "status": "FOUND",
+          "citation": {
+            "source": "N.C. Gen. Stat. § 75-65(a)",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_75/GS_75-65.html",
+            "jurisdiction": "North Carolina",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-NC-BRN-003",
+          "text": "When providing notice to affected persons, the business must also notify the Consumer Protection Division of the Attorney General's Office of the breach nature, consumer count, investigation steps, and notice content.",
+          "status": "FOUND",
+          "citation": {
+            "source": "N.C. Gen. Stat. § 75-65(e1)",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_75/GS_75-65.html",
+            "jurisdiction": "North Carolina",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 3,
+      "gap": null
+    }
+  },
+  "status_roll": {
+    "FOUND": 6,
+    "REQUIRES_CONFIRMATION": 0,
+    "NOT FOUND": 0,
+    "ACCESS_RESTRICTED": 0,
+    "PARKED": 0
+  },
+  "total_facts": 6
+}

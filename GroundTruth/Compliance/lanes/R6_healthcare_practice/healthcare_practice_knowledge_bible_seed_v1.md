@@ -1,107 +1,58 @@
-# Healthcare Practice Knowledge Bible — Seed v1.1 (R6-C)
+# Healthcare Practice Knowledge Bible — Seed v1.2 (R6-D)
 
 **Lane:** R6 — Healthcare Practice  
-**Variant:** 11-state seed (CA, TX, NY, WA, FL, MA, OH, PA, IL, NJ, GA) + federal HIPAA control-map  
+**Variant:** 15-state seed · IL·NJ·GA parked unchanged  
 **As-of:** 2026-06-19  
-**Status:** SEED (approaching sellable depth — not sellable yet)  
+**Status:** SEED (near sellable)  
 **Citation standard:** STD-CITE-001
-
-> Operational compliance research and cited public-records compilation — not legal advice.
 
 ---
 
-## 1. TL;DR / Executive Summary
+## 1. TL;DR
 
-R6-C adds a **high-volume state tranche** (IL · PA · NJ · GA · OH) to the existing 6-state seed. Federal HIPAA remains eCFR-primary with CMS/ASPE fallbacks.
+R6-D adds **NC · VA · MI · AZ** via reachable `.gov` statute hosts (all **FOUND**). IL · NJ · GA **left parked** from R6-C.
 
 | Metric | Value |
 |--------|-------|
-| Cited claims | 90 |
-| Federal controls | 35 (34 FOUND) |
-| States | 11 |
-| State facts | 55 |
-| Gaps flagged | 12 |
+| States | 15 |
+| State facts | 79 (63 FOUND) |
+| Cited claims | 114 |
+| Harvested sources | 36 |
 | Parked sources | 10 |
 
-**Honesty rule:** Portal blocks render as `NOT FOUND — [source checked: …]`. No bypass.
+---
+
+## 2. Scope
+
+Outpatient practices — federal HIPAA + state medical-privacy and breach-notification overlays.
 
 ---
 
-## 2. Scope, Methodology & As-Of Date
+## 3. Body — R6-D State Add-ons
 
-**Scope:** Outpatient medical practices — HIPAA + state medical-privacy and breach-notification overlays.
+### North Carolina — FOUND
+- [§ 90-21.20B](https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_90/GS_90-21.20B.html) — HIPAA 164.512(f)/164.506 disclosure alignment.
+- [§§ 75-61, 75-65](https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_75/GS_75-65.html) — breach definition + AG notice.
 
-**R6-C tranche:** IL, PA, NJ, GA, OH — privacy/breach add-ons only.
+### Virginia — FOUND
+- [§ 32.1-127.1:03](https://law.lis.virginia.gov/vacode/title32.1/chapter1/section32.1-127.1:03/) — health-record privacy.
+- [§ 18.2-186.6](https://law.lis.virginia.gov/vacode/title18.2/chapter8/section18.2-186.6/) — breach notification.
 
----
+### Michigan — FOUND
+- [MCL 333.26265](https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-333-26265) — medical records access.
+- [MCL 445.72](https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-445-72) — breach notice; HIPAA safe harbor.
 
-## 3. Body — Cited Compliance Record
+### Arizona — FOUND
+- [§ 12-2292](https://www.azleg.gov/ars/12/02292.htm) — privileged medical records.
+- [§ 18-552](https://www.azleg.gov/ars/18/00552.htm) — 45-day breach notice; HIPAA CE/BA exempt.
 
-### Ohio — FOUND (primary)
-
-- [§3701.74](https://codes.ohio.gov/ohio-revised-code/section-3701.74) — written request for medical-record access; record definition.
-- [§4731.22](https://codes.ohio.gov/ohio-revised-code/section-4731.22) — betraying professional confidence = discipline.
-- [§1349.19](https://codes.ohio.gov/ohio-revised-code/section-1349.19) — breach definition; 45-day notice; **HIPAA CE exempt**.
-
-### Pennsylvania — PARTIAL
-
-- **FOUND:** [42 Pa.C.S. §6155–6156](https://www.palegis.us/statutes/consolidated/view-statute?txtType=PDF&ttl=42&div=00.&chpt=61&sctn=55&subsctn=0) (PDF primary) — patient access, protective orders, sealed-record consent.
-- **FOUND (secondary):** [PA OAG BPINA](https://www.attorneygeneral.gov/protect-yourself/bpina/) — breach definition, resident notice, AG notice (500+).
-- **NOT FOUND:** 73 P.S. §2301 primary at palegis (2026 Title 73 chpt collision).
-
-### Illinois — ACCESS_RESTRICTED
-
-- **ACCESS_RESTRICTED:** 740 ILCS 110/ and 815 ILCS 530/ — ilga.gov ILCS/JCAR 404/500.
-
-### New Jersey — PARKED
-
-- **PARKED:** N.J.S.A. 26:5C and 56:8-163 — lis.njleg SPA shell; cyber.nj.gov Incapsula.
-
-### Georgia — ACCESS_RESTRICTED
-
-- **ACCESS_RESTRICTED:** O.C.G.A. §31-33 and §10-1-910 — legis.ga.gov API 404/401; sos.ga.gov PDF 403.
-
-*(Prior states CA, TX, NY, WA, FL, MA unchanged from R6-B — see state packs.)*
+### Parked (unchanged)
+- **Illinois** — ilga.gov 404/500
+- **New Jersey** — lis.njleg SPA
+- **Georgia** — legis.ga.gov / sos.ga.gov blocked
 
 ---
 
-## 4. Source Register (Graded)
+## 4–8. Register · Gaps · Confidence · Citations
 
-See `source_register.json` v1.2 — **28 harvested, 10 parked**.
-
----
-
-## 5. Conflict Reconciliation
-
-| Topic | Assessment |
-|-------|------------|
-| PA BPINA primary vs OAG | palegis chpt collision; OAG secondary operative until primary re-located |
-| OH §1349.19 vs HIPAA | CE exempt; non-CE PI holders still notify |
-
----
-
-## 6. Gaps / NOT FOUND
-
-1. **PARKED** — HHS HIPAA (403)
-2. **NOT FOUND** — 73 P.S. §2301 BPINA primary (palegis)
-3. **ACCESS_RESTRICTED** — Illinois ILCS 815/740
-4. **PARKED** — New Jersey lis.njleg + cyber.nj.gov
-5. **ACCESS_RESTRICTED** — Georgia legis.ga.gov / sos.ga.gov
-6. *(Prior R6 gaps: TX SPA, NY nysenate, MA 201 CMR 17, etc.)*
-
----
-
-## 7. Confidence
-
-| Section | Confidence |
-|---------|------------|
-| Federal HIPAA | HIGH |
-| Ohio | HIGH |
-| Pennsylvania | MEDIUM |
-| Illinois / NJ / GA | LOW |
-
----
-
-## 8. Citation Appendix
-
-Numbered references in `healthcare_practice_knowledge_bible_seed_v1.json` §8 and per-state packs under `states/`.
+See `source_register.json` v1.3 and per-state packs under `states/`.

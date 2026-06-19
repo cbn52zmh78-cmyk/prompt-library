@@ -1,7 +1,7 @@
 {
   "artifact": "groundtruth_healthcare_practice_source_register",
-  "version": "1.2",
-  "task": "R6-C — Expand healthcare toward sellable depth (IL · PA · NJ · GA · OH)",
+  "version": "1.3",
+  "task": "R6-D — NC·VA·MI·AZ reachable-host tranche toward sellable pack",
   "lane": "R6",
   "vertical": "Healthcare Practice",
   "tier": "A",
@@ -10,7 +10,7 @@
   "retrieved_date": "2026-06-19",
   "pinned_path": "GroundTruth/Compliance/lanes/R6_healthcare_practice/source_register.json",
   "policy": "Public .gov / official statute sources only; HTTP 403/SPA/Cloudflare = park; gaps explicit.",
-  "harvested_count": 28,
+  "harvested_count": 36,
   "parked_count": 10,
   "sources": [
     {
@@ -528,6 +528,102 @@
       "http_status": 403,
       "retrieved_date": "2026-06-19",
       "reliability_note": "HTTP 403 at harvest."
+    },
+    {
+      "source_id": "nc_90_21_20b",
+      "name": "N.C. Gen. Stat. § 90-21.20B — Medical information disclosure (HIPAA cross-ref)",
+      "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_90/GS_90-21.20B.html",
+      "jurisdiction": "North Carolina",
+      "domain": "state_medical_privacy",
+      "grade": "primary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "45 C.F.R. § 164.512(f) and § 164.506 alignment; law-enforcement redisclosure limits."
+    },
+    {
+      "source_id": "nc_75_65",
+      "name": "N.C. Gen. Stat. §§ 75-61, 75-65 — Breach notification",
+      "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_75/GS_75-65.html",
+      "jurisdiction": "North Carolina",
+      "domain": "state_data_security",
+      "grade": "primary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "Security breach definition; AG Consumer Protection Division notice."
+    },
+    {
+      "source_id": "va_32_1_127_1_03",
+      "name": "Va. Code § 32.1-127.1:03 — Health records privacy",
+      "url": "https://law.lis.virginia.gov/vacode/title32.1/chapter1/section32.1-127.1:03/",
+      "jurisdiction": "Virginia",
+      "domain": "state_medical_privacy",
+      "grade": "primary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "Individual privacy right; redisclosure prohibition; HIPAA cross-reference."
+    },
+    {
+      "source_id": "va_18_2_186_6",
+      "name": "Va. Code § 18.2-186.6 — Breach of personal information notification",
+      "url": "https://law.lis.virginia.gov/vacode/title18.2/chapter8/section18.2-186.6/",
+      "jurisdiction": "Virginia",
+      "domain": "state_data_security",
+      "grade": "primary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "Breach definition; AG + resident notice; 1000+ CRA notice."
+    },
+    {
+      "source_id": "mi_333_26265",
+      "name": "MCL 333.26263–26267 — Medical Records Access Act",
+      "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-333-26265",
+      "jurisdiction": "Michigan",
+      "domain": "state_medical_privacy",
+      "grade": "primary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "30/60-day access response; purpose-inquiry prohibition."
+    },
+    {
+      "source_id": "mi_445_72",
+      "name": "MCL 445.72 — Identity Theft Protection Act breach notice",
+      "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-445-72",
+      "jurisdiction": "Michigan",
+      "domain": "state_data_security",
+      "grade": "primary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "Resident notice; HIPAA compliance safe harbor."
+    },
+    {
+      "source_id": "az_12_2292",
+      "name": "A.R.S. §§ 12-2291, 12-2292 — Medical records confidentiality",
+      "url": "https://www.azleg.gov/ars/12/02292.htm",
+      "jurisdiction": "Arizona",
+      "domain": "state_medical_privacy",
+      "grade": "primary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "Privileged/confidential records; written authorization required."
+    },
+    {
+      "source_id": "az_18_552",
+      "name": "A.R.S. §§ 18-551, 18-552 — Security system breach notification",
+      "url": "https://www.azleg.gov/ars/18/00552.htm",
+      "jurisdiction": "Arizona",
+      "domain": "state_data_security",
+      "grade": "primary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "Health info in PI; 45-day notice; HIPAA CE/BA exempt."
     }
   ]
 }

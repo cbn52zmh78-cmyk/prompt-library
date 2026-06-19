@@ -1,0 +1,123 @@
+{
+  "artifact": "healthcare_practice_state_pack",
+  "version": "1.0",
+  "lane": "R6",
+  "task": "R6-D — Healthcare practice state privacy add-on (Virginia health records + breach)",
+  "state": "Virginia",
+  "state_code": "VA",
+  "state_slug": "virginia",
+  "generated_at": "2026-06-19T23:00:00+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research — not legal advice. Virginia health-record privacy statute is comprehensive; breach notice applies to personal information.",
+  "policy": "Public statute sources only; gaps explicit.",
+  "domains": {
+    "medical_records_privacy": {
+      "domain": "medical_records_privacy",
+      "label": "Va. Code § 32.1-127.1:03 — Health records privacy",
+      "statute": "Va. Code § 32.1-127.1:03",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Virginia Legislative Information System — law.lis.virginia.gov",
+        "url": "https://law.lis.virginia.gov/vacode/title32.1/chapter1/section32.1-127.1:03/"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-VA-HR-001",
+          "text": "An individual has a right of privacy in health records; except when permitted or required by law, no health care entity may disclose an individual's health records.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Va. Code § 32.1-127.1:03(A)",
+            "url": "https://law.lis.virginia.gov/vacode/title32.1/chapter1/section32.1-127.1:03/",
+            "jurisdiction": "Virginia",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-VA-HR-002",
+          "text": "Health care entities shall disclose health records to the individual who is the subject of the record (including audit trail if requested), except as provided in specified subsections.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Va. Code § 32.1-127.1:03(A)(1)",
+            "url": "https://law.lis.virginia.gov/vacode/title32.1/chapter1/section32.1-127.1:03/",
+            "jurisdiction": "Virginia",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-VA-HR-003",
+          "text": "No person receiving health records may redisclose or reveal them beyond the purpose for which disclosure was made without the individual's specific authorization, subject to HIPAA-aligned health-care-entity exceptions.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Va. Code § 32.1-127.1:03(A)(3)",
+            "url": "https://law.lis.virginia.gov/vacode/title32.1/chapter1/section32.1-127.1:03/",
+            "jurisdiction": "Virginia",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 3,
+      "gap": null
+    },
+    "data_security_breach": {
+      "domain": "data_security_breach",
+      "label": "Va. Code § 18.2-186.6 — Breach of personal information notification",
+      "statute": "Va. Code § 18.2-186.6",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Virginia Legislative Information System — law.lis.virginia.gov",
+        "url": "https://law.lis.virginia.gov/vacode/title18.2/chapter8/section18.2-186.6/"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-VA-BRN-001",
+          "text": "'Breach of the security of the system' means unauthorized access and acquisition of unencrypted and unredacted computerized personal information that compromises security or confidentiality and causes or is reasonably believed to cause identity theft or fraud to a Virginia resident.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Va. Code § 18.2-186.6(A)",
+            "url": "https://law.lis.virginia.gov/vacode/title18.2/chapter8/section18.2-186.6/",
+            "jurisdiction": "Virginia",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-VA-BRN-002",
+          "text": "An owner or licensee of computerized personal information must disclose a breach to the Office of the Attorney General and affected Virginia residents without unreasonable delay after discovery.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Va. Code § 18.2-186.6(B)",
+            "url": "https://law.lis.virginia.gov/vacode/title18.2/chapter8/section18.2-186.6/",
+            "jurisdiction": "Virginia",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-VA-BRN-003",
+          "text": "When notice is provided to more than 1,000 persons at one time, the entity must also notify the Attorney General and nationwide consumer reporting agencies of the timing, distribution, and content of the notice.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Va. Code § 18.2-186.6(E)",
+            "url": "https://law.lis.virginia.gov/vacode/title18.2/chapter8/section18.2-186.6/",
+            "jurisdiction": "Virginia",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 3,
+      "gap": null
+    }
+  },
+  "status_roll": {
+    "FOUND": 6,
+    "REQUIRES_CONFIRMATION": 0,
+    "NOT FOUND": 0,
+    "ACCESS_RESTRICTED": 0,
+    "PARKED": 0
+  },
+  "total_facts": 6
+}
