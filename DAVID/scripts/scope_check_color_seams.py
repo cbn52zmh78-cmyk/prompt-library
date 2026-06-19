@@ -79,6 +79,38 @@ def _qa_from_production(slug: str) -> dict | None:
     return None
 
 
+def run_scope_qa_only(slug: str) -> dict:
+    qa = _qa_from_production(slug)
+    row: dict = {"slug": slug, "mode": "qa_only"}
+    if not qa:
+        row.update(status="skip", reason="qa_report.json not found")
+        return row
+    passes = qa.get("passes") or []
+    issues = qa.get("issues") or []
+    seam_ok = any(k in " ".join(passes) for k in ("xfade chain", "re-concat join preserved"))
+    color_ok = qa.get("pass") or (
+        seam_ok
+        and not any(
+            k in " ".join(issues).lower()
+            for k in ("yellow-green", "hue drift", "magenta detected", "lamp hue drift")
+        )
+    )
+    prod = ROOT / "DAVID/productions" / f"{slug}_longform_v1"
+    if not prod.is_dir():
+        prod = ROOT / "STUDIO/Productions/Editorial" / f"{slug}_longform_v1"
+    out_glob = list((prod / "output").glob("*_seamless_v1.mp4")) if prod.is_dir() else []
+    row.update(
+        status="pass" if qa.get("pass") else "fail",
+        exit_code=0 if qa.get("pass") else 1,
+        qa_pass=qa.get("pass"),
+        output=str(out_glob[0]) if out_glob else None,
+        issues=issues,
+        seam_ok=seam_ok,
+        color_ok=color_ok,
+    )
+    return row
+
+
 def run_scope(slug: str, *, package: bool = False) -> dict:
     script = _resolve_script(slug)
     row: dict = {"slug": slug, "script": str(script) if script else None}
@@ -128,13 +160,17 @@ def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description="#194 scope-check color + seams")
     p.add_argument("--include-latin", action="store_true", help="Also check david_latin_corpus_v1")
     p.add_argument("--package", action="store_true", help="Run package stage on pass")
+    p.add_argument("--qa-only", action="store_true", help="Read qa_report.json only — no re-render")
     args = p.parse_args(argv)
 
     slugs = list(OBSERVABLE_SLUGS)
     if args.include_latin:
         slugs.append("david_latin_corpus_v1")
 
-    results = [run_scope(s, package=args.package) for s in slugs]
+    if args.qa_only:
+        results = [run_scope_qa_only(s) for s in slugs]
+    else:
+        results = [run_scope(s, package=args.package) for s in slugs]
     passed = sum(1 for r in results if r.get("status") == "pass")
     failed = sum(1 for r in results if r.get("status") == "fail")
     skipped = sum(1 for r in results if r.get("status") == "skip")
