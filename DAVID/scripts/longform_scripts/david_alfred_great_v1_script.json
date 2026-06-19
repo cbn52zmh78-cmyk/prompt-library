@@ -1,0 +1,254 @@
+{
+  "slug": "david_alfred_great_v1",
+  "title": "DAVID — Alfred the Great: A King in His Own English",
+  "format_id": "historical-figure-documentary",
+  "target_seconds": 54,
+  "intake": {
+    "format_id": "historical-figure-documentary",
+    "actor_id": "David-001",
+    "set_id": "@Set-Archive-001",
+    "style_id": "@Style-Documentary-Prestige-001",
+    "source": "STUDIO/Pipeline/production_intake.py",
+    "gate_0": {
+      "version": "1.3",
+      "verdict": "GREEN",
+      "blocked": false,
+      "requires_human_signoff": false,
+      "human_signoff": true,
+      "target_rating": "PG",
+      "channels": [
+        "social",
+        "streaming"
+      ],
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_GREEN_david_alfred_great_v1_20260619_003916.json",
+      "checklist_domains": {
+        "row_1_synthetic_ownership": "MANUAL",
+        "row_2_music_sync": "PASS",
+        "row_3_no_real_likeness": "MANUAL",
+        "row_4_target_channel": "PASS",
+        "row_5_age_documentation": "N/A",
+        "row_6_ai_disclosure": "PASS"
+      },
+      "hard_stops": [],
+      "counsel_flags": [],
+      "distribution_flags": [],
+      "warnings": [],
+      "rating_flags": [],
+      "cara_status": "COMPLIANT",
+      "music_bed_id": "BED-DOC-001",
+      "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
+      "row_2_music_sync": "PASS",
+      "notes": [
+        "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
+        "Social = mass dissemination. Platform AI-label + community guidelines apply.",
+        "Row 2: Manifest-cleared music bed(s): BED-DOC-001 (STUDIO/Music_Sound/clearance_manifest.json)",
+        "Historical Figure Gate: pre-1901 subject (died 899); 1900 ceiling and recency clear.",
+        "Gate 0 cleared for Development/Pre-Production subject to ongoing review."
+      ],
+      "brief_source": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Pipeline\\Concepts\\royal_tongues\\david_alfred_great_v1_brief.txt"
+    },
+    "libraries": {
+      "formats": "Production_Templates_v1.json (#98)",
+      "sets": "Set_Library_v1.json (#99)",
+      "styles": "Style_Library_v1.json (#99)",
+      "casting": "Casting_Bible/registry/casting_registry.json"
+    },
+    "historical_figure": {
+      "figure_id": "ALF-001",
+      "name": "Alfred the Great",
+      "death_year": 899,
+      "era": "9th Century Anglo-Saxon Wessex",
+      "period_language": "old-english",
+      "birth_year": "c. 849",
+      "sources": [
+        {
+          "citation": "Alfred, Preface to the Old English translation of Gregory's Pastoral Care (Hierdeboc, c. 890) — Alfred's own words on learning and translation",
+          "url": "https://sourcebooks.fordham.edu/source/asbook.asp",
+          "type": "primary",
+          "notes": "Royal prose attributed to Alfred himself; the opening greeting is the attested period line",
+          "supports": null
+        },
+        {
+          "citation": "Asser, Vita Ælfredi regis Angul Saxonum (893) — contemporary Latin biography of Alfred",
+          "url": null,
+          "type": "primary",
+          "notes": "Eyewitness Welsh bishop at Alfred's court",
+          "supports": null
+        },
+        {
+          "citation": "Anglo-Saxon Chronicle (compiled under Alfred, late 9th c.) — reign, Viking wars, Treaty of Wedmore",
+          "url": null,
+          "type": "primary",
+          "notes": "West Saxon vernacular annals",
+          "supports": null
+        }
+      ]
+    },
+    "duration_clamp": {
+      "applied": true,
+      "policy": "seamless_7_9",
+      "lo": 7,
+      "hi": 9,
+      "shots_clamped": 1
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "voice_suffix": "mid-low resonant unhurried voice, precise diction, documentary gravitas, biography register, accessible never stuffy, synthetic host only",
+    "identity_lock": "productions/host_identity_v1/david_identity_lock.json",
+    "avatar_reference": "productions/host_identity_v1/references/david_avatar_reference.jpg",
+    "set_reference": "DAVID/productions/host_identity_v1/references/archive_set_reference.jpg",
+    "seamless": {
+      "primary": "extend",
+      "xfade_s": 0.2,
+      "match_color": true,
+      "cut_on_motion": true,
+      "lamp_lock": true,
+      "glasses_lock": true,
+      "loudnorm": true,
+      "pin_audio_sync": true,
+      "reground_interval": 2,
+      "magenta_clamp": true
+    },
+    "music_bed": {
+      "track_id": "BED-DOC-001",
+      "manifest": "STUDIO/Music_Sound/clearance_manifest.json"
+    }
+  },
+  "shots": [
+    {
+      "id": "01_cold_open",
+      "duration": 8,
+      "t_start": 0,
+      "t_end": 8,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host seated at Archive worktable, warm brass lamplight, names the historical figure and episode promise. Camera: slow gentle push-in medium. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"I am DAVID. Tonight, Alfred the Great — the only English king ever called Great, and one of the very few medieval rulers whose own words we can still read.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, biography register, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "I am DAVID. Tonight, Alfred the Great — the only English king ever called Great, and one of the very few medieval rulers whose own words we can still read.",
+      "on_screen": "DAVID · The Archive · Royal Tongues"
+    },
+    {
+      "id": "02_who_they_were",
+      "duration": 9,
+      "t_start": 8,
+      "t_end": 17,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host delivers concise biography — birth, role, defining achievement — manuscripts behind. Camera: locked medium, slight lean. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"Born around eight forty-nine, king of Wessex, he held off the Viking Great Army, struck a treaty that split England, and then did something stranger — he sat down to translate Latin books into English himself.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, biography register, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "Born around eight forty-nine, king of Wessex, he held off the Viking Great Army, struck a treaty that split England, and then did something stranger — he sat down to translate Latin books into English himself."
+    },
+    {
+      "id": "03_their_world",
+      "duration": 9,
+      "t_start": 17,
+      "t_end": 26,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host situates the figure in era and place — political, cultural, or scientific context. Camera: medium — gesture to map or codex. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"His court ran on two tongues: Latin for the church and scholarship, and Old English — West Saxon — for law, chronicle, and the books he wanted every freeborn youth to read.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, biography register, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "His court ran on two tongues: Latin for the church and scholarship, and Old English — West Saxon — for law, chronicle, and the books he wanted every freeborn youth to read."
+    },
+    {
+      "id": "04_period_line",
+      "duration": 9,
+      "t_start": 26,
+      "t_end": 35,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host delivers one line in the figure's period language; on-screen attestation label visible. Camera: medium-close — deliberate delivery. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"Ælfred kyning hateð gretan Wærferð biscep his wordum luflice ond freondlice — Alfred the king sends his greetings to Bishop Wærferth, lovingly and as a friend — the king's own attested Old English.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, biography register, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "Ælfred kyning hateð gretan Wærferð biscep his wordum luflice ond freondlice — Alfred the king sends his greetings to Bishop Wærferth, lovingly and as a friend — the king's own attested Old English.",
+      "speech_ipa": "/ˈælvred ˈkynɪŋ ˈhɑːteð ˈɡreːtɑn ˈwæːrferð ˈbiʃep/",
+      "on_screen": "ATTESTED · Old English · Pastoral Care preface",
+      "on_screen_labels": [
+        "ATTESTED",
+        "PERIOD LANGUAGE"
+      ],
+      "speech_lang": "old-english",
+      "historical_figure_ref": "ALF-001",
+      "duration_raw": 10
+    },
+    {
+      "id": "05_legacy",
+      "duration": 9,
+      "t_start": 35,
+      "t_end": 44,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host on legacy and influence — what changed because they lived; end on gesture peak. Camera: warm close, inviting settle. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"He died in eight ninety-nine. Most kings reach us through others' chronicles; Alfred reaches us in the first person — proof that a crown could also hold a pen.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, biography register, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "He died in eight ninety-nine. Most kings reach us through others' chronicles; Alfred reaches us in the first person — proof that a crown could also hold a pen."
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 6,
+    "card_type": "sources",
+    "title": "Sources — Alfred the Great",
+    "subtitle": "9th Century Anglo-Saxon Wessex · d. 899",
+    "footer": "Alfred, Preface to the Old English translation of Gregory's Pastoral … · Asser, Vita Ælfredi regis Angul Saxonum (893) — contemporary Latin bi… · Anglo-Saxon Chronicle (compiled under Alfred, late 9th c.) — reign, V…",
+    "lines": [
+      "FIGURE: Alfred the Great (ALF-001) · d. 899",
+      "PERIOD LINE: Attested Old English — Alfred's own preface to the Pastoral Care",
+      "METHOD: Royal prose (Alfred) + Asser's Life + Anglo-Saxon Chronicle"
+    ],
+    "sources": [
+      {
+        "citation": "Alfred, Preface to the Old English translation of Gregory's Pastoral Care (Hierdeboc, c. 890) — Alfred's own words on learning and translation",
+        "url": "https://sourcebooks.fordham.edu/source/asbook.asp",
+        "type": "primary",
+        "notes": "Royal prose attributed to Alfred himself; the opening greeting is the attested period line",
+        "supports": null
+      },
+      {
+        "citation": "Asser, Vita Ælfredi regis Angul Saxonum (893) — contemporary Latin biography of Alfred",
+        "url": null,
+        "type": "primary",
+        "notes": "Eyewitness Welsh bishop at Alfred's court",
+        "supports": null
+      },
+      {
+        "citation": "Anglo-Saxon Chronicle (compiled under Alfred, late 9th c.) — reign, Viking wars, Treaty of Wedmore",
+        "url": null,
+        "type": "primary",
+        "notes": "West Saxon vernacular annals",
+        "supports": null
+      }
+    ],
+    "historical_figure_id": "ALF-001"
+  },
+  "qa_rules": {
+    "require_identity_lock": true,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": true,
+    "min_shots": 5
+  },
+  "production_meta": {
+    "set_id": "@Set-Archive-001",
+    "style_id": "@Style-Documentary-Prestige-001",
+    "identity_anchor": "@David-001",
+    "pacing": {
+      "words_per_second": 2.4,
+      "beat_gap_s": 0.45,
+      "register": "prestige biography, evidence-forward",
+      "pause_on": [
+        "death dates",
+        "period-language lines",
+        "source citations",
+        "legacy beats"
+      ]
+    },
+    "camera": {
+      "primary": "slow motivated push-in medium at Archive desk",
+      "secondary": "insert B-roll of manuscripts, maps, or era objects",
+      "forbidden": [
+        "snap zoom",
+        "beauty-filter smoothing",
+        "dramatic reenactment cutaways"
+      ]
+    },
+    "target_rating": "PG",
+    "historical_figure": {
+      "figure_id": "ALF-001",
+      "name": "Alfred the Great",
+      "death_year": 899,
+      "era": "9th Century Anglo-Saxon Wessex",
+      "period_language": "old-english",
+      "source_count": 3
+    }
+  }
+}

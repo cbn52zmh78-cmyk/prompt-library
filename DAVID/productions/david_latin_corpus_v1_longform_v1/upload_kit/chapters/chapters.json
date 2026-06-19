@@ -44,15 +44,15 @@
     },
     {
       "shot_id": "08_invitation",
-      "start_s": 54.8,
+      "start_s": 55.8,
       "label": "Invitation",
-      "youtube": "00:54 Invitation"
+      "youtube": "00:55 Invitation"
     },
     {
       "shot_id": "provenance_card",
-      "start_s": 63.8,
+      "start_s": 64.8,
       "label": "DAVID · The Archive",
-      "youtube": "01:03 DAVID · The Archive"
+      "youtube": "01:04 DAVID · The Archive"
     }
   ],
   "xfade_s": 0.2
