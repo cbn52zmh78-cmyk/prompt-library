@@ -3,15 +3,15 @@
   "title": "ACTORS #157 — @2 Swap Demo (Neutron star (pulsar magnetosphere)) 480p",
   "format_id": "science-explainer",
   "target_seconds": 15,
-  "production_dir": "C:/Users/NCG/Videos/Grok Projects/STUDIO/Productions/Science/actors_157_at2_swap/actors_157_at2_swap_neutron-star_480p_v1_longform_v1",
+  "production_dir": "C:/Users/NCG/Videos/Grok Projects/Studio/Productions/Science/actors_157_at2_swap/actors_157_at2_swap_neutron-star_480p_v1_longform_v1",
   "config": {
     "model_video": "grok-imagine-video-1.5",
     "resolution": "480p",
     "aspect_ratio": "16:9",
     "voice_suffix": "clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only",
     "use_identity_lock": false,
-    "avatar_reference": "STUDIO/Cast/actors_roster/male/north_america/Julian_Cross/01_casting_shots/casting_turnaround_v1.jpg",
-    "set_reference": "STUDIO/Pipeline/references/seamless_neutral_grey_reference.jpg",
+    "avatar_reference": "Studio/Cast/actors_roster/male/north_america/Julian_Cross/01_casting_shots/casting_turnaround_v1.jpg",
+    "set_reference": "Studio/Pipeline/references/seamless_neutral_grey_reference.jpg",
     "visualization_reference": "C:/Users/NCG/Videos/Grok Projects/Science/reference_plates/astro/neutron_star_reference.jpg",
     "visualization_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-51a2f96a-d50c-4b5e-8007-e5a631f7d417.jpeg",
     "seamless": {
