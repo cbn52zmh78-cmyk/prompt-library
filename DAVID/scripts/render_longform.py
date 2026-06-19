@@ -60,10 +60,8 @@ AUDIO_SILENCE_DB = -45.0
 LOUDNORM_I = -16.0
 LOUDNORM_TP = -1.5
 LOUDNORM_LRA = 11.0
-MAGENTA_CLAMP_VF = (
-    "curves=r='0/0 0.5/0.50 1/1':b='0/0 0.5/0.40 1/0.90',"
-    "eq=gamma_r=1.08:gamma_g=1.02:gamma_b=0.82:saturation=1.05"
-)
+MAGENTA_CLAMP_VF = "eq=gamma_r=1.08:gamma_g=1.02:gamma_b=0.82:saturation=1.05:brightness=0.01"
+WARM_GOLD_CLAMP_VF = f"{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}"
 MAGENTA_SCORE_MAX = 0.42
 LOUDNESS_SPREAD_MAX_LU = 1.5
 REGROUND_EVERY_N = 2
@@ -840,7 +838,7 @@ def apply_warm_gold_clamp(video: Path, out: Path, color_ref: Path) -> Path:
     if ref.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp"):
         vfilter = (
             f"[0:v][1:v]histogrammatching=pattern=1:strength=0.62[matched];"
-            f"[matched]{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}[outv]"
+            f"[matched]{WARM_GOLD_CLAMP_VF}[outv]"
         )
         cmd = [
             ff, "-y", "-i", str(video), "-loop", "1", "-i", str(ref),
@@ -849,25 +847,25 @@ def apply_warm_gold_clamp(video: Path, out: Path, color_ref: Path) -> Path:
             "-c:a", "copy", "-shortest", str(out),
         ]
     else:
-        vfilter = f"[0:v]{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}[outv]"
         cmd = [
-            ff, "-y", "-i", str(video),
-            "-filter_complex", vfilter,
-            "-map", "[outv]", "-map", "0:a?", "-c:v", "libx264", "-pix_fmt", "yuv420p",
-            "-c:a", "copy", str(out),
+            ff, "-y", "-i", str(video), "-vf", WARM_GOLD_CLAMP_VF,
+            "-c:v", "libx264", "-pix_fmt", "yuv420p",
+            "-map", "0:v", "-map", "0:a?", "-c:a", "copy", str(out),
         ]
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode != 0:
-        vf = f"{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}"
-        subprocess.run(
+        print("[seamless] warm-gold histogram clamp failed; eq-only fallback")
+        r2 = subprocess.run(
             [
-                ff, "-y", "-i", str(video), "-vf", vf,
+                ff, "-y", "-i", str(video), "-vf", WARM_GOLD_CLAMP_VF,
                 "-c:v", "libx264", "-pix_fmt", "yuv420p",
                 "-map", "0:v", "-map", "0:a?", "-c:a", "copy", str(out),
             ],
-            check=True,
             capture_output=True,
+            text=True,
         )
+        if r2.returncode != 0:
+            shutil.copy2(video, out)
     return out
 
 
@@ -887,10 +885,10 @@ def match_color_segment(
         if lamp_lock:
             vfilter = (
                 f"[0:v][1:v]histogrammatching=pattern=1:strength=0.62[matched];"
-                f"[matched]{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}[outv]"
+                f"[matched]{WARM_GOLD_CLAMP_VF}[outv]"
             )
         else:
-            vfilter = "[0:v][1:v]histogrammatching=pattern=1:strength=0.62[outv]"
+            vfilter = f"[0:v][1:v]histogrammatching=pattern=1:strength=0.62[matched];[matched]{MAGENTA_CLAMP_VF}[outv]"
         cmd = [
             ff, "-y", "-i", str(target), "-loop", "1", "-i", str(ref),
             "-filter_complex", vfilter,
@@ -900,7 +898,7 @@ def match_color_segment(
     elif lamp_lock:
         vfilter = (
             f"[0:v][1:v]histogrammatching=pattern=1:strength=0.55[matched];"
-            f"[matched]{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}[outv]"
+            f"[matched]{WARM_GOLD_CLAMP_VF}[outv]"
         )
         cmd = [
             ff, "-y", "-i", str(target), "-i", str(ref),
@@ -919,7 +917,7 @@ def match_color_segment(
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode != 0:
         print("[seamless] match-color filter unavailable; warm-gold + magenta clamp fallback")
-        vf = f"{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}" if lamp_lock else MAGENTA_CLAMP_VF
+        vf = WARM_GOLD_CLAMP_VF if lamp_lock else MAGENTA_CLAMP_VF
         cmd_eq = [
             ff, "-y", "-i", str(target), "-vf", vf,
             "-c:v", "libx264", "-pix_fmt", "yuv420p",

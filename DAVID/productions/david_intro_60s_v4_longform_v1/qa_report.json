@@ -1,0 +1,40 @@
+{
+  "slug": "david_intro_60s_v4",
+  "qa_at": "2026-06-19T02:27:40.288219+00:00",
+  "pass": true,
+  "passes": [
+    "host identity lock LOADED",
+    "shot count OK (8 >= 8)",
+    "all shots carry synthetic host guard (incl. auto-patched)",
+    "target duration ~69s",
+    "STUDIO v1.1 seamless mode ACTIVE",
+    "continuity mode: frame_chain; card join xfade=0.2s",
+    "frame-chain i2v fallback (extend unsupported on 1.5)",
+    "match-color pre-join ENABLED",
+    "cut-on-motion tail trim ENABLED",
+    "host performance: host_performance_extend.mp4 (61.3s)",
+    "David-001 continuity prefix embedded in video_prompt",
+    "xfade chain + synced audio crossfade at joins",
+    "audio PRESENT (david_david_intro_60s_v4_seamless_v1.mp4 mean -28.0 dB)",
+    "lamp lock 3200K warm-gold clamp to David-001 reference",
+    "loudnorm two-pass target I=-16.0 LUFS per shot",
+    "audio pinned to exact shot duration (no stretch/offset)",
+    "flat loudness across shots (spread 0.04 LU)",
+    "zero magenta (max score 0.173 <= 0.42)",
+    "tight A/V sync per shot (duration pinned)",
+    "lamp warm ratio stable across segments (Δ=0.000)",
+    "side-by-side: david_david_intro_60s_v4_v1_vs_v2.mp4"
+  ],
+  "issues": [],
+  "shot_count": 8,
+  "segment_count": 2,
+  "seamless": true,
+  "extend_api": {
+    "scriptable": true,
+    "enabled_on_model": false,
+    "model": "grok-imagine-video-1.5",
+    "editor_extend": "Grok Imagine UI Continue/Extend may work before API parity on 1.5",
+    "finding": "client.video.extend() exists in xAI SDK but grok-imagine-video-1.5 returns 'Video extension is not supported for this model'. Pipeline uses frame-chain i2v fallback.",
+    "continuity_mode": "frame_chain"
+  }
+}
