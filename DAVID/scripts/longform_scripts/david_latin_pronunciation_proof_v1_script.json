@@ -1,0 +1,93 @@
+{
+  "slug": "david_latin_pronunciation_proof_v1",
+  "title": "DAVID — Classical Latin Pronunciation Proof (Aeneid 1.1)",
+  "format_id": "documentary-host",
+  "target_seconds": 27,
+  "concept": "480p format proof — DAVID host speaks attested Latin with code-burned labels, IPA, provenance",
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "voice_suffix": "mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only",
+    "identity_lock": "productions/host_identity_v1/david_identity_lock.json",
+    "avatar_reference": "productions/host_identity_v1/references/david_avatar_reference.jpg",
+    "set_reference": "productions/host_identity_v1/references/archive_set_reference.jpg"
+  },
+  "corpus": {
+    "language": "classical-latin",
+    "corpus_id": "virgil-aeneid-1-1",
+    "attested_text": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+    "attested_text_spoken": "Arma virumque cano, Troiae qui primus ab oris",
+    "translation": "I sing of arms and the man, who first from the shores of Troy…",
+    "text_confidence": "attested",
+    "pronunciation_model": "reconstructed Classical Latin (restituta)",
+    "line_ipa": "[ˈar.ma wɪˈrũːk.we ˈka.noː ˈtroː.jae̯ kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+    "text_source": "Virgil, Aeneid 1.1, public domain"
+  },
+  "on_screen_labels": {
+    "text": "attested text",
+    "pronunciation": "reconstructed pronunciation"
+  },
+  "shots": [
+    {
+      "id": "01_latin_line_slow",
+      "duration": 10,
+      "t_start": 0,
+      "t_end": 10,
+      "role": "host",
+      "speech_lang": "classical-latin",
+      "speech_text": "Arma virumque cano, Troiae qui primus ab oris",
+      "speech_ipa": "[ˈar.ma wɪˈrũːk.we ˈka.noː ˈtroː.jae̯ kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+      "on_screen": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+      "on_screen_labels": ["ATTESTED TEXT", "RECONSTRUCTED PRONUNCIATION"],
+      "overlay_ipa": true,
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line. The Archive host speaks slowly in reconstructed Classical Latin (restituta pronunciation), lip-synced, delivering: \"Arma virumque cano, Troiae qui primus ab oris\". Speech MUST be Latin not English. Medium shot at worktable, warm brass lamp 3200K, documentary gravitas. mid-low resonant unhurried voice, precise diction, synthetic host only."
+    },
+    {
+      "id": "02_lesson_virumque",
+      "duration": 6,
+      "t_start": 10,
+      "t_end": 16,
+      "role": "host",
+      "speech_lang": "classical-latin",
+      "speech_text": "virumque",
+      "speech_ipa": "[wɪˈrũːk.we]",
+      "on_screen": "virumque",
+      "on_screen_labels": ["RECONSTRUCTED PRONUNCIATION"],
+      "overlay_detail": "v → [w]",
+      "overlay_ipa": true,
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp. Host voices a single Latin word in reconstructed Classical Latin, lip-synced, emphasizing \"virumque\" with v pronounced as w. Micro-lesson energy, steady medium shot. Speech MUST be Latin. synthetic host only."
+    },
+    {
+      "id": "03_latin_full",
+      "duration": 6,
+      "t_start": 16,
+      "t_end": 22,
+      "role": "host",
+      "speech_lang": "classical-latin",
+      "speech_text": "Arma virumque cano, Troiae qui primus ab oris",
+      "speech_ipa": "[ˈar.ma wɪˈrũːk.we ˈka.noː ˈtroː.jae̯ kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+      "on_screen": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+      "on_screen_labels": ["ATTESTED TEXT", "RECONSTRUCTED PRONUNCIATION"],
+      "overlay_ipa": true,
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp. Host delivers the full attested Aeneid line confidently in reconstructed Classical Latin, lip-synced: \"Arma virumque cano, Troiae qui primus ab oris\". Medium close-up, clear Latin speech not English. synthetic host only."
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 5,
+    "card_type": "provenance",
+    "title": "DAVID · PROVENANCE",
+    "subtitle": "Latin · Virgil, Aeneid 1.1 (19 BCE)",
+    "footer": "attested text · reconstructed pronunciation — More dead languages, actually pronounced."
+  },
+  "qa_rules": {
+    "require_identity_lock": true,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": true,
+    "require_overlay_burn": true,
+    "min_shots": 3,
+    "duration_lo_s": 20,
+    "duration_hi_s": 32
+  }
+}

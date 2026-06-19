@@ -9,6 +9,8 @@ Usage:
     python render_longform.py <script.json> --concat-only
     python render_longform.py <script.json> --script-only
     python render_longform.py <script.json> --force-shot 03_host_pie_line
+    python render_longform.py <script.json> --package
+    python render_longform.py <script.json> --package-only
 
 Input: script JSON with shots[] + config + provenance_card (imagine-pack schema).
 Output: productions/<slug>/ → shots/, output/*.mp4, imagine_pack.json, qa_report.json
@@ -2302,11 +2304,22 @@ def render_longform(
     }
 
 
+def _run_package_stage(prod_dir: Path, *, require_qa_pass: bool = True) -> dict[str, Any]:
+    pipeline_dir = WORKSPACE / "STUDIO" / "Pipeline"
+    if str(pipeline_dir) not in sys.path:
+        sys.path.insert(0, str(pipeline_dir))
+    from package_episode import package_production  # noqa: WPS433
+
+    return package_production(prod_dir, require_qa_pass=require_qa_pass)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="DAVID long-form video assembler")
     parser.add_argument("script", type=Path, help="Path to script JSON")
     parser.add_argument("--concat-only", action="store_true", help="Reuse cached shots; no API calls")
     parser.add_argument("--script-only", action="store_true", help="Normalize + write imagine pack only")
+    parser.add_argument("--package", action="store_true", help="Build upload kit after render (MP4 → SEO/chapters/end-screen/thumbnail)")
+    parser.add_argument("--package-only", action="store_true", help="Package existing production only; no render")
     parser.add_argument("--force-shot", action="append", default=[], help="Regenerate specific shot id(s)")
     parser.add_argument("--force-all", action="store_true", help="Regenerate every seamless chain shot")
     parser.add_argument("--seamless", action="store_true", help="STUDIO v1.1 extend-primary + xfade joins")
@@ -2328,6 +2341,20 @@ def main() -> int:
         raise SystemExit("Script has no shots[]")
 
     assert_gate_0_cleared(script)
+
+    if args.package_only:
+        prod_dir = resolve_production_dir(script)
+        if not (prod_dir / "manifest.json").is_file():
+            raise SystemExit(f"--package-only: no manifest in {prod_dir}")
+        pkg = _run_package_stage(prod_dir)
+        manifest = json.loads((prod_dir / "manifest.json").read_text(encoding="utf-8"))
+        manifest["upload_kit"] = pkg["upload_kit"]
+        manifest["packaged_at"] = pkg["manifest"]["packaged_at"]
+        (prod_dir / "manifest.json").write_text(
+            json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
+        print(json.dumps(pkg["manifest"], indent=2, ensure_ascii=False))
+        return 0
 
     if args.script_only:
         refs = resolve_refs(script)
@@ -2376,6 +2403,10 @@ def main() -> int:
     }
     prod_dir = Path(result["production_dir"])
     manifest_path = prod_dir / "manifest.json"
+    if args.package and result["qa"]["pass"]:
+        pkg = _run_package_stage(prod_dir)
+        manifest["upload_kit"] = pkg["upload_kit"]
+        manifest["packaged_at"] = pkg["manifest"]["packaged_at"]
     manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
     print(json.dumps(manifest, indent=2, ensure_ascii=False))
     return 0 if result["qa"]["pass"] else 1

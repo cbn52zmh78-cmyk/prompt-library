@@ -1,0 +1,123 @@
+{
+  "pipeline": "render_dead_language_proof",
+  "completed_at": "2026-06-19T03:48:23.539471+00:00",
+  "resolution": "480p",
+  "concat_only": true,
+  "production_dir": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1",
+  "script": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\david_latin_pronunciation_proof_v1_script.json",
+  "output": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\output\\david_latin_pronunciation_proof_480p_v1.mp4",
+  "provenance_card": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\provenance_card.png",
+  "qa": {
+    "slug": "david_latin_pronunciation_proof_v1",
+    "qa_at": "2026-06-19T03:48:23.538771+00:00",
+    "pass": true,
+    "passes": [
+      "host identity lock LOADED (@David-001)",
+      "Latin demonstration shots: 3",
+      "01_latin_line_slow: RECONSTRUCTED label present",
+      "01_latin_line_slow: attested/pronunciation honesty chips",
+      "02_lesson_virumque: RECONSTRUCTED label present",
+      "02_lesson_virumque: attested/pronunciation honesty chips",
+      "03_latin_full: RECONSTRUCTED label present",
+      "03_latin_full: attested/pronunciation honesty chips",
+      "attested_text matches corpus transliteration (Virgil Aeneid 1.1)",
+      "line IPA bracketed (reconstructed pronunciation)",
+      "overlay manifest complete (3 shots)",
+      "overlay burn verified (label region pixel change)",
+      "lower-third IPA bar visible on burned frame",
+      "target duration OK (28.3s in 20–32s band)",
+      "proof MP4: david_latin_pronunciation_proof_480p_v1.mp4",
+      "provenance card enabled (5s)"
+    ],
+    "issues": [],
+    "corpus_id": "virgil-aeneid-1-1",
+    "attested_text": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+    "line_ipa": "[ˈar.ma wɪˈrũːk.we ˈka.noː ˈtroː.jae̯ kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+    "overlay_manifest": [
+      {
+        "shot_id": "01_latin_line_slow",
+        "t_start": 0,
+        "t_end": 10,
+        "on_screen": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+        "on_screen_labels": [
+          "ATTESTED TEXT",
+          "RECONSTRUCTED PRONUNCIATION"
+        ],
+        "speech_ipa": "[ˈar.ma wɪˈrũːk.we ˈka.noː ˈtroː.jae̯ kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+        "overlay_png": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\shots\\01_latin_line_slow_overlay.png",
+        "raw_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\shots\\01_latin_line_slow_raw.mp4",
+        "burned_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\shots\\01_latin_line_slow_burned.mp4"
+      },
+      {
+        "shot_id": "02_lesson_virumque",
+        "t_start": 10,
+        "t_end": 16,
+        "on_screen": "virumque",
+        "on_screen_labels": [
+          "RECONSTRUCTED PRONUNCIATION"
+        ],
+        "speech_ipa": "[wɪˈrũːk.we]",
+        "overlay_png": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\shots\\02_lesson_virumque_overlay.png",
+        "raw_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\shots\\02_lesson_virumque_raw.mp4",
+        "burned_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\shots\\02_lesson_virumque_burned.mp4"
+      },
+      {
+        "shot_id": "03_latin_full",
+        "t_start": 16,
+        "t_end": 22,
+        "on_screen": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+        "on_screen_labels": [
+          "ATTESTED TEXT",
+          "RECONSTRUCTED PRONUNCIATION"
+        ],
+        "speech_ipa": "[ˈar.ma wɪˈrũːk.we ˈka.noː ˈtroː.jae̯ kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+        "overlay_png": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\shots\\03_latin_full_overlay.png",
+        "raw_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\shots\\03_latin_full_raw.mp4",
+        "burned_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\shots\\03_latin_full_burned.mp4"
+      }
+    ]
+  },
+  "overlay_manifest": [
+    {
+      "shot_id": "01_latin_line_slow",
+      "t_start": 0,
+      "t_end": 10,
+      "on_screen": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+      "on_screen_labels": [
+        "ATTESTED TEXT",
+        "RECONSTRUCTED PRONUNCIATION"
+      ],
+      "speech_ipa": "[ˈar.ma wɪˈrũːk.we ˈka.noː ˈtroː.jae̯ kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+      "overlay_png": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\shots\\01_latin_line_slow_overlay.png",
+      "raw_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\shots\\01_latin_line_slow_raw.mp4",
+      "burned_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\shots\\01_latin_line_slow_burned.mp4"
+    },
+    {
+      "shot_id": "02_lesson_virumque",
+      "t_start": 10,
+      "t_end": 16,
+      "on_screen": "virumque",
+      "on_screen_labels": [
+        "RECONSTRUCTED PRONUNCIATION"
+      ],
+      "speech_ipa": "[wɪˈrũːk.we]",
+      "overlay_png": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\shots\\02_lesson_virumque_overlay.png",
+      "raw_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\shots\\02_lesson_virumque_raw.mp4",
+      "burned_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\shots\\02_lesson_virumque_burned.mp4"
+    },
+    {
+      "shot_id": "03_latin_full",
+      "t_start": 16,
+      "t_end": 22,
+      "on_screen": "Arma virumque canō, Trōiae quī prīmus ab ōrīs",
+      "on_screen_labels": [
+        "ATTESTED TEXT",
+        "RECONSTRUCTED PRONUNCIATION"
+      ],
+      "speech_ipa": "[ˈar.ma wɪˈrũːk.we ˈka.noː ˈtroː.jae̯ kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+      "overlay_png": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\shots\\03_latin_full_overlay.png",
+      "raw_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\shots\\03_latin_full_raw.mp4",
+      "burned_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_pronunciation_proof_v1_longform_v1\\shots\\03_latin_full_burned.mp4"
+    }
+  ]
+}
