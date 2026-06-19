@@ -1,0 +1,361 @@
+{
+  "issue": "218-FULL",
+  "generated_at": "2026-06-19T16:28:23.697954+00:00",
+  "state": "RED",
+  "green_pass": false,
+  "proof_218": "HELD",
+  "commit": "HOLD \u2014 NEXUS sign-off required before commit/unpark",
+  "criteria_gate": "Nexus\\gates\\T4_244_GREEN_criteria.json",
+  "script": "scripts\\longform_scripts\\david_latin_corpus_v1_script.json",
+  "production": "productions\\david_latin_corpus_v1_longform_v1",
+  "shot_count": 8,
+  "scored_count": 8,
+  "missing_shots": [],
+  "metric_green_count": 6,
+  "generation_defect_count": 2,
+  "human_eye": "PENDING",
+  "human_eye_owner": "Benjamin + NEXUS",
+  "qa_pass": false,
+  "qa_issues": [
+    "yellow-green cast detected: [('chain_02_stakes_processed', 0.12685481524585393), ('chain_06_honesty_processed', 0.1403030303030303)]",
+    "07_demonstration: duration 10s outside 7\u20139s seamless band"
+  ],
+  "master": {
+    "path": "productions\\david_latin_corpus_v1_longform_v1\\output\\david_david_latin_corpus_v1_seamless_v1.mp4",
+    "magenta": 0.0956,
+    "yellow_green": 0.0106,
+    "host_blue_mean": 45.0,
+    "host_br_ratio": 0.785,
+    "rgb_skew": 0.06,
+    "magenta_pass": true,
+    "yellow_green_pass": true
+  },
+  "shots": [
+    {
+      "shot_id": "01_cold_open",
+      "raw_chain": "productions\\david_latin_corpus_v1_longform_v1\\shots\\chain_01_cold_open.mp4",
+      "processed_chain": "productions\\david_latin_corpus_v1_longform_v1\\shots\\chain_01_cold_open_processed.mp4",
+      "before": {
+        "magenta": 0.254,
+        "host_blue_mean": 57.7,
+        "host_br_ratio": 0.892
+      },
+      "after": {
+        "magenta": 0.0953,
+        "host_blue_mean": 48.4,
+        "host_br_ratio": 0.805
+      },
+      "green_gate": {
+        "metric_pass": true,
+        "human_eye": "PENDING",
+        "green_pass": false,
+        "checks": {
+          "raw_magenta": true,
+          "graded_magenta": true,
+          "clamp_burden": true,
+          "host_blue_mean": true
+        },
+        "failures": [],
+        "thresholds": {
+          "raw_magenta_max": 0.42,
+          "graded_magenta_max": 0.42,
+          "clamp_burden_max": 0.2,
+          "host_blue_mean_min": 40.0,
+          "host_blue_mean_max": 70.0
+        },
+        "criteria_gate": "Nexus\\gates\\T4_244_GREEN_criteria.json"
+      },
+      "clamp_burden": 0.1587,
+      "clamp_burden_max": 0.2,
+      "generation_defect": false,
+      "generation_defect_label": null,
+      "generation_defect_reason": null
+    },
+    {
+      "shot_id": "02_stakes",
+      "raw_chain": "productions\\david_latin_corpus_v1_longform_v1\\shots\\chain_02_stakes.mp4",
+      "processed_chain": "productions\\david_latin_corpus_v1_longform_v1\\shots\\chain_02_stakes_processed.mp4",
+      "before": {
+        "magenta": 0.1407,
+        "host_blue_mean": 56.8,
+        "host_br_ratio": 0.715
+      },
+      "after": {
+        "magenta": 0.0832,
+        "host_blue_mean": 48.4,
+        "host_br_ratio": 0.653
+      },
+      "green_gate": {
+        "metric_pass": true,
+        "human_eye": "PENDING",
+        "green_pass": false,
+        "checks": {
+          "raw_magenta": true,
+          "graded_magenta": true,
+          "clamp_burden": true,
+          "host_blue_mean": true
+        },
+        "failures": [],
+        "thresholds": {
+          "raw_magenta_max": 0.42,
+          "graded_magenta_max": 0.42,
+          "clamp_burden_max": 0.2,
+          "host_blue_mean_min": 40.0,
+          "host_blue_mean_max": 70.0
+        },
+        "criteria_gate": "Nexus\\gates\\T4_244_GREEN_criteria.json"
+      },
+      "clamp_burden": 0.0575,
+      "clamp_burden_max": 0.2,
+      "generation_defect": false,
+      "generation_defect_label": null,
+      "generation_defect_reason": null
+    },
+    {
+      "shot_id": "03_signature_question",
+      "raw_chain": "productions\\david_latin_corpus_v1_longform_v1\\shots\\chain_03_signature_question.mp4",
+      "processed_chain": "productions\\david_latin_corpus_v1_longform_v1\\shots\\chain_03_signature_question_processed.mp4",
+      "before": {
+        "magenta": 0.6829,
+        "host_blue_mean": 63.4,
+        "host_br_ratio": 1.018
+      },
+      "after": {
+        "magenta": 0.3398,
+        "host_blue_mean": 53.1,
+        "host_br_ratio": 0.909
+      },
+      "green_gate": {
+        "metric_pass": false,
+        "human_eye": "PENDING",
+        "green_pass": false,
+        "checks": {
+          "raw_magenta": false,
+          "graded_magenta": true,
+          "clamp_burden": false,
+          "host_blue_mean": true
+        },
+        "failures": [
+          "raw_magenta",
+          "clamp_burden"
+        ],
+        "thresholds": {
+          "raw_magenta_max": 0.42,
+          "graded_magenta_max": 0.42,
+          "clamp_burden_max": 0.2,
+          "host_blue_mean_min": 40.0,
+          "host_blue_mean_max": 70.0
+        },
+        "criteria_gate": "Nexus\\gates\\T4_244_GREEN_criteria.json"
+      },
+      "clamp_burden": 0.3431,
+      "clamp_burden_max": 0.2,
+      "generation_defect": true,
+      "generation_defect_label": "GENERATION DEFECT \u2014 clamp masking",
+      "generation_defect_reason": "raw\u2212graded magenta 0.3431 > 0.2 \u2014 clamp masking bad generation"
+    },
+    {
+      "shot_id": "04_proof_beat",
+      "raw_chain": "productions\\david_latin_corpus_v1_longform_v1\\shots\\chain_04_proof_beat.mp4",
+      "processed_chain": "productions\\david_latin_corpus_v1_longform_v1\\shots\\chain_04_proof_beat_processed.mp4",
+      "before": {
+        "magenta": 0.1528,
+        "host_blue_mean": 55.9,
+        "host_br_ratio": 0.755
+      },
+      "after": {
+        "magenta": 0.0775,
+        "host_blue_mean": 47.3,
+        "host_br_ratio": 0.681
+      },
+      "green_gate": {
+        "metric_pass": true,
+        "human_eye": "PENDING",
+        "green_pass": false,
+        "checks": {
+          "raw_magenta": true,
+          "graded_magenta": true,
+          "clamp_burden": true,
+          "host_blue_mean": true
+        },
+        "failures": [],
+        "thresholds": {
+          "raw_magenta_max": 0.42,
+          "graded_magenta_max": 0.42,
+          "clamp_burden_max": 0.2,
+          "host_blue_mean_min": 40.0,
+          "host_blue_mean_max": 70.0
+        },
+        "criteria_gate": "Nexus\\gates\\T4_244_GREEN_criteria.json"
+      },
+      "clamp_burden": 0.0753,
+      "clamp_burden_max": 0.2,
+      "generation_defect": false,
+      "generation_defect_label": null,
+      "generation_defect_reason": null
+    },
+    {
+      "shot_id": "05_method",
+      "raw_chain": "productions\\david_latin_corpus_v1_longform_v1\\shots\\chain_05_method.mp4",
+      "processed_chain": "productions\\david_latin_corpus_v1_longform_v1\\shots\\chain_05_method_processed.mp4",
+      "before": {
+        "magenta": 0.2329,
+        "host_blue_mean": 53.0,
+        "host_br_ratio": 0.872
+      },
+      "after": {
+        "magenta": 0.0865,
+        "host_blue_mean": 43.4,
+        "host_br_ratio": 0.787
+      },
+      "green_gate": {
+        "metric_pass": true,
+        "human_eye": "PENDING",
+        "green_pass": false,
+        "checks": {
+          "raw_magenta": true,
+          "graded_magenta": true,
+          "clamp_burden": true,
+          "host_blue_mean": true
+        },
+        "failures": [],
+        "thresholds": {
+          "raw_magenta_max": 0.42,
+          "graded_magenta_max": 0.42,
+          "clamp_burden_max": 0.2,
+          "host_blue_mean_min": 40.0,
+          "host_blue_mean_max": 70.0
+        },
+        "criteria_gate": "Nexus\\gates\\T4_244_GREEN_criteria.json"
+      },
+      "clamp_burden": 0.1464,
+      "clamp_burden_max": 0.2,
+      "generation_defect": false,
+      "generation_defect_label": null,
+      "generation_defect_reason": null
+    },
+    {
+      "shot_id": "06_honesty",
+      "raw_chain": "productions\\david_latin_corpus_v1_longform_v1\\shots\\chain_06_honesty.mp4",
+      "processed_chain": "productions\\david_latin_corpus_v1_longform_v1\\shots\\chain_06_honesty_processed.mp4",
+      "before": {
+        "magenta": 0.1333,
+        "host_blue_mean": 49.8,
+        "host_br_ratio": 0.75
+      },
+      "after": {
+        "magenta": 0.0642,
+        "host_blue_mean": 41.6,
+        "host_br_ratio": 0.673
+      },
+      "green_gate": {
+        "metric_pass": true,
+        "human_eye": "PENDING",
+        "green_pass": false,
+        "checks": {
+          "raw_magenta": true,
+          "graded_magenta": true,
+          "clamp_burden": true,
+          "host_blue_mean": true
+        },
+        "failures": [],
+        "thresholds": {
+          "raw_magenta_max": 0.42,
+          "graded_magenta_max": 0.42,
+          "clamp_burden_max": 0.2,
+          "host_blue_mean_min": 40.0,
+          "host_blue_mean_max": 70.0
+        },
+        "criteria_gate": "Nexus\\gates\\T4_244_GREEN_criteria.json"
+      },
+      "clamp_burden": 0.0691,
+      "clamp_burden_max": 0.2,
+      "generation_defect": false,
+      "generation_defect_label": null,
+      "generation_defect_reason": null
+    },
+    {
+      "shot_id": "07_demonstration",
+      "raw_chain": "productions\\david_latin_corpus_v1_longform_v1\\shots\\chain_07_demonstration.mp4",
+      "processed_chain": "productions\\david_latin_corpus_v1_longform_v1\\shots\\chain_07_demonstration_processed.mp4",
+      "before": {
+        "magenta": 0.6614,
+        "host_blue_mean": 57.9,
+        "host_br_ratio": 1.01
+      },
+      "after": {
+        "magenta": 0.3183,
+        "host_blue_mean": 46.8,
+        "host_br_ratio": 0.898
+      },
+      "green_gate": {
+        "metric_pass": false,
+        "human_eye": "PENDING",
+        "green_pass": false,
+        "checks": {
+          "raw_magenta": false,
+          "graded_magenta": true,
+          "clamp_burden": false,
+          "host_blue_mean": true
+        },
+        "failures": [
+          "raw_magenta",
+          "clamp_burden"
+        ],
+        "thresholds": {
+          "raw_magenta_max": 0.42,
+          "graded_magenta_max": 0.42,
+          "clamp_burden_max": 0.2,
+          "host_blue_mean_min": 40.0,
+          "host_blue_mean_max": 70.0
+        },
+        "criteria_gate": "Nexus\\gates\\T4_244_GREEN_criteria.json"
+      },
+      "clamp_burden": 0.3431,
+      "clamp_burden_max": 0.2,
+      "generation_defect": true,
+      "generation_defect_label": "GENERATION DEFECT \u2014 clamp masking",
+      "generation_defect_reason": "raw\u2212graded magenta 0.3431 > 0.2 \u2014 clamp masking bad generation"
+    },
+    {
+      "shot_id": "08_invitation",
+      "raw_chain": "productions\\david_latin_corpus_v1_longform_v1\\shots\\chain_08_invitation.mp4",
+      "processed_chain": "productions\\david_latin_corpus_v1_longform_v1\\shots\\chain_08_invitation_processed.mp4",
+      "before": {
+        "magenta": 0.1454,
+        "host_blue_mean": 50.8,
+        "host_br_ratio": 0.733
+      },
+      "after": {
+        "magenta": 0.0754,
+        "host_blue_mean": 41.9,
+        "host_br_ratio": 0.656
+      },
+      "green_gate": {
+        "metric_pass": true,
+        "human_eye": "PENDING",
+        "green_pass": false,
+        "checks": {
+          "raw_magenta": true,
+          "graded_magenta": true,
+          "clamp_burden": true,
+          "host_blue_mean": true
+        },
+        "failures": [],
+        "thresholds": {
+          "raw_magenta_max": 0.42,
+          "graded_magenta_max": 0.42,
+          "clamp_burden_max": 0.2,
+          "host_blue_mean_min": 40.0,
+          "host_blue_mean_max": 70.0
+        },
+        "criteria_gate": "Nexus\\gates\\T4_244_GREEN_criteria.json"
+      },
+      "clamp_burden": 0.07,
+      "clamp_burden_max": 0.2,
+      "generation_defect": false,
+      "generation_defect_label": null,
+      "generation_defect_reason": null
+    }
+  ]
+}
