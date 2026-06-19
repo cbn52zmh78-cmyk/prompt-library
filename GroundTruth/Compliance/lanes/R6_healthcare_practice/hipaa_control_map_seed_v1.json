@@ -1,6 +1,6 @@
 {
   "artifact": "hipaa_control_map_seed",
-  "version": "1.0",
+  "version": "1.1",
   "lane": "R6",
   "task": "R6 — HIPAA control-map seed for medical-vertical bible",
   "jurisdiction": "Federal (HIPAA / HHS)",
@@ -349,30 +349,54 @@
     },
     "hhs_guidance_overlay": {
       "domain_id": "hhs_guidance_overlay",
-      "label": "HHS OCR Guidance (Secondary — PARKED)",
+      "label": "Federal HIPAA Guidance Overlay (HHS PARKED; CMS/ASPE fallbacks)",
       "cfr_anchors": [],
-      "status": "PARKED",
+      "status": "PARTIAL",
       "controls": [
         {
           "control_id": "HIPAA-GAP-001",
-          "control": "NOT FOUND — HHS HIPAA for Professionals guidance pages returned HTTP 403 at harvest. Use eCFR as primary; re-probe hhs.gov/hipaa when accessible.",
+          "control": "PARKED — R6-B re-probe: hhs.gov/hipaa/* and hhs.gov/ocr/* return HTTP 403 (2026-06-19). eCFR remains operative primary.",
           "requirement_type": "gap",
           "status": "PARKED",
           "citation_ref": 10,
           "cfr_section": null,
           "source_checked": "https://www.hhs.gov/hipaa/for-professionals/privacy/"
+        },
+        {
+          "control_id": "HIPAA-GUI-001",
+          "control": "CMS Administrative Simplification: HIPAA covered entities include health plans, clearinghouses, and providers transmitting standard electronic transactions; BAs require written contract with HIPAA compliance obligations.",
+          "requirement_type": "guidance",
+          "status": "FOUND",
+          "citation_ref": 11,
+          "cfr_section": "45 CFR Part 164 (cross-ref)"
+        },
+        {
+          "control_id": "HIPAA-GUI-002",
+          "control": "ASPE HIPAA 1996 statutory summary: Secretary authorized to adopt privacy standards; state laws more stringent than federal privacy standards are not preempted.",
+          "requirement_type": "guidance",
+          "status": "FOUND",
+          "citation_ref": 12,
+          "cfr_section": "42 U.S.C. §1173 et seq. (HIPAA Admin Simplification)"
+        },
+        {
+          "control_id": "HIPAA-GUI-003",
+          "control": "CMS subregulatory guidance: covered entities remain responsible for business associate HIPAA compliance; BAA required.",
+          "requirement_type": "guidance",
+          "status": "FOUND",
+          "citation_ref": 13,
+          "cfr_section": "45 CFR §164.504(e)"
         }
       ],
-      "fact_count": 1
+      "fact_count": 4
     }
   },
   "metrics": {
     "domain_count": 8,
-    "control_count": 32,
-    "found_controls": 31,
+    "control_count": 35,
+    "found_controls": 34,
     "parked_controls": 1,
     "status_roll": {
-      "FOUND": 31,
+      "FOUND": 34,
       "PARKED": 1,
       "NOT FOUND": 0,
       "REQUIRES_CONFIRMATION": 0
@@ -452,6 +476,30 @@
       "grade": "secondary",
       "harvest_status": "PARKED",
       "http_status": 403
+    },
+    {
+      "ref": 11,
+      "source": "CMS — HIPAA Covered Entities",
+      "url": "https://www.cms.gov/priorities/key-initiatives/burden-reduction/administrative-simplification/hipaa/covered-entities",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "Federal",
+      "grade": "secondary"
+    },
+    {
+      "ref": 12,
+      "source": "ASPE — HIPAA 1996 (Pub. L. 104-191)",
+      "url": "https://aspe.hhs.gov/reports/health-insurance-portability-accountability-act-1996",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "Federal",
+      "grade": "secondary"
+    },
+    {
+      "ref": 13,
+      "source": "CMS — Guidance on BA Compliance (PDF)",
+      "url": "https://www.cms.gov/files/document/guidance-letter-business-associate.pdf",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "Federal",
+      "grade": "secondary"
     }
   ]
 }

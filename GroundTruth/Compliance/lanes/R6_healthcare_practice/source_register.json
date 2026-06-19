@@ -1,6 +1,7 @@
 {
   "artifact": "groundtruth_healthcare_practice_source_register",
-  "version": "1.0",
+  "version": "1.1",
+  "task": "R6-B — Close parked HIPAA items + expand states",
   "lane": "R6",
   "vertical": "Healthcare Practice",
   "tier": "A",
@@ -9,8 +10,8 @@
   "retrieved_date": "2026-06-19",
   "pinned_path": "GroundTruth/Compliance/lanes/R6_healthcare_practice/source_register.json",
   "policy": "Public .gov / official statute sources only; HTTP 403/SPA/Cloudflare = park; gaps explicit.",
-  "harvested_count": 12,
-  "parked_count": 6,
+  "harvested_count": 22,
+  "parked_count": 5,
   "sources": [
     {
       "source_id": "ecfr_45_part_164",
@@ -178,7 +179,7 @@
       "status": "PARKED",
       "http_status": 403,
       "retrieved_date": "2026-06-19",
-      "reliability_note": "HTTP 403 at harvest; use eCFR Part 164 as primary until portal accessible."
+      "reliability_note": "R6-B re-probe: HTTP 403 persists; CMS/ASPE fallbacks harvested."
     },
     {
       "source_id": "hhs_hipaa_security",
@@ -214,7 +215,7 @@
       "status": "ACCESS_RESTRICTED",
       "http_status": 200,
       "retrieved_date": "2026-06-19",
-      "reliability_note": "Chapter anchor confirmed; section text not harvestable (SPA/JS shell, no statute body in HTML)."
+      "reliability_note": "R6-B re-probe: GetStatute.aspx, PDF, search — all SPA; section text ACCESS_RESTRICTED."
     },
     {
       "source_id": "ny_gbl_899_aa",
@@ -226,7 +227,7 @@
       "status": "PARKED",
       "http_status": null,
       "retrieved_date": "2026-06-19",
-      "reliability_note": "Cloudflare block at harvest; statute text NOT FOUND in lane — REQUIRES_CONFIRMATION via alternate primary."
+      "reliability_note": "Cloudflare block persists; SHIELD requirements harvested via NY AG official summary."
     },
     {
       "source_id": "ny_dfs_cybersecurity",
@@ -235,22 +236,22 @@
       "jurisdiction": "New York",
       "domain": "state_data_security",
       "grade": "secondary",
-      "status": "REQUIRES_CONFIRMATION",
+      "status": "HARVESTED",
       "http_status": 200,
       "retrieved_date": "2026-06-19",
-      "reliability_note": "Portal live (200) but sparse text harvest; DFS Part 500 applies to covered financial entities — not all medical practices."
+      "reliability_note": "R6-B: FAQ HTML harvest confirms GBL §899-aa cross-reference; Part 500 applies to covered financial entities."
     },
     {
       "source_id": "ny_ag_breach",
-      "name": "NY Attorney General — Data breach reporting",
-      "url": "https://ag.ny.gov/internet/data-breach-reporting",
+      "name": "NY Attorney General — Report a Data Breach",
+      "url": "https://www.ag.ny.gov/resources/organizations/data-breach-reporting",
       "jurisdiction": "New York",
       "domain": "state_breach_notification",
-      "grade": "secondary",
-      "status": "NOT FOUND",
-      "http_status": 404,
+      "grade": "primary",
+      "status": "HARVESTED",
+      "http_status": 200,
       "retrieved_date": "2026-06-19",
-      "reliability_note": "URL 404 at harvest; SHIELD breach notification facts require alternate source."
+      "reliability_note": "R6-B: corrected URL (prior ag.ny.gov/internet/ path 404)."
     },
     {
       "source_id": "tx_tmb_privacy",
@@ -263,6 +264,114 @@
       "http_status": 404,
       "retrieved_date": "2026-06-19",
       "reliability_note": "Page 404; Texas medical-practice privacy add-ons rely on HS Ch. 181 when text accessible."
+    },
+    {
+      "source_id": "ny_ag_shield_act",
+      "name": "NY AG — SHIELD Act (GBL §899-aa summary)",
+      "url": "https://www.ag.ny.gov/resources/organizations/data-breach-reporting/shield-act",
+      "jurisdiction": "New York",
+      "domain": "state_data_security",
+      "grade": "secondary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "Official AG summary of SHIELD safeguards and breach obligations; alternate to nysenate statute HTML."
+    },
+    {
+      "source_id": "cms_hipaa_covered_entities",
+      "name": "CMS — HIPAA Covered Entities & BA contracts",
+      "url": "https://www.cms.gov/priorities/key-initiatives/burden-reduction/administrative-simplification/hipaa/covered-entities",
+      "jurisdiction": "Federal",
+      "domain": "hipaa_guidance",
+      "grade": "secondary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "HHS.gov 403 fallback for covered-entity and BAA guidance."
+    },
+    {
+      "source_id": "aspe_hipaa_1996",
+      "name": "ASPE — Health Insurance Portability and Accountability Act of 1996",
+      "url": "https://aspe.hhs.gov/reports/health-insurance-portability-accountability-act-1996",
+      "jurisdiction": "Federal",
+      "domain": "hipaa_statutory",
+      "grade": "secondary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "Federal statutory HIPAA summary; state-more-stringent non-preemption."
+    },
+    {
+      "source_id": "cms_ba_guidance",
+      "name": "CMS — Guidance on HIPAA Covered Entities' Responsibility for BA Compliance (PDF)",
+      "url": "https://www.cms.gov/files/document/guidance-letter-business-associate.pdf",
+      "jurisdiction": "Federal",
+      "domain": "baa_guidance",
+      "grade": "secondary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "Subregulatory BAA guidance when HHS OCR pages 403."
+    },
+    {
+      "source_id": "wa_rcw_70_02",
+      "name": "Washington RCW 70.02 — Health Care Information",
+      "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=70.02&full=true",
+      "jurisdiction": "Washington",
+      "domain": "state_medical_privacy",
+      "grade": "primary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "Authorization-first disclosure; security safeguards; vendor chain."
+    },
+    {
+      "source_id": "fl_456_057",
+      "name": "Florida Stat. §456.057 — Patient records",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2024/456.057",
+      "jurisdiction": "Florida",
+      "domain": "state_medical_privacy",
+      "grade": "primary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "Ownership, disclosure authorization, security policies."
+    },
+    {
+      "source_id": "fl_501_171",
+      "name": "Florida Stat. §501.171 — FIPA (health info in PI)",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2024/501.171",
+      "jurisdiction": "Florida",
+      "domain": "state_data_security",
+      "grade": "primary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "Reasonable security measures; breach notice incl. medical/insurance identifiers."
+    },
+    {
+      "source_id": "ma_93h",
+      "name": "Massachusetts Gen. Laws c. 93H — Security Breaches",
+      "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXV/Chapter93H/Section1",
+      "jurisdiction": "Massachusetts",
+      "domain": "state_data_security",
+      "grade": "primary",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "Safeguard regulations; consistent with applicable federal regs (HIPAA)."
+    },
+    {
+      "source_id": "ma_201_cmr_17",
+      "name": "201 CMR 17.00 — MA Personal Information Safeguards",
+      "url": "https://www.mass.gov/regulations/201-CMR-1700-standards-for-the-protection-of-personal-information-of-residents-of-the-commonwealth",
+      "jurisdiction": "Massachusetts",
+      "domain": "state_data_security",
+      "grade": "primary",
+      "status": "ACCESS_RESTRICTED",
+      "http_status": 403,
+      "retrieved_date": "2026-06-19",
+      "reliability_note": "mass.gov 403 at harvest; c. 93H §2 statute framework FOUND."
     }
   ]
 }

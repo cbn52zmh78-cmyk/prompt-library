@@ -1,12 +1,12 @@
 {
   "artifact": "healthcare_practice_state_pack",
-  "version": "1.0",
+  "version": "1.1",
   "lane": "R6",
-  "task": "R6 — Healthcare practice state privacy add-on (Texas Medical Records Privacy)",
+  "task": "R6-B — Texas Medical Records Privacy (re-probe Ch. 181)",
   "state": "Texas",
   "state_code": "TX",
   "state_slug": "texas",
-  "generated_at": "2026-06-19T18:00:00+00:00",
+  "generated_at": "2026-06-19T20:00:00+00:00",
   "retrieved_date": "2026-06-19",
   "disclaimer": "Operational compliance research — not legal advice. Texas Ch. 181 section-level facts require confirmation when statute text is accessible.",
   "policy": "Public .gov sources only; SPA statute portal = ACCESS_RESTRICTED; gaps explicit.",
@@ -15,16 +15,15 @@
       "domain": "medical_records_privacy",
       "label": "Texas Health & Safety Code Ch. 181 — Medical Records Privacy",
       "statute": "Tex. Health & Safety Code Ch. 181",
-      "status": "REQUIRES_CONFIRMATION",
+      "status": "ACCESS_RESTRICTED",
       "regulator": {
         "agency": "Texas Legislature — Statutes (Health & Safety Code)",
-        "url": "https://statutes.capitol.texas.gov/Docs/HS/htm/HS.181.htm",
-        "notes": "Chapter index URL confirmed; section text not harvestable (SPA shell)."
+        "url": "https://statutes.capitol.texas.gov/Docs/HS/htm/HS.181.htm"
       },
       "cited_facts": [
         {
           "fact_id": "R6-TX-MRP-001",
-          "text": "Texas maintains a codified Medical Records Privacy chapter at Health & Safety Code Chapter 181 (statute index anchor confirmed at statutes.capitol.texas.gov).",
+          "text": "Texas maintains a codified Medical Records Privacy chapter at Health & Safety Code Chapter 181 (chapter anchor confirmed at statutes.capitol.texas.gov).",
           "status": "FOUND",
           "citation": {
             "source": "Tex. Health & Safety Code Ch. 181 (index)",
@@ -36,23 +35,36 @@
         },
         {
           "fact_id": "R6-TX-MRP-002",
-          "text": "ACCESS_RESTRICTED — Section-level disclosure, authorization, and penalty provisions for Ch. 181 NOT FOUND in HTML harvest (SPA/JS; ~250KB shell without extractable §181.x text). Re-probe via browser or official PDF when available.",
+          "text": "ACCESS_RESTRICTED — R6-B re-probe: GetStatute.aspx?Code=HS&Value=181.001, HS.181.pdf, TextSearchResults, and capitol.texas.gov PDF all return SPA shell or 404; no extractable §181.x section text from official .gov harvest.",
           "status": "ACCESS_RESTRICTED",
           "citation": {
             "source": "Tex. Health & Safety Code Ch. 181 (section text)",
-            "url": "https://statutes.capitol.texas.gov/Docs/HS/htm/HS.181.htm",
+            "url": "https://statutes.capitol.texas.gov/GetStatute.aspx?Code=HS&Value=181.001",
             "jurisdiction": "Texas",
             "tier": "statute_primary",
             "retrieved_date": "2026-06-19"
           },
-          "source_checked": "https://statutes.capitol.texas.gov/Docs/HS/htm/HS.181.htm"
+          "source_checked": "https://statutes.capitol.texas.gov/GetStatute.aspx?Code=HS&Value=181.001"
         }
       ],
       "fact_count": 2,
       "gap": {
-        "status": "REQUIRES_CONFIRMATION",
-        "message": "NOT FOUND — Texas Ch. 181 section text [source checked: statutes.capitol.texas.gov/Docs/HS/htm/HS.181.htm — ACCESS_RESTRICTED SPA]",
+        "status": "ACCESS_RESTRICTED",
+        "message": "NOT FOUND — Texas Ch. 181 section text [source checked: statutes.capitol.texas.gov GetStatute/HS.181.htm/HS.181.pdf — SPA]",
         "alternate_sources_checked": [
+          {
+            "url": "https://statutes.capitol.texas.gov/GetStatute.aspx?Code=HS&Value=181.001",
+            "status": "ACCESS_RESTRICTED"
+          },
+          {
+            "url": "https://statutes.capitol.texas.gov/Docs/HS/pdf/HS.181.pdf",
+            "status": "ACCESS_RESTRICTED"
+          },
+          {
+            "url": "https://capitol.texas.gov/tlodocs/healthcode/pdf/healthcode.181.pdf",
+            "status": "NOT FOUND",
+            "http_status": 404
+          },
           {
             "url": "https://www.tmb.texas.gov/page/privacy-and-security",
             "status": "NOT FOUND",
@@ -64,7 +76,7 @@
   },
   "status_roll": {
     "FOUND": 1,
-    "REQUIRES_CONFIRMATION": 1,
+    "REQUIRES_CONFIRMATION": 0,
     "NOT FOUND": 0,
     "ACCESS_RESTRICTED": 1,
     "PARKED": 0

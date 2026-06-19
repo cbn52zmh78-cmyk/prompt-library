@@ -3,8 +3,8 @@
   "lane": "R6",
   "slug": "healthcare_practice",
   "vertical": "Healthcare Practice",
-  "version": "1.0",
-  "task": "R6 — Healthcare practice compliance source-gather",
+  "version": "1.1",
+  "task": "R6-B — Close parked HIPAA items + expand states",
   "as_of_date": "2026-06-19",
   "retrieved_date": "2026-06-19",
   "citation_standard": "STD-CITE-001",
@@ -16,48 +16,23 @@
     "bible_seed_json": "healthcare_practice_knowledge_bible_seed_v1.json",
     "bible_seed_md": "healthcare_practice_knowledge_bible_seed_v1.md",
     "template": "compliance_bible_template_v1.json",
-    "recap": "dispatches/R6_healthcare_practice_recap.json"
+    "recap_r6": "dispatches/R6_healthcare_practice_recap.json",
+    "recap_r6b": "dispatches/R6_B_healthcare_practice_recap.json"
   },
   "states": [
-    {
-      "state": "California",
-      "state_code": "CA",
-      "file": "states/california.json",
-      "total_facts": 6,
-      "status_counts": {
-        "FOUND": 6
-      }
-    },
-    {
-      "state": "Texas",
-      "state_code": "TX",
-      "file": "states/texas.json",
-      "total_facts": 2,
-      "status_counts": {
-        "FOUND": 1,
-        "REQUIRES_CONFIRMATION": 1,
-        "ACCESS_RESTRICTED": 1
-      }
-    },
-    {
-      "state": "New York",
-      "state_code": "NY",
-      "file": "states/new_york.json",
-      "total_facts": 6,
-      "status_counts": {
-        "FOUND": 4,
-        "REQUIRES_CONFIRMATION": 2,
-        "NOT FOUND": 1,
-        "PARKED": 1
-      }
-    }
+    { "state": "California", "state_code": "CA", "file": "states/california.json", "total_facts": 6, "status_counts": { "FOUND": 6 } },
+    { "state": "Texas", "state_code": "TX", "file": "states/texas.json", "total_facts": 2, "status_counts": { "FOUND": 1, "ACCESS_RESTRICTED": 1 } },
+    { "state": "New York", "state_code": "NY", "file": "states/new_york.json", "total_facts": 8, "status_counts": { "FOUND": 7, "PARKED": 1 } },
+    { "state": "Washington", "state_code": "WA", "file": "states/washington.json", "total_facts": 5, "status_counts": { "FOUND": 5 } },
+    { "state": "Florida", "state_code": "FL", "file": "states/florida.json", "total_facts": 6, "status_counts": { "FOUND": 6 } },
+    { "state": "Massachusetts", "state_code": "MA", "file": "states/massachusetts.json", "total_facts": 3, "status_counts": { "FOUND": 2, "REQUIRES_CONFIRMATION": 1 } }
   ],
   "metrics": {
-    "federal_facts": 28,
-    "state_facts": 14,
-    "total_facts": 42,
-    "sources_harvested": 12,
-    "sources_parked": 6,
-    "gap_count": 8
+    "federal_controls": 35,
+    "state_facts": 30,
+    "total_facts": 65,
+    "sources_harvested": 22,
+    "sources_parked": 5,
+    "gap_count": 5
   }
 }

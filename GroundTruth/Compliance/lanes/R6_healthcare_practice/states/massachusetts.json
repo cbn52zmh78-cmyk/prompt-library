@@ -1,0 +1,78 @@
+{
+  "artifact": "healthcare_practice_state_pack",
+  "version": "1.0",
+  "lane": "R6",
+  "task": "R6-B — Healthcare practice state privacy add-on (Massachusetts Ch. 93H + 201 CMR 17 context)",
+  "state": "Massachusetts",
+  "state_code": "MA",
+  "state_slug": "massachusetts",
+  "generated_at": "2026-06-19T20:00:00+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research — not legal advice. MA data-security regulations (201 CMR 17.00) apply to persons owning/licensing personal information; confirm applicability to PHI held by medical practices.",
+  "policy": "Public .gov sources only; mass.gov regulation portal 403 at harvest — statute primary.",
+  "domains": {
+    "data_security_breach": {
+      "domain": "data_security_breach",
+      "label": "M.G.L. c. 93H — Security Breaches & Safeguard Regulations",
+      "statute": "M.G.L. c. 93H",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Massachusetts General Court — malegislature.gov",
+        "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXV/Chapter93H"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-MA-93H-001",
+          "text": "Breach of security means unauthorized acquisition or use of unencrypted personal information (or encrypted data with compromised key) creating substantial risk of identity theft or fraud against a Massachusetts resident.",
+          "status": "FOUND",
+          "citation": {
+            "source": "M.G.L. c. 93H §1 (breach of security)",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXV/Chapter93H/Section1",
+            "jurisdiction": "Massachusetts",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-MA-93H-002",
+          "text": "DCABR shall adopt regulations requiring any person that owns or licenses personal information about a Massachusetts resident to safeguard it — consistent with applicable federal regulations by which the person is regulated (including HIPAA-covered entities).",
+          "status": "FOUND",
+          "citation": {
+            "source": "M.G.L. c. 93H §2(a)",
+            "url": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXV/Chapter93H/Section2",
+            "jurisdiction": "Massachusetts",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-MA-93H-003",
+          "text": "REQUIRES_CONFIRMATION — 201 CMR 17.00 implementing regulations (mass.gov) returned HTTP 403 at harvest; safeguard standards referenced by §2(a) require separate regulation harvest.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "201 CMR 17.00 — Standards for Protection of Personal Information",
+            "url": "https://www.mass.gov/regulations/201-CMR-1700-standards-for-the-protection-of-personal-information-of-residents-of-the-commonwealth",
+            "jurisdiction": "Massachusetts",
+            "tier": "regulation_primary",
+            "retrieved_date": "2026-06-19",
+            "http_status": 403
+          },
+          "source_checked": "https://www.mass.gov/regulations/201-CMR-1700-standards-for-the-protection-of-personal-information-of-residents-of-the-commonwealth"
+        }
+      ],
+      "fact_count": 3,
+      "gap": {
+        "status": "REQUIRES_CONFIRMATION",
+        "message": "201 CMR 17.00 regulation text ACCESS_RESTRICTED (mass.gov 403); statute framework FOUND via c. 93H."
+      }
+    }
+  },
+  "status_roll": {
+    "FOUND": 2,
+    "REQUIRES_CONFIRMATION": 1,
+    "NOT FOUND": 0,
+    "ACCESS_RESTRICTED": 0,
+    "PARKED": 0
+  },
+  "total_facts": 3
+}

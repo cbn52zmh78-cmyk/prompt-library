@@ -2,7 +2,8 @@
   "artifact": "knowledge_bible",
   "format": "8-section",
   "version": "1.0",
-  "variant": "seed_3_states",
+  "variant": "seed_6_states",
+  "task": "R6-B",
   "lane": "R6",
   "vertical": "Healthcare Practice",
   "sku": "R6-HC-SEED-3-v1",
@@ -16,19 +17,19 @@
   "sections": {
     "1_tldr": {
       "title": "TL;DR / Executive Summary",
-      "coverage": "Federal HIPAA Privacy/Security/Breach + BAA control-map seed; state medical-privacy add-ons for CA, TX, NY.",
-      "state_count": 3,
-      "state_codes": ["CA", "TX", "NY"],
-      "cited_claims": 42,
-      "citation_count": 14,
-      "gaps_flagged": 8,
-      "parked_sources": 6,
+      "coverage": "Federal HIPAA (eCFR + CMS/ASPE fallbacks) + BAA control-map; state add-ons CA, TX, NY, WA, FL, MA.",
+      "state_count": 6,
+      "state_codes": ["CA", "TX", "NY", "WA", "FL", "MA"],
+      "cited_claims": 65,
+      "citation_count": 22,
+      "gaps_flagged": 5,
+      "parked_sources": 5,
       "status_roll": {
-        "FOUND": 35,
-        "REQUIRES_CONFIRMATION": 4,
-        "NOT FOUND": 2,
+        "FOUND": 61,
+        "REQUIRES_CONFIRMATION": 1,
+        "NOT FOUND": 0,
         "ACCESS_RESTRICTED": 2,
-        "PARKED": 4
+        "PARKED": 2
       },
       "as_of_date": "2026-06-19",
       "honesty_rule": "Every claim STD-CITE-001 cited; gaps render NOT FOUND — [source checked: …]; eCFR primary when HHS 403."

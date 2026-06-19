@@ -1,0 +1,72 @@
+{
+  "message_type": "recap_vcs",
+  "task": "R6-B — Close parked HIPAA items + expand states",
+  "title": "R6-B — HIPAA re-probe + TX/NY close-outs + WA/FL/MA state add-ons",
+  "generated_at": "2026-06-19T20:00:00+00:00",
+  "status": "COMPLETE",
+  "verdict": "GREEN",
+  "lane": "R6",
+  "vertical": "Healthcare Practice",
+  "pinned_lane": "GroundTruth/Compliance/lanes/R6_healthcare_practice",
+  "recap": {
+    "did": [
+      "Re-probed hhs.gov/hipaa/* and hhs.gov/ocr/* — HTTP 403 persists; harvested CMS covered-entities/BA guidance + ASPE HIPAA 1996 + CMS BA guidance PDF as federal fallbacks",
+      "Closed NY SHIELD gap via NY AG official SHIELD Act page + corrected AG breach portal URL (ag.ny.gov/resources/organizations/data-breach-reporting); nysenate GBL §899-aa remains PARKED",
+      "Re-probed Texas HS Ch. 181 via GetStatute.aspx, PDF, search — SPA ACCESS_RESTRICTED; chapter index still FOUND",
+      "Added state add-ons: Washington (RCW 70.02, 5 facts), Florida (§456.057 + §501.171, 6 facts), Massachusetts (c. 93H, 3 facts)",
+      "Updated hipaa_control_map v1.1, source_register v1.1, lane_meta, INDEX; pinned to R6_healthcare_practice"
+    ],
+    "state": "Federal 34/35 controls FOUND (1 HHS PARKED); 6 states / 30 state facts — CA 6, NY 8, WA 5, FL 6, MA 3, TX 2 (1 RESTRICTED)",
+    "gaps": {
+      "federal": [
+        "hhs.gov/hipaa and hhs.gov/ocr — 403 PARKED (CMS/ASPE fallbacks in lane)"
+      ],
+      "states": {
+        "Texas": "Ch. 181 section text SPA ACCESS_RESTRICTED after R6-B re-probe",
+        "New York": "nysenate GBL §899-aa statute HTML Cloudflare PARKED (AG summary FOUND)",
+        "Massachusetts": "201 CMR 17.00 mass.gov 403 ACCESS_RESTRICTED"
+      }
+    },
+    "next": [
+      "Browser/manual harvest Texas HS Ch. 181 when SPA portal yields section text",
+      "Re-probe hhs.gov/hipaa when 403 clears",
+      "Harvest 201 CMR 17.00 when mass.gov accessible",
+      "Expand to PA and additional states; consolidate into canonical pack"
+    ]
+  },
+  "metrics": {
+    "federal_controls": 35,
+    "federal_status_roll": {
+      "FOUND": 34,
+      "PARKED": 1
+    },
+    "state_count": 6,
+    "state_facts": 30,
+    "state_status_roll": {
+      "FOUND": 27,
+      "REQUIRES_CONFIRMATION": 1,
+      "ACCESS_RESTRICTED": 1,
+      "PARKED": 1
+    },
+    "sources_harvested": 22,
+    "sources_parked": 5,
+    "gap_count": 5
+  },
+  "vcs_commit_draft": {
+    "subject": "R6-B: Close HIPAA parks (CMS/ASPE fallbacks), NY SHIELD via AG, +WA/FL/MA states",
+    "body": "RECAP\n- Did: Re-probe HHS (403 persists); CMS/ASPE HIPAA fallbacks; NY SHIELD via AG + breach portal fix; TX Ch.181 re-probe (SPA); add WA/FL/MA state packs\n- State: 6 states, 30 facts; NY SHIELD FOUND via AG; TX sections still ACCESS_RESTRICTED\n- Gaps: HHS 403; TX SPA; nysenate Cloudflare; MA 201 CMR 17 403\n- Next: Browser TX Ch.181; re-probe HHS; expand states\n\nCEILING: Public .gov only; gaps explicit."
+  },
+  "artifacts": [
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/hipaa_control_map_seed_v1.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/source_register.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/lane_meta.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/INDEX.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/states/texas.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/states/new_york.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/states/washington.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/states/florida.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/states/massachusetts.json",
+    "GroundTruth/Compliance/lanes/R6_healthcare_practice/dispatches/R6_B_healthcare_practice_recap.json",
+    "GroundTruth/Compliance/INDEX.json"
+  ]
+}

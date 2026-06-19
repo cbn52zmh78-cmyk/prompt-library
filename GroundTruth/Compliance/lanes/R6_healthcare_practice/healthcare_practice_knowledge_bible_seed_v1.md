@@ -1,7 +1,7 @@
 # Healthcare Practice Knowledge Bible — Seed v1 (R6)
 
 **Lane:** R6 — Healthcare Practice  
-**Variant:** 3-state seed (CA, TX, NY) + federal HIPAA control-map  
+**Variant:** 6-state seed (CA, TX, NY, WA, FL, MA) + federal HIPAA control-map (R6-B)  
 **As-of:** 2026-06-19  
 **Status:** SEED (not sellable)  
 **Citation standard:** STD-CITE-001
@@ -18,11 +18,11 @@ This seed gathers **federal HIPAA** Privacy, Security, Breach Notification, and 
 |--------|-------|
 | Cited claims | 42 |
 | Federal controls mapped | 32 (31 FOUND) |
-| States | CA, TX, NY |
-| Gaps flagged | 8 |
-| Parked sources | 6 |
+| States | CA, TX, NY, WA, FL, MA |
+| Gaps flagged | 5 |
+| Parked sources | 5 |
 
-**Honesty rule:** Gaps render as `NOT FOUND — [source checked: …]`. HHS.gov returned **HTTP 403**; eCFR used as federal primary.
+**Honesty rule:** Gaps render as `NOT FOUND — [source checked: …]`. HHS.gov still **HTTP 403** (R6-B re-probe); eCFR primary + **CMS/ASPE** fallbacks harvested.
 
 ---
 
@@ -63,9 +63,23 @@ Full control map: `hipaa_control_map_seed_v1.json`.
 
 ### New York — PHL + SHIELD
 
-- **FOUND:** [NY DOH HIPAA hub](https://www.health.ny.gov/regulations/hipaa/) and [preemption charts](https://www.health.ny.gov/regulations/hipaa/preemption_charts.htm) — state laws more stringent than HIPAA are not superseded; PHL §17/§18 prevail in documented scenarios.
-- **REQUIRES_CONFIRMATION:** GBL §899-aa (SHIELD) — nysenate.gov **PARKED** (Cloudflare).
-- **NOT FOUND:** NY AG breach reporting URL **404**.
+- **FOUND:** [NY DOH HIPAA hub](https://www.health.ny.gov/regulations/hipaa/) and [preemption charts](https://www.health.ny.gov/regulations/hipaa/preemption_charts.htm); PHL §17/§18 prevail in documented scenarios.
+- **FOUND (R6-B):** [NY AG SHIELD Act](https://www.ag.ny.gov/resources/organizations/data-breach-reporting/shield-act) — reasonable safeguards + breach notice; [AG breach portal](https://www.ag.ny.gov/resources/organizations/data-breach-reporting).
+- **PARKED:** nysenate.gov GBL §899-aa statute HTML (Cloudflare).
+
+### Washington — RCW 70.02
+
+- Written authorization required for disclosure ([§70.02.020](https://app.leg.wa.gov/RCW/default.aspx?cite=70.02.020)); authorization form requirements ([§70.02.030](https://app.leg.wa.gov/RCW/default.aspx?cite=70.02.030)); reasonable safeguards ([§70.02.150](https://app.leg.wa.gov/RCW/default.aspx?cite=70.02.150)).
+
+### Florida — Patient Records + FIPA
+
+- [§456.057](https://www.flsenate.gov/Laws/Statutes/2024/456.057) — patient access, written authorization, no marketing use, security policies.
+- [§501.171](https://www.flsenate.gov/Laws/Statutes/2024/501.171) — reasonable security; breach notice (health info in PI definition).
+
+### Massachusetts — c. 93H
+
+- **FOUND:** [c. 93H §1-§2](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXV/Chapter93H/Section1) — breach definition; safeguard regulations consistent with federal (HIPAA).
+- **REQUIRES_CONFIRMATION:** 201 CMR 17.00 (mass.gov **403**).
 
 ---
 

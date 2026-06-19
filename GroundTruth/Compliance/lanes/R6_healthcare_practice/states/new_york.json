@@ -1,15 +1,15 @@
 {
   "artifact": "healthcare_practice_state_pack",
-  "version": "1.0",
+  "version": "1.1",
   "lane": "R6",
-  "task": "R6 — Healthcare practice state privacy add-on (New York PHL + SHIELD overlay)",
+  "task": "R6-B — New York PHL + SHIELD (alternate primary via NY AG)",
   "state": "New York",
   "state_code": "NY",
   "state_slug": "new_york",
-  "generated_at": "2026-06-19T18:00:00+00:00",
+  "generated_at": "2026-06-19T20:00:00+00:00",
   "retrieved_date": "2026-06-19",
-  "disclaimer": "Operational compliance research — not legal advice. NY may impose privacy standards more stringent than HIPAA; confirm PHL and SHIELD applicability.",
-  "policy": "Public .gov sources only; gaps explicit.",
+  "disclaimer": "Operational compliance research — not legal advice. NY may impose privacy standards more stringent than HIPAA; SHIELD applies to private information beyond HIPAA PHI.",
+  "policy": "Public .gov sources only; nysenate statute text PARKED; AG official summary used as secondary for SHIELD requirements.",
   "domains": {
     "hipaa_state_overlay": {
       "domain": "hipaa_state_overlay",
@@ -34,7 +34,7 @@
         },
         {
           "fact_id": "R6-NY-DOH-002",
-          "text": "HIPAA did not supersede state laws imposing more stringent privacy standards; NY DOH states it will enforce such state laws within its purview and enforce other state laws to the extent not preempted.",
+          "text": "HIPAA did not supersede state laws imposing more stringent privacy standards; NY DOH states it will enforce such state laws within its purview.",
           "status": "FOUND",
           "citation": {
             "source": "NY DOH — HIPAA Preemption Charts",
@@ -46,7 +46,7 @@
         },
         {
           "fact_id": "R6-NY-PHL-001",
-          "text": "PHL §17 prevails over HIPAA where a provider must release medical records to another designated physician or hospital upon written patient request — treated as disclosure required by law under HIPAA.",
+          "text": "PHL §17 prevails over HIPAA where a provider must release medical records to another designated physician or hospital upon written patient request.",
           "status": "FOUND",
           "citation": {
             "source": "NY DOH — HIPAA Preemption Charts (PHL §17)",
@@ -58,7 +58,7 @@
         },
         {
           "fact_id": "R6-NY-PHL-002",
-          "text": "PHL §18 governs patient information held by health care practitioners; NY DOH preemption analysis maps scope differences vs. HIPAA designated record set (e.g., billing records, psychotherapy notes, practitioner personal notes).",
+          "text": "PHL §18 governs patient information held by health care practitioners; NY DOH preemption charts map scope differences vs. HIPAA designated record set.",
           "status": "FOUND",
           "citation": {
             "source": "NY DOH — HIPAA Preemption Charts (PHL §18)",
@@ -74,19 +74,56 @@
     },
     "data_security_breach": {
       "domain": "data_security_breach",
-      "label": "SHIELD Act / Data Security & Breach (non-HIPAA PHI)",
-      "status": "REQUIRES_CONFIRMATION",
+      "label": "SHIELD Act (GBL §899-aa) — Data Security & Breach",
+      "status": "FOUND",
       "regulator": {
-        "agency": "NY DFS / NY AG (context-dependent)",
-        "url": "https://www.dfs.ny.gov/industry_guidance/cybersecurity"
+        "agency": "NY Attorney General — Data Breach Reporting / SHIELD Act",
+        "url": "https://www.ag.ny.gov/resources/organizations/data-breach-reporting/shield-act"
       },
       "cited_facts": [
         {
           "fact_id": "R6-NY-SHIELD-001",
-          "text": "REQUIRES_CONFIRMATION — N.Y. Gen. Bus. Law §899-aa (SHIELD Act) statute text NOT FOUND at harvest (nysenate.gov Cloudflare PARKED). DFS cybersecurity hub live (HTTP 200) but sparse harvest; confirm reasonable safeguards and breach notification obligations via alternate primary source.",
-          "status": "REQUIRES_CONFIRMATION",
+          "text": "SHIELD Act requires businesses maintaining private information to develop, implement, and maintain reasonable administrative, technical, and physical safeguards for security, confidentiality, and integrity.",
+          "status": "FOUND",
           "citation": {
-            "source": "N.Y. Gen. Bus. Law §899-aa (SHIELD Act)",
+            "source": "NY AG — SHIELD Act (GBL §899-aa summary)",
+            "url": "https://www.ag.ny.gov/resources/organizations/data-breach-reporting/shield-act",
+            "jurisdiction": "New York",
+            "tier": "agency_secondary",
+            "retrieved_date": "2026-06-19",
+            "statute_ref": "N.Y. Gen. Bus. Law §899-aa"
+          }
+        },
+        {
+          "fact_id": "R6-NY-SHIELD-002",
+          "text": "SHIELD expands breach definition to unauthorized 'access' (not only acquisition); expands private information to include biometric data, username/email with password, and related credentials.",
+          "status": "FOUND",
+          "citation": {
+            "source": "NY AG — SHIELD Act",
+            "url": "https://www.ag.ny.gov/resources/organizations/data-breach-reporting/shield-act",
+            "jurisdiction": "New York",
+            "tier": "agency_secondary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-NY-SHIELD-003",
+          "text": "On breach affecting private information, businesses must notify affected consumers and the NY AG, Department of State, and State Police; AG breach portal submission satisfies multi-agency notice.",
+          "status": "FOUND",
+          "citation": {
+            "source": "NY AG — Report a Data Breach",
+            "url": "https://www.ag.ny.gov/resources/organizations/data-breach-reporting",
+            "jurisdiction": "New York",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-NY-SHIELD-004",
+          "text": "PARKED — nysenate.gov GBL §899-aa statute text remains Cloudflare-blocked; requirements sourced from NY AG official SHIELD summary and DFS FAQ cross-reference to §899-aa.",
+          "status": "PARKED",
+          "citation": {
+            "source": "N.Y. Gen. Bus. Law §899-aa (statute text)",
             "url": "https://www.nysenate.gov/legislation/laws/GBM/899-AA",
             "jurisdiction": "New York",
             "tier": "statute_primary",
@@ -94,36 +131,22 @@
             "harvest_status": "PARKED"
           },
           "source_checked": "https://www.nysenate.gov/legislation/laws/GBM/899-AA"
-        },
-        {
-          "fact_id": "R6-NY-SHIELD-002",
-          "text": "NOT FOUND — NY Attorney General data breach reporting page returned HTTP 404 [source checked: ag.ny.gov/internet/data-breach-reporting].",
-          "status": "NOT FOUND",
-          "citation": {
-            "source": "NY AG — Data breach reporting",
-            "url": "https://ag.ny.gov/internet/data-breach-reporting",
-            "jurisdiction": "New York",
-            "tier": "agency_secondary",
-            "retrieved_date": "2026-06-19",
-            "http_status": 404
-          },
-          "source_checked": "https://ag.ny.gov/internet/data-breach-reporting"
         }
       ],
-      "fact_count": 2,
+      "fact_count": 4,
       "gap": {
-        "status": "REQUIRES_CONFIRMATION",
-        "message": "SHIELD Act primary statute and AG breach portal not harvestable; medical practices with HIPAA-covered PHI may have parallel obligations for non-covered data elements.",
-        "note": "23 NYCRR Part 500 (DFS) applies to covered financial entities — not a universal medical-practice baseline."
+        "status": "PARTIAL",
+        "message": "SHIELD requirements FOUND via NY AG; primary statute HTML on nysenate.gov remains PARKED.",
+        "note": "23 NYCRR Part 500 (DFS) applies to covered financial entities — parallel but not universal medical-practice baseline."
       }
     }
   },
   "status_roll": {
-    "FOUND": 4,
-    "REQUIRES_CONFIRMATION": 1,
-    "NOT FOUND": 1,
+    "FOUND": 7,
+    "REQUIRES_CONFIRMATION": 0,
+    "NOT FOUND": 0,
     "ACCESS_RESTRICTED": 0,
     "PARKED": 1
   },
-  "total_facts": 6
+  "total_facts": 8
 }

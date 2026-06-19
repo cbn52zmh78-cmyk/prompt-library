@@ -1,0 +1,97 @@
+{
+  "artifact": "healthcare_practice_state_pack",
+  "version": "1.0",
+  "lane": "R6",
+  "task": "R6-B — Healthcare practice state privacy add-on (Washington RCW 70.02)",
+  "state": "Washington",
+  "state_code": "WA",
+  "state_slug": "washington",
+  "generated_at": "2026-06-19T20:00:00+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research — not legal advice. RCW 70.02 may impose requirements beyond HIPAA.",
+  "policy": "Public statute sources only; gaps explicit.",
+  "domains": {
+    "medical_records_privacy": {
+      "domain": "medical_records_privacy",
+      "label": "RCW 70.02 — Health Care Information Access and Disclosure",
+      "statute": "RCW Chapter 70.02",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Washington State Legislature — RCW 70.02",
+        "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=70.02&full=true"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-WA-HCI-001",
+          "text": "Except as authorized elsewhere in chapter 70.02, a health care provider may not disclose health care information about a patient without the patient's written authorization.",
+          "status": "FOUND",
+          "citation": {
+            "source": "RCW 70.02.020(1)",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=70.02.020",
+            "jurisdiction": "Washington",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-WA-HCI-002",
+          "text": "A valid disclosure authorization must be in writing, dated, signed, identify the information and recipients, identify the provider, identify the patient, and contain an expiration date or event.",
+          "status": "FOUND",
+          "citation": {
+            "source": "RCW 70.02.030(3)",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=70.02.030",
+            "jurisdiction": "Washington",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-WA-HCI-003",
+          "text": "Authorizations permitting disclosure to a financial institution or employer for non-payment purposes expire one year after signing unless renewed.",
+          "status": "FOUND",
+          "citation": {
+            "source": "RCW 70.02.030(6)",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=70.02.030",
+            "jurisdiction": "Washington",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-WA-HCI-004",
+          "text": "A health care provider shall effect reasonable safeguards for the security of all health care information it maintains.",
+          "status": "FOUND",
+          "citation": {
+            "source": "RCW 70.02.150",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=70.02.150",
+            "jurisdiction": "Washington",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-WA-HCI-005",
+          "text": "Persons receiving health care information for health care operations may not use or disclose it in a manner that would violate chapter 70.02 if performed by the provider; providers may terminate contracts if a pattern of violation is not cured.",
+          "status": "FOUND",
+          "citation": {
+            "source": "RCW 70.02.270",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=70.02.270",
+            "jurisdiction": "Washington",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gap": null
+    }
+  },
+  "status_roll": {
+    "FOUND": 5,
+    "REQUIRES_CONFIRMATION": 0,
+    "NOT FOUND": 0,
+    "ACCESS_RESTRICTED": 0,
+    "PARKED": 0
+  },
+  "total_facts": 5
+}

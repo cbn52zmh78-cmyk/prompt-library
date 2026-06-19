@@ -1,0 +1,123 @@
+{
+  "artifact": "healthcare_practice_state_pack",
+  "version": "1.0",
+  "lane": "R6",
+  "task": "R6-B — Healthcare practice state privacy add-on (Florida patient records + FIPA)",
+  "state": "Florida",
+  "state_code": "FL",
+  "state_slug": "florida",
+  "generated_at": "2026-06-19T20:00:00+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research — not legal advice. Florida patient-record and data-security rules may exceed HIPAA for certain facts.",
+  "policy": "Public statute sources only; gaps explicit.",
+  "domains": {
+    "patient_records": {
+      "domain": "patient_records",
+      "label": "F.S. 456.057 — Patient Records Ownership & Disclosure",
+      "statute": "Fla. Stat. §456.057",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Florida Senate — Statutes",
+        "url": "https://www.flsenate.gov/Laws/Statutes/2024/456.057"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-FL-PR-001",
+          "text": "Health care practitioners must furnish copies of reports and records relating to examination or treatment upon request of the patient or legal representative, without conditioning on payment of service fees.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Fla. Stat. §456.057(6)",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2024/456.057",
+            "jurisdiction": "Florida",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-FL-PR-002",
+          "text": "Records may not be furnished to persons other than the patient, legal representative, or other treating practitioners except upon written patient authorization, subject to listed exceptions (subpoena, fraud investigation, etc.).",
+          "status": "FOUND",
+          "citation": {
+            "source": "Fla. Stat. §456.057(7)(a)",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2024/456.057",
+            "jurisdiction": "Florida",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-FL-PR-003",
+          "text": "Absent specific written release, use of patient information for solicitation or marketing the sale of goods or services is prohibited.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Fla. Stat. §456.057(7)(b)",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2024/456.057",
+            "jurisdiction": "Florida",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-FL-PR-004",
+          "text": "Records owners must develop and implement policies to protect confidentiality and security of medical records; employees must be trained; disclosure logs must be maintained.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Fla. Stat. §456.057(10)-(11)",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2024/456.057",
+            "jurisdiction": "Florida",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 4,
+      "gap": null
+    },
+    "data_security_breach": {
+      "domain": "data_security_breach",
+      "label": "F.S. 501.171 — Florida Information Protection Act (health info in PI)",
+      "statute": "Fla. Stat. §501.171",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Florida Senate — Statutes / FL Department of Legal Affairs",
+        "url": "https://www.flsenate.gov/Laws/Statutes/2024/501.171"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-FL-FIPA-001",
+          "text": "Covered entities must take reasonable measures to protect and secure electronic data containing personal information; 'personal information' includes medical history, condition, treatment, diagnosis, and health insurance identifiers.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Fla. Stat. §501.171(1)(g), (2)",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2024/501.171",
+            "jurisdiction": "Florida",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-FL-FIPA-002",
+          "text": "Breach affecting 500+ Florida individuals: notify Department of Legal Affairs within 30 days; notify affected individuals within 30 days unless law enforcement delay or documented low-risk determination.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Fla. Stat. §501.171(3)-(4)",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2024/501.171",
+            "jurisdiction": "Florida",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 2,
+      "gap": null
+    }
+  },
+  "status_roll": {
+    "FOUND": 6,
+    "REQUIRES_CONFIRMATION": 0,
+    "NOT FOUND": 0,
+    "ACCESS_RESTRICTED": 0,
+    "PARKED": 0
+  },
+  "total_facts": 6
+}
