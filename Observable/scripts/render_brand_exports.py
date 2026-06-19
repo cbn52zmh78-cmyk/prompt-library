@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
-"""Observable brand export renderer — task #180.
+"""Observable brand export renderer — task #180 / intro sting #197.
 
 Generates wordmark PNG, monogram avatar, YouTube banner, channel avatar,
-and template plates from asset_specs.json + Julian-001 casting plate.
+4s intro sting MP4, and template plates from asset_specs.json + Julian-001.
 
 Usage:
     python Observable/scripts/render_brand_exports.py
     python Observable/scripts/render_brand_exports.py --only wordmark banner avatar
+    python Observable/scripts/render_brand_exports.py --only intro_sting
 """
 from __future__ import annotations
 
 import argparse
 import json
+import subprocess
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -242,10 +245,108 @@ def render_end_card(kind: str) -> Path:
     return out
 
 
+def _lerp(a: float, b: float, t: float) -> float:
+    return a + (b - a) * max(0.0, min(1.0, t))
+
+
+def _fade_alpha(frame_i: int, fps: int, start_s: float, end_s: float) -> float:
+    t = frame_i / fps
+    if t < start_s:
+        return 0.0
+    if t >= end_s:
+        return 1.0
+    return (t - start_s) / max(end_s - start_s, 1e-6)
+
+
+def render_intro_sting() -> Path:
+    """4s 1080p bumper — obs-bg fade → seamless neutral + Julian → wordmark."""
+    from PIL import Image, ImageDraw, ImageEnhance
+
+    out = EXPORT / "intro_sting_4s_1080p.mp4"
+    w, h = 1920, 1080
+    fps = 24
+    duration_s = 4.0
+    total_frames = int(duration_s * fps)
+    fonts = _fonts()
+    bg = _rgb("obs-bg")
+    seamless_top = _rgb("obs-seamless")
+    seamless_bot = _rgb("obs-bg")
+    title_c = _rgb("obs-title")
+    body_c = _rgb("obs-body")
+
+    wm_path = render_wordmark_png()
+    wordmark = Image.open(wm_path).convert("RGBA")
+
+    with tempfile.TemporaryDirectory(prefix="obs_intro_") as tmp:
+        tmp_dir = Path(tmp)
+        for i in range(total_frames):
+            t = i / fps
+            img = Image.new("RGB", (w, h), bg)
+
+            # 0.0–0.5 s: obs-bg hold; 0.5–3.0 s: seamless neutral wide + Julian
+            host_alpha = _fade_alpha(i, fps, 0.35, 0.55)
+            if host_alpha > 0:
+                wide = _gradient_vertical((w, h), "obs-seamless", "obs-bg")
+                img = wide.copy()
+                if CASTING.is_file():
+                    _paste_chest_up(img, CASTING, (w // 2 - 280, 120, 560, 840))
+                    img = ImageEnhance.Brightness(img).enhance(0.98)
+                overlay = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+                if t < 0.5:
+                    fade = int(255 * (1.0 - t / 0.5))
+                    overlay = Image.new("RGBA", (w, h), (*bg, fade))
+                img = img.convert("RGBA")
+                img = Image.alpha_composite(img, overlay).convert("RGB")
+                if t < 0.5:
+                    bg_layer = Image.new("RGB", (w, h), bg)
+                    blend = _lerp(1.0, 0.0, t / 0.5)
+                    img = Image.blend(bg_layer, img, 1.0 - blend)
+
+            # 3.0–4.0 s: wordmark + tagline on obs-bg
+            end_alpha = _fade_alpha(i, fps, 3.0, 3.25)
+            if end_alpha > 0:
+                end_card = Image.new("RGB", (w, h), bg)
+                draw = ImageDraw.Draw(end_card)
+                wm = wordmark.resize((900, 225), Image.Resampling.LANCZOS)
+                end_card.paste(wm, ((w - 900) // 2, 360), wm)
+                draw.text((w // 2, 640), "Evidence before wonder.", fill=body_c, font=fonts["tagline"], anchor="mm")
+                if host_alpha > 0 and end_alpha < 1.0:
+                    img = Image.blend(img, end_card, end_alpha)
+                else:
+                    img = end_card
+
+            img.save(tmp_dir / f"frame_{i:04d}.png")
+
+        import imageio_ffmpeg
+
+        ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
+        proc = subprocess.run(
+            [
+                ffmpeg, "-y",
+                "-framerate", str(fps),
+                "-i", str(tmp_dir / "frame_%04d.png"),
+                "-c:v", "libx264",
+                "-pix_fmt", "yuv420p",
+                "-movflags", "+faststart",
+                "-t", str(duration_s),
+                str(out),
+            ],
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+        )
+        if proc.returncode != 0:
+            raise RuntimeError(f"intro sting encode failed: {proc.stderr[-800:]}")
+
+    return out
+
+
 RENDERERS = {
     "wordmark": lambda: (render_wordmark_png(), render_monogram()),
     "avatar": render_channel_avatar,
     "banner": render_banner,
+    "intro_sting": render_intro_sting,
     "lower_third": render_lower_third,
     "end_closing": lambda: render_end_card("closing"),
     "end_sources": lambda: render_end_card("sources"),
