@@ -53,9 +53,9 @@ TESTS = [
         ),
     },
     {
-        "id": "TEST_HISTFIG_POST1900_YELLOW",
-        "expected_verdict": "YELLOW",
-        "expected_histfig_status": "CAUTION",
+        "id": "TEST_HISTFIG_POST1900_BLOCKED",
+        "expected_verdict": "RED",
+        "expected_histfig_status": "BLOCKED",
         "text": (
             _BASE
             + "Historical figure: Vladimir Lenin\n"

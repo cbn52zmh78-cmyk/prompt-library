@@ -1,0 +1,242 @@
+{
+  "slug": "science_star_lifecycle_v1",
+  "title": "Observable — Life & Death of a Star",
+  "format_id": "science-explainer",
+  "target_seconds": 54,
+  "intake": {
+    "format_id": "science-explainer",
+    "actor_id": "Julian-001",
+    "set_id": "@Set-Seamless-Neutral-001",
+    "style_id": "@Style-Cool-Clinical-001",
+    "source": "STUDIO/Pipeline/production_intake.py",
+    "gate_0": {
+      "version": "1.3",
+      "verdict": "YELLOW",
+      "blocked": false,
+      "requires_human_signoff": true,
+      "human_signoff": true,
+      "target_rating": "PG",
+      "channels": [
+        "social",
+        "streaming"
+      ],
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_star_lifecycle_v1_20260618_235648.json",
+      "checklist_domains": {
+        "row_1_synthetic_ownership": "MANUAL",
+        "row_2_music_sync": "PASS",
+        "row_3_no_real_likeness": "MANUAL",
+        "row_4_target_channel": "PASS",
+        "row_5_age_documentation": "N/A",
+        "row_6_ai_disclosure": "PASS"
+      },
+      "hard_stops": [],
+      "counsel_flags": [],
+      "distribution_flags": [],
+      "warnings": [
+        "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
+      ],
+      "rating_flags": [],
+      "cara_status": "COMPLIANT",
+      "music_bed_id": "BED-DOC-001",
+      "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
+      "row_2_music_sync": "PASS",
+      "notes": [
+        "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
+        "Social = mass dissemination. Platform AI-label + community guidelines apply.",
+        "Row 2: Manifest-cleared music bed(s): BED-DOC-001 (STUDIO/Music_Sound/clearance_manifest.json)",
+        "Science Gate: illustrative-not-simulation policy applies.",
+        "Revise and re-submit to Legal Gate (Gate 0)."
+      ],
+      "brief_source": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Pipeline\\Concepts\\astro_mini_slate\\science_star_lifecycle_v1_brief.txt"
+    },
+    "libraries": {
+      "formats": "Production_Templates_v1.json (#98)",
+      "sets": "Set_Library_v1.json (#99)",
+      "styles": "Style_Library_v1.json (#99)",
+      "casting": "Casting_Bible/registry/casting_registry.json"
+    },
+    "science_subject": {
+      "subject_id": "STAR-LIFE-001",
+      "domain": "Astrophysics — Stellar Evolution",
+      "phenomenon": "Life & Death of a Star",
+      "key_measurement": "Chandrasekhar limit ~1.4 M☉ (white dwarf); iron-core collapse triggers Type II supernova",
+      "visualization_ref": null,
+      "visualization_prompt": "scientific visualization stellar evolution sequence, protostar in molecular cloud, main-sequence star, red giant envelope expansion, planetary nebula or core-collapse supernova branch by mass, NOT TO SCALE time-compressed, 16:9 documentary fidelity",
+      "institutions": [
+        "NASA",
+        "ESA",
+        "Hubble Space Telescope"
+      ],
+      "sources": [
+        {
+          "citation": "NASA Science — Stars: Life and Death (stellar evolution stages, mass-dependent endpoints)",
+          "url": "https://science.nasa.gov/universe/stars/",
+          "type": "secondary",
+          "notes": "Authoritative public synthesis of stellar lifecycle"
+        },
+        {
+          "citation": "ESA/Hubble — Stellar evolution and star formation (HR diagram, main sequence, giants)",
+          "url": "https://esahubble.org/science/stars/",
+          "type": "secondary",
+          "notes": "Observational context for populations and nebulae"
+        },
+        {
+          "citation": "Chandrasekhar, S., The Maximum Mass of Ideal White Dwarfs, ApJ 74, 81 (1931)",
+          "url": "https://ui.adsabs.harvard.edu/abs/1931ApJ....74...81C",
+          "type": "primary",
+          "notes": "Theoretical mass limit for white dwarf stability"
+        }
+      ]
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "voice_suffix": "clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only",
+    "use_identity_lock": false,
+    "avatar_reference": "STUDIO/Cast/actors_roster/male/north_america/Julian_Cross/01_casting_shots/casting_turnaround_v1.jpg",
+    "set_reference": "STUDIO/Pipeline/references/seamless_neutral_grey_reference.jpg",
+    "seamless": {
+      "primary": "extend",
+      "xfade_s": 0.2,
+      "match_color": true,
+      "cut_on_motion": true
+    },
+    "music_bed": {
+      "track_id": "BED-DOC-001",
+      "manifest": "STUDIO/Music_Sound/clearance_manifest.json"
+    }
+  },
+  "shots": [
+    {
+      "id": "01_hook",
+      "duration": 7,
+      "t_start": 0,
+      "t_end": 7,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter addresses camera on seamless neutral, crisp science hook. Camera: locked medium, direct address. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Every atom of iron in your blood was forged inside a star that lived, burned, and died long before Earth existed.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Every atom of iron in your blood was forged inside a star that lived, burned, and died long before Earth existed.",
+      "on_screen": "Observable · Life & Death of a Star"
+    },
+    {
+      "id": "02_phenomenon",
+      "duration": 9,
+      "t_start": 7,
+      "t_end": 16,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter explains the phenomenon plainly, motivated gesture, clinical lighting. Camera: slow push-in medium. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Stars begin as dense knots in cold gas clouds. Gravity pulls hydrogen together until fusion ignites — a main-sequence star. Mass is destiny: Sun-like stars swell into red giants; the most massive stars race through fusion stages in millions of years.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Stars begin as dense knots in cold gas clouds. Gravity pulls hydrogen together until fusion ignites — a main-sequence star. Mass is destiny: Sun-like stars swell into red giants; the most massive stars race through fusion stages in millions of years."
+    },
+    {
+      "id": "03_how_we_know",
+      "duration": 9,
+      "t_start": 16,
+      "t_end": 25,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter cites measurement, experiment, or observation chain — evidence-forward tone. Camera: medium — gesture to evidence. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"We read stellar ages and compositions in spectra — the fingerprint of elements made in the core. Hubble and ground telescopes watch star-forming nebulae today. Supernova SN nineteen eighty-seven A showed, in real time, what theory predicted for a collapsing massive star.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "We read stellar ages and compositions in spectra — the fingerprint of elements made in the core. Hubble and ground telescopes watch star-forming nebulae today. Supernova SN nineteen eighty-seven A showed, in real time, what theory predicted for a collapsing massive star."
+    },
+    {
+      "id": "04_visualization_payoff",
+      "duration": 10,
+      "t_start": 25,
+      "t_end": 35,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter narrates over locked @2 science visualization — see attached render for phenomenon geometry; accurate color, on-screen NOT TO SCALE when illustrative. Camera: locked medium beside or over @2 visualization plate. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"This time-compressed model walks one star from nursery to remnant — white dwarf, neutron star, or black hole depending on mass. Billions of years, seconds on screen — a simulation, not a single observed timeline.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "This time-compressed model walks one star from nursery to remnant — white dwarf, neutron star, or black hole depending on mass. Billions of years, seconds on screen — a simulation, not a single observed timeline.",
+      "on_screen_labels": [
+        "SCIENCE VISUALIZATION",
+        "MODEL",
+        "NOT TO SCALE"
+      ],
+      "reference_slots": {
+        "@2": "visualization"
+      },
+      "science_subject_ref": "STAR-LIFE-001",
+      "visualization_prompt": "stellar evolution montage: molecular cloud collapse, main-sequence G-type star, red giant with concentric shells, Type II supernova flash and expanding remnant, labeled mass branches, documentary astrophysics fidelity"
+    },
+    {
+      "id": "05_significance",
+      "duration": 9,
+      "t_start": 35,
+      "t_end": 44,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter lands significance — real-world stakes or deeper insight; end on gesture peak. Camera: warm medium-close, inviting settle. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"When massive stars explode, they seed the galaxy with heavy elements — the raw material for planets and life. Stars are not background lights. They are the universe's chemical factories.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "When massive stars explode, they seed the galaxy with heavy elements — the raw material for planets and life. Stars are not background lights. They are the universe's chemical factories."
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 6,
+    "card_type": "sources",
+    "title": "Sources — Life & Death of a Star",
+    "subtitle": "Astrophysics — Stellar Evolution",
+    "footer": "NASA Science — Stars: Life and Death (stellar evolution stages, mass-… · ESA/Hubble — Stellar evolution and star formation (HR diagram, main s… · Chandrasekhar, S., The Maximum Mass of Ideal White Dwarfs, ApJ 74, 81…",
+    "lines": [
+      "SUBJECT: Life & Death of a Star (STAR-LIFE-001)",
+      "EVIDENCE: Stellar spectroscopy; SN 1987A; Chandrasekhar limit theory",
+      "VIZ: Time-compressed stellar evolution model — NOT TO SCALE"
+    ],
+    "sources": [
+      {
+        "citation": "NASA Science — Stars: Life and Death (stellar evolution stages, mass-dependent endpoints)",
+        "url": "https://science.nasa.gov/universe/stars/",
+        "type": "secondary",
+        "notes": "Authoritative public synthesis of stellar lifecycle"
+      },
+      {
+        "citation": "ESA/Hubble — Stellar evolution and star formation (HR diagram, main sequence, giants)",
+        "url": "https://esahubble.org/science/stars/",
+        "type": "secondary",
+        "notes": "Observational context for populations and nebulae"
+      },
+      {
+        "citation": "Chandrasekhar, S., The Maximum Mass of Ideal White Dwarfs, ApJ 74, 81 (1931)",
+        "url": "https://ui.adsabs.harvard.edu/abs/1931ApJ....74...81C",
+        "type": "primary",
+        "notes": "Theoretical mass limit for white dwarf stability"
+      }
+    ],
+    "science_subject_id": "STAR-LIFE-001"
+  },
+  "qa_rules": {
+    "require_identity_lock": false,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": false,
+    "min_shots": 5
+  },
+  "production_meta": {
+    "set_id": "@Set-Seamless-Neutral-001",
+    "style_id": "@Style-Cool-Clinical-001",
+    "identity_anchor": "@Julian-001",
+    "pacing": {
+      "words_per_second": 2.6,
+      "beat_gap_s": 0.35,
+      "register": "clear science communication, wonder without hype",
+      "pause_on": [
+        "measurement beats",
+        "visualization reveals",
+        "significance landings"
+      ]
+    },
+    "camera": {
+      "primary": "locked medium on seamless neutral — presenter direct to camera",
+      "secondary": "full-frame @2 science visualization payoff",
+      "forbidden": [
+        "handheld jitter",
+        "beauty-filter smoothing",
+        "misleading scale without label"
+      ]
+    },
+    "target_rating": "PG",
+    "science_subject": {
+      "subject_id": "STAR-LIFE-001",
+      "domain": "Astrophysics — Stellar Evolution",
+      "phenomenon": "Life & Death of a Star",
+      "key_measurement": "Chandrasekhar limit ~1.4 M☉ (white dwarf); iron-core collapse triggers Type II supernova",
+      "source_count": 3,
+      "has_visualization_ref": false
+    }
+  }
+}

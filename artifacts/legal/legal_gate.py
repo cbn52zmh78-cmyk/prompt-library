@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Legal Gate v1.4 — Producer Hard Stop (aligned to Gate_0_Checklist.md v1.1)
+Legal Gate v1.5 — Producer Hard Stop (aligned to Gate_0_Checklist.md v1.1)
 
 Gate 0: FIRST action on every scene, video, brief, or client ask.
 
@@ -29,6 +29,7 @@ ensure_paths()
 from lib.studio_paths import producers_path, studio_path
 from historical_figure_gate import evaluate_historical_figure_gate  # noqa: E402
 from music_clearance import music_row2_status  # noqa: E402
+from science_gate import evaluate_science_gate  # noqa: E402
 
 VALID_RATINGS = ("G", "PG", "PG-13", "R")
 VALID_CHANNELS = ("social", "streaming", "theatrical", "festival", "client")
@@ -177,6 +178,7 @@ class GateResult:
     notes: list[str] = field(default_factory=list)
     checklist_domains: dict[str, str] = field(default_factory=dict)
     historical_figure_gate: dict = field(default_factory=dict)
+    science_gate: dict = field(default_factory=dict)
 
     def blocked(self) -> bool:
         return self.verdict == "RED"
@@ -196,6 +198,7 @@ class GateResult:
             "notes": self.notes,
             "checklist_domains": self.checklist_domains,
             "historical_figure_gate": self.historical_figure_gate,
+            "science_gate": self.science_gate,
             "timestamp": datetime.now().isoformat(),
         }
 
@@ -434,13 +437,21 @@ class LegalGate:
                     "Numerical performer age not stated — required per Age Policy + Intimacy Protocol v1.3"
                 )
 
-        # ── Historical Figure Gate (safety spine #147) ───────────────────
+        # ── Historical Figure Gate (safety spine #147 / #154) ─────────────
         hist = evaluate_historical_figure_gate(text)
         result.historical_figure_gate = hist.to_dict()
         if hist.applies:
             result.hard_stops.extend(hist.hard_stops)
             result.warnings.extend(hist.warnings)
             result.notes.extend(hist.notes)
+
+        # ── Science Gate (illustrative-not-simulation #154) ───────────────
+        sci = evaluate_science_gate(text)
+        result.science_gate = sci.to_dict()
+        if sci.applies:
+            result.hard_stops.extend(sci.hard_stops)
+            result.warnings.extend(sci.warnings)
+            result.notes.extend(sci.notes)
 
         # ── Verdict ───────────────────────────────────────────────────────
         if result.hard_stops:
@@ -501,7 +512,7 @@ class LegalGate:
             lines.extend(f"- {x}" for x in result.warnings)
             lines.append("")
         if result.historical_figure_gate.get("applies"):
-            lines.append("## Historical Figure Gate (#147)")
+            lines.append("## Historical Figure Gate (#147 / #154)")
             hfg = result.historical_figure_gate
             lines.append(f"- **status:** {hfg.get('status')}")
             if hfg.get("death_year") is not None:
@@ -510,6 +521,16 @@ class LegalGate:
                 lines.append(f"- 🛑 {msg}")
             for msg in hfg.get("warnings", []):
                 lines.append(f"- ⚠️ {msg}")
+            lines.append("")
+        if result.science_gate.get("applies"):
+            lines.append("## Science Gate (#154)")
+            sg = result.science_gate
+            lines.append(f"- **status:** {sg.get('status')}")
+            for msg in sg.get("overclaims", []):
+                lines.append(f"- ⚠️ {msg}")
+            for msg in sg.get("warnings", []):
+                if msg not in sg.get("overclaims", []):
+                    lines.append(f"- ⚠️ {msg}")
             lines.append("")
         if result.checklist_domains:
             lines.append("## Checklist Domains (Gate 0 v1.1)")
@@ -534,7 +555,7 @@ def main() -> int:
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="Legal Gate v1.4 — Gate 0: AI + mass dissemination + historical figure spine (RUN FIRST)"
+        description="Legal Gate v1.5 — Gate 0: AI + dissemination + history + science spines (RUN FIRST)"
     )
     parser.add_argument("--project", required=True, help="Project / slate ID")
     parser.add_argument("--text", help="Inline brief, prompt, or scene description")

@@ -1,0 +1,129 @@
+{
+  "slug": "david_black_hole_science_proof_v1",
+  "title": "DAVID — Black Hole Shadow Science Proof (M87*, EHT 2019)",
+  "format_id": "science-explainer",
+  "target_seconds": 27,
+  "concept": "480p marquee science proof — narration + honesty labels + NASA/EHT sources card",
+  "brand": {
+    "title": "DAVID · Science"
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "output_filename": "david_black_hole_science_proof_480p_v1.mp4",
+    "voice_suffix": "measured clear science narration voice, mid-low resonant precise diction, wonder without hype, documentary trust, accessible never stuffy, synthetic host only",
+    "voice_recommendation": {
+      "primary": "clear enthusiastic science communicator voice, precise but accessible diction, wonder without hype, synthetic presenter only",
+      "primary_source": "Production_Templates_v1.json → science-explainer",
+      "david_lane": "measured clear science narration voice, mid-low resonant precise diction, wonder without hype, documentary trust, accessible never stuffy, synthetic host only",
+      "rationale": "Primary rec matches Julian science-explainer lane (cool-clinical, wonder without hype). DAVID lane keeps Archive gravitas while adopting science register."
+    },
+    "identity_lock": "productions/host_identity_v1/david_identity_lock.json",
+    "avatar_reference": "productions/host_identity_v1/references/david_avatar_reference.jpg"
+  },
+  "science_subject": {
+    "subject_id": "m87-black-hole-shadow",
+    "domain": "astrophysics",
+    "phenomenon": "Black hole shadow (M87*)",
+    "key_measurement": "Event Horizon Telescope — first horizon-scale image, 10 April 2019",
+    "principle_set": "astrophysics_fidelity",
+    "framework": "Domain_Specific_Visualization_Principles_Framework v1.0",
+    "sources": [
+      {
+        "citation": "Event Horizon Telescope Collaboration, ApJL 875:L1 (2019) — First M87* Event Horizon Telescope Results",
+        "type": "primary",
+        "url": "https://iopscience.iop.org/article/10.3847/2041-8213/ab0ec7"
+      },
+      {
+        "citation": "NASA — Black Holes (science.nasa.gov/universe/black-holes)",
+        "type": "secondary",
+        "url": "https://science.nasa.gov/universe/black-holes/"
+      },
+      {
+        "citation": "EHT Collaboration — eventhorizontelescope.org image gallery",
+        "type": "primary",
+        "url": "https://eventhorizontelescope.org/"
+      }
+    ]
+  },
+  "shots": [
+    {
+      "id": "01_hook",
+      "duration": 10,
+      "t_start": 0,
+      "t_end": 10,
+      "role": "host",
+      "use_avatar": true,
+      "speech_text": "What does a black hole actually look like? Not a hole you could fall through — a shadow, smaller than the event horizon itself.",
+      "on_screen": "Black hole shadow · M87*",
+      "on_screen_labels": [
+        "HOW WE KNOW"
+      ],
+      "overlay_detail": "EHT 2019",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line. The Archive host speaks directly to camera with measured clear science narration voice, lip-synced, delivering: \"What does a black hole actually look like? Not a hole you could fall through — a shadow, smaller than the event horizon itself.\" Wonder without hype, precise accessible diction, documentary trust. Medium shot, warm brass lamp 3200K. synthetic host only."
+    },
+    {
+      "id": "02_how_we_know",
+      "duration": 6,
+      "t_start": 10,
+      "t_end": 16,
+      "role": "host",
+      "use_avatar": true,
+      "speech_text": "In 2019, the Event Horizon Telescope linked radio dishes worldwide and photographed the shadow of M87's supermassive black hole.",
+      "on_screen": "Event Horizon Telescope · April 2019",
+      "on_screen_labels": [
+        "MEASUREMENT",
+        "HOW WE KNOW"
+      ],
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp. Host explains evidence-forward, lip-synced: \"In 2019, the Event Horizon Telescope linked radio dishes worldwide and photographed the shadow of M87's supermassive black hole.\" Measured clear science narration voice, gesture toward evidence, medium shot. synthetic host only."
+    },
+    {
+      "id": "03_viz_payoff",
+      "duration": 6,
+      "t_start": 16,
+      "t_end": 22,
+      "role": "visualization",
+      "use_avatar": true,
+      "speech_text": "An illustrative render: a dark central shadow, a thin glowing accretion disk, and starlight bent around it — the geometry Einstein predicted.",
+      "on_screen": "Illustrative Kerr shadow + accretion disk",
+      "on_screen_labels": [
+        "ILLUSTRATIVE",
+        "NOT TO SCALE"
+      ],
+      "overlay_detail": "astrophysics_fidelity",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk. Full-frame photorealistic scientific visualization on a large display behind the host: supermassive black hole with dark central shadow (no solid surface), thin relativistic accretion disk temperature gradient inner blue-white outer orange-red, Doppler beaming on inclined disk, gravitational lensing of background starfield, subtle Einstein ring, no luminous sphere, no waterfall accretion. Host narrates to camera lip-synced: \"An illustrative render: a dark central shadow, a thin glowing accretion disk, and starlight bent around it — the geometry Einstein predicted.\" Measured clear science narration voice. Medium shot, viz dominates frame. synthetic host only."
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 5,
+    "card_type": "sources",
+    "title": "Sources — Black hole shadow (M87*)",
+    "subtitle": "astrophysics · EHT + NASA",
+    "footer": "illustrative visualization · sources on file — DAVID Science",
+    "sources": [
+      {
+        "citation": "Event Horizon Telescope Collaboration, ApJL 875:L1 (2019) — First M87* Event Horizon Telescope Results",
+        "type": "primary"
+      },
+      {
+        "citation": "NASA — Black Holes (science.nasa.gov/universe/black-holes)",
+        "type": "secondary"
+      },
+      {
+        "citation": "EHT Collaboration — eventhorizontelescope.org",
+        "type": "primary"
+      }
+    ]
+  },
+  "qa_rules": {
+    "require_identity_lock": true,
+    "require_synthetic_guard": true,
+    "require_illustrative_labels": true,
+    "require_overlay_burn": true,
+    "min_shots": 3,
+    "duration_lo_s": 20,
+    "duration_hi_s": 32
+  }
+}

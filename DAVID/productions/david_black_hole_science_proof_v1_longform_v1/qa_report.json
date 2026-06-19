@@ -1,0 +1,72 @@
+{
+  "slug": "david_black_hole_science_proof_v1",
+  "qa_at": "2026-06-19T04:59:38.965556+00:00",
+  "pass": true,
+  "passes": [
+    "host identity lock LOADED (@David-001)",
+    "science proof shots: 3",
+    "03_viz_payoff: ILLUSTRATIVE label present",
+    "03_viz_payoff: NOT TO SCALE label present",
+    "science narration voice configured",
+    "voice_recommendation documented in script",
+    "science_subject matches registry (m87-black-hole-shadow)",
+    "EHT source cited",
+    "NASA source cited",
+    "overlay manifest complete (3 shots)",
+    "overlay burn verified (label region pixel change)",
+    "target duration OK (28.3s in 20–32s band)",
+    "proof MP4: david_black_hole_science_proof_480p_v1.mp4",
+    "sources card enabled (5s)",
+    "sources card entries: 3",
+    "principle_set: astrophysics_fidelity"
+  ],
+  "issues": [],
+  "science_subject_id": "m87-black-hole-shadow",
+  "phenomenon": "Black hole shadow (M87*)",
+  "voice_recommendation": {
+    "primary": "clear enthusiastic science communicator voice, precise but accessible diction, wonder without hype, synthetic presenter only",
+    "primary_source": "Production_Templates_v1.json → science-explainer",
+    "david_lane": "measured clear science narration voice, mid-low resonant precise diction, wonder without hype, documentary trust, accessible never stuffy, synthetic host only",
+    "rationale": "Primary rec matches Julian science-explainer lane (cool-clinical, wonder without hype). DAVID lane keeps Archive gravitas while adopting science register."
+  },
+  "overlay_manifest": [
+    {
+      "shot_id": "01_hook",
+      "t_start": 0,
+      "t_end": 10,
+      "on_screen": "Black hole shadow · M87*",
+      "on_screen_labels": [
+        "HOW WE KNOW"
+      ],
+      "overlay_png": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_black_hole_science_proof_v1_longform_v1\\shots\\01_hook_overlay.png",
+      "raw_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_black_hole_science_proof_v1_longform_v1\\shots\\01_hook_raw.mp4",
+      "burned_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_black_hole_science_proof_v1_longform_v1\\shots\\01_hook_burned.mp4"
+    },
+    {
+      "shot_id": "02_how_we_know",
+      "t_start": 10,
+      "t_end": 16,
+      "on_screen": "Event Horizon Telescope · April 2019",
+      "on_screen_labels": [
+        "MEASUREMENT",
+        "HOW WE KNOW"
+      ],
+      "overlay_png": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_black_hole_science_proof_v1_longform_v1\\shots\\02_how_we_know_overlay.png",
+      "raw_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_black_hole_science_proof_v1_longform_v1\\shots\\02_how_we_know_raw.mp4",
+      "burned_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_black_hole_science_proof_v1_longform_v1\\shots\\02_how_we_know_burned.mp4"
+    },
+    {
+      "shot_id": "03_viz_payoff",
+      "t_start": 16,
+      "t_end": 22,
+      "on_screen": "Illustrative Kerr shadow + accretion disk",
+      "on_screen_labels": [
+        "ILLUSTRATIVE",
+        "NOT TO SCALE"
+      ],
+      "overlay_png": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_black_hole_science_proof_v1_longform_v1\\shots\\03_viz_payoff_overlay.png",
+      "raw_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_black_hole_science_proof_v1_longform_v1\\shots\\03_viz_payoff_raw.mp4",
+      "burned_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_black_hole_science_proof_v1_longform_v1\\shots\\03_viz_payoff_burned.mp4"
+    }
+  ]
+}

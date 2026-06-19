@@ -199,6 +199,22 @@ def _script_ctx_from_refs(refs: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _shot_uses_viz_reference(shot: dict[str, Any]) -> bool:
+    slots = shot.get("reference_slots") or {}
+    if slots.get("@2") == "visualization":
+        return True
+    return shot.get("role") == "visualization" or shot.get("use_avatar") is False
+
+
+def resolve_shot_image_url(shot: dict[str, Any], refs: dict[str, Any]) -> str:
+    """Presenter shots use avatar; @2 visualization shots use locked science plate."""
+    if shot.get("image_url"):
+        return str(shot["image_url"])
+    if _shot_uses_viz_reference(shot) and refs.get("visualization_url"):
+        return str(refs["visualization_url"])
+    return str(refs["avatar_url"])
+
+
 def _use_avatar_reground(
     refs: dict[str, Any],
     shot: dict[str, Any],
@@ -206,6 +222,8 @@ def _use_avatar_reground(
     opts: "SeamlessOptions",
 ) -> bool:
     """Dark/high-contrast: re-ground every shot on locked avatar (never drifted chain frame)."""
+    if _shot_uses_viz_reference(shot) and refs.get("visualization_url"):
+        return True
     if _is_dark_scene(refs, shot=shot):
         return True
     if shot_index == 0:
@@ -600,12 +618,23 @@ def resolve_refs(script: dict[str, Any], *, client: Any = None) -> dict[str, Any
         avatar_url = upload_image_url(client, Path(avatar_file))
         cfg["avatar_url"] = avatar_url
 
+    viz_url = cfg.get("visualization_url")
+    viz_file = cfg.get("visualization_reference")
+    if viz_file:
+        vp = Path(str(viz_file))
+        viz_file = str(vp if vp.is_absolute() else _resolve_workspace_path(str(viz_file)))
+    if not viz_url and viz_file and client is not None:
+        viz_url = upload_image_url(client, Path(viz_file))
+        cfg["visualization_url"] = viz_url
+
     return {
         "lock": lock,
         "lock_path": lock_path,
         "avatar_url": avatar_url,
         "avatar_file": avatar_file,
         "config_avatar_reference": cfg.get("avatar_reference"),
+        "visualization_url": viz_url,
+        "visualization_file": viz_file,
         "set_file": set_file,
         "voice_suffix": voice_suffix,
         "format_id": script.get("format_id"),
@@ -646,7 +675,7 @@ def build_imagine_pack(
             {
                 "shot_id": s["id"],
                 "duration": clamp_shot_duration(s["duration"]) if use_seamless else s["duration"],
-                "image_url": s.get("image_url") or refs.get("avatar_url"),
+                "image_url": resolve_shot_image_url(s, refs),
                 "video_prompt": (
                     apply_seamless_prompt(s, refs, seamless_opts)
                     if use_seamless
@@ -708,13 +737,18 @@ def render_provenance_card(script: dict[str, Any], out_path: Path) -> None:
         pfx_s = rules.get("secondary_prefix", "S")
 
         y = y_title + (100 if prov.get("subtitle") else 60)
+        show_agency = bool(rules.get("show_agency"))
         for src in prov.get("sources", [])[:max_lines]:
             cite = str(src.get("citation", "")).strip()
             if len(cite) > trunc:
                 cite = cite[: trunc - 1] + "…"
             kind = str(src.get("type", "secondary")).lower()
             prefix = pfx_p if kind == "primary" else pfx_s
-            line = f"{prefix}: {cite}"
+            agency = str(src.get("agency", "")).strip()
+            if show_agency and agency and kind == "primary":
+                line = f"{prefix} [{agency}]: {cite}"
+            else:
+                line = f"{prefix}: {cite}"
             for wrapped in textwrap.wrap(line, width=78):
                 draw.text((70, y), wrapped, fill=(200, 205, 215), font=small_font)
                 y += 26
@@ -1734,13 +1768,14 @@ def render_frame_chain_performance(
                     pass
                 else:
                     if _use_avatar_reground(refs, shot, i, opts):
-                        image_url = avatar_url
+                        image_url = resolve_shot_image_url(shot, refs)
                         dark = _is_dark_scene(refs, shot=shot)
-                        src = (
-                            "dark-set avatar re-ground (Kelvin locked)"
-                            if dark
-                            else ("talent re-ground" if i > 0 else "locked talent avatar")
-                        )
+                        if _shot_uses_viz_reference(shot) and refs.get("visualization_url"):
+                            src = "locked @2 science plate re-ground"
+                        elif dark:
+                            src = "dark-set avatar re-ground (Kelvin locked)"
+                        else:
+                            src = "talent re-ground" if i > 0 else "locked talent avatar"
                         print(f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} ({dur}s) ← {src}")
                     else:
                         frame_jpg = frames_dir / f"frame_after_{segments[-1].stem}.jpg"
@@ -1871,12 +1906,13 @@ def render_extend_performance(
     shot0 = shots[0]
     dur0 = clamp_shot_duration(shot0.get("duration", 8))
     prompt0 = apply_seamless_prompt(shot0, refs, opts)
+    image_url0 = resolve_shot_image_url(shot0, refs)
     print(f"[seamless] extend step 1/{len(shots)} {shot0['id']} ({dur0}s)…")
     _api_pace()
     resp = client.video.generate(
         prompt=prompt0,
         model=gen_model,
-        image_url=avatar_url,
+        image_url=image_url0,
         duration=dur0,
         resolution=refs["resolution"],
     )
@@ -1997,6 +2033,19 @@ def qa_check(
             issues.append(f"shots missing synthetic guard after patch: {bad}")
         else:
             passes.append("all shots carry synthetic talent guard (incl. auto-patched)")
+
+    if rules.get("require_at2_swap_proof"):
+        meta = script.get("production_meta") or {}
+        viz_shots = [s for s in shots if _shot_uses_viz_reference(s)]
+        if not viz_shots:
+            issues.append("@2 swap proof: no visualization reference_slots shot")
+        elif refs.get("visualization_url") or refs.get("visualization_file"):
+            plate_id = meta.get("plate_id", "visualization")
+            passes.append(f"@2 swap proof: {plate_id} plate loaded for {viz_shots[0]['id']}")
+            if meta.get("scaffold_id"):
+                passes.append(f"fixed scaffold: {meta['scaffold_id']}")
+        else:
+            issues.append("@2 swap proof: missing visualization_reference / visualization_url")
 
     pie_like = [s for s in shots if s.get("speech_lang", "").startswith("pie") or "RECONSTRUCTED" in str(s.get("on_screen_labels"))]
     for s in pie_like:
@@ -2305,7 +2354,7 @@ def render_longform(
             raise RuntimeError("API client required for shot generation")
 
         prompt = ensure_voice_in_prompt(shot["video_prompt"], refs["voice_suffix"])
-        image_url = shot.get("image_url") or refs["avatar_url"]
+        image_url = resolve_shot_image_url(shot, refs)
         print(f"[longform] rendering {sid} ({shot['duration']}s)…")
         _api_pace()
         vid = client.video.generate(

@@ -15,11 +15,12 @@
       "blocked": false,
       "requires_human_signoff": true,
       "human_signoff": true,
-      "target_rating": "PG-13",
+      "target_rating": "PG",
       "channels": [
-        "social"
+        "social",
+        "streaming"
       ],
-      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_template_validate_historical_figure_docu_20260618_232905.json",
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_template_validate_historical_figure_docu_20260618_235645.json",
       "checklist_domains": {
         "row_1_synthetic_ownership": "MANUAL",
         "row_2_music_sync": "MANUAL",
@@ -42,7 +43,7 @@
       "notes": [
         "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
         "Social = mass dissemination. Platform AI-label + community guidelines apply.",
-        "Historical Figure Gate: pre-1900 subject (died 415); recency clear.",
+        "Historical Figure Gate: pre-1901 subject (died 415); 1900 ceiling and recency clear.",
         "Revise and re-submit to Legal Gate (Gate 0)."
       ],
       "brief_source": "composed"
@@ -65,13 +66,15 @@
           "citation": "Template Source Citation",
           "url": "template",
           "type": "primary",
-          "notes": null
+          "notes": null,
+          "supports": null
         },
         {
           "citation": "Template Source Citation",
           "url": null,
           "type": "secondary",
-          "notes": null
+          "notes": null,
+          "supports": null
         }
       ]
     }
@@ -162,13 +165,15 @@
         "citation": "Template Source Citation",
         "url": "template",
         "type": "primary",
-        "notes": null
+        "notes": null,
+        "supports": null
       },
       {
         "citation": "Template Source Citation",
         "url": null,
         "type": "secondary",
-        "notes": null
+        "notes": null,
+        "supports": null
       }
     ],
     "historical_figure_id": "template_figure"

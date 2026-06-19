@@ -39,11 +39,12 @@ def documentary_beats() -> list[dict]:
     ]
 
 
-def test_list_formats_has_five_templates():
+def test_list_formats_has_six_templates():
     formats = list_formats()
-    assert len(formats) == 5
+    assert len(formats) == 6
     assert "documentary-host" in formats
     assert "historical-figure-documentary" in formats
+    assert "science-explainer" in formats
     assert "narrative-short-film" in formats
     assert "conversational-companion" in formats
     assert "explainer-ad" in formats
@@ -64,6 +65,13 @@ def test_select_format_historical_figure():
         "historical figure biography who they were their world legacy period language sources"
     )
     assert result["format_id"] == "historical-figure-documentary"
+
+
+def test_select_format_science_explainer():
+    result = select_format(
+        "science explainer phenomenon how we know visualization payoff significance physics"
+    )
+    assert result["format_id"] == "science-explainer"
 
 
 def test_select_format_narrative():

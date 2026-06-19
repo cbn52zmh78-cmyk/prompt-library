@@ -1,0 +1,32 @@
+{
+  "subject_id": "m87-black-hole-shadow",
+  "domain": "astrophysics",
+  "phenomenon": "Black hole shadow (M87*)",
+  "key_measurement": "Event Horizon Telescope — first horizon-scale image, 10 April 2019",
+  "principle_set": "astrophysics_fidelity",
+  "framework": "Domain_Specific_Visualization_Principles_Framework v1.0",
+  "institutions": ["EHT Collaboration", "NASA"],
+  "sources": [
+    {
+      "citation": "Event Horizon Telescope Collaboration, ApJL 875:L1 (2019) — First M87* Event Horizon Telescope Results",
+      "type": "primary",
+      "url": "https://iopscience.iop.org/article/10.3847/2041-8213/ab0ec7"
+    },
+    {
+      "citation": "NASA — Black Holes (science.nasa.gov/universe/black-holes)",
+      "type": "secondary",
+      "url": "https://science.nasa.gov/universe/black-holes/"
+    },
+    {
+      "citation": "EHT Collaboration — eventhorizontelescope.org image gallery",
+      "type": "primary",
+      "url": "https://eventhorizontelescope.org/"
+    }
+  ],
+  "visualization_compliance": [
+    "No luminous black hole surface — shadow only",
+    "Accretion disk temperature gradient required",
+    "Doppler beaming on inclined disk",
+    "ILLUSTRATIVE + NOT TO SCALE labels on payoff frame"
+  ]
+}

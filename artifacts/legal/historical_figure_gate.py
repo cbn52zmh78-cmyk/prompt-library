@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Historical Figure Gate — safety spine for Gate 0 (issue #147).
+"""Historical Figure Gate — safety spine for Gate 0 (issues #147, #154).
 
 Applies when brief/content references a historical figure subject.
 
 Rules:
   - death_year missing → RED hard stop
   - death_year within 100-year recency floor → RED hard stop
-  - death_year post-1900 (and outside recency floor) → YELLOW caution
+  - death_year > 1900 CE hard ceiling → RED hard stop (#154)
   - reconstruction disclosure required
   - sourced claims required
   - dignity / no-NSFW required (NSFW cues → RED)
@@ -19,7 +19,7 @@ from dataclasses import dataclass, field
 from datetime import datetime
 
 RECENCY_YEARS = 100
-POST_1900_CAUTION_YEAR = 1900
+DEATH_YEAR_HARD_CEILING = 1900  # #154 — no portrayal for figures who died after 1900 CE
 
 HISTORICAL_FIGURE_TRIGGER = re.compile(
     r"historical\s+figure|historical_figure|death_year\s*[:=]|figure\s+subject\s*:",
@@ -65,9 +65,10 @@ class HistoricalFigureGateResult:
             "hard_stops": self.hard_stops,
             "warnings": self.warnings,
             "notes": self.notes,
-            "recency_floor_year": _recency_floor_year(),
-            "post_1900_caution": (
-                self.death_year is not None and self.death_year > POST_1900_CAUTION_YEAR
+            "recency_floor_year": recency_floor_year(),
+            "hard_1900_ceiling": DEATH_YEAR_HARD_CEILING,
+            "post_1900_blocked": (
+                self.death_year is not None and self.death_year > DEATH_YEAR_HARD_CEILING
             ),
         }
 
@@ -76,8 +77,12 @@ def _current_year() -> int:
     return datetime.now().year
 
 
+def recency_floor_year(*, current_year: int | None = None) -> int:
+    return (current_year or _current_year()) - RECENCY_YEARS
+
+
 def _recency_floor_year() -> int:
-    return _current_year() - RECENCY_YEARS
+    return recency_floor_year()
 
 
 def _is_historical_figure_content(text: str) -> bool:
@@ -148,17 +153,15 @@ def evaluate_historical_figure_gate(
             f"[HISTFIG] death_year {result.death_year} within {RECENCY_YEARS}-year recency floor "
             f"(>{recency_floor}) — living-memory / estate risk; portrayal BLOCKED"
         )
-    elif result.death_year > POST_1900_CAUTION_YEAR:
-        result.warnings.append(
-            f"[HISTFIG] death_year {result.death_year} post-1900 — living-memory caution; "
-            "extra dignity review and counsel flags apply"
-        )
-        result.notes.append(
-            f"Historical Figure Gate: post-1900 subject (died {result.death_year}); proceed YELLOW only."
+    elif result.death_year > DEATH_YEAR_HARD_CEILING:
+        result.hard_stops.append(
+            f"[HISTFIG] death_year {result.death_year} exceeds hard 1900 CE ceiling "
+            f"(>{DEATH_YEAR_HARD_CEILING}) — portrayal BLOCKED (#154)"
         )
     else:
         result.notes.append(
-            f"Historical Figure Gate: pre-1900 subject (died {result.death_year}); recency clear."
+            f"Historical Figure Gate: pre-1901 subject (died {result.death_year}); "
+            f"1900 ceiling and recency clear."
         )
 
     if not _has_reconstruction_disclosure(text):
