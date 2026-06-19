@@ -1,0 +1,198 @@
+{
+  "slug": "pie-deep-dive-v1",
+  "title": "DAVID Deep Dive — Proto-Indo-European: The Mother Tongue",
+  "issue": 70,
+  "format": "hybrid_host_longform",
+  "target_duration_s": 145,
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "identity_lock": "productions/host_identity_v1/david_identity_lock.json"
+  },
+  "shots": [
+    {
+      "id": "01_cold_open",
+      "duration": 8,
+      "role": "host",
+      "on_screen": "DAVID · The Archive · 🔶 RECONSTRUCTED",
+      "on_screen_labels": [
+        "RECONSTRUCTED language"
+      ],
+      "speech_text": "Six thousand years ago, one language split into hundreds. We never wrote it down. But its echo is still in your mouth every time you say sheep, mother, or three.",
+      "video_prompt": "Archive host speaks directly to camera in English, lip-synced, slow documentary gravitas, subtle push-in, warm brass lamp, open codex on worktable. Delivers hook about language family and everyday English words."
+    },
+    {
+      "id": "02_signature_beat",
+      "duration": 6,
+      "role": "host",
+      "on_screen": "What did they actually say?",
+      "speech_text": "What did they actually say? … And how do we prove it?",
+      "video_prompt": "Host medium-close, signature beat, thoughtful pause between clauses, still grounded at Archive desk, trustworthy delivery."
+    },
+    {
+      "id": "03_what_is_pie",
+      "duration": 8,
+      "role": "host",
+      "on_screen": "Proto-Indo-European · *reconstructed parent language",
+      "on_screen_labels": [
+        "RECONSTRUCTED language"
+      ],
+      "speech_text": "Proto-Indo-European is not a lost manuscript. It's a hypothesis built from daughter languages — Sanskrit, Greek, Latin, Old English, and dozens more.",
+      "video_prompt": "Host explains PIE concept in English, gestures toward manuscripts, educational tone, steady medium shot."
+    },
+    {
+      "id": "04_no_recordings",
+      "duration": 7,
+      "role": "host",
+      "on_screen": "NO AUDIO · NO ATTESTED TEXT",
+      "on_screen_labels": [
+        "NOT ATTESTED",
+        "RECONSTRUCTED"
+      ],
+      "speech_text": "There is no recording. No native speaker. Every PIE word you hear carries an asterisk — the scholarly mark for reconstruction.",
+      "video_prompt": "Host speaks with calm honesty about absence of attestation, on-screen NOT ATTESTED feel, documentary authority."
+    },
+    {
+      "id": "05_schleicher_intro",
+      "duration": 8,
+      "role": "host",
+      "on_screen": "Schleicher's Fable · 1868 recension",
+      "speech_text": "In 1868 August Schleicher wrote a little fable in reconstructed PIE — a sheep and some horses on a journey. It's our standard teaching excerpt.",
+      "video_prompt": "Host introduces Schleicher fable, points to codex, measured pace, Archive setting consistent."
+    },
+    {
+      "id": "06_pie_line_full",
+      "duration": 15,
+      "role": "host_pie",
+      "on_screen": "*h₂éwis, h₁éḱwōs h₁éḱontes\nRECONSTRUCTED — NOT ATTESTED",
+      "on_screen_labels": [
+        "RECONSTRUCTED text",
+        "RECONSTRUCTED pronunciation",
+        "NOT ATTESTED"
+      ],
+      "speech_text": "h₂éwis, h₁éḱwōs h₁éḱontes",
+      "speech_ipa": "[ˈh₂é.wis ˈh₁é.kʷoːs ˈh₁é.kʷon.tes]",
+      "speech_lang": "pie-reconstructed",
+      "video_prompt": "Host speaks reconstructed PIE line slowly, lip-synced, scholarly tone, never claiming recording. IPA target [ˈh₂é.wis ˈh₁é.kʷoːs ˈh₁é.kʷon.tes]. Bold RECONSTRUCTED tags implied."
+    },
+    {
+      "id": "07_sheep_cognates",
+      "duration": 10,
+      "role": "host",
+      "on_screen": "*h₂éwis → Latin ovis → Sanskrit ávi- → English ewe",
+      "on_screen_labels": [
+        "RECONSTRUCTED inference"
+      ],
+      "speech_text": "The word for sheep: Latin ovis, Sanskrit ávi-, English ewe — all point backward to a reconstructed root *h₂éwis.",
+      "video_prompt": "Host teaches cognate chain for sheep, gestures to table, didactic English delivery."
+    },
+    {
+      "id": "08_horse_cognates",
+      "duration": 10,
+      "role": "host",
+      "on_screen": "*h₁éḱwos → Latin equus → Greek ἵππος → English equestrian",
+      "on_screen_labels": [
+        "RECONSTRUCTED inference"
+      ],
+      "speech_text": "Horses: Latin equus, Greek hippos, English equestrian — daughters of *h₁éḱwos, with a debated laryngeal in the middle.",
+      "video_prompt": "Host explains horse cognate family, calm authority, one idea per shot."
+    },
+    {
+      "id": "09_laryngeal_intro",
+      "duration": 8,
+      "role": "host",
+      "on_screen": "Laryngeal theory · *h₁ *h₂ *h₃",
+      "on_screen_labels": [
+        "RECONSTRUCTED phonology"
+      ],
+      "speech_text": "Those h-with-subscript symbols? Laryngeals — consonants we infer never left a direct letter, only shadows in daughter languages.",
+      "video_prompt": "Host introduces laryngeal theory symbols, honest uncertainty, educational documentary tone."
+    },
+    {
+      "id": "10_comparative_method",
+      "duration": 10,
+      "role": "host",
+      "on_screen": "Comparative method · work backward from daughters",
+      "on_screen_labels": [
+        "RECONSTRUCTED inference"
+      ],
+      "speech_text": "We line up related words across languages, find the sound laws that changed them, and reconstruct the parent form that best explains the pattern.",
+      "video_prompt": "Host explains comparative method, gestures toward multilingual manuscripts, measured gravitas."
+    },
+    {
+      "id": "11_sanskrit_bridge",
+      "duration": 8,
+      "role": "host",
+      "on_screen": "Sanskrit · often closest daughter",
+      "speech_text": "Sanskrit often preserves archaic features — which is why nineteenth-century scholars turned to India to crack the Indo-European puzzle.",
+      "video_prompt": "Host discusses Sanskrit role in IE studies, warm lamp light, scholarly tone."
+    },
+    {
+      "id": "12_daughter_map",
+      "duration": 8,
+      "role": "host",
+      "on_screen": "IE branches · Germanic · Italic · Indo-Iranian · Slavic · Celtic…",
+      "speech_text": "From one ancestor: Germanic, Italic, Celtic, Slavic, Indo-Iranian, and more — a family tree you can still hear in grammar and vocabulary.",
+      "video_prompt": "Host surveys IE branches, wide medium shot of Archive, map-like energy without literal graphics."
+    },
+    {
+      "id": "13_honest_science",
+      "duration": 8,
+      "role": "host",
+      "on_screen": "Reconstruction ≠ recording",
+      "on_screen_labels": [
+        "RECONSTRUCTED"
+      ],
+      "speech_text": "This is rigorous inference, not time travel. DAVID always labels reconstructed forms — because intellectual honesty is the whole point.",
+      "video_prompt": "Host states honesty principle, direct eye contact, documentary trust signal."
+    },
+    {
+      "id": "14_limits",
+      "duration": 7,
+      "role": "host",
+      "on_screen": "Debate remains · laryngeals · accent · dialect",
+      "speech_text": "Phonologists still argue details — which laryngeal where, what accent, which dialect stage. Reconstruction is a living science.",
+      "video_prompt": "Host acknowledges scholarly debate, measured pace, no false certainty."
+    },
+    {
+      "id": "15_tagline",
+      "duration": 6,
+      "role": "host",
+      "on_screen": "DAVID",
+      "speech_text": "Bring the dead tongues back — one attestation at a time. DAVID.",
+      "video_prompt": "Host warm close, tagline delivery, slight smile of quiet wonder, medium close-up."
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 7,
+    "banner": "RECONSTRUCTED — NOT ATTESTED",
+    "title": "DAVID · PROVENANCE · PIE Deep Dive",
+    "subtitle": "Proto-Indo-European — Schleicher fable opener",
+    "lines": [
+      "TEXT [reconstructed]: August Schleicher, Compendium der vergleichenden Grammatik (1861/62); modern recension Schleicher's Fable. Reconstructed — not attested.",
+      "PRONUNCIATION [reconstructed]: reconstructed late PIE phonology (laryngeal theory); moderate confidence — scholarly consensus with debated detail.",
+      "LINE: *h₂éwis, h₁éḱwōs h₁éḱontes",
+      "IPA: [ˈh₂é.wis ˈh₁é.kʷoːs ˈh₁é.kʷon.tes]",
+      "TRANSLATION: The sheep and the horses (were) going…",
+      "CITATION: https://en.wikipedia.org/wiki/Schleicher%27s_fable",
+      "SOURCES: Wikipedia / Wiktionary (CC BY-SA), Wikidata (CC0), retrieved 2026-06-18.",
+      "BRAIN: languages/reconstructed/proto-indo-european/research/brain/latest_scrape.json"
+    ],
+    "footer": "reconstructed text · reconstructed pronunciation · comparative method"
+  },
+  "provenance": {
+    "text": "August Schleicher, Compendium der vergleichenden Grammatik (1861/62); modern recension Schleicher's Fable. Reconstructed — not attested.",
+    "pronunciation": "reconstructed late PIE phonology (laryngeal theory); moderate — scholarly consensus with debated laryngeal detail.",
+    "citation": "https://en.wikipedia.org/wiki/Schleicher%27s_fable",
+    "sources": "Wikipedia / Wiktionary (CC BY-SA), Wikidata (CC0), retrieved 2026-06-18.",
+    "brain_scrape": "languages/reconstructed/proto-indo-european/research/brain/latest_scrape.json"
+  },
+  "qa_rules": {
+    "require_identity_lock": true,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": true,
+    "min_shots": 10
+  }
+}

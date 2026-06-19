@@ -1,0 +1,249 @@
+{
+  "slug": "pie-deep-dive-v1",
+  "title": "DAVID Deep Dive — Proto-Indo-European: The Mother Tongue",
+  "model_video": "grok-imagine-video-1.5",
+  "resolution": "720p",
+  "aspect_ratio": "16:9",
+  "host_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\references\\david_avatar_reference.jpg",
+  "avatar_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+  "set_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\references\\archive_set_reference.jpg",
+  "voice_suffix": "mid-low resonant unhurried voice, precise diction, documentary gravitas",
+  "shots": [
+    {
+      "shot_id": "01_cold_open",
+      "duration": 8,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "Archive host speaks directly to camera in English, lip-synced, slow documentary gravitas, subtle push-in, warm brass lamp, open codex on worktable. Delivers hook about language family and everyday English words. mid-low resonant unhurried voice, precise diction, documentary gravitas synthetic host only",
+      "speech_text": "Six thousand years ago, one language split into hundreds. We never wrote it down. But its echo is still in your mouth every time you say sheep, mother, or three.",
+      "speech_ipa": null,
+      "on_screen": "DAVID · The Archive · 🔶 RECONSTRUCTED",
+      "on_screen_labels": [
+        "RECONSTRUCTED language"
+      ],
+      "timing": {
+        "start_s": null,
+        "end_s": null
+      }
+    },
+    {
+      "shot_id": "02_signature_beat",
+      "duration": 6,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "Host medium-close, signature beat, thoughtful pause between clauses, still grounded at Archive desk, trustworthy delivery. mid-low resonant unhurried voice, precise diction, documentary gravitas synthetic host only",
+      "speech_text": "What did they actually say? … And how do we prove it?",
+      "speech_ipa": null,
+      "on_screen": "What did they actually say?",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": null,
+        "end_s": null
+      }
+    },
+    {
+      "shot_id": "03_what_is_pie",
+      "duration": 8,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "Host explains PIE concept in English, gestures toward manuscripts, educational tone, steady medium shot. mid-low resonant unhurried voice, precise diction, documentary gravitas synthetic host only",
+      "speech_text": "Proto-Indo-European is not a lost manuscript. It's a hypothesis built from daughter languages — Sanskrit, Greek, Latin, Old English, and dozens more.",
+      "speech_ipa": null,
+      "on_screen": "Proto-Indo-European · *reconstructed parent language",
+      "on_screen_labels": [
+        "RECONSTRUCTED language"
+      ],
+      "timing": {
+        "start_s": null,
+        "end_s": null
+      }
+    },
+    {
+      "shot_id": "04_no_recordings",
+      "duration": 7,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "Host speaks with calm honesty about absence of attestation, on-screen NOT ATTESTED feel, documentary authority. mid-low resonant unhurried voice, precise diction, documentary gravitas synthetic host only",
+      "speech_text": "There is no recording. No native speaker. Every PIE word you hear carries an asterisk — the scholarly mark for reconstruction.",
+      "speech_ipa": null,
+      "on_screen": "NO AUDIO · NO ATTESTED TEXT",
+      "on_screen_labels": [
+        "NOT ATTESTED",
+        "RECONSTRUCTED"
+      ],
+      "timing": {
+        "start_s": null,
+        "end_s": null
+      }
+    },
+    {
+      "shot_id": "05_schleicher_intro",
+      "duration": 8,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "Host introduces Schleicher fable, points to codex, measured pace, Archive setting consistent. mid-low resonant unhurried voice, precise diction, documentary gravitas synthetic host only",
+      "speech_text": "In 1868 August Schleicher wrote a little fable in reconstructed PIE — a sheep and some horses on a journey. It's our standard teaching excerpt.",
+      "speech_ipa": null,
+      "on_screen": "Schleicher's Fable · 1868 recension",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": null,
+        "end_s": null
+      }
+    },
+    {
+      "shot_id": "06_pie_line_full",
+      "duration": 15,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "Host speaks reconstructed PIE line slowly, lip-synced, scholarly tone, never claiming recording. IPA target [ˈh₂é.wis ˈh₁é.kʷoːs ˈh₁é.kʷon.tes]. Bold RECONSTRUCTED tags implied. mid-low resonant unhurried voice, precise diction, documentary gravitas synthetic host only",
+      "speech_text": "h₂éwis, h₁éḱwōs h₁éḱontes",
+      "speech_ipa": "[ˈh₂é.wis ˈh₁é.kʷoːs ˈh₁é.kʷon.tes]",
+      "on_screen": "*h₂éwis, h₁éḱwōs h₁éḱontes\nRECONSTRUCTED — NOT ATTESTED",
+      "on_screen_labels": [
+        "RECONSTRUCTED text",
+        "RECONSTRUCTED pronunciation",
+        "NOT ATTESTED"
+      ],
+      "timing": {
+        "start_s": null,
+        "end_s": null
+      }
+    },
+    {
+      "shot_id": "07_sheep_cognates",
+      "duration": 10,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "Host teaches cognate chain for sheep, gestures to table, didactic English delivery. mid-low resonant unhurried voice, precise diction, documentary gravitas synthetic host only",
+      "speech_text": "The word for sheep: Latin ovis, Sanskrit ávi-, English ewe — all point backward to a reconstructed root *h₂éwis.",
+      "speech_ipa": null,
+      "on_screen": "*h₂éwis → Latin ovis → Sanskrit ávi- → English ewe",
+      "on_screen_labels": [
+        "RECONSTRUCTED inference"
+      ],
+      "timing": {
+        "start_s": null,
+        "end_s": null
+      }
+    },
+    {
+      "shot_id": "08_horse_cognates",
+      "duration": 10,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "Host explains horse cognate family, calm authority, one idea per shot. mid-low resonant unhurried voice, precise diction, documentary gravitas synthetic host only",
+      "speech_text": "Horses: Latin equus, Greek hippos, English equestrian — daughters of *h₁éḱwos, with a debated laryngeal in the middle.",
+      "speech_ipa": null,
+      "on_screen": "*h₁éḱwos → Latin equus → Greek ἵππος → English equestrian",
+      "on_screen_labels": [
+        "RECONSTRUCTED inference"
+      ],
+      "timing": {
+        "start_s": null,
+        "end_s": null
+      }
+    },
+    {
+      "shot_id": "09_laryngeal_intro",
+      "duration": 8,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "Host introduces laryngeal theory symbols, honest uncertainty, educational documentary tone. mid-low resonant unhurried voice, precise diction, documentary gravitas synthetic host only",
+      "speech_text": "Those h-with-subscript symbols? Laryngeals — consonants we infer never left a direct letter, only shadows in daughter languages.",
+      "speech_ipa": null,
+      "on_screen": "Laryngeal theory · *h₁ *h₂ *h₃",
+      "on_screen_labels": [
+        "RECONSTRUCTED phonology"
+      ],
+      "timing": {
+        "start_s": null,
+        "end_s": null
+      }
+    },
+    {
+      "shot_id": "10_comparative_method",
+      "duration": 10,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "Host explains comparative method, gestures toward multilingual manuscripts, measured gravitas. mid-low resonant unhurried voice, precise diction, documentary gravitas synthetic host only",
+      "speech_text": "We line up related words across languages, find the sound laws that changed them, and reconstruct the parent form that best explains the pattern.",
+      "speech_ipa": null,
+      "on_screen": "Comparative method · work backward from daughters",
+      "on_screen_labels": [
+        "RECONSTRUCTED inference"
+      ],
+      "timing": {
+        "start_s": null,
+        "end_s": null
+      }
+    },
+    {
+      "shot_id": "11_sanskrit_bridge",
+      "duration": 8,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "Host discusses Sanskrit role in IE studies, warm lamp light, scholarly tone. mid-low resonant unhurried voice, precise diction, documentary gravitas synthetic host only",
+      "speech_text": "Sanskrit often preserves archaic features — which is why nineteenth-century scholars turned to India to crack the Indo-European puzzle.",
+      "speech_ipa": null,
+      "on_screen": "Sanskrit · often closest daughter",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": null,
+        "end_s": null
+      }
+    },
+    {
+      "shot_id": "12_daughter_map",
+      "duration": 8,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "Host surveys IE branches, wide medium shot of Archive, map-like energy without literal graphics. mid-low resonant unhurried voice, precise diction, documentary gravitas synthetic host only",
+      "speech_text": "From one ancestor: Germanic, Italic, Celtic, Slavic, Indo-Iranian, and more — a family tree you can still hear in grammar and vocabulary.",
+      "speech_ipa": null,
+      "on_screen": "IE branches · Germanic · Italic · Indo-Iranian · Slavic · Celtic…",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": null,
+        "end_s": null
+      }
+    },
+    {
+      "shot_id": "13_honest_science",
+      "duration": 8,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "Host states honesty principle, direct eye contact, documentary trust signal. mid-low resonant unhurried voice, precise diction, documentary gravitas synthetic host only",
+      "speech_text": "This is rigorous inference, not time travel. DAVID always labels reconstructed forms — because intellectual honesty is the whole point.",
+      "speech_ipa": null,
+      "on_screen": "Reconstruction ≠ recording",
+      "on_screen_labels": [
+        "RECONSTRUCTED"
+      ],
+      "timing": {
+        "start_s": null,
+        "end_s": null
+      }
+    },
+    {
+      "shot_id": "14_limits",
+      "duration": 7,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "Host acknowledges scholarly debate, measured pace, no false certainty. mid-low resonant unhurried voice, precise diction, documentary gravitas synthetic host only",
+      "speech_text": "Phonologists still argue details — which laryngeal where, what accent, which dialect stage. Reconstruction is a living science.",
+      "speech_ipa": null,
+      "on_screen": "Debate remains · laryngeals · accent · dialect",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": null,
+        "end_s": null
+      }
+    },
+    {
+      "shot_id": "15_tagline",
+      "duration": 6,
+      "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+      "video_prompt": "Host warm close, tagline delivery, slight smile of quiet wonder, medium close-up. mid-low resonant unhurried voice, precise diction, documentary gravitas synthetic host only",
+      "speech_text": "Bring the dead tongues back — one attestation at a time. DAVID.",
+      "speech_ipa": null,
+      "on_screen": "DAVID",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": null,
+        "end_s": null
+      }
+    }
+  ],
+  "provenance_shot": {
+    "type": "code_rendered_png",
+    "duration_s": 7,
+    "enabled": true
+  }
+}

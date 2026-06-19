@@ -1,0 +1,144 @@
+{
+  "slug": "david_intro_60s_v2",
+  "title": "DAVID — Self-Introduction (Channel Intro) v2 Seamless",
+  "target_seconds": 69,
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "identity_lock": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\david_identity_lock.json",
+    "voice_suffix": "mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible, never stuffy, synthetic host only",
+    "avatar_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\references\\david_avatar_reference.jpg",
+    "seamless": {
+      "protocol": "STUDIO_Seamless_Continuity_Protocol_v1.1",
+      "primary": "extend",
+      "xfade_s": 0.2,
+      "match_color": true,
+      "cut_on_motion": true,
+      "avatar_ref_id": "David-001",
+      "performance_scene_id": "archive_performance"
+    }
+  },
+  "shots": [
+    {
+      "duration": 8,
+      "scene_id": "archive_performance",
+      "join": "extend",
+      "video_prompt": "DAVID keeper of the Archive seated at worktable, warm lamplight, speaks calmly to camera, slow gentle push-in. Lip-synced, delivers: \"I am DAVID. I bring dead languages back — not as words on a page, but as sound you can hear.\"",
+      "speech_text": "I am DAVID. I bring dead languages back — not as words on a page, but as sound you can hear.",
+      "on_screen": "DAVID · The Archive",
+      "id": "01_cold_open",
+      "t_start": 0,
+      "t_end": 8
+    },
+    {
+      "duration": 8,
+      "scene_id": "archive_performance",
+      "join": "extend",
+      "video_prompt": "Same take continues — DAVID reflects, manuscripts behind him, same desk and lamp, lip-synced. Lip-synced, delivers: \"For most of history, when a language died, its voice died with it. The words survived. The sound was lost.\"",
+      "speech_text": "For most of history, when a language died, its voice died with it. The words survived. The sound was lost.",
+      "id": "02_the_loss",
+      "t_start": 8,
+      "t_end": 16
+    },
+    {
+      "duration": 8,
+      "scene_id": "archive_performance",
+      "join": "extend",
+      "video_prompt": "Same take — DAVID leans slightly toward camera, intent, signature question beat. Lip-synced, delivers: \"So I ask one question of every silent tongue: what did they actually say?\"",
+      "speech_text": "So I ask one question of every silent tongue: what did they actually say?",
+      "on_screen": "What did they actually say?",
+      "id": "03_the_question",
+      "t_start": 16,
+      "t_end": 24
+    },
+    {
+      "duration": 7,
+      "scene_id": "archive_performance",
+      "join": "extend",
+      "video_prompt": "Same take — steady close-up, knowing pause, second half of signature beat. Lip-synced, delivers: \"And how do we prove it?\"",
+      "speech_text": "And how do we prove it?",
+      "on_screen": "…And how do we prove it?",
+      "id": "04_how_prove",
+      "t_start": 24,
+      "t_end": 31
+    },
+    {
+      "duration": 8,
+      "scene_id": "archive_performance",
+      "join": "extend",
+      "video_prompt": "Same take — DAVID gestures to open codex on worktable, explaining corpus-first method. Lip-synced, delivers: \"I work only from the corpus — the texts people actually left — and reconstruct the sound the evidence supports. Never invention.\"",
+      "speech_text": "I work only from the corpus — the texts people actually left — and reconstruct the sound the evidence supports. Never invention.",
+      "on_screen": "Corpus-first · attested, then reconstructed",
+      "id": "05_method",
+      "t_start": 31,
+      "t_end": 39
+    },
+    {
+      "duration": 8,
+      "scene_id": "archive_performance",
+      "join": "extend",
+      "video_prompt": "Same take — DAVID direct to camera, honesty principle, calm authority. Lip-synced, delivers: \"When a sound is certain, I say so. When it's reconstructed, I say that too — and I show the proof on screen.\"",
+      "speech_text": "When a sound is certain, I say so. When it's reconstructed, I say that too — and I show the proof on screen.",
+      "on_screen": "attested vs reconstructed — always labeled",
+      "id": "06_honesty",
+      "t_start": 39,
+      "t_end": 47
+    },
+    {
+      "duration": 8,
+      "scene_id": "archive_performance",
+      "join": "extend",
+      "video_prompt": "Same take — spark of delight, warm light lifts slightly, listing languages to come. Lip-synced, delivers: \"Here you'll hear Latin, Gothic, Old Norse, Sumerian — tongues no one has spoken aloud in a thousand years.\"",
+      "speech_text": "Here you'll hear Latin, Gothic, Old Norse, Sumerian — tongues no one has spoken aloud in a thousand years.",
+      "id": "07_what_youll_hear",
+      "t_start": 47,
+      "t_end": 55
+    },
+    {
+      "duration": 8,
+      "scene_id": "archive_performance",
+      "join": "extend",
+      "gesture_peak": true,
+      "video_prompt": "Same take — warm inviting close, slight smile, gentle settle; end on hand gesture mid-motion toward camera. Lip-synced, delivers: \"Bring the dead tongues back with me, one attestation at a time. Welcome to the Archive.\"",
+      "speech_text": "Bring the dead tongues back with me, one attestation at a time. Welcome to the Archive.",
+      "id": "08_invitation",
+      "t_start": 55,
+      "t_end": 63
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "card_type": "closing",
+    "duration_s": 6,
+    "banner": "",
+    "title": "DAVID · The Archive",
+    "subtitle": "Dead languages, actually pronounced.",
+    "lines": [],
+    "footer": "Bring the dead tongues back — one attestation at a time. DAVID."
+  },
+  "guardrails": [
+    "Synthetic avatar only; David-001 locked ref.",
+    "PRIMARY: Grok Imagine EXTEND within archive_performance scene.",
+    "JOINS: frame-chain + 0.2s xfade to closing card only.",
+    "7–9s segments; continuity-prefix + end-guard on every shot."
+  ],
+  "qa_rules": {
+    "require_identity_lock": true,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": false,
+    "min_shots": 1
+  },
+  "seamless": {
+    "protocol": "STUDIO_Seamless_Continuity_Protocol_v1.1",
+    "primary": "extend",
+    "xfade_s": 0.2,
+    "match_color": true,
+    "cut_on_motion": true,
+    "avatar_ref_id": "David-001",
+    "performance_scene_id": "archive_performance"
+  },
+  "continuity_prefix": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut.",
+  "end_guard": "Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+  "compare_v1": "productions/david_intro_60s_longform_v1/output/david_david_intro_60s_longform_v1.mp4"
+}

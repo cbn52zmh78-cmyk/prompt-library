@@ -1,27 +1,35 @@
 {
-  "issue": 70,
-  "format": "hybrid_host",
-  "format_proof": 2,
-  "completed_at": "2026-06-18T22:58:30.208230+00:00",
+  "pipeline": "render_longform",
+  "completed_at": "2026-06-19T00:50:28.483229+00:00",
+  "script_source": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\scripts\\longform_scripts\\post01_pie_longform.json",
+  "concat_only": true,
   "production_dir": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1",
-  "post": {
-    "script": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1\\post01_pie_script_final.json",
-    "imagine_pack": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1\\post01_pie_imagine_pack.json",
-    "provenance_card": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1\\provenance_card.png",
-    "output": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1\\output\\david_post01_pie_hybrid_v1.mp4",
-    "qa": {
-      "issue": 70,
-      "slug": "proto-indo-european",
-      "qa_at": "2026-06-18T22:58:30.207383+00:00",
-      "pass": true,
-      "passes": [
-        "host identity lock LOADED",
-        "text labeled reconstructed",
-        "line IPA bracketed with laryngeal notation",
-        "PIE shot has heavy RECONSTRUCTED + NOT ATTESTED labels",
-        "hybrid host shot structure complete (5 host + provenance)"
-      ],
-      "issues": []
-    }
-  }
+  "script": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1\\post01-pie-hybrid_script.json",
+  "imagine_pack": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1\\post01-pie-hybrid_imagine_pack.json",
+  "output": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1\\output\\david_post01-pie-hybrid_longform_v1.mp4",
+  "qa": {
+    "slug": "post01-pie-hybrid",
+    "qa_at": "2026-06-19T00:50:28.482802+00:00",
+    "pass": true,
+    "passes": [
+      "host identity lock LOADED",
+      "shot count OK (5 >= 5)",
+      "all shots carry synthetic host guard (incl. auto-patched)",
+      "01_host_cold_open: RECONSTRUCTED labels present",
+      "03_host_pie_line: RECONSTRUCTED labels present",
+      "04_host_comparative_method: RECONSTRUCTED labels present",
+      "target duration ~49s"
+    ],
+    "issues": [],
+    "shot_count": 5,
+    "segment_count": 6
+  },
+  "segments": [
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1\\shots\\01_host_cold_open.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1\\shots\\02_host_question.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1\\shots\\03_host_pie_line.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1\\shots\\04_host_comparative_method.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1\\shots\\05_tagline_vo.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\post_01_pie_hybrid_v1\\shots\\provenance.mp4"
+  ]
 }

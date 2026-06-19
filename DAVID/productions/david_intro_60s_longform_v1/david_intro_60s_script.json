@@ -1,0 +1,108 @@
+{
+  "slug": "david_intro_60s",
+  "title": "DAVID — Self-Introduction (Channel Intro)",
+  "target_seconds": 61,
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "identity_lock": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\david_identity_lock.json",
+    "voice_suffix": "mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible, never stuffy, synthetic host only",
+    "avatar_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\references\\david_avatar_reference.jpg"
+  },
+  "shots": [
+    {
+      "duration": 7,
+      "video_prompt": "DAVID, keeper of the Archive, seated at his worktable in warm lamplight, looks to camera and speaks calmly, lip-synced. Slow gentle push-in. Lip-synced, delivers: \"I am DAVID. I bring dead languages back — not as words on a page, but as sound you can hear.\"",
+      "speech_text": "I am DAVID. I bring dead languages back — not as words on a page, but as sound you can hear.",
+      "on_screen": "DAVID · The Archive",
+      "id": "01_cold_open",
+      "t_start": 0,
+      "t_end": 7
+    },
+    {
+      "duration": 7,
+      "video_prompt": "DAVID, medium shot among shelves of manuscripts and tablets, reflective, lip-synced. Lip-synced, delivers: \"For most of history, when a language died, its voice died with it. The words survived. The sound was lost.\"",
+      "speech_text": "For most of history, when a language died, its voice died with it. The words survived. The sound was lost.",
+      "on_screen": "",
+      "id": "02_the_loss",
+      "t_start": 7,
+      "t_end": 14
+    },
+    {
+      "duration": 6,
+      "video_prompt": "DAVID leans slightly toward camera, intent, lip-synced. The signature question. Lip-synced, delivers: \"So I ask one question of every silent tongue: what did they actually say?\"",
+      "speech_text": "So I ask one question of every silent tongue: what did they actually say?",
+      "on_screen": "What did they actually say?",
+      "id": "03_the_question",
+      "t_start": 14,
+      "t_end": 20
+    },
+    {
+      "duration": 6,
+      "video_prompt": "DAVID, steady close-up, a knowing pause, lip-synced. Lip-synced, delivers: \"And how do we prove it?\"",
+      "speech_text": "And how do we prove it?",
+      "on_screen": "…And how do we prove it?",
+      "id": "04_how_prove",
+      "t_start": 20,
+      "t_end": 26
+    },
+    {
+      "duration": 8,
+      "video_prompt": "DAVID gestures to an open codex on the worktable, explaining, lip-synced. Lip-synced, delivers: \"I work only from the corpus — the texts people actually left — and reconstruct the sound the evidence supports. Never invention.\"",
+      "speech_text": "I work only from the corpus — the texts people actually left — and reconstruct the sound the evidence supports. Never invention.",
+      "on_screen": "Corpus-first · attested, then reconstructed",
+      "id": "05_method",
+      "t_start": 26,
+      "t_end": 34
+    },
+    {
+      "duration": 8,
+      "video_prompt": "DAVID, calm and direct to camera, lip-synced. The honesty principle. Lip-synced, delivers: \"When a sound is certain, I say so. When it's reconstructed, I say that too — and I show the proof on screen.\"",
+      "speech_text": "When a sound is certain, I say so. When it's reconstructed, I say that too — and I show the proof on screen.",
+      "on_screen": "attested vs reconstructed — always labeled",
+      "id": "06_honesty",
+      "t_start": 34,
+      "t_end": 42
+    },
+    {
+      "duration": 7,
+      "video_prompt": "DAVID, a spark of delight, lip-synced; warm light lifts slightly. Lip-synced, delivers: \"Here you'll hear Latin, Gothic, Old Norse, Sumerian — tongues no one has spoken aloud in a thousand years.\"",
+      "speech_text": "Here you'll hear Latin, Gothic, Old Norse, Sumerian — tongues no one has spoken aloud in a thousand years.",
+      "on_screen": "",
+      "id": "07_what_youll_hear",
+      "t_start": 42,
+      "t_end": 49
+    },
+    {
+      "duration": 6,
+      "video_prompt": "DAVID, warm and inviting, slight smile, lip-synced; gentle settle. Lip-synced, delivers: \"Bring the dead tongues back with me, one attestation at a time. Welcome to the Archive.\"",
+      "speech_text": "Bring the dead tongues back with me, one attestation at a time. Welcome to the Archive.",
+      "on_screen": "",
+      "id": "08_invitation",
+      "t_start": 49,
+      "t_end": 55
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "card_type": "closing",
+    "duration_s": 6,
+    "banner": "",
+    "title": "DAVID · The Archive",
+    "subtitle": "Dead languages, actually pronounced.",
+    "lines": [],
+    "footer": "Bring the dead tongues back — one attestation at a time. DAVID."
+  },
+  "guardrails": [
+    "Synthetic avatar only; no real-person likeness.",
+    "DAVID speaks modern English about himself — no dead-language line in this intro, so no IPA/attestation labels required.",
+    "Reuse the locked avatar + Archive set + voice suffix for full consistency."
+  ],
+  "qa_rules": {
+    "require_identity_lock": true,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": false,
+    "min_shots": 1
+  }
+}

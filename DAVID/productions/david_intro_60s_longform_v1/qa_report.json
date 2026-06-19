@@ -1,0 +1,14 @@
+{
+  "slug": "david_intro_60s",
+  "qa_at": "2026-06-19T01:05:59.067811+00:00",
+  "pass": true,
+  "passes": [
+    "host identity lock LOADED",
+    "shot count OK (8 >= 1)",
+    "all shots carry synthetic host guard (incl. auto-patched)",
+    "target duration ~61s"
+  ],
+  "issues": [],
+  "shot_count": 8,
+  "segment_count": 9
+}

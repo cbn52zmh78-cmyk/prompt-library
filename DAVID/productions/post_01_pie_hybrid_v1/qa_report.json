@@ -1,14 +1,17 @@
 {
-  "issue": 70,
-  "slug": "proto-indo-european",
-  "qa_at": "2026-06-18T22:58:30.207383+00:00",
+  "slug": "post01-pie-hybrid",
+  "qa_at": "2026-06-19T00:50:28.482802+00:00",
   "pass": true,
   "passes": [
     "host identity lock LOADED",
-    "text labeled reconstructed",
-    "line IPA bracketed with laryngeal notation",
-    "PIE shot has heavy RECONSTRUCTED + NOT ATTESTED labels",
-    "hybrid host shot structure complete (5 host + provenance)"
+    "shot count OK (5 >= 5)",
+    "all shots carry synthetic host guard (incl. auto-patched)",
+    "01_host_cold_open: RECONSTRUCTED labels present",
+    "03_host_pie_line: RECONSTRUCTED labels present",
+    "04_host_comparative_method: RECONSTRUCTED labels present",
+    "target duration ~49s"
   ],
-  "issues": []
+  "issues": [],
+  "shot_count": 5,
+  "segment_count": 6
 }

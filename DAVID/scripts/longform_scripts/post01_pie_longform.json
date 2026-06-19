@@ -1,0 +1,105 @@
+{
+  "slug": "post01-pie-hybrid",
+  "title": "Post 1 — The Mother Tongue of English (Proto-Indo-European)",
+  "production_dir": "productions/post_01_pie_hybrid_v1",
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "identity_lock": "productions/host_identity_v1/david_identity_lock.json"
+  },
+  "shots": [
+    {
+      "id": "01_host_cold_open",
+      "role": "host",
+      "t_start": 0,
+      "t_end": 6,
+      "duration": 6,
+      "on_screen": "DAVID · The Archive · 🔶 RECONSTRUCTED",
+      "on_screen_labels": ["RECONSTRUCTED language"],
+      "video_prompt": "The Archive keeper host speaks directly to camera in English, lip-synced, measured documentary gravitas. Delivers slowly: \"Before Latin. Before Greek. Before anything was written down — there was one language. No one ever recorded it. And yet we can rebuild it… from its children.\" Subtle slow push-in, warm brass lamp on face, hands near open codex on worktable.",
+      "speech_text": "Before Latin. Before Greek. Before anything was written down — there was one language. No one ever recorded it. And yet we can rebuild it… from its children.",
+      "speech_lang": "en"
+    },
+    {
+      "id": "02_host_question",
+      "role": "host",
+      "t_start": 6,
+      "t_end": 11,
+      "duration": 5,
+      "on_screen": "What did they actually say?",
+      "on_screen_labels": [],
+      "video_prompt": "Host push-in medium-close, speaks signature beat in English, lip-synced, thoughtful pause between clauses. Delivers: \"What did they actually say? … And how do we prove it?\" Still grounded, trustworthy delivery.",
+      "speech_text": "What did they actually say? … And how do we prove it?",
+      "speech_lang": "en"
+    },
+    {
+      "id": "03_host_pie_line",
+      "role": "host_pie",
+      "t_start": 11,
+      "t_end": 26,
+      "duration": 15,
+      "on_screen": "*h₂éwis, h₁éḱwōs h₁éḱontes\n[ˈh₂é.wis ˈh₁é.kʷoːs ˈh₁é.kʷon.tes]\nRECONSTRUCTED — NOT ATTESTED",
+      "on_screen_labels": ["RECONSTRUCTED text", "RECONSTRUCTED pronunciation", "NOT ATTESTED"],
+      "video_prompt": "The same Archive host now speaks reconstructed Proto-Indo-European slowly and clearly, lip-synced, scholarly documentary tone, never claiming it is a recording. PIE line: \"h₂éwis, h₁éḱwōs h₁éḱontes\" IPA target [ˈh₂é.wis ˈh₁é.kʷoːs ˈh₁é.kʷon.tes]. On-screen feel: bold RECONSTRUCTED warning tags, asterisk forms visible. Steady medium shot, lamp light, deliberate pace.",
+      "speech_text": "h₂éwis, h₁éḱwōs h₁éḱontes",
+      "speech_ipa": "[ˈh₂é.wis ˈh₁é.kʷoːs ˈh₁é.kʷon.tes]",
+      "speech_lang": "pie-reconstructed"
+    },
+    {
+      "id": "04_host_comparative_method",
+      "role": "host",
+      "t_start": 26,
+      "t_end": 36,
+      "duration": 10,
+      "on_screen": "Comparative method · Latin ovis ← *h₂éwis · Sanskrit ávi- · English ewe",
+      "on_screen_labels": ["RECONSTRUCTED inference"],
+      "video_prompt": "Host back in Archive, gestures toward manuscripts on table while explaining in English, lip-synced. Delivers: \"We compare its daughters — Latin, Sanskrit, Old English — and work backward to the sound that must have stood behind them all. That's the comparative method. It's reconstruction, not a recording — and we'll always tell you which is which.\" Educational hand gesture toward codex, calm authority, honesty about uncertainty.",
+      "speech_text": "We compare its daughters — Latin, Sanskrit, Old English — and work backward to the sound that must have stood behind them all. That's the comparative method. It's reconstruction, not a recording — and we'll always tell you which is which.",
+      "speech_lang": "en"
+    },
+    {
+      "id": "05_tagline_vo",
+      "role": "host",
+      "t_start": 36,
+      "t_end": 42,
+      "duration": 6,
+      "on_screen": "DAVID",
+      "on_screen_labels": [],
+      "video_prompt": "Host warm close, speaks tagline in English, lip-synced. Delivers: \"Bring the dead tongues back — one attestation at a time. DAVID.\" Slight smile of quiet wonder, medium close-up.",
+      "speech_text": "Bring the dead tongues back — one attestation at a time. DAVID.",
+      "speech_lang": "en"
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 7,
+    "banner": "RECONSTRUCTED — NOT ATTESTED",
+    "title": "DAVID · PROVENANCE · Post 1",
+    "subtitle": "Post 1 — The Mother Tongue of English (Proto-Indo-European)",
+    "lines": [
+      "TEXT [reconstructed]: August Schleicher, Compendium der vergleichenden Grammatik (1861/62); modern recension Schleicher's Fable. Reconstructed — not attested.",
+      "PRONUNCIATION [reconstructed]: reconstructed late PIE phonology (laryngeal theory); moderate — scholarly consensus with debated laryngeal detail.",
+      "LINE: *h₂éwis, h₁éḱwōs h₁éḱontes",
+      "IPA: [ˈh₂é.wis ˈh₁é.kʷoːs ˈh₁é.kʷon.tes]",
+      "TRANSLATION: The sheep and the horses (were) going…",
+      "CITATION: https://en.wikipedia.org/wiki/Schleicher%27s_fable",
+      "SOURCES: Wikipedia / Wiktionary (CC BY-SA), Wikidata (CC0), retrieved 2026-06-18.",
+      "BRAIN: languages/reconstructed/proto-indo-european/research/brain/latest_scrape.json"
+    ],
+    "footer": "reconstructed text · reconstructed pronunciation · comparative method"
+  },
+  "provenance": {
+    "text": "August Schleicher, Compendium der vergleichenden Grammatik (1861/62); modern recension Schleicher's Fable. Reconstructed — not attested.",
+    "pronunciation": "reconstructed late PIE phonology (laryngeal theory); moderate — scholarly consensus with debated laryngeal detail.",
+    "citation": "https://en.wikipedia.org/wiki/Schleicher%27s_fable",
+    "sources": "Wikipedia / Wiktionary (CC BY-SA), Wikidata (CC0), retrieved 2026-06-18.",
+    "brain_scrape": "languages/reconstructed/proto-indo-european/research/brain/latest_scrape.json"
+  },
+  "qa_rules": {
+    "require_identity_lock": true,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": true,
+    "min_shots": 5
+  }
+}

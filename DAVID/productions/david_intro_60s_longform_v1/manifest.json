@@ -1,0 +1,35 @@
+{
+  "pipeline": "render_longform",
+  "completed_at": "2026-06-19T01:05:59.068216+00:00",
+  "script_source": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\scripts\\longform_scripts\\david_intro_60s_script.json",
+  "concat_only": false,
+  "production_dir": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_intro_60s_longform_v1",
+  "script": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_intro_60s_longform_v1\\david_intro_60s_script.json",
+  "imagine_pack": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_intro_60s_longform_v1\\david_intro_60s_imagine_pack.json",
+  "output": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_intro_60s_longform_v1\\output\\david_david_intro_60s_longform_v1.mp4",
+  "qa": {
+    "slug": "david_intro_60s",
+    "qa_at": "2026-06-19T01:05:59.067811+00:00",
+    "pass": true,
+    "passes": [
+      "host identity lock LOADED",
+      "shot count OK (8 >= 1)",
+      "all shots carry synthetic host guard (incl. auto-patched)",
+      "target duration ~61s"
+    ],
+    "issues": [],
+    "shot_count": 8,
+    "segment_count": 9
+  },
+  "segments": [
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_intro_60s_longform_v1\\shots\\01_cold_open.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_intro_60s_longform_v1\\shots\\02_the_loss.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_intro_60s_longform_v1\\shots\\03_the_question.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_intro_60s_longform_v1\\shots\\04_how_prove.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_intro_60s_longform_v1\\shots\\05_method.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_intro_60s_longform_v1\\shots\\06_honesty.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_intro_60s_longform_v1\\shots\\07_what_youll_hear.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_intro_60s_longform_v1\\shots\\08_invitation.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_intro_60s_longform_v1\\shots\\provenance.mp4"
+  ]
+}
