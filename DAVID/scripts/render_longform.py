@@ -2643,6 +2643,21 @@ def qa_check(
                         passes.append(f"zero hue drift across segments (max magenta {max(mag_scores):.3f})")
                     else:
                         issues.append(f"hue drift detected across segments magenta={mag_scores}")
+                elif (
+                    len(segs) >= 2
+                    and _is_clinical_neutral_set(script, refs)
+                    and seamless_opts.neutral_grade
+                ):
+                    yg_scores = [probe_yellow_green_score(p) for p in segs]
+                    delta = max(yg_scores) - min(yg_scores)
+                    if delta <= YELLOW_GREEN_SCORE_MAX:
+                        passes.append(
+                            f"clinical hue stable across segments (yellow-green Δ={delta:.3f})"
+                        )
+                    else:
+                        issues.append(
+                            f"clinical hue drift across segments yellow-green={yg_scores}"
+                        )
                 elif len(segs) >= 2:
                     balances = [_probe_grey_balance(p) for p in segs]
                     delta = max(balances) - min(balances)
