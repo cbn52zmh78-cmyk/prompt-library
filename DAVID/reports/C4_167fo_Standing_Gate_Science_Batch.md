@@ -1,36 +1,44 @@
 # C4 Standing QA Gate — inbound masters (T4_181 science astro + science)
 
 **Owner:** C4 · **Date:** 2026-06-19 · **Gate def:** `DAVID/reports/C4_167_PrePublish_QA_Gate.md`
-**Status:** **STANDING — queue triaged, ready to gate on first clean render.**
+**Status:** **HOLD — all three FRAME-FAIL. No re-verdict until DAVID's real re-render + frame proof (#195).**
 
-> Discipline note: gate reads the **on-disk** `<prod>/qa_report.json` (latest-wins), **not** the batch
-> `manifest.json` snapshot. The 06:19 manifest snapshot is already stale — it lists black_hole + star
-> as `qa_pass=True`, but the current on-disk QA for **all three** is `pass:false`. Cite the render's own
-> live qa_report, same as Gate 0's "newest report wins".
+> **#195 correction applied.** QA now verdicts colour/continuity from the **actual delivered frames**
+> (`DAVID/scripts/c4_frame_proof_qa.py`, 1 fps across the whole master), **not** from the
+> self-reported `qa_report.json`. The JSON is corroborating-only and has been caught issuing live
+> false passes. The renderer's own colour gate only samples one frame per segment midpoint, so
+> tail / provenance-card casts slip through — that is the hole #195 names.
 
-## Inbound queue — T4_181_science_astro (phase: draft_480p)
+## Frame-proof results (this pass — diagnostic, NOT a verdict)
 
-All three: **Gate 0 = YELLOW (human-signed)** ✓ · **Science honesty rail = PASS** ✓ (illustrative-label
-+ cited source + no simulation overclaim). Each carries one **open Dimension-1 (Render Integrity)** blocker:
+Ran the frame-proof verifier on the current (pre-re-render) masters. **2 of 3 are confirmed
+FALSE PASSES** — `qa_report.json` says `pass:true` while the frames fail:
 
-| Master | Gate 0 | Honesty | Render-integrity blocker (live qa) | C4 call |
-|---|:---:|:---:|---|:---:|
-| `science_black_hole_anatomy_v1` (5.71 MB) | YELLOW✓ | PASS✓ | **R6** yellow-green cast > 0.42 on 4 chains (0.46/0.53/0.49/0.42) | **FIX** |
-| `science_galaxy_formation_v1` (0.91 MB) | YELLOW✓ | PASS✓ | **R5** loudness spread 7.19 LU > 1.5; master ~0.9 MB (likely truncated) | **FIX** |
-| `science_star_lifecycle_v1` (6.81 MB) | YELLOW✓ | PASS✓ | **R6** hue drift across segments (grey_balance 0.11→0.32) | **FIX** |
+| Master | JSON self-report | Frame verdict | Coherence | Breach (real frames) |
+|---|:---:|:---:|:---:|---|
+| `science_black_hole_anatomy_v1` | `pass:true` ❌ | **FRAME-FAIL** | **INCOHERENT_FALSE_PASS** | magenta **0.79** @ t=42–47s; grey-drift 0.32 |
+| `science_star_lifecycle_v1` | `pass:true` ❌ | **FRAME-FAIL** | **INCOHERENT_FALSE_PASS** | magenta **0.51–0.85** @ t=25–32s & 42–47s; grey-drift 0.29 |
+| `science_galaxy_formation_v1` | `pass:false` | **FRAME-FAIL** | COHERENT | yellow-green **0.47–0.54** @ t=0–7s; master ~0.9 MB (truncated) |
 
-**Verdict at this instant: none SHIP-ready.** Each is a single render-pass FIX (color lock / audio
-loudnorm / segment grade) away from a full C4 walk. Gate 0 + honesty are already green-lit, so once
-`qa_report.json.pass:true && issues:[]` lands, the C4 run is fast: re-walk Dim-1 only, then Dim-4 brand
-(these are 480p drafts → brand polish gated at proof altitude per #167 Appendix A).
+Thresholds: magenta ≤ 0.42 · yellow-green ≤ 0.12 · grey-drift ≤ 0.12.
+Evidence of record: `<prod>/frame_proof/` stills + `<prod>/frame_proof_qa.json` per master.
 
-## What "clean" requires before I issue SHIP/FIX verdict files
-For each: live `qa_report.json` → `pass:true`, `issues:[]` (clears R5/R6/R7); master present & non-trivial
-(galaxy's ~0.9 MB must be re-rendered to full length); then I emit
-`DAVID/reports/C4_167_VERDICT_<slug>.md`. Science masters also defer citation accuracy to C2 #159
-fact-check (H2) before any promotion above proof.
+The t=42–47s magenta on black_hole + star is the **provenance-card / tail** region — exactly the
+frames the midpoint-per-segment probe never measured. Visible cast, JSON-green. Caught now.
+
+## Gate posture
+- **Re-verdict only after DAVID delivers a real re-render** whose frame proof reads `FRAME-PASS`
+  with `coherence` COHERENT/JSON_STRICTER. No SHIP/FIX verdict file is issued before that.
+- Gate 0 (YELLOW, signed) + science honesty rail (PASS) remain green-lit for all three — the open
+  blocker is purely render colour/continuity, now measured at frame level.
+- On re-render, C4 re-runs `c4_frame_proof_qa.py`, confirms FRAME-PASS, then walks Dim-1 R1–R5 +
+  Dim-4 brand and emits `DAVID/reports/C4_167_VERDICT_<slug>.md` citing breach-free frame proof.
+
+## Re-render targets handed to DAVID
+- **black_hole:** kill the magenta cast in the tail/provenance-card region (t≈42–47s); re-grade for grey-drift ≤ 0.12.
+- **star_lifecycle:** kill magenta across t≈25–32s and the tail t≈42–47s; grey-drift ≤ 0.12.
+- **galaxy:** neutralise the yellow-green cast in the opening (t≈0–7s) **and** re-render to full length (current master ~0.9 MB is truncated).
 
 ## Scope note
-Same posture extends to sibling science slates when they render (`chem_physics_mini_slate`,
-`molecular_mini_slate`) and to any DAVID longform/host master — all routed through the #167 C4 gate.
-Ping C4 on render-clean; I gate on arrival.
+Same frame-proof posture applies to every DAVID longform/host/science master and sibling science
+slates (`chem_physics_mini_slate`, `molecular_mini_slate`). Ping C4 on render-clean; I gate on the frames.

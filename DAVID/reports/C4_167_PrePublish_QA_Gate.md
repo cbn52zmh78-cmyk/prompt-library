@@ -53,11 +53,24 @@ own `qa_report.json` (must show `pass: true`, empty `issues`) plus a structural 
 - [ ] **R6 — Color/continuity QC.** Magenta score ≤ **0.42** (lamp 3200K warm-gold lock), no
       uncorrected cast/grade drift; lamp warm-ratio Δ stable across segments.
 - [ ] **R7 — `qa_report.json` is GREEN.** `pass: true` **and** `issues: []`. A render with any
-      blocking issue is FAIL even if a file exists.
+      blocking issue is FAIL even if a file exists. **`qa_report.json` is CORROBORATING ONLY — it
+      never, by itself, passes R6/R8.** It is self-reported by the renderer and has been caught
+      lying (live `pass:true` on a master with magenta 0.79; `qa_at` predating master mtime — #176/#195).
+- [ ] **R8 — FRAME PROOF (#195, hard).** Colour/continuity (R6) is verdicted from the **actual
+      delivered frames**, densely sampled across the **whole** timeline, NOT from the JSON. Run
+      `python DAVID/scripts/c4_frame_proof_qa.py <prod_dir>` → require `frame_verdict: FRAME-PASS`
+      and `coherence ∈ {COHERENT, JSON_STRICTER}`. **`INCOHERENT_FALSE_PASS` (JSON green, frames
+      fail) is an automatic FAIL and a renderer-trust flag.** The extracted `frame_proof/` stills are
+      the evidence of record; the verdict file must cite breach timestamps, not a `pass:true`.
 
-> Note: `ffprobe` is not installed in this environment — R3–R6 are verified from the pipeline's
-> emitted `qa_report.json` (which derives them at render time). If you have `ffprobe`, re-confirm
-> R3/R4 directly. Never infer "duration OK" from file size alone.
+> **Why R8 exists (the false-pass root cause).** The pipeline's colour gate
+> (`probe_magenta_score` / `probe_yellow_green_score` / `_probe_grey_balance`) samples **one frame
+> per segment, at the segment midpoint**. A cast in the tail / provenance-card / between-midpoint
+> regions is never measured → `pass:true` on visibly cast frames. `c4_frame_proof_qa.py` samples
+> 1 fps across the full master and re-measures with the pipeline's own formulas + thresholds
+> (magenta ≤ 0.42, yellow-green ≤ 0.12, grey-drift ≤ 0.12). `ffprobe` is absent, but `ffmpeg` is
+> reachable via `imageio_ffmpeg` — so frames ARE extractable; never fall back to JSON-trust.
+> Never infer "duration OK" from file size alone; never infer "colour OK" from the JSON alone.
 
 ## Dimension 2 — GATE 0 (LEGAL) FRESHNESS
 
