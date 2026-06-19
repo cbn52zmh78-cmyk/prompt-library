@@ -80,7 +80,9 @@ NEUTRAL_WB_VF = "eq=gamma_r=1.00:gamma_g=0.92:gamma_b=1.04:saturation=0.93:brigh
 SKIN_NEUTRAL_VF = "eq=contrast=1.02:saturation=0.96"
 LAMP_ACCENT_VF = "eq=gamma_r=1.10:gamma_g=1.02:gamma_b=0.82:saturation=1.08"
 LAMP_LOCK_VF = (
-    "eq=gamma_r=1.06:gamma_g=1.02:gamma_b=0.88:saturation=1.10:brightness=0.02"
+    # #244: relaxed post-#218. Old gamma_r=1.06/gamma_b=0.88/sat=1.10 over-warmed and
+    # blue-starved now-neutral generation when compounded across clamp+match stages.
+    "eq=gamma_r=1.01:gamma_g=1.01:gamma_b=0.99:saturation=1.04:brightness=0.02"
 )
 LAMP_LOCK_PROMPT = (
     "Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only, "
@@ -113,7 +115,11 @@ AUDIO_SILENCE_DB = -45.0
 LOUDNORM_I = -16.0
 LOUDNORM_TP = -1.5
 LOUDNORM_LRA = 11.0
-MAGENTA_CLAMP_VF = "eq=gamma_r=1.08:gamma_g=1.02:gamma_b=0.82:saturation=1.05:brightness=0.01"
+# #244: relaxed post-#218. Old gamma_r=1.08/gamma_b=0.82/sat=1.05 was tuned for blue-excess
+# magenta generation; on now-neutral footage (raw magenta ~0.15 << 0.42) it crushed blue
+# (Bμ 57→19) and warmed when applied 4x (per-shot clamp + match_color). Conditional strong-pass
+# loop (MAGENTA_CLAMP_STRONG_VF, gated on probe_magenta_score>0.42) remains the real-magenta net.
+MAGENTA_CLAMP_VF = "eq=gamma_r=1.01:gamma_g=1.01:gamma_b=0.99:saturation=1.03:brightness=0.01"
 MAGENTA_CLAMP_STRONG_VF = (
     "eq=gamma_r=1.18:gamma_g=1.08:gamma_b=0.62:saturation=0.90:brightness=0.03"
 )

@@ -1,7 +1,7 @@
 {
   "pipeline": "render_longform_seamless",
   "protocol": "STUDIO_Canonical_Schema_and_Seamless_Spec_v1",
-  "completed_at": "2026-06-19T14:19:09.629493+00:00",
+  "completed_at": "2026-06-19T15:33:51.139399+00:00",
   "script_source": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\scripts\\longform_scripts\\david_latin_corpus_v1_script.json",
   "concat_only": false,
   "seamless": true,
@@ -10,12 +10,12 @@
   "imagine_pack": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_corpus_v1_longform_v1\\david_latin_corpus_v1_imagine_pack.json",
   "output": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_corpus_v1_longform_v1\\output\\david_david_latin_corpus_v1_seamless_v1.mp4",
   "extend_performance": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_corpus_v1_longform_v1\\shots\\host_performance_extend.mp4",
-  "extend_steps": 7,
+  "extend_steps": "cached",
   "continuity_mode": "frame_chain",
   "comparison": null,
   "qa": {
     "slug": "david_latin_corpus_v1",
-    "qa_at": "2026-06-19T14:19:09.628883+00:00",
+    "qa_at": "2026-06-19T15:33:51.138738+00:00",
     "pass": false,
     "passes": [
       "host identity lock LOADED",
@@ -31,19 +31,19 @@
       "@David-001 continuity prefix embedded in video_prompt",
       "xfade chain + synced audio crossfade at joins",
       "re-concat join preserved: xfade_chain (0.35s)",
-      "audio PRESENT (david_david_latin_corpus_v1_seamless_v1.mp4 mean -27.1 dB)",
+      "final mux color-cast T4 clean (#244) — B/R=1.037 starve=0.070 Bμ=59.3",
+      "audio PRESENT (david_david_latin_corpus_v1_seamless_v1.mp4 mean -21.5 dB)",
       "loudnorm two-pass target I=-16.0 LUFS per shot",
       "audio pinned to exact shot duration (no stretch/offset)",
-      "flat loudness across shots (spread 0.06 LU)",
-      "zero magenta (max score 0.141 <= 0.42)",
+      "flat loudness across shots (spread 0.08 LU)",
       "tight A/V sync per shot (duration pinned)",
+      "neutral WB — yellow-green suppressed (max 0.083 <= 0.12)",
+      "generation color-cast clean — B/R=0.750 starve=0.278 Bμ=49.8",
       "pronunciation chip overlay burned (high-contrast #194)",
       "lamp warm ratio stable across segments (Δ=0.000)"
     ],
     "issues": [
-      "final output bypassed grade/xfade path (#244 T4): ['rgb_skew 0.1447 > 0.12', 'blue_starvation_fraction 0.556 > 0.5']",
-      "yellow-green cast detected: [('chain_02_stakes_processed', 0.19581610313792264), ('chain_04_proof_beat_processed', 0.1702127659574468), ('chain_06_honesty_processed', 0.19053457577243746), ('chain_08_invitation_processed', 0.18011390602752728)]",
-      "blue-starved generation cast (#194 T4): [('chain_02_stakes_processed', ['rgb_skew 0.1661 > 0.12']), ('chain_04_proof_beat_processed', ['rgb_skew 0.1540 > 0.12']), ('chain_06_honesty_processed', ['rgb_skew 0.1529 > 0.12', 'blue_starvation_fraction 0.500 > 0.5']), ('chain_08_invitation_processed', ['rgb_skew 0.1543 > 0.12', 'blue_starvation_fraction 0.514 > 0.5'])]"
+      "magenta detected: [('chain_01_cold_open', 0.6337822014051522), ('chain_03_signature_question', 0.6828665568369028), ('chain_05_method', 0.6686894160296319), ('chain_07_demonstration', 0.6614094476073242)]"
     ],
     "shot_count": 8,
     "segment_count": 2,
