@@ -1,0 +1,107 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "Alaska",
+  "state_code": "AK",
+  "state_slug": "alaska",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:12:21.982592+00:00",
+  "status": "PARKED",
+  "primary_source": "Alaska 8 AAC 55",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "group_size": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "ratios",
+      "status": "PARKED",
+      "source_checked": "Alaska 8 AAC 55"
+    },
+    {
+      "domain": "group_size",
+      "status": "PARKED"
+    },
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": [
+    {
+      "source_id": "alaska_alaska_8_aac_55",
+      "state": "Alaska",
+      "source": "Alaska 8 AAC 55",
+      "url": "https://regulations.commerce.alaska.gov/online/Show/4/8.55.010",
+      "extractor": "generic",
+      "status": "PARKED",
+      "http_status": null,
+      "bytes": 0,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "park_reason": "<urlopen error [Errno 11001] getaddrinfo failed>"
+    },
+    {
+      "source_id": "alaska_alaska_child_care_regulations_fallback_",
+      "state": "Alaska",
+      "source": "Alaska Child Care Regulations (fallback)",
+      "url": "https://health.alaska.gov/dph/HealthSafety/Pages/childcare/default.aspx",
+      "extractor": "generic",
+      "status": "PARKED",
+      "http_status": 403,
+      "bytes": 5671,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "park_reason": "HTTP 403"
+    },
+    {
+      "source_id": "alaska_childcare_gov_alaska",
+      "state": "Alaska",
+      "source": "Childcare.gov — Alaska",
+      "url": "https://www.childcare.gov/state-resources/alaska/understanding-and-finding-child-care-resources",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 69181,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    }
+  ]
+}

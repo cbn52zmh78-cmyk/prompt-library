@@ -1,0 +1,84 @@
+{
+  "message_type": "recap_vcs",
+  "issue": 275,
+  "title": "R5 #275 — Transport/DOT compliance (FMCSA federal + 7 non-PA states)",
+  "generated_at": "2026-06-19T16:11:01.553260+00:00",
+  "status": "COMPLETE",
+  "verdict": "GREEN",
+  "owner_terminal": "T5",
+  "lane": "R5",
+  "vertical": "Transport / Logistics / Auto",
+  "pinned_lane": "GroundTruth/Compliance/lanes/R5_transport_logistics_auto",
+  "recap": {
+    "did": [
+      "Built federal FMCSA/DOT baseline: carrier registration, HOS, vehicle requirements, insurance, interstate/intrastate (eCFR + UCR; FMCSA.gov parked 403)",
+      "Deep-harvested state DOT overlays for 7 non-PA states: California, Florida, Georgia, Illinois, New York, Ohio, Texas",
+      "Merged dot_compliance into #269 state packs; pinned artifacts to GroundTruth/Compliance/lanes/R5_transport_logistics_auto/"
+    ],
+    "state": "Federal 16 facts (FOUND 5/5 domains); state overlay 36 facts across 7 states (FOUND 6, REQUIRES_CONFIRMATION 24, ACCESS_RESTRICTED 5)",
+    "gaps": {
+      "federal": [
+        "FMCSA registration portal HTTP 403 — use eCFR Parts 365/390 + UCR.gov"
+      ],
+      "states": {
+        "Georgia": "GA PSC motor-carrier pages SSL certificate expired — all DOT domains ACCESS_RESTRICTED",
+        "partial_confirmation": [
+          "California",
+          "Florida",
+          "Illinois",
+          "New York",
+          "Ohio",
+          "Texas"
+        ]
+      }
+    },
+    "next": [
+      "Re-probe fmcsa.dot.gov/registration when 403 clears",
+      "Re-probe psc.ga.gov/utilities/motor-carrier/ when SSL renewed",
+      "Re-run groundtruth_consolidate_compliance.py to roll DOT facts into canonical pack"
+    ]
+  },
+  "metrics": {
+    "federal_domains": 5,
+    "federal_facts": 16,
+    "federal_status_roll": {
+      "FOUND": 5,
+      "REQUIRES_CONFIRMATION": 0,
+      "NOT FOUND": 0,
+      "ACCESS_RESTRICTED": 0
+    },
+    "state_deep_count": 7,
+    "state_dot_facts": 36,
+    "state_status_roll": {
+      "FOUND": 6,
+      "REQUIRES_CONFIRMATION": 24,
+      "NOT FOUND": 0,
+      "ACCESS_RESTRICTED": 5
+    },
+    "gap_states": [
+      "Georgia"
+    ]
+  },
+  "vcs_commit_draft": {
+    "subject": "R5 #275: FMCSA federal DOT baseline + 7-state DOT overlays (non-PA)",
+    "body": "RECAP\n- Did: Federal FMCSA baseline (16 facts, 5 domains); state DOT overlays for CA/TX/FL/NY/IL/OH/GA (36 facts); pinned GroundTruth lane\n- State: Federal roll {'FOUND': 5, 'REQUIRES_CONFIRMATION': 0, 'NOT FOUND': 0, 'ACCESS_RESTRICTED': 0}; state roll {'FOUND': 6, 'REQUIRES_CONFIRMATION': 24, 'NOT FOUND': 0, 'ACCESS_RESTRICTED': 5}; GA PSC SSL parked\n- Next: Re-probe FMCSA portal + GA PSC; consolidate into canonical pack\n\nCEILING: Public .gov only; 403/SSL = park; gaps explicit."
+  },
+  "artifacts": [
+    "GroundTruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+    "GroundTruth/Compliance/lanes/R5_transport_logistics_auto/dot_states/california.json",
+    "GroundTruth/Compliance/lanes/R5_transport_logistics_auto/states/california.json",
+    "GroundTruth/Compliance/lanes/R5_transport_logistics_auto/dot_states/florida.json",
+    "GroundTruth/Compliance/lanes/R5_transport_logistics_auto/states/florida.json",
+    "GroundTruth/Compliance/lanes/R5_transport_logistics_auto/dot_states/georgia.json",
+    "GroundTruth/Compliance/lanes/R5_transport_logistics_auto/states/georgia.json",
+    "GroundTruth/Compliance/lanes/R5_transport_logistics_auto/dot_states/illinois.json",
+    "GroundTruth/Compliance/lanes/R5_transport_logistics_auto/states/illinois.json",
+    "GroundTruth/Compliance/lanes/R5_transport_logistics_auto/dot_states/new_york.json",
+    "GroundTruth/Compliance/lanes/R5_transport_logistics_auto/states/new_york.json",
+    "GroundTruth/Compliance/lanes/R5_transport_logistics_auto/dot_states/ohio.json",
+    "GroundTruth/Compliance/lanes/R5_transport_logistics_auto/states/ohio.json",
+    "GroundTruth/Compliance/lanes/R5_transport_logistics_auto/dot_states/texas.json",
+    "GroundTruth/Compliance/lanes/R5_transport_logistics_auto/states/texas.json",
+    "GroundTruth/Compliance/lanes/R5_transport_logistics_auto/dot_states/index.json"
+  ]
+}

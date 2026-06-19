@@ -1,0 +1,166 @@
+{
+  "artifact": "transport_dot_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 275,
+  "parent_issue": 269,
+  "deepening_issue": 275,
+  "task": "R5 #275 — State DOT/motor-carrier compliance overlay (non-PA selected states)",
+  "state": "Texas",
+  "state_code": "TX",
+  "state_slug": "texas",
+  "generated_at": "2026-06-19T16:11:01.534130+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm DOT/FMCSA carrier registration, HOS, vehicle, and insurance requirements with FMCSA and the relevant state authority.",
+  "policy": "Public .gov sources only; 403/SSL = park; gaps explicit.",
+  "federal_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "FOUND",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-TX-CAR-001",
+            "text": "TxDMV Motor Carriers Division supports apportioned and intrastate fleet registration; carriers update carrier information, renew certificates, and print cab cards through TxDMV.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "TxDMV — Motor Carriers",
+              "url": "https://www.txdmv.gov/motor-carriers",
+              "agency": "Texas Department of Motor Vehicles",
+              "jurisdiction": "Texas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          },
+          {
+            "fact_id": "GT275-TX-CAR-002",
+            "text": "Texas DPS Commercial Vehicle Enforcement performs New Entrant Safety Audits and compliance reviews for motor carriers operating in Texas.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "TX DPS — Commercial Vehicle Enforcement",
+              "url": "https://www.dps.texas.gov/section/commercial-vehicle-enforcement",
+              "agency": "Texas Department of Public Safety",
+              "jurisdiction": "Texas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 2,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-TX-HOU-001",
+            "text": "The Texas Motor Carrier's Guide to Highway Safety covers intrastate commercial motor vehicle laws including hours-of-service and FMCSR adoption for Texas intrastate operations.",
+            "status": "FOUND",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "TX DPS — Commercial Vehicle Enforcement",
+              "url": "https://www.dps.texas.gov/section/commercial-vehicle-enforcement",
+              "agency": "Texas Department of Public Safety",
+              "jurisdiction": "Texas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-TX-VEH-001",
+            "text": "Texas DPS CVE inspects commercial vehicles for compliance with state traffic laws, FMCSR vehicle standards, and hazardous materials requirements on Texas highways.",
+            "status": "FOUND",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "TX DPS — Commercial Vehicle Enforcement",
+              "url": "https://www.dps.texas.gov/section/commercial-vehicle-enforcement",
+              "agency": "Texas Department of Public Safety",
+              "jurisdiction": "Texas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-TX-INS-001",
+            "text": "Interstate motor carriers operating in Texas must meet federal Part 387 minimums; intrastate for-hire carriers must maintain liability coverage per Texas Transportation Code and DPS/CVE enforcement standards.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "insurance",
+            "citation": {
+              "source": "TX DPS — Commercial Vehicle Enforcement",
+              "url": "https://www.dps.texas.gov/section/commercial-vehicle-enforcement",
+              "agency": "Texas Department of Public Safety",
+              "jurisdiction": "Texas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-TX-INT-001",
+            "text": "Texas distinguishes intrastate CMV operations governed by state law and FMCSR adoption from interstate carriers requiring USDOT registration, UCR, and federal operating authority.",
+            "status": "FOUND",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "TX DPS — Commercial Vehicle Enforcement",
+              "url": "https://www.dps.texas.gov/section/commercial-vehicle-enforcement",
+              "agency": "Texas Department of Public Safety",
+              "jurisdiction": "Texas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": true
+    }
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "Georgia",
+  "state_code": "GA",
+  "state_slug": "georgia",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:12:35.574306+00:00",
+  "status": "PARTIAL",
+  "primary_source": "Georgia Ga. Comp. R. & Regs. R. 591-1-1-.32",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "HARVESTED",
+      "fact_count": 6,
+      "facts": [
+        {
+          "fact_id": "georgia-childcare-ratios-1",
+          "category": "ratios",
+          "text": "Georgia child care center staff:child ratio for One (1) year olds who are walking: 1:8; maximum group size 16.",
+          "citation": {
+            "source": "Georgia Ga. Comp. R. & Regs. R. 591-1-1-.32",
+            "url": "https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-591-1-1-.32",
+            "agency": "Georgia DECAL",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "georgia-childcare-ratios-2",
+          "category": "ratios",
+          "text": "Georgia child care center staff:child ratio for Two (2) year olds: 1:10; maximum group size 20.",
+          "citation": {
+            "source": "Georgia Ga. Comp. R. & Regs. R. 591-1-1-.32",
+            "url": "https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-591-1-1-.32",
+            "agency": "Georgia DECAL",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "georgia-childcare-ratios-3",
+          "category": "ratios",
+          "text": "Georgia child care center staff:child ratio for Three (3) year olds: 1:15; maximum group size 30.",
+          "citation": {
+            "source": "Georgia Ga. Comp. R. & Regs. R. 591-1-1-.32",
+            "url": "https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-591-1-1-.32",
+            "agency": "Georgia DECAL",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "georgia-childcare-ratios-4",
+          "category": "ratios",
+          "text": "Georgia child care center staff:child ratio for Four (4) year olds: 1:18; maximum group size 36.",
+          "citation": {
+            "source": "Georgia Ga. Comp. R. & Regs. R. 591-1-1-.32",
+            "url": "https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-591-1-1-.32",
+            "agency": "Georgia DECAL",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "georgia-childcare-ratios-5",
+          "category": "ratios",
+          "text": "Georgia child care center staff:child ratio for Five (5) year olds: 1:20; maximum group size 40.",
+          "citation": {
+            "source": "Georgia Ga. Comp. R. & Regs. R. 591-1-1-.32",
+            "url": "https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-591-1-1-.32",
+            "agency": "Georgia DECAL",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "georgia-childcare-ratios-6",
+          "category": "ratios",
+          "text": "Georgia child care center staff:child ratio for Six (6) years and older: 1:25; maximum group size 50.",
+          "citation": {
+            "source": "Georgia Ga. Comp. R. & Regs. R. 591-1-1-.32",
+            "url": "https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-591-1-1-.32",
+            "agency": "Georgia DECAL",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        }
+      ]
+    },
+    "group_size": {
+      "status": "HARVESTED",
+      "fact_count": 6,
+      "facts": [
+        {
+          "fact_id": "georgia-childcare-group-size-1",
+          "category": "group_size",
+          "text": "Georgia child care center maximum group size for One (1) year olds who are walking: 16 children.",
+          "citation": {
+            "source": "Georgia Ga. Comp. R. & Regs. R. 591-1-1-.32",
+            "url": "https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-591-1-1-.32",
+            "agency": "Georgia DECAL",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "georgia-childcare-group-size-2",
+          "category": "group_size",
+          "text": "Georgia child care center maximum group size for Two (2) year olds: 20 children.",
+          "citation": {
+            "source": "Georgia Ga. Comp. R. & Regs. R. 591-1-1-.32",
+            "url": "https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-591-1-1-.32",
+            "agency": "Georgia DECAL",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "georgia-childcare-group-size-3",
+          "category": "group_size",
+          "text": "Georgia child care center maximum group size for Three (3) year olds: 30 children.",
+          "citation": {
+            "source": "Georgia Ga. Comp. R. & Regs. R. 591-1-1-.32",
+            "url": "https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-591-1-1-.32",
+            "agency": "Georgia DECAL",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "georgia-childcare-group-size-4",
+          "category": "group_size",
+          "text": "Georgia child care center maximum group size for Four (4) year olds: 36 children.",
+          "citation": {
+            "source": "Georgia Ga. Comp. R. & Regs. R. 591-1-1-.32",
+            "url": "https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-591-1-1-.32",
+            "agency": "Georgia DECAL",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "georgia-childcare-group-size-5",
+          "category": "group_size",
+          "text": "Georgia child care center maximum group size for Five (5) year olds: 40 children.",
+          "citation": {
+            "source": "Georgia Ga. Comp. R. & Regs. R. 591-1-1-.32",
+            "url": "https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-591-1-1-.32",
+            "agency": "Georgia DECAL",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "georgia-childcare-group-size-6",
+          "category": "group_size",
+          "text": "Georgia child care center maximum group size for Six (6) years and older: 50 children.",
+          "citation": {
+            "source": "Georgia Ga. Comp. R. & Regs. R. 591-1-1-.32",
+            "url": "https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-591-1-1-.32",
+            "agency": "Georgia DECAL",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        }
+      ]
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": []
+}

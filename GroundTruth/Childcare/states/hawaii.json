@@ -1,0 +1,107 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "Hawaii",
+  "state_code": "HI",
+  "state_slug": "hawaii",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:12:37.073139+00:00",
+  "status": "PARKED",
+  "primary_source": "Hawaii Child Care Licensing",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "group_size": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "ratios",
+      "status": "PARKED",
+      "source_checked": "Hawaii Child Care Licensing"
+    },
+    {
+      "domain": "group_size",
+      "status": "PARKED"
+    },
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": [
+    {
+      "source_id": "hawaii_hawaii_child_care_licensing",
+      "state": "Hawaii",
+      "source": "Hawaii Child Care Licensing",
+      "url": "https://health.hawaii.gov/childcare/cc-licensing/",
+      "extractor": "generic",
+      "status": "PARKED",
+      "http_status": 404,
+      "bytes": 55398,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "park_reason": "HTTP 404"
+    },
+    {
+      "source_id": "hawaii_hawaii_child_care_regulations_fallback_",
+      "state": "Hawaii",
+      "source": "Hawaii Child Care Regulations (fallback)",
+      "url": "https://health.hawaii.gov/childcare/",
+      "extractor": "generic",
+      "status": "PARKED",
+      "http_status": 404,
+      "bytes": 55385,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "park_reason": "HTTP 404"
+    },
+    {
+      "source_id": "hawaii_childcare_gov_hawaii",
+      "state": "Hawaii",
+      "source": "Childcare.gov — Hawaii",
+      "url": "https://www.childcare.gov/state-resources/hawaii/understanding-and-finding-child-care-resources",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 66897,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "Illinois",
+  "state_code": "IL",
+  "state_slug": "illinois",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:12:38.742495+00:00",
+  "status": "PARTIAL",
+  "primary_source": "Illinois 89 Ill. Adm. Code 407",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "HARVESTED",
+      "fact_count": 7,
+      "facts": [
+        {
+          "fact_id": "illinois-childcare-ratios-1",
+          "category": "ratios",
+          "text": "Illinois licensed child care center staff:child ratio for Infants (6 weeks through 14 months): 1:4; maximum group size 12.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois DCFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-ratios-2",
+          "category": "ratios",
+          "text": "Illinois licensed child care center staff:child ratio for Toddlers (15 through 23 months): 1:5; maximum group size 15.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois DCFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-ratios-3",
+          "category": "ratios",
+          "text": "Illinois licensed child care center staff:child ratio for Two years: 1:8; maximum group size 16.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois DCFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-ratios-4",
+          "category": "ratios",
+          "text": "Illinois licensed child care center staff:child ratio for Three years: 1:10; maximum group size 20.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois DCFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-ratios-5",
+          "category": "ratios",
+          "text": "Illinois licensed child care center staff:child ratio for Four years: 1:10; maximum group size 20.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois DCFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-ratios-6",
+          "category": "ratios",
+          "text": "Illinois licensed child care center staff:child ratio for Five years (preschool): 1:20; maximum group size 20.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois DCFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-ratios-7",
+          "category": "ratios",
+          "text": "Illinois licensed child care center staff:child ratio for School-age: Kindergartners present: 1:20; maximum group size 30.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois DCFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        }
+      ]
+    },
+    "group_size": {
+      "status": "HARVESTED",
+      "fact_count": 7,
+      "facts": [
+        {
+          "fact_id": "illinois-childcare-group-size-1",
+          "category": "group_size",
+          "text": "Illinois child care center maximum group size for Infants (6 weeks through 14 months): 12 children.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois DCFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-group-size-2",
+          "category": "group_size",
+          "text": "Illinois child care center maximum group size for Toddlers (15 through 23 months): 15 children.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois DCFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-group-size-3",
+          "category": "group_size",
+          "text": "Illinois child care center maximum group size for Two years: 16 children.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois DCFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-group-size-4",
+          "category": "group_size",
+          "text": "Illinois child care center maximum group size for Three years: 20 children.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois DCFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-group-size-5",
+          "category": "group_size",
+          "text": "Illinois child care center maximum group size for Four years: 20 children.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois DCFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-group-size-6",
+          "category": "group_size",
+          "text": "Illinois child care center maximum group size for Five years (preschool): 20 children.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois DCFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-group-size-7",
+          "category": "group_size",
+          "text": "Illinois child care center maximum group size for School-age: 30 children.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois DCFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        }
+      ]
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": []
+}

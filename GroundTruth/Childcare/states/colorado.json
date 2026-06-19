@@ -1,0 +1,108 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "Colorado",
+  "state_code": "CO",
+  "state_slug": "colorado",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:12:30.761810+00:00",
+  "status": "PARKED",
+  "primary_source": "Colorado 7 CCR 1-3.5",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "group_size": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "ratios",
+      "status": "PARKED",
+      "source_checked": "Colorado 7 CCR 1-3.5"
+    },
+    {
+      "domain": "group_size",
+      "status": "PARKED"
+    },
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": [
+    {
+      "source_id": "colorado_colorado_7_ccr_1_3_5",
+      "state": "Colorado",
+      "source": "Colorado 7 CCR 1-3.5",
+      "url": "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=1042&fileName=7%20CCR%201-3.5",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 131307,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "tertiary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    },
+    {
+      "source_id": "colorado_colorado_child_care_regulations_fallback_",
+      "state": "Colorado",
+      "source": "Colorado Child Care Regulations (fallback)",
+      "url": "https://cdhs.colorado.gov/child-care-licensing",
+      "extractor": "generic",
+      "status": "PARKED",
+      "http_status": 403,
+      "bytes": 919,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "park_reason": "HTTP 403"
+    },
+    {
+      "source_id": "colorado_childcare_gov_colorado",
+      "state": "Colorado",
+      "source": "Childcare.gov — Colorado",
+      "url": "https://www.childcare.gov/state-resources/colorado/understanding-and-finding-child-care-resources",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 66735,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    }
+  ]
+}

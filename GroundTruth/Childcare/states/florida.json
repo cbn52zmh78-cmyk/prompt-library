@@ -1,0 +1,161 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "Florida",
+  "state_code": "FL",
+  "state_slug": "florida",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:12:35.428254+00:00",
+  "status": "PARTIAL",
+  "primary_source": "Florida F.S. 402.305(4) Staff-to-Children Ratio",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "HARVESTED",
+      "fact_count": 6,
+      "facts": [
+        {
+          "fact_id": "florida-childcare-ratios-1",
+          "category": "ratios",
+          "text": "Florida licensed child care center staff:child ratio for birth through 1 year: 1:4.",
+          "citation": {
+            "source": "Florida F.S. 402.305(4) Staff-to-Children Ratio",
+            "url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0402/Sections/0402.305.html",
+            "agency": "Florida DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "florida-childcare-ratios-2",
+          "category": "ratios",
+          "text": "Florida licensed child care center staff:child ratio for 1 year to under 2 years: 1:6.",
+          "citation": {
+            "source": "Florida F.S. 402.305(4) Staff-to-Children Ratio",
+            "url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0402/Sections/0402.305.html",
+            "agency": "Florida DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "florida-childcare-ratios-3",
+          "category": "ratios",
+          "text": "Florida licensed child care center staff:child ratio for 2 years to under 3 years: 1:11.",
+          "citation": {
+            "source": "Florida F.S. 402.305(4) Staff-to-Children Ratio",
+            "url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0402/Sections/0402.305.html",
+            "agency": "Florida DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "florida-childcare-ratios-4",
+          "category": "ratios",
+          "text": "Florida licensed child care center staff:child ratio for 3 years to under 4 years: 1:15.",
+          "citation": {
+            "source": "Florida F.S. 402.305(4) Staff-to-Children Ratio",
+            "url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0402/Sections/0402.305.html",
+            "agency": "Florida DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "florida-childcare-ratios-5",
+          "category": "ratios",
+          "text": "Florida licensed child care center staff:child ratio for 4 years to under 5 years: 1:20.",
+          "citation": {
+            "source": "Florida F.S. 402.305(4) Staff-to-Children Ratio",
+            "url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0402/Sections/0402.305.html",
+            "agency": "Florida DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "florida-childcare-ratios-6",
+          "category": "ratios",
+          "text": "Florida licensed child care center staff:child ratio for 5 years and older: 1:25.",
+          "citation": {
+            "source": "Florida F.S. 402.305(4) Staff-to-Children Ratio",
+            "url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0402/Sections/0402.305.html",
+            "agency": "Florida DCF",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        }
+      ]
+    },
+    "group_size": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "group_size",
+      "status": "PARTIAL"
+    },
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": []
+}

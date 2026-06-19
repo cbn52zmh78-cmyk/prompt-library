@@ -1,0 +1,102 @@
+{
+  "lane": "R5",
+  "issue": 237,
+  "vertical": "Transport / Logistics / Auto",
+  "slug": "transport_logistics_auto",
+  "origin_repo": "Science",
+  "pack_kind": "founding_brief",
+  "source_pack": "Science/groundtruth_poc/GT237_R5_transport_logistics_auto_founding_brief.json",
+  "canonical_pack": "Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/cited_data_pack.json",
+  "federal_fact_count": 23,
+  "state_count": 50,
+  "state_slots": 50,
+  "state_gaps": 0,
+  "state_fact_count": 195,
+  "source_count": 12,
+  "retrieved_date": "2026-06-19",
+  "state_roots_scanned": [
+    "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/states"
+  ],
+  "deepening_issues": [
+    269,
+    275
+  ],
+  "dot_baseline_issue": 275,
+  "dot_baseline_retrieved": "2026-06-19",
+  "dot_federal_fact_count": 16,
+  "dot_state_deep_states": [
+    "California",
+    "Florida",
+    "Georgia",
+    "Illinois",
+    "New York",
+    "Ohio",
+    "Texas"
+  ],
+  "dot_state_roll": {
+    "California": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    "Florida": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    "Georgia": {
+      "total_facts": 0,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 5
+      }
+    },
+    "Illinois": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    "New York": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    "Ohio": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    "Texas": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    }
+  },
+  "pinned_lane": "GroundTruth/Compliance/lanes/R5_transport_logistics_auto"
+}

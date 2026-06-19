@@ -63,6 +63,7 @@ def run_proof(
     prod_dir: Path,
     shot_ids: tuple[str, ...],
     resolution_label: str = "480p",
+    force: bool = False,
 ) -> dict:
     script = json.loads(script_path.read_text(encoding="utf-8"))
     refs = rl.resolve_refs(script)
@@ -107,8 +108,17 @@ def run_proof(
         before = shot_metrics(scaled)
         processed = work_dir / f"chain_{sid}_{resolution_label}_processed.mp4"
         marker = processed.with_suffix(processed.suffix + ".clamp244.json")
-        if marker.is_file():
-            marker.unlink()
+        if force:
+            for stale in (
+                processed,
+                marker,
+                work_dir / f"{scaled.stem}_clamped.mp4",
+                work_dir / f"{scaled.stem}_clamped.mp4.clamp244.json",
+                work_dir / f"{scaled.stem}_pinned.mp4",
+                work_dir / f"{scaled.stem}_loud.mp4",
+                work_dir / f"{scaled.stem}_final.mp4",
+            ):
+                stale.unlink(missing_ok=True)
 
         rl.process_shot_segment(
             scaled, processed, shot, refs, opts, work_dir, color_ref,
@@ -167,12 +177,14 @@ def main() -> int:
     parser.add_argument("--script", type=Path, default=DEFAULT_SCRIPT)
     parser.add_argument("--production", type=Path, default=DEFAULT_PROD)
     parser.add_argument("--shots", nargs="+", default=list(DEFAULT_SHOTS))
+    parser.add_argument("--force", action="store_true", help="Re-run process_shot_segment from scratch")
     args = parser.parse_args()
 
     report = run_proof(
         script_path=args.script,
         prod_dir=args.production,
         shot_ids=tuple(args.shots),
+        force=args.force,
     )
     print(f"T4 #244 clamp proof — state={report['state']}  commit={report['commit']}")
     print(f"Report: {args.production / 'proof_244' / 'proof_244_clamp_report.json'}")

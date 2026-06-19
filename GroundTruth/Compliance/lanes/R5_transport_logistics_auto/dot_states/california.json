@@ -1,0 +1,166 @@
+{
+  "artifact": "transport_dot_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 275,
+  "parent_issue": 269,
+  "deepening_issue": 275,
+  "task": "R5 #275 — State DOT/motor-carrier compliance overlay (non-PA selected states)",
+  "state": "California",
+  "state_code": "CA",
+  "state_slug": "california",
+  "generated_at": "2026-06-19T16:11:01.471273+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm DOT/FMCSA carrier registration, HOS, vehicle, and insurance requirements with FMCSA and the relevant state authority.",
+  "policy": "Public .gov sources only; 403/SSL = park; gaps explicit.",
+  "federal_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "FOUND",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-CA-CAR-001",
+            "text": "Interstate carriers of passengers or used household goods conducting for-hire transportation from one state to another participate in California's Single State Registration System (SSRS) under CPUC registration requirements.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "CPUC — Licensing Requirements for Carriers",
+              "url": "https://www.cpuc.ca.gov/regulatory-services/licensing/transportation-licensing-and-analysis-branch/licensing-requirements-for-carriers-under-cpuc-authority",
+              "agency": "California Public Utilities Commission",
+              "jurisdiction": "California",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          },
+          {
+            "fact_id": "GT275-CA-CAR-002",
+            "text": "California intrastate for-hire motor carriers of property must obtain CPUC authority; interstate carriers must also maintain federal USDOT/MC registration and UCR where applicable.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "CPUC — Licensing Requirements for Carriers",
+              "url": "https://www.cpuc.ca.gov/regulatory-services/licensing/transportation-licensing-and-analysis-branch/licensing-requirements-for-carriers-under-cpuc-authority",
+              "agency": "California Public Utilities Commission",
+              "jurisdiction": "California",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 2,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-CA-HOU-001",
+            "text": "California adopts federal hours-of-service rules for interstate CMV operations; intrastate carriers may be subject to additional CHP enforcement of compatible state safety orders.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "CPUC — Licensing Requirements for Carriers",
+              "url": "https://www.cpuc.ca.gov/regulatory-services/licensing/transportation-licensing-and-analysis-branch/licensing-requirements-for-carriers-under-cpuc-authority",
+              "agency": "California Public Utilities Commission / CHP",
+              "jurisdiction": "California",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-CA-VEH-001",
+            "text": "California enforces FMCSR-equivalent vehicle safety standards for commercial motor vehicles through CHP commercial vehicle enforcement and CPUC carrier safety compliance programs.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "CPUC — Licensing Requirements for Carriers",
+              "url": "https://www.cpuc.ca.gov/regulatory-services/licensing/transportation-licensing-and-analysis-branch/licensing-requirements-for-carriers-under-cpuc-authority",
+              "agency": "California Public Utilities Commission",
+              "jurisdiction": "California",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-CA-INS-001",
+            "text": "CPUC-regulated motor carriers must maintain evidence of insurance meeting state and federal minimums; CPUC Transportation Licensing and Analysis Branch reviews carrier insurance filings.",
+            "status": "FOUND",
+            "category": "insurance",
+            "citation": {
+              "source": "CPUC — Licensing Requirements for Carriers",
+              "url": "https://www.cpuc.ca.gov/regulatory-services/licensing/transportation-licensing-and-analysis-branch/licensing-requirements-for-carriers-under-cpuc-authority",
+              "agency": "California Public Utilities Commission",
+              "jurisdiction": "California",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-CA-INT-001",
+            "text": "SSRS applies to interstate for-hire carriers operating in California; intrastate-only carriers obtain CPUC certificates without SSRS but remain subject to state safety and insurance rules.",
+            "status": "FOUND",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "CPUC — Licensing Requirements for Carriers",
+              "url": "https://www.cpuc.ca.gov/regulatory-services/licensing/transportation-licensing-and-analysis-branch/licensing-requirements-for-carriers-under-cpuc-authority",
+              "agency": "California Public Utilities Commission",
+              "jurisdiction": "California",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": true
+    }
+  }
+}

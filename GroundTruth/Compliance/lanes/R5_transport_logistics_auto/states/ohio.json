@@ -1,0 +1,382 @@
+{
+  "artifact": "transport_logistics_auto_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 269,
+  "parent_issue": 237,
+  "task": "R5 — Transport/Logistics/Auto state PUC/TNC/repair/dealer/movers",
+  "state": "Ohio",
+  "state_code": "OH",
+  "state_slug": "ohio",
+  "generated_at": "2026-06-19T11:11:14.761334+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm motor-carrier, TNC, dealer, mover, and repair requirements with the relevant state authority.",
+  "policy": "Public .gov sources only; 403/404 = park (no bypass); gaps explicit.",
+  "sub_verticals": {
+    "trucking": {
+      "sub_vertical": "trucking",
+      "label": "Trucking",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Ohio Revised Code Ch. 4923 — Motor Carriers (PUCO)",
+        "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4923",
+        "notes": "Ohio trucking — harvest pending"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-OH-TRU-001",
+          "text": "A for-hire motor carrier is a person engaged in the business of transporting persons or property by motor vehicle for compensation in intrastate commerce, subject to exemptions including taxicabs, school buses, and cost-sharing ridesharing arrangements.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Ohio Revised Code Ch. 4923",
+            "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4923",
+            "agency": "Ohio Legislature / Public Utilities Commission of Ohio",
+            "jurisdiction": "Ohio",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-OH-TRU-002",
+          "text": "The Public Utilities Commission of Ohio adopts motor-carrier safety rules, may inspect carriers and drivers, and may assess forfeitures up to $25,000 per day per violation of Chapters 4921 and 4923.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Ohio Revised Code Ch. 4923",
+            "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4923",
+            "agency": "Public Utilities Commission of Ohio",
+            "jurisdiction": "Ohio",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 2,
+      "gap": null
+    },
+    "rideshare_delivery": {
+      "sub_vertical": "rideshare_delivery",
+      "label": "Rideshare Delivery",
+      "status": "NOT FOUND",
+      "regulator": {
+        "agency": "Ohio Revised Code Ch. 4923 — Motor Carriers (PUCO)",
+        "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4923",
+        "notes": "TNC/rideshare — confirm state TNC statute and licensing authority"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "NOT FOUND",
+        "source_checked": "https://codes.ohio.gov/ohio-revised-code/chapter-4923",
+        "detail": "Deep harvest — no agency-sourced facts extracted for this domain"
+      }
+    },
+    "moving": {
+      "sub_vertical": "moving",
+      "label": "Moving",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Ohio Revised Code Ch. 4921 — Household Goods Carriers (PUCO)",
+        "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4921",
+        "notes": "Ohio moving — harvest pending"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-OH-MOV-001",
+          "text": "No for-hire motor carrier may engage in intrastate transportation of household goods without a current and valid PUCO-issued certificate for the transportation of household goods.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Ohio Revised Code Ch. 4921",
+            "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4921",
+            "agency": "Public Utilities Commission of Ohio",
+            "jurisdiction": "Ohio",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-OH-MOV-002",
+          "text": "PUCO may adopt rules requiring binding estimates by HHG carriers and requiring certificate numbers in all advertising, written estimates, and contracts for intrastate household-goods moves.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Ohio Revised Code Ch. 4921",
+            "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4921",
+            "agency": "Public Utilities Commission of Ohio",
+            "jurisdiction": "Ohio",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 2,
+      "gap": null
+    },
+    "dealerships": {
+      "sub_vertical": "dealerships",
+      "label": "Dealerships",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Ohio Revised Code Ch. 4517 — Motor Vehicle Dealers",
+        "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4517",
+        "notes": "Ohio dealerships — harvest pending"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-OH-DEA-001",
+          "text": "Ohio Revised Code Chapter 4517 requires a motor vehicle dealer license before displaying or selling new or used motor vehicles at retail, conducting motor vehicle auctions, or distributing motor vehicles.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Ohio Revised Code § 4517.02",
+            "url": "https://codes.ohio.gov/ohio-revised-code/section-4517.02",
+            "agency": "Ohio Bureau of Motor Vehicles",
+            "jurisdiction": "Ohio",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-OH-DEA-002",
+          "text": "Certain motor vehicle dealers must post a bond, surety, or certificate of deposit of not less than $100,000 with the registrar for the protection of customers.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Ohio Revised Code Ch. 4517",
+            "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4517",
+            "agency": "Ohio Bureau of Motor Vehicles",
+            "jurisdiction": "Ohio",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "value": "100000 USD"
+        },
+        {
+          "fact_id": "GT269-OH-DEA-003",
+          "text": "Used motor vehicle dealer applicants must complete a board-approved training course (at least six hours) within six months before applying, unless the applicant held a dealer license within the prior two years.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Ohio Revised Code Ch. 4517",
+            "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4517",
+            "agency": "Ohio Bureau of Motor Vehicles",
+            "jurisdiction": "Ohio",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 3,
+      "gap": null
+    },
+    "auto_repair": {
+      "sub_vertical": "auto_repair",
+      "label": "Auto Repair",
+      "status": "NOT FOUND",
+      "regulator": {
+        "agency": "Ohio AG / Consumer Protection — Auto Repair",
+        "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+        "notes": "Federal FTC baseline; confirm state BAR/inspection program if any"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "NOT FOUND",
+        "source_checked": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+        "detail": "Deep harvest — no agency-sourced facts extracted for this domain"
+      }
+    }
+  },
+  "federal_context": [
+    {
+      "sub_vertical": "trucking",
+      "text": "The Pennsylvania Public Utility Commission regulates nearly 7,500 motor carriers that transport property, passengers, or household goods for compensation in Pennsylvania.",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    },
+    {
+      "sub_vertical": "trucking",
+      "text": "Property carriers (e.g., trucking companies) operating in Pennsylvania are regulated by the PUC for safety and insurance requirements only (not rates).",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    }
+  ],
+  "summary": {
+    "domain_count": 5,
+    "total_facts": 7,
+    "status_counts": {
+      "FOUND": 3,
+      "REQUIRES_CONFIRMATION": 0,
+      "NOT FOUND": 2,
+      "ACCESS_RESTRICTED": 0
+    },
+    "anchor_state": false,
+    "deep_harvest": true
+  },
+  "deepening_issues": [
+    275
+  ],
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "FOUND",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-OH-CAR-001",
+            "text": "A for-hire motor carrier is a person engaged in transporting persons or property by motor vehicle for compensation in intrastate commerce, subject to PUCO regulation under Ohio Revised Code Chapter 4923.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "Ohio Revised Code Ch. 4923",
+              "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4923",
+              "agency": "Public Utilities Commission of Ohio",
+              "jurisdiction": "Ohio",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          },
+          {
+            "fact_id": "GT275-OH-CAR-002",
+            "text": "PUCO adopts motor-carrier safety rules, may inspect carriers and drivers, and may assess forfeitures up to $25,000 per day per violation of Chapters 4921 and 4923.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "Ohio Revised Code Ch. 4923",
+              "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4923",
+              "agency": "Public Utilities Commission of Ohio",
+              "jurisdiction": "Ohio",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            },
+            "value": "25000 USD/day"
+          }
+        ],
+        "fact_count": 2,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-OH-HOU-001",
+            "text": "Ohio intrastate for-hire motor carriers must comply with PUCO-adopted safety rules including hours-of-service compatible with federal Part 395.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "Ohio Revised Code Ch. 4923",
+              "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4923",
+              "agency": "Public Utilities Commission of Ohio",
+              "jurisdiction": "Ohio",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-OH-VEH-001",
+            "text": "PUCO may inspect for-hire motor carriers and drivers for compliance with vehicle safety and operational standards under Ohio motor-carrier chapters.",
+            "status": "FOUND",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "Ohio Revised Code Ch. 4923",
+              "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4923",
+              "agency": "Public Utilities Commission of Ohio",
+              "jurisdiction": "Ohio",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-OH-INS-001",
+            "text": "Ohio for-hire motor carriers must maintain liability insurance and file evidence with PUCO; interstate carriers must also meet federal Part 387 minimums.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "insurance",
+            "citation": {
+              "source": "Ohio Revised Code Ch. 4923",
+              "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4923",
+              "agency": "Public Utilities Commission of Ohio",
+              "jurisdiction": "Ohio",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-OH-INT-001",
+            "text": "Ohio Revised Code Ch. 4923 governs intrastate for-hire motor carriers; interstate carriers additionally require USDOT registration, operating authority, and UCR per federal rules.",
+            "status": "FOUND",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "Ohio Revised Code Ch. 4923",
+              "url": "https://codes.ohio.gov/ohio-revised-code/chapter-4923",
+              "agency": "Public Utilities Commission of Ohio",
+              "jurisdiction": "Ohio",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": true
+    }
+  },
+  "federal_dot_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_issue": 275
+}

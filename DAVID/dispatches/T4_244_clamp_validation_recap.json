@@ -1,0 +1,78 @@
+{
+  "message_type": "recap_vcs",
+  "issue": 244,
+  "title": "T4 #244 — saturation-reduction clamp single-pass validation (480p)",
+  "generated_at": "2026-06-19T16:05:00+00:00",
+  "status": "HOLD",
+  "verdict": "AMBER",
+  "owner_terminal": "T4",
+  "lane": "DAVID",
+  "commit": {
+    "allowed": false,
+    "reason": "HOLD — human-eye + NEXUS sign-off required before ANY commit",
+    "cron": "PAUSED — Nexus/gates/T4_244_HARD_COMMIT_PAUSE.json state=ACTIVE"
+  },
+  "recap": {
+    "did": [
+      "Adopted saturation-reduction clamp baseline (gamma_b=0.90, sat=0.93) — single eq pass at process_shot_segment only",
+      "De-duplicated clamp: match_color/concat skip post-clamp when archive-neutral; idempotent .clamp244.json sidecars",
+      "Paused hard-commit cron (.wave_commit.ps1 + tools/git_auto_pusher.py gated on T4_244_HARD_COMMIT_PAUSE)",
+      "Ran REAL per-shot _processed pass (NOT reassembly) on 01_cold_open + 05_method at 480p via proof_244_clamp_pass.py --force"
+    ],
+    "state": "AMBER — single-pass metrics pass magenta gate; awaiting human-eye + NEXUS dual-verify",
+    "next": [
+      "Human-eye review proof_244/shots/*_480p_processed.mp4",
+      "NEXUS sign-off to lift HOLD",
+      "DAVID #218 generation fix — reduce raw magenta at source (clamp is safety net only)",
+      "GREEN only after dual-verify + #218 lands"
+    ]
+  },
+  "clamp": {
+    "method": "saturation-reduction",
+    "vf": "eq=gamma_r=1.00:gamma_g=0.98:gamma_b=0.90:saturation=0.93:brightness=0.00",
+    "stage": "process_shot_segment",
+    "passes": 1,
+    "ceiling": "NOT tuned to pass raw-magenta 0.634 alone — safety net; #218 fixes magenta at generation"
+  },
+  "proof": {
+    "resolution": "480p",
+    "pass_type": "process_shot_segment (full _processed, not reassembly)",
+    "report": "DAVID/productions/david_latin_corpus_v1_longform_v1/proof_244/proof_244_clamp_report.json",
+    "shots": [
+      {
+        "shot_id": "01_cold_open",
+        "raw_magenta": 0.6388,
+        "processed_magenta": 0.2881,
+        "raw_bmu": 58.1,
+        "processed_bmu": 47.8,
+        "verdict": "AMBER",
+        "output": "DAVID/productions/david_latin_corpus_v1_longform_v1/proof_244/shots/chain_01_cold_open_480p_processed.mp4"
+      },
+      {
+        "shot_id": "05_method",
+        "raw_magenta": 0.6652,
+        "processed_magenta": 0.3057,
+        "raw_bmu": 56.2,
+        "processed_bmu": 45.9,
+        "verdict": "AMBER",
+        "output": "DAVID/productions/david_latin_corpus_v1_longform_v1/proof_244/shots/chain_05_method_480p_processed.mp4"
+      }
+    ],
+    "magenta_max": 0.42,
+    "proof_218": "HELD",
+    "backup": "DAVID/productions/david_latin_corpus_v1_longform_v1/_backup_pre244fix"
+  },
+  "pairs_with": 218,
+  "vcs_commit_draft": {
+    "subject": "T4 #244: saturation-reduction clamp single-pass + 480p proof (HOLD)",
+    "body": "RECAP\n- Did: Saturation-reduction clamp (gamma_b=0.90 sat=0.93) once at process_shot_segment; de-duped concat/match-color; hard-commit PAUSED; 480p _processed proof on shot01+05\n- State: AMBER — magenta 0.639→0.288 / 0.665→0.306; Bμ 58→48 / 56→46; HOLD human-eye+NEXUS; proof_218 HELD\n- Next: Dual-verify proof_244 outputs; #218 generation magenta fix; GREEN after sign-off\n\nCEILING: clamp safety net only — not tuned for raw-magenta 0.634; cron stays PAUSED until #244 closes."
+  },
+  "artifacts": [
+    "DAVID/scripts/render_longform.py",
+    "DAVID/scripts/proof_244_clamp_pass.py",
+    "Nexus/gates/T4_244_HARD_COMMIT_PAUSE.json",
+    ".wave_commit.ps1",
+    "tools/git_auto_pusher.py",
+    "DAVID/productions/david_latin_corpus_v1_longform_v1/proof_244/"
+  ]
+}

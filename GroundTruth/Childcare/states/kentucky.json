@@ -1,0 +1,338 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "Kentucky",
+  "state_code": "KY",
+  "state_slug": "kentucky",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:12:42.896542+00:00",
+  "status": "PARTIAL",
+  "primary_source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "HARVESTED",
+      "fact_count": 8,
+      "facts": [
+        {
+          "fact_id": "kentucky-childcare-ratios-1",
+          "category": "ratios",
+          "text": "Kentucky Type I child care center staff:child ratio for infant (under 12 months): 1:5; maximum group size 10.",
+          "citation": {
+            "source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "url": "https://www.law.cornell.edu/regulations/kentucky/922-KAR-2-120",
+            "agency": "Kentucky CHFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "kentucky-childcare-ratios-2",
+          "category": "ratios",
+          "text": "Kentucky Type I child care center staff:child ratio for toddler (12–24 months): 1:6; maximum group size 12.",
+          "citation": {
+            "source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "url": "https://www.law.cornell.edu/regulations/kentucky/922-KAR-2-120",
+            "agency": "Kentucky CHFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "kentucky-childcare-ratios-3",
+          "category": "ratios",
+          "text": "Kentucky Type I child care center staff:child ratio for toddler (24–36 months): 1:10; maximum group size 20.",
+          "citation": {
+            "source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "url": "https://www.law.cornell.edu/regulations/kentucky/922-KAR-2-120",
+            "agency": "Kentucky CHFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "kentucky-childcare-ratios-4",
+          "category": "ratios",
+          "text": "Kentucky Type I child care center staff:child ratio for preschool (3–4 years): 1:12; maximum group size 24.",
+          "citation": {
+            "source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "url": "https://www.law.cornell.edu/regulations/kentucky/922-KAR-2-120",
+            "agency": "Kentucky CHFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "kentucky-childcare-ratios-5",
+          "category": "ratios",
+          "text": "Kentucky Type I child care center staff:child ratio for preschool (4–5 years): 1:14; maximum group size 28.",
+          "citation": {
+            "source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "url": "https://www.law.cornell.edu/regulations/kentucky/922-KAR-2-120",
+            "agency": "Kentucky CHFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "kentucky-childcare-ratios-6",
+          "category": "ratios",
+          "text": "Kentucky Type I child care center staff:child ratio for school-age (5–7 years): 1:15; maximum group size 30.",
+          "citation": {
+            "source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "url": "https://www.law.cornell.edu/regulations/kentucky/922-KAR-2-120",
+            "agency": "Kentucky CHFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "kentucky-childcare-ratios-7",
+          "category": "ratios",
+          "text": "Kentucky Type I child care center staff:child ratio for school-age (7+, before/after school): 1:25; maximum group size 30.",
+          "citation": {
+            "source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "url": "https://www.law.cornell.edu/regulations/kentucky/922-KAR-2-120",
+            "agency": "Kentucky CHFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "kentucky-childcare-ratios-8",
+          "category": "ratios",
+          "text": "Kentucky Type I child care center staff:child ratio for school-age (7+, full day): 1:20; maximum group size 30.",
+          "citation": {
+            "source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "url": "https://www.law.cornell.edu/regulations/kentucky/922-KAR-2-120",
+            "agency": "Kentucky CHFS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        }
+      ]
+    },
+    "group_size": {
+      "status": "HARVESTED",
+      "fact_count": 8,
+      "facts": [
+        {
+          "fact_id": "kentucky-childcare-group-size-1",
+          "category": "group_size",
+          "text": "Kentucky Type I child care center maximum group size for infant (under 12 months): 10 children.",
+          "citation": {
+            "source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "url": "https://www.law.cornell.edu/regulations/kentucky/922-KAR-2-120",
+            "agency": "Kentucky CHFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "kentucky-childcare-group-size-2",
+          "category": "group_size",
+          "text": "Kentucky Type I child care center maximum group size for toddler (12–24 months): 12 children.",
+          "citation": {
+            "source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "url": "https://www.law.cornell.edu/regulations/kentucky/922-KAR-2-120",
+            "agency": "Kentucky CHFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "kentucky-childcare-group-size-3",
+          "category": "group_size",
+          "text": "Kentucky Type I child care center maximum group size for toddler (24–36 months): 20 children.",
+          "citation": {
+            "source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "url": "https://www.law.cornell.edu/regulations/kentucky/922-KAR-2-120",
+            "agency": "Kentucky CHFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "kentucky-childcare-group-size-4",
+          "category": "group_size",
+          "text": "Kentucky Type I child care center maximum group size for preschool (3–4 years): 24 children.",
+          "citation": {
+            "source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "url": "https://www.law.cornell.edu/regulations/kentucky/922-KAR-2-120",
+            "agency": "Kentucky CHFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "kentucky-childcare-group-size-5",
+          "category": "group_size",
+          "text": "Kentucky Type I child care center maximum group size for preschool (4–5 years): 28 children.",
+          "citation": {
+            "source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "url": "https://www.law.cornell.edu/regulations/kentucky/922-KAR-2-120",
+            "agency": "Kentucky CHFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "kentucky-childcare-group-size-6",
+          "category": "group_size",
+          "text": "Kentucky Type I child care center maximum group size for school-age (5–7 years): 30 children.",
+          "citation": {
+            "source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "url": "https://www.law.cornell.edu/regulations/kentucky/922-KAR-2-120",
+            "agency": "Kentucky CHFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "kentucky-childcare-group-size-7",
+          "category": "group_size",
+          "text": "Kentucky Type I child care center maximum group size for school-age (7+, before/after school): 30 children.",
+          "citation": {
+            "source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "url": "https://www.law.cornell.edu/regulations/kentucky/922-KAR-2-120",
+            "agency": "Kentucky CHFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "kentucky-childcare-group-size-8",
+          "category": "group_size",
+          "text": "Kentucky Type I child care center maximum group size for school-age (7+, full day): 30 children.",
+          "citation": {
+            "source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "url": "https://www.law.cornell.edu/regulations/kentucky/922-KAR-2-120",
+            "agency": "Kentucky CHFS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        }
+      ]
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": []
+}

@@ -1,0 +1,357 @@
+{
+  "artifact": "transport_logistics_auto_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 269,
+  "parent_issue": 237,
+  "task": "R5 — Transport/Logistics/Auto state PUC/TNC/repair/dealer/movers",
+  "state": "Illinois",
+  "state_code": "IL",
+  "state_slug": "illinois",
+  "generated_at": "2026-06-19T11:09:58.525305+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm motor-carrier, TNC, dealer, mover, and repair requirements with the relevant state authority.",
+  "policy": "Public .gov sources only; 403/404 = park (no bypass); gaps explicit.",
+  "sub_verticals": {
+    "trucking": {
+      "sub_vertical": "trucking",
+      "label": "Trucking",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "IL Commerce Commission — Public Carrier Certificate",
+        "url": "https://icc.illinois.gov/authority/public-carrier-certificate",
+        "notes": "Illinois trucking — harvest pending"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-IL-TRU-001",
+          "text": "Intrastate for-hire transportation of property (non-household goods) over Illinois public roads requires an Illinois Commerce Commission Public Carrier Certificate under 625 ILCS Chapter 18C.",
+          "status": "FOUND",
+          "citation": {
+            "source": "IL ICC — Public Carrier Certificate",
+            "url": "https://icc.illinois.gov/authority/public-carrier-certificate",
+            "agency": "Illinois Commerce Commission",
+            "jurisdiction": "Illinois",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-IL-TRU-002",
+          "text": "Freight brokers arranging for-hire property transportation by licensed motor carriers must hold an ICC Broker's License.",
+          "status": "FOUND",
+          "citation": {
+            "source": "IL ICC — Broker's License",
+            "url": "https://icc.illinois.gov/authority/brokers-license",
+            "agency": "Illinois Commerce Commission",
+            "jurisdiction": "Illinois",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-IL-TRU-003",
+          "text": "Illinois Commerce Commission no longer accepts UCR registrations — interstate carriers must register via the national UCR system at www.ucr.gov.",
+          "status": "FOUND",
+          "citation": {
+            "source": "IL ICC — UCR Registration",
+            "url": "https://icc.illinois.gov/authority/unified-carrier-registration",
+            "agency": "Illinois Commerce Commission",
+            "jurisdiction": "Illinois",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 3,
+      "gap": null
+    },
+    "rideshare_delivery": {
+      "sub_vertical": "rideshare_delivery",
+      "label": "Rideshare Delivery",
+      "status": "NOT FOUND",
+      "regulator": {
+        "agency": "IL Commerce Commission — Transportation",
+        "url": "https://icc.illinois.gov/transportation/",
+        "notes": "Illinois rideshare_delivery — harvest pending"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "NOT FOUND",
+        "source_checked": "https://icc.illinois.gov/transportation/",
+        "detail": "Deep harvest — no agency-sourced facts extracted for this domain"
+      }
+    },
+    "moving": {
+      "sub_vertical": "moving",
+      "label": "Moving",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "IL Commerce Commission — Household Goods Movers",
+        "url": "https://icc.illinois.gov/authority/household-goods-movers",
+        "notes": "Illinois moving — harvest pending"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-IL-MOV-001",
+          "text": "For-hire household goods movers in Illinois must obtain an ICC Household Goods License, publish and file a tariff of services and prices, and comply with 625 ILCS 5/18c and 92 Ill. Adm. Code 1457.",
+          "status": "FOUND",
+          "citation": {
+            "source": "IL ICC — Household Goods Movers",
+            "url": "https://icc.illinois.gov/authority/household-goods-movers",
+            "agency": "Illinois Commerce Commission",
+            "jurisdiction": "Illinois",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-IL-MOV-002",
+          "text": "ICC maintains a searchable registry of licensed household goods movers and publishes a Consumer Guide to Household Goods Movers in Illinois.",
+          "status": "FOUND",
+          "citation": {
+            "source": "IL ICC — Household Goods Movers",
+            "url": "https://icc.illinois.gov/authority/household-goods-movers",
+            "agency": "Illinois Commerce Commission",
+            "jurisdiction": "Illinois",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 2,
+      "gap": null
+    },
+    "dealerships": {
+      "sub_vertical": "dealerships",
+      "label": "Dealerships",
+      "status": "NOT FOUND",
+      "regulator": {
+        "agency": "IL Secretary of State — Vehicle Dealer Licensing",
+        "url": "https://www.ilsos.gov/departments/vehicles/dealer_remit.html",
+        "notes": "Illinois dealerships — harvest pending"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "NOT FOUND",
+        "source_checked": "https://www.ilsos.gov/departments/vehicles/dealer_remit.html",
+        "detail": "Deep harvest — no agency-sourced facts extracted for this domain"
+      }
+    },
+    "auto_repair": {
+      "sub_vertical": "auto_repair",
+      "label": "Auto Repair",
+      "status": "NOT FOUND",
+      "regulator": {
+        "agency": "Illinois AG / Consumer Protection — Auto Repair",
+        "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+        "notes": "Federal FTC baseline; confirm state BAR/inspection program if any"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "NOT FOUND",
+        "source_checked": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+        "detail": "Deep harvest — no agency-sourced facts extracted for this domain"
+      }
+    }
+  },
+  "federal_context": [
+    {
+      "sub_vertical": "trucking",
+      "text": "The Pennsylvania Public Utility Commission regulates nearly 7,500 motor carriers that transport property, passengers, or household goods for compensation in Pennsylvania.",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    },
+    {
+      "sub_vertical": "trucking",
+      "text": "Property carriers (e.g., trucking companies) operating in Pennsylvania are regulated by the PUC for safety and insurance requirements only (not rates).",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    }
+  ],
+  "summary": {
+    "domain_count": 5,
+    "total_facts": 5,
+    "status_counts": {
+      "FOUND": 2,
+      "REQUIRES_CONFIRMATION": 0,
+      "NOT FOUND": 3,
+      "ACCESS_RESTRICTED": 0
+    },
+    "anchor_state": false,
+    "deep_harvest": true
+  },
+  "deepening_issues": [
+    275
+  ],
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "FOUND",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-IL-CAR-001",
+            "text": "Intrastate for-hire transportation of property (non-household goods) over Illinois public roads requires an Illinois Commerce Commission Public Carrier Certificate under 625 ILCS Chapter 18C.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "IL ICC — Public Carrier Certificate",
+              "url": "https://icc.illinois.gov/authority/public-carrier-certificate",
+              "agency": "Illinois Commerce Commission",
+              "jurisdiction": "Illinois",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          },
+          {
+            "fact_id": "GT275-IL-CAR-002",
+            "text": "Illinois Commerce Commission no longer accepts UCR registrations — interstate carriers must register via the national UCR system at www.ucr.gov.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "IL ICC — UCR Registration",
+              "url": "https://icc.illinois.gov/authority/unified-carrier-registration",
+              "agency": "Illinois Commerce Commission",
+              "jurisdiction": "Illinois",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 2,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-IL-HOU-001",
+            "text": "Illinois adopts federal HOS rules for interstate CMV operations; ICC-regulated intrastate carriers must comply with compatible state safety requirements enforced by Illinois State Police.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "IL ICC — Public Carrier Certificate",
+              "url": "https://icc.illinois.gov/authority/public-carrier-certificate",
+              "agency": "Illinois Commerce Commission",
+              "jurisdiction": "Illinois",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-IL-VEH-001",
+            "text": "ICC certificate holders must operate safe, properly maintained commercial vehicles; Illinois State Police conduct CMV inspections on Illinois highways.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "IL ICC — Public Carrier Certificate",
+              "url": "https://icc.illinois.gov/authority/public-carrier-certificate",
+              "agency": "Illinois Commerce Commission",
+              "jurisdiction": "Illinois",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-IL-INS-001",
+            "text": "ICC public carrier certificate applicants must file evidence of insurance meeting Illinois minimum requirements in addition to federal Part 387 for interstate operations.",
+            "status": "FOUND",
+            "category": "insurance",
+            "citation": {
+              "source": "IL ICC — Public Carrier Certificate",
+              "url": "https://icc.illinois.gov/authority/public-carrier-certificate",
+              "agency": "Illinois Commerce Commission",
+              "jurisdiction": "Illinois",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-IL-INT-001",
+            "text": "Illinois requires ICC certificates for intrastate for-hire property carriers while interstate carriers use federal USDOT/MC authority plus national UCR — ICC does not process UCR.",
+            "status": "FOUND",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "IL ICC — UCR Registration",
+              "url": "https://icc.illinois.gov/authority/unified-carrier-registration",
+              "agency": "Illinois Commerce Commission",
+              "jurisdiction": "Illinois",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": true
+    }
+  },
+  "federal_dot_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_issue": 275
+}

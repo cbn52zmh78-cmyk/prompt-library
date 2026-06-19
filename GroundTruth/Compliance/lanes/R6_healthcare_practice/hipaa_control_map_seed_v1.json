@@ -1,0 +1,457 @@
+{
+  "artifact": "hipaa_control_map_seed",
+  "version": "1.0",
+  "lane": "R6",
+  "task": "R6 — HIPAA control-map seed for medical-vertical bible",
+  "jurisdiction": "Federal (HIPAA / HHS)",
+  "generated_at": "2026-06-19T18:00:00+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm HIPAA obligations with counsel and current eCFR.",
+  "policy": "Primary = eCFR 45 CFR Parts 160 & 164; HHS.gov guidance PARKED (403). Gaps explicit.",
+  "pinned_path": "GroundTruth/Compliance/lanes/R6_healthcare_practice/hipaa_control_map_seed_v1.json",
+  "primary_citation_base": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164",
+  "control_domains": {
+    "definitions_scope": {
+      "domain_id": "definitions_scope",
+      "label": "Definitions & Covered Entity Scope",
+      "cfr_anchors": [
+        "45 CFR §160.103",
+        "45 CFR §164.102"
+      ],
+      "status": "FOUND",
+      "controls": [
+        {
+          "control_id": "HIPAA-DEF-001",
+          "control": "Covered entity means a health plan, health care clearinghouse, or health care provider that transmits health information in electronic form in connection with a covered transaction.",
+          "requirement_type": "definition",
+          "status": "FOUND",
+          "citation_ref": 1,
+          "cfr_section": "45 CFR §160.103"
+        },
+        {
+          "control_id": "HIPAA-DEF-002",
+          "control": "Business associate creates, receives, maintains, or transmits PHI on behalf of a covered entity (or provides services involving PHI disclosure); subcontractors are business associates of the BA.",
+          "requirement_type": "definition",
+          "status": "FOUND",
+          "citation_ref": 1,
+          "cfr_section": "45 CFR §160.103"
+        },
+        {
+          "control_id": "HIPAA-DEF-003",
+          "control": "Protected health information is individually identifiable health information transmitted or maintained in any form; electronic PHI (ePHI) is PHI in electronic media.",
+          "requirement_type": "definition",
+          "status": "FOUND",
+          "citation_ref": 1,
+          "cfr_section": "45 CFR §160.103"
+        }
+      ],
+      "fact_count": 3
+    },
+    "privacy_uses_disclosures": {
+      "domain_id": "privacy_uses_disclosures",
+      "label": "Privacy Rule — Uses & Disclosures",
+      "cfr_anchors": [
+        "45 CFR §164.502",
+        "45 CFR §164.506",
+        "45 CFR §164.508",
+        "45 CFR §164.512"
+      ],
+      "status": "FOUND",
+      "controls": [
+        {
+          "control_id": "HIPAA-PRV-001",
+          "control": "Covered entity or business associate may not use or disclose PHI except as permitted or required by the Privacy Rule.",
+          "requirement_type": "standard",
+          "status": "FOUND",
+          "citation_ref": 2,
+          "cfr_section": "45 CFR §164.502(a)"
+        },
+        {
+          "control_id": "HIPAA-PRV-002",
+          "control": "Permitted uses include disclosure to the individual; treatment, payment, or health care operations; valid authorization; and other listed bases.",
+          "requirement_type": "standard",
+          "status": "FOUND",
+          "citation_ref": 2,
+          "cfr_section": "45 CFR §164.502(a)(1)"
+        },
+        {
+          "control_id": "HIPAA-PRV-003",
+          "control": "Minimum necessary: limit PHI used, disclosed, or requested to the minimum necessary to accomplish the purpose (exceptions include treatment and disclosures to individual).",
+          "requirement_type": "standard",
+          "status": "FOUND",
+          "citation_ref": 2,
+          "cfr_section": "45 CFR §164.502(b)"
+        },
+        {
+          "control_id": "HIPAA-PRV-004",
+          "control": "Sale of PHI prohibited except pursuant to valid authorization with specific sale provisions.",
+          "requirement_type": "prohibition",
+          "status": "FOUND",
+          "citation_ref": 2,
+          "cfr_section": "45 CFR §164.502(a)(5)(ii)"
+        },
+        {
+          "control_id": "HIPAA-PRV-005",
+          "control": "Required disclosures: to individual upon access/accounting request; to Secretary for compliance investigation.",
+          "requirement_type": "required",
+          "status": "FOUND",
+          "citation_ref": 2,
+          "cfr_section": "45 CFR §164.502(a)(2)"
+        }
+      ],
+      "fact_count": 5
+    },
+    "privacy_administrative": {
+      "domain_id": "privacy_administrative",
+      "label": "Privacy Rule — Administrative Requirements",
+      "cfr_anchors": [
+        "45 CFR §164.530",
+        "45 CFR §164.520"
+      ],
+      "status": "FOUND",
+      "controls": [
+        {
+          "control_id": "HIPAA-PRV-ADM-001",
+          "control": "Designate a privacy official responsible for development and implementation of privacy policies.",
+          "requirement_type": "administrative",
+          "status": "FOUND",
+          "citation_ref": 9,
+          "cfr_section": "45 CFR §164.530(a)(1)"
+        },
+        {
+          "control_id": "HIPAA-PRV-ADM-002",
+          "control": "Train all workforce members on policies and procedures with respect to PHI as necessary and appropriate.",
+          "requirement_type": "administrative",
+          "status": "FOUND",
+          "citation_ref": 9,
+          "cfr_section": "45 CFR §164.530(b)"
+        },
+        {
+          "control_id": "HIPAA-PRV-ADM-003",
+          "control": "Implement administrative, technical, and physical safeguards to protect PHI from intentional or unintentional use or disclosure.",
+          "requirement_type": "administrative",
+          "status": "FOUND",
+          "citation_ref": 9,
+          "cfr_section": "45 CFR §164.530(c)"
+        },
+        {
+          "control_id": "HIPAA-PRV-ADM-004",
+          "control": "Maintain policies, procedures, communications, and other required documentation for six years.",
+          "requirement_type": "documentation",
+          "status": "FOUND",
+          "citation_ref": 9,
+          "cfr_section": "45 CFR §164.530(j)"
+        }
+      ],
+      "fact_count": 4
+    },
+    "baa_organizational": {
+      "domain_id": "baa_organizational",
+      "label": "Business Associate Agreements (BAA)",
+      "cfr_anchors": [
+        "45 CFR §164.502(e)",
+        "45 CFR §164.504(e)",
+        "45 CFR §164.314(a)"
+      ],
+      "status": "FOUND",
+      "controls": [
+        {
+          "control_id": "HIPAA-BAA-001",
+          "control": "Covered entity may not disclose PHI to a business associate without satisfactory assurances via written contract or other arrangement meeting §164.504(e).",
+          "requirement_type": "contract",
+          "status": "FOUND",
+          "citation_ref": 3,
+          "cfr_section": "45 CFR §164.502(e)"
+        },
+        {
+          "control_id": "HIPAA-BAA-002",
+          "control": "BAA must establish permitted and required uses/disclosures; prohibit uses that would violate the Privacy Rule if done by the covered entity.",
+          "requirement_type": "contract",
+          "status": "FOUND",
+          "citation_ref": 3,
+          "cfr_section": "45 CFR §164.504(e)(2)(i)"
+        },
+        {
+          "control_id": "HIPAA-BAA-003",
+          "control": "BA must use appropriate safeguards and comply with Security Rule for ePHI; report breaches of unsecured PHI; flow down same restrictions to subcontractors.",
+          "requirement_type": "contract",
+          "status": "FOUND",
+          "citation_ref": 3,
+          "cfr_section": "45 CFR §164.504(e)(2)(ii)"
+        },
+        {
+          "control_id": "HIPAA-BAA-004",
+          "control": "BA must make PHI available for individual access, amendment, and accounting of disclosures; return or destroy PHI at termination when feasible.",
+          "requirement_type": "contract",
+          "status": "FOUND",
+          "citation_ref": 3,
+          "cfr_section": "45 CFR §164.504(e)(2)(ii)(E)-(J)"
+        },
+        {
+          "control_id": "HIPAA-BAA-005",
+          "control": "Contract must authorize termination by covered entity if BA materially violates the contract.",
+          "requirement_type": "contract",
+          "status": "FOUND",
+          "citation_ref": 3,
+          "cfr_section": "45 CFR §164.504(e)(2)(iii)"
+        },
+        {
+          "control_id": "HIPAA-BAA-006",
+          "control": "Security Rule: covered entity must obtain satisfactory assurances that BA will safeguard ePHI; document via written contract per §164.314(a).",
+          "requirement_type": "contract",
+          "status": "FOUND",
+          "citation_ref": 7,
+          "cfr_section": "45 CFR §164.314(a)"
+        }
+      ],
+      "fact_count": 6
+    },
+    "security_administrative": {
+      "domain_id": "security_administrative",
+      "label": "Security Rule — Administrative Safeguards",
+      "cfr_anchors": [
+        "45 CFR §164.306",
+        "45 CFR §164.308"
+      ],
+      "status": "FOUND",
+      "controls": [
+        {
+          "control_id": "HIPAA-SEC-ADM-001",
+          "control": "Conduct accurate and thorough risk analysis of risks and vulnerabilities to ePHI confidentiality, integrity, and availability.",
+          "requirement_type": "required",
+          "status": "FOUND",
+          "citation_ref": 4,
+          "cfr_section": "45 CFR §164.308(a)(1)(ii)(A)"
+        },
+        {
+          "control_id": "HIPAA-SEC-ADM-002",
+          "control": "Implement security measures to reduce risks and vulnerabilities to a reasonable and appropriate level.",
+          "requirement_type": "required",
+          "status": "FOUND",
+          "citation_ref": 4,
+          "cfr_section": "45 CFR §164.308(a)(1)(ii)(B)"
+        },
+        {
+          "control_id": "HIPAA-SEC-ADM-003",
+          "control": "Identify security official responsible for development and implementation of security policies.",
+          "requirement_type": "required",
+          "status": "FOUND",
+          "citation_ref": 4,
+          "cfr_section": "45 CFR §164.308(a)(2)"
+        },
+        {
+          "control_id": "HIPAA-SEC-ADM-004",
+          "control": "Implement security incident procedures: identify, respond, mitigate harmful effects, and document incidents and outcomes.",
+          "requirement_type": "required",
+          "status": "FOUND",
+          "citation_ref": 4,
+          "cfr_section": "45 CFR §164.308(a)(6)(ii)"
+        },
+        {
+          "control_id": "HIPAA-SEC-ADM-005",
+          "control": "Contingency plan required elements: data backup, disaster recovery, emergency mode operation; periodic testing (addressable).",
+          "requirement_type": "required",
+          "status": "FOUND",
+          "citation_ref": 4,
+          "cfr_section": "45 CFR §164.308(a)(7)(ii)"
+        }
+      ],
+      "fact_count": 5
+    },
+    "security_technical": {
+      "domain_id": "security_technical",
+      "label": "Security Rule — Technical Safeguards",
+      "cfr_anchors": [
+        "45 CFR §164.312"
+      ],
+      "status": "FOUND",
+      "controls": [
+        {
+          "control_id": "HIPAA-SEC-TEC-001",
+          "control": "Access control: unique user identification; emergency access; automatic logoff; encryption/decryption (addressable).",
+          "requirement_type": "standard",
+          "status": "FOUND",
+          "citation_ref": 5,
+          "cfr_section": "45 CFR §164.312(a)"
+        },
+        {
+          "control_id": "HIPAA-SEC-TEC-002",
+          "control": "Audit controls: hardware, software, and procedural mechanisms to record and examine activity in systems containing ePHI.",
+          "requirement_type": "required",
+          "status": "FOUND",
+          "citation_ref": 5,
+          "cfr_section": "45 CFR §164.312(b)"
+        },
+        {
+          "control_id": "HIPAA-SEC-TEC-003",
+          "control": "Integrity: policies and procedures to protect ePHI from improper alteration or destruction.",
+          "requirement_type": "required",
+          "status": "FOUND",
+          "citation_ref": 5,
+          "cfr_section": "45 CFR §164.312(c)"
+        },
+        {
+          "control_id": "HIPAA-SEC-TEC-004",
+          "control": "Person or entity authentication before access to ePHI.",
+          "requirement_type": "required",
+          "status": "FOUND",
+          "citation_ref": 5,
+          "cfr_section": "45 CFR §164.312(d)"
+        },
+        {
+          "control_id": "HIPAA-SEC-TEC-005",
+          "control": "Transmission security: integrity controls and encryption (addressable) for ePHI transmitted over electronic communications networks.",
+          "requirement_type": "standard",
+          "status": "FOUND",
+          "citation_ref": 5,
+          "cfr_section": "45 CFR §164.312(e)"
+        }
+      ],
+      "fact_count": 5
+    },
+    "breach_notification": {
+      "domain_id": "breach_notification",
+      "label": "Breach Notification Rule",
+      "cfr_anchors": [
+        "45 CFR §164.400",
+        "45 CFR §164.404",
+        "45 CFR §164.408",
+        "45 CFR §164.410"
+      ],
+      "status": "FOUND",
+      "controls": [
+        {
+          "control_id": "HIPAA-BRN-001",
+          "control": "Covered entity must notify each affected individual of a breach of unsecured PHI without unreasonable delay, no later than 60 days after discovery.",
+          "requirement_type": "required",
+          "status": "FOUND",
+          "citation_ref": 8,
+          "cfr_section": "45 CFR §164.404(b)"
+        },
+        {
+          "control_id": "HIPAA-BRN-002",
+          "control": "Individual breach notice must include brief description, types of information involved, steps individuals should take, CE investigation/mitigation steps, and contact procedures.",
+          "requirement_type": "required",
+          "status": "FOUND",
+          "citation_ref": 8,
+          "cfr_section": "45 CFR §164.404(c)"
+        },
+        {
+          "control_id": "HIPAA-BRN-003",
+          "control": "Business associate must notify covered entity of breach of unsecured PHI without unreasonable delay, no later than 60 days after discovery.",
+          "requirement_type": "required",
+          "status": "FOUND",
+          "citation_ref": 8,
+          "cfr_section": "45 CFR §164.410"
+        }
+      ],
+      "fact_count": 3
+    },
+    "hhs_guidance_overlay": {
+      "domain_id": "hhs_guidance_overlay",
+      "label": "HHS OCR Guidance (Secondary — PARKED)",
+      "cfr_anchors": [],
+      "status": "PARKED",
+      "controls": [
+        {
+          "control_id": "HIPAA-GAP-001",
+          "control": "NOT FOUND — HHS HIPAA for Professionals guidance pages returned HTTP 403 at harvest. Use eCFR as primary; re-probe hhs.gov/hipaa when accessible.",
+          "requirement_type": "gap",
+          "status": "PARKED",
+          "citation_ref": 10,
+          "cfr_section": null,
+          "source_checked": "https://www.hhs.gov/hipaa/for-professionals/privacy/"
+        }
+      ],
+      "fact_count": 1
+    }
+  },
+  "metrics": {
+    "domain_count": 8,
+    "control_count": 32,
+    "found_controls": 31,
+    "parked_controls": 1,
+    "status_roll": {
+      "FOUND": 31,
+      "PARKED": 1,
+      "NOT FOUND": 0,
+      "REQUIRES_CONFIRMATION": 0
+    }
+  },
+  "citations": [
+    {
+      "ref": 1,
+      "source": "eCFR — 45 CFR §160.103",
+      "url": "https://www.ecfr.gov/current/title-45/section-160.103",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "Federal",
+      "grade": "primary"
+    },
+    {
+      "ref": 2,
+      "source": "eCFR — 45 CFR §164.502",
+      "url": "https://www.ecfr.gov/current/title-45/section-164.502",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "Federal",
+      "grade": "primary"
+    },
+    {
+      "ref": 3,
+      "source": "eCFR — 45 CFR §164.504",
+      "url": "https://www.ecfr.gov/current/title-45/section-164.504",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "Federal",
+      "grade": "primary"
+    },
+    {
+      "ref": 4,
+      "source": "eCFR — 45 CFR §164.308",
+      "url": "https://www.ecfr.gov/current/title-45/section-164.308",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "Federal",
+      "grade": "primary"
+    },
+    {
+      "ref": 5,
+      "source": "eCFR — 45 CFR §164.312",
+      "url": "https://www.ecfr.gov/current/title-45/section-164.312",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "Federal",
+      "grade": "primary"
+    },
+    {
+      "ref": 7,
+      "source": "eCFR — 45 CFR §164.314",
+      "url": "https://www.ecfr.gov/current/title-45/section-164.314",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "Federal",
+      "grade": "primary"
+    },
+    {
+      "ref": 8,
+      "source": "eCFR — 45 CFR §164.404",
+      "url": "https://www.ecfr.gov/current/title-45/section-164.404",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "Federal",
+      "grade": "primary"
+    },
+    {
+      "ref": 9,
+      "source": "eCFR — 45 CFR §164.530",
+      "url": "https://www.ecfr.gov/current/title-45/section-164.530",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "Federal",
+      "grade": "primary"
+    },
+    {
+      "ref": 10,
+      "source": "HHS.gov — HIPAA for Professionals (PARKED)",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "Federal",
+      "grade": "secondary",
+      "harvest_status": "PARKED",
+      "http_status": 403
+    }
+  ]
+}

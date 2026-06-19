@@ -1,0 +1,109 @@
+{
+  "artifact": "healthcare_practice_state_pack",
+  "version": "1.0",
+  "lane": "R6",
+  "task": "R6 — Healthcare practice state privacy add-on (California CMIA)",
+  "state": "California",
+  "state_code": "CA",
+  "state_slug": "california",
+  "generated_at": "2026-06-19T18:00:00+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research — not legal advice. CMIA may impose requirements beyond HIPAA; confirm with counsel.",
+  "policy": "Public statute sources only; gaps explicit.",
+  "domains": {
+    "medical_records_privacy": {
+      "domain": "medical_records_privacy",
+      "label": "Confidentiality of Medical Information Act (CMIA)",
+      "statute": "Cal. Civ. Code Part 2.6 (§§56–56.37)",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "California Legislature — Civil Code (CMIA)",
+        "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=56.10.&lawCode=CIV"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-CA-CMIA-001",
+          "text": "A provider, health care service plan, or contractor shall not disclose medical information regarding a patient without first obtaining an authorization, except as provided in §56.10(b) or (c).",
+          "status": "FOUND",
+          "citation": {
+            "source": "Cal. Civ. Code §56.10(a)",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=56.10.&lawCode=CIV",
+            "jurisdiction": "California",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-CA-CMIA-002",
+          "text": "Except as authorized, a provider, plan, contractor, or affiliate shall not intentionally share, sell, use for marketing, or otherwise use medical information for a purpose not necessary to provide health care services.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Cal. Civ. Code §56.10(d)",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=56.10.&lawCode=CIV",
+            "jurisdiction": "California",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-CA-CMIA-003",
+          "text": "CMIA permits disclosure to other providers for diagnosis or treatment, to payers for payment determination, and to other listed entities under §56.10(c) without patient authorization.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Cal. Civ. Code §56.10(c)(1)-(3)",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=56.10.&lawCode=CIV",
+            "jurisdiction": "California",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-CA-CMIA-004",
+          "text": "Disclosures to employee welfare benefit plans must comply with written authorization and federal HIPAA Part 164 restrictions; information may not be further used in violation of CMIA or 45 CFR Part 164.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Cal. Civ. Code §56.10(c)(21)",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=56.10.&lawCode=CIV",
+            "jurisdiction": "California",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-CA-CMIA-005",
+          "text": "Authorization for release must be in 14-point type (or handwritten), separately executed, specify uses/limitations/recipients, and expire within one year unless a longer period is requested or clinical-trial exception applies.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Cal. Civ. Code §56.11(b)",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=56.11.&lawCode=CIV",
+            "jurisdiction": "California",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-CA-CMIA-006",
+          "text": "Entity seeking authorization for PHI use/disclosure must provide the individual a copy of the signed authorization and instructions to access additional copies.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Cal. Civ. Code §56.11(c)",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=56.11.&lawCode=CIV",
+            "jurisdiction": "California",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 6,
+      "gap": null
+    }
+  },
+  "status_roll": {
+    "FOUND": 6,
+    "REQUIRES_CONFIRMATION": 0,
+    "NOT FOUND": 0,
+    "ACCESS_RESTRICTED": 0,
+    "PARKED": 0
+  },
+  "total_facts": 6
+}

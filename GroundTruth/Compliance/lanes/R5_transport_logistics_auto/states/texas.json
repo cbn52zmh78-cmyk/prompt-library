@@ -1,0 +1,394 @@
+{
+  "artifact": "transport_logistics_auto_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 269,
+  "parent_issue": 237,
+  "task": "R5 — Transport/Logistics/Auto state PUC/TNC/repair/dealer/movers",
+  "state": "Texas",
+  "state_code": "TX",
+  "state_slug": "texas",
+  "generated_at": "2026-06-19T11:11:36.250780+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm motor-carrier, TNC, dealer, mover, and repair requirements with the relevant state authority.",
+  "policy": "Public .gov sources only; 403/404 = park (no bypass); gaps explicit.",
+  "sub_verticals": {
+    "trucking": {
+      "sub_vertical": "trucking",
+      "label": "Trucking",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "TX DPS — Commercial Vehicle Enforcement",
+        "url": "https://www.dps.texas.gov/section/commercial-vehicle-enforcement",
+        "notes": "Texas trucking — harvest pending"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-TX-TRU-001",
+          "text": "Texas DPS Commercial Vehicle Enforcement publishes the Texas Motor Carrier's Guide to Highway Safety covering intrastate commercial motor vehicle laws, FMCSR, and hazardous materials requirements.",
+          "status": "FOUND",
+          "citation": {
+            "source": "TX DPS — Commercial Vehicle Enforcement",
+            "url": "https://www.dps.texas.gov/section/commercial-vehicle-enforcement",
+            "agency": "Texas Department of Public Safety",
+            "jurisdiction": "Texas",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-TX-TRU-002",
+          "text": "The Texas Motor Carrier Bureau trains inspectors statewide and performs New Entrant Evaluations, Compliance Reviews, and enforcement cases for motor carriers.",
+          "status": "FOUND",
+          "citation": {
+            "source": "TX DPS — Commercial Vehicle Enforcement",
+            "url": "https://www.dps.texas.gov/section/commercial-vehicle-enforcement",
+            "agency": "Texas Department of Public Safety",
+            "jurisdiction": "Texas",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-TX-TRU-003",
+          "text": "TxDMV Motor Carriers Division supports apportioned and intrastate fleet registration and allows carriers to update carrier information, renew certificates, and print cab cards.",
+          "status": "FOUND",
+          "citation": {
+            "source": "TxDMV — Motor Carriers",
+            "url": "https://www.txdmv.gov/motor-carriers",
+            "agency": "Texas Department of Motor Vehicles",
+            "jurisdiction": "Texas",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 3,
+      "gap": null
+    },
+    "rideshare_delivery": {
+      "sub_vertical": "rideshare_delivery",
+      "label": "Rideshare Delivery",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "TDLR — Transportation & Delivery Network Companies",
+        "url": "https://www.tdlr.texas.gov/tnc/tnc.htm",
+        "notes": "Texas rideshare_delivery — harvest pending"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-TX-RID-001",
+          "text": "A person may not operate a transportation or delivery network company in Texas without first obtaining and maintaining a TDLR-issued transportation and delivery network company permit.",
+          "status": "FOUND",
+          "citation": {
+            "source": "TDLR — Apply for TNC Permit",
+            "url": "https://www.tdlr.texas.gov/tnc/apply.htm",
+            "agency": "Texas Department of Licensing and Regulation",
+            "jurisdiction": "Texas",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-TX-RID-002",
+          "text": "TNC/DNC permits require proof of insurance per Texas Insurance Code Chapter 1954; new permits require a non-refundable $10,500 fee and annual renewal.",
+          "status": "FOUND",
+          "citation": {
+            "source": "TDLR — Apply for TNC Permit",
+            "url": "https://www.tdlr.texas.gov/tnc/apply.htm",
+            "agency": "Texas Department of Licensing and Regulation",
+            "jurisdiction": "Texas",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "value": "10500 USD"
+        },
+        {
+          "fact_id": "GT269-TX-RID-003",
+          "text": "Transportation Network Companies connect passengers with drivers for pre-arranged trips through a digital platform; Delivery Network Companies arrange pickup and delivery of food, beverages, or goods.",
+          "status": "FOUND",
+          "citation": {
+            "source": "TDLR — Transportation & Delivery Network Companies",
+            "url": "https://www.tdlr.texas.gov/tnc/tnc.htm",
+            "agency": "Texas Department of Licensing and Regulation",
+            "jurisdiction": "Texas",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 3,
+      "gap": null
+    },
+    "moving": {
+      "sub_vertical": "moving",
+      "label": "Moving",
+      "status": "NOT FOUND",
+      "regulator": {
+        "agency": "TxDMV — Motor Carriers / Consumer Protection",
+        "url": "https://www.txdmv.gov/motor-carriers",
+        "notes": "Texas moving — harvest pending"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "NOT FOUND",
+        "source_checked": "https://www.txdmv.gov/motor-carriers",
+        "detail": "Deep harvest — no agency-sourced facts extracted for this domain"
+      }
+    },
+    "dealerships": {
+      "sub_vertical": "dealerships",
+      "label": "Dealerships",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "TxDMV — Dealers",
+        "url": "https://www.txdmv.gov/dealers",
+        "notes": "Texas dealerships — harvest pending"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-TX-DEA-001",
+          "text": "As of July 1, 2025, all licensed Texas dealers must use the TxDMV webDEALER system to electronically process title and registration for vehicle sales.",
+          "status": "FOUND",
+          "citation": {
+            "source": "TxDMV — Dealers",
+            "url": "https://www.txdmv.gov/dealers",
+            "agency": "Texas Department of Motor Vehicles",
+            "jurisdiction": "Texas",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-TX-DEA-002",
+          "text": "Dealer Temporary Tags are replaced effective July 1, 2025 with the Dealer Temporary Plate under TxDMV HB 718 implementation guidance.",
+          "status": "FOUND",
+          "citation": {
+            "source": "TxDMV — Dealers",
+            "url": "https://www.txdmv.gov/dealers",
+            "agency": "Texas Department of Motor Vehicles",
+            "jurisdiction": "Texas",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 2,
+      "gap": null
+    },
+    "auto_repair": {
+      "sub_vertical": "auto_repair",
+      "label": "Auto Repair",
+      "status": "NOT FOUND",
+      "regulator": {
+        "agency": "Texas AG / Consumer Protection — Auto Repair",
+        "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+        "notes": "Federal FTC baseline; confirm state BAR/inspection program if any"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "NOT FOUND",
+        "source_checked": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+        "detail": "Deep harvest — no agency-sourced facts extracted for this domain"
+      }
+    }
+  },
+  "federal_context": [
+    {
+      "sub_vertical": "trucking",
+      "text": "The Pennsylvania Public Utility Commission regulates nearly 7,500 motor carriers that transport property, passengers, or household goods for compensation in Pennsylvania.",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    },
+    {
+      "sub_vertical": "trucking",
+      "text": "Property carriers (e.g., trucking companies) operating in Pennsylvania are regulated by the PUC for safety and insurance requirements only (not rates).",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    }
+  ],
+  "summary": {
+    "domain_count": 5,
+    "total_facts": 8,
+    "status_counts": {
+      "FOUND": 3,
+      "REQUIRES_CONFIRMATION": 0,
+      "NOT FOUND": 2,
+      "ACCESS_RESTRICTED": 0
+    },
+    "anchor_state": false,
+    "deep_harvest": true
+  },
+  "deepening_issues": [
+    275
+  ],
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "FOUND",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-TX-CAR-001",
+            "text": "TxDMV Motor Carriers Division supports apportioned and intrastate fleet registration; carriers update carrier information, renew certificates, and print cab cards through TxDMV.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "TxDMV — Motor Carriers",
+              "url": "https://www.txdmv.gov/motor-carriers",
+              "agency": "Texas Department of Motor Vehicles",
+              "jurisdiction": "Texas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          },
+          {
+            "fact_id": "GT275-TX-CAR-002",
+            "text": "Texas DPS Commercial Vehicle Enforcement performs New Entrant Safety Audits and compliance reviews for motor carriers operating in Texas.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "TX DPS — Commercial Vehicle Enforcement",
+              "url": "https://www.dps.texas.gov/section/commercial-vehicle-enforcement",
+              "agency": "Texas Department of Public Safety",
+              "jurisdiction": "Texas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 2,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-TX-HOU-001",
+            "text": "The Texas Motor Carrier's Guide to Highway Safety covers intrastate commercial motor vehicle laws including hours-of-service and FMCSR adoption for Texas intrastate operations.",
+            "status": "FOUND",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "TX DPS — Commercial Vehicle Enforcement",
+              "url": "https://www.dps.texas.gov/section/commercial-vehicle-enforcement",
+              "agency": "Texas Department of Public Safety",
+              "jurisdiction": "Texas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-TX-VEH-001",
+            "text": "Texas DPS CVE inspects commercial vehicles for compliance with state traffic laws, FMCSR vehicle standards, and hazardous materials requirements on Texas highways.",
+            "status": "FOUND",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "TX DPS — Commercial Vehicle Enforcement",
+              "url": "https://www.dps.texas.gov/section/commercial-vehicle-enforcement",
+              "agency": "Texas Department of Public Safety",
+              "jurisdiction": "Texas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-TX-INS-001",
+            "text": "Interstate motor carriers operating in Texas must meet federal Part 387 minimums; intrastate for-hire carriers must maintain liability coverage per Texas Transportation Code and DPS/CVE enforcement standards.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "insurance",
+            "citation": {
+              "source": "TX DPS — Commercial Vehicle Enforcement",
+              "url": "https://www.dps.texas.gov/section/commercial-vehicle-enforcement",
+              "agency": "Texas Department of Public Safety",
+              "jurisdiction": "Texas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-TX-INT-001",
+            "text": "Texas distinguishes intrastate CMV operations governed by state law and FMCSR adoption from interstate carriers requiring USDOT registration, UCR, and federal operating authority.",
+            "status": "FOUND",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "TX DPS — Commercial Vehicle Enforcement",
+              "url": "https://www.dps.texas.gov/section/commercial-vehicle-enforcement",
+              "agency": "Texas Department of Public Safety",
+              "jurisdiction": "Texas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": true
+    }
+  },
+  "federal_dot_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_issue": 275
+}

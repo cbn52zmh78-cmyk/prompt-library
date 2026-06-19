@@ -1,0 +1,42 @@
+{
+  "artifact": "r2_construction_trades_bibles_index",
+  "issue": 284,
+  "product_status": "DRAFT",
+  "sellable": false,
+  "pinned_dir": "GroundTruth/Compliance/lanes/R2_construction_trades/bibles",
+  "generated_at": "2026-06-19T16:08:11+00:00",
+  "knowledge_bible_format": "8-section",
+  "citation_standard": "STD-CITE-001",
+  "products": {
+    "full_50_state": {
+      "sku": "R2-CT-BIBLE-50-v1",
+      "stem": "construction_trades_knowledge_bible_50state_v1_DRAFT",
+      "state_count": 50,
+      "cited_claims": 1117,
+      "gaps": 99,
+      "as_of_date": "2026-06-19"
+    },
+    "sample_5_state": {
+      "sku": "R2-CT-SAMPLE-5-v1",
+      "stem": "construction_trades_knowledge_bible_sample_5state_v1_DRAFT",
+      "state_codes": [
+        "PA",
+        "TX",
+        "FL",
+        "CA",
+        "NY"
+      ],
+      "pricing": "FREE",
+      "state_count": 5,
+      "cited_claims": 220,
+      "upsell_to": "R2-CT-BIBLE-50-v1"
+    }
+  },
+  "builder": "Stonebridge/Operations/Scripts/build_t2_284_construction_trades_bible.py",
+  "_output_stamp": {
+    "issue": 284,
+    "canonical_path": "GroundTruth/Compliance/lanes/R2_construction_trades/bibles/INDEX.json",
+    "stamped_at": "2026-06-19T16:08:11+00:00",
+    "registry": "GroundTruth/Compliance/lanes/R2_construction_trades/bibles"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "lane": "R5",
+  "issue": 275,
+  "parent_issue": 269,
+  "task": "R5 #275 — State DOT compliance overlays (non-PA selected)",
+  "generated_at": "2026-06-19T16:11:01.543763+00:00",
+  "retrieved_date": "2026-06-19",
+  "state_count": 7,
+  "federal_baseline": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "total_facts": 36,
+  "states": [
+    {
+      "state": "California",
+      "state_code": "CA",
+      "file": "dot_states/california.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "carrier_registration": "FOUND",
+      "hours_of_service": "REQUIRES_CONFIRMATION",
+      "vehicle_requirements": "REQUIRES_CONFIRMATION",
+      "insurance": "REQUIRES_CONFIRMATION",
+      "interstate_intrastate": "REQUIRES_CONFIRMATION"
+    },
+    {
+      "state": "Florida",
+      "state_code": "FL",
+      "file": "dot_states/florida.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "carrier_registration": "FOUND",
+      "hours_of_service": "REQUIRES_CONFIRMATION",
+      "vehicle_requirements": "REQUIRES_CONFIRMATION",
+      "insurance": "REQUIRES_CONFIRMATION",
+      "interstate_intrastate": "REQUIRES_CONFIRMATION"
+    },
+    {
+      "state": "Georgia",
+      "state_code": "GA",
+      "file": "dot_states/georgia.json",
+      "total_facts": 0,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 5
+      },
+      "carrier_registration": "ACCESS_RESTRICTED",
+      "hours_of_service": "ACCESS_RESTRICTED",
+      "vehicle_requirements": "ACCESS_RESTRICTED",
+      "insurance": "ACCESS_RESTRICTED",
+      "interstate_intrastate": "ACCESS_RESTRICTED"
+    },
+    {
+      "state": "Illinois",
+      "state_code": "IL",
+      "file": "dot_states/illinois.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "carrier_registration": "FOUND",
+      "hours_of_service": "REQUIRES_CONFIRMATION",
+      "vehicle_requirements": "REQUIRES_CONFIRMATION",
+      "insurance": "REQUIRES_CONFIRMATION",
+      "interstate_intrastate": "REQUIRES_CONFIRMATION"
+    },
+    {
+      "state": "New York",
+      "state_code": "NY",
+      "file": "dot_states/new_york.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "carrier_registration": "FOUND",
+      "hours_of_service": "REQUIRES_CONFIRMATION",
+      "vehicle_requirements": "REQUIRES_CONFIRMATION",
+      "insurance": "REQUIRES_CONFIRMATION",
+      "interstate_intrastate": "REQUIRES_CONFIRMATION"
+    },
+    {
+      "state": "Ohio",
+      "state_code": "OH",
+      "file": "dot_states/ohio.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "carrier_registration": "FOUND",
+      "hours_of_service": "REQUIRES_CONFIRMATION",
+      "vehicle_requirements": "REQUIRES_CONFIRMATION",
+      "insurance": "REQUIRES_CONFIRMATION",
+      "interstate_intrastate": "REQUIRES_CONFIRMATION"
+    },
+    {
+      "state": "Texas",
+      "state_code": "TX",
+      "file": "dot_states/texas.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "carrier_registration": "FOUND",
+      "hours_of_service": "REQUIRES_CONFIRMATION",
+      "vehicle_requirements": "REQUIRES_CONFIRMATION",
+      "insurance": "REQUIRES_CONFIRMATION",
+      "interstate_intrastate": "REQUIRES_CONFIRMATION"
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "artifact": "transport_dot_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 275,
+  "parent_issue": 269,
+  "deepening_issue": 275,
+  "task": "R5 #275 — State DOT/motor-carrier compliance overlay (non-PA selected states)",
+  "state": "Illinois",
+  "state_code": "IL",
+  "state_slug": "illinois",
+  "generated_at": "2026-06-19T16:11:01.502500+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm DOT/FMCSA carrier registration, HOS, vehicle, and insurance requirements with FMCSA and the relevant state authority.",
+  "policy": "Public .gov sources only; 403/SSL = park; gaps explicit.",
+  "federal_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "FOUND",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-IL-CAR-001",
+            "text": "Intrastate for-hire transportation of property (non-household goods) over Illinois public roads requires an Illinois Commerce Commission Public Carrier Certificate under 625 ILCS Chapter 18C.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "IL ICC — Public Carrier Certificate",
+              "url": "https://icc.illinois.gov/authority/public-carrier-certificate",
+              "agency": "Illinois Commerce Commission",
+              "jurisdiction": "Illinois",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          },
+          {
+            "fact_id": "GT275-IL-CAR-002",
+            "text": "Illinois Commerce Commission no longer accepts UCR registrations — interstate carriers must register via the national UCR system at www.ucr.gov.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "IL ICC — UCR Registration",
+              "url": "https://icc.illinois.gov/authority/unified-carrier-registration",
+              "agency": "Illinois Commerce Commission",
+              "jurisdiction": "Illinois",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 2,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-IL-HOU-001",
+            "text": "Illinois adopts federal HOS rules for interstate CMV operations; ICC-regulated intrastate carriers must comply with compatible state safety requirements enforced by Illinois State Police.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "IL ICC — Public Carrier Certificate",
+              "url": "https://icc.illinois.gov/authority/public-carrier-certificate",
+              "agency": "Illinois Commerce Commission",
+              "jurisdiction": "Illinois",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-IL-VEH-001",
+            "text": "ICC certificate holders must operate safe, properly maintained commercial vehicles; Illinois State Police conduct CMV inspections on Illinois highways.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "IL ICC — Public Carrier Certificate",
+              "url": "https://icc.illinois.gov/authority/public-carrier-certificate",
+              "agency": "Illinois Commerce Commission",
+              "jurisdiction": "Illinois",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-IL-INS-001",
+            "text": "ICC public carrier certificate applicants must file evidence of insurance meeting Illinois minimum requirements in addition to federal Part 387 for interstate operations.",
+            "status": "FOUND",
+            "category": "insurance",
+            "citation": {
+              "source": "IL ICC — Public Carrier Certificate",
+              "url": "https://icc.illinois.gov/authority/public-carrier-certificate",
+              "agency": "Illinois Commerce Commission",
+              "jurisdiction": "Illinois",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-IL-INT-001",
+            "text": "Illinois requires ICC certificates for intrastate for-hire property carriers while interstate carriers use federal USDOT/MC authority plus national UCR — ICC does not process UCR.",
+            "status": "FOUND",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "IL ICC — UCR Registration",
+              "url": "https://icc.illinois.gov/authority/unified-carrier-registration",
+              "agency": "Illinois Commerce Commission",
+              "jurisdiction": "Illinois",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": true
+    }
+  }
+}

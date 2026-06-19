@@ -1,0 +1,357 @@
+{
+  "artifact": "transport_logistics_auto_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 269,
+  "parent_issue": 237,
+  "task": "R5 — Transport/Logistics/Auto state PUC/TNC/repair/dealer/movers",
+  "state": "New York",
+  "state_code": "NY",
+  "state_slug": "new_york",
+  "generated_at": "2026-06-19T11:11:05.836931+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm motor-carrier, TNC, dealer, mover, and repair requirements with the relevant state authority.",
+  "policy": "Public .gov sources only; 403/404 = park (no bypass); gaps explicit.",
+  "sub_verticals": {
+    "trucking": {
+      "sub_vertical": "trucking",
+      "label": "Trucking",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "NY DMV — Commercial Drivers",
+        "url": "https://dmv.ny.gov/commercial-drivers",
+        "notes": "New York trucking — harvest pending"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-NY-TRU-001",
+          "text": "A New York commercial driver license (CDL) is required to operate large or heavy vehicles including dump trucks, tractor trailers, buses, and stretch limousines.",
+          "status": "FOUND",
+          "citation": {
+            "source": "NY DMV — Commercial Drivers",
+            "url": "https://dmv.ny.gov/commercial-drivers",
+            "agency": "New York State Department of Motor Vehicles",
+            "jurisdiction": "New York",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-NY-TRU-002",
+          "text": "NY DMV must query the FMCSA Drug and Alcohol Clearinghouse for CDL/CLP holders and applicants to ensure no prohibiting violations before commercial motor vehicle operation.",
+          "status": "FOUND",
+          "citation": {
+            "source": "NY DMV — Commercial Drivers",
+            "url": "https://dmv.ny.gov/commercial-drivers",
+            "agency": "New York State Department of Motor Vehicles",
+            "jurisdiction": "New York",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-NY-TRU-003",
+          "text": "CDL-holders operating buses for motor carriers with NY State Department of Transportation authority may be subject to Article 19-A driver qualification rules.",
+          "status": "FOUND",
+          "citation": {
+            "source": "NY DMV — Commercial Drivers",
+            "url": "https://dmv.ny.gov/commercial-drivers",
+            "agency": "New York State Department of Motor Vehicles",
+            "jurisdiction": "New York",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 3,
+      "gap": null
+    },
+    "rideshare_delivery": {
+      "sub_vertical": "rideshare_delivery",
+      "label": "Rideshare Delivery",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "NYC Taxi & Limousine Commission — FHV",
+        "url": "https://www.nyc.gov/site/tlc/businesses/for-hire-vehicles.page",
+        "notes": "New York rideshare_delivery — harvest pending"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-NY-RID-001",
+          "text": "NYC Taxi & Limousine Commission For-Hire Vehicles (FHVs) provide pre-arranged transportation throughout New York City via TLC-licensed bases dispatching TLC-licensed drivers in TLC-licensed vehicles.",
+          "status": "FOUND",
+          "citation": {
+            "source": "NYC TLC — For-Hire Vehicles",
+            "url": "https://www.nyc.gov/site/tlc/businesses/for-hire-vehicles.page",
+            "agency": "NYC Taxi and Limousine Commission",
+            "jurisdiction": "New York",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-NY-RID-002",
+          "text": "NYC TLC recognizes four FHV base classes (livery, black car, luxury limousine, high-volume for-hire service) with separate licensing and renewal requirements.",
+          "status": "FOUND",
+          "citation": {
+            "source": "NYC TLC — For-Hire Vehicles",
+            "url": "https://www.nyc.gov/site/tlc/businesses/for-hire-vehicles.page",
+            "agency": "NYC Taxi and Limousine Commission",
+            "jurisdiction": "New York",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 2,
+      "gap": null
+    },
+    "moving": {
+      "sub_vertical": "moving",
+      "label": "Moving",
+      "status": "NOT FOUND",
+      "regulator": {
+        "agency": "NY DMV — Commercial Drivers",
+        "url": "https://dmv.ny.gov/commercial-drivers",
+        "notes": "Household goods movers — confirm HHG authority with state motor-carrier regulator"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "NOT FOUND",
+        "source_checked": "https://dmv.ny.gov/commercial-drivers",
+        "detail": "Deep harvest — no agency-sourced facts extracted for this domain"
+      }
+    },
+    "dealerships": {
+      "sub_vertical": "dealerships",
+      "label": "Dealerships",
+      "status": "NOT FOUND",
+      "regulator": {
+        "agency": "NY DMV — Dealer/Transporter Licensing",
+        "url": "https://dmv.ny.gov/",
+        "notes": "New York dealerships — harvest pending"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "NOT FOUND",
+        "source_checked": "https://dmv.ny.gov/",
+        "detail": "Deep harvest — no agency-sourced facts extracted for this domain"
+      }
+    },
+    "auto_repair": {
+      "sub_vertical": "auto_repair",
+      "label": "Auto Repair",
+      "status": "NOT FOUND",
+      "regulator": {
+        "agency": "New York AG / Consumer Protection — Auto Repair",
+        "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+        "notes": "Federal FTC baseline; confirm state BAR/inspection program if any"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "NOT FOUND",
+        "source_checked": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+        "detail": "Deep harvest — no agency-sourced facts extracted for this domain"
+      }
+    }
+  },
+  "federal_context": [
+    {
+      "sub_vertical": "trucking",
+      "text": "The Pennsylvania Public Utility Commission regulates nearly 7,500 motor carriers that transport property, passengers, or household goods for compensation in Pennsylvania.",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    },
+    {
+      "sub_vertical": "trucking",
+      "text": "Property carriers (e.g., trucking companies) operating in Pennsylvania are regulated by the PUC for safety and insurance requirements only (not rates).",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    }
+  ],
+  "summary": {
+    "domain_count": 5,
+    "total_facts": 5,
+    "status_counts": {
+      "FOUND": 2,
+      "REQUIRES_CONFIRMATION": 0,
+      "NOT FOUND": 3,
+      "ACCESS_RESTRICTED": 0
+    },
+    "anchor_state": false,
+    "deep_harvest": true
+  },
+  "deepening_issues": [
+    275
+  ],
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "FOUND",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-NY-CAR-001",
+            "text": "NY DMV queries the FMCSA Drug and Alcohol Clearinghouse for CDL/CLP holders and applicants before commercial motor vehicle operation.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "NY DMV — Commercial Drivers",
+              "url": "https://dmv.ny.gov/commercial-drivers",
+              "agency": "New York State Department of Motor Vehicles",
+              "jurisdiction": "New York",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          },
+          {
+            "fact_id": "GT275-NY-CAR-002",
+            "text": "CDL-holders operating buses for motor carriers with NY State Department of Transportation authority may be subject to Article 19-A driver qualification rules.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "NY DMV — Commercial Drivers",
+              "url": "https://dmv.ny.gov/commercial-drivers",
+              "agency": "New York State Department of Motor Vehicles",
+              "jurisdiction": "New York",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 2,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-NY-HOU-001",
+            "text": "New York adopts federal hours-of-service limits for interstate CMV drivers; intrastate carriers may face additional NYSDOT and Thruway Authority enforcement.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "NY DMV — Commercial Drivers",
+              "url": "https://dmv.ny.gov/commercial-drivers",
+              "agency": "New York State Department of Motor Vehicles",
+              "jurisdiction": "New York",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-NY-VEH-001",
+            "text": "A New York commercial driver license (CDL) is required to operate large or heavy vehicles including dump trucks, tractor trailers, buses, and stretch limousines.",
+            "status": "FOUND",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "NY DMV — Commercial Drivers",
+              "url": "https://dmv.ny.gov/commercial-drivers",
+              "agency": "New York State Department of Motor Vehicles",
+              "jurisdiction": "New York",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-NY-INS-001",
+            "text": "Interstate for-hire carriers operating in New York must meet federal Part 387 minimums; NYSDOT-regulated carriers may have additional state insurance filing requirements.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "insurance",
+            "citation": {
+              "source": "NY DMV — Commercial Drivers",
+              "url": "https://dmv.ny.gov/commercial-drivers",
+              "agency": "New York State Department of Motor Vehicles",
+              "jurisdiction": "New York",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-NY-INT-001",
+            "text": "New York distinguishes interstate carriers (USDOT/FMCSA + UCR) from intrastate for-hire operations subject to NYSDOT certificates and DMV CDL requirements.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "NY DMV — Commercial Drivers",
+              "url": "https://dmv.ny.gov/commercial-drivers",
+              "agency": "New York State Department of Motor Vehicles",
+              "jurisdiction": "New York",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": true
+    }
+  },
+  "federal_dot_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_issue": 275
+}

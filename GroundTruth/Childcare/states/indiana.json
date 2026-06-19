@@ -1,0 +1,338 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "Indiana",
+  "state_code": "IN",
+  "state_slug": "indiana",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:12:39.377369+00:00",
+  "status": "PARTIAL",
+  "primary_source": "Indiana Licensed Center Ratio Chart",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "HARVESTED",
+      "fact_count": 8,
+      "facts": [
+        {
+          "fact_id": "indiana-childcare-ratios-1",
+          "category": "ratios",
+          "text": "Indiana licensed child care center staff:child ratio for infant: 1:4; maximum group size 8.",
+          "citation": {
+            "source": "Indiana Licensed Center Ratio Chart",
+            "url": "https://www.in.gov/fssa/carefinder/files/Center_Ratio_Chart.pdf",
+            "agency": "Indiana FSSA OECOSL",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "indiana-childcare-ratios-2",
+          "category": "ratios",
+          "text": "Indiana licensed child care center staff:child ratio for toddler: 1:5; maximum group size 10.",
+          "citation": {
+            "source": "Indiana Licensed Center Ratio Chart",
+            "url": "https://www.in.gov/fssa/carefinder/files/Center_Ratio_Chart.pdf",
+            "agency": "Indiana FSSA OECOSL",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "indiana-childcare-ratios-3",
+          "category": "ratios",
+          "text": "Indiana licensed child care center staff:child ratio for 2 years: 1:5; maximum group size 10.",
+          "citation": {
+            "source": "Indiana Licensed Center Ratio Chart",
+            "url": "https://www.in.gov/fssa/carefinder/files/Center_Ratio_Chart.pdf",
+            "agency": "Indiana FSSA OECOSL",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "indiana-childcare-ratios-4",
+          "category": "ratios",
+          "text": "Indiana licensed child care center staff:child ratio for 30–36 months: 1:7; maximum group size 14.",
+          "citation": {
+            "source": "Indiana Licensed Center Ratio Chart",
+            "url": "https://www.in.gov/fssa/carefinder/files/Center_Ratio_Chart.pdf",
+            "agency": "Indiana FSSA OECOSL",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "indiana-childcare-ratios-5",
+          "category": "ratios",
+          "text": "Indiana licensed child care center staff:child ratio for 3 years: 1:10; maximum group size 20.",
+          "citation": {
+            "source": "Indiana Licensed Center Ratio Chart",
+            "url": "https://www.in.gov/fssa/carefinder/files/Center_Ratio_Chart.pdf",
+            "agency": "Indiana FSSA OECOSL",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "indiana-childcare-ratios-6",
+          "category": "ratios",
+          "text": "Indiana licensed child care center staff:child ratio for 4 years: 1:12; maximum group size 24.",
+          "citation": {
+            "source": "Indiana Licensed Center Ratio Chart",
+            "url": "https://www.in.gov/fssa/carefinder/files/Center_Ratio_Chart.pdf",
+            "agency": "Indiana FSSA OECOSL",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "indiana-childcare-ratios-7",
+          "category": "ratios",
+          "text": "Indiana licensed child care center staff:child ratio for 5 years/kindergarten: 1:15; maximum group size 30.",
+          "citation": {
+            "source": "Indiana Licensed Center Ratio Chart",
+            "url": "https://www.in.gov/fssa/carefinder/files/Center_Ratio_Chart.pdf",
+            "agency": "Indiana FSSA OECOSL",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "indiana-childcare-ratios-8",
+          "category": "ratios",
+          "text": "Indiana licensed child care center staff:child ratio for 1st grade and above: 1:20; maximum group size 40.",
+          "citation": {
+            "source": "Indiana Licensed Center Ratio Chart",
+            "url": "https://www.in.gov/fssa/carefinder/files/Center_Ratio_Chart.pdf",
+            "agency": "Indiana FSSA OECOSL",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        }
+      ]
+    },
+    "group_size": {
+      "status": "HARVESTED",
+      "fact_count": 8,
+      "facts": [
+        {
+          "fact_id": "indiana-childcare-group-size-1",
+          "category": "group_size",
+          "text": "Indiana child care center maximum group size for infant: 8 children.",
+          "citation": {
+            "source": "Indiana Licensed Center Ratio Chart",
+            "url": "https://www.in.gov/fssa/carefinder/files/Center_Ratio_Chart.pdf",
+            "agency": "Indiana FSSA OECOSL",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "indiana-childcare-group-size-2",
+          "category": "group_size",
+          "text": "Indiana child care center maximum group size for toddler: 10 children.",
+          "citation": {
+            "source": "Indiana Licensed Center Ratio Chart",
+            "url": "https://www.in.gov/fssa/carefinder/files/Center_Ratio_Chart.pdf",
+            "agency": "Indiana FSSA OECOSL",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "indiana-childcare-group-size-3",
+          "category": "group_size",
+          "text": "Indiana child care center maximum group size for 2 years: 10 children.",
+          "citation": {
+            "source": "Indiana Licensed Center Ratio Chart",
+            "url": "https://www.in.gov/fssa/carefinder/files/Center_Ratio_Chart.pdf",
+            "agency": "Indiana FSSA OECOSL",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "indiana-childcare-group-size-4",
+          "category": "group_size",
+          "text": "Indiana child care center maximum group size for 30–36 months: 14 children.",
+          "citation": {
+            "source": "Indiana Licensed Center Ratio Chart",
+            "url": "https://www.in.gov/fssa/carefinder/files/Center_Ratio_Chart.pdf",
+            "agency": "Indiana FSSA OECOSL",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "indiana-childcare-group-size-5",
+          "category": "group_size",
+          "text": "Indiana child care center maximum group size for 3 years: 20 children.",
+          "citation": {
+            "source": "Indiana Licensed Center Ratio Chart",
+            "url": "https://www.in.gov/fssa/carefinder/files/Center_Ratio_Chart.pdf",
+            "agency": "Indiana FSSA OECOSL",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "indiana-childcare-group-size-6",
+          "category": "group_size",
+          "text": "Indiana child care center maximum group size for 4 years: 24 children.",
+          "citation": {
+            "source": "Indiana Licensed Center Ratio Chart",
+            "url": "https://www.in.gov/fssa/carefinder/files/Center_Ratio_Chart.pdf",
+            "agency": "Indiana FSSA OECOSL",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "indiana-childcare-group-size-7",
+          "category": "group_size",
+          "text": "Indiana child care center maximum group size for 5 years/kindergarten: 30 children.",
+          "citation": {
+            "source": "Indiana Licensed Center Ratio Chart",
+            "url": "https://www.in.gov/fssa/carefinder/files/Center_Ratio_Chart.pdf",
+            "agency": "Indiana FSSA OECOSL",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "indiana-childcare-group-size-8",
+          "category": "group_size",
+          "text": "Indiana child care center maximum group size for 1st grade and above: 40 children.",
+          "citation": {
+            "source": "Indiana Licensed Center Ratio Chart",
+            "url": "https://www.in.gov/fssa/carefinder/files/Center_Ratio_Chart.pdf",
+            "agency": "Indiana FSSA OECOSL",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        }
+      ]
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": []
+}

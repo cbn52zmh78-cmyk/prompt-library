@@ -1,0 +1,419 @@
+{
+  "artifact": "transport_logistics_auto_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 269,
+  "parent_issue": 237,
+  "task": "R5 — Transport/Logistics/Auto state PUC/TNC/repair/dealer/movers",
+  "state": "Florida",
+  "state_code": "FL",
+  "state_slug": "florida",
+  "generated_at": "2026-06-19T11:09:34.087530+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm motor-carrier, TNC, dealer, mover, and repair requirements with the relevant state authority.",
+  "policy": "Public .gov sources only; 403/404 = park (no bypass); gaps explicit.",
+  "sub_verticals": {
+    "trucking": {
+      "sub_vertical": "trucking",
+      "label": "Trucking",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "FLHSMV — Commercial Vehicle Enforcement",
+        "url": "https://www.flhsmv.gov/florida-highway-patrol/commercial-vehicle-enforcement/",
+        "notes": "Florida trucking — harvest pending"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-FL-TRU-001",
+          "text": "Florida Highway Patrol Office of Commercial Vehicle Enforcement inspects commercial vehicles, enforces state traffic laws on CMVs, and publishes Unified Carrier Registration guidance.",
+          "status": "FOUND",
+          "citation": {
+            "source": "FLHSMV — Commercial Vehicle Enforcement",
+            "url": "https://www.flhsmv.gov/florida-highway-patrol/commercial-vehicle-enforcement/",
+            "agency": "Florida Department of Highway Safety and Motor Vehicles",
+            "jurisdiction": "Florida",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-FL-TRU-002",
+          "text": "Florida Statutes authorize CVE troopers to require any commercial vehicle driver to stop and submit to inspection.",
+          "status": "FOUND",
+          "citation": {
+            "source": "FLHSMV — Commercial Vehicle Enforcement",
+            "url": "https://www.flhsmv.gov/florida-highway-patrol/commercial-vehicle-enforcement/",
+            "agency": "Florida Department of Highway Safety and Motor Vehicles",
+            "jurisdiction": "Florida",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 2,
+      "gap": null
+    },
+    "rideshare_delivery": {
+      "sub_vertical": "rideshare_delivery",
+      "label": "Rideshare Delivery",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Florida Legislature — TNC (F.S. 627.748)",
+        "url": "https://www.flsenate.gov/Laws/Statutes/2023/627.748",
+        "notes": "Florida rideshare_delivery — harvest pending"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-FL-RID-001",
+          "text": "Florida defines a transportation network company (TNC) as an entity using a digital network to connect riders to TNC drivers who provide prearranged rides; TNCs are not common carriers or taxicab services.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Florida Statutes § 627.748",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2023/627.748",
+            "agency": "Florida Legislature",
+            "jurisdiction": "Florida",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-FL-RID-002",
+          "text": "While engaged in a prearranged ride, Florida TNCs/drivers must maintain primary automobile liability coverage of at least $1 million for death, bodily injury, and property damage.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Florida Statutes § 627.748(7)(c)",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2023/627.748",
+            "agency": "Florida Legislature",
+            "jurisdiction": "Florida",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "value": "1000000 USD liability (on-ride)"
+        }
+      ],
+      "fact_count": 2,
+      "gap": null
+    },
+    "moving": {
+      "sub_vertical": "moving",
+      "label": "Moving",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Florida Statutes Ch. 507 — Movers & Moving Brokers",
+        "url": "https://www.flsenate.gov/Laws/Statutes/2023/Chapter507",
+        "notes": "Florida moving — harvest pending"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-FL-MOV-001",
+          "text": "A mover is a person who, for compensation, contracts for or engages in loading, transportation or shipment, or unloading of household goods as part of a household move; the term does not include postal, courier, or package services that do not advertise as a mover.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Florida Statutes § 507.01",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2023/507.01",
+            "agency": "Florida Legislature",
+            "jurisdiction": "Florida",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-FL-MOV-002",
+          "text": "Florida movers and moving brokers must register with the department, display a registration certificate, and renew biennially; registration fees are $300 per year per mover or moving broker.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Florida Statutes § 507.03",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2023/507.03",
+            "agency": "Florida Legislature",
+            "jurisdiction": "Florida",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "value": "300 USD/year"
+        },
+        {
+          "fact_id": "GT269-FL-MOV-003",
+          "text": "Each mover operating in Florida must maintain liability insurance of at least $10,000 per shipment for loss or damage to household goods and provide evidence of coverage before department registration.",
+          "status": "FOUND",
+          "citation": {
+            "source": "Florida Statutes § 507.04",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2023/507.04",
+            "agency": "Florida Legislature",
+            "jurisdiction": "Florida",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "value": "10000 USD/shipment"
+        }
+      ],
+      "fact_count": 3,
+      "gap": null
+    },
+    "dealerships": {
+      "sub_vertical": "dealerships",
+      "label": "Dealerships",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "FLHSMV — Bureau of Dealer Services",
+        "url": "https://www.flhsmv.gov/motor-vehicles-tags-titles/dealers/",
+        "notes": "Florida dealerships — harvest pending"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-FL-DEA-001",
+          "text": "FLHSMV Bureau of Dealer Services issues and renews licenses for motor vehicle, auction, salvage, wholesale, mobile home, and recreational vehicle dealers and manufacturers statewide.",
+          "status": "FOUND",
+          "citation": {
+            "source": "FLHSMV — Dealers",
+            "url": "https://www.flhsmv.gov/motor-vehicles-tags-titles/dealers/",
+            "agency": "Florida Department of Highway Safety and Motor Vehicles",
+            "jurisdiction": "Florida",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-FL-DEA-002",
+          "text": "A manufacturer, importer, or distributor license is required to distribute and sell motor vehicles, recreational vehicles, or mobile homes in Florida and applicants must meet FLHSMV licensing requirements.",
+          "status": "FOUND",
+          "citation": {
+            "source": "FLHSMV — Dealers",
+            "url": "https://www.flhsmv.gov/motor-vehicles-tags-titles/dealers/",
+            "agency": "Florida Department of Highway Safety and Motor Vehicles",
+            "jurisdiction": "Florida",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-FL-DEA-003",
+          "text": "Motor vehicle, mobile home, and recreational vehicle dealers must meet FLHSMV licensing requirements before conducting business in Florida.",
+          "status": "FOUND",
+          "citation": {
+            "source": "FLHSMV — Dealers",
+            "url": "https://www.flhsmv.gov/motor-vehicles-tags-titles/dealers/",
+            "agency": "Florida Department of Highway Safety and Motor Vehicles",
+            "jurisdiction": "Florida",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 3,
+      "gap": null
+    },
+    "auto_repair": {
+      "sub_vertical": "auto_repair",
+      "label": "Auto Repair",
+      "status": "NOT FOUND",
+      "regulator": {
+        "agency": "Florida AG / Consumer Protection — Auto Repair",
+        "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+        "notes": "Federal FTC baseline; confirm state BAR/inspection program if any"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "NOT FOUND",
+        "source_checked": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+        "detail": "Deep harvest — no agency-sourced facts extracted for this domain"
+      }
+    }
+  },
+  "federal_context": [
+    {
+      "sub_vertical": "trucking",
+      "text": "The Pennsylvania Public Utility Commission regulates nearly 7,500 motor carriers that transport property, passengers, or household goods for compensation in Pennsylvania.",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    },
+    {
+      "sub_vertical": "trucking",
+      "text": "Property carriers (e.g., trucking companies) operating in Pennsylvania are regulated by the PUC for safety and insurance requirements only (not rates).",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    }
+  ],
+  "summary": {
+    "domain_count": 5,
+    "total_facts": 10,
+    "status_counts": {
+      "FOUND": 4,
+      "REQUIRES_CONFIRMATION": 0,
+      "NOT FOUND": 1,
+      "ACCESS_RESTRICTED": 0
+    },
+    "anchor_state": false,
+    "deep_harvest": true
+  },
+  "deepening_issues": [
+    275
+  ],
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "FOUND",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-FL-CAR-001",
+            "text": "Florida Highway Patrol Office of Commercial Vehicle Enforcement inspects commercial vehicles and publishes Unified Carrier Registration guidance for interstate motor carriers.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "FLHSMV — Commercial Vehicle Enforcement",
+              "url": "https://www.flhsmv.gov/florida-highway-patrol/commercial-vehicle-enforcement/",
+              "agency": "Florida Department of Highway Safety and Motor Vehicles",
+              "jurisdiction": "Florida",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          },
+          {
+            "fact_id": "GT275-FL-CAR-002",
+            "text": "Florida Statutes authorize CVE troopers to require any commercial vehicle driver to stop and submit to inspection.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "FLHSMV — Commercial Vehicle Enforcement",
+              "url": "https://www.flhsmv.gov/florida-highway-patrol/commercial-vehicle-enforcement/",
+              "agency": "Florida Department of Highway Safety and Motor Vehicles",
+              "jurisdiction": "Florida",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 2,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-FL-HOU-001",
+            "text": "Florida intrastate CMV hours-of-service rules align with federal Part 395 for property carriers; CVE enforces HOS during roadside inspections.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "FLHSMV — Commercial Vehicle Enforcement",
+              "url": "https://www.flhsmv.gov/florida-highway-patrol/commercial-vehicle-enforcement/",
+              "agency": "Florida Department of Highway Safety and Motor Vehicles",
+              "jurisdiction": "Florida",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-FL-VEH-001",
+            "text": "CVE performs Level I–III inspections and may place commercial vehicles out of service for safety defects under Florida and FMCSR standards.",
+            "status": "FOUND",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "FLHSMV — Commercial Vehicle Enforcement",
+              "url": "https://www.flhsmv.gov/florida-highway-patrol/commercial-vehicle-enforcement/",
+              "agency": "Florida Department of Highway Safety and Motor Vehicles",
+              "jurisdiction": "Florida",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-FL-INS-001",
+            "text": "Interstate carriers in Florida must maintain federal minimum liability per 49 CFR Part 387; Florida may require additional proof during CVE registration and enforcement actions.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "insurance",
+            "citation": {
+              "source": "FLHSMV — Commercial Vehicle Enforcement",
+              "url": "https://www.flhsmv.gov/florida-highway-patrol/commercial-vehicle-enforcement/",
+              "agency": "Florida Department of Highway Safety and Motor Vehicles",
+              "jurisdiction": "Florida",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-FL-INT-001",
+            "text": "Florida CVE enforces both interstate FMCSR compliance and intrastate CMV safety rules; carriers operating solely intrastate remain subject to Florida commercial vehicle statutes.",
+            "status": "FOUND",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "FLHSMV — Commercial Vehicle Enforcement",
+              "url": "https://www.flhsmv.gov/florida-highway-patrol/commercial-vehicle-enforcement/",
+              "agency": "Florida Department of Highway Safety and Motor Vehicles",
+              "jurisdiction": "Florida",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": true
+    }
+  },
+  "federal_dot_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_issue": 275
+}

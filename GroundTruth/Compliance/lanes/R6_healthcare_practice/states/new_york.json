@@ -1,0 +1,129 @@
+{
+  "artifact": "healthcare_practice_state_pack",
+  "version": "1.0",
+  "lane": "R6",
+  "task": "R6 — Healthcare practice state privacy add-on (New York PHL + SHIELD overlay)",
+  "state": "New York",
+  "state_code": "NY",
+  "state_slug": "new_york",
+  "generated_at": "2026-06-19T18:00:00+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research — not legal advice. NY may impose privacy standards more stringent than HIPAA; confirm PHL and SHIELD applicability.",
+  "policy": "Public .gov sources only; gaps explicit.",
+  "domains": {
+    "hipaa_state_overlay": {
+      "domain": "hipaa_state_overlay",
+      "label": "NY DOH HIPAA Resources & Preemption",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "New York State Department of Health",
+        "url": "https://www.health.ny.gov/regulations/hipaa/"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-NY-DOH-001",
+          "text": "NY Department of Health maintains HIPAA regulation resources including preemption charts, access flow chart, and notices of privacy practices for DOH covered programs.",
+          "status": "FOUND",
+          "citation": {
+            "source": "NY DOH — HIPAA regulations",
+            "url": "https://www.health.ny.gov/regulations/hipaa/",
+            "jurisdiction": "New York",
+            "tier": "agency_secondary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-NY-DOH-002",
+          "text": "HIPAA did not supersede state laws imposing more stringent privacy standards; NY DOH states it will enforce such state laws within its purview and enforce other state laws to the extent not preempted.",
+          "status": "FOUND",
+          "citation": {
+            "source": "NY DOH — HIPAA Preemption Charts",
+            "url": "https://www.health.ny.gov/regulations/hipaa/preemption_charts.htm",
+            "jurisdiction": "New York",
+            "tier": "agency_secondary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-NY-PHL-001",
+          "text": "PHL §17 prevails over HIPAA where a provider must release medical records to another designated physician or hospital upon written patient request — treated as disclosure required by law under HIPAA.",
+          "status": "FOUND",
+          "citation": {
+            "source": "NY DOH — HIPAA Preemption Charts (PHL §17)",
+            "url": "https://www.health.ny.gov/regulations/hipaa/preemption_charts.htm",
+            "jurisdiction": "New York",
+            "tier": "agency_secondary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "R6-NY-PHL-002",
+          "text": "PHL §18 governs patient information held by health care practitioners; NY DOH preemption analysis maps scope differences vs. HIPAA designated record set (e.g., billing records, psychotherapy notes, practitioner personal notes).",
+          "status": "FOUND",
+          "citation": {
+            "source": "NY DOH — HIPAA Preemption Charts (PHL §18)",
+            "url": "https://www.health.ny.gov/regulations/hipaa/preemption_charts.htm",
+            "jurisdiction": "New York",
+            "tier": "agency_secondary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 4,
+      "gap": null
+    },
+    "data_security_breach": {
+      "domain": "data_security_breach",
+      "label": "SHIELD Act / Data Security & Breach (non-HIPAA PHI)",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "NY DFS / NY AG (context-dependent)",
+        "url": "https://www.dfs.ny.gov/industry_guidance/cybersecurity"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "R6-NY-SHIELD-001",
+          "text": "REQUIRES_CONFIRMATION — N.Y. Gen. Bus. Law §899-aa (SHIELD Act) statute text NOT FOUND at harvest (nysenate.gov Cloudflare PARKED). DFS cybersecurity hub live (HTTP 200) but sparse harvest; confirm reasonable safeguards and breach notification obligations via alternate primary source.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "N.Y. Gen. Bus. Law §899-aa (SHIELD Act)",
+            "url": "https://www.nysenate.gov/legislation/laws/GBM/899-AA",
+            "jurisdiction": "New York",
+            "tier": "statute_primary",
+            "retrieved_date": "2026-06-19",
+            "harvest_status": "PARKED"
+          },
+          "source_checked": "https://www.nysenate.gov/legislation/laws/GBM/899-AA"
+        },
+        {
+          "fact_id": "R6-NY-SHIELD-002",
+          "text": "NOT FOUND — NY Attorney General data breach reporting page returned HTTP 404 [source checked: ag.ny.gov/internet/data-breach-reporting].",
+          "status": "NOT FOUND",
+          "citation": {
+            "source": "NY AG — Data breach reporting",
+            "url": "https://ag.ny.gov/internet/data-breach-reporting",
+            "jurisdiction": "New York",
+            "tier": "agency_secondary",
+            "retrieved_date": "2026-06-19",
+            "http_status": 404
+          },
+          "source_checked": "https://ag.ny.gov/internet/data-breach-reporting"
+        }
+      ],
+      "fact_count": 2,
+      "gap": {
+        "status": "REQUIRES_CONFIRMATION",
+        "message": "SHIELD Act primary statute and AG breach portal not harvestable; medical practices with HIPAA-covered PHI may have parallel obligations for non-covered data elements.",
+        "note": "23 NYCRR Part 500 (DFS) applies to covered financial entities — not a universal medical-practice baseline."
+      }
+    }
+  },
+  "status_roll": {
+    "FOUND": 4,
+    "REQUIRES_CONFIRMATION": 1,
+    "NOT FOUND": 1,
+    "ACCESS_RESTRICTED": 0,
+    "PARKED": 1
+  },
+  "total_facts": 6
+}

@@ -1,0 +1,166 @@
+{
+  "artifact": "transport_dot_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 275,
+  "parent_issue": 269,
+  "deepening_issue": 275,
+  "task": "R5 #275 — State DOT/motor-carrier compliance overlay (non-PA selected states)",
+  "state": "Florida",
+  "state_code": "FL",
+  "state_slug": "florida",
+  "generated_at": "2026-06-19T16:11:01.482363+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm DOT/FMCSA carrier registration, HOS, vehicle, and insurance requirements with FMCSA and the relevant state authority.",
+  "policy": "Public .gov sources only; 403/SSL = park; gaps explicit.",
+  "federal_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "FOUND",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-FL-CAR-001",
+            "text": "Florida Highway Patrol Office of Commercial Vehicle Enforcement inspects commercial vehicles and publishes Unified Carrier Registration guidance for interstate motor carriers.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "FLHSMV — Commercial Vehicle Enforcement",
+              "url": "https://www.flhsmv.gov/florida-highway-patrol/commercial-vehicle-enforcement/",
+              "agency": "Florida Department of Highway Safety and Motor Vehicles",
+              "jurisdiction": "Florida",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          },
+          {
+            "fact_id": "GT275-FL-CAR-002",
+            "text": "Florida Statutes authorize CVE troopers to require any commercial vehicle driver to stop and submit to inspection.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "FLHSMV — Commercial Vehicle Enforcement",
+              "url": "https://www.flhsmv.gov/florida-highway-patrol/commercial-vehicle-enforcement/",
+              "agency": "Florida Department of Highway Safety and Motor Vehicles",
+              "jurisdiction": "Florida",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 2,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-FL-HOU-001",
+            "text": "Florida intrastate CMV hours-of-service rules align with federal Part 395 for property carriers; CVE enforces HOS during roadside inspections.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "FLHSMV — Commercial Vehicle Enforcement",
+              "url": "https://www.flhsmv.gov/florida-highway-patrol/commercial-vehicle-enforcement/",
+              "agency": "Florida Department of Highway Safety and Motor Vehicles",
+              "jurisdiction": "Florida",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-FL-VEH-001",
+            "text": "CVE performs Level I–III inspections and may place commercial vehicles out of service for safety defects under Florida and FMCSR standards.",
+            "status": "FOUND",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "FLHSMV — Commercial Vehicle Enforcement",
+              "url": "https://www.flhsmv.gov/florida-highway-patrol/commercial-vehicle-enforcement/",
+              "agency": "Florida Department of Highway Safety and Motor Vehicles",
+              "jurisdiction": "Florida",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-FL-INS-001",
+            "text": "Interstate carriers in Florida must maintain federal minimum liability per 49 CFR Part 387; Florida may require additional proof during CVE registration and enforcement actions.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "insurance",
+            "citation": {
+              "source": "FLHSMV — Commercial Vehicle Enforcement",
+              "url": "https://www.flhsmv.gov/florida-highway-patrol/commercial-vehicle-enforcement/",
+              "agency": "Florida Department of Highway Safety and Motor Vehicles",
+              "jurisdiction": "Florida",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-FL-INT-001",
+            "text": "Florida CVE enforces both interstate FMCSR compliance and intrastate CMV safety rules; carriers operating solely intrastate remain subject to Florida commercial vehicle statutes.",
+            "status": "FOUND",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "FLHSMV — Commercial Vehicle Enforcement",
+              "url": "https://www.flhsmv.gov/florida-highway-patrol/commercial-vehicle-enforcement/",
+              "agency": "Florida Department of Highway Safety and Motor Vehicles",
+              "jurisdiction": "Florida",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": true
+    }
+  }
+}

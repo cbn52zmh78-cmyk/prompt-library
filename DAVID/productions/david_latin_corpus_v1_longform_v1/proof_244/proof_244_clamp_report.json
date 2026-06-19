@@ -11,7 +11,7 @@
   },
   "clamp_ceiling": "Safety net \u2014 cannot pass raw-magenta 0.634 alone",
   "magenta_max": 0.42,
-  "generated_at": "2026-06-19T15:51:46.986959+00:00",
+  "generated_at": "2026-06-19T16:07:23.946246+00:00",
   "script": "scripts\\longform_scripts\\david_latin_corpus_v1_script.json",
   "production": "productions\\david_latin_corpus_v1_longform_v1",
   "shots": [
@@ -38,7 +38,13 @@
         "host_blue_mean": -10.3
       },
       "verdict": "AMBER",
-      "clamp_marker": null
+      "clamp_marker": {
+        "issue": 244,
+        "stage": "process_shot_segment",
+        "vf": "eq=gamma_r=1.00:gamma_g=0.98:gamma_b=0.90:saturation=0.93:brightness=0.00",
+        "magenta": 0.2881,
+        "host_blue_mean": 47.8
+      }
     },
     {
       "shot_id": "05_method",
@@ -63,7 +69,13 @@
         "host_blue_mean": -10.3
       },
       "verdict": "AMBER",
-      "clamp_marker": null
+      "clamp_marker": {
+        "issue": 244,
+        "stage": "process_shot_segment",
+        "vf": "eq=gamma_r=1.00:gamma_g=0.98:gamma_b=0.90:saturation=0.93:brightness=0.00",
+        "magenta": 0.3057,
+        "host_blue_mean": 45.9
+      }
     }
   ]
 }

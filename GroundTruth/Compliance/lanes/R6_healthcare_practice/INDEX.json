@@ -1,0 +1,63 @@
+{
+  "artifact": "groundtruth_compliance_lane_index",
+  "lane": "R6",
+  "slug": "healthcare_practice",
+  "vertical": "Healthcare Practice",
+  "version": "1.0",
+  "task": "R6 — Healthcare practice compliance source-gather",
+  "as_of_date": "2026-06-19",
+  "retrieved_date": "2026-06-19",
+  "citation_standard": "STD-CITE-001",
+  "pinned_root": "GroundTruth/Compliance/lanes/R6_healthcare_practice",
+  "artifacts": {
+    "lane_meta": "lane_meta.json",
+    "source_register": "source_register.json",
+    "hipaa_control_map": "hipaa_control_map_seed_v1.json",
+    "bible_seed_json": "healthcare_practice_knowledge_bible_seed_v1.json",
+    "bible_seed_md": "healthcare_practice_knowledge_bible_seed_v1.md",
+    "template": "compliance_bible_template_v1.json",
+    "recap": "dispatches/R6_healthcare_practice_recap.json"
+  },
+  "states": [
+    {
+      "state": "California",
+      "state_code": "CA",
+      "file": "states/california.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 6
+      }
+    },
+    {
+      "state": "Texas",
+      "state_code": "TX",
+      "file": "states/texas.json",
+      "total_facts": 2,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 1,
+        "ACCESS_RESTRICTED": 1
+      }
+    },
+    {
+      "state": "New York",
+      "state_code": "NY",
+      "file": "states/new_york.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 4,
+        "REQUIRES_CONFIRMATION": 2,
+        "NOT FOUND": 1,
+        "PARKED": 1
+      }
+    }
+  ],
+  "metrics": {
+    "federal_facts": 28,
+    "state_facts": 14,
+    "total_facts": 42,
+    "sources_harvested": 12,
+    "sources_parked": 6,
+    "gap_count": 8
+  }
+}
