@@ -1428,8 +1428,8 @@ def _video_frame_size(video: Path) -> tuple[int, int]:
         check=True,
         capture_output=True,
     )
-    img = Image.open(jpg)
-    w, h = img.size
+    with Image.open(jpg) as img:
+        w, h = img.size
     jpg.unlink(missing_ok=True)
     return w, h
 
