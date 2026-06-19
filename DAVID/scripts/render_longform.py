@@ -2314,6 +2314,12 @@ def _run_package_stage(prod_dir: Path, *, require_qa_pass: bool = True) -> dict[
 
 
 def main() -> int:
+    # Unicode status glyphs (→, ⚠) must survive a cp1252 Windows console.
+    for _stream in (sys.stdout, sys.stderr):
+        try:
+            _stream.reconfigure(encoding="utf-8")
+        except (AttributeError, ValueError):
+            pass
     parser = argparse.ArgumentParser(description="DAVID long-form video assembler")
     parser.add_argument("script", type=Path, help="Path to script JSON")
     parser.add_argument("--concat-only", action="store_true", help="Reuse cached shots; no API calls")

@@ -1,0 +1,115 @@
+{
+  "task": "#141",
+  "version": "1.0",
+  "locked_at": "2026-06-19",
+  "parent": {
+    "name": "Upon Tyne Productions",
+    "tagline_draft": "Directed. Not generated.",
+    "colors": {
+      "ut-black": "#0D0D0D",
+      "ut-warm-white": "#F5F0E8",
+      "ut-gold": "#C9A84C"
+    },
+    "wordmark": {
+      "layout": "two-line letterpress",
+      "line_1": "UPON TYNE",
+      "line_2": "PRODUCTIONS",
+      "exports": [
+        "DAVID/brand/export/upon_tyne_wordmark_dark.svg",
+        "DAVID/brand/export/upon_tyne_wordmark_light.svg"
+      ]
+    }
+  },
+  "channel": {
+    "name": "DAVID · The Archive",
+    "slug": "david-the-archive",
+    "subtitle": "Dead languages, actually pronounced.",
+    "cta": "Bring the dead tongues back — one attestation at a time. DAVID.",
+    "signature_beat": "What did they actually say? … And how do we prove it?",
+    "host_lock": "DAVID/productions/host_identity_v1/david_identity_lock.json",
+    "set_lock": "@Set-Archive-001",
+    "style_lock": "@Style-Documentary-Prestige-001",
+    "colors": {
+      "archive-bg": "#0C0E14",
+      "archive-title": "#DCBE78",
+      "archive-border": "#B4965A",
+      "archive-body": "#C8CDD7",
+      "archive-cta": "#FFB45A",
+      "archive-parchment": "#F5F0E6",
+      "label-attested": "#226E48",
+      "label-reconstructed": "#8C581C"
+    },
+    "typography": {
+      "wordmark": "EB Garamond 600",
+      "body": "Inter 400",
+      "ipa": "Charis SIL 400"
+    }
+  },
+  "assets": [
+    {
+      "id": "youtube_banner",
+      "canvas_px": [2560, 1440],
+      "safe_tv_px": [1546, 423],
+      "safe_mobile_px": [640, 360],
+      "export": "DAVID/brand/export/youtube_banner_2560x1440.jpg",
+      "sources": [
+        "DAVID/productions/host_identity_v1/references/archive_set_reference.jpg",
+        "DAVID/productions/host_identity_v1/references/david_avatar_reference.jpg"
+      ]
+    },
+    {
+      "id": "channel_avatar",
+      "canvas_px": [800, 800],
+      "export": "DAVID/brand/export/channel_avatar_800.png",
+      "source": "DAVID/productions/host_identity_v1/references/david_avatar_reference.jpg"
+    },
+    {
+      "id": "intro_sting",
+      "duration_s": 4.0,
+      "resolution": "1920x1080",
+      "export": "DAVID/brand/export/intro_sting_4s_1080p.mp4",
+      "source_masters": [
+        "DAVID/productions/david_intro_60s_v4_longform_v1/output/",
+        "DAVID/productions/host_identity_v1/output/david_host_test_signature_beat_v1.mp4"
+      ],
+      "on_screen": "DAVID · The Archive"
+    },
+    {
+      "id": "lower_third",
+      "canvas_px": [1920, 1080],
+      "pipeline_px": [854, 480],
+      "export": "DAVID/brand/templates/lower_third_master_1920x1080.png",
+      "renderer": "DAVID/scripts/render_dead_language_proof.py::render_shot_overlay_png",
+      "fields": ["on_screen", "on_screen_labels", "speech_ipa", "overlay_ipa"]
+    },
+    {
+      "id": "end_card_closing",
+      "canvas_px": [1280, 720],
+      "card_type": "closing",
+      "duration_s": 5,
+      "export": "DAVID/brand/templates/end_card_closing_1920x1080.png",
+      "renderer": "DAVID/scripts/render_longform.py::render_provenance_card"
+    },
+    {
+      "id": "end_card_provenance",
+      "canvas_px": [1280, 720],
+      "card_type": "provenance",
+      "duration_s": 7,
+      "export": "DAVID/brand/templates/end_card_provenance_1920x1080.png",
+      "renderer": "DAVID/scripts/render_longform.py::render_provenance_card"
+    },
+    {
+      "id": "parent_slate",
+      "canvas_px": [1920, 200],
+      "export": "DAVID/brand/templates/parent_slate_upon_tyne.png"
+    },
+    {
+      "id": "channel_wordmark",
+      "text": "DAVID · The Archive",
+      "exports": [
+        "DAVID/brand/export/david_archive_wordmark.svg",
+        "DAVID/brand/export/david_archive_wordmark_1x.png"
+      ]
+    }
+  ]
+}
