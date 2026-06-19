@@ -55,8 +55,12 @@ def test_process_shot_segment_uses_neutral_grade_not_lamp_clamp(tmp_path: Path):
     )
     color_ref = ROOT / "STUDIO/Pipeline/references/seamless_neutral_reference.jpg"
 
+    def _write_neutral(_v: Path, o: Path, _ref: Path) -> Path:
+        o.write_bytes(b"x" * 20_000)
+        return o
+
     with (
-        patch.object(rl, "apply_neutral_white_balance_grade", return_value=out) as neutral,
+        patch.object(rl, "apply_neutral_white_balance_grade", side_effect=_write_neutral) as neutral,
         patch.object(rl, "apply_per_shot_magenta_clamp") as lamp_clamp,
         patch.object(rl, "pin_av_to_duration", side_effect=lambda src, dst, _d: shutil.copy2(src, dst)),
         patch.object(rl, "loudnorm_two_pass", side_effect=lambda src, dst: shutil.copy2(src, dst)),

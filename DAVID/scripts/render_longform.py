@@ -1656,8 +1656,12 @@ def match_color_segment(
         ]
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode != 0:
-        _log("[seamless] match-color filter unavailable; warm-gold + magenta clamp fallback")
-        vf = WARM_GOLD_CLAMP_VF if lamp_lock else MAGENTA_CLAMP_VF
+        if neutral_grade:
+            _log("[seamless] match-color filter unavailable; clinical neutral WB fallback")
+            vf = CLINICAL_NEUTRAL_CLAMP_VF
+        else:
+            _log("[seamless] match-color filter unavailable; warm-gold + magenta clamp fallback")
+            vf = WARM_GOLD_CLAMP_VF if lamp_lock else MAGENTA_CLAMP_VF
         cmd_eq = [
             ff, "-y", "-i", str(target), "-vf", vf,
             "-c:v", "libx264", "-pix_fmt", "yuv420p",
