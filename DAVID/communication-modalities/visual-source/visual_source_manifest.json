@@ -1,0 +1,75 @@
+{
+  "spec": "DAVID Visual-Source Manifest v1 (reuses SCIENCE/HISTORY reference-plate pattern)",
+  "generated_at": "2026-06-19",
+  "domain": "visual_source",
+  "gate": "VISUAL_SOURCE_INTERPRETATION",
+  "gate_doc": "DAVID/communication-modalities/visual-source/INTERPRETATION_GATE.md",
+  "license_policy": "Public sources only; cite provenance + license on every image; 403/paywall/blocked = PARK (no bypass).",
+  "citation_standard": "STD-CITE-001",
+  "subject_count": 2,
+  "entries": [
+    {
+      "slug": "rosetta_stone_ptolemy_cartouche",
+      "plate_id": "VS-WS-0001",
+      "category": "writing-systems",
+      "subject": "Egyptian hieroglyphic — Ptolemy cartouche (Rosetta Stone)",
+      "decipherment_status": "DECIPHERED",
+      "transcription": "Cartouche: reed-leaf + stool + lion + lion + reed-leaf + folded-cloth (royal-name ring)",
+      "transliteration": "p-t-w-l-m-y-s",
+      "interpretation": "Royal name 'Ptolemy' (Ptolemaios); the stele bears a trilingual priestly decree, Memphis, 196 BCE (hieroglyphic / Demotic / Greek).",
+      "confidence": "high",
+      "dissent": [],
+      "claims": [
+        {"claim": "The cartouche spells the royal name Ptolemy (p-t-w-l-m-y-s).",
+         "citation": "Champollion, J.-F. (1822), Lettre à M. Dacier relative à l'alphabet des hiéroglyphes phonétiques.",
+         "grade": "primary"},
+        {"claim": "The three scripts record one decree, enabling the decipherment.",
+         "citation": "British Museum, object EA24 (Rosetta Stone), collection record.",
+         "grade": "secondary"}
+      ],
+      "file": null,
+      "image_url": "https://www.britishmuseum.org/collection/object/Y_EA24",
+      "source_url": "https://www.britishmuseum.org/collection/object/Y_EA24",
+      "repository": "The British Museum (EA24)",
+      "license": "© The Trustees of the British Museum, CC BY-NC-SA 4.0",
+      "harvest_status": "reference_only"
+    },
+    {
+      "slug": "linear_a_ht_tablet",
+      "plate_id": "VS-WS-0002",
+      "category": "writing-systems",
+      "subject": "Minoan Linear A — Haghia Triada tablet (sign sequence)",
+      "decipherment_status": "UNDECIPHERED",
+      "transcription": "Linear A sign sequence per GORILA sign list (e.g. AB01 AB02 …)",
+      "transliteration": "Tentative phonetic values borrowed from Linear B (provisional, sound-only)",
+      "interpretation": null,
+      "confidence": "none",
+      "dissent": [
+        "Phonetic values inferred from Linear B are provisional; the underlying language and semantics remain UNKNOWN."
+      ],
+      "claims": [
+        {"claim": "Sign forms are catalogued in the standard Linear A corpus; the script's meaning is UNDECIPHERED.",
+         "citation": "Godart, L. & Olivier, J.-P. (1976–1985), GORILA: Recueil des inscriptions en linéaire A.",
+         "grade": "primary"}
+      ],
+      "file": null,
+      "image_url": "https://commons.wikimedia.org/wiki/Category:Linear_A",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Linear_A",
+      "repository": "Heraklion Archaeological Museum (corpus: GORILA)",
+      "license": "image PD line-drawing / CC where applicable — verify per file",
+      "harvest_status": "reference_only",
+      "honesty_note": "R7: no meaning asserted for an undeciphered script — interpretation deliberately null."
+    }
+  ],
+  "parked_sources": {
+    "policy": "403/paywall/blocked = PARK; no bypass, no fabricated provenance.",
+    "parked": [
+      {
+        "url": "https://example-museum.invalid/high-res/linear-a-HT13.tif",
+        "reason": "high-res TIFF behind institutional access wall — returns 403",
+        "status": "PARKED",
+        "fallback": "GORILA line-drawing + Wikimedia Commons category used for reference instead"
+      }
+    ]
+  }
+}
