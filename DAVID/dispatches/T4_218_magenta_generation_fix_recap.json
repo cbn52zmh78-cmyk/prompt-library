@@ -1,0 +1,93 @@
+{
+  "message_type": "recap_vcs",
+  "issue": 218,
+  "title": "T4 #218 — generation magenta fix (480p shot01+05 RAW re-gen)",
+  "generated_at": "2026-06-19T16:22:00+00:00",
+  "status": "GREEN",
+  "verdict": "GREEN — raw generation magenta clean on proof shots; clamp burden <0.20",
+  "owner_terminal": "T4",
+  "lane": "DAVID",
+  "no_full_corpus_render": true,
+  "commit": {
+    "allowed": false,
+    "reason": "HOLD — proof_218 stays HELD; NEXUS + human-eye sign-off before commit",
+    "cron": "PAUSED"
+  },
+  "recap": {
+    "did": [
+      "Added ARCHIVE_ANTI_MAGENTA_GENERATION_LOCK (#218) — D65 neutral WB, forbid purple/magenta ambient, R≈G≈B frame-wide",
+      "Strengthened ARCHIVE_NEUTRAL_GENERATION_LOCK + _ARCHIVE_NEUTRAL_PROMPT_BLOCK anti-magenta language",
+      "Updated render_host_identity.py set/avatar/host-test prompts (D65 neutral, no magenta spill)",
+      "Synced 480p Latin script: neutral_generation=true, lamp_lock=false, shots 01+05 from purged 720p",
+      "Regenerated avatar+set refs (refs magenta 0.595/0.587 → 0.202/0.197) — magenta baked in refs was root cause",
+      "480p RAW re-gen shot01+05 only (--force-shot); measured PRE-clamp magenta on chain_*.mp4"
+    ],
+    "state": "GREEN — 2/2 proof shots raw magenta <0.42 AND clamp burden <0.20; raw clean, not clamp-masked",
+    "next": [
+      "Human-eye dual-verify proof_218 raw frames (proof_218 stays HELD until sign-off)",
+      "NEXUS sign-off on #218 GREEN",
+      "Propagate anti-magenta lock to remaining corpus 480p scripts when full regen authorized",
+      "Full master GREEN blocked on cached shots 02/06 yellow-green (out of scope this pass)"
+    ]
+  },
+  "prompt_changes": {
+    "runtime_lock": "ARCHIVE_ANTI_MAGENTA_GENERATION_LOCK + ARCHIVE_NEUTRAL_GENERATION_LOCK injected when seamless.neutral_generation=true",
+    "host_identity": "render_host_identity.py — D65 neutral set/avatar prompts",
+    "480p_script": "DAVID/batches/T3_dryrun/scripts/david_latin_corpus_v1_480p_script.json"
+  },
+  "refs_regen": {
+    "avatar_magenta_before": 0.595,
+    "set_magenta_before": 0.587,
+    "avatar_magenta_after": 0.2024,
+    "set_magenta_after": 0.1974,
+    "avatar_blue_mean": 57.9
+  },
+  "proof": {
+    "resolution": "480p",
+    "render": "force-shot 01_cold_open + 05_method only",
+    "magenta_max": 0.42,
+    "clamp_burden_max": 0.2,
+    "proof_218": "HELD",
+    "report": "DAVID/productions/david_latin_corpus_v1_longform_v1/proof_218/raw_magenta_report.json",
+    "before_244": {
+      "01_cold_open": { "raw_magenta": 0.6388, "clamp_burden": 0.3507 },
+      "05_method": { "raw_magenta": 0.6652, "clamp_burden": 0.3595 }
+    },
+    "after_218": {
+      "01_cold_open": {
+        "raw_magenta_pre_clamp": 0.254,
+        "processed_magenta": 0.0953,
+        "clamp_burden": 0.1588,
+        "host_blue_mean": 57.7,
+        "host_br_ratio": 0.892,
+        "raw_magenta_pass": true,
+        "clamp_burden_pass": true,
+        "generation_defect": false
+      },
+      "05_method": {
+        "raw_magenta_pre_clamp": 0.2329,
+        "processed_magenta": 0.0865,
+        "clamp_burden": 0.1464,
+        "host_blue_mean": 53.0,
+        "host_br_ratio": 0.872,
+        "raw_magenta_pass": true,
+        "clamp_burden_pass": true,
+        "generation_defect": false
+      }
+    }
+  },
+  "pairs_with": [244, 243],
+  "vcs_commit_draft": {
+    "subject": "T4 #218: generation magenta fix — anti-magenta lock + 480p RAW proof GREEN (HOLD)",
+    "body": "RECAP\n- Did: ARCHIVE_ANTI_MAGENTA_GENERATION_LOCK; D65 neutral host/set prompts; ref regen (mag 0.59→0.20); 480p RAW re-gen shot01+05\n- State: GREEN — raw magenta 0.254/0.233 (<0.42); clamp burden 0.159/0.146 (<0.20); generation defect CLEARED; proof_218 HELD\n- Next: human-eye dual-verify; NEXUS sign-off; full corpus regen when authorized\n\nRoot cause: magenta baked into avatar/set refs (0.59) propagated via i2v image_url. Prompt+ref fix — clamp not leaned on."
+  },
+  "artifacts": [
+    "DAVID/scripts/render_longform.py",
+    "DAVID/scripts/render_host_identity.py",
+    "DAVID/scripts/probe_raw_magenta_218.py",
+    "DAVID/batches/T3_dryrun/scripts/david_latin_corpus_v1_480p_script.json",
+    "DAVID/productions/david_latin_corpus_v1_longform_v1/proof_218/raw_magenta_report.json",
+    "DAVID/productions/host_identity_v1/references/david_avatar_reference.jpg",
+    "DAVID/productions/host_identity_v1/references/archive_set_reference.jpg"
+  ]
+}

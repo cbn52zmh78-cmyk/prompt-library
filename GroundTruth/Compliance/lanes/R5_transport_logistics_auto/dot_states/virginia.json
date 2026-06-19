@@ -1,0 +1,166 @@
+{
+  "artifact": "transport_dot_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 275,
+  "parent_issue": 269,
+  "deepening_issue": 275,
+  "task": "R5 #275 — State DOT/motor-carrier compliance overlay (non-PA selected states)",
+  "state": "Virginia",
+  "state_code": "VA",
+  "state_slug": "virginia",
+  "generated_at": "2026-06-19T16:22:54.076367+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm DOT/FMCSA carrier registration, HOS, vehicle, and insurance requirements with FMCSA and the relevant state authority.",
+  "policy": "Public .gov sources only; 403/SSL = park; gaps explicit.",
+  "federal_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "FOUND",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-VA-CAR-001",
+            "text": "Virginia DMV Motor Carriers Division administers IRP, IFTA, and other commercial registration programs for motor carriers operating in Virginia.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "VA DMV — Motor Carriers",
+              "url": "https://www.dmv.virginia.gov/businesses/motor-carriers",
+              "agency": "Virginia Department of Motor Vehicles",
+              "jurisdiction": "Virginia",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          },
+          {
+            "fact_id": "GT275-VA-CAR-002",
+            "text": "Virginia DMV VIIM System provides one-stop electronic services for IFTA and IRP for qualified motor carriers.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "VA DMV — VIIM System",
+              "url": "https://www.dmv.virginia.gov/businesses/motor-carriers/viim-system",
+              "agency": "Virginia Department of Motor Vehicles",
+              "jurisdiction": "Virginia",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 2,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-VA-HOU-001",
+            "text": "Interstate CMV drivers in Virginia must comply with federal Part 395; Virginia State Police and DMV enforce compatible intrastate HOS for regulated carriers.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "VA DMV — Motor Carriers",
+              "url": "https://www.dmv.virginia.gov/businesses/motor-carriers",
+              "agency": "Virginia Department of Motor Vehicles",
+              "jurisdiction": "Virginia",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-VA-VEH-001",
+            "text": "Virginia DMV Motor Carrier Services covers registration, permits, and compliance resources for commercial motor vehicle operators on Virginia highways.",
+            "status": "FOUND",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "VA DMV — Motor Carriers",
+              "url": "https://www.dmv.virginia.gov/businesses/motor-carriers",
+              "agency": "Virginia Department of Motor Vehicles",
+              "jurisdiction": "Virginia",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-VA-INS-001",
+            "text": "Virginia DMV Insurance Services monitors insurance verification for motor carriers; interstate carriers must meet federal Part 387 minimum liability.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "insurance",
+            "citation": {
+              "source": "VA DMV — Insurance Services",
+              "url": "https://www.dmv.virginia.gov/businesses/insurance",
+              "agency": "Virginia Department of Motor Vehicles",
+              "jurisdiction": "Virginia",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-VA-INT-001",
+            "text": "Virginia DMV distinguishes interstate IRP/IFTA fleet registration from intrastate motor-carrier permitting; USDOT numbers required when operating CMVs per federal and state rules.",
+            "status": "FOUND",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "VA DMV — Motor Carriers",
+              "url": "https://www.dmv.virginia.gov/businesses/motor-carriers",
+              "agency": "Virginia Department of Motor Vehicles",
+              "jurisdiction": "Virginia",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": true
+    }
+  }
+}

@@ -23,17 +23,33 @@
   ],
   "dot_baseline_issue": 275,
   "dot_baseline_retrieved": "2026-06-19",
-  "dot_federal_fact_count": 16,
+  "dot_federal_fact_count": 17,
   "dot_state_deep_states": [
+    "Arizona",
     "California",
     "Florida",
     "Georgia",
     "Illinois",
+    "Indiana",
+    "Michigan",
     "New York",
+    "North Carolina",
     "Ohio",
-    "Texas"
+    "Tennessee",
+    "Texas",
+    "Virginia",
+    "Washington"
   ],
   "dot_state_roll": {
+    "Arizona": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
     "California": {
       "total_facts": 6,
       "status_counts": {
@@ -53,15 +69,33 @@
       }
     },
     "Georgia": {
-      "total_facts": 0,
+      "total_facts": 6,
       "status_counts": {
-        "FOUND": 0,
-        "REQUIRES_CONFIRMATION": 0,
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
         "NOT FOUND": 0,
-        "ACCESS_RESTRICTED": 5
+        "ACCESS_RESTRICTED": 0
       }
     },
     "Illinois": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    "Indiana": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    "Michigan": {
       "total_facts": 6,
       "status_counts": {
         "FOUND": 1,
@@ -79,11 +113,29 @@
         "ACCESS_RESTRICTED": 0
       }
     },
+    "North Carolina": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
     "Ohio": {
       "total_facts": 6,
       "status_counts": {
         "FOUND": 1,
         "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    "Tennessee": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
         "NOT FOUND": 0,
         "ACCESS_RESTRICTED": 0
       }
@@ -96,7 +148,44 @@
         "NOT FOUND": 0,
         "ACCESS_RESTRICTED": 0
       }
+    },
+    "Virginia": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    "Washington": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
     }
   },
-  "pinned_lane": "GroundTruth/Compliance/lanes/R5_transport_logistics_auto"
+  "pinned_lane": "GroundTruth/Compliance/lanes/R5_transport_logistics_auto",
+  "dot_state_tranche_1": [
+    "California",
+    "Florida",
+    "Georgia",
+    "Illinois",
+    "New York",
+    "Ohio",
+    "Texas"
+  ],
+  "dot_state_tranche_2": [
+    "Arizona",
+    "Indiana",
+    "Michigan",
+    "North Carolina",
+    "Tennessee",
+    "Virginia",
+    "Washington"
+  ],
+  "r5b_complete": true
 }

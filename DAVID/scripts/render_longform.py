@@ -86,13 +86,21 @@ LAMP_LOCK_PROMPT = (
     "Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only, "
     "no magenta purple ambient, no cool fill, no glasses purple reflection."
 )
+ARCHIVE_ANTI_MAGENTA_GENERATION_LOCK = (
+    "MAGENTA SUPPRESS @David-001 (#218): D65 neutral white balance 5000K on host face, charcoal "
+    "sweater, walls, and ambient plate — frame-wide midtones R≈G≈B within 8%; forbid purple/magenta "
+    "ambient, pink wall bounce, magenta shadow grey, violet wood bounce, and red-blue skew "
+    "(R+B must not exceed G×1.25 in ambient mids); brass lamp warmth stays amber-only in desk "
+    "quadrant ≤25% frame — zero magenta spill on host skin, sweater, or shelf blur; neutral "
+    "documentary skin, no color gel on key light."
+)
 ARCHIVE_NEUTRAL_GENERATION_LOCK = (
     "LIGHTING LOCK @David-001 (#243): neutral balanced 5000K white key on face, neck, and charcoal "
     "sweater — natural documentary skin with intact blue channel (B≥40/255 mids, B/R≥0.35); soft "
     "5200K shelf-bounce fill ≤25%; brass desk lamp 3200K tight motivated accent ONLY on desk "
-    "quadrant (worktable, codex, lamp shade) — warm pool ≤30% frame, NEVER global amber wash on "
-    "face, sweater, walls, or shadows; no yellow-green cast; no blue-starved shadows; no magenta "
-    "purple ambient."
+    "quadrant (worktable, codex, lamp shade) — warm amber pool ≤25% frame, NEVER global amber wash "
+    "on face, sweater, walls, or shadows; no yellow-green cast; no blue-starved shadows; no magenta "
+    "purple ambient, no pink skin cast, no violet shadow bounce."
 )
 _ARCHIVE_WARM_PURGE_RE = re.compile(
     r"Warm gold brass desk lamp 3200K key light locked[^.]*\."
@@ -104,9 +112,10 @@ _ARCHIVE_WARM_PURGE_RE = re.compile(
 _ARCHIVE_NEUTRAL_PROMPT_BLOCK = (
     "LIGHTING: Neutral balanced 5000K ambient key on host — natural skin, blue channel intact; "
     "brass desk lamp 3200K localized warm pool on desk quadrant only; soft 5200K shelf bounce ≤25%; "
-    "no yellow-green cast; no blue-starved shadows. "
-    "GENERATION LOCK Archive-neutral (#243): balanced WB 4800–5200K; B≥40 in skin mids; "
-    "forbid dominant amber full-frame; forbid blue-starved generation."
+    "no yellow-green cast; no blue-starved shadows; no magenta ambient. "
+    "GENERATION LOCK Archive-neutral (#243): D65 neutral WB 4800–5200K; B≥40 in skin mids; "
+    "frame ambient R≈G≈B within 8%; forbid dominant amber full-frame; forbid blue-starved "
+    "generation; forbid purple/magenta ambient, pink bounce, violet shadows."
 )
 GLASSES_LOCK_PROMPT = "Reading glasses pushed up into hair — same placement every frame."
 AUDIO_SILENCE_DB = -45.0
@@ -1156,7 +1165,7 @@ def apply_seamless_prompt(shot: dict[str, Any], refs: dict[str, Any], opts: Seam
         base = purge_archive_warm_prompt_clauses(base)
     locks: list[str] = []
     if opts.neutral_generation and archive:
-        locks.append(ARCHIVE_NEUTRAL_GENERATION_LOCK)
+        locks.extend([ARCHIVE_ANTI_MAGENTA_GENERATION_LOCK, ARCHIVE_NEUTRAL_GENERATION_LOCK])
     else:
         kelvin_lock = _kelvin_lock_for_prompt(base, refs)
         if kelvin_lock:

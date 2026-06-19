@@ -7,7 +7,7 @@
   "deepening_issue": 275,
   "task": "R5 #275 — FMCSA federal DOT baseline (carrier registration, HOS, vehicle, insurance, interstate/intrastate)",
   "jurisdiction": "Federal (FMCSA / U.S. DOT)",
-  "generated_at": "2026-06-19T16:11:01.468633+00:00",
+  "generated_at": "2026-06-19T16:22:54.035914+00:00",
   "retrieved_date": "2026-06-19",
   "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm DOT/FMCSA carrier registration, HOS, vehicle, and insurance requirements with FMCSA and the relevant state authority.",
   "policy": "Public .gov sources only; FMCSA.gov 403 = park; gaps explicit; eCFR/UCR fallbacks.",
@@ -64,7 +64,7 @@
         },
         {
           "fact_id": "GT275-US-CAR-004",
-          "text": "ACCESS_RESTRICTED — FMCSA registration portal (fmcsa.dot.gov/registration) returned HTTP 403 at harvest; use eCFR Parts 365/390 and UCR.gov for federal registration requirements until live portal verified.",
+          "text": "ACCESS_RESTRICTED — FMCSA registration portal (fmcsa.dot.gov/registration) returned HTTP 403 at R5-B reprobe; use eCFR Parts 365/390, UCR.gov, and SAFER lookup until live portal verified.",
           "status": "ACCESS_RESTRICTED",
           "category": "portal_gap",
           "citation": {
@@ -75,9 +75,23 @@
             "tier": "agency_primary",
             "retrieved_date": "2026-06-19"
           }
+        },
+        {
+          "fact_id": "GT275-US-CAR-005",
+          "text": "FMCSA SAFER System (safer.fmcsa.dot.gov) provides public motor-carrier snapshot and safety data when the main registration portal is access-restricted.",
+          "status": "FOUND",
+          "category": "safer_fallback",
+          "citation": {
+            "source": "FMCSA — SAFER System",
+            "url": "https://safer.fmcsa.dot.gov/",
+            "agency": "FMCSA",
+            "jurisdiction": "Federal",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
         }
       ],
-      "fact_count": 4,
+      "fact_count": 5,
       "gap": null
     },
     "hours_of_service": {
@@ -293,9 +307,44 @@
       "gap": null
     }
   },
+  "reprobe": {
+    "probes": {
+      "fmcsa_registration": {
+        "url": "https://www.fmcsa.dot.gov/registration",
+        "status": "http_403",
+        "http_code": 403,
+        "grade": "ACCESS_RESTRICTED"
+      },
+      "fmcsa_safer": {
+        "url": "https://safer.fmcsa.dot.gov/",
+        "status": "ok",
+        "http_code": 200,
+        "grade": "FOUND"
+      },
+      "ga_psc_motor_carrier": {
+        "url": "https://psc.ga.gov/utilities/motor-carrier/",
+        "status": "URLError",
+        "http_code": null,
+        "grade": "ACCESS_RESTRICTED"
+      },
+      "ga_dps_cve": {
+        "url": "https://dps.georgia.gov/divisions/motor-carrier-compliance-division",
+        "status": "ok",
+        "http_code": 200,
+        "grade": "FOUND"
+      }
+    },
+    "summary": {
+      "fmcsa_portal_clear": false,
+      "fmcsa_safer_ok": true,
+      "ga_psc_clear": false,
+      "ga_dps_fallback_ok": true,
+      "ga_gap_cleared": true
+    }
+  },
   "summary": {
     "domain_count": 5,
-    "total_facts": 16,
+    "total_facts": 17,
     "status_counts": {
       "FOUND": 5,
       "REQUIRES_CONFIRMATION": 0,

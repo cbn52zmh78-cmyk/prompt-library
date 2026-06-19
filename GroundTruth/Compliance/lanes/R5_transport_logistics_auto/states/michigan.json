@@ -1,0 +1,318 @@
+{
+  "artifact": "transport_logistics_auto_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 269,
+  "parent_issue": 237,
+  "task": "R5 — Transport/Logistics/Auto state PUC/TNC/repair/dealer/movers",
+  "state": "Michigan",
+  "state_code": "MI",
+  "state_slug": "michigan",
+  "generated_at": "2026-06-19T11:10:33.117423+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm motor-carrier, TNC, dealer, mover, and repair requirements with the relevant state authority.",
+  "policy": "Public .gov sources only; 403/404 = park (no bypass); gaps explicit.",
+  "sub_verticals": {
+    "trucking": {
+      "sub_vertical": "trucking",
+      "label": "Trucking",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "MI PSC — Motor Carrier",
+        "url": "https://www.michigan.gov/mpsc",
+        "notes": "Michigan trucking — harvest pending"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "REQUIRES_CONFIRMATION",
+        "source_checked": "https://www.michigan.gov/mpsc",
+        "detail": "URL reachable; domain-specific facts not yet harvested"
+      }
+    },
+    "rideshare_delivery": {
+      "sub_vertical": "rideshare_delivery",
+      "label": "Rideshare Delivery",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "MI PSC — Motor Carrier",
+        "url": "https://www.michigan.gov/mpsc",
+        "notes": "TNC/rideshare — confirm state TNC statute and licensing authority"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "REQUIRES_CONFIRMATION",
+        "source_checked": "https://www.michigan.gov/mpsc",
+        "detail": "URL reachable; domain-specific facts not yet harvested"
+      }
+    },
+    "moving": {
+      "sub_vertical": "moving",
+      "label": "Moving",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "MI PSC — Motor Carrier",
+        "url": "https://www.michigan.gov/mpsc",
+        "notes": "Household goods movers — confirm HHG authority with state motor-carrier regulator"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "REQUIRES_CONFIRMATION",
+        "source_checked": "https://www.michigan.gov/mpsc",
+        "detail": "URL reachable; domain-specific facts not yet harvested"
+      }
+    },
+    "dealerships": {
+      "sub_vertical": "dealerships",
+      "label": "Dealerships",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "MI Secretary of State — Dealer Licensing",
+        "url": "https://www.michigan.gov/sos",
+        "notes": "Michigan dealerships — harvest pending"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-MI-DEA-001",
+          "text": "Scam alert The Michigan Department of State / Secretary of State will never ask people to send money or personal information via text message , email or QR code .",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Michigan — Dealerships",
+            "url": "https://www.michigan.gov/sos",
+            "agency": "MI Secretary of State — Dealer Licensing",
+            "jurisdiction": "Michigan",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    },
+    "auto_repair": {
+      "sub_vertical": "auto_repair",
+      "label": "Auto Repair",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "Michigan AG / Consumer Protection — Auto Repair",
+        "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+        "notes": "Federal FTC baseline; confirm state BAR/inspection program if any"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-MI-AUT-001",
+          "text": "Before sharing sensitive information, make sure you’re on a federal government site.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Michigan — Auto Repair",
+            "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+            "agency": "Michigan AG / Consumer Protection — Auto Repair",
+            "jurisdiction": "Michigan",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    }
+  },
+  "federal_context": [
+    {
+      "sub_vertical": "trucking",
+      "text": "The Pennsylvania Public Utility Commission regulates nearly 7,500 motor carriers that transport property, passengers, or household goods for compensation in Pennsylvania.",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    },
+    {
+      "sub_vertical": "trucking",
+      "text": "Property carriers (e.g., trucking companies) operating in Pennsylvania are regulated by the PUC for safety and insurance requirements only (not rates).",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    }
+  ],
+  "summary": {
+    "domain_count": 5,
+    "total_facts": 2,
+    "status_counts": {
+      "FOUND": 0,
+      "REQUIRES_CONFIRMATION": 5,
+      "NOT FOUND": 0,
+      "ACCESS_RESTRICTED": 0
+    },
+    "anchor_state": false,
+    "deep_harvest": false
+  },
+  "deepening_issues": [
+    275
+  ],
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "FOUND",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-MI-CAR-001",
+            "text": "Michigan Act 254 of 1933 (Motor Carrier Act) provides for supervision and regulation of motor carriers of property for hire on Michigan public highways and gives the Michigan Public Service Commission jurisdiction over registration and rates.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "MCL — Act 254 of 1933 (Motor Carrier Act)",
+              "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-Act-254-of-1933",
+              "agency": "Michigan Legislature / Michigan Public Service Commission",
+              "jurisdiction": "Michigan",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          },
+          {
+            "fact_id": "GT275-MI-CAR-002",
+            "text": "MPSC may require registration, conduct audits, and assess unified carrier registration fees for motor carriers under the Motor Carrier Act.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "MCL — Act 254 of 1933 (Motor Carrier Act)",
+              "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-Act-254-of-1933",
+              "agency": "Michigan Public Service Commission",
+              "jurisdiction": "Michigan",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 2,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-MI-HOU-001",
+            "text": "Michigan motor carriers must comply with hours-of-service rules compatible with federal Part 395 when operating interstate; intrastate carriers are subject to MPSC safety regulations.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "MCL — Act 254 of 1933 (Motor Carrier Act)",
+              "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-Act-254-of-1933",
+              "agency": "Michigan Public Service Commission",
+              "jurisdiction": "Michigan",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-MI-VEH-001",
+            "text": "Act 254 promotes safety upon Michigan public highways and authorizes MPSC to regulate motor vehicle transportation facilities and carrier operations.",
+            "status": "FOUND",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "MCL — Act 254 of 1933 (Motor Carrier Act)",
+              "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-Act-254-of-1933",
+              "agency": "Michigan Legislature",
+              "jurisdiction": "Michigan",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-MI-INS-001",
+            "text": "Michigan motor carriers of household goods are subject to MPSC jurisdiction to fix rates and require observance of minimum charges; liability insurance must meet state and federal standards.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "insurance",
+            "citation": {
+              "source": "MCL — Act 254 of 1933 (Motor Carrier Act)",
+              "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-Act-254-of-1933",
+              "agency": "Michigan Public Service Commission",
+              "jurisdiction": "Michigan",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-MI-INT-001",
+            "text": "Michigan Act 254 regulates intrastate for-hire motor carriers through MPSC; interstate carriers must also maintain USDOT/MC authority and UCR registration.",
+            "status": "FOUND",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "MCL — Act 254 of 1933 (Motor Carrier Act)",
+              "url": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-Act-254-of-1933",
+              "agency": "Michigan Legislature / Michigan Public Service Commission",
+              "jurisdiction": "Michigan",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": true
+    }
+  },
+  "federal_dot_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_issue": 275
+}

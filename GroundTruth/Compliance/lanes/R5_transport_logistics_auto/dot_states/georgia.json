@@ -9,7 +9,7 @@
   "state": "Georgia",
   "state_code": "GA",
   "state_slug": "georgia",
-  "generated_at": "2026-06-19T16:11:01.491957+00:00",
+  "generated_at": "2026-06-19T16:22:54.047465+00:00",
   "retrieved_date": "2026-06-19",
   "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm DOT/FMCSA carrier registration, HOS, vehicle, and insurance requirements with FMCSA and the relevant state authority.",
   "policy": "Public .gov sources only; 403/SSL = park; gaps explicit.",
@@ -19,77 +19,146 @@
       "carrier_registration": {
         "domain": "carrier_registration",
         "label": "Carrier Registration",
-        "status": "ACCESS_RESTRICTED",
+        "status": "FOUND",
         "probe_result": "deep_harvest",
-        "cited_facts": [],
-        "fact_count": 0,
-        "gap": {
-          "status": "ACCESS_RESTRICTED",
-          "source_checked": "https://psc.ga.gov/utilities/motor-carrier/",
-          "detail": "Source access restricted at harvest (SSL/certificate or HTTP 403) — parked per policy"
-        }
+        "cited_facts": [
+          {
+            "fact_id": "GT275-GA-CAR-001",
+            "text": "Georgia Department of Public Safety Commercial Vehicle Enforcement (CVE) is the primary focus for commercial motor vehicle highway safety, including new-entrant background reviews and motor-carrier compliance.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "GA DPS — Commercial Vehicle Enforcement",
+              "url": "https://dps.georgia.gov/divisions/motor-carrier-compliance-division",
+              "agency": "Georgia Department of Public Safety",
+              "jurisdiction": "Georgia",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          },
+          {
+            "fact_id": "GT275-GA-CAR-002",
+            "text": "GA Permitting Online Portal (gaprospermits.com) supports Georgia oversize/overweight and related commercial vehicle permitting administered through DPS CVE.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "GA DPS — Commercial Vehicle Enforcement",
+              "url": "https://dps.georgia.gov/divisions/motor-carrier-compliance-division",
+              "agency": "Georgia Department of Public Safety",
+              "jurisdiction": "Georgia",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 2,
+        "gap": null
       },
       "hours_of_service": {
         "domain": "hours_of_service",
         "label": "Hours Of Service",
-        "status": "ACCESS_RESTRICTED",
+        "status": "REQUIRES_CONFIRMATION",
         "probe_result": "deep_harvest",
-        "cited_facts": [],
-        "fact_count": 0,
-        "gap": {
-          "status": "ACCESS_RESTRICTED",
-          "source_checked": "https://psc.ga.gov/utilities/motor-carrier/",
-          "detail": "Source access restricted at harvest (SSL/certificate or HTTP 403) — parked per policy"
-        }
+        "cited_facts": [
+          {
+            "fact_id": "GT275-GA-HOU-001",
+            "text": "Georgia DPS Transportation Rulebook Chapter One — Motor Carrier Safety Regulations adopts and enforces intrastate CMV hours-of-service and safety rules compatible with federal FMCSR.",
+            "status": "FOUND",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "GA DPS — Transportation Rulebook Ch. 1",
+              "url": "https://dps.georgia.gov/georgia-department-public-safety-transportation-rulebook",
+              "agency": "Georgia Department of Public Safety",
+              "jurisdiction": "Georgia",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
       },
       "vehicle_requirements": {
         "domain": "vehicle_requirements",
         "label": "Vehicle Requirements",
-        "status": "ACCESS_RESTRICTED",
+        "status": "REQUIRES_CONFIRMATION",
         "probe_result": "deep_harvest",
-        "cited_facts": [],
-        "fact_count": 0,
-        "gap": {
-          "status": "ACCESS_RESTRICTED",
-          "source_checked": "https://psc.ga.gov/utilities/motor-carrier/",
-          "detail": "Source access restricted at harvest (SSL/certificate or HTTP 403) — parked per policy"
-        }
+        "cited_facts": [
+          {
+            "fact_id": "GT275-GA-VEH-001",
+            "text": "Georgia DPS CVE conducts commercial vehicle enforcement including size/weight compliance, safety operations reviews, and roadside inspections under DPS Transportation Safety Rules.",
+            "status": "FOUND",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "GA DPS — Transportation Safety Rules",
+              "url": "https://dps.georgia.gov/transportation-safety-rules",
+              "agency": "Georgia Department of Public Safety",
+              "jurisdiction": "Georgia",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
       },
       "insurance": {
         "domain": "insurance",
         "label": "Insurance",
-        "status": "ACCESS_RESTRICTED",
+        "status": "REQUIRES_CONFIRMATION",
         "probe_result": "deep_harvest",
-        "cited_facts": [],
-        "fact_count": 0,
-        "gap": {
-          "status": "ACCESS_RESTRICTED",
-          "source_checked": "https://psc.ga.gov/utilities/motor-carrier/",
-          "detail": "Source access restricted at harvest (SSL/certificate or HTTP 403) — parked per policy"
-        }
+        "cited_facts": [
+          {
+            "fact_id": "GT275-GA-INS-001",
+            "text": "Interstate motor carriers operating in Georgia must meet federal Part 387 minimums; intrastate carriers are subject to Georgia DPS motor-carrier safety regulations and CVE enforcement.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "insurance",
+            "citation": {
+              "source": "GA DPS — Transportation Safety Rules",
+              "url": "https://dps.georgia.gov/transportation-safety-rules",
+              "agency": "Georgia Department of Public Safety",
+              "jurisdiction": "Georgia",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
       },
       "interstate_intrastate": {
         "domain": "interstate_intrastate",
         "label": "Interstate Intrastate",
-        "status": "ACCESS_RESTRICTED",
+        "status": "REQUIRES_CONFIRMATION",
         "probe_result": "deep_harvest",
-        "cited_facts": [],
-        "fact_count": 0,
-        "gap": {
-          "status": "ACCESS_RESTRICTED",
-          "source_checked": "https://psc.ga.gov/utilities/motor-carrier/",
-          "detail": "Source access restricted at harvest (SSL/certificate or HTTP 403) — parked per policy"
-        }
+        "cited_facts": [
+          {
+            "fact_id": "GT275-GA-INT-001",
+            "text": "Georgia DPS CVE distinguishes interstate FMCSA-regulated operations from intrastate CMV compliance enforced under Georgia Transportation Rulebook chapters; PSC motor-carrier pages remain SSL-parked — DPS CVE is harvest fallback.",
+            "status": "FOUND",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "GA DPS — Commercial Vehicle Enforcement",
+              "url": "https://dps.georgia.gov/divisions/motor-carrier-compliance-division",
+              "agency": "Georgia Department of Public Safety",
+              "jurisdiction": "Georgia",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
       }
     },
     "summary": {
       "domain_count": 5,
-      "total_facts": 0,
+      "total_facts": 6,
       "status_counts": {
-        "FOUND": 0,
-        "REQUIRES_CONFIRMATION": 0,
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
         "NOT FOUND": 0,
-        "ACCESS_RESTRICTED": 5
+        "ACCESS_RESTRICTED": 0
       },
       "deep_harvest": true
     }

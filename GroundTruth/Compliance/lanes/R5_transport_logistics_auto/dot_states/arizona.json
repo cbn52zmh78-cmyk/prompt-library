@@ -1,0 +1,166 @@
+{
+  "artifact": "transport_dot_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 275,
+  "parent_issue": 269,
+  "deepening_issue": 275,
+  "task": "R5 #275 — State DOT/motor-carrier compliance overlay (non-PA selected states)",
+  "state": "Arizona",
+  "state_code": "AZ",
+  "state_slug": "arizona",
+  "generated_at": "2026-06-19T16:22:54.037902+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm DOT/FMCSA carrier registration, HOS, vehicle, and insurance requirements with FMCSA and the relevant state authority.",
+  "policy": "Public .gov sources only; 403/SSL = park; gaps explicit.",
+  "federal_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "FOUND",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-AZ-CAR-001",
+            "text": "Arizona Revised Statutes Title 28 grants the Department of Transportation director authority over commercial vehicle ports of entry and motor vehicle law enforcement on highways.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "Arizona Revised Statutes Title 28",
+              "url": "https://www.azleg.gov/arsDetail/?title=28",
+              "agency": "Arizona Legislature / ADOT",
+              "jurisdiction": "Arizona",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          },
+          {
+            "fact_id": "GT275-AZ-CAR-002",
+            "text": "ARS § 28-369 authorizes ADOT law enforcement powers at ports of entry for commercial vehicles operating on Arizona highways.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "ARS § 28-369",
+              "url": "https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/28/00369.htm",
+              "agency": "Arizona Department of Transportation",
+              "jurisdiction": "Arizona",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 2,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-AZ-HOU-001",
+            "text": "Interstate CMV drivers in Arizona must comply with federal Part 395; ADOT and DPS enforce compatible intrastate hours-of-service for commercial vehicles.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "Arizona Revised Statutes Title 28",
+              "url": "https://www.azleg.gov/arsDetail/?title=28",
+              "agency": "Arizona Department of Transportation",
+              "jurisdiction": "Arizona",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-AZ-VEH-001",
+            "text": "ADOT MVD commercial vehicle programs regulate size, weight, and safety compliance for motor carriers using Arizona public highways.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "Arizona Revised Statutes Title 28",
+              "url": "https://www.azleg.gov/arsDetail/?title=28",
+              "agency": "Arizona Department of Transportation",
+              "jurisdiction": "Arizona",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-AZ-INS-001",
+            "text": "Motor carriers operating in Arizona must maintain liability insurance meeting federal Part 387 minimums for interstate commerce and applicable state requirements for intrastate operations.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "insurance",
+            "citation": {
+              "source": "Arizona Revised Statutes Title 28",
+              "url": "https://www.azleg.gov/arsDetail/?title=28",
+              "agency": "Arizona Legislature",
+              "jurisdiction": "Arizona",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-AZ-INT-001",
+            "text": "Arizona ARS Title 28 distinguishes interstate commercial vehicle registration (IRP/apportioned fleets) from intrastate ADOT-regulated motor carrier operations.",
+            "status": "FOUND",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "ARS § 28-403 — Interstate agreements; commercial vehicle registration",
+              "url": "https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/28/00403.htm",
+              "agency": "Arizona Legislature",
+              "jurisdiction": "Arizona",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": true
+    }
+  }
+}

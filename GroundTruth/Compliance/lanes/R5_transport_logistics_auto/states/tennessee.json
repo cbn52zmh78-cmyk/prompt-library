@@ -1,0 +1,304 @@
+{
+  "artifact": "transport_logistics_auto_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 269,
+  "parent_issue": 237,
+  "task": "R5 — Transport/Logistics/Auto state PUC/TNC/repair/dealer/movers",
+  "state": "Tennessee",
+  "state_code": "TN",
+  "state_slug": "tennessee",
+  "generated_at": "2026-06-19T11:11:36.249615+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm motor-carrier, TNC, dealer, mover, and repair requirements with the relevant state authority.",
+  "policy": "Public .gov sources only; 403/404 = park (no bypass); gaps explicit.",
+  "sub_verticals": {
+    "trucking": {
+      "sub_vertical": "trucking",
+      "label": "Trucking",
+      "status": "NOT FOUND",
+      "regulator": {
+        "agency": "TN Dept of Safety — Motor Carrier",
+        "url": "https://www.tn.gov/safety.html",
+        "notes": "Tennessee trucking — harvest pending"
+      },
+      "probe_result": "failed",
+      "http_code": null,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "NOT FOUND",
+        "source_checked": "https://www.tn.gov/safety.html",
+        "detail": "probe=failed; http=None"
+      }
+    },
+    "rideshare_delivery": {
+      "sub_vertical": "rideshare_delivery",
+      "label": "Rideshare Delivery",
+      "status": "NOT FOUND",
+      "regulator": {
+        "agency": "TN Dept of Commerce — TNC",
+        "url": "https://www.tn.gov/commerce.html",
+        "notes": "Tennessee rideshare_delivery — harvest pending"
+      },
+      "probe_result": "failed",
+      "http_code": null,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "NOT FOUND",
+        "source_checked": "https://www.tn.gov/commerce.html",
+        "detail": "probe=failed; http=None"
+      }
+    },
+    "moving": {
+      "sub_vertical": "moving",
+      "label": "Moving",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "TN Dept of Safety — Motor Carrier",
+        "url": "https://www.tn.gov/safety.html",
+        "notes": "Household goods movers — confirm HHG authority with state motor-carrier regulator"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-TN-MOV-001",
+          "text": "Popular Topics Access Driver Services Online Apply for a Tennessee Handgun Carry Permit Licensed Hemp Growers Purchase a Tennessee Crash Report Title VI Safety Tips and Guidance Statistics and Research Dashboards Crash Data Maps Handgun Data TN Highway Patrol (THP) Activity TITAN Asset Forfeiture Reports More...",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Tennessee — Moving",
+            "url": "https://www.tn.gov/safety.html",
+            "agency": "TN Dept of Safety — Motor Carrier",
+            "jurisdiction": "Tennessee",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    },
+    "dealerships": {
+      "sub_vertical": "dealerships",
+      "label": "Dealerships",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "TN Dept of Revenue — Dealer Licensing",
+        "url": "https://www.tn.gov/revenue/title-and-registration.html",
+        "notes": "Tennessee dealerships — harvest pending"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "REQUIRES_CONFIRMATION",
+        "source_checked": "https://www.tn.gov/revenue/title-and-registration.html",
+        "detail": "URL reachable; domain-specific facts not yet harvested"
+      }
+    },
+    "auto_repair": {
+      "sub_vertical": "auto_repair",
+      "label": "Auto Repair",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "Tennessee AG / Consumer Protection — Auto Repair",
+        "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+        "notes": "Federal FTC baseline; confirm state BAR/inspection program if any"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-TN-AUT-001",
+          "text": "Before sharing sensitive information, make sure you’re on a federal government site.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Tennessee — Auto Repair",
+            "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+            "agency": "Tennessee AG / Consumer Protection — Auto Repair",
+            "jurisdiction": "Tennessee",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    }
+  },
+  "federal_context": [
+    {
+      "sub_vertical": "trucking",
+      "text": "The Pennsylvania Public Utility Commission regulates nearly 7,500 motor carriers that transport property, passengers, or household goods for compensation in Pennsylvania.",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    },
+    {
+      "sub_vertical": "trucking",
+      "text": "Property carriers (e.g., trucking companies) operating in Pennsylvania are regulated by the PUC for safety and insurance requirements only (not rates).",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    }
+  ],
+  "summary": {
+    "domain_count": 5,
+    "total_facts": 2,
+    "status_counts": {
+      "FOUND": 0,
+      "REQUIRES_CONFIRMATION": 3,
+      "NOT FOUND": 2,
+      "ACCESS_RESTRICTED": 0
+    },
+    "anchor_state": false,
+    "deep_harvest": false
+  },
+  "deepening_issues": [
+    275
+  ],
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-TN-CAR-001",
+            "text": "Tennessee Highway Patrol Commercial Vehicle Enforcement regulates commercial motor vehicle safety; TN.gov agency pages returned 403/404 at R5-B reprobe — confirm current CVE registration requirements with TN Dept of Safety.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "TN Dept of Safety — Motor Carrier (regulator anchor)",
+              "url": "https://www.tn.gov/safety.html",
+              "agency": "Tennessee Department of Safety and Homeland Security",
+              "jurisdiction": "Tennessee",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-TN-HOU-001",
+            "text": "Tennessee intrastate CMV hours-of-service rules align with federal Part 395 for interstate carriers; CVE enforces HOS during roadside inspections.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "TN Dept of Safety — Motor Carrier (regulator anchor)",
+              "url": "https://www.tn.gov/safety.html",
+              "agency": "Tennessee Department of Safety and Homeland Security",
+              "jurisdiction": "Tennessee",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-TN-VEH-001",
+            "text": "Tennessee CVE performs CMV safety inspections on state highways; agency subpages blocked at harvest.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "TN Dept of Safety — Motor Carrier (regulator anchor)",
+              "url": "https://www.tn.gov/safety.html",
+              "agency": "Tennessee Department of Safety and Homeland Security",
+              "jurisdiction": "Tennessee",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-TN-INS-001",
+            "text": "Interstate carriers in Tennessee must maintain federal Part 387 liability minimums; intrastate for-hire carriers must confirm state insurance filings with TN CVE when agency pages restore.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "insurance",
+            "citation": {
+              "source": "TN Dept of Safety — Motor Carrier (regulator anchor)",
+              "url": "https://www.tn.gov/safety.html",
+              "agency": "Tennessee Department of Safety and Homeland Security",
+              "jurisdiction": "Tennessee",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-TN-INT-001",
+            "text": "Tennessee distinguishes interstate carriers (USDOT/FMCSA + UCR) from intrastate CMV operations enforced by Highway Patrol CVE — agency deep pages parked at R5-B reprobe.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "TN Dept of Safety — Motor Carrier (regulator anchor)",
+              "url": "https://www.tn.gov/safety.html",
+              "agency": "Tennessee Department of Safety and Homeland Security",
+              "jurisdiction": "Tennessee",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": true
+    }
+  },
+  "federal_dot_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_issue": 275
+}

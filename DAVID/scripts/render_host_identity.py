@@ -20,14 +20,15 @@ FFMPEG: str | None = None
 
 ARCHIVE_SET_PROMPT = (
     "The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, "
-    "no people. Neutral balanced 5000K ambient light with real blue present in shadow neutrals; "
-    "floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures "
-    "receding into soft blur. A long wooden worktable in the foreground holds an open illuminated "
-    "codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp "
-    "casting a tight localized 3200K warm pool on the desk surface and lamp shade only — NOT a "
-    "global amber wash. Documentary prestige aesthetic, rich wood and parchment textures, "
-    "instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal "
-    "cinematic lighting with balanced white balance."
+    "no people. D65 neutral balanced 5000K ambient light — frame midtones R≈G≈B within 8%, "
+    "real blue present in shadow neutrals; no purple/magenta ambient, no pink wall bounce, "
+    "no violet wood bounce. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets "
+    "from many cultures receding into soft blur. A long wooden worktable in the foreground holds "
+    "an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring "
+    "brass desk lamp casting a tight localized 3200K amber pool on the desk surface and lamp shade "
+    "only — NOT a global amber wash, zero magenta spill on walls or shelves. Documentary prestige "
+    "aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy "
+    "but ancient-archive themed, photoreal cinematic lighting with neutral white balance."
 )
 
 DAVID_AVATAR_PROMPT = (
@@ -36,10 +37,11 @@ DAVID_AVATAR_PROMPT = (
     "intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, "
     "reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. "
     "Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near "
-    "open codex. Neutral balanced 5000K key on face with natural blue in skin midtones; brass "
-    "desk lamp 3200K visible as localized warm accent on desk beside him, not washing his face "
-    "amber; manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, "
-    "no real person likeness, no celebrity resemblance, invented face only."
+    "open codex. D65 neutral balanced 5000K key on face — skin R≈G≈B within 8%, natural blue in "
+    "skin midtones; no magenta/pink skin cast, no purple ambient; brass desk lamp 3200K visible as "
+    "localized amber accent on desk beside him, not washing his face; manuscript shelves soft "
+    "behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity "
+    "resemblance, invented face only."
 )
 
 HOST_TEST_SPEECH = (
@@ -50,15 +52,16 @@ HOST_SHOT_A_PROMPT = (
     "The Archive keeper host speaks directly to camera with measured documentary gravitas, "
     "lip-synced, mid-low resonant unhurried voice, precise diction, Attenborough-calm. "
     "He asks: 'What did they actually say?' Medium shot, still grounded at worktable near "
-    "open codex, neutral balanced 5000K key on face with blue intact, brass lamp warm accent "
-    "on desk only, calm attentive eyes. Synthetic host only."
+    "open codex, D65 neutral 5000K key on face with blue intact — no magenta/pink skin cast; "
+    "brass lamp amber accent on desk only, calm attentive eyes. Synthetic host only."
 )
 
 HOST_SHOT_B_PROMPT = (
     "The Archive keeper host continues speaking to camera, lip-synced, same mid-low resonant "
     "unhurried voice. After a brief thoughtful pause he asks: 'And how do we prove it?' "
-    "Subtle slow push-in to medium-close, quiet conviction, hands still, neutral 5000K skin key "
-    "— lamp warmth on desk surface only, not face wash. Synthetic host only, documentary trust signal."
+    "Subtle slow push-in to medium-close, quiet conviction, hands still, D65 neutral 5000K skin key "
+    "— no purple ambient; lamp amber on desk surface only, not face wash. Synthetic host only, "
+    "documentary trust signal."
 )
 
 VOICE_LOCK = {
@@ -132,8 +135,9 @@ def generate_archive_set(client: Any, out_dir: Path, *, force: bool = False) -> 
         "url": resp.url,
         "prompt": ARCHIVE_SET_PROMPT,
         "lighting_lock": (
-            "LIGHTING LOCK @Set-Archive-001 (#243): neutral balanced 5000K ambient key — "
-            "blue preserved in shadows; brass lamp 3200K localized desk pool only."
+            "LIGHTING LOCK @Set-Archive-001 (#243/#218): D65 neutral 5000K ambient key — "
+            "blue preserved in shadows; no magenta/purple ambient; brass lamp 3200K localized "
+            "amber desk pool only."
         ),
         "model": "grok-imagine-image-quality",
         "aspect_ratio": "16:9",
@@ -177,8 +181,9 @@ def generate_david_avatar(
         "url": resp.url,
         "prompt": DAVID_AVATAR_PROMPT,
         "lighting_lock": (
-            "LIGHTING LOCK @David-001 (#243): neutral balanced 5000K white key on face and sweater — "
-            "natural skin, blue channel intact (B≥40 mids); brass lamp 3200K tight desk accent only."
+            "LIGHTING LOCK @David-001 (#243/#218): D65 neutral 5000K white key on face and sweater — "
+            "natural skin R≈G≈B, blue channel intact (B≥40 mids); no magenta cast; brass lamp 3200K "
+            "tight amber desk accent only."
         ),
         "model": "grok-imagine-image-quality",
         "base_set": archive["path"],

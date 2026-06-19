@@ -2,13 +2,41 @@
   "lane": "R5",
   "issue": 275,
   "parent_issue": 269,
-  "task": "R5 #275 — State DOT compliance overlays (non-PA selected)",
-  "generated_at": "2026-06-19T16:11:01.543763+00:00",
+  "task": "R5-B — State DOT compliance overlays (14 non-PA deep states)",
+  "generated_at": "2026-06-19T16:22:54.082836+00:00",
   "retrieved_date": "2026-06-19",
-  "state_count": 7,
+  "state_count": 14,
+  "tranche_1_count": 7,
+  "tranche_2_count": 7,
+  "tranche_2_states": [
+    "Arizona",
+    "Indiana",
+    "Michigan",
+    "North Carolina",
+    "Tennessee",
+    "Virginia",
+    "Washington"
+  ],
   "federal_baseline": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
-  "total_facts": 36,
+  "total_facts": 83,
   "states": [
+    {
+      "state": "Arizona",
+      "state_code": "AZ",
+      "file": "dot_states/arizona.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "carrier_registration": "FOUND",
+      "hours_of_service": "REQUIRES_CONFIRMATION",
+      "vehicle_requirements": "REQUIRES_CONFIRMATION",
+      "insurance": "REQUIRES_CONFIRMATION",
+      "interstate_intrastate": "REQUIRES_CONFIRMATION"
+    },
     {
       "state": "California",
       "state_code": "CA",
@@ -47,23 +75,57 @@
       "state": "Georgia",
       "state_code": "GA",
       "file": "dot_states/georgia.json",
-      "total_facts": 0,
+      "total_facts": 6,
       "status_counts": {
-        "FOUND": 0,
-        "REQUIRES_CONFIRMATION": 0,
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
         "NOT FOUND": 0,
-        "ACCESS_RESTRICTED": 5
+        "ACCESS_RESTRICTED": 0
       },
-      "carrier_registration": "ACCESS_RESTRICTED",
-      "hours_of_service": "ACCESS_RESTRICTED",
-      "vehicle_requirements": "ACCESS_RESTRICTED",
-      "insurance": "ACCESS_RESTRICTED",
-      "interstate_intrastate": "ACCESS_RESTRICTED"
+      "carrier_registration": "FOUND",
+      "hours_of_service": "REQUIRES_CONFIRMATION",
+      "vehicle_requirements": "REQUIRES_CONFIRMATION",
+      "insurance": "REQUIRES_CONFIRMATION",
+      "interstate_intrastate": "REQUIRES_CONFIRMATION"
     },
     {
       "state": "Illinois",
       "state_code": "IL",
       "file": "dot_states/illinois.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "carrier_registration": "FOUND",
+      "hours_of_service": "REQUIRES_CONFIRMATION",
+      "vehicle_requirements": "REQUIRES_CONFIRMATION",
+      "insurance": "REQUIRES_CONFIRMATION",
+      "interstate_intrastate": "REQUIRES_CONFIRMATION"
+    },
+    {
+      "state": "Indiana",
+      "state_code": "IN",
+      "file": "dot_states/indiana.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "carrier_registration": "FOUND",
+      "hours_of_service": "REQUIRES_CONFIRMATION",
+      "vehicle_requirements": "REQUIRES_CONFIRMATION",
+      "insurance": "REQUIRES_CONFIRMATION",
+      "interstate_intrastate": "REQUIRES_CONFIRMATION"
+    },
+    {
+      "state": "Michigan",
+      "state_code": "MI",
+      "file": "dot_states/michigan.json",
       "total_facts": 6,
       "status_counts": {
         "FOUND": 1,
@@ -95,6 +157,23 @@
       "interstate_intrastate": "REQUIRES_CONFIRMATION"
     },
     {
+      "state": "North Carolina",
+      "state_code": "NC",
+      "file": "dot_states/north_carolina.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "carrier_registration": "FOUND",
+      "hours_of_service": "REQUIRES_CONFIRMATION",
+      "vehicle_requirements": "REQUIRES_CONFIRMATION",
+      "insurance": "REQUIRES_CONFIRMATION",
+      "interstate_intrastate": "REQUIRES_CONFIRMATION"
+    },
+    {
       "state": "Ohio",
       "state_code": "OH",
       "file": "dot_states/ohio.json",
@@ -112,9 +191,60 @@
       "interstate_intrastate": "REQUIRES_CONFIRMATION"
     },
     {
+      "state": "Tennessee",
+      "state_code": "TN",
+      "file": "dot_states/tennessee.json",
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "carrier_registration": "REQUIRES_CONFIRMATION",
+      "hours_of_service": "REQUIRES_CONFIRMATION",
+      "vehicle_requirements": "REQUIRES_CONFIRMATION",
+      "insurance": "REQUIRES_CONFIRMATION",
+      "interstate_intrastate": "REQUIRES_CONFIRMATION"
+    },
+    {
       "state": "Texas",
       "state_code": "TX",
       "file": "dot_states/texas.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "carrier_registration": "FOUND",
+      "hours_of_service": "REQUIRES_CONFIRMATION",
+      "vehicle_requirements": "REQUIRES_CONFIRMATION",
+      "insurance": "REQUIRES_CONFIRMATION",
+      "interstate_intrastate": "REQUIRES_CONFIRMATION"
+    },
+    {
+      "state": "Virginia",
+      "state_code": "VA",
+      "file": "dot_states/virginia.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "carrier_registration": "FOUND",
+      "hours_of_service": "REQUIRES_CONFIRMATION",
+      "vehicle_requirements": "REQUIRES_CONFIRMATION",
+      "insurance": "REQUIRES_CONFIRMATION",
+      "interstate_intrastate": "REQUIRES_CONFIRMATION"
+    },
+    {
+      "state": "Washington",
+      "state_code": "WA",
+      "file": "dot_states/washington.json",
       "total_facts": 6,
       "status_counts": {
         "FOUND": 1,

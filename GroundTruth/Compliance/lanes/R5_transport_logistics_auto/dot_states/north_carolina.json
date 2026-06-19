@@ -1,0 +1,166 @@
+{
+  "artifact": "transport_dot_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 275,
+  "parent_issue": 269,
+  "deepening_issue": 275,
+  "task": "R5 #275 — State DOT/motor-carrier compliance overlay (non-PA selected states)",
+  "state": "North Carolina",
+  "state_code": "NC",
+  "state_slug": "north_carolina",
+  "generated_at": "2026-06-19T16:22:54.063507+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm DOT/FMCSA carrier registration, HOS, vehicle, and insurance requirements with FMCSA and the relevant state authority.",
+  "policy": "Public .gov sources only; 403/SSL = park; gaps explicit.",
+  "federal_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "FOUND",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-NC-CAR-001",
+            "text": "A household goods mover must obtain a Certificate (C-#) from the North Carolina Utilities Commission to engage in intrastate HHG transportation.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "NCUC — Transportation",
+              "url": "https://www.ncuc.gov/Industries/transportation/transportation.html",
+              "agency": "North Carolina Utilities Commission",
+              "jurisdiction": "North Carolina",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          },
+          {
+            "fact_id": "GT275-NC-CAR-002",
+            "text": "Regular-route bus companies must obtain a Certificate (B-#) from the NCUC to transport passengers as a motor carrier over fixed routes in intrastate commerce.",
+            "status": "FOUND",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "NCUC — Transportation",
+              "url": "https://www.ncuc.gov/Industries/transportation/transportation.html",
+              "agency": "North Carolina Utilities Commission",
+              "jurisdiction": "North Carolina",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 2,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-NC-HOU-001",
+            "text": "NCUC-regulated motor carriers must comply with compatible hours-of-service requirements; interstate CMV drivers remain subject to federal Part 395.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "NCUC — Transportation",
+              "url": "https://www.ncuc.gov/Industries/transportation/transportation.html",
+              "agency": "North Carolina Utilities Commission",
+              "jurisdiction": "North Carolina",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-NC-VEH-001",
+            "text": "NCUC publishes Maximum Rate Tariff rules and consumer guides governing HHG moves including required forms and vehicle safety compliance for certificated carriers.",
+            "status": "FOUND",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "NCUC — Transportation",
+              "url": "https://www.ncuc.gov/Industries/transportation/transportation.html",
+              "agency": "North Carolina Utilities Commission",
+              "jurisdiction": "North Carolina",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-NC-INS-001",
+            "text": "Certificated NCUC transportation carriers must maintain insurance and tariff filings as a condition of intrastate authority; interstate carriers must meet federal Part 387 minimums.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "insurance",
+            "citation": {
+              "source": "NCUC — Transportation",
+              "url": "https://www.ncuc.gov/Industries/transportation/transportation.html",
+              "agency": "North Carolina Utilities Commission",
+              "jurisdiction": "North Carolina",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "deep_harvest",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-NC-INT-001",
+            "text": "NCUC regulates intrastate HHG, bus, broker, and ferry certificates; interstate property carriers must maintain USDOT/MC registration and UCR per FMCSA.",
+            "status": "FOUND",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "NCUC — Transportation",
+              "url": "https://www.ncuc.gov/Industries/transportation/transportation.html",
+              "agency": "North Carolina Utilities Commission",
+              "jurisdiction": "North Carolina",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": true
+    }
+  }
+}
