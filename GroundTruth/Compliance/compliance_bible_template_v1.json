@@ -1,0 +1,180 @@
+{
+  "artifact": "construction_trades_compliance_bible_template",
+  "version": "1.0",
+  "tier": "A",
+  "lane": "R2",
+  "vertical": "Construction & Trades",
+  "citation_standard": "STD-CITE-001",
+  "generated_at": "2026-06-19T12:00:00+00:00",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal, tax, or accounting advice. This package records what public .gov sources show as of the retrieval date; confirm licensing, bonding, permit, and code requirements with the relevant state or local authority and licensed counsel before relying on any fact for filings or operations.",
+  "competitive_positioning": {
+    "incumbents": [
+      "State-by-state legal research (hourly counsel)",
+      "Generic contractor-license listicles (unsourced)",
+      "Paid compliance databases (opaque sourcing)"
+    ],
+    "incumbent_price_band_usd": "$500–$5,000+ (ad-hoc research) · $200–$800/mo (databases)",
+    "stonebridge_angle": "50-state cited .gov compliance bible — every fact sourced, every gap explicit (NOT FOUND / REQUIRES_CONFIRMATION), federal OSHA/EPA/ICC baseline included; monthly source-register refresh available via RCaaS."
+  },
+  "policy": {
+    "public_sources_only": true,
+    "no_bypass": true,
+    "gap_rendering": "NOT FOUND — [source checked: …]",
+    "status_taxonomy": [
+      "FOUND",
+      "EXEMPT",
+      "REQUIRES_CONFIRMATION",
+      "NOT FOUND",
+      "ACCESS_RESTRICTED"
+    ],
+    "as_of_field": "retrieved_date"
+  },
+  "corpus_binding": {
+    "lane_dir": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R2_construction_trades",
+    "state_packs": "states/{state_slug}.json",
+    "state_index": "states/index.json",
+    "federal_baseline": "cited_data_pack.json",
+    "source_registers": [
+      "source_register.json",
+      "states_source_register.json"
+    ]
+  },
+  "sections": [
+    {
+      "section_id": "federal_baseline",
+      "title": "Federal Baseline (OSHA · EPA · ICC · NASCLA)",
+      "purpose": "Cross-cutting federal construction standards that apply in every state before state-specific licensing, bonding, permits, and code adoption.",
+      "trades": [
+        "general_contractor",
+        "electrical",
+        "plumbing",
+        "hvac",
+        "roofing"
+      ],
+      "primary_source_tiers": [
+        "OSHA 29 CFR 1926 (Construction)",
+        "EPA (SDWA, Section 608, Lead RRP, Asbestos)",
+        "International Code Council (I-Codes adoption)",
+        "NASCLA (multi-state licensing coordination)"
+      ],
+      "gap_policy": "Federal seed facts from #234 cited_data_pack; harvested facts carry origin tag. No inference beyond cited text."
+    },
+    {
+      "section_id": "state_licensing_trades",
+      "title": "State Licensing by Trade",
+      "purpose": "Per-state regulator identity, statewide GC model, NASCLA participation, and cited facts for GC, electrical, plumbing, HVAC, and roofing.",
+      "trades": [
+        "general_contractor",
+        "electrical",
+        "plumbing",
+        "hvac",
+        "roofing"
+      ],
+      "expected_datums": [
+        {
+          "label": "Regulator agency name",
+          "status_if_missing": "NOT FOUND"
+        },
+        {
+          "label": "Primary licensing portal URL",
+          "status_if_missing": "NOT FOUND"
+        },
+        {
+          "label": "Statewide GC license required (yes / no / local-only / HIC-only)",
+          "status_if_missing": "REQUIRES_CONFIRMATION"
+        },
+        {
+          "label": "NASCLA participating state",
+          "status_if_missing": "REQUIRES_CONFIRMATION"
+        },
+        {
+          "label": "Cited licensing facts (STD-CITE-001)",
+          "status_if_missing": "NOT FOUND"
+        }
+      ],
+      "gap_policy": "Interactive portals without API → ACCESS_RESTRICTED with portal URL cited; never infer license status or fees."
+    },
+    {
+      "section_id": "bonding_insurance",
+      "title": "Bonding & Insurance",
+      "purpose": "State-level bonding, surety, and insurance requirements cited from public regulator pages.",
+      "expected_datums": [
+        {
+          "label": "Bonding authority / program",
+          "status_if_missing": "NOT FOUND"
+        },
+        {
+          "label": "Insurance minimums or proof requirements",
+          "status_if_missing": "REQUIRES_CONFIRMATION"
+        },
+        {
+          "label": "Cited facts",
+          "status_if_missing": "NOT FOUND"
+        }
+      ]
+    },
+    {
+      "section_id": "permits_inspections",
+      "title": "Permits & Inspections",
+      "purpose": "State permit authority, inspection workflow, and cited public requirements.",
+      "expected_datums": [
+        {
+          "label": "Permit / inspection authority",
+          "status_if_missing": "NOT FOUND"
+        },
+        {
+          "label": "Application or portal URL",
+          "status_if_missing": "NOT FOUND"
+        },
+        {
+          "label": "Cited facts",
+          "status_if_missing": "NOT FOUND"
+        }
+      ]
+    },
+    {
+      "section_id": "building_codes",
+      "title": "Building Codes",
+      "purpose": "Statewide code adoption (UCC, I-Codes, amendments) from cited public code authority pages.",
+      "expected_datums": [
+        {
+          "label": "Code authority",
+          "status_if_missing": "NOT FOUND"
+        },
+        {
+          "label": "Adopted code edition / UCC status",
+          "status_if_missing": "REQUIRES_CONFIRMATION"
+        },
+        {
+          "label": "Cited facts",
+          "status_if_missing": "NOT FOUND"
+        }
+      ]
+    },
+    {
+      "section_id": "source_register",
+      "title": "Source Register Appendix",
+      "purpose": "Complete register of .gov sources harvested for this lane — federal (#234) and state (#266) — for audit and monthly refresh.",
+      "gap_policy": "PARKED sources (HTTP 403/404) listed with park_reason; never bypassed."
+    }
+  ],
+  "product_variants": {
+    "full_bible": {
+      "state_count": 50,
+      "includes_federal": true,
+      "sku": "R2-CT-BIBLE-50-v1"
+    },
+    "lead_magnet_5_states": {
+      "state_codes": [
+        "PA",
+        "TX",
+        "FL",
+        "CA",
+        "NY"
+      ],
+      "includes_federal": true,
+      "sku": "R2-CT-SAMPLE-5-v1",
+      "upsell_to": "R2-CT-BIBLE-50-v1"
+    }
+  }
+}

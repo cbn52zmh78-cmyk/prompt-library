@@ -125,6 +125,24 @@ _KINDS: tuple[OutputKind, ...] = (
     # ---- pipeline concepts ----------------------------------------------------
     OutputKind("concept_slate", "Studio/Pipeline/Concepts/{slate}", is_dir=True,
                description="A concept slate directory."),
+    # ---- science groundtruth (was drifting to ad-hoc Science/ sub-dirs) -------
+    OutputKind("groundtruth_pack", "Science/groundtruth_poc", "{filename}",
+               description="GroundTruth POC packs / knowledge-gate reports / papers."),
+    OutputKind("science_corpus", "Science/corpus", "{filename}",
+               description="Science fact-base corpora."),
+    OutputKind("science_report", "Science/reports", "{filename}",
+               description="Science accuracy / verification reports."),
+    # ---- cast / references / prompts ------------------------------------------
+    OutputKind("casting_bible", "Studio/Cast/Casting_Bible", is_dir=True,
+               description="Casting Bible registry / schema / lock cards."),
+    OutputKind("set_reference", "Studio/Pipeline/references", "{filename}",
+               description="Set / neutral reference plates for generation."),
+    OutputKind("prompt_pack", "Studio/Pipeline/Grok_Video_Packs", "{filename}",
+               description="Imagine / Grok video prompt packs."),
+    OutputKind("music_clearance_manifest", "Studio/Music_Sound", "clearance_manifest.json",
+               description="Canonical music-clearance manifest pointer."),
+    OutputKind("workflow_template", "Nexus/Workflows/templates", "{filename}",
+               description="NEXUS workflow templates."),
     # ---- ledger ---------------------------------------------------------------
     OutputKind("output_ledger", "data", "output_ledger.jsonl",
                description="Append-only stamp ledger."),
@@ -310,6 +328,33 @@ def stamp_payload(payload: dict, kind: str, path: "str | Path", **stamp_kw) -> d
     return payload
 
 
+def canonical_str(path: "str | Path") -> str:
+    """Canonical workspace-relative pointer string (fixes ``STUDIO/`` → ``Studio/``).
+
+    Use when *embedding* a path into output data so every emitted pointer is
+    canonical regardless of how it was typed.
+    """
+    return rel_canonical(path)
+
+
+def note(path: "str | Path", *, kind: "str | None" = None, terminal: "str | None" = None,
+         ledger: bool = True, **meta) -> "tuple[bool, str | None]":
+    """One-line registry adoption for an *already-written* output.
+
+    Classifies ``path`` against the registry, records a ledger stamp (so the
+    validator can audit it), and returns ``(is_canonical_ok, kind)``. Producers add
+    ``note(out_path)`` after each write to adopt the registry without restructuring
+    their path logic — and to surface drift the moment it happens.
+    """
+    resolved_kind = kind or classify(path)
+    ok, _reasons = is_canonical(path)
+    if ledger:
+        stamp = make_stamp(resolved_kind or "unregistered", path,
+                           terminal=terminal, extra={"canonical": ok, **meta})
+        record_ledger(stamp)
+    return ok, resolved_kind
+
+
 def write_stamped(
     kind: str,
     payload,
@@ -371,6 +416,8 @@ __all__ = [
     "make_stamp",
     "record_ledger",
     "stamp_payload",
+    "canonical_str",
+    "note",
     "write_stamped",
 ]
 

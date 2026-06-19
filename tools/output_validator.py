@@ -142,6 +142,58 @@ def scan(fix: bool = False) -> "tuple[list, list]":
 
 
 # --------------------------------------------------------------------------- check
+# --------------------------------------------------------------------------- lint (source)
+# Top-level dirs whose non-canonical spelling in a path literal is drift.
+import re  # noqa: E402
+
+from output_registry import CANONICAL_TOP  # noqa: E402
+
+_DRIFT_LITERAL_RE = re.compile(r"""['"][^'"]*?\b([A-Za-z_][A-Za-z_]+)/""")
+
+# Source trees that may legitimately contain non-canonical spellings as *data*.
+_LINT_EXCLUDE_PARTS = {".git", "__pycache__", "node_modules", ".pytest_cache"}
+_LINT_EXCLUDE_FILES = {"output_registry.py", "output_validator.py"}
+_LINT_DEFAULT_ROOTS = (
+    "DAVID/scripts", "Science/scripts", "History/scripts", "History/src",
+    "Nexus/scripts", "Studio", "artifacts", "agent-tools", "tools",
+    "Content_Production",
+)
+
+
+def lint_source(roots: "list | None" = None) -> list:
+    """Scan producer ``.py`` files for non-canonical top-level path literals (drift).
+
+    A literal like ``"STUDIO/Productions/..."`` is flagged because ``STUDIO`` should
+    be the canonical ``Studio``. Tests and the registry/validator are excluded (they
+    reference drift spellings deliberately as fixtures/data).
+    """
+    roots = roots or list(_LINT_DEFAULT_ROOTS)
+    violations: list = []
+    for root in roots:
+        base = WORKSPACE / root
+        if not base.exists():
+            continue
+        for py in base.rglob("*.py"):
+            if any(part in _LINT_EXCLUDE_PARTS for part in py.parts):
+                continue
+            if py.name in _LINT_EXCLUDE_FILES or py.name.startswith("test_"):
+                continue
+            try:
+                lines = py.read_text(encoding="utf-8").splitlines()
+            except (UnicodeDecodeError, OSError):
+                continue
+            for n, line in enumerate(lines, 1):
+                for m in _DRIFT_LITERAL_RE.finditer(line):
+                    seg = m.group(1)
+                    canonical = CANONICAL_TOP.get(seg.lower())
+                    if canonical and seg != canonical:
+                        rel = py.relative_to(WORKSPACE).as_posix()
+                        violations.append(Violation(
+                            "SOURCE_DRIFT", f"{rel}:{n}",
+                            f"non-canonical path literal '{seg}/' (should be '{canonical}/')"))
+    return violations
+
+
 def check_paths(paths: list, expected_kind: "str | None" = None) -> list:
     violations: list = []
     for raw in paths:
@@ -193,11 +245,20 @@ def main(argv: "list | None" = None) -> int:
     ck.add_argument("--kind", help="assert these paths resolve to this registry kind")
     ck.add_argument("--json", action="store_true")
 
+    ln = sub.add_parser("lint", help="Scan producer source for non-canonical path literals")
+    ln.add_argument("roots", nargs="*", help="source roots (default: all producer trees)")
+    ln.add_argument("--json", action="store_true")
+
     args = ap.parse_args(argv)
 
     if args.cmd == "scan":
         violations, fixed = scan(fix=args.fix)
         _print(violations, fixed, args.json)
+        return 1 if violations else 0
+
+    if args.cmd == "lint":
+        violations = lint_source(args.roots or None)
+        _print(violations, [], args.json)
         return 1 if violations else 0
 
     violations = check_paths(args.paths, args.kind)
