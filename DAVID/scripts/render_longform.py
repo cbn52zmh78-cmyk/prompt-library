@@ -103,7 +103,10 @@ import numpy as np  # noqa: E402
 from color_cast_qa import (  # noqa: E402
     color_cast_breaches,
     color_cast_passes,
+    generation_reference_breaches,
+    generation_reference_passes,
     measure_color_cast,
+    measure_set_shadow_blue_health,
 )
 CLINICAL_CHANNEL_BALANCE_MAX = 0.12  # #199 — absolute host CCB; fails +66 legacy false-pass frames
 LABEL_CHIP_COLORS = {
@@ -635,6 +638,59 @@ def normalize_script(raw: dict[str, Any], script_path: Path) -> dict[str, Any]:
             "min_shots": 1,
         },
     }
+
+
+def assert_generation_reference_gate(
+    script: dict[str, Any],
+    refs: dict[str, Any],
+    *,
+    seamless_opts: SeamlessOptions | None = None,
+) -> None:
+    """T243 — block full render when avatar/set stills are blue-starved at source."""
+    opts = seamless_opts or SeamlessOptions()
+    if not opts.neutral_generation or not opts.enabled:
+        return
+    if not _is_archive_production(script, refs):
+        return
+
+    from PIL import Image
+
+    failures: list[str] = []
+    avatar_path = Path(str(refs.get("avatar_file") or ""))
+    set_path = Path(str(refs.get("set_file") or ""))
+
+    if avatar_path.is_file():
+        with Image.open(avatar_path) as img:
+            metrics = measure_color_cast(np.asarray(img.convert("RGB")))
+        if not generation_reference_passes(metrics, host=True):
+            failures.append(
+                f"avatar {avatar_path.name}: {generation_reference_breaches(metrics, host=True)} "
+                f"(Bμ={metrics['host_blue_mean']:.1f} B/R={metrics['host_br_ratio']:.3f} "
+                f"starve={metrics['blue_starvation_fraction']:.3f})"
+            )
+    else:
+        failures.append(f"avatar reference missing: {avatar_path}")
+
+    if set_path.is_file():
+        with Image.open(set_path) as img:
+            set_metrics = measure_set_shadow_blue_health(np.asarray(img.convert("RGB")))
+        if not generation_reference_passes(set_metrics, host=False):
+            failures.append(
+                f"set {set_path.name}: {generation_reference_breaches(set_metrics, host=False)} "
+                f"(shadow Bμ={set_metrics['host_blue_mean']:.1f} "
+                f"B/R={set_metrics['host_br_ratio']:.3f} "
+                f"starve={set_metrics['blue_starvation_fraction']:.3f})"
+            )
+    else:
+        failures.append(f"set reference missing: {set_path}")
+
+    if failures:
+        raise SystemExit(
+            "Generation reference gate FAIL (#243) — regenerate avatar + set before render. "
+            "Targets: Bμ≥40, B/R≥0.35, blue_starvation_fraction≤0.30. "
+            f"Failures: {'; '.join(failures)}. "
+            "Run: python DAVID/scripts/render_host_identity.py --force-refs"
+        )
 
 
 def assert_gate_0_cleared(script: dict[str, Any]) -> None:
@@ -3142,6 +3198,11 @@ def main() -> int:
     parser.add_argument("--package-only", action="store_true", help="Package existing production only; no render")
     parser.add_argument("--force-shot", action="append", default=[], help="Regenerate specific shot id(s)")
     parser.add_argument("--force-all", action="store_true", help="Regenerate every seamless chain shot")
+    parser.add_argument(
+        "--skip-generation-gate",
+        action="store_true",
+        help="Bypass T243 avatar/set blue-channel pre-render gate (dev only)",
+    )
     parser.add_argument("--seamless", action="store_true", help="STUDIO v1.1 extend-primary + xfade joins")
     parser.add_argument("--match-color", action="store_true", help="Histogram-match before frame-chain joins")
     parser.add_argument("--cut-on-motion", action="store_true", help="Trim tail stillness before card join")
@@ -3202,8 +3263,11 @@ def main() -> int:
         os.environ["XAI_API_KEY"] = token
         client = xai_sdk.Client(api_key=token)
 
+    refs = resolve_refs(script)
     seamless_opts = get_seamless_options(script, args)
-    seamless_opts = _apply_grade_policy(script, resolve_refs(script), seamless_opts)
+    seamless_opts = _apply_grade_policy(script, refs, seamless_opts)
+    if not args.skip_generation_gate:
+        assert_generation_reference_gate(script, refs, seamless_opts=seamless_opts)
     reject_concat_only_seamless_grade(
         concat_only=args.concat_only,
         seamless_opts=seamless_opts,

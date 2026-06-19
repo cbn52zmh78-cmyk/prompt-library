@@ -20,12 +20,14 @@ FFMPEG: str | None = None
 
 ARCHIVE_SET_PROMPT = (
     "The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, "
-    "no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves "
-    "hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. "
-    "A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform "
-    "clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. "
-    "Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition "
-    "recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting."
+    "no people. Neutral balanced 5000K ambient light with real blue present in shadow neutrals; "
+    "floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures "
+    "receding into soft blur. A long wooden worktable in the foreground holds an open illuminated "
+    "codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp "
+    "casting a tight localized 3200K warm pool on the desk surface and lamp shade only — NOT a "
+    "global amber wash. Documentary prestige aesthetic, rich wood and parchment textures, "
+    "instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal "
+    "cinematic lighting with balanced white balance."
 )
 
 DAVID_AVATAR_PROMPT = (
@@ -34,8 +36,10 @@ DAVID_AVATAR_PROMPT = (
     "intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, "
     "reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. "
     "Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near "
-    "open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, "
-    "trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only."
+    "open codex. Neutral balanced 5000K key on face with natural blue in skin midtones; brass "
+    "desk lamp 3200K visible as localized warm accent on desk beside him, not washing his face "
+    "amber; manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, "
+    "no real person likeness, no celebrity resemblance, invented face only."
 )
 
 HOST_TEST_SPEECH = (
@@ -46,14 +50,15 @@ HOST_SHOT_A_PROMPT = (
     "The Archive keeper host speaks directly to camera with measured documentary gravitas, "
     "lip-synced, mid-low resonant unhurried voice, precise diction, Attenborough-calm. "
     "He asks: 'What did they actually say?' Medium shot, still grounded at worktable near "
-    "open codex, warm brass lamp key light, calm attentive eyes. Synthetic host only."
+    "open codex, neutral balanced 5000K key on face with blue intact, brass lamp warm accent "
+    "on desk only, calm attentive eyes. Synthetic host only."
 )
 
 HOST_SHOT_B_PROMPT = (
     "The Archive keeper host continues speaking to camera, lip-synced, same mid-low resonant "
     "unhurried voice. After a brief thoughtful pause he asks: 'And how do we prove it?' "
-    "Subtle slow push-in to medium-close, quiet conviction, hands still, warm lamp light. "
-    "Synthetic host only, documentary trust signal."
+    "Subtle slow push-in to medium-close, quiet conviction, hands still, neutral 5000K skin key "
+    "— lamp warmth on desk surface only, not face wash. Synthetic host only, documentary trust signal."
 )
 
 VOICE_LOCK = {
@@ -111,9 +116,9 @@ def _save_ref_meta(path: Path, data: dict[str, Any]) -> None:
     meta_path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
-def generate_archive_set(client: Any, out_dir: Path) -> dict[str, Any]:
+def generate_archive_set(client: Any, out_dir: Path, *, force: bool = False) -> dict[str, Any]:
     path = out_dir / "archive_set_reference.jpg"
-    if path.exists() and path.stat().st_size > 5000:
+    if not force and path.exists() and path.stat().st_size > 5000:
         meta = _load_ref_meta(path)
         if meta.get("url"):
             print("[archive] reusing existing set plate")
@@ -126,17 +131,29 @@ def generate_archive_set(client: Any, out_dir: Path) -> dict[str, Any]:
         "path": str(path),
         "url": resp.url,
         "prompt": ARCHIVE_SET_PROMPT,
+        "lighting_lock": (
+            "LIGHTING LOCK @Set-Archive-001 (#243): neutral balanced 5000K ambient key — "
+            "blue preserved in shadows; brass lamp 3200K localized desk pool only."
+        ),
         "model": "grok-imagine-image-quality",
         "aspect_ratio": "16:9",
+        "spec": "T243_neutral_lighting_prompt_spec.json",
+        "status": "REGENERATED",
         "reused": False,
     }
     _save_ref_meta(path, data)
     return data
 
 
-def generate_david_avatar(client: Any, archive: dict[str, Any], out_dir: Path) -> dict[str, Any]:
+def generate_david_avatar(
+    client: Any,
+    archive: dict[str, Any],
+    out_dir: Path,
+    *,
+    force: bool = False,
+) -> dict[str, Any]:
     path = out_dir / "david_avatar_reference.jpg"
-    if path.exists() and path.stat().st_size > 5000:
+    if not force and path.exists() and path.stat().st_size > 5000:
         meta = _load_ref_meta(path)
         if meta.get("url"):
             print("[david] reusing existing avatar reference")
@@ -159,9 +176,15 @@ def generate_david_avatar(client: Any, archive: dict[str, Any], out_dir: Path) -
         "path": str(path),
         "url": resp.url,
         "prompt": DAVID_AVATAR_PROMPT,
+        "lighting_lock": (
+            "LIGHTING LOCK @David-001 (#243): neutral balanced 5000K white key on face and sweater — "
+            "natural skin, blue channel intact (B≥40 mids); brass lamp 3200K tight desk accent only."
+        ),
         "model": "grok-imagine-image-quality",
         "base_set": archive["path"],
         "aspect_ratio": "16:9",
+        "spec": "T243_neutral_lighting_prompt_spec.json",
+        "status": "REGENERATED",
         "synthetic_only": True,
         "no_real_person_likeness": True,
         "reused": False,
@@ -295,7 +318,58 @@ def write_identity_lock(
     return path
 
 
+def _report_generation_gate(archive_path: Path, avatar_path: Path) -> None:
+    import numpy as np
+    from PIL import Image
+
+    sys_path = str(Path(__file__).resolve().parent)
+    if sys_path not in __import__("sys").path:
+        __import__("sys").path.insert(0, sys_path)
+    from color_cast_qa import (  # noqa: WPS433
+        generation_reference_breaches,
+        generation_reference_passes,
+        measure_color_cast,
+        measure_set_shadow_blue_health,
+    )
+
+    with Image.open(avatar_path) as img:
+        avatar_m = measure_color_cast(np.asarray(img.convert("RGB")))
+    with Image.open(archive_path) as img:
+        set_m = measure_set_shadow_blue_health(np.asarray(img.convert("RGB")))
+    print(
+        f"[gate] avatar Bμ={avatar_m['host_blue_mean']:.1f} "
+        f"B/R={avatar_m['host_br_ratio']:.3f} "
+        f"starve={avatar_m['blue_starvation_fraction']:.3f} "
+        f"pass={generation_reference_passes(avatar_m, host=True)}"
+    )
+    print(
+        f"[gate] set_shadow Bμ={set_m['host_blue_mean']:.1f} "
+        f"B/R={set_m['host_br_ratio']:.3f} "
+        f"starve={set_m['blue_starvation_fraction']:.3f} "
+        f"pass={generation_reference_passes(set_m, host=False)}"
+    )
+    if not generation_reference_passes(avatar_m, host=True):
+        print(f"[gate] avatar breaches: {generation_reference_breaches(avatar_m, host=True)}")
+    if not generation_reference_passes(set_m, host=False):
+        print(f"[gate] set breaches: {generation_reference_breaches(set_m, host=False)}")
+
+
 def main() -> int:
+    import argparse
+
+    parser = argparse.ArgumentParser(description="DAVID host identity lock — Issue #69")
+    parser.add_argument(
+        "--force-refs",
+        action="store_true",
+        help="Regenerate archive set + avatar stills (T243 neutral lighting prompts)",
+    )
+    parser.add_argument(
+        "--refs-only",
+        action="store_true",
+        help="Regenerate reference stills only; skip host test clip",
+    )
+    args = parser.parse_args()
+
     import xai_sdk
 
     token = os.environ.get("XAI_API_KEY") or _load_grok_token()
@@ -305,8 +379,12 @@ def main() -> int:
     refs_dir = PROD / "references"
     refs_dir.mkdir(parents=True, exist_ok=True)
 
-    archive = generate_archive_set(client, refs_dir)
-    avatar = generate_david_avatar(client, archive, refs_dir)
+    archive = generate_archive_set(client, refs_dir, force=args.force_refs)
+    avatar = generate_david_avatar(client, archive, refs_dir, force=args.force_refs)
+    _report_generation_gate(Path(archive["path"]), Path(avatar["path"]))
+    if args.refs_only:
+        print(json.dumps({"archive_set": archive["path"], "david_avatar": avatar["path"]}, indent=2))
+        return 0
     host_clip = render_host_test(client, avatar, PROD)
     lock_path = write_identity_lock(archive, avatar, host_clip)
 

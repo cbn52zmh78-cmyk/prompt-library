@@ -6,6 +6,8 @@ import shutil
 import subprocess
 import sys
 from pathlib import Path
+
+import numpy as np
 from unittest.mock import patch
 
 import pytest
@@ -30,6 +32,43 @@ STAR_SCRIPT = (
 )
 STAR_PROD = ROOT / "STUDIO/Productions/Editorial/science_star_lifecycle_v1_longform_v1"
 RENDER = DAVID_SCRIPTS / "render_longform.py"
+
+
+def test_neutral_generation_prepends_archive_lock():
+    shot = {"id": "01_hook", "video_prompt": "CONTINUITY LOCK @David-001: host. Finish on gesture peak."}
+    refs = {
+        "set_file": str(ROOT / "DAVID/productions/host_identity_v1/references/archive_set_reference.jpg"),
+        "voice_suffix": "synthetic host only",
+    }
+    opts = SeamlessOptions(enabled=True, neutral_generation=True)
+    out = rl.apply_seamless_prompt(shot, refs, opts)
+    assert rl.ARCHIVE_NEUTRAL_GENERATION_LOCK.split("LIGHTING LOCK")[0] in out or "LIGHTING LOCK @David-001 (#243)" in out
+
+
+def test_generation_reference_gate_blocks_blue_starved_avatar(tmp_path: Path):
+    from PIL import Image
+
+    avatar = tmp_path / "david_avatar_reference.jpg"
+    set_ref = tmp_path / "archive_set_reference.jpg"
+    # blue-starved host mids (B≈8 trap)
+    arr = np.zeros((720, 1280, 3), dtype=np.uint8)
+    arr[:, :, 0] = 220
+    arr[:, :, 1] = 215
+    arr[:, :, 2] = 8
+    Image.fromarray(arr).save(avatar)
+    Image.fromarray(arr).save(set_ref)
+
+    script = {
+        "format_id": "documentary-host",
+        "config": {"seamless": {"neutral_generation": True, "primary": "extend"}},
+    }
+    refs = {
+        "avatar_file": str(avatar),
+        "set_file": str(set_ref),
+    }
+    opts = SeamlessOptions(enabled=True, neutral_generation=True)
+    with pytest.raises(SystemExit, match="Generation reference gate FAIL"):
+        rl.assert_generation_reference_gate(script, refs, seamless_opts=opts)
 
 
 def test_resolve_xfade_s_floors_legacy_0_2():
