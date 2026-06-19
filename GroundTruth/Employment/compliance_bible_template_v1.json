@@ -1,0 +1,94 @@
+{
+  "artifact": "employment_labor_knowledge_bible_template",
+  "version": "1.0",
+  "format": "knowledge_bible_8_section",
+  "tier": "A",
+  "lane": "R4-B",
+  "vertical": "Employment / Labor",
+  "citation_standard": "STD-CITE-001",
+  "knowledge_gate": "Knowledge-Gate-clean",
+  "generated_at": "2026-06-19T16:20:26.709990+00:00",
+  "parent_template": "GroundTruth/Compliance/compliance_bible_template_v1.json",
+  "disclaimer": "Operational employment/labor compliance research and cited public-records compilation — not legal advice. Confirm wage-hour, OSHA, EEOC, and state labor obligations with licensed counsel and the relevant agency before relying on any fact for operations or filings.",
+  "pinned_output_dir": "GroundTruth/Employment",
+  "policy": {
+    "public_sources_only": true,
+    "no_bypass": true,
+    "http_403_ssl_park": true,
+    "gap_rendering": "NOT FOUND — [source checked: …]",
+    "status_taxonomy": [
+      "FOUND",
+      "EXEMPT",
+      "REQUIRES_CONFIRMATION",
+      "NOT FOUND",
+      "ACCESS_RESTRICTED",
+      "PARKED"
+    ],
+    "as_of_field": "retrieved_date",
+    "source_grades": [
+      "primary",
+      "secondary",
+      "tertiary"
+    ]
+  },
+  "sections": [
+    {
+      "section_id": "1_tldr",
+      "title": "TL;DR / Executive Summary",
+      "purpose": "Coverage, fact count, status roll, cross-sell hooks."
+    },
+    {
+      "section_id": "2_scope_methodology_as_of",
+      "title": "Scope, Methodology & As-Of Date",
+      "purpose": "Federal DOL/OSHA/EEOC + state overlays; retrieval date; public-sources policy."
+    },
+    {
+      "section_id": "3_body",
+      "title": "Body — Cited Compliance Record",
+      "purpose": "Federal baseline + per-state wage-hour, discrimination, WC, leave, UI."
+    },
+    {
+      "section_id": "4_source_register_graded",
+      "title": "Source Register (Graded)",
+      "purpose": "URL, grade, harvest status, retrieved_date."
+    },
+    {
+      "section_id": "5_conflict_reconciliation",
+      "title": "Conflicting Sources Reconciliation",
+      "purpose": "Federal vs state minimum wage, OSHA state-plan splits."
+    },
+    {
+      "section_id": "6_gaps_not_found",
+      "title": "Gaps / NOT FOUND / Open Questions",
+      "purpose": "Parked portals and REQUIRES_CONFIRMATION local rules."
+    },
+    {
+      "section_id": "7_confidence",
+      "title": "Confidence Assessment",
+      "purpose": "Per-domain confidence from gap density."
+    },
+    {
+      "section_id": "8_citations",
+      "title": "Full Citation Appendix",
+      "purpose": "Numbered STD-CITE-001 references."
+    }
+  ],
+  "product_variants": {
+    "seed_5_states": {
+      "sku": "R4B-EL-SEED-5-v1",
+      "stem": "employment_labor_knowledge_bible_seed_v1",
+      "state_codes": [
+        "CA",
+        "TX",
+        "NY",
+        "FL",
+        "PA"
+      ],
+      "cross_sell_verticals": [
+        "construction",
+        "healthcare",
+        "childcare"
+      ]
+    }
+  }
+}

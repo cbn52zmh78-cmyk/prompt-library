@@ -1,0 +1,335 @@
+{
+  "artifact": "knowledge_bible",
+  "format": "8-section",
+  "version": "1.0",
+  "variant": "seed_5_states",
+  "lane": "R4-B",
+  "vertical": "Employment / Labor",
+  "sku": "R4B-EL-SEED-5-v1",
+  "product_status": "SEED",
+  "sellable": true,
+  "citation_standard": "STD-CITE-001",
+  "knowledge_gate": "Knowledge-Gate-clean",
+  "template": "GroundTruth/Employment/compliance_bible_template_v1.json",
+  "generated_at": "2026-06-19T16:20:26.713326+00:00",
+  "disclaimer": "Operational employment/labor compliance research and cited public-records compilation — not legal advice. Confirm wage-hour, OSHA, EEOC, and state labor obligations with licensed counsel and the relevant agency before relying on any fact for operations or filings.",
+  "sections": {
+    "1_tldr": {
+      "title": "TL;DR / Executive Summary",
+      "coverage": "Federal DOL FLSA wage-hour, OSHA workplace safety, EEOC hiring discrimination + state overlays for CA, TX, NY, FL, PA.",
+      "state_count": 5,
+      "state_codes": [
+        "CA",
+        "TX",
+        "NY",
+        "FL",
+        "PA"
+      ],
+      "cited_claims": 44,
+      "gaps_flagged": 0,
+      "status_roll": {
+        "FOUND": 42,
+        "REQUIRES_CONFIRMATION": 2
+      },
+      "as_of_date": "2026-06-19",
+      "cross_sell": [
+        "construction",
+        "healthcare",
+        "childcare"
+      ],
+      "honesty_rule": "Every claim STD-CITE-001 cited; gaps render NOT FOUND — [source checked: …]."
+    },
+    "2_scope_methodology_as_of": {
+      "title": "Scope, Methodology & As-Of Date",
+      "scope": {
+        "employer_types": [
+          "all_private_employers",
+          "construction",
+          "healthcare_practice",
+          "childcare"
+        ],
+        "federal_domains": [
+          "flsa_wage_hour",
+          "osha_workplace_safety",
+          "eeoc_hiring_discrimination"
+        ],
+        "state_domains": [
+          "minimum_wage_overtime",
+          "anti_discrimination",
+          "workers_compensation",
+          "paid_leave_posting",
+          "unemployment_insurance"
+        ],
+        "jurisdictions": [
+          "Federal",
+          "California",
+          "Texas",
+          "New York",
+          "Florida",
+          "Pennsylvania"
+        ]
+      },
+      "methodology": "Curated public-source harvest 2026-06-19. Primary federal = eCFR Title 29 + DOL/OSHA/EEOC .gov; state = statute and agency labor portals.",
+      "as_of_date": "2026-06-19",
+      "retrieved_date": "2026-06-19"
+    },
+    "3_body": {
+      "title": "Body — Cited Compliance Record",
+      "federal_summary": {
+        "flsa_wage_hour": {
+          "status": "FOUND",
+          "fact_count": 5
+        },
+        "osha_workplace_safety": {
+          "status": "FOUND",
+          "fact_count": 5
+        },
+        "eeoc_hiring_discrimination": {
+          "status": "FOUND",
+          "fact_count": 5
+        }
+      },
+      "state_overlays": {
+        "California": {
+          "state_code": "CA",
+          "domains": {
+            "minimum_wage_overtime": {
+              "status": "FOUND",
+              "fact_count": 2,
+              "sample_facts": [
+                "California minimum wage and overtime rules are set by Labor Code and IWC wage orders; employers must pay the higher of federal or state minimum and follow daily overtime after 8 hours and double-time rules for extended shifts.",
+                "Meal and rest break requirements apply to nonexempt employees; failure to provide compliant breaks triggers premium pay obligations under state law."
+              ]
+            },
+            "anti_discrimination": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "The Fair Employment and Housing Act (FEHA) prohibits harassment and discrimination in employment based on protected classes including race, religion, sex, disability, age, and others; DFEH/CRD enforces."
+              ]
+            },
+            "workers_compensation": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "California employers must secure workers' compensation insurance or qualify as self-insured before hiring employees; failure to carry coverage is a criminal misdemeanor."
+              ]
+            },
+            "paid_leave_posting": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Employers must provide paid sick leave accrual or front-loading under the Healthy Workplaces, Healthy Families Act; poster and wage-statement requirements apply."
+              ]
+            },
+            "unemployment_insurance": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Employers with California wages must register with EDD for unemployment and disability insurance, file quarterly wage reports, and display mandatory workplace posters."
+              ]
+            }
+          }
+        },
+        "Texas": {
+          "state_code": "TX",
+          "domains": {
+            "minimum_wage_overtime": {
+              "status": "FOUND",
+              "fact_count": 2,
+              "sample_facts": [
+                "Texas does not set a state minimum wage above the federal floor; covered employers follow FLSA minimum wage and overtime unless a higher federal contract or local rule applies.",
+                "Texas Payday Law requires employers to pay wages at least twice monthly for non-exempt employees and on schedule for exempt employees; final pay timing rules apply on separation."
+              ]
+            },
+            "anti_discrimination": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Chapter 21 of the Texas Labor Code prohibits employment discrimination based on race, color, disability, religion, sex, national origin, and age; TWC Civil Rights Division enforces for smaller employers."
+              ]
+            },
+            "workers_compensation": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Private employers in Texas may elect workers' compensation coverage; non-subscribers lose common-law defenses and must notify employees and post notices of non-coverage."
+              ]
+            },
+            "paid_leave_posting": {
+              "status": "REQUIRES_CONFIRMATION",
+              "fact_count": 1,
+              "sample_facts": [
+                "Texas has no statewide paid sick leave mandate for private employers; local paid-sick ordinances have been preempted — confirm current preemption statute before relying on municipal rules."
+              ]
+            },
+            "unemployment_insurance": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Employers liable under the Texas Unemployment Compensation Act must register with TWC, report wages quarterly, and pay unemployment tax."
+              ]
+            }
+          }
+        },
+        "New York": {
+          "state_code": "NY",
+          "domains": {
+            "minimum_wage_overtime": {
+              "status": "FOUND",
+              "fact_count": 2,
+              "sample_facts": [
+                "New York minimum wage varies by region and employer size under Labor Law Article 19; employers must post wage rates and comply with spread-of-hours and call-in pay rules where applicable.",
+                "Nonexempt employees receive overtime at 1.5× regular rate after 40 hours in a payroll week; certain residential and farm workers have distinct thresholds."
+              ]
+            },
+            "anti_discrimination": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "The New York State Human Rights Law prohibits discrimination in hiring and employment based on protected characteristics including age, race, creed, sex, sexual orientation, gender identity, disability, and others."
+              ]
+            },
+            "workers_compensation": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "New York employers must obtain workers' compensation insurance before hiring employees; failure to secure coverage exposes employers to penalties and personal liability."
+              ]
+            },
+            "paid_leave_posting": {
+              "status": "FOUND",
+              "fact_count": 2,
+              "sample_facts": [
+                "Employers must provide paid sick leave accrual under Labor Law §196-b; amount depends on employer size; posting and recordkeeping required.",
+                "Paid Family Leave provides job-protected, paid time off for eligible employees; employers must display PFL workplace poster and collect employee contributions."
+              ]
+            },
+            "unemployment_insurance": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Employers must register with NY DOL for unemployment insurance, file quarterly wage reports, and maintain UI posters."
+              ]
+            }
+          }
+        },
+        "Florida": {
+          "state_code": "FL",
+          "domains": {
+            "minimum_wage_overtime": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Florida minimum wage is adjusted annually by constitutional amendment; covered employers must pay the state minimum where it exceeds the federal floor and follow FLSA overtime rules."
+              ]
+            },
+            "anti_discrimination": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "The Florida Civil Rights Act prohibits employment discrimination because of race, color, religion, sex, pregnancy, national origin, age, handicap, or marital status."
+              ]
+            },
+            "workers_compensation": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Florida employers with four or more employees (construction: one or more) must secure workers' compensation coverage through an insurer or self-insurance."
+              ]
+            },
+            "paid_leave_posting": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Florida does not mandate private-sector paid sick leave statewide; employers must still comply with federal FMLA where applicable and post USERRA/OSHA/EEO notices."
+              ]
+            },
+            "unemployment_insurance": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Employers must register with Florida Reemployment Assistance (UI) tax program and report wages quarterly."
+              ]
+            }
+          }
+        },
+        "Pennsylvania": {
+          "state_code": "PA",
+          "domains": {
+            "minimum_wage_overtime": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Pennsylvania follows the federal minimum wage for most employees; state overtime rules align with FLSA for nonexempt workers unless a higher standard applies under contract or local rule."
+              ]
+            },
+            "anti_discrimination": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "The Pennsylvania Human Relations Act prohibits discrimination in hiring and employment based on race, color, religious creed, ancestry, age, sex, national origin, disability, and other protected classes."
+              ]
+            },
+            "workers_compensation": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Pennsylvania employers must carry workers' compensation insurance for all employees, including part-time and seasonal workers, with limited exceptions."
+              ]
+            },
+            "paid_leave_posting": {
+              "status": "REQUIRES_CONFIRMATION",
+              "fact_count": 1,
+              "sample_facts": [
+                "Pennsylvania has no statewide paid sick leave mandate for private employers; Philadelphia and Pittsburgh have local ordinances — confirm locality before relying on state-wide absence of mandate."
+              ]
+            },
+            "unemployment_insurance": {
+              "status": "FOUND",
+              "fact_count": 1,
+              "sample_facts": [
+                "Employers must register for Pennsylvania UC tax, file quarterly wage and tax reports, and display UC poster requirements."
+              ]
+            }
+          }
+        }
+      }
+    },
+    "4_source_register_graded": {
+      "title": "Source Register (Graded)",
+      "register_path": "GroundTruth/Employment/source_register.json",
+      "primary_count": 28,
+      "harvested_count": 15,
+      "parked_count": 13
+    },
+    "5_conflict_reconciliation": {
+      "title": "Conflicting Sources Reconciliation",
+      "items": [
+        {
+          "topic": "Minimum wage — federal vs state",
+          "assessment": "Employers must pay the higher applicable rate; CA/NY/FL exceed federal floor; TX and PA generally track federal unless local ordinance applies.",
+          "status": "FOUND"
+        },
+        {
+          "topic": "OSHA — federal vs Cal/OSHA state plan",
+          "assessment": "California operates a state-plan OSHA program with standards at least as effective as federal; construction employers in CA follow Cal/OSHA Title 8.",
+          "status": "REQUIRES_CONFIRMATION"
+        }
+      ]
+    },
+    "6_gaps_not_found": {
+      "title": "Gaps / NOT FOUND / Open Questions",
+      "gaps": []
+    },
+    "7_confidence": {
+      "title": "Confidence Assessment",
+      "overall": "HIGH",
+      "basis": "42/44 facts FOUND; 0 explicit gaps; 13 parked sources."
+    },
+    "8_citations": {
+      "title": "Full Citation Appendix",
+      "note": "See source_register.json and per-fact citation blocks in federal/state packs."
+    }
+  }
+}

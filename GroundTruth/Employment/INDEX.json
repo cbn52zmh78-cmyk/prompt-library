@@ -1,0 +1,101 @@
+{
+  "artifact": "groundtruth_employment_index",
+  "version": "1.0",
+  "task": "R4-B",
+  "lane": "Employment / Labor",
+  "tier": "A",
+  "slug": "employment_labor",
+  "pinned_lane": "GroundTruth/Employment",
+  "canonical_root": "Stonebridge/Operations/Compliance_Research/groundtruth/Employment",
+  "harvester": "Stonebridge/Operations/Scripts/run_employment_labor_compliance.py",
+  "template": "GroundTruth/Employment/compliance_bible_template_v1.json",
+  "bible_seed": "GroundTruth/Employment/employment_labor_knowledge_bible_seed_v1.json",
+  "source_register": "GroundTruth/Employment/source_register.json",
+  "federal_baseline": "GroundTruth/Employment/federal_employment_labor_baseline.json",
+  "cross_sell_map": "GroundTruth/Employment/cross_sell_map_v1.json",
+  "citation_standard": "STD-CITE-001",
+  "retrieved_date": "2026-06-19",
+  "state_codes": [
+    "CA",
+    "TX",
+    "NY",
+    "FL",
+    "PA"
+  ],
+  "summary": {
+    "federal_facts": 15,
+    "state_facts": 29,
+    "total_facts": 44,
+    "state_count": 5,
+    "harvested_sources": 15,
+    "parked_sources": 13,
+    "cross_sell_verticals": [
+      "construction",
+      "healthcare",
+      "childcare"
+    ]
+  },
+  "states": [
+    {
+      "state": "California",
+      "state_code": "CA",
+      "file": "states/california.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 5,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    {
+      "state": "Texas",
+      "state_code": "TX",
+      "file": "states/texas.json",
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 4,
+        "REQUIRES_CONFIRMATION": 1,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    {
+      "state": "New York",
+      "state_code": "NY",
+      "file": "states/new_york.json",
+      "total_facts": 7,
+      "status_counts": {
+        "FOUND": 5,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    {
+      "state": "Florida",
+      "state_code": "FL",
+      "file": "states/florida.json",
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 5,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    {
+      "state": "Pennsylvania",
+      "state_code": "PA",
+      "file": "states/pennsylvania.json",
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 4,
+        "REQUIRES_CONFIRMATION": 1,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    }
+  ],
+  "recap": "GroundTruth/Employment/dispatches/R4_B_employment_labor_recap.json"
+}

@@ -1,0 +1,78 @@
+{
+  "lane": "R4-B",
+  "task": "R4-B — Employment/Labor compliance source-gather seed",
+  "vertical": "Employment / Labor",
+  "slug": "employment_labor",
+  "origin_repo": "GroundTruth",
+  "pack_kind": "source_gather_seed",
+  "canonical_pack": "Stonebridge/Operations/Compliance_Research/groundtruth/Employment/employment_labor_knowledge_bible_seed_v1.json",
+  "federal_fact_count": 15,
+  "state_count": 5,
+  "state_codes": [
+    "CA",
+    "TX",
+    "NY",
+    "FL",
+    "PA"
+  ],
+  "source_count": 28,
+  "harvested_sources": 15,
+  "parked_sources": 13,
+  "retrieved_date": "2026-06-19",
+  "state_roots": [
+    "GroundTruth/Employment/states"
+  ],
+  "state_roll": {
+    "California": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 5,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    "Texas": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 4,
+        "REQUIRES_CONFIRMATION": 1,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    "New York": {
+      "total_facts": 7,
+      "status_counts": {
+        "FOUND": 5,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    "Florida": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 5,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    },
+    "Pennsylvania": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 4,
+        "REQUIRES_CONFIRMATION": 1,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    }
+  },
+  "pinned_lane": "GroundTruth/Employment",
+  "cross_sell_verticals": [
+    "construction",
+    "healthcare",
+    "childcare"
+  ]
+}

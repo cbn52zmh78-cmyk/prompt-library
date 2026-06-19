@@ -1,0 +1,148 @@
+{
+  "artifact": "employment_labor_state_pack",
+  "version": "1.0",
+  "lane": "R4-B",
+  "task": "R4-B — State employment/labor overlay (Florida)",
+  "state": "Florida",
+  "state_code": "FL",
+  "state_slug": "florida",
+  "generated_at": "2026-06-19T16:20:25.906644+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational employment/labor compliance research and cited public-records compilation — not legal advice. Confirm wage-hour, OSHA, EEOC, and state labor obligations with licensed counsel and the relevant agency before relying on any fact for operations or filings.",
+  "policy": "Public statute/agency sources only; gaps explicit.",
+  "federal_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Employment/federal_employment_labor_baseline.json",
+  "employment_compliance": {
+    "domains": {
+      "minimum_wage_overtime": {
+        "domain": "minimum_wage_overtime",
+        "label": "Minimum Wage Overtime",
+        "status": "FOUND",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-FL-MIN-001",
+            "text": "Florida minimum wage is adjusted annually by constitutional amendment; covered employers must pay the state minimum where it exceeds the federal floor and follow FLSA overtime rules.",
+            "status": "FOUND",
+            "category": "minimum_wage",
+            "citation": {
+              "source": "Florida Constitution Art. X §24 / FL DEO",
+              "url": "https://floridajobs.org/business-growth-and-partnerships/for-employers/display-posters-and-required-notices",
+              "agency": "Florida Department of Commerce",
+              "jurisdiction": "Florida",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "anti_discrimination": {
+        "domain": "anti_discrimination",
+        "label": "Anti Discrimination",
+        "status": "FOUND",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-FL-ANT-001",
+            "text": "The Florida Civil Rights Act prohibits employment discrimination because of race, color, religion, sex, pregnancy, national origin, age, handicap, or marital status.",
+            "status": "FOUND",
+            "category": "fcra",
+            "citation": {
+              "source": "Fla. Stat. §760.10",
+              "url": "https://www.flsenate.gov/Laws/Statutes/2024/760.10",
+              "agency": "Florida Commission on Human Relations",
+              "jurisdiction": "Florida",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "workers_compensation": {
+        "domain": "workers_compensation",
+        "label": "Workers Compensation",
+        "status": "FOUND",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-FL-WOR-001",
+            "text": "Florida employers with four or more employees (construction: one or more) must secure workers' compensation coverage through an insurer or self-insurance.",
+            "status": "FOUND",
+            "category": "wc_mandatory",
+            "citation": {
+              "source": "Florida DFS — Workers' compensation coverage",
+              "url": "https://www.myfloridacfo.com/division/wc/employer/coverage",
+              "agency": "Florida Division of Workers' Compensation",
+              "jurisdiction": "Florida",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "paid_leave_posting": {
+        "domain": "paid_leave_posting",
+        "label": "Paid Leave Posting",
+        "status": "FOUND",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-FL-PAI-001",
+            "text": "Florida does not mandate private-sector paid sick leave statewide; employers must still comply with federal FMLA where applicable and post USERRA/OSHA/EEO notices.",
+            "status": "FOUND",
+            "category": "posting",
+            "citation": {
+              "source": "Florida DEO — Required employer notices",
+              "url": "https://floridajobs.org/business-growth-and-partnerships/for-employers/display-posters-and-required-notices",
+              "agency": "Florida Department of Commerce",
+              "jurisdiction": "Florida",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "unemployment_insurance": {
+        "domain": "unemployment_insurance",
+        "label": "Unemployment Insurance",
+        "status": "FOUND",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-FL-UNE-001",
+            "text": "Employers must register with Florida Reemployment Assistance (UI) tax program and report wages quarterly.",
+            "status": "FOUND",
+            "category": "ui_registration",
+            "citation": {
+              "source": "Florida DEO — Reemployment tax",
+              "url": "https://floridarevenue.com/taxes/taxesfees/Pages/reemployment.aspx",
+              "agency": "Florida Department of Revenue",
+              "jurisdiction": "Florida",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 5,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    }
+  }
+}

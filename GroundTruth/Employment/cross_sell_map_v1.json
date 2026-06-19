@@ -1,0 +1,43 @@
+{
+  "artifact": "employment_labor_cross_sell_map",
+  "version": "1.0",
+  "task": "R4-B",
+  "verticals": {
+    "construction": {
+      "label": "Construction & Trades",
+      "lane_ref": "GroundTruth/Compliance/lanes/R2_construction_trades",
+      "employment_hooks": [
+        "OSHA 29 CFR Part 1926 construction standards + General Duty Clause",
+        "FLSA prevailing-wage overlays on federal/public works (Davis-Bacon — separate lane)",
+        "State workers' compensation mandatory in all five seed states",
+        "Child-labor hazardous occupation orders for under-18 workers on job sites"
+      ]
+    },
+    "healthcare": {
+      "label": "Healthcare Practice",
+      "lane_ref": "GroundTruth/Compliance/lanes/R6_healthcare_practice",
+      "employment_hooks": [
+        "OSHA bloodborne pathogens (29 CFR 1910.1030) for clinical staff",
+        "FEHA / NYHRL / state anti-discrimination beyond federal Title VII",
+        "Paid sick leave mandates (CA, NY) for clinical and admin staff",
+        "HIPAA workforce training separate from employment law — cross-reference R6"
+      ]
+    },
+    "childcare": {
+      "label": "Childcare / Early Education",
+      "lane_ref": null,
+      "employment_hooks": [
+        "FLSA child-labor restrictions and hazardous occupation orders",
+        "State background-check and ratio staffing rules — REQUIRES_CONFIRMATION per license type",
+        "Paid sick leave (CA, NY) and workers' comp mandatory coverage",
+        "EEOC hiring screening guidance for criminal history in caregiver roles"
+      ]
+    }
+  },
+  "all_employer_baseline": [
+    "Federal FLSA minimum wage/overtime/recordkeeping",
+    "OSHA workplace safety and injury reporting",
+    "EEOC anti-discrimination in hiring and employment",
+    "State UI registration and mandatory workplace posters"
+  ]
+}

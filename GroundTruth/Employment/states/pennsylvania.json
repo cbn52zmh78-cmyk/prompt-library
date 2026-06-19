@@ -1,0 +1,148 @@
+{
+  "artifact": "employment_labor_state_pack",
+  "version": "1.0",
+  "lane": "R4-B",
+  "task": "R4-B — State employment/labor overlay (Pennsylvania)",
+  "state": "Pennsylvania",
+  "state_code": "PA",
+  "state_slug": "pennsylvania",
+  "generated_at": "2026-06-19T16:20:26.707113+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational employment/labor compliance research and cited public-records compilation — not legal advice. Confirm wage-hour, OSHA, EEOC, and state labor obligations with licensed counsel and the relevant agency before relying on any fact for operations or filings.",
+  "policy": "Public statute/agency sources only; gaps explicit.",
+  "federal_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Employment/federal_employment_labor_baseline.json",
+  "employment_compliance": {
+    "domains": {
+      "minimum_wage_overtime": {
+        "domain": "minimum_wage_overtime",
+        "label": "Minimum Wage Overtime",
+        "status": "FOUND",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-PA-MIN-001",
+            "text": "Pennsylvania follows the federal minimum wage for most employees; state overtime rules align with FLSA for nonexempt workers unless a higher standard applies under contract or local rule.",
+            "status": "FOUND",
+            "category": "minimum_wage",
+            "citation": {
+              "source": "PA DOL — Minimum Wage Act overview",
+              "url": "https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/wage-hour/minimum-wage",
+              "agency": "Pennsylvania Department of Labor & Industry",
+              "jurisdiction": "Pennsylvania",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "anti_discrimination": {
+        "domain": "anti_discrimination",
+        "label": "Anti Discrimination",
+        "status": "FOUND",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-PA-ANT-001",
+            "text": "The Pennsylvania Human Relations Act prohibits discrimination in hiring and employment based on race, color, religious creed, ancestry, age, sex, national origin, disability, and other protected classes.",
+            "status": "FOUND",
+            "category": "phra",
+            "citation": {
+              "source": "43 P.S. §951 et seq. (PHRA)",
+              "url": "https://www.pa.gov/agencies/phrc/about-us/laws-regulations",
+              "agency": "Pennsylvania Human Relations Commission",
+              "jurisdiction": "Pennsylvania",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "workers_compensation": {
+        "domain": "workers_compensation",
+        "label": "Workers Compensation",
+        "status": "FOUND",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-PA-WOR-001",
+            "text": "Pennsylvania employers must carry workers' compensation insurance for all employees, including part-time and seasonal workers, with limited exceptions.",
+            "status": "FOUND",
+            "category": "wc_mandatory",
+            "citation": {
+              "source": "PA DLI — Workers' compensation insurance",
+              "url": "https://www.pa.gov/agencies/dli/programs-services/workers-compensation/for-employers/insurance",
+              "agency": "Pennsylvania Department of Labor & Industry",
+              "jurisdiction": "Pennsylvania",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "paid_leave_posting": {
+        "domain": "paid_leave_posting",
+        "label": "Paid Leave Posting",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-PA-PAI-001",
+            "text": "Pennsylvania has no statewide paid sick leave mandate for private employers; Philadelphia and Pittsburgh have local ordinances — confirm locality before relying on state-wide absence of mandate.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "paid_leave",
+            "citation": {
+              "source": "PA DLI — wage-hour (statewide)",
+              "url": "https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/wage-hour",
+              "agency": "Pennsylvania Department of Labor & Industry",
+              "jurisdiction": "Pennsylvania",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "unemployment_insurance": {
+        "domain": "unemployment_insurance",
+        "label": "Unemployment Insurance",
+        "status": "FOUND",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-PA-UNE-001",
+            "text": "Employers must register for Pennsylvania UC tax, file quarterly wage and tax reports, and display UC poster requirements.",
+            "status": "FOUND",
+            "category": "ui_registration",
+            "citation": {
+              "source": "PA DLI — UC employer registration",
+              "url": "https://www.pa.gov/agencies/dli/programs-services/unemployment-compensation/for-employers",
+              "agency": "Pennsylvania Department of Labor & Industry",
+              "jurisdiction": "Pennsylvania",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 4,
+        "REQUIRES_CONFIRMATION": 1,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    }
+  }
+}

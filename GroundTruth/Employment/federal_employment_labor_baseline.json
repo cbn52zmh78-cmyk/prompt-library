@@ -1,0 +1,266 @@
+{
+  "artifact": "federal_employment_labor_baseline",
+  "version": "1.0",
+  "lane": "R4-B",
+  "task": "R4-B — Federal employment/labor baseline (DOL FLSA, OSHA, EEOC hiring)",
+  "jurisdiction": "Federal",
+  "generated_at": "2026-06-19T16:20:18.283812+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational employment/labor compliance research and cited public-records compilation — not legal advice. Confirm wage-hour, OSHA, EEOC, and state labor obligations with licensed counsel and the relevant agency before relying on any fact for operations or filings.",
+  "policy": "Public .gov / eCFR sources only; HTTP 403 = park; gaps explicit.",
+  "pinned_path": "GroundTruth/Employment/federal_employment_labor_baseline.json",
+  "canonical_path": "Stonebridge/Operations/Compliance_Research/groundtruth/Employment/federal_employment_labor_baseline.json",
+  "domains": {
+    "flsa_wage_hour": {
+      "domain": "flsa_wage_hour",
+      "label": "Flsa Wage Hour",
+      "status": "FOUND",
+      "probe_result": "curated_public_sources",
+      "cited_facts": [
+        {
+          "fact_id": "EL-US-FLS-001",
+          "text": "The Fair Labor Standards Act (FLSA) establishes federal minimum wage, overtime pay, recordkeeping, and youth-employment standards for covered employees in the private and public sectors.",
+          "status": "FOUND",
+          "category": "federal_baseline",
+          "citation": {
+            "source": "DOL WHD — Fair Labor Standards Act overview",
+            "url": "https://www.dol.gov/agencies/whd/flsa",
+            "agency": "U.S. Department of Labor — Wage and Hour Division",
+            "jurisdiction": "Federal",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "EL-US-FLS-002",
+          "text": "Covered nonexempt employees must receive overtime pay at not less than one and one-half times the regular rate of pay for hours worked over 40 in a workweek unless an exemption applies.",
+          "status": "FOUND",
+          "category": "overtime",
+          "citation": {
+            "source": "eCFR — 29 CFR Part 778 (Overtime Compensation)",
+            "url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-A/part-778",
+            "agency": "U.S. Department of Labor",
+            "jurisdiction": "Federal",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "value": "1.5× after 40h/week"
+        },
+        {
+          "fact_id": "EL-US-FLS-003",
+          "text": "Executive, administrative, and professional exemptions (and certain computer/outside-sales employees) require meeting salary and duties tests codified at 29 CFR Part 541.",
+          "status": "FOUND",
+          "category": "exemptions",
+          "citation": {
+            "source": "eCFR — 29 CFR Part 541 (Defining and Delimiting Exemptions)",
+            "url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-A/part-541",
+            "agency": "U.S. Department of Labor",
+            "jurisdiction": "Federal",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "EL-US-FLS-004",
+          "text": "Employers must keep payroll records, hours worked each day, and total overtime earnings for nonexempt workers; records must be preserved as required by 29 CFR Part 516.",
+          "status": "FOUND",
+          "category": "recordkeeping",
+          "citation": {
+            "source": "eCFR — 29 CFR Part 516 (Records to be Kept by Employers)",
+            "url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-A/part-516",
+            "agency": "U.S. Department of Labor",
+            "jurisdiction": "Federal",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "EL-US-FLS-005",
+          "text": "Child-labor provisions restrict hours and occupations for workers under 18; hazardous occupation orders apply to employment in construction, manufacturing, and other listed sectors.",
+          "status": "FOUND",
+          "category": "child_labor",
+          "citation": {
+            "source": "eCFR — 29 CFR Part 570 (Child Labor Regulations)",
+            "url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-A/part-570",
+            "agency": "U.S. Department of Labor",
+            "jurisdiction": "Federal",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gap": null
+    },
+    "osha_workplace_safety": {
+      "domain": "osha_workplace_safety",
+      "label": "Osha Workplace Safety",
+      "status": "FOUND",
+      "probe_result": "curated_public_sources",
+      "cited_facts": [
+        {
+          "fact_id": "EL-US-OSH-001",
+          "text": "The Occupational Safety and Health Act requires employers to furnish employment free from recognized hazards likely to cause death or serious physical harm (General Duty Clause, Section 5(a)(1)).",
+          "status": "FOUND",
+          "category": "general_duty",
+          "citation": {
+            "source": "OSHA — Occupational Safety and Health Act of 1970",
+            "url": "https://www.osha.gov/laws-regs/oshact/section_5_duties",
+            "agency": "U.S. Department of Labor — OSHA",
+            "jurisdiction": "Federal",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "EL-US-OSH-002",
+          "text": "OSHA standards in 29 CFR Part 1910 govern general industry hazards (machine guarding, hazard communication, walking-working surfaces, personal protective equipment).",
+          "status": "FOUND",
+          "category": "general_industry",
+          "citation": {
+            "source": "eCFR — 29 CFR Part 1910 (General Industry)",
+            "url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1910",
+            "agency": "OSHA",
+            "jurisdiction": "Federal",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "EL-US-OSH-003",
+          "text": "Construction employers must comply with 29 CFR Part 1926 (fall protection, scaffolding, excavation, steel erection) in addition to the General Duty Clause.",
+          "status": "FOUND",
+          "category": "construction",
+          "citation": {
+            "source": "eCFR — 29 CFR Part 1926 (Construction)",
+            "url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1926",
+            "agency": "OSHA",
+            "jurisdiction": "Federal",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "EL-US-OSH-004",
+          "text": "Employers covered by the OSH Act must display the OSHA Job Safety and Health poster (or state-plan equivalent) informing workers of rights and how to report hazards.",
+          "status": "FOUND",
+          "category": "posting",
+          "citation": {
+            "source": "OSHA — It's the Law poster (Publication 3165)",
+            "url": "https://www.osha.gov/publications/poster",
+            "agency": "OSHA",
+            "jurisdiction": "Federal",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "EL-US-OSH-005",
+          "text": "Employers must report work-related fatalities within 8 hours and in-patient hospitalizations, amputations, or eye losses within 24 hours to OSHA.",
+          "status": "FOUND",
+          "category": "reporting",
+          "citation": {
+            "source": "OSHA — Reporting fatalities and severe injuries",
+            "url": "https://www.osha.gov/ords/imis/establishment.html",
+            "agency": "OSHA",
+            "jurisdiction": "Federal",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gap": null
+    },
+    "eeoc_hiring_discrimination": {
+      "domain": "eeoc_hiring_discrimination",
+      "label": "Eeoc Hiring Discrimination",
+      "status": "FOUND",
+      "probe_result": "curated_public_sources",
+      "cited_facts": [
+        {
+          "fact_id": "EL-US-EEO-001",
+          "text": "Title VII of the Civil Rights Act prohibits employment discrimination based on race, color, religion, sex (including pregnancy), or national origin in hiring, firing, promotion, and compensation.",
+          "status": "FOUND",
+          "category": "title_vii",
+          "citation": {
+            "source": "EEOC — Title VII of the Civil Rights Act of 1964",
+            "url": "https://www.eeoc.gov/statutes/title-vii-civil-rights-act-1964",
+            "agency": "U.S. Equal Employment Opportunity Commission",
+            "jurisdiction": "Federal",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "EL-US-EEO-002",
+          "text": "The Americans with Disabilities Act (Title I) prohibits covered employers from discriminating against qualified individuals with disabilities in job application procedures, hiring, and other terms of employment.",
+          "status": "FOUND",
+          "category": "ada",
+          "citation": {
+            "source": "EEOC — Americans with Disabilities Act of 1990",
+            "url": "https://www.eeoc.gov/statutes/americans-disabilities-act-1990",
+            "agency": "U.S. Equal Employment Opportunity Commission",
+            "jurisdiction": "Federal",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "EL-US-EEO-003",
+          "text": "The Age Discrimination in Employment Act protects applicants and employees 40 and older from discrimination in hiring, discharge, compensation, and terms of employment.",
+          "status": "FOUND",
+          "category": "adea",
+          "citation": {
+            "source": "EEOC — Age Discrimination in Employment Act of 1967",
+            "url": "https://www.eeoc.gov/statutes/age-discrimination-employment-act-1967",
+            "agency": "U.S. Equal Employment Opportunity Commission",
+            "jurisdiction": "Federal",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "EL-US-EEO-004",
+          "text": "Covered employers must post notices describing federal laws prohibiting job discrimination (EEOC 'Know Your Rights' poster / 'EEO Is The Law').",
+          "status": "FOUND",
+          "category": "posting",
+          "citation": {
+            "source": "EEOC — Required posters",
+            "url": "https://www.eeoc.gov/poster",
+            "agency": "U.S. Equal Employment Opportunity Commission",
+            "jurisdiction": "Federal",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "EL-US-EEO-005",
+          "text": "Unlawful pre-employment inquiries include those that disproportionately screen out protected groups; criminal history and credit checks may require individualized assessment under EEOC guidance.",
+          "status": "FOUND",
+          "category": "hiring_screening",
+          "citation": {
+            "source": "EEOC — Employment tests and selection procedures",
+            "url": "https://www.eeoc.gov/laws/guidance/employment-tests-and-selection-procedures",
+            "agency": "U.S. Equal Employment Opportunity Commission",
+            "jurisdiction": "Federal",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gap": null
+    }
+  },
+  "summary": {
+    "domain_count": 3,
+    "total_facts": 15,
+    "status_counts": {
+      "FOUND": 3,
+      "REQUIRES_CONFIRMATION": 0,
+      "NOT FOUND": 0,
+      "ACCESS_RESTRICTED": 0
+    }
+  }
+}

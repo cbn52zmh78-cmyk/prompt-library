@@ -1,0 +1,162 @@
+{
+  "artifact": "employment_labor_state_pack",
+  "version": "1.0",
+  "lane": "R4-B",
+  "task": "R4-B — State employment/labor overlay (Texas)",
+  "state": "Texas",
+  "state_code": "TX",
+  "state_slug": "texas",
+  "generated_at": "2026-06-19T16:20:21.949323+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational employment/labor compliance research and cited public-records compilation — not legal advice. Confirm wage-hour, OSHA, EEOC, and state labor obligations with licensed counsel and the relevant agency before relying on any fact for operations or filings.",
+  "policy": "Public statute/agency sources only; gaps explicit.",
+  "federal_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Employment/federal_employment_labor_baseline.json",
+  "employment_compliance": {
+    "domains": {
+      "minimum_wage_overtime": {
+        "domain": "minimum_wage_overtime",
+        "label": "Minimum Wage Overtime",
+        "status": "FOUND",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-TX-MIN-001",
+            "text": "Texas does not set a state minimum wage above the federal floor; covered employers follow FLSA minimum wage and overtime unless a higher federal contract or local rule applies.",
+            "status": "FOUND",
+            "category": "minimum_wage",
+            "citation": {
+              "source": "Texas Workforce Commission — Texas Minimum Wage Law",
+              "url": "https://www.twc.texas.gov/businesses/texas-minimum-wage-law",
+              "agency": "Texas Workforce Commission",
+              "jurisdiction": "Texas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          },
+          {
+            "fact_id": "EL-TX-MIN-002",
+            "text": "Texas Payday Law requires employers to pay wages at least twice monthly for non-exempt employees and on schedule for exempt employees; final pay timing rules apply on separation.",
+            "status": "FOUND",
+            "category": "payday_law",
+            "citation": {
+              "source": "Texas Workforce Commission — Payday Law",
+              "url": "https://www.twc.texas.gov/businesses/payday-law",
+              "agency": "Texas Workforce Commission",
+              "jurisdiction": "Texas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 2,
+        "gap": null
+      },
+      "anti_discrimination": {
+        "domain": "anti_discrimination",
+        "label": "Anti Discrimination",
+        "status": "FOUND",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-TX-ANT-001",
+            "text": "Chapter 21 of the Texas Labor Code prohibits employment discrimination based on race, color, disability, religion, sex, national origin, and age; TWC Civil Rights Division enforces for smaller employers.",
+            "status": "FOUND",
+            "category": "chapter_21",
+            "citation": {
+              "source": "Tex. Labor Code Ch. 21",
+              "url": "https://statutes.capitol.texas.gov/Docs/LA/htm/LA.21.htm",
+              "agency": "Texas Workforce Commission",
+              "jurisdiction": "Texas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "workers_compensation": {
+        "domain": "workers_compensation",
+        "label": "Workers Compensation",
+        "status": "FOUND",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-TX-WOR-001",
+            "text": "Private employers in Texas may elect workers' compensation coverage; non-subscribers lose common-law defenses and must notify employees and post notices of non-coverage.",
+            "status": "FOUND",
+            "category": "wc_elective",
+            "citation": {
+              "source": "Texas DWC — Workers' compensation coverage",
+              "url": "https://www.tdi.texas.gov/wc/employer/",
+              "agency": "Texas Department of Insurance — DWC",
+              "jurisdiction": "Texas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "paid_leave_posting": {
+        "domain": "paid_leave_posting",
+        "label": "Paid Leave Posting",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-TX-PAI-001",
+            "text": "Texas has no statewide paid sick leave mandate for private employers; local paid-sick ordinances have been preempted — confirm current preemption statute before relying on municipal rules.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "paid_leave",
+            "citation": {
+              "source": "Texas Legislature — paid leave preemption (verify current)",
+              "url": "https://statutes.capitol.texas.gov/",
+              "agency": "Texas Legislature",
+              "jurisdiction": "Texas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "unemployment_insurance": {
+        "domain": "unemployment_insurance",
+        "label": "Unemployment Insurance",
+        "status": "FOUND",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-TX-UNE-001",
+            "text": "Employers liable under the Texas Unemployment Compensation Act must register with TWC, report wages quarterly, and pay unemployment tax.",
+            "status": "FOUND",
+            "category": "ui_registration",
+            "citation": {
+              "source": "Texas Workforce Commission — Unemployment tax registration",
+              "url": "https://www.twc.texas.gov/businesses/unemployment-tax-registration",
+              "agency": "Texas Workforce Commission",
+              "jurisdiction": "Texas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 4,
+        "REQUIRES_CONFIRMATION": 1,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    }
+  }
+}

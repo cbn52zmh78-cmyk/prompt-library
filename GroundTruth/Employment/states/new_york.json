@@ -1,0 +1,176 @@
+{
+  "artifact": "employment_labor_state_pack",
+  "version": "1.0",
+  "lane": "R4-B",
+  "task": "R4-B — State employment/labor overlay (New York)",
+  "state": "New York",
+  "state_code": "NY",
+  "state_slug": "new_york",
+  "generated_at": "2026-06-19T16:20:23.705083+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational employment/labor compliance research and cited public-records compilation — not legal advice. Confirm wage-hour, OSHA, EEOC, and state labor obligations with licensed counsel and the relevant agency before relying on any fact for operations or filings.",
+  "policy": "Public statute/agency sources only; gaps explicit.",
+  "federal_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Employment/federal_employment_labor_baseline.json",
+  "employment_compliance": {
+    "domains": {
+      "minimum_wage_overtime": {
+        "domain": "minimum_wage_overtime",
+        "label": "Minimum Wage Overtime",
+        "status": "FOUND",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-NY-MIN-001",
+            "text": "New York minimum wage varies by region and employer size under Labor Law Article 19; employers must post wage rates and comply with spread-of-hours and call-in pay rules where applicable.",
+            "status": "FOUND",
+            "category": "minimum_wage",
+            "citation": {
+              "source": "NY DOL — Minimum wage",
+              "url": "https://dol.ny.gov/minimum-wage",
+              "agency": "New York Department of Labor",
+              "jurisdiction": "New York",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          },
+          {
+            "fact_id": "EL-NY-MIN-002",
+            "text": "Nonexempt employees receive overtime at 1.5× regular rate after 40 hours in a payroll week; certain residential and farm workers have distinct thresholds.",
+            "status": "FOUND",
+            "category": "overtime",
+            "citation": {
+              "source": "NY Labor Law §651 et seq.",
+              "url": "https://www.nysenate.gov/legislation/laws/LAB/651",
+              "agency": "New York Department of Labor",
+              "jurisdiction": "New York",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 2,
+        "gap": null
+      },
+      "anti_discrimination": {
+        "domain": "anti_discrimination",
+        "label": "Anti Discrimination",
+        "status": "FOUND",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-NY-ANT-001",
+            "text": "The New York State Human Rights Law prohibits discrimination in hiring and employment based on protected characteristics including age, race, creed, sex, sexual orientation, gender identity, disability, and others.",
+            "status": "FOUND",
+            "category": "nyhrl",
+            "citation": {
+              "source": "NY Executive Law §296",
+              "url": "https://www.nysenate.gov/legislation/laws/EXE/296",
+              "agency": "New York Division of Human Rights",
+              "jurisdiction": "New York",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "workers_compensation": {
+        "domain": "workers_compensation",
+        "label": "Workers Compensation",
+        "status": "FOUND",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-NY-WOR-001",
+            "text": "New York employers must obtain workers' compensation insurance before hiring employees; failure to secure coverage exposes employers to penalties and personal liability.",
+            "status": "FOUND",
+            "category": "wc_mandatory",
+            "citation": {
+              "source": "NY Workers' Compensation Board — Coverage requirements",
+              "url": "https://www.wcb.ny.gov/content/main/Employers/employer-requirements.jsp",
+              "agency": "NYS Workers' Compensation Board",
+              "jurisdiction": "New York",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "paid_leave_posting": {
+        "domain": "paid_leave_posting",
+        "label": "Paid Leave Posting",
+        "status": "FOUND",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-NY-PAI-001",
+            "text": "Employers must provide paid sick leave accrual under Labor Law §196-b; amount depends on employer size; posting and recordkeeping required.",
+            "status": "FOUND",
+            "category": "paid_sick_leave",
+            "citation": {
+              "source": "NY Labor Law §196-b",
+              "url": "https://www.nysenate.gov/legislation/laws/LAB/196-B",
+              "agency": "New York Department of Labor",
+              "jurisdiction": "New York",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          },
+          {
+            "fact_id": "EL-NY-PAI-002",
+            "text": "Paid Family Leave provides job-protected, paid time off for eligible employees; employers must display PFL workplace poster and collect employee contributions.",
+            "status": "FOUND",
+            "category": "paid_family_leave",
+            "citation": {
+              "source": "NY Paid Family Leave — Employer information",
+              "url": "https://paidfamilyleave.ny.gov/employers",
+              "agency": "New York State",
+              "jurisdiction": "New York",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 2,
+        "gap": null
+      },
+      "unemployment_insurance": {
+        "domain": "unemployment_insurance",
+        "label": "Unemployment Insurance",
+        "status": "FOUND",
+        "probe_result": "curated_public_sources",
+        "cited_facts": [
+          {
+            "fact_id": "EL-NY-UNE-001",
+            "text": "Employers must register with NY DOL for unemployment insurance, file quarterly wage reports, and maintain UI posters.",
+            "status": "FOUND",
+            "category": "ui_registration",
+            "citation": {
+              "source": "NY DOL — Employer registration",
+              "url": "https://dol.ny.gov/unemployment-insurance-employers",
+              "agency": "New York Department of Labor",
+              "jurisdiction": "New York",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 7,
+      "status_counts": {
+        "FOUND": 5,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      }
+    }
+  }
+}

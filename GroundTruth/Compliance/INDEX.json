@@ -28,6 +28,20 @@
       "template_version": "1.2",
       "recap": "GroundTruth/DueDiligence/dispatches/R4_285_due_diligence_catalog_recap.json"
     },
+    "employment_labor_tier_a": {
+      "tier": "A",
+      "lane": "Employment / Labor",
+      "task": "R4-B",
+      "pinned_lane": "GroundTruth/Employment",
+      "index": "GroundTruth/Employment/INDEX.json",
+      "canonical_root": "Stonebridge/Operations/Compliance_Research/groundtruth/Employment",
+      "harvester": "Stonebridge/Operations/Scripts/run_employment_labor_compliance.py",
+      "state_count": 5,
+      "state_codes": ["CA", "TX", "NY", "FL", "PA"],
+      "total_facts": 44,
+      "cross_sell_verticals": ["construction", "healthcare", "childcare"],
+      "recap": "GroundTruth/Employment/dispatches/R4_B_employment_labor_recap.json"
+    },
     "R6_healthcare_practice": {
       "tier": "A",
       "vertical": "Healthcare Practice",

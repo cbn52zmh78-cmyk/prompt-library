@@ -1,0 +1,66 @@
+{
+  "message_type": "recap_vcs",
+  "issue": "R4-B",
+  "title": "R4-B — Employment/Labor compliance (DOL FLSA + OSHA + EEOC + 5 states)",
+  "generated_at": "2026-06-19T16:20:26.728971+00:00",
+  "status": "COMPLETE",
+  "verdict": "GREEN",
+  "owner_terminal": "R4",
+  "lane": "Employment / Labor",
+  "pinned_lane": "GroundTruth/Employment",
+  "recap": {
+    "did": [
+      "Built federal employment/labor baseline: DOL FLSA wage-hour, OSHA workplace safety, EEOC hiring discrimination",
+      "State overlays for 5 high-volume states: California, Texas, New York, Florida, Pennsylvania",
+      "8-section knowledge bible seed (STD-CITE-001, graded source register); cross-sell map for construction, healthcare, childcare",
+      "Pinned lane to GroundTruth/Employment/"
+    ],
+    "state": "Federal 15 facts across 3 domains (FOUND 3); state 29 facts across 5 states (FOUND 23, REQUIRES_CONFIRMATION 2)",
+    "next": [
+      "Expand to remaining 45 states on client intake",
+      "Wire stonebridge.employment_labor SKU into Nexus intake",
+      "Add Davis-Bacon / prevailing wage cross-lane pointer for public-works construction"
+    ]
+  },
+  "metrics": {
+    "federal_domains": 3,
+    "federal_facts": 15,
+    "federal_status_roll": {
+      "FOUND": 3,
+      "REQUIRES_CONFIRMATION": 0,
+      "NOT FOUND": 0,
+      "ACCESS_RESTRICTED": 0
+    },
+    "state_count": 5,
+    "state_facts": 29,
+    "state_status_roll": {
+      "FOUND": 23,
+      "REQUIRES_CONFIRMATION": 2,
+      "NOT FOUND": 0,
+      "ACCESS_RESTRICTED": 0
+    },
+    "cross_sell_verticals": [
+      "construction",
+      "healthcare",
+      "childcare"
+    ]
+  },
+  "vcs_commit_draft": {
+    "subject": "R4-B: Employment/Labor compliance seed (federal + 5 states)",
+    "body": "RECAP\n- Did: Federal FLSA/OSHA/EEOC baseline (15 facts); state overlays CA/TX/NY/FL/PA (29 facts); 8-section bible seed; GroundTruth/Employment pin\n- State: GREEN — public-sources-only; cross-sell construction/healthcare/childcare\n- Next: Nexus intake wire; 50-state expansion on demand\n\nCEILING: Local paid-leave ordinances REQUIRES_CONFIRMATION; no Lexis/paywall sources."
+  },
+  "artifacts": [
+    "GroundTruth/Employment/federal_employment_labor_baseline.json",
+    "GroundTruth/Employment/states/california.json",
+    "GroundTruth/Employment/states/texas.json",
+    "GroundTruth/Employment/states/new_york.json",
+    "GroundTruth/Employment/states/florida.json",
+    "GroundTruth/Employment/states/pennsylvania.json",
+    "GroundTruth/Employment/compliance_bible_template_v1.json",
+    "GroundTruth/Employment/employment_labor_knowledge_bible_seed_v1.json",
+    "GroundTruth/Employment/source_register.json",
+    "GroundTruth/Employment/cross_sell_map_v1.json",
+    "GroundTruth/Employment/lane_meta.json",
+    "GroundTruth/Employment/INDEX.json"
+  ]
+}
