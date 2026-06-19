@@ -212,7 +212,37 @@ def _is_clinical_neutral_set(script: dict[str, Any], refs: dict[str, Any]) -> bo
     set_file = str(refs.get("set_file") or "").lower()
     if any(k in set_file for k in ("cyclorama", "seamless_neutral", "studio_interior")):
         return True
-    return script.get("format_id") in ("editorial-explainer", "companion", "gfe-companion")
+    return script.get("format_id") in (
+        "science-explainer",
+        "editorial-explainer",
+        "companion",
+        "gfe-companion",
+    )
+
+
+def _apply_grade_policy(
+    script: dict[str, Any],
+    refs: dict[str, Any],
+    opts: SeamlessOptions,
+) -> SeamlessOptions:
+    """Clinical/neutral productions: white-balance grade, no full-frame warm lamp cast (#193)."""
+    if not _is_clinical_neutral_set(script, refs):
+        return opts
+    seam = script.get("config", {}).get("seamless") or {}
+    neutral = bool(seam.get("neutral_grade", True))
+    return SeamlessOptions(
+        enabled=opts.enabled,
+        xfade_s=opts.xfade_s,
+        match_color=opts.match_color,
+        cut_on_motion=opts.cut_on_motion,
+        lamp_lock=False,
+        glasses_lock=opts.glasses_lock,
+        loudnorm=opts.loudnorm,
+        pin_audio_sync=opts.pin_audio_sync,
+        reground_interval=opts.reground_interval,
+        magenta_clamp=opts.magenta_clamp,
+        neutral_grade=neutral,
+    )
 
 
 def _use_magenta_hue_qa(script: dict[str, Any], refs: dict[str, Any]) -> bool:
@@ -865,7 +895,11 @@ def provenance_to_video(png: Path, mp4: Path, duration: float) -> None:
     )
 
 
-def concat_videos(parts: list[Path], out: Path) -> None:
+def concat_videos(parts: list[Path], out: Path, *, seamless: bool = False) -> None:
+    if seamless:
+        raise RuntimeError(
+            "concat_videos hard-cut forbidden in seamless mode — use _reconcat_seamless_chain"
+        )
     ff = _ffmpeg_exe()
     list_file = out.with_suffix(".txt")
     list_file.write_text(
@@ -892,6 +926,7 @@ class SeamlessOptions:
     pin_audio_sync: bool = True
     reground_interval: int = REGROUND_EVERY_N
     magenta_clamp: bool = True
+    neutral_grade: bool = False
 
 
 EXTEND_API_FINDING = {
@@ -920,6 +955,7 @@ def get_seamless_options(script: dict[str, Any], args: argparse.Namespace) -> Se
         pin_audio_sync=bool(seam.get("pin_audio_sync", True)),
         reground_interval=int(seam.get("reground_interval", REGROUND_EVERY_N)),
         magenta_clamp=bool(seam.get("magenta_clamp", True)),
+        neutral_grade=bool(seam.get("neutral_grade", False)),
     )
 
 
@@ -1264,6 +1300,150 @@ def probe_magenta_score(video: Path, at_s: float | None = None) -> float:
     return magenta_n / total_n if total_n else 0.0
 
 
+def probe_yellow_green_score(video: Path, at_s: float | None = None) -> float:
+    """Yellow-green cast in non-lamp host region — lower is better (#194)."""
+    from PIL import Image
+
+    ff = _ffmpeg_exe()
+    at_s = at_s if at_s is not None else max(0.0, probe_duration(video) * 0.5)
+    jpg = video.with_suffix(".yg_probe.jpg")
+    subprocess.run(
+        [ff, "-y", "-ss", f"{at_s:.3f}", "-i", str(video), "-frames:v", "1", str(jpg)],
+        check=True,
+        capture_output=True,
+    )
+    img = Image.open(jpg).convert("RGB")
+    w, h = img.size
+    bias_n = total_n = 0
+    for y in range(int(h * 0.18), int(h * 0.72), 6):
+        for x in range(int(w * 0.08), int(w * 0.48), 6):
+            r, g, b = img.getpixel((x, y))
+            lum = 0.299 * r + 0.587 * g + 0.114 * b
+            if lum < 35 or lum > 210:
+                continue
+            total_n += 1
+            if g > r * 1.06 and g > b * 1.04:
+                bias_n += 1
+    jpg.unlink(missing_ok=True)
+    return bias_n / total_n if total_n else 0.0
+
+
+def apply_lamp_accent_local(video: Path, out: Path) -> Path:
+    """Warm 3200K pool on desk/lamp quadrant only — not full-frame tint (#194)."""
+    ff = _ffmpeg_exe()
+    out.parent.mkdir(parents=True, exist_ok=True)
+    filt = (
+        "[0:v]split=2[base][warmsrc];"
+        f"[warmsrc]{LAMP_ACCENT_VF}[warmed];"
+        "[base][warmed]blend=all_expr="
+        "'if(between(X,W*0.52)*between(X,W*0.94)*between(Y,H*0.12)*between(Y,H*0.68),"
+        "A*(1-0.62)+B*0.62,A)'[outv]"
+    )
+    cmd = [
+        ff, "-y", "-i", str(video),
+        "-filter_complex", filt,
+        "-map", "[outv]", "-map", "0:a?",
+        "-c:v", "libx264", "-pix_fmt", "yuv420p",
+        "-c:a", "copy", str(out),
+    ]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    if r.returncode != 0:
+        shutil.copy2(video, out)
+    return out
+
+
+def _shot_needs_label_chip_burn(shot: dict[str, Any]) -> bool:
+    if shot.get("burn_label_chip"):
+        return True
+    on_screen = (shot.get("on_screen") or "").upper()
+    return "PRONUNCIATION" in on_screen
+
+
+def _video_frame_size(video: Path) -> tuple[int, int]:
+    from PIL import Image
+
+    ff = _ffmpeg_exe()
+    jpg = video.with_suffix(".dims_probe.jpg")
+    subprocess.run(
+        [ff, "-y", "-ss", "0.5", "-i", str(video), "-frames:v", "1", str(jpg)],
+        check=True,
+        capture_output=True,
+    )
+    img = Image.open(jpg)
+    w, h = img.size
+    jpg.unlink(missing_ok=True)
+    return w, h
+
+
+def render_pronunciation_chip_overlay(
+    shot: dict[str, Any],
+    out_path: Path,
+    *,
+    width: int,
+    height: int,
+) -> Path:
+    """High-contrast code-burned pronunciation chips (#194 washed-out fix)."""
+    from PIL import Image, ImageDraw, ImageFont
+
+    img = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+    try:
+        chip_font = ImageFont.truetype("arialbd.ttf", max(18, width // 56))
+        sub_font = ImageFont.truetype("arial.ttf", max(15, width // 68))
+    except OSError:
+        chip_font = sub_font = ImageFont.load_default()
+
+    on_screen = (shot.get("on_screen") or "").strip()
+    parts = [p.strip() for p in on_screen.split("·")] if on_screen else []
+    primary = parts[0].upper() if parts else "RECONSTRUCTED PRONUNCIATION"
+    secondary = parts[1] if len(parts) > 1 else ""
+
+    x, y = int(width * 0.025), int(height * 0.055)
+    chip_color = LABEL_CHIP_COLORS.get(primary, (140, 88, 28, 245))
+    tw = draw.textlength(primary, font=chip_font)
+    pad = max(10, width // 96)
+    chip_h = max(34, height // 22)
+    draw.rounded_rectangle(
+        [(x, y), (x + tw + pad * 2, y + chip_h)],
+        radius=8,
+        fill=chip_color,
+    )
+    draw.text((x + pad, y + pad // 2), primary, fill=(255, 255, 255, 255), font=chip_font)
+
+    if secondary:
+        sub_y = y + chip_h + 8
+        stw = draw.textlength(secondary, font=sub_font)
+        draw.rounded_rectangle(
+            [(x, sub_y), (x + stw + pad * 2, sub_y + chip_h - 6)],
+            radius=6,
+            fill=LABEL_CHIP_COLORS.get(secondary.upper(), (40, 48, 62, 235)),
+        )
+        draw.text((x + pad, sub_y + 4), secondary, fill=(245, 242, 235, 255), font=sub_font)
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    img.save(out_path)
+    return out_path
+
+
+def burn_label_overlay(video: Path, overlay_png: Path, out: Path) -> Path:
+    ff = _ffmpeg_exe()
+    out.parent.mkdir(parents=True, exist_ok=True)
+    subprocess.run(
+        [
+            ff, "-y",
+            "-i", str(video),
+            "-i", str(overlay_png),
+            "-filter_complex", "[0:v][1:v]overlay=0:0:format=auto,format=yuv420p[v]",
+            "-map", "[v]", "-map", "0:a?",
+            "-c:v", "libx264", "-pix_fmt", "yuv420p",
+            "-c:a", "copy", str(out),
+        ],
+        check=True,
+        capture_output=True,
+    )
+    return out
+
+
 def apply_warm_gold_clamp(video: Path, out: Path, color_ref: Path) -> Path:
     """Magenta suppression + warm-gold clamp against locked talent reference."""
     return apply_per_shot_magenta_clamp(
@@ -1291,11 +1471,14 @@ def apply_per_shot_magenta_clamp(
     *,
     dark_scene: bool = False,
     lamp_lock: bool = True,
+    archive_neutral: bool = False,
 ) -> Path:
     """Per-shot magenta suppression — within-clip, independent of --match-color joins."""
     ff = _ffmpeg_exe()
     out.parent.mkdir(parents=True, exist_ok=True)
-    clamp_vf = _magenta_clamp_vf(dark_scene=dark_scene, lamp_lock=lamp_lock)
+    clamp_vf = _magenta_clamp_vf(
+        dark_scene=dark_scene, lamp_lock=lamp_lock, archive_neutral=archive_neutral,
+    )
     cur = video
     staged = out.with_name(f"{out.stem}_clamp_stage.mp4")
 
@@ -1335,12 +1518,19 @@ def apply_per_shot_magenta_clamp(
         mag = probe_magenta_score(cur)
         if mag <= MAGENTA_SCORE_MAX:
             break
-        strong_vf = _magenta_clamp_vf(dark_scene=True, lamp_lock=lamp_lock, strong=True)
+        strong_vf = _magenta_clamp_vf(
+            dark_scene=True, lamp_lock=lamp_lock, strong=True, archive_neutral=archive_neutral,
+        )
         strong_out = out.with_name(f"{out.stem}_strong{pass_n}.mp4")
         if not _run_video_eq_pass(cur, strong_out, strong_vf):
             break
         cur = strong_out
         _log(f"[magenta] within-clip strong pass {pass_n + 1}/{max_strong} (score was {mag:.3f})")
+
+    if archive_neutral and not dark_scene:
+        accented = out.with_name(f"{out.stem}_lamp_accent.mp4")
+        apply_lamp_accent_local(cur, accented)
+        cur = accented
 
     staging = out.with_name(f"{out.stem}__clamp_staging.mp4")
     if staging.exists():
@@ -1357,16 +1547,20 @@ def match_color_segment(
     *,
     lamp_lock: bool = True,
     color_ref: Path | None = None,
+    archive_neutral: bool = False,
 ) -> Path:
     """Match *target* to locked *color_ref* (David-001), not drifted prior segment."""
     ff = _ffmpeg_exe()
     out.parent.mkdir(parents=True, exist_ok=True)
     ref = color_ref or reference
+    post_vf = WARM_GOLD_CLAMP_VF if (lamp_lock and archive_neutral) else (
+        WARM_GOLD_CLAMP_VF if lamp_lock else MAGENTA_CLAMP_VF
+    )
     if ref.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp"):
         if lamp_lock:
             vfilter = (
                 f"[0:v][1:v]histogrammatching=pattern=1:strength=0.62[matched];"
-                f"[matched]{WARM_GOLD_CLAMP_VF}[outv]"
+                f"[matched]{post_vf}[outv]"
             )
         else:
             vfilter = f"[0:v][1:v]histogrammatching=pattern=1:strength=0.62[matched];[matched]{MAGENTA_CLAMP_VF}[outv]"
@@ -1379,7 +1573,7 @@ def match_color_segment(
     elif lamp_lock:
         vfilter = (
             f"[0:v][1:v]histogrammatching=pattern=1:strength=0.55[matched];"
-            f"[matched]{WARM_GOLD_CLAMP_VF}[outv]"
+            f"[matched]{post_vf}[outv]"
         )
         cmd = [
             ff, "-y", "-i", str(target), "-i", str(ref),
@@ -1419,10 +1613,11 @@ def process_shot_segment(
     shots_dir: Path,
     color_ref: Path,
 ) -> Path:
-    """Post-process: magenta clamp → pin A/V sync → loudnorm."""
+    """Post-process: color correct → label chip → pin A/V sync → loudnorm."""
     work = shots_dir
     cur = video
     dark_scene = _is_dark_scene(refs, shot=shot)
+    archive_neutral = _refs_is_archive(refs) and opts.lamp_lock and not dark_scene
     target_dur = float(
         effective_shot_duration(shot, seamless=True)
         if shot.get("duration") is not None
@@ -1434,8 +1629,18 @@ def process_shot_segment(
         apply_per_shot_magenta_clamp(
             cur, clamped, color_ref,
             dark_scene=dark_scene, lamp_lock=opts.lamp_lock,
+            archive_neutral=archive_neutral,
         )
         cur = clamped
+
+    if _shot_needs_label_chip_burn(shot):
+        vw, vh = _video_frame_size(cur)
+        overlay_png = work / f"{video.stem}_chip_overlay.png"
+        burned = work / f"{video.stem}_chip_burned.mp4"
+        render_pronunciation_chip_overlay(shot, overlay_png, width=vw, height=vh)
+        burn_label_overlay(cur, overlay_png, burned)
+        cur = burned
+        _log(f"[#194] pronunciation chip burned → {shot.get('id', video.stem)}")
 
     if opts.pin_audio_sync:
         pinned = work / f"{video.stem}_pinned.mp4"
