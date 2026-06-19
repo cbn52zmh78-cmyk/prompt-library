@@ -88,17 +88,17 @@ SLATES: list[dict[str, str]] = [
     {
         "id": "astro",
         "title": "Astrophysics mini-slate (#153 Observable launch)",
-        "concepts_dir": "STUDIO/Pipeline/Concepts/astro_mini_slate",
+        "concepts_dir": "Studio/Pipeline/Concepts/astro_mini_slate",
     },
     {
         "id": "molecular",
         "title": "Molecular biology mini-slate (#160/#172)",
-        "concepts_dir": "STUDIO/Pipeline/Concepts/molecular_mini_slate",
+        "concepts_dir": "Studio/Pipeline/Concepts/molecular_mini_slate",
     },
     {
         "id": "chem_physics",
         "title": "Chemistry & physics mini-slate (#180)",
-        "concepts_dir": "STUDIO/Pipeline/Concepts/chem_physics_mini_slate",
+        "concepts_dir": "Studio/Pipeline/Concepts/chem_physics_mini_slate",
     },
 ]
 

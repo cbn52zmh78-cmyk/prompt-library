@@ -394,7 +394,7 @@ class LegalGate:
             result.hard_stops.append(
                 "[MUSIC] Unlisted music bed(s) "
                 f"{', '.join(mstatus['unlisted'])} — not in "
-                "STUDIO/Music_Sound/clearance_manifest.json (Gate 0 row 2)"
+                "Studio/Music_Sound/clearance_manifest.json (Gate 0 row 2)"
             )
         for block in mstatus.get("channel_blocked") or []:
             result.hard_stops.append(
@@ -405,7 +405,7 @@ class LegalGate:
             result.notes.append(
                 "Row 2: Manifest-cleared music bed(s): "
                 f"{', '.join(mstatus['cleared'])} "
-                "(STUDIO/Music_Sound/clearance_manifest.json)"
+                "(Studio/Music_Sound/clearance_manifest.json)"
             )
 
         client_delivery = "client" in channels or "client deliverable" in lower

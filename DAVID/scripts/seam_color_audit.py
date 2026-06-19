@@ -59,13 +59,13 @@ def classify_lane(prod_dir: Path) -> str:
         return "Companion"
     if "narrative" in rel or "movies_lane" in prod_dir.name:
         return "Movies"
-    if "/science/" in rel or "actors_157" in prod_dir.name or "black_hole_science_proof" in prod_dir.name:
+    if "/Science/" in rel or "actors_157" in prod_dir.name or "black_hole_science_proof" in prod_dir.name:
         return "Science"
     if prod_dir.name.startswith("science_") or "editorial/science" in rel:
         return "Observable"
     if "historicalfigures" in rel or "figure_proof" in prod_dir.name:
         return "DAVID"
-    if "david/productions" in rel:
+    if "DAVID/productions" in rel:
         return "DAVID"
     return "Other"
 

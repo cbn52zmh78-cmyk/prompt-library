@@ -71,7 +71,7 @@ def _parse_manifest(stdout: str) -> dict | None:
 def _qa_from_production(slug: str) -> dict | None:
     for base in (
         ROOT / "DAVID/productions" / f"{slug}_longform_v1",
-        ROOT / "STUDIO/Productions/Editorial" / f"{slug}_longform_v1",
+        ROOT / "Studio/Productions/Editorial" / f"{slug}_longform_v1",
     ):
         qa_path = base / "qa_report.json"
         if qa_path.is_file():
@@ -97,7 +97,7 @@ def run_scope_qa_only(slug: str) -> dict:
     )
     prod = ROOT / "DAVID/productions" / f"{slug}_longform_v1"
     if not prod.is_dir():
-        prod = ROOT / "STUDIO/Productions/Editorial" / f"{slug}_longform_v1"
+        prod = ROOT / "Studio/Productions/Editorial" / f"{slug}_longform_v1"
     out_glob = list((prod / "output").glob("*_seamless_v1.mp4")) if prod.is_dir() else []
     row.update(
         status="pass" if qa.get("pass") else "fail",

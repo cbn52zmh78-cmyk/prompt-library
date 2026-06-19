@@ -282,7 +282,7 @@ def build_spec(
             "Title in left title_zone; host eyes remain in right crop",
             "Primary attestation badge above excerpt strip; secondary badge below",
             f"Artifact cue: {ep['artifact']}",
-            "Compatible with STUDIO/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff",
+            "Compatible with Studio/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff",
         ],
     }
 

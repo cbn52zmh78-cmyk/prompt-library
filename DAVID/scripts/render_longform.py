@@ -714,7 +714,7 @@ def assert_gate_0_cleared(script: dict[str, Any]) -> None:
     if gate.get("music_bed_id") and gate.get("row_2_music_sync") != "PASS":
         raise SystemExit(
             f"Gate 0 row 2 music/sync FAIL — render blocked for music bed "
-            f"{gate.get('music_bed_id')}. Verify STUDIO/Music_Sound/clearance_manifest.json. "
+            f"{gate.get('music_bed_id')}. Verify Studio/Music_Sound/clearance_manifest.json. "
             f"Report: {gate.get('report_path', 'unknown')}"
         )
 

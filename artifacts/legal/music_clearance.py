@@ -107,7 +107,7 @@ def format_bed_declaration(track_id: str, *, manifest: dict[str, Any] | None = N
     channels = ", ".join(track.get("allowed_channels") or [])
     return (
         f"Music bed: {key} — {track.get('title', '')} ({track.get('lane', '')}); "
-        f"cleared per STUDIO/Music_Sound/clearance_manifest.json "
+        f"cleared per Studio/Music_Sound/clearance_manifest.json "
         f"(source: {track.get('source', '')}; license: {track.get('license', '')}; "
         f"{attr}); allowed channels: {channels}"
     )
