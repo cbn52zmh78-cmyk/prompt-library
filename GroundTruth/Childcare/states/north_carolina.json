@@ -1,0 +1,266 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "North Carolina",
+  "state_code": "NC",
+  "state_slug": "north_carolina",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:13:09.210640+00:00",
+  "status": "PARTIAL",
+  "primary_source": "North Carolina G.S. 110-91",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "HARVESTED",
+      "fact_count": 6,
+      "facts": [
+        {
+          "fact_id": "north_carolina-childcare-ratios-1",
+          "category": "ratios",
+          "text": "North Carolina child care center staff:child ratio for 0 to 12 months: 1:5; maximum group size 15.",
+          "citation": {
+            "source": "North Carolina G.S. 110-91",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_110/GS_110-91.html",
+            "agency": "North Carolina DHHS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "north_carolina-childcare-ratios-2",
+          "category": "ratios",
+          "text": "North Carolina child care center staff:child ratio for 12 to 24 months: 1:6; maximum group size 18.",
+          "citation": {
+            "source": "North Carolina G.S. 110-91",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_110/GS_110-91.html",
+            "agency": "North Carolina DHHS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "north_carolina-childcare-ratios-3",
+          "category": "ratios",
+          "text": "North Carolina child care center staff:child ratio for 2 to 3 years: 1:10; maximum group size 20.",
+          "citation": {
+            "source": "North Carolina G.S. 110-91",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_110/GS_110-91.html",
+            "agency": "North Carolina DHHS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "north_carolina-childcare-ratios-4",
+          "category": "ratios",
+          "text": "North Carolina child care center staff:child ratio for 0 to 12 months (enhanced): 1:4; maximum group size 12.",
+          "citation": {
+            "source": "North Carolina G.S. 110-91",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_110/GS_110-91.html",
+            "agency": "North Carolina DHHS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "north_carolina-childcare-ratios-5",
+          "category": "ratios",
+          "text": "North Carolina child care center staff:child ratio for 12 to 24 months (enhanced): 1:5; maximum group size 15.",
+          "citation": {
+            "source": "North Carolina G.S. 110-91",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_110/GS_110-91.html",
+            "agency": "North Carolina DHHS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        },
+        {
+          "fact_id": "north_carolina-childcare-ratios-6",
+          "category": "ratios",
+          "text": "North Carolina child care center staff:child ratio for 2 to 3 years (enhanced): 1:8; maximum group size 20.",
+          "citation": {
+            "source": "North Carolina G.S. 110-91",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_110/GS_110-91.html",
+            "agency": "North Carolina DHHS",
+            "category": "ratios",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "ratios"
+          }
+        }
+      ]
+    },
+    "group_size": {
+      "status": "HARVESTED",
+      "fact_count": 6,
+      "facts": [
+        {
+          "fact_id": "north_carolina-childcare-group-size-1",
+          "category": "group_size",
+          "text": "North Carolina child care center maximum group size for 0 to 12 months: 15 children.",
+          "citation": {
+            "source": "North Carolina G.S. 110-91",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_110/GS_110-91.html",
+            "agency": "North Carolina DHHS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "north_carolina-childcare-group-size-2",
+          "category": "group_size",
+          "text": "North Carolina child care center maximum group size for 12 to 24 months: 18 children.",
+          "citation": {
+            "source": "North Carolina G.S. 110-91",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_110/GS_110-91.html",
+            "agency": "North Carolina DHHS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "north_carolina-childcare-group-size-3",
+          "category": "group_size",
+          "text": "North Carolina child care center maximum group size for 2 to 3 years: 20 children.",
+          "citation": {
+            "source": "North Carolina G.S. 110-91",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_110/GS_110-91.html",
+            "agency": "North Carolina DHHS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "north_carolina-childcare-group-size-4",
+          "category": "group_size",
+          "text": "North Carolina child care center maximum group size for 0 to 12 months (enhanced): 12 children.",
+          "citation": {
+            "source": "North Carolina G.S. 110-91",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_110/GS_110-91.html",
+            "agency": "North Carolina DHHS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "north_carolina-childcare-group-size-5",
+          "category": "group_size",
+          "text": "North Carolina child care center maximum group size for 12 to 24 months (enhanced): 15 children.",
+          "citation": {
+            "source": "North Carolina G.S. 110-91",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_110/GS_110-91.html",
+            "agency": "North Carolina DHHS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        },
+        {
+          "fact_id": "north_carolina-childcare-group-size-6",
+          "category": "group_size",
+          "text": "North Carolina child care center maximum group size for 2 to 3 years (enhanced): 20 children.",
+          "citation": {
+            "source": "North Carolina G.S. 110-91",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_110/GS_110-91.html",
+            "agency": "North Carolina DHHS",
+            "category": "group_size",
+            "tier": "primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "primary",
+            "category": "group_size"
+          }
+        }
+      ]
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": []
+}

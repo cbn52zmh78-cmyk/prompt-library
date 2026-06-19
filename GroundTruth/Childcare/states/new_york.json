@@ -1,0 +1,107 @@
+{
+  "artifact": "groundtruth_childcare_state_pack",
+  "version": "1.0",
+  "issue": 279,
+  "lane": "Childcare",
+  "citation_standard": "STD-CITE-001",
+  "state": "New York",
+  "state_code": "NY",
+  "state_slug": "new_york",
+  "retrieved_date": "2026-06-19",
+  "generated_at": "2026-06-19T16:13:09.056482+00:00",
+  "status": "PARKED",
+  "primary_source": "New York 18 NYCRR Part 418",
+  "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
+  "domains": {
+    "ratios": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "group_size": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "staff_qualifications": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    },
+    "background_checks": {
+      "status": "PARKED",
+      "fact_count": 0,
+      "facts": []
+    }
+  },
+  "gaps": [
+    {
+      "domain": "ratios",
+      "status": "PARKED",
+      "source_checked": "New York 18 NYCRR Part 418"
+    },
+    {
+      "domain": "group_size",
+      "status": "PARKED"
+    },
+    {
+      "domain": "staff_qualifications",
+      "status": "PARKED"
+    },
+    {
+      "domain": "background_checks",
+      "status": "PARKED"
+    }
+  ],
+  "parked": [
+    {
+      "source_id": "new_york_new_york_18_nycrr_part_418",
+      "state": "New York",
+      "source": "New York 18 NYCRR Part 418",
+      "url": "https://ocfs.ny.gov/programs/childcare/daycare/regulations/418-1.8.htm",
+      "extractor": "generic",
+      "status": "PARKED",
+      "http_status": null,
+      "bytes": 0,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "park_reason": "[WinError 10054] An existing connection was forcibly closed by the remote host"
+    },
+    {
+      "source_id": "new_york_new_york_child_care_regulations_fallback_",
+      "state": "New York",
+      "source": "New York Child Care Regulations (fallback)",
+      "url": "https://ocfs.ny.gov/programs/childcare/",
+      "extractor": "generic",
+      "status": "PARKED",
+      "http_status": null,
+      "bytes": 0,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "park_reason": "[WinError 10054] An existing connection was forcibly closed by the remote host"
+    },
+    {
+      "source_id": "new_york_childcare_gov_new_york",
+      "state": "New York",
+      "source": "Childcare.gov — New York",
+      "url": "https://www.childcare.gov/state-resources/new-york/understanding-and-finding-child-care-resources",
+      "extractor": "generic",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 68462,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    }
+  ]
+}
