@@ -1,0 +1,150 @@
+{
+  "engine": "editorial",
+  "version": "1.0",
+  "issue": 212,
+  "project_id": "memoir2",
+  "generated_at": "2026-06-19T08:22:40.654730+00:00",
+  "source": "Content_Production/SCRIBE/_t212_tmp/memoir2.md",
+  "doc_kind": "prose",
+  "meta": {
+    "client_deliverable": true,
+    "genre": "memoir",
+    "human_signoff": true
+  },
+  "stages": [
+    {
+      "name": "intake",
+      "status": "done",
+      "artifact": null,
+      "at": "2026-06-19T08:22:40.644261+00:00",
+      "gate_verdict": "YELLOW",
+      "doc_kind": "prose"
+    },
+    {
+      "name": "coverage",
+      "status": "done",
+      "artifact": "Content_Production/SCRIBE/_t212_tmp/out/memoir2/coverage.md",
+      "at": "2026-06-19T08:22:40.647405+00:00",
+      "units": 2,
+      "words": 311
+    },
+    {
+      "name": "architecture",
+      "status": "done",
+      "artifact": "Content_Production/SCRIBE/_t212_tmp/out/memoir2/architecture.md",
+      "at": "2026-06-19T08:22:40.649033+00:00",
+      "units": 2
+    },
+    {
+      "name": "development",
+      "status": "done",
+      "artifact": "Content_Production/SCRIBE/_t212_tmp/out/memoir2/development_notes.md",
+      "at": "2026-06-19T08:22:40.649721+00:00",
+      "units": 2
+    },
+    {
+      "name": "draft",
+      "status": "done",
+      "artifact": "Content_Production/SCRIBE/_t212_tmp/out/memoir2/drafts/draft_v1.md",
+      "at": "2026-06-19T08:22:40.652073+00:00",
+      "round": 1,
+      "words": 311
+    },
+    {
+      "name": "revision",
+      "status": "done",
+      "artifact": null,
+      "at": "2026-06-19T08:22:40.652134+00:00",
+      "round": 1,
+      "word_delta": 0
+    },
+    {
+      "name": "deliver",
+      "status": "done",
+      "artifact": "Content_Production/SCRIBE/_t212_tmp/out/memoir2/delivery_manifest.json",
+      "at": "2026-06-19T08:22:40.654701+00:00",
+      "gate_verdict": "YELLOW"
+    }
+  ],
+  "gate_intake": {
+    "gate": "editorial",
+    "applies": true,
+    "verdict": "YELLOW",
+    "status": "CAUTION",
+    "blocked": false,
+    "requires_human_signoff": true,
+    "human_signoff": true,
+    "hard_stops": [],
+    "warnings": [
+      "[IP] client-ownership not asserted — record work-for-hire / assignment of rights before delivery",
+      "[ORIGINALITY] no originality attestation — run/record an originality check before delivery"
+    ],
+    "counsel_flags": [],
+    "notes": [
+      "Editorial Gate: client-deliverable editorial rails apply.",
+      "[COVERAGE] no inflated promises; coverage reads as honest.",
+      "[DEFAMATION] no unhedged derogatory factual claims about real persons detected.",
+      "[STRUCTURE] 3 structural division(s) over 311 words."
+    ],
+    "checklist": {
+      "row_1_client_ip": "CAUTION",
+      "row_2_originality": "CAUTION",
+      "row_3_honest_coverage": "PASS",
+      "row_4_no_defamation": "PASS",
+      "row_5_format": "PASS",
+      "row_6_structure": "PASS",
+      "row_7_genre": "PASS"
+    }
+  },
+  "gate_deliver": {
+    "gate": "editorial",
+    "applies": true,
+    "verdict": "YELLOW",
+    "status": "CAUTION",
+    "blocked": false,
+    "requires_human_signoff": true,
+    "human_signoff": true,
+    "hard_stops": [],
+    "warnings": [
+      "[IP] client-ownership not asserted — record work-for-hire / assignment of rights before delivery",
+      "[ORIGINALITY] no originality attestation — run/record an originality check before delivery"
+    ],
+    "counsel_flags": [],
+    "notes": [
+      "Editorial Gate: client-deliverable editorial rails apply.",
+      "[COVERAGE] no inflated promises; coverage reads as honest.",
+      "[DEFAMATION] no unhedged derogatory factual claims about real persons detected.",
+      "[STRUCTURE] 3 structural division(s) over 311 words."
+    ],
+    "checklist": {
+      "row_1_client_ip": "CAUTION",
+      "row_2_originality": "CAUTION",
+      "row_3_honest_coverage": "PASS",
+      "row_4_no_defamation": "PASS",
+      "row_5_format": "PASS",
+      "row_6_structure": "PASS",
+      "row_7_genre": "PASS"
+    }
+  },
+  "revision_round": 1,
+  "revisions": [
+    {
+      "round": 1,
+      "change_note": "initial draft",
+      "draft_metrics": {
+        "words": 311,
+        "lines": 9,
+        "chars": 1444
+      },
+      "word_delta_vs_prev": 0,
+      "at": "2026-06-19T08:22:40.652127+00:00"
+    }
+  ],
+  "editorial_summary": {
+    "gate_verdict": "YELLOW",
+    "units": 2,
+    "words": 311,
+    "delivered": true,
+    "stages_done": 7
+  }
+}

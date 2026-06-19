@@ -1,0 +1,28 @@
+{
+  "project_id": "memoir2",
+  "unit_label": "chapter",
+  "unit_count": 2,
+  "units": [
+    {
+      "index": 1,
+      "heading": "Chapter 1",
+      "size": 150
+    },
+    {
+      "index": 2,
+      "heading": "Chapter 2",
+      "size": 150
+    }
+  ],
+  "spine": {
+    "opening": [
+      1
+    ],
+    "middle": [],
+    "closing": [
+      2
+    ]
+  },
+  "total_size": 300,
+  "at": "2026-06-19T08:22:40.647442+00:00"
+}

@@ -1,0 +1,49 @@
+{
+  "project_id": "the_salt_road",
+  "delivered_at": "2026-06-19T08:22:40.583467+00:00",
+  "doc_kind": "prose",
+  "final_draft": {
+    "words": 755,
+    "lines": 12,
+    "chars": 3857
+  },
+  "revision_round": 1,
+  "gate": {
+    "gate": "editorial",
+    "applies": true,
+    "verdict": "GREEN",
+    "status": "PASS",
+    "blocked": false,
+    "requires_human_signoff": false,
+    "human_signoff": false,
+    "hard_stops": [],
+    "warnings": [],
+    "counsel_flags": [],
+    "notes": [
+      "Editorial Gate: client-deliverable editorial rails apply.",
+      "[IP] client IP ownership asserted (work-for-hire / rights assigned).",
+      "[ORIGINALITY] originality attested.",
+      "[COVERAGE] no inflated promises; coverage reads as honest.",
+      "[DEFAMATION] no unhedged derogatory factual claims about real persons detected.",
+      "[STRUCTURE] 3 structural division(s) over 755 words.",
+      "Editorial Gate: all seven rails clear."
+    ],
+    "checklist": {
+      "row_1_client_ip": "PASS",
+      "row_2_originality": "PASS",
+      "row_3_honest_coverage": "PASS",
+      "row_4_no_defamation": "PASS",
+      "row_5_format": "PASS",
+      "row_6_structure": "PASS",
+      "row_7_genre": "PASS"
+    }
+  },
+  "ip_statement": "Work-for-hire: all rights in the deliverable are assigned to the client.",
+  "originality_statement": "Originality attested for this deliverable.",
+  "artifacts": {
+    "coverage": "Content_Production/SCRIBE/_t212_tmp/out/salt/coverage.md",
+    "architecture": "Content_Production/SCRIBE/_t212_tmp/out/salt/architecture.md",
+    "development": "Content_Production/SCRIBE/_t212_tmp/out/salt/development_notes.md",
+    "draft": "Content_Production/SCRIBE/_t212_tmp/out/salt/drafts/draft_v1.md"
+  }
+}

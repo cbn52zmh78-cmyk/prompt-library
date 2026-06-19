@@ -44,7 +44,8 @@ def _cmd_format(args: argparse.Namespace) -> int:
     for fmt in ("pdf", "fdx"):
         if fmt in res:
             print(f"[scribe] wrote {fmt.upper()}: {res[fmt]}")
-    print(f"[scribe] paginated to {res['pages']} page(s)")
+    print(f"[scribe] paginated to {res['pages']} script page(s)"
+          + (" (+ title page)" if not args.no_title_page else ""))
     return 0
 
 

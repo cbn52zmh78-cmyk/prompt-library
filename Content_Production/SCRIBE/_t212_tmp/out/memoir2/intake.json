@@ -1,0 +1,41 @@
+{
+  "project_id": "memoir2",
+  "source": "Content_Production/SCRIBE/_t212_tmp/memoir2.md",
+  "doc_kind": "prose",
+  "meta": {
+    "client_deliverable": true,
+    "genre": "memoir",
+    "human_signoff": true
+  },
+  "gate": {
+    "gate": "editorial",
+    "applies": true,
+    "verdict": "YELLOW",
+    "status": "CAUTION",
+    "blocked": false,
+    "requires_human_signoff": true,
+    "human_signoff": true,
+    "hard_stops": [],
+    "warnings": [
+      "[IP] client-ownership not asserted — record work-for-hire / assignment of rights before delivery",
+      "[ORIGINALITY] no originality attestation — run/record an originality check before delivery"
+    ],
+    "counsel_flags": [],
+    "notes": [
+      "Editorial Gate: client-deliverable editorial rails apply.",
+      "[COVERAGE] no inflated promises; coverage reads as honest.",
+      "[DEFAMATION] no unhedged derogatory factual claims about real persons detected.",
+      "[STRUCTURE] 3 structural division(s) over 311 words."
+    ],
+    "checklist": {
+      "row_1_client_ip": "CAUTION",
+      "row_2_originality": "CAUTION",
+      "row_3_honest_coverage": "PASS",
+      "row_4_no_defamation": "PASS",
+      "row_5_format": "PASS",
+      "row_6_structure": "PASS",
+      "row_7_genre": "PASS"
+    }
+  },
+  "at": "2026-06-19T08:22:40.644298+00:00"
+}

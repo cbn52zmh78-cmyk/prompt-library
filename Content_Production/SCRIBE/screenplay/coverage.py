@@ -18,9 +18,8 @@ from __future__ import annotations
 import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
-from datetime import date
 
-from .fountain import Element, ElementType, Screenplay, parse_fountain
+from .fountain import ElementType, Screenplay, parse_fountain
 
 # words/minute and page→minute heuristics used only for *descriptive* estimates
 _PAGES_PER_MINUTE = 1.0  # industry rule of thumb: 1 page ≈ 1 screen minute

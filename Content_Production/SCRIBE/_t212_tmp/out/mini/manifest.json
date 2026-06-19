@@ -1,0 +1,52 @@
+{
+  "engine": "editorial",
+  "version": "1.0",
+  "issue": 212,
+  "project_id": "mini",
+  "generated_at": "2026-06-19T08:22:40.728994+00:00",
+  "source": "Content_Production/SCRIBE/_t212_tmp/mini.fountain",
+  "doc_kind": "screenplay",
+  "meta": {},
+  "stages": [
+    {
+      "name": "intake",
+      "status": "done",
+      "artifact": null,
+      "at": "2026-06-19T08:22:40.698241+00:00",
+      "gate_verdict": "GREEN",
+      "doc_kind": "screenplay"
+    },
+    {
+      "name": "coverage",
+      "status": "done",
+      "artifact": "Content_Production/SCRIBE/_t212_tmp/out/mini/coverage.md",
+      "at": "2026-06-19T08:22:40.728959+00:00",
+      "units": 3,
+      "words": 1
+    }
+  ],
+  "gate_intake": {
+    "gate": "editorial",
+    "applies": false,
+    "verdict": "GREEN",
+    "status": "N/A",
+    "blocked": false,
+    "requires_human_signoff": false,
+    "human_signoff": false,
+    "hard_stops": [],
+    "warnings": [],
+    "counsel_flags": [],
+    "notes": [],
+    "checklist": {}
+  },
+  "gate_deliver": null,
+  "revision_round": 1,
+  "revisions": [],
+  "editorial_summary": {
+    "gate_verdict": "GREEN",
+    "units": 3,
+    "words": 1,
+    "delivered": false,
+    "stages_done": 2
+  }
+}

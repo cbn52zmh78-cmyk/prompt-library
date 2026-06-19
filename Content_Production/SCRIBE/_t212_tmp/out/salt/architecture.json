@@ -1,0 +1,28 @@
+{
+  "project_id": "the_salt_road",
+  "unit_label": "chapter",
+  "unit_count": 2,
+  "units": [
+    {
+      "index": 1,
+      "heading": "Chapter 1",
+      "size": 280
+    },
+    {
+      "index": 2,
+      "heading": "Chapter 2",
+      "size": 445
+    }
+  ],
+  "spine": {
+    "opening": [
+      1
+    ],
+    "middle": [],
+    "closing": [
+      2
+    ]
+  },
+  "total_size": 725,
+  "at": "2026-06-19T08:22:40.578818+00:00"
+}
