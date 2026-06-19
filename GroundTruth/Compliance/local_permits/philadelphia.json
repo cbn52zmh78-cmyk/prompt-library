@@ -1,0 +1,549 @@
+{
+  "artifact": "local_permits_city_pack",
+  "version": "1.0",
+  "tier": "B",
+  "layer": "municipal",
+  "citation_standard": "STD-CITE-001",
+  "task": "Local Permits & Licenses — city/county bible (sample metro)",
+  "city": "Philadelphia",
+  "city_slug": "philadelphia",
+  "state": "Pennsylvania",
+  "state_code": "PA",
+  "county": "Philadelphia",
+  "borough": null,
+  "consolidated_city_county": true,
+  "jurisdiction": "City of Philadelphia, PA",
+  "generated_at": "2026-06-19T10:05:53.798901+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Municipal permit and license intelligence from cited public sources — informational only; not legal, zoning, or tax advice. Confirm fees and applicability with the cited city/county authority.",
+  "policy": "Public municipal .gov sources only; HTTP 403/404 PARKED without bypass; gaps explicit.",
+  "notes": null,
+  "domains": {
+    "business_license": {
+      "domain_id": "business_license",
+      "title": "Business License",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Philadelphia Department of Licenses & Inspections (L&I)",
+        "url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "philadelphia-business_license-curated",
+          "status": "FOUND",
+          "text": "Philadelphia requires a Commercial Activity License (and related L&I licenses by business type) through the Department of Licenses & Inspections eCLIPSE portal.",
+          "citation": {
+            "source_name": "Philadelphia Department of Licenses & Inspections (L&I)",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia Department of Licenses & Inspections (L&I)"
+          }
+        },
+        {
+          "fact_id": "philadelphia-business_license-portal",
+          "status": "FOUND",
+          "text": "Philadelphia Department of Licenses & Inspections (L&I) portal: Department of Licenses and Inspections | Homepage | City of Philadelphia.",
+          "citation": {
+            "source_name": "Philadelphia Department of Licenses & Inspections (L&I)",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia Department of Licenses & Inspections (L&I)"
+          }
+        },
+        {
+          "fact_id": "philadelphia-business_license-live-1",
+          "status": "FOUND",
+          "text": "Department of Licenses and Inspections | Homepage | City of Philadelphia You are using an outdated browser.",
+          "citation": {
+            "source_name": "Philadelphia Department of Licenses & Inspections (L&I)",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia Department of Licenses & Inspections (L&I)"
+          }
+        },
+        {
+          "fact_id": "philadelphia-business_license-live-2",
+          "status": "FOUND",
+          "text": "Please upgrade your browser to improve your experience.",
+          "citation": {
+            "source_name": "Philadelphia Department of Licenses & Inspections (L&I)",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia Department of Licenses & Inspections (L&I)"
+          }
+        },
+        {
+          "fact_id": "philadelphia-business_license-live-3",
+          "status": "FOUND",
+          "text": "If you can't switch browsers, turn off compatibility mode.",
+          "citation": {
+            "source_name": "Philadelphia Department of Licenses & Inspections (L&I)",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia Department of Licenses & Inspections (L&I)"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for business_license",
+          "source_checked": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+          "rendered": "NOT FOUND — [source checked: https://www.phila.gov/departments/department-of-licenses-and-inspections/]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    },
+    "zoning_use": {
+      "domain_id": "zoning_use",
+      "title": "Zoning Use",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Philadelphia Department of Planning & Development — Zoning",
+        "url": "https://www.phila.gov/departments/department-of-planning-and-development/",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "philadelphia-zoning_use-curated",
+          "status": "FOUND",
+          "text": "Zoning and land-use compliance in Philadelphia is administered by the Department of Planning & Development; use permits and zoning determinations precede many L&I permits.",
+          "citation": {
+            "source_name": "Philadelphia Department of Planning & Development — Zoning",
+            "source_url": "https://www.phila.gov/departments/department-of-planning-and-development/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia Department of Planning & Development — Zoning"
+          }
+        },
+        {
+          "fact_id": "philadelphia-zoning_use-portal",
+          "status": "FOUND",
+          "text": "Philadelphia Department of Planning & Development — Zoning portal: Department of Planning and Development | Homepage | City of Philadelphia.",
+          "citation": {
+            "source_name": "Philadelphia Department of Planning & Development — Zoning",
+            "source_url": "https://www.phila.gov/departments/department-of-planning-and-development/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia Department of Planning & Development — Zoning"
+          }
+        },
+        {
+          "fact_id": "philadelphia-zoning_use-live-1",
+          "status": "FOUND",
+          "text": "Department of Planning and Development | Homepage | City of Philadelphia You are using an outdated browser.",
+          "citation": {
+            "source_name": "Philadelphia Department of Planning & Development — Zoning",
+            "source_url": "https://www.phila.gov/departments/department-of-planning-and-development/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia Department of Planning & Development — Zoning"
+          }
+        },
+        {
+          "fact_id": "philadelphia-zoning_use-live-2",
+          "status": "FOUND",
+          "text": "Please upgrade your browser to improve your experience.",
+          "citation": {
+            "source_name": "Philadelphia Department of Planning & Development — Zoning",
+            "source_url": "https://www.phila.gov/departments/department-of-planning-and-development/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia Department of Planning & Development — Zoning"
+          }
+        },
+        {
+          "fact_id": "philadelphia-zoning_use-live-3",
+          "status": "FOUND",
+          "text": "If you can't switch browsers, turn off compatibility mode.",
+          "citation": {
+            "source_name": "Philadelphia Department of Planning & Development — Zoning",
+            "source_url": "https://www.phila.gov/departments/department-of-planning-and-development/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia Department of Planning & Development — Zoning"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for zoning_use",
+          "source_checked": "https://www.phila.gov/departments/department-of-planning-and-development/",
+          "rendered": "NOT FOUND — [source checked: https://www.phila.gov/departments/department-of-planning-and-development/]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    },
+    "signage": {
+      "domain_id": "signage",
+      "title": "Signage",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Philadelphia L&I — Sign Permits",
+        "url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "philadelphia-signage-curated",
+          "status": "FOUND",
+          "text": "Permanent and temporary sign permits in Philadelphia route through L&I; sign dimensions and illumination rules reference the Philadelphia Code and Art Commission review where applicable.",
+          "citation": {
+            "source_name": "Philadelphia L&I — Sign Permits",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia L&I — Sign Permits"
+          }
+        },
+        {
+          "fact_id": "philadelphia-signage-portal",
+          "status": "FOUND",
+          "text": "Philadelphia L&I — Sign Permits portal: Department of Licenses and Inspections | Homepage | City of Philadelphia.",
+          "citation": {
+            "source_name": "Philadelphia L&I — Sign Permits",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia L&I — Sign Permits"
+          }
+        },
+        {
+          "fact_id": "philadelphia-signage-live-1",
+          "status": "FOUND",
+          "text": "Department of Licenses and Inspections | Homepage | City of Philadelphia You are using an outdated browser.",
+          "citation": {
+            "source_name": "Philadelphia L&I — Sign Permits",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia L&I — Sign Permits"
+          }
+        },
+        {
+          "fact_id": "philadelphia-signage-live-2",
+          "status": "FOUND",
+          "text": "Please upgrade your browser to improve your experience.",
+          "citation": {
+            "source_name": "Philadelphia L&I — Sign Permits",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia L&I — Sign Permits"
+          }
+        },
+        {
+          "fact_id": "philadelphia-signage-live-3",
+          "status": "FOUND",
+          "text": "If you can't switch browsers, turn off compatibility mode.",
+          "citation": {
+            "source_name": "Philadelphia L&I — Sign Permits",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia L&I — Sign Permits"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for signage",
+          "source_checked": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+          "rendered": "NOT FOUND — [source checked: https://www.phila.gov/departments/department-of-licenses-and-inspections/]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    },
+    "health_fire_occupancy": {
+      "domain_id": "health_fire_occupancy",
+      "title": "Health Fire Occupancy",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Philadelphia L&I + Department of Public Health",
+        "url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "philadelphia-health_fire_occupancy-curated",
+          "status": "FOUND",
+          "text": "Building permits and certificates of occupancy are issued by L&I; food establishments also require Health Department plan review and licensing through PDPH.",
+          "citation": {
+            "source_name": "Philadelphia L&I + Department of Public Health",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia L&I + Department of Public Health"
+          }
+        },
+        {
+          "fact_id": "philadelphia-health_fire_occupancy-portal",
+          "status": "FOUND",
+          "text": "Philadelphia L&I + Department of Public Health portal: Department of Licenses and Inspections | Homepage | City of Philadelphia.",
+          "citation": {
+            "source_name": "Philadelphia L&I + Department of Public Health",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia L&I + Department of Public Health"
+          }
+        },
+        {
+          "fact_id": "philadelphia-health_fire_occupancy-live-1",
+          "status": "FOUND",
+          "text": "Department of Licenses and Inspections | Homepage | City of Philadelphia You are using an outdated browser.",
+          "citation": {
+            "source_name": "Philadelphia L&I + Department of Public Health",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia L&I + Department of Public Health"
+          }
+        },
+        {
+          "fact_id": "philadelphia-health_fire_occupancy-live-2",
+          "status": "FOUND",
+          "text": "Please upgrade your browser to improve your experience.",
+          "citation": {
+            "source_name": "Philadelphia L&I + Department of Public Health",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia L&I + Department of Public Health"
+          }
+        },
+        {
+          "fact_id": "philadelphia-health_fire_occupancy-live-3",
+          "status": "FOUND",
+          "text": "If you can't switch browsers, turn off compatibility mode.",
+          "citation": {
+            "source_name": "Philadelphia L&I + Department of Public Health",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia L&I + Department of Public Health"
+          }
+        },
+        {
+          "fact_id": "philadelphia-health_fire_occupancy-secondary",
+          "status": "FOUND",
+          "text": "Related authority for health_fire_occupancy: Philadelphia Department of Public Health.",
+          "citation": {
+            "source_name": "Philadelphia Department of Public Health",
+            "source_url": "https://www.phila.gov/departments/department-of-public-health/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia Department of Public Health"
+          }
+        }
+      ],
+      "fact_count": 6,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for health_fire_occupancy",
+          "source_checked": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+          "rendered": "NOT FOUND — [source checked: https://www.phila.gov/departments/department-of-licenses-and-inspections/]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ],
+      "secondary_regulator": {
+        "agency": "Philadelphia Department of Public Health",
+        "url": "https://www.phila.gov/departments/department-of-public-health/"
+      }
+    },
+    "home_occupation": {
+      "domain_id": "home_occupation",
+      "title": "Home Occupation",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Philadelphia L&I — Home-Based Businesses",
+        "url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "philadelphia-home_occupation-curated",
+          "status": "FOUND",
+          "text": "Home-based businesses in Philadelphia require appropriate L&I licenses and must comply with zoning rules for accessory home occupations.",
+          "citation": {
+            "source_name": "Philadelphia L&I — Home-Based Businesses",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia L&I — Home-Based Businesses"
+          }
+        },
+        {
+          "fact_id": "philadelphia-home_occupation-portal",
+          "status": "FOUND",
+          "text": "Philadelphia L&I — Home-Based Businesses portal: Department of Licenses and Inspections | Homepage | City of Philadelphia.",
+          "citation": {
+            "source_name": "Philadelphia L&I — Home-Based Businesses",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia L&I — Home-Based Businesses"
+          }
+        },
+        {
+          "fact_id": "philadelphia-home_occupation-live-1",
+          "status": "FOUND",
+          "text": "Department of Licenses and Inspections | Homepage | City of Philadelphia You are using an outdated browser.",
+          "citation": {
+            "source_name": "Philadelphia L&I — Home-Based Businesses",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia L&I — Home-Based Businesses"
+          }
+        },
+        {
+          "fact_id": "philadelphia-home_occupation-live-2",
+          "status": "FOUND",
+          "text": "Please upgrade your browser to improve your experience.",
+          "citation": {
+            "source_name": "Philadelphia L&I — Home-Based Businesses",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia L&I — Home-Based Businesses"
+          }
+        },
+        {
+          "fact_id": "philadelphia-home_occupation-live-3",
+          "status": "FOUND",
+          "text": "If you can't switch browsers, turn off compatibility mode.",
+          "citation": {
+            "source_name": "Philadelphia L&I — Home-Based Businesses",
+            "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Philadelphia, PA",
+            "agency": "Philadelphia L&I — Home-Based Businesses"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for home_occupation",
+          "source_checked": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+          "rendered": "NOT FOUND — [source checked: https://www.phila.gov/departments/department-of-licenses-and-inspections/]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    }
+  },
+  "gaps": [
+    {
+      "domain_id": "business_license",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for business_license",
+      "source_checked": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+      "rendered": "NOT FOUND — [source checked: https://www.phila.gov/departments/department-of-licenses-and-inspections/]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "zoning_use",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for zoning_use",
+      "source_checked": "https://www.phila.gov/departments/department-of-planning-and-development/",
+      "rendered": "NOT FOUND — [source checked: https://www.phila.gov/departments/department-of-planning-and-development/]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "signage",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for signage",
+      "source_checked": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+      "rendered": "NOT FOUND — [source checked: https://www.phila.gov/departments/department-of-licenses-and-inspections/]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "health_fire_occupancy",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for health_fire_occupancy",
+      "source_checked": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+      "rendered": "NOT FOUND — [source checked: https://www.phila.gov/departments/department-of-licenses-and-inspections/]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "home_occupation",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for home_occupation",
+      "source_checked": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+      "rendered": "NOT FOUND — [source checked: https://www.phila.gov/departments/department-of-licenses-and-inspections/]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    }
+  ],
+  "summary": {
+    "domain_count": 5,
+    "total_facts": 26,
+    "gap_count": 5,
+    "status_counts": {
+      "FOUND": 5
+    }
+  },
+  "references": [
+    {
+      "ref_id": 1,
+      "source_name": "Philadelphia Department of Licenses & Inspections (L&I)",
+      "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Philadelphia, PA",
+      "rendered": "1. Philadelphia Department of Licenses & Inspections (L&I) — https://www.phila.gov/departments/department-of-licenses-and-inspections/ — retrieved 2026-06-19 — City of Philadelphia, PA"
+    },
+    {
+      "ref_id": 2,
+      "source_name": "Philadelphia Department of Planning & Development — Zoning",
+      "source_url": "https://www.phila.gov/departments/department-of-planning-and-development/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Philadelphia, PA",
+      "rendered": "2. Philadelphia Department of Planning & Development — Zoning — https://www.phila.gov/departments/department-of-planning-and-development/ — retrieved 2026-06-19 — City of Philadelphia, PA"
+    },
+    {
+      "ref_id": 3,
+      "source_name": "Philadelphia L&I — Sign Permits",
+      "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Philadelphia, PA",
+      "rendered": "3. Philadelphia L&I — Sign Permits — https://www.phila.gov/departments/department-of-licenses-and-inspections/ — retrieved 2026-06-19 — City of Philadelphia, PA"
+    },
+    {
+      "ref_id": 4,
+      "source_name": "Philadelphia L&I + Department of Public Health",
+      "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Philadelphia, PA",
+      "rendered": "4. Philadelphia L&I + Department of Public Health — https://www.phila.gov/departments/department-of-licenses-and-inspections/ — retrieved 2026-06-19 — City of Philadelphia, PA"
+    },
+    {
+      "ref_id": 5,
+      "source_name": "Philadelphia Department of Public Health",
+      "source_url": "https://www.phila.gov/departments/department-of-public-health/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Philadelphia, PA",
+      "rendered": "5. Philadelphia Department of Public Health — https://www.phila.gov/departments/department-of-public-health/ — retrieved 2026-06-19 — City of Philadelphia, PA"
+    },
+    {
+      "ref_id": 6,
+      "source_name": "Philadelphia L&I — Home-Based Businesses",
+      "source_url": "https://www.phila.gov/departments/department-of-licenses-and-inspections/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Philadelphia, PA",
+      "rendered": "6. Philadelphia L&I — Home-Based Businesses — https://www.phila.gov/departments/department-of-licenses-and-inspections/ — retrieved 2026-06-19 — City of Philadelphia, PA"
+    }
+  ]
+}

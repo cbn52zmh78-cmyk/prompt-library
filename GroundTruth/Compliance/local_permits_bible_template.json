@@ -1,0 +1,218 @@
+{
+  "artifact": "groundtruth_local_permits_bible_template",
+  "version": "1.0",
+  "category": "local_permits_licenses",
+  "tier": "B",
+  "layer": "municipal",
+  "complements": "GroundTruth/Compliance/lanes/* (state/federal compliance packs)",
+  "task": "Local Permits & Licenses — municipal bible structure (city/county)",
+  "generated_at": "2026-06-19T12:00:00+00:00",
+  "as_of_date": "2026-06-19",
+  "citation_standard": "STD-CITE-001",
+  "pinned_output_path": "GroundTruth/Compliance/local_permits/{city_slug}.json",
+  "disclaimer": "Municipal permit and license intelligence compiled from cited public sources — informational only; not legal, zoning, or tax advice. Confirm fees, timelines, and applicability with the cited city/county authority before filing.",
+  "policy": {
+    "public_sources_only": true,
+    "authority_tier": "municipal_primary",
+    "no_bypass": true,
+    "http_403_park": true,
+    "gap_rendering": "NOT FOUND — [source checked: …]",
+    "status_taxonomy": [
+      "FOUND",
+      "EXEMPT",
+      "REQUIRES_CONFIRMATION",
+      "NOT FOUND",
+      "ACCESS_RESTRICTED",
+      "PARKED"
+    ],
+    "as_of_field": "retrieved_date"
+  },
+  "city_pack_schema": {
+    "required_fields": [
+      "artifact",
+      "version",
+      "tier",
+      "citation_standard",
+      "city",
+      "city_slug",
+      "state",
+      "state_code",
+      "jurisdiction",
+      "domains",
+      "gaps",
+      "references",
+      "summary",
+      "retrieved_date"
+    ],
+    "optional_fields": [
+      "county",
+      "borough",
+      "consolidated_city_county",
+      "notes"
+    ]
+  },
+  "domains": [
+    {
+      "domain_id": "business_license",
+      "title": "Business License / Registration",
+      "purpose": "City business privilege license, tax registration, or mercantile permit required to operate a commercial establishment within municipal limits.",
+      "primary_authority_types": [
+        "Department of Licenses & Inspections",
+        "Business Affairs & Consumer Protection",
+        "Office of Finance / Business Tax",
+        "City Clerk / Revenue"
+      ],
+      "expected_datums": [
+        {
+          "label": "Licensing authority name",
+          "status_if_missing": "NOT FOUND"
+        },
+        {
+          "label": "Application / registration portal URL",
+          "status_if_missing": "NOT FOUND"
+        },
+        {
+          "label": "Who must register (physical nexus, home-based, contractors)",
+          "status_if_missing": "REQUIRES_CONFIRMATION"
+        },
+        {
+          "label": "Renewal cadence or expiration rule",
+          "status_if_missing": "NOT FOUND"
+        },
+        {
+          "label": "Published fee schedule (if on portal)",
+          "status_if_missing": "NOT FOUND"
+        }
+      ],
+      "gap_policy": "Fee tables behind login or PDF-only → NOT FOUND with PDF URL as source_checked; state-level registration does not replace municipal license."
+    },
+    {
+      "domain_id": "zoning_use",
+      "title": "Zoning / Land Use",
+      "purpose": "Permitted uses, conditional uses, special exceptions, and zoning clearance before occupancy or change of use.",
+      "primary_authority_types": [
+        "Planning Department",
+        "Department of City Planning",
+        "Planning & Development",
+        "Zoning Board of Adjustment"
+      ],
+      "expected_datums": [
+        {
+          "label": "Zoning map / ordinance portal",
+          "status_if_missing": "NOT FOUND"
+        },
+        {
+          "label": "Use-permit or zoning clearance process",
+          "status_if_missing": "NOT FOUND"
+        },
+        {
+          "label": "Home-based / accessory use cross-reference",
+          "status_if_missing": "REQUIRES_CONFIRMATION"
+        }
+      ],
+      "gap_policy": "Cities without traditional zoning (e.g. Houston) → EXEMPT or REQUIRES_CONFIRMATION with deed-restriction / plat note; never assume state zoning replaces local."
+    },
+    {
+      "domain_id": "signage",
+      "title": "Signage Permits",
+      "purpose": "Permanent, temporary, illuminated, and facade signage permits; often split between planning and building departments.",
+      "primary_authority_types": [
+        "Planning — Sign Ordinance",
+        "Department of Buildings",
+        "Licenses & Inspections"
+      ],
+      "expected_datums": [
+        {
+          "label": "Sign permit application portal",
+          "status_if_missing": "NOT FOUND"
+        },
+        {
+          "label": "Size / illumination / district rules summary",
+          "status_if_missing": "NOT FOUND"
+        },
+        {
+          "label": "Fee or review timeline (if published)",
+          "status_if_missing": "NOT FOUND"
+        }
+      ],
+      "gap_policy": "Sign code in municipal code PDF without extractable HTML → cite code URL + NOT FOUND for fee table if absent."
+    },
+    {
+      "domain_id": "health_fire_occupancy",
+      "title": "Health / Fire / Occupancy",
+      "purpose": "Certificate of occupancy, fire inspection, health permit (food), assembly occupancy — local enforcement before opening.",
+      "primary_authority_types": [
+        "Fire Department / Fire Marshal",
+        "Department of Public Health",
+        "Building Department",
+        "Licenses & Inspections"
+      ],
+      "expected_datums": [
+        {
+          "label": "Certificate of occupancy / use-and-occupancy process",
+          "status_if_missing": "NOT FOUND"
+        },
+        {
+          "label": "Food / health establishment permit portal (if applicable)",
+          "status_if_missing": "NOT FOUND"
+        },
+        {
+          "label": "Fire inspection or assembly permit trigger",
+          "status_if_missing": "REQUIRES_CONFIRMATION"
+        }
+      ],
+      "gap_policy": "County health department overlay (e.g. LA County vs City of LA) → REQUIRES_CONFIRMATION + explicit jurisdiction split in gaps."
+    },
+    {
+      "domain_id": "home_occupation",
+      "title": "Home Occupation / Home-Based Business",
+      "purpose": "Accessory home business rules — zoning clearance, license type, signage prohibition, employee/traffic limits.",
+      "primary_authority_types": [
+        "Planning / Zoning",
+        "Business License bureau",
+        "Licenses & Inspections"
+      ],
+      "expected_datums": [
+        {
+          "label": "Home occupation permit or registration path",
+          "status_if_missing": "NOT FOUND"
+        },
+        {
+          "label": "Zoning code section or policy page",
+          "status_if_missing": "NOT FOUND"
+        },
+        {
+          "label": "Restrictions (employees, signage, commercial vehicles)",
+          "status_if_missing": "NOT FOUND"
+        }
+      ],
+      "gap_policy": "No home-occupation ordinance published → NOT FOUND — [source checked: planning portal + municipal code index]."
+    }
+  ],
+  "references_block": {
+    "format": "numbered STD-CITE-001 references[]",
+    "tuple": [
+      "source_name",
+      "source_url",
+      "retrieved_date",
+      "jurisdiction"
+    ],
+    "gap_format": "NOT FOUND — [source checked: …]"
+  },
+  "acceptance_criteria": [
+    "Every city pack includes all five domain_id sections",
+    "Every cited_fact carries full STD-CITE-001 citation tuple",
+    "Every gap uses NOT FOUND or REQUIRES_CONFIRMATION with source_checked",
+    "Municipal .gov primary; state portals only as routing pointers",
+    "HTTP 403/404 → PARKED on source_register without bypass",
+    "No mirror paths — single pinned output per city_slug"
+  ],
+  "expansion_pattern": {
+    "next_metro_batch": "County seats + franchise expansion targets",
+    "cross_lane_refs": [
+      "R1 food/hospitality (health permits)",
+      "R2 construction (building permits)",
+      "R6 tech/retail (business registration)"
+    ]
+  }
+}

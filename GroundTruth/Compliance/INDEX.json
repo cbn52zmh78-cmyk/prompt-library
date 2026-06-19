@@ -1,0 +1,85 @@
+{
+  "artifact": "groundtruth_compliance_index",
+  "version": "1.0",
+  "generated_at": "2026-06-19T10:06:28.028662+00:00",
+  "as_of_date": "2026-06-19",
+  "lanes": {
+    "state_federal": "GroundTruth/Compliance/lanes/",
+    "local_permits_tier_b": "GroundTruth/Compliance/local_permits/"
+  },
+  "local_permits": {
+    "tier": "B",
+    "citation_standard": "STD-CITE-001",
+    "bible_template": "GroundTruth/Compliance/local_permits_bible_template.json",
+    "source_register": "GroundTruth/Compliance/local_permits/source_register.json",
+    "harvester": "Science/scripts/harvest_groundtruth_local_permits.py",
+    "metro_sample_count": 5,
+    "total_facts": 127,
+    "total_gaps": 25,
+    "harvested_sources": 30,
+    "parked_sources": 0,
+    "metros": [
+      {
+        "city": "Philadelphia",
+        "city_slug": "philadelphia",
+        "state_code": "PA",
+        "file": "local_permits/philadelphia.json",
+        "total_facts": 26,
+        "gap_count": 5,
+        "status_counts": {
+          "FOUND": 5
+        },
+        "reference_count": 6
+      },
+      {
+        "city": "New York City",
+        "city_slug": "new-york-city",
+        "state_code": "NY",
+        "file": "local_permits/new-york-city.json",
+        "total_facts": 23,
+        "gap_count": 5,
+        "status_counts": {
+          "FOUND": 5
+        },
+        "reference_count": 6
+      },
+      {
+        "city": "Los Angeles",
+        "city_slug": "los-angeles",
+        "state_code": "CA",
+        "file": "local_permits/los-angeles.json",
+        "total_facts": 26,
+        "gap_count": 5,
+        "status_counts": {
+          "FOUND": 5
+        },
+        "reference_count": 6
+      },
+      {
+        "city": "Houston",
+        "city_slug": "houston",
+        "state_code": "TX",
+        "file": "local_permits/houston.json",
+        "total_facts": 26,
+        "gap_count": 5,
+        "status_counts": {
+          "FOUND": 3,
+          "REQUIRES_CONFIRMATION": 2
+        },
+        "reference_count": 6
+      },
+      {
+        "city": "Chicago",
+        "city_slug": "chicago",
+        "state_code": "IL",
+        "file": "local_permits/chicago.json",
+        "total_facts": 26,
+        "gap_count": 5,
+        "status_counts": {
+          "FOUND": 5
+        },
+        "reference_count": 6
+      }
+    ]
+  }
+}

@@ -1,0 +1,513 @@
+{
+  "artifact": "local_permits_city_pack",
+  "version": "1.0",
+  "tier": "B",
+  "layer": "municipal",
+  "citation_standard": "STD-CITE-001",
+  "task": "Local Permits & Licenses — city/county bible (sample metro)",
+  "city": "New York City",
+  "city_slug": "new-york-city",
+  "state": "New York",
+  "state_code": "NY",
+  "county": "New York (boroughs)",
+  "borough": "Five boroughs",
+  "consolidated_city_county": true,
+  "jurisdiction": "City of New York, NY",
+  "generated_at": "2026-06-19T10:05:54.196843+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Municipal permit and license intelligence from cited public sources — informational only; not legal, zoning, or tax advice. Confirm fees and applicability with the cited city/county authority.",
+  "policy": "Public municipal .gov sources only; HTTP 403/404 PARKED without bypass; gaps explicit.",
+  "notes": null,
+  "domains": {
+    "business_license": {
+      "domain_id": "business_license",
+      "title": "Business License",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "NYC Department of Small Business Services (SBS)",
+        "url": "https://www.nyc.gov/site/sbs/businesses/start-a-business.page",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "new-york-city-business_license-curated",
+          "status": "FOUND",
+          "text": "NYC business formation and industry-specific license routing starts with SBS; many sectors require additional agency permits (Health, Consumer Affairs, SLA, etc.).",
+          "citation": {
+            "source_name": "NYC Department of Small Business Services (SBS)",
+            "source_url": "https://www.nyc.gov/site/sbs/businesses/start-a-business.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC Department of Small Business Services (SBS)"
+          }
+        },
+        {
+          "fact_id": "new-york-city-business_license-portal",
+          "status": "FOUND",
+          "text": "NYC Department of Small Business Services (SBS) portal: Start a Business - SBS.",
+          "citation": {
+            "source_name": "NYC Department of Small Business Services (SBS)",
+            "source_url": "https://www.nyc.gov/site/sbs/businesses/start-a-business.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC Department of Small Business Services (SBS)"
+          }
+        },
+        {
+          "fact_id": "new-york-city-business_license-live-1",
+          "status": "FOUND",
+          "text": "Learn what it takes to: Create a business plan Register your business Finance your business Find and plan your space Prepare to open Hire a team Open and operate Have questions?",
+          "citation": {
+            "source_name": "NYC Department of Small Business Services (SBS)",
+            "source_url": "https://www.nyc.gov/site/sbs/businesses/start-a-business.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC Department of Small Business Services (SBS)"
+          }
+        },
+        {
+          "fact_id": "new-york-city-business_license-live-2",
+          "status": "FOUND",
+          "text": "Please call the NYC Small Business Services Hotline at 888-SBS-4NYC (888-727-4692).",
+          "citation": {
+            "source_name": "NYC Department of Small Business Services (SBS)",
+            "source_url": "https://www.nyc.gov/site/sbs/businesses/start-a-business.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC Department of Small Business Services (SBS)"
+          }
+        },
+        {
+          "fact_id": "new-york-city-business_license-live-3",
+          "status": "FOUND",
+          "text": "Get the help you need to start your business City Programs & Initiatives NYC Business Express Service Team (BEST) Interagency effort providing a sole point of contact to cut through red tape.",
+          "citation": {
+            "source_name": "NYC Department of Small Business Services (SBS)",
+            "source_url": "https://www.nyc.gov/site/sbs/businesses/start-a-business.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC Department of Small Business Services (SBS)"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for business_license",
+          "source_checked": "https://www.nyc.gov/site/sbs/businesses/start-a-business.page",
+          "rendered": "NOT FOUND — [source checked: https://www.nyc.gov/site/sbs/businesses/start-a-business.page]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    },
+    "zoning_use": {
+      "domain_id": "zoning_use",
+      "title": "Zoning Use",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "NYC Department of City Planning (DCP)",
+        "url": "https://www.nyc.gov/site/planning/index.page",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "new-york-city-zoning_use-curated",
+          "status": "FOUND",
+          "text": "Zoning applications and land-use reviews in NYC are handled by the Department of City Planning and borough offices; ZoLa map defines district uses.",
+          "citation": {
+            "source_name": "NYC Department of City Planning (DCP)",
+            "source_url": "https://www.nyc.gov/site/planning/index.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC Department of City Planning (DCP)"
+          }
+        },
+        {
+          "fact_id": "new-york-city-zoning_use-portal",
+          "status": "FOUND",
+          "text": "NYC Department of City Planning (DCP) portal: Department of City Planning.",
+          "citation": {
+            "source_name": "NYC Department of City Planning (DCP)",
+            "source_url": "https://www.nyc.gov/site/planning/index.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC Department of City Planning (DCP)"
+          }
+        }
+      ],
+      "fact_count": 2,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for zoning_use",
+          "source_checked": "https://www.nyc.gov/site/planning/index.page",
+          "rendered": "NOT FOUND — [source checked: https://www.nyc.gov/site/planning/index.page]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    },
+    "signage": {
+      "domain_id": "signage",
+      "title": "Signage",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "NYC Department of Buildings — Signs",
+        "url": "https://www.nyc.gov/site/buildings/index.page",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "new-york-city-signage-curated",
+          "status": "FOUND",
+          "text": "Sign permits in NYC are filed with the Department of Buildings; zoning resolution and DOT rules govern size, projection, and illumination.",
+          "citation": {
+            "source_name": "NYC Department of Buildings — Signs",
+            "source_url": "https://www.nyc.gov/site/buildings/index.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC Department of Buildings — Signs"
+          }
+        },
+        {
+          "fact_id": "new-york-city-signage-portal",
+          "status": "FOUND",
+          "text": "NYC Department of Buildings — Signs portal: NYC Department of Buildings.",
+          "citation": {
+            "source_name": "NYC Department of Buildings — Signs",
+            "source_url": "https://www.nyc.gov/site/buildings/index.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC Department of Buildings — Signs"
+          }
+        },
+        {
+          "fact_id": "new-york-city-signage-live-1",
+          "status": "FOUND",
+          "text": "The new law also introduces a one-year grace period for SST card renewals and includes updates to course equivalency standards.",
+          "citation": {
+            "source_name": "NYC Department of Buildings — Signs",
+            "source_url": "https://www.nyc.gov/site/buildings/index.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC Department of Buildings — Signs"
+          }
+        },
+        {
+          "fact_id": "new-york-city-signage-live-2",
+          "status": "FOUND",
+          "text": "Landmarked buildings and buildings in historic districts are exempt.",
+          "citation": {
+            "source_name": "NYC Department of Buildings — Signs",
+            "source_url": "https://www.nyc.gov/site/buildings/index.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC Department of Buildings — Signs"
+          }
+        },
+        {
+          "fact_id": "new-york-city-signage-live-3",
+          "status": "FOUND",
+          "text": "The report findings highlight areas that could potentially reduce the need for some sidewalk sheds without negatively impacting public safety.",
+          "citation": {
+            "source_name": "NYC Department of Buildings — Signs",
+            "source_url": "https://www.nyc.gov/site/buildings/index.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC Department of Buildings — Signs"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for signage",
+          "source_checked": "https://www.nyc.gov/site/buildings/index.page",
+          "rendered": "NOT FOUND — [source checked: https://www.nyc.gov/site/buildings/index.page]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    },
+    "health_fire_occupancy": {
+      "domain_id": "health_fire_occupancy",
+      "title": "Health Fire Occupancy",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "NYC Department of Health and Mental Hygiene (DOHMH)",
+        "url": "https://www.nyc.gov/site/doh/index.page",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "new-york-city-health_fire_occupancy-curated",
+          "status": "FOUND",
+          "text": "Food service and many health permits route through DOHMH; occupancy and fire safety involve DOB certificates of occupancy and FDNY inspection for assembly uses.",
+          "citation": {
+            "source_name": "NYC Department of Health and Mental Hygiene (DOHMH)",
+            "source_url": "https://www.nyc.gov/site/doh/index.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC Department of Health and Mental Hygiene (DOHMH)"
+          }
+        },
+        {
+          "fact_id": "new-york-city-health_fire_occupancy-portal",
+          "status": "FOUND",
+          "text": "NYC Department of Health and Mental Hygiene (DOHMH) portal: NYC Health.",
+          "citation": {
+            "source_name": "NYC Department of Health and Mental Hygiene (DOHMH)",
+            "source_url": "https://www.nyc.gov/site/doh/index.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC Department of Health and Mental Hygiene (DOHMH)"
+          }
+        },
+        {
+          "fact_id": "new-york-city-health_fire_occupancy-live-1",
+          "status": "FOUND",
+          "text": "Learn about services that are available and get information to keep you healthy during your trip.",
+          "citation": {
+            "source_name": "NYC Department of Health and Mental Hygiene (DOHMH)",
+            "source_url": "https://www.nyc.gov/site/doh/index.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC Department of Health and Mental Hygiene (DOHMH)"
+          }
+        },
+        {
+          "fact_id": "new-york-city-health_fire_occupancy-live-2",
+          "status": "FOUND",
+          "text": "Find Sexual Health Services Sexual health care is available for people of all gender identities, sexual orientations, and immigration statuses in New York City.",
+          "citation": {
+            "source_name": "NYC Department of Health and Mental Hygiene (DOHMH)",
+            "source_url": "https://www.nyc.gov/site/doh/index.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC Department of Health and Mental Hygiene (DOHMH)"
+          }
+        },
+        {
+          "fact_id": "new-york-city-health_fire_occupancy-live-3",
+          "status": "FOUND",
+          "text": "Learn more about low- to no-cost sexual health care services near you.",
+          "citation": {
+            "source_name": "NYC Department of Health and Mental Hygiene (DOHMH)",
+            "source_url": "https://www.nyc.gov/site/doh/index.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC Department of Health and Mental Hygiene (DOHMH)"
+          }
+        },
+        {
+          "fact_id": "new-york-city-health_fire_occupancy-secondary",
+          "status": "FOUND",
+          "text": "Related authority for health_fire_occupancy: NYC Department of Buildings.",
+          "citation": {
+            "source_name": "NYC Department of Buildings",
+            "source_url": "https://www.nyc.gov/site/buildings/index.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC Department of Buildings"
+          }
+        }
+      ],
+      "fact_count": 6,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for health_fire_occupancy",
+          "source_checked": "https://www.nyc.gov/site/doh/index.page",
+          "rendered": "NOT FOUND — [source checked: https://www.nyc.gov/site/doh/index.page]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ],
+      "secondary_regulator": {
+        "agency": "NYC Department of Buildings",
+        "url": "https://www.nyc.gov/site/buildings/index.page"
+      }
+    },
+    "home_occupation": {
+      "domain_id": "home_occupation",
+      "title": "Home Occupation",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "NYC SBS — Business from Home",
+        "url": "https://www.nyc.gov/site/sbs/businesses/start-a-business.page",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "new-york-city-home_occupation-curated",
+          "status": "FOUND",
+          "text": "NYC home-based businesses must comply with zoning (primarily residential districts), business registration, and sector-specific agency rules.",
+          "citation": {
+            "source_name": "NYC SBS — Business from Home",
+            "source_url": "https://www.nyc.gov/site/sbs/businesses/start-a-business.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC SBS — Business from Home"
+          }
+        },
+        {
+          "fact_id": "new-york-city-home_occupation-portal",
+          "status": "FOUND",
+          "text": "NYC SBS — Business from Home portal: Start a Business - SBS.",
+          "citation": {
+            "source_name": "NYC SBS — Business from Home",
+            "source_url": "https://www.nyc.gov/site/sbs/businesses/start-a-business.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC SBS — Business from Home"
+          }
+        },
+        {
+          "fact_id": "new-york-city-home_occupation-live-1",
+          "status": "FOUND",
+          "text": "Learn what it takes to: Create a business plan Register your business Finance your business Find and plan your space Prepare to open Hire a team Open and operate Have questions?",
+          "citation": {
+            "source_name": "NYC SBS — Business from Home",
+            "source_url": "https://www.nyc.gov/site/sbs/businesses/start-a-business.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC SBS — Business from Home"
+          }
+        },
+        {
+          "fact_id": "new-york-city-home_occupation-live-2",
+          "status": "FOUND",
+          "text": "Please call the NYC Small Business Services Hotline at 888-SBS-4NYC (888-727-4692).",
+          "citation": {
+            "source_name": "NYC SBS — Business from Home",
+            "source_url": "https://www.nyc.gov/site/sbs/businesses/start-a-business.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC SBS — Business from Home"
+          }
+        },
+        {
+          "fact_id": "new-york-city-home_occupation-live-3",
+          "status": "FOUND",
+          "text": "Get the help you need to start your business City Programs & Initiatives NYC Business Express Service Team (BEST) Interagency effort providing a sole point of contact to cut through red tape.",
+          "citation": {
+            "source_name": "NYC SBS — Business from Home",
+            "source_url": "https://www.nyc.gov/site/sbs/businesses/start-a-business.page",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of New York, NY",
+            "agency": "NYC SBS — Business from Home"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for home_occupation",
+          "source_checked": "https://www.nyc.gov/site/sbs/businesses/start-a-business.page",
+          "rendered": "NOT FOUND — [source checked: https://www.nyc.gov/site/sbs/businesses/start-a-business.page]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    }
+  },
+  "gaps": [
+    {
+      "domain_id": "business_license",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for business_license",
+      "source_checked": "https://www.nyc.gov/site/sbs/businesses/start-a-business.page",
+      "rendered": "NOT FOUND — [source checked: https://www.nyc.gov/site/sbs/businesses/start-a-business.page]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "zoning_use",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for zoning_use",
+      "source_checked": "https://www.nyc.gov/site/planning/index.page",
+      "rendered": "NOT FOUND — [source checked: https://www.nyc.gov/site/planning/index.page]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "signage",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for signage",
+      "source_checked": "https://www.nyc.gov/site/buildings/index.page",
+      "rendered": "NOT FOUND — [source checked: https://www.nyc.gov/site/buildings/index.page]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "health_fire_occupancy",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for health_fire_occupancy",
+      "source_checked": "https://www.nyc.gov/site/doh/index.page",
+      "rendered": "NOT FOUND — [source checked: https://www.nyc.gov/site/doh/index.page]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "home_occupation",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for home_occupation",
+      "source_checked": "https://www.nyc.gov/site/sbs/businesses/start-a-business.page",
+      "rendered": "NOT FOUND — [source checked: https://www.nyc.gov/site/sbs/businesses/start-a-business.page]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    }
+  ],
+  "summary": {
+    "domain_count": 5,
+    "total_facts": 23,
+    "gap_count": 5,
+    "status_counts": {
+      "FOUND": 5
+    }
+  },
+  "references": [
+    {
+      "ref_id": 1,
+      "source_name": "NYC Department of Small Business Services (SBS)",
+      "source_url": "https://www.nyc.gov/site/sbs/businesses/start-a-business.page",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of New York, NY",
+      "rendered": "1. NYC Department of Small Business Services (SBS) — https://www.nyc.gov/site/sbs/businesses/start-a-business.page — retrieved 2026-06-19 — City of New York, NY"
+    },
+    {
+      "ref_id": 2,
+      "source_name": "NYC Department of City Planning (DCP)",
+      "source_url": "https://www.nyc.gov/site/planning/index.page",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of New York, NY",
+      "rendered": "2. NYC Department of City Planning (DCP) — https://www.nyc.gov/site/planning/index.page — retrieved 2026-06-19 — City of New York, NY"
+    },
+    {
+      "ref_id": 3,
+      "source_name": "NYC Department of Buildings — Signs",
+      "source_url": "https://www.nyc.gov/site/buildings/index.page",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of New York, NY",
+      "rendered": "3. NYC Department of Buildings — Signs — https://www.nyc.gov/site/buildings/index.page — retrieved 2026-06-19 — City of New York, NY"
+    },
+    {
+      "ref_id": 4,
+      "source_name": "NYC Department of Health and Mental Hygiene (DOHMH)",
+      "source_url": "https://www.nyc.gov/site/doh/index.page",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of New York, NY",
+      "rendered": "4. NYC Department of Health and Mental Hygiene (DOHMH) — https://www.nyc.gov/site/doh/index.page — retrieved 2026-06-19 — City of New York, NY"
+    },
+    {
+      "ref_id": 5,
+      "source_name": "NYC Department of Buildings",
+      "source_url": "https://www.nyc.gov/site/buildings/index.page",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of New York, NY",
+      "rendered": "5. NYC Department of Buildings — https://www.nyc.gov/site/buildings/index.page — retrieved 2026-06-19 — City of New York, NY"
+    },
+    {
+      "ref_id": 6,
+      "source_name": "NYC SBS — Business from Home",
+      "source_url": "https://www.nyc.gov/site/sbs/businesses/start-a-business.page",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of New York, NY",
+      "rendered": "6. NYC SBS — Business from Home — https://www.nyc.gov/site/sbs/businesses/start-a-business.page — retrieved 2026-06-19 — City of New York, NY"
+    }
+  ]
+}

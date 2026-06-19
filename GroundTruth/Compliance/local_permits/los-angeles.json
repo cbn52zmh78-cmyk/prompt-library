@@ -1,0 +1,549 @@
+{
+  "artifact": "local_permits_city_pack",
+  "version": "1.0",
+  "tier": "B",
+  "layer": "municipal",
+  "citation_standard": "STD-CITE-001",
+  "task": "Local Permits & Licenses — city/county bible (sample metro)",
+  "city": "Los Angeles",
+  "city_slug": "los-angeles",
+  "state": "California",
+  "state_code": "CA",
+  "county": "Los Angeles",
+  "borough": null,
+  "consolidated_city_county": false,
+  "jurisdiction": "City of Los Angeles, CA",
+  "generated_at": "2026-06-19T10:06:25.626584+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Municipal permit and license intelligence from cited public sources — informational only; not legal, zoning, or tax advice. Confirm fees and applicability with the cited city/county authority.",
+  "policy": "Public municipal .gov sources only; HTTP 403/404 PARKED without bypass; gaps explicit.",
+  "notes": "LA County Public Health overlays for unincorporated areas and some cities — confirm jurisdiction.",
+  "domains": {
+    "business_license": {
+      "domain_id": "business_license",
+      "title": "Business License",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "City of Los Angeles Office of Finance — Business Tax",
+        "url": "https://finance.lacity.org/",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "los-angeles-business_license-curated",
+          "status": "FOUND",
+          "text": "Business tax registration (BTRC) with the City of Los Angeles Office of Finance is required for businesses operating in city limits; additional police commission permits apply to some industries.",
+          "citation": {
+            "source_name": "City of Los Angeles Office of Finance — Business Tax",
+            "source_url": "https://finance.lacity.org/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "City of Los Angeles Office of Finance — Business Tax"
+          }
+        },
+        {
+          "fact_id": "los-angeles-business_license-portal",
+          "status": "FOUND",
+          "text": "City of Los Angeles Office of Finance — Business Tax portal: Home | Los Angeles Office of Finance.",
+          "citation": {
+            "source_name": "City of Los Angeles Office of Finance — Business Tax",
+            "source_url": "https://finance.lacity.org/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "City of Los Angeles Office of Finance — Business Tax"
+          }
+        },
+        {
+          "fact_id": "los-angeles-business_license-live-1",
+          "status": "FOUND",
+          "text": "Permits Business Requiring Permits Tobacco Permits Fire Permit Fire Permit Fees Police Permits Group 1 Police Permits Group 2 Police Permits Business Taxes About the Business Tax Fiscal vs.",
+          "citation": {
+            "source_name": "City of Los Angeles Office of Finance — Business Tax",
+            "source_url": "https://finance.lacity.org/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "City of Los Angeles Office of Finance — Business Tax"
+          }
+        },
+        {
+          "fact_id": "los-angeles-business_license-live-2",
+          "status": "FOUND",
+          "text": "Collection Agency Information Offer in Compromise Info and FAQ Changing or Closing Business?",
+          "citation": {
+            "source_name": "City of Los Angeles Office of Finance — Business Tax",
+            "source_url": "https://finance.lacity.org/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "City of Los Angeles Office of Finance — Business Tax"
+          }
+        },
+        {
+          "fact_id": "los-angeles-business_license-live-3",
+          "status": "FOUND",
+          "text": "Please note that our public counter will be closed on Thursday, June 18, and Thursday, July 2.",
+          "citation": {
+            "source_name": "City of Los Angeles Office of Finance — Business Tax",
+            "source_url": "https://finance.lacity.org/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "City of Los Angeles Office of Finance — Business Tax"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for business_license",
+          "source_checked": "https://finance.lacity.org/",
+          "rendered": "NOT FOUND — [source checked: https://finance.lacity.org/]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    },
+    "zoning_use": {
+      "domain_id": "zoning_use",
+      "title": "Zoning Use",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Los Angeles City Planning",
+        "url": "https://planning.lacity.gov/",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "los-angeles-zoning_use-curated",
+          "status": "FOUND",
+          "text": "Los Angeles City Planning administers zoning, plan checks, and land-use entitlements; ZIMAS identifies zoning for parcels in the City of LA.",
+          "citation": {
+            "source_name": "Los Angeles City Planning",
+            "source_url": "https://planning.lacity.gov/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles City Planning"
+          }
+        },
+        {
+          "fact_id": "los-angeles-zoning_use-portal",
+          "status": "FOUND",
+          "text": "Los Angeles City Planning portal: Home | Los Angeles City Planning.",
+          "citation": {
+            "source_name": "Los Angeles City Planning",
+            "source_url": "https://planning.lacity.gov/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles City Planning"
+          }
+        },
+        {
+          "fact_id": "los-angeles-zoning_use-live-1",
+          "status": "FOUND",
+          "text": "Read more + Senate Bill (SB) 79 Local Implementation Ordinances Released.",
+          "citation": {
+            "source_name": "Los Angeles City Planning",
+            "source_url": "https://planning.lacity.gov/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles City Planning"
+          }
+        },
+        {
+          "fact_id": "los-angeles-zoning_use-live-2",
+          "status": "FOUND",
+          "text": "Read more + New Affordable Housing Linkage Fee Market Area Maps Approved by City Council.",
+          "citation": {
+            "source_name": "Los Angeles City Planning",
+            "source_url": "https://planning.lacity.gov/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles City Planning"
+          }
+        },
+        {
+          "fact_id": "los-angeles-zoning_use-live-3",
+          "status": "FOUND",
+          "text": "Read more + General Plan Maintenance Surcharge (GPMS) takes effect June 9, 2026.",
+          "citation": {
+            "source_name": "Los Angeles City Planning",
+            "source_url": "https://planning.lacity.gov/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles City Planning"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for zoning_use",
+          "source_checked": "https://planning.lacity.gov/",
+          "rendered": "NOT FOUND — [source checked: https://planning.lacity.gov/]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    },
+    "signage": {
+      "domain_id": "signage",
+      "title": "Signage",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Los Angeles City Planning — Signs",
+        "url": "https://planning.lacity.gov/",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "los-angeles-signage-curated",
+          "status": "FOUND",
+          "text": "Sign permits and sign district rules in the City of Los Angeles are processed through City Planning and LADBS building permit channels.",
+          "citation": {
+            "source_name": "Los Angeles City Planning — Signs",
+            "source_url": "https://planning.lacity.gov/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles City Planning — Signs"
+          }
+        },
+        {
+          "fact_id": "los-angeles-signage-portal",
+          "status": "FOUND",
+          "text": "Los Angeles City Planning — Signs portal: Home | Los Angeles City Planning.",
+          "citation": {
+            "source_name": "Los Angeles City Planning — Signs",
+            "source_url": "https://planning.lacity.gov/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles City Planning — Signs"
+          }
+        },
+        {
+          "fact_id": "los-angeles-signage-live-1",
+          "status": "FOUND",
+          "text": "Read more + Senate Bill (SB) 79 Local Implementation Ordinances Released.",
+          "citation": {
+            "source_name": "Los Angeles City Planning — Signs",
+            "source_url": "https://planning.lacity.gov/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles City Planning — Signs"
+          }
+        },
+        {
+          "fact_id": "los-angeles-signage-live-2",
+          "status": "FOUND",
+          "text": "Read more + New Affordable Housing Linkage Fee Market Area Maps Approved by City Council.",
+          "citation": {
+            "source_name": "Los Angeles City Planning — Signs",
+            "source_url": "https://planning.lacity.gov/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles City Planning — Signs"
+          }
+        },
+        {
+          "fact_id": "los-angeles-signage-live-3",
+          "status": "FOUND",
+          "text": "Read more + General Plan Maintenance Surcharge (GPMS) takes effect June 9, 2026.",
+          "citation": {
+            "source_name": "Los Angeles City Planning — Signs",
+            "source_url": "https://planning.lacity.gov/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles City Planning — Signs"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for signage",
+          "source_checked": "https://planning.lacity.gov/",
+          "rendered": "NOT FOUND — [source checked: https://planning.lacity.gov/]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    },
+    "health_fire_occupancy": {
+      "domain_id": "health_fire_occupancy",
+      "title": "Health Fire Occupancy",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Los Angeles Department of Building and Safety (LADBS)",
+        "url": "https://www.ladbs.org/",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "los-angeles-health_fire_occupancy-curated",
+          "status": "FOUND",
+          "text": "LADBS issues building permits and certificates of occupancy; retail food may require LA County Public Health permits when county is the health authority.",
+          "citation": {
+            "source_name": "Los Angeles Department of Building and Safety (LADBS)",
+            "source_url": "https://www.ladbs.org/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles Department of Building and Safety (LADBS)"
+          }
+        },
+        {
+          "fact_id": "los-angeles-health_fire_occupancy-portal",
+          "status": "FOUND",
+          "text": "Los Angeles Department of Building and Safety (LADBS) portal: Home Page | LADBS.",
+          "citation": {
+            "source_name": "Los Angeles Department of Building and Safety (LADBS)",
+            "source_url": "https://www.ladbs.org/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles Department of Building and Safety (LADBS)"
+          }
+        },
+        {
+          "fact_id": "los-angeles-health_fire_occupancy-live-1",
+          "status": "FOUND",
+          "text": "Inspection Request Inspection Inspection Status Cancel Inspection Construction Hours Inspection Forms Inspection Case Management Pay Extra Trip Inspection Fee Pay for Temporary Certificate of Occupancy III.",
+          "citation": {
+            "source_name": "Los Angeles Department of Building and Safety (LADBS)",
+            "source_url": "https://www.ladbs.org/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles Department of Building and Safety (LADBS)"
+          }
+        },
+        {
+          "fact_id": "los-angeles-health_fire_occupancy-live-2",
+          "status": "FOUND",
+          "text": "Enforcement Report Code Violation Complaint Status Resolve Orders to Comply & Associated Fees Report Haul Route Violation Code Enforcement Dashboard IV.",
+          "citation": {
+            "source_name": "Los Angeles Department of Building and Safety (LADBS)",
+            "source_url": "https://www.ladbs.org/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles Department of Building and Safety (LADBS)"
+          }
+        },
+        {
+          "fact_id": "los-angeles-health_fire_occupancy-live-3",
+          "status": "FOUND",
+          "text": "Property Records Search Online Building Records Obtain Residential Property Report Obtain Parcel Profile Report Generate Zoning Information Letter Generate Rebuild Letter Custodian of Records V.",
+          "citation": {
+            "source_name": "Los Angeles Department of Building and Safety (LADBS)",
+            "source_url": "https://www.ladbs.org/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles Department of Building and Safety (LADBS)"
+          }
+        },
+        {
+          "fact_id": "los-angeles-health_fire_occupancy-secondary",
+          "status": "FOUND",
+          "text": "Related authority for health_fire_occupancy: LA County Department of Public Health — Environmental Health.",
+          "citation": {
+            "source_name": "LA County Department of Public Health — Environmental Health",
+            "source_url": "http://publichealth.lacounty.gov/eh/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "LA County Department of Public Health — Environmental Health"
+          }
+        }
+      ],
+      "fact_count": 6,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for health_fire_occupancy",
+          "source_checked": "https://www.ladbs.org/",
+          "rendered": "NOT FOUND — [source checked: https://www.ladbs.org/]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ],
+      "secondary_regulator": {
+        "agency": "LA County Department of Public Health — Environmental Health",
+        "url": "http://publichealth.lacounty.gov/eh/"
+      }
+    },
+    "home_occupation": {
+      "domain_id": "home_occupation",
+      "title": "Home Occupation",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Los Angeles City Planning — Home Occupations",
+        "url": "https://planning.lacity.gov/",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "los-angeles-home_occupation-curated",
+          "status": "FOUND",
+          "text": "Home occupations in the City of Los Angeles are accessory uses regulated by the zoning code; City Planning publishes home-occupation criteria.",
+          "citation": {
+            "source_name": "Los Angeles City Planning — Home Occupations",
+            "source_url": "https://planning.lacity.gov/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles City Planning — Home Occupations"
+          }
+        },
+        {
+          "fact_id": "los-angeles-home_occupation-portal",
+          "status": "FOUND",
+          "text": "Los Angeles City Planning — Home Occupations portal: Home | Los Angeles City Planning.",
+          "citation": {
+            "source_name": "Los Angeles City Planning — Home Occupations",
+            "source_url": "https://planning.lacity.gov/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles City Planning — Home Occupations"
+          }
+        },
+        {
+          "fact_id": "los-angeles-home_occupation-live-1",
+          "status": "FOUND",
+          "text": "Read more + Senate Bill (SB) 79 Local Implementation Ordinances Released.",
+          "citation": {
+            "source_name": "Los Angeles City Planning — Home Occupations",
+            "source_url": "https://planning.lacity.gov/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles City Planning — Home Occupations"
+          }
+        },
+        {
+          "fact_id": "los-angeles-home_occupation-live-2",
+          "status": "FOUND",
+          "text": "Read more + New Affordable Housing Linkage Fee Market Area Maps Approved by City Council.",
+          "citation": {
+            "source_name": "Los Angeles City Planning — Home Occupations",
+            "source_url": "https://planning.lacity.gov/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles City Planning — Home Occupations"
+          }
+        },
+        {
+          "fact_id": "los-angeles-home_occupation-live-3",
+          "status": "FOUND",
+          "text": "Read more + General Plan Maintenance Surcharge (GPMS) takes effect June 9, 2026.",
+          "citation": {
+            "source_name": "Los Angeles City Planning — Home Occupations",
+            "source_url": "https://planning.lacity.gov/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Los Angeles, CA",
+            "agency": "Los Angeles City Planning — Home Occupations"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for home_occupation",
+          "source_checked": "https://planning.lacity.gov/",
+          "rendered": "NOT FOUND — [source checked: https://planning.lacity.gov/]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    }
+  },
+  "gaps": [
+    {
+      "domain_id": "business_license",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for business_license",
+      "source_checked": "https://finance.lacity.org/",
+      "rendered": "NOT FOUND — [source checked: https://finance.lacity.org/]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "zoning_use",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for zoning_use",
+      "source_checked": "https://planning.lacity.gov/",
+      "rendered": "NOT FOUND — [source checked: https://planning.lacity.gov/]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "signage",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for signage",
+      "source_checked": "https://planning.lacity.gov/",
+      "rendered": "NOT FOUND — [source checked: https://planning.lacity.gov/]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "health_fire_occupancy",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for health_fire_occupancy",
+      "source_checked": "https://www.ladbs.org/",
+      "rendered": "NOT FOUND — [source checked: https://www.ladbs.org/]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "home_occupation",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for home_occupation",
+      "source_checked": "https://planning.lacity.gov/",
+      "rendered": "NOT FOUND — [source checked: https://planning.lacity.gov/]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    }
+  ],
+  "summary": {
+    "domain_count": 5,
+    "total_facts": 26,
+    "gap_count": 5,
+    "status_counts": {
+      "FOUND": 5
+    }
+  },
+  "references": [
+    {
+      "ref_id": 1,
+      "source_name": "City of Los Angeles Office of Finance — Business Tax",
+      "source_url": "https://finance.lacity.org/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Los Angeles, CA",
+      "rendered": "1. City of Los Angeles Office of Finance — Business Tax — https://finance.lacity.org/ — retrieved 2026-06-19 — City of Los Angeles, CA"
+    },
+    {
+      "ref_id": 2,
+      "source_name": "Los Angeles City Planning",
+      "source_url": "https://planning.lacity.gov/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Los Angeles, CA",
+      "rendered": "2. Los Angeles City Planning — https://planning.lacity.gov/ — retrieved 2026-06-19 — City of Los Angeles, CA"
+    },
+    {
+      "ref_id": 3,
+      "source_name": "Los Angeles City Planning — Signs",
+      "source_url": "https://planning.lacity.gov/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Los Angeles, CA",
+      "rendered": "3. Los Angeles City Planning — Signs — https://planning.lacity.gov/ — retrieved 2026-06-19 — City of Los Angeles, CA"
+    },
+    {
+      "ref_id": 4,
+      "source_name": "Los Angeles Department of Building and Safety (LADBS)",
+      "source_url": "https://www.ladbs.org/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Los Angeles, CA",
+      "rendered": "4. Los Angeles Department of Building and Safety (LADBS) — https://www.ladbs.org/ — retrieved 2026-06-19 — City of Los Angeles, CA"
+    },
+    {
+      "ref_id": 5,
+      "source_name": "LA County Department of Public Health — Environmental Health",
+      "source_url": "http://publichealth.lacounty.gov/eh/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Los Angeles, CA",
+      "rendered": "5. LA County Department of Public Health — Environmental Health — http://publichealth.lacounty.gov/eh/ — retrieved 2026-06-19 — City of Los Angeles, CA"
+    },
+    {
+      "ref_id": 6,
+      "source_name": "Los Angeles City Planning — Home Occupations",
+      "source_url": "https://planning.lacity.gov/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Los Angeles, CA",
+      "rendered": "6. Los Angeles City Planning — Home Occupations — https://planning.lacity.gov/ — retrieved 2026-06-19 — City of Los Angeles, CA"
+    }
+  ]
+}

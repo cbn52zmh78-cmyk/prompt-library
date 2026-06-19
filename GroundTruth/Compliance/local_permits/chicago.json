@@ -1,0 +1,549 @@
+{
+  "artifact": "local_permits_city_pack",
+  "version": "1.0",
+  "tier": "B",
+  "layer": "municipal",
+  "citation_standard": "STD-CITE-001",
+  "task": "Local Permits & Licenses — city/county bible (sample metro)",
+  "city": "Chicago",
+  "city_slug": "chicago",
+  "state": "Illinois",
+  "state_code": "IL",
+  "county": "Cook",
+  "borough": null,
+  "consolidated_city_county": false,
+  "jurisdiction": "City of Chicago, IL",
+  "generated_at": "2026-06-19T10:06:28.025967+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Municipal permit and license intelligence from cited public sources — informational only; not legal, zoning, or tax advice. Confirm fees and applicability with the cited city/county authority.",
+  "policy": "Public municipal .gov sources only; HTTP 403/404 PARKED without bypass; gaps explicit.",
+  "notes": null,
+  "domains": {
+    "business_license": {
+      "domain_id": "business_license",
+      "title": "Business License",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Chicago Department of Business Affairs & Consumer Protection (BACP)",
+        "url": "https://www.chicago.gov/city/en/depts/bacp.html",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "chicago-business_license-curated",
+          "status": "FOUND",
+          "text": "Chicago business licenses are issued by BACP; license type depends on business activity (retail, food, liquor, entertainment, etc.).",
+          "citation": {
+            "source_name": "Chicago Department of Business Affairs & Consumer Protection (BACP)",
+            "source_url": "https://www.chicago.gov/city/en/depts/bacp.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago Department of Business Affairs & Consumer Protection (BACP)"
+          }
+        },
+        {
+          "fact_id": "chicago-business_license-portal",
+          "status": "FOUND",
+          "text": "Chicago Department of Business Affairs & Consumer Protection (BACP) portal: City of Chicago :: Business Affairs and Consumer Protection.",
+          "citation": {
+            "source_name": "Chicago Department of Business Affairs & Consumer Protection (BACP)",
+            "source_url": "https://www.chicago.gov/city/en/depts/bacp.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago Department of Business Affairs & Consumer Protection (BACP)"
+          }
+        },
+        {
+          "fact_id": "chicago-business_license-live-1",
+          "status": "FOUND",
+          "text": "City of Chicago :: Business Affairs and Consumer Protection Skip to main content An official website of the City of Chicago Here's how you know The .gov means it's official Municipal government websites often end in .gov or .org.",
+          "citation": {
+            "source_name": "Chicago Department of Business Affairs & Consumer Protection (BACP)",
+            "source_url": "https://www.chicago.gov/city/en/depts/bacp.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago Department of Business Affairs & Consumer Protection (BACP)"
+          }
+        },
+        {
+          "fact_id": "chicago-business_license-live-2",
+          "status": "FOUND",
+          "text": "Before sharing sensitive information, make sure you're on a City of Chicago government site.",
+          "citation": {
+            "source_name": "Chicago Department of Business Affairs & Consumer Protection (BACP)",
+            "source_url": "https://www.chicago.gov/city/en/depts/bacp.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago Department of Business Affairs & Consumer Protection (BACP)"
+          }
+        },
+        {
+          "fact_id": "chicago-business_license-live-3",
+          "status": "FOUND",
+          "text": "The https:// ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.",
+          "citation": {
+            "source_name": "Chicago Department of Business Affairs & Consumer Protection (BACP)",
+            "source_url": "https://www.chicago.gov/city/en/depts/bacp.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago Department of Business Affairs & Consumer Protection (BACP)"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for business_license",
+          "source_checked": "https://www.chicago.gov/city/en/depts/bacp.html",
+          "rendered": "NOT FOUND — [source checked: https://www.chicago.gov/city/en/depts/bacp.html]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    },
+    "zoning_use": {
+      "domain_id": "zoning_use",
+      "title": "Zoning Use",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Chicago Department of Planning & Development (DPD)",
+        "url": "https://www.chicago.gov/city/en/depts/dcd.html",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "chicago-zoning_use-curated",
+          "status": "FOUND",
+          "text": "Chicago land-use and zoning compliance is administered by DPD; Zoning Board of Appeals handles variances and special uses.",
+          "citation": {
+            "source_name": "Chicago Department of Planning & Development (DPD)",
+            "source_url": "https://www.chicago.gov/city/en/depts/dcd.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago Department of Planning & Development (DPD)"
+          }
+        },
+        {
+          "fact_id": "chicago-zoning_use-portal",
+          "status": "FOUND",
+          "text": "Chicago Department of Planning & Development (DPD) portal: City of Chicago :: Planning and Development.",
+          "citation": {
+            "source_name": "Chicago Department of Planning & Development (DPD)",
+            "source_url": "https://www.chicago.gov/city/en/depts/dcd.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago Department of Planning & Development (DPD)"
+          }
+        },
+        {
+          "fact_id": "chicago-zoning_use-live-1",
+          "status": "FOUND",
+          "text": "City of Chicago :: Planning and Development Skip to main content An official website of the City of Chicago Here's how you know The .gov means it's official Municipal government websites often end in .gov or .org.",
+          "citation": {
+            "source_name": "Chicago Department of Planning & Development (DPD)",
+            "source_url": "https://www.chicago.gov/city/en/depts/dcd.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago Department of Planning & Development (DPD)"
+          }
+        },
+        {
+          "fact_id": "chicago-zoning_use-live-2",
+          "status": "FOUND",
+          "text": "Before sharing sensitive information, make sure you're on a City of Chicago government site.",
+          "citation": {
+            "source_name": "Chicago Department of Planning & Development (DPD)",
+            "source_url": "https://www.chicago.gov/city/en/depts/dcd.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago Department of Planning & Development (DPD)"
+          }
+        },
+        {
+          "fact_id": "chicago-zoning_use-live-3",
+          "status": "FOUND",
+          "text": "The https:// ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.",
+          "citation": {
+            "source_name": "Chicago Department of Planning & Development (DPD)",
+            "source_url": "https://www.chicago.gov/city/en/depts/dcd.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago Department of Planning & Development (DPD)"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for zoning_use",
+          "source_checked": "https://www.chicago.gov/city/en/depts/dcd.html",
+          "rendered": "NOT FOUND — [source checked: https://www.chicago.gov/city/en/depts/dcd.html]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    },
+    "signage": {
+      "domain_id": "signage",
+      "title": "Signage",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Chicago DPD — Signs",
+        "url": "https://www.chicago.gov/city/en/depts/dcd.html",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "chicago-signage-curated",
+          "status": "FOUND",
+          "text": "Sign permits in Chicago route through the Department of Planning and Development with reference to the municipal sign code.",
+          "citation": {
+            "source_name": "Chicago DPD — Signs",
+            "source_url": "https://www.chicago.gov/city/en/depts/dcd.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago DPD — Signs"
+          }
+        },
+        {
+          "fact_id": "chicago-signage-portal",
+          "status": "FOUND",
+          "text": "Chicago DPD — Signs portal: City of Chicago :: Planning and Development.",
+          "citation": {
+            "source_name": "Chicago DPD — Signs",
+            "source_url": "https://www.chicago.gov/city/en/depts/dcd.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago DPD — Signs"
+          }
+        },
+        {
+          "fact_id": "chicago-signage-live-1",
+          "status": "FOUND",
+          "text": "City of Chicago :: Planning and Development Skip to main content An official website of the City of Chicago Here's how you know The .gov means it's official Municipal government websites often end in .gov or .org.",
+          "citation": {
+            "source_name": "Chicago DPD — Signs",
+            "source_url": "https://www.chicago.gov/city/en/depts/dcd.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago DPD — Signs"
+          }
+        },
+        {
+          "fact_id": "chicago-signage-live-2",
+          "status": "FOUND",
+          "text": "Before sharing sensitive information, make sure you're on a City of Chicago government site.",
+          "citation": {
+            "source_name": "Chicago DPD — Signs",
+            "source_url": "https://www.chicago.gov/city/en/depts/dcd.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago DPD — Signs"
+          }
+        },
+        {
+          "fact_id": "chicago-signage-live-3",
+          "status": "FOUND",
+          "text": "The https:// ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.",
+          "citation": {
+            "source_name": "Chicago DPD — Signs",
+            "source_url": "https://www.chicago.gov/city/en/depts/dcd.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago DPD — Signs"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for signage",
+          "source_checked": "https://www.chicago.gov/city/en/depts/dcd.html",
+          "rendered": "NOT FOUND — [source checked: https://www.chicago.gov/city/en/depts/dcd.html]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    },
+    "health_fire_occupancy": {
+      "domain_id": "health_fire_occupancy",
+      "title": "Health Fire Occupancy",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Chicago Department of Public Health (CDPH) + Buildings",
+        "url": "https://www.chicago.gov/city/en/depts/cdph.html",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "chicago-health_fire_occupancy-curated",
+          "status": "FOUND",
+          "text": "Food establishment permits and health inspections are issued by CDPH; building permits and occupancy are handled by the Department of Buildings.",
+          "citation": {
+            "source_name": "Chicago Department of Public Health (CDPH) + Buildings",
+            "source_url": "https://www.chicago.gov/city/en/depts/cdph.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago Department of Public Health (CDPH) + Buildings"
+          }
+        },
+        {
+          "fact_id": "chicago-health_fire_occupancy-portal",
+          "status": "FOUND",
+          "text": "Chicago Department of Public Health (CDPH) + Buildings portal: City of Chicago :: Chicago Department of Public Health.",
+          "citation": {
+            "source_name": "Chicago Department of Public Health (CDPH) + Buildings",
+            "source_url": "https://www.chicago.gov/city/en/depts/cdph.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago Department of Public Health (CDPH) + Buildings"
+          }
+        },
+        {
+          "fact_id": "chicago-health_fire_occupancy-live-1",
+          "status": "FOUND",
+          "text": "City of Chicago :: Chicago Department of Public Health Skip to main content An official website of the City of Chicago Here's how you know The .gov means it's official Municipal government websites often end in .gov or .org.",
+          "citation": {
+            "source_name": "Chicago Department of Public Health (CDPH) + Buildings",
+            "source_url": "https://www.chicago.gov/city/en/depts/cdph.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago Department of Public Health (CDPH) + Buildings"
+          }
+        },
+        {
+          "fact_id": "chicago-health_fire_occupancy-live-2",
+          "status": "FOUND",
+          "text": "Before sharing sensitive information, make sure you're on a City of Chicago government site.",
+          "citation": {
+            "source_name": "Chicago Department of Public Health (CDPH) + Buildings",
+            "source_url": "https://www.chicago.gov/city/en/depts/cdph.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago Department of Public Health (CDPH) + Buildings"
+          }
+        },
+        {
+          "fact_id": "chicago-health_fire_occupancy-live-3",
+          "status": "FOUND",
+          "text": "The https:// ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.",
+          "citation": {
+            "source_name": "Chicago Department of Public Health (CDPH) + Buildings",
+            "source_url": "https://www.chicago.gov/city/en/depts/cdph.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago Department of Public Health (CDPH) + Buildings"
+          }
+        },
+        {
+          "fact_id": "chicago-health_fire_occupancy-secondary",
+          "status": "FOUND",
+          "text": "Related authority for health_fire_occupancy: Chicago Department of Buildings.",
+          "citation": {
+            "source_name": "Chicago Department of Buildings",
+            "source_url": "https://www.chicago.gov/city/en/depts/bldgs.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago Department of Buildings"
+          }
+        }
+      ],
+      "fact_count": 6,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for health_fire_occupancy",
+          "source_checked": "https://www.chicago.gov/city/en/depts/cdph.html",
+          "rendered": "NOT FOUND — [source checked: https://www.chicago.gov/city/en/depts/cdph.html]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ],
+      "secondary_regulator": {
+        "agency": "Chicago Department of Buildings",
+        "url": "https://www.chicago.gov/city/en/depts/bldgs.html"
+      }
+    },
+    "home_occupation": {
+      "domain_id": "home_occupation",
+      "title": "Home Occupation",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Chicago BACP — Home Business",
+        "url": "https://www.chicago.gov/city/en/depts/bacp.html",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "chicago-home_occupation-curated",
+          "status": "FOUND",
+          "text": "Chicago regulates home-based businesses through BACP licensing and DPD zoning rules for accessory home occupations.",
+          "citation": {
+            "source_name": "Chicago BACP — Home Business",
+            "source_url": "https://www.chicago.gov/city/en/depts/bacp.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago BACP — Home Business"
+          }
+        },
+        {
+          "fact_id": "chicago-home_occupation-portal",
+          "status": "FOUND",
+          "text": "Chicago BACP — Home Business portal: City of Chicago :: Business Affairs and Consumer Protection.",
+          "citation": {
+            "source_name": "Chicago BACP — Home Business",
+            "source_url": "https://www.chicago.gov/city/en/depts/bacp.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago BACP — Home Business"
+          }
+        },
+        {
+          "fact_id": "chicago-home_occupation-live-1",
+          "status": "FOUND",
+          "text": "City of Chicago :: Business Affairs and Consumer Protection Skip to main content An official website of the City of Chicago Here's how you know The .gov means it's official Municipal government websites often end in .gov or .org.",
+          "citation": {
+            "source_name": "Chicago BACP — Home Business",
+            "source_url": "https://www.chicago.gov/city/en/depts/bacp.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago BACP — Home Business"
+          }
+        },
+        {
+          "fact_id": "chicago-home_occupation-live-2",
+          "status": "FOUND",
+          "text": "Before sharing sensitive information, make sure you're on a City of Chicago government site.",
+          "citation": {
+            "source_name": "Chicago BACP — Home Business",
+            "source_url": "https://www.chicago.gov/city/en/depts/bacp.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago BACP — Home Business"
+          }
+        },
+        {
+          "fact_id": "chicago-home_occupation-live-3",
+          "status": "FOUND",
+          "text": "The https:// ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.",
+          "citation": {
+            "source_name": "Chicago BACP — Home Business",
+            "source_url": "https://www.chicago.gov/city/en/depts/bacp.html",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Chicago, IL",
+            "agency": "Chicago BACP — Home Business"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for home_occupation",
+          "source_checked": "https://www.chicago.gov/city/en/depts/bacp.html",
+          "rendered": "NOT FOUND — [source checked: https://www.chicago.gov/city/en/depts/bacp.html]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    }
+  },
+  "gaps": [
+    {
+      "domain_id": "business_license",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for business_license",
+      "source_checked": "https://www.chicago.gov/city/en/depts/bacp.html",
+      "rendered": "NOT FOUND — [source checked: https://www.chicago.gov/city/en/depts/bacp.html]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "zoning_use",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for zoning_use",
+      "source_checked": "https://www.chicago.gov/city/en/depts/dcd.html",
+      "rendered": "NOT FOUND — [source checked: https://www.chicago.gov/city/en/depts/dcd.html]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "signage",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for signage",
+      "source_checked": "https://www.chicago.gov/city/en/depts/dcd.html",
+      "rendered": "NOT FOUND — [source checked: https://www.chicago.gov/city/en/depts/dcd.html]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "health_fire_occupancy",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for health_fire_occupancy",
+      "source_checked": "https://www.chicago.gov/city/en/depts/cdph.html",
+      "rendered": "NOT FOUND — [source checked: https://www.chicago.gov/city/en/depts/cdph.html]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "home_occupation",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for home_occupation",
+      "source_checked": "https://www.chicago.gov/city/en/depts/bacp.html",
+      "rendered": "NOT FOUND — [source checked: https://www.chicago.gov/city/en/depts/bacp.html]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    }
+  ],
+  "summary": {
+    "domain_count": 5,
+    "total_facts": 26,
+    "gap_count": 5,
+    "status_counts": {
+      "FOUND": 5
+    }
+  },
+  "references": [
+    {
+      "ref_id": 1,
+      "source_name": "Chicago Department of Business Affairs & Consumer Protection (BACP)",
+      "source_url": "https://www.chicago.gov/city/en/depts/bacp.html",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Chicago, IL",
+      "rendered": "1. Chicago Department of Business Affairs & Consumer Protection (BACP) — https://www.chicago.gov/city/en/depts/bacp.html — retrieved 2026-06-19 — City of Chicago, IL"
+    },
+    {
+      "ref_id": 2,
+      "source_name": "Chicago Department of Planning & Development (DPD)",
+      "source_url": "https://www.chicago.gov/city/en/depts/dcd.html",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Chicago, IL",
+      "rendered": "2. Chicago Department of Planning & Development (DPD) — https://www.chicago.gov/city/en/depts/dcd.html — retrieved 2026-06-19 — City of Chicago, IL"
+    },
+    {
+      "ref_id": 3,
+      "source_name": "Chicago DPD — Signs",
+      "source_url": "https://www.chicago.gov/city/en/depts/dcd.html",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Chicago, IL",
+      "rendered": "3. Chicago DPD — Signs — https://www.chicago.gov/city/en/depts/dcd.html — retrieved 2026-06-19 — City of Chicago, IL"
+    },
+    {
+      "ref_id": 4,
+      "source_name": "Chicago Department of Public Health (CDPH) + Buildings",
+      "source_url": "https://www.chicago.gov/city/en/depts/cdph.html",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Chicago, IL",
+      "rendered": "4. Chicago Department of Public Health (CDPH) + Buildings — https://www.chicago.gov/city/en/depts/cdph.html — retrieved 2026-06-19 — City of Chicago, IL"
+    },
+    {
+      "ref_id": 5,
+      "source_name": "Chicago Department of Buildings",
+      "source_url": "https://www.chicago.gov/city/en/depts/bldgs.html",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Chicago, IL",
+      "rendered": "5. Chicago Department of Buildings — https://www.chicago.gov/city/en/depts/bldgs.html — retrieved 2026-06-19 — City of Chicago, IL"
+    },
+    {
+      "ref_id": 6,
+      "source_name": "Chicago BACP — Home Business",
+      "source_url": "https://www.chicago.gov/city/en/depts/bacp.html",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Chicago, IL",
+      "rendered": "6. Chicago BACP — Home Business — https://www.chicago.gov/city/en/depts/bacp.html — retrieved 2026-06-19 — City of Chicago, IL"
+    }
+  ]
+}

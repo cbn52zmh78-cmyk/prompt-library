@@ -1,0 +1,550 @@
+{
+  "artifact": "local_permits_city_pack",
+  "version": "1.0",
+  "tier": "B",
+  "layer": "municipal",
+  "citation_standard": "STD-CITE-001",
+  "task": "Local Permits & Licenses — city/county bible (sample metro)",
+  "city": "Houston",
+  "city_slug": "houston",
+  "state": "Texas",
+  "state_code": "TX",
+  "county": "Harris",
+  "borough": null,
+  "consolidated_city_county": false,
+  "jurisdiction": "City of Houston, TX",
+  "generated_at": "2026-06-19T10:06:27.421993+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Municipal permit and license intelligence from cited public sources — informational only; not legal, zoning, or tax advice. Confirm fees and applicability with the cited city/county authority.",
+  "policy": "Public municipal .gov sources only; HTTP 403/404 PARKED without bypass; gaps explicit.",
+  "notes": "Houston has no traditional use zoning — land-use controls rely on deed restrictions and development codes.",
+  "domains": {
+    "business_license": {
+      "domain_id": "business_license",
+      "title": "Business License",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "City of Houston — Finance Business Tax",
+        "url": "https://www.houstontx.gov/finance/",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "houston-business_license-curated",
+          "status": "FOUND",
+          "text": "The City of Houston collects occupation tax / business registration through the Finance Department; state franchise tax is separate.",
+          "citation": {
+            "source_name": "City of Houston — Finance Business Tax",
+            "source_url": "https://www.houstontx.gov/finance/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston — Finance Business Tax"
+          }
+        },
+        {
+          "fact_id": "houston-business_license-portal",
+          "status": "FOUND",
+          "text": "City of Houston — Finance Business Tax portal: Finance Department.",
+          "citation": {
+            "source_name": "City of Houston — Finance Business Tax",
+            "source_url": "https://www.houstontx.gov/finance/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston — Finance Business Tax"
+          }
+        },
+        {
+          "fact_id": "houston-business_license-live-1",
+          "status": "FOUND",
+          "text": "Finance Department RESIDENTS 311 Help and Info Animal Adoptions Trash / Recycling Health Department Housing Parks and Recreation Open Data Report Fraud / Waste View More Residents ...",
+          "citation": {
+            "source_name": "City of Houston — Finance Business Tax",
+            "source_url": "https://www.houstontx.gov/finance/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston — Finance Business Tax"
+          }
+        },
+        {
+          "fact_id": "houston-business_license-live-2",
+          "status": "FOUND",
+          "text": "BUSINESS Economic Development Permits / Building Codes Purchasing Division Business Opportunity View More Business ...",
+          "citation": {
+            "source_name": "City of Houston — Finance Business Tax",
+            "source_url": "https://www.houstontx.gov/finance/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston — Finance Business Tax"
+          }
+        },
+        {
+          "fact_id": "houston-business_license-live-3",
+          "status": "FOUND",
+          "text": "VISITORS About Houston Calendar of Events Cultural Affairs Special Events Office Visitors / Tourism View More Visitors ...",
+          "citation": {
+            "source_name": "City of Houston — Finance Business Tax",
+            "source_url": "https://www.houstontx.gov/finance/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston — Finance Business Tax"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for business_license",
+          "source_checked": "https://www.houstontx.gov/finance/",
+          "rendered": "NOT FOUND — [source checked: https://www.houstontx.gov/finance/]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    },
+    "zoning_use": {
+      "domain_id": "zoning_use",
+      "title": "Zoning Use",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "City of Houston Planning & Development",
+        "url": "https://www.houstontx.gov/planning/",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "houston-zoning_use-curated",
+          "status": "FOUND",
+          "text": "Houston does not have conventional zoning districts; Planning & Development administers development codes, platting, and deed-restriction tools instead of use zoning.",
+          "citation": {
+            "source_name": "City of Houston Planning & Development",
+            "source_url": "https://www.houstontx.gov/planning/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston Planning & Development"
+          }
+        },
+        {
+          "fact_id": "houston-zoning_use-portal",
+          "status": "FOUND",
+          "text": "City of Houston Planning & Development portal: City of Houston Planning and Development Department.",
+          "citation": {
+            "source_name": "City of Houston Planning & Development",
+            "source_url": "https://www.houstontx.gov/planning/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston Planning & Development"
+          }
+        },
+        {
+          "fact_id": "houston-zoning_use-live-1",
+          "status": "FOUND",
+          "text": "City of Houston Planning and Development Department Skip to main content RESIDENTS 311 Animal Adoptions Trash and Recycling Health Department Housing Department Parks and Recreation Open Data Report Fraud and Waste View More Residents ...",
+          "citation": {
+            "source_name": "City of Houston Planning & Development",
+            "source_url": "https://www.houstontx.gov/planning/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston Planning & Development"
+          }
+        },
+        {
+          "fact_id": "houston-zoning_use-live-2",
+          "status": "FOUND",
+          "text": "BUSINESS Economic Development Houston Permitting Center Purchasing Division Office of Business Opportunity View More Business ...",
+          "citation": {
+            "source_name": "City of Houston Planning & Development",
+            "source_url": "https://www.houstontx.gov/planning/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston Planning & Development"
+          }
+        },
+        {
+          "fact_id": "houston-zoning_use-live-3",
+          "status": "FOUND",
+          "text": "VISITORS About Houston Calendar of Events Cultural Affairs Special Events Office Visitors and Tourism View More Visitors ...",
+          "citation": {
+            "source_name": "City of Houston Planning & Development",
+            "source_url": "https://www.houstontx.gov/planning/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston Planning & Development"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for zoning_use",
+          "source_checked": "https://www.houstontx.gov/planning/",
+          "rendered": "NOT FOUND — [source checked: https://www.houstontx.gov/planning/]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    },
+    "signage": {
+      "domain_id": "signage",
+      "title": "Signage",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "City of Houston Planning — Signs",
+        "url": "https://www.houstontx.gov/planning/",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "houston-signage-curated",
+          "status": "FOUND",
+          "text": "Houston sign regulations are administered by Planning & Development; sign permits apply despite absence of traditional zoning.",
+          "citation": {
+            "source_name": "City of Houston Planning — Signs",
+            "source_url": "https://www.houstontx.gov/planning/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston Planning — Signs"
+          }
+        },
+        {
+          "fact_id": "houston-signage-portal",
+          "status": "FOUND",
+          "text": "City of Houston Planning — Signs portal: City of Houston Planning and Development Department.",
+          "citation": {
+            "source_name": "City of Houston Planning — Signs",
+            "source_url": "https://www.houstontx.gov/planning/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston Planning — Signs"
+          }
+        },
+        {
+          "fact_id": "houston-signage-live-1",
+          "status": "FOUND",
+          "text": "City of Houston Planning and Development Department Skip to main content RESIDENTS 311 Animal Adoptions Trash and Recycling Health Department Housing Department Parks and Recreation Open Data Report Fraud and Waste View More Residents ...",
+          "citation": {
+            "source_name": "City of Houston Planning — Signs",
+            "source_url": "https://www.houstontx.gov/planning/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston Planning — Signs"
+          }
+        },
+        {
+          "fact_id": "houston-signage-live-2",
+          "status": "FOUND",
+          "text": "BUSINESS Economic Development Houston Permitting Center Purchasing Division Office of Business Opportunity View More Business ...",
+          "citation": {
+            "source_name": "City of Houston Planning — Signs",
+            "source_url": "https://www.houstontx.gov/planning/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston Planning — Signs"
+          }
+        },
+        {
+          "fact_id": "houston-signage-live-3",
+          "status": "FOUND",
+          "text": "VISITORS About Houston Calendar of Events Cultural Affairs Special Events Office Visitors and Tourism View More Visitors ...",
+          "citation": {
+            "source_name": "City of Houston Planning — Signs",
+            "source_url": "https://www.houstontx.gov/planning/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston Planning — Signs"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for signage",
+          "source_checked": "https://www.houstontx.gov/planning/",
+          "rendered": "NOT FOUND — [source checked: https://www.houstontx.gov/planning/]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    },
+    "health_fire_occupancy": {
+      "domain_id": "health_fire_occupancy",
+      "title": "Health Fire Occupancy",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "Houston Health Department + Houston Fire Marshal",
+        "url": "https://www.houstonhealth.org/",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "houston-health_fire_occupancy-curated",
+          "status": "FOUND",
+          "text": "Food dealer permits and health inspections route through the Houston Health Department; fire marshal review applies to assembly and hazardous uses.",
+          "citation": {
+            "source_name": "Houston Health Department + Houston Fire Marshal",
+            "source_url": "https://www.houstonhealth.org/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "Houston Health Department + Houston Fire Marshal"
+          }
+        },
+        {
+          "fact_id": "houston-health_fire_occupancy-portal",
+          "status": "FOUND",
+          "text": "Houston Health Department + Houston Fire Marshal portal: Home | Houston Health Department.",
+          "citation": {
+            "source_name": "Houston Health Department + Houston Fire Marshal",
+            "source_url": "https://www.houstonhealth.org/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "Houston Health Department + Houston Fire Marshal"
+          }
+        },
+        {
+          "fact_id": "houston-health_fire_occupancy-live-1",
+          "status": "FOUND",
+          "text": "Call 832-393-4220 to learn about our services.",
+          "citation": {
+            "source_name": "Houston Health Department + Houston Fire Marshal",
+            "source_url": "https://www.houstonhealth.org/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "Houston Health Department + Houston Fire Marshal"
+          }
+        },
+        {
+          "fact_id": "houston-health_fire_occupancy-live-2",
+          "status": "FOUND",
+          "text": "Call 832-393-4220 to learn about our services.",
+          "citation": {
+            "source_name": "Houston Health Department + Houston Fire Marshal",
+            "source_url": "https://www.houstonhealth.org/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "Houston Health Department + Houston Fire Marshal"
+          }
+        },
+        {
+          "fact_id": "houston-health_fire_occupancy-live-3",
+          "status": "FOUND",
+          "text": "There have been 15 reported cases, all currently hospitalized across 12 states.",
+          "citation": {
+            "source_name": "Houston Health Department + Houston Fire Marshal",
+            "source_url": "https://www.houstonhealth.org/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "Houston Health Department + Houston Fire Marshal"
+          }
+        },
+        {
+          "fact_id": "houston-health_fire_occupancy-secondary",
+          "status": "FOUND",
+          "text": "Related authority for health_fire_occupancy: Houston Fire Department.",
+          "citation": {
+            "source_name": "Houston Fire Department",
+            "source_url": "https://www.houstontx.gov/fire/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "Houston Fire Department"
+          }
+        }
+      ],
+      "fact_count": 6,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for health_fire_occupancy",
+          "source_checked": "https://www.houstonhealth.org/",
+          "rendered": "NOT FOUND — [source checked: https://www.houstonhealth.org/]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ],
+      "secondary_regulator": {
+        "agency": "Houston Fire Department",
+        "url": "https://www.houstontx.gov/fire/"
+      }
+    },
+    "home_occupation": {
+      "domain_id": "home_occupation",
+      "title": "Home Occupation",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "City of Houston — Planning (no zoning)",
+        "url": "https://www.houstontx.gov/planning/",
+        "portal_status": "HARVESTED"
+      },
+      "cited_facts": [
+        {
+          "fact_id": "houston-home_occupation-curated",
+          "status": "FOUND",
+          "text": "Without citywide zoning, home businesses are primarily governed by deed restrictions, business tax registration, and sector permits — not a standard home-occupation permit.",
+          "citation": {
+            "source_name": "City of Houston — Planning (no zoning)",
+            "source_url": "https://www.houstontx.gov/planning/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston — Planning (no zoning)"
+          }
+        },
+        {
+          "fact_id": "houston-home_occupation-portal",
+          "status": "FOUND",
+          "text": "City of Houston — Planning (no zoning) portal: City of Houston Planning and Development Department.",
+          "citation": {
+            "source_name": "City of Houston — Planning (no zoning)",
+            "source_url": "https://www.houstontx.gov/planning/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston — Planning (no zoning)"
+          }
+        },
+        {
+          "fact_id": "houston-home_occupation-live-1",
+          "status": "FOUND",
+          "text": "City of Houston Planning and Development Department Skip to main content RESIDENTS 311 Animal Adoptions Trash and Recycling Health Department Housing Department Parks and Recreation Open Data Report Fraud and Waste View More Residents ...",
+          "citation": {
+            "source_name": "City of Houston — Planning (no zoning)",
+            "source_url": "https://www.houstontx.gov/planning/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston — Planning (no zoning)"
+          }
+        },
+        {
+          "fact_id": "houston-home_occupation-live-2",
+          "status": "FOUND",
+          "text": "BUSINESS Economic Development Houston Permitting Center Purchasing Division Office of Business Opportunity View More Business ...",
+          "citation": {
+            "source_name": "City of Houston — Planning (no zoning)",
+            "source_url": "https://www.houstontx.gov/planning/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston — Planning (no zoning)"
+          }
+        },
+        {
+          "fact_id": "houston-home_occupation-live-3",
+          "status": "FOUND",
+          "text": "VISITORS About Houston Calendar of Events Cultural Affairs Special Events Office Visitors and Tourism View More Visitors ...",
+          "citation": {
+            "source_name": "City of Houston — Planning (no zoning)",
+            "source_url": "https://www.houstontx.gov/planning/",
+            "retrieved_date": "2026-06-19",
+            "jurisdiction": "City of Houston, TX",
+            "agency": "City of Houston — Planning (no zoning)"
+          }
+        }
+      ],
+      "fact_count": 5,
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Published fee schedule for home_occupation",
+          "source_checked": "https://www.houstontx.gov/planning/",
+          "rendered": "NOT FOUND — [source checked: https://www.houstontx.gov/planning/]",
+          "note": "Fee tables often PDF-only or behind ePermit login"
+        }
+      ]
+    }
+  },
+  "gaps": [
+    {
+      "domain_id": "business_license",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for business_license",
+      "source_checked": "https://www.houstontx.gov/finance/",
+      "rendered": "NOT FOUND — [source checked: https://www.houstontx.gov/finance/]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "zoning_use",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for zoning_use",
+      "source_checked": "https://www.houstontx.gov/planning/",
+      "rendered": "NOT FOUND — [source checked: https://www.houstontx.gov/planning/]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "signage",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for signage",
+      "source_checked": "https://www.houstontx.gov/planning/",
+      "rendered": "NOT FOUND — [source checked: https://www.houstontx.gov/planning/]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "health_fire_occupancy",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for health_fire_occupancy",
+      "source_checked": "https://www.houstonhealth.org/",
+      "rendered": "NOT FOUND — [source checked: https://www.houstonhealth.org/]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    },
+    {
+      "domain_id": "home_occupation",
+      "status": "NOT FOUND",
+      "label": "Published fee schedule for home_occupation",
+      "source_checked": "https://www.houstontx.gov/planning/",
+      "rendered": "NOT FOUND — [source checked: https://www.houstontx.gov/planning/]",
+      "note": "Fee tables often PDF-only or behind ePermit login"
+    }
+  ],
+  "summary": {
+    "domain_count": 5,
+    "total_facts": 26,
+    "gap_count": 5,
+    "status_counts": {
+      "FOUND": 3,
+      "REQUIRES_CONFIRMATION": 2
+    }
+  },
+  "references": [
+    {
+      "ref_id": 1,
+      "source_name": "City of Houston — Finance Business Tax",
+      "source_url": "https://www.houstontx.gov/finance/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Houston, TX",
+      "rendered": "1. City of Houston — Finance Business Tax — https://www.houstontx.gov/finance/ — retrieved 2026-06-19 — City of Houston, TX"
+    },
+    {
+      "ref_id": 2,
+      "source_name": "City of Houston Planning & Development",
+      "source_url": "https://www.houstontx.gov/planning/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Houston, TX",
+      "rendered": "2. City of Houston Planning & Development — https://www.houstontx.gov/planning/ — retrieved 2026-06-19 — City of Houston, TX"
+    },
+    {
+      "ref_id": 3,
+      "source_name": "City of Houston Planning — Signs",
+      "source_url": "https://www.houstontx.gov/planning/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Houston, TX",
+      "rendered": "3. City of Houston Planning — Signs — https://www.houstontx.gov/planning/ — retrieved 2026-06-19 — City of Houston, TX"
+    },
+    {
+      "ref_id": 4,
+      "source_name": "Houston Health Department + Houston Fire Marshal",
+      "source_url": "https://www.houstonhealth.org/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Houston, TX",
+      "rendered": "4. Houston Health Department + Houston Fire Marshal — https://www.houstonhealth.org/ — retrieved 2026-06-19 — City of Houston, TX"
+    },
+    {
+      "ref_id": 5,
+      "source_name": "Houston Fire Department",
+      "source_url": "https://www.houstontx.gov/fire/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Houston, TX",
+      "rendered": "5. Houston Fire Department — https://www.houstontx.gov/fire/ — retrieved 2026-06-19 — City of Houston, TX"
+    },
+    {
+      "ref_id": 6,
+      "source_name": "City of Houston — Planning (no zoning)",
+      "source_url": "https://www.houstontx.gov/planning/",
+      "retrieved_date": "2026-06-19",
+      "jurisdiction": "City of Houston, TX",
+      "rendered": "6. City of Houston — Planning (no zoning) — https://www.houstontx.gov/planning/ — retrieved 2026-06-19 — City of Houston, TX"
+    }
+  ]
+}
