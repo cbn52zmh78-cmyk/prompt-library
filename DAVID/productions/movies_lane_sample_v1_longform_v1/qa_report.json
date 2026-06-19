@@ -1,6 +1,6 @@
 {
   "slug": "movies_lane_sample_v1",
-  "qa_at": "2026-06-19T03:32:23.667416+00:00",
+  "qa_at": "2026-06-19T03:34:09.438768+00:00",
   "pass": true,
   "passes": [
     "shot count OK (7 >= 5)",
@@ -14,13 +14,13 @@
     "host performance: host_performance_extend.mp4 (52.5s)",
     "@David-001 continuity prefix embedded in video_prompt",
     "xfade chain + synced audio crossfade at joins",
-    "audio PRESENT (david_movies_lane_sample_v1_seamless_v1.mp4 mean -27.0 dB)",
+    "audio PRESENT (david_movies_lane_sample_v1_seamless_v1.mp4 mean -27.4 dB)",
     "loudnorm two-pass target I=-16.0 LUFS per shot",
     "audio pinned to exact shot duration (no stretch/offset)",
-    "flat loudness across shots (spread 0.87 LU)",
-    "zero magenta (max score 0.414 <= 0.42)",
+    "flat loudness across shots (spread 0.27 LU)",
+    "zero magenta (max score 0.000 <= 0.42)",
     "tight A/V sync per shot (duration pinned)",
-    "zero hue drift across segments (max magenta 0.414)"
+    "zero hue drift across segments (max magenta 0.000)"
   ],
   "issues": [],
   "shot_count": 7,
