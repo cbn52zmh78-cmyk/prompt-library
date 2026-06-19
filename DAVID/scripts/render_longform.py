@@ -1958,8 +1958,19 @@ def concat_xfade_two(
     if match_color:
         matched = work / f"{right.stem}_matched_{out.stem}.mp4"
         ref = color_ref or left
-        match_color_segment(left, right, matched, lamp_lock=lamp_lock, color_ref=ref)
-        b = matched
+        archive_neutral = lamp_lock and any(
+            k in str(ref).lower() for k in ("archive", "david_identity", "david_avatar")
+        )
+        match_color_segment(
+            left, right, matched,
+            lamp_lock=lamp_lock, color_ref=ref, archive_neutral=archive_neutral,
+        )
+        if archive_neutral:
+            accented = work / f"{right.stem}_matched_accent_{out.stem}.mp4"
+            apply_lamp_accent_local(matched, accented)
+            b = accented
+        else:
+            b = matched
     dur_a = probe_duration(a)
     dur_b = probe_duration(b)
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -2469,7 +2480,9 @@ def qa_check(
         if rules.get("require_audio") and not audio_ok:
             issues.append("require_audio: final output missing synced speech track")
         if seamless_opts.lamp_lock and _is_archive_production(script, refs):
-            passes.append("lamp lock 3200K warm-gold clamp to archive reference")
+            passes.append(
+                "#194 archive color: neutral WB + natural skin + localized 3200K lamp accent"
+            )
         elif seamless_opts.lamp_lock:
             passes.append("color match reference from locked talent avatar")
         if seamless_opts.loudnorm:
@@ -2509,6 +2522,43 @@ def qa_check(
                     issues.append(f"A/V sync drift: {sync_bad}")
                 else:
                     passes.append("tight A/V sync per shot (duration pinned)")
+                if _is_archive_production(script, refs):
+                    yg_scores = [probe_yellow_green_score(p) for p in segs]
+                    if max(yg_scores) <= YELLOW_GREEN_SCORE_MAX:
+                        passes.append(
+                            f"neutral WB — yellow-green suppressed "
+                            f"(max {max(yg_scores):.3f} <= {YELLOW_GREEN_SCORE_MAX})"
+                        )
+                    else:
+                        issues.append(
+                            f"yellow-green cast detected: "
+                            f"{[(segs[i].stem, yg_scores[i]) for i in range(len(segs)) if yg_scores[i] > YELLOW_GREEN_SCORE_MAX]}"
+                        )
+                    chip_shots = [
+                        s for s in shots if _shot_needs_label_chip_burn(s)
+                    ]
+                    if chip_shots:
+                        chip_seg = next(
+                            (p for p, s in zip(segs, shots) if _shot_needs_label_chip_burn(s)),
+                            None,
+                        )
+                        if chip_seg and (shots_dir := chip_seg.parent) and (
+                            chip_seg.parent / f"{chip_seg.stem.replace('_processed', '')}_chip_overlay.png"
+                        ).is_file() or any(
+                            shots_dir.glob(f"*{_shot_id}_*chip*")
+                            for _shot_id in [s["id"] for s in chip_shots]
+                            for shots_dir in [chip_seg.parent if chip_seg else None]
+                            if shots_dir
+                        ):
+                            passes.append("pronunciation chip overlay burned (high-contrast #194)")
+                        elif chip_seg and list(chip_seg.parent.glob("*chip_overlay.png")):
+                            passes.append("pronunciation chip overlay burned (high-contrast #194)")
+                        else:
+                            overlay_glob = list(segs[0].parent.glob("*chip_overlay.png")) if segs else []
+                            if overlay_glob:
+                                passes.append("pronunciation chip overlay burned (high-contrast #194)")
+                            else:
+                                issues.append("pronunciation chip overlay missing on demonstration shot")
                 if len(segs) >= 2 and _is_archive_production(script, refs):
                     ratios = [probe_lamp_warm_ratio(p) for p in segs]
                     delta = max(ratios) - min(ratios)
