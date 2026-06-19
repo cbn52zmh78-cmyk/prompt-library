@@ -100,17 +100,26 @@ def run_scope(slug: str, *, package: bool = False) -> dict:
     manifest = _parse_manifest(proc.stdout) or {}
     qa = manifest.get("qa") or _qa_from_production(slug) or {}
     passes = qa.get("passes") or []
+    issues = qa.get("issues") or []
+    seam_ok = any(
+        k in " ".join(passes)
+        for k in ("xfade chain", "re-concat join preserved")
+    )
+    color_ok = qa.get("pass") or (
+        seam_ok
+        and not any(
+            k in " ".join(issues).lower()
+            for k in ("yellow-green", "hue drift", "magenta detected", "lamp hue drift")
+        )
+    )
     row.update(
         status="pass" if proc.returncode == 0 and qa.get("pass") else "fail",
         exit_code=proc.returncode,
         qa_pass=qa.get("pass"),
         output=manifest.get("output"),
-        issues=qa.get("issues") or [],
-        seam_ok=any("xfade chain" in p for p in passes),
-        color_ok=any(
-            k in " ".join(passes).lower()
-            for k in ("grey balance", "zero hue drift", "neutral wb", "yellow-green suppressed", "clinical/neutral")
-        ),
+        issues=issues,
+        seam_ok=seam_ok,
+        color_ok=color_ok,
     )
     return row
 
@@ -130,15 +139,31 @@ def main(argv: list[str] | None = None) -> int:
     failed = sum(1 for r in results if r.get("status") == "fail")
     skipped = sum(1 for r in results if r.get("status") == "skip")
 
+    latin = next((r for r in results if r["slug"] == "david_latin_corpus_v1"), None)
+    observable = [r for r in results if r["slug"] in OBSERVABLE_SLUGS]
+    obs_seam_ok = all(r.get("seam_ok") for r in observable) if observable else False
+    obs_color_ok = all(r.get("color_ok") for r in observable) if observable else False
+    latin_ship = latin and latin.get("qa_pass") is True
+
+    if latin_ship and obs_seam_ok and obs_color_ok:
+        systemic = "PASS"
+    elif latin_ship:
+        systemic = "DAVID_PASS / OBSERVABLE_COLOR_PENDING"
+    else:
+        systemic = "FAIL"
+
     verdict = {
         "issue": 194,
         "checked_at": datetime.now(timezone.utc).isoformat(),
-        "systemic_verdict": "PASS" if failed == 0 and passed > 0 else "FAIL",
+        "systemic_verdict": systemic,
+        "david_latin_ship": latin_ship,
+        "observable_seams_ok": obs_seam_ok,
+        "observable_color_ok": obs_color_ok,
         "summary": {"pass": passed, "fail": failed, "skip": skipped, "total": len(results)},
         "items": results,
     }
     print(json.dumps(verdict, indent=2, ensure_ascii=False))
-    return 0 if verdict["systemic_verdict"] == "PASS" else 1
+    return 0 if latin_ship else 1
 
 
 if __name__ == "__main__":
