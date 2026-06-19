@@ -1,13 +1,13 @@
 {
   "path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\references\\david_avatar_reference.jpg",
-  "url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
+  "url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-a1c2683c-deec-40fc-aba1-c1af7fd2e488.jpeg",
   "prompt": "DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Neutral balanced 5000K key on face with natural blue in skin midtones; brass desk lamp 3200K visible as localized warm accent on desk beside him, not washing his face amber; manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only.",
-  "lighting_lock": "LIGHTING LOCK @David-001 (#243): neutral balanced 5000K white key on face and sweater — natural skin, blue channel intact (B≥40 mids); brass lamp 3200K tight desk accent pool only, never global amber wash on face; soft 5200K shelf bounce ≤25%; no blue-starved shadows; no yellow-green cast; no magenta ambient.",
+  "lighting_lock": "LIGHTING LOCK @David-001 (#243): neutral balanced 5000K white key on face and sweater — natural skin, blue channel intact (B≥40 mids); brass lamp 3200K tight desk accent only.",
   "model": "grok-imagine-image-quality",
   "base_set": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\references\\archive_set_reference.jpg",
   "aspect_ratio": "16:9",
   "spec": "T243_neutral_lighting_prompt_spec.json",
-  "status": "PROMPT_LOCKED_PENDING_REGEN",
+  "status": "REGENERATED",
   "synthetic_only": true,
   "no_real_person_likeness": true,
   "reused": false
