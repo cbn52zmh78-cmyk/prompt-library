@@ -8,7 +8,7 @@
   "avatar_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
   "set_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\references\\archive_set_reference.jpg",
   "voice_suffix": "mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only",
-  "seamless": true,
+  "seamless": null,
   "shots": [
     {
       "shot_id": "01_cold_open",
@@ -96,7 +96,7 @@
     },
     {
       "shot_id": "07_demonstration",
-      "duration": 9,
+      "duration": 10,
       "image_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-89ba6afa-5526-4821-8942-f7292e7342d8.jpeg",
       "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host delivers example pronunciation or excerpt, scholarly tone, on-screen labels visible. Camera: medium — deliberate pace. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"Listen — Gallia est omnis divisa in partes tres — hard c, v as w, ae as a single syllable in Caesar's prose rhythm.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
       "speech_text": "Listen — Gallia est omnis divisa in partes tres — hard c, v as w, ae as a single syllable in Caesar's prose rhythm.",
@@ -105,7 +105,7 @@
       "on_screen_labels": [],
       "timing": {
         "start_s": 47,
-        "end_s": 56
+        "end_s": 57
       }
     },
     {
@@ -118,8 +118,8 @@
       "on_screen": "",
       "on_screen_labels": [],
       "timing": {
-        "start_s": 56,
-        "end_s": 64
+        "start_s": 57,
+        "end_s": 65
       }
     }
   ],

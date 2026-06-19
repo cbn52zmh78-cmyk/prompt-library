@@ -91,7 +91,7 @@
   },
   "config": {
     "model_video": "grok-imagine-video-1.5",
-    "resolution": "720p",
+    "resolution": "480p",
     "aspect_ratio": "16:9",
     "voice_suffix": "clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only",
     "use_identity_lock": false,
@@ -240,5 +240,10 @@
       "source_count": 3,
       "has_visualization_ref": true
     }
+  },
+  "batch": {
+    "batch_id": "20260619_052638",
+    "phase": "draft_480p",
+    "resolution": "480p"
   }
 }
