@@ -1,190 +1,41 @@
 {
   "batch_id": "T4_181_science_astro",
+  "issue": 208,
+  "completed_at": "2026-06-19T07:28:39.275393+00:00",
   "phase": "draft_480p",
-  "generated_at": "2026-06-19T06:19:45.240834+00:00",
-  "concepts_dir": "STUDIO/Pipeline/Concepts/astro_mini_slate",
-  "dry_run": false,
   "resolution": "480p",
+  "summary": {
+    "pass": 3,
+    "fail": 0,
+    "total": 3
+  },
   "items": [
     {
       "slug": "science_black_hole_anatomy_v1",
-      "concept_path": "STUDIO/Pipeline/Concepts/astro_mini_slate/science_black_hole_anatomy_v1.concept.json",
-      "script_path": "DAVID/batches/T4_181_science_astro/scripts/science_black_hole_anatomy_v1_480p_script.json",
-      "production_dir": "STUDIO/Productions/Editorial/science_black_hole_anatomy_v1_longform_v1",
-      "gate_0_verdict": "YELLOW",
-      "gate_0_signed": true,
-      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_black_hole_anatomy_v1_20260619_011903.json",
-      "intake_exit": 0,
-      "phase": "draft_480p",
-      "resolution": "480p",
       "status": "pass",
-      "dry_run": false,
-      "qa_report_path": "STUDIO/Productions/Editorial/science_black_hole_anatomy_v1_longform_v1/qa_report.json",
       "qa_pass": true,
-      "qa_issues": [],
-      "render_exit": 0,
-      "render_mode": "full",
-      "render_attempts": 1,
-      "science_applies": true,
-      "science_gate": {
-        "verdict": "YELLOW",
-        "warnings": [
-          "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
-        ],
-        "status": "CAUTION"
-      },
-      "honesty_rail": {
-        "applies": true,
-        "status": "PASS",
-        "passed": true,
-        "failures": [],
-        "checks": [
-          {
-            "name": "illustrative_label",
-            "ok": true
-          },
-          {
-            "name": "cited_source",
-            "ok": true
-          },
-          {
-            "name": "no_simulation_overclaims",
-            "ok": true
-          }
-        ],
-        "sources": [
-          "Event Horizon Telescope Collaboration et al., First M87 Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole, ApJ 875, L1 (2019)",
-          "Abbott, B. P. et al. (LIGO Scientific Collaboration), Observation of Gravitational Waves from a Binary Black Hole Merger, Phys. Rev. Lett. 116, 061102 (2016)",
-          "NASA Science — Black Holes overview (event horizon, no escape for light)"
-        ]
-      },
-      "honesty_pass": true,
-      "promote_eligible": true,
-      "promote_command": "python DAVID/scripts/batch_runner.py promote --from-manifest <manifest.json> --slug science_black_hole_anatomy_v1"
-    },
-    {
-      "slug": "science_galaxy_formation_v1",
-      "concept_path": "STUDIO/Pipeline/Concepts/astro_mini_slate/science_galaxy_formation_v1.concept.json",
-      "script_path": "DAVID/batches/T4_181_science_astro/scripts/science_galaxy_formation_v1_480p_script.json",
-      "production_dir": "STUDIO/Productions/Editorial/science_galaxy_formation_v1_longform_v1",
-      "gate_0_verdict": "YELLOW",
-      "gate_0_signed": true,
-      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_galaxy_formation_v1_20260619_011934.json",
-      "intake_exit": 0,
-      "phase": "draft_480p",
-      "resolution": "480p",
-      "status": "fail",
-      "dry_run": false,
-      "qa_report_path": "STUDIO/Productions/Editorial/science_galaxy_formation_v1_longform_v1/qa_report.json",
-      "qa_pass": false,
-      "qa_issues": [
-        "loudness spread 7.19 LU > 1.5"
-      ],
-      "render_exit": 1,
-      "render_mode": "full",
-      "render_attempts": 1,
-      "science_applies": true,
-      "science_gate": {
-        "verdict": "YELLOW",
-        "warnings": [
-          "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
-        ],
-        "status": "CAUTION"
-      },
-      "honesty_rail": {
-        "applies": true,
-        "status": "PASS",
-        "passed": true,
-        "failures": [],
-        "checks": [
-          {
-            "name": "illustrative_label",
-            "ok": true
-          },
-          {
-            "name": "cited_source",
-            "ok": true
-          },
-          {
-            "name": "no_simulation_overclaims",
-            "ok": true
-          }
-        ],
-        "sources": [
-          "Planck Collaboration, Planck 2018 results. VI. Cosmological parameters, A&A 641, A6 (2020)",
-          "NASA Webb Mission — Early Universe & Galaxy Evolution science themes",
-          "ESA/Hubble — Galaxy formation and evolution (hierarchical merging, star-formation history)"
-        ]
-      },
-      "honesty_pass": true,
-      "promote_eligible": false,
-      "promote_command": null
+      "issues": [],
+      "output": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Productions\\Editorial\\science_black_hole_anatomy_v1_longform_v1\\output\\studio_science_black_hole_anatomy_v1_seamless_v1.mp4",
+      "yellow_green_max": "0.003",
+      "loudness_spread": "0.04"
     },
     {
       "slug": "science_star_lifecycle_v1",
-      "concept_path": "STUDIO/Pipeline/Concepts/astro_mini_slate/science_star_lifecycle_v1.concept.json",
-      "script_path": "DAVID/batches/T4_181_science_astro/scripts/science_star_lifecycle_v1_480p_script.json",
-      "production_dir": "STUDIO/Productions/Editorial/science_star_lifecycle_v1_longform_v1",
-      "gate_0_verdict": "YELLOW",
-      "gate_0_signed": true,
-      "gate_0_report": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_star_lifecycle_v1_20260619_011942.json",
-      "intake_exit": 0,
-      "phase": "draft_480p",
-      "resolution": "480p",
-      "status": "fail",
-      "dry_run": false,
-      "qa_report_path": "STUDIO/Productions/Editorial/science_star_lifecycle_v1_longform_v1/qa_report.json",
+      "status": "pass",
       "qa_pass": true,
-      "qa_issues": [],
-      "render_exit": 1,
-      "render_mode": "full",
-      "render_attempts": 1,
-      "science_applies": true,
-      "science_gate": {
-        "verdict": "YELLOW",
-        "warnings": [
-          "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
-        ],
-        "status": "CAUTION"
-      },
-      "honesty_rail": {
-        "applies": true,
-        "status": "PASS",
-        "passed": true,
-        "failures": [],
-        "checks": [
-          {
-            "name": "illustrative_label",
-            "ok": true
-          },
-          {
-            "name": "cited_source",
-            "ok": true
-          },
-          {
-            "name": "no_simulation_overclaims",
-            "ok": true
-          }
-        ],
-        "sources": [
-          "NASA Science — Stars: Life and Death (stellar evolution stages, mass-dependent endpoints)",
-          "ESA/Hubble — Stellar evolution and star formation (HR diagram, main sequence, giants)",
-          "Chandrasekhar, S., The Maximum Mass of Ideal White Dwarfs, ApJ 74, 81 (1931)"
-        ]
-      },
-      "honesty_pass": true,
-      "promote_eligible": false,
-      "promote_command": null
+      "issues": [],
+      "output": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Productions\\Editorial\\science_star_lifecycle_v1_longform_v1\\output\\studio_science_star_lifecycle_v1_seamless_v1.mp4",
+      "yellow_green_max": "0.026",
+      "loudness_spread": "0.03"
+    },
+    {
+      "slug": "science_galaxy_formation_v1",
+      "status": "pass",
+      "qa_pass": true,
+      "issues": [],
+      "output": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Productions\\Editorial\\science_galaxy_formation_v1_longform_v1\\output\\studio_science_galaxy_formation_v1_seamless_v1.mp4",
+      "yellow_green_max": "0.044",
+      "loudness_spread": "0.05"
     }
-  ],
-  "summary": {
-    "pass": 1,
-    "fail": 2
-  },
-  "science_summary": {
-    "science_episodes": 3,
-    "honesty_pass": 3,
-    "honesty_fail": 0
-  },
-  "promote_command": "python DAVID/scripts/batch_runner.py promote C:/Users/NCG/Videos/Grok Projects/DAVID/batches/T4_181_science_astro/manifest.json"
+  ]
 }

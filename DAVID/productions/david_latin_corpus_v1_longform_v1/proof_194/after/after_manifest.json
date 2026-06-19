@@ -1,0 +1,22 @@
+{
+  "video": "DAVID\\productions\\david_latin_corpus_v1_longform_v1\\output\\david_david_latin_corpus_v1_seamless_v1.mp4",
+  "tag": "after",
+  "frames": {
+    "after_01_cold_open_mid": {
+      "at_s": 4.0,
+      "path": "DAVID\\productions\\david_latin_corpus_v1_longform_v1\\proof_194\\after\\after_01_cold_open_mid.jpg"
+    },
+    "after_05_method_mid": {
+      "at_s": 34.2,
+      "path": "DAVID\\productions\\david_latin_corpus_v1_longform_v1\\proof_194\\after\\after_05_method_mid.jpg"
+    },
+    "after_07_demonstration_mid": {
+      "at_s": 50.3,
+      "path": "DAVID\\productions\\david_latin_corpus_v1_longform_v1\\proof_194\\after\\after_07_demonstration_mid.jpg"
+    },
+    "after_join_03_04_xfade": {
+      "at_s": 23.400000000000002,
+      "path": "DAVID\\productions\\david_latin_corpus_v1_longform_v1\\proof_194\\after\\after_join_03_04_xfade.jpg"
+    }
+  }
+}

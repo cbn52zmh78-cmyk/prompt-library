@@ -1,21 +1,21 @@
 {
   "pipeline": "render_longform_seamless",
   "protocol": "STUDIO_Canonical_Schema_and_Seamless_Spec_v1",
-  "completed_at": "2026-06-19T07:06:39.812786+00:00",
+  "completed_at": "2026-06-19T07:30:48.870391+00:00",
   "script_source": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\scripts\\longform_scripts\\david_latin_corpus_v1_script.json",
-  "concat_only": true,
+  "concat_only": false,
   "seamless": true,
   "production_dir": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_corpus_v1_longform_v1",
   "script": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_corpus_v1_longform_v1\\david_latin_corpus_v1_script.json",
   "imagine_pack": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_corpus_v1_longform_v1\\david_latin_corpus_v1_imagine_pack.json",
   "output": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_corpus_v1_longform_v1\\output\\david_david_latin_corpus_v1_seamless_v1.mp4",
   "extend_performance": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_corpus_v1_longform_v1\\shots\\host_performance_extend.mp4",
-  "extend_steps": "cached",
+  "extend_steps": 8,
   "continuity_mode": "frame_chain",
   "comparison": null,
   "qa": {
     "slug": "david_latin_corpus_v1",
-    "qa_at": "2026-06-19T07:06:39.812086+00:00",
+    "qa_at": "2026-06-19T07:30:48.869703+00:00",
     "pass": true,
     "passes": [
       "host identity lock LOADED",
@@ -31,14 +31,14 @@
       "@David-001 continuity prefix embedded in video_prompt",
       "xfade chain + synced audio crossfade at joins",
       "re-concat join preserved: xfade_chain (0.2s)",
-      "audio PRESENT (david_david_latin_corpus_v1_seamless_v1.mp4 mean -27.2 dB)",
+      "audio PRESENT (david_david_latin_corpus_v1_seamless_v1.mp4 mean -27.0 dB)",
       "#194 archive color: neutral WB + natural skin + localized 3200K lamp accent",
       "loudnorm two-pass target I=-16.0 LUFS per shot",
       "audio pinned to exact shot duration (no stretch/offset)",
-      "flat loudness across shots (spread 0.05 LU)",
+      "flat loudness across shots (spread 0.09 LU)",
       "zero magenta (max score 0.006 <= 0.42)",
       "tight A/V sync per shot (duration pinned)",
-      "neutral WB — yellow-green suppressed (max 0.007 <= 0.12)",
+      "neutral WB — yellow-green suppressed (max 0.008 <= 0.12)",
       "pronunciation chip overlay burned (high-contrast #194)",
       "lamp warm ratio stable across segments (Δ=0.000)"
     ],
@@ -58,5 +58,7 @@
   "segments": [
     "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_corpus_v1_longform_v1\\shots\\host_performance_extend.mp4",
     "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_corpus_v1_longform_v1\\shots\\provenance.mp4"
-  ]
+  ],
+  "upload_kit": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\david_latin_corpus_v1_longform_v1\\upload_kit",
+  "packaged_at": "2026-06-19T07:30:49.093764+00:00"
 }

@@ -1,0 +1,248 @@
+{
+  "slug": "elijah_heat_pump_valve_60s",
+  "title": "Blueprint — Heat Pump Reversing Valve",
+  "format_id": "technical-explainer",
+  "target_seconds": 54,
+  "intake": {
+    "format_id": "technical-explainer",
+    "actor_id": "Elijah-001",
+    "set_id": "@Set-Warehouse-Industrial-001",
+    "style_id": "@Style-Blueprint-Technical-001",
+    "source": "STUDIO/Pipeline/production_intake.py",
+    "gate_0": {
+      "version": "1.3",
+      "verdict": "GREEN",
+      "blocked": false,
+      "requires_human_signoff": false,
+      "human_signoff": true,
+      "target_rating": "PG",
+      "channels": [
+        "social",
+        "streaming"
+      ],
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_GREEN_elijah_heat_pump_valve_60s_20260619_021952.json",
+      "checklist_domains": {
+        "row_1_synthetic_ownership": "PASS",
+        "row_2_music_sync": "PASS",
+        "row_3_no_real_likeness": "PASS",
+        "row_4_target_channel": "PASS",
+        "row_5_age_documentation": "PASS",
+        "row_6_ai_disclosure": "PASS"
+      },
+      "hard_stops": [],
+      "counsel_flags": [],
+      "distribution_flags": [],
+      "warnings": [],
+      "rating_flags": [],
+      "cara_status": "COMPLIANT",
+      "music_bed_id": "BED-DOC-001",
+      "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
+      "row_2_music_sync": "PASS",
+      "notes": [
+        "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
+        "Social = mass dissemination. Platform AI-label + community guidelines apply.",
+        "Row 2: Manifest-cleared music bed(s): BED-DOC-001 (STUDIO/Music_Sound/clearance_manifest.json)",
+        "Row 1: STUDIO Casting Bible synthetic cast — Upon Tyne ownership; no third-party likeness license.",
+        "Gate 0 cleared for Development/Pre-Production subject to ongoing review."
+      ],
+      "brief_source": "composed"
+    },
+    "libraries": {
+      "formats": "Production_Templates_v1.json (#98)",
+      "sets": "Set_Library_v1.json (#99)",
+      "styles": "Style_Library_v1.json (#99)",
+      "casting": "Casting_Bible/registry/casting_registry.json"
+    },
+    "duration_clamp": {
+      "applied": true,
+      "policy": "seamless_7_9",
+      "lo": 7,
+      "hi": 9,
+      "shots_clamped": 1
+    },
+    "technical_subject": {
+      "subject_id": "heat_pump_reversing_valve",
+      "domain": "Mechanical Systems — HVAC",
+      "system": "Heat pump reversing valve",
+      "key_spec": "ANSI/ASHRAE reference cycle diagram — four-way valve slide mechanism",
+      "visualization_ref": null,
+      "diagram_prompt": "Technical exploded schematic: four-way reversing valve body, slide piston, capillary tubes to indoor and outdoor coils, solenoid pilot; cyan schematic lines on navy field, part callouts, accurate topology not decorative",
+      "diagram_class_default": "exploded",
+      "plate_id": "@Tech-HeatPump-001",
+      "sources": [
+        {
+          "citation": "ASHRAE Handbook — Fundamentals, Chapter 9: Refrigeration Cycles and Systems",
+          "url": null,
+          "type": "primary",
+          "notes": null
+        },
+        {
+          "citation": "U.S. DOE Energy Saver — Heat Pump Systems",
+          "url": "https://www.energy.gov/energysaver/heat-pump-systems",
+          "type": "secondary",
+          "notes": null
+        },
+        {
+          "citation": "Carrier Service Manual — Four-Way Reversing Valve (illustrative teardown reference)",
+          "url": null,
+          "type": "secondary",
+          "notes": null
+        }
+      ]
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "voice_suffix": "deep measured baritone, unhurried authoritative systems walk-through, synthetic presenter only",
+    "use_identity_lock": false,
+    "avatar_reference": "STUDIO/Cast/actors_roster/male/north_america/Elijah_Brooks/01_casting_shots/casting_turnaround_v1.jpg",
+    "set_reference": "STUDIO/Pipeline/references/warehouse_industrial_reference.jpg",
+    "seamless": {
+      "primary": "extend",
+      "xfade_s": 0.2,
+      "match_color": true,
+      "cut_on_motion": true,
+      "lamp_lock": false,
+      "glasses_lock": false,
+      "loudnorm": true,
+      "pin_audio_sync": true,
+      "reground_interval": 2,
+      "magenta_clamp": true,
+      "neutral_grade": false
+    },
+    "music_bed": {
+      "track_id": "BED-DOC-001",
+      "manifest": "STUDIO/Music_Sound/clearance_manifest.json"
+    }
+  },
+  "shots": [
+    {
+      "id": "01_hook",
+      "duration": 7,
+      "t_start": 0,
+      "t_end": 7,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Elijah-001: identical presenter face, workwear wardrobe, blueprint bench set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Blueprint-Technical-001: blueprint technical grade — navy-base low saturation, cyan schematic accent on diagrams only, accurate workwear color, minimal stylistic grading, systems trust, no Observable clinical cast, no DAVID warm amber. Presenter addresses camera on warehouse bench, surprising failure mode or daily-use system hook. Camera: locked medium, direct address. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Industrial 4800K window key locked — deep shadow pockets for dimension, no magenta brick bounce, no cool fill contamination. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Blueprint-Technical: host skin true-to-life, wardrobe earth-neutral, diagram accents cyan #3DB8E8 on navy #0A1628 only — forbid full-frame warm lamp cast, forbid magenta fog, forbid orange global, forbid Observable grey clinical on host. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Your heat pump heats and cools from one outdoor box. The part that flips the whole cycle lives inside this valve — and most homeowners have never seen it.\" deep measured baritone, unhurried authoritative systems walk-through, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Your heat pump heats and cools from one outdoor box. The part that flips the whole cycle lives inside this valve — and most homeowners have never seen it.",
+      "on_screen": "Heat pump reversing valve"
+    },
+    {
+      "id": "02_mechanism",
+      "duration": 9,
+      "t_start": 7,
+      "t_end": 16,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Elijah-001: identical presenter face, workwear wardrobe, blueprint bench set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Blueprint-Technical-001: blueprint technical grade — navy-base low saturation, cyan schematic accent on diagrams only, accurate workwear color, minimal stylistic grading, systems trust, no Observable clinical cast, no DAVID warm amber. Presenter names subsystems and what each does in plain language, motivated gesture. Camera: slow push-in medium. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Industrial 4800K window key locked — deep shadow pockets for dimension, no magenta brick bounce, no cool fill contamination. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Blueprint-Technical: host skin true-to-life, wardrobe earth-neutral, diagram accents cyan #3DB8E8 on navy #0A1628 only — forbid full-frame warm lamp cast, forbid magenta fog, forbid orange global, forbid Observable grey clinical on host. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"A four-way valve routes hot refrigerant gas either to the indoor coil for heat, or to the outdoor coil for cooling. A slide piston inside the body swaps those paths in milliseconds.\" deep measured baritone, unhurried authoritative systems walk-through, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "A four-way valve routes hot refrigerant gas either to the indoor coil for heat, or to the outdoor coil for cooling. A slide piston inside the body swaps those paths in milliseconds."
+    },
+    {
+      "id": "03_how_we_know",
+      "duration": 9,
+      "t_start": 16,
+      "t_end": 25,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Elijah-001: identical presenter face, workwear wardrobe, blueprint bench set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Blueprint-Technical-001: blueprint technical grade — navy-base low saturation, cyan schematic accent on diagrams only, accurate workwear color, minimal stylistic grading, systems trust, no Observable clinical cast, no DAVID warm amber. Presenter cites standard, manual, teardown, or spec sheet — evidence-forward tone. Camera: medium — gesture to evidence. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Industrial 4800K window key locked — deep shadow pockets for dimension, no magenta brick bounce, no cool fill contamination. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Blueprint-Technical: host skin true-to-life, wardrobe earth-neutral, diagram accents cyan #3DB8E8 on navy #0A1628 only — forbid full-frame warm lamp cast, forbid magenta fog, forbid orange global, forbid Observable grey clinical on host. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"ASHRAE documents the standard vapor-compression cycle. Manufacturer teardowns show the slide-and-capillary pilot that moves the piston when the thermostat calls for mode change.\" deep measured baritone, unhurried authoritative systems walk-through, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "ASHRAE documents the standard vapor-compression cycle. Manufacturer teardowns show the slide-and-capillary pilot that moves the piston when the thermostat calls for mode change."
+    },
+    {
+      "id": "04_diagram_payoff",
+      "duration": 9,
+      "t_start": 25,
+      "t_end": 34,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Elijah-001: identical presenter face, workwear wardrobe, blueprint bench set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Blueprint-Technical-001: blueprint technical grade — navy-base low saturation, cyan schematic accent on diagrams only, accurate workwear color, minimal stylistic grading, systems trust, no Observable clinical cast, no DAVID warm amber. Presenter narrates over locked @2 technical diagram — cutaway, exploded, or schematic plate; label chips on screen. Camera: locked medium beside or over @2 diagram plate. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Industrial 4800K window key locked — deep shadow pockets for dimension, no magenta brick bounce, no cool fill contamination. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Blueprint-Technical: host skin true-to-life, wardrobe earth-neutral, diagram accents cyan #3DB8E8 on navy #0A1628 only — forbid full-frame warm lamp cast, forbid magenta fog, forbid orange global, forbid Observable grey clinical on host. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Watch the payoff: refrigerant enters here, the slide shifts, and the flow diagram inverts — same compressor, opposite job. One valve, two seasons.\" deep measured baritone, unhurried authoritative systems walk-through, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Watch the payoff: refrigerant enters here, the slide shifts, and the flow diagram inverts — same compressor, opposite job. One valve, two seasons.",
+      "on_screen_labels": [
+        "EXPLODED VIEW",
+        "ILLUSTRATIVE",
+        "NOT TO SCALE"
+      ],
+      "reference_slots": {
+        "@2": "diagram"
+      },
+      "technical_subject_ref": "heat_pump_reversing_valve",
+      "diagram_prompt": "Exploded four-way heat pump reversing valve: brass body, slide piston, solenoid pilot, capillary lines to coils; labeled flow arrows for heating vs cooling modes; cyan-on-navy schematic",
+      "duration_raw": 10
+    },
+    {
+      "id": "05_significance",
+      "duration": 9,
+      "t_start": 34,
+      "t_end": 43,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Elijah-001: identical presenter face, workwear wardrobe, blueprint bench set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Blueprint-Technical-001: blueprint technical grade — navy-base low saturation, cyan schematic accent on diagrams only, accurate workwear color, minimal stylistic grading, systems trust, no Observable clinical cast, no DAVID warm amber. Presenter lands stakes — safety, cost, design tradeoff, or maintenance; end on gesture peak. Camera: medium-close, authoritative settle. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Industrial 4800K window key locked — deep shadow pockets for dimension, no magenta brick bounce, no cool fill contamination. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Blueprint-Technical: host skin true-to-life, wardrobe earth-neutral, diagram accents cyan #3DB8E8 on navy #0A1628 only — forbid full-frame warm lamp cast, forbid magenta fog, forbid orange global, forbid Observable grey clinical on host. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"When this valve sticks, you get heat in summer or ice in winter — and a service call that costs more than the part. Knowing the mechanism is knowing what failed.\" deep measured baritone, unhurried authoritative systems walk-through, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "When this valve sticks, you get heat in summer or ice in winter — and a service call that costs more than the part. Knowing the mechanism is knowing what failed."
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 6,
+    "card_type": "sources",
+    "title": "Sources — Heat pump reversing valve",
+    "subtitle": "Mechanical Systems — HVAC",
+    "footer": "ASHRAE Handbook — Fundamentals, Chapter 9: Refrigeration Cycles and S… · U.S. DOE Energy Saver — Heat Pump Systems · Carrier Service Manual — Four-Way Reversing Valve (illustrative teard…",
+    "sources": [
+      {
+        "citation": "ASHRAE Handbook — Fundamentals, Chapter 9: Refrigeration Cycles and Systems",
+        "url": null,
+        "type": "primary",
+        "notes": null
+      },
+      {
+        "citation": "U.S. DOE Energy Saver — Heat Pump Systems",
+        "url": "https://www.energy.gov/energysaver/heat-pump-systems",
+        "type": "secondary",
+        "notes": null
+      },
+      {
+        "citation": "Carrier Service Manual — Four-Way Reversing Valve (illustrative teardown reference)",
+        "url": null,
+        "type": "secondary",
+        "notes": null
+      }
+    ],
+    "technical_subject_id": "heat_pump_reversing_valve"
+  },
+  "qa_rules": {
+    "require_identity_lock": false,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": false,
+    "min_shots": 5
+  },
+  "production_meta": {
+    "set_id": "@Set-Warehouse-Industrial-001",
+    "style_id": "@Style-Blueprint-Technical-001",
+    "identity_anchor": "@Elijah-001",
+    "pacing": {
+      "words_per_second": 2.4,
+      "beat_gap_s": 0.35,
+      "register": "quiet authority, systems walk-through, spec-first",
+      "pause_on": [
+        "subsystem reveals",
+        "diagram cutaways",
+        "maintenance stakes"
+      ]
+    },
+    "camera": {
+      "primary": "locked medium on warehouse bench — presenter direct to camera",
+      "secondary": "full-frame @2 schematic / exploded diagram payoff",
+      "forbidden": [
+        "handheld jitter",
+        "beauty-filter smoothing",
+        "misleading scale without label"
+      ]
+    },
+    "target_rating": "PG",
+    "technical_subject": {
+      "subject_id": "heat_pump_reversing_valve",
+      "domain": "Mechanical Systems — HVAC",
+      "system": "Heat pump reversing valve",
+      "key_spec": "ANSI/ASHRAE reference cycle diagram — four-way valve slide mechanism",
+      "source_count": 3,
+      "has_diagram_ref": false,
+      "plate_id": "@Tech-HeatPump-001"
+    }
+  }
+}

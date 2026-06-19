@@ -1008,11 +1008,11 @@ def probe_duration(video: Path) -> float:
     raise RuntimeError(f"cannot probe duration: {video}")
 
 
-def extract_last_frame(video: Path, out_jpg: Path) -> Path:
+def extract_frame_at(video: Path, at_s: float, out_jpg: Path) -> Path:
     ff = _ffmpeg_exe()
     out_jpg.parent.mkdir(parents=True, exist_ok=True)
     dur = probe_duration(video)
-    seek = max(0.0, dur - 0.4)
+    seek = max(0.0, min(float(at_s), max(0.0, dur - 0.05)))
     subprocess.run(
         [
             ff, "-y", "-ss", f"{seek:.3f}", "-i", str(video),
@@ -1022,6 +1022,39 @@ def extract_last_frame(video: Path, out_jpg: Path) -> Path:
         capture_output=True,
     )
     return out_jpg
+
+
+def extract_last_frame(video: Path, out_jpg: Path) -> Path:
+    dur = probe_duration(video)
+    return extract_frame_at(video, max(0.0, dur - 0.4), out_jpg)
+
+
+def reject_concat_only_seamless_grade(
+    *,
+    concat_only: bool,
+    seamless_opts: SeamlessOptions,
+    match_color: bool,
+    cut_on_motion: bool,
+    seamless_flag: bool,
+) -> None:
+    """#194 — grading/re-seam requires fresh segments; concat-only must hard-fail."""
+    if not concat_only:
+        return
+    if (
+        seamless_opts.enabled
+        or seamless_flag
+        or match_color
+        or cut_on_motion
+        or seamless_opts.match_color
+        or seamless_opts.cut_on_motion
+        or seamless_opts.magenta_clamp
+        or seamless_opts.neutral_grade
+    ):
+        raise SystemExit(
+            "--concat-only cannot grade or re-seam (#194). "
+            "Cached raw segments produce unchanged pixels — QA false-pass. "
+            "Omit --concat-only; use --force-all for a full seamless re-render."
+        )
 
 
 def trim_tail_motion(video: Path, out: Path, trim_s: float = 0.15) -> Path:
@@ -2974,6 +3007,14 @@ def main() -> int:
         client = xai_sdk.Client(api_key=token)
 
     seamless_opts = get_seamless_options(script, args)
+    seamless_opts = _apply_grade_policy(script, resolve_refs(script), seamless_opts)
+    reject_concat_only_seamless_grade(
+        concat_only=args.concat_only,
+        seamless_opts=seamless_opts,
+        match_color=bool(args.match_color),
+        cut_on_motion=bool(args.cut_on_motion),
+        seamless_flag=bool(args.seamless),
+    )
 
     force_ids = set(args.force_shot)
     if args.force_all and seamless_opts.enabled:

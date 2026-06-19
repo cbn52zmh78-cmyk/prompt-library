@@ -118,9 +118,10 @@ def run_scope(slug: str, *, package: bool = False) -> dict:
         row.update(status="skip", reason="script not found")
         return row
 
+    # #194: concat-only + seamless is forbidden — use --qa-only to read existing QA.
     cmd = [
         sys.executable, str(RENDER), str(script),
-        "--concat-only", "--seamless", "--match-color", "--cut-on-motion",
+        "--seamless", "--match-color", "--cut-on-motion", "--force-all",
     ]
     if package:
         cmd.append("--package")

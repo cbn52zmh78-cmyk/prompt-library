@@ -20,7 +20,7 @@
         "social",
         "streaming"
       ],
-      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_star_lifecycle_v1_20260619_010729.json",
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_star_lifecycle_v1_20260619_021821.json",
       "checklist_domains": {
         "row_1_synthetic_ownership": "MANUAL",
         "row_2_music_sync": "PASS",
@@ -37,13 +37,13 @@
       ],
       "rating_flags": [],
       "cara_status": "COMPLIANT",
-      "music_bed_id": "BED-DOC-001",
+      "music_bed_id": "BED-COS-001",
       "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
       "row_2_music_sync": "PASS",
       "notes": [
         "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
         "Social = mass dissemination. Platform AI-label + community guidelines apply.",
-        "Row 2: Manifest-cleared music bed(s): BED-DOC-001 (STUDIO/Music_Sound/clearance_manifest.json)",
+        "Row 2: Manifest-cleared music bed(s): BED-COS-001 (STUDIO/Music_Sound/clearance_manifest.json)",
         "Science Gate: illustrative-not-simulation policy applies.",
         "Revise and re-submit to Legal Gate (Gate 0)."
       ],
@@ -66,9 +66,12 @@
       "subject_id": "STAR-LIFE-001",
       "domain": "Astrophysics — Stellar Evolution",
       "phenomenon": "Life & Death of a Star",
+      "field": "astrophysics",
       "key_measurement": "Chandrasekhar limit ~1.4 M☉ (white dwarf); iron-core collapse triggers Type II supernova",
       "visualization_ref": "Science/reference_plates/astro/supernova_reference.jpg",
       "visualization_prompt": "scientific visualization stellar evolution sequence, protostar in molecular cloud, main-sequence star, red giant envelope expansion, planetary nebula or core-collapse supernova branch by mass, NOT TO SCALE time-compressed, 16:9 documentary fidelity",
+      "principle_set": "astrophysics_fidelity",
+      "plate_id": "@Sci-Supernova-001",
       "institutions": [
         "NASA",
         "ESA",
@@ -93,7 +96,8 @@
           "type": "primary",
           "notes": "Theoretical mass limit for white dwarf stability"
         }
-      ]
+      ],
+      "principle_selection_reason": "field:astrophysics"
     }
   },
   "config": {
@@ -118,7 +122,7 @@
       "magenta_clamp": true
     },
     "music_bed": {
-      "track_id": "BED-DOC-001",
+      "track_id": "BED-COS-001",
       "manifest": "STUDIO/Music_Sound/clearance_manifest.json"
     }
   },
@@ -250,9 +254,18 @@
       "subject_id": "STAR-LIFE-001",
       "domain": "Astrophysics — Stellar Evolution",
       "phenomenon": "Life & Death of a Star",
+      "field": "astrophysics",
+      "principle_set": "astrophysics_fidelity",
       "key_measurement": "Chandrasekhar limit ~1.4 M☉ (white dwarf); iron-core collapse triggers Type II supernova",
       "source_count": 3,
-      "has_visualization_ref": true
-    }
+      "has_visualization_ref": true,
+      "plate_id": "@Sci-Supernova-001"
+    },
+    "principle_set": "astrophysics_fidelity"
+  },
+  "batch": {
+    "batch_id": "T4_181_science_astro",
+    "phase": "draft_480p",
+    "resolution": "480p"
   }
 }

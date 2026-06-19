@@ -37,3 +37,26 @@ def test_render_pronunciation_chip_overlay(tmp_path: Path):
     rl.render_pronunciation_chip_overlay(shot, out, width=1280, height=720)
     assert out.is_file()
     assert out.stat().st_size > 500
+
+
+def test_concat_only_seamless_grade_rejected():
+    opts = rl.SeamlessOptions(enabled=True, match_color=True, magenta_clamp=True)
+    with pytest.raises(SystemExit, match="cannot grade or re-seam"):
+        rl.reject_concat_only_seamless_grade(
+            concat_only=True,
+            seamless_opts=opts,
+            match_color=True,
+            cut_on_motion=True,
+            seamless_flag=True,
+        )
+
+
+def test_concat_only_plain_concat_allowed():
+    opts = rl.SeamlessOptions(enabled=False, magenta_clamp=False, neutral_grade=False)
+    rl.reject_concat_only_seamless_grade(
+        concat_only=True,
+        seamless_opts=opts,
+        match_color=False,
+        cut_on_motion=False,
+        seamless_flag=False,
+    )

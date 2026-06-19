@@ -252,8 +252,8 @@ def test_have_chain_reassembly_wires_tighten(tmp_path: Path):
 
 
 @pytest.mark.skipif(not STAR_SCRIPT.is_file(), reason="star_lifecycle batch script missing")
-@pytest.mark.skipif(not STAR_PROD.is_dir(), reason="star_lifecycle production missing")
-def test_star_lifecycle_concat_only_exit_zero_when_qa_passes():
+def test_concat_only_seamless_grade_rejected_by_cli():
+    """#194 — concat-only + seamless must hard-fail (prevents false-pass re-grade)."""
     proc = subprocess.run(
         [
             sys.executable,
@@ -270,15 +270,5 @@ def test_star_lifecycle_concat_only_exit_zero_when_qa_passes():
         encoding="utf-8",
         errors="replace",
     )
-    assert proc.returncode == 0, proc.stderr[-500:]
-    if str(DAVID_SCRIPTS) not in sys.path:
-        sys.path.insert(0, str(DAVID_SCRIPTS))
-    from batch_runner import parse_render_manifest  # noqa: WPS433
-
-    manifest = parse_render_manifest(proc.stdout)
-    assert manifest is not None
-    assert manifest["qa"]["pass"] is True
-    passes = manifest["qa"].get("passes", [])
-    assert any("xfade chain" in p for p in passes)
-    assert any("re-concat join preserved" in p for p in passes)
-    assert any("clinical neutral WB grade" in p for p in passes)
+    assert proc.returncode != 0
+    assert "cannot grade or re-seam" in (proc.stderr or "") + (proc.stdout or "")
