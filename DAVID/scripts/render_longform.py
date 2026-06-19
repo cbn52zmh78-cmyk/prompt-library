@@ -336,7 +336,7 @@ def normalize_script(raw: dict[str, Any], script_path: Path) -> dict[str, Any]:
                 "subtitle": closing.get("subtext", ""),
                 "footer": raw.get("cta", ""),
             }
-        return {
+        out = {
             "slug": raw.get("slug", script_path.stem.replace("_script", "")),
             "title": raw.get("title", raw.get("slug", script_path.stem)),
             "target_seconds": raw.get("target_seconds"),
@@ -349,6 +349,33 @@ def normalize_script(raw: dict[str, Any], script_path: Path) -> dict[str, Any]:
                 "min_shots": 1,
             }),
         }
+        for key in (
+            "format_id", "concept", "production_dir", "production_meta",
+            "guardrails", "continuity_prefix", "end_guard", "intake",
+        ):
+            if raw.get(key) is not None:
+                out[key] = raw[key]
+        return out
+
+
+def assert_gate_0_cleared(script: dict[str, Any]) -> None:
+    """Block render when intake Gate 0 is RED or pending human sign-off."""
+    intake = script.get("intake") or {}
+    gate = intake.get("gate_0") or {}
+    if not gate:
+        return  # legacy script without intake stamp
+    verdict = gate.get("verdict", "")
+    if gate.get("blocked") or verdict == "RED":
+        report = gate.get("report_path", "unknown")
+        raise SystemExit(
+            f"Gate 0 RED — render blocked. No script may ship. Report: {report}"
+        )
+    if gate.get("requires_human_signoff") and not gate.get("human_signoff"):
+        raise SystemExit(
+            f"Gate 0 {verdict} — human sign-off required before render. "
+            f"Set gate_0.human_signoff in concept and re-run intake, or update script intake stamp. "
+            f"Report: {gate.get('report_path', 'unknown')}"
+        )
 
     # Channel intro / alternate longform shape (shot_id, host_identity, closing_card)
     if "shots" in raw and any("shot_id" in s for s in raw["shots"]):
@@ -866,6 +893,34 @@ def pin_av_to_duration(video: Path, out: Path, duration_s: float) -> Path:
     return out
 
 
+def _remux_av(
+    video: Path,
+    out: Path,
+    *,
+    af: str | None = None,
+    vf: str | None = None,
+    copy_video: bool = True,
+) -> None:
+    """Remux primary video+audio streams — skips attached-picture sidecars."""
+    ff = _ffmpeg_exe()
+    out.parent.mkdir(parents=True, exist_ok=True)
+    cmd = [ff, "-y", "-i", str(video), "-map", "0:0"]
+    if vf:
+        cmd.extend(["-vf", vf, "-c:v", "libx264", "-pix_fmt", "yuv420p"])
+    elif copy_video:
+        cmd.extend(["-c:v", "copy"])
+    else:
+        cmd.extend(["-c:v", "libx264", "-pix_fmt", "yuv420p"])
+    if has_audio_stream(video):
+        cmd.extend(["-map", "0:1"])
+        if af:
+            cmd.extend(["-af", af, "-c:a", "aac", "-b:a", "192k"])
+        else:
+            cmd.extend(["-c:a", "aac", "-b:a", "192k"])
+    cmd.append(str(out))
+    subprocess.run(cmd, check=True, capture_output=True)
+
+
 def loudnorm_two_pass(
     video: Path,
     out: Path,
@@ -882,22 +937,14 @@ def loudnorm_two_pass(
         return out
     measure_af = f"loudnorm=I={target_i}:TP={target_tp}:LRA={target_lra}:print_format=json"
     r1 = subprocess.run(
-        [ff, "-i", str(video), "-af", measure_af, "-f", "null", "-"],
+        [ff, "-i", str(video), "-map", "0:a", "-af", measure_af, "-f", "null", "-"],
         capture_output=True,
         text=True,
     )
     stats = _parse_loudnorm_json(r1.stderr or "")
     if not stats:
         print("[audio] loudnorm measure failed; dynaudnorm fallback")
-        subprocess.run(
-            [
-                ff, "-y", "-i", str(video),
-                "-af", f"dynaudnorm=f=150:g=15:p=0.95:m=100:s=12",
-                "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", str(out),
-            ],
-            check=True,
-            capture_output=True,
-        )
+        _remux_av(video, out, af="dynaudnorm=f=150:g=15:p=0.95:m=100:s=12")
         return out
     apply_af = (
         f"loudnorm=I={target_i}:TP={target_tp}:LRA={target_lra}:"
@@ -907,15 +954,7 @@ def loudnorm_two_pass(
         f"measured_thresh={stats.get('input_thresh', '-70')}:"
         f"offset={stats.get('target_offset', '0')}:linear=true"
     )
-    subprocess.run(
-        [
-            ff, "-y", "-i", str(video),
-            "-af", apply_af,
-            "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", str(out),
-        ],
-        check=True,
-        capture_output=True,
-    )
+    _remux_av(video, out, af=apply_af)
     return out
 
 
@@ -1170,10 +1209,6 @@ def process_shot_segment(
     """Post-process: magenta clamp → pin A/V sync → loudnorm."""
     work = shots_dir
     cur = video
-    staged = work / f"{video.stem}_raw.mp4"
-    if cur != staged:
-        shutil.copy2(cur, staged)
-    cur = staged
     dark_scene = _is_dark_scene(refs, shot=shot)
     target_dur = float(clamp_shot_duration(shot.get("duration", probe_duration(cur))))
 
@@ -1212,7 +1247,6 @@ def tighten_chain_loudness(
     """Iterative volume trim: align per-shot integrated LUFS to chain median (≤1.5 LU)."""
     if len(segments) < 2:
         return segments
-    ff = _ffmpeg_exe()
     updated = list(segments)
 
     for iteration in range(6):
@@ -1237,16 +1271,7 @@ def tighten_chain_loudness(
             if abs(gain_db) < 0.02:
                 continue
             leveled = shots_dir / f"{seg.stem}_lvl{iteration}.mp4"
-            subprocess.run(
-                [
-                    ff, "-y", "-i", str(seg),
-                    "-af", f"volume={gain_db:.2f}dB",
-                    "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
-                    str(leveled),
-                ],
-                check=True,
-                capture_output=True,
-            )
+            _remux_av(seg, leveled, af=f"volume={gain_db:.2f}dB")
             target_dur = float(clamp_shot_duration(shot.get("duration", probe_duration(leveled))))
             pinned = shots_dir / f"{seg.stem}_lvl{iteration}_pin.mp4"
             pin_av_to_duration(leveled, pinned, target_dur)
@@ -2213,6 +2238,8 @@ def main() -> int:
 
     if not script.get("shots"):
         raise SystemExit("Script has no shots[]")
+
+    assert_gate_0_cleared(script)
 
     if args.script_only:
         refs = resolve_refs(script)

@@ -1,0 +1,102 @@
+{
+  "slug": "template_validate_conversational_companion",
+  "title": "Template Validate — template validate conversational companion",
+  "format_id": "conversational-companion",
+  "target_seconds": 40,
+  "intake": {
+    "format_id": "conversational-companion",
+    "actor_id": "Amara-001",
+    "set_id": "@Set-Modern-Apartment-001",
+    "style_id": "@Style-Soft-Warm-001",
+    "source": "STUDIO/Pipeline/production_intake.py",
+    "libraries": {
+      "formats": "Production_Templates_v1.json (#98)",
+      "sets": "Set_Library_v1.json (#99)",
+      "styles": "Style_Library_v1.json (#99)",
+      "casting": "Casting_Bible/registry/casting_registry.json"
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "voice_suffix": "London crisp; Punjabi warmth with family., synthetic talent only",
+    "use_identity_lock": false,
+    "avatar_reference": "STUDIO/Cast/actors_roster/female/south_asia/Amara_Singh/01_casting_shots/casting_turnaround_v1.jpg",
+    "set_reference": "STUDIO/Pipeline/references/modern_apartment_reference.jpg",
+    "seamless": {
+      "primary": "extend",
+      "xfade_s": 0.2,
+      "match_color": true,
+      "cut_on_motion": true
+    }
+  },
+  "shots": [
+    {
+      "id": "01_greeting",
+      "duration": 6,
+      "t_start": 0,
+      "t_end": 6,
+      "role": "companion",
+      "video_prompt": "CONTINUITY LOCK @Amara-001: identical 30-year-old British Indian female performer (Amara Singh), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Modern-Apartment-001: identical modern apartment — same window position camera-left, same oak floor grain direction, same linen sofa tone, same kitchen blur background, same plant placement — seamless continuation, zero jump cut. STYLE LOCK @Style-Soft-Warm-001: soft-warm grade — diffused wrap light, creamy highlights, gentle contrast, approachable intimacy, lifestyle editorial not clinical, no harsh specular, no cold blue fill. Companion greets viewer warmly, relaxed posture on sofa, soft daylight. Camera: static medium-close, soft window light. Soft window daylight 5200K key locked — sheer curtain diffusion, gentle fill from interior bounce 4800K max 20%, zero hue drift, no magenta daylight, no purple shadow. Soft wrap key 4500–5200K per set lock — diffusion mandatory, shadow transition gradual, no hard nose shadow. COLOR LOCK Modern-Apartment: palette warm white #FAF8F5, oak #C4A77D, soft grey textiles #B8B5B0, foliage muted green #6B7F5E — no teal push, no pink wall bounce, no saturated LED accent. GRADE LOCK Soft-Warm: palette cream #FAF6F0, blush skin +5% warmth, shadows latte #C9B8A8 — forbid magenta blush, forbid purple shadow, forbid cool 7000K fill, forbid oversaturated orange. Gentle float or static medium-close; micro-push only. Lip-synced, delivers: \"Template validation spoken line.\" London crisp; Punjabi warmth with family., synthetic talent only. Finish on soft gesture peak (breath, smile, hand settle), never hold dead stillness or dead frame.",
+      "speech_text": "Template validation spoken line."
+    },
+    {
+      "id": "02_check_in",
+      "duration": 7,
+      "t_start": 6,
+      "t_end": 13,
+      "role": "companion",
+      "video_prompt": "CONTINUITY LOCK @Amara-001: identical 30-year-old British Indian female performer (Amara Singh), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Modern-Apartment-001: identical modern apartment — same window position camera-left, same oak floor grain direction, same linen sofa tone, same kitchen blur background, same plant placement — seamless continuation, zero jump cut. STYLE LOCK @Style-Soft-Warm-001: soft-warm grade — diffused wrap light, creamy highlights, gentle contrast, approachable intimacy, lifestyle editorial not clinical, no harsh specular, no cold blue fill. Companion listens attentively, nodding, empathetic micro-expressions. Camera: gentle float, same framing. Soft window daylight 5200K key locked — sheer curtain diffusion, gentle fill from interior bounce 4800K max 20%, zero hue drift, no magenta daylight, no purple shadow. Soft wrap key 4500–5200K per set lock — diffusion mandatory, shadow transition gradual, no hard nose shadow. COLOR LOCK Modern-Apartment: palette warm white #FAF8F5, oak #C4A77D, soft grey textiles #B8B5B0, foliage muted green #6B7F5E — no teal push, no pink wall bounce, no saturated LED accent. GRADE LOCK Soft-Warm: palette cream #FAF6F0, blush skin +5% warmth, shadows latte #C9B8A8 — forbid magenta blush, forbid purple shadow, forbid cool 7000K fill, forbid oversaturated orange. Gentle float or static medium-close; micro-push only. Lip-synced, delivers: \"Template validation spoken line.\" London crisp; Punjabi warmth with family., synthetic talent only. Finish on soft gesture peak (breath, smile, hand settle), never hold dead stillness or dead frame.",
+      "speech_text": "Template validation spoken line."
+    },
+    {
+      "id": "03_core_message",
+      "duration": 8,
+      "t_start": 13,
+      "t_end": 21,
+      "role": "companion",
+      "video_prompt": "CONTINUITY LOCK @Amara-001: identical 30-year-old British Indian female performer (Amara Singh), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Modern-Apartment-001: identical modern apartment — same window position camera-left, same oak floor grain direction, same linen sofa tone, same kitchen blur background, same plant placement — seamless continuation, zero jump cut. STYLE LOCK @Style-Soft-Warm-001: soft-warm grade — diffused wrap light, creamy highlights, gentle contrast, approachable intimacy, lifestyle editorial not clinical, no harsh specular, no cold blue fill. Companion shares main thought calmly, open hand gesture, trustworthy tone. Camera: slow micro-push-in. Soft window daylight 5200K key locked — sheer curtain diffusion, gentle fill from interior bounce 4800K max 20%, zero hue drift, no magenta daylight, no purple shadow. Soft wrap key 4500–5200K per set lock — diffusion mandatory, shadow transition gradual, no hard nose shadow. COLOR LOCK Modern-Apartment: palette warm white #FAF8F5, oak #C4A77D, soft grey textiles #B8B5B0, foliage muted green #6B7F5E — no teal push, no pink wall bounce, no saturated LED accent. GRADE LOCK Soft-Warm: palette cream #FAF6F0, blush skin +5% warmth, shadows latte #C9B8A8 — forbid magenta blush, forbid purple shadow, forbid cool 7000K fill, forbid oversaturated orange. Gentle float or static medium-close; micro-push only. Lip-synced, delivers: \"Template validation spoken line.\" London crisp; Punjabi warmth with family., synthetic talent only. Finish on soft gesture peak (breath, smile, hand settle), never hold dead stillness or dead frame.",
+      "speech_text": "Template validation spoken line."
+    },
+    {
+      "id": "04_reflective_pause",
+      "duration": 6,
+      "t_start": 21,
+      "t_end": 27,
+      "role": "companion",
+      "video_prompt": "CONTINUITY LOCK @Amara-001: identical 30-year-old British Indian female performer (Amara Singh), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Modern-Apartment-001: identical modern apartment — same window position camera-left, same oak floor grain direction, same linen sofa tone, same kitchen blur background, same plant placement — seamless continuation, zero jump cut. STYLE LOCK @Style-Soft-Warm-001: soft-warm grade — diffused wrap light, creamy highlights, gentle contrast, approachable intimacy, lifestyle editorial not clinical, no harsh specular, no cold blue fill. Brief reflective pause, soft breath, inviting viewer reflection. Camera: hold medium-close. Soft window daylight 5200K key locked — sheer curtain diffusion, gentle fill from interior bounce 4800K max 20%, zero hue drift, no magenta daylight, no purple shadow. Soft wrap key 4500–5200K per set lock — diffusion mandatory, shadow transition gradual, no hard nose shadow. COLOR LOCK Modern-Apartment: palette warm white #FAF8F5, oak #C4A77D, soft grey textiles #B8B5B0, foliage muted green #6B7F5E — no teal push, no pink wall bounce, no saturated LED accent. GRADE LOCK Soft-Warm: palette cream #FAF6F0, blush skin +5% warmth, shadows latte #C9B8A8 — forbid magenta blush, forbid purple shadow, forbid cool 7000K fill, forbid oversaturated orange. Gentle float or static medium-close; micro-push only. Lip-synced, delivers: \"Template validation spoken line.\" London crisp; Punjabi warmth with family., synthetic talent only. Finish on soft gesture peak (breath, smile, hand settle), never hold dead stillness or dead frame.",
+      "speech_text": "Template validation spoken line."
+    },
+    {
+      "id": "05_encouragement",
+      "duration": 7,
+      "t_start": 27,
+      "t_end": 34,
+      "role": "companion",
+      "video_prompt": "CONTINUITY LOCK @Amara-001: identical 30-year-old British Indian female performer (Amara Singh), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Modern-Apartment-001: identical modern apartment — same window position camera-left, same oak floor grain direction, same linen sofa tone, same kitchen blur background, same plant placement — seamless continuation, zero jump cut. STYLE LOCK @Style-Soft-Warm-001: soft-warm grade — diffused wrap light, creamy highlights, gentle contrast, approachable intimacy, lifestyle editorial not clinical, no harsh specular, no cold blue fill. Encouraging close, genuine smile, supportive hand gesture. Camera: micro-push, warm smile. Soft window daylight 5200K key locked — sheer curtain diffusion, gentle fill from interior bounce 4800K max 20%, zero hue drift, no magenta daylight, no purple shadow. Soft wrap key 4500–5200K per set lock — diffusion mandatory, shadow transition gradual, no hard nose shadow. COLOR LOCK Modern-Apartment: palette warm white #FAF8F5, oak #C4A77D, soft grey textiles #B8B5B0, foliage muted green #6B7F5E — no teal push, no pink wall bounce, no saturated LED accent. GRADE LOCK Soft-Warm: palette cream #FAF6F0, blush skin +5% warmth, shadows latte #C9B8A8 — forbid magenta blush, forbid purple shadow, forbid cool 7000K fill, forbid oversaturated orange. Gentle float or static medium-close; micro-push only. Lip-synced, delivers: \"Template validation spoken line.\" London crisp; Punjabi warmth with family., synthetic talent only. Finish on soft gesture peak (breath, smile, hand settle), never hold dead stillness or dead frame.",
+      "speech_text": "Template validation spoken line."
+    },
+    {
+      "id": "06_soft_close",
+      "duration": 6,
+      "t_start": 34,
+      "t_end": 40,
+      "role": "companion",
+      "video_prompt": "CONTINUITY LOCK @Amara-001: identical 30-year-old British Indian female performer (Amara Singh), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Modern-Apartment-001: identical modern apartment — same window position camera-left, same oak floor grain direction, same linen sofa tone, same kitchen blur background, same plant placement — seamless continuation, zero jump cut. STYLE LOCK @Style-Soft-Warm-001: soft-warm grade — diffused wrap light, creamy highlights, gentle contrast, approachable intimacy, lifestyle editorial not clinical, no harsh specular, no cold blue fill. Soft sign-off, wave or hand settle mid-motion, warm eye contact. Camera: gentle settle, hold eye-line. Soft window daylight 5200K key locked — sheer curtain diffusion, gentle fill from interior bounce 4800K max 20%, zero hue drift, no magenta daylight, no purple shadow. Soft wrap key 4500–5200K per set lock — diffusion mandatory, shadow transition gradual, no hard nose shadow. COLOR LOCK Modern-Apartment: palette warm white #FAF8F5, oak #C4A77D, soft grey textiles #B8B5B0, foliage muted green #6B7F5E — no teal push, no pink wall bounce, no saturated LED accent. GRADE LOCK Soft-Warm: palette cream #FAF6F0, blush skin +5% warmth, shadows latte #C9B8A8 — forbid magenta blush, forbid purple shadow, forbid cool 7000K fill, forbid oversaturated orange. Gentle float or static medium-close; micro-push only. Lip-synced, delivers: \"Template validation spoken line.\" London crisp; Punjabi warmth with family., synthetic talent only. Finish on soft gesture peak (breath, smile, hand settle), never hold dead stillness or dead frame.",
+      "speech_text": "Template validation spoken line."
+    }
+  ],
+  "provenance_card": {
+    "enabled": false,
+    "duration_s": 0,
+    "card_type": "none"
+  },
+  "qa_rules": {
+    "require_identity_lock": false,
+    "require_synthetic_guard": true,
+    "require_sfw_companion": true,
+    "require_reconstructed_labels": false,
+    "min_shots": 4
+  }
+}

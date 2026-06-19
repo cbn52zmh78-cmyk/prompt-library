@@ -1,0 +1,112 @@
+{
+  "slug": "template_validate_narrative_short_film",
+  "title": "Template Validate — template validate narrative short film",
+  "format_id": "narrative-short-film",
+  "target_seconds": 60,
+  "intake": {
+    "format_id": "narrative-short-film",
+    "actor_id": "Aiko-001",
+    "set_id": "@Set-Warehouse-Industrial-001",
+    "style_id": "@Style-Cinematic-001",
+    "source": "STUDIO/Pipeline/production_intake.py",
+    "libraries": {
+      "formats": "Production_Templates_v1.json (#98)",
+      "sets": "Set_Library_v1.json (#99)",
+      "styles": "Style_Library_v1.json (#99)",
+      "casting": "Casting_Bible/registry/casting_registry.json"
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "voice_suffix": "Soft neutral tone; sharpens on technical jargon., synthetic talent only",
+    "use_identity_lock": false,
+    "avatar_reference": "STUDIO/Cast/actors_roster/female/east_asia/Aiko_Nakamura/01_casting_shots/casting_turnaround_v1.jpg",
+    "set_reference": "STUDIO/Pipeline/references/warehouse_industrial_reference.jpg",
+    "seamless": {
+      "primary": "extend",
+      "xfade_s": 0.2,
+      "match_color": true,
+      "cut_on_motion": true
+    }
+  },
+  "shots": [
+    {
+      "id": "01_establishing",
+      "duration": 6,
+      "t_start": 0,
+      "t_end": 6,
+      "role": "b_roll",
+      "video_prompt": "CONTINUITY LOCK @Aiko-001: identical 26-year-old Japanese-American female performer (Aiko Nakamura), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Cinematic-001: cinematic grade — shallow depth of field, dramatic side key, controlled bloom on highlights, filmic S-curve, subtle anamorphic horizontal flare on practicals only, no flat YouTube lighting. Establishing wide of location, atmospheric, no dialogue required. Camera: wide static or slow crane down. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Strong key from camera left or right at 45°, fill ratio 1:4 max, rim optional single edge — lock side every segment. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Cinematic: teal pushed only in shadows -5% max OR amber highlights +5% — never both teal and orange at full saturation (no blockbuster split unless locked shot). Forbid magenta skin, forbid green yellow cast, forbid flat grey mids. Slow dolly or crane; rack focus motivated; no snap zoom. Finish on gesture peak or rack-focus completion, never hold dead stillness or dead frame."
+    },
+    {
+      "id": "02_character_intro",
+      "duration": 8,
+      "t_start": 6,
+      "t_end": 14,
+      "role": "character",
+      "video_prompt": "CONTINUITY LOCK @Aiko-001: identical 26-year-old Japanese-American female performer (Aiko Nakamura), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Cinematic-001: cinematic grade — shallow depth of field, dramatic side key, controlled bloom on highlights, filmic S-curve, subtle anamorphic horizontal flare on practicals only, no flat YouTube lighting. Character enters frame or revealed in medium shot, motivated side key. Camera: medium profile or three-quarter. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Strong key from camera left or right at 45°, fill ratio 1:4 max, rim optional single edge — lock side every segment. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Cinematic: teal pushed only in shadows -5% max OR amber highlights +5% — never both teal and orange at full saturation (no blockbuster split unless locked shot). Forbid magenta skin, forbid green yellow cast, forbid flat grey mids. Slow dolly or crane; rack focus motivated; no snap zoom. Lip-synced, delivers: \"Template validation spoken line.\" Soft neutral tone; sharpens on technical jargon., synthetic talent only. Finish on gesture peak or rack-focus completion, never hold dead stillness or dead frame.",
+      "speech_text": "Template validation spoken line."
+    },
+    {
+      "id": "03_inciting",
+      "duration": 8,
+      "t_start": 14,
+      "t_end": 22,
+      "role": "character",
+      "video_prompt": "CONTINUITY LOCK @Aiko-001: identical 26-year-old Japanese-American female performer (Aiko Nakamura), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Cinematic-001: cinematic grade — shallow depth of field, dramatic side key, controlled bloom on highlights, filmic S-curve, subtle anamorphic horizontal flare on practicals only, no flat YouTube lighting. Inciting event lands — character reacts, tension enters. Camera: push-in on reaction. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Strong key from camera left or right at 45°, fill ratio 1:4 max, rim optional single edge — lock side every segment. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Cinematic: teal pushed only in shadows -5% max OR amber highlights +5% — never both teal and orange at full saturation (no blockbuster split unless locked shot). Forbid magenta skin, forbid green yellow cast, forbid flat grey mids. Slow dolly or crane; rack focus motivated; no snap zoom. Lip-synced, delivers: \"Template validation spoken line.\" Soft neutral tone; sharpens on technical jargon., synthetic talent only. Finish on gesture peak or rack-focus completion, never hold dead stillness or dead frame.",
+      "speech_text": "Template validation spoken line."
+    },
+    {
+      "id": "04_rising",
+      "duration": 8,
+      "t_start": 22,
+      "t_end": 30,
+      "role": "character",
+      "video_prompt": "CONTINUITY LOCK @Aiko-001: identical 26-year-old Japanese-American female performer (Aiko Nakamura), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Cinematic-001: cinematic grade — shallow depth of field, dramatic side key, controlled bloom on highlights, filmic S-curve, subtle anamorphic horizontal flare on practicals only, no flat YouTube lighting. Close-up, subtext in eyes, rack focus to story object if present. Camera: close-up rack focus. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Strong key from camera left or right at 45°, fill ratio 1:4 max, rim optional single edge — lock side every segment. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Cinematic: teal pushed only in shadows -5% max OR amber highlights +5% — never both teal and orange at full saturation (no blockbuster split unless locked shot). Forbid magenta skin, forbid green yellow cast, forbid flat grey mids. Slow dolly or crane; rack focus motivated; no snap zoom. Lip-synced, delivers: \"Template validation spoken line.\" Soft neutral tone; sharpens on technical jargon., synthetic talent only. Finish on gesture peak or rack-focus completion, never hold dead stillness or dead frame.",
+      "speech_text": "Template validation spoken line."
+    },
+    {
+      "id": "05_turn",
+      "duration": 8,
+      "t_start": 30,
+      "t_end": 38,
+      "role": "character",
+      "video_prompt": "CONTINUITY LOCK @Aiko-001: identical 26-year-old Japanese-American female performer (Aiko Nakamura), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Cinematic-001: cinematic grade — shallow depth of field, dramatic side key, controlled bloom on highlights, filmic S-curve, subtle anamorphic horizontal flare on practicals only, no flat YouTube lighting. Turning point — decision, revelation, or reversal. Camera: slow dolly in. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Strong key from camera left or right at 45°, fill ratio 1:4 max, rim optional single edge — lock side every segment. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Cinematic: teal pushed only in shadows -5% max OR amber highlights +5% — never both teal and orange at full saturation (no blockbuster split unless locked shot). Forbid magenta skin, forbid green yellow cast, forbid flat grey mids. Slow dolly or crane; rack focus motivated; no snap zoom. Lip-synced, delivers: \"Template validation spoken line.\" Soft neutral tone; sharpens on technical jargon., synthetic talent only. Finish on gesture peak or rack-focus completion, never hold dead stillness or dead frame.",
+      "speech_text": "Template validation spoken line."
+    },
+    {
+      "id": "06_peak",
+      "duration": 8,
+      "t_start": 38,
+      "t_end": 46,
+      "role": "character",
+      "video_prompt": "CONTINUITY LOCK @Aiko-001: identical 26-year-old Japanese-American female performer (Aiko Nakamura), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Cinematic-001: cinematic grade — shallow depth of field, dramatic side key, controlled bloom on highlights, filmic S-curve, subtle anamorphic horizontal flare on practicals only, no flat YouTube lighting. Emotional peak — gesture, glance, or physical beat at maximum tension. Camera: tight close or wide isolation. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Strong key from camera left or right at 45°, fill ratio 1:4 max, rim optional single edge — lock side every segment. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Cinematic: teal pushed only in shadows -5% max OR amber highlights +5% — never both teal and orange at full saturation (no blockbuster split unless locked shot). Forbid magenta skin, forbid green yellow cast, forbid flat grey mids. Slow dolly or crane; rack focus motivated; no snap zoom. Lip-synced, delivers: \"Template validation spoken line.\" Soft neutral tone; sharpens on technical jargon., synthetic talent only. Finish on gesture peak or rack-focus completion, never hold dead stillness or dead frame.",
+      "speech_text": "Template validation spoken line."
+    },
+    {
+      "id": "07_resolution",
+      "duration": 7,
+      "t_start": 46,
+      "t_end": 53,
+      "role": "character",
+      "video_prompt": "CONTINUITY LOCK @Aiko-001: identical 26-year-old Japanese-American female performer (Aiko Nakamura), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Cinematic-001: cinematic grade — shallow depth of field, dramatic side key, controlled bloom on highlights, filmic S-curve, subtle anamorphic horizontal flare on practicals only, no flat YouTube lighting. Resolution beat — release, irony, or quiet button; end on motion. Camera: pull back or hold on button. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Strong key from camera left or right at 45°, fill ratio 1:4 max, rim optional single edge — lock side every segment. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Cinematic: teal pushed only in shadows -5% max OR amber highlights +5% — never both teal and orange at full saturation (no blockbuster split unless locked shot). Forbid magenta skin, forbid green yellow cast, forbid flat grey mids. Slow dolly or crane; rack focus motivated; no snap zoom. Lip-synced, delivers: \"Template validation spoken line.\" Soft neutral tone; sharpens on technical jargon., synthetic talent only. Finish on gesture peak or rack-focus completion, never hold dead stillness or dead frame.",
+      "speech_text": "Template validation spoken line."
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 5,
+    "card_type": "closing",
+    "title": "Template Validate — template validate narrative short film",
+    "subtitle": "Template",
+    "footer": "Template"
+  },
+  "qa_rules": {
+    "require_identity_lock": false,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": false,
+    "min_shots": 5
+  }
+}

@@ -1,8 +1,8 @@
 {
   "pipeline": "render_longform_seamless",
   "protocol": "STUDIO_Canonical_Schema_and_Seamless_Spec_v1",
-  "completed_at": "2026-06-19T03:26:13.463499+00:00",
-  "script_source": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\flowdesk_explainer_v1_longform_v1\\flowdesk_explainer_v1_script.json",
+  "completed_at": "2026-06-19T03:28:26.015392+00:00",
+  "script_source": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Productions\\Editorial\\flowdesk_explainer_v1_longform_v1\\flowdesk_explainer_v1_script.json",
   "concat_only": true,
   "seamless": true,
   "production_dir": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\flowdesk_explainer_v1_longform_v1",
@@ -15,8 +15,8 @@
   "comparison": null,
   "qa": {
     "slug": "flowdesk_explainer_v1",
-    "qa_at": "2026-06-19T03:26:13.461378+00:00",
-    "pass": false,
+    "qa_at": "2026-06-19T03:28:26.014279+00:00",
+    "pass": true,
     "passes": [
       "shot count OK (6 >= 4)",
       "all shots carry synthetic talent guard (incl. auto-patched)",
@@ -33,12 +33,11 @@
       "loudnorm two-pass target I=-16.0 LUFS per shot",
       "audio pinned to exact shot duration (no stretch/offset)",
       "flat loudness across shots (spread 0.08 LU)",
-      "tight A/V sync per shot (duration pinned)"
+      "clinical/neutral set — archive magenta probe skipped",
+      "tight A/V sync per shot (duration pinned)",
+      "zero hue drift across segments (grey balance Δ=0.014)"
     ],
-    "issues": [
-      "magenta detected: [('chain_01_hook_processed', 0.9510471649923378), ('chain_02_pain_processed', 0.9395175137362637), ('chain_03_solution_processed', 0.9531717597471022), ('chain_04_benefit_a_processed', 0.9417526674829456), ('chain_05_benefit_b_processed', 0.9485889675164123), ('chain_06_cta_processed', 0.9500428816466552)]",
-      "hue drift detected across segments magenta=[0.9510471649923378, 0.9395175137362637, 0.9531717597471022, 0.9417526674829456, 0.9485889675164123, 0.9500428816466552]"
-    ],
+    "issues": [],
     "shot_count": 6,
     "segment_count": 2,
     "seamless": true,

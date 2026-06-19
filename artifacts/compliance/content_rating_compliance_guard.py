@@ -12,7 +12,13 @@ ensure_paths()
 from lib.studio_paths import pipeline_path, producers_path
 
 import argparse
+import re
 from datetime import datetime
+
+# Whole-word only — never substring match on "minor" inside unrelated tokens.
+_MINOR_WORD = re.compile(r"\bminors?\b", re.I)
+_MINOR_NEGATED = re.compile(r"\b(?:no|not|without|zero)\s+minors?\b", re.I)
+_ADULT_CAST_SAFE = re.compile(r"adult cast only\s*\(\s*21\s*\+\s*\)", re.I)
 
 
 
@@ -21,6 +27,25 @@ DEFAULT_SHOTLISTS_ROOT = pipeline_path("ShotLists")
 
 
 class ContentRatingGuard:
+    @staticmethod
+    def _minor_policy_violation(prompt_lower: str) -> bool:
+        """True when minors are referenced in a non-compliant way.
+
+        Safe phrases (Gate 0 brief standard): ``adult cast only (21+)``.
+        Negated forms (``no minors``) are ignored — prefer the safe phrase in new briefs.
+        """
+        if _ADULT_CAST_SAFE.search(prompt_lower) and not re.search(
+            r"\bminors?\b.{0,40}\b(sex|nude|erotic|intimate|nsfw)\b", prompt_lower
+        ):
+            stripped = _ADULT_CAST_SAFE.sub("", prompt_lower)
+            if not _MINOR_WORD.search(stripped):
+                return False
+        if _MINOR_NEGATED.search(prompt_lower):
+            remainder = _MINOR_NEGATED.sub("", prompt_lower)
+            if not _MINOR_WORD.search(remainder):
+                return False
+        return bool(_MINOR_WORD.search(prompt_lower))
+
     def __init__(self, output_dir: str | Path | None = None):
         self.version = "1.2"
         self.output_dir = Path(output_dir or DEFAULT_REPORTS_DIR)
@@ -37,8 +62,8 @@ class ContentRatingGuard:
     def analyze_prompt(self, prompt: str, target_rating: str = "PG-13", name: str = "Prompt"):
         prompt_lower = prompt.lower()
         issues = []
-        if "minor" in prompt_lower or (
-            "teen" in prompt_lower
+        if self._minor_policy_violation(prompt_lower) or (
+            re.search(r"\bteens?\b", prompt_lower)
             and any(x in prompt_lower for x in ["sex", "nude", "erotic", "intimate"])
         ):
             issues.append(
