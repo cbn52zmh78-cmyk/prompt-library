@@ -16,12 +16,39 @@ from color_cast_qa import probe_video_midframe  # noqa: E402
 MAGENTA_MAX = 0.42
 BURDEN_MAX = 0.20
 SHOTS_DIR = ROOT / "productions" / "david_latin_corpus_v1_longform_v1" / "shots"
-SHOT_IDS = ("01_cold_open", "05_method")
+DEFAULT_SHOT_IDS = ("01_cold_open", "05_method")
+ALL_HOST_SHOT_IDS = (
+    "01_cold_open",
+    "02_stakes",
+    "03_signature_question",
+    "04_proof_beat",
+    "05_method",
+    "06_honesty",
+    "07_demonstration",
+    "08_invitation",
+)
 
 
 def main() -> int:
+    import argparse
+
+    parser = argparse.ArgumentParser(description="#218 RAW magenta PRE-clamp probe")
+    parser.add_argument(
+        "--all-shots",
+        action="store_true",
+        help="Score all 8 host chain segments (post full-corpus regen)",
+    )
+    parser.add_argument("--shots", nargs="+", default=None)
+    args = parser.parse_args()
+    if args.shots:
+        shot_ids = tuple(args.shots)
+    elif args.all_shots:
+        shot_ids = ALL_HOST_SHOT_IDS
+    else:
+        shot_ids = DEFAULT_SHOT_IDS
+
     rows = []
-    for sid in SHOT_IDS:
+    for sid in shot_ids:
         raw = SHOTS_DIR / f"chain_{sid}.mp4"
         proc = SHOTS_DIR / f"chain_{sid}_processed.mp4"
         raw_mag = rl.probe_magenta_score(raw)
@@ -56,7 +83,7 @@ def main() -> int:
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text(json.dumps(out, indent=2), encoding="utf-8")
     print(f"report → {report_path}")
-    all_pass = all(r["raw_magenta_pass"] and r["clamp_burden_pass"] for r in rows)
+    all_pass = rows and all(r["raw_magenta_pass"] and r["clamp_burden_pass"] for r in rows)
     return 0 if all_pass else 1
 
 

@@ -24,11 +24,17 @@
     ],
     "state": "GREEN — 2/2 proof shots raw magenta <0.42 AND clamp burden <0.20; raw clean, not clamp-masked",
     "next": [
-      "Human-eye dual-verify proof_218 raw frames (proof_218 stays HELD until sign-off)",
-      "NEXUS sign-off on #218 GREEN",
-      "Propagate anti-magenta lock to remaining corpus 480p scripts when full regen authorized",
-      "Full master GREEN blocked on cached shots 02/06 yellow-green (out of scope this pass)"
-    ]
+      "Benjamin human-eye GREEN on proof 01/05 RAW (proof_218 HELD)",
+      "Benjamin GO → full --force-all seamless regen per D218_full_corpus_authorization.json",
+      "T4 score_corpus_green_218.py + proof_244_clamp_pass on full master",
+      "NEXUS sign-off → commit/unpark"
+    ],
+    "full_corpus_authorization": {
+      "dispatch": "DAVID/dispatches/D218_full_corpus_authorization.json",
+      "state": "HOLD",
+      "blocked_until": "Benjamin human-eye PASS + explicit GO",
+      "render_command": "python DAVID/scripts/render_longform.py DAVID/scripts/longform_scripts/david_latin_corpus_v1_script.json --seamless --match-color --cut-on-motion --force-all"
+    }
   },
   "prompt_changes": {
     "runtime_lock": "ARCHIVE_ANTI_MAGENTA_GENERATION_LOCK + ARCHIVE_NEUTRAL_GENERATION_LOCK injected when seamless.neutral_generation=true",

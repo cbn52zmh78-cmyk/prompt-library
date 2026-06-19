@@ -1,0 +1,133 @@
+{
+  "message_type": "authorization_dispatch",
+  "issue": "218-FULL",
+  "title": "DAVID #218 → full Latin corpus re-gen authorization",
+  "generated_at": "2026-06-19T17:00:00+00:00",
+  "status": "HOLD",
+  "verdict": "HOLD — awaiting Benjamin human-eye GREEN on proof 01/05 + explicit GO",
+  "owner_terminal": "T4",
+  "lane": "DAVID",
+  "pairs_with": [218, 244, "244-C"],
+  "proof_218": "HELD",
+  "commit": {
+    "allowed": false,
+    "cron": "PAUSED — Nexus/gates/T4_244_HARD_COMMIT_PAUSE.json state=ACTIVE",
+    "unpark_requires": ["Benjamin human-eye PASS", "full corpus metric GREEN", "NEXUS sign-off"]
+  },
+  "prerequisites": {
+    "proof_cohort_metrics": {
+      "state": "GREEN",
+      "report": "DAVID/productions/david_latin_corpus_v1_longform_v1/proof_218/raw_magenta_report.json",
+      "shots": {
+        "01_cold_open": { "raw_magenta_pre_clamp": 0.254, "clamp_burden": 0.1588, "pass": true },
+        "05_method": { "raw_magenta_pre_clamp": 0.2329, "clamp_burden": 0.1464, "pass": true }
+      }
+    },
+    "benjamin_human_eye": {
+      "required": true,
+      "owner": "Benjamin",
+      "state": "PENDING",
+      "artifacts": [
+        "DAVID/productions/david_latin_corpus_v1_longform_v1/shots/chain_01_cold_open.mp4",
+        "DAVID/productions/david_latin_corpus_v1_longform_v1/shots/chain_05_method.mp4",
+        "DAVID/productions/david_latin_corpus_v1_longform_v1/proof_218/raw_magenta_report.json"
+      ],
+      "checks": [
+        "No visible magenta/purple ambient wash on host face, sweater, or walls",
+        "Skin mids natural — not sallow, not orange-mud; blue channel present",
+        "Brass lamp warmth localized to desk quadrant only",
+        "Raw generation looks clean — not rescued by post clamp"
+      ],
+      "pass_values": ["PASS", "SIGNED", "GO"]
+    },
+    "refs_clean": {
+      "avatar_magenta": 0.2024,
+      "set_magenta": 0.1974,
+      "avatar_blue_mean": 57.9,
+      "gate": "t243_pre_render_gate refs_neutral raw_magenta_max=0.42"
+    },
+    "runtime_lock": "ARCHIVE_ANTI_MAGENTA_GENERATION_LOCK + ARCHIVE_NEUTRAL_GENERATION_LOCK on every shot when seamless.neutral_generation=true"
+  },
+  "authorization": {
+    "state": "HOLD",
+    "blocked_until": "Benjamin human-eye GREEN + explicit GO",
+    "on_go": "T1/T4 may execute full corpus re-gen (API spend authorized)",
+    "scope": "Latin corpus 8 host shots — regen ALL including cached 02/06; NO concat-from-cache",
+    "resolution": "720p production",
+    "script": "DAVID/scripts/longform_scripts/david_latin_corpus_v1_script.json",
+    "production": "DAVID/productions/david_latin_corpus_v1_longform_v1",
+    "seamless": {
+      "neutral_generation": true,
+      "lamp_lock": false,
+      "magenta_clamp": true,
+      "match_color": true,
+      "cut_on_motion": true
+    }
+  },
+  "render_command": {
+    "description": "Full seamless re-gen — every chain segment fresh; rejects concat-only grade",
+    "cwd": "C:\\Users\\NCG\\Videos\\Grok Projects",
+    "command": "python DAVID/scripts/render_longform.py DAVID/scripts/longform_scripts/david_latin_corpus_v1_script.json --seamless --match-color --cut-on-motion --force-all",
+    "forbidden": ["--concat-only"],
+    "force_shots_blocked": ["02_stakes", "06_honesty"],
+    "note": "02/06 currently yellow-green cached — force-all regenerates without concat-from-cache"
+  },
+  "post_render_pipeline": [
+    {
+      "step": "01_proof_cohort_rescore",
+      "owner": "T4",
+      "command": "python DAVID/scripts/proof_244_clamp_pass.py --force",
+      "gate": "Nexus/gates/T4_244_GREEN_criteria.json"
+    },
+    {
+      "step": "02_full_corpus_green_score",
+      "owner": "T4",
+      "command": "python DAVID/scripts/score_corpus_green_218.py",
+      "output": "DAVID/productions/david_latin_corpus_v1_longform_v1/proof_218/full_corpus_green_report.json"
+    },
+    {
+      "step": "03_raw_magenta_all_shots",
+      "owner": "T4",
+      "command": "python DAVID/scripts/probe_raw_magenta_218.py",
+      "note": "Extend probe script shot list to all 8 when running post full-regen"
+    },
+    {
+      "step": "04_benjamin_master_eyeball",
+      "owner": "Benjamin",
+      "artifact": "DAVID/productions/david_latin_corpus_v1_longform_v1/output/david_david_latin_corpus_v1_seamless_v1.mp4"
+    },
+    {
+      "step": "05_nexus_signoff",
+      "owner": "NEXUS",
+      "requires": ["full_corpus_green_report.json state=GREEN", "qa_report.json pass=true", "Benjamin PASS"]
+    },
+    {
+      "step": "06_commit_unpark",
+      "owner": "NEXUS",
+      "manual_only": true,
+      "lifts": ["T4_244_HARD_COMMIT_PAUSE", "proof_218 HELD → RELEASE on sign-off"]
+    }
+  ],
+  "green_criteria": {
+    "gate": "Nexus/gates/T4_244_GREEN_criteria.json",
+    "per_shot": "raw_magenta<0.42 AND clamp_burden<0.20 AND 40<=Bμ<=70",
+    "master": "magenta<0.42, yellow_green<=0.12, qa_report pass=true",
+    "human_eye": "Benjamin PASS + NEXUS sign-off"
+  },
+  "current_blockers": [
+    "Benjamin human-eye PENDING on proof 01/05",
+    "Cached shots 02_stakes + 06_honesty yellow-green (0.127/0.140) — require full regen",
+    "07_demonstration duration 10s outside 7–9s band (pre-existing; out of #218 scope unless clamped)"
+  ],
+  "vcs_commit_draft": {
+    "subject": "DAVID #218-FULL: corpus authorization HOLD — Benjamin eyeball + GO (no render)",
+    "body": "RECAP\n- Did: D218_full_corpus_authorization.json; score_corpus_green_218.py; 480p script full sync; gates updated\n- State: HOLD — proof 01/05 metric GREEN; Benjamin human-eye PENDING; full --force-all NOT executed\n- Next: Benjamin PASS+GO → full seamless regen → T4 GREEN score → NEXUS sign-off → commit/unpark\n\nproof_218 HELD. Cron PAUSED."
+  },
+  "artifacts": [
+    "DAVID/dispatches/D218_full_corpus_authorization.json",
+    "DAVID/scripts/score_corpus_green_218.py",
+    "DAVID/scripts/probe_raw_magenta_218.py",
+    "DAVID/scripts/proof_244_clamp_pass.py",
+    "Nexus/gates/T4_244_GREEN_criteria.json"
+  ]
+}

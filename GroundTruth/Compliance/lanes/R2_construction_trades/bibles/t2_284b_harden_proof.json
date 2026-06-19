@@ -1,0 +1,52 @@
+{
+  "task": "T2 #284-B",
+  "status": "EXECUTED",
+  "executed_at": "2026-06-19T16:28:04+00:00",
+  "r1_register_git": "37d2931",
+  "r1_register_path": "Operations/Compliance_Research/groundtruth/Compliance/construction_trades",
+  "before": {
+    "total": 7,
+    "by_state": {
+      "PA": 1,
+      "TX": 1,
+      "FL": 1,
+      "CA": 2,
+      "NY": 2
+    },
+    "corpus": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R2_construction_trades",
+    "cited_claims": 220
+  },
+  "after": {
+    "total": 6,
+    "by_state": {
+      "PA": 3,
+      "TX": 2,
+      "FL": 0,
+      "CA": 0,
+      "NY": 1
+    },
+    "corpus": "Operations/Compliance_Research/groundtruth/Compliance/construction_trades",
+    "cited_claims": 151
+  },
+  "delta_by_state": {
+    "PA": 2,
+    "TX": 1,
+    "FL": -1,
+    "CA": -2,
+    "NY": -1
+  },
+  "delta_total": -1,
+  "launch_states": [
+    "PA",
+    "TX",
+    "FL",
+    "CA",
+    "NY"
+  ],
+  "_output_stamp": {
+    "issue": 284,
+    "canonical_path": "GroundTruth/Compliance/lanes/R2_construction_trades/bibles/t2_284b_harden_proof.json",
+    "stamped_at": "2026-06-19T16:28:04+00:00",
+    "registry": "GroundTruth/Compliance/lanes/R2_construction_trades/bibles"
+  }
+}

@@ -12,9 +12,9 @@
 5-state Construction & Trades compliance bible (PA + TX + FL + CA + NY sample) with federal OSHA/EPA/ICC baseline.
 
 - **States:** 5 (PA, TX, FL, CA, NY)
-- **Cited claims:** 220 · **References:** 16
-- **Gaps flagged:** 7 · **Parked sources:** 1
-- **Status roll:** {'FOUND': 24, 'REQUIRES_CONFIRMATION': 16, 'NOT FOUND': 0, 'ACCESS_RESTRICTED': 0}
+- **Cited claims:** 151 · **References:** 16
+- **Gaps flagged:** 6 · **Parked sources:** 1
+- **Status roll:** {'FOUND': 21, 'REQUIRES_CONFIRMATION': 8}
 - **As-of:** 2026-06-19
 
 *Every claim STD-CITE-001 cited; gaps explicit; public sources only.*
@@ -23,7 +23,7 @@
 
 **As-of date:** 2026-06-19
 
-Transformative synthesis from R2 corpus (#234 federal cited_data_pack + #266 state packs). Public .gov and agency portals only; HTTP 403/404/SSL sources PARKED without bypass. AI-assisted assembly with Knowledge Gate rails — not original legal research.
+T2 #284-B harden: 5-state sample rebuilt from R1 launch-5 deep gather (git 37d2931) rich_curated register. Federal baseline unchanged (#234). Transformative synthesis from R2 corpus (#234 federal cited_data_pack + #266 state packs). Public .gov and agency portals only; HTTP 403/404/SSL sources PARKED without bypass. AI-assisted assembly with Knowledge Gate rails — not original legal research.
 
 **Scope — trades:** general_contractor, electrical, plumbing, hvac, roofing
 **Scope — domains:** bonding_insurance, permits_inspections, building_codes
@@ -159,271 +159,163 @@ Transformative synthesis from R2 corpus (#234 federal cited_data_pack + #266 sta
 ### Pennsylvania (PA)
 *GC model: `hic_only` · NASCLA: False*
 
-#### General Contractor — **FOUND**
+#### Home improvement / general contractor registration — **FOUND**
 - Portal: https://hic.attorneygeneral.gov/
-- Welcome to Pennsylvania’s online Home Improvement Contractor Registration System. [7]
-- Use this site to register, renew, or update your contractor registration with the PA Office of Attorney General. [7]
-- for an existing registration (located next to the business name in the table). [7]
-- Proof of Commercial General Liability Insurance with: [7]
-- New contractors will receive a PA contractor number (PA#). [7]
-- Contractors must follow the Home Improvement Consumer Protection Act (HICPA). Non‑compliance may result in penalties and unenforceable contracts. [7]
-- Contractors may mail completed registration applications to: [7]
-- ATTN : Home Improvement Contractor Registration [7]
+- Pennsylvania has no statewide general contractor license; most home improvement contractors must register with the PA Office of Attorney General under the Home Improvement Consumer Protection Act (HICPA), effective July 1, 2009. [7]
+- HIC registration costs $100 every two years (non-refundable); online credit card payments add a $2 processing fee; ACH payments have no fee. [8]
+- HIC applicants must provide proof of commercial general liability insurance with at least $50,000 personal injury coverage and at least $50,000 property damage coverage (or approved self-insurance documentation). [8]
+- Registered contractors receive a PA contractor number (PA#) that must appear on all ads, contracts, estimates, and proposals; non-compliance with HICPA may result in penalties and unenforceable contracts. [8]
+- `NOT FOUND — [source checked: City licensing portals (403 at harvest — confirm locally)]`
 
-#### Electrical — **REQUIRES_CONFIRMATION**
-- Portal: https://hic.attorneygeneral.gov/
-- `REQUIRES_CONFIRMATION — [source checked: https://hic.attorneygeneral.gov/] — confirm applicability for your entity and municipality.`
+#### Electrical contractor / electrician licensing — **REQUIRES_CONFIRMATION**
+- Portal: https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing
+- The Commonwealth of Pennsylvania currently has no licensure or certification requirements for most construction contractors or their employees; electrical contractor licensing is typically established at the municipal level. [7]
+- `NOT FOUND — [source checked: https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing]`
 
-#### Plumbing — **REQUIRES_CONFIRMATION**
-- Portal: https://hic.attorneygeneral.gov/
-- `REQUIRES_CONFIRMATION — [source checked: https://hic.attorneygeneral.gov/] — confirm applicability for your entity and municipality.`
+#### Plumbing contractor licensing — **REQUIRES_CONFIRMATION**
+- Portal: https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing
+- Some Pennsylvania municipalities require local licensure or certification for plumbing contractors; the Department of Labor & Industry maintains no statewide plumbing contractor license records — contact the municipality where work will occur. [7]
+- `REQUIRES_CONFIRMATION — [source checked: https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing]`
 
-#### Hvac — **REQUIRES_CONFIRMATION**
-- Portal: https://hic.attorneygeneral.gov/
-- `REQUIRES_CONFIRMATION — [source checked: https://hic.attorneygeneral.gov/] — confirm applicability for your entity and municipality.`
+#### HVAC / mechanical contractor licensing — **REQUIRES_CONFIRMATION**
+- Portal: https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing
+- Pennsylvania has no statewide HVAC/mechanical contractor license at the Commonwealth level; local municipalities may impose certification requirements for contractors performing mechanical work. [7]
+- `REQUIRES_CONFIRMATION — [source checked: https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing]`
 
-#### Roofing — **FOUND**
-- Portal: https://hic.attorneygeneral.gov/
-- Proof of Commercial General Liability Insurance with: [7]
-- Required Documentation Proof of Commercial General Liability Insurance with: At least $50,000 personal injury coverage. [7]
-
-#### Bonding & Insurance — **FOUND**
-- Portal: https://hic.attorneygeneral.gov/
-- Proof of Commercial General Liability Insurance with: [7]
-- A self‑insurance certificate and attestation. [7]
-- Self-Insurance Instructions & Certification/Attestation Form [7]
-- Required Documentation Proof of Commercial General Liability Insurance with: At least $50,000 personal injury coverage. [7]
-- If self‑insured, submit: A self‑insurance certificate and attestation. [7]
-
-#### Permits & Inspections — **FOUND**
+#### Building permits & code enforcement — **FOUND**
 - Portal: https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home
-- If a municipality has "OPTED-OUT," the Department is responsible for all commercial code enforcement in that municipality. The Department also has sole jurisdiction for all elevators and all state-owned buildings, no matter where they are located. [8]
-- In Act 106 of 2008, the General Assembly established the RAC, whose members represent industry sectors that participate in the various aspects relating to building construction including building component design, construction, building code enforcement and local government representation. The RAC is charged to review the periodic changes to the revised ICC codes prior to adoption into the UCC. [8]
-- The members represent industry sectors that participate in the various aspects relating to the building - including building component design, construction, building code enforcement, and local government representation. [8]
-- Over 90% of Pennsylvania's 2,562 municipalities have elected to administer and enforce the UCC locally, using their own employees or via certified third party agencies (private code enforcement agencies) that they have retained. [8]
-- In these municipalities, the Department has no code enforcement authority, except where the municipality lacks the services of a person certified as an "Accessibility Inspector/Plans Examiner." If a municipality has "OPTED-OUT," the Department is responsible for all commercial code enforcement in that municipality. [8]
-- Where a design or construction contract is signed before this effective date, application may be made and permit issued under the Uniform Construction Code (UCC) in effect at the time of contract as long as application is made August 14, 2022 or before. [8]
+- Pennsylvania's Uniform Construction Code (UCC) must be followed statewide; over 90% of Pennsylvania's 2,562 municipalities administer and enforce the UCC locally using municipal employees or certified third-party agencies. [7]
+- In municipalities that have opted out of local UCC administration, PA DLI enforces all commercial code requirements; DLI also has sole jurisdiction for elevators and state-owned buildings. [7]
+- Pennsylvania's UCC triennial update was published November 8, 2025 with effective date January 1, 2026 (2025 Pennsylvania Bulletin final-omitted rulemaking). [7]
 
-#### Building Codes — **FOUND**
+#### State-adopted building codes (UCC) — **FOUND**
 - Portal: https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home
-- Pennsylvania's statewide building code, generally known as the Uniform Construction Code (UCC), has to be followed by builders in the state. [8]
-- Please be advised that the Court’s decision does not affect enforcement of the non-accessibility requirements of the Uniform Construction Code. [8]
-- If a municipality has "OPTED-OUT," the Department is responsible for all commercial code enforcement in that municipality. The Department also has sole jurisdiction for all elevators and all state-owned buildings, no matter where they are located. [8]
-- Certified third party agencies hired by property owners (or their contractors) enforce the residential requirements of the UCC in all opt-out municipalities. Detailed information about these agencies can be accessed on the Buildings page. [8]
-- In Act 106 of 2008, the General Assembly established the RAC, whose members represent industry sectors that participate in the various aspects relating to building construction including building component design, construction, building code enforcement and local government representation. The RAC is charged to review the periodic changes to the revised ICC codes prior to adoption into the UCC. [8]
-- Chapter 11, Appendix E of the International Building Code of 2018 and any other accessibility requirements contained in the 2018 I-codes referenced by the Uniform Construction Code were published in the Pennsylvania Bulletin and became effective on June 15, 2019. [8]
+- The UCC adopts ICC codes (including International Building Code) by reference through regulations reviewed by the Review and Advisory Council (RAC) established under Act 106 of 2008. [7]
 
 ---
 
 ### Texas (TX)
 *GC model: `trades_only` · NASCLA: False*
 
-#### General Contractor — **FOUND**
+#### General contractor (local — no state GC license) — **REQUIRES_CONFIRMATION**
 - Portal: https://www.tdlr.texas.gov/
-- Check out our licensing opportunities for active duty, veterans, and spouses. [9]
-- Search construction projects or register a new project [9]
-- Information for people with criminal convictions who wish to apply for a license. [9]
-- News and information about TDLR's building-related programs. [9]
-- Keeping you informed on the Texas Electrical Safety and Licensing [9]
-- Texas Department of Licensing and Regulation 2027 - 2031 Strategic Plan TDLR's Strategic Plan provides the roadmap for the next five years, guiding priorities, improving services, and supporting our mission to serve Texans with integrity, efficiency, and transparency. [9]
-- Start here Learn More Benefits for Military Check out our licensing opportunities for active duty, veterans, and spouses. [9]
-- Learn More Parent Taught Driver Education Learn what you need to become a parent-instructor Learn More Texas Architectural Barriers System (TABS) Search construction projects or register a new project Learn More Contracting, Procurement, and HUB Opportunities Active contracts, procurement, RFPs and more. [9]
+- Texas does not issue a statewide general contractor license; TDLR regulates specific building trades (electrical, HVAC/refrigeration, plumbing via TSBPE) while general contracting is governed locally. [9]
+- TDLR's Texas Architectural Barriers System (TABS) provides registration and lookup for construction projects subject to accessibility requirements. [9]
+- `NOT FOUND — [source checked: https://www.tdlr.texas.gov/]`
 
-#### Electrical — **FOUND**
+#### Electrical contractor & electrician licensing — **FOUND**
 - Portal: https://www.tdlr.texas.gov/electricians/
-- Keeping you informed on the Texas Electrical Safety and Licensing [9]
-- Learn More The Arc Flash Keeping you informed on the Texas Electrical Safety and Licensing [9]
-- Some manufacturers chose to start constructing to these codes prior to the July 1, 2024 effective date, so if the approved plans identify the applicable mandatory building codes as the 2021 International Codes, the 2015 International Energy Conservation Code, and the 2020 NEC, then the on-site construction will be performed to these code editions. Please contact us at [9]
-- There are 2 exceptions to this as follows: Some manufacturers chose to start constructing to these codes prior to the July 1, 2024 effective date, so if the approved plans identify the applicable mandatory building codes as the 2021 International Codes, the 2015 International Energy Conservation Code, and the 2020 NEC, then the on-site construction will be performed to these code editions. [9]
+- Anyone who performs or offers to perform non-exempt electrical work in Texas must be licensed and perform that work through a licensed electrical contractor. [9]
+- TDLR issues individual electrician licenses (apprentice, journeyman, master, residential wireman, etc.) and business electrical contractor licenses searchable via TDLR License Search (program ELC). [9]
 
-#### Plumbing — **FOUND**
-- Portal: https://www.tdlr.texas.gov/plumbing/
-- International Plumbing Code (IPC), 2021 Edition [9]
+#### Plumber licensing (TSBPE) — **FOUND**
+- Portal: https://tsbpe.texas.gov/
+- The Texas State Board of Plumbing Examiners (TSBPE) licenses and regulates the plumbing trade statewide, including apprentice, journeyman, and master plumber license types. [10]
+- `NOT FOUND — [source checked: https://www.tdlr.texas.gov/plumbing/]`
 
-#### Hvac — **FOUND**
-- Portal: https://www.tdlr.texas.gov/hvac/
-- International Mechanical Code (IMC), 2021 Edition [9]
+#### Air conditioning & refrigeration (TDLR ACR) — **FOUND**
+- Portal: https://www.tdlr.texas.gov/ACR/acr.htm
+- Contractors who install, repair, or maintain air conditioning, refrigeration, or heating systems must hold a TDLR ACR contractor license; ACR companies must employ an ACR contractor in each permanent location. [9]
 
-#### Roofing — **REQUIRES_CONFIRMATION**
+#### Building codes (local adoption) — **REQUIRES_CONFIRMATION**
 - Portal: https://www.tdlr.texas.gov/
-- `REQUIRES_CONFIRMATION — [source checked: https://www.tdlr.texas.gov/] — confirm applicability for your entity and municipality.`
-
-#### Bonding & Insurance — **FOUND**
-- Portal: https://www.tdlr.texas.gov/
-- Financial and budget reports, strategic plans, and legislative reports. [9]
-- Learn More Agency Reports Financial and budget reports, strategic plans, and legislative reports. [9]
-
-#### Permits & Inspections — **FOUND**
-- Portal: https://www.tdlr.texas.gov/ihb/codes.htm
-- Effective July 1, 2024, all industrialized housing and buildings, modules, and modular components shall comply with the following codes, as amended in 70.101 of the IHB Rules: [10]
-- International Building Code (IBC), 2021 Edition [10]
-- International Residential Code (IRC), 2021 Edition [10]
-- International Fuel Gas Code (IFGC), 2021 Edition [10]
-
-#### Building Codes — **FOUND**
-- Portal: https://www.tdlr.texas.gov/ihb/codes.htm
-- Effective July 1, 2024, all industrialized housing and buildings, modules, and modular components shall comply with the following codes, as amended in 70.101 of the IHB Rules: [10]
-- International Building Code (IBC), 2021 Edition [10]
-- International Residential Code (IRC), 2021 Edition [10]
-- International Fuel Gas Code (IFGC), 2021 Edition [10]
-- International Mechanical Code (IMC), 2021 Edition [10]
-- International Plumbing Code (IPC), 2021 Edition [10]
+- `NOT FOUND — [source checked: https://www.tdlr.texas.gov/]`
 
 ---
 
 ### Florida (FL)
 *GC model: `yes` · NASCLA: False*
 
-#### General Contractor — **FOUND**
-- Portal: https://www.myfloridalicense.com/dbpr/
-- ➢ UPDATE: Florida’s 2023 Protection of Children Act (Senate Bill 1438) [11]
-- Custodian of Public Records Contact Information [11]
-- is a multi-functional database that provides building professionals, general public, local governments, businesses and manufacturers with a single-point access to the Florida Building Code, Manufactured Building Program, Product Approval System, local code amendments, and the interested parties list. [11]
-- Getting Started In Building Codes and Standards [11]
-- The Florida Building Commission (Sections 553.76 and 553.77, F.S.) [11]
-- The Florida Building Code (Section 553.73, F.S.) [11]
-- The Manufactured (Modular) Building Program (Section 553, Part I, F.S. ) [11]
-- The program insures structures built in a manufacturing facility are in compliance with the Florida Building Code. The primary benefits of modular buildings are fast delivery, ease of relocation, low-cost reconfiguration and flexibility. Site work can occur while the modular is being constructed in the plant, resulting in earlier building occupancy and reduced labor, financing, and supervision costs. [11]
+#### Certified / registered general contractor (CILB) — **FOUND**
+- Portal: https://www2.myfloridalicense.com/construction-industry/
+- Florida's Construction Industry Licensing Board licenses and regulates the construction industry; certified contractors (occupation codes beginning with 'C') may contract statewide without meeting each jurisdiction's competency exam. [11]
+- A Florida 'general contractor' (CG/RG) has unlimited services as to the type of work they may perform under Chapter 489, Florida Statutes. [11]
+- Registered contractors (codes beginning with 'R') may contract only in jurisdictions where registered; they must meet local competency requirements. [11]
 
-#### Electrical — **REQUIRES_CONFIRMATION**
-- Portal: https://www.myfloridalicense.com/dbpr/
-- `REQUIRES_CONFIRMATION — [source checked: https://www.myfloridalicense.com/dbpr/] — confirm applicability for your entity and municipality.`
+#### Electrical contracting (state certification) — **FOUND**
+- Portal: https://www2.myfloridalicense.com/construction-industry/
+- Florida electrical contracting falls under CILB specialty classifications; certified electrical contractors may work statewide when holding the appropriate CILB certificate of competency. [11]
 
-#### Plumbing — **REQUIRES_CONFIRMATION**
-- Portal: https://www.myfloridalicense.com/dbpr/
-- `REQUIRES_CONFIRMATION — [source checked: https://www.myfloridalicense.com/dbpr/] — confirm applicability for your entity and municipality.`
+#### Plumbing contractor (CF/RF) — **FOUND**
+- Portal: https://www2.myfloridalicense.com/construction-industry/
+- A Florida plumbing contractor (CF/RF) may install, maintain, repair, alter, extend, or design plumbing including sanitary drainage, water supply, septic tanks, gas piping, and medical gas systems without obtaining additional local regulatory licenses. [11]
 
-#### Hvac — **REQUIRES_CONFIRMATION**
-- Portal: https://www.myfloridalicense.com/dbpr/
-- `REQUIRES_CONFIRMATION — [source checked: https://www.myfloridalicense.com/dbpr/] — confirm applicability for your entity and municipality.`
+#### Air-conditioning contractor (Class A / B) — **FOUND**
+- Portal: https://www2.myfloridalicense.com/construction-industry/
+- Florida Class A air-conditioning contractors (CA/RA) have unlimited scope for central air-conditioning, refrigeration, heating, and ventilating systems; Class B contractors are limited to 25 tons cooling and 500,000 BTU heating per system. [11]
+- Class A and B air-conditioning contractors may not perform liquefied petroleum or natural gas fuel lines within buildings, potable water connections, sanitary sewer lines, swimming pool piping, or electrical power wiring unless separately licensed. [11]
 
-#### Roofing — **FOUND**
-- Portal: https://www.myfloridalicense.com/dbpr/
-- The Product Approval System (Section 553.842, F.S.) It provides an optional statewide approval for eight identified building envelope and structural frame products (panel walls, exterior doors, roofing products, skylights, windows, shutters, structural components, Impact Protective Systems) that are intended to be replicated during the manufacturing process. [11]
+#### Roofing contractor (CC/RC) — **FOUND**
+- Portal: https://www2.myfloridalicense.com/construction-industry/
+- Florida roofing contractors (CC/RC) have unlimited scope in the roofing trade including installation, maintenance, repair, waterproofing, and coating; scope includes skylights, roof-deck attachments, and limited wood sheathing repair during reroofing. [11]
 
-#### Bonding & Insurance — **FOUND**
-- Portal: https://www.myfloridalicense.com/dbpr/
-- Other Commission members appointed by the Governor represent architects, engineers, contractors, building owners, insurance, public education, local governments, building and fire officials and persons with disabilities. [11]
+#### Workers' compensation & financial responsibility — **FOUND**
+- Portal: https://www2.myfloridalicense.com/construction-industry/
+- Florida's Construction Policy Tracking Database (Florida DFS Division of Workers' Compensation) provides contractor workers' compensation coverage status and automatic electronic notification of coverage changes. [11]
 
-#### Permits & Inspections — **FOUND**
+#### Florida Building Code — **FOUND**
 - Portal: https://www2.myfloridalicense.com/building-codes-and-standards/
-- All requests for publications, documents, forms, applications for licenses, permits and other similar certifications can be obtained by contacting the Customer Contact Center. [12]
-
-#### Building Codes — **FOUND**
-- Portal: https://www2.myfloridalicense.com/building-codes-and-standards/
-- is a multi-functional database that provides building professionals, general public, local governments, businesses and manufacturers with a single-point access to the Florida Building Code, Manufactured Building Program, Product Approval System, local code amendments, and the interested parties list. [12]
-- Standard Solar Disclosure Forms Available Here [12]
-- Getting Started In Building Codes and Standards [12]
-- The Florida Building Commission (Sections 553.76 and 553.77, F.S.) [12]
-- The Florida Building Code (Section 553.73, F.S.) [12]
-- The Manufactured (Modular) Building Program (Section 553, Part I, F.S. ) [12]
+- Florida Building Code information, product approval, manufactured building program, and local amendment database are accessible through DBPR Building Codes & Standards (Florida Building Commission, Sections 553.73–553.77, F.S.). [12]
 
 ---
 
 ### California (CA)
 *GC model: `yes` · NASCLA: True*
 
-#### General Contractor — **FOUND**
+#### Contractor license (CSLB) — **FOUND**
 - Portal: https://www.cslb.ca.gov/
-- Welcome to the Contractors State License Board [13]
-- The Contractors State License Board (CSLB) protects California consumers by licensing and regulating the state's construction industry. CSLB was established in 1929 and today licenses about 285,000 contractors in 45 different classifications. [13]
-- When it comes to going green, especially utilizing solar energy, California leads the nation. Our solar industry is booming. It’s never been easier or more affordable to go solar. If you’re considering installing a residential solar energy system, there’s important information you need to consider so you can be [13]
-- Stay informed by subscribing to receive important email updates from Contractors State License Board. [13]
-- You can sign up to receive Industry Bulletins to stay informed about new laws, fee changes, fraud alerts and other important construction news. [13]
-- Seniors are a particularly vulnerable audience, often preyed upon by unlicensed or unscrupulous contractors. Senior Scam Stopper℠ seminars are an important tool to help educate seniors about hiring contractors, and to help protect them from being victimized. [13]
-- Expedited Licensure Application Processing for Service Members Enrolled in Skillbridge [13]
-- Scammers may send you fraudulent text messages, phone calls, or emails impersonating CSLB, including signatures and sender information that appear to be legitimate. Licensees who receive these emails should check the email address to verify it is coming from a @cslb.ca.gov domain before responding. You can report suspicious emails to [13]
+- CSLB licenses and regulates California's construction industry statewide; CSLB was established in 1929 and licenses about 285,000 contractors in 45 classifications. [13]
+- CSLB licensure requires passing two examinations — law and business, and trade — unless a waiver applies; C-61 Limited Specialty classification has no trade exam. [13]
+- Original CSLB license application fee (exam or waiver, one classification) is $450; initial license fee is $200 (sole owner) or $350 (non-sole owner). [13]
 
-#### Electrical — **REQUIRES_CONFIRMATION**
+#### Electrical (C-10) classification — **FOUND**
 - Portal: https://www.cslb.ca.gov/
-- `REQUIRES_CONFIRMATION — [source checked: https://www.cslb.ca.gov/] — confirm applicability for your entity and municipality.`
+- Electrical contracting in California is performed under CSLB license classification C-10 (Electrical); active timely renewal for C-10 contractors is $470 (sole owner) or $720 (non-sole owner) per CSLB fee schedule. [13]
 
-#### Plumbing — **REQUIRES_CONFIRMATION**
+#### Plumbing (C-36) classification — **FOUND**
 - Portal: https://www.cslb.ca.gov/
-- `REQUIRES_CONFIRMATION — [source checked: https://www.cslb.ca.gov/] — confirm applicability for your entity and municipality.`
+- Plumbing contracting is licensed under CSLB C-36 classification as part of the statewide contractor license system — not a separate non-CSLB trade board. [13]
 
-#### Hvac — **REQUIRES_CONFIRMATION**
+#### HVAC (C-20) classification — **FOUND**
 - Portal: https://www.cslb.ca.gov/
-- `REQUIRES_CONFIRMATION — [source checked: https://www.cslb.ca.gov/] — confirm applicability for your entity and municipality.`
+- HVAC/mechanical contracting is licensed under CSLB C-20 (Warm-Air Heating, Ventilating and Air-Conditioning) and related specialty classifications per CSLB Description of Classifications. [13]
 
-#### Roofing — **REQUIRES_CONFIRMATION**
-- Portal: https://www.cslb.ca.gov/
-- `REQUIRES_CONFIRMATION — [source checked: https://www.cslb.ca.gov/] — confirm applicability for your entity and municipality.`
+#### Contractor bond & insurance — **FOUND**
+- Portal: https://www.cslb.ca.gov/About_Us/Library/Guides_And_Publications/
+- A California contractor must maintain a contractor's bond on file with CSLB in the sum of $25,000 from a surety company or as a cashier's check held by CSLB. [13]
+- CSLB restricts residential down payments: contractors may not receive more than $1,000 or 10% of the contract price (whichever is less) as a down payment on home improvement, solar, ADU, and disaster-rebuild work. [13]
 
-#### Bonding & Insurance — **REQUIRES_CONFIRMATION**
-- Portal: https://www.cslb.ca.gov/
-- `NOT FOUND — [source checked: https://www.cslb.ca.gov/]`
-
-#### Permits & Inspections — **FOUND**
+#### California Building Standards Code (Title 24) — **FOUND**
 - Portal: https://www.dgs.ca.gov/BSC/Codes
-- The 2025 California Building Standards Code (Cal. Code Regs., Title 24) will be published July 1, 2025, with an effective date of January 1, 2026. [14]
-- in this edition and the supplements are available under the [14]
-- The active links below will take you to each publisher's website. Please contact CBSC at [14]
-- Errata — Part 2, Volume 1 (non-substantive corrections) [14]
-
-#### Building Codes — **FOUND**
-- Portal: https://www.dgs.ca.gov/BSC/Codes
-- The 2025 California Building Standards Code (Cal. Code Regs., Title 24) will be published July 1, 2025, with an effective date of January 1, 2026. [14]
-- The 2022 California Building Standards Code (Cal. Code Regs., Title 24) was published July 1, 2022, with an effective date of January 1, 2023. [14]
-- PART 7 – Vacant - formerly California Elevator Safety Construction Code (see Cal. Code Regs., Title 8) [14]
-- The 2019 California Building Standards Code (Cal. Code Regs., Title 24) was published July 1, 2019, with an effective date of January 1, 2020. [14]
-- PART 7–Vacant - formerly California Elevator Safety Construction Code (see Cal. Code Regs., Title 8) [14]
-- The 2016 California Building Standards Code (Cal. Code Regs., Title 24) was published July 1, 2016, with an effective date of January 1, 2017. Additionally, the intervening supplement was published January 1, 2017 with an effective date of July 1, 2018. Information Bulletins 16-01 and 17-06 provide detailed information concerning changes to the 2016 publication. If you would l [14]
+- The California Building Standards Code (Cal. Code Regs., Title 24) is published by the Building Standards Commission; the 2025 code publishes July 1, 2025 with effective date January 1, 2026. [14]
 
 ---
 
 ### New York (NY)
 *GC model: `no` · NASCLA: False*
 
-#### General Contractor — **FOUND**
-- Portal: https://www.nyc.gov/site/buildings/index.page
-- Effective May 3, 2026, Local Law 10 (LL10) of 2026 updates the Site Safety Training (SST) Program by requiring training focused on mental health and wellness, suicide risk and prevention, and alcohol and substance misuse on construction sites. The new law also introduces a one-year grace period for SST card renewals and includes updates to course equivalency standards. [15]
-- Local Law 75 of 2009 requires that no later than July 1, 2026, all existing and new security grilles installed at businesses adjacent to a public sidewalk must meet new visibility requirements. Landmarked buildings and buildings in historic districts are exempt. [15]
-- Read the Construction Advisory for requirement details [15]
-- DOB, in partnership with engineering firm Thornton Tomasetti, releases the first-ever report using evidence-based building science to recommend improvements to the current façade inspection requirements. The report findings highlight areas that could potentially reduce the need for some sidewalk sheds without negatively impacting public safety. [15]
-- DOB borough offices will be open the first and third Tuesday of the month from 4:00 pm to 7:00 pm. Staff will be available to answer questions and provide needed information to homeowners, tenants, building managers, and small business owners. [15]
-- Property owners, RDPs, Licensees, Filing Reps, and other registrants can register to join our bi-weekly online Q&A Sessions to ask job-specific questions about DOB NOW and BIS filings, or general questions about permits, Codes, sign-offs, certificates of occupancy, etc. [15]
-- View the schedule and register for a Q&A Session [15]
-- Buildings 311 Search all NYC.gov websites Menu Text-Size Search Search Search Updates & News Local Law 10 of 2026 Makes Updates to SST Program Effective May 3, 2026 Effective May 3, 2026, Local Law 10 (LL10) of 2026 updates the Site Safety Training (SST) Program by requiring training focused on mental health and wellness, suicide risk and prevention, and alcohol and substance misuse on construction sites. [15]
+#### General contractor (local — no statewide GC license) — **REQUIRES_CONFIRMATION**
+- Portal: https://www.nyc.gov/site/buildings/industry/licensing.page
+- New York does not issue a statewide general contractor license; construction contractor licensing is primarily local (e.g., NYC Dept of Buildings for New York City). [15]
+- As of September 7, 2021, all new NYC Dept of Buildings license applications must be submitted online via NYC DOB NOW at nyc.gov/dobnow. [16]
+- `NOT FOUND — [source checked: https://dos.ny.gov/licensing-services]`
 
-#### Electrical — **FOUND**
-- Portal: https://www.nyc.gov/site/buildings/index.page
-- Permits Certificate of Occupancy After Hour Variances DOB's Upcoming Changes Job Status Updates Tenant Assistance Site Safety Training Stay Connected Youtube Instagram Linkedin Facebook Tweets by NYC_Buildings Quick Links Forms & Applic [15]
-- Sign Up Social Media Connect with Us Facebook X (formerly Twitter) Youtube Instagram LinkedIn [15]
+#### Electrical / skilled trade licensing (NYC) — **FOUND**
+- Portal: https://www.nyc.gov/site/buildings/industry/licensing.page
+- NYC Dept of Buildings licenses skilled trades and construction professionals including master electricians and special rigging; license insurance updates must be submitted via DOB NOW as of June 5, 2023. [16]
 
-#### Plumbing — **REQUIRES_CONFIRMATION**
-- Portal: https://www.nyc.gov/site/buildings/index.page
-- `REQUIRES_CONFIRMATION — [source checked: https://www.nyc.gov/site/buildings/index.page] — confirm applicability for your entity and municipality.`
+#### Plumbing / master plumber (local) — **REQUIRES_CONFIRMATION**
+- Portal: https://www.nyc.gov/site/buildings/industry/licensing.page
+- NYC DOB issues plumber and master plumber licenses as part of its skilled-trades licensing program; requirements include exams, qualifications, and insurance per DOB licensing guidelines. [16]
+- `NOT FOUND — [source checked: https://dos.ny.gov/licensing-services]`
 
-#### Hvac — **REQUIRES_CONFIRMATION**
-- Portal: https://www.nyc.gov/site/buildings/index.page
-- `REQUIRES_CONFIRMATION — [source checked: https://www.nyc.gov/site/buildings/index.page] — confirm applicability for your entity and municipality.`
+#### HVAC / mechanical (local) — **REQUIRES_CONFIRMATION**
+- Portal: https://www.nyc.gov/site/buildings/industry/licensing.page
+- `NOT FOUND — [source checked: https://dos.ny.gov/licensing-services]`
 
-#### Roofing — **REQUIRES_CONFIRMATION**
-- Portal: https://www.nyc.gov/site/buildings/index.page
-- `REQUIRES_CONFIRMATION — [source checked: https://www.nyc.gov/site/buildings/index.page] — confirm applicability for your entity and municipality.`
-
-#### Bonding & Insurance — **REQUIRES_CONFIRMATION**
-- Portal: https://www.nyc.gov/site/buildings/index.page
-- `NOT FOUND — [source checked: https://www.nyc.gov/site/buildings/index.page]`
-
-#### Permits & Inspections — **FOUND**
-- Portal: https://dos.ny.gov/building-standards-and-codes
-- Code Enforcement Officials & Building Safety Inspectors [16]
-- Click the subscribe button below if you would like to receive email notifications pertaining to training events, code and regulation updates, Code Council meetings, and other information that is relevant to the code enforcement community. [16]
-- Click the subscribe button below if you would like to receive monthly emails pertaining to frequently asked code questions, guidance on overlooked or misunderstood code requirements, administration and enforcement tips, and other information that is relevant to the code enforcement community. [16]
-- Learn more Code Enforcement Officials & Building Safety Inspectors card image Basic Training Program The Basic Training Program provides initial training and certification to those who wish to become a code official. [16]
-- Code Officials Update Your Contact Information Update contact information The Division of Building Standards and Codes Electronic Mailing List E-Bulletin Mailing List Click the subscribe button below if you would like to receive email notifications pertaining to training events, code and regulation updates, Code Council meetings, and other information that is relevant to the code enforcement community. [16]
-- Subscribe Code Outreach Program Mailing List Click the subscribe button below if you would like to receive monthly emails pertaining to frequently asked code questions, guidance on overlooked or misunderstood code requirements, administration and enforcement tips, and other information that is relevant to the code enforcement community. [16]
-
-#### Building Codes — **FOUND**
-- Portal: https://dos.ny.gov/building-standards-and-codes
-- The Division of Building Standards and Codes ensures the health, safety & resilience of the built environment for all New Yorkers. [16]
-- Click the button below for Information on the Current Update to the Uniform Code and Energy Code. [16]
-- The Department of State’s Division of Building Standards and Codes provides a variety of services related to the development, administration, and enforcement of the Uniform Fire Prevention and Building Code and Energy Conservation Construction Code. These Codes provide for the construction of safe, resilient, and energy efficient buildings throughout New York State. [16]
-- The Uniform Fire Prevention and Building Code (Uniform Code) and the State Energy Conservation Construction Code (Energy Code), are contained within Title 19 of the New York Codes, Rules and Regulations (19 NYCRR). 19 NYCRR incorporates by reference publications including the current model code books as published by the International Code Council. [16]
-- Various other parts of 19 NYCRR contain regulations related to the Uniform Code and Energy Code. They cover topics such as administration and enforcement of the code, variance procedures, training standards, standards for manufactured housing and factory manufactured housing, Council Rules and Regulations, truss construction identification, SEQR, etc. [16]
-- Code Enforcement Officials & Building Safety Inspectors [16]
+#### Building codes (local enforcement) — **FOUND**
+- Portal: https://www.nyc.gov/site/buildings/industry/licensing.page
+- New York City enforces NYC Building Code through Dept of Buildings permit, plan examination, and inspection workflows; statewide construction outside NYC follows local adopted codes. [16]
 
 ---
 
@@ -437,16 +329,16 @@ Transformative synthesis from R2 corpus (#234 federal cited_data_pack + #266 sta
 | 4 | primary | SBA — Stay Legally Compliant | https://www.sba.gov/business-guide/manage-your-business/stay-legally-compliant | HARVESTED |
 | 5 | primary | NASCLA — Contractor Licensing | https://www.nascla.org/ | HARVESTED |
 | 6 | primary | NFPA 70 (index only — text not republished) | https://www.nfpa.org/codes-and-standards/nfpa-70-national-electrical-code | HARVESTED |
-| 7 | primary | Pennsylvania — General Contractor Licensing | https://hic.attorneygeneral.gov/ | HARVESTED |
-| 8 | primary | Pennsylvania Building Codes | https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home | HARVESTED |
-| 9 | primary | Texas — General Contractor Licensing | https://www.tdlr.texas.gov/ | HARVESTED |
-| 10 | primary | Texas Building Codes | https://www.tdlr.texas.gov/ihb/codes.htm | HARVESTED |
-| 11 | primary | Florida — General Contractor Licensing | https://www.myfloridalicense.com/dbpr/ | HARVESTED |
-| 12 | primary | Florida Building Codes | https://www2.myfloridalicense.com/building-codes-and-standards/ | HARVESTED |
-| 13 | primary | California — General Contractor Licensing | https://www.cslb.ca.gov/ | HARVESTED |
-| 14 | primary | California Building Codes | https://www.dgs.ca.gov/BSC/Codes | HARVESTED |
-| 15 | primary | New York — General Contractor Licensing | https://www.nyc.gov/site/buildings/index.page | HARVESTED |
-| 16 | primary | New York Building Codes | https://dos.ny.gov/building-standards-and-codes | HARVESTED |
+| 7 | primary | PA DLI — Contractor Licensing | https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing | HARVESTED |
+| 8 | primary | PA OAG — HIC Registration | https://hic.attorneygeneral.gov/ | HARVESTED |
+| 9 | primary | TDLR — Agency home | https://www.tdlr.texas.gov/ | HARVESTED |
+| 10 | primary | TSBPE — Home | https://tsbpe.texas.gov/ | HARVESTED |
+| 11 | primary | FL DBPR — Construction Industry | https://www2.myfloridalicense.com/construction-industry/ | HARVESTED |
+| 12 | primary | FL DBPR — Building Codes | https://www2.myfloridalicense.com/building-codes-and-standards/ | HARVESTED |
+| 13 | primary | CSLB — Home | https://www.cslb.ca.gov/ | HARVESTED |
+| 14 | primary | CA BSC — Codes | https://www.dgs.ca.gov/BSC/Codes | HARVESTED |
+| 15 | primary | NY DOS — Licensing Services | https://dos.ny.gov/licensing-services | HARVESTED |
+| 16 | primary | NYC DOB — Licensing | https://www.nyc.gov/site/buildings/industry/licensing.page | HARVESTED |
 | osha_fall_protection | primary | OSHA | https://www.osha.gov/fall-protection | HARVESTED |
 | osha_electrical | primary | OSHA | https://www.osha.gov/electrical | HARVESTED |
 | epa_section608 | primary | EPA | https://www.epa.gov/section608 | HARVESTED |
@@ -469,25 +361,23 @@ Transformative synthesis from R2 corpus (#234 federal cited_data_pack + #266 sta
 
 ## 6. Gaps / NOT FOUND / Open Questions
 
-1. **Pennsylvania — Electrical** (`REQUIRES_CONFIRMATION`)
-   - REQUIRES_CONFIRMATION — [source checked: https://hic.attorneygeneral.gov/] — confirm applicability for your entity and municipality.
-1. **Texas — Roofing** (`REQUIRES_CONFIRMATION`)
-   - REQUIRES_CONFIRMATION — [source checked: https://www.tdlr.texas.gov/] — confirm applicability for your entity and municipality.
-1. **Florida — Electrical** (`REQUIRES_CONFIRMATION`)
-   - REQUIRES_CONFIRMATION — [source checked: https://www.myfloridalicense.com/dbpr/] — confirm applicability for your entity and municipality.
-1. **California — Electrical** (`REQUIRES_CONFIRMATION`)
-   - REQUIRES_CONFIRMATION — [source checked: https://www.cslb.ca.gov/] — confirm applicability for your entity and municipality.
-1. **California — Bonding & Insurance** (`REQUIRES_CONFIRMATION`)
-   - NOT FOUND — [source checked: https://www.cslb.ca.gov/]
-1. **New York — Plumbing** (`REQUIRES_CONFIRMATION`)
-   - REQUIRES_CONFIRMATION — [source checked: https://www.nyc.gov/site/buildings/index.page] — confirm applicability for your entity and municipality.
-1. **New York — Bonding & Insurance** (`REQUIRES_CONFIRMATION`)
-   - NOT FOUND — [source checked: https://www.nyc.gov/site/buildings/index.page]
+1. **Pennsylvania — Home improvement / general contractor registration** (`NOT FOUND`)
+   - NOT FOUND — [source checked: City licensing portals (403 at harvest — confirm locally)]
+1. **Pennsylvania — Electrical contractor / electrician licensing** (`NOT FOUND`)
+   - NOT FOUND — [source checked: https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing]
+1. **Pennsylvania — Plumbing contractor licensing** (`REQUIRES_CONFIRMATION`)
+   - REQUIRES_CONFIRMATION — [source checked: https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing]
+1. **Texas — General contractor (local — no state GC license)** (`NOT FOUND`)
+   - NOT FOUND — [source checked: https://www.tdlr.texas.gov/]
+1. **Texas — Plumber licensing (TSBPE)** (`NOT FOUND`)
+   - NOT FOUND — [source checked: https://www.tdlr.texas.gov/plumbing/]
+1. **New York — General contractor (local — no statewide GC license)** (`NOT FOUND`)
+   - NOT FOUND — [source checked: https://dos.ny.gov/licensing-services]
 
 ## 7. Confidence Assessment
 
 **Overall:** MEDIUM
-*As-of 2026-06-19; 220 cited claims; 7 gaps flagged; 1 parked sources; 16 REQUIRES_CONFIRMATION.*
+*As-of 2026-06-19; 151 cited claims; 6 gaps flagged; 1 parked sources; 8 REQUIRES_CONFIRMATION.*
 
 - **Federal Baseline:** HIGH — Federal OSHA/EPA/ICC seeds from agency_primary sources.
 - **State Licensing:** MEDIUM — State portal harvest; municipal overlays may apply.
@@ -503,16 +393,16 @@ Transformative synthesis from R2 corpus (#234 federal cited_data_pack + #266 sta
 4. SBA — Stay Legally Compliant — https://www.sba.gov/business-guide/manage-your-business/stay-legally-compliant — retrieved 2026-06-19 — Federal
 5. NASCLA — Contractor Licensing — https://www.nascla.org/ — retrieved 2026-06-19 — Federal
 6. NFPA 70 (index only — text not republished) — https://www.nfpa.org/codes-and-standards/nfpa-70-national-electrical-code — retrieved 2026-06-19 — Federal
-7. Pennsylvania — General Contractor Licensing — https://hic.attorneygeneral.gov/ — retrieved 2026-06-19 — Pennsylvania
-8. Pennsylvania Building Codes — https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home — retrieved 2026-06-19 — Pennsylvania
-9. Texas — General Contractor Licensing — https://www.tdlr.texas.gov/ — retrieved 2026-06-19 — Texas
-10. Texas Building Codes — https://www.tdlr.texas.gov/ihb/codes.htm — retrieved 2026-06-19 — Texas
-11. Florida — General Contractor Licensing — https://www.myfloridalicense.com/dbpr/ — retrieved 2026-06-19 — Florida
-12. Florida Building Codes — https://www2.myfloridalicense.com/building-codes-and-standards/ — retrieved 2026-06-19 — Florida
-13. California — General Contractor Licensing — https://www.cslb.ca.gov/ — retrieved 2026-06-19 — California
-14. California Building Codes — https://www.dgs.ca.gov/BSC/Codes — retrieved 2026-06-19 — California
-15. New York — General Contractor Licensing — https://www.nyc.gov/site/buildings/index.page — retrieved 2026-06-19 — New York
-16. New York Building Codes — https://dos.ny.gov/building-standards-and-codes — retrieved 2026-06-19 — New York
+7. PA DLI — Contractor Licensing — https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing — retrieved 2026-06-19 — Pennsylvania
+8. PA OAG — HIC Registration — https://hic.attorneygeneral.gov/ — retrieved 2026-06-19 — Pennsylvania
+9. TDLR — Agency home — https://www.tdlr.texas.gov/ — retrieved 2026-06-19 — Texas
+10. TSBPE — Home — https://tsbpe.texas.gov/ — retrieved 2026-06-19 — Texas
+11. FL DBPR — Construction Industry — https://www2.myfloridalicense.com/construction-industry/ — retrieved 2026-06-19 — Florida
+12. FL DBPR — Building Codes — https://www2.myfloridalicense.com/building-codes-and-standards/ — retrieved 2026-06-19 — Florida
+13. CSLB — Home — https://www.cslb.ca.gov/ — retrieved 2026-06-19 — California
+14. CA BSC — Codes — https://www.dgs.ca.gov/BSC/Codes — retrieved 2026-06-19 — California
+15. NY DOS — Licensing Services — https://dos.ny.gov/licensing-services — retrieved 2026-06-19 — New York
+16. NYC DOB — Licensing — https://www.nyc.gov/site/buildings/industry/licensing.page — retrieved 2026-06-19 — New York
 
 ## Lead Magnet — Upgrade Path
 
