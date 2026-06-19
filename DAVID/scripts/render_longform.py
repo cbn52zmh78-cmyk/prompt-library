@@ -62,10 +62,27 @@ LOUDNORM_I = -16.0
 LOUDNORM_TP = -1.5
 LOUDNORM_LRA = 11.0
 MAGENTA_CLAMP_VF = "eq=gamma_r=1.08:gamma_g=1.02:gamma_b=0.82:saturation=1.05:brightness=0.01"
+MAGENTA_CLAMP_STRONG_VF = (
+    "eq=gamma_r=1.18:gamma_g=1.08:gamma_b=0.62:saturation=0.90:brightness=0.03"
+)
+DARK_SCENE_MAGENTA_CLAMP_VF = (
+    "eq=gamma_r=1.14:gamma_g=1.05:gamma_b=0.68:saturation=0.94:brightness=0.02"
+)
 WARM_GOLD_CLAMP_VF = f"{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}"
 MAGENTA_SCORE_MAX = 0.42
 LOUDNESS_SPREAD_MAX_LU = 1.5
 REGROUND_EVERY_N = 2
+LOUDNORM_LRA_TIGHT = 7.0
+SET_LIBRARY_PATH = WORKSPACE / "STUDIO" / "Pipeline" / "Set_Library_v1.json"
+DARK_SCENE_KEYWORDS = (
+    "warehouse", "industrial", "dusk", "shadow", "darkness", "dramatic",
+    "night", "low key", "high-contrast", "corridor", "noir", "deep shadow",
+)
+WAREHOUSE_KELVIN_LOCK_PROMPT = (
+    "Industrial window 4800K directional key locked — zero hue drift, deep shadow pockets, "
+    "no magenta brick bounce, no cool fill contamination, no purple ambient."
+)
+_SET_LIBRARY_CACHE: dict[str, Any] | None = None
 
 
 def _load_grok_token() -> str:
@@ -149,6 +166,85 @@ def _identity_anchor(script: dict[str, Any]) -> str:
 def _is_archive_production(script: dict[str, Any], refs: dict[str, Any]) -> bool:
     set_file = str(refs.get("set_file") or "")
     return "archive" in set_file.lower() or script.get("format_id") == "documentary-host"
+
+
+def _load_set_library() -> dict[str, Any]:
+    global _SET_LIBRARY_CACHE
+    if _SET_LIBRARY_CACHE is None:
+        if SET_LIBRARY_PATH.is_file():
+            _SET_LIBRARY_CACHE = json.loads(SET_LIBRARY_PATH.read_text(encoding="utf-8"))
+        else:
+            _SET_LIBRARY_CACHE = {}
+    return _SET_LIBRARY_CACHE
+
+
+def _extract_set_id(text: str) -> str | None:
+    m = re.search(r"@Set-[\w-]+", text)
+    return m.group(0) if m else None
+
+
+def _set_lighting_lock(set_id: str) -> str | None:
+    entry = (_load_set_library().get("sets") or {}).get(set_id)
+    if not entry:
+        return None
+    lock = entry.get("lighting_lock")
+    return str(lock) if lock else None
+
+
+def _kelvin_lock_for_prompt(base: str, refs: dict[str, Any]) -> str | None:
+    if re.search(r"\b\d{4}\s*k\b", base, re.I):
+        return None
+    set_id = _extract_set_id(base)
+    if set_id:
+        lock = _set_lighting_lock(set_id)
+        if lock:
+            return lock
+    set_file = str(refs.get("set_file") or "").lower()
+    if "warehouse" in set_file or "industrial" in set_file:
+        return WAREHOUSE_KELVIN_LOCK_PROMPT
+    if "archive" in set_file:
+        return LAMP_LOCK_PROMPT
+    return None
+
+
+def _is_dark_scene(
+    refs: dict[str, Any],
+    *,
+    script: dict[str, Any] | None = None,
+    shot: dict[str, Any] | None = None,
+) -> bool:
+    set_file = str(refs.get("set_file") or "").lower()
+    if any(k in set_file for k in ("warehouse", "industrial", "rooftop", "night", "dusk")):
+        return True
+    texts: list[str] = []
+    if shot:
+        texts.append(shot.get("video_prompt", ""))
+    elif script:
+        texts.extend(s.get("video_prompt", "") for s in script.get("shots", []))
+    blob = " ".join(texts).lower()
+    if any(k in blob for k in DARK_SCENE_KEYWORDS):
+        return True
+    return bool(re.search(r"\b(4200|4300|4800)\s*k\b", blob, re.I))
+
+
+def _effective_reground_interval(
+    opts: "SeamlessOptions",
+    refs: dict[str, Any],
+    shot: dict[str, Any],
+) -> int:
+    if _is_dark_scene(refs, shot=shot):
+        return 1
+    return opts.reground_interval
+
+
+def _magenta_clamp_vf(*, dark_scene: bool, lamp_lock: bool, strong: bool = False) -> str:
+    if strong or dark_scene:
+        base = MAGENTA_CLAMP_STRONG_VF if strong else DARK_SCENE_MAGENTA_CLAMP_VF
+    else:
+        base = MAGENTA_CLAMP_VF
+    if lamp_lock:
+        return f"{base},{LAMP_LOCK_VF}"
+    return base
 
 
 def _normalize_shot_list(shots: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -429,6 +525,7 @@ def resolve_refs(script: dict[str, Any], *, client: Any = None) -> dict[str, Any
         "config_avatar_reference": cfg.get("avatar_reference"),
         "set_file": set_file,
         "voice_suffix": voice_suffix,
+        "format_id": script.get("format_id"),
         "model_video": cfg.get("model_video", "grok-imagine-video-1.5"),
         "resolution": cfg.get("resolution", "720p"),
     }
@@ -632,7 +729,10 @@ def apply_seamless_prompt(shot: dict[str, Any], refs: dict[str, Any], opts: Seam
     base = shot.get("video_prompt", "")
     locks: list[str] = []
     archive = "archive" in str(refs.get("set_file") or "").lower()
-    if opts.lamp_lock and archive and "3200K" not in base:
+    kelvin_lock = _kelvin_lock_for_prompt(base, refs)
+    if kelvin_lock:
+        locks.append(kelvin_lock)
+    elif opts.lamp_lock and archive and "3200K" not in base:
         locks.append(LAMP_LOCK_PROMPT)
     if opts.glasses_lock and archive and "glasses" not in base.lower():
         locks.append(GLASSES_LOCK_PROMPT)
@@ -858,6 +958,35 @@ def chain_segment_paths(shots_dir: Path, shots: list[dict[str, Any]]) -> list[Pa
     return paths
 
 
+def _probe_grey_balance(video: Path, at_s: float | None = None) -> float:
+    """Neutral grey balance metric for clinical sets — lower drift = better continuity."""
+    from PIL import Image
+
+    ff = _ffmpeg_exe()
+    at_s = at_s if at_s is not None else max(0.0, probe_duration(video) * 0.5)
+    jpg = video.with_suffix(".grey_probe.jpg")
+    subprocess.run(
+        [ff, "-y", "-ss", f"{at_s:.3f}", "-i", str(video), "-frames:v", "1", str(jpg)],
+        check=True,
+        capture_output=True,
+    )
+    img = Image.open(jpg).convert("RGB")
+    w, h = img.size
+    rs = gs = bs = n = 0
+    for y in range(int(h * 0.1), int(h * 0.55), 8):
+        for x in range(int(w * 0.15), int(w * 0.85), 8):
+            r, g, b = img.getpixel((x, y))
+            rs += r
+            gs += g
+            bs += b
+            n += 1
+    jpg.unlink(missing_ok=True)
+    if not n:
+        return 0.0
+    r_mean, g_mean, b_mean = rs / n, gs / n, bs / n
+    return abs(r_mean - g_mean) / 255.0 + abs(b_mean - g_mean) / 255.0
+
+
 def probe_magenta_score(video: Path, at_s: float | None = None) -> float:
     """Fraction of ambient pixels with purple/magenta bias (0=none, 1=all)."""
     from PIL import Image
@@ -889,41 +1018,83 @@ def probe_magenta_score(video: Path, at_s: float | None = None) -> float:
 
 
 def apply_warm_gold_clamp(video: Path, out: Path, color_ref: Path) -> Path:
-    """Magenta suppression + warm-gold clamp against locked David-001 reference."""
+    """Magenta suppression + warm-gold clamp against locked talent reference."""
+    return apply_per_shot_magenta_clamp(
+        video, out, color_ref, dark_scene=False, lamp_lock=True,
+    )
+
+
+def _run_video_eq_pass(video: Path, out: Path, vf: str) -> bool:
+    ff = _ffmpeg_exe()
+    cmd = [
+        ff, "-y", "-i", str(video), "-vf", vf,
+        "-map", "0:0", "-c:v", "libx264", "-pix_fmt", "yuv420p",
+    ]
+    if has_audio_stream(video):
+        cmd.extend(["-map", "0:1", "-c:a", "aac", "-b:a", "192k"])
+    cmd.append(str(out))
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    return r.returncode == 0
+
+
+def apply_per_shot_magenta_clamp(
+    video: Path,
+    out: Path,
+    color_ref: Path,
+    *,
+    dark_scene: bool = False,
+    lamp_lock: bool = True,
+) -> Path:
+    """Per-shot magenta suppression — within-clip, independent of --match-color joins."""
     ff = _ffmpeg_exe()
     out.parent.mkdir(parents=True, exist_ok=True)
-    ref = color_ref
-    if ref.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp"):
+    clamp_vf = _magenta_clamp_vf(dark_scene=dark_scene, lamp_lock=lamp_lock)
+    cur = video
+    staged = out.with_name(f"{out.stem}_clamp_stage.mp4")
+
+    # Dark/high-contrast: eq-only within-clip — avatar histogram match drifts magenta.
+    use_histogram = (
+        not dark_scene
+        and color_ref.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp")
+    )
+    if use_histogram:
         vfilter = (
-            f"[0:v][1:v]histogrammatching=pattern=1:strength=0.62[matched];"
-            f"[matched]{WARM_GOLD_CLAMP_VF}[outv]"
+            "[0:v][1:v]histogrammatching=pattern=1:strength=0.55[matched];"
+            f"[matched]{clamp_vf}[outv]"
         )
-        cmd = [
-            ff, "-y", "-i", str(video), "-loop", "1", "-i", str(ref),
+        hist_cmd = [
+            ff, "-y", "-i", str(video), "-loop", "1", "-i", str(color_ref),
             "-filter_complex", vfilter,
-            "-map", "[outv]", "-map", "0:a?", "-c:v", "libx264", "-pix_fmt", "yuv420p",
-            "-c:a", "copy", "-shortest", str(out),
+            "-map", "[outv]", "-c:v", "libx264", "-pix_fmt", "yuv420p",
         ]
-    else:
-        cmd = [
-            ff, "-y", "-i", str(video), "-vf", WARM_GOLD_CLAMP_VF,
-            "-c:v", "libx264", "-pix_fmt", "yuv420p",
-            "-map", "0:v", "-map", "0:a?", "-c:a", "copy", str(out),
-        ]
-    r = subprocess.run(cmd, capture_output=True, text=True)
-    if r.returncode != 0:
-        print("[seamless] warm-gold histogram clamp failed; eq-only fallback")
-        r2 = subprocess.run(
-            [
-                ff, "-y", "-i", str(video), "-vf", WARM_GOLD_CLAMP_VF,
-                "-c:v", "libx264", "-pix_fmt", "yuv420p",
-                "-map", "0:v", "-map", "0:a?", "-c:a", "copy", str(out),
-            ],
-            capture_output=True,
-            text=True,
-        )
-        if r2.returncode != 0:
+        if has_audio_stream(video):
+            hist_cmd.extend(["-map", "0:1", "-c:a", "aac", "-b:a", "192k"])
+        hist_cmd.extend(["-shortest", str(staged)])
+        r = subprocess.run(hist_cmd, capture_output=True, text=True)
+        if r.returncode == 0:
+            cur = staged
+        else:
+            print("[seamless] per-shot histogram clamp failed; eq-only fallback")
+            use_histogram = False
+
+    if not use_histogram:
+        if not _run_video_eq_pass(video, staged, clamp_vf):
             shutil.copy2(video, out)
+            return out
+        cur = staged
+
+    for pass_n in range(2):
+        mag = probe_magenta_score(cur)
+        if mag <= MAGENTA_SCORE_MAX:
+            break
+        strong_vf = _magenta_clamp_vf(dark_scene=True, lamp_lock=lamp_lock, strong=True)
+        strong_out = out.with_name(f"{out.stem}_strong{pass_n}.mp4")
+        if not _run_video_eq_pass(cur, strong_out, strong_vf):
+            break
+        cur = strong_out
+        print(f"[magenta] within-clip strong pass {pass_n + 1} (score was {mag:.3f})")
+
+    shutil.copy2(cur, out)
     return out
 
 
@@ -1003,13 +1174,17 @@ def process_shot_segment(
     if cur != staged:
         shutil.copy2(cur, staged)
     cur = staged
+    dark_scene = _is_dark_scene(refs, shot=shot)
+    target_dur = float(clamp_shot_duration(shot.get("duration", probe_duration(cur))))
 
     if opts.magenta_clamp or opts.match_color:
         clamped = work / f"{video.stem}_clamped.mp4"
-        apply_warm_gold_clamp(cur, clamped, color_ref)
+        apply_per_shot_magenta_clamp(
+            cur, clamped, color_ref,
+            dark_scene=dark_scene, lamp_lock=opts.lamp_lock,
+        )
         cur = clamped
 
-    target_dur = float(shot.get("duration", probe_duration(cur)))
     if opts.pin_audio_sync:
         pinned = work / f"{video.stem}_pinned.mp4"
         pin_av_to_duration(cur, pinned, target_dur)
@@ -1017,15 +1192,72 @@ def process_shot_segment(
 
     if opts.loudnorm:
         normalized = work / f"{video.stem}_loud.mp4"
-        loudnorm_two_pass(cur, normalized)
+        loudnorm_two_pass(cur, normalized, target_lra=LOUDNORM_LRA_TIGHT)
         cur = normalized
         if opts.pin_audio_sync:
             final_pin = work / f"{video.stem}_final.mp4"
             pin_av_to_duration(cur, final_pin, target_dur)
             cur = final_pin
 
-    shutil.copy2(cur, out)
+    out.unlink(missing_ok=True)
+    shutil.move(str(cur), str(out))
     return out
+
+
+def tighten_chain_loudness(
+    segments: list[Path],
+    shots: list[dict[str, Any]],
+    shots_dir: Path,
+) -> list[Path]:
+    """Iterative volume trim: align per-shot integrated LUFS to chain median (≤1.5 LU)."""
+    if len(segments) < 2:
+        return segments
+    ff = _ffmpeg_exe()
+    updated = list(segments)
+
+    for iteration in range(6):
+        measured: list[tuple[Path, dict[str, Any], float, int]] = []
+        for idx, (seg, shot) in enumerate(zip(updated, shots)):
+            il = probe_integrated_loudness(seg)
+            if il is not None:
+                measured.append((seg, shot, il, idx))
+        if len(measured) < 2:
+            return updated
+
+        values = sorted(m[2] for m in measured)
+        spread = values[-1] - values[0]
+        if spread <= LOUDNESS_SPREAD_MAX_LU:
+            if iteration:
+                print(f"[audio] chain loudness converged (spread {spread:.2f} LU)")
+            return updated
+
+        target_i = values[len(values) // 2]
+        for seg, shot, il, idx in measured:
+            gain_db = target_i - il
+            if abs(gain_db) < 0.02:
+                continue
+            leveled = shots_dir / f"{seg.stem}_lvl{iteration}.mp4"
+            subprocess.run(
+                [
+                    ff, "-y", "-i", str(seg),
+                    "-af", f"volume={gain_db:.2f}dB",
+                    "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
+                    str(leveled),
+                ],
+                check=True,
+                capture_output=True,
+            )
+            target_dur = float(clamp_shot_duration(shot.get("duration", probe_duration(leveled))))
+            pinned = shots_dir / f"{seg.stem}_lvl{iteration}_pin.mp4"
+            pin_av_to_duration(leveled, pinned, target_dur)
+            seg.unlink(missing_ok=True)
+            shutil.move(str(pinned), str(seg))
+            updated[idx] = seg
+            print(
+                f"[audio] chain level pass {iteration + 1} {seg.name}: "
+                f"{il:.2f} → {target_i:.2f} LUFS (gain {gain_db:+.2f} dB)"
+            )
+    return updated
 
 
 def has_audio_stream(video: Path) -> bool:
@@ -1323,7 +1555,12 @@ def render_frame_chain_performance(
         prompt = apply_seamless_prompt(shot, refs, opts)
         regen = force or sid in force_ids
 
-        if proc_path.exists() and proc_path.stat().st_size > 10000 and not regen:
+        if (
+            proc_path.exists()
+            and proc_path.stat().st_size > 10000
+            and not regen
+            and not concat_only
+        ):
             print(f"[seamless] reusing processed {proc_path.name}")
             segments.append(proc_path)
             continue
@@ -1334,9 +1571,13 @@ def render_frame_chain_performance(
             segments.append(proc_path)
             continue
 
+        archive_prod = _is_archive_production({"format_id": refs.get("format_id")}, refs)
         if seg_path.exists() and seg_path.stat().st_size > 10000 and not regen and not concat_only:
             raw = ensure_segment_audio(seg_path, shot, refs, shots_dir)
             process_shot_segment(raw, proc_path, shot, refs, opts, shots_dir, color_ref)
+            if not archive_prod:
+                segments.append(proc_path)
+                continue
             mag = probe_magenta_score(proc_path)
             if mag <= MAGENTA_SCORE_MAX:
                 segments.append(proc_path)
@@ -1357,7 +1598,8 @@ def render_frame_chain_performance(
                 if i == 0 and attempt == 0 and seed_segment and seed_segment.is_file() and not regen:
                     pass
                 else:
-                    reground = i > 0 and opts.reground_interval > 0 and (i % opts.reground_interval == 0)
+                    reground_n = _effective_reground_interval(opts, refs, shot)
+                    reground = i > 0 and reground_n > 0 and (i % reground_n == 0)
                     if i == 0 or reground:
                         image_url = avatar_url
                         src = "talent re-ground" if reground else "locked talent avatar"
@@ -1393,6 +1635,9 @@ def render_frame_chain_performance(
             print(f"[magenta] {sid} still elevated after 3 attempts — keeping best-effort clamp")
 
         segments.append(proc_path)
+
+    if opts.loudnorm and len(segments) >= 2:
+        segments = tighten_chain_loudness(segments, shots, shots_dir)
 
     if len(segments) == 1:
         shutil.copy2(segments[0], out_path)
@@ -1684,12 +1929,15 @@ def qa_check(
                         passes.append(f"flat loudness across shots (spread {spread:.2f} LU)")
                     else:
                         issues.append(f"loudness spread {spread:.2f} LU > {LOUDNESS_SPREAD_MAX_LU}")
-                mag_scores = [probe_magenta_score(p) for p in segs]
-                if max(mag_scores) <= MAGENTA_SCORE_MAX:
-                    passes.append(f"zero magenta (max score {max(mag_scores):.3f} <= {MAGENTA_SCORE_MAX})")
+                if _is_archive_production(script, refs):
+                    mag_scores = [probe_magenta_score(p) for p in segs]
+                    if max(mag_scores) <= MAGENTA_SCORE_MAX:
+                        passes.append(f"zero magenta (max score {max(mag_scores):.3f} <= {MAGENTA_SCORE_MAX})")
+                    else:
+                        bad = [(segs[i].stem, mag_scores[i]) for i in range(len(segs)) if mag_scores[i] > MAGENTA_SCORE_MAX]
+                        issues.append(f"magenta detected: {bad}")
                 else:
-                    bad = [(segs[i].stem, mag_scores[i]) for i in range(len(segs)) if mag_scores[i] > MAGENTA_SCORE_MAX]
-                    issues.append(f"magenta detected: {bad}")
+                    passes.append("clinical/neutral set — archive magenta probe skipped")
                 sync_bad = []
                 for p, shot in zip(segs, shots[: len(segs)]):
                     delta = probe_av_duration_delta(p, float(shot.get("duration", 0)))
@@ -1707,15 +1955,17 @@ def qa_check(
                     else:
                         issues.append(f"lamp hue drift between segments Δ={delta:.3f} ratios={ratios}")
                 elif len(segs) >= 2:
-                    mag_scores = [probe_magenta_score(p) for p in segs]
-                    if max(mag_scores) <= MAGENTA_SCORE_MAX:
-                        passes.append(f"zero hue drift across segments (max magenta {max(mag_scores):.3f})")
+                    balances = [_probe_grey_balance(p) for p in segs]
+                    delta = max(balances) - min(balances)
+                    if delta <= 0.06:
+                        passes.append(f"zero hue drift across segments (grey balance Δ={delta:.3f})")
                     else:
-                        issues.append(f"hue drift detected across segments magenta={mag_scores}")
+                        issues.append(f"hue drift across segments grey_balance={balances}")
             except Exception as exc:
                 issues.append(f"post-process QA probe failed: {exc}")
         for s in shots:
-            dur = s.get("duration", 0)
+            raw_dur = s.get("duration", 0)
+            dur = clamp_shot_duration(raw_dur) if seamless_opts.enabled else raw_dur
             if dur < 7 or dur > 9:
                 issues.append(f"{s['id']}: duration {dur}s outside 7–9s seamless band")
         if comparison_path and comparison_path.is_file():

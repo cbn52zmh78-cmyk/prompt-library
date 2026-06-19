@@ -1,29 +1,28 @@
 {
   "slug": "movies_lane_sample_v1",
-  "qa_at": "2026-06-19T03:13:05.017569+00:00",
+  "qa_at": "2026-06-19T03:26:31.139629+00:00",
   "pass": false,
   "passes": [
     "shot count OK (7 >= 5)",
     "all shots carry synthetic talent guard (incl. auto-patched)",
-    "target duration ~58s",
+    "target duration ~59s",
     "STUDIO v1.1 seamless mode ACTIVE",
     "continuity mode: frame_chain; card join xfade=0.2s",
     "frame-chain i2v fallback (extend unsupported on 1.5)",
     "match-color pre-join ENABLED",
     "cut-on-motion tail trim ENABLED",
-    "host performance: host_performance_extend.mp4 (51.5s)",
+    "host performance: host_performance_extend.mp4 (52.5s)",
     "@David-001 continuity prefix embedded in video_prompt",
     "xfade chain + synced audio crossfade at joins",
-    "audio PRESENT (david_movies_lane_sample_v1_seamless_v1.mp4 mean -26.7 dB)",
+    "audio PRESENT (david_movies_lane_sample_v1_seamless_v1.mp4 mean -27.4 dB)",
     "loudnorm two-pass target I=-16.0 LUFS per shot",
     "audio pinned to exact shot duration (no stretch/offset)",
     "tight A/V sync per shot (duration pinned)"
   ],
   "issues": [
-    "loudness spread 3.09 LU > 1.5",
-    "magenta detected: [('chain_07_resolution_processed', 0.5026299179465601)]",
-    "hue drift detected across segments magenta=[0.3724171859626107, 0.3917357301272324, 0.39011761697775504, 0.3320408619789725, 0.31384723523898783, 0.37887608411548057, 0.5026299179465601]",
-    "01_establishing: duration 6s outside 7–9s seamless band"
+    "loudness spread 1.87 LU > 1.5",
+    "magenta detected: [('chain_07_resolution_processed', 0.5071213077948502)]",
+    "hue drift detected across segments magenta=[0.2705921490352628, 0.3890711846246568, 0.3903617521775065, 0.33512625130733603, 0.31384723523898783, 0.3841177517953588, 0.5071213077948502]"
   ],
   "shot_count": 7,
   "segment_count": 2,

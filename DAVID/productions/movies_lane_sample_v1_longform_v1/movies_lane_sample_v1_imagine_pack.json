@@ -21,7 +21,7 @@
       "on_screen_labels": [],
       "timing": {
         "start_s": 0,
-        "end_s": 6
+        "end_s": 7
       }
     },
     {
@@ -34,8 +34,8 @@
       "on_screen": "",
       "on_screen_labels": [],
       "timing": {
-        "start_s": 6,
-        "end_s": 14
+        "start_s": 7,
+        "end_s": 15
       }
     },
     {
@@ -48,8 +48,8 @@
       "on_screen": "",
       "on_screen_labels": [],
       "timing": {
-        "start_s": 14,
-        "end_s": 22
+        "start_s": 15,
+        "end_s": 23
       }
     },
     {
@@ -62,8 +62,8 @@
       "on_screen": "",
       "on_screen_labels": [],
       "timing": {
-        "start_s": 22,
-        "end_s": 30
+        "start_s": 23,
+        "end_s": 31
       }
     },
     {
@@ -76,8 +76,8 @@
       "on_screen": "",
       "on_screen_labels": [],
       "timing": {
-        "start_s": 30,
-        "end_s": 38
+        "start_s": 31,
+        "end_s": 39
       }
     },
     {
@@ -90,8 +90,8 @@
       "on_screen": "",
       "on_screen_labels": [],
       "timing": {
-        "start_s": 38,
-        "end_s": 46
+        "start_s": 39,
+        "end_s": 47
       }
     },
     {
@@ -104,8 +104,8 @@
       "on_screen": "",
       "on_screen_labels": [],
       "timing": {
-        "start_s": 46,
-        "end_s": 53
+        "start_s": 47,
+        "end_s": 54
       }
     }
   ],

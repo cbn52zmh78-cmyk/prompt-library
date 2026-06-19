@@ -1,0 +1,103 @@
+{
+  "slug": "julian_flowdesk_explainer_v1",
+  "title": "STUDIO Worked Example — FlowDesk Explainer Ad (Julian-001)",
+  "model_video": "grok-imagine-video-1.5",
+  "resolution": "720p",
+  "aspect_ratio": "16:9",
+  "host_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Cast\\actors_roster\\male\\north_america\\Julian_Cross\\01_casting_shots\\casting_turnaround_v1.jpg",
+  "avatar_url": null,
+  "set_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Pipeline\\references\\seamless_neutral_grey_reference.jpg",
+  "voice_suffix": "Warm mid-Atlantic baritone; can sharpen to boardroom cut., synthetic talent only",
+  "seamless": null,
+  "shots": [
+    {
+      "shot_id": "01_hook",
+      "duration": 5,
+      "image_url": null,
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical 31-year-old White American male performer (Julian Cross), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter addresses camera directly, crisp opener, neutral backdrop. Camera: locked medium, snap attention. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Still drowning in scattered notes?\" Warm mid-Atlantic baritone; can sharpen to boardroom cut., synthetic talent only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Still drowning in scattered notes?",
+      "speech_ipa": null,
+      "on_screen": "FlowDesk",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 0,
+        "end_s": 5
+      }
+    },
+    {
+      "shot_id": "02_pain",
+      "duration": 5,
+      "image_url": null,
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical 31-year-old White American male performer (Julian Cross), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter names the pain point, empathetic but brisk. Camera: same framing, slight lean. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Every tab steals your focus.\" Warm mid-Atlantic baritone; can sharpen to boardroom cut., synthetic talent only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Every tab steals your focus.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 5,
+        "end_s": 10
+      }
+    },
+    {
+      "shot_id": "03_solution",
+      "duration": 6,
+      "image_url": null,
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical 31-year-old White American male performer (Julian Cross), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Solution reveal — product or concept introduced, clean clinical lighting. Camera: slow push to product or presenter. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"FlowDesk gathers ideas in one calm workspace.\" Warm mid-Atlantic baritone; can sharpen to boardroom cut., synthetic talent only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "FlowDesk gathers ideas in one calm workspace.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 10,
+        "end_s": 16
+      }
+    },
+    {
+      "shot_id": "04_benefit_a",
+      "duration": 5,
+      "image_url": null,
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical 31-year-old White American male performer (Julian Cross), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. First benefit demonstrated or stated with presentational gesture. Camera: locked, gesture to feature. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Capture thoughts instantly, anywhere.\" Warm mid-Atlantic baritone; can sharpen to boardroom cut., synthetic talent only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Capture thoughts instantly, anywhere.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 16,
+        "end_s": 21
+      }
+    },
+    {
+      "shot_id": "05_benefit_b",
+      "duration": 5,
+      "image_url": null,
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical 31-year-old White American male performer (Julian Cross), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Second benefit, maintain axis and lighting continuity. Camera: locked, same axis. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Find what you need in seconds.\" Warm mid-Atlantic baritone; can sharpen to boardroom cut., synthetic talent only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Find what you need in seconds.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 21,
+        "end_s": 26
+      }
+    },
+    {
+      "shot_id": "06_cta",
+      "duration": 5,
+      "image_url": null,
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical 31-year-old White American male performer (Julian Cross), same face, wardrobe, hair, eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Clear CTA, presenter points or open-palm invite, end on gesture peak. Camera: medium-close, direct address. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Try FlowDesk free at flowdesk dot app.\" Warm mid-Atlantic baritone; can sharpen to boardroom cut., synthetic talent only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Try FlowDesk free at flowdesk dot app.",
+      "speech_ipa": null,
+      "on_screen": "FlowDesk · flowdesk.app",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 26,
+        "end_s": 31
+      }
+    }
+  ],
+  "provenance_shot": {
+    "type": "code_rendered_png",
+    "duration_s": 4,
+    "enabled": true
+  }
+}

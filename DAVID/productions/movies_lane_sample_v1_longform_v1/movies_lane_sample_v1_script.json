@@ -27,9 +27,9 @@
   "shots": [
     {
       "id": "01_establishing",
-      "duration": 6,
+      "duration": 7,
       "t_start": 0,
-      "t_end": 6,
+      "t_end": 7,
       "role": "b_roll",
       "video_prompt": "CONTINUITY LOCK @Amara-001: identical character face, wardrobe, hair, same eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Cinematic-001: cinematic grade — shallow depth of field, dramatic side key, controlled bloom on highlights, filmic S-curve, subtle anamorphic horizontal flare on practicals only, no flat YouTube lighting. Establishing wide of industrial loft at dusk, dust motes in window light, empty floor, atmospheric tension, no people visible. wide static or slow crane down Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Strong key from camera left or right at 45°, fill ratio 1:4 max, rim optional single edge — lock side every segment. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Cinematic: teal pushed only in shadows -5% max OR amber highlights +5% — never both teal and orange at full saturation (no blockbuster split unless locked shot). Forbid magenta skin, forbid green yellow cast, forbid flat grey mids. Slow dolly or crane; rack focus motivated; no snap zoom. naturalistic dialogue delivery, motivated breath, cinematic intimacy, synthetic talent only Finish on gesture peak or rack-focus completion, never hold dead stillness or dead frame.",
       "speech_text": ""
@@ -37,8 +37,8 @@
     {
       "id": "02_character_intro",
       "duration": 8,
-      "t_start": 6,
-      "t_end": 14,
+      "t_start": 7,
+      "t_end": 15,
       "role": "character",
       "video_prompt": "CONTINUITY LOCK @Amara-001: identical character face, wardrobe, hair, same eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Cinematic-001: cinematic grade — shallow depth of field, dramatic side key, controlled bloom on highlights, filmic S-curve, subtle anamorphic horizontal flare on practicals only, no flat YouTube lighting. 30-year-old British Indian woman in dark olive field jacket and black jeans enters frame in medium three-quarter, motivated side key from factory windows, cautious posture. medium profile or three-quarter Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Strong key from camera left or right at 45°, fill ratio 1:4 max, rim optional single edge — lock side every segment. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Cinematic: teal pushed only in shadows -5% max OR amber highlights +5% — never both teal and orange at full saturation (no blockbuster split unless locked shot). Forbid magenta skin, forbid green yellow cast, forbid flat grey mids. Slow dolly or crane; rack focus motivated; no snap zoom. Lip-synced, delivers: \"I came back for one file.\" naturalistic dialogue delivery, motivated breath, cinematic intimacy, synthetic talent only Finish on gesture peak or rack-focus completion, never hold dead stillness or dead frame.",
       "speech_text": "I came back for one file."
@@ -46,8 +46,8 @@
     {
       "id": "03_inciting",
       "duration": 8,
-      "t_start": 14,
-      "t_end": 22,
+      "t_start": 15,
+      "t_end": 23,
       "role": "character",
       "video_prompt": "CONTINUITY LOCK @Amara-001: identical character face, wardrobe, hair, same eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Cinematic-001: cinematic grade — shallow depth of field, dramatic side key, controlled bloom on highlights, filmic S-curve, subtle anamorphic horizontal flare on practicals only, no flat YouTube lighting. Character freezes mid-step, head turns toward darkness, tension enters frame, push-in begins. push-in on reaction Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Strong key from camera left or right at 45°, fill ratio 1:4 max, rim optional single edge — lock side every segment. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Cinematic: teal pushed only in shadows -5% max OR amber highlights +5% — never both teal and orange at full saturation (no blockbuster split unless locked shot). Forbid magenta skin, forbid green yellow cast, forbid flat grey mids. Slow dolly or crane; rack focus motivated; no snap zoom. Lip-synced, delivers: \"Then the lights went out.\" naturalistic dialogue delivery, motivated breath, cinematic intimacy, synthetic talent only Finish on gesture peak or rack-focus completion, never hold dead stillness or dead frame.",
       "speech_text": "Then the lights went out."
@@ -55,8 +55,8 @@
     {
       "id": "04_rising",
       "duration": 8,
-      "t_start": 22,
-      "t_end": 30,
+      "t_start": 23,
+      "t_end": 31,
       "role": "character",
       "video_prompt": "CONTINUITY LOCK @Amara-001: identical character face, wardrobe, hair, same eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Cinematic-001: cinematic grade — shallow depth of field, dramatic side key, controlled bloom on highlights, filmic S-curve, subtle anamorphic horizontal flare on practicals only, no flat YouTube lighting. Close-up rack focus from her eyes to shadowed corridor behind, breath catches, jaw tightens. close-up rack focus Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Strong key from camera left or right at 45°, fill ratio 1:4 max, rim optional single edge — lock side every segment. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Cinematic: teal pushed only in shadows -5% max OR amber highlights +5% — never both teal and orange at full saturation (no blockbuster split unless locked shot). Forbid magenta skin, forbid green yellow cast, forbid flat grey mids. Slow dolly or crane; rack focus motivated; no snap zoom. Lip-synced, delivers: \"Footsteps. Not mine.\" naturalistic dialogue delivery, motivated breath, cinematic intimacy, synthetic talent only Finish on gesture peak or rack-focus completion, never hold dead stillness or dead frame.",
       "speech_text": "Footsteps. Not mine."
@@ -64,8 +64,8 @@
     {
       "id": "05_turn",
       "duration": 8,
-      "t_start": 30,
-      "t_end": 38,
+      "t_start": 31,
+      "t_end": 39,
       "role": "character",
       "video_prompt": "CONTINUITY LOCK @Amara-001: identical character face, wardrobe, hair, same eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Cinematic-001: cinematic grade — shallow depth of field, dramatic side key, controlled bloom on highlights, filmic S-curve, subtle anamorphic horizontal flare on practicals only, no flat YouTube lighting. Slow dolly in as she discovers open metal door she had locked, reversal lands in her expression. slow dolly in Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Strong key from camera left or right at 45°, fill ratio 1:4 max, rim optional single edge — lock side every segment. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Cinematic: teal pushed only in shadows -5% max OR amber highlights +5% — never both teal and orange at full saturation (no blockbuster split unless locked shot). Forbid magenta skin, forbid green yellow cast, forbid flat grey mids. Slow dolly or crane; rack focus motivated; no snap zoom. Lip-synced, delivers: \"The door I locked was open.\" naturalistic dialogue delivery, motivated breath, cinematic intimacy, synthetic talent only Finish on gesture peak or rack-focus completion, never hold dead stillness or dead frame.",
       "speech_text": "The door I locked was open."
@@ -73,8 +73,8 @@
     {
       "id": "06_peak",
       "duration": 8,
-      "t_start": 38,
-      "t_end": 46,
+      "t_start": 39,
+      "t_end": 47,
       "role": "character",
       "video_prompt": "CONTINUITY LOCK @Amara-001: identical character face, wardrobe, hair, same eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Cinematic-001: cinematic grade — shallow depth of field, dramatic side key, controlled bloom on highlights, filmic S-curve, subtle anamorphic horizontal flare on practicals only, no flat YouTube lighting. Tight close, maximum tension, she whispers without breaking eye-line, hand half-raised. tight close or wide isolation Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Strong key from camera left or right at 45°, fill ratio 1:4 max, rim optional single edge — lock side every segment. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Cinematic: teal pushed only in shadows -5% max OR amber highlights +5% — never both teal and orange at full saturation (no blockbuster split unless locked shot). Forbid magenta skin, forbid green yellow cast, forbid flat grey mids. Slow dolly or crane; rack focus motivated; no snap zoom. Lip-synced, delivers: \"Someone is still here.\" naturalistic dialogue delivery, motivated breath, cinematic intimacy, synthetic talent only Finish on gesture peak or rack-focus completion, never hold dead stillness or dead frame.",
       "speech_text": "Someone is still here."
@@ -82,8 +82,8 @@
     {
       "id": "07_resolution",
       "duration": 7,
-      "t_start": 46,
-      "t_end": 53,
+      "t_start": 47,
+      "t_end": 54,
       "role": "character",
       "video_prompt": "CONTINUITY LOCK @Amara-001: identical character face, wardrobe, hair, same eye-line and blocking — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Cinematic-001: cinematic grade — shallow depth of field, dramatic side key, controlled bloom on highlights, filmic S-curve, subtle anamorphic horizontal flare on practicals only, no flat YouTube lighting. She pivots to run, wide isolation or pull-back on motion peak, button beat as she exits frame. pull back or hold on button Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Strong key from camera left or right at 45°, fill ratio 1:4 max, rim optional single edge — lock side every segment. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Cinematic: teal pushed only in shadows -5% max OR amber highlights +5% — never both teal and orange at full saturation (no blockbuster split unless locked shot). Forbid magenta skin, forbid green yellow cast, forbid flat grey mids. Slow dolly or crane; rack focus motivated; no snap zoom. Lip-synced, delivers: \"Run.\" naturalistic dialogue delivery, motivated breath, cinematic intimacy, synthetic talent only Finish on gesture peak or rack-focus completion, never hold dead stillness or dead frame.",
       "speech_text": "Run."

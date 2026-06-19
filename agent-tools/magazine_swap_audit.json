@@ -1,0 +1,75 @@
+{
+  "audited_at": "2026-06-19",
+  "lane": "magazine_editorial",
+  "method": "visual plate vs appearance_lock_verbatim (roster + studio lock)",
+  "batch_deploy_root_cause": "parallel image_gen return order != deploy index mapping in deploy_magazine_turnarounds.py",
+  "nadia_okoro_fixed": true,
+  "clean": [
+    {
+      "actor_id": "AnyaPetrovaMag-001",
+      "name": "Anya Petrova",
+      "plate_match": "ice-blonde ponytail, silver chrome jacket, black sheer gown"
+    },
+    {
+      "actor_id": "FreyaLindMag-001",
+      "name": "Freya Lind",
+      "plate_match": "Swedish strawberry-blonde, pastel knit coat + slip dress (reroll 2026-06-19)"
+    },
+    {
+      "actor_id": "IsoldeMoreauMag-001",
+      "name": "Isolde Moreau",
+      "plate_match": "dark pixie cut, black tuxedo gown with cape"
+    },
+    {
+      "actor_id": "MeiLinChenMag-001",
+      "name": "Mei Lin Chen",
+      "plate_match": "East Asian black bob bangs, crimson cheongsam gown"
+    },
+    {
+      "actor_id": "NadiaOkoroMag-001",
+      "name": "Nadia Okoro",
+      "plate_match": "dark-skinned gold-braided African couture saffron/gold gown (reroll 2026-06-19)"
+    },
+    {
+      "actor_id": "PriyaSinghMag-001",
+      "name": "Priya Singh",
+      "plate_match": "South Asian, sapphire sari-inspired couture gown"
+    }
+  ],
+  "dirty": [
+    {
+      "actor_id": "ValentinaRossiMag-001",
+      "name": "Valentina Rossi",
+      "lock_expects": "Italian porcelain skin, black sculptural wool coat with silver petal accents",
+      "plate_shows": "olive skin, emerald silk cape gown with crystal beading (Zara Khan lock residue)",
+      "reroll_required": true
+    },
+    {
+      "actor_id": "ZaraKhanMag-001",
+      "name": "Zara Khan",
+      "lock_expects": "Indian-British golden skin, emerald silk gown with cape sleeves",
+      "plate_shows": "dark curly hair, red metallic draped gown with high slit (Sofia Alvarez lock residue)",
+      "reroll_required": true
+    },
+    {
+      "actor_id": "LioraVossMag-001",
+      "name": "Liora Voss",
+      "lock_expects": "platinum blonde blunt bob, white architectural dress with cut-outs",
+      "plate_shows": "dark hair bun, black wool coat with silver floral shoulder (Valentina Rossi lock residue)",
+      "reroll_required": true
+    },
+    {
+      "actor_id": "SofiaAlvarezMag-001",
+      "name": "Sofia Alvarez",
+      "lock_expects": "Brazilian tan skin, voluminous curly dark hair, red metallic draped gown",
+      "plate_shows": "platinum blonde bob, white geometric cut-out dress (Liora Voss lock residue)",
+      "reroll_required": true
+    }
+  ],
+  "summary": {
+    "total": 10,
+    "clean": 6,
+    "dirty": 4,
+    "blocked": 0
+  }
+}

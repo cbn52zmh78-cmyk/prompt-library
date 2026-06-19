@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """
-Legal Gate v1.1 — Producer Hard Stop
+Legal Gate v1.2 — Producer Hard Stop (aligned to Gate_0_Checklist.md v1.1)
+
 Gate 0: FIRST action on every scene, video, brief, or client ask.
 
-Reviews TWO legal stacks before anything else:
+Reviews TWO legal stacks + six checklist domains:
   1. AI Content law (replica, deepfake, synthetic performer, likeness)
   2. Mass Dissemination law (CARA/rating bodies, social, streaming, theatrical, festival)
+
+Checklist rows mapped in GateResult.checklist_domains (row_1 … row_6).
 
 RED = hard fucking no. No override without licensed counsel on file.
 """
@@ -65,12 +68,50 @@ RATING_CEILING_VIOLATIONS: dict[str, list[tuple[str, str]]] = {
 COUNSEL_PATTERNS: list[tuple[str, str]] = [
     (r"\b(sag|union|taft.?hartley|signatory)\b", "Union/signatory — verify with entertainment counsel"),
     (r"\b(e&o|errors.?and.?omissions|insurance)\b", "E&O/insurance — broker + counsel"),
-    (r"\b(deepfake|digital replica|synthetic performer|de.?aging|ai.?generated.?actor)\b", "Digital replica — AB 2602 / SAG replica consent required"),
-    (r"\b(licensed music|sync license|master use|beatles|taylor swift)\b", "Music clearance — two-sided licenses required"),
-    (r"\b(real person|living person|celebrity)\b.*\b(likeness|face|voice|portrait)", "Living person likeness on screen — counsel + consent"),
+    (
+        r"\b(deepfake|digital replica|de.?aging|ai.?generated.?actor)\b",
+        "Digital replica — AB 2602 / SAG replica consent required",
+    ),
+    (
+        r"\b(licensed music|sync license|master use|beatles|taylor swift)\b",
+        "Music clearance — two-sided licenses required",
+    ),
+    (
+        r"\b(real person|living person|celebrity)\b.*\b(likeness|face|voice|portrait)",
+        "Living person likeness on screen — counsel + consent",
+    ),
     (r"\b(deceased|post.?mortem)\b.*\b(replica|deepfake|likeness)", "Deceased replica — AB 1836 / counsel"),
     (r"\b(broadcast|fcc|ofcom|tv.?ma|watershed)\b", "Broadcast standards — territory-specific counsel"),
 ]
+
+# Gate 0 row 2 — uncleared music on client deliverable = RED (Music_Clearance CHARTER)
+MUSIC_UNCLEARED_PATTERNS: list[tuple[str, str]] = [
+    (r"\buncleared\b", "Uncleared music — HARD STOP on client deliverable (Gate 0 row 2)"),
+    (r"\bunlicensed\b", "Unlicensed music — HARD STOP on client deliverable (Gate 0 row 2)"),
+    (r"\bno sync license\b", "No sync license — HARD STOP on client deliverable (Gate 0 row 2)"),
+    (r"\btemp music only\b", "Temp music only without clearance plan — HARD STOP on client deliverable (Gate 0 row 2)"),
+    (r"\bno master use\b", "No master use clearance — HARD STOP on client deliverable (Gate 0 row 2)"),
+    (r"\bmusic not cleared\b", "Music not cleared — HARD STOP on client deliverable (Gate 0 row 2)"),
+]
+
+DISCLOSURE_PLANNED_PATTERN = re.compile(
+    r"ai disclosure|disclosure planned|synthetic.?performer disclosure|ai.?generated disclosure",
+    re.I,
+)
+STUDIO_SYNTHETIC_CAST_PATTERN = re.compile(
+    r"casting bible|synthetic:\s*true",
+    re.I,
+)
+STUDIO_NO_LIKENESS_PATTERN = re.compile(
+    r"real_person_likeness:\s*false|no real.?person likeness",
+    re.I,
+)
+MUSIC_CLEARED_PATTERN = re.compile(
+    r"music cleared|original score|cue sheet on file|cleared sync|master use cleared",
+    re.I,
+)
+AGE_EXTRACT_PATTERN = re.compile(r"\b(\d{2})-year-old\b", re.I)
+MIN_PERFORMER_AGE = 21
 
 YELLOW_PATTERNS: list[tuple[str, str]] = [
     (r"\b(brand|logo|nike|apple|coca.?cola|disney)\b.*\b(prominent|featured|endorse)", "Trademark in frame — clearance or nominative text only"),
@@ -121,6 +162,7 @@ class GateResult:
     rating_flags: list[str] = field(default_factory=list)
     cara_status: str = ""
     notes: list[str] = field(default_factory=list)
+    checklist_domains: dict[str, str] = field(default_factory=dict)
 
     def blocked(self) -> bool:
         return self.verdict == "RED"
@@ -138,8 +180,91 @@ class GateResult:
             "rating_flags": self.rating_flags,
             "cara_status": self.cara_status,
             "notes": self.notes,
+            "checklist_domains": self.checklist_domains,
             "timestamp": datetime.now().isoformat(),
         }
+
+
+def _is_studio_synthetic_cast(text: str) -> bool:
+    return bool(
+        STUDIO_SYNTHETIC_CAST_PATTERN.search(text)
+        and STUDIO_NO_LIKENESS_PATTERN.search(text)
+    )
+
+
+def _disclosure_planned(text: str) -> bool:
+    return bool(DISCLOSURE_PLANNED_PATTERN.search(text))
+
+
+def _music_cleared(text: str) -> bool:
+    return bool(MUSIC_CLEARED_PATTERN.search(text))
+
+
+def _evaluate_checklist_domains(result: GateResult, text: str, channels: list[str]) -> dict[str, str]:
+    """Map machine findings to Gate_0_Checklist.md v1.1 rows 1–6."""
+    lower = text.lower()
+    domains: dict[str, str] = {}
+
+    # Row 1 — synthetic-actor consent / ownership
+    if any("[AI]" in h and "likeness" in h.lower() for h in result.hard_stops):
+        domains["row_1_synthetic_ownership"] = "FAIL"
+    elif _is_studio_synthetic_cast(text):
+        domains["row_1_synthetic_ownership"] = "PASS"
+    elif any("likeness" in f.lower() for f in result.counsel_flags):
+        domains["row_1_synthetic_ownership"] = "COUNSEL"
+    else:
+        domains["row_1_synthetic_ownership"] = "MANUAL"
+
+    # Row 2 — music / sync rights
+    if any("[MUSIC]" in h for h in result.hard_stops):
+        domains["row_2_music_sync"] = "FAIL"
+    elif _music_cleared(text):
+        domains["row_2_music_sync"] = "PASS"
+    elif any("music" in f.lower() for f in result.counsel_flags):
+        domains["row_2_music_sync"] = "COUNSEL"
+    else:
+        domains["row_2_music_sync"] = "MANUAL"
+
+    # Row 3 — no-real-likeness sign-off
+    if any("likeness" in h.lower() or "deepfake" in h.lower() for h in result.hard_stops):
+        domains["row_3_no_real_likeness"] = "FAIL"
+    elif any("likeness" in f.lower() for f in result.counsel_flags):
+        domains["row_3_no_real_likeness"] = "COUNSEL"
+    elif _is_studio_synthetic_cast(text) or "no real-person likeness" in lower:
+        domains["row_3_no_real_likeness"] = "PASS"
+    else:
+        domains["row_3_no_real_likeness"] = "MANUAL"
+
+    # Row 4 — target-channel legality
+    if result.distribution_flags and result.verdict in ("YELLOW", "COUNSEL", "RED"):
+        domains["row_4_target_channel"] = "REVIEW"
+    elif result.distribution_flags:
+        domains["row_4_target_channel"] = "REVIEW"
+    elif channels:
+        domains["row_4_target_channel"] = "PASS"
+    else:
+        domains["row_4_target_channel"] = "FAIL"
+
+    # Row 5 — 2257-style age documentation
+    ages = [int(m.group(1)) for m in AGE_EXTRACT_PATTERN.finditer(text)]
+    if any(a < MIN_PERFORMER_AGE for a in ages):
+        domains["row_5_age_documentation"] = "FAIL"
+    elif ages and all(a >= MIN_PERFORMER_AGE for a in ages):
+        domains["row_5_age_documentation"] = "PASS"
+    elif "performer" in lower or "actress" in lower or "actor" in lower:
+        domains["row_5_age_documentation"] = "MANUAL"
+    else:
+        domains["row_5_age_documentation"] = "N/A"
+
+    # Row 6 — AI-disclosure obligation
+    if _disclosure_planned(text):
+        domains["row_6_ai_disclosure"] = "PASS"
+    elif "social" in channels or "streaming" in channels:
+        domains["row_6_ai_disclosure"] = "MANUAL"
+    else:
+        domains["row_6_ai_disclosure"] = "MANUAL"
+
+    return domains
 
 
 class LegalGate:
@@ -225,6 +350,16 @@ class LegalGate:
                 continue
             for pattern, msg in CHANNEL_CHECKS.get(channel, []):
                 if re.search(pattern, lower, re.I):
+                    # Row 6: disclosure planned satisfies social AI-label obligation at Gate 0
+                    if (
+                        channel == "social"
+                        and "AI disclosure" in msg
+                        and _disclosure_planned(text)
+                    ):
+                        result.notes.append(
+                            "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish."
+                        )
+                        continue
                     result.distribution_flags.append(f"[{channel.upper()}] {msg}")
 
         if "theatrical" in channels and not target_rating:
@@ -233,11 +368,35 @@ class LegalGate:
         if "social" in channels:
             result.notes.append("Social = mass dissemination. Platform AI-label + community guidelines apply.")
 
-        # ── Performer age (Intimacy Protocol) ───────────────────────────
+        # ── Gate 0 row 2: uncleared music on client deliverable = RED ───
+        client_delivery = "client" in channels or "client deliverable" in lower
+        if client_delivery:
+            for pattern, msg in MUSIC_UNCLEARED_PATTERNS:
+                if re.search(pattern, lower, re.I):
+                    result.hard_stops.append(f"[MUSIC] {msg}")
+                    break
+
+        # ── Gate 0 row 1: STUDIO Casting Bible synthetic cast note ───────
+        if _is_studio_synthetic_cast(text):
+            result.notes.append(
+                "Row 1: STUDIO Casting Bible synthetic cast — Upon Tyne ownership; no third-party likeness license."
+            )
+
+        # ── Gate 0 row 5: 21+ age floor (2257-style) ─────────────────────
+        for match in AGE_EXTRACT_PATTERN.finditer(text):
+            age_val = int(match.group(1))
+            if age_val < MIN_PERFORMER_AGE:
+                result.hard_stops.append(
+                    f"[AGE] Performer age {age_val} below {MIN_PERFORMER_AGE}+ floor — HARD STOP (Gate 0 row 5)"
+                )
+
+        # ── Performer age stated (Intimacy Protocol) ─────────────────────
         if has_performers and not REQUIRED_AGE_PATTERN.search(text):
             intimate = any(w in lower for w in ("intimate", "nude", "sensual", "erotic", "gfe", "topless", "sexual"))
             if intimate or "performer" in lower or "actress" in lower or "actor" in lower:
-                result.warnings.append("Numerical performer age not stated — required per Age Policy + Intimacy Protocol v1.3")
+                result.warnings.append(
+                    "Numerical performer age not stated — required per Age Policy + Intimacy Protocol v1.3"
+                )
 
         # ── Verdict ───────────────────────────────────────────────────────
         if result.hard_stops:
@@ -252,6 +411,7 @@ class LegalGate:
         else:
             result.notes.append("Gate 0 cleared for Development/Pre-Production subject to ongoing review.")
 
+        result.checklist_domains = _evaluate_checklist_domains(result, text, channels)
         return result
 
     def save_report(self, result: GateResult, source_text: str = "") -> Path:
@@ -296,6 +456,19 @@ class LegalGate:
             lines.append("## WARNINGS")
             lines.extend(f"- {x}" for x in result.warnings)
             lines.append("")
+        if result.checklist_domains:
+            lines.append("## Checklist Domains (Gate 0 v1.1)")
+            for key in (
+                "row_1_synthetic_ownership",
+                "row_2_music_sync",
+                "row_3_no_real_likeness",
+                "row_4_target_channel",
+                "row_5_age_documentation",
+                "row_6_ai_disclosure",
+            ):
+                if key in result.checklist_domains:
+                    lines.append(f"- **{key}:** {result.checklist_domains[key]}")
+            lines.append("")
         lines.append("## Producer Notes")
         lines.extend(f"- {n}" for n in result.notes)
         md_path.write_text("\n".join(lines), encoding="utf-8")
@@ -306,7 +479,7 @@ def main() -> int:
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="Legal Gate v1.1 — Gate 0: AI + mass dissemination compliance (RUN FIRST)"
+        description="Legal Gate v1.2 — Gate 0: AI + mass dissemination + v1.1 checklist domains (RUN FIRST)"
     )
     parser.add_argument("--project", required=True, help="Project / slate ID")
     parser.add_argument("--text", help="Inline brief, prompt, or scene description")
@@ -355,6 +528,10 @@ def main() -> int:
         print(f"  📡 DISTRIBUTION: {msg}")
     for msg in result.warnings:
         print(f"  ⚠️  WARN: {msg}")
+    if result.checklist_domains:
+        print("\n  📋 CHECKLIST DOMAINS:")
+        for key, status in result.checklist_domains.items():
+            print(f"     {key}: {status}")
     print(f"\nReport: {path}")
     if result.blocked():
         print("\nPRODUCER: Gate 0 failed. Legal no. Hard fucking no. We are not making this.")

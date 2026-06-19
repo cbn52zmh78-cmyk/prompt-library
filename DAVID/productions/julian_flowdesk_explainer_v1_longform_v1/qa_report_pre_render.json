@@ -1,0 +1,14 @@
+{
+  "slug": "julian_flowdesk_explainer_v1",
+  "qa_at": "2026-06-19T03:20:32.172541+00:00",
+  "pass": true,
+  "passes": [
+    "shot count OK (6 >= 4)",
+    "all shots carry synthetic talent guard (incl. auto-patched)",
+    "target duration ~35s"
+  ],
+  "issues": [],
+  "shot_count": 6,
+  "segment_count": 0,
+  "seamless": false
+}
