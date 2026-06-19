@@ -15,15 +15,14 @@
       "blocked": false,
       "requires_human_signoff": true,
       "human_signoff": true,
-      "target_rating": "PG-13",
+      "target_rating": "PG",
       "channels": [
-        "social",
-        "educational"
+        "social"
       ],
-      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_julian_why_sky_blue_60s_20260619_003814.json",
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_julian_why_sky_blue_60s_20260619_011923.json",
       "checklist_domains": {
         "row_1_synthetic_ownership": "PASS",
-        "row_2_music_sync": "MANUAL",
+        "row_2_music_sync": "PASS",
         "row_3_no_real_likeness": "PASS",
         "row_4_target_channel": "PASS",
         "row_5_age_documentation": "PASS",
@@ -33,17 +32,17 @@
       "counsel_flags": [],
       "distribution_flags": [],
       "warnings": [
-        "Unknown channel 'educational' — valid: social, streaming, theatrical, festival, client",
         "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
       ],
       "rating_flags": [],
       "cara_status": "COMPLIANT",
-      "music_bed_id": null,
+      "music_bed_id": "BED-PHY-001",
       "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
-      "row_2_music_sync": "MANUAL",
+      "row_2_music_sync": "PASS",
       "notes": [
         "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
         "Social = mass dissemination. Platform AI-label + community guidelines apply.",
+        "Row 2: Manifest-cleared music bed(s): BED-PHY-001 (STUDIO/Music_Sound/clearance_manifest.json)",
         "Row 1: STUDIO Casting Bible synthetic cast — Upon Tyne ownership; no third-party likeness license.",
         "Science Gate: illustrative-not-simulation policy applies.",
         "Revise and re-submit to Legal Gate (Gate 0)."
@@ -67,9 +66,12 @@
       "subject_id": "rayleigh_scattering",
       "domain": "atmospheric physics",
       "phenomenon": "Why the sky appears blue",
+      "field": "physics",
       "key_measurement": "Rayleigh scattering intensity scales as 1/λ⁴ — shorter wavelengths scatter more",
       "visualization_ref": null,
       "visualization_prompt": "Scientific visualization: sunlight entering Earth's atmosphere, blue shorter wavelengths scattering in all directions while red passes through at sunset angle; accurate color, neutral clinical grade, no decorative bloom",
+      "principle_set": "general_scientific",
+      "plate_id": null,
       "institutions": [],
       "sources": [
         {
@@ -90,7 +92,8 @@
           "type": "secondary",
           "notes": null
         }
-      ]
+      ],
+      "principle_selection_reason": "default"
     }
   },
   "config": {
@@ -112,6 +115,10 @@
       "pin_audio_sync": true,
       "reground_interval": 2,
       "magenta_clamp": true
+    },
+    "music_bed": {
+      "track_id": "BED-PHY-001",
+      "manifest": "STUDIO/Music_Sound/clearance_manifest.json"
     }
   },
   "shots": [
@@ -235,9 +242,13 @@
       "subject_id": "rayleigh_scattering",
       "domain": "atmospheric physics",
       "phenomenon": "Why the sky appears blue",
+      "field": "physics",
+      "principle_set": "general_scientific",
       "key_measurement": "Rayleigh scattering intensity scales as 1/λ⁴ — shorter wavelengths scatter more",
       "source_count": 3,
-      "has_visualization_ref": false
-    }
+      "has_visualization_ref": false,
+      "plate_id": null
+    },
+    "principle_set": "general_scientific"
   }
 }

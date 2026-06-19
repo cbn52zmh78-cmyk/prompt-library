@@ -20,7 +20,7 @@
         "social",
         "streaming"
       ],
-      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_black_hole_anatomy_v1_20260619_003817.json",
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_science_black_hole_anatomy_v1_20260619_011919.json",
       "checklist_domains": {
         "row_1_synthetic_ownership": "MANUAL",
         "row_2_music_sync": "PASS",
@@ -37,13 +37,13 @@
       ],
       "rating_flags": [],
       "cara_status": "COMPLIANT",
-      "music_bed_id": "BED-DOC-001",
+      "music_bed_id": "BED-COS-002",
       "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
       "row_2_music_sync": "PASS",
       "notes": [
         "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
         "Social = mass dissemination. Platform AI-label + community guidelines apply.",
-        "Row 2: Manifest-cleared music bed(s): BED-DOC-001 (STUDIO/Music_Sound/clearance_manifest.json)",
+        "Row 2: Manifest-cleared music bed(s): BED-COS-002 (STUDIO/Music_Sound/clearance_manifest.json)",
         "Science Gate: illustrative-not-simulation policy applies.",
         "Revise and re-submit to Legal Gate (Gate 0)."
       ],
@@ -66,9 +66,12 @@
       "subject_id": "BH-ANAT-001",
       "domain": "Astrophysics — Black Holes",
       "phenomenon": "Anatomy of a Black Hole",
+      "field": "astrophysics",
       "key_measurement": "M87* shadow diameter ~42 μas (EHT 2019); GW150914 final black-hole mass ~62 M☉ (chirp mass ~28 M☉)",
       "visualization_ref": "Science/reference_plates/astro/black_hole_reference.jpg",
       "visualization_prompt": "photorealistic scientific visualization, supermassive black hole with dark central shadow, thin relativistic accretion disk with temperature gradient, Doppler beaming on inclined disk, gravitational lensing of background starfield, photon ring, NOT TO SCALE illustrative geometry, 16:9 astrophysics fidelity",
+      "principle_set": "astrophysics_fidelity",
+      "plate_id": "@Sci-BlackHole-001",
       "institutions": [
         "Event Horizon Telescope Collaboration",
         "LIGO Scientific Collaboration",
@@ -93,7 +96,8 @@
           "type": "secondary",
           "notes": "Public-facing synthesis aligned with GR textbook definitions"
         }
-      ]
+      ],
+      "principle_selection_reason": "field:astrophysics"
     }
   },
   "config": {
@@ -118,7 +122,7 @@
       "magenta_clamp": true
     },
     "music_bed": {
-      "track_id": "BED-DOC-001",
+      "track_id": "BED-COS-002",
       "manifest": "STUDIO/Music_Sound/clearance_manifest.json"
     }
   },
@@ -250,9 +254,13 @@
       "subject_id": "BH-ANAT-001",
       "domain": "Astrophysics — Black Holes",
       "phenomenon": "Anatomy of a Black Hole",
+      "field": "astrophysics",
+      "principle_set": "astrophysics_fidelity",
       "key_measurement": "M87* shadow diameter ~42 μas (EHT 2019); GW150914 final black-hole mass ~62 M☉ (chirp mass ~28 M☉)",
       "source_count": 3,
-      "has_visualization_ref": true
-    }
+      "has_visualization_ref": true,
+      "plate_id": "@Sci-BlackHole-001"
+    },
+    "principle_set": "astrophysics_fidelity"
   }
 }

@@ -1,0 +1,242 @@
+{
+  "slug": "julian_covalent_bonding_60s",
+  "title": "STUDIO Science — Covalent Bonding in Water",
+  "format_id": "science-explainer",
+  "target_seconds": 54,
+  "intake": {
+    "format_id": "science-explainer",
+    "actor_id": "Julian-001",
+    "set_id": "@Set-Seamless-Neutral-001",
+    "style_id": "@Style-Cool-Clinical-001",
+    "source": "STUDIO/Pipeline/production_intake.py",
+    "gate_0": {
+      "version": "1.3",
+      "verdict": "YELLOW",
+      "blocked": false,
+      "requires_human_signoff": true,
+      "human_signoff": true,
+      "target_rating": "PG-13",
+      "channels": [
+        "social",
+        "educational"
+      ],
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_julian_covalent_bonding_60s_20260619_011838.json",
+      "checklist_domains": {
+        "row_1_synthetic_ownership": "PASS",
+        "row_2_music_sync": "MANUAL",
+        "row_3_no_real_likeness": "PASS",
+        "row_4_target_channel": "PASS",
+        "row_5_age_documentation": "PASS",
+        "row_6_ai_disclosure": "PASS"
+      },
+      "hard_stops": [],
+      "counsel_flags": [],
+      "distribution_flags": [],
+      "warnings": [
+        "Unknown channel 'educational' — valid: social, streaming, theatrical, festival, client",
+        "[SCIENCE] illustrative-not-simulation disclosure required — state visuals are educational illustration, not simulation output"
+      ],
+      "rating_flags": [],
+      "cara_status": "COMPLIANT",
+      "music_bed_id": null,
+      "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
+      "row_2_music_sync": "MANUAL",
+      "notes": [
+        "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
+        "Social = mass dissemination. Platform AI-label + community guidelines apply.",
+        "Row 1: STUDIO Casting Bible synthetic cast — Upon Tyne ownership; no third-party likeness license.",
+        "Science Gate: illustrative-not-simulation policy applies.",
+        "Revise and re-submit to Legal Gate (Gate 0)."
+      ],
+      "brief_source": "composed"
+    },
+    "libraries": {
+      "formats": "Production_Templates_v1.json (#98)",
+      "sets": "Set_Library_v1.json (#99)",
+      "styles": "Style_Library_v1.json (#99)",
+      "casting": "Casting_Bible/registry/casting_registry.json"
+    },
+    "duration_clamp": {
+      "applied": true,
+      "policy": "seamless_7_9",
+      "lo": 7,
+      "hi": 9,
+      "shots_clamped": 1
+    },
+    "science_subject": {
+      "subject_id": "covalent-bonding-water",
+      "domain": "Chemistry — Covalent Bonding",
+      "phenomenon": "How atoms share electrons in a water molecule",
+      "field": "chemistry",
+      "key_measurement": "O–H bond length ~0.96 Å; H–O–H angle ~104.5° (NIST WebBook)",
+      "visualization_ref": "Science/reference_plates/chemistry/images/covalent-bonding_harvest.png",
+      "visualization_prompt": "Scientific chemistry visualization: bent H2O molecule with shared electron pairs between oxygen and two hydrogens, neutral clinical grade, Lewis structure fidelity, no decorative glow",
+      "principle_set": "jantzen_molecular_cellular",
+      "plate_id": "@Sci-ChemBond-001",
+      "institutions": [],
+      "sources": [
+        {
+          "citation": "NIST Standard Reference Database 69 — NIST Chemistry WebBook, water (H2O)",
+          "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Units=SI",
+          "type": "primary",
+          "notes": null
+        },
+        {
+          "citation": "Pauling L., The Nature of the Chemical Bond, 3rd ed. (Cornell University Press, 1960)",
+          "url": null,
+          "type": "secondary",
+          "notes": null
+        }
+      ],
+      "principle_selection_reason": "field:chemistry",
+      "illustrative_note": "Use as covalent-bonding @2 anchor: bent triatomic water with two equivalent O–H σ bonds. Avoid: ionic lattice mixing, exaggerated 90° geometry, cartoon orbitals not tied to bent geometry."
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "voice_suffix": "clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only",
+    "use_identity_lock": false,
+    "avatar_reference": "STUDIO/Cast/actors_roster/male/north_america/Julian_Cross/01_casting_shots/casting_turnaround_v1.jpg",
+    "set_reference": "STUDIO/Pipeline/references/seamless_neutral_grey_reference.jpg",
+    "visualization_reference": "Science/reference_plates/chemistry/images/covalent-bonding_harvest.png",
+    "seamless": {
+      "primary": "extend",
+      "xfade_s": 0.2,
+      "match_color": true,
+      "cut_on_motion": true,
+      "lamp_lock": true,
+      "glasses_lock": true,
+      "loudnorm": true,
+      "pin_audio_sync": true,
+      "reground_interval": 2,
+      "magenta_clamp": true
+    }
+  },
+  "shots": [
+    {
+      "id": "01_hook",
+      "duration": 7,
+      "t_start": 0,
+      "t_end": 7,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter addresses camera on seamless neutral, crisp science hook. Camera: locked medium, direct address. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Water looks simple — two hydrogens, one oxygen. But the bond holding them together is not a handoff of electrons. It is a share.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Water looks simple — two hydrogens, one oxygen. But the bond holding them together is not a handoff of electrons. It is a share.",
+      "on_screen": "What is a covalent bond?"
+    },
+    {
+      "id": "02_phenomenon",
+      "duration": 9,
+      "t_start": 7,
+      "t_end": 16,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter explains the phenomenon plainly, motivated gesture, clinical lighting. Camera: slow push-in medium. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"In a covalent bond, atoms pool valence electrons into a shared region. In water, oxygen pulls harder on those electrons, bending the molecule and making the O–H bonds polar.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "In a covalent bond, atoms pool valence electrons into a shared region. In water, oxygen pulls harder on those electrons, bending the molecule and making the O–H bonds polar."
+    },
+    {
+      "id": "03_how_we_know",
+      "duration": 9,
+      "t_start": 16,
+      "t_end": 25,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter cites measurement, experiment, or observation chain — evidence-forward tone. Camera: medium — gesture to evidence. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"Spectroscopy and crystallography pin the geometry: an H–O–H angle near one hundred four degrees and bond lengths under one ångström — tabulated in the NIST Chemistry WebBook.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "Spectroscopy and crystallography pin the geometry: an H–O–H angle near one hundred four degrees and bond lengths under one ångström — tabulated in the NIST Chemistry WebBook."
+    },
+    {
+      "id": "04_visualization_payoff",
+      "duration": 9,
+      "t_start": 25,
+      "t_end": 34,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter narrates over locked @2 science visualization — see attached render for phenomenon geometry; accurate color, on-screen NOT TO SCALE when illustrative. Camera: locked medium beside or over @2 visualization plate. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"See the payoff: two equivalent O–H σ bonds in a bent triatomic frame — shared electron density, not isolated spheres glued together.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "See the payoff: two equivalent O–H σ bonds in a bent triatomic frame — shared electron density, not isolated spheres glued together.",
+      "on_screen_labels": [
+        "SCIENCE VISUALIZATION",
+        "NOT TO SCALE"
+      ],
+      "reference_slots": {
+        "@2": "visualization"
+      },
+      "science_subject_ref": "covalent-bonding-water",
+      "visualization_prompt": "Bent water molecule with shared electron pair lobes on O–H bonds, clinical accurate color, chemistry @2 plate fidelity",
+      "visualization_ref": "Science/reference_plates/chemistry/images/covalent-bonding_harvest.png",
+      "duration_raw": 10
+    },
+    {
+      "id": "05_significance",
+      "duration": 9,
+      "t_start": 34,
+      "t_end": 43,
+      "role": "presenter",
+      "video_prompt": "CONTINUITY LOCK @Julian-001: identical presenter face, smart-casual wardrobe, seamless neutral set, same eye-line to camera — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Seamless-Neutral-001: identical neutral grey seamless — same backdrop tone mid-grey #9A9A98, same floor sweep, same subject-to-backdrop distance, same falloff — seamless continuation, zero jump cut. STYLE LOCK @Style-Cool-Clinical-001: cool-clinical grade — neutral white balance, low saturation, accurate color reproduction, minimal stylistic grading, science and product trust, no warm cozy cast, no film grain. Presenter lands significance — real-world stakes or deeper insight; end on gesture peak. Camera: warm medium-close, inviting settle. Neutral seamless 5500K bilateral soft key locked — symmetrical wrap, subtle nose shadow only, zero hue drift, no magenta vignette, no warm/cool lateral split. Neutral 5600–6500K even field — shadow definition for shape only, no gel, no warm practicals in frame. COLOR LOCK Seamless-Neutral: backdrop #9A9A98±2%, skin true-to-life, wardrobe colors accurate, no gel spill — no magenta edge gradient, no orange spotlight cone. GRADE LOCK Cool-Clinical: grey axis neutral, skin neither pink nor yellow pushed, saturation -15% global — forbid magenta tint, forbid orange warmth, forbid teal skin on shadows, forbid vintage fade. Locked-off or slow linear track; no handheld. Lip-synced, delivers: \"That shared-electron geometry is why water is polar, why ice floats, and why life chemistry runs in solution — bonding at the root.\" clear enthusiastic science communicator voice, precise but accessible diction, synthetic presenter only. Finish on presentational gesture peak, never hold dead stillness or dead frame.",
+      "speech_text": "That shared-electron geometry is why water is polar, why ice floats, and why life chemistry runs in solution — bonding at the root."
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 6,
+    "card_type": "sources",
+    "title": "Sources — How atoms share electrons in a water molecule",
+    "subtitle": "Chemistry — Covalent Bonding",
+    "footer": "NIST Standard Reference Database 69 — NIST Chemistry WebBook, water (… · Pauling L., The Nature of the Chemical Bond, 3rd ed. (Cornell Univers…",
+    "sources": [
+      {
+        "citation": "NIST Standard Reference Database 69 — NIST Chemistry WebBook, water (H2O)",
+        "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Units=SI",
+        "type": "primary",
+        "notes": null
+      },
+      {
+        "citation": "Pauling L., The Nature of the Chemical Bond, 3rd ed. (Cornell University Press, 1960)",
+        "url": null,
+        "type": "secondary",
+        "notes": null
+      }
+    ],
+    "science_subject_id": "covalent-bonding-water"
+  },
+  "qa_rules": {
+    "require_identity_lock": false,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": false,
+    "min_shots": 5
+  },
+  "production_meta": {
+    "set_id": "@Set-Seamless-Neutral-001",
+    "style_id": "@Style-Cool-Clinical-001",
+    "identity_anchor": "@Julian-001",
+    "pacing": {
+      "words_per_second": 2.6,
+      "beat_gap_s": 0.35,
+      "register": "clear science communication, wonder without hype",
+      "pause_on": [
+        "measurement beats",
+        "visualization reveals",
+        "significance landings"
+      ]
+    },
+    "camera": {
+      "primary": "locked medium on seamless neutral — presenter direct to camera",
+      "secondary": "full-frame @2 science visualization payoff",
+      "forbidden": [
+        "handheld jitter",
+        "beauty-filter smoothing",
+        "misleading scale without label"
+      ]
+    },
+    "target_rating": "PG",
+    "science_subject": {
+      "subject_id": "covalent-bonding-water",
+      "domain": "Chemistry — Covalent Bonding",
+      "phenomenon": "How atoms share electrons in a water molecule",
+      "field": "chemistry",
+      "principle_set": "jantzen_molecular_cellular",
+      "key_measurement": "O–H bond length ~0.96 Å; H–O–H angle ~104.5° (NIST WebBook)",
+      "source_count": 2,
+      "has_visualization_ref": true,
+      "plate_id": "@Sci-ChemBond-001"
+    },
+    "principle_set": "jantzen_molecular_cellular"
+  }
+}
