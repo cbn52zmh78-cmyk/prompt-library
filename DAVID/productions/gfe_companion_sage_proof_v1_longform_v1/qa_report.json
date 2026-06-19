@@ -1,0 +1,38 @@
+{
+  "slug": "gfe_companion_sage_proof_v1",
+  "qa_at": "2026-06-19T03:06:32.232329+00:00",
+  "pass": false,
+  "passes": [
+    "shot count OK (6 >= 4)",
+    "all shots carry synthetic talent guard (incl. auto-patched)",
+    "target duration ~40s",
+    "STUDIO v1.1 seamless mode ACTIVE",
+    "continuity mode: cached; card join xfade=0.2s",
+    "match-color pre-join ENABLED",
+    "cut-on-motion tail trim ENABLED",
+    "host performance: host_performance_extend.mp4 (7.0s)",
+    "@David-001 continuity prefix embedded in video_prompt",
+    "xfade chain + synced audio crossfade at joins",
+    "audio PRESENT (david_gfe_companion_sage_proof_v1_seamless_v1.mp4 mean -19.5 dB)",
+    "loudnorm two-pass target I=-16.0 LUFS per shot",
+    "audio pinned to exact shot duration (no stretch/offset)",
+    "zero magenta (max score 0.121 <= 0.42)",
+    "tight A/V sync per shot (duration pinned)"
+  ],
+  "issues": [
+    "01_greeting: duration 6s outside 7–9s seamless band",
+    "04_reflective_pause: duration 6s outside 7–9s seamless band",
+    "06_soft_close: duration 6s outside 7–9s seamless band"
+  ],
+  "shot_count": 6,
+  "segment_count": 1,
+  "seamless": true,
+  "extend_api": {
+    "scriptable": true,
+    "enabled_on_model": false,
+    "model": "grok-imagine-video-1.5",
+    "editor_extend": "Grok Imagine UI Continue/Extend may work before API parity on 1.5",
+    "finding": "client.video.extend() exists in xAI SDK but grok-imagine-video-1.5 returns 'Video extension is not supported for this model'. Pipeline uses frame-chain i2v fallback.",
+    "continuity_mode": "cached"
+  }
+}
