@@ -41,7 +41,7 @@
       "gate_0_signed": true,
       "counsel_flag": false,
       "status": "armed",
-      "preflight_at": "2026-06-19T06:08:14.276559+00:00",
+      "preflight_at": "2026-06-19T06:17:54.809566+00:00",
       "preflight": "pass",
       "preflight_issues": []
     },
@@ -59,7 +59,7 @@
       "gate_0_signed": true,
       "counsel_flag": false,
       "status": "armed",
-      "preflight_at": "2026-06-19T06:08:14.276912+00:00",
+      "preflight_at": "2026-06-19T06:17:54.809884+00:00",
       "preflight": "pass",
       "preflight_issues": []
     },
@@ -77,7 +77,7 @@
       "gate_0_signed": true,
       "counsel_flag": false,
       "status": "armed",
-      "preflight_at": "2026-06-19T06:08:14.277171+00:00",
+      "preflight_at": "2026-06-19T06:17:54.810113+00:00",
       "preflight": "pass",
       "preflight_issues": []
     },
@@ -95,7 +95,7 @@
       "gate_0_signed": true,
       "counsel_flag": false,
       "status": "armed",
-      "preflight_at": "2026-06-19T06:08:14.277402+00:00",
+      "preflight_at": "2026-06-19T06:17:54.810323+00:00",
       "preflight": "pass",
       "preflight_issues": []
     },
@@ -113,7 +113,7 @@
       "gate_0_signed": true,
       "counsel_flag": false,
       "status": "armed",
-      "preflight_at": "2026-06-19T06:08:14.277613+00:00",
+      "preflight_at": "2026-06-19T06:17:54.810529+00:00",
       "preflight": "pass",
       "preflight_issues": []
     },
@@ -131,7 +131,7 @@
       "gate_0_signed": true,
       "counsel_flag": false,
       "status": "armed",
-      "preflight_at": "2026-06-19T06:08:14.277822+00:00",
+      "preflight_at": "2026-06-19T06:17:54.810720+00:00",
       "preflight": "pass",
       "preflight_issues": []
     },
@@ -150,7 +150,7 @@
       "counsel_flag": true,
       "counsel_note": "Gate 0 COUNSEL — signed; proceeds on Benjamin batch go",
       "status": "armed",
-      "preflight_at": "2026-06-19T06:08:14.278034+00:00",
+      "preflight_at": "2026-06-19T06:17:54.810924+00:00",
       "preflight": "pass",
       "preflight_issues": []
     },
@@ -168,7 +168,7 @@
       "gate_0_signed": true,
       "counsel_flag": false,
       "status": "armed",
-      "preflight_at": "2026-06-19T06:08:14.278243+00:00",
+      "preflight_at": "2026-06-19T06:17:54.811121+00:00",
       "preflight": "pass",
       "preflight_issues": []
     }
@@ -180,7 +180,7 @@
     "Richard I: COUNSEL gate — human_signoff true; counsel review noted.",
     "Each item: render_longform.py --seamless --match-color --cut-on-motion --package @ 720p."
   ],
-  "preflight_at": "2026-06-19T06:08:14.278457+00:00",
+  "preflight_at": "2026-06-19T06:17:54.811460+00:00",
   "preflight_summary": {
     "pass": 8,
     "fail": 0,
