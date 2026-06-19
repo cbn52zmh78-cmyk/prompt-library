@@ -6,7 +6,7 @@
   "input_conflict_count": 706,
   "trivial_count": 143,
   "substantive_count": 563,
-  "facts_collapsed": 235,
+  "facts_collapsed": 0,
   "by_reason": {
     "TRIVIAL": {
       "wording_substring": 74,

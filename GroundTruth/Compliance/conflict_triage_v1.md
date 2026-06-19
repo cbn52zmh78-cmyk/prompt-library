@@ -7,7 +7,7 @@ _Task T5-280-B · 2026-06-19_
 - **Input conflicts:** 706
 - **TRIVIAL (auto-collapse):** 143
 - **SUBSTANTIVE:** 563
-- **Facts collapsed:** 235
+- **Facts collapsed:** 0
 
 ### By reason
 
