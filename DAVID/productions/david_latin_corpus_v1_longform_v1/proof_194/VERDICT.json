@@ -1,0 +1,27 @@
+{
+  "issue": 194,
+  "redo": true,
+  "method": "cache_cleared + full --force-all --seamless (NO --concat-only)",
+  "extend_steps": 8,
+  "master_before_sha256": "27EB0E8A35CEEF68103C1AE9044AA86BE22DDED57375BED95399D46E6E17F880",
+  "master_after_sha256": "925B5391155092C8F73BBFC871200538A3F58A991D44548FDE54EC0299660F5A",
+  "master_after": "DAVID/productions/david_latin_corpus_v1_longform_v1/output/david_david_latin_corpus_v1_seamless_v1.mp4",
+  "qa_pass": true,
+  "eye_check": {
+    "neutral_skin": "PASS — after: natural midtones; before: sallow yellow-green wash",
+    "lamp_local_pool": "PASS — after: warm accent on desk/lamp quadrant; before: full-frame tint",
+    "join_03_04_continuous": "PASS — xfade join reads continuous; no seam pop",
+    "pronunciation_chip": "PASS — shot 07: burned RECONSTRUCTED PRONUNCIATION + Classical Latin chips legible"
+  },
+  "proof_frames": {
+    "before_dir": "proof_194/before",
+    "after_dir": "proof_194/after",
+    "pairs": [
+      "before_01_cold_open_mid.jpg / after_01_cold_open_mid.jpg",
+      "before_05_method_mid.jpg / after_05_method_mid.jpg",
+      "before_07_demonstration_mid.jpg / after_07_demonstration_mid.jpg",
+      "before_join_03_04_xfade.jpg / after_join_03_04_xfade.jpg"
+    ]
+  },
+  "guard": "render_longform.reject_concat_only_seamless_grade — concat-only + seamless now hard-fails"
+}
