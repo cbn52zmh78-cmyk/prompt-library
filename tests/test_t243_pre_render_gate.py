@@ -73,9 +73,9 @@ def test_refs_neutral_fails_blue_starved_avatar(tmp_path: Path):
 def test_refs_neutral_passes_balanced_stills(tmp_path: Path):
     avatar = tmp_path / "avatar.jpg"
     arr = np.zeros((720, 1280, 3), dtype=np.uint8)
-    arr[:, :, 0] = 120
-    arr[:, :, 1] = 115
-    arr[:, :, 2] = 110
+    arr[:, :, 0] = 150
+    arr[:, :, 1] = 145
+    arr[:, :, 2] = 130
     Image.fromarray(arr).save(avatar)
     set_ref = tmp_path / "set.jpg"
     Image.fromarray(arr).save(set_ref)
