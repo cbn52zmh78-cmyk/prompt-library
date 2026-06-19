@@ -17,7 +17,7 @@ import pytest
 ROOT = Path(__file__).resolve().parents[1]
 PIPELINE = ROOT / "STUDIO" / "Pipeline"
 LEGAL = ROOT / "artifacts" / "legal"
-SCRIBE = ROOT / "Content_Production" / "SCRIBE"
+SCRIBE = ROOT / "Scribe" / "SCRIBE"
 SHARED_SINK = ROOT / "STUDIO" / "Legal" / "Gate_Reports"
 PI_STORY_FORM = ROOT / "Nexus" / "Intake_Forms" / "examples" / "pi_story_editorial_filled_v1.json"
 

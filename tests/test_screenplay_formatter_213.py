@@ -10,10 +10,10 @@ from pathlib import Path
 import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
-PKG_PARENT = ROOT / "Content_Production" / "SCRIBE"
+PKG_PARENT = ROOT / "Scribe" / "SCRIBE"
 SAMPLE = PKG_PARENT / "screenplay" / "samples" / "sample.fountain"
 
-# Import the package (Content_Production has no __init__; add SCRIBE dir to path).
+# Import the package (Scribe has no __init__; add SCRIBE dir to path).
 sys.path.insert(0, str(PKG_PARENT))
 from screenplay import (  # noqa: E402
     ElementType,

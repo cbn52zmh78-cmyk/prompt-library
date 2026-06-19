@@ -39,7 +39,7 @@ def test_resolve_missing_param_raises():
     ("Studio/Legal/Gate_Reports/GATE_GREEN_x_1_editorial.md", "gate_report"),
     ("DAVID/batches/T4_181_science_molecular/manifest.json", "batch_manifest"),
     ("Studio/Productions/Editorial/foo/output/v.mp4", "production_output"),
-    ("Content_Production/SCRIBE/editorials/pi_story/intake.json", "editorial_project"),
+    ("Scribe/SCRIBE/editorials/pi_story/intake.json", "editorial_project"),
     ("Science/reference_plates/molecular/x_reference.json", "reference_plate"),
 ])
 def test_classify_known(path, kind):

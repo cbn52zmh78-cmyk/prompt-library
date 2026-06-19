@@ -159,9 +159,14 @@ _DRIFT_SEGMENT_RE = re.compile(r"""(?:/\s*['"]([A-Za-z_]+)['"]|['"]([A-Za-z_]+)[
 # make those segments ambiguous. 'STUDIO' is the dominant, unambiguous real drift.
 _REPO_DRIFT: dict = {
     "studio": "Studio",
-    "content_production": "Content_Production", "nexus": "Nexus",
+    "scribe": "Scribe", "nexus": "Nexus",
     "stonebridge": "Stonebridge", "flash": "FLASH", "creator4": "Creator4",
 }
+
+# Legit all-caps inner dirs that collide case-insensitively with a top-level lane.
+# 'SCRIBE' is the editorial engine package living *inside* the 'Scribe' lane
+# (Scribe/SCRIBE/) — it is NOT lane drift; never flag it.
+_DRIFT_SKIP_SEG: set = {"SCRIBE"}
 
 # Source trees that may legitimately contain non-canonical spellings as *data*.
 _LINT_EXCLUDE_PARTS = {".git", "__pycache__", "node_modules", ".pytest_cache"}
@@ -169,7 +174,7 @@ _LINT_EXCLUDE_FILES = {"output_registry.py", "output_validator.py"}
 _LINT_DEFAULT_ROOTS = (
     "DAVID/scripts", "Science/scripts", "History/scripts", "History/src",
     "Nexus/scripts", "Studio", "artifacts", "agent-tools", "tools",
-    "Content_Production",
+    "Scribe",
     "Stonebridge/Operations/Scripts",
 )
 
@@ -202,7 +207,7 @@ def lint_source(roots: "list | None" = None) -> list:
                 for m in _DRIFT_LITERAL_RE.finditer(line):
                     seg = m.group(1)
                     canonical = _REPO_DRIFT.get(seg.lower())
-                    if canonical and seg != canonical and (n, seg) not in seen:
+                    if canonical and seg != canonical and seg not in _DRIFT_SKIP_SEG and (n, seg) not in seen:
                         seen.add((n, seg))
                         violations.append(Violation(
                             "SOURCE_DRIFT", f"{rel_file}:{n}",
@@ -210,7 +215,7 @@ def lint_source(roots: "list | None" = None) -> list:
                 for m in _DRIFT_SEGMENT_RE.finditer(line):
                     seg = m.group(1) or m.group(2)
                     canonical = _REPO_DRIFT.get(seg.lower())
-                    if canonical and seg != canonical and (n, seg) not in seen:
+                    if canonical and seg != canonical and seg not in _DRIFT_SKIP_SEG and (n, seg) not in seen:
                         seen.add((n, seg))
                         violations.append(Violation(
                             "SOURCE_DRIFT", f"{rel_file}:{n}",

@@ -43,7 +43,7 @@ CANONICAL_TOP: dict[str, str] = {
     "studio": "Studio",
     "david": "DAVID",
     "science": "Science",
-    "content_production": "Content_Production",
+    "scribe": "Scribe",
     "nexus": "Nexus",
     "history": "History",
     "ai": "AI",
@@ -118,7 +118,7 @@ _KINDS: tuple[OutputKind, ...] = (
     OutputKind("production_output", "Studio/Productions/{lane}/{slug}/output", "{filename}",
                description="Rendered production deliverables."),
     # ---- editorial (SCRIBE) ---------------------------------------------------
-    OutputKind("editorial_project", "Content_Production/SCRIBE/editorials/{project_id}", is_dir=True,
+    OutputKind("editorial_project", "Scribe/SCRIBE/editorials/{project_id}", is_dir=True,
                description="SCRIBE editorial-engine project directory."),
     # ---- science reference ----------------------------------------------------
     OutputKind("reference_plate", "Science/reference_plates/{domain}", "{filename}",
