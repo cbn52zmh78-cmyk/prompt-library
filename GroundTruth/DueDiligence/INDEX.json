@@ -1,0 +1,119 @@
+{
+  "artifact": "groundtruth_due_diligence_index",
+  "version": "1.0",
+  "issue": 285,
+  "lane": "Company / Due-Diligence",
+  "tier": "A",
+  "slug": "due_diligence",
+  "pinned_lane": "GroundTruth/DueDiligence",
+  "canonical_root": "Stonebridge/Operations/Compliance_Research/GroundTruth/DueDiligence",
+  "harvester": "Stonebridge/Operations/Scripts/run_due_diligence_sample_gather.py",
+  "template": "Stonebridge/Operations/Compliance_Research/GroundTruth/DueDiligence/due_diligence_bible_template_v1.json",
+  "source_register": "Stonebridge/Operations/Compliance_Research/GroundTruth/DueDiligence/due_diligence_source_register_v1.json",
+  "citation_standard": "STD-CITE-001",
+  "retrieved_date": "2026-06-19",
+  "template_version": "1.2",
+  "profile_version": "1.1",
+  "sections": [
+    "entity_registration",
+    "corporate_filings_edgar",
+    "officers_registered_agent",
+    "licenses_standing",
+    "public_litigation_liens",
+    "financials_edgar",
+    "regulatory_standing",
+    "adverse_media",
+    "red_flag_checklist"
+  ],
+  "dossiers": [
+    {
+      "company_slug": "hershey_company",
+      "legal_name": "The Hershey Company",
+      "entity_class": "public",
+      "industry": "cpg",
+      "path": "Stonebridge/Operations/Compliance_Research/GroundTruth/DueDiligence/samples/hershey_company_profile_v1.json"
+    },
+    {
+      "company_slug": "coca_cola_company",
+      "legal_name": "The Coca-Cola Company",
+      "entity_class": "public",
+      "industry": "cpg",
+      "path": "Stonebridge/Operations/Compliance_Research/GroundTruth/DueDiligence/samples/coca_cola_company_profile_v1.json"
+    },
+    {
+      "company_slug": "costco_wholesale",
+      "legal_name": "Costco Wholesale Corporation",
+      "entity_class": "public",
+      "industry": "retail",
+      "path": "Stonebridge/Operations/Compliance_Research/GroundTruth/DueDiligence/samples/costco_wholesale_profile_v1.json"
+    },
+    {
+      "company_slug": "walmart_inc",
+      "legal_name": "Walmart Inc.",
+      "entity_class": "public",
+      "industry": "retail",
+      "path": "Stonebridge/Operations/Compliance_Research/GroundTruth/DueDiligence/samples/walmart_inc_profile_v1.json"
+    },
+    {
+      "company_slug": "mars_incorporated",
+      "legal_name": "Mars, Incorporated",
+      "entity_class": "private",
+      "industry": "cpg",
+      "path": "Stonebridge/Operations/Compliance_Research/GroundTruth/DueDiligence/samples/mars_incorporated_profile_v1.json"
+    },
+    {
+      "company_slug": "johnson_and_johnson",
+      "legal_name": "Johnson & Johnson",
+      "entity_class": "public",
+      "industry": "healthcare_pharma",
+      "path": "Stonebridge/Operations/Compliance_Research/GroundTruth/DueDiligence/samples/johnson_and_johnson_profile_v1.json"
+    },
+    {
+      "company_slug": "jpmorgan_chase",
+      "legal_name": "JPMorgan Chase & Co.",
+      "entity_class": "public",
+      "industry": "financial_services",
+      "path": "Stonebridge/Operations/Compliance_Research/GroundTruth/DueDiligence/samples/jpmorgan_chase_profile_v1.json"
+    },
+    {
+      "company_slug": "microsoft_corporation",
+      "legal_name": "Microsoft Corporation",
+      "entity_class": "public",
+      "industry": "technology",
+      "path": "Stonebridge/Operations/Compliance_Research/GroundTruth/DueDiligence/samples/microsoft_corporation_profile_v1.json"
+    },
+    {
+      "company_slug": "exxon_mobil",
+      "legal_name": "Exxon Mobil Corporation",
+      "entity_class": "public",
+      "industry": "energy",
+      "path": "Stonebridge/Operations/Compliance_Research/GroundTruth/DueDiligence/samples/exxon_mobil_profile_v1.json"
+    },
+    {
+      "company_slug": "koch_industries",
+      "legal_name": "Koch Industries, Inc.",
+      "entity_class": "private",
+      "industry": "energy_industrial",
+      "path": "Stonebridge/Operations/Compliance_Research/GroundTruth/DueDiligence/samples/koch_industries_profile_v1.json"
+    }
+  ],
+  "summary": {
+    "dossier_count": 10,
+    "public_count": 8,
+    "private_count": 2,
+    "industry_coverage": [
+      "cpg",
+      "retail",
+      "healthcare_pharma",
+      "financial_services",
+      "technology",
+      "energy",
+      "energy_industrial"
+    ],
+    "harvested_sources": 97,
+    "parked_sources": 8,
+    "total_datums": 335,
+    "total_gaps": 123
+  },
+  "recap": "GroundTruth/DueDiligence/dispatches/R4_285_due_diligence_catalog_recap.json"
+}

@@ -16,7 +16,18 @@
       "total_state_facts": 4137,
       "total_facts": 5454
     },
-    "local_permits_tier_b": "GroundTruth/Compliance/local_permits/"
+    "local_permits_tier_b": "GroundTruth/Compliance/local_permits/",
+    "due_diligence_tier_a": {
+      "tier": "A",
+      "lane": "Company / Due-Diligence",
+      "pinned_lane": "GroundTruth/DueDiligence",
+      "index": "GroundTruth/DueDiligence/INDEX.json",
+      "canonical_root": "Stonebridge/Operations/Compliance_Research/GroundTruth/DueDiligence",
+      "harvester": "Stonebridge/Operations/Scripts/run_due_diligence_sample_gather.py",
+      "dossier_count": 10,
+      "template_version": "1.2",
+      "recap": "GroundTruth/DueDiligence/dispatches/R4_285_due_diligence_catalog_recap.json"
+    }
   },
   "consolidation": {
     "conflict_count": 706,

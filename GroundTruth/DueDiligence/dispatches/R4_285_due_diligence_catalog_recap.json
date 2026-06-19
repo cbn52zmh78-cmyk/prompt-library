@@ -1,0 +1,74 @@
+{
+  "message_type": "recap_vcs",
+  "issue": 285,
+  "title": "R4 #285 — Due-Diligence catalog expansion (5 industry dossiers)",
+  "generated_at": "2026-06-19T16:12:00+00:00",
+  "status": "COMPLETE",
+  "verdict": "GREEN",
+  "owner_terminal": "R4",
+  "lane": "Company / Due-Diligence",
+  "pinned_lane": "GroundTruth/DueDiligence",
+  "recap": {
+    "did": [
+      "Standardized bible template v1.2 — added regulatory_standing + adverse_media sections; RF-06/RF-08 checklist items",
+      "Extended harvester with FDA openFDA, FINRA/FDIC, EPA ECHO, SEC litigation index, Google News RSS snapshots",
+      "Added 5 industry-diverse dossiers: JNJ (healthcare), JPM (financial), MSFT (tech), XOM (energy), Koch (private/industrial)",
+      "Re-harvested all 10 catalog samples under comparable profile v1.1 schema; pinned lane INDEX to GroundTruth/DueDiligence"
+    ],
+    "state": "GREEN — 10 dossiers (8 public, 2 private); 335 datums / 123 gaps; 97 harvested / 8 parked sources; public-sources-only policy intact",
+    "catalog": {
+      "original_five": [
+        "hershey_company",
+        "coca_cola_company",
+        "costco_wholesale",
+        "walmart_inc",
+        "mars_incorporated"
+      ],
+      "new_five": [
+        "johnson_and_johnson",
+        "jpmorgan_chase",
+        "microsoft_corporation",
+        "exxon_mobil",
+        "koch_industries"
+      ],
+      "industries": [
+        "cpg",
+        "retail",
+        "healthcare_pharma",
+        "financial_services",
+        "technology",
+        "energy",
+        "energy_industrial"
+      ]
+    },
+    "next": [
+      "Wire due_diligence lane into Nexus stonebridge.due_diligence workflow deliverable mapping",
+      "Add paid-source escalation playbook (PACER, Lexis) as client-option appendix — not harvested",
+      "Re-run harvester on quarterly cadence or on client intake trigger"
+    ]
+  },
+  "metrics": {
+    "dossier_count": 10,
+    "public_count": 8,
+    "private_count": 2,
+    "template_version": "1.2",
+    "profile_version": "1.1",
+    "total_datums": 335,
+    "total_gaps": 123,
+    "harvested_sources": 97,
+    "parked_sources": 8
+  },
+  "vcs_commit_draft": {
+    "subject": "R4 #285: Due-Diligence catalog — 5 industry dossiers + template v1.2",
+    "body": "RECAP\n- Did: Template v1.2 (regulatory_standing, adverse_media); 5 new dossiers (JNJ/JPM/MSFT/XOM/Koch); harvester extended; 10-sample catalog pinned GroundTruth/DueDiligence\n- State: GREEN — 335 datums, 123 gaps, public-sources-only; 8 public + 2 private entities across 7 industries\n- Next: Nexus workflow deliverable wire; quarterly re-harvest cadence\n\nCEILING: PACER/Lexis remain NOT FOUND by policy — client escalation playbook TBD."
+  },
+  "artifacts": [
+    "Stonebridge/Operations/Scripts/run_due_diligence_sample_gather.py",
+    "Stonebridge/Operations/Compliance_Research/GroundTruth/DueDiligence/due_diligence_bible_template_v1.json",
+    "Stonebridge/Operations/Compliance_Research/GroundTruth/DueDiligence/due_diligence_source_register_v1.json",
+    "Stonebridge/Operations/Compliance_Research/GroundTruth/DueDiligence/INDEX.json",
+    "Stonebridge/Operations/Compliance_Research/GroundTruth/DueDiligence/samples/",
+    "GroundTruth/DueDiligence/INDEX.json",
+    "GroundTruth/DueDiligence/dispatches/R4_285_due_diligence_catalog_recap.json"
+  ]
+}
