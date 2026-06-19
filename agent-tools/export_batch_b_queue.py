@@ -1,8 +1,12 @@
 import json
+import sys
 from pathlib import Path
 
 root = Path(r"C:\Users\NCG\Videos\Grok Projects\Studio")
 ws = Path(r"C:\Users\NCG\Videos\Grok Projects")
+
+sys.path.insert(0, str(ws / "tools"))
+from output_registry import rel_canonical  # canonical pointers (fixes casing drift)
 
 casting = json.loads((root / "Cast/Casting_Bible/registry/casting_registry.json").read_text())
 mag = json.loads((root / "Cast/Casting_Bible/registry/magazine_casting_registry.json").read_text())
@@ -13,7 +17,7 @@ pending_mag = [a for a in mag["actors"] if a.get("reference_image_status") == "p
 queue = []
 
 for a in batch_b:
-    rel = a["reference_image_primary"].replace("STUDIO/", "Studio/")
+    rel = rel_canonical(a["reference_image_primary"])
     out = ws / rel.replace("/", "\\")
     queue.append({
         "lane": "roster",
@@ -27,7 +31,7 @@ for a in batch_b:
     })
 
 for a in pending_mag:
-    rp = a["roster_path"].replace("STUDIO/", "Studio/")
+    rp = rel_canonical(a["roster_path"])
     out = ws / rp.replace("/", "\\") / "01_casting_shots" / "casting_turnaround_v1.jpg"
     queue.append({
         "lane": "magazine",

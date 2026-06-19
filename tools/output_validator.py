@@ -148,7 +148,9 @@ import re  # noqa: E402
 
 from output_registry import CANONICAL_TOP  # noqa: E402
 
+# (1) prefix literal: "STUDIO/Productions/..."   (2) path-join segment: ROOT / "STUDIO" / ...
 _DRIFT_LITERAL_RE = re.compile(r"""['"][^'"]*?\b([A-Za-z_][A-Za-z_]+)/""")
+_DRIFT_SEGMENT_RE = re.compile(r"""(?:/\s*['"]([A-Za-z_]+)['"]|['"]([A-Za-z_]+)['"]\s*/)""")
 
 # Source trees that may legitimately contain non-canonical spellings as *data*.
 _LINT_EXCLUDE_PARTS = {".git", "__pycache__", "node_modules", ".pytest_cache"}
@@ -182,15 +184,25 @@ def lint_source(roots: "list | None" = None) -> list:
                 lines = py.read_text(encoding="utf-8").splitlines()
             except (UnicodeDecodeError, OSError):
                 continue
+            rel_file = py.relative_to(WORKSPACE).as_posix()
             for n, line in enumerate(lines, 1):
+                seen: set = set()
                 for m in _DRIFT_LITERAL_RE.finditer(line):
                     seg = m.group(1)
                     canonical = CANONICAL_TOP.get(seg.lower())
-                    if canonical and seg != canonical:
-                        rel = py.relative_to(WORKSPACE).as_posix()
+                    if canonical and seg != canonical and (n, seg) not in seen:
+                        seen.add((n, seg))
                         violations.append(Violation(
-                            "SOURCE_DRIFT", f"{rel}:{n}",
+                            "SOURCE_DRIFT", f"{rel_file}:{n}",
                             f"non-canonical path literal '{seg}/' (should be '{canonical}/')"))
+                for m in _DRIFT_SEGMENT_RE.finditer(line):
+                    seg = m.group(1) or m.group(2)
+                    canonical = CANONICAL_TOP.get(seg.lower())
+                    if canonical and seg != canonical and (n, seg) not in seen:
+                        seen.add((n, seg))
+                        violations.append(Violation(
+                            "SOURCE_DRIFT", f"{rel_file}:{n}",
+                            f"non-canonical path segment '{seg}' (should be '{canonical}')"))
     return violations
 
 

@@ -34,9 +34,22 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 WORKSPACE = ROOT.parent
-PIPELINE_DIR = WORKSPACE / "STUDIO" / "Pipeline"
+PIPELINE_DIR = WORKSPACE / "Studio" / "Pipeline"
 if str(PIPELINE_DIR) not in sys.path:
     sys.path.insert(0, str(PIPELINE_DIR))
+
+
+def _ledger_note(path, **meta):
+    """#259 path-stamping: record an output in the canonical ledger (best-effort)."""
+    try:
+        tools = WORKSPACE / "tools"
+        if str(tools) not in sys.path:
+            sys.path.insert(0, str(tools))
+        from output_registry import note
+
+        note(path, **meta)
+    except Exception:
+        pass
 
 from shot_duration import (  # noqa: E402
     av_sync_drift_label,
@@ -195,7 +208,7 @@ def _resolve_david_path(rel: str) -> Path:
 
 def _resolve_workspace_path(rel: str) -> Path:
     rel = str(rel).replace("\\", "/")
-    if rel.startswith("STUDIO/"):
+    if rel.split("/", 1)[0].lower() == "studio":  # canonical or legacy casing
         return WORKSPACE / rel
     if rel.startswith("DAVID/"):
         rel = rel[6:]
@@ -722,7 +735,7 @@ def assert_gate_0_cleared(script: dict[str, Any]) -> None:
 def resolve_production_dir(script: dict[str, Any]) -> Path:
     if script.get("production_dir"):
         raw = str(script["production_dir"]).replace("\\", "/")
-        if raw.startswith("STUDIO/"):
+        if raw.split("/", 1)[0].lower() == "studio":  # canonical or legacy casing
             return _resolve_workspace_path(raw)
         p = Path(script["production_dir"])
         return p if p.is_absolute() else (ROOT / p)
@@ -3309,6 +3322,7 @@ def main() -> int:
         except Exception as exc:
             _log(f"[longform] package stage failed (QA still {'pass' if exit_code == 0 else 'fail'}): {exc}")
     manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
+    _ledger_note(manifest_path)
     print(json.dumps(manifest, indent=2, ensure_ascii=False))
     return exit_code
 

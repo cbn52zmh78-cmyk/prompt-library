@@ -120,7 +120,7 @@ def gate_allows_render(gate: dict[str, Any]) -> tuple[bool, str]:
 def resolve_production_dir(script: dict[str, Any]) -> Path:
     if script.get("production_dir"):
         raw = str(script["production_dir"]).replace("\\", "/")
-        if raw.startswith("STUDIO/"):
+        if raw.split("/", 1)[0].lower() == "studio":  # canonical or legacy casing
             return ROOT / raw.replace("/", "\\") if "\\" in str(ROOT) else ROOT / raw
         p = Path(script["production_dir"])
         return p if p.is_absolute() else (DAVID / p)
@@ -416,9 +416,23 @@ def summarize_science(items: list[dict[str, Any]]) -> dict[str, int]:
     }
 
 
+def _ledger_note(path, **meta):
+    """#259 path-stamping: record an output in the canonical ledger (best-effort)."""
+    try:
+        tools = ROOT / "tools"
+        if str(tools) not in sys.path:
+            sys.path.insert(0, str(tools))
+        from output_registry import note
+
+        note(path, **meta)
+    except Exception:
+        pass
+
+
 def write_manifest(manifest: dict[str, Any], path: Path) -> Path:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
+    _ledger_note(path)
     return path
 
 

@@ -8,7 +8,7 @@
     "actor_id": "Julian-001",
     "set_id": "@Set-Seamless-Neutral-001",
     "style_id": "@Style-Cool-Clinical-001",
-    "source": "STUDIO/Pipeline/production_intake.py",
+    "source": "Studio/Pipeline/production_intake.py",
     "gate_0": {
       "version": "1.3",
       "verdict": "YELLOW",
@@ -19,7 +19,7 @@
       "channels": [
         "social"
       ],
-      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_julian_why_sky_blue_60s_20260619_045908.json",
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_YELLOW_julian_why_sky_blue_60s_20260619_053235.json",
       "checklist_domains": {
         "row_1_synthetic_ownership": "PASS",
         "row_2_music_sync": "PASS",
@@ -37,12 +37,12 @@
       "rating_flags": [],
       "cara_status": "COMPLIANT",
       "music_bed_id": "BED-PHY-001",
-      "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
+      "music_clearance_manifest": "Studio/Music_Sound/clearance_manifest.json",
       "row_2_music_sync": "PASS",
       "notes": [
         "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
         "Social = mass dissemination. Platform AI-label + community guidelines apply.",
-        "Row 2: Manifest-cleared music bed(s): BED-PHY-001 (STUDIO/Music_Sound/clearance_manifest.json)",
+        "Row 2: Manifest-cleared music bed(s): BED-PHY-001 (Studio/Music_Sound/clearance_manifest.json)",
         "Row 1: STUDIO Casting Bible synthetic cast — Upon Tyne ownership; no third-party likeness license.",
         "Science Gate: illustrative-not-simulation policy applies.",
         "Revise and re-submit to Legal Gate (Gate 0)."
@@ -119,7 +119,7 @@
     },
     "music_bed": {
       "track_id": "BED-PHY-001",
-      "manifest": "STUDIO/Music_Sound/clearance_manifest.json"
+      "manifest": "Studio/Music_Sound/clearance_manifest.json"
     }
   },
   "shots": [

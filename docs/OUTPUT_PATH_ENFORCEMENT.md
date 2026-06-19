@@ -82,6 +82,13 @@ python tools/output_validator.py check <path>... [--kind gate_report]
 
 `--fix` only removes *empty* stray root files; it never deletes non-empty data.
 
+`lint` flags:
+
+- **`SOURCE_DRIFT`** — a non-canonical top-level path literal in producer source, e.g.
+  `"STUDIO/Productions/…"` (should be `Studio/`). Tests and the registry/validator are
+  excluded (they reference drift spellings deliberately). This is the gate that keeps the
+  #282 migration from regressing — every producer stays canonical or `lint` exits 1.
+
 ### Run it as a round-boundary gate
 
 Run `python tools/output_validator.py scan` at every fan-out boundary (or in CI / the wave
@@ -98,5 +105,19 @@ don't run a manual consolidation pass.
    `assert output_validator.check_paths([p], expected_kind="<kind>") == []`.
 4. Ensure `python tools/output_validator.py scan` stays green.
 
-*Issue #259 — canonical-path registry + validator + path-stamping. No more consolidation
-passes after every fan-out.*
+## Adoption status (#282)
+
+The 27 producers that hardcoded non-canonical path literals have been migrated to canonical
+casing, and the **compliance / GroundTruth / render** writers now ledger-stamp every output
+via `note()`:
+
+- compliance — `artifacts/compliance/content_rating_compliance_guard.py`
+- render — `DAVID/scripts/{render_longform,batch_runner,science_batch_runner}.py`
+- GroundTruth — `Science/scripts/groundtruth_knowledge_gate_v2.py` (kind `groundtruth_pack`)
+
+Drift handlers (`.replace`/`.startswith` on legacy path strings) were made case-tolerant
+(`split("/")[0].lower() == "studio"`) or routed through `rel_canonical()`. `lint` is green
+across all producer trees and is the standing regression gate.
+
+*Issue #259 — registry + validator + path-stamping. Issue #282 — 32 producers migrated.
+No more consolidation passes after every fan-out.*

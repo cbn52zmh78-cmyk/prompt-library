@@ -10,7 +10,9 @@ mag = json.loads((root / "Cast/Casting_Bible/registry/magazine_casting_registry.
 bb = reg["actors"][35:]
 recent = 0
 for a in bb:
-    p = root / a["reference_image_primary"].replace("STUDIO/", "").replace("/", "\\")
+    _p = a["reference_image_primary"].replace("\\", "/").split("/")  # strip leading 'Studio/' any casing
+    _rel = "/".join(_p[1:]) if _p and _p[0].lower() == "studio" else "/".join(_p)
+    p = root / _rel.replace("/", "\\")
     m = datetime.fromtimestamp(p.stat().st_mtime)
     if m.date().isoformat() >= "2026-06-18":
         recent += 1

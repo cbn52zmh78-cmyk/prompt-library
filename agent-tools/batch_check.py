@@ -9,8 +9,14 @@ batch_a = actors[:35]
 batch_b = actors[35:]
 
 
+def _under_studio(ref):
+    # strip leading 'Studio/' (any casing); root already points at Studio/
+    parts = ref.replace("\\", "/").split("/")
+    return "/".join(parts[1:]) if parts and parts[0].lower() == "studio" else ref
+
+
 def img_mtime(a):
-    p = root / a["reference_image_primary"].replace("STUDIO/", "").replace("/", "\\")
+    p = root / _under_studio(a["reference_image_primary"]).replace("/", "\\")
     if p.exists():
         return p.stat().st_mtime
     return None

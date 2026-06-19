@@ -26,6 +26,19 @@ DEFAULT_REPORTS_DIR = producers_path("Compliance_Reports")
 DEFAULT_SHOTLISTS_ROOT = pipeline_path("ShotLists")
 
 
+def _ledger_note(path, **meta):
+    """#259 path-stamping: record an output in the canonical ledger (best-effort)."""
+    try:
+        tools = Path(__file__).resolve().parents[2] / "tools"
+        if str(tools) not in sys.path:
+            sys.path.insert(0, str(tools))
+        from output_registry import note
+
+        note(path, **meta)
+    except Exception:
+        pass
+
+
 class ContentRatingGuard:
     @staticmethod
     def _minor_policy_violation(prompt_lower: str) -> bool:
@@ -106,6 +119,7 @@ class ContentRatingGuard:
             )
         print(f"✅ CARA compliance report generated: {filename}")
         report["report_path"] = str(filename)
+        _ledger_note(filename, kind="compliance_report", verdict=report.get("status"))
         return filename
 
     def audit_folder(self, folder_path: str | Path, target_rating: str = "PG-13", name: str | None = None):

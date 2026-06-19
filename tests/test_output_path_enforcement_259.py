@@ -165,3 +165,36 @@ def test_live_workspace_has_no_root_scatter():
     violations, _ = val.scan(fix=False)
     root_scatter = [v for v in violations if v.code == "ROOT_SCATTER"]
     assert root_scatter == [], f"scatter present: {[v.path for v in root_scatter]}"
+
+
+# --- adoption: note() + new kinds ------------------------------------------
+def test_note_records_and_classifies(tmp_path, monkeypatch):
+    monkeypatch.setattr(reg, "LEDGER_PATH", tmp_path / "ledger.jsonl")
+    ok, kind = reg.note("DAVID/batches/B/manifest.json", terminal="C3")
+    assert ok is True and kind == "batch_manifest"
+    line = json.loads((tmp_path / "ledger.jsonl").read_text(encoding="utf-8").splitlines()[-1])
+    assert line["key"] == "batch_manifest" and line["terminal"] == "C3"
+
+
+def test_note_flags_noncanonical(tmp_path, monkeypatch):
+    monkeypatch.setattr(reg, "LEDGER_PATH", tmp_path / "ledger.jsonl")
+    ok, _kind = reg.note("STUDIO/Legal/Gate_Reports/x.md", ledger=True)
+    assert ok is False  # case drift surfaced at write time
+
+
+def test_new_kinds_resolve():
+    assert reg.rel_canonical(reg.resolve("groundtruth_pack", mkdirs=False, filename="r.json")) \
+        == "Science/groundtruth_poc/r.json"
+    assert reg.rel_canonical(reg.resolve("set_reference", mkdirs=False, filename="s.jpg")) \
+        == "Studio/Pipeline/references/s.jpg"
+
+
+def test_canonical_str_fixes_drift():
+    assert reg.canonical_str("STUDIO/Music_Sound/clearance_manifest.json") \
+        == "Studio/Music_Sound/clearance_manifest.json"
+
+
+# --- the migration invariant: producers carry no path-literal drift --------
+def test_no_source_drift_in_producers():
+    violations = val.lint_source()
+    assert violations == [], "source drift remains:\n" + "\n".join(str(v) for v in violations)
