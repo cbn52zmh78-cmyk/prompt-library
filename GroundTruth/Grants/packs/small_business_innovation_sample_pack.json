@@ -1,0 +1,356 @@
+{
+  "artifact": "groundtruth_grants_vertical_pack",
+  "version": "1.0",
+  "vertical_id": "small_business_innovation",
+  "vertical_display_name": "Small Business Innovation (SBIR/STTR + SBA)",
+  "tier": "B",
+  "pack_kind": "sample_template",
+  "task": "GroundTruth Grants — sample curated pack (living-bible subscription proof)",
+  "generated_at": "2026-06-19T10:00:00+00:00",
+  "as_of_date": "2026-06-19",
+  "retrieved_date": "2026-06-19",
+  "citation_standard": "STD-CITE-001",
+  "disclaimer": "Grant intelligence from public sources — not application or legal advice. Deadlines change; verify on cited portal before submission.",
+  "policy": "Public .gov sources; Grants.gov API PARKED (403) — curated from opportunity detail pages and agency solicitations.",
+  "subscription_refresh": {
+    "product_angle": "Deadlines + new postings = recurring subscription value",
+    "next_scheduled_refresh": "2026-06-26",
+    "refresh_triggers": [
+      "NSF SBIR/STTR rolling deadlines (Jul/Nov/Mar annually)",
+      "SBA FAST close date 2026-07-22",
+      "Grants.gov opportunity version updates (simpler.grants.gov)",
+      "SAM.gov entity registration renewal (365-day cycle)"
+    ],
+    "watchlist_deadlines": [
+      {"program_id": "sba-fast-fy26", "close_date": "2026-07-22", "alert_days": [30, 7, 1]},
+      {"program_id": "nsf-sbir-sttr-26-510", "close_date": "2026-07-27", "alert_days": [30, 7, 1]},
+      {"program_id": "nsf-sbir-sttr-26-510", "close_date": "2026-11-04", "alert_days": [30, 7, 1]}
+    ]
+  },
+  "eligibility_categories": ["small_biz", "research"],
+  "prerequisites": [
+    {
+      "prerequisite_id": "sam_entity_registration",
+      "title": "SAM.gov entity registration + Unique Entity ID",
+      "status": "FOUND",
+      "summary": "Organizations applying for federal awards as prime awardees must register in SAM.gov; registration enables bidding and federal assistance applications. Registration must be renewed every 365 days.",
+      "cited_facts": [
+        {
+          "value": "To apply for federal awards as a prime awardee, an organization needs a SAM.gov registration; registration assigns a Unique Entity ID and allows bidding on contracts and applying for federal assistance.",
+          "citation": {
+            "source": "SAM.gov — Entity Registration",
+            "url": "https://www.sam.gov/content/entity-registration",
+            "agency": "GSA / SAM.gov",
+            "retrieved": "2026-06-19",
+            "jurisdiction": "United States (federal)"
+          }
+        },
+        {
+          "value": "SAM.gov registration can take up to 10 business days to become active; entities must renew registration every 365 days to keep it active.",
+          "citation": {
+            "source": "SAM.gov — Entity Registration (customer service)",
+            "url": "https://www.sam.gov/content/entity-registration",
+            "agency": "GSA / SAM.gov",
+            "retrieved": "2026-06-19",
+            "jurisdiction": "United States (federal)"
+          }
+        }
+      ]
+    },
+    {
+      "prerequisite_id": "grants_gov_workspace",
+      "title": "Grants.gov registration + Workspace",
+      "status": "FOUND",
+      "summary": "Federal grant applicants search opportunities on Grants.gov, confirm eligibility, register, and submit via Workspace.",
+      "cited_facts": [
+        {
+          "value": "Grants.gov application workflow: Learn → Check eligibility → Search opportunities → Register → Apply via Workspace → Track submission status.",
+          "citation": {
+            "source": "Grants.gov — How to Apply for Grants",
+            "url": "https://www.grants.gov/applicants/grant-applications/how-to-apply-for-grants",
+            "agency": "Grants.gov (HHS)",
+            "retrieved": "2026-06-19",
+            "jurisdiction": "United States (federal)"
+          }
+        },
+        {
+          "value": "Small business federal grants may be awarded to companies meeting SBA size standards; most Grants.gov opportunities are for organizations, not individuals — personal financial assistance routes to USA.gov.",
+          "citation": {
+            "source": "Grants.gov — Grant Eligibility",
+            "url": "https://www.grants.gov/learn-grants/grant-eligibility",
+            "agency": "Grants.gov (HHS)",
+            "retrieved": "2026-06-19",
+            "jurisdiction": "United States (federal)"
+          }
+        }
+      ]
+    }
+  ],
+  "programs": [
+    {
+      "program_id": "nsf-sbir-sttr-26-510",
+      "title": "NSF SBIR/STTR Phase I, Phase II, Fast-Track (NSF 26-510)",
+      "sponsor_agency": "U.S. National Science Foundation — Directorate for Technology, Innovation and Partnerships",
+      "funding_layer": "federal",
+      "opportunity_numbers": ["NSF 26-510"],
+      "grants_gov_detail_url": "https://www.nsf.gov/funding/opportunities/small-business-innovation-research-small-business-technology/nsf26-510/solicitation",
+      "eligibility_categories": ["small_biz", "research"],
+      "status": "POSTED",
+      "amount": {
+        "phase_i_max": 305000,
+        "phase_ii_max": 1250000,
+        "fast_track_max": 1555555,
+        "total_program_funding": 210000000,
+        "currency": "USD",
+        "cost_sharing_required": false
+      },
+      "deadlines": [
+        {
+          "label": "Full proposal deadline",
+          "date": "2026-07-27",
+          "deadline_type": "annual_cycle",
+          "refresh_priority": "high"
+        },
+        {
+          "label": "Full proposal deadline",
+          "date": "2026-11-04",
+          "deadline_type": "annual_cycle",
+          "refresh_priority": "medium"
+        },
+        {
+          "label": "Full proposal deadline",
+          "date": "2027-03-04",
+          "deadline_type": "annual_cycle",
+          "refresh_priority": "low"
+        }
+      ],
+      "requirements": [
+        "Small business concern meeting SBA size standards (≤500 employees including affiliates)",
+        "Phase I: official invitation required after Project Pitch approval",
+        "Phase II: only prior NSF Phase I awardees; submit 6–24 months after Phase I start",
+        "STTR: requires partner research institution subaward",
+        "Submit via Research.gov per solicitation"
+      ],
+      "cited_facts": [
+        {
+          "value": "NSF 26-510 posted May 22, 2026; full proposal deadlines include July 27, 2026, November 4, 2026, and recurring first-Wednesday-in-November / first-Thursday-in-March / first-Wednesday-in-July cycles.",
+          "citation": {
+            "source": "NSF 26-510 Program Solicitation",
+            "url": "https://www.nsf.gov/funding/opportunities/small-business-innovation-research-small-business-technology/nsf26-510/solicitation",
+            "agency": "NSF",
+            "retrieved": "2026-06-19",
+            "jurisdiction": "United States (federal)"
+          }
+        },
+        {
+          "value": "Phase I awards up to $305,000 (6–18 months); Phase II up to $1,250,000 (typically 24 months); Fast-Track up to $1,555,555; anticipated program budget $210,000,000 across SBIR/STTR award types.",
+          "citation": {
+            "source": "NSF 26-510 — Award Information",
+            "url": "https://www.nsf.gov/funding/opportunities/small-business-innovation-research-small-business-technology/nsf26-510/solicitation",
+            "agency": "NSF",
+            "retrieved": "2026-06-19",
+            "jurisdiction": "United States (federal)"
+          }
+        },
+        {
+          "value": "America's Seed Fund (NSF SBIR/STTR) awards $200+ million annually to ~400 startups; up to $2M non-dilutive R&D with 0% equity — awardees retain full company and IP ownership.",
+          "citation": {
+            "source": "NSF Seed Fund — About the Program",
+            "url": "https://seedfund.nsf.gov/our-program/",
+            "agency": "NSF",
+            "retrieved": "2026-06-19",
+            "jurisdiction": "United States (federal)"
+          }
+        }
+      ],
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Entity-specific Project Pitch invitation status",
+          "source_checked": "https://seedfund.nsf.gov/apply/project-pitch/",
+          "note": "Invitation is per-company — requires applicant action; not in public index"
+        }
+      ]
+    },
+    {
+      "program_id": "sba-fast-fy26",
+      "title": "SBA Federal and State Technology (FAST) Partnership Program FY2026",
+      "sponsor_agency": "U.S. Small Business Administration",
+      "funding_layer": "federal",
+      "opportunity_numbers": ["SB-OIIFT-26-001"],
+      "assistance_listing": "59.058",
+      "grants_gov_detail_url": "https://www.grants.gov/search-results-detail/362646",
+      "simpler_grants_url": "https://simpler.grants.gov/opportunity/9ea5fbca-f285-4ad8-a14e-cc2c0abc0266",
+      "eligibility_categories": ["nonprofit", "government", "small_biz"],
+      "status": "POSTED",
+      "amount": {
+        "award_min": 1,
+        "award_max": 180000,
+        "total_program_funding": 9000000,
+        "expected_awards": 7,
+        "currency": "USD",
+        "cost_sharing_required": true
+      },
+      "deadlines": [
+        {
+          "label": "Application close",
+          "date": "2026-07-22",
+          "posted_date": "2026-06-02",
+          "archive_date": "2026-08-15",
+          "deadline_type": "fixed",
+          "refresh_priority": "high"
+        }
+      ],
+      "requirements": [
+        "Public or private entity endorsed by state governor as sole state applicant",
+        "Provide SBIR/STTR outreach, technical/business assistance, or financial support to small businesses",
+        "FY2026 FAST limited to specific states/territories per NOFO (e.g., CT, DC, MD, MA, NV, OR, SC, WA, VT, territories listed in source)",
+        "Cost sharing or matching required per opportunity listing"
+      ],
+      "cited_facts": [
+        {
+          "value": "FAST FY2026 (SB-OIIFT-26-001) closes July 22, 2026; $9,000,000 program funding; 7 expected awards; award range $1–$180,000; posted June 2, 2026; archives August 15, 2026.",
+          "citation": {
+            "source": "Simpler.Grants.gov — FAST Partnership Program",
+            "url": "https://simpler.grants.gov/opportunity/9ea5fbca-f285-4ad8-a14e-cc2c0abc0266",
+            "agency": "SBA / Grants.gov",
+            "retrieved": "2026-06-19",
+            "jurisdiction": "United States (federal)"
+          }
+        },
+        {
+          "value": "FAST mission: strengthen technological competitiveness of U.S. small businesses via state/regional programs raising SBIR/STTR awareness, educating on requirements, and increasing application submissions and awards.",
+          "citation": {
+            "source": "Simpler.Grants.gov — FAST Description",
+            "url": "https://simpler.grants.gov/opportunity/9ea5fbca-f285-4ad8-a14e-cc2c0abc0266",
+            "agency": "SBA",
+            "retrieved": "2026-06-19",
+            "jurisdiction": "United States (federal)"
+          }
+        }
+      ],
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Pennsylvania FAST applicant eligibility (PA not in FY2026 eligible-state list)",
+          "source_checked": "FAST FY2026 NOFO eligible states list — https://simpler.grants.gov/opportunity/9ea5fbca-f285-4ad8-a14e-cc2c0abc0266",
+          "note": "PA small businesses benefit indirectly via FAST-funded state programs in eligible states — not as FAST grantee"
+        }
+      ]
+    },
+    {
+      "program_id": "sbir-sttr-program-hub",
+      "title": "SBIR/STTR Federal Program Hub",
+      "sponsor_agency": "U.S. Small Business Administration (SBIR/STTR policy) + participating agencies",
+      "funding_layer": "federal",
+      "eligibility_categories": ["small_biz"],
+      "status": "FOUND",
+      "amount": {
+        "award_min": null,
+        "award_max": null,
+        "total_program_funding": null,
+        "currency": "USD",
+        "cost_sharing_required": null
+      },
+      "deadlines": [
+        {
+          "label": "Agency-specific solicitations",
+          "date": null,
+          "deadline_type": "rolling",
+          "refresh_priority": "high",
+          "note": "Each participating agency publishes its own NOFO cycles — monitor via SBIR.gov and Grants.gov search"
+        }
+      ],
+      "requirements": [
+        "U.S. small business concern per SBA size standards",
+        "Work performed in United States (with limited exceptions per SBIR/STTR Policy Directive)",
+        "Agency-specific solicitation compliance"
+      ],
+      "cited_facts": [
+        {
+          "value": "SBIR.gov is the federal SBIR/STTR program hub; eligibility size/compliance guidance published by SBA (site root accessible; legacy /about-sbir path returns 404).",
+          "citation": {
+            "source": "SBIR.gov — Home",
+            "url": "https://www.sbir.gov/",
+            "agency": "SBA / SBIR Program",
+            "retrieved": "2026-06-19",
+            "jurisdiction": "United States (federal)"
+          }
+        }
+      ],
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Consolidated live deadline index for all 11 SBIR agencies",
+          "source_checked": "https://www.sbir.gov/ — no single machine-readable deadline rollup at harvest",
+          "note": "Living-bible refresh harvests per-agency solicitations (NIH, DOE, USDA, etc.) into vertical pack"
+        }
+      ]
+    },
+    {
+      "program_id": "pa-dced-programs-funding",
+      "title": "Pennsylvania DCED Programs & Funding (state layer)",
+      "sponsor_agency": "PA Department of Community & Economic Development",
+      "funding_layer": "state",
+      "state_code": "PA",
+      "eligibility_categories": ["small_biz", "nonprofit", "government"],
+      "status": "PARTIAL",
+      "amount": {
+        "award_min": null,
+        "award_max": null,
+        "total_program_funding": null,
+        "currency": "USD",
+        "cost_sharing_required": null
+      },
+      "deadlines": [
+        {
+          "label": "Program-specific rounds",
+          "date": null,
+          "deadline_type": "rolling",
+          "refresh_priority": "medium"
+        }
+      ],
+      "requirements": [
+        "Varies by program — DCED publishes separate NOFAs/RFPs per initiative",
+        "Pennsylvania business location typically required"
+      ],
+      "cited_facts": [
+        {
+          "value": "PA DCED Programs & Funding portal indexes state economic development grants, tax credits, and business assistance programs for Pennsylvania entities.",
+          "citation": {
+            "source": "PA DCED — Programs & Funding",
+            "url": "https://dced.pa.gov/programs-funding/",
+            "agency": "PA DCED",
+            "retrieved": "2026-06-19",
+            "jurisdiction": "Pennsylvania"
+          }
+        }
+      ],
+      "gaps": [
+        {
+          "status": "NOT FOUND",
+          "label": "Unified PA state grant deadline calendar with award amounts",
+          "source_checked": "https://dced.pa.gov/programs-funding/",
+          "note": "State pack expansion required — per-program harvest into states/pa/programs.json"
+        }
+      ]
+    }
+  ],
+  "cross_cutting_gaps": [
+    {
+      "status": "NOT FOUND",
+      "label": "Grants.gov Search2 API automated harvest",
+      "source_checked": "https://api.grants.gov/v1/api/search2 — HTTP 403 at harvest",
+      "note": "PARKED — use simpler.grants.gov + search-results-detail pages until API access restored"
+    }
+  ],
+  "parked_sources": [
+    {
+      "label": "grants_gov_api_search2",
+      "url": "https://api.grants.gov/v1/api/search2",
+      "reason": "HTTP 403 — no bypass; curated from opportunity detail pages"
+    }
+  ],
+  "fact_count": 10,
+  "program_count": 4
+}

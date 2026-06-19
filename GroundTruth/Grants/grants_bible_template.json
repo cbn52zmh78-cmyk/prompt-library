@@ -1,0 +1,215 @@
+{
+  "artifact": "groundtruth_grants_bible_template",
+  "version": "1.0",
+  "category": "grants_funding",
+  "tier": "B",
+  "task": "GroundTruth Grants/Funding — bible structure definition",
+  "generated_at": "2026-06-19T10:00:00+00:00",
+  "as_of_date": "2026-06-19",
+  "citation_standard": "STD-CITE-001",
+  "disclaimer": "Grant intelligence compiled from public sources — not application advice, tax advice, or a guarantee of eligibility. Verify deadlines, amounts, and requirements on the cited agency portal before applying.",
+  "policy": "Public .gov and foundation-published sources only; HTTP 403/404/502 PARKED without bypass; deadlines and award figures must cite primary notice; gaps shown as NOT FOUND — never silently omitted.",
+  "subscription_model": {
+    "product_type": "living_bible_subscription",
+    "anchor_portal": "Grants.gov",
+    "recurring_value_drivers": [
+      "New opportunity postings (forecasted → posted → amended)",
+      "Deadline changes and close-date extensions",
+      "NOFO/solicitation version updates",
+      "Assistance Listing (CFDA/ALN) revisions on SAM.gov",
+      "State program funding round openings/closures",
+      "Foundation RFP cycles (quarterly/annual)"
+    ],
+    "refresh_cadence": {
+      "federal_posted_opportunities": "weekly",
+      "deadline_watchlist": "daily (T-30 / T-7 / T-1 alerts)",
+      "state_program_index": "monthly",
+      "foundation_rfp_index": "monthly",
+      "prerequisite_registers": "quarterly (SAM.gov, Research.gov, Grants.gov Workspace)"
+    },
+    "wtp_anchor": {
+      "benchmark": "Grant discovery SaaS (Instrumentl-class)",
+      "price_band": "$20–$200/mo consumer; ~$179+/mo professional",
+      "groundtruth_differentiator": "Vertical cited packs + explicit gaps + STD-CITE-001 audit trail — not raw search aggregation"
+    },
+    "data_opportunity_registry_ref": "Science/groundtruth_poc/groundtruth_data_opportunity_registry.json#grants"
+  },
+  "source_layers": {
+    "federal": {
+      "description": "Primary federal grant discovery, application, and entity-registration anchors",
+      "portals": [
+        {
+          "portal_id": "grants_gov",
+          "name": "Grants.gov",
+          "url": "https://www.grants.gov/",
+          "role": "Federal funding opportunity search, Workspace applications, opportunity packages",
+          "tier": "agency_primary"
+        },
+        {
+          "portal_id": "simpler_grants_gov",
+          "name": "Simpler.Grants.gov",
+          "url": "https://simpler.grants.gov/",
+          "role": "Modernized opportunity listings; links to legacy Grants.gov detail pages",
+          "tier": "agency_primary"
+        },
+        {
+          "portal_id": "sam_gov",
+          "name": "SAM.gov",
+          "url": "https://www.sam.gov/",
+          "role": "Entity registration, Unique Entity ID (UEI), Assistance Listings",
+          "tier": "agency_primary"
+        },
+        {
+          "portal_id": "sbir_gov",
+          "name": "SBIR.gov",
+          "url": "https://www.sbir.gov/",
+          "role": "SBIR/STTR program hub, eligibility guides, agency solicitations index",
+          "tier": "agency_primary"
+        },
+        {
+          "portal_id": "usaspending",
+          "name": "USAspending.gov",
+          "url": "https://www.usaspending.gov/",
+          "role": "Past award verification (FFATA/DATA Act transparency)",
+          "tier": "agency_secondary"
+        }
+      ]
+    },
+    "state": {
+      "description": "State economic development, innovation, and sector grant portals — indexed per state pack",
+      "portal_pattern": "states/{state_code}/portals.json",
+      "example_portals": [
+        {
+          "state_code": "PA",
+          "name": "PA DCED Programs & Funding",
+          "url": "https://dced.pa.gov/programs-funding/",
+          "role": "Pennsylvania state grants, tax credits, and small-business programs"
+        }
+      ],
+      "gap_note": "Not all states publish machine-readable deadline indexes — county/municipal incentives require local pack expansion"
+    },
+    "foundations": {
+      "description": "Major foundation RFP portals — cited to published grant-opportunity pages and 990-PF where applicable",
+      "portal_pattern": "foundations/{foundation_slug}.json",
+      "example_portals": [
+        {
+          "foundation_slug": "gates_foundation",
+          "name": "Gates Foundation — Grant opportunities",
+          "url": "https://www.gatesfoundation.org/about/how-we-work/grant-opportunities",
+          "submission_portal": "https://submit.gatesfoundation.org/"
+        }
+      ]
+    }
+  },
+  "eligibility_categories": [
+    {
+      "category_id": "small_biz",
+      "display_name": "Small Business",
+      "description": "For-profit small business concerns meeting SBA size standards; includes SBIR/STTR, SBA, EDA, and agency small-business set-asides",
+      "typical_applicant": "LLC, C-corp, or partnership with ≤500 employees (SBA size standard varies by NAICS)",
+      "prerequisite_registers": ["sam_gov_entity_registration", "grants_gov_workspace_or_agency_system"]
+    },
+    {
+      "category_id": "nonprofit",
+      "display_name": "Nonprofit / NGO",
+      "description": "501(c)(3) and other tax-exempt organizations eligible under Grants.gov opportunity-specific criteria",
+      "typical_applicant": "Registered nonprofit, public charity, community foundation",
+      "prerequisite_registers": ["sam_gov_entity_registration", "grants_gov_workspace"]
+    },
+    {
+      "category_id": "research",
+      "display_name": "Research / Higher Education",
+      "description": "Universities, research institutions, and faculty-led projects (NIH, NSF, DOE, USDA NIFA, etc.)",
+      "typical_applicant": "IHE, research institute, PI with institutional affiliation",
+      "prerequisite_registers": ["sam_gov_entity_registration", "research_gov_or_agency_system"]
+    },
+    {
+      "category_id": "government",
+      "display_name": "State / Local / Tribal Government",
+      "description": "State, county, city, special district, and federally recognized tribal governments",
+      "typical_applicant": "Government agency or instrumentality",
+      "prerequisite_registers": ["sam_gov_entity_registration"]
+    },
+    {
+      "category_id": "individual",
+      "display_name": "Individual (limited)",
+      "description": "Rare on Grants.gov — most federal assistance is organizational; personal benefits route to USA.gov",
+      "typical_applicant": "Individual researcher or artist only when opportunity explicitly allows",
+      "prerequisite_registers": ["grants_gov_individual_profile"]
+    }
+  ],
+  "vertical_pack_schema": {
+    "required_fields": [
+      "artifact",
+      "version",
+      "vertical_id",
+      "vertical_display_name",
+      "eligibility_categories",
+      "as_of_date",
+      "retrieved_date",
+      "citation_standard",
+      "disclaimer",
+      "subscription_refresh",
+      "prerequisites",
+      "programs",
+      "gaps",
+      "parked_sources"
+    ],
+    "program_record": {
+      "required_fields": [
+        "program_id",
+        "title",
+        "sponsor_agency",
+        "funding_layer",
+        "eligibility_categories",
+        "status",
+        "amount",
+        "deadlines",
+        "requirements",
+        "cited_facts"
+      ],
+      "amount_fields": {
+        "award_min": "number or null — NOT FOUND if absent from source",
+        "award_max": "number or null",
+        "total_program_funding": "number or null",
+        "currency": "USD",
+        "cost_sharing_required": "boolean or REQUIRES_CONFIRMATION"
+      },
+      "deadline_fields": {
+        "close_date": "ISO-8601 date or rolling/annual pattern text",
+        "posted_date": "ISO-8601 date",
+        "archive_date": "ISO-8601 date or null",
+        "deadline_type": "fixed | rolling | annual_cycle | invitation_only",
+        "refresh_priority": "high if within 30 days of as_of_date"
+      },
+      "status_values": ["POSTED", "FORECASTED", "CLOSED", "ARCHIVED", "INVITATION_ONLY", "PARKED"]
+    },
+    "citation_block": {
+      "standard": "STD-CITE-001",
+      "required_keys": ["source", "url", "agency", "retrieved", "jurisdiction"],
+      "gap_format": "NOT FOUND — [source checked: …]"
+    }
+  },
+  "directory_layout": {
+    "root": "GroundTruth/Grants/",
+    "files": {
+      "bible_template": "grants_bible_template.json",
+      "index": "INDEX.json",
+      "source_register": "source_register.json",
+      "packs": "packs/{vertical_id}_pack.json",
+      "state_portals": "states/{state_code}/portals.json",
+      "foundations": "foundations/{foundation_slug}.json",
+      "refresh_log": "refresh/{YYYY-MM-DD}_delta.json"
+    }
+  },
+  "qa_gate": {
+    "rules": [
+      "Every program record has ≥1 cited_fact with full STD-CITE-001 tuple",
+      "Every deadline field cites the NOFO/solicitation or Grants.gov opportunity detail URL",
+      "Amount fields missing from source → gap with NOT FOUND, not invented",
+      "as_of_date and retrieved_date present on every pack",
+      "PARKED sources listed in parked_sources with reason",
+      "Subscription refresh block documents next_scheduled_refresh"
+    ]
+  }
+}
