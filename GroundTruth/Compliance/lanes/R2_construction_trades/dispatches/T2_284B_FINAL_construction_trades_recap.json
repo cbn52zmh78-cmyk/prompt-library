@@ -1,0 +1,75 @@
+{
+  "message_type": "recap_vcs",
+  "task": "T2 #284-B FINAL",
+  "title": "T2 #284-B FINAL — Construction launch lead-magnet LOCKED (R1 c16d7bf)",
+  "generated_at": "2026-06-19T16:45:00+00:00",
+  "status": "LOCKED",
+  "verdict": "GREEN",
+  "lane": "R1+R2",
+  "issue": 284,
+  "vertical": "Construction & Trades",
+  "product": "lead_magnet_5_states",
+  "product_status": "DRAFT",
+  "sellable": false,
+  "launch_lead_magnet_locked": true,
+  "pinned_bible": "GroundTruth/Compliance/lanes/R2_construction_trades/bibles",
+  "pinned_sample": "construction_trades_knowledge_bible_sample_5state_v1_DRAFT",
+  "r1_register_pin": "c16d7bf",
+  "recap": {
+    "did": [
+      "FINAL harden against R1 refreshed register (Stonebridge c16d7bf — PA/TX municipal refine)",
+      "Rebuilt 5-state sample bible JSON/MD/DOCX/PDF at canonical pin",
+      "Gap lock verified: PA 2 · TX 3 · FL 0 · CA 0 · NY 1 · total 6",
+      "Cited claims 151→161 (+10 municipal facts: Philly/Austin/Houston/Dallas)"
+    ],
+    "state": "LOCKED — Construction launch lead-magnet hardened; honest NOT FOUND only (403s + legacy URLs + local-primary)",
+    "final_gap_count": {
+      "total": 6,
+      "by_state": {"PA": 2, "TX": 3, "FL": 0, "CA": 0, "NY": 1}
+    },
+    "delta_vs_prior_harden_37d2931": {
+      "PA": -1,
+      "TX": 1,
+      "NY": 0,
+      "cited_claims": 10
+    },
+    "honest_gaps": [
+      "PA: Pittsburgh pittsburghpa.gov 403; statewide HVAC REQUIRES_CONFIRMATION",
+      "TX: San Antonio sa.gov 403; legacy TDLR /plumbing 404; local building code adoption NOT FOUND",
+      "NY: Municipal GC outside NYC — dos.ny.gov local-primary (GC/plumbing/HVAC deduped to 1 §6 line)"
+    ],
+    "next": [
+      "50-state bible integrate path continues (R1-C/D tranches)",
+      "Optional: re-probe Pittsburgh / San Antonio when 403 clears",
+      "Sell gate unchanged — Benjamin says sell"
+    ]
+  },
+  "metrics": {
+    "sample_cited_claims": 161,
+    "sample_gap_count_s6": 6,
+    "gap_match": true,
+    "r1_register_git": "5dbb901 (includes c16d7bf)"
+  },
+  "vcs_commit_draft": {
+    "subject": "T2 #284-B FINAL: lock Construction launch lead-magnet (PA 2 / TX 3 gaps, R1 c16d7bf)",
+    "body": "RECAP\n- Did: FINAL harden 5-state sample vs R1 c16d7bf; LOCKED lead-magnet at canonical pin\n- State: §6 gaps 6 — PA 2 · TX 3 · FL/CA 0 · NY 1; 161 cited claims; gap_match=true\n- Gaps: Pittsburgh+San Antonio 403; TDLR /plumbing legacy 404; TX local codes; PA HVAC local; NY municipal\n- Next: 50-state R1 tranches; sell gate pending Benjamin\n\nCEILING: Honest NOT FOUND only; public .gov; no bypass."
+  },
+  "artifacts": [
+    "GroundTruth/Compliance/lanes/R2_construction_trades/bibles/construction_trades_knowledge_bible_sample_5state_v1_DRAFT.json",
+    "GroundTruth/Compliance/lanes/R2_construction_trades/bibles/construction_trades_knowledge_bible_sample_5state_v1_DRAFT.md",
+    "GroundTruth/Compliance/lanes/R2_construction_trades/bibles/construction_trades_knowledge_bible_sample_5state_v1_DRAFT.docx",
+    "GroundTruth/Compliance/lanes/R2_construction_trades/bibles/construction_trades_knowledge_bible_sample_5state_v1_DRAFT.pdf",
+    "GroundTruth/Compliance/lanes/R2_construction_trades/bibles/t2_284b_harden_proof.json",
+    "GroundTruth/Compliance/lanes/R2_construction_trades/bibles/INDEX.json",
+    "Stonebridge/Operations/Scripts/harden_t2_284b_launch5_sample.py",
+    "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/construction_trades/states/pa.json",
+    "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/construction_trades/states/tx.json",
+    "GroundTruth/Compliance/lanes/R2_construction_trades/dispatches/T2_284B_FINAL_construction_trades_recap.json"
+  ],
+  "_output_stamp": {
+    "issue": 284,
+    "canonical_path": "GroundTruth/Compliance/lanes/R2_construction_trades/dispatches/T2_284B_FINAL_construction_trades_recap.json",
+    "stamped_at": "2026-06-19T16:45:00+00:00",
+    "registry": "GroundTruth/Compliance/lanes/R2_construction_trades/dispatches"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "artifact": "transport_dot_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 275,
+  "parent_issue": 269,
+  "deepening_issue": 275,
+  "task": "R5-C — State DOT/motor-carrier compliance overlay (tranche-3 probe harvest)",
+  "state": "Pennsylvania",
+  "state_code": "PA",
+  "state_slug": "pennsylvania",
+  "generated_at": "2026-06-19T16:38:59.075341+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm DOT/FMCSA carrier registration, HOS, vehicle, and insurance requirements with FMCSA and the relevant state authority.",
+  "policy": "Public .gov sources only; 403/SSL = park; gaps explicit.",
+  "federal_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-PA-CAR-001",
+            "text": "Registration Alerts The Federal Motor Carrier Safety Administration (FMCSA) is notifying the public that a HIGH PHISHING ALERT regarding FAKE SAFETY AUDITS are being sent by email to registered entities by someone pretending to be FMCSA.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "PA Public Utility Commission — Motor Carrier",
+              "url": "https://www.puc.pa.gov/motor-carrier/",
+              "agency": "PA Public Utility Commission",
+              "jurisdiction": "Pennsylvania",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-PA-HOU-001",
+            "text": "Property carriers (e.g., trucking companies) and charter bus carriers (seating capacity of more than 15) are regulated for safety and insurance requirements only.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "PA Public Utility Commission — Motor Carrier",
+              "url": "https://www.puc.pa.gov/motor-carrier/",
+              "agency": "PA Public Utility Commission",
+              "jurisdiction": "Pennsylvania",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-PA-VEH-001",
+            "text": "Property carriers (e.g., trucking companies) and charter bus carriers (seating capacity of more than 15) are regulated for safety and insurance requirements only.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "PA Public Utility Commission — Motor Carrier",
+              "url": "https://www.puc.pa.gov/motor-carrier/",
+              "agency": "PA Public Utility Commission",
+              "jurisdiction": "Pennsylvania",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-PA-INS-001",
+            "text": "Property carriers (e.g., trucking companies) and charter bus carriers (seating capacity of more than 15) are regulated for safety and insurance requirements only.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "insurance",
+            "citation": {
+              "source": "PA Public Utility Commission — Motor Carrier",
+              "url": "https://www.puc.pa.gov/motor-carrier/",
+              "agency": "PA Public Utility Commission",
+              "jurisdiction": "Pennsylvania",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-PA-INT-001",
+            "text": "Registration Alerts The Federal Motor Carrier Safety Administration (FMCSA) is notifying the public that a HIGH PHISHING ALERT regarding FAKE SAFETY AUDITS are being sent by email to registered entities by someone pretending to be FMCSA.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "PA Public Utility Commission — Motor Carrier",
+              "url": "https://www.puc.pa.gov/motor-carrier/",
+              "agency": "PA Public Utility Commission",
+              "jurisdiction": "Pennsylvania",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": false,
+      "tranche": 3
+    }
+  },
+  "tranche3_probe": {
+    "url": "https://www.puc.pa.gov/motor-carrier/",
+    "probe": "ok",
+    "http_code": 200,
+    "agency": "PA Public Utility Commission — Motor Carrier"
+  }
+}

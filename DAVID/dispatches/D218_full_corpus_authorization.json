@@ -116,9 +116,18 @@
   },
   "current_blockers": [
     "Benjamin human-eye PENDING on proof 01/05",
-    "Cached shots 02_stakes + 06_honesty yellow-green (0.127/0.140) — require full regen",
+    "Cached magenta defects: 03_signature_question (raw 0.683), 07_demonstration (raw 0.661) — clamp masking",
+    "Cached yellow-green: 02_stakes (0.127), 06_honesty (0.140) — require full regen not concat-from-cache",
     "07_demonstration duration 10s outside 7–9s band (pre-existing; out of #218 scope unless clamped)"
   ],
+  "pre_regen_baseline": {
+    "scorer": "DAVID/scripts/score_corpus_green_218.py",
+    "report": "DAVID/productions/david_latin_corpus_v1_longform_v1/proof_218/full_corpus_green_report.json",
+    "state": "RED",
+    "metric_green": "6/8",
+    "generation_defects": "2/8 (03, 07)",
+    "master_magenta": 0.0956
+  },
   "vcs_commit_draft": {
     "subject": "DAVID #218-FULL: corpus authorization HOLD — Benjamin eyeball + GO (no render)",
     "body": "RECAP\n- Did: D218_full_corpus_authorization.json; score_corpus_green_218.py; 480p script full sync; gates updated\n- State: HOLD — proof 01/05 metric GREEN; Benjamin human-eye PENDING; full --force-all NOT executed\n- Next: Benjamin PASS+GO → full seamless regen → T4 GREEN score → NEXUS sign-off → commit/unpark\n\nproof_218 HELD. Cron PAUSED."

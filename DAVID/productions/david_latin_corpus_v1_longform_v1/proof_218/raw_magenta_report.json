@@ -1,6 +1,6 @@
 {
   "issue": 218,
-  "generated_at": "2026-06-19T16:26:30.869920+00:00",
+  "generated_at": "2026-06-19T16:44:26.503723+00:00",
   "resolution": "480p",
   "magenta_max": 0.42,
   "clamp_burden_max": 0.2,
@@ -8,14 +8,14 @@
   "shots": [
     {
       "shot_id": "01_cold_open",
-      "raw_magenta_pre_clamp": 0.254,
+      "raw_magenta_pre_clamp": 0.3664,
       "processed_magenta": 0.0953,
-      "clamp_burden": 0.1588,
-      "host_blue_mean": 57.7,
-      "host_br_ratio": 0.892,
-      "blue_starvation_fraction": 0.118,
+      "clamp_burden": 0.2711,
+      "host_blue_mean": 50.4,
+      "host_br_ratio": 0.882,
+      "blue_starvation_fraction": 0.139,
       "raw_magenta_pass": true,
-      "clamp_burden_pass": true
+      "clamp_burden_pass": false
     },
     {
       "shot_id": "05_method",

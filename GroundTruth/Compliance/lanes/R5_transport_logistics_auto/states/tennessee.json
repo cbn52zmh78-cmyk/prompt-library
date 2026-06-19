@@ -296,7 +296,8 @@
         "NOT FOUND": 0,
         "ACCESS_RESTRICTED": 0
       },
-      "deep_harvest": true
+      "deep_harvest": true,
+      "tranche": 2
     }
   },
   "federal_dot_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",

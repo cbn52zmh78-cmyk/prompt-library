@@ -16,7 +16,12 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 PROD = ROOT / "productions" / "host_identity_v1"
+SCRIPTS = ROOT / "scripts"
 FFMPEG: str | None = None
+
+if str(SCRIPTS) not in __import__("sys").path:
+    __import__("sys").path.insert(0, str(SCRIPTS))
+from render_longform import ARCHIVE_ANTI_MAGENTA_GENERATION_LOCK  # noqa: E402
 
 ARCHIVE_SET_PROMPT = (
     "The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, "
@@ -127,13 +132,14 @@ def generate_archive_set(client: Any, out_dir: Path, *, force: bool = False) -> 
             print("[archive] reusing existing set plate")
             return {**meta, "path": str(path), "reused": True}
 
+    set_prompt = f"{ARCHIVE_ANTI_MAGENTA_GENERATION_LOCK} {ARCHIVE_SET_PROMPT}"
     print("[archive] generating set plate…")
-    resp = client.image.sample(prompt=ARCHIVE_SET_PROMPT, model="grok-imagine-image-quality")
+    resp = client.image.sample(prompt=set_prompt, model="grok-imagine-image-quality")
     _download(resp.url, path)
     data = {
         "path": str(path),
         "url": resp.url,
-        "prompt": ARCHIVE_SET_PROMPT,
+        "prompt": set_prompt,
         "lighting_lock": (
             "LIGHTING LOCK @Set-Archive-001 (#243/#218): D65 neutral 5000K ambient key — "
             "blue preserved in shadows; no magenta/purple ambient; brass lamp 3200K localized "
@@ -163,15 +169,16 @@ def generate_david_avatar(
             print("[david] reusing existing avatar reference")
             return {**meta, "path": str(path), "reused": True}
 
+    avatar_prompt = f"{ARCHIVE_ANTI_MAGENTA_GENERATION_LOCK} {DAVID_AVATAR_PROMPT}"
     print("[david] generating avatar in Archive (image edit on set)…")
     archive_url = archive.get("url")
     if not archive_url:
         # re-upload not available — regenerate combined
         print("[david] no set URL — generating avatar with embedded set description")
-        resp = client.image.sample(prompt=DAVID_AVATAR_PROMPT, model="grok-imagine-image-quality")
+        resp = client.image.sample(prompt=avatar_prompt, model="grok-imagine-image-quality")
     else:
         resp = client.image.sample(
-            prompt=DAVID_AVATAR_PROMPT,
+            prompt=avatar_prompt,
             model="grok-imagine-image-quality",
             image_url=archive_url,
         )
@@ -179,7 +186,7 @@ def generate_david_avatar(
     data = {
         "path": str(path),
         "url": resp.url,
-        "prompt": DAVID_AVATAR_PROMPT,
+        "prompt": avatar_prompt,
         "lighting_lock": (
             "LIGHTING LOCK @David-001 (#243/#218): D65 neutral 5000K white key on face and sweater — "
             "natural skin R≈G≈B, blue channel intact (B≥40 mids); no magenta cast; brass lamp 3200K "
@@ -266,6 +273,47 @@ def render_host_test(client: Any, avatar: dict[str, Any], out_dir: Path) -> dict
     }
 
 
+def sync_identity_lock_refs(archive: dict[str, Any], avatar: dict[str, Any]) -> Path:
+    """#218-B — sync canonical david_identity_lock.json after refs-only regen."""
+    path = PROD / "david_identity_lock.json"
+    lock: dict[str, Any] = {}
+    if path.is_file():
+        lock = json.loads(path.read_text(encoding="utf-8"))
+    lock.setdefault("issue", 69)
+    lock["locked_at"] = datetime.now(timezone.utc).isoformat()
+    lock["status"] = "LOCKED"
+    lock.setdefault("character", {
+        "name": "DAVID",
+        "role": "keeper of the Archive",
+        "core_question": "What did they actually say — and how do we prove it?",
+        "age_read": "45-55",
+        "wardrobe": "charcoal/deep navy modern understated — NOT period costume",
+        "set_name": "The Archive",
+    })
+    lock.setdefault("voice", VOICE_LOCK)
+    lock["references"] = {
+        "archive_set": {
+            "file": archive["path"],
+            "url": archive.get("url"),
+            "prompt": archive["prompt"],
+            "lighting_lock": archive.get("lighting_lock"),
+            "anti_magenta_lock": ARCHIVE_ANTI_MAGENTA_GENERATION_LOCK,
+            "reuse": "environment plate @1 — same set every episode",
+        },
+        "david_avatar": {
+            "file": avatar["path"],
+            "url": avatar.get("url"),
+            "prompt": avatar["prompt"],
+            "lighting_lock": avatar.get("lighting_lock"),
+            "anti_magenta_lock": ARCHIVE_ANTI_MAGENTA_GENERATION_LOCK,
+            "reuse": "host reference @2 — image_to_video frame 1 every DAVID host shot",
+        },
+    }
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(lock, indent=2, ensure_ascii=False), encoding="utf-8")
+    return path
+
+
 def write_identity_lock(
     archive: dict[str, Any],
     avatar: dict[str, Any],
@@ -286,13 +334,18 @@ def write_identity_lock(
         "references": {
             "archive_set": {
                 "file": archive["path"],
+                "url": archive.get("url"),
                 "prompt": archive["prompt"],
+                "lighting_lock": archive.get("lighting_lock"),
+                "anti_magenta_lock": ARCHIVE_ANTI_MAGENTA_GENERATION_LOCK,
                 "reuse": "environment plate @1 — same set every episode",
             },
             "david_avatar": {
                 "file": avatar["path"],
                 "url": avatar.get("url"),
                 "prompt": avatar["prompt"],
+                "lighting_lock": avatar.get("lighting_lock"),
+                "anti_magenta_lock": ARCHIVE_ANTI_MAGENTA_GENERATION_LOCK,
                 "reuse": "host reference @2 — image_to_video frame 1 every DAVID host shot",
             },
         },
@@ -327,32 +380,36 @@ def _report_generation_gate(archive_path: Path, avatar_path: Path) -> None:
     import numpy as np
     from PIL import Image
 
-    sys_path = str(Path(__file__).resolve().parent)
-    if sys_path not in __import__("sys").path:
-        __import__("sys").path.insert(0, sys_path)
     from color_cast_qa import (  # noqa: WPS433
         generation_reference_breaches,
         generation_reference_passes,
         measure_color_cast,
         measure_set_shadow_blue_health,
     )
+    from t243_pre_render_gate import probe_magenta_score_image  # noqa: WPS433
 
     with Image.open(avatar_path) as img:
-        avatar_m = measure_color_cast(np.asarray(img.convert("RGB")))
+        avatar_arr = np.asarray(img.convert("RGB"))
+        avatar_m = measure_color_cast(avatar_arr)
+        avatar_mag = probe_magenta_score_image(avatar_arr)
     with Image.open(archive_path) as img:
-        set_m = measure_set_shadow_blue_health(np.asarray(img.convert("RGB")))
+        set_arr = np.asarray(img.convert("RGB"))
+        set_m = measure_set_shadow_blue_health(set_arr)
+        set_mag = probe_magenta_score_image(set_arr)
     print(
         f"[gate] avatar Bμ={avatar_m['host_blue_mean']:.1f} "
         f"B/R={avatar_m['host_br_ratio']:.3f} "
-        f"starve={avatar_m['blue_starvation_fraction']:.3f} "
+        f"magenta={avatar_mag:.4f} "
         f"pass={generation_reference_passes(avatar_m, host=True)}"
     )
     print(
         f"[gate] set_shadow Bμ={set_m['host_blue_mean']:.1f} "
         f"B/R={set_m['host_br_ratio']:.3f} "
-        f"starve={set_m['blue_starvation_fraction']:.3f} "
+        f"magenta={set_mag:.4f} "
         f"pass={generation_reference_passes(set_m, host=False)}"
     )
+    if avatar_mag >= 0.42 or set_mag >= 0.42:
+        print(f"[gate] FAIL raw magenta must be <0.42 (avatar={avatar_mag:.4f} set={set_mag:.4f})")
     if not generation_reference_passes(avatar_m, host=True):
         print(f"[gate] avatar breaches: {generation_reference_breaches(avatar_m, host=True)}")
     if not generation_reference_passes(set_m, host=False):
@@ -388,7 +445,13 @@ def main() -> int:
     avatar = generate_david_avatar(client, archive, refs_dir, force=args.force_refs)
     _report_generation_gate(Path(archive["path"]), Path(avatar["path"]))
     if args.refs_only:
-        print(json.dumps({"archive_set": archive["path"], "david_avatar": avatar["path"]}, indent=2))
+        lock_path = sync_identity_lock_refs(archive, avatar)
+        print(f"[sync] canonical identity_lock → {lock_path}")
+        print(json.dumps({
+            "archive_set": archive["path"],
+            "david_avatar": avatar["path"],
+            "identity_lock": str(lock_path),
+        }, indent=2))
         return 0
     host_clip = render_host_test(client, avatar, PROD)
     lock_path = write_identity_lock(archive, avatar, host_clip)

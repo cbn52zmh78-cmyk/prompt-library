@@ -1,0 +1,80 @@
+{
+  "message_type": "recap_vcs",
+  "task": "T2 #284 integrate + R1-C gap tranche",
+  "title": "T2 integrate (R1-B→50-state bible) + R1-C UT·NJ·MD·KS·IA·HI·GA·DE·WA",
+  "generated_at": "2026-06-19T16:45:00+00:00",
+  "status": "COMPLETE",
+  "verdict": "YELLOW",
+  "lane": "R1+R2",
+  "issue": 284,
+  "vertical": "Construction & Trades",
+  "product_status": "DRAFT",
+  "sellable": false,
+  "pinned_bible": "GroundTruth/Compliance/lanes/R2_construction_trades/bibles",
+  "pinned_r1_register": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/construction_trades",
+  "recap": {
+    "did": [
+      "T2 integrate EXECUTED: merged R1 launch-5 + R1-B gap-9 (14 states) over R2 #266; rebuilt 50-state Knowledge Bible JSON/MD/DOCX/PDF",
+      "§6 gap proof: 99 → 84 (Δ −15); cited claims 1117 → 963",
+      "R1-C harvest: 9 states UT/NJ/MD/KS/IA/HI/GA/DE/WA appended to canonical construction_trades register (23 states total, 113 facts)",
+      "MA held — mass.gov HTTP 403 persists; not in R1-C tranche"
+    ],
+    "state": "50-state bible DRAFT · 84 §6 gaps · 23/50 R1 deep packs · sellable=false until Benjamin says sell",
+    "integrate": {
+      "before_gap_count": 99,
+      "after_gap_count": 84,
+      "delta_gaps": -15,
+      "r1_states_merged": 14,
+      "proof": "GroundTruth/Compliance/lanes/R2_construction_trades/bibles/t2_284_integrate_r1_proof.json"
+    },
+    "r1c": {
+      "states": ["UT", "NJ", "MD", "KS", "IA", "HI", "GA", "DE", "WA"],
+      "facts_added": 27,
+      "parked": ["ks_ag_reg (403)", "ga_sos_plb (403)", "ga_rules (403)"],
+      "access_restricted": ["NJ njconsumeraffairs Incapsula", "GA sos.ga.gov 403"]
+    },
+    "gaps": {
+      "bible_s6": 84,
+      "ma_hold": "5 gaps remain in integrated bible; re-harvest when mass.gov clears",
+      "portal_blocks": "KS AG contractor registration 403; GA SOS contractor board 403; NJ consumeraffairs Incapsula"
+    },
+    "next": [
+      "T2 integrate R1-C (9 states) into 50-state bible — expect further §6 gap reduction",
+      "Re-probe MA mass.gov; fold MA when 403 clears",
+      "R1-D: next 2-gap tranche (AK·AZ·CT·DE-tier remainder) toward 50/50 R1 coverage"
+    ]
+  },
+  "metrics": {
+    "bible_state_count": 50,
+    "bible_cited_claims": 963,
+    "bible_gap_count_s6": 84,
+    "r1_register_states": 23,
+    "r1_register_facts": 113,
+    "r1c_states": 9,
+    "r1c_facts": 27,
+    "integrate_delta_gaps": -15
+  },
+  "vcs_commit_draft": {
+    "subject": "T2 #284: integrate R1-B (99→84 gaps) + R1-C UT/NJ/MD/KS/IA/HI/GA/DE/WA harvest",
+    "body": "RECAP\n- Did: T2 integrate 14 R1 states into 50-state bible; §6 gaps 99→84 (Δ−15); R1-C harvest 9 states (27 facts) to construction_trades register\n- State: DRAFT · 84 gaps · 23/50 R1 packs · MA held (mass.gov 403)\n- Gaps: KS ag.ks.gov 403; GA sos.ga.gov 403; NJ Incapsula; MA parked\n- Next: integrate R1-C into bible; re-probe MA; R1-D tranche\n\nCEILING: Public .gov only; gaps explicit; sellable=false until Benjamin says sell."
+  },
+  "artifacts": [
+    "GroundTruth/Compliance/lanes/R2_construction_trades/bibles/construction_trades_knowledge_bible_50state_v1_DRAFT.json",
+    "GroundTruth/Compliance/lanes/R2_construction_trades/bibles/construction_trades_knowledge_bible_50state_v1_DRAFT.md",
+    "GroundTruth/Compliance/lanes/R2_construction_trades/bibles/construction_trades_knowledge_bible_50state_v1_DRAFT.docx",
+    "GroundTruth/Compliance/lanes/R2_construction_trades/bibles/construction_trades_knowledge_bible_50state_v1_DRAFT.pdf",
+    "GroundTruth/Compliance/lanes/R2_construction_trades/bibles/t2_284_integrate_r1_proof.json",
+    "GroundTruth/Compliance/lanes/R2_construction_trades/bibles/INDEX.json",
+    "Stonebridge/Operations/Scripts/integrate_t2_284_r1_50state_bible.py",
+    "Stonebridge/Operations/Scripts/construction_trades_r1c_urls.py",
+    "Stonebridge/Operations/Scripts/harvest_groundtruth_r1c_construction_trades_gaps.py",
+    "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/construction_trades/states_index.json",
+    "GroundTruth/Compliance/lanes/R2_construction_trades/dispatches/R1_C_construction_trades_recap.json"
+  ],
+  "_output_stamp": {
+    "issue": 284,
+    "canonical_path": "GroundTruth/Compliance/lanes/R2_construction_trades/dispatches/R1_C_construction_trades_recap.json",
+    "stamped_at": "2026-06-19T16:45:00+00:00",
+    "registry": "GroundTruth/Compliance/lanes/R2_construction_trades/dispatches"
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "artifact": "transport_logistics_auto_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 269,
+  "parent_issue": 237,
+  "task": "R5 — Transport/Logistics/Auto state PUC/TNC/repair/dealer/movers",
+  "state": "Maryland",
+  "state_code": "MD",
+  "state_slug": "maryland",
+  "generated_at": "2026-06-19T11:10:29.105950+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm motor-carrier, TNC, dealer, mover, and repair requirements with the relevant state authority.",
+  "policy": "Public .gov sources only; 403/404 = park (no bypass); gaps explicit.",
+  "sub_verticals": {
+    "trucking": {
+      "sub_vertical": "trucking",
+      "label": "Trucking",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "MD PSC — Motor Carrier",
+        "url": "https://www.psc.state.md.us/",
+        "notes": "Maryland trucking — harvest pending"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-MD-TRU-001",
+          "text": "Back Telecommunications Overview Carriers Consumers FAQs Transportation Taxis, limos, sedans and rideshare regulatory information.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Maryland — Trucking",
+            "url": "https://www.psc.state.md.us/",
+            "agency": "MD PSC — Motor Carrier",
+            "jurisdiction": "Maryland",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    },
+    "rideshare_delivery": {
+      "sub_vertical": "rideshare_delivery",
+      "label": "Rideshare Delivery",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "MD PSC — Motor Carrier",
+        "url": "https://www.psc.state.md.us/",
+        "notes": "TNC/rideshare — confirm state TNC statute and licensing authority"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-MD-RID-001",
+          "text": "Back Telecommunications Overview Carriers Consumers FAQs Transportation Taxis, limos, sedans and rideshare regulatory information.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Maryland — Rideshare Delivery",
+            "url": "https://www.psc.state.md.us/",
+            "agency": "MD PSC — Motor Carrier",
+            "jurisdiction": "Maryland",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    },
+    "moving": {
+      "sub_vertical": "moving",
+      "label": "Moving",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "MD PSC — Motor Carrier",
+        "url": "https://www.psc.state.md.us/",
+        "notes": "Household goods movers — confirm HHG authority with state motor-carrier regulator"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-MD-MOV-001",
+          "text": "Case/Maillog Search Search cases/proceedings/administrative dockets and filings by case number or maillog tracking number.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Maryland — Moving",
+            "url": "https://www.psc.state.md.us/",
+            "agency": "MD PSC — Motor Carrier",
+            "jurisdiction": "Maryland",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    },
+    "dealerships": {
+      "sub_vertical": "dealerships",
+      "label": "Dealerships",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "MD MVA — Dealer Licensing",
+        "url": "https://mva.maryland.gov/",
+        "notes": "Maryland dealerships — harvest pending"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-MD-DEA-001",
+          "text": "if (window.uswdsPresent) { clearTimeout(fallback); revertClass(); window.removeEventListener(\"load\", verifyLoaded, true); } } window.addEventListener(\"load\", verifyLoaded, true); Skip to main content An official website of the State of Maryland.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Maryland — Dealerships",
+            "url": "https://mva.maryland.gov/",
+            "agency": "MD MVA — Dealer Licensing",
+            "jurisdiction": "Maryland",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    },
+    "auto_repair": {
+      "sub_vertical": "auto_repair",
+      "label": "Auto Repair",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "Maryland AG / Consumer Protection — Auto Repair",
+        "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+        "notes": "Federal FTC baseline; confirm state BAR/inspection program if any"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-MD-AUT-001",
+          "text": "Before sharing sensitive information, make sure you’re on a federal government site.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Maryland — Auto Repair",
+            "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+            "agency": "Maryland AG / Consumer Protection — Auto Repair",
+            "jurisdiction": "Maryland",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    }
+  },
+  "federal_context": [
+    {
+      "sub_vertical": "trucking",
+      "text": "The Pennsylvania Public Utility Commission regulates nearly 7,500 motor carriers that transport property, passengers, or household goods for compensation in Pennsylvania.",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    },
+    {
+      "sub_vertical": "trucking",
+      "text": "Property carriers (e.g., trucking companies) operating in Pennsylvania are regulated by the PUC for safety and insurance requirements only (not rates).",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    }
+  ],
+  "summary": {
+    "domain_count": 5,
+    "total_facts": 5,
+    "status_counts": {
+      "FOUND": 0,
+      "REQUIRES_CONFIRMATION": 5,
+      "NOT FOUND": 0,
+      "ACCESS_RESTRICTED": 0
+    },
+    "anchor_state": false,
+    "deep_harvest": false
+  },
+  "deepening_issues": [
+    275
+  ],
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-MD-CAR-001",
+            "text": "Regulated Utilities Regulated Utilities Learn More Back Electricity Regulation of electric utilities, renewable energy certification and permitting processes.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "MD PSC — Motor Carrier",
+              "url": "https://www.psc.state.md.us/",
+              "agency": "MD PSC",
+              "jurisdiction": "Maryland",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-MD-HOU-001",
+            "text": "Reports Official Commission reports, including those to the Maryland General Assembly.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "MD PSC — Motor Carrier",
+              "url": "https://www.psc.state.md.us/",
+              "agency": "MD PSC",
+              "jurisdiction": "Maryland",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-MD-VEH-001",
+            "text": "Back Gas Overview Gas Supplier License Application Pipeline Safety Programs and Forms Approved Gas Meter Shops Request Meter Tests Telecommunications Regulation of wholesale and local retail telecommunications services.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "MD PSC — Motor Carrier",
+              "url": "https://www.psc.state.md.us/",
+              "agency": "MD PSC",
+              "jurisdiction": "Maryland",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-MD-INS-001",
+            "text": "Safety and Reliability The Engineering Division monitors the operations of public service companies for safety, efficiency, reliability and quality of service.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "insurance",
+            "citation": {
+              "source": "MD PSC — Motor Carrier",
+              "url": "https://www.psc.state.md.us/",
+              "agency": "MD PSC",
+              "jurisdiction": "Maryland",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-MD-INT-001",
+            "text": "Case/Maillog Search Search cases/proceedings/administrative dockets and filings by case number or maillog tracking number.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "MD PSC — Motor Carrier",
+              "url": "https://www.psc.state.md.us/",
+              "agency": "MD PSC",
+              "jurisdiction": "Maryland",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": false,
+      "tranche": 3
+    }
+  },
+  "federal_dot_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_issue": 275
+}

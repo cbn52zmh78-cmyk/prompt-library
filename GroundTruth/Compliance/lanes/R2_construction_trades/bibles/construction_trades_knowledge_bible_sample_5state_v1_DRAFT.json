@@ -13,7 +13,7 @@
   "citation_standard": "STD-CITE-001",
   "knowledge_gate": "Knowledge-Gate-clean",
   "template": "GroundTruth/Compliance/compliance_bible_template_v1.json",
-  "generated_at": "2026-06-19T16:28:04+00:00",
+  "generated_at": "2026-06-19T16:44:44+00:00",
   "disclaimer": "Operational compliance research and cited public-records compilation — not legal, tax, or accounting advice. Transformative synthesis from cited public sources; confirm requirements with the relevant authority and licensed counsel.",
   "corpus": {
     "federal_issue": 234,
@@ -33,13 +33,13 @@
         "CA",
         "NY"
       ],
-      "cited_claims": 151,
-      "citation_count": 16,
+      "cited_claims": 161,
+      "citation_count": 20,
       "gaps_flagged": 6,
       "parked_sources": 1,
       "status_roll": {
-        "FOUND": 21,
-        "REQUIRES_CONFIRMATION": 8
+        "FOUND": 24,
+        "REQUIRES_CONFIRMATION": 5
       },
       "as_of_date": "2026-06-19",
       "honesty_rule": "Every claim STD-CITE-001 cited; gaps explicit; public sources only."
@@ -68,7 +68,7 @@
         ],
         "federal_baseline": true
       },
-      "methodology": "T2 #284-B harden: 5-state sample rebuilt from R1 launch-5 deep gather (git 37d2931) rich_curated register. Federal baseline unchanged (#234). Transformative synthesis from R2 corpus (#234 federal cited_data_pack + #266 state packs). Public .gov and agency portals only; HTTP 403/404/SSL sources PARKED without bypass. AI-assisted assembly with Knowledge Gate rails — not original legal research.",
+      "methodology": "T2 #284-B FINAL harden: 5-state launch lead-magnet rebuilt from R1 register (Stonebridge git c16d7bf, municipal refine). Federal baseline unchanged (#234). Transformative synthesis from R2 corpus (#234 federal cited_data_pack + #266 state packs). Public .gov and agency portals only; HTTP 403/404/SSL sources PARKED without bypass. AI-assisted assembly with Knowledge Gate rails — not original legal research.",
       "as_of_date": "2026-06-19",
       "retrieved_date": "2026-06-19",
       "policy": {
@@ -827,25 +827,43 @@
                   "status": "FOUND",
                   "citation_ref": 8,
                   "fact_id": "PA:general_contractor_licensing:4"
+                },
+                {
+                  "text": "Philadelphia requires a Contractor License from the Department of Licenses and Inspections (L&I) for construction, demolition, or repair work that does not require a specialized trade license; the license fee is $126 annually with a $20 non-refundable application fee.",
+                  "status": "FOUND",
+                  "citation_ref": 9,
+                  "fact_id": "PA:general_contractor_licensing:5"
+                },
+                {
+                  "text": "Philadelphia contractor license applicants must provide general liability insurance of at least $500,000 per occurrence, automobile liability of $300,000, and workers' compensation coverage; supervisors must complete OSHA 30 Construction Safety and Health within five years of application.",
+                  "status": "FOUND",
+                  "citation_ref": 9,
+                  "fact_id": "PA:general_contractor_licensing:6"
+                },
+                {
+                  "text": "Contractors working in Philadelphia must hold a valid license and follow L&I contractor requirements; L&I issues contractor licenses and maintains a public contractor lookup tool.",
+                  "status": "FOUND",
+                  "citation_ref": 9,
+                  "fact_id": "PA:general_contractor_licensing:7"
                 }
               ],
               "gap": {
                 "state": "Pennsylvania",
                 "topic": "Home improvement / general contractor registration",
                 "status": "NOT FOUND",
-                "rendered": "NOT FOUND — [source checked: City licensing portals (403 at harvest — confirm locally)]",
-                "source_checked": "City licensing portals (403 at harvest — confirm locally)",
-                "detail": "PA DLI notes separate city licensing for Philadelphia and Pittsburgh"
+                "rendered": "NOT FOUND — [source checked: https://www.pittsburghpa.gov/city-government/departments/permits-licenses-inspections (HTTP 403)]",
+                "source_checked": "https://www.pittsburghpa.gov/city-government/departments/permits-licenses-inspections (HTTP 403)",
+                "detail": "PA DLI notes separate Pittsburgh city licensing; municipal portal blocked at harvest — confirm locally"
               }
             },
             {
               "kind": "trade",
               "key": "electrical",
               "label": "Electrical contractor / electrician licensing",
-              "status": "REQUIRES_CONFIRMATION",
+              "status": "FOUND",
               "regulator": {
-                "agency": "PA municipalities / local boards (no statewide GC electrician license)",
-                "url": "https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing",
+                "agency": "PA municipalities / Philadelphia L&I (no statewide electrician license)",
+                "url": "https://www.phila.gov/services/permits-violations-licenses/get-a-license/trade-licenses/get-an-electrical-contractor-license/",
                 "statewide_gc": "no"
               },
               "claims": [
@@ -854,25 +872,30 @@
                   "status": "FOUND",
                   "citation_ref": 7,
                   "fact_id": "PA:electrical_licensing:1"
+                },
+                {
+                  "text": "Philadelphia requires an Electrical Contractor License from L&I to perform electrical work in the city, including low-voltage wiring; the license fee is $262 with a $60 non-refundable application fee.",
+                  "status": "FOUND",
+                  "citation_ref": 9,
+                  "fact_id": "PA:electrical_licensing:2"
+                },
+                {
+                  "text": "Philadelphia electrical contractor applicants must pass the Philadelphia Electrical Contractor Examination (ICC), demonstrate four years of electrical employment (or equivalent education), and complete eight hours of NFPA 70 coursework within 12 months preceding application.",
+                  "status": "FOUND",
+                  "citation_ref": 9,
+                  "fact_id": "PA:electrical_licensing:3"
                 }
               ],
-              "gap": {
-                "state": "Pennsylvania",
-                "topic": "Electrical contractor / electrician licensing",
-                "status": "NOT FOUND",
-                "rendered": "NOT FOUND — [source checked: https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing]",
-                "source_checked": "https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing",
-                "detail": "Confirm local electrical board in municipality of work"
-              }
+              "gap": null
             },
             {
               "kind": "trade",
               "key": "plumbing",
               "label": "Plumbing contractor licensing",
-              "status": "REQUIRES_CONFIRMATION",
+              "status": "FOUND",
               "regulator": {
-                "agency": "PA municipalities (local)",
-                "url": "https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing",
+                "agency": "PA municipalities / Philadelphia L&I (local)",
+                "url": "https://www.phila.gov/services/permits-violations-licenses/get-a-license/trade-licenses/get-a-master-plumbers-license/",
                 "statewide_gc": "no"
               },
               "claims": [
@@ -881,16 +904,15 @@
                   "status": "FOUND",
                   "citation_ref": 7,
                   "fact_id": "PA:plumbing_licensing:1"
+                },
+                {
+                  "text": "Philadelphia requires plumbing work to be performed by a licensed master plumber; master plumber license applicants must be registered as a Philadelphia Journeyman Plumber for at least one year and pass the Philadelphia Master Plumber Examination (ICC).",
+                  "status": "FOUND",
+                  "citation_ref": 9,
+                  "fact_id": "PA:plumbing_licensing:2"
                 }
               ],
-              "gap": {
-                "state": "Pennsylvania",
-                "topic": "Plumbing contractor licensing",
-                "status": "REQUIRES_CONFIRMATION",
-                "rendered": "REQUIRES_CONFIRMATION — [source checked: https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing]",
-                "source_checked": "https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing",
-                "detail": ""
-              }
+              "gap": null
             },
             {
               "kind": "trade",
@@ -983,33 +1005,57 @@
               "kind": "trade",
               "key": "general_contractor",
               "label": "General contractor (local — no state GC license)",
-              "status": "REQUIRES_CONFIRMATION",
+              "status": "FOUND",
               "regulator": {
-                "agency": "Local municipalities / county",
-                "url": "https://www.tdlr.texas.gov/",
+                "agency": "Local municipalities (Austin BTCS, Houston BCE, Dallas Building Inspection)",
+                "url": "https://www.austintexas.gov/page/contractor-registration",
                 "statewide_gc": "no"
               },
               "claims": [
                 {
                   "text": "Texas does not issue a statewide general contractor license; TDLR regulates specific building trades (electrical, HVAC/refrigeration, plumbing via TSBPE) while general contracting is governed locally.",
                   "status": "FOUND",
-                  "citation_ref": 9,
+                  "citation_ref": 10,
                   "fact_id": "TX:general_contractor_licensing:1"
+                },
+                {
+                  "text": "In Austin, general contractors, trade contractors, and homeowners acting as contractors must register with Building and Trade Contractor Services (BTCS) before beginning construction associated with a building or trade permit; Texas has no state GC license requirement.",
+                  "status": "FOUND",
+                  "citation_ref": 11,
+                  "fact_id": "TX:general_contractor_licensing:2"
+                },
+                {
+                  "text": "Austin general contractors register once via BTCS web form and receive a Contractor/Homeowner PIN for permit activation; MEP trade contractors must also hold state trade licenses and register annually with BTCS.",
+                  "status": "FOUND",
+                  "citation_ref": 11,
+                  "fact_id": "TX:general_contractor_licensing:3"
+                },
+                {
+                  "text": "Houston Building Code Enforcement processes building permits through the Houston Permitting Center; trade contractors are licensed by inspection sections and fire alarm/sprinkler contractors register with the Permits office — no separate citywide GC license program is published on the permits portal.",
+                  "status": "FOUND",
+                  "citation_ref": 12,
+                  "fact_id": "TX:general_contractor_licensing:4"
+                },
+                {
+                  "text": "City of Dallas Sustainable Development / Building Inspection publishes a General Contractor Registration Form and ALL CONTRACTOR REGISTRATION materials for contractor registration with the city.",
+                  "status": "FOUND",
+                  "citation_ref": 13,
+                  "fact_id": "TX:general_contractor_licensing:5"
                 },
                 {
                   "text": "TDLR's Texas Architectural Barriers System (TABS) provides registration and lookup for construction projects subject to accessibility requirements.",
                   "status": "FOUND",
-                  "citation_ref": 9,
-                  "fact_id": "TX:general_contractor_licensing:2"
+                  "citation_ref": 10,
+                  "fact_id": "TX:general_contractor_licensing:6"
                 }
               ],
               "gap": {
                 "state": "Texas",
                 "topic": "General contractor (local — no state GC license)",
                 "status": "NOT FOUND",
-                "rendered": "NOT FOUND — [source checked: https://www.tdlr.texas.gov/]",
-                "source_checked": "https://www.tdlr.texas.gov/",
-                "detail": "Local/municipal primary authority — confirm with jurisdiction portal"
+                "rendered": "NOT FOUND — [source checked: https://www.sa.gov/departments/development-services (HTTP 403)]",
+                "source_checked": "https://www.sa.gov/departments/development-services (HTTP 403)",
+                "detail": "San Antonio DSD contractor pages blocked at harvest — confirm with Development Services locally"
               }
             },
             {
@@ -1026,13 +1072,13 @@
                 {
                   "text": "Anyone who performs or offers to perform non-exempt electrical work in Texas must be licensed and perform that work through a licensed electrical contractor.",
                   "status": "FOUND",
-                  "citation_ref": 9,
+                  "citation_ref": 10,
                   "fact_id": "TX:electrical_licensing:1"
                 },
                 {
                   "text": "TDLR issues individual electrician licenses (apprentice, journeyman, master, residential wireman, etc.) and business electrical contractor licenses searchable via TDLR License Search (program ELC).",
                   "status": "FOUND",
-                  "citation_ref": 9,
+                  "citation_ref": 10,
                   "fact_id": "TX:electrical_licensing:2"
                 }
               ],
@@ -1052,7 +1098,7 @@
                 {
                   "text": "The Texas State Board of Plumbing Examiners (TSBPE) licenses and regulates the plumbing trade statewide, including apprentice, journeyman, and master plumber license types.",
                   "status": "FOUND",
-                  "citation_ref": 10,
+                  "citation_ref": 14,
                   "fact_id": "TX:plumbing_licensing:1"
                 }
               ],
@@ -1079,7 +1125,7 @@
                 {
                   "text": "Contractors who install, repair, or maintain air conditioning, refrigeration, or heating systems must hold a TDLR ACR contractor license; ACR companies must employ an ACR contractor in each permanent location.",
                   "status": "FOUND",
-                  "citation_ref": 9,
+                  "citation_ref": 10,
                   "fact_id": "TX:hvac_licensing:1"
                 }
               ],
@@ -1127,19 +1173,19 @@
                 {
                   "text": "Florida's Construction Industry Licensing Board licenses and regulates the construction industry; certified contractors (occupation codes beginning with 'C') may contract statewide without meeting each jurisdiction's competency exam.",
                   "status": "FOUND",
-                  "citation_ref": 11,
+                  "citation_ref": 15,
                   "fact_id": "FL:general_contractor_licensing:1"
                 },
                 {
                   "text": "A Florida 'general contractor' (CG/RG) has unlimited services as to the type of work they may perform under Chapter 489, Florida Statutes.",
                   "status": "FOUND",
-                  "citation_ref": 11,
+                  "citation_ref": 15,
                   "fact_id": "FL:general_contractor_licensing:2"
                 },
                 {
                   "text": "Registered contractors (codes beginning with 'R') may contract only in jurisdictions where registered; they must meet local competency requirements.",
                   "status": "FOUND",
-                  "citation_ref": 11,
+                  "citation_ref": 15,
                   "fact_id": "FL:general_contractor_licensing:3"
                 }
               ],
@@ -1159,7 +1205,7 @@
                 {
                   "text": "Florida electrical contracting falls under CILB specialty classifications; certified electrical contractors may work statewide when holding the appropriate CILB certificate of competency.",
                   "status": "FOUND",
-                  "citation_ref": 11,
+                  "citation_ref": 15,
                   "fact_id": "FL:electrical_licensing:1"
                 }
               ],
@@ -1179,7 +1225,7 @@
                 {
                   "text": "A Florida plumbing contractor (CF/RF) may install, maintain, repair, alter, extend, or design plumbing including sanitary drainage, water supply, septic tanks, gas piping, and medical gas systems without obtaining additional local regulatory licenses.",
                   "status": "FOUND",
-                  "citation_ref": 11,
+                  "citation_ref": 15,
                   "fact_id": "FL:plumbing_licensing:1"
                 }
               ],
@@ -1199,13 +1245,13 @@
                 {
                   "text": "Florida Class A air-conditioning contractors (CA/RA) have unlimited scope for central air-conditioning, refrigeration, heating, and ventilating systems; Class B contractors are limited to 25 tons cooling and 500,000 BTU heating per system.",
                   "status": "FOUND",
-                  "citation_ref": 11,
+                  "citation_ref": 15,
                   "fact_id": "FL:hvac_licensing:1"
                 },
                 {
                   "text": "Class A and B air-conditioning contractors may not perform liquefied petroleum or natural gas fuel lines within buildings, potable water connections, sanitary sewer lines, swimming pool piping, or electrical power wiring unless separately licensed.",
                   "status": "FOUND",
-                  "citation_ref": 11,
+                  "citation_ref": 15,
                   "fact_id": "FL:hvac_licensing:2"
                 }
               ],
@@ -1225,7 +1271,7 @@
                 {
                   "text": "Florida roofing contractors (CC/RC) have unlimited scope in the roofing trade including installation, maintenance, repair, waterproofing, and coating; scope includes skylights, roof-deck attachments, and limited wood sheathing repair during reroofing.",
                   "status": "FOUND",
-                  "citation_ref": 11,
+                  "citation_ref": 15,
                   "fact_id": "FL:roofing_licensing:1"
                 }
               ],
@@ -1245,7 +1291,7 @@
                 {
                   "text": "Florida's Construction Policy Tracking Database (Florida DFS Division of Workers' Compensation) provides contractor workers' compensation coverage status and automatic electronic notification of coverage changes.",
                   "status": "FOUND",
-                  "citation_ref": 11,
+                  "citation_ref": 15,
                   "fact_id": "FL:bonding_insurance:1"
                 }
               ],
@@ -1265,7 +1311,7 @@
                 {
                   "text": "Florida Building Code information, product approval, manufactured building program, and local amendment database are accessible through DBPR Building Codes & Standards (Florida Building Commission, Sections 553.73–553.77, F.S.).",
                   "status": "FOUND",
-                  "citation_ref": 12,
+                  "citation_ref": 16,
                   "fact_id": "FL:building_codes:1"
                 }
               ],
@@ -1294,19 +1340,19 @@
                 {
                   "text": "CSLB licenses and regulates California's construction industry statewide; CSLB was established in 1929 and licenses about 285,000 contractors in 45 classifications.",
                   "status": "FOUND",
-                  "citation_ref": 13,
+                  "citation_ref": 17,
                   "fact_id": "CA:general_contractor_licensing:1"
                 },
                 {
                   "text": "CSLB licensure requires passing two examinations — law and business, and trade — unless a waiver applies; C-61 Limited Specialty classification has no trade exam.",
                   "status": "FOUND",
-                  "citation_ref": 13,
+                  "citation_ref": 17,
                   "fact_id": "CA:general_contractor_licensing:2"
                 },
                 {
                   "text": "Original CSLB license application fee (exam or waiver, one classification) is $450; initial license fee is $200 (sole owner) or $350 (non-sole owner).",
                   "status": "FOUND",
-                  "citation_ref": 13,
+                  "citation_ref": 17,
                   "fact_id": "CA:general_contractor_licensing:3"
                 }
               ],
@@ -1326,7 +1372,7 @@
                 {
                   "text": "Electrical contracting in California is performed under CSLB license classification C-10 (Electrical); active timely renewal for C-10 contractors is $470 (sole owner) or $720 (non-sole owner) per CSLB fee schedule.",
                   "status": "FOUND",
-                  "citation_ref": 13,
+                  "citation_ref": 17,
                   "fact_id": "CA:electrical_licensing:1"
                 }
               ],
@@ -1346,7 +1392,7 @@
                 {
                   "text": "Plumbing contracting is licensed under CSLB C-36 classification as part of the statewide contractor license system — not a separate non-CSLB trade board.",
                   "status": "FOUND",
-                  "citation_ref": 13,
+                  "citation_ref": 17,
                   "fact_id": "CA:plumbing_licensing:1"
                 }
               ],
@@ -1366,7 +1412,7 @@
                 {
                   "text": "HVAC/mechanical contracting is licensed under CSLB C-20 (Warm-Air Heating, Ventilating and Air-Conditioning) and related specialty classifications per CSLB Description of Classifications.",
                   "status": "FOUND",
-                  "citation_ref": 13,
+                  "citation_ref": 17,
                   "fact_id": "CA:hvac_licensing:1"
                 }
               ],
@@ -1386,13 +1432,13 @@
                 {
                   "text": "A California contractor must maintain a contractor's bond on file with CSLB in the sum of $25,000 from a surety company or as a cashier's check held by CSLB.",
                   "status": "FOUND",
-                  "citation_ref": 13,
+                  "citation_ref": 17,
                   "fact_id": "CA:bonding_insurance:1"
                 },
                 {
                   "text": "CSLB restricts residential down payments: contractors may not receive more than $1,000 or 10% of the contract price (whichever is less) as a down payment on home improvement, solar, ADU, and disaster-rebuild work.",
                   "status": "FOUND",
-                  "citation_ref": 13,
+                  "citation_ref": 17,
                   "fact_id": "CA:bonding_insurance:2"
                 }
               ],
@@ -1412,7 +1458,7 @@
                 {
                   "text": "The California Building Standards Code (Cal. Code Regs., Title 24) is published by the Building Standards Commission; the 2025 code publishes July 1, 2025 with effective date January 1, 2026.",
                   "status": "FOUND",
-                  "citation_ref": 14,
+                  "citation_ref": 18,
                   "fact_id": "CA:building_codes:1"
                 }
               ],
@@ -1440,13 +1486,13 @@
                 {
                   "text": "New York does not issue a statewide general contractor license; construction contractor licensing is primarily local (e.g., NYC Dept of Buildings for New York City).",
                   "status": "FOUND",
-                  "citation_ref": 15,
+                  "citation_ref": 19,
                   "fact_id": "NY:general_contractor_licensing:1"
                 },
                 {
                   "text": "As of September 7, 2021, all new NYC Dept of Buildings license applications must be submitted online via NYC DOB NOW at nyc.gov/dobnow.",
                   "status": "FOUND",
-                  "citation_ref": 16,
+                  "citation_ref": 20,
                   "fact_id": "NY:general_contractor_licensing:2"
                 }
               ],
@@ -1473,7 +1519,7 @@
                 {
                   "text": "NYC Dept of Buildings licenses skilled trades and construction professionals including master electricians and special rigging; license insurance updates must be submitted via DOB NOW as of June 5, 2023.",
                   "status": "FOUND",
-                  "citation_ref": 16,
+                  "citation_ref": 20,
                   "fact_id": "NY:electrical_licensing:1"
                 }
               ],
@@ -1493,7 +1539,7 @@
                 {
                   "text": "NYC DOB issues plumber and master plumber licenses as part of its skilled-trades licensing program; requirements include exams, qualifications, and insurance per DOB licensing guidelines.",
                   "status": "FOUND",
-                  "citation_ref": 16,
+                  "citation_ref": 20,
                   "fact_id": "NY:plumbing_licensing:1"
                 }
               ],
@@ -1540,7 +1586,7 @@
                 {
                   "text": "New York City enforces NYC Building Code through Dept of Buildings permit, plan examination, and inspection workflows; statewide construction outside NYC follows local adopted codes.",
                   "status": "FOUND",
-                  "citation_ref": 16,
+                  "citation_ref": 20,
                   "fact_id": "NY:building_codes:1"
                 }
               ],
@@ -1552,7 +1598,7 @@
     },
     "4_source_register_graded": {
       "title": "Source Register (Graded)",
-      "source_count": 23,
+      "source_count": 27,
       "sources": [
         {
           "ref": 1,
@@ -1636,6 +1682,16 @@
         },
         {
           "ref": 9,
+          "source_name": "City of Philadelphia — Get a Contractor License",
+          "source_url": "https://www.phila.gov/services/permits-violations-licenses/get-a-license/trade-licenses/get-a-contractor-license/",
+          "retrieved_date": "2026-06-19",
+          "jurisdiction": "Philadelphia, PA",
+          "grade": "primary",
+          "reliability_note": "Authoritative public agency source (.gov or agency_primary tier).",
+          "harvest_status": "HARVESTED"
+        },
+        {
+          "ref": 10,
           "source_name": "TDLR — Agency home",
           "source_url": "https://www.tdlr.texas.gov/",
           "retrieved_date": "2026-06-19",
@@ -1645,7 +1701,37 @@
           "harvest_status": "HARVESTED"
         },
         {
-          "ref": 10,
+          "ref": 11,
+          "source_name": "City of Austin — Contractor Registration",
+          "source_url": "https://www.austintexas.gov/page/contractor-registration",
+          "retrieved_date": "2026-06-19",
+          "jurisdiction": "Austin, TX",
+          "grade": "primary",
+          "reliability_note": "Authoritative public agency source (.gov or agency_primary tier).",
+          "harvest_status": "HARVESTED"
+        },
+        {
+          "ref": 12,
+          "source_name": "Houston Permitting Center — Permits",
+          "source_url": "https://www.houstonpermittingcenter.org/building-code-enforcement/permits",
+          "retrieved_date": "2026-06-19",
+          "jurisdiction": "Houston, TX",
+          "grade": "secondary",
+          "reliability_note": "Public web source — verify against state regulator portal.",
+          "harvest_status": "HARVESTED"
+        },
+        {
+          "ref": 13,
+          "source_name": "City of Dallas — Forms & Applications",
+          "source_url": "https://dallascityhall.com/departments/sustainabledevelopment/buildinginspection/pages/forms-applications.aspx",
+          "retrieved_date": "2026-06-19",
+          "jurisdiction": "Dallas, TX",
+          "grade": "secondary",
+          "reliability_note": "Public web source — verify against state regulator portal.",
+          "harvest_status": "HARVESTED"
+        },
+        {
+          "ref": 14,
           "source_name": "TSBPE — Home",
           "source_url": "https://tsbpe.texas.gov/",
           "retrieved_date": "2026-06-19",
@@ -1655,7 +1741,7 @@
           "harvest_status": "HARVESTED"
         },
         {
-          "ref": 11,
+          "ref": 15,
           "source_name": "FL DBPR — Construction Industry",
           "source_url": "https://www2.myfloridalicense.com/construction-industry/",
           "retrieved_date": "2026-06-19",
@@ -1665,7 +1751,7 @@
           "harvest_status": "HARVESTED"
         },
         {
-          "ref": 12,
+          "ref": 16,
           "source_name": "FL DBPR — Building Codes",
           "source_url": "https://www2.myfloridalicense.com/building-codes-and-standards/",
           "retrieved_date": "2026-06-19",
@@ -1675,7 +1761,7 @@
           "harvest_status": "HARVESTED"
         },
         {
-          "ref": 13,
+          "ref": 17,
           "source_name": "CSLB — Home",
           "source_url": "https://www.cslb.ca.gov/",
           "retrieved_date": "2026-06-19",
@@ -1685,7 +1771,7 @@
           "harvest_status": "HARVESTED"
         },
         {
-          "ref": 14,
+          "ref": 18,
           "source_name": "CA BSC — Codes",
           "source_url": "https://www.dgs.ca.gov/BSC/Codes",
           "retrieved_date": "2026-06-19",
@@ -1695,7 +1781,7 @@
           "harvest_status": "HARVESTED"
         },
         {
-          "ref": 15,
+          "ref": 19,
           "source_name": "NY DOS — Licensing Services",
           "source_url": "https://dos.ny.gov/licensing-services",
           "retrieved_date": "2026-06-19",
@@ -1705,7 +1791,7 @@
           "harvest_status": "HARVESTED"
         },
         {
-          "ref": 16,
+          "ref": 20,
           "source_name": "NYC DOB — Licensing",
           "source_url": "https://www.nyc.gov/site/buildings/industry/licensing.page",
           "retrieved_date": "2026-06-19",
@@ -1838,21 +1924,13 @@
           "state": "Pennsylvania",
           "topic": "Home improvement / general contractor registration",
           "status": "NOT FOUND",
-          "rendered": "NOT FOUND — [source checked: City licensing portals (403 at harvest — confirm locally)]",
-          "source_checked": "City licensing portals (403 at harvest — confirm locally)",
-          "detail": "PA DLI notes separate city licensing for Philadelphia and Pittsburgh"
+          "rendered": "NOT FOUND — [source checked: https://www.pittsburghpa.gov/city-government/departments/permits-licenses-inspections (HTTP 403)]",
+          "source_checked": "https://www.pittsburghpa.gov/city-government/departments/permits-licenses-inspections (HTTP 403)",
+          "detail": "PA DLI notes separate Pittsburgh city licensing; municipal portal blocked at harvest — confirm locally"
         },
         {
           "state": "Pennsylvania",
-          "topic": "Electrical contractor / electrician licensing",
-          "status": "NOT FOUND",
-          "rendered": "NOT FOUND — [source checked: https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing]",
-          "source_checked": "https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing",
-          "detail": "Confirm local electrical board in municipality of work"
-        },
-        {
-          "state": "Pennsylvania",
-          "topic": "Plumbing contractor licensing",
+          "topic": "HVAC / mechanical contractor licensing",
           "status": "REQUIRES_CONFIRMATION",
           "rendered": "REQUIRES_CONFIRMATION — [source checked: https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing]",
           "source_checked": "https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home/contractor-licensing",
@@ -1862,9 +1940,9 @@
           "state": "Texas",
           "topic": "General contractor (local — no state GC license)",
           "status": "NOT FOUND",
-          "rendered": "NOT FOUND — [source checked: https://www.tdlr.texas.gov/]",
-          "source_checked": "https://www.tdlr.texas.gov/",
-          "detail": "Local/municipal primary authority — confirm with jurisdiction portal"
+          "rendered": "NOT FOUND — [source checked: https://www.sa.gov/departments/development-services (HTTP 403)]",
+          "source_checked": "https://www.sa.gov/departments/development-services (HTTP 403)",
+          "detail": "San Antonio DSD contractor pages blocked at harvest — confirm with Development Services locally"
         },
         {
           "state": "Texas",
@@ -1873,6 +1951,14 @@
           "rendered": "NOT FOUND — [source checked: https://www.tdlr.texas.gov/plumbing/]",
           "source_checked": "https://www.tdlr.texas.gov/plumbing/",
           "detail": "Program pages 404 at harvest — TSBPE is current plumbing authority"
+        },
+        {
+          "state": "Texas",
+          "topic": "Building codes (local adoption)",
+          "status": "NOT FOUND",
+          "rendered": "NOT FOUND — [source checked: https://www.tdlr.texas.gov/]",
+          "source_checked": "https://www.tdlr.texas.gov/",
+          "detail": "Texas adopts model codes at local level — confirm city/county adopted IBC/IRC edition"
         },
         {
           "state": "New York",
@@ -1887,7 +1973,7 @@
     "7_confidence": {
       "title": "Confidence Assessment",
       "overall": "MEDIUM",
-      "basis": "As-of 2026-06-19; 151 cited claims; 6 gaps flagged; 1 parked sources; 8 REQUIRES_CONFIRMATION.",
+      "basis": "As-of 2026-06-19; 161 cited claims; 6 gaps flagged; 1 parked sources; 5 REQUIRES_CONFIRMATION.",
       "by_section": {
         "federal_baseline": {
           "level": "HIGH",
@@ -1913,7 +1999,7 @@
     },
     "8_citations": {
       "title": "Full Citation Appendix (STD-CITE-001)",
-      "citation_count": 16,
+      "citation_count": 20,
       "references": [
         {
           "ref": 1,
@@ -1997,7 +2083,17 @@
         },
         {
           "ref": 9,
-          "line": "9. TDLR — Agency home — https://www.tdlr.texas.gov/ — retrieved 2026-06-19 — Texas",
+          "line": "9. City of Philadelphia — Get a Contractor License — https://www.phila.gov/services/permits-violations-licenses/get-a-license/trade-licenses/get-a-contractor-license/ — retrieved 2026-06-19 — Philadelphia, PA",
+          "source_name": "City of Philadelphia — Get a Contractor License",
+          "source_url": "https://www.phila.gov/services/permits-violations-licenses/get-a-license/trade-licenses/get-a-contractor-license/",
+          "retrieved_date": "2026-06-19",
+          "jurisdiction": "Philadelphia, PA",
+          "agency": "Philadelphia Dept of Licenses & Inspections",
+          "tier": "municipal_primary"
+        },
+        {
+          "ref": 10,
+          "line": "10. TDLR — Agency home — https://www.tdlr.texas.gov/ — retrieved 2026-06-19 — Texas",
           "source_name": "TDLR — Agency home",
           "source_url": "https://www.tdlr.texas.gov/",
           "retrieved_date": "2026-06-19",
@@ -2006,8 +2102,38 @@
           "tier": "agency_primary"
         },
         {
-          "ref": 10,
-          "line": "10. TSBPE — Home — https://tsbpe.texas.gov/ — retrieved 2026-06-19 — Texas",
+          "ref": 11,
+          "line": "11. City of Austin — Contractor Registration — https://www.austintexas.gov/page/contractor-registration — retrieved 2026-06-19 — Austin, TX",
+          "source_name": "City of Austin — Contractor Registration",
+          "source_url": "https://www.austintexas.gov/page/contractor-registration",
+          "retrieved_date": "2026-06-19",
+          "jurisdiction": "Austin, TX",
+          "agency": "City of Austin Development Services",
+          "tier": "municipal_primary"
+        },
+        {
+          "ref": 12,
+          "line": "12. Houston Permitting Center — Permits — https://www.houstonpermittingcenter.org/building-code-enforcement/permits — retrieved 2026-06-19 — Houston, TX",
+          "source_name": "Houston Permitting Center — Permits",
+          "source_url": "https://www.houstonpermittingcenter.org/building-code-enforcement/permits",
+          "retrieved_date": "2026-06-19",
+          "jurisdiction": "Houston, TX",
+          "agency": "City of Houston — Building Code Enforcement",
+          "tier": "municipal_primary"
+        },
+        {
+          "ref": 13,
+          "line": "13. City of Dallas — Forms & Applications — https://dallascityhall.com/departments/sustainabledevelopment/buildinginspection/pages/forms-applications.aspx — retrieved 2026-06-19 — Dallas, TX",
+          "source_name": "City of Dallas — Forms & Applications",
+          "source_url": "https://dallascityhall.com/departments/sustainabledevelopment/buildinginspection/pages/forms-applications.aspx",
+          "retrieved_date": "2026-06-19",
+          "jurisdiction": "Dallas, TX",
+          "agency": "City of Dallas — Building Inspection",
+          "tier": "municipal_primary"
+        },
+        {
+          "ref": 14,
+          "line": "14. TSBPE — Home — https://tsbpe.texas.gov/ — retrieved 2026-06-19 — Texas",
           "source_name": "TSBPE — Home",
           "source_url": "https://tsbpe.texas.gov/",
           "retrieved_date": "2026-06-19",
@@ -2016,8 +2142,8 @@
           "tier": "agency_primary"
         },
         {
-          "ref": 11,
-          "line": "11. FL DBPR — Construction Industry — https://www2.myfloridalicense.com/construction-industry/ — retrieved 2026-06-19 — Florida",
+          "ref": 15,
+          "line": "15. FL DBPR — Construction Industry — https://www2.myfloridalicense.com/construction-industry/ — retrieved 2026-06-19 — Florida",
           "source_name": "FL DBPR — Construction Industry",
           "source_url": "https://www2.myfloridalicense.com/construction-industry/",
           "retrieved_date": "2026-06-19",
@@ -2026,8 +2152,8 @@
           "tier": "agency_primary"
         },
         {
-          "ref": 12,
-          "line": "12. FL DBPR — Building Codes — https://www2.myfloridalicense.com/building-codes-and-standards/ — retrieved 2026-06-19 — Florida",
+          "ref": 16,
+          "line": "16. FL DBPR — Building Codes — https://www2.myfloridalicense.com/building-codes-and-standards/ — retrieved 2026-06-19 — Florida",
           "source_name": "FL DBPR — Building Codes",
           "source_url": "https://www2.myfloridalicense.com/building-codes-and-standards/",
           "retrieved_date": "2026-06-19",
@@ -2036,8 +2162,8 @@
           "tier": "agency_primary"
         },
         {
-          "ref": 13,
-          "line": "13. CSLB — Home — https://www.cslb.ca.gov/ — retrieved 2026-06-19 — California",
+          "ref": 17,
+          "line": "17. CSLB — Home — https://www.cslb.ca.gov/ — retrieved 2026-06-19 — California",
           "source_name": "CSLB — Home",
           "source_url": "https://www.cslb.ca.gov/",
           "retrieved_date": "2026-06-19",
@@ -2046,8 +2172,8 @@
           "tier": "agency_primary"
         },
         {
-          "ref": 14,
-          "line": "14. CA BSC — Codes — https://www.dgs.ca.gov/BSC/Codes — retrieved 2026-06-19 — California",
+          "ref": 18,
+          "line": "18. CA BSC — Codes — https://www.dgs.ca.gov/BSC/Codes — retrieved 2026-06-19 — California",
           "source_name": "CA BSC — Codes",
           "source_url": "https://www.dgs.ca.gov/BSC/Codes",
           "retrieved_date": "2026-06-19",
@@ -2056,8 +2182,8 @@
           "tier": "agency_primary"
         },
         {
-          "ref": 15,
-          "line": "15. NY DOS — Licensing Services — https://dos.ny.gov/licensing-services — retrieved 2026-06-19 — New York",
+          "ref": 19,
+          "line": "19. NY DOS — Licensing Services — https://dos.ny.gov/licensing-services — retrieved 2026-06-19 — New York",
           "source_name": "NY DOS — Licensing Services",
           "source_url": "https://dos.ny.gov/licensing-services",
           "retrieved_date": "2026-06-19",
@@ -2066,8 +2192,8 @@
           "tier": "agency_primary"
         },
         {
-          "ref": 16,
-          "line": "16. NYC DOB — Licensing — https://www.nyc.gov/site/buildings/industry/licensing.page — retrieved 2026-06-19 — New York",
+          "ref": 20,
+          "line": "20. NYC DOB — Licensing — https://www.nyc.gov/site/buildings/industry/licensing.page — retrieved 2026-06-19 — New York",
           "source_name": "NYC DOB — Licensing",
           "source_url": "https://www.nyc.gov/site/buildings/industry/licensing.page",
           "retrieved_date": "2026-06-19",
@@ -2079,49 +2205,60 @@
     }
   },
   "harden": {
-    "task": "T2 #284-B",
-    "executed_at": "2026-06-19T16:28:04+00:00",
-    "r1_register_git": "37d2931",
+    "task": "T2 #284-B FINAL",
+    "phase": "LOCKED",
+    "executed_at": "2026-06-19T16:44:44+00:00",
+    "r1_register_git": "c16d7bf",
     "r1_register_path": "Operations/Compliance_Research/groundtruth/Compliance/construction_trades",
     "r1_source_register": "Operations/Compliance_Research/groundtruth/Compliance/construction_trades/source_register.json",
     "proof": {
-      "task": "T2 #284-B",
-      "status": "EXECUTED",
-      "executed_at": "2026-06-19T16:28:04+00:00",
-      "r1_register_git": "37d2931",
+      "task": "T2 #284-B FINAL",
+      "status": "LOCKED",
+      "phase": "launch_lead_magnet",
+      "executed_at": "2026-06-19T16:44:44+00:00",
+      "r1_register_git": "5dbb901 (includes c16d7bf)",
+      "r1_register_pin": "c16d7bf",
       "r1_register_path": "Operations/Compliance_Research/groundtruth/Compliance/construction_trades",
       "before": {
-        "total": 7,
-        "by_state": {
-          "PA": 1,
-          "TX": 1,
-          "FL": 1,
-          "CA": 2,
-          "NY": 2
-        },
-        "corpus": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R2_construction_trades",
-        "cited_claims": 220
-      },
-      "after": {
         "total": 6,
         "by_state": {
-          "PA": 3,
-          "TX": 2,
+          "PA": 2,
+          "TX": 3,
           "FL": 0,
           "CA": 0,
           "NY": 1
         },
         "corpus": "Operations/Compliance_Research/groundtruth/Compliance/construction_trades",
-        "cited_claims": 151
+        "cited_claims": 161
       },
-      "delta_by_state": {
+      "after": {
+        "total": 6,
+        "by_state": {
+          "PA": 2,
+          "TX": 3,
+          "FL": 0,
+          "CA": 0,
+          "NY": 1
+        },
+        "corpus": "Operations/Compliance_Research/groundtruth/Compliance/construction_trades",
+        "cited_claims": 161
+      },
+      "expected_by_state": {
         "PA": 2,
-        "TX": 1,
-        "FL": -1,
-        "CA": -2,
-        "NY": -1
+        "TX": 3,
+        "FL": 0,
+        "CA": 0,
+        "NY": 1
       },
-      "delta_total": -1,
+      "gap_match": true,
+      "delta_by_state": {
+        "PA": 0,
+        "TX": 0,
+        "FL": 0,
+        "CA": 0,
+        "NY": 0
+      },
+      "delta_total": 0,
       "launch_states": [
         "PA",
         "TX",
@@ -2134,7 +2271,7 @@
   "_output_stamp": {
     "issue": 284,
     "canonical_path": "GroundTruth/Compliance/lanes/R2_construction_trades/bibles/construction_trades_knowledge_bible_sample_5state_v1_DRAFT.json",
-    "stamped_at": "2026-06-19T16:28:04+00:00",
+    "stamped_at": "2026-06-19T16:44:44+00:00",
     "registry": "GroundTruth/Compliance/lanes/R2_construction_trades/bibles"
   }
 }

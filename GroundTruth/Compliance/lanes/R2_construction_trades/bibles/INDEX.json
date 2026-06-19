@@ -4,7 +4,7 @@
   "product_status": "DRAFT",
   "sellable": false,
   "pinned_dir": "GroundTruth/Compliance/lanes/R2_construction_trades/bibles",
-  "generated_at": "2026-06-19T16:08:11+00:00",
+  "generated_at": "2026-06-19T16:44:44+00:00",
   "knowledge_bible_format": "8-section",
   "citation_standard": "STD-CITE-001",
   "products": {
@@ -12,9 +12,11 @@
       "sku": "R2-CT-BIBLE-50-v1",
       "stem": "construction_trades_knowledge_bible_50state_v1_DRAFT",
       "state_count": 50,
-      "cited_claims": 1117,
-      "gaps": 99,
-      "as_of_date": "2026-06-19"
+      "cited_claims": 963,
+      "gaps": 84,
+      "as_of_date": "2026-06-19",
+      "r1_integrated_states": 14,
+      "integrate_proof": "t2_284_integrate_r1_proof.json"
     },
     "sample_5_state": {
       "sku": "R2-CT-SAMPLE-5-v1",
@@ -28,7 +30,12 @@
       ],
       "pricing": "FREE",
       "state_count": 5,
-      "cited_claims": 220,
+      "cited_claims": 161,
+      "gaps": 6,
+      "gaps_by_state": {"PA": 2, "TX": 3, "FL": 0, "CA": 0, "NY": 1},
+      "harden_status": "LOCKED",
+      "r1_register_pin": "c16d7bf",
+      "harden_proof": "t2_284b_harden_proof.json",
       "upsell_to": "R2-CT-BIBLE-50-v1"
     }
   },
@@ -36,7 +43,7 @@
   "_output_stamp": {
     "issue": 284,
     "canonical_path": "GroundTruth/Compliance/lanes/R2_construction_trades/bibles/INDEX.json",
-    "stamped_at": "2026-06-19T16:08:11+00:00",
+    "stamped_at": "2026-06-19T16:44:44+00:00",
     "registry": "GroundTruth/Compliance/lanes/R2_construction_trades/bibles"
   }
 }

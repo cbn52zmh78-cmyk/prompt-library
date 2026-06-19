@@ -7,11 +7,11 @@
   "pack_kind": "founding_brief",
   "source_pack": "Science/groundtruth_poc/GT237_R5_transport_logistics_auto_founding_brief.json",
   "canonical_pack": "Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/cited_data_pack.json",
-  "federal_fact_count": 23,
+  "federal_fact_count": 40,
   "state_count": 50,
   "state_slots": 50,
   "state_gaps": 0,
-  "state_fact_count": 195,
+  "state_fact_count": 278,
   "source_count": 12,
   "retrieved_date": "2026-06-19",
   "state_roots_scanned": [
@@ -21,154 +21,62 @@
     269,
     275
   ],
+  "dot_federal_fact_count": 17,
+  "dot_federal_baseline": "Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
   "dot_baseline_issue": 275,
   "dot_baseline_retrieved": "2026-06-19",
-  "dot_federal_fact_count": 17,
   "dot_state_deep_states": [
+    "Alabama",
+    "Alaska",
     "Arizona",
+    "Arkansas",
     "California",
+    "Colorado",
+    "Connecticut",
+    "Delaware",
     "Florida",
     "Georgia",
+    "Hawaii",
+    "Idaho",
     "Illinois",
     "Indiana",
+    "Iowa",
+    "Kansas",
+    "Kentucky",
+    "Louisiana",
+    "Maine",
+    "Maryland",
+    "Massachusetts",
     "Michigan",
+    "Minnesota",
+    "Mississippi",
+    "Missouri",
+    "Montana",
+    "Nebraska",
+    "Nevada",
+    "New Hampshire",
+    "New Jersey",
+    "New Mexico",
     "New York",
     "North Carolina",
+    "North Dakota",
     "Ohio",
+    "Oklahoma",
+    "Oregon",
+    "Pennsylvania",
+    "Rhode Island",
+    "South Carolina",
+    "South Dakota",
     "Tennessee",
     "Texas",
+    "Utah",
+    "Vermont",
     "Virginia",
-    "Washington"
+    "Washington",
+    "West Virginia",
+    "Wisconsin",
+    "Wyoming"
   ],
-  "dot_state_roll": {
-    "Arizona": {
-      "total_facts": 6,
-      "status_counts": {
-        "FOUND": 1,
-        "REQUIRES_CONFIRMATION": 4,
-        "NOT FOUND": 0,
-        "ACCESS_RESTRICTED": 0
-      }
-    },
-    "California": {
-      "total_facts": 6,
-      "status_counts": {
-        "FOUND": 1,
-        "REQUIRES_CONFIRMATION": 4,
-        "NOT FOUND": 0,
-        "ACCESS_RESTRICTED": 0
-      }
-    },
-    "Florida": {
-      "total_facts": 6,
-      "status_counts": {
-        "FOUND": 1,
-        "REQUIRES_CONFIRMATION": 4,
-        "NOT FOUND": 0,
-        "ACCESS_RESTRICTED": 0
-      }
-    },
-    "Georgia": {
-      "total_facts": 6,
-      "status_counts": {
-        "FOUND": 1,
-        "REQUIRES_CONFIRMATION": 4,
-        "NOT FOUND": 0,
-        "ACCESS_RESTRICTED": 0
-      }
-    },
-    "Illinois": {
-      "total_facts": 6,
-      "status_counts": {
-        "FOUND": 1,
-        "REQUIRES_CONFIRMATION": 4,
-        "NOT FOUND": 0,
-        "ACCESS_RESTRICTED": 0
-      }
-    },
-    "Indiana": {
-      "total_facts": 6,
-      "status_counts": {
-        "FOUND": 1,
-        "REQUIRES_CONFIRMATION": 4,
-        "NOT FOUND": 0,
-        "ACCESS_RESTRICTED": 0
-      }
-    },
-    "Michigan": {
-      "total_facts": 6,
-      "status_counts": {
-        "FOUND": 1,
-        "REQUIRES_CONFIRMATION": 4,
-        "NOT FOUND": 0,
-        "ACCESS_RESTRICTED": 0
-      }
-    },
-    "New York": {
-      "total_facts": 6,
-      "status_counts": {
-        "FOUND": 1,
-        "REQUIRES_CONFIRMATION": 4,
-        "NOT FOUND": 0,
-        "ACCESS_RESTRICTED": 0
-      }
-    },
-    "North Carolina": {
-      "total_facts": 6,
-      "status_counts": {
-        "FOUND": 1,
-        "REQUIRES_CONFIRMATION": 4,
-        "NOT FOUND": 0,
-        "ACCESS_RESTRICTED": 0
-      }
-    },
-    "Ohio": {
-      "total_facts": 6,
-      "status_counts": {
-        "FOUND": 1,
-        "REQUIRES_CONFIRMATION": 4,
-        "NOT FOUND": 0,
-        "ACCESS_RESTRICTED": 0
-      }
-    },
-    "Tennessee": {
-      "total_facts": 5,
-      "status_counts": {
-        "FOUND": 0,
-        "REQUIRES_CONFIRMATION": 5,
-        "NOT FOUND": 0,
-        "ACCESS_RESTRICTED": 0
-      }
-    },
-    "Texas": {
-      "total_facts": 6,
-      "status_counts": {
-        "FOUND": 1,
-        "REQUIRES_CONFIRMATION": 4,
-        "NOT FOUND": 0,
-        "ACCESS_RESTRICTED": 0
-      }
-    },
-    "Virginia": {
-      "total_facts": 6,
-      "status_counts": {
-        "FOUND": 1,
-        "REQUIRES_CONFIRMATION": 4,
-        "NOT FOUND": 0,
-        "ACCESS_RESTRICTED": 0
-      }
-    },
-    "Washington": {
-      "total_facts": 6,
-      "status_counts": {
-        "FOUND": 1,
-        "REQUIRES_CONFIRMATION": 4,
-        "NOT FOUND": 0,
-        "ACCESS_RESTRICTED": 0
-      }
-    }
-  },
-  "pinned_lane": "GroundTruth/Compliance/lanes/R5_transport_logistics_auto",
   "dot_state_tranche_1": [
     "California",
     "Florida",
@@ -187,5 +95,548 @@
     "Virginia",
     "Washington"
   ],
-  "r5b_complete": true
+  "dot_state_roll": {
+    "Alabama": {
+      "total_facts": 0,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 5
+      },
+      "tranche": 3
+    },
+    "Alaska": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Arizona": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 2
+    },
+    "Arkansas": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "California": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 1
+    },
+    "Colorado": {
+      "total_facts": 0,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 5
+      },
+      "tranche": 3
+    },
+    "Connecticut": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Delaware": {
+      "total_facts": 0,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 5
+      },
+      "tranche": 3
+    },
+    "Florida": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 1
+    },
+    "Georgia": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 1
+    },
+    "Hawaii": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Idaho": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Illinois": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 1
+    },
+    "Indiana": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 2
+    },
+    "Iowa": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Kansas": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Kentucky": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Louisiana": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Maine": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Maryland": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Massachusetts": {
+      "total_facts": 0,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 5
+      },
+      "tranche": 3
+    },
+    "Michigan": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 2
+    },
+    "Minnesota": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Mississippi": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Missouri": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Montana": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Nebraska": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Nevada": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "New Hampshire": {
+      "total_facts": 0,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 5
+      },
+      "tranche": 3
+    },
+    "New Jersey": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "New Mexico": {
+      "total_facts": 0,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 5
+      },
+      "tranche": 3
+    },
+    "New York": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 1
+    },
+    "North Carolina": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 2
+    },
+    "North Dakota": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Ohio": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 1
+    },
+    "Oklahoma": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Oregon": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Pennsylvania": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Rhode Island": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "South Carolina": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "South Dakota": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Tennessee": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 2
+    },
+    "Texas": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 1
+    },
+    "Utah": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Vermont": {
+      "total_facts": 0,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 0,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 5
+      },
+      "tranche": 3
+    },
+    "Virginia": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 2
+    },
+    "Washington": {
+      "total_facts": 6,
+      "status_counts": {
+        "FOUND": 1,
+        "REQUIRES_CONFIRMATION": 4,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 2
+    },
+    "West Virginia": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Wisconsin": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    },
+    "Wyoming": {
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "tranche": 3
+    }
+  },
+  "pinned_lane": "GroundTruth/Compliance/lanes/R5_transport_logistics_auto",
+  "r5b_complete": true,
+  "dot_state_tranche_3": [
+    "Alabama",
+    "Alaska",
+    "Arkansas",
+    "Colorado",
+    "Connecticut",
+    "Delaware",
+    "Hawaii",
+    "Idaho",
+    "Iowa",
+    "Kansas",
+    "Kentucky",
+    "Louisiana",
+    "Maine",
+    "Maryland",
+    "Massachusetts",
+    "Minnesota",
+    "Mississippi",
+    "Missouri",
+    "Montana",
+    "Nebraska",
+    "Nevada",
+    "New Hampshire",
+    "New Jersey",
+    "New Mexico",
+    "North Dakota",
+    "Oklahoma",
+    "Oregon",
+    "Pennsylvania",
+    "Rhode Island",
+    "South Carolina",
+    "South Dakota",
+    "Utah",
+    "Vermont",
+    "West Virginia",
+    "Wisconsin",
+    "Wyoming"
+  ],
+  "dot_state_count": 50,
+  "r5c_complete": true
 }

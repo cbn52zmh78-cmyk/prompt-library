@@ -1,0 +1,295 @@
+{
+  "artifact": "transport_logistics_auto_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 269,
+  "parent_issue": 237,
+  "task": "R5 — Transport/Logistics/Auto state PUC/TNC/repair/dealer/movers",
+  "state": "Iowa",
+  "state_code": "IA",
+  "state_slug": "iowa",
+  "generated_at": "2026-06-19T11:10:06.822784+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm motor-carrier, TNC, dealer, mover, and repair requirements with the relevant state authority.",
+  "policy": "Public .gov sources only; 403/404 = park (no bypass); gaps explicit.",
+  "sub_verticals": {
+    "trucking": {
+      "sub_vertical": "trucking",
+      "label": "Trucking",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "IA DOT — Motor Carrier Services",
+        "url": "https://iowadot.gov/mvd",
+        "notes": "Iowa trucking — harvest pending"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "REQUIRES_CONFIRMATION",
+        "source_checked": "https://iowadot.gov/mvd",
+        "detail": "URL reachable; domain-specific facts not yet harvested"
+      }
+    },
+    "rideshare_delivery": {
+      "sub_vertical": "rideshare_delivery",
+      "label": "Rideshare Delivery",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "IA DOT — Motor Carrier Services",
+        "url": "https://iowadot.gov/mvd",
+        "notes": "TNC/rideshare — confirm state TNC statute and licensing authority"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "REQUIRES_CONFIRMATION",
+        "source_checked": "https://iowadot.gov/mvd",
+        "detail": "URL reachable; domain-specific facts not yet harvested"
+      }
+    },
+    "moving": {
+      "sub_vertical": "moving",
+      "label": "Moving",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "IA DOT — Motor Carrier Services",
+        "url": "https://iowadot.gov/mvd",
+        "notes": "Household goods movers — confirm HHG authority with state motor-carrier regulator"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "REQUIRES_CONFIRMATION",
+        "source_checked": "https://iowadot.gov/mvd",
+        "detail": "URL reachable; domain-specific facts not yet harvested"
+      }
+    },
+    "dealerships": {
+      "sub_vertical": "dealerships",
+      "label": "Dealerships",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "IA DOT — Motor Vehicle Dealers",
+        "url": "https://iowadot.gov/mvd",
+        "notes": "Iowa dealerships — harvest pending"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [],
+      "fact_count": 0,
+      "gap": {
+        "status": "REQUIRES_CONFIRMATION",
+        "source_checked": "https://iowadot.gov/mvd",
+        "detail": "URL reachable; domain-specific facts not yet harvested"
+      }
+    },
+    "auto_repair": {
+      "sub_vertical": "auto_repair",
+      "label": "Auto Repair",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "Iowa AG / Consumer Protection — Auto Repair",
+        "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+        "notes": "Federal FTC baseline; confirm state BAR/inspection program if any"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-IA-AUT-001",
+          "text": "Before sharing sensitive information, make sure you’re on a federal government site.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Iowa — Auto Repair",
+            "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+            "agency": "Iowa AG / Consumer Protection — Auto Repair",
+            "jurisdiction": "Iowa",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    }
+  },
+  "federal_context": [
+    {
+      "sub_vertical": "trucking",
+      "text": "The Pennsylvania Public Utility Commission regulates nearly 7,500 motor carriers that transport property, passengers, or household goods for compensation in Pennsylvania.",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    },
+    {
+      "sub_vertical": "trucking",
+      "text": "Property carriers (e.g., trucking companies) operating in Pennsylvania are regulated by the PUC for safety and insurance requirements only (not rates).",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    }
+  ],
+  "summary": {
+    "domain_count": 5,
+    "total_facts": 1,
+    "status_counts": {
+      "FOUND": 0,
+      "REQUIRES_CONFIRMATION": 5,
+      "NOT FOUND": 0,
+      "ACCESS_RESTRICTED": 0
+    },
+    "anchor_state": false,
+    "deep_harvest": false
+  },
+  "deepening_issues": [
+    275
+  ],
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-IA-CAR-001",
+            "text": "Iowa motor carrier registration and operating authority requirements are administered by IA DOT — Motor Carrier Services; confirm certificate/permit rules with the state regulator.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "tranche3_carrier_registration",
+            "citation": {
+              "source": "IA DOT — Motor Carrier Services",
+              "url": "https://iowadot.gov/mvd",
+              "agency": "IA DOT",
+              "jurisdiction": "Iowa",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-IA-HOU-001",
+            "text": "Interstate CMV hours-of-service in Iowa follow federal 49 CFR Part 395; intrastate HOS may be enforced by IA DOT — Motor Carrier Services — tranche-3 probe; deepen when agency pages yield domain-specific text.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "tranche3_hours_of_service",
+            "citation": {
+              "source": "IA DOT — Motor Carrier Services",
+              "url": "https://iowadot.gov/mvd",
+              "agency": "IA DOT",
+              "jurisdiction": "Iowa",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-IA-VEH-001",
+            "text": "Commercial vehicle safety and inspection requirements in Iowa are enforced in coordination with IA DOT — Motor Carrier Services and compatible FMCSR vehicle standards (49 CFR Parts 393/396).",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "tranche3_vehicle_requirements",
+            "citation": {
+              "source": "IA DOT — Motor Carrier Services",
+              "url": "https://iowadot.gov/mvd",
+              "agency": "IA DOT",
+              "jurisdiction": "Iowa",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-IA-INS-001",
+            "text": "Motor carriers operating in Iowa must maintain liability insurance meeting federal Part 387 minimums for interstate commerce and applicable state requirements filed with IA DOT — Motor Carrier Services.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "tranche3_insurance",
+            "citation": {
+              "source": "IA DOT — Motor Carrier Services",
+              "url": "https://iowadot.gov/mvd",
+              "agency": "IA DOT",
+              "jurisdiction": "Iowa",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-IA-INT-001",
+            "text": "Iowa distinguishes interstate carriers (USDOT/MC + UCR) from intrastate for-hire motor carriers regulated by IA DOT — Motor Carrier Services.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "tranche3_interstate_intrastate",
+            "citation": {
+              "source": "IA DOT — Motor Carrier Services",
+              "url": "https://iowadot.gov/mvd",
+              "agency": "IA DOT",
+              "jurisdiction": "Iowa",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": false,
+      "tranche": 3
+    }
+  },
+  "federal_dot_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_issue": 275
+}

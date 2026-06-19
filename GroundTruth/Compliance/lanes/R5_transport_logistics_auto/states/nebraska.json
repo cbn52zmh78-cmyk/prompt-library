@@ -1,0 +1,335 @@
+{
+  "artifact": "transport_logistics_auto_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 269,
+  "parent_issue": 237,
+  "task": "R5 — Transport/Logistics/Auto state PUC/TNC/repair/dealer/movers",
+  "state": "Nebraska",
+  "state_code": "NE",
+  "state_slug": "nebraska",
+  "generated_at": "2026-06-19T11:10:54.260004+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm motor-carrier, TNC, dealer, mover, and repair requirements with the relevant state authority.",
+  "policy": "Public .gov sources only; 403/404 = park (no bypass); gaps explicit.",
+  "sub_verticals": {
+    "trucking": {
+      "sub_vertical": "trucking",
+      "label": "Trucking",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "NE PSC — Motor Carrier",
+        "url": "https://psc.nebraska.gov/",
+        "notes": "Nebraska trucking — harvest pending"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-NE-TRU-001",
+          "text": "The Commission also has limited regulatory oversight related to railroad safety and the construction of high-voltage electric transmission lines in Nebraska.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Nebraska — Trucking",
+            "url": "https://psc.nebraska.gov/",
+            "agency": "NE PSC — Motor Carrier",
+            "jurisdiction": "Nebraska",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    },
+    "rideshare_delivery": {
+      "sub_vertical": "rideshare_delivery",
+      "label": "Rideshare Delivery",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "NE PSC — Motor Carrier",
+        "url": "https://psc.nebraska.gov/",
+        "notes": "TNC/rideshare — confirm state TNC statute and licensing authority"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-NE-RID-001",
+          "text": "The Commission also has limited regulatory oversight related to railroad safety and the construction of high-voltage electric transmission lines in Nebraska.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Nebraska — Rideshare Delivery",
+            "url": "https://psc.nebraska.gov/",
+            "agency": "NE PSC — Motor Carrier",
+            "jurisdiction": "Nebraska",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    },
+    "moving": {
+      "sub_vertical": "moving",
+      "label": "Moving",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "NE PSC — Motor Carrier",
+        "url": "https://psc.nebraska.gov/",
+        "notes": "Household goods movers — confirm HHG authority with state motor-carrier regulator"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-NE-MOV-001",
+          "text": "The Commission also has limited regulatory oversight related to railroad safety and the construction of high-voltage electric transmission lines in Nebraska.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Nebraska — Moving",
+            "url": "https://psc.nebraska.gov/",
+            "agency": "NE PSC — Motor Carrier",
+            "jurisdiction": "Nebraska",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    },
+    "dealerships": {
+      "sub_vertical": "dealerships",
+      "label": "Dealerships",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "NE DMV — Dealer Licensing",
+        "url": "https://dmv.nebraska.gov/",
+        "notes": "Nebraska dealerships — harvest pending"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-NE-DEA-001",
+          "text": "Upgrade Internet Explorer , install a modern browser , or contact your system administrator.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Nebraska — Dealerships",
+            "url": "https://dmv.nebraska.gov/",
+            "agency": "NE DMV — Dealer Licensing",
+            "jurisdiction": "Nebraska",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    },
+    "auto_repair": {
+      "sub_vertical": "auto_repair",
+      "label": "Auto Repair",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "Nebraska AG / Consumer Protection — Auto Repair",
+        "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+        "notes": "Federal FTC baseline; confirm state BAR/inspection program if any"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-NE-AUT-001",
+          "text": "Before sharing sensitive information, make sure you’re on a federal government site.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Nebraska — Auto Repair",
+            "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+            "agency": "Nebraska AG / Consumer Protection — Auto Repair",
+            "jurisdiction": "Nebraska",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    }
+  },
+  "federal_context": [
+    {
+      "sub_vertical": "trucking",
+      "text": "The Pennsylvania Public Utility Commission regulates nearly 7,500 motor carriers that transport property, passengers, or household goods for compensation in Pennsylvania.",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    },
+    {
+      "sub_vertical": "trucking",
+      "text": "Property carriers (e.g., trucking companies) operating in Pennsylvania are regulated by the PUC for safety and insurance requirements only (not rates).",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    }
+  ],
+  "summary": {
+    "domain_count": 5,
+    "total_facts": 5,
+    "status_counts": {
+      "FOUND": 0,
+      "REQUIRES_CONFIRMATION": 5,
+      "NOT FOUND": 0,
+      "ACCESS_RESTRICTED": 0
+    },
+    "anchor_state": false,
+    "deep_harvest": false
+  },
+  "deepening_issues": [
+    275
+  ],
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-NE-CAR-001",
+            "text": "The Commission also has limited regulatory oversight related to railroad safety and the construction of high-voltage electric transmission lines in Nebraska.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "NE PSC — Motor Carrier",
+              "url": "https://psc.nebraska.gov/",
+              "agency": "NE PSC",
+              "jurisdiction": "Nebraska",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-NE-HOU-001",
+            "text": "The Commission also has limited regulatory oversight related to railroad safety and the construction of high-voltage electric transmission lines in Nebraska.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "NE PSC — Motor Carrier",
+              "url": "https://psc.nebraska.gov/",
+              "agency": "NE PSC",
+              "jurisdiction": "Nebraska",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-NE-VEH-001",
+            "text": "The Commission also has limited regulatory oversight related to railroad safety and the construction of high-voltage electric transmission lines in Nebraska.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "NE PSC — Motor Carrier",
+              "url": "https://psc.nebraska.gov/",
+              "agency": "NE PSC",
+              "jurisdiction": "Nebraska",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-NE-INS-001",
+            "text": "The Commission also has limited regulatory oversight related to railroad safety and the construction of high-voltage electric transmission lines in Nebraska.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "insurance",
+            "citation": {
+              "source": "NE PSC — Motor Carrier",
+              "url": "https://psc.nebraska.gov/",
+              "agency": "NE PSC",
+              "jurisdiction": "Nebraska",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-NE-INT-001",
+            "text": "The Commission also has limited regulatory oversight related to railroad safety and the construction of high-voltage electric transmission lines in Nebraska.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "NE PSC — Motor Carrier",
+              "url": "https://psc.nebraska.gov/",
+              "agency": "NE PSC",
+              "jurisdiction": "Nebraska",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": false,
+      "tranche": 3
+    }
+  },
+  "federal_dot_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_issue": 275
+}

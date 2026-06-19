@@ -1,0 +1,159 @@
+{
+  "artifact": "transport_dot_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 275,
+  "parent_issue": 269,
+  "deepening_issue": 275,
+  "task": "R5-C — State DOT/motor-carrier compliance overlay (tranche-3 probe harvest)",
+  "state": "Hawaii",
+  "state_code": "HI",
+  "state_slug": "hawaii",
+  "generated_at": "2026-06-19T16:38:36.948161+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm DOT/FMCSA carrier registration, HOS, vehicle, and insurance requirements with FMCSA and the relevant state authority.",
+  "policy": "Public .gov sources only; 403/SSL = park; gaps explicit.",
+  "federal_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-HI-CAR-001",
+            "text": "Search Cases &amp; Filings Find PUC cases/dockets, tariffs, certificates, filings and other documents.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "HI PUC — Motor Carrier",
+              "url": "https://puc.hawaii.gov/",
+              "agency": "HI PUC",
+              "jurisdiction": "Hawaii",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-HI-HOU-001",
+            "text": "Read More Relay Hawaii Relay Hawaii is a no-cost service that provides full telephone accessibility to people who are Deaf, Hard of Hearing, DeafBlind or those with a speech disability.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "HI PUC — Motor Carrier",
+              "url": "https://puc.hawaii.gov/",
+              "agency": "HI PUC",
+              "jurisdiction": "Hawaii",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-HI-VEH-001",
+            "text": "MonsterInsightsPrivacyGuardFilter( MonsterInsightsExcludeQuery ) : MonsterInsightsPrivacyGuardFilter( MonsterInsightsDefaultLocations ); } else { var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ?",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "HI PUC — Motor Carrier",
+              "url": "https://puc.hawaii.gov/",
+              "agency": "HI PUC",
+              "jurisdiction": "Hawaii",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-HI-INS-001",
+            "text": "This latest PUC Connection edition 26-03 highlights multiple opportunities for public input, including efforts to improve the PUC website, develop a wildfire liability cap framework under Act 258, update the Hawaiʻi Universal Service Fund to better support blind and low vision residents, and more.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "insurance",
+            "citation": {
+              "source": "HI PUC — Motor Carrier",
+              "url": "https://puc.hawaii.gov/",
+              "agency": "HI PUC",
+              "jurisdiction": "Hawaii",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-HI-INT-001",
+            "text": "MonsterInsightsPrivacyGuardFilter( MonsterInsightsExcludeQuery ) : MonsterInsightsPrivacyGuardFilter( MonsterInsightsDefaultLocations ); } else { var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ?",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "HI PUC — Motor Carrier",
+              "url": "https://puc.hawaii.gov/",
+              "agency": "HI PUC",
+              "jurisdiction": "Hawaii",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": false,
+      "tranche": 3
+    }
+  },
+  "tranche3_probe": {
+    "url": "https://puc.hawaii.gov/",
+    "probe": "ok",
+    "http_code": 200,
+    "agency": "HI PUC — Motor Carrier"
+  }
+}

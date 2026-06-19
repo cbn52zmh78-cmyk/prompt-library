@@ -1,0 +1,159 @@
+{
+  "artifact": "transport_dot_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 275,
+  "parent_issue": 269,
+  "deepening_issue": 275,
+  "task": "R5-C — State DOT/motor-carrier compliance overlay (tranche-3 probe harvest)",
+  "state": "Arkansas",
+  "state_code": "AR",
+  "state_slug": "arkansas",
+  "generated_at": "2026-06-19T16:38:12.170355+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm DOT/FMCSA carrier registration, HOS, vehicle, and insurance requirements with FMCSA and the relevant state authority.",
+  "policy": "Public .gov sources only; 403/SSL = park; gaps explicit.",
+  "federal_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-AR-CAR-001",
+            "text": "Arkansas motor carrier registration and operating authority requirements are administered by AR Public Service Commission; confirm certificate/permit rules with the state regulator.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "tranche3_carrier_registration",
+            "citation": {
+              "source": "AR Public Service Commission",
+              "url": "https://www.arkansas.gov/psc/",
+              "agency": "AR Public Service Commission",
+              "jurisdiction": "Arkansas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-AR-HOU-001",
+            "text": "Interstate CMV hours-of-service in Arkansas follow federal 49 CFR Part 395; intrastate HOS may be enforced by AR Public Service Commission — tranche-3 probe; deepen when agency pages yield domain-specific text.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "tranche3_hours_of_service",
+            "citation": {
+              "source": "AR Public Service Commission",
+              "url": "https://www.arkansas.gov/psc/",
+              "agency": "AR Public Service Commission",
+              "jurisdiction": "Arkansas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-AR-VEH-001",
+            "text": "Commercial vehicle safety and inspection requirements in Arkansas are enforced in coordination with AR Public Service Commission and compatible FMCSR vehicle standards (49 CFR Parts 393/396).",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "tranche3_vehicle_requirements",
+            "citation": {
+              "source": "AR Public Service Commission",
+              "url": "https://www.arkansas.gov/psc/",
+              "agency": "AR Public Service Commission",
+              "jurisdiction": "Arkansas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-AR-INS-001",
+            "text": "Motor carriers operating in Arkansas must maintain liability insurance meeting federal Part 387 minimums for interstate commerce and applicable state requirements filed with AR Public Service Commission.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "tranche3_insurance",
+            "citation": {
+              "source": "AR Public Service Commission",
+              "url": "https://www.arkansas.gov/psc/",
+              "agency": "AR Public Service Commission",
+              "jurisdiction": "Arkansas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-AR-INT-001",
+            "text": "Arkansas distinguishes interstate carriers (USDOT/MC + UCR) from intrastate for-hire motor carriers regulated by AR Public Service Commission.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "tranche3_interstate_intrastate",
+            "citation": {
+              "source": "AR Public Service Commission",
+              "url": "https://www.arkansas.gov/psc/",
+              "agency": "AR Public Service Commission",
+              "jurisdiction": "Arkansas",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": false,
+      "tranche": 3
+    }
+  },
+  "tranche3_probe": {
+    "url": "https://www.arkansas.gov/psc/",
+    "probe": "ok",
+    "http_code": 200,
+    "agency": "AR Public Service Commission"
+  }
+}

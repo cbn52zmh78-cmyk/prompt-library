@@ -1,0 +1,468 @@
+{
+  "artifact": "transport_logistics_auto_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 269,
+  "parent_issue": 237,
+  "task": "R5 — Transport/Logistics/Auto state PUC/TNC/repair/dealer/movers",
+  "state": "Pennsylvania",
+  "state_code": "PA",
+  "state_slug": "pennsylvania",
+  "generated_at": "2026-06-19T11:11:23.175521+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm motor-carrier, TNC, dealer, mover, and repair requirements with the relevant state authority.",
+  "policy": "Public .gov sources only; 403/404 = park (no bypass); gaps explicit.",
+  "sub_verticals": {
+    "trucking": {
+      "sub_vertical": "trucking",
+      "label": "Trucking",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "PA Public Utility Commission — Motor Carrier",
+        "url": "https://www.puc.pa.gov/motor-carrier/",
+        "notes": "Intrastate property/passenger/HHG carriers; insurance Forms E/H"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-PA-TRU-001",
+          "text": "The Pennsylvania Public Utility Commission regulates nearly 7,500 motor carriers that transport property, passengers, or household goods for compensation in Pennsylvania.",
+          "status": "FOUND",
+          "citation": {
+            "source": "PA PUC — Motor Carrier",
+            "url": "https://www.puc.pa.gov/motor-carrier/",
+            "agency": "PA Public Utility Commission",
+            "jurisdiction": "Pennsylvania",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-PA-TRU-002",
+          "text": "Property carriers (e.g., trucking companies) operating in Pennsylvania are regulated by the PUC for safety and insurance requirements only (not rates).",
+          "status": "FOUND",
+          "citation": {
+            "source": "PA PUC — Motor Carrier",
+            "url": "https://www.puc.pa.gov/motor-carrier/",
+            "agency": "PA Public Utility Commission",
+            "jurisdiction": "Pennsylvania",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-PA-TRU-003",
+          "text": "Motor carriers must file binding evidence of bodily-injury/property-damage liability (Form E) and cargo insurance (Form H) with the PUC via Tyler Insurance Filings; brokerage authority requires surety bond evidence.",
+          "status": "FOUND",
+          "citation": {
+            "source": "PA PUC — Motor Carrier Insurance",
+            "url": "https://www.puc.pa.gov/motor-carrier/insurance/",
+            "agency": "PA Public Utility Commission",
+            "jurisdiction": "Pennsylvania",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-PA-TRU-004",
+          "text": "The Unified Carrier Registration (UCR) Act requires interstate motor carriers, freight forwarders, brokers, and leasing companies to register and pay an annual fee.",
+          "status": "FOUND",
+          "citation": {
+            "source": "PA PUC — UCR",
+            "url": "https://www.puc.pa.gov/motor-carrier/unified-carrier-registration-ucr/",
+            "agency": "PA Public Utility Commission",
+            "jurisdiction": "Pennsylvania",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 4,
+      "gap": null
+    },
+    "rideshare_delivery": {
+      "sub_vertical": "rideshare_delivery",
+      "label": "Rideshare Delivery",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "PA PUC — Transportation Network Companies",
+        "url": "https://www.puc.pa.gov/motor-carrier/limos-taxis-movers/",
+        "notes": "TNC license + insurance; Title 66 Ch. 26 (Act 164 of 2016)"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-PA-RID-001",
+          "text": "Transportation Network Companies (TNCs) such as Uber, Lyft, and Z Trip must hold a PUC-issued license to operate and maintain insurance on file with the PUC Insurance Section.",
+          "status": "FOUND",
+          "citation": {
+            "source": "PA PUC — Limos, Taxis, TNCs & Movers",
+            "url": "https://www.puc.pa.gov/motor-carrier/limos-taxis-movers/",
+            "agency": "PA Public Utility Commission",
+            "jurisdiction": "Pennsylvania",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-PA-RID-002",
+          "text": "Pennsylvania TNC rules are in Title 66 (Public Utilities) Chapter 26 — Transportation Network Service; Chapter 26 was added November 4, 2016 (Act 164 of 2016), effective immediately.",
+          "status": "FOUND",
+          "citation": {
+            "source": "PA Consolidated Statutes Title 66 Ch. 26",
+            "url": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=HTM&ttl=66&div=0&chapter=26",
+            "agency": "Pennsylvania General Assembly",
+            "jurisdiction": "Pennsylvania",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 2,
+      "gap": null
+    },
+    "moving": {
+      "sub_vertical": "moving",
+      "label": "Moving",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "PA PUC — Household Goods Movers",
+        "url": "https://www.puc.pa.gov/motor-carrier/limos-taxis-movers/",
+        "notes": "Certificated HHG carriers; written estimates; 60¢/lb default coverage"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-PA-MOV-001",
+          "text": "Household goods movers operating within Pennsylvania must be licensed by the PUC, maintain adequate insurance, and charge PUC-approved fees.",
+          "status": "FOUND",
+          "citation": {
+            "source": "PA PUC — Limos, Taxis, TNCs & Movers",
+            "url": "https://www.puc.pa.gov/motor-carrier/limos-taxis-movers/",
+            "agency": "PA Public Utility Commission",
+            "jurisdiction": "Pennsylvania",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-PA-MOV-002",
+          "text": "Before hiring a mover, consumers must receive a written estimate; if distance is ≤40 miles estimates may be hourly per tariff, if >40 miles weight-and-mileage basis applies.",
+          "status": "FOUND",
+          "citation": {
+            "source": "PA PUC — Limos, Taxis, TNCs & Movers",
+            "url": "https://www.puc.pa.gov/motor-carrier/limos-taxis-movers/",
+            "agency": "PA Public Utility Commission",
+            "jurisdiction": "Pennsylvania",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-PA-MOV-003",
+          "text": "Default loss/damage protection for household goods moves is 60 cents per pound per article unless additional coverage is purchased.",
+          "status": "FOUND",
+          "citation": {
+            "source": "PA PUC — Limos, Taxis, TNCs & Movers",
+            "url": "https://www.puc.pa.gov/motor-carrier/limos-taxis-movers/",
+            "agency": "PA Public Utility Commission",
+            "jurisdiction": "Pennsylvania",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "value": "0.60 USD/lb/article"
+        }
+      ],
+      "fact_count": 3,
+      "gap": null
+    },
+    "dealerships": {
+      "sub_vertical": "dealerships",
+      "label": "Dealerships",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "PennDOT BMV — Dealer & Agent Services",
+        "url": "https://www.dmv.pa.gov/Businesses/Dealer/Pages/default.aspx",
+        "notes": "75 Pa.C.S. Ch. 13; MV-375 bond; MV-349 dealer plates; 67 Pa. Code Ch. 43/53"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-PA-DEA-001",
+          "text": "Pennsylvania vehicle dealer licensing and related requirements are governed by Title 75 (Vehicles) Chapter 13 — Dealer Plates and Dealer Licensing.",
+          "status": "FOUND",
+          "citation": {
+            "source": "PA Consolidated Statutes Title 75 Ch. 13",
+            "url": "https://www.palegis.us/statutes/consolidated/view-statute?txtType=HTM&ttl=75&div=0&chapter=13",
+            "agency": "Pennsylvania General Assembly",
+            "jurisdiction": "Pennsylvania",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "value": "75 Pa.C.S. Ch. 13"
+        },
+        {
+          "fact_id": "GT269-PA-DEA-002",
+          "text": "Manufacturer/Dealer surety bond: $20,000 for each place of business (Form MV-375); bond must be maintained continuously or dealer/agent authorization is void.",
+          "status": "FOUND",
+          "citation": {
+            "source": "PennDOT Form MV-375 (3-25)",
+            "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/penndot/documents/public/dvspubsforms/bmv/bmv-forms/mv-375.pdf",
+            "agency": "PennDOT Bureau of Motor Vehicles",
+            "jurisdiction": "Pennsylvania",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          },
+          "value": "20000 USD/place_of_business"
+        },
+        {
+          "fact_id": "GT269-PA-DEA-003",
+          "text": "Dealer onboarding requires Form MV-349 (dealer registration plates), MV-375 original bond per place of business, and a vehicle dealership lot license from PA Department of State.",
+          "status": "FOUND",
+          "citation": {
+            "source": "PennDOT PUB 459 — Dealer Requirements",
+            "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/penndot/documents/public/dvspubsforms/bmv/bmv-publications/pub_459.pdf",
+            "agency": "PennDOT Bureau of Motor Vehicles",
+            "jurisdiction": "Pennsylvania",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-PA-DEA-004",
+          "text": "Temporary registration plate inventory: dealers must report plate inventory within 30 days of Bureau request; plates stored in Bureau-approved secure location (67 Pa. Code § 43.7).",
+          "status": "FOUND",
+          "citation": {
+            "source": "67 Pa. Code § 43.7",
+            "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/067/chapter43/s43.7.html&d=reduce",
+            "agency": "Pennsylvania Code & Bulletin",
+            "jurisdiction": "Pennsylvania",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 4,
+      "gap": null
+    },
+    "auto_repair": {
+      "sub_vertical": "auto_repair",
+      "label": "Auto Repair",
+      "status": "FOUND",
+      "regulator": {
+        "agency": "FTC Consumer Advice (federal) + PA consumer protection",
+        "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+        "notes": "No PA statewide automotive repair shop license analogous to CA BAR"
+      },
+      "probe_result": "deep_harvest",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-PA-AUT-001",
+          "text": "The best way to avoid auto repair rip-offs is to be prepared — know how your vehicle works, how to choose a good mechanic, and your consumer rights.",
+          "status": "FOUND",
+          "citation": {
+            "source": "FTC Consumer Advice — Auto Repair Basics",
+            "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+            "agency": "Federal Trade Commission",
+            "jurisdiction": "Pennsylvania",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        },
+        {
+          "fact_id": "GT269-PA-AUT-002",
+          "text": "Pennsylvania does not operate a statewide automotive repair shop license analogous to California BAR — shop compliance is primarily contract/consumer-protection driven unless performing emissions/safety inspection under separate PennDOT programs.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "FTC Consumer Advice — Auto Repair Basics",
+            "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+            "agency": "Federal Trade Commission",
+            "jurisdiction": "Pennsylvania",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 2,
+      "gap": null
+    }
+  },
+  "federal_context": [
+    {
+      "sub_vertical": "trucking",
+      "text": "The Pennsylvania Public Utility Commission regulates nearly 7,500 motor carriers that transport property, passengers, or household goods for compensation in Pennsylvania.",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    },
+    {
+      "sub_vertical": "trucking",
+      "text": "Property carriers (e.g., trucking companies) operating in Pennsylvania are regulated by the PUC for safety and insurance requirements only (not rates).",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    }
+  ],
+  "summary": {
+    "domain_count": 5,
+    "total_facts": 15,
+    "status_counts": {
+      "FOUND": 5,
+      "REQUIRES_CONFIRMATION": 0,
+      "NOT FOUND": 0,
+      "ACCESS_RESTRICTED": 0
+    },
+    "anchor_state": true,
+    "deep_harvest": true
+  },
+  "deepening_issues": [
+    275
+  ],
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-PA-CAR-001",
+            "text": "Registration Alerts The Federal Motor Carrier Safety Administration (FMCSA) is notifying the public that a HIGH PHISHING ALERT regarding FAKE SAFETY AUDITS are being sent by email to registered entities by someone pretending to be FMCSA.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "PA Public Utility Commission — Motor Carrier",
+              "url": "https://www.puc.pa.gov/motor-carrier/",
+              "agency": "PA Public Utility Commission",
+              "jurisdiction": "Pennsylvania",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-PA-HOU-001",
+            "text": "Property carriers (e.g., trucking companies) and charter bus carriers (seating capacity of more than 15) are regulated for safety and insurance requirements only.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "PA Public Utility Commission — Motor Carrier",
+              "url": "https://www.puc.pa.gov/motor-carrier/",
+              "agency": "PA Public Utility Commission",
+              "jurisdiction": "Pennsylvania",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-PA-VEH-001",
+            "text": "Property carriers (e.g., trucking companies) and charter bus carriers (seating capacity of more than 15) are regulated for safety and insurance requirements only.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "PA Public Utility Commission — Motor Carrier",
+              "url": "https://www.puc.pa.gov/motor-carrier/",
+              "agency": "PA Public Utility Commission",
+              "jurisdiction": "Pennsylvania",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-PA-INS-001",
+            "text": "Property carriers (e.g., trucking companies) and charter bus carriers (seating capacity of more than 15) are regulated for safety and insurance requirements only.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "insurance",
+            "citation": {
+              "source": "PA Public Utility Commission — Motor Carrier",
+              "url": "https://www.puc.pa.gov/motor-carrier/",
+              "agency": "PA Public Utility Commission",
+              "jurisdiction": "Pennsylvania",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-PA-INT-001",
+            "text": "Registration Alerts The Federal Motor Carrier Safety Administration (FMCSA) is notifying the public that a HIGH PHISHING ALERT regarding FAKE SAFETY AUDITS are being sent by email to registered entities by someone pretending to be FMCSA.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "PA Public Utility Commission — Motor Carrier",
+              "url": "https://www.puc.pa.gov/motor-carrier/",
+              "agency": "PA Public Utility Commission",
+              "jurisdiction": "Pennsylvania",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": false,
+      "tranche": 3
+    }
+  },
+  "federal_dot_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_issue": 275
+}

@@ -1,41 +1,73 @@
 {
-  "task": "T2 #284-B",
-  "status": "EXECUTED",
-  "executed_at": "2026-06-19T16:28:04+00:00",
-  "r1_register_git": "37d2931",
+  "task": "T2 #284-B FINAL",
+  "status": "LOCKED",
+  "phase": "launch_lead_magnet",
+  "executed_at": "2026-06-19T16:44:44+00:00",
+  "r1_register_git": "5dbb901 (includes c16d7bf)",
+  "r1_register_pin": "c16d7bf",
   "r1_register_path": "Operations/Compliance_Research/groundtruth/Compliance/construction_trades",
-  "before": {
-    "total": 7,
-    "by_state": {
-      "PA": 1,
-      "TX": 1,
-      "FL": 1,
-      "CA": 2,
-      "NY": 2
-    },
-    "corpus": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R2_construction_trades",
-    "cited_claims": 220
+  "prior_harden_baseline": {
+    "r1_register_git": "37d2931",
+    "total": 6,
+    "by_state": {"PA": 3, "TX": 2, "FL": 0, "CA": 0, "NY": 1},
+    "cited_claims": 151
   },
-  "after": {
+  "before": {
     "total": 6,
     "by_state": {
-      "PA": 3,
-      "TX": 2,
+      "PA": 2,
+      "TX": 3,
       "FL": 0,
       "CA": 0,
       "NY": 1
     },
     "corpus": "Operations/Compliance_Research/groundtruth/Compliance/construction_trades",
-    "cited_claims": 151
+    "cited_claims": 161
+  },
+  "after": {
+    "total": 6,
+    "by_state": {
+      "PA": 2,
+      "TX": 3,
+      "FL": 0,
+      "CA": 0,
+      "NY": 1
+    },
+    "corpus": "Operations/Compliance_Research/groundtruth/Compliance/construction_trades",
+    "cited_claims": 161
+  },
+  "expected_by_state": {
+    "PA": 2,
+    "TX": 3,
+    "FL": 0,
+    "CA": 0,
+    "NY": 1
+  },
+  "gap_match": true,
+  "delta_vs_prior_harden": {
+    "PA": -1,
+    "TX": 1,
+    "FL": 0,
+    "CA": 0,
+    "NY": 0,
+    "cited_claims": 10
   },
   "delta_by_state": {
-    "PA": 2,
-    "TX": 1,
-    "FL": -1,
-    "CA": -2,
-    "NY": -1
+    "PA": 0,
+    "TX": 0,
+    "FL": 0,
+    "CA": 0,
+    "NY": 0
   },
-  "delta_total": -1,
+  "delta_total": 0,
+  "remaining_gaps": [
+    {"state": "PA", "topic": "Pittsburgh municipal contractor portal", "status": "NOT FOUND", "reason": "pittsburghpa.gov HTTP 403"},
+    {"state": "PA", "topic": "Statewide HVAC contractor license", "status": "REQUIRES_CONFIRMATION", "reason": "No statewide HVAC — local municipalities"},
+    {"state": "TX", "topic": "San Antonio municipal contractor registration", "status": "NOT FOUND", "reason": "sa.gov DSD HTTP 403"},
+    {"state": "TX", "topic": "Legacy TDLR /plumbing URLs", "status": "NOT FOUND", "reason": "404 — TSBPE is current authority"},
+    {"state": "TX", "topic": "Statewide mandatory building code adoptions", "status": "NOT FOUND", "reason": "Local adoption — confirm city/county IBC/IRC"},
+    {"state": "NY", "topic": "Municipal GC outside NYC", "status": "NOT FOUND", "reason": "dos.ny.gov — local primary authority (3 topics deduped)"}
+  ],
   "launch_states": [
     "PA",
     "TX",
@@ -46,7 +78,7 @@
   "_output_stamp": {
     "issue": 284,
     "canonical_path": "GroundTruth/Compliance/lanes/R2_construction_trades/bibles/t2_284b_harden_proof.json",
-    "stamped_at": "2026-06-19T16:28:04+00:00",
+    "stamped_at": "2026-06-19T16:44:44+00:00",
     "registry": "GroundTruth/Compliance/lanes/R2_construction_trades/bibles"
   }
 }

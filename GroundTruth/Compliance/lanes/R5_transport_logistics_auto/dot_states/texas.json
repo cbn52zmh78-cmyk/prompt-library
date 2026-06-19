@@ -5,11 +5,11 @@
   "issue": 275,
   "parent_issue": 269,
   "deepening_issue": 275,
-  "task": "R5 #275 — State DOT/motor-carrier compliance overlay (non-PA selected states)",
+  "task": "R5 #275 — State DOT/motor-carrier compliance overlay (deep harvest)",
   "state": "Texas",
   "state_code": "TX",
   "state_slug": "texas",
-  "generated_at": "2026-06-19T16:22:54.073296+00:00",
+  "generated_at": "2026-06-19T16:39:00.559799+00:00",
   "retrieved_date": "2026-06-19",
   "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm DOT/FMCSA carrier registration, HOS, vehicle, and insurance requirements with FMCSA and the relevant state authority.",
   "policy": "Public .gov sources only; 403/SSL = park; gaps explicit.",
@@ -160,7 +160,8 @@
         "NOT FOUND": 0,
         "ACCESS_RESTRICTED": 0
       },
-      "deep_harvest": true
+      "deep_harvest": true,
+      "tranche": 1
     }
   }
 }

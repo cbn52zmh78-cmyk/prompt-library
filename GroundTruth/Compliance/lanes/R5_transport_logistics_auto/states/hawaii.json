@@ -1,0 +1,335 @@
+{
+  "artifact": "transport_logistics_auto_state_pack",
+  "version": "1.0",
+  "lane": "R5",
+  "issue": 269,
+  "parent_issue": 237,
+  "task": "R5 — Transport/Logistics/Auto state PUC/TNC/repair/dealer/movers",
+  "state": "Hawaii",
+  "state_code": "HI",
+  "state_slug": "hawaii",
+  "generated_at": "2026-06-19T11:09:36.927567+00:00",
+  "retrieved_date": "2026-06-19",
+  "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm motor-carrier, TNC, dealer, mover, and repair requirements with the relevant state authority.",
+  "policy": "Public .gov sources only; 403/404 = park (no bypass); gaps explicit.",
+  "sub_verticals": {
+    "trucking": {
+      "sub_vertical": "trucking",
+      "label": "Trucking",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "HI PUC — Motor Carrier",
+        "url": "https://puc.hawaii.gov/",
+        "notes": "Hawaii trucking — harvest pending"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-HI-TRU-001",
+          "text": "2026‑0125 to review and establish the State of Hawaii Universal Service Fund (HI‑USF) carrier contribution factor and annual fund size effective July 1, 2026.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Hawaii — Trucking",
+            "url": "https://puc.hawaii.gov/",
+            "agency": "HI PUC — Motor Carrier",
+            "jurisdiction": "Hawaii",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    },
+    "rideshare_delivery": {
+      "sub_vertical": "rideshare_delivery",
+      "label": "Rideshare Delivery",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "HI PUC — Motor Carrier",
+        "url": "https://puc.hawaii.gov/",
+        "notes": "TNC/rideshare — confirm state TNC statute and licensing authority"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-HI-RID-001",
+          "text": "MonsterInsightsPrivacyGuardFilter( MonsterInsightsExcludeQuery ) : MonsterInsightsPrivacyGuardFilter( MonsterInsightsDefaultLocations ); } else { var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ?",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Hawaii — Rideshare Delivery",
+            "url": "https://puc.hawaii.gov/",
+            "agency": "HI PUC — Motor Carrier",
+            "jurisdiction": "Hawaii",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    },
+    "moving": {
+      "sub_vertical": "moving",
+      "label": "Moving",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "HI PUC — Motor Carrier",
+        "url": "https://puc.hawaii.gov/",
+        "notes": "Household goods movers — confirm HHG authority with state motor-carrier regulator"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-HI-MOV-001",
+          "text": "Search Cases &amp; Filings Find PUC cases/dockets, tariffs, certificates, filings and other documents.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Hawaii — Moving",
+            "url": "https://puc.hawaii.gov/",
+            "agency": "HI PUC — Motor Carrier",
+            "jurisdiction": "Hawaii",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    },
+    "dealerships": {
+      "sub_vertical": "dealerships",
+      "label": "Dealerships",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "HI DMV — Dealer Licensing",
+        "url": "https://hidot.hawaii.gov/",
+        "notes": "Hawaii dealerships — harvest pending"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-HI-DEA-001",
+          "text": "您需要其它語言嗎？如有需要,請致電 (808) 831-7921, 我們會提供免費翻譯服務 您需要其它语言吗？如有需要,请致电 (808) 831-7921, 我们会提供免费翻译服务 En mi niit alilis lon pwal eu kapas?",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Hawaii — Dealerships",
+            "url": "https://hidot.hawaii.gov/",
+            "agency": "HI DMV — Dealer Licensing",
+            "jurisdiction": "Hawaii",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    },
+    "auto_repair": {
+      "sub_vertical": "auto_repair",
+      "label": "Auto Repair",
+      "status": "REQUIRES_CONFIRMATION",
+      "regulator": {
+        "agency": "Hawaii AG / Consumer Protection — Auto Repair",
+        "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+        "notes": "Federal FTC baseline; confirm state BAR/inspection program if any"
+      },
+      "probe_result": "ok",
+      "http_code": 200,
+      "cited_facts": [
+        {
+          "fact_id": "GT269-HI-AUT-001",
+          "text": "Before sharing sensitive information, make sure you’re on a federal government site.",
+          "status": "REQUIRES_CONFIRMATION",
+          "citation": {
+            "source": "Hawaii — Auto Repair",
+            "url": "https://www.consumer.ftc.gov/articles/auto-repair-basics",
+            "agency": "Hawaii AG / Consumer Protection — Auto Repair",
+            "jurisdiction": "Hawaii",
+            "tier": "agency_primary",
+            "retrieved_date": "2026-06-19"
+          }
+        }
+      ],
+      "fact_count": 1,
+      "gap": null
+    }
+  },
+  "federal_context": [
+    {
+      "sub_vertical": "trucking",
+      "text": "The Pennsylvania Public Utility Commission regulates nearly 7,500 motor carriers that transport property, passengers, or household goods for compensation in Pennsylvania.",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    },
+    {
+      "sub_vertical": "trucking",
+      "text": "Property carriers (e.g., trucking companies) operating in Pennsylvania are regulated by the PUC for safety and insurance requirements only (not rates).",
+      "status": "FOUND",
+      "source": "PA PUC — Motor Carrier",
+      "url": "https://www.puc.pa.gov/motor-carrier/",
+      "retrieved_date": "2026-06-19",
+      "origin": "federal_baseline_237"
+    }
+  ],
+  "summary": {
+    "domain_count": 5,
+    "total_facts": 5,
+    "status_counts": {
+      "FOUND": 0,
+      "REQUIRES_CONFIRMATION": 5,
+      "NOT FOUND": 0,
+      "ACCESS_RESTRICTED": 0
+    },
+    "anchor_state": false,
+    "deep_harvest": false
+  },
+  "deepening_issues": [
+    275
+  ],
+  "dot_compliance": {
+    "domains": {
+      "carrier_registration": {
+        "domain": "carrier_registration",
+        "label": "Carrier Registration",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-HI-CAR-001",
+            "text": "Search Cases &amp; Filings Find PUC cases/dockets, tariffs, certificates, filings and other documents.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "carrier_registration",
+            "citation": {
+              "source": "HI PUC — Motor Carrier",
+              "url": "https://puc.hawaii.gov/",
+              "agency": "HI PUC",
+              "jurisdiction": "Hawaii",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "hours_of_service": {
+        "domain": "hours_of_service",
+        "label": "Hours Of Service",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-HI-HOU-001",
+            "text": "Read More Relay Hawaii Relay Hawaii is a no-cost service that provides full telephone accessibility to people who are Deaf, Hard of Hearing, DeafBlind or those with a speech disability.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "hours_of_service",
+            "citation": {
+              "source": "HI PUC — Motor Carrier",
+              "url": "https://puc.hawaii.gov/",
+              "agency": "HI PUC",
+              "jurisdiction": "Hawaii",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "vehicle_requirements": {
+        "domain": "vehicle_requirements",
+        "label": "Vehicle Requirements",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-HI-VEH-001",
+            "text": "MonsterInsightsPrivacyGuardFilter( MonsterInsightsExcludeQuery ) : MonsterInsightsPrivacyGuardFilter( MonsterInsightsDefaultLocations ); } else { var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ?",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "vehicle_requirements",
+            "citation": {
+              "source": "HI PUC — Motor Carrier",
+              "url": "https://puc.hawaii.gov/",
+              "agency": "HI PUC",
+              "jurisdiction": "Hawaii",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "insurance": {
+        "domain": "insurance",
+        "label": "Insurance",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-HI-INS-001",
+            "text": "This latest PUC Connection edition 26-03 highlights multiple opportunities for public input, including efforts to improve the PUC website, develop a wildfire liability cap framework under Act 258, update the Hawaiʻi Universal Service Fund to better support blind and low vision residents, and more.",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "insurance",
+            "citation": {
+              "source": "HI PUC — Motor Carrier",
+              "url": "https://puc.hawaii.gov/",
+              "agency": "HI PUC",
+              "jurisdiction": "Hawaii",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      },
+      "interstate_intrastate": {
+        "domain": "interstate_intrastate",
+        "label": "Interstate Intrastate",
+        "status": "REQUIRES_CONFIRMATION",
+        "probe_result": "tranche3_probe",
+        "cited_facts": [
+          {
+            "fact_id": "GT275-HI-INT-001",
+            "text": "MonsterInsightsPrivacyGuardFilter( MonsterInsightsExcludeQuery ) : MonsterInsightsPrivacyGuardFilter( MonsterInsightsDefaultLocations ); } else { var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ?",
+            "status": "REQUIRES_CONFIRMATION",
+            "category": "interstate_intrastate",
+            "citation": {
+              "source": "HI PUC — Motor Carrier",
+              "url": "https://puc.hawaii.gov/",
+              "agency": "HI PUC",
+              "jurisdiction": "Hawaii",
+              "tier": "agency_primary",
+              "retrieved_date": "2026-06-19"
+            }
+          }
+        ],
+        "fact_count": 1,
+        "gap": null
+      }
+    },
+    "summary": {
+      "domain_count": 5,
+      "total_facts": 5,
+      "status_counts": {
+        "FOUND": 0,
+        "REQUIRES_CONFIRMATION": 5,
+        "NOT FOUND": 0,
+        "ACCESS_RESTRICTED": 0
+      },
+      "deep_harvest": false,
+      "tranche": 3
+    }
+  },
+  "federal_dot_baseline_ref": "Stonebridge/Operations/Compliance_Research/groundtruth/Compliance/lanes/R5_transport_logistics_auto/federal_fmcsa_dot_baseline.json",
+  "dot_issue": 275
+}

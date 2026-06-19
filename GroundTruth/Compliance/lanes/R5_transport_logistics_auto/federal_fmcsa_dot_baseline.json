@@ -7,7 +7,7 @@
   "deepening_issue": 275,
   "task": "R5 #275 — FMCSA federal DOT baseline (carrier registration, HOS, vehicle, insurance, interstate/intrastate)",
   "jurisdiction": "Federal (FMCSA / U.S. DOT)",
-  "generated_at": "2026-06-19T16:22:54.035914+00:00",
+  "generated_at": "2026-06-19T16:38:09.615917+00:00",
   "retrieved_date": "2026-06-19",
   "disclaimer": "Operational compliance research and cited public-records compilation — not legal advice. Confirm DOT/FMCSA carrier registration, HOS, vehicle, and insurance requirements with FMCSA and the relevant state authority.",
   "policy": "Public .gov sources only; FMCSA.gov 403 = park; gaps explicit; eCFR/UCR fallbacks.",
@@ -340,7 +340,9 @@
       "ga_psc_clear": false,
       "ga_dps_fallback_ok": true,
       "ga_gap_cleared": true
-    }
+    },
+    "skipped": "fmcsa_weekly_only",
+    "policy": "R5-C: FMCSA portal live reprobe skipped; weekly schedule only"
   },
   "summary": {
     "domain_count": 5,
