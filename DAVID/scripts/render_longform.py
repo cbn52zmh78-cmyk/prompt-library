@@ -168,6 +168,21 @@ def _is_archive_production(script: dict[str, Any], refs: dict[str, Any]) -> bool
     return "archive" in set_file.lower() or script.get("format_id") == "documentary-host"
 
 
+def _is_clinical_neutral_set(script: dict[str, Any], refs: dict[str, Any]) -> bool:
+    set_file = str(refs.get("set_file") or "").lower()
+    if any(k in set_file for k in ("cyclorama", "seamless_neutral", "studio_interior")):
+        return True
+    return script.get("format_id") in ("editorial-explainer", "companion", "gfe-companion")
+
+
+def _use_magenta_hue_qa(script: dict[str, Any], refs: dict[str, Any]) -> bool:
+    return (
+        _is_archive_production(script, refs)
+        or _is_dark_scene(refs, script=script)
+        or script.get("format_id") in ("narrative-short-film", "movies")
+    )
+
+
 def _load_set_library() -> dict[str, Any]:
     global _SET_LIBRARY_CACHE
     if _SET_LIBRARY_CACHE is None:
@@ -1954,15 +1969,17 @@ def qa_check(
                         passes.append(f"flat loudness across shots (spread {spread:.2f} LU)")
                     else:
                         issues.append(f"loudness spread {spread:.2f} LU > {LOUDNESS_SPREAD_MAX_LU}")
-                if _is_archive_production(script, refs):
+                if _use_magenta_hue_qa(script, refs):
                     mag_scores = [probe_magenta_score(p) for p in segs]
                     if max(mag_scores) <= MAGENTA_SCORE_MAX:
                         passes.append(f"zero magenta (max score {max(mag_scores):.3f} <= {MAGENTA_SCORE_MAX})")
                     else:
                         bad = [(segs[i].stem, mag_scores[i]) for i in range(len(segs)) if mag_scores[i] > MAGENTA_SCORE_MAX]
                         issues.append(f"magenta detected: {bad}")
+                elif _is_clinical_neutral_set(script, refs):
+                    passes.append("clinical/neutral set — magenta probe skipped (grey balance gate)")
                 else:
-                    passes.append("clinical/neutral set — archive magenta probe skipped")
+                    passes.append("neutral set — magenta probe skipped")
                 sync_bad = []
                 for p, shot in zip(segs, shots[: len(segs)]):
                     delta = probe_av_duration_delta(p, float(shot.get("duration", 0)))
@@ -1979,6 +1996,12 @@ def qa_check(
                         passes.append(f"lamp warm ratio stable across segments (Δ={delta:.3f})")
                     else:
                         issues.append(f"lamp hue drift between segments Δ={delta:.3f} ratios={ratios}")
+                elif len(segs) >= 2 and _use_magenta_hue_qa(script, refs):
+                    mag_scores = [probe_magenta_score(p) for p in segs]
+                    if max(mag_scores) <= MAGENTA_SCORE_MAX:
+                        passes.append(f"zero hue drift across segments (max magenta {max(mag_scores):.3f})")
+                    else:
+                        issues.append(f"hue drift detected across segments magenta={mag_scores}")
                 elif len(segs) >= 2:
                     balances = [_probe_grey_balance(p) for p in segs]
                     delta = max(balances) - min(balances)
