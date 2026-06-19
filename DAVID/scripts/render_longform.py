@@ -2534,31 +2534,14 @@ def qa_check(
                             f"yellow-green cast detected: "
                             f"{[(segs[i].stem, yg_scores[i]) for i in range(len(segs)) if yg_scores[i] > YELLOW_GREEN_SCORE_MAX]}"
                         )
-                    chip_shots = [
-                        s for s in shots if _shot_needs_label_chip_burn(s)
-                    ]
-                    if chip_shots:
-                        chip_seg = next(
-                            (p for p, s in zip(segs, shots) if _shot_needs_label_chip_burn(s)),
-                            None,
-                        )
-                        if chip_seg and (shots_dir := chip_seg.parent) and (
-                            chip_seg.parent / f"{chip_seg.stem.replace('_processed', '')}_chip_overlay.png"
-                        ).is_file() or any(
-                            shots_dir.glob(f"*{_shot_id}_*chip*")
-                            for _shot_id in [s["id"] for s in chip_shots]
-                            for shots_dir in [chip_seg.parent if chip_seg else None]
-                            if shots_dir
-                        ):
-                            passes.append("pronunciation chip overlay burned (high-contrast #194)")
-                        elif chip_seg and list(chip_seg.parent.glob("*chip_overlay.png")):
+                    chip_shots = [s for s in shots if _shot_needs_label_chip_burn(s)]
+                    if chip_shots and segs:
+                        shots_dir = segs[0].parent
+                        overlays = list(shots_dir.glob("*chip_overlay.png"))
+                        if overlays:
                             passes.append("pronunciation chip overlay burned (high-contrast #194)")
                         else:
-                            overlay_glob = list(segs[0].parent.glob("*chip_overlay.png")) if segs else []
-                            if overlay_glob:
-                                passes.append("pronunciation chip overlay burned (high-contrast #194)")
-                            else:
-                                issues.append("pronunciation chip overlay missing on demonstration shot")
+                            issues.append("pronunciation chip overlay missing on demonstration shot")
                 if len(segs) >= 2 and _is_archive_production(script, refs):
                     ratios = [probe_lamp_warm_ratio(p) for p in segs]
                     delta = max(ratios) - min(ratios)
