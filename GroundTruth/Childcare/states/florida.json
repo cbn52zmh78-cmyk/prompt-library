@@ -8,8 +8,8 @@
   "state_code": "FL",
   "state_slug": "florida",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:14:49.194351+00:00",
-  "status": "PARTIAL",
+  "generated_at": "2026-06-19T16:26:07.132773+00:00",
+  "status": "HARVESTED",
   "primary_source": "Florida F.S. 402.305(4) Staff-to-Children Ratio",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
@@ -128,19 +128,56 @@
       ]
     },
     "group_size": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "staff_qualifications": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "background_checks": {
-      "status": "PARKED",
-      "fact_count": 0,
-      "facts": []
+      "status": "HARVESTED",
+      "fact_count": 2,
+      "facts": [
+        {
+          "fact_id": "florida-childcare-background-checks-1",
+          "category": "background_checks",
+          "text": "Florida child care licensing — This screening shall be conducted as provided in chapter 435, using the level 2 standards for screening provided in that chapter, and include employment history checks, a search of criminal history records, sexual predator and sexual offender registries, and child abuse and neglect registry of any state in which the current or prospective child care personnel resided during the preceding 5 years.",
+          "citation": {
+            "source": "Florida F.S. 402.305(4) Staff-to-Children Ratio",
+            "url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0402/Sections/0402.305.html",
+            "agency": "Florida F.S. 402.305(4) Staff-to-Children Ratio",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "florida-childcare-background-checks-2",
+          "category": "background_checks",
+          "text": "Florida child care licensing — The department shall complete the screening and provide the results to the child care facility within 3 business days from the receipt of the criminal history record check.",
+          "citation": {
+            "source": "Florida F.S. 402.305(4) Staff-to-Children Ratio",
+            "url": "http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0402/Sections/0402.305.html",
+            "agency": "Florida F.S. 402.305(4) Staff-to-Children Ratio",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        }
+      ]
     }
   },
   "gaps": [
@@ -150,11 +187,8 @@
     },
     {
       "domain": "staff_qualifications",
-      "status": "PARKED"
-    },
-    {
-      "domain": "background_checks",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": ""
     }
   ],
   "parked": []

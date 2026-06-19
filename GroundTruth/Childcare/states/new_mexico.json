@@ -8,28 +8,28 @@
   "state_code": "NM",
   "state_slug": "new_mexico",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:15:16.341579+00:00",
-  "status": "PARKED",
+  "generated_at": "2026-06-19T16:26:38.489690+00:00",
+  "status": "NOT FOUND",
   "primary_source": "New Mexico 8.14.3 NMAC",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
     "ratios": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "group_size": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "staff_qualifications": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "background_checks": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     }
@@ -37,20 +37,23 @@
   "gaps": [
     {
       "domain": "ratios",
-      "status": "PARKED",
-      "source_checked": "New Mexico 8.14.3 NMAC"
+      "status": "NOT FOUND",
+      "source_checked": "New Mexico 8.14.3 NMAC",
+      "rendered": "NOT FOUND — [source checked: New Mexico 8.14.3 NMAC] — HTTP 404"
     },
     {
       "domain": "group_size",
-      "status": "PARKED"
+      "status": "NOT FOUND"
     },
     {
       "domain": "staff_qualifications",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": "https://www.srca.nm.gov/parts/title8/8.14.3.html; https://www.nmececd.org/child-care-licensing/; https://www.childcare.gov/state-resources/new-mexico/understanding-and-finding-child-care-resources"
     },
     {
       "domain": "background_checks",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": "https://www.srca.nm.gov/parts/title8/8.14.3.html; https://www.nmececd.org/child-care-licensing/; https://www.childcare.gov/state-resources/new-mexico/understanding-and-finding-child-care-resources"
     }
   ],
   "parked": [
@@ -78,7 +81,7 @@
       "extractor": "generic",
       "status": "HARVESTED",
       "http_status": 200,
-      "bytes": 132117,
+      "bytes": 132123,
       "retrieved_date": "2026-06-19",
       "issue": 279,
       "lane": "Childcare",

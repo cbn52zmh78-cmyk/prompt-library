@@ -8,28 +8,28 @@
   "state_code": "ID",
   "state_slug": "idaho",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:14:50.753848+00:00",
-  "status": "PARKED",
+  "generated_at": "2026-06-19T16:26:08.677119+00:00",
+  "status": "NOT FOUND",
   "primary_source": "Idaho Child Care Licensing",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
     "ratios": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "group_size": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "staff_qualifications": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "background_checks": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     }
@@ -37,20 +37,23 @@
   "gaps": [
     {
       "domain": "ratios",
-      "status": "PARKED",
-      "source_checked": "Idaho Child Care Licensing"
+      "status": "NOT FOUND",
+      "source_checked": "Idaho Child Care Licensing",
+      "rendered": "NOT FOUND — [source checked: Idaho Child Care Licensing] — HTTP 404"
     },
     {
       "domain": "group_size",
-      "status": "PARKED"
+      "status": "NOT FOUND"
     },
     {
       "domain": "staff_qualifications",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": "https://healthandwelfare.idaho.gov/services-programs/children-families/child-care-licensing; https://www.childcare.gov/state-resources/idaho/understanding-and-finding-child-care-resources"
     },
     {
       "domain": "background_checks",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": "https://healthandwelfare.idaho.gov/services-programs/children-families/child-care-licensing; https://www.childcare.gov/state-resources/idaho/understanding-and-finding-child-care-resources"
     }
   ],
   "parked": [

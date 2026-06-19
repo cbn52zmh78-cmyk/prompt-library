@@ -8,28 +8,28 @@
   "state_code": "ME",
   "state_slug": "maine",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:14:57.301009+00:00",
-  "status": "PARKED",
+  "generated_at": "2026-06-19T16:26:16.732247+00:00",
+  "status": "NOT FOUND",
   "primary_source": "Maine Child Care Facility Licensing Rules",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
     "ratios": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "group_size": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "staff_qualifications": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "background_checks": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     }
@@ -37,20 +37,23 @@
   "gaps": [
     {
       "domain": "ratios",
-      "status": "PARKED",
-      "source_checked": "Maine Child Care Facility Licensing Rules"
+      "status": "NOT FOUND",
+      "source_checked": "Maine Child Care Facility Licensing Rules",
+      "rendered": "NOT FOUND — [source checked: Maine Child Care Facility Licensing Rules] — HTTP 404"
     },
     {
       "domain": "group_size",
-      "status": "PARKED"
+      "status": "NOT FOUND"
     },
     {
       "domain": "staff_qualifications",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": "https://www.maine.gov/dhhs/ocfs/cb-licensing/regulations; https://www.maine.gov/dhhs/ocfs/cb-licensing/; https://www.childcare.gov/state-resources/maine/understanding-and-finding-child-care-resources"
     },
     {
       "domain": "background_checks",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": "https://www.maine.gov/dhhs/ocfs/cb-licensing/regulations; https://www.maine.gov/dhhs/ocfs/cb-licensing/; https://www.childcare.gov/state-resources/maine/understanding-and-finding-child-care-resources"
     }
   ],
   "parked": [
@@ -62,7 +65,7 @@
       "extractor": "generic",
       "status": "PARKED",
       "http_status": 404,
-      "bytes": 41726,
+      "bytes": 41705,
       "retrieved_date": "2026-06-19",
       "issue": 279,
       "lane": "Childcare",

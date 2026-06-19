@@ -8,28 +8,65 @@
   "state_code": "TX",
   "state_slug": "texas",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:15:26.197524+00:00",
-  "status": "PARKED",
-  "primary_source": "Texas 26 TAC §746.1301",
+  "generated_at": "2026-06-19T16:26:50.423421+00:00",
+  "status": "PARTIAL",
+  "primary_source": "Texas 26 TAC §746.1601 (Ratio chart — LII)",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
     "ratios": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "group_size": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "staff_qualifications": {
-      "status": "PARKED",
-      "fact_count": 0,
-      "facts": []
+      "status": "HARVESTED",
+      "fact_count": 2,
+      "facts": [
+        {
+          "fact_id": "texas-childcare-staff-qualifications-1",
+          "category": "staff_qualifications",
+          "text": "Texas child care licensing — 1301 - What are the training requirements for employees, caregivers, and directors? State Regulations Compare (a) Employees, caregivers, and directors must complete the following training requirements.",
+          "citation": {
+            "source": "Texas 26 TAC §746.1301 (Training requirements)",
+            "url": "https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-746-1301",
+            "agency": "Texas HHS CCR",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "texas-childcare-staff-qualifications-2",
+          "category": "staff_qualifications",
+          "text": "Texas child care licensing — Attached Graphic (b) If a caregiver or employee does not yet have a current certificate in pediatric CPR as required in (a)(4)(A) in Figure: 26 TAC § 746.",
+          "citation": {
+            "source": "Texas 26 TAC §746.1301 (Training requirements)",
+            "url": "https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-746-1301",
+            "agency": "Texas HHS CCR",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        }
+      ]
     },
     "background_checks": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     }
@@ -37,37 +74,68 @@
   "gaps": [
     {
       "domain": "ratios",
-      "status": "PARKED",
-      "source_checked": "Texas 26 TAC §746.1301"
+      "status": "NOT FOUND",
+      "source_checked": "Texas 26 TAC §746.1601 (Ratio chart — LII)",
+      "rendered": "NOT FOUND — [source checked: Texas 26 TAC §746.1601 (Ratio chart — LII)] — Live source fetched but no ratio facts extracted from static content"
     },
     {
       "domain": "group_size",
-      "status": "PARKED"
-    },
-    {
-      "domain": "staff_qualifications",
-      "status": "PARKED"
+      "status": "NOT FOUND"
     },
     {
       "domain": "background_checks",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": "https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-746-1601; https://www.law.cornell.edu/tx/admin/2025/tx26_7461601_200901576_1.pdf; https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-746-1603 …"
     }
   ],
   "parked": [
     {
-      "source_id": "texas_texas_26_tac_746_1301",
+      "source_id": "texas_texas_26_tac_746_1601_ratio_chart_lii_",
       "state": "Texas",
-      "source": "Texas 26 TAC §746.1301",
-      "url": "https://texreg.sos.state.tx.us/public/readtac$ext.ViewTAC?tac_view=3&ti=26&pt=1&ch=746&sch=H&sec=746.1301&rl=Y",
-      "extractor": "generic",
+      "source": "Texas 26 TAC §746.1601 (Ratio chart — LII)",
+      "url": "https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-746-1601",
+      "extractor": "tx_tac746_chart",
       "status": "HARVESTED",
       "http_status": 200,
-      "bytes": 2517,
+      "bytes": 28812,
       "retrieved_date": "2026-06-19",
       "issue": 279,
       "lane": "Childcare",
       "domain": "ratios",
-      "tier": "tertiary",
+      "tier": "primary",
+      "ratio_facts_extracted": 0,
+      "park_reason": "Live source fetched but no ratio facts extracted from static content"
+    },
+    {
+      "source_id": "texas_texas_26_tac_746_1601_ratio_chart_pdf_",
+      "state": "Texas",
+      "source": "Texas 26 TAC §746.1601 Ratio Chart (PDF)",
+      "url": "https://www.law.cornell.edu/tx/admin/2025/tx26_7461601_200901576_1.pdf",
+      "extractor": "generic",
+      "status": "PARKED",
+      "http_status": 404,
+      "bytes": 228,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "secondary",
+      "park_reason": "HTTP 404"
+    },
+    {
+      "source_id": "texas_texas_26_tac_746_1603_ratios_lii_",
+      "state": "Texas",
+      "source": "Texas 26 TAC §746.1603 (Ratios — LII)",
+      "url": "https://www.law.cornell.edu/regulations/texas/26-Tex-Admin-Code-SS-746-1603",
+      "extractor": "lii_ratio_table",
+      "status": "HARVESTED",
+      "http_status": 200,
+      "bytes": 29634,
+      "retrieved_date": "2026-06-19",
+      "issue": 279,
+      "lane": "Childcare",
+      "domain": "ratios",
+      "tier": "primary",
       "ratio_facts_extracted": 0,
       "park_reason": "Live source fetched but no ratio facts extracted from static content"
     },

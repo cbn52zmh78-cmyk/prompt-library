@@ -8,8 +8,8 @@
   "state_code": "NC",
   "state_slug": "north_carolina",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:15:16.945920+00:00",
-  "status": "PARTIAL",
+  "generated_at": "2026-06-19T16:26:40.327544+00:00",
+  "status": "HARVESTED",
   "primary_source": "North Carolina G.S. 110-91",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
@@ -242,24 +242,76 @@
       ]
     },
     "staff_qualifications": {
-      "status": "PARKED",
-      "fact_count": 0,
-      "facts": []
+      "status": "HARVESTED",
+      "fact_count": 3,
+      "facts": [
+        {
+          "fact_id": "north_carolina-childcare-staff-qualifications-1",
+          "category": "staff_qualifications",
+          "text": "North Carolina child care licensing — In the circumstance in which a lead teacher is responsible for two groups of children in a child care facility, at least one other individual overseeing the group shall be engaging in the North Carolina Early Childhood Credential coursework or seeking job training with the goal of accomplishing the five-year pathway to seek a future Lead Teacher qualification.",
+          "citation": {
+            "source": "North Carolina G.S. 110-91",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_110/GS_110-91.html",
+            "agency": "North Carolina G.S. 110-91",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "north_carolina-childcare-staff-qualifications-2",
+          "category": "staff_qualifications",
+          "text": "North Carolina child care licensing — Lead teachers shall either (i) be enrolled in the North Carolina Early Childhood Credential coursework or its equivalent as determined by the Department within six months after becoming employed as a lead teacher or within six months after this act becomes law, whichever is later, and shall complete the credential or its equivalent within 18 months after enrollment or (ii) have a minimum of five years of documented experience teaching in a licensed child care facility in this State which shall be deemed equivalent to the North Carolina Early Childhood Credential.",
+          "citation": {
+            "source": "North Carolina G.S. 110-91",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_110/GS_110-91.html",
+            "agency": "North Carolina G.S. 110-91",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "north_carolina-childcare-staff-qualifications-3",
+          "category": "staff_qualifications",
+          "text": "North Carolina child care licensing — For child care centers licensed to care for 200 or more children, the Department, in collaboration with the North Carolina Institute for Early Childhood Professional Development, shall establish categories to recognize the levels of education achieved by child care center administrators and teachers who perform administrative functions.",
+          "citation": {
+            "source": "North Carolina G.S. 110-91",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_110/GS_110-91.html",
+            "agency": "North Carolina G.S. 110-91",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        }
+      ]
     },
     "background_checks": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     }
   },
   "gaps": [
     {
-      "domain": "staff_qualifications",
-      "status": "PARKED"
-    },
-    {
       "domain": "background_checks",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": ""
     }
   ],
   "parked": []

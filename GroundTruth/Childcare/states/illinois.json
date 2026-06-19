@@ -8,8 +8,8 @@
   "state_code": "IL",
   "state_slug": "illinois",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:14:51.333160+00:00",
-  "status": "PARTIAL",
+  "generated_at": "2026-06-19T16:26:09.871892+00:00",
+  "status": "HARVESTED",
   "primary_source": "Illinois 89 Ill. Adm. Code 407",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
@@ -278,25 +278,252 @@
       ]
     },
     "staff_qualifications": {
-      "status": "PARKED",
-      "fact_count": 0,
-      "facts": []
+      "status": "HARVESTED",
+      "fact_count": 7,
+      "facts": [
+        {
+          "fact_id": "illinois-childcare-staff-qualifications-1",
+          "category": "staff_qualifications",
+          "text": "Illinois child care licensing — 1) The director and each child care staff member shall participate in 15 clock hours of in-service training per year.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois 89 Ill. Adm. Code 407",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-staff-qualifications-2",
+          "category": "staff_qualifications",
+          "text": "Illinois child care licensing — 5) By September 1, 2012, all child care staff employed by the day care center, assistants and the director shall become members of the Gateways to Opportunity Registry, with all educational and training credentials entered into the registry verified in accordance with procedures and requirements adopted by the Department of Human Services (see 89 Ill.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois 89 Ill. Adm. Code 407",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-staff-qualifications-3",
+          "category": "staff_qualifications",
+          "text": "Illinois child care licensing — 6) The director and each child care staff member must complete the online Mandated Reporter Training that is available on the Department's website.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois 89 Ill. Adm. Code 407",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-staff-qualifications-4",
+          "category": "staff_qualifications",
+          "text": "Illinois child care licensing — 8) Every 3 years, all child care staff in a facility licensed to care for newborns and infants, including the day care center director, shall receive training on the nature of Sudden Unexpected Infant Death (SUID), SIDS and the safe sleep recommendations of the American Academy of Pediatrics.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois 89 Ill. Adm. Code 407",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-staff-qualifications-5",
+          "category": "staff_qualifications",
+          "text": "Illinois child care licensing — 100, and if serving as the child care director of a facility serving more groups of school-age children than groups of pre-school children shall have achieved one of the following: 1) 60 semester or 90 quarter hours of credit from an accredited college or university with 18 semester or 27 quarter hours in courses related to child care and/or child development, elementary education, physical education, recreation, camping or other related fields, including courses related to school-age children; or 2) All of the following: A) Two years (3120 clock hours) of child development experience in a recreational program, kindergarten, or licensed day care center serving school-age children, or license exempt school-age child care program operated by a public or private school; B) 30 semester or 45 quarter hours of college credits with 10 semester or 15 quarter hours in courses related directly to child care and/or child development, elementary education, physical education, recreation, camping or other related fields; and C) Proof of enrollment in an accredited college or university until 2 years of college credit have been achieved.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois 89 Ill. Adm. Code 407",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-staff-qualifications-6",
+          "category": "staff_qualifications",
+          "text": "Illinois child care licensing — 140) may be designated to assume decision-making responsibility, that shall include opening and closing the facility, when the child care director is off site, if the day care center operates eight or more hours per day and the following provisions are met: A) The staff member must have on file, documentation of a minimum of 2880 hours of experience as an early childhood teacher at the early childhood teacher's current facility; and B) The early childhood teacher may only be present and assume decision-making responsibilities for the first and last hour of operation, that shall include opening and closing the facility, when a qualified director is not present; and C) All requirements of subsection (l)(1), (2), and (3) of this Section are met .",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois 89 Ill. Adm. Code 407",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-staff-qualifications-7",
+          "category": "staff_qualifications",
+          "text": "Illinois child care licensing — i) Within nine months after beginning interim conditional teaching, the individual must complete all training hours required for a CDA or CCP credential, submit an application for the credential and request the observation necessary to be granted the credential; and ii) Within 15 months after beginning interim conditional teaching, the individual must have proof of having received the CDA or CCP credential.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois 89 Ill. Adm. Code 407",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        }
+      ]
     },
     "background_checks": {
-      "status": "PARKED",
-      "fact_count": 0,
-      "facts": []
+      "status": "HARVESTED",
+      "fact_count": 6,
+      "facts": [
+        {
+          "fact_id": "illinois-childcare-background-checks-1",
+          "category": "background_checks",
+          "text": "Illinois child care licensing — \"Background check\" means: a criminal history check via fingerprints of persons age 17 and over that are submitted to the Illinois State Police and the Federal Bureau of Investigation (FBI) for comparison to their criminal history records, as appropriate; a check of the Statewide Automated Child Welfare Information System (SACWIS) and other states' child protection systems, as appropriate, to determine whether an individual has been alleged or indicated as a perpetrator of child abuse or neglect; and a check of the Illinois Sex Offender Registry.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois 89 Ill. Adm. Code 407",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-background-checks-2",
+          "category": "background_checks",
+          "text": "Illinois child care licensing — \"Initial background check\" means fingerprints have been obtained, as verified by a receipt from the fingerprint vendor, and the individual has cleared a check of the Statewide Automated Child Welfare Information System (SACWIS) and the Illinois Sex Offender Registry.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois 89 Ill. Adm. Code 407",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-background-checks-3",
+          "category": "background_checks",
+          "text": "Illinois child care licensing — 70(b); 7) A list of persons subject to the background check requirements of 89 Ill.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois 89 Ill. Adm. Code 407",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-background-checks-4",
+          "category": "background_checks",
+          "text": "Illinois child care licensing — Code 385 (Background Checks) and each person's complete, signed authorization to conduct the background check; 8) Effective January 1, 2014, as part of an initial application, the Department shall require proof the center has been tested within the last 3 years for radon by a Radon Measurement Professional licensed by the Illinois Emergency Management Agency (see 32 Ill.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois 89 Ill. Adm. Code 407",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-background-checks-5",
+          "category": "background_checks",
+          "text": "Illinois child care licensing — 65 Provisions Pertaining to Permits a) A permit shall not be issued prior to the following: 1) Completion of the application for license and submission to the Department; 2) Employment of a child care director who has passed the background check requirements of 89 Ill.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois 89 Ill. Adm. Code 407",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "illinois-childcare-background-checks-6",
+          "category": "background_checks",
+          "text": "Illinois child care licensing — h employed staff member during the permit period, including a current medical report (not more than six months old), three written character references, documentation of educational qualifications (if required for the position) and proof that the employee has cleared the initial background check; 10) Procedures and forms have been created as required in Section 407.",
+          "citation": {
+            "source": "Illinois 89 Ill. Adm. Code 407",
+            "url": "https://www.ilga.gov/agencies/JCAR/entirepart?titlepart=08900407",
+            "agency": "Illinois 89 Ill. Adm. Code 407",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        }
+      ]
     }
   },
-  "gaps": [
-    {
-      "domain": "staff_qualifications",
-      "status": "PARKED"
-    },
-    {
-      "domain": "background_checks",
-      "status": "PARKED"
-    }
-  ],
+  "gaps": [],
   "parked": []
 }

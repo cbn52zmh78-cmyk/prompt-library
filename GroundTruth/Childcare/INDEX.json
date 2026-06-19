@@ -5,7 +5,7 @@
   "issue": 279,
   "citation_standard": "STD-CITE-001",
   "as_of_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:15:34.855587+00:00",
+  "generated_at": "2026-06-19T16:26:58.459240+00:00",
   "pinned_path": "GroundTruth/Childcare",
   "harvester": "Stonebridge/Operations/Scripts/harvest_groundtruth_279_r3_childcare_ratios.py",
   "artifacts": {
@@ -21,16 +21,19 @@
     "lane": "Childcare",
     "vertical": "childcare_licensing",
     "citation_standard": "STD-CITE-001",
-    "generated_at": "2026-06-19T16:15:34.571338+00:00",
+    "generated_at": "2026-06-19T16:26:58.424173+00:00",
     "retrieved_date": "2026-06-19",
     "state_count": 50,
-    "states_with_ratios": 17,
-    "states_without_ratios": 33,
-    "total_ratio_facts": 106,
-    "total_group_size_facts": 87,
-    "total_staff_qual_facts": 7,
-    "total_background_facts": 8,
-    "sources_attempted": 114,
+    "states_with_ratios": 19,
+    "states_without_ratios": 31,
+    "states_not_found": 28,
+    "states_access_restricted": 3,
+    "phase": "R3-B",
+    "total_ratio_facts": 123,
+    "total_group_size_facts": 95,
+    "total_staff_qual_facts": 33,
+    "total_background_facts": 29,
+    "sources_attempted": 119,
     "sources_parked": 28,
     "pinned_lane": "GroundTruth/Childcare",
     "states": [
@@ -42,8 +45,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "ACCESS_RESTRICTED",
+        "lane_status": "NOT FOUND",
         "primary_source": "Alabama Admin Code HEA 659"
       },
       {
@@ -54,21 +57,21 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "ACCESS_RESTRICTED",
+        "lane_status": "NOT FOUND",
         "primary_source": "Alaska 8 AAC 55"
       },
       {
         "state": "Arizona",
         "state_code": "AZ",
         "state_slug": "arizona",
-        "ratio_count": 0,
+        "ratio_count": 7,
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
-        "primary_source": "Arizona DHS Child Care Licensing"
+        "ratio_status": "HARVESTED",
+        "lane_status": "PARTIAL",
+        "primary_source": "Arizona Admin Code R9-5-404 (Staff:child ratios)"
       },
       {
         "state": "Arkansas",
@@ -78,8 +81,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Arkansas DHS Child Care Center Licensing"
       },
       {
@@ -90,8 +93,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "California CDSS Child Care Licensing Regulations"
       },
       {
@@ -102,8 +105,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Colorado 7 CCR 1-3.5"
       },
       {
@@ -114,8 +117,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Connecticut OEC Licensing"
       },
       {
@@ -126,8 +129,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Delaware Admin Code Title 14"
       },
       {
@@ -137,9 +140,9 @@
         "ratio_count": 6,
         "group_size_count": 0,
         "staff_qual_count": 0,
-        "background_count": 0,
+        "background_count": 2,
         "ratio_status": "HARVESTED",
-        "lane_status": "PARTIAL",
+        "lane_status": "HARVESTED",
         "primary_source": "Florida F.S. 402.305(4) Staff-to-Children Ratio"
       },
       {
@@ -162,8 +165,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Hawaii Child Care Licensing"
       },
       {
@@ -174,8 +177,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Idaho Child Care Licensing"
       },
       {
@@ -184,10 +187,10 @@
         "state_slug": "illinois",
         "ratio_count": 7,
         "group_size_count": 7,
-        "staff_qual_count": 0,
-        "background_count": 0,
+        "staff_qual_count": 7,
+        "background_count": 6,
         "ratio_status": "HARVESTED",
-        "lane_status": "PARTIAL",
+        "lane_status": "HARVESTED",
         "primary_source": "Illinois 89 Ill. Adm. Code 407"
       },
       {
@@ -209,7 +212,7 @@
         "ratio_count": 6,
         "group_size_count": 0,
         "staff_qual_count": 2,
-        "background_count": 4,
+        "background_count": 6,
         "ratio_status": "HARVESTED",
         "lane_status": "HARVESTED",
         "primary_source": "Iowa 441-109 Child Care Centers"
@@ -222,8 +225,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Kansas KDHE Child Care Licensing Regulations"
       },
       {
@@ -232,10 +235,10 @@
         "state_slug": "kentucky",
         "ratio_count": 8,
         "group_size_count": 8,
-        "staff_qual_count": 0,
-        "background_count": 0,
+        "staff_qual_count": 1,
+        "background_count": 1,
         "ratio_status": "HARVESTED",
-        "lane_status": "PARTIAL",
+        "lane_status": "HARVESTED",
         "primary_source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios"
       },
       {
@@ -246,8 +249,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "ACCESS_RESTRICTED",
+        "lane_status": "NOT FOUND",
         "primary_source": "Louisiana DSS Child Care Center Licensing"
       },
       {
@@ -258,8 +261,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Maine Child Care Facility Licensing Rules"
       },
       {
@@ -270,21 +273,21 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Maryland Child Care Center Licensing"
       },
       {
         "state": "Massachusetts",
         "state_code": "MA",
         "state_slug": "massachusetts",
-        "ratio_count": 0,
-        "group_size_count": 0,
-        "staff_qual_count": 0,
+        "ratio_count": 10,
+        "group_size_count": 8,
+        "staff_qual_count": 3,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
-        "primary_source": "Massachusetts 102 CMR 7.14"
+        "ratio_status": "HARVESTED",
+        "lane_status": "HARVESTED",
+        "primary_source": "Massachusetts 606 CMR 7.10 (Staff:child ratios and group sizes)"
       },
       {
         "state": "Michigan",
@@ -294,8 +297,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Michigan Child Care Licensing"
       },
       {
@@ -318,8 +321,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Mississippi MDHS Child Care Licensing"
       },
       {
@@ -328,8 +331,8 @@
         "state_slug": "missouri",
         "ratio_count": 4,
         "group_size_count": 4,
-        "staff_qual_count": 5,
-        "background_count": 4,
+        "staff_qual_count": 6,
+        "background_count": 6,
         "ratio_status": "HARVESTED",
         "lane_status": "HARVESTED",
         "primary_source": "Missouri 5 CSR 25-500 Staff/Child Ratios"
@@ -342,8 +345,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Montana ARM 37.95.301"
       },
       {
@@ -354,8 +357,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Nebraska 391-04-004"
       },
       {
@@ -364,10 +367,10 @@
         "state_slug": "nevada",
         "ratio_count": 5,
         "group_size_count": 3,
-        "staff_qual_count": 0,
-        "background_count": 0,
+        "staff_qual_count": 7,
+        "background_count": 6,
         "ratio_status": "HARVESTED",
-        "lane_status": "PARTIAL",
+        "lane_status": "HARVESTED",
         "primary_source": "Nevada NAC 432A.5205"
       },
       {
@@ -378,8 +381,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "New Hampshire He-C 4000"
       },
       {
@@ -402,8 +405,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "New Mexico 8.14.3 NMAC"
       },
       {
@@ -414,9 +417,9 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
-        "primary_source": "New York 18 NYCRR Part 418"
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
+        "primary_source": "New York 18 NYCRR §418-1.8 (LII mirror)"
       },
       {
         "state": "North Carolina",
@@ -424,10 +427,10 @@
         "state_slug": "north_carolina",
         "ratio_count": 6,
         "group_size_count": 6,
-        "staff_qual_count": 0,
+        "staff_qual_count": 3,
         "background_count": 0,
         "ratio_status": "HARVESTED",
-        "lane_status": "PARTIAL",
+        "lane_status": "HARVESTED",
         "primary_source": "North Carolina G.S. 110-91"
       },
       {
@@ -438,8 +441,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "North Dakota Child Care Licensing"
       },
       {
@@ -448,10 +451,10 @@
         "state_slug": "ohio",
         "ratio_count": 8,
         "group_size_count": 8,
-        "staff_qual_count": 0,
+        "staff_qual_count": 1,
         "background_count": 0,
         "ratio_status": "HARVESTED",
-        "lane_status": "PARTIAL",
+        "lane_status": "HARVESTED",
         "primary_source": "Ohio OAC 5180:2-12-18 Appendix A"
       },
       {
@@ -462,8 +465,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Oklahoma Child Care Licensing"
       },
       {
@@ -474,8 +477,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Oregon OAR Child Care Rules"
       },
       {
@@ -484,10 +487,10 @@
         "state_slug": "pennsylvania",
         "ratio_count": 6,
         "group_size_count": 6,
-        "staff_qual_count": 0,
+        "staff_qual_count": 1,
         "background_count": 0,
         "ratio_status": "HARVESTED",
-        "lane_status": "PARTIAL",
+        "lane_status": "HARVESTED",
         "primary_source": "Pennsylvania 55 Pa. Code §3270.51"
       },
       {
@@ -498,8 +501,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Rhode Island 500-RICR-70-00-1"
       },
       {
@@ -510,8 +513,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "South Carolina Child Care Licensing"
       },
       {
@@ -522,8 +525,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "South Dakota Child Care Licensing"
       },
       {
@@ -534,8 +537,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Tennessee Child Care Services"
       },
       {
@@ -544,11 +547,11 @@
         "state_slug": "texas",
         "ratio_count": 0,
         "group_size_count": 0,
-        "staff_qual_count": 0,
+        "staff_qual_count": 2,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
-        "primary_source": "Texas 26 TAC §746.1301"
+        "ratio_status": "NOT FOUND",
+        "lane_status": "PARTIAL",
+        "primary_source": "Texas 26 TAC §746.1601 (Ratio chart — LII)"
       },
       {
         "state": "Utah",
@@ -570,8 +573,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Vermont 33 V.S.A. §851"
       },
       {
@@ -581,9 +584,9 @@
         "ratio_count": 6,
         "group_size_count": 4,
         "staff_qual_count": 0,
-        "background_count": 0,
+        "background_count": 1,
         "ratio_status": "HARVESTED",
-        "lane_status": "PARTIAL",
+        "lane_status": "HARVESTED",
         "primary_source": "Virginia 8VAC20-780-350 Staff-to-children ratio and group size"
       },
       {
@@ -593,9 +596,9 @@
         "ratio_count": 6,
         "group_size_count": 6,
         "staff_qual_count": 0,
-        "background_count": 0,
+        "background_count": 1,
         "ratio_status": "HARVESTED",
-        "lane_status": "PARTIAL",
+        "lane_status": "HARVESTED",
         "primary_source": "Washington WAC 110-300-0356"
       },
       {
@@ -606,8 +609,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "West Virginia CSR Child Care"
       },
       {
@@ -630,8 +633,8 @@
         "group_size_count": 0,
         "staff_qual_count": 0,
         "background_count": 0,
-        "ratio_status": "PARKED",
-        "lane_status": "PARKED",
+        "ratio_status": "NOT FOUND",
+        "lane_status": "NOT FOUND",
         "primary_source": "Wyoming DFS Child Care Licensing"
       }
     ]
@@ -641,7 +644,7 @@
       "state": "Alabama",
       "state_code": "AL",
       "state_slug": "alabama",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -652,7 +655,7 @@
       "state": "Alaska",
       "state_code": "AK",
       "state_slug": "alaska",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -663,18 +666,18 @@
       "state": "Arizona",
       "state_code": "AZ",
       "state_slug": "arizona",
-      "status": "PARKED",
-      "ratio_count": 0,
+      "status": "PARTIAL",
+      "ratio_count": 7,
       "group_size_count": 0,
       "staff_qual_count": 0,
       "background_count": 0,
-      "gap_count": 4
+      "gap_count": 3
     },
     {
       "state": "Arkansas",
       "state_code": "AR",
       "state_slug": "arkansas",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -685,7 +688,7 @@
       "state": "California",
       "state_code": "CA",
       "state_slug": "california",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -696,7 +699,7 @@
       "state": "Colorado",
       "state_code": "CO",
       "state_slug": "colorado",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -707,7 +710,7 @@
       "state": "Connecticut",
       "state_code": "CT",
       "state_slug": "connecticut",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -718,7 +721,7 @@
       "state": "Delaware",
       "state_code": "DE",
       "state_slug": "delaware",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -729,12 +732,12 @@
       "state": "Florida",
       "state_code": "FL",
       "state_slug": "florida",
-      "status": "PARTIAL",
+      "status": "HARVESTED",
       "ratio_count": 6,
       "group_size_count": 0,
       "staff_qual_count": 0,
-      "background_count": 0,
-      "gap_count": 3
+      "background_count": 2,
+      "gap_count": 2
     },
     {
       "state": "Georgia",
@@ -751,7 +754,7 @@
       "state": "Hawaii",
       "state_code": "HI",
       "state_slug": "hawaii",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -762,7 +765,7 @@
       "state": "Idaho",
       "state_code": "ID",
       "state_slug": "idaho",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -773,12 +776,12 @@
       "state": "Illinois",
       "state_code": "IL",
       "state_slug": "illinois",
-      "status": "PARTIAL",
+      "status": "HARVESTED",
       "ratio_count": 7,
       "group_size_count": 7,
-      "staff_qual_count": 0,
-      "background_count": 0,
-      "gap_count": 2
+      "staff_qual_count": 7,
+      "background_count": 6,
+      "gap_count": 0
     },
     {
       "state": "Indiana",
@@ -799,14 +802,14 @@
       "ratio_count": 6,
       "group_size_count": 0,
       "staff_qual_count": 2,
-      "background_count": 4,
+      "background_count": 6,
       "gap_count": 1
     },
     {
       "state": "Kansas",
       "state_code": "KS",
       "state_slug": "kansas",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -817,18 +820,18 @@
       "state": "Kentucky",
       "state_code": "KY",
       "state_slug": "kentucky",
-      "status": "PARTIAL",
+      "status": "HARVESTED",
       "ratio_count": 8,
       "group_size_count": 8,
-      "staff_qual_count": 0,
-      "background_count": 0,
-      "gap_count": 2
+      "staff_qual_count": 1,
+      "background_count": 1,
+      "gap_count": 0
     },
     {
       "state": "Louisiana",
       "state_code": "LA",
       "state_slug": "louisiana",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -839,7 +842,7 @@
       "state": "Maine",
       "state_code": "ME",
       "state_slug": "maine",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -850,7 +853,7 @@
       "state": "Maryland",
       "state_code": "MD",
       "state_slug": "maryland",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -861,18 +864,18 @@
       "state": "Massachusetts",
       "state_code": "MA",
       "state_slug": "massachusetts",
-      "status": "PARKED",
-      "ratio_count": 0,
-      "group_size_count": 0,
-      "staff_qual_count": 0,
+      "status": "HARVESTED",
+      "ratio_count": 10,
+      "group_size_count": 8,
+      "staff_qual_count": 3,
       "background_count": 0,
-      "gap_count": 4
+      "gap_count": 1
     },
     {
       "state": "Michigan",
       "state_code": "MI",
       "state_slug": "michigan",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -894,7 +897,7 @@
       "state": "Mississippi",
       "state_code": "MS",
       "state_slug": "mississippi",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -908,15 +911,15 @@
       "status": "HARVESTED",
       "ratio_count": 4,
       "group_size_count": 4,
-      "staff_qual_count": 5,
-      "background_count": 4,
+      "staff_qual_count": 6,
+      "background_count": 6,
       "gap_count": 0
     },
     {
       "state": "Montana",
       "state_code": "MT",
       "state_slug": "montana",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -927,7 +930,7 @@
       "state": "Nebraska",
       "state_code": "NE",
       "state_slug": "nebraska",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -938,18 +941,18 @@
       "state": "Nevada",
       "state_code": "NV",
       "state_slug": "nevada",
-      "status": "PARTIAL",
+      "status": "HARVESTED",
       "ratio_count": 5,
       "group_size_count": 3,
-      "staff_qual_count": 0,
-      "background_count": 0,
-      "gap_count": 2
+      "staff_qual_count": 7,
+      "background_count": 6,
+      "gap_count": 0
     },
     {
       "state": "New Hampshire",
       "state_code": "NH",
       "state_slug": "new_hampshire",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -971,7 +974,7 @@
       "state": "New Mexico",
       "state_code": "NM",
       "state_slug": "new_mexico",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -982,7 +985,7 @@
       "state": "New York",
       "state_code": "NY",
       "state_slug": "new_york",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -993,18 +996,18 @@
       "state": "North Carolina",
       "state_code": "NC",
       "state_slug": "north_carolina",
-      "status": "PARTIAL",
+      "status": "HARVESTED",
       "ratio_count": 6,
       "group_size_count": 6,
-      "staff_qual_count": 0,
+      "staff_qual_count": 3,
       "background_count": 0,
-      "gap_count": 2
+      "gap_count": 1
     },
     {
       "state": "North Dakota",
       "state_code": "ND",
       "state_slug": "north_dakota",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -1015,18 +1018,18 @@
       "state": "Ohio",
       "state_code": "OH",
       "state_slug": "ohio",
-      "status": "PARTIAL",
+      "status": "HARVESTED",
       "ratio_count": 8,
       "group_size_count": 8,
-      "staff_qual_count": 0,
+      "staff_qual_count": 1,
       "background_count": 0,
-      "gap_count": 2
+      "gap_count": 1
     },
     {
       "state": "Oklahoma",
       "state_code": "OK",
       "state_slug": "oklahoma",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -1037,7 +1040,7 @@
       "state": "Oregon",
       "state_code": "OR",
       "state_slug": "oregon",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -1048,18 +1051,18 @@
       "state": "Pennsylvania",
       "state_code": "PA",
       "state_slug": "pennsylvania",
-      "status": "PARTIAL",
+      "status": "HARVESTED",
       "ratio_count": 6,
       "group_size_count": 6,
-      "staff_qual_count": 0,
+      "staff_qual_count": 1,
       "background_count": 0,
-      "gap_count": 2
+      "gap_count": 1
     },
     {
       "state": "Rhode Island",
       "state_code": "RI",
       "state_slug": "rhode_island",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -1070,7 +1073,7 @@
       "state": "South Carolina",
       "state_code": "SC",
       "state_slug": "south_carolina",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -1081,7 +1084,7 @@
       "state": "South Dakota",
       "state_code": "SD",
       "state_slug": "south_dakota",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -1092,7 +1095,7 @@
       "state": "Tennessee",
       "state_code": "TN",
       "state_slug": "tennessee",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -1103,12 +1106,12 @@
       "state": "Texas",
       "state_code": "TX",
       "state_slug": "texas",
-      "status": "PARKED",
+      "status": "PARTIAL",
       "ratio_count": 0,
       "group_size_count": 0,
-      "staff_qual_count": 0,
+      "staff_qual_count": 2,
       "background_count": 0,
-      "gap_count": 4
+      "gap_count": 3
     },
     {
       "state": "Utah",
@@ -1125,7 +1128,7 @@
       "state": "Vermont",
       "state_code": "VT",
       "state_slug": "vermont",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -1136,29 +1139,29 @@
       "state": "Virginia",
       "state_code": "VA",
       "state_slug": "virginia",
-      "status": "PARTIAL",
+      "status": "HARVESTED",
       "ratio_count": 6,
       "group_size_count": 4,
       "staff_qual_count": 0,
-      "background_count": 0,
-      "gap_count": 2
+      "background_count": 1,
+      "gap_count": 1
     },
     {
       "state": "Washington",
       "state_code": "WA",
       "state_slug": "washington",
-      "status": "PARTIAL",
+      "status": "HARVESTED",
       "ratio_count": 6,
       "group_size_count": 6,
       "staff_qual_count": 0,
-      "background_count": 0,
-      "gap_count": 2
+      "background_count": 1,
+      "gap_count": 1
     },
     {
       "state": "West Virginia",
       "state_code": "WV",
       "state_slug": "west_virginia",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,
@@ -1180,7 +1183,7 @@
       "state": "Wyoming",
       "state_code": "WY",
       "state_slug": "wyoming",
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "ratio_count": 0,
       "group_size_count": 0,
       "staff_qual_count": 0,

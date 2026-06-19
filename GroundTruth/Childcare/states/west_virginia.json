@@ -8,28 +8,28 @@
   "state_code": "WV",
   "state_slug": "west_virginia",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:15:31.409459+00:00",
-  "status": "PARKED",
+  "generated_at": "2026-06-19T16:26:54.889179+00:00",
+  "status": "NOT FOUND",
   "primary_source": "West Virginia CSR Child Care",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
     "ratios": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "group_size": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "staff_qualifications": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "background_checks": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     }
@@ -37,20 +37,23 @@
   "gaps": [
     {
       "domain": "ratios",
-      "status": "PARKED",
-      "source_checked": "West Virginia CSR Child Care"
+      "status": "NOT FOUND",
+      "source_checked": "West Virginia CSR Child Care",
+      "rendered": "NOT FOUND — [source checked: West Virginia CSR Child Care] — Live source fetched but no ratio facts extracted from static content"
     },
     {
       "domain": "group_size",
-      "status": "PARKED"
+      "status": "NOT FOUND"
     },
     {
       "domain": "staff_qualifications",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": "https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=15418&Format=PDF; https://dhhr.wv.gov/bcf/childcare/Pages/default.aspx; https://www.childcare.gov/state-resources/west-virginia/understanding-and-finding-child-care-resources"
     },
     {
       "domain": "background_checks",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": "https://apps.sos.wv.gov/adlaw/csr/readfile.aspx?DocId=15418&Format=PDF; https://dhhr.wv.gov/bcf/childcare/Pages/default.aspx; https://www.childcare.gov/state-resources/west-virginia/understanding-and-finding-child-care-resources"
     }
   ],
   "parked": [

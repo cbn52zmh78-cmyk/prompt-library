@@ -8,28 +8,28 @@
   "state_code": "AL",
   "state_slug": "alabama",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:14:36.686857+00:00",
-  "status": "PARKED",
+  "generated_at": "2026-06-19T16:25:44.905321+00:00",
+  "status": "NOT FOUND",
   "primary_source": "Alabama Admin Code HEA 659",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
     "ratios": {
-      "status": "PARKED",
+      "status": "ACCESS_RESTRICTED",
       "fact_count": 0,
       "facts": []
     },
     "group_size": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "staff_qualifications": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "background_checks": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     }
@@ -37,20 +37,23 @@
   "gaps": [
     {
       "domain": "ratios",
-      "status": "PARKED",
-      "source_checked": "Alabama Admin Code HEA 659"
+      "status": "ACCESS_RESTRICTED",
+      "source_checked": "Alabama Admin Code HEA 659",
+      "rendered": "ACCESS_RESTRICTED — [source checked: Alabama Admin Code HEA 659] — interactive portal or blocked fetch; no bypass."
     },
     {
       "domain": "group_size",
-      "status": "PARKED"
+      "status": "NOT FOUND"
     },
     {
       "domain": "staff_qualifications",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": "https://www.alabamaadministrativecode.state.al.us/docs/HEA/HEA-659-4-01-02-01-02.htm; https://dhr.alabama.gov/child-care-services/; https://www.childcare.gov/state-resources/alabama/understanding-and-finding-child-care-resources"
     },
     {
       "domain": "background_checks",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": "https://www.alabamaadministrativecode.state.al.us/docs/HEA/HEA-659-4-01-02-01-02.htm; https://dhr.alabama.gov/child-care-services/; https://www.childcare.gov/state-resources/alabama/understanding-and-finding-child-care-resources"
     }
   ],
   "parked": [

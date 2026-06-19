@@ -7,10 +7,10 @@
   "issue": 279,
   "citation_standard": "STD-CITE-001",
   "pinned_output_dir": "GroundTruth/Childcare",
-  "generated_at": "2026-06-19T16:15:34.852989+00:00",
+  "generated_at": "2026-06-19T16:26:58.455129+00:00",
   "as_of_date": "2026-06-19",
   "disclaimer": "Child care staff-to-child ratios, group-size caps, staff qualifications, and background-check requirements compiled from cited state regulatory sources — informational only; not legal advice.",
-  "policy": "Public .gov and LII mirror sources only; HTTP 403/404/502 PARKED without bypass; gaps shown as PARKED — never silently omitted; STD-CITE-001 citation + source grade on every fact.",
+  "policy": "Public .gov and LII mirror sources only; HTTP 403/404/502 blocked without bypass; gaps shown as NOT FOUND or ACCESS_RESTRICTED — never silently omitted; STD-CITE-001 citation + source grade on every fact.",
   "domains": [
     "ratios",
     "group_size",

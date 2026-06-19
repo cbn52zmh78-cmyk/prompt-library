@@ -8,7 +8,7 @@
   "state_code": "MN",
   "state_slug": "minnesota",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:15:01.050841+00:00",
+  "generated_at": "2026-06-19T16:26:20.644280+00:00",
   "status": "PARTIAL",
   "primary_source": "Minnesota DHS Ratio and Group Size Standards",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
@@ -170,12 +170,12 @@
       ]
     },
     "staff_qualifications": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "background_checks": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     }
@@ -183,11 +183,13 @@
   "gaps": [
     {
       "domain": "staff_qualifications",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": ""
     },
     {
       "domain": "background_checks",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": ""
     }
   ],
   "parked": []

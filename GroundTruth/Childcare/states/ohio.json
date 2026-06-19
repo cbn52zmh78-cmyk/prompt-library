@@ -8,8 +8,8 @@
   "state_code": "OH",
   "state_slug": "ohio",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:15:19.596101+00:00",
-  "status": "PARTIAL",
+  "generated_at": "2026-06-19T16:26:43.612846+00:00",
+  "status": "HARVESTED",
   "primary_source": "Ohio OAC 5180:2-12-18 Appendix A",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
@@ -314,24 +314,40 @@
       ]
     },
     "staff_qualifications": {
-      "status": "PARKED",
-      "fact_count": 0,
-      "facts": []
+      "status": "HARVESTED",
+      "fact_count": 1,
+      "facts": [
+        {
+          "fact_id": "ohio-childcare-staff-qualifications-1",
+          "category": "staff_qualifications",
+          "text": "Ohio child care licensing — (C) What are the orientation requirements for child care staff members? (1) Child care staff members, including substitute child care staff members, shall complete the child care center staff orientation training as prescribed by the ODJFS within thirty days of starting employment at the center as a child care staff member unless the child care staff member has documentation of completion of the training after December 31, 2016.",
+          "citation": {
+            "source": "Ohio OAC 5180:2-12-08 (Staff requirements)",
+            "url": "https://codes.ohio.gov/ohio-administrative-code/rule-5180:2-12-08",
+            "agency": "Ohio JFS",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        }
+      ]
     },
     "background_checks": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     }
   },
   "gaps": [
     {
-      "domain": "staff_qualifications",
-      "status": "PARKED"
-    },
-    {
       "domain": "background_checks",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": ""
     }
   ],
   "parked": []

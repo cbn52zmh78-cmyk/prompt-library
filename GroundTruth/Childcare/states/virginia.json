@@ -8,8 +8,8 @@
   "state_code": "VA",
   "state_slug": "virginia",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:15:29.313387+00:00",
-  "status": "PARTIAL",
+  "generated_at": "2026-06-19T16:26:52.813952+00:00",
+  "status": "HARVESTED",
   "primary_source": "Virginia 8VAC20-780-350 Staff-to-children ratio and group size",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
@@ -206,24 +206,40 @@
       ]
     },
     "staff_qualifications": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "background_checks": {
-      "status": "PARKED",
-      "fact_count": 0,
-      "facts": []
+      "status": "HARVESTED",
+      "fact_count": 1,
+      "facts": [
+        {
+          "fact_id": "virginia-childcare-background-checks-1",
+          "category": "background_checks",
+          "text": "Virginia child care licensing — Policy for reporting suspected child abuse as required by § 63.",
+          "citation": {
+            "source": "Virginia 8VAC20-780-420 (Background checks)",
+            "url": "https://www.law.cornell.edu/regulations/virginia/8VAC20-780-420",
+            "agency": "Virginia DSS",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        }
+      ]
     }
   },
   "gaps": [
     {
       "domain": "staff_qualifications",
-      "status": "PARKED"
-    },
-    {
-      "domain": "background_checks",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": ""
     }
   ],
   "parked": []

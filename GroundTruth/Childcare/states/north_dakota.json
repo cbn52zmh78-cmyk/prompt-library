@@ -8,28 +8,28 @@
   "state_code": "ND",
   "state_slug": "north_dakota",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:15:18.929825+00:00",
-  "status": "PARKED",
+  "generated_at": "2026-06-19T16:26:42.747465+00:00",
+  "status": "NOT FOUND",
   "primary_source": "North Dakota Child Care Licensing",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
     "ratios": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "group_size": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "staff_qualifications": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "background_checks": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     }
@@ -37,20 +37,23 @@
   "gaps": [
     {
       "domain": "ratios",
-      "status": "PARKED",
-      "source_checked": "North Dakota Child Care Licensing"
+      "status": "NOT FOUND",
+      "source_checked": "North Dakota Child Care Licensing",
+      "rendered": "NOT FOUND — [source checked: North Dakota Child Care Licensing] — HTTP 404"
     },
     {
       "domain": "group_size",
-      "status": "PARKED"
+      "status": "NOT FOUND"
     },
     {
       "domain": "staff_qualifications",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": "https://www.hhs.nd.gov/child-care/licensing; https://www.hhs.nd.gov/child-care; https://www.childcare.gov/state-resources/north-dakota/understanding-and-finding-child-care-resources"
     },
     {
       "domain": "background_checks",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": "https://www.hhs.nd.gov/child-care/licensing; https://www.hhs.nd.gov/child-care; https://www.childcare.gov/state-resources/north-dakota/understanding-and-finding-child-care-resources"
     }
   ],
   "parked": [

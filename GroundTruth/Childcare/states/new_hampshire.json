@@ -8,28 +8,28 @@
   "state_code": "NH",
   "state_slug": "new_hampshire",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:15:11.603800+00:00",
-  "status": "PARKED",
+  "generated_at": "2026-06-19T16:26:34.511724+00:00",
+  "status": "NOT FOUND",
   "primary_source": "New Hampshire He-C 4000",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
     "ratios": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "group_size": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "staff_qualifications": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "background_checks": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     }
@@ -37,20 +37,23 @@
   "gaps": [
     {
       "domain": "ratios",
-      "status": "PARKED",
-      "source_checked": "New Hampshire He-C 4000"
+      "status": "NOT FOUND",
+      "source_checked": "New Hampshire He-C 4000",
+      "rendered": "NOT FOUND — [source checked: New Hampshire He-C 4000] — Live source fetched but no ratio facts extracted from static content"
     },
     {
       "domain": "group_size",
-      "status": "PARKED"
+      "status": "NOT FOUND"
     },
     {
       "domain": "staff_qualifications",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": "https://www.gencourt.state.nh.us/rules/state_agencies/he-c4000.html; https://www.dhhs.nh.gov/programs-services/childcare-parenting/child-care-licensing; https://www.childcare.gov/state-resources/new-hampshire/understanding-and-finding-child-care-resources"
     },
     {
       "domain": "background_checks",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": "https://www.gencourt.state.nh.us/rules/state_agencies/he-c4000.html; https://www.dhhs.nh.gov/programs-services/childcare-parenting/child-care-licensing; https://www.childcare.gov/state-resources/new-hampshire/understanding-and-finding-child-care-resources"
     }
   ],
   "parked": [

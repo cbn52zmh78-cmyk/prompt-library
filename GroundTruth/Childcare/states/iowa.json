@@ -8,7 +8,7 @@
   "state_code": "IA",
   "state_slug": "iowa",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:14:53.850277+00:00",
+  "generated_at": "2026-06-19T16:26:12.252069+00:00",
   "status": "HARVESTED",
   "primary_source": "Iowa 441-109 Child Care Centers",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
@@ -128,7 +128,7 @@
       ]
     },
     "group_size": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
@@ -176,7 +176,7 @@
     },
     "background_checks": {
       "status": "HARVESTED",
-      "fact_count": 4,
+      "fact_count": 6,
       "facts": [
         {
           "fact_id": "iowa-childcare-background-checks-1",
@@ -236,6 +236,42 @@
           "fact_id": "iowa-childcare-background-checks-4",
           "category": "background_checks",
           "text": "Iowa child care licensing — Has certification in infant, child, and adult CPR; infant, child, and adult first aid; and Iowa’s mandatory reporting of child abuse.",
+          "citation": {
+            "source": "Iowa 441-109 Child Care Centers",
+            "url": "https://www.legis.iowa.gov/docs/ACO/chapter/441.109.pdf",
+            "agency": "Iowa 441-109 Child Care Centers",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "iowa-childcare-background-checks-5",
+          "category": "background_checks",
+          "text": "Iowa child care licensing — Sign a statement indicating whether or not they have one of the following: (1) A conviction of any law in any state or any record of founded child abuse or dependent adult abuse in any state.",
+          "citation": {
+            "source": "Iowa 441-109 Child Care Centers",
+            "url": "https://www.legis.iowa.gov/docs/ACO/chapter/441.109.pdf",
+            "agency": "Iowa 441-109 Child Care Centers",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "iowa-childcare-background-checks-6",
+          "category": "background_checks",
+          "text": "Iowa child care licensing — The person subject to record checks shall complete the department’s criminal history record check form and any other forms required by the department of public safety to authorize the release of records.",
           "citation": {
             "source": "Iowa 441-109 Child Care Centers",
             "url": "https://www.legis.iowa.gov/docs/ACO/chapter/441.109.pdf",

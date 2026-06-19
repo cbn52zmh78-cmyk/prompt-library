@@ -8,7 +8,7 @@
   "state_code": "MO",
   "state_slug": "missouri",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:15:05.433221+00:00",
+  "generated_at": "2026-06-19T16:26:28.541939+00:00",
   "status": "HARVESTED",
   "primary_source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
@@ -171,7 +171,7 @@
     },
     "staff_qualifications": {
       "status": "HARVESTED",
-      "fact_count": 5,
+      "fact_count": 6,
       "facts": [
         {
           "fact_id": "missouri-childcare-staff-qualifications-1",
@@ -262,12 +262,30 @@
             "tier": "secondary",
             "category": "staff_qualifications"
           }
+        },
+        {
+          "fact_id": "missouri-childcare-staff-qualifications-6",
+          "category": "staff_qualifications",
+          "text": "Missouri child care licensing — (F) An adult who has completed a course in basic water safety, which includes infant/child CPR, shall be on duty when a swimming or wading pool containing less than forty-eight inches (48\") of water is being used.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
         }
       ]
     },
     "background_checks": {
       "status": "HARVESTED",
-      "fact_count": 4,
+      "fact_count": 6,
       "facts": [
         {
           "fact_id": "missouri-childcare-background-checks-1",
@@ -327,6 +345,42 @@
           "fact_id": "missouri-childcare-background-checks-4",
           "category": "background_checks",
           "text": "Missouri child care licensing — (P) The child care provider shall conduct a Family Care Safety Registry screening prior to employment for any newly hired child care staff member who has a qualifying criminal background check result.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "missouri-childcare-background-checks-5",
+          "category": "background_checks",
+          "text": "Missouri child care licensing — The center owner(s), or the board president or chairperson, shall notify the department immediately when there is a change of directors and shall have a qualifying criminal background check on file as required by 5 CSR 25- 600.",
+          "citation": {
+            "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",
+            "agency": "Missouri 5 CSR 25-500 Staff/Child Ratios",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "missouri-childcare-background-checks-6",
+          "category": "background_checks",
+          "text": "Missouri child care licensing — Children shall not be subjected to child abuse/neglect as defined by section 210.",
           "citation": {
             "source": "Missouri 5 CSR 25-500 Staff/Child Ratios",
             "url": "https://www.sos.mo.gov/adrules/csr/current/5csr/5c25-500.pdf",

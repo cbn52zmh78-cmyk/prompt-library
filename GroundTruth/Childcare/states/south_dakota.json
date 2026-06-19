@@ -8,28 +8,28 @@
   "state_code": "SD",
   "state_slug": "south_dakota",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:15:25.097529+00:00",
-  "status": "PARKED",
+  "generated_at": "2026-06-19T16:26:49.050319+00:00",
+  "status": "NOT FOUND",
   "primary_source": "South Dakota Child Care Licensing",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
     "ratios": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "group_size": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "staff_qualifications": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "background_checks": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     }
@@ -37,20 +37,23 @@
   "gaps": [
     {
       "domain": "ratios",
-      "status": "PARKED",
-      "source_checked": "South Dakota Child Care Licensing"
+      "status": "NOT FOUND",
+      "source_checked": "South Dakota Child Care Licensing",
+      "rendered": "NOT FOUND — [source checked: South Dakota Child Care Licensing] — Live source fetched but no ratio facts extracted from static content"
     },
     {
       "domain": "group_size",
-      "status": "PARKED"
+      "status": "NOT FOUND"
     },
     {
       "domain": "staff_qualifications",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": "https://dss.sd.gov/childcare/licensing/; https://www.childcare.gov/state-resources/south-dakota/understanding-and-finding-child-care-resources"
     },
     {
       "domain": "background_checks",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": "https://dss.sd.gov/childcare/licensing/; https://www.childcare.gov/state-resources/south-dakota/understanding-and-finding-child-care-resources"
     }
   ],
   "parked": [

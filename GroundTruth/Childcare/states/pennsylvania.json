@@ -8,8 +8,8 @@
   "state_code": "PA",
   "state_slug": "pennsylvania",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:15:23.204262+00:00",
-  "status": "PARTIAL",
+  "generated_at": "2026-06-19T16:26:46.952653+00:00",
+  "status": "HARVESTED",
   "primary_source": "Pennsylvania 55 Pa. Code §3270.51",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
@@ -242,24 +242,40 @@
       ]
     },
     "staff_qualifications": {
-      "status": "PARKED",
-      "fact_count": 0,
-      "facts": []
+      "status": "HARVESTED",
+      "fact_count": 1,
+      "facts": [
+        {
+          "fact_id": "pennsylvania-childcare-staff-qualifications-1",
+          "category": "staff_qualifications",
+          "text": "Pennsylvania child care licensing — (ii) In a program operating 31 to 45 hours a week, a director or director/group supervisor shall be present at a facility site at least 35% of the program’s operational hours.",
+          "citation": {
+            "source": "Pennsylvania 55 Pa. Code §3270.241 (Clearances)",
+            "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/055/chapter3270/s3270.241.html",
+            "agency": "Pennsylvania DHS",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        }
+      ]
     },
     "background_checks": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     }
   },
   "gaps": [
     {
-      "domain": "staff_qualifications",
-      "status": "PARKED"
-    },
-    {
       "domain": "background_checks",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": ""
     }
   ],
   "parked": []

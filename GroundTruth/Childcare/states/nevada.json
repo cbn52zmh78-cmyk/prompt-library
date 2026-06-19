@@ -8,8 +8,8 @@
   "state_code": "NV",
   "state_slug": "nevada",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:15:10.250427+00:00",
-  "status": "PARTIAL",
+  "generated_at": "2026-06-19T16:26:33.057660+00:00",
+  "status": "HARVESTED",
   "primary_source": "Nevada NAC 432A.5205",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
@@ -170,25 +170,252 @@
       ]
     },
     "staff_qualifications": {
-      "status": "PARKED",
-      "fact_count": 0,
-      "facts": []
+      "status": "HARVESTED",
+      "fact_count": 7,
+      "facts": [
+        {
+          "fact_id": "nevada-childcare-staff-qualifications-1",
+          "category": "staff_qualifications",
+          "text": "Nevada child care licensing — If the facility is in operation 25 hours or less per week, the director must be present in the facility during at least half the hours of operation.",
+          "citation": {
+            "source": "Nevada NAC 432A.5205",
+            "url": "https://www.leg.state.nv.us/NAC/NAC-432A.html#NAC432ASec5205",
+            "agency": "Nevada NAC 432A.5205",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "nevada-childcare-staff-qualifications-2",
+          "category": "staff_qualifications",
+          "text": "Nevada child care licensing — Each person who on July 1, 2004, is a director or licensee of a child care facility or is a caretaker employed in a child care facility shall, within 12 months after July 1, 2004, and in addition to completing any training required pursuant to section 19 of this regulation and completing any course in the development of children required pursuant to NAC 432A.",
+          "citation": {
+            "source": "Nevada NAC 432A.5205",
+            "url": "https://www.leg.state.nv.us/NAC/NAC-432A.html#NAC432ASec5205",
+            "agency": "Nevada NAC 432A.5205",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "nevada-childcare-staff-qualifications-3",
+          "category": "staff_qualifications",
+          "text": "Nevada child care licensing — Whenever a child care facility is in operation, each caregiver on duty must have completed training for the recognition of signs and symptoms of illness and the administration of first aid.",
+          "citation": {
+            "source": "Nevada NAC 432A.5205",
+            "url": "https://www.leg.state.nv.us/NAC/NAC-432A.html#NAC432ASec5205",
+            "agency": "Nevada NAC 432A.5205",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "nevada-childcare-staff-qualifications-4",
+          "category": "staff_qualifications",
+          "text": "Nevada child care licensing — A volunteer who works at least 15 hours per week in a facility and participates in specialized child care training, as defined by the director: (a) Is a member of the staff of the facility for the purposes of this section; and (b) Must satisfy the training and certification requirements set forth in NAC 432A.",
+          "citation": {
+            "source": "Nevada NAC 432A.5205",
+            "url": "https://www.leg.state.nv.us/NAC/NAC-432A.html#NAC432ASec5205",
+            "agency": "Nevada NAC 432A.5205",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "nevada-childcare-staff-qualifications-5",
+          "category": "staff_qualifications",
+          "text": "Nevada child care licensing — 177 in the personnel file of each employee of the child care facility required to complete the training; and (b) Upon request of the Division, submit the evidence of completion of the training for any employee of the child care facility required to complete such training.",
+          "citation": {
+            "source": "Nevada NAC 432A.5205",
+            "url": "https://www.leg.state.nv.us/NAC/NAC-432A.html#NAC432ASec5205",
+            "agency": "Nevada NAC 432A.5205",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "nevada-childcare-staff-qualifications-6",
+          "category": "staff_qualifications",
+          "text": "Nevada child care licensing — 323 , each director of a child care facility and each caregiver who is employed at the facility shall complete: (a) If the facility provides care for ill children, at least 24 hours of training, of which not more than 3 hours may be training in the administration of cardiopulmonary resuscitation.",
+          "citation": {
+            "source": "Nevada NAC 432A.5205",
+            "url": "https://www.leg.state.nv.us/NAC/NAC-432A.html#NAC432ASec5205",
+            "agency": "Nevada NAC 432A.5205",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        },
+        {
+          "fact_id": "nevada-childcare-staff-qualifications-7",
+          "category": "staff_qualifications",
+          "text": "Nevada child care licensing — With regard to training concerning the administration of first aid and the recognition of signs and symptoms of illness that is required pursuant to the amendatory provisions of NAC 432A.",
+          "citation": {
+            "source": "Nevada NAC 432A.5205",
+            "url": "https://www.leg.state.nv.us/NAC/NAC-432A.html#NAC432ASec5205",
+            "agency": "Nevada NAC 432A.5205",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        }
+      ]
     },
     "background_checks": {
-      "status": "PARKED",
-      "fact_count": 0,
-      "facts": []
+      "status": "HARVESTED",
+      "fact_count": 6,
+      "facts": [
+        {
+          "fact_id": "nevada-childcare-background-checks-1",
+          "category": "background_checks",
+          "text": "Nevada child care licensing — The Division shall immediately notify the applicant or licensee if the investigation conducted pursuant to subsection 2 indicates that he or she or a person whose fingerprints were taken pursuant to subsection 4 has been convicted of any offense listed in subsection 2 of NRS 432A.",
+          "citation": {
+            "source": "Nevada NAC 432A.5205",
+            "url": "https://www.leg.state.nv.us/NAC/NAC-432A.html#NAC432ASec5205",
+            "agency": "Nevada NAC 432A.5205",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "nevada-childcare-background-checks-2",
+          "category": "background_checks",
+          "text": "Nevada child care licensing — 170 or has had a substantiated report of child abuse or neglect filed against him or her.",
+          "citation": {
+            "source": "Nevada NAC 432A.5205",
+            "url": "https://www.leg.state.nv.us/NAC/NAC-432A.html#NAC432ASec5205",
+            "agency": "Nevada NAC 432A.5205",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "nevada-childcare-background-checks-3",
+          "category": "background_checks",
+          "text": "Nevada child care licensing — A licensee of a child care facility shall not knowingly appoint a person as director of the facility or appoint or permit the appointment of a person as an employee or volunteer at the facility if the person has been convicted of child abuse or neglect or any other crime involving physical harm to a person or if a criminal action for such a crime is pending against the person.",
+          "citation": {
+            "source": "Nevada NAC 432A.5205",
+            "url": "https://www.leg.state.nv.us/NAC/NAC-432A.html#NAC432ASec5205",
+            "agency": "Nevada NAC 432A.5205",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "nevada-childcare-background-checks-4",
+          "category": "background_checks",
+          "text": "Nevada child care licensing — t of his or her duties, 1 or more hours of training in appropriate precautions when transporting children; (b) Within 90 days after commencing his or her employment or position in a child care facility and every 5 years thereafter, 2 or more hours in recognition and reporting of child abuse and neglect; and (c) Within 120 days after commencing his or her employment or position in a child care facility: (1) One or more hours of training in the administration of cardiopulmonary resuscitation and any additional training required by the facility in which the director serves or in which the person is employed for the purposes of obtaining certification in the administration of cardiopulmonary resuscitation as required pursuant to NAC 432A.",
+          "citation": {
+            "source": "Nevada NAC 432A.5205",
+            "url": "https://www.leg.state.nv.us/NAC/NAC-432A.html#NAC432ASec5205",
+            "agency": "Nevada NAC 432A.5205",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "nevada-childcare-background-checks-5",
+          "category": "background_checks",
+          "text": "Nevada child care licensing — 077 ) If any person suspects that child abuse or neglect is occurring in a facility, the person may immediately report such suspicions to the Division.",
+          "citation": {
+            "source": "Nevada NAC 432A.5205",
+            "url": "https://www.leg.state.nv.us/NAC/NAC-432A.html#NAC432ASec5205",
+            "agency": "Nevada NAC 432A.5205",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        },
+        {
+          "fact_id": "nevada-childcare-background-checks-6",
+          "category": "background_checks",
+          "text": "Nevada child care licensing — Every licensee or employee of a facility who has reason to believe child abuse or neglect is occurring in the facility, in the childs home or elsewhere shall report such beliefs to: 1.",
+          "citation": {
+            "source": "Nevada NAC 432A.5205",
+            "url": "https://www.leg.state.nv.us/NAC/NAC-432A.html#NAC432ASec5205",
+            "agency": "Nevada NAC 432A.5205",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        }
+      ]
     }
   },
-  "gaps": [
-    {
-      "domain": "staff_qualifications",
-      "status": "PARKED"
-    },
-    {
-      "domain": "background_checks",
-      "status": "PARKED"
-    }
-  ],
+  "gaps": [],
   "parked": []
 }

@@ -8,7 +8,7 @@
   "state_code": "GA",
   "state_slug": "georgia",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:14:49.338561+00:00",
+  "generated_at": "2026-06-19T16:26:07.363016+00:00",
   "status": "PARTIAL",
   "primary_source": "Georgia Ga. Comp. R. & Regs. R. 591-1-1-.32",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
@@ -242,12 +242,12 @@
       ]
     },
     "staff_qualifications": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     },
     "background_checks": {
-      "status": "PARKED",
+      "status": "NOT FOUND",
       "fact_count": 0,
       "facts": []
     }
@@ -255,11 +255,13 @@
   "gaps": [
     {
       "domain": "staff_qualifications",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": ""
     },
     {
       "domain": "background_checks",
-      "status": "PARKED"
+      "status": "NOT FOUND",
+      "source_checked": ""
     }
   ],
   "parked": []

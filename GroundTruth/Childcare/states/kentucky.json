@@ -8,8 +8,8 @@
   "state_code": "KY",
   "state_slug": "kentucky",
   "retrieved_date": "2026-06-19",
-  "generated_at": "2026-06-19T16:14:55.261190+00:00",
-  "status": "PARTIAL",
+  "generated_at": "2026-06-19T16:26:13.962389+00:00",
+  "status": "HARVESTED",
   "primary_source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
   "disclaimer": "Child care licensing compliance research — cited public regulatory sources only; not legal advice. Confirm ratios, group sizes, and staff requirements with the state licensing authority.",
   "domains": {
@@ -314,25 +314,54 @@
       ]
     },
     "staff_qualifications": {
-      "status": "PARKED",
-      "fact_count": 0,
-      "facts": []
+      "status": "HARVESTED",
+      "fact_count": 1,
+      "facts": [
+        {
+          "fact_id": "kentucky-childcare-staff-qualifications-1",
+          "category": "staff_qualifications",
+          "text": "Kentucky child care licensing — (12) If nontraditional hours of care are provided: (a) Including time spent in school, a child shall not be permitted to spend more than sixteen (16) hours in the child-care center during one (1) twenty-four (24) hour period; (b) At least one (1) staff member shall be assigned responsibility for each sleeping room; (c) A child present for an extended period of time during waking hours shall receive a program of well-balanced and constructive activity that is developmentally appropriate for the child; (d) A child sleeping three (3) hours or more shall sleep in: 1.",
+          "citation": {
+            "source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "url": "https://www.law.cornell.edu/regulations/kentucky/922-KAR-2-120",
+            "agency": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "category": "staff_qualifications",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "staff_qualifications"
+          }
+        }
+      ]
     },
     "background_checks": {
-      "status": "PARKED",
-      "fact_count": 0,
-      "facts": []
+      "status": "HARVESTED",
+      "fact_count": 1,
+      "facts": [
+        {
+          "fact_id": "kentucky-childcare-background-checks-1",
+          "category": "background_checks",
+          "text": "Kentucky child care licensing — A procedure to ensure compliance with and inform child care staff of the laws of the commonwealth pertaining to child abuse or neglect set forth in KRS 620.",
+          "citation": {
+            "source": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "url": "https://www.law.cornell.edu/regulations/kentucky/922-KAR-2-120",
+            "agency": "Kentucky 922 KAR 2:120 Staff-to-Child Ratios",
+            "category": "background_checks",
+            "tier": "secondary",
+            "retrieved_date": "2026-06-19"
+          },
+          "grade": {
+            "status": "FOUND",
+            "tier": "secondary",
+            "category": "background_checks"
+          }
+        }
+      ]
     }
   },
-  "gaps": [
-    {
-      "domain": "staff_qualifications",
-      "status": "PARKED"
-    },
-    {
-      "domain": "background_checks",
-      "status": "PARKED"
-    }
-  ],
+  "gaps": [],
   "parked": []
 }
