@@ -8,7 +8,7 @@ import render_longform  # noqa: E402
 
 render_longform.API_PACE_S = 3.5
 
-script = ROOT / "STUDIO" / "Productions" / "Companion" / "gfe_companion_sage_proof_v1_longform_v1" / "gfe_companion_sage_proof_v1_script.json"
+script = ROOT / "Studio" / "Productions" / "Companion" / "gfe_companion_sage_proof_v1_longform_v1" / "gfe_companion_sage_proof_v1_script.json"
 shots_dir = ROOT / "DAVID" / "productions" / "gfe_companion_sage_proof_v1_longform_v1" / "shots"
 partial = shots_dir / "host_performance_extend.mp4"
 state = shots_dir / "extend_state.json"

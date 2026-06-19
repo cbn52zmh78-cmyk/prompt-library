@@ -25,7 +25,7 @@ from lib.bootstrap import ensure_paths
 ensure_paths()
 from lib.studio_paths import pipeline_path
 
-_PIPELINE = Path(__file__).resolve().parents[2] / "STUDIO" / "Pipeline"
+_PIPELINE = Path(__file__).resolve().parents[2] / "Studio" / "Pipeline"
 if str(_PIPELINE) not in sys.path:
     sys.path.insert(0, str(_PIPELINE))
 from shot_duration import apply_duration_clamp_to_shots, should_clamp_shot_durations  # noqa: E402

@@ -17,11 +17,11 @@ RENDER = ROOT / "DAVID" / "scripts" / "render_longform.py"
 # Production roots scanned for qa_report.json + manifest.json masters.
 SCAN_ROOTS = [
     ROOT / "DAVID" / "productions",
-    ROOT / "STUDIO" / "Productions" / "Editorial",
-    ROOT / "STUDIO" / "Productions" / "Companion",
-    ROOT / "STUDIO" / "Productions" / "Narrative",
-    ROOT / "STUDIO" / "Productions" / "Science",
-    ROOT / "STUDIO" / "Productions" / "HistoricalFigures",
+    ROOT / "Studio" / "Productions" / "Editorial",
+    ROOT / "Studio" / "Productions" / "Companion",
+    ROOT / "Studio" / "Productions" / "Narrative",
+    ROOT / "Studio" / "Productions" / "Science",
+    ROOT / "Studio" / "Productions" / "HistoricalFigures",
 ]
 
 SKIP_DIR_PARTS = {"shots", "upload_kit", "cache", "__pycache__"}
@@ -59,13 +59,13 @@ def classify_lane(prod_dir: Path) -> str:
         return "Companion"
     if "narrative" in rel or "movies_lane" in prod_dir.name:
         return "Movies"
-    if "/Science/" in rel or "actors_157" in prod_dir.name or "black_hole_science_proof" in prod_dir.name:
+    if "/science/" in rel or "actors_157" in prod_dir.name or "black_hole_science_proof" in prod_dir.name:
         return "Science"
     if prod_dir.name.startswith("science_") or "editorial/science" in rel:
         return "Observable"
     if "historicalfigures" in rel or "figure_proof" in prod_dir.name:
         return "DAVID"
-    if "DAVID/productions" in rel:
+    if "david/productions" in rel:
         return "DAVID"
     return "Other"
 
@@ -354,7 +354,7 @@ def main(argv: list[str] | None = None) -> int:
         ],
     }
 
-    out_path = args.output or (ROOT / "STUDIO" / "Pipeline" / "seam_color_audit_T4_199.json")
+    out_path = args.output or (ROOT / "Studio" / "Pipeline" / "seam_color_audit_T4_199.json")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
 

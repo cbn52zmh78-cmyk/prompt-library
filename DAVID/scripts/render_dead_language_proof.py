@@ -19,7 +19,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 WORKSPACE = ROOT.parent
-PIPELINE_DIR = WORKSPACE / "STUDIO" / "Pipeline"
+PIPELINE_DIR = WORKSPACE / "Studio" / "Pipeline"
 if str(PIPELINE_DIR) not in sys.path:
     sys.path.insert(0, str(PIPELINE_DIR))
 

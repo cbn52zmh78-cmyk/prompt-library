@@ -1,0 +1,169 @@
+{
+  "message_type": "dispatch_plan",
+  "spec": "DAVID_Dispatch_Plan_v1",
+  "issue": 218,
+  "title": "DAVID Archive — generation-side neutral lighting + color-cast QA (blue-starvation fix)",
+  "generated_at": "2026-06-19T10:45:00+00:00",
+  "status": "ACTIVE",
+  "owner_terminal": "T4",
+  "lane": "DAVID",
+  "tier": "prompt-engineering + QA-metric spec",
+  "no_render": true,
+  "no_spend": true,
+  "blocks": ["T1_render", "API_spend", "concat-only grade/re-seam"],
+  "diagnosis": {
+    "symptom": "Visibly sallow/yellow-green Archive host; post-grade re-render unchanged pixels",
+    "root_cause": "Generation source is blue-starved — host B≈8/255, B/R≈0.09. Post-grade cannot inject blue that was never rendered.",
+    "false_pass_trap": "Legacy yellow-green gate (g>r bias) passed proof at yg_max=0.007 while 68/68 frames visibly cast",
+    "proof_record": {
+      "master": "DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/before/master_concat_only_v1.mp4",
+      "frames": 68,
+      "legacy_yellow_green_max": 0.0067,
+      "measured_host_B_mean_min": 2.23,
+      "measured_host_B_R_min": 0.0503,
+      "blue_starvation_max": 1.0,
+      "rgb_skew_typical": 0.20,
+      "frame_proof_qa": "DAVID/productions/david_latin_corpus_v1_longform_v1/proof_194/before/frame_proof_qa.json"
+    },
+    "prompt_root_cause": "3200K-global amber locks in Set_Library, identity refs, and per-shot video_prompts — lamp specified as KEY not localized accent"
+  },
+  "work_scope": [
+    "Finalize QA-metric spec (#244) — rgb_skew + blue_starvation + generation_reference gate",
+    "Lock neutral lighting prompt blocks (#243 → #218) — identity + set + per-shot",
+    "Purge warm-global strings from Latin script + template scripts",
+    "Wire C4 R8 gate + render_longform QA to shared color_cast_qa.py",
+    "Document legacy_false_pass_cohort (+66 frames) — yg≤0.012 while grey_drift≥0.20"
+  ],
+  "artifacts": {
+    "lighting_spec": "DAVID/handoff/T243_neutral_lighting_prompt_spec.json",
+    "qa_module": "DAVID/scripts/color_cast_qa.py",
+    "frame_proof_verifier": "DAVID/scripts/c4_frame_proof_qa.py",
+    "runtime_injection": "DAVID/scripts/render_longform.py → ARCHIVE_NEUTRAL_GENERATION_LOCK",
+    "identity_lock": "DAVID/productions/host_identity_v1/david_identity_lock.json",
+    "set_library": "STUDIO/Pipeline/Set_Library_v1.json",
+    "style_library": "STUDIO/Pipeline/Style_Library_v1.json",
+    "latin_script_pending_purge": "DAVID/scripts/longform_scripts/david_latin_corpus_v1_script.json",
+    "tests": [
+      "tests/test_color_cast_metric.py",
+      "tests/test_color_cast_qa_199.py"
+    ]
+  },
+  "qa_metric_spec": {
+    "module": "DAVID/scripts/color_cast_qa.py",
+    "host_region": "h[0.18,0.72] × w[0.08,0.48], step 6",
+    "gates": {
+      "rgb_skew": {
+        "formula": "((R+G)/2 − B) / 255 on host means",
+        "fail_gt": 0.12,
+        "proof_194_typical": 0.20,
+        "neutral_ref_typical": 0.06
+      },
+      "blue_starvation_fraction": {
+        "formula": "fraction of valid host pixels where (B<40) OR (B<R×0.35)",
+        "fail_gt": 0.50
+      },
+      "host_br_ratio": { "fail_lt": 0.22 },
+      "host_blue_mean": { "fail_lt": 25, "lum_lt": 90 },
+      "clinical_channel_balance": {
+        "formula": "|R−G|/255 + |B−G|/255",
+        "fail_gt": 0.12,
+        "lum_range": [80, 220]
+      },
+      "legacy_yellow_green": {
+        "formula": "fraction where g>r×1.06 AND g>b×1.04",
+        "fail_gt": 0.12,
+        "note": "RETAINED but demoted — misses B-starved warm cast"
+      }
+    },
+    "generation_pre_render_gate": {
+      "host_blue_mean_min": 40,
+      "host_br_ratio_min": 0.35,
+      "blue_starvation_fraction_max": 0.30,
+      "fn": "generation_reference_passes()"
+    },
+    "legacy_false_pass_cohort": {
+      "fn": "legacy_false_pass_cohort(yg, grey_balance)",
+      "yg_pass_lte": 0.012,
+      "grey_fail_gte": 0.20,
+      "cohort_size": 66
+    },
+    "acceptance_proof": "68/68 bad frames FAIL new gate; archive_set_reference.jpg PASSES generation_reference_passes()"
+  },
+  "lighting_prompt_spec": {
+    "kelvin_stack": {
+      "ambient_key": 5000,
+      "fill_bounce": 5200,
+      "fill_ratio_max": 0.25,
+      "lamp_accent": 3200,
+      "lamp_coverage_max_pct": 30,
+      "lamp_placement": "desk quadrant only — NOT face, NOT shelves, NOT full frame"
+    },
+    "david_identity_lock": "LIGHTING LOCK @David-001 (#243): neutral balanced 5000K white key on face, neck, and charcoal sweater — natural documentary skin with intact blue channel (B≥40/255 mids, B/R≥0.35); soft 5200K shelf-bounce ≤25%; brass lamp 3200K tight desk accent ≤30% frame; NEVER global amber wash; no blue-starved shadows; no yellow-green cast; no magenta ambient.",
+    "archive_set_lock": "LIGHTING LOCK @Set-Archive-001 (#243): neutral balanced 5000K ambient key — blue preserved in skin/shadow mids; 5200K shelf bounce ≤25%; brass lamp 3200K localized desk pool only (≈lower-right 40%); NOT full-frame amber gel; NOT global wash on face/shelves.",
+    "shared_per_shot_clause": "Neutral balanced 5000K ambient key on host — blue channel intact; brass lamp 3200K localized warm pool on desk quadrant only; soft 5200K shelf bounce ≤25%; no yellow-green cast; no blue-starved shadows.",
+    "purge_strings": [
+      "Warm gold brass desk lamp 3200K key light locked",
+      "amber pool only on desk and face",
+      "dominant amber 3200K",
+      "warm brass lamplight",
+      "shadows warm-neutral not blue",
+      "no blue fill"
+    ]
+  },
+  "steps": [
+    {
+      "step": "01_metric_lock",
+      "owner": "T4",
+      "action": "Freeze color_cast_qa.py thresholds + document +66 false-pass cohort",
+      "input": "proof_194/before/frame_proof/",
+      "output": "tests/test_color_cast_metric.py green + C4 gate doc update",
+      "depends_on": []
+    },
+    {
+      "step": "02_prompt_purge",
+      "owner": "T4",
+      "action": "Apply shared lighting clause to Latin script shots 01–08; purge warm-global strings",
+      "input": "T243_neutral_lighting_prompt_spec.json",
+      "output": "david_latin_corpus_v1_script.json video_prompts updated",
+      "depends_on": ["01_metric_lock"]
+    },
+    {
+      "step": "03_template_sweep",
+      "owner": "T4",
+      "action": "Propagate neutral locks to documentary-host templates + dead-language corpus scripts",
+      "input": "Set_Library + Style_Library + template_validate_*_script.json",
+      "output": "No 3200K-global key remains in generation prompts",
+      "depends_on": ["02_prompt_purge"]
+    },
+    {
+      "step": "04_reference_gate",
+      "owner": "T4",
+      "action": "Add pre-render reference still gate (avatar + set plate) via generation_reference_passes",
+      "input": "david_avatar_reference.jpg + archive_set_reference.jpg",
+      "output": "CLI or render_longform preflight hook — blocks i2v if Bμ<40",
+      "depends_on": ["01_metric_lock"]
+    },
+    {
+      "step": "05_handoff_t1",
+      "owner": "T4",
+      "action": "Sign off spec → unblock T1 test render (single shot 01_cold_open)",
+      "input": "steps 01–04 complete",
+      "output": "T1 go: --force-shot 01_cold_open only after reference gate passes",
+      "depends_on": ["02_prompt_purge", "04_reference_gate"],
+      "blocked_until": "human approval"
+    }
+  ],
+  "dispatch_authorization": {
+    "auto_execute": true,
+    "requires_human_approval": false,
+    "ready_to_dispatch": true,
+    "block_reasons": []
+  },
+  "downstream": {
+    "T1_blocked_until": "T4 step 05_handoff_t1 + human approval",
+    "T1_test_render_proposed": "python DAVID/scripts/render_longform.py DAVID/scripts/longform_scripts/david_latin_corpus_v1_script.json --force-shot 01_cold_open --seamless --match-color --cut-on-motion",
+    "T1_pass_criteria": "generation_reference_passes on segment still: Bμ≥40, B/R≥0.35, blue_starvation≤0.30"
+  },
+  "supersedes": [194, 243],
+  "pairs_with": 244
+}

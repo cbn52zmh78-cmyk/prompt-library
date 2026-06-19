@@ -29,7 +29,7 @@ from typing import Any, Optional
 
 ROOT = Path(__file__).resolve().parents[2]
 DAVID = ROOT / "DAVID"
-PIPELINE = ROOT / "STUDIO" / "Pipeline"
+PIPELINE = ROOT / "Studio" / "Pipeline"
 SCIENCE_SCRIPTS = ROOT / "Science" / "scripts"
 INTAKE = PIPELINE / "production_intake.py"
 RENDER = DAVID / "scripts" / "render_longform.py"
@@ -127,7 +127,7 @@ def resolve_production_dir(script: dict[str, Any]) -> Path:
     slug = script.get("slug", "longform")
     fmt = script.get("format_id", "")
     if fmt and fmt != "documentary-host":
-        return ROOT / "STUDIO" / "Productions" / "Editorial" / f"{slug}_longform_v1"
+        return ROOT / "Studio" / "Productions" / "Editorial" / f"{slug}_longform_v1"
     return DAVID / "productions" / f"{slug}_longform_v1"
 
 

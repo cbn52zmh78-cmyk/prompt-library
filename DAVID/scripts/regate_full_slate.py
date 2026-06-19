@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-PIPELINE = ROOT / "STUDIO" / "Pipeline"
+PIPELINE = ROOT / "Studio" / "Pipeline"
 INTAKE = PIPELINE / "production_intake.py"
 RENDER = ROOT / "DAVID" / "scripts" / "render_longform.py"
 SCRIPTS = ROOT / "DAVID" / "scripts" / "longform_scripts"

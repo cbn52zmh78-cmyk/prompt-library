@@ -133,7 +133,7 @@ LOUDNORM_LRA_TIGHT = 7.0
 DEFAULT_XFADE_S = 0.45
 MIN_XFADE_S = 0.35
 MAX_XFADE_S = 0.75
-SET_LIBRARY_PATH = WORKSPACE / "STUDIO" / "Pipeline" / "Set_Library_v1.json"
+SET_LIBRARY_PATH = WORKSPACE / "Studio" / "Pipeline" / "Set_Library_v1.json"
 DARK_SCENE_KEYWORDS = (
     "warehouse", "industrial", "dusk", "shadow", "darkness", "dramatic",
     "night", "low key", "high-contrast", "corridor", "noir", "deep shadow",
@@ -741,7 +741,7 @@ def resolve_production_dir(script: dict[str, Any]) -> Path:
         return p if p.is_absolute() else (ROOT / p)
     slug = script.get("slug", "longform")
     if script.get("format_id") and script["format_id"] != "documentary-host":
-        return WORKSPACE / "STUDIO" / "Productions" / "Editorial" / f"{slug}_longform_v1"
+        return WORKSPACE / "Studio" / "Productions" / "Editorial" / f"{slug}_longform_v1"
     return ROOT / "productions" / f"{slug}_longform_v1"
 
 
@@ -3188,7 +3188,7 @@ def render_longform(
 
 
 def _run_package_stage(prod_dir: Path, *, require_qa_pass: bool = True) -> dict[str, Any]:
-    pipeline_dir = WORKSPACE / "STUDIO" / "Pipeline"
+    pipeline_dir = WORKSPACE / "Studio" / "Pipeline"
     if str(pipeline_dir) not in sys.path:
         sys.path.insert(0, str(pipeline_dir))
     from package_episode import package_production  # noqa: WPS433

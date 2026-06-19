@@ -50,7 +50,7 @@ from typing import Any, Optional
 
 ROOT = Path(__file__).resolve().parents[2]
 DAVID = ROOT / "DAVID"
-PIPELINE = ROOT / "STUDIO" / "Pipeline"
+PIPELINE = ROOT / "Studio" / "Pipeline"
 SCIENCE = ROOT / "Science"
 CONCEPTS_ROOT = PIPELINE / "Concepts"
 SCRIPTS_DIR = DAVID / "scripts" / "longform_scripts"
@@ -734,7 +734,7 @@ def cmd_render_first(args: argparse.Namespace) -> int:
     if proc.returncode != 0:
         return proc.returncode
 
-    prod_dir = ROOT / "STUDIO" / "Productions" / "Editorial" / f"{slug}_longform_v1"
+    prod_dir = ROOT / "Studio" / "Productions" / "Editorial" / f"{slug}_longform_v1"
     qa_path = prod_dir / "qa_report.json"
     if qa_path.is_file():
         qa = _load_json(qa_path)

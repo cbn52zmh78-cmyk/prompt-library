@@ -152,6 +152,15 @@ from output_registry import CANONICAL_TOP  # noqa: E402
 _DRIFT_LITERAL_RE = re.compile(r"""['"][^'"]*?\b([A-Za-z_][A-Za-z_]+)/""")
 _DRIFT_SEGMENT_RE = re.compile(r"""(?:/\s*['"]([A-Za-z_]+)['"]|['"]([A-Za-z_]+)['"]\s*/)""")
 
+# Only DISTINCTIVE top-level repo dirs are checked for drift — generic sub-dir words
+# (scripts, tests, data, docs …) recur at many depths with parent-dependent casing
+# (e.g. Studio/Cast/Scripts is legitimately capital-S), so flagging them is noise.
+_REPO_DRIFT: dict = {
+    "studio": "Studio", "david": "DAVID", "science": "Science",
+    "content_production": "Content_Production", "nexus": "Nexus",
+    "stonebridge": "Stonebridge", "flash": "FLASH", "creator4": "Creator4",
+}
+
 # Source trees that may legitimately contain non-canonical spellings as *data*.
 _LINT_EXCLUDE_PARTS = {".git", "__pycache__", "node_modules", ".pytest_cache"}
 _LINT_EXCLUDE_FILES = {"output_registry.py", "output_validator.py"}
@@ -189,7 +198,7 @@ def lint_source(roots: "list | None" = None) -> list:
                 seen: set = set()
                 for m in _DRIFT_LITERAL_RE.finditer(line):
                     seg = m.group(1)
-                    canonical = CANONICAL_TOP.get(seg.lower())
+                    canonical = _REPO_DRIFT.get(seg.lower())
                     if canonical and seg != canonical and (n, seg) not in seen:
                         seen.add((n, seg))
                         violations.append(Violation(
@@ -197,7 +206,7 @@ def lint_source(roots: "list | None" = None) -> list:
                             f"non-canonical path literal '{seg}/' (should be '{canonical}/')"))
                 for m in _DRIFT_SEGMENT_RE.finditer(line):
                     seg = m.group(1) or m.group(2)
-                    canonical = CANONICAL_TOP.get(seg.lower())
+                    canonical = _REPO_DRIFT.get(seg.lower())
                     if canonical and seg != canonical and (n, seg) not in seen:
                         seen.add((n, seg))
                         violations.append(Violation(
