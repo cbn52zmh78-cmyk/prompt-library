@@ -1,6 +1,6 @@
 {
-  "version": "1.0",
-  "updated": "2026-06-18",
+  "version": "1.1",
+  "updated": "2026-06-19",
   "languages": [
     {
       "id": "etruscan",
@@ -239,6 +239,20 @@
       "decipherment": "fully_read",
       "history_links": [],
       "notes": "Cyril and Methodius liturgical corpus; bridge to East Slavic and Balkan philology."
+    },
+    {
+      "id": "coptic",
+      "name": "Coptic",
+      "slug": "coptic",
+      "status": "liturgical",
+      "revival_tier": "living_liturgical",
+      "family": "Afro-Asiatic > Egyptian",
+      "period": "c. 2nd century CE - present (liturgical)",
+      "script": "Coptic alphabet (Greek + 7 Demotic-derived letters)",
+      "corpus_size": "extensive",
+      "decipherment": "fully_read",
+      "history_links": [],
+      "notes": "Final stage of Egyptian; Bohairic dialect active in Coptic Orthodox liturgy. Key to Champollion's 1822 hieroglyphic decipherment via vowel anchor. Nag Hammadi Library (Sahidic). Pairs with Middle Egyptian (ep 10) as vowel-revelation counterpart."
     }
   ]
 }

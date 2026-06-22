@@ -1,0 +1,159 @@
+{
+  "slug": "helix_s009-exoplanet-desert-worlds_space_science",
+  "title": "Exoplanet desert worlds and regolith dynamics",
+  "domain": "space_science",
+  "target_seconds": 90,
+  "config": {
+    "agent": "HELIX",
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "host_mode": "voiceover_only",
+    "on_screen_host": false,
+    "voice_suffix": "warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+    "voice_gender": "female",
+    "voice_accent": "British RP (slight)",
+    "continuity_prefix": "HELIX VOICEOVER — SCIENCE NARRATION\nVoice: warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole\nNo on-screen presenter. Voiceover only.\nAll visuals are camera/animation/archival — HELIX does not appear on screen.\nAccuracy standard: all claims sourced. Units required. Uncertainty stated.\nTone: informative but never boring. The universe is extraordinary — let it show.",
+    "visual_style": "cinematic science — imagery-forward, minimal text overlay"
+  },
+  "shots": [
+    {
+      "role": "cold_open",
+      "target_s": 8,
+      "speech_text": "Imagine TRAPPIST-1e stellar flux 0.66 S⊕ (Gillon et al., 2017, Natur. That single number is the key to understanding Exoplanet desert worlds and regolith dynamics — one of the most extraordinary phenomena in the known universe.",
+      "visual_direction": "OPEN ON: [High-impact visual — dramatic representation of Exoplanet desert worlds and regolith dynamics]. Title card: 'Exoplanet desert worlds and regolith dynamics'. No host. Pure visual with HELIX voiceover.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Striking hook — a disorienting scale fact or visual paradox that pulls the viewer in immediately"
+    },
+    {
+      "role": "establish",
+      "target_s": 10,
+      "speech_text": "Exoplanet desert worlds and regolith dynamics sits within the domain of space_science. g. To understand it, we need to think at a scale that challenges intuition.",
+      "visual_direction": "ESTABLISH SHOT: [Wide or macro view establishing scale and context of Exoplanet desert worlds and regolith dynamics]. Slow zoom or pull-back revealing scope. Minimal text — let the imagery speak.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Set the scene: what is this phenomenon, where does it occur, what scale are we at"
+    },
+    {
+      "role": "explain",
+      "target_s": 12,
+      "speech_text": "g e The governing framework here is Domain_Specific_Visualization_Principles_Framework v1.0.",
+      "visual_direction": "EXPLAIN SEQUENCE: [Animation or diagram illustrating the core mechanism of Exoplanet desert worlds and regolith dynamics]. Clear, elegant — no clutter. Labels only where essential. Motion should mirror the narration pace.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Core mechanism or concept — clearly, accurately, engagingly. No jargon without definition"
+    },
+    {
+      "role": "visualize",
+      "target_s": 10,
+      "speech_text": "The visual signature of Exoplanet desert worlds and regolith dynamics is unlike anything else in space_science. The n produces effects visible at extraordinary scale.",
+      "visual_direction": "VISUALIZATION: [Best available imagery/animation of Exoplanet desert worlds and regolith dynamics — archival, simulated, or observational]. HELIX voiceover continuous.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Describe what the camera or animation shows — specific, visual, sensory language"
+    },
+    {
+      "role": "evidence",
+      "target_s": 10,
+      "speech_text": "The key measurement: TRAPPIST-1e stellar flux 0.66 S⊕ (Gillon et al., 2017, Nature 542); NASA Exoplanet Archive (June 2026): >5,600 confirmed exoplanets, ~170 rocky (R < 1.6 R⊕) in or near habitable zone. Results like this, produced by NASA Exoplanet Science Institute (NExScI) / IPAC, transformed our understanding of Exoplanet desert worlds and regolith dynamics.",
+      "visual_direction": "EVIDENCE SHOT: [Data visualisation, telescope imagery, or archival footage of the key discovery moment]. Institution logos/credits if available. Measurement values as lower-third text overlay.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "The key measurement, landmark discovery, or institutional proof — cite it precisely"
+    },
+    {
+      "role": "connect",
+      "target_s": 8,
+      "speech_text": "Exoplanet desert worlds and regolith dynamics is not just a phenomenon at the far edge of science. It connects directly to questions about the fabric of reality. The e has implications that reach far beyond the laboratory.",
+      "visual_direction": "CONNECT SHOT: [Imagery bridging Exoplanet desert worlds and regolith dynamics to human scale or everyday context — e.g. night sky, biological cell, chemical process]. Gentle visual metaphor. Warmer colour grade than previous shots.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Link to the wider universe, human biology, Earth, or the viewer's daily experience"
+    },
+    {
+      "role": "close",
+      "target_s": 6,
+      "speech_text": "We are only beginning to understand Exoplanet desert worlds and regolith dynamics. And perhaps that's exactly the point — the universe keeps its most intricate secrets just within reach, if we keep looking.",
+      "visual_direction": "CLOSE: [Wide, contemplative — return to establishing imagery or slow fade to black]. HELIX narration ends. Silence before credits. No host sign-off.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Resonant closing thought — open-ended, leaves the viewer with something to sit with"
+    }
+  ],
+  "provenance_card": {
+    "title": "Exoplanet desert worlds and regolith dynamics",
+    "domain": "space_science",
+    "subject_id": "s009-exoplanet-desert-worlds",
+    "key_measurement": "TRAPPIST-1e stellar flux 0.66 S⊕ (Gillon et al., 2017, Nature 542); NASA Exoplanet Archive (June 2026): >5,600 confirmed exoplanets, ~170 rocky (R < 1.6 R⊕) in or near habitable zone",
+    "framework": "Domain_Specific_Visualization_Principles_Framework v1.0",
+    "institutions": [
+      "NASA Exoplanet Science Institute (NExScI) / IPAC",
+      "MIT Kavli Institute for Astrophysics and Space Research (TESS mission)",
+      "ESA / University of Liège (TRAPPIST team)",
+      "NASA Jet Propulsion Laboratory (Kepler/K2 science)"
+    ],
+    "sources": [
+      {
+        "title": "Source",
+        "citation": "Gillon, M. et al. (2017) 'Seven temperate terrestrial planets around the nearby ultracool dwarf star TRAPPIST-1', Nature 542:456–460",
+        "url": "https://www.nature.com/articles/nature21360"
+      },
+      {
+        "title": "Source",
+        "citation": "NASA Exoplanet Archive — Confirmed Exoplanet Catalog, NASA Exoplanet Science Institute, IPAC/Caltech (continuously updated)",
+        "url": "https://exoplanetarchive.ipac.caltech.edu/"
+      },
+      {
+        "title": "Source",
+        "citation": "Wordsworth, R.D. (2015) 'Atmospheric Heat Redistribution and Collapse on Tidally Locked Rocky Planets', Astrophysical Journal 806(2):180",
+        "url": "https://iopscience.iop.org/article/10.1088/0004-637X/806/2/180"
+      }
+    ],
+    "agent": "HELIX",
+    "accuracy_note": "All measurements cited. Uncertainty stated where present. No fabricated statistics."
+  },
+  "guardrails": [
+    "HELIX is voiceover only — no on-screen host, no synthetic presenter, no avatar.",
+    "All quantitative claims must include units and citation.",
+    "Uncertainty must be stated where present (e.g. 'approximately', 'within a margin of').",
+    "Do not present theoretical models as confirmed fact without qualification.",
+    "Do not fabricate measurements, paper titles, DOIs, or institutional affiliations.",
+    "Maintain wonder without hyperbole — the phenomena are extraordinary enough.",
+    "No speculation presented as established science.",
+    "HELIX does not cover history, biography, or language — those are DAVID's domain."
+  ],
+  "qa_rules": {
+    "min_shots": 7,
+    "min_speech_words": 12,
+    "required_shot_roles": [
+      "cold_open",
+      "establish",
+      "explain",
+      "visualize",
+      "evidence",
+      "connect",
+      "close"
+    ],
+    "voiceover_only": true,
+    "citation_required": true,
+    "unit_required": true,
+    "forbidden_patterns": [
+      "DAVID says",
+      "keeper of the Archive",
+      "MAGENTA SUPPRESS",
+      "charcoal.*wardrobe",
+      "I am HELIX",
+      "\\[UNCITED\\]"
+    ]
+  },
+  "meta": {
+    "subject_id": "s009-exoplanet-desert-worlds",
+    "shot_count": 7,
+    "total_s": 64,
+    "agent": "HELIX",
+    "voice_suffix": "warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole"
+  },
+  "_agent": "HELIX",
+  "_generated_at": "2026-06-21T21:27:17.915879+00:00"
+}

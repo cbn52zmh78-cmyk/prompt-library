@@ -6,6 +6,18 @@ Scores prompts on cinematic strength and suggests improvements. Fully general.
 
 import re
 import sys
+from pathlib import Path as _Path
+
+# --- qa_gate wiring ---
+_AI_FED = _Path(__file__).resolve().parents[2] / "AI" / "federation"
+if str(_AI_FED) not in sys.path:
+    sys.path.insert(0, str(_AI_FED))
+try:
+    from qa_gate import qa_check as _qa_gate_check
+    _QA_GATE_AVAILABLE = True
+except ImportError:
+    _QA_GATE_AVAILABLE = False
+# --- end qa_gate wiring ---
 
 CHECKS = [
     (
@@ -60,12 +72,24 @@ class PromptQualityScorer:
     def score(self, prompt: str) -> dict:
         passed, missing, suggestions = self._evaluate(prompt)
         final_score = round((len(passed) / len(CHECKS)) * 100) if CHECKS else 0
-        return {
+        result = {
             "score": final_score,
             "passed": passed,
             "missing": missing,
             "suggestions": suggestions,
         }
+        # --- qa_gate: enrich with reasoning_qa (non-blocking) ---
+        if _QA_GATE_AVAILABLE and prompt and prompt.strip():
+            try:
+                result["reasoning_qa"] = _qa_gate_check(
+                    content=prompt,
+                    content_type="general",
+                    subject="prompt quality",
+                )
+            except Exception as _exc:
+                result["reasoning_qa"] = {"error": str(_exc)}
+        # --- end qa_gate ---
+        return result
 
     def improve(self, prompt: str) -> str:
         """Append missing cinematic elements until the prompt scores 100."""

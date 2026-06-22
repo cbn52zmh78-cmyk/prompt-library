@@ -1,0 +1,40 @@
+{
+  "subject_id": "s009-exoplanet-desert-worlds",
+  "domain": "space_science",
+  "phenomenon": "Exoplanet desert worlds and regolith dynamics",
+  "key_measurement": "TRAPPIST-1e stellar flux 0.66 S⊕ (Gillon et al., 2017, Nature 542); NASA Exoplanet Archive (June 2026): >5,600 confirmed exoplanets, ~170 rocky (R < 1.6 R⊕) in or near habitable zone",
+  "principle_set": "general_scientific",
+  "framework": "Domain_Specific_Visualization_Principles_Framework v1.0",
+  "institutions": [
+    "NASA Exoplanet Science Institute (NExScI) / IPAC",
+    "MIT Kavli Institute for Astrophysics and Space Research (TESS mission)",
+    "ESA / University of Liège (TRAPPIST team)",
+    "NASA Jet Propulsion Laboratory (Kepler/K2 science)"
+  ],
+  "sources": [
+    {
+      "citation": "Gillon, M. et al. (2017) 'Seven temperate terrestrial planets around the nearby ultracool dwarf star TRAPPIST-1', Nature 542:456–460",
+      "type": "primary",
+      "url": "https://www.nature.com/articles/nature21360"
+    },
+    {
+      "citation": "NASA Exoplanet Archive — Confirmed Exoplanet Catalog, NASA Exoplanet Science Institute, IPAC/Caltech (continuously updated)",
+      "type": "primary",
+      "url": "https://exoplanetarchive.ipac.caltech.edu/"
+    },
+    {
+      "citation": "Wordsworth, R.D. (2015) 'Atmospheric Heat Redistribution and Collapse on Tidally Locked Rocky Planets', Astrophysical Journal 806(2):180",
+      "type": "secondary",
+      "url": "https://iopscience.iop.org/article/10.1088/0004-637X/806/2/180"
+    }
+  ],
+  "visualization_compliance": [
+    "Planet radii, masses, and orbital periods must be drawn from NASA Exoplanet Archive confirmed catalog values — do not use unconfirmed candidates as reference geometry",
+    "Atmospheric composition must be labeled HYPOTHETICAL unless confirmed by JWST or HST transmission spectroscopy with cited publication",
+    "Tidally locked rotation must be depicted for planets within ~0.05 AU of M-dwarf hosts — do not show day/night rotation for these cases",
+    "Regolith grain size and composition must be labeled SPECULATIVE unless supported by reflectance spectroscopy data",
+    "Surface temperature ranges must derive from cited energy-balance or GCM models — not interpolated from Earth analogs",
+    "Scale bar in AU required for orbital diagrams; planet size scale bar in R⊕ required on comparative size charts",
+    "Label ILLUSTRATIVE on all artist surface renderings; do not depict liquid surface water without spectroscopic confirmation"
+  ]
+}

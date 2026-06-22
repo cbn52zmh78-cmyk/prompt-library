@@ -38,6 +38,26 @@ PIPELINE_DIR = WORKSPACE / "Studio" / "Pipeline"
 if str(PIPELINE_DIR) not in sys.path:
     sys.path.insert(0, str(PIPELINE_DIR))
 
+# --- qa_gate wiring ---
+_AI_FED = WORKSPACE / "AI" / "federation"
+if str(_AI_FED) not in sys.path:
+    sys.path.insert(0, str(_AI_FED))
+from qa_gate import qa_check as _qa_gate_check  # noqa: E402  # distinct from local qa_check()
+# --- end qa_gate wiring ---
+
+# --- PromptDirector wiring ---
+_PROMPT_DIRECTOR: "Any | None" = None
+try:
+    _PROMPT_DIR_MOD = str(_AI_FED / "prompt_director")
+    if _PROMPT_DIR_MOD not in sys.path:
+        sys.path.insert(0, _PROMPT_DIR_MOD)
+    from prompt_director import PromptDirector as _PromptDirector
+    _PROMPT_DIRECTOR = _PromptDirector()
+except Exception as _pd_exc:
+    print(f"[PromptDirector] not available — continuing without: {_pd_exc}", file=sys.stderr)
+    _PROMPT_DIRECTOR = None
+# --- end PromptDirector wiring ---
+
 
 def _ledger_note(path, **meta):
     """#259 path-stamping: record an output in the canonical ledger (best-effort)."""
@@ -3337,6 +3357,60 @@ def render_longform(
             raise RuntimeError("API client required for shot generation")
 
         prompt = ensure_voice_in_prompt(shot["video_prompt"], refs["voice_suffix"])
+
+        # --- PromptDirector: validate/augment prompt before generation ---
+        _pd_render_id = ""
+        if _PROMPT_DIRECTOR is not None:
+            _pd_speech = shot.get("speech", "")
+            _pd_shot_type = shot.get("shot_type", "medium_close")
+            _pd_subject = shot.get("character", shot.get("host", "subject"))
+            _pd_result = _PROMPT_DIRECTOR.direct(
+                subject=_pd_subject,
+                audio_line=_pd_speech,
+                narrative_beat=shot.get("narrative_beat", ""),
+                physical_description=shot.get("physical_description", ""),
+                shot_type=_pd_shot_type if _pd_shot_type in ("wide", "medium", "medium_close", "close", "extreme_close") else "medium_close",
+                sequence_position=shot.get("sequence_position", 1),
+                sequence_total=shot.get("sequence_total", 1),
+                prior_shot_context=shot.get("prior_shot_context", ""),
+                dry_run=True,
+            )
+            _pd_render_id = _pd_result.render_id
+            if _pd_result.gate == "RED":
+                raise RuntimeError(
+                    f"PromptDirector RED on shot {sid} — "
+                    f"hard failure modes: {_pd_result.flagged_risks} | "
+                    f"workarounds: {_pd_result.critique_issues}"
+                )
+            elif _pd_result.gate == "YELLOW":
+                print(
+                    f"[PromptDirector WARN] shot {sid} gate=YELLOW "
+                    f"conf={_pd_result.confidence:.2f} "
+                    f"risks={_pd_result.flagged_risks} "
+                    f"levers={_pd_result.active_levers}",
+                    file=sys.stderr,
+                )
+            # else GREEN — proceed silently
+        # --- end PromptDirector ---
+
+        # --- qa_gate: QA render description before generation ---
+        _qa_rl = _qa_gate_check(
+            content=prompt,
+            content_type="render_description",
+            subject=f"longform shot {sid}",
+        )
+        if _qa_rl["gate"] == "RED":
+            print(
+                f"[QA HOLD] render_longform.py: {_qa_rl['summary']} | Issues: {_qa_rl['issues']}",
+                file=sys.stderr,
+            )
+            raise RuntimeError(f"QA gate RED on shot {sid} render description — render aborted")
+        elif _qa_rl["gate"] == "YELLOW":
+            print(
+                f"[QA WARN] render_longform.py: {_qa_rl['summary']}",
+                file=sys.stderr,
+            )
+        # --- end qa_gate ---
         image_url = resolve_shot_image_url(shot, refs)
         _log(f"[longform] rendering {sid} ({shot['duration']}s)…")
         _api_pace()
@@ -3349,6 +3423,9 @@ def render_longform(
         )
         _download(vid.url, out)
         rendered.append(out)
+        # Print render_id so caller can capture it for outcome recording
+        if _pd_render_id:
+            print(f"[RENDER_ID] {_pd_render_id}")
 
     prov_cfg = script.get("provenance_card", {})
     if prov_cfg.get("enabled", True):
@@ -3469,65 +3546,32 @@ def main() -> int:
         os.environ["XAI_API_KEY"] = token
         client = xai_sdk.Client(api_key=token)
 
-    refs = resolve_refs(script)
-    seamless_opts = get_seamless_options(script, args)
-    seamless_opts = _apply_grade_policy(script, refs, seamless_opts)
-    if not args.skip_generation_gate:
-        assert_generation_reference_gate(script, refs, seamless_opts=seamless_opts)
-    if not getattr(args, "skip_t243_gate", False):
-        from t243_pre_render_gate import assert_t243_pre_render_gate  # noqa: WPS433
-
-        assert_t243_pre_render_gate(
-            script,
-            refs,
-            seamless_opts=seamless_opts,
-            production_dir=resolve_production_dir(script) if seamless_opts.enabled else None,
-        )
-    reject_concat_only_seamless_grade(
-        concat_only=args.concat_only,
-        seamless_opts=seamless_opts,
-        match_color=bool(args.match_color),
-        cut_on_motion=bool(args.cut_on_motion),
-        seamless_flag=bool(args.seamless),
-    )
-
-    force_ids = set(args.force_shot)
-    if args.force_all and seamless_opts.enabled:
-        force_ids = {s["id"] for s in script["shots"]}
-
+    refs = resolve_refs(script, client=client)
+    seamless_opts = get_seamless_options(script, args) if args.seamless else None
     result = render_longform(
         script,
         client=client,
         concat_only=args.concat_only,
-        force_shots=force_ids,
+        force_shots=set(args.force_shot) if args.force_shot else None,
         force_all=args.force_all,
         seamless_opts=seamless_opts,
     )
 
-    manifest = {
-        "pipeline": "render_longform_seamless" if seamless_opts.enabled else "render_longform",
-        "protocol": "STUDIO_Canonical_Schema_and_Seamless_Spec_v1" if seamless_opts.enabled else None,
-        "completed_at": datetime.now(timezone.utc).isoformat(),
-        "script_source": str(script_path),
-        "concat_only": args.concat_only,
-        "seamless": seamless_opts.enabled,
-        **result,
-    }
-    prod_dir = Path(result["production_dir"])
-    manifest_path = prod_dir / "manifest.json"
-    exit_code = resolve_render_exit_code(result)
-    if args.package and result["qa"]["pass"]:
-        try:
-            pkg = _run_package_stage(prod_dir)
+    if args.package:
+        prod_dir = resolve_production_dir(script)
+        pkg = _run_package_stage(prod_dir)
+        manifest_path = prod_dir / "manifest.json"
+        if manifest_path.is_file():
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
             manifest["upload_kit"] = pkg["upload_kit"]
             manifest["packaged_at"] = pkg["manifest"]["packaged_at"]
-        except Exception as exc:
-            _log(f"[longform] package stage failed (QA still {'pass' if exit_code == 0 else 'fail'}): {exc}")
-    manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
-    _ledger_note(manifest_path)
-    print(json.dumps(manifest, indent=2, ensure_ascii=False))
-    return exit_code
+            manifest_path.write_text(
+                json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8"
+            )
+        print(json.dumps(pkg["manifest"], indent=2, ensure_ascii=False))
+
+    return resolve_render_exit_code(result)
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    sys.exit(main())

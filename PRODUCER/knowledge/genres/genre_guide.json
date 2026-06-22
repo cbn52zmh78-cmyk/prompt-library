@@ -1,0 +1,51 @@
+{
+  "thriller": {
+    "visual_grammar": "shallow depth of field, tight framing, rack focus on threat, desaturated or cool grade",
+    "pacing": "slow burn to sudden violence, holds longer than comfortable, quiet before storm",
+    "camera": "motivated handheld in action, locked down in suspense, POV to create identification",
+    "performance": "menace, controlled affect, subtext dense, stillness as threat",
+    "lighting": "hard single key, chiaroscuro, practical-heavy, shadow conceals"
+  },
+  "drama": {
+    "visual_grammar": "medium and close coverage, OTS dialogue, motivated camera, natural light preferred",
+    "pacing": "scene-driven, emotional beats respected, pauses earn weight",
+    "camera": "steadicam for intimacy, crane for release, handheld for breakdown moments",
+    "performance": "stanislavski or meisner, emotional truth, naturalistic",
+    "lighting": "golden hour, practical + soft key, three-point for classical coverage"
+  },
+  "action": {
+    "visual_grammar": "dynamic angles, handheld in combat, wide for choreography, ECU for impact",
+    "pacing": "fast cut in action, longer shots in setup, rhythm builds to climax",
+    "camera": "Steadicam hero walk, crane for scale, Dutch angle for chaos, POV for impact",
+    "performance": "physical precision, commitment, body over voice, presence over psychology",
+    "lighting": "high contrast, motivated naturalistic in drama scenes, dramatic in action"
+  },
+  "horror": {
+    "visual_grammar": "negative space, off-center framing, slow reveal, Dutch angle, wide lens distortion",
+    "pacing": "long holds, jump scare rhythm subverted, dread through sound design gaps",
+    "camera": "low angle, canted, POV as vulnerability, wide lens warps space",
+    "performance": "fear physicality, primal response, body language leads, vocalization restrained",
+    "lighting": "practical only, chiaroscuro extreme, underexpose, light from below"
+  },
+  "romance": {
+    "visual_grammar": "soft focus, golden light, two-shot intimacy, rack focus on eyes",
+    "pacing": "linger on texture, slow push-in at emotional peak, breath-matched cuts",
+    "camera": "handheld for spontaneity, dolly-in for revelation, OTS for tension before kiss",
+    "performance": "meisner presence, listening dominant, restraint before release, desire in eyes not dialogue",
+    "lighting": "golden hour, magic hour, soft key, warm practical, candlelight"
+  },
+  "crime_noir": {
+    "visual_grammar": "venetian blind shadows, low angles, wide lens claustrophobia, wet streets reflecting neon",
+    "pacing": "unhurried reveals, long takes in dialogue, sudden violence, smoke in the light",
+    "camera": "dolly slow through space, canted for moral rot, low angle for power, ECU on hands",
+    "performance": "clipped delivery, subtext maximum, stillness, economy — every word costs something",
+    "lighting": "hard single source, neon color, venetian stripe, pools of light in dark"
+  },
+  "sci_fi": {
+    "visual_grammar": "wide negative space, scale shots, practical effects grounded, sterile vs organic contrast",
+    "pacing": "awe and dread alternating, long establishing of world before character",
+    "camera": "crane for scale, Villeneuve-wide, Steadicam through corridors, clinical locked",
+    "performance": "physical_theatre + method hybrid, alien physicality, constrained affect",
+    "lighting": "cool blue, practical tech sources, contrast warm/cold, sterile high-key to chiaroscuro"
+  }
+}

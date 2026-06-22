@@ -1,0 +1,19 @@
+{
+  "system_id": "ws_linear_a_linear_b",
+  "name": "Linear A and Linear B (Aegean syllabaries)",
+  "script_family": "syllabic / Aegean (Minoan/Mycenaean Greek)",
+  "approx_period": "Linear A: c. 1800–1450 BCE (Minoan Crete); Linear B: c. 1450–1200 BCE (Mycenaean Greece and Crete)",
+  "decipherment_status": "Linear B: fully deciphered (Mycenaean Greek, 1952). Linear A: UNDECIPHERED (underlying language and semantic values unknown).",
+  "extant_corpus_size": "Linear B: ~5,000 clay tablets and sealings (Knossos, Pylos, Mycenae, Tiryns, Thebes). Linear A: ~1,500 inscriptions on clay tablets, stone libation tables, and metal objects.",
+  "key_source_documents": [
+    "Ventris, M. & Chadwick, J. (1953), 'Evidence for Greek Dialect in the Mycenaean Archives', Journal of Hellenic Studies 73 — the decipherment paper for Linear B",
+    "Chadwick, J. (1958), The Decipherment of Linear B (Cambridge University Press) — accessible decipherment account",
+    "Godart, L. & Olivier, J.-P. (1976–1985), GORILA: Recueil des inscriptions en linéaire A, 5 vols. — definitive Linear A corpus",
+    "Knossos tablets (Evans, A., 1900–1935 excavations): primary Linear B archive; Evans, A. (1952), Scripta Minoa II",
+    "Pylos tablets (Blegen, C., excavations 1939–1952): best-preserved Linear B palace archive, destroyed in c. 1200 BCE fire that baked tablets"
+  ],
+  "visual_characteristics": "Both Linear A and Linear B are syllabic scripts (each sign represents a consonant-vowel syllable, plus logograms for commodities, weights, and persons). Signs are incised into wet clay with a stylus. Linear B has ~87 syllabic signs plus ~100 logograms; Linear A has ~56 syllabic signs overlapping with Linear B in sign-form but not necessarily in sound value. Signs are angular with horizontal and vertical strokes; tablets are small palm-sized clay bars oriented horizontally. Linear A signs are slightly more cursive and varied than Linear B's more standardised administrative forms.",
+  "honesty_note": "R7 compliance: Linear A interpretation is null. Linear B is fully deciphered as Mycenaean Greek. These are two distinct scripts sharing partial sign ancestry; treating them as one entry documents the scholarly relationship. See also manifest entry VS-WS-0002 (Linear A POC).",
+  "david_episode_slug": null,
+  "notes": "Linear A is UNDECIPHERED. Do not assert meaning for Linear A signs. Linear B is used solely for administrative records (inventories, rations, land tenure) — no literature survives. Decipherment of Linear B relied on sign-form comparison with Linear A plus frequency analysis by Ventris (1952)."
+}

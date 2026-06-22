@@ -30,6 +30,13 @@ from shot_duration import (  # noqa: E402
     seamless_chain_enabled,
 )
 
+# --- qa_gate wiring ---
+_AI_FED = Path(__file__).resolve().parents[2] / "AI" / "federation"
+if str(_AI_FED) not in sys.path:
+    sys.path.insert(0, str(_AI_FED))
+from qa_gate import qa_check as _qa_gate_check  # noqa: E402  # distinct from local qa_check()
+# --- end qa_gate wiring ---
+
 SCRIPTS = Path(__file__).resolve().parent / "longform_scripts"
 FFMPEG: str | None = None
 
@@ -515,6 +522,26 @@ def render_proof(
                 raise RuntimeError("API client required for video generation")
             seamless = seamless_chain_enabled(cfg.get("seamless"))
             api_dur = effective_shot_duration(shot, seamless=seamless)
+            # --- qa_gate: QA render description before generation ---
+            _qa_rd = _qa_gate_check(
+                content=shot["video_prompt"],
+                content_type="render_description",
+                subject=f"dead language proof shot {sid}",
+            )
+            if _qa_rd["gate"] == "RED":
+                import sys as _sys_rd
+                print(
+                    f"[QA HOLD] render_dead_language_proof.py: {_qa_rd['summary']} | Issues: {_qa_rd['issues']}",
+                    file=_sys_rd.stderr,
+                )
+                raise RuntimeError(f"QA gate RED on shot {sid} render description — render aborted")
+            elif _qa_rd["gate"] == "YELLOW":
+                import sys as _sys_rd
+                print(
+                    f"[QA WARN] render_dead_language_proof.py: {_qa_rd['summary']}",
+                    file=_sys_rd.stderr,
+                )
+            # --- end qa_gate ---
             print(f"[proof] rendering {sid} ({api_dur}s, {resolution})…")
             resp = client.video.generate(
                 prompt=shot["video_prompt"],

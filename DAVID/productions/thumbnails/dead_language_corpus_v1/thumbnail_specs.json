@@ -1,7 +1,7 @@
 {
   "issue": 140,
-  "task": "T2 thumbnail system — dead-language corpus v1",
-  "generated_at": "2026-06-19T03:49:07.788529+00:00",
+  "task": "T2 thumbnail system — dead-language corpus v1 (extended 12 eps + A/B)",
+  "generated_at": "2026-06-19T23:26:02.518448+00:00",
   "brand_system": {
     "issue": 140,
     "canvas_px": [
@@ -124,9 +124,10 @@
       "export PNG 1280×720 under 2MB"
     ]
   },
-  "identity_lock": "productions/host_identity_v1/david_identity_lock.json",
+  "identity_lock": "DAVID/productions/host_identity_v1/david_identity_lock.json",
   "identity_status": "LOCKED",
-  "episode_count": 6,
+  "episode_count": 12,
+  "ab_variant_count": 12,
   "episodes": [
     {
       "slug": "david_latin_corpus_v1",
@@ -280,9 +281,24 @@
         "Title in left title_zone; host eyes remain in right crop",
         "Primary attestation badge above excerpt strip; secondary badge below",
         "Artifact cue: illuminated codex + Roman grammarian marginalia",
-        "Compatible with STUDIO/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff"
+        "Compatible with Studio/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff"
       ],
-      "rendered_path": "productions/thumbnails/dead_language_corpus_v1/david_latin_corpus_v1_thumbnail_1280x720.jpg"
+      "variants": {
+        "a": {
+          "label": "A — emotional hook",
+          "hook_title": "LATIN\nNEVER DIED",
+          "hook_subtitle": "Who kept speaking it?",
+          "filename": "david_latin_corpus_v1_thumbnail_A_1280x720.jpg"
+        },
+        "b": {
+          "label": "B — descriptive / keyword",
+          "hook_title": "STILL\nSPOKEN",
+          "hook_subtitle": "Latin never left",
+          "filename": "david_latin_corpus_v1_thumbnail_B_1280x720.jpg",
+          "imagine_prompt": "YouTube thumbnail 1280×720, cinematic documentary prestige, high contrast readable at small size. LEFT THIRD: bold title-safe negative space for text overlay — gold hook title \"STILL SPOKEN\" and subtitle \"Latin never left\". RIGHT TWO-THIRDS: DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only. Background depth from The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting. Foreground artifact prop: illuminated codex + Roman grammarian marginalia. Excerpt strip in Latin script: \"Gallia est omnis divisa in partes tres\". On-screen badges: ATTESTED + RECONSTRUCTED PRONUNCIATION. Brand wordmark top-left: DAVID · The Archive. COLOR LOCK Archive: amber 3200K brass lamp, burnt umber wood, parchment cream, warm shadow — no blue fill, no magenta, no teal. Synthetic host David-001 only, no real person likeness, no celebrity resemblance, SFW."
+        }
+      },
+      "ab_test_note": "Upload both variants; use YouTube A/B test (or early-click-rate manual comparison) to select winner after 48h."
     },
     {
       "slug": "david_gothic_corpus_v1",
@@ -436,9 +452,24 @@
         "Title in left title_zone; host eyes remain in right crop",
         "Primary attestation badge above excerpt strip; secondary badge below",
         "Artifact cue: Codex Argenteus silver manuscript fragment",
-        "Compatible with STUDIO/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff"
+        "Compatible with Studio/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff"
       ],
-      "rendered_path": "productions/thumbnails/dead_language_corpus_v1/david_gothic_corpus_v1_thumbnail_1280x720.jpg"
+      "variants": {
+        "a": {
+          "label": "A — emotional hook",
+          "hook_title": "ONE\nBIBLE",
+          "hook_subtitle": "Wulfila's witness",
+          "filename": "david_gothic_corpus_v1_thumbnail_A_1280x720.jpg"
+        },
+        "b": {
+          "label": "B — descriptive / keyword",
+          "hook_title": "WULFILA\nBIBLE",
+          "hook_subtitle": "The only Gothic witness",
+          "filename": "david_gothic_corpus_v1_thumbnail_B_1280x720.jpg",
+          "imagine_prompt": "YouTube thumbnail 1280×720, cinematic documentary prestige, high contrast readable at small size. LEFT THIRD: bold title-safe negative space for text overlay — gold hook title \"WULFILA BIBLE\" and subtitle \"The only Gothic witness\". RIGHT TWO-THIRDS: DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only. Background depth from The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting. Foreground artifact prop: Codex Argenteus silver manuscript fragment. Excerpt strip in Gothic script: \"Atta unsar, thu in himinam\". On-screen badges: ATTESTED TEXT + RECONSTRUCTED PRONUNCIATION. Brand wordmark top-left: DAVID · The Archive. COLOR LOCK Archive: amber 3200K brass lamp, burnt umber wood, parchment cream, warm shadow — no blue fill, no magenta, no teal. Synthetic host David-001 only, no real person likeness, no celebrity resemblance, SFW."
+        }
+      },
+      "ab_test_note": "Upload both variants; use YouTube A/B test (or early-click-rate manual comparison) to select winner after 48h."
     },
     {
       "slug": "david_ancient_greek_corpus_v1",
@@ -592,9 +623,24 @@
         "Title in left title_zone; host eyes remain in right crop",
         "Primary attestation badge above excerpt strip; secondary badge below",
         "Artifact cue: Homeric papyrus with accent marks",
-        "Compatible with STUDIO/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff"
+        "Compatible with Studio/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff"
       ],
-      "rendered_path": "productions/thumbnails/dead_language_corpus_v1/david_ancient_greek_corpus_v1_thumbnail_1280x720.jpg"
+      "variants": {
+        "a": {
+          "label": "A — emotional hook",
+          "hook_title": "GREEK\nPITCH ACCENT",
+          "hook_subtitle": "Pitch, not just letters",
+          "filename": "david_ancient_greek_corpus_v1_thumbnail_A_1280x720.jpg"
+        },
+        "b": {
+          "label": "B — descriptive / keyword",
+          "hook_title": "HOMER\nPITCH",
+          "hook_subtitle": "Read it how it scanned",
+          "filename": "david_ancient_greek_corpus_v1_thumbnail_B_1280x720.jpg",
+          "imagine_prompt": "YouTube thumbnail 1280×720, cinematic documentary prestige, high contrast readable at small size. LEFT THIRD: bold title-safe negative space for text overlay — gold hook title \"HOMER PITCH\" and subtitle \"Read it how it scanned\". RIGHT TWO-THIRDS: DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only. Background depth from The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting. Foreground artifact prop: Homeric papyrus with accent marks. Excerpt strip in Greek script: \"ἄνδρα μοι ἔννεπε, μοῦσα\". On-screen badges: ATTESTED NOTATION + RECONSTRUCTED PRONUNCIATION. Brand wordmark top-left: DAVID · The Archive. COLOR LOCK Archive: amber 3200K brass lamp, burnt umber wood, parchment cream, warm shadow — no blue fill, no magenta, no teal. Synthetic host David-001 only, no real person likeness, no celebrity resemblance, SFW."
+        }
+      },
+      "ab_test_note": "Upload both variants; use YouTube A/B test (or early-click-rate manual comparison) to select winner after 48h."
     },
     {
       "slug": "david_old_english_corpus_v1",
@@ -748,9 +794,24 @@
         "Title in left title_zone; host eyes remain in right crop",
         "Primary attestation badge above excerpt strip; secondary badge below",
         "Artifact cue: Beowulf manuscript folio (Cotton Vitellius)",
-        "Compatible with STUDIO/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff"
+        "Compatible with Studio/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff"
       ],
-      "rendered_path": "productions/thumbnails/dead_language_corpus_v1/david_old_english_corpus_v1_thumbnail_1280x720.jpg"
+      "variants": {
+        "a": {
+          "label": "A — emotional hook",
+          "hook_title": "BEFORE\nENGLISH",
+          "hook_subtitle": "Manuscript vs mouth",
+          "filename": "david_old_english_corpus_v1_thumbnail_A_1280x720.jpg"
+        },
+        "b": {
+          "label": "B — descriptive / keyword",
+          "hook_title": "HWÆT\nBEOWULF",
+          "hook_subtitle": "Your language, 1,000 years ago",
+          "filename": "david_old_english_corpus_v1_thumbnail_B_1280x720.jpg",
+          "imagine_prompt": "YouTube thumbnail 1280×720, cinematic documentary prestige, high contrast readable at small size. LEFT THIRD: bold title-safe negative space for text overlay — gold hook title \"HWÆT BEOWULF\" and subtitle \"Your language, 1,000 years ago\". RIGHT TWO-THIRDS: DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only. Background depth from The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting. Foreground artifact prop: Beowulf manuscript folio (Cotton Vitellius). Excerpt strip in Anglo-Saxon script: \"Hwæt, we gar-Dena in geardagum\". On-screen badges: ATTESTED MANUSCRIPT + RECONSTRUCTED PRONUNCIATION. Brand wordmark top-left: DAVID · The Archive. COLOR LOCK Archive: amber 3200K brass lamp, burnt umber wood, parchment cream, warm shadow — no blue fill, no magenta, no teal. Synthetic host David-001 only, no real person likeness, no celebrity resemblance, SFW."
+        }
+      },
+      "ab_test_note": "Upload both variants; use YouTube A/B test (or early-click-rate manual comparison) to select winner after 48h."
     },
     {
       "slug": "david_old_norse_corpus_v1",
@@ -904,9 +965,24 @@
         "Title in left title_zone; host eyes remain in right crop",
         "Primary attestation badge above excerpt strip; secondary badge below",
         "Artifact cue: Jelling runestone rubbing",
-        "Compatible with STUDIO/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff"
+        "Compatible with Studio/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff"
       ],
-      "rendered_path": "productions/thumbnails/dead_language_corpus_v1/david_old_norse_corpus_v1_thumbnail_1280x720.jpg"
+      "variants": {
+        "a": {
+          "label": "A — emotional hook",
+          "hook_title": "RUNES\nSPEAK",
+          "hook_subtitle": "Stone attests · verse reconstructs",
+          "filename": "david_old_norse_corpus_v1_thumbnail_A_1280x720.jpg"
+        },
+        "b": {
+          "label": "B — descriptive / keyword",
+          "hook_title": "VIKING\nTONGUE",
+          "hook_subtitle": "Carved in stone, sung from memory",
+          "filename": "david_old_norse_corpus_v1_thumbnail_B_1280x720.jpg",
+          "imagine_prompt": "YouTube thumbnail 1280×720, cinematic documentary prestige, high contrast readable at small size. LEFT THIRD: bold title-safe negative space for text overlay — gold hook title \"VIKING TONGUE\" and subtitle \"Carved in stone, sung from memory\". RIGHT TWO-THIRDS: DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only. Background depth from The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting. Foreground artifact prop: Jelling runestone rubbing. Excerpt strip in Younger Futhark / Latin transliteration script: \"Haraldr konungr sigrsæll\". On-screen badges: ATTESTED + RECONSTRUCTED. Brand wordmark top-left: DAVID · The Archive. COLOR LOCK Archive: amber 3200K brass lamp, burnt umber wood, parchment cream, warm shadow — no blue fill, no magenta, no teal. Synthetic host David-001 only, no real person likeness, no celebrity resemblance, SFW."
+        }
+      },
+      "ab_test_note": "Upload both variants; use YouTube A/B test (or early-click-rate manual comparison) to select winner after 48h."
     },
     {
       "slug": "david_sumerian_corpus_v1",
@@ -1060,9 +1136,1050 @@
         "Title in left title_zone; host eyes remain in right crop",
         "Primary attestation badge above excerpt strip; secondary badge below",
         "Artifact cue: Lagash administrative clay tablet",
-        "Compatible with STUDIO/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff"
+        "Compatible with Studio/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff"
       ],
-      "rendered_path": "productions/thumbnails/dead_language_corpus_v1/david_sumerian_corpus_v1_thumbnail_1280x720.jpg"
+      "variants": {
+        "a": {
+          "label": "A — emotional hook",
+          "hook_title": "FIRST\nLANGUAGE",
+          "hook_subtitle": "Clay outlived voice",
+          "filename": "david_sumerian_corpus_v1_thumbnail_A_1280x720.jpg"
+        },
+        "b": {
+          "label": "B — descriptive / keyword",
+          "hook_title": "CLAY\nSPEAKS",
+          "hook_subtitle": "5,000 years later",
+          "filename": "david_sumerian_corpus_v1_thumbnail_B_1280x720.jpg",
+          "imagine_prompt": "YouTube thumbnail 1280×720, cinematic documentary prestige, high contrast readable at small size. LEFT THIRD: bold title-safe negative space for text overlay — gold hook title \"CLAY SPEAKS\" and subtitle \"5,000 years later\". RIGHT TWO-THIRDS: DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only. Background depth from The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting. Foreground artifact prop: Lagash administrative clay tablet. Excerpt strip in cuneiform transliteration script: \"dnin-ĝir-su-ka\". On-screen badges: ATTESTED SYLLABLES + RECONSTRUCTED VOWELS. Brand wordmark top-left: DAVID · The Archive. COLOR LOCK Archive: amber 3200K brass lamp, burnt umber wood, parchment cream, warm shadow — no blue fill, no magenta, no teal. Synthetic host David-001 only, no real person likeness, no celebrity resemblance, SFW."
+        }
+      },
+      "ab_test_note": "Upload both variants; use YouTube A/B test (or early-click-rate manual comparison) to select winner after 48h."
+    },
+    {
+      "slug": "david_sanskrit_corpus_v1",
+      "issue": 140,
+      "title": "DAVID — The Language Memory Kept Alive",
+      "language": "Classical Sanskrit",
+      "actor_id": "David-001",
+      "canvas_px": [
+        1280,
+        720
+      ],
+      "brand": {
+        "wordmark": "DAVID · The Archive",
+        "tagline": "Dead languages, actually pronounced.",
+        "colors": {
+          "bg": "#0C0E14",
+          "bg_rgb": [
+            12,
+            14,
+            20
+          ],
+          "gold_title": "#DCBE78",
+          "gold_title_rgb": [
+            220,
+            190,
+            120
+          ],
+          "gold_footer": "#FFB45A",
+          "gold_footer_rgb": [
+            255,
+            180,
+            90
+          ],
+          "parchment": "#F5F0E6",
+          "parchment_rgb": [
+            245,
+            240,
+            230
+          ],
+          "umber_dark": "#3D2B1F",
+          "umber_mid": "#5C4033",
+          "shadow_warm": "#2A2520",
+          "body_text": "#C8CDD7",
+          "body_text_rgb": [
+            200,
+            205,
+            215
+          ],
+          "banner_fill": "#502D14",
+          "banner_fill_rgb": [
+            80,
+            45,
+            20
+          ],
+          "attested": "#6BBF8A",
+          "attested_rgb": [
+            107,
+            191,
+            138
+          ],
+          "reconstructed": "#E8A84C",
+          "reconstructed_rgb": [
+            232,
+            168,
+            76
+          ]
+        },
+        "lighting": "Warm brass desk lamp 3200K key — amber pool, no magenta, no cool fill"
+      },
+      "plates": {
+        "identity_lock": "productions/host_identity_v1/david_identity_lock.json",
+        "host_reference": "productions/host_identity_v1/references/david_avatar_reference.jpg",
+        "set_reference": "productions/host_identity_v1/references/archive_set_reference.jpg",
+        "host_reuse": "host reference @2 — image_to_video frame 1 every DAVID host shot",
+        "set_reuse": "environment plate @1 — same set every episode"
+      },
+      "layout": {
+        "title_zone": {
+          "x": 0,
+          "y": 420,
+          "w": 742,
+          "h": 260,
+          "safe_margin_px": 48,
+          "youtube_safe": "left 58% bottom 38% — face stays right; title never overlaps host eyes"
+        },
+        "host_crop": {
+          "source": "david_avatar_reference.jpg",
+          "x": 520,
+          "y": 0,
+          "w": 760,
+          "h": 720,
+          "anchor": "right-center",
+          "notes": "Chest-up from locked host plate; vignette left edge into title zone"
+        },
+        "set_plate": {
+          "source": "archive_set_reference.jpg",
+          "blend": "darken 65% under host crop for depth"
+        },
+        "fonts": {
+          "wordmark": {
+            "family": "Arial",
+            "weight": "regular",
+            "size_px": 22
+          },
+          "hook_title": {
+            "family": "Arial",
+            "weight": "bold",
+            "size_px": 72,
+            "max_lines": 2
+          },
+          "hook_subtitle": {
+            "family": "Arial",
+            "weight": "regular",
+            "size_px": 28
+          },
+          "excerpt": {
+            "family": "Arial",
+            "weight": "regular",
+            "size_px": 20,
+            "style": "italic"
+          },
+          "badge": {
+            "family": "Arial",
+            "weight": "bold",
+            "size_px": 18
+          }
+        }
+      },
+      "copy": {
+        "hook_title": "MEMORY\nKEPT IT",
+        "hook_subtitle": "No ink needed",
+        "excerpt": "agním īḷe purohitaṃ",
+        "excerpt_script": "Devanagari / IAST",
+        "artifact": "Rigveda palm-leaf manuscript page"
+      },
+      "attestation": {
+        "primary_badge": "ATTESTED TEXT",
+        "secondary_badge": "RECONSTRUCTED PRONUNCIATION",
+        "note": "Rigveda transmitted orally; Pāṇini's grammar 4th c. BCE anchors phonology",
+        "accent_hex": "#D4822A"
+      },
+      "imagine_prompt": "YouTube thumbnail 1280×720, cinematic documentary prestige, high contrast readable at small size. LEFT THIRD: bold title-safe negative space for text overlay — gold hook title \"MEMORY KEPT IT\" and subtitle \"No ink needed\". RIGHT TWO-THIRDS: DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only. Background depth from The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting. Foreground artifact prop: Rigveda palm-leaf manuscript page. Excerpt strip in Devanagari / IAST script: \"agním īḷe purohitaṃ\". On-screen badges: ATTESTED TEXT + RECONSTRUCTED PRONUNCIATION. Brand wordmark top-left: DAVID · The Archive. COLOR LOCK Archive: amber 3200K brass lamp, burnt umber wood, parchment cream, warm shadow — no blue fill, no magenta, no teal. Synthetic host David-001 only, no real person likeness, no celebrity resemblance, SFW.",
+      "delivery": {
+        "filename": "david_sanskrit_corpus_v1_thumbnail_1280x720.jpg",
+        "format": "JPEG",
+        "quality": 92,
+        "max_bytes": 2097152
+      },
+      "design_notes": [
+        "Composite from locked david_avatar_reference.jpg — never substitute another face",
+        "Title in left title_zone; host eyes remain in right crop",
+        "Primary attestation badge above excerpt strip; secondary badge below",
+        "Artifact cue: Rigveda palm-leaf manuscript page",
+        "Compatible with Studio/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff"
+      ],
+      "variants": {
+        "a": {
+          "label": "A — emotional hook",
+          "hook_title": "MEMORY\nKEPT IT",
+          "hook_subtitle": "No ink needed",
+          "filename": "david_sanskrit_corpus_v1_thumbnail_A_1280x720.jpg"
+        },
+        "b": {
+          "label": "B — descriptive / keyword",
+          "hook_title": "ORAL\nARCHIVE",
+          "hook_subtitle": "Recited, not written",
+          "filename": "david_sanskrit_corpus_v1_thumbnail_B_1280x720.jpg",
+          "imagine_prompt": "YouTube thumbnail 1280×720, cinematic documentary prestige, high contrast readable at small size. LEFT THIRD: bold title-safe negative space for text overlay — gold hook title \"ORAL ARCHIVE\" and subtitle \"Recited, not written\". RIGHT TWO-THIRDS: DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only. Background depth from The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting. Foreground artifact prop: Rigveda palm-leaf manuscript page. Excerpt strip in Devanagari / IAST script: \"agním īḷe purohitaṃ\". On-screen badges: ATTESTED TEXT + RECONSTRUCTED PRONUNCIATION. Brand wordmark top-left: DAVID · The Archive. COLOR LOCK Archive: amber 3200K brass lamp, burnt umber wood, parchment cream, warm shadow — no blue fill, no magenta, no teal. Synthetic host David-001 only, no real person likeness, no celebrity resemblance, SFW."
+        }
+      },
+      "ab_test_note": "Upload both variants; use YouTube A/B test (or early-click-rate manual comparison) to select winner after 48h."
+    },
+    {
+      "slug": "david_biblical_hebrew_corpus_v1",
+      "issue": 140,
+      "title": "DAVID — The Language That Came Back",
+      "language": "Biblical Hebrew",
+      "actor_id": "David-001",
+      "canvas_px": [
+        1280,
+        720
+      ],
+      "brand": {
+        "wordmark": "DAVID · The Archive",
+        "tagline": "Dead languages, actually pronounced.",
+        "colors": {
+          "bg": "#0C0E14",
+          "bg_rgb": [
+            12,
+            14,
+            20
+          ],
+          "gold_title": "#DCBE78",
+          "gold_title_rgb": [
+            220,
+            190,
+            120
+          ],
+          "gold_footer": "#FFB45A",
+          "gold_footer_rgb": [
+            255,
+            180,
+            90
+          ],
+          "parchment": "#F5F0E6",
+          "parchment_rgb": [
+            245,
+            240,
+            230
+          ],
+          "umber_dark": "#3D2B1F",
+          "umber_mid": "#5C4033",
+          "shadow_warm": "#2A2520",
+          "body_text": "#C8CDD7",
+          "body_text_rgb": [
+            200,
+            205,
+            215
+          ],
+          "banner_fill": "#502D14",
+          "banner_fill_rgb": [
+            80,
+            45,
+            20
+          ],
+          "attested": "#6BBF8A",
+          "attested_rgb": [
+            107,
+            191,
+            138
+          ],
+          "reconstructed": "#E8A84C",
+          "reconstructed_rgb": [
+            232,
+            168,
+            76
+          ]
+        },
+        "lighting": "Warm brass desk lamp 3200K key — amber pool, no magenta, no cool fill"
+      },
+      "plates": {
+        "identity_lock": "productions/host_identity_v1/david_identity_lock.json",
+        "host_reference": "productions/host_identity_v1/references/david_avatar_reference.jpg",
+        "set_reference": "productions/host_identity_v1/references/archive_set_reference.jpg",
+        "host_reuse": "host reference @2 — image_to_video frame 1 every DAVID host shot",
+        "set_reuse": "environment plate @1 — same set every episode"
+      },
+      "layout": {
+        "title_zone": {
+          "x": 0,
+          "y": 420,
+          "w": 742,
+          "h": 260,
+          "safe_margin_px": 48,
+          "youtube_safe": "left 58% bottom 38% — face stays right; title never overlaps host eyes"
+        },
+        "host_crop": {
+          "source": "david_avatar_reference.jpg",
+          "x": 520,
+          "y": 0,
+          "w": 760,
+          "h": 720,
+          "anchor": "right-center",
+          "notes": "Chest-up from locked host plate; vignette left edge into title zone"
+        },
+        "set_plate": {
+          "source": "archive_set_reference.jpg",
+          "blend": "darken 65% under host crop for depth"
+        },
+        "fonts": {
+          "wordmark": {
+            "family": "Arial",
+            "weight": "regular",
+            "size_px": 22
+          },
+          "hook_title": {
+            "family": "Arial",
+            "weight": "bold",
+            "size_px": 72,
+            "max_lines": 2
+          },
+          "hook_subtitle": {
+            "family": "Arial",
+            "weight": "regular",
+            "size_px": 28
+          },
+          "excerpt": {
+            "family": "Arial",
+            "weight": "regular",
+            "size_px": 20,
+            "style": "italic"
+          },
+          "badge": {
+            "family": "Arial",
+            "weight": "bold",
+            "size_px": 18
+          }
+        }
+      },
+      "copy": {
+        "hook_title": "HEBREW\nCAME BACK",
+        "hook_subtitle": "Guarded, then revived",
+        "excerpt": "Shemaʿ Yisraʾel",
+        "excerpt_script": "Hebrew",
+        "artifact": "Dead Sea Scroll fragment (Great Isaiah Scroll, Qumran)"
+      },
+      "attestation": {
+        "primary_badge": "ATTESTED SCROLL",
+        "secondary_badge": "RECONSTRUCTED VOWELS",
+        "note": "Dead Sea Scrolls attested; Masoretic pointing reconstructs vowels",
+        "accent_hex": "#4A7C6F"
+      },
+      "imagine_prompt": "YouTube thumbnail 1280×720, cinematic documentary prestige, high contrast readable at small size. LEFT THIRD: bold title-safe negative space for text overlay — gold hook title \"HEBREW CAME BACK\" and subtitle \"Guarded, then revived\". RIGHT TWO-THIRDS: DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only. Background depth from The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting. Foreground artifact prop: Dead Sea Scroll fragment (Great Isaiah Scroll, Qumran). Excerpt strip in Hebrew script: \"Shemaʿ Yisraʾel\". On-screen badges: ATTESTED SCROLL + RECONSTRUCTED VOWELS. Brand wordmark top-left: DAVID · The Archive. COLOR LOCK Archive: amber 3200K brass lamp, burnt umber wood, parchment cream, warm shadow — no blue fill, no magenta, no teal. Synthetic host David-001 only, no real person likeness, no celebrity resemblance, SFW.",
+      "delivery": {
+        "filename": "david_biblical_hebrew_corpus_v1_thumbnail_1280x720.jpg",
+        "format": "JPEG",
+        "quality": 92,
+        "max_bytes": 2097152
+      },
+      "design_notes": [
+        "Composite from locked david_avatar_reference.jpg — never substitute another face",
+        "Title in left title_zone; host eyes remain in right crop",
+        "Primary attestation badge above excerpt strip; secondary badge below",
+        "Artifact cue: Dead Sea Scroll fragment (Great Isaiah Scroll, Qumran)",
+        "Compatible with Studio/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff"
+      ],
+      "variants": {
+        "a": {
+          "label": "A — emotional hook",
+          "hook_title": "HEBREW\nCAME BACK",
+          "hook_subtitle": "Guarded, then revived",
+          "filename": "david_biblical_hebrew_corpus_v1_thumbnail_A_1280x720.jpg"
+        },
+        "b": {
+          "label": "B — descriptive / keyword",
+          "hook_title": "DEAD SEA\nSCROLLS",
+          "hook_subtitle": "The voice it preserved",
+          "filename": "david_biblical_hebrew_corpus_v1_thumbnail_B_1280x720.jpg",
+          "imagine_prompt": "YouTube thumbnail 1280×720, cinematic documentary prestige, high contrast readable at small size. LEFT THIRD: bold title-safe negative space for text overlay — gold hook title \"DEAD SEA SCROLLS\" and subtitle \"The voice it preserved\". RIGHT TWO-THIRDS: DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only. Background depth from The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting. Foreground artifact prop: Dead Sea Scroll fragment (Great Isaiah Scroll, Qumran). Excerpt strip in Hebrew script: \"Shemaʿ Yisraʾel\". On-screen badges: ATTESTED SCROLL + RECONSTRUCTED VOWELS. Brand wordmark top-left: DAVID · The Archive. COLOR LOCK Archive: amber 3200K brass lamp, burnt umber wood, parchment cream, warm shadow — no blue fill, no magenta, no teal. Synthetic host David-001 only, no real person likeness, no celebrity resemblance, SFW."
+        }
+      },
+      "ab_test_note": "Upload both variants; use YouTube A/B test (or early-click-rate manual comparison) to select winner after 48h."
+    },
+    {
+      "slug": "david_akkadian_corpus_v1",
+      "issue": 140,
+      "title": "DAVID — The Voice Inside the Clay",
+      "language": "Akkadian",
+      "actor_id": "David-001",
+      "canvas_px": [
+        1280,
+        720
+      ],
+      "brand": {
+        "wordmark": "DAVID · The Archive",
+        "tagline": "Dead languages, actually pronounced.",
+        "colors": {
+          "bg": "#0C0E14",
+          "bg_rgb": [
+            12,
+            14,
+            20
+          ],
+          "gold_title": "#DCBE78",
+          "gold_title_rgb": [
+            220,
+            190,
+            120
+          ],
+          "gold_footer": "#FFB45A",
+          "gold_footer_rgb": [
+            255,
+            180,
+            90
+          ],
+          "parchment": "#F5F0E6",
+          "parchment_rgb": [
+            245,
+            240,
+            230
+          ],
+          "umber_dark": "#3D2B1F",
+          "umber_mid": "#5C4033",
+          "shadow_warm": "#2A2520",
+          "body_text": "#C8CDD7",
+          "body_text_rgb": [
+            200,
+            205,
+            215
+          ],
+          "banner_fill": "#502D14",
+          "banner_fill_rgb": [
+            80,
+            45,
+            20
+          ],
+          "attested": "#6BBF8A",
+          "attested_rgb": [
+            107,
+            191,
+            138
+          ],
+          "reconstructed": "#E8A84C",
+          "reconstructed_rgb": [
+            232,
+            168,
+            76
+          ]
+        },
+        "lighting": "Warm brass desk lamp 3200K key — amber pool, no magenta, no cool fill"
+      },
+      "plates": {
+        "identity_lock": "productions/host_identity_v1/david_identity_lock.json",
+        "host_reference": "productions/host_identity_v1/references/david_avatar_reference.jpg",
+        "set_reference": "productions/host_identity_v1/references/archive_set_reference.jpg",
+        "host_reuse": "host reference @2 — image_to_video frame 1 every DAVID host shot",
+        "set_reuse": "environment plate @1 — same set every episode"
+      },
+      "layout": {
+        "title_zone": {
+          "x": 0,
+          "y": 420,
+          "w": 742,
+          "h": 260,
+          "safe_margin_px": 48,
+          "youtube_safe": "left 58% bottom 38% — face stays right; title never overlaps host eyes"
+        },
+        "host_crop": {
+          "source": "david_avatar_reference.jpg",
+          "x": 520,
+          "y": 0,
+          "w": 760,
+          "h": 720,
+          "anchor": "right-center",
+          "notes": "Chest-up from locked host plate; vignette left edge into title zone"
+        },
+        "set_plate": {
+          "source": "archive_set_reference.jpg",
+          "blend": "darken 65% under host crop for depth"
+        },
+        "fonts": {
+          "wordmark": {
+            "family": "Arial",
+            "weight": "regular",
+            "size_px": 22
+          },
+          "hook_title": {
+            "family": "Arial",
+            "weight": "bold",
+            "size_px": 72,
+            "max_lines": 2
+          },
+          "hook_subtitle": {
+            "family": "Arial",
+            "weight": "regular",
+            "size_px": 28
+          },
+          "excerpt": {
+            "family": "Arial",
+            "weight": "regular",
+            "size_px": 20,
+            "style": "italic"
+          },
+          "badge": {
+            "family": "Arial",
+            "weight": "bold",
+            "size_px": 18
+          }
+        }
+      },
+      "copy": {
+        "hook_title": "VOICE\nIN CLAY",
+        "hook_subtitle": "Babylon's forgotten tongue",
+        "excerpt": "ša naqba īmuru",
+        "excerpt_script": "Akkadian cuneiform / IAST",
+        "artifact": "Gilgamesh epic clay tablet (Nineveh library)"
+      },
+      "attestation": {
+        "primary_badge": "ATTESTED CUNEIFORM",
+        "secondary_badge": "RECONSTRUCTED PROSODY",
+        "note": "Syllabic cuneiform attested; vowel length and stress reconstructed",
+        "accent_hex": "#A0522D"
+      },
+      "imagine_prompt": "YouTube thumbnail 1280×720, cinematic documentary prestige, high contrast readable at small size. LEFT THIRD: bold title-safe negative space for text overlay — gold hook title \"VOICE IN CLAY\" and subtitle \"Babylon's forgotten tongue\". RIGHT TWO-THIRDS: DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only. Background depth from The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting. Foreground artifact prop: Gilgamesh epic clay tablet (Nineveh library). Excerpt strip in Akkadian cuneiform / IAST script: \"ša naqba īmuru\". On-screen badges: ATTESTED CUNEIFORM + RECONSTRUCTED PROSODY. Brand wordmark top-left: DAVID · The Archive. COLOR LOCK Archive: amber 3200K brass lamp, burnt umber wood, parchment cream, warm shadow — no blue fill, no magenta, no teal. Synthetic host David-001 only, no real person likeness, no celebrity resemblance, SFW.",
+      "delivery": {
+        "filename": "david_akkadian_corpus_v1_thumbnail_1280x720.jpg",
+        "format": "JPEG",
+        "quality": 92,
+        "max_bytes": 2097152
+      },
+      "design_notes": [
+        "Composite from locked david_avatar_reference.jpg — never substitute another face",
+        "Title in left title_zone; host eyes remain in right crop",
+        "Primary attestation badge above excerpt strip; secondary badge below",
+        "Artifact cue: Gilgamesh epic clay tablet (Nineveh library)",
+        "Compatible with Studio/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff"
+      ],
+      "variants": {
+        "a": {
+          "label": "A — emotional hook",
+          "hook_title": "VOICE\nIN CLAY",
+          "hook_subtitle": "Babylon's forgotten tongue",
+          "filename": "david_akkadian_corpus_v1_thumbnail_A_1280x720.jpg"
+        },
+        "b": {
+          "label": "B — descriptive / keyword",
+          "hook_title": "GILGAMESH\nSPEAKS",
+          "hook_subtitle": "Cuneiform, decoded",
+          "filename": "david_akkadian_corpus_v1_thumbnail_B_1280x720.jpg",
+          "imagine_prompt": "YouTube thumbnail 1280×720, cinematic documentary prestige, high contrast readable at small size. LEFT THIRD: bold title-safe negative space for text overlay — gold hook title \"GILGAMESH SPEAKS\" and subtitle \"Cuneiform, decoded\". RIGHT TWO-THIRDS: DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only. Background depth from The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting. Foreground artifact prop: Gilgamesh epic clay tablet (Nineveh library). Excerpt strip in Akkadian cuneiform / IAST script: \"ša naqba īmuru\". On-screen badges: ATTESTED CUNEIFORM + RECONSTRUCTED PROSODY. Brand wordmark top-left: DAVID · The Archive. COLOR LOCK Archive: amber 3200K brass lamp, burnt umber wood, parchment cream, warm shadow — no blue fill, no magenta, no teal. Synthetic host David-001 only, no real person likeness, no celebrity resemblance, SFW."
+        }
+      },
+      "ab_test_note": "Upload both variants; use YouTube A/B test (or early-click-rate manual comparison) to select winner after 48h."
+    },
+    {
+      "slug": "david_middle_egyptian_corpus_v1",
+      "issue": 140,
+      "title": "DAVID — The Sound Behind the Hieroglyphs",
+      "language": "Middle Egyptian",
+      "actor_id": "David-001",
+      "canvas_px": [
+        1280,
+        720
+      ],
+      "brand": {
+        "wordmark": "DAVID · The Archive",
+        "tagline": "Dead languages, actually pronounced.",
+        "colors": {
+          "bg": "#0C0E14",
+          "bg_rgb": [
+            12,
+            14,
+            20
+          ],
+          "gold_title": "#DCBE78",
+          "gold_title_rgb": [
+            220,
+            190,
+            120
+          ],
+          "gold_footer": "#FFB45A",
+          "gold_footer_rgb": [
+            255,
+            180,
+            90
+          ],
+          "parchment": "#F5F0E6",
+          "parchment_rgb": [
+            245,
+            240,
+            230
+          ],
+          "umber_dark": "#3D2B1F",
+          "umber_mid": "#5C4033",
+          "shadow_warm": "#2A2520",
+          "body_text": "#C8CDD7",
+          "body_text_rgb": [
+            200,
+            205,
+            215
+          ],
+          "banner_fill": "#502D14",
+          "banner_fill_rgb": [
+            80,
+            45,
+            20
+          ],
+          "attested": "#6BBF8A",
+          "attested_rgb": [
+            107,
+            191,
+            138
+          ],
+          "reconstructed": "#E8A84C",
+          "reconstructed_rgb": [
+            232,
+            168,
+            76
+          ]
+        },
+        "lighting": "Warm brass desk lamp 3200K key — amber pool, no magenta, no cool fill"
+      },
+      "plates": {
+        "identity_lock": "productions/host_identity_v1/david_identity_lock.json",
+        "host_reference": "productions/host_identity_v1/references/david_avatar_reference.jpg",
+        "set_reference": "productions/host_identity_v1/references/archive_set_reference.jpg",
+        "host_reuse": "host reference @2 — image_to_video frame 1 every DAVID host shot",
+        "set_reuse": "environment plate @1 — same set every episode"
+      },
+      "layout": {
+        "title_zone": {
+          "x": 0,
+          "y": 420,
+          "w": 742,
+          "h": 260,
+          "safe_margin_px": 48,
+          "youtube_safe": "left 58% bottom 38% — face stays right; title never overlaps host eyes"
+        },
+        "host_crop": {
+          "source": "david_avatar_reference.jpg",
+          "x": 520,
+          "y": 0,
+          "w": 760,
+          "h": 720,
+          "anchor": "right-center",
+          "notes": "Chest-up from locked host plate; vignette left edge into title zone"
+        },
+        "set_plate": {
+          "source": "archive_set_reference.jpg",
+          "blend": "darken 65% under host crop for depth"
+        },
+        "fonts": {
+          "wordmark": {
+            "family": "Arial",
+            "weight": "regular",
+            "size_px": 22
+          },
+          "hook_title": {
+            "family": "Arial",
+            "weight": "bold",
+            "size_px": 72,
+            "max_lines": 2
+          },
+          "hook_subtitle": {
+            "family": "Arial",
+            "weight": "regular",
+            "size_px": 28
+          },
+          "excerpt": {
+            "family": "Arial",
+            "weight": "regular",
+            "size_px": 20,
+            "style": "italic"
+          },
+          "badge": {
+            "family": "Arial",
+            "weight": "bold",
+            "size_px": 18
+          }
+        }
+      },
+      "copy": {
+        "hook_title": "HIEROGLYPHS\nHAD VOWELS",
+        "hook_subtitle": "The script hid the sound",
+        "excerpt": "ḥotep-di-nesu",
+        "excerpt_script": "Hieroglyphic transliteration",
+        "artifact": "Rosetta Stone rubbing + Champollion's key"
+      },
+      "attestation": {
+        "primary_badge": "ATTESTED CONSONANTS",
+        "secondary_badge": "RECONSTRUCTED VOWELS",
+        "note": "Consonants in hieroglyphs; vowels reconstructed via Coptic",
+        "accent_hex": "#C8A951"
+      },
+      "imagine_prompt": "YouTube thumbnail 1280×720, cinematic documentary prestige, high contrast readable at small size. LEFT THIRD: bold title-safe negative space for text overlay — gold hook title \"HIEROGLYPHS HAD VOWELS\" and subtitle \"The script hid the sound\". RIGHT TWO-THIRDS: DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only. Background depth from The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting. Foreground artifact prop: Rosetta Stone rubbing + Champollion's key. Excerpt strip in Hieroglyphic transliteration script: \"ḥotep-di-nesu\". On-screen badges: ATTESTED CONSONANTS + RECONSTRUCTED VOWELS. Brand wordmark top-left: DAVID · The Archive. COLOR LOCK Archive: amber 3200K brass lamp, burnt umber wood, parchment cream, warm shadow — no blue fill, no magenta, no teal. Synthetic host David-001 only, no real person likeness, no celebrity resemblance, SFW.",
+      "delivery": {
+        "filename": "david_middle_egyptian_corpus_v1_thumbnail_1280x720.jpg",
+        "format": "JPEG",
+        "quality": 92,
+        "max_bytes": 2097152
+      },
+      "design_notes": [
+        "Composite from locked david_avatar_reference.jpg — never substitute another face",
+        "Title in left title_zone; host eyes remain in right crop",
+        "Primary attestation badge above excerpt strip; secondary badge below",
+        "Artifact cue: Rosetta Stone rubbing + Champollion's key",
+        "Compatible with Studio/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff"
+      ],
+      "variants": {
+        "a": {
+          "label": "A — emotional hook",
+          "hook_title": "HIEROGLYPHS\nHAD VOWELS",
+          "hook_subtitle": "The script hid the sound",
+          "filename": "david_middle_egyptian_corpus_v1_thumbnail_A_1280x720.jpg"
+        },
+        "b": {
+          "label": "B — descriptive / keyword",
+          "hook_title": "ROSETTA\nDECODED",
+          "hook_subtitle": "What Champollion heard",
+          "filename": "david_middle_egyptian_corpus_v1_thumbnail_B_1280x720.jpg",
+          "imagine_prompt": "YouTube thumbnail 1280×720, cinematic documentary prestige, high contrast readable at small size. LEFT THIRD: bold title-safe negative space for text overlay — gold hook title \"ROSETTA DECODED\" and subtitle \"What Champollion heard\". RIGHT TWO-THIRDS: DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only. Background depth from The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting. Foreground artifact prop: Rosetta Stone rubbing + Champollion's key. Excerpt strip in Hieroglyphic transliteration script: \"ḥotep-di-nesu\". On-screen badges: ATTESTED CONSONANTS + RECONSTRUCTED VOWELS. Brand wordmark top-left: DAVID · The Archive. COLOR LOCK Archive: amber 3200K brass lamp, burnt umber wood, parchment cream, warm shadow — no blue fill, no magenta, no teal. Synthetic host David-001 only, no real person likeness, no celebrity resemblance, SFW."
+        }
+      },
+      "ab_test_note": "Upload both variants; use YouTube A/B test (or early-click-rate manual comparison) to select winner after 48h."
+    },
+    {
+      "slug": "david_classical_nahuatl_corpus_v1",
+      "issue": 140,
+      "title": "DAVID — The Tongue the Conquest Wrote Down",
+      "language": "Classical Nahuatl",
+      "actor_id": "David-001",
+      "canvas_px": [
+        1280,
+        720
+      ],
+      "brand": {
+        "wordmark": "DAVID · The Archive",
+        "tagline": "Dead languages, actually pronounced.",
+        "colors": {
+          "bg": "#0C0E14",
+          "bg_rgb": [
+            12,
+            14,
+            20
+          ],
+          "gold_title": "#DCBE78",
+          "gold_title_rgb": [
+            220,
+            190,
+            120
+          ],
+          "gold_footer": "#FFB45A",
+          "gold_footer_rgb": [
+            255,
+            180,
+            90
+          ],
+          "parchment": "#F5F0E6",
+          "parchment_rgb": [
+            245,
+            240,
+            230
+          ],
+          "umber_dark": "#3D2B1F",
+          "umber_mid": "#5C4033",
+          "shadow_warm": "#2A2520",
+          "body_text": "#C8CDD7",
+          "body_text_rgb": [
+            200,
+            205,
+            215
+          ],
+          "banner_fill": "#502D14",
+          "banner_fill_rgb": [
+            80,
+            45,
+            20
+          ],
+          "attested": "#6BBF8A",
+          "attested_rgb": [
+            107,
+            191,
+            138
+          ],
+          "reconstructed": "#E8A84C",
+          "reconstructed_rgb": [
+            232,
+            168,
+            76
+          ]
+        },
+        "lighting": "Warm brass desk lamp 3200K key — amber pool, no magenta, no cool fill"
+      },
+      "plates": {
+        "identity_lock": "productions/host_identity_v1/david_identity_lock.json",
+        "host_reference": "productions/host_identity_v1/references/david_avatar_reference.jpg",
+        "set_reference": "productions/host_identity_v1/references/archive_set_reference.jpg",
+        "host_reuse": "host reference @2 — image_to_video frame 1 every DAVID host shot",
+        "set_reuse": "environment plate @1 — same set every episode"
+      },
+      "layout": {
+        "title_zone": {
+          "x": 0,
+          "y": 420,
+          "w": 742,
+          "h": 260,
+          "safe_margin_px": 48,
+          "youtube_safe": "left 58% bottom 38% — face stays right; title never overlaps host eyes"
+        },
+        "host_crop": {
+          "source": "david_avatar_reference.jpg",
+          "x": 520,
+          "y": 0,
+          "w": 760,
+          "h": 720,
+          "anchor": "right-center",
+          "notes": "Chest-up from locked host plate; vignette left edge into title zone"
+        },
+        "set_plate": {
+          "source": "archive_set_reference.jpg",
+          "blend": "darken 65% under host crop for depth"
+        },
+        "fonts": {
+          "wordmark": {
+            "family": "Arial",
+            "weight": "regular",
+            "size_px": 22
+          },
+          "hook_title": {
+            "family": "Arial",
+            "weight": "bold",
+            "size_px": 72,
+            "max_lines": 2
+          },
+          "hook_subtitle": {
+            "family": "Arial",
+            "weight": "regular",
+            "size_px": 28
+          },
+          "excerpt": {
+            "family": "Arial",
+            "weight": "regular",
+            "size_px": 20,
+            "style": "italic"
+          },
+          "badge": {
+            "family": "Arial",
+            "weight": "bold",
+            "size_px": 18
+          }
+        }
+      },
+      "copy": {
+        "hook_title": "AZTEC\nTONGUE",
+        "hook_subtitle": "Conquest couldn't silence it",
+        "excerpt": "in xochitl in cuicatl",
+        "excerpt_script": "Nahuatl / Latin transliteration",
+        "artifact": "Florentine Codex illustrated page (Sahagún)"
+      },
+      "attestation": {
+        "primary_badge": "ATTESTED MANUSCRIPT",
+        "secondary_badge": "RECONSTRUCTED PRONUNCIATION",
+        "note": "Florentine Codex attested; tonal features partially reconstructed",
+        "accent_hex": "#8B3A3A"
+      },
+      "imagine_prompt": "YouTube thumbnail 1280×720, cinematic documentary prestige, high contrast readable at small size. LEFT THIRD: bold title-safe negative space for text overlay — gold hook title \"AZTEC TONGUE\" and subtitle \"Conquest couldn't silence it\". RIGHT TWO-THIRDS: DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only. Background depth from The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting. Foreground artifact prop: Florentine Codex illustrated page (Sahagún). Excerpt strip in Nahuatl / Latin transliteration script: \"in xochitl in cuicatl\". On-screen badges: ATTESTED MANUSCRIPT + RECONSTRUCTED PRONUNCIATION. Brand wordmark top-left: DAVID · The Archive. COLOR LOCK Archive: amber 3200K brass lamp, burnt umber wood, parchment cream, warm shadow — no blue fill, no magenta, no teal. Synthetic host David-001 only, no real person likeness, no celebrity resemblance, SFW.",
+      "delivery": {
+        "filename": "david_classical_nahuatl_corpus_v1_thumbnail_1280x720.jpg",
+        "format": "JPEG",
+        "quality": 92,
+        "max_bytes": 2097152
+      },
+      "design_notes": [
+        "Composite from locked david_avatar_reference.jpg — never substitute another face",
+        "Title in left title_zone; host eyes remain in right crop",
+        "Primary attestation badge above excerpt strip; secondary badge below",
+        "Artifact cue: Florentine Codex illustrated page (Sahagún)",
+        "Compatible with Studio/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff"
+      ],
+      "variants": {
+        "a": {
+          "label": "A — emotional hook",
+          "hook_title": "AZTEC\nTONGUE",
+          "hook_subtitle": "Conquest couldn't silence it",
+          "filename": "david_classical_nahuatl_corpus_v1_thumbnail_A_1280x720.jpg"
+        },
+        "b": {
+          "label": "B — descriptive / keyword",
+          "hook_title": "FLORENTINE\nCODEX",
+          "hook_subtitle": "Two civilisations, one book",
+          "filename": "david_classical_nahuatl_corpus_v1_thumbnail_B_1280x720.jpg",
+          "imagine_prompt": "YouTube thumbnail 1280×720, cinematic documentary prestige, high contrast readable at small size. LEFT THIRD: bold title-safe negative space for text overlay — gold hook title \"FLORENTINE CODEX\" and subtitle \"Two civilisations, one book\". RIGHT TWO-THIRDS: DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only. Background depth from The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting. Foreground artifact prop: Florentine Codex illustrated page (Sahagún). Excerpt strip in Nahuatl / Latin transliteration script: \"in xochitl in cuicatl\". On-screen badges: ATTESTED MANUSCRIPT + RECONSTRUCTED PRONUNCIATION. Brand wordmark top-left: DAVID · The Archive. COLOR LOCK Archive: amber 3200K brass lamp, burnt umber wood, parchment cream, warm shadow — no blue fill, no magenta, no teal. Synthetic host David-001 only, no real person likeness, no celebrity resemblance, SFW."
+        }
+      },
+      "ab_test_note": "Upload both variants; use YouTube A/B test (or early-click-rate manual comparison) to select winner after 48h."
+    },
+    {
+      "slug": "david_old_church_slavonic_corpus_v1",
+      "issue": 140,
+      "title": "DAVID — The Bible That Built an Alphabet",
+      "language": "Old Church Slavonic",
+      "actor_id": "David-001",
+      "canvas_px": [
+        1280,
+        720
+      ],
+      "brand": {
+        "wordmark": "DAVID · The Archive",
+        "tagline": "Dead languages, actually pronounced.",
+        "colors": {
+          "bg": "#0C0E14",
+          "bg_rgb": [
+            12,
+            14,
+            20
+          ],
+          "gold_title": "#DCBE78",
+          "gold_title_rgb": [
+            220,
+            190,
+            120
+          ],
+          "gold_footer": "#FFB45A",
+          "gold_footer_rgb": [
+            255,
+            180,
+            90
+          ],
+          "parchment": "#F5F0E6",
+          "parchment_rgb": [
+            245,
+            240,
+            230
+          ],
+          "umber_dark": "#3D2B1F",
+          "umber_mid": "#5C4033",
+          "shadow_warm": "#2A2520",
+          "body_text": "#C8CDD7",
+          "body_text_rgb": [
+            200,
+            205,
+            215
+          ],
+          "banner_fill": "#502D14",
+          "banner_fill_rgb": [
+            80,
+            45,
+            20
+          ],
+          "attested": "#6BBF8A",
+          "attested_rgb": [
+            107,
+            191,
+            138
+          ],
+          "reconstructed": "#E8A84C",
+          "reconstructed_rgb": [
+            232,
+            168,
+            76
+          ]
+        },
+        "lighting": "Warm brass desk lamp 3200K key — amber pool, no magenta, no cool fill"
+      },
+      "plates": {
+        "identity_lock": "productions/host_identity_v1/david_identity_lock.json",
+        "host_reference": "productions/host_identity_v1/references/david_avatar_reference.jpg",
+        "set_reference": "productions/host_identity_v1/references/archive_set_reference.jpg",
+        "host_reuse": "host reference @2 — image_to_video frame 1 every DAVID host shot",
+        "set_reuse": "environment plate @1 — same set every episode"
+      },
+      "layout": {
+        "title_zone": {
+          "x": 0,
+          "y": 420,
+          "w": 742,
+          "h": 260,
+          "safe_margin_px": 48,
+          "youtube_safe": "left 58% bottom 38% — face stays right; title never overlaps host eyes"
+        },
+        "host_crop": {
+          "source": "david_avatar_reference.jpg",
+          "x": 520,
+          "y": 0,
+          "w": 760,
+          "h": 720,
+          "anchor": "right-center",
+          "notes": "Chest-up from locked host plate; vignette left edge into title zone"
+        },
+        "set_plate": {
+          "source": "archive_set_reference.jpg",
+          "blend": "darken 65% under host crop for depth"
+        },
+        "fonts": {
+          "wordmark": {
+            "family": "Arial",
+            "weight": "regular",
+            "size_px": 22
+          },
+          "hook_title": {
+            "family": "Arial",
+            "weight": "bold",
+            "size_px": 72,
+            "max_lines": 2
+          },
+          "hook_subtitle": {
+            "family": "Arial",
+            "weight": "regular",
+            "size_px": 28
+          },
+          "excerpt": {
+            "family": "Arial",
+            "weight": "regular",
+            "size_px": 20,
+            "style": "italic"
+          },
+          "badge": {
+            "family": "Arial",
+            "weight": "bold",
+            "size_px": 18
+          }
+        }
+      },
+      "copy": {
+        "hook_title": "BUILT\nAN ALPHABET",
+        "hook_subtitle": "Scripture first, then writing",
+        "excerpt": "Otĭče našĭ",
+        "excerpt_script": "Glagolitic / Cyrillic",
+        "artifact": "Codex Zographensis Glagolitic Gospels page"
+      },
+      "attestation": {
+        "primary_badge": "ATTESTED TEXT",
+        "secondary_badge": "RECONSTRUCTED PRONUNCIATION",
+        "note": "Glagolitic manuscripts 9th–11th c.; phonology from comparative Slavic",
+        "accent_hex": "#6A5ACD"
+      },
+      "imagine_prompt": "YouTube thumbnail 1280×720, cinematic documentary prestige, high contrast readable at small size. LEFT THIRD: bold title-safe negative space for text overlay — gold hook title \"BUILT AN ALPHABET\" and subtitle \"Scripture first, then writing\". RIGHT TWO-THIRDS: DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only. Background depth from The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting. Foreground artifact prop: Codex Zographensis Glagolitic Gospels page. Excerpt strip in Glagolitic / Cyrillic script: \"Otĭče našĭ\". On-screen badges: ATTESTED TEXT + RECONSTRUCTED PRONUNCIATION. Brand wordmark top-left: DAVID · The Archive. COLOR LOCK Archive: amber 3200K brass lamp, burnt umber wood, parchment cream, warm shadow — no blue fill, no magenta, no teal. Synthetic host David-001 only, no real person likeness, no celebrity resemblance, SFW.",
+      "delivery": {
+        "filename": "david_old_church_slavonic_corpus_v1_thumbnail_1280x720.jpg",
+        "format": "JPEG",
+        "quality": 92,
+        "max_bytes": 2097152
+      },
+      "design_notes": [
+        "Composite from locked david_avatar_reference.jpg — never substitute another face",
+        "Title in left title_zone; host eyes remain in right crop",
+        "Primary attestation badge above excerpt strip; secondary badge below",
+        "Artifact cue: Codex Zographensis Glagolitic Gospels page",
+        "Compatible with Studio/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff"
+      ],
+      "variants": {
+        "a": {
+          "label": "A — emotional hook",
+          "hook_title": "BUILT\nAN ALPHABET",
+          "hook_subtitle": "Scripture first, then writing",
+          "filename": "david_old_church_slavonic_corpus_v1_thumbnail_A_1280x720.jpg"
+        },
+        "b": {
+          "label": "B — descriptive / keyword",
+          "hook_title": "GLAGOLITIC\nSCRIPTURE",
+          "hook_subtitle": "Cyril's first alphabet",
+          "filename": "david_old_church_slavonic_corpus_v1_thumbnail_B_1280x720.jpg",
+          "imagine_prompt": "YouTube thumbnail 1280×720, cinematic documentary prestige, high contrast readable at small size. LEFT THIRD: bold title-safe negative space for text overlay — gold hook title \"GLAGOLITIC SCRIPTURE\" and subtitle \"Cyril's first alphabet\". RIGHT TWO-THIRDS: DAVID — synthetic keeper-of-the-Archive host, chest-up medium shot seated at the Archive worktable, 16:9. Male, reads age 45–55, dark hair flecked with silver neatly kept, lined intelligent face, calm attentive eyes. Charcoal fine-texture sweater, deep navy undertones, reading glasses pushed up into his hair, subtle worn leather strap detail on shoulder. Modern understated wardrobe NOT period costume. Still grounded presence, hands resting near open codex. Warm brass lamp key light, manuscript shelves soft behind. Documentary gravitas, trustworthy linguist host, no real person likeness, no celebrity resemblance, invented face only. Background depth from The Archive — a deep scholarly study and library interior, 16:9 cinematic wide shot, no people. Warm pools of amber lamplight against deep shadow. Floor-to-ceiling shelves hold manuscripts, scrolls, and clay tablets from many cultures receding into soft blur. A long wooden worktable in the foreground holds an open illuminated codex, a cuneiform clay tablet, a rolled papyrus scroll, and one recurring brass desk lamp with a soft glow. Documentary prestige aesthetic, rich wood and parchment textures, instant-recognition recurring TV host desk energy but ancient-archive themed, photoreal cinematic lighting. Foreground artifact prop: Codex Zographensis Glagolitic Gospels page. Excerpt strip in Glagolitic / Cyrillic script: \"Otĭče našĭ\". On-screen badges: ATTESTED TEXT + RECONSTRUCTED PRONUNCIATION. Brand wordmark top-left: DAVID · The Archive. COLOR LOCK Archive: amber 3200K brass lamp, burnt umber wood, parchment cream, warm shadow — no blue fill, no magenta, no teal. Synthetic host David-001 only, no real person likeness, no celebrity resemblance, SFW."
+        }
+      },
+      "ab_test_note": "Upload both variants; use YouTube A/B test (or early-click-rate manual comparison) to select winner after 48h."
     }
   ]
 }

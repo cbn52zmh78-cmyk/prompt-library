@@ -1,0 +1,19 @@
+{
+  "system_id": "pw_indus_valley_script",
+  "name": "Indus Valley Script (Harappan Script)",
+  "script_family": "undeciphered script / possibly logosyllabic or mixed",
+  "approx_period": "c. 2600–1900 BCE (Mature Harappan period, Indus Valley Civilisation)",
+  "decipherment_status": "undeciphered",
+  "extant_corpus_size": "~4,000+ inscribed objects (seals, sealings, tablets, pottery, copper tablets); corpus of ~400 distinct signs (Mahadevan concordance). Major collections: National Museum of India (New Delhi), Lahore Museum, Mohenjo-daro Museum.",
+  "key_source_documents": [
+    "Mahadevan, I. (1977), The Indus Script: Texts, Concordance and Tables (Archaeological Survey of India) — definitive sign concordance, the standard reference corpus",
+    "Wells, B. (2011), Epigraphic Approaches to Indus Writing (Oxbow Books) — systematic epigraphic analysis",
+    "Parpola, A. (1994), Deciphering the Indus Script (Cambridge University Press) — most influential attempted decipherment (Dravidian hypothesis)",
+    "Farmer, S., Sproat, R. & Witzel, M. (2004), 'The Collapse of the Indus-Script Thesis: The Myth of a Literate Harappan Civilization', Electronic Journal of Vedic Studies 11(2) — contested counter-thesis arguing the system is non-linguistic",
+    "Rao, R.P.N. et al. (2009), 'A Markov Model of the Indus Script', Science 324(5931) — statistical analysis suggesting structured language-like organisation"
+  ],
+  "visual_characteristics": "Indus script appears primarily on small square or rectangular steatite seals (~2.5–5 cm square) and copper tablets, impressed or incised. The seals also bear highly skilled naturalistic animal depictions (a 'unicorn' bull, elephant, rhinoceros, zebu) alongside the signs. The script runs right-to-left (determined by sign-compression at left edge of seals). Inscriptions are short — typically 4–6 signs, rarely exceeding 17 on a single object. Signs include geometric shapes (circles, crosses, fish-like forms), anthropomorphic figures, and composite pictograms. No bilingual inscription exists to anchor decipherment.",
+  "honesty_note": "R7: UNDECIPHERED — interpretation is null. No scholarly consensus exists on the underlying language, direction of decipherment, or whether the system is fully linguistic. The Dravidian hypothesis (Parpola), the Munda hypothesis, and the non-linguistic-notation hypothesis (Farmer et al.) all remain active and unresolved. No 'reading' of Indus signs may be presented as established.",
+  "david_episode_slug": null,
+  "notes": "The Indus script is one of the most important unsolved problems in epigraphy. Cultural sensitivity: the Indus Valley Civilisation is claimed as cultural heritage by both India and Pakistan; respectful, neutral framing is required. The script's undeciphered status is itself the intellectually honest and compelling story for DAVID content."
+}

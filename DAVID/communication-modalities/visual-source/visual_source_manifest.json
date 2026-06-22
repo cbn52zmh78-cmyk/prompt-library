@@ -1,19 +1,24 @@
 {
   "spec": "DAVID Visual-Source Manifest v1 (reuses SCIENCE/HISTORY reference-plate pattern)",
-  "generated_at": "2026-06-19",
+  "generated_at": "2026-06-20",
   "domain": "visual_source",
   "gate": "VISUAL_SOURCE_INTERPRETATION",
   "gate_doc": "DAVID/communication-modalities/visual-source/INTERPRETATION_GATE.md",
   "license_policy": "Public sources only; cite provenance + license on every image; 403/paywall/blocked = PARK (no bypass).",
   "citation_standard": "STD-CITE-001",
-  "subject_count": 2,
+  "subject_count": 13,
   "entries": [
     {
       "slug": "rosetta_stone_ptolemy_cartouche",
       "plate_id": "VS-WS-0001",
       "category": "writing-systems",
-      "subject": "Egyptian hieroglyphic — Ptolemy cartouche (Rosetta Stone)",
+      "type": "writing_system",
+      "display_name": "Egyptian hieroglyphic - Ptolemy cartouche (Rosetta Stone)",
       "decipherment_status": "DECIPHERED",
+      "david_episode_slug": null,
+      "entry_file_path": null,
+      "gate_status": "POC_COMPLETE",
+      "subject": "Egyptian hieroglyphic - Ptolemy cartouche (Rosetta Stone)",
       "transcription": "Cartouche: reed-leaf + stool + lion + lion + reed-leaf + folded-cloth (royal-name ring)",
       "transliteration": "p-t-w-l-m-y-s",
       "interpretation": "Royal name 'Ptolemy' (Ptolemaios); the stele bears a trilingual priestly decree, Memphis, 196 BCE (hieroglyphic / Demotic / Greek).",
@@ -21,7 +26,7 @@
       "dissent": [],
       "claims": [
         {"claim": "The cartouche spells the royal name Ptolemy (p-t-w-l-m-y-s).",
-         "citation": "Champollion, J.-F. (1822), Lettre à M. Dacier relative à l'alphabet des hiéroglyphes phonétiques.",
+         "citation": "Champollion, J.-F. (1822), Lettre a M. Dacier relative a l'alphabet des hieroglyphes phonetiques.",
          "grade": "primary"},
         {"claim": "The three scripts record one decree, enabling the decipherment.",
          "citation": "British Museum, object EA24 (Rosetta Stone), collection record.",
@@ -31,16 +36,21 @@
       "image_url": "https://www.britishmuseum.org/collection/object/Y_EA24",
       "source_url": "https://www.britishmuseum.org/collection/object/Y_EA24",
       "repository": "The British Museum (EA24)",
-      "license": "© The Trustees of the British Museum, CC BY-NC-SA 4.0",
+      "license": "The Trustees of the British Museum, CC BY-NC-SA 4.0",
       "harvest_status": "reference_only"
     },
     {
       "slug": "linear_a_ht_tablet",
       "plate_id": "VS-WS-0002",
       "category": "writing-systems",
-      "subject": "Minoan Linear A — Haghia Triada tablet (sign sequence)",
+      "type": "writing_system",
+      "display_name": "Minoan Linear A - Haghia Triada tablet (sign sequence)",
       "decipherment_status": "UNDECIPHERED",
-      "transcription": "Linear A sign sequence per GORILA sign list (e.g. AB01 AB02 …)",
+      "david_episode_slug": null,
+      "entry_file_path": "DAVID/communication-modalities/visual-source/writing-systems/ws_linear_a_linear_b.json",
+      "gate_status": "POC_COMPLETE",
+      "subject": "Minoan Linear A - Haghia Triada tablet (sign sequence)",
+      "transcription": "Linear A sign sequence per GORILA sign list (e.g. AB01 AB02)",
       "transliteration": "Tentative phonetic values borrowed from Linear B (provisional, sound-only)",
       "interpretation": null,
       "confidence": "none",
@@ -49,16 +59,138 @@
       ],
       "claims": [
         {"claim": "Sign forms are catalogued in the standard Linear A corpus; the script's meaning is UNDECIPHERED.",
-         "citation": "Godart, L. & Olivier, J.-P. (1976–1985), GORILA: Recueil des inscriptions en linéaire A.",
+         "citation": "Godart, L. & Olivier, J.-P. (1976-1985), GORILA: Recueil des inscriptions en lineaire A.",
          "grade": "primary"}
       ],
       "file": null,
       "image_url": "https://commons.wikimedia.org/wiki/Category:Linear_A",
       "source_url": "https://commons.wikimedia.org/wiki/Category:Linear_A",
       "repository": "Heraklion Archaeological Museum (corpus: GORILA)",
-      "license": "image PD line-drawing / CC where applicable — verify per file",
+      "license": "image PD line-drawing / CC where applicable - verify per file",
       "harvest_status": "reference_only",
-      "honesty_note": "R7: no meaning asserted for an undeciphered script — interpretation deliberately null."
+      "honesty_note": "R7: no meaning asserted for an undeciphered script - interpretation deliberately null."
+    },
+    {
+      "slug": "ws_latin_alphabet",
+      "plate_id": "VS-WS-0003",
+      "category": "writing-systems",
+      "type": "writing_system",
+      "display_name": "Latin Alphabet",
+      "decipherment_status": "DECIPHERED",
+      "david_episode_slug": "david_latin_corpus_v1",
+      "entry_file_path": "DAVID/communication-modalities/visual-source/writing-systems/ws_latin_alphabet.json",
+      "gate_status": "PENDING_POC"
+    },
+    {
+      "slug": "ws_ancient_greek_alphabet",
+      "plate_id": "VS-WS-0004",
+      "category": "writing-systems",
+      "type": "writing_system",
+      "display_name": "Ancient Greek Alphabet",
+      "decipherment_status": "DECIPHERED",
+      "david_episode_slug": "david_ancient_greek_corpus_v1",
+      "entry_file_path": "DAVID/communication-modalities/visual-source/writing-systems/ws_ancient_greek_alphabet.json",
+      "gate_status": "PENDING_POC"
+    },
+    {
+      "slug": "ws_cuneiform_sumerian_akkadian",
+      "plate_id": "VS-WS-0005",
+      "category": "writing-systems",
+      "type": "writing_system",
+      "display_name": "Cuneiform (Sumerian / Akkadian)",
+      "decipherment_status": "DECIPHERED",
+      "david_episode_slug": "david_sumerian_corpus_v1",
+      "entry_file_path": "DAVID/communication-modalities/visual-source/writing-systems/ws_cuneiform_sumerian_akkadian.json",
+      "gate_status": "PENDING_POC"
+    },
+    {
+      "slug": "ws_runic_elder_futhark",
+      "plate_id": "VS-WS-0006",
+      "category": "writing-systems",
+      "type": "writing_system",
+      "display_name": "Runic Script - Elder Futhark (Old Norse / Old English)",
+      "decipherment_status": "DECIPHERED",
+      "david_episode_slug": "david_old_norse_corpus_v1",
+      "entry_file_path": "DAVID/communication-modalities/visual-source/writing-systems/ws_runic_elder_futhark.json",
+      "gate_status": "PENDING_POC"
+    },
+    {
+      "slug": "ws_gothic_wulfila",
+      "plate_id": "VS-WS-0007",
+      "category": "writing-systems",
+      "type": "writing_system",
+      "display_name": "Gothic Script (Wulfila Alphabet)",
+      "decipherment_status": "DECIPHERED",
+      "david_episode_slug": "david_gothic_corpus_v1",
+      "entry_file_path": "DAVID/communication-modalities/visual-source/writing-systems/ws_gothic_wulfila.json",
+      "gate_status": "PENDING_POC"
+    },
+    {
+      "slug": "ws_linear_a_linear_b",
+      "plate_id": "VS-WS-0008",
+      "category": "writing-systems",
+      "type": "writing_system",
+      "display_name": "Linear A and Linear B (Aegean syllabaries)",
+      "decipherment_status": "PARTIALLY_DECIPHERED",
+      "david_episode_slug": null,
+      "entry_file_path": "DAVID/communication-modalities/visual-source/writing-systems/ws_linear_a_linear_b.json",
+      "gate_status": "PENDING_POC",
+      "honesty_note": "Linear B = DECIPHERED (Mycenaean Greek). Linear A = UNDECIPHERED. Paired entry per scholarly relationship."
+    },
+    {
+      "slug": "pw_cuneiform_uruk_proto",
+      "plate_id": "VS-PW-0001",
+      "category": "proto-writing",
+      "type": "proto_writing",
+      "display_name": "Proto-Cuneiform (Uruk Period Tokens and Proto-Signs)",
+      "decipherment_status": "PARTIALLY_DECIPHERED",
+      "david_episode_slug": "david_sumerian_corpus_v1",
+      "entry_file_path": "DAVID/communication-modalities/visual-source/proto-writing/pw_cuneiform_uruk_proto.json",
+      "gate_status": "PENDING_POC"
+    },
+    {
+      "slug": "pw_egyptian_proto_hieroglyphs",
+      "plate_id": "VS-PW-0002",
+      "category": "proto-writing",
+      "type": "proto_writing",
+      "display_name": "Egyptian Proto-Hieroglyphs (Abydos Tags, Naqada Period)",
+      "decipherment_status": "PARTIALLY_DECIPHERED",
+      "david_episode_slug": null,
+      "entry_file_path": "DAVID/communication-modalities/visual-source/proto-writing/pw_egyptian_proto_hieroglyphs.json",
+      "gate_status": "PENDING_POC"
+    },
+    {
+      "slug": "pw_indus_valley_script",
+      "plate_id": "VS-PW-0003",
+      "category": "proto-writing",
+      "type": "proto_writing",
+      "display_name": "Indus Valley Script (Harappan Script)",
+      "decipherment_status": "UNDECIPHERED",
+      "david_episode_slug": null,
+      "entry_file_path": "DAVID/communication-modalities/visual-source/proto-writing/pw_indus_valley_script.json",
+      "gate_status": "PENDING_POC"
+    },
+    {
+      "slug": "aac_cave_art_lascaux_altamira",
+      "plate_id": "VS-AAC-0001",
+      "category": "art-as-communication",
+      "type": "art",
+      "display_name": "Upper Palaeolithic Cave Art (Lascaux, Altamira) as Communicative System",
+      "decipherment_status": "UNDECIPHERED",
+      "david_episode_slug": null,
+      "entry_file_path": "DAVID/communication-modalities/visual-source/art-as-communication/aac_cave_art_lascaux_altamira.json",
+      "gate_status": "PENDING_POC"
+    },
+    {
+      "slug": "aac_medieval_manuscript_marginalia",
+      "plate_id": "VS-AAC-0002",
+      "category": "art-as-communication",
+      "type": "art",
+      "display_name": "Medieval Illuminated Manuscript Marginalia as Secondary Communication Channel",
+      "decipherment_status": "DECIPHERED",
+      "david_episode_slug": null,
+      "entry_file_path": "DAVID/communication-modalities/visual-source/art-as-communication/aac_medieval_manuscript_marginalia.json",
+      "gate_status": "PENDING_POC"
     }
   ],
   "parked_sources": {
@@ -66,7 +198,7 @@
     "parked": [
       {
         "url": "https://example-museum.invalid/high-res/linear-a-HT13.tif",
-        "reason": "high-res TIFF behind institutional access wall — returns 403",
+        "reason": "high-res TIFF behind institutional access wall - returns 403",
         "status": "PARKED",
         "fallback": "GORILA line-drawing + Wikimedia Commons category used for reference instead"
       }

@@ -3,7 +3,7 @@
   "version": "1.0",
   "issue": 212,
   "project_id": "pi_story",
-  "generated_at": "2026-06-19T10:56:44.144221+00:00",
+  "generated_at": "2026-06-19T21:27:50.005716+00:00",
   "source": "STUDIO/Productions/Narrative/PI_Story/PI_Story_Act_I_Screenplay_v1.fountain",
   "doc_kind": "screenplay",
   "meta": {
@@ -21,10 +21,10 @@
       "name": "intake",
       "status": "done",
       "artifact": null,
-      "at": "2026-06-19T10:56:44.143679+00:00",
+      "at": "2026-06-19T21:27:50.005105+00:00",
       "gate_verdict": "YELLOW",
       "doc_kind": "screenplay",
-      "gate_report": "Studio/Legal/Gate_Reports/GATE_YELLOW_pi_story_20260619_055644_editorial.md"
+      "gate_report": "Studio/Legal/Gate_Reports/GATE_YELLOW_pi_story_20260619_162750_editorial.md"
     }
   ],
   "gate_intake": {
@@ -56,8 +56,8 @@
       "row_6_structure": "PASS",
       "row_7_genre": "PASS"
     },
-    "report_path": "Studio/Legal/Gate_Reports/GATE_YELLOW_pi_story_20260619_055644_editorial.md",
-    "report_json": "Studio/Producers_Office/Editorial_Gate/GATE_YELLOW_pi_story_20260619_055644.json"
+    "report_path": "Studio/Legal/Gate_Reports/GATE_YELLOW_pi_story_20260619_162750_editorial.md",
+    "report_json": "Studio/Producers_Office/Editorial_Gate/GATE_YELLOW_pi_story_20260619_162750.json"
   },
   "gate_deliver": null,
   "revision_round": 1,

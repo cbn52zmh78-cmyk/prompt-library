@@ -1,0 +1,72 @@
+{
+  "domain": "actor_performance",
+  "version": "1.0.0",
+  "methods": {
+    "stanislavski": {
+      "core": "Emotional truth through internal experience. Actor lives the character's circumstances.",
+      "tools": [
+        "emotional recall",
+        "given circumstances",
+        "magic if",
+        "units and objectives",
+        "through-line of action"
+      ],
+      "prompt_language": "motivated from inner emotional truth, specific objective driving every beat, lived-in naturalism"
+    },
+    "meisner": {
+      "core": "Living truthfully under imaginary circumstances. Moment-to-moment instinctive response to partner.",
+      "tools": [
+        "repetition exercise",
+        "independent activity",
+        "emotional preparation",
+        "living in the moment"
+      ],
+      "prompt_language": "reactive and spontaneous, listening deeply, responding to the moment not the script, impulse-driven"
+    },
+    "practical_aesthetics": {
+      "core": "Mamet / Macy school. Literal action, simple want, text as written. Anti-psychological.",
+      "tools": [
+        "literal action verb",
+        "as-if",
+        "essential action"
+      ],
+      "prompt_language": "precise action verb driving delivery, unadorned truth, text delivered as written, zero indication"
+    },
+    "method": {
+      "core": "Lee Strasberg. Extreme psychological immersion. Substitution, sense memory, emotional recall.",
+      "tools": [
+        "sense memory",
+        "substitution",
+        "private moment",
+        "animal exercise"
+      ],
+      "prompt_language": "deeply inhabited, sense-memory grounded, raw emotional access, total psychological immersion"
+    },
+    "physical_theatre": {
+      "core": "Lecoq / Viewpoints. Body first. Space, time, shape, gesture, repetition.",
+      "tools": [
+        "neutral mask",
+        "seven levels of tension",
+        "viewpoints",
+        "spatial composition"
+      ],
+      "prompt_language": "body-led characterization, physicality precise and deliberate, spatial geometry intentional"
+    }
+  },
+  "direction_language": {
+    "urgency": "driven, pressed, no time to waste, body leaning forward, words clipped",
+    "grief": "held, constricted throat, pauses involuntary, eyes wet but not crying, jaw tight",
+    "menace": "stillness carrying threat, economy of movement, voice low and even, held eye contact",
+    "joy": "open body, easy breath, face leading, gesture released not controlled",
+    "fear": "contracted, quick glances, shallow breath, micro-flinch on sudden sound",
+    "resolve": "settled, jaw set, gaze steady, breath deepens before speaking, stillness with weight",
+    "confusion": "brief disconnection, processing visible in eyes, speech slightly hesitant",
+    "desire": "extended contact, breath slightly elevated, language economical, eyes stay"
+  },
+  "dialogue_delivery": {
+    "naturalistic": "motivated breath, overlapping rhythms, imperfect starts, listening visible",
+    "heightened": "controlled, rhythmic, text precisely placed, elevated register, articulate",
+    "clipped_noir": "terse, pauses weighted, subtext dense, every word doing double duty",
+    "comedic_timing": "beat before punchline, commitment to premise, reaction held, never indicate"
+  }
+}

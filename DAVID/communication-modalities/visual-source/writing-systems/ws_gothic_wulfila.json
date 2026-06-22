@@ -1,0 +1,18 @@
+{
+  "system_id": "ws_gothic_wulfila",
+  "name": "Gothic Script (Wulfila Alphabet)",
+  "script_family": "alphabetic / Gothic (Wulfilan)",
+  "approx_period": "c. 350 CE (script creation) – c. 600 CE (latest manuscripts); primary corpus: 4th–5th century CE",
+  "decipherment_status": "fully deciphered",
+  "extant_corpus_size": "Approximately 600,000 words of Gothic text survive, mostly in the Codex Argenteus (~187 surviving folios of the Wulfila Bible); ~13 other manuscript fragments",
+  "key_source_documents": [
+    "Codex Argenteus (Uppsala University Library, DG 1), c. 520 CE — 187 surviving silver-ink folios of the Gothic Bible, copied in Italy under Ostrogothic patronage",
+    "Wulfila (Ulfilas), Gothic Bible translation, c. 350 CE — original 4th-century translation from Greek",
+    "Streitberg, W. (1908), Die gotische Bibel — standard scholarly edition of Gothic biblical text",
+    "Crimean Gothic wordlist (Busbecq, O.G. de, 1589) — latest attestation of Gothic as a spoken language",
+    "Schäferdiek, K. (1981), 'Wulfila: vom Bischof von Terwigi zum Apostel der Goten', ZKG — primary historical source on Wulfila"
+  ],
+  "visual_characteristics": "The Gothic alphabet of 27 letters was created by Bishop Wulfila (Ulfilas) c. 350 CE to translate the Bible into Gothic, drawing on Greek uncial letterforms for most letters, with some letters adapted from Latin and a few possibly from runic. The script is written left-to-right in a flowing uncial hand. The Codex Argenteus is written in silver and gold ink on purple-dyed vellum — a prestige manuscript format — producing a visually striking silver-on-purple appearance. Letters are rounded and connected; the script closely resembles contemporary Greek uncial manuscripts.",
+  "david_episode_slug": "david_gothic_corpus_v1",
+  "notes": "Episode T3_dryrun references this system (david_gothic_corpus_v1). Gothic is the oldest attested Germanic language with a substantial corpus. The Wulfila alphabet is distinct from the unrelated 'gothic' (blackletter) scripts of medieval Western Europe."
+}

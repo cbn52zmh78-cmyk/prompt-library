@@ -1,0 +1,68 @@
+{
+  "nexus_command": "research_pass",
+  "subject_type": "science",
+  "subject_id": "s032",
+  "domain": "astronomy",
+  "phenomenon": "Sagittarius A* — Milky Way Galactic Center Black Hole",
+  "key_measurement": "Mass: 4.297 ± 0.012 × 10⁶ solar masses (4.297 million M☉); Distance: 26,996 ± 33 light-years (8,277 ± 9 parsecs); Shadow ring angular size: 51.8 ± 2.3 microarcseconds (EHT Collaboration 2022, ApJL 930 L12; GRAVITY Collaboration 2022)",
+  "principle_set": [
+    "General relativity predicts that the photon capture cross-section of a black hole forms an observable 'shadow' — for Sgr A*, this region subtends ~52 microarcseconds, making it the largest apparent angular size of any black hole as seen from Earth despite its relatively modest mass",
+    "Stellar orbital tracking of the S-star cluster — particularly the star S2, which completes a full orbit in 16 years — provides an independent precise measurement of Sgr A*'s mass and the Earth-to-galactic-center distance",
+    "Sgr A*'s accretion flow is highly variable on timescales of minutes to hours (compared to days for M87*), because its smaller mass means orbital timescales near the event horizon are far shorter, complicating EHT imaging",
+    "Radio interferometry at 230 GHz (1.3 mm wavelength) can penetrate the interstellar scattering screen that blocks optical and ultraviolet observations of the galactic center",
+    "The observed ring morphology is consistent with a Kerr (rotating) black hole in general relativity; alternative compact object models (boson stars, gravastars) are disfavored by the observed shadow size and shape",
+    "Sgr A* is currently in an extremely low-luminosity accretion state — about 10⁹ times less luminous than a typical active galactic nucleus of comparable mass — making it an unusually quiet supermassive black hole"
+  ],
+  "framework": "General relativity; Very Long Baseline Interferometry (VLBI); Keplerian orbital mechanics of S-stars; Near-infrared interferometry (GRAVITY/VLTI)",
+  "institutions": [
+    "Event Horizon Telescope Collaboration",
+    "Max Planck Institute for Extraterrestrial Physics (MPE) — Reinhard Genzel group",
+    "UCLA Galactic Center Group — Andrea Ghez group",
+    "GRAVITY Collaboration / ESO Very Large Telescope Interferometer",
+    "National Radio Astronomy Observatory (NRAO)",
+    "MIT Haystack Observatory"
+  ],
+  "sources": [
+    {
+      "claim": "EHT released first image of Sagittarius A* on May 12, 2022, showing a ring-like structure with angular size 51.8 ± 2.3 microarcseconds consistent with the predicted black hole shadow",
+      "citation": "Event Horizon Telescope Collaboration 2022, ApJL 930 L12 (Paper I: Introduction and Summary)",
+      "url": "https://iopscience.iop.org/article/10.3847/2041-8213/ac6674",
+      "doi": "10.3847/2041-8213/ac6674"
+    },
+    {
+      "claim": "Mass of Sgr A* measured at 4.297 ± 0.012 × 10⁶ solar masses and distance 8,277 ± 9 pc (26,996 ly) from GRAVITY interferometer tracking S2 stellar orbit at the VLT",
+      "citation": "GRAVITY Collaboration 2022, A&A 657 L12",
+      "url": "https://www.aanda.org/articles/aa/full_html/2022/01/aa42465-21/aa42465-21.html",
+      "doi": "10.1051/0004-6361/202142465"
+    },
+    {
+      "claim": "Sgr A* discovered as a compact radio source in 1974 by Balick and Brown using NRAO baseline interferometer; the asterisk designation added 1982 by Brown to denote 'excited' nature of the source",
+      "citation": "Balick & Brown 1974, ApJ 194 265; Brown 1982 (naming convention)",
+      "url": "https://en.wikipedia.org/wiki/Sagittarius_A*",
+      "doi": "10.1086/153242"
+    },
+    {
+      "claim": "Reinhard Genzel and Andrea Ghez awarded the 2020 Nobel Prize in Physics for discovering that Sgr A* is a supermassive compact object — the best empirical evidence that supermassive black holes exist",
+      "citation": "Nobel Committee for Physics 2020, Nobel Prize in Physics announcement",
+      "url": "https://www.nobelprize.org/prizes/physics/2020/summary/",
+      "doi": null
+    },
+    {
+      "claim": "Star S2 reached closest approach (periapsis) to Sgr A* in 2018 at ~120 AU, moving at 2.55% the speed of light (7,650 km/s), with gravitational redshift observed consistent with general relativity",
+      "citation": "GRAVITY Collaboration 2018, A&A 618 L10",
+      "url": "https://www.aanda.org/articles/aa/abs/2018/10/aa33718-18/aa33718-18.html",
+      "doi": "10.1051/0004-6361/201833718"
+    }
+  ],
+  "visualization_notes": "The EHT image of Sgr A* shows a glowing orange-gold ring of emission — similar in visual character to M87* but notably fuzzier in the released image due to rapid variability during the observation. The ring is roughly symmetric (unlike M87*'s asymmetric crescent), consistent with a nearly face-on accretion disk orientation. Shadow diameter: ~52 microarcseconds — coincidentally almost identical apparent size to M87* in the sky, despite Sgr A* being ~1,500x less massive and ~2,000x closer. The physical shadow diameter is ~51.8 million km (~0.35 AU), smaller than Mercury's orbit. The Schwarzschild radius is 0.08 AU (12 million km). For S-star visualization: the S2 star traces a tight Keplerian ellipse around an invisible point (the black hole) with a 16-year period — a powerful 'proving' visual. The galactic center is hidden behind ~25 magnitudes of interstellar dust extinction in visible light — only radio, infrared, and X-ray can see Sgr A*. Shot ideas: galaxy overhead view showing Earth-to-center distance of 26,000 light-years; S2 orbital animation; zoom to 52-microarcsecond shadow ring; comparison frame with M87* at same angular scale.",
+  "visualization_compliance": [
+    "EHT images of Sgr A* released open access — credit 'EHT Collaboration' required for direct image use",
+    "The image was produced from 2017 observation data but released May 12, 2022 after five years of processing — the delay is scientifically significant (Sgr A* variability required novel imaging methods)",
+    "The shadow is an image of the photon ring region, not the singularity — do not depict or narrate about the interior of the black hole as observable",
+    "Hawking radiation from Sgr A* is theoretical and unmeasurably small — do not depict as observed",
+    "The Galactic Center is invisible in optical wavelengths due to dust — optical imagery of 'the galactic center' in documentaries is always artist impression unless clearly labelled as infrared/radio",
+    "Nobel Prize attribution: Reinhard Genzel (MPE) and Andrea Ghez (UCLA) shared the 2020 Nobel for the S-star work; Roger Penrose received the other half for GR black hole formation theorem"
+  ],
+  "_ingested_from": "T4_pass1_s032.json",
+  "_ingested_at": "2026-06-21T21:10:56.179571+00:00"
+}

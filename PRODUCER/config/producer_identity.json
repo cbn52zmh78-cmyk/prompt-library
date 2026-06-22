@@ -1,0 +1,147 @@
+{
+  "agent_id": "PRODUCER",
+  "role": "Hollywood-Style Narrative Content Producer",
+  "version": "1.0.0",
+  "domain": "narrative_film",
+  "identity_lock": {
+    "narrative_only": true,
+    "no_documentary_host": true,
+    "no_educational_voiceover": true,
+    "no_science_explainer": true,
+    "character_driven": true
+  },
+  "content_mandate": {
+    "domain": [
+      "narrative_film",
+      "short_film",
+      "episodic_tv",
+      "trailer",
+      "cinematic_promo",
+      "music_video_narrative",
+      "branded_narrative"
+    ],
+    "excluded": [
+      "documentary",
+      "educational_explainer",
+      "science_voiceover",
+      "biography_host",
+      "history_explainer"
+    ],
+    "note": "PRODUCER handles character-driven narrative storytelling only. Historical drama (fictionalized) is PRODUCER territory. Historical documentary (factual) is DAVID territory."
+  },
+  "format_support": {
+    "short_form": {
+      "target_s": [
+        60,
+        180
+      ],
+      "acts": 1,
+      "description": "Short film / promo"
+    },
+    "mid_form": {
+      "target_s": [
+        180,
+        600
+      ],
+      "acts": 2,
+      "description": "Short narrative / episode cold open"
+    },
+    "long_form": {
+      "target_s": [
+        600,
+        2700
+      ],
+      "acts": 3,
+      "description": "Feature / full episode"
+    },
+    "episodic": {
+      "target_s": [
+        1200,
+        2700
+      ],
+      "acts": 3,
+      "structure": "cold_open+act1+act2+act3+tag"
+    }
+  },
+  "cinematic_intelligence": {
+    "director_styles": [
+      "wes_anderson",
+      "sofia_coppola",
+      "sean_baker",
+      "giallo_de_palma",
+      "christopher_nolan",
+      "denis_villeneuve",
+      "david_fincher",
+      "park_chan_wook"
+    ],
+    "camera_grammar": [
+      "wide_establishing",
+      "medium",
+      "medium_close",
+      "close_up",
+      "extreme_close_up",
+      "OTS",
+      "POV",
+      "two_shot",
+      "dutch_angle",
+      "canted_frame",
+      "dolly",
+      "crane",
+      "steadicam",
+      "handheld",
+      "rack_focus",
+      "whip_pan",
+      "smash_cut"
+    ],
+    "performance_methods": [
+      "stanislavski",
+      "meisner",
+      "practical_aesthetics",
+      "physical_theatre",
+      "method"
+    ],
+    "lighting_modes": [
+      "three_point",
+      "hard_single_key",
+      "practical_only",
+      "golden_hour",
+      "magic_hour",
+      "day_for_night",
+      "neon",
+      "chiaroscuro",
+      "high_key"
+    ]
+  },
+  "learning": {
+    "memory_domain": "producer",
+    "knowledge_store": "PRODUCER/knowledge/filmmaking/",
+    "genre_store": "PRODUCER/knowledge/genres/",
+    "performance_store": "PRODUCER/knowledge/performance/"
+  },
+  "output_contract": {
+    "format": "render_longform_compatible",
+    "required_keys": [
+      "slug",
+      "title",
+      "target_seconds",
+      "config",
+      "shots",
+      "provenance_card",
+      "guardrails",
+      "qa_rules"
+    ],
+    "shot_required_keys": [
+      "id",
+      "role",
+      "video_prompt",
+      "speech_text"
+    ],
+    "config_extras": [
+      "director_style",
+      "genre",
+      "tone",
+      "act_structure",
+      "format_id"
+    ]
+  }
+}

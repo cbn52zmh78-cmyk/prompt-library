@@ -1,0 +1,154 @@
+{
+  "slug": "thriller-naturalistic",
+  "title": "Untitled Thriller — short_form",
+  "target_seconds": 90,
+  "format_id": "narrative-short_form",
+  "config": {
+    "agent": "PRODUCER",
+    "format_id": "narrative-short_form",
+    "genre": "thriller",
+    "director_style": "naturalistic",
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "1080p",
+    "aspect_ratio": "16:9",
+    "voice_suffix": "naturalistic dialogue delivery, motivated breath, cinematic intimacy, synthetic talent only",
+    "cinematography": "shallow depth of field, tight framing, rack focus on threat, desaturated or cool grade",
+    "performance_mode": "menace, controlled affect, subtext dense, stillness as threat",
+    "pacing": "slow burn to sudden violence, holds longer than comfortable, quiet before storm",
+    "actor_id": "",
+    "seamless": {
+      "primary": "extend",
+      "xfade_s": 0.2,
+      "match_color": true,
+      "cut_on_motion": true,
+      "loudnorm": true,
+      "magenta_clamp": true
+    }
+  },
+  "shots": [
+    {
+      "id": "01_cold_open",
+      "role": "cold_open",
+      "shot_type": "wide_establishing",
+      "duration": 30,
+      "t_start": 0,
+      "t_end": 30,
+      "video_prompt": "CONTINUITY LOCK @Actor-001: identical character face, wardrobe, hair, same eye-line and blocking -- seamless continuation of prior take, zero jump cut. Wide establishing shot, static or slow crane, sets geography and scale, no dialogue. Single hard key source, strong shadow pools, chiaroscuro depth. Motivated naturalistic coverage, performance-driven camera, practical lighting, real locations, no stylistic flourish. Narrative function: Pre-title hook, in medias res or thematic statement. Finish on gesture peak or deliberate stillness -- never hold dead frame.",
+      "speech_text": "",
+      "emotional_beat": "menace",
+      "scene_heading": "EXT. UNKNOWN LOCATION -- NIGHT",
+      "action_line": "We open on a world already in motion.",
+      "director_note": "Naturalistic style applied."
+    },
+    {
+      "id": "02_inciting",
+      "role": "inciting",
+      "shot_type": "medium_close",
+      "duration": 12,
+      "t_start": 30,
+      "t_end": 42,
+      "video_prompt": "CONTINUITY LOCK @Actor-001: identical character face, wardrobe, hair, same eye-line and blocking -- seamless continuation of prior take, zero jump cut. Medium-close shot, chest-up, dialogue delivery and emotional grounding. Single hard key source, strong shadow pools, chiaroscuro depth. Motivated naturalistic coverage, performance-driven camera, practical lighting, real locations, no stylistic flourish. Performance: body forward, words clipped, driven pace, no margin, physical press. Narrative function: Inciting incident, the world changes. Finish on gesture peak or deliberate stillness -- never hold dead frame.",
+      "speech_text": "[DIALOGUE: inciting beat -- write from logline: A hitman must protect the witness who can bury him.]",
+      "emotional_beat": "urgency",
+      "scene_heading": "INT. INTERIOR -- NIGHT",
+      "action_line": "The moment everything changes. No going back.",
+      "director_note": "Naturalistic style applied."
+    },
+    {
+      "id": "03_confrontation",
+      "role": "confrontation",
+      "shot_type": "OTS",
+      "duration": 15,
+      "t_start": 42,
+      "t_end": 57,
+      "video_prompt": "CONTINUITY LOCK @Actor-001: identical character face, wardrobe, hair, same eye-line and blocking -- seamless continuation of prior take, zero jump cut. Over-the-shoulder, conversation staging, spatial relationship visible. Classical three-point, key plus fill plus rim, clean readable coverage. Motivated naturalistic coverage, performance-driven camera, practical lighting, real locations, no stylistic flourish. Performance: stillness carrying threat, economy of movement, voice low and even, held eye contact, body contained. Narrative function: Dramatic confrontation, high stakes. Finish on gesture peak or deliberate stillness -- never hold dead frame.",
+      "speech_text": "[DIALOGUE: confrontation beat -- write from logline: A hitman must protect the witness who can bury him.]",
+      "emotional_beat": "menace",
+      "scene_heading": "INT. INTERIOR -- NIGHT",
+      "action_line": "The confrontation that has been building arrives.",
+      "director_note": "Naturalistic style applied."
+    },
+    {
+      "id": "04_turn",
+      "role": "turn",
+      "shot_type": "close_up",
+      "duration": 12,
+      "t_start": 57,
+      "t_end": 69,
+      "video_prompt": "CONTINUITY LOCK @Actor-001: identical character face, wardrobe, hair, same eye-line and blocking -- seamless continuation of prior take, zero jump cut. Close-up, face and neck, high emotional stakes, reaction or decision. Extreme light-dark contrast, renaissance shadow painting, prestige drama. Motivated naturalistic coverage, performance-driven camera, practical lighting, real locations, no stylistic flourish. Performance: contracted body, shallow breath, quick glances, micro-flinch on sound. Narrative function: Act turn, plot reversal, new direction. Finish on gesture peak or deliberate stillness -- never hold dead frame.",
+      "speech_text": "",
+      "emotional_beat": "fear",
+      "scene_heading": "INT. INTERIOR -- NIGHT",
+      "action_line": "The turn. Nothing is what it seemed.",
+      "director_note": "Naturalistic style applied."
+    },
+    {
+      "id": "05_climax",
+      "role": "climax",
+      "shot_type": "medium_close",
+      "duration": 20,
+      "t_start": 69,
+      "t_end": 89,
+      "video_prompt": "CONTINUITY LOCK @Actor-001: identical character face, wardrobe, hair, same eye-line and blocking -- seamless continuation of prior take, zero jump cut. Medium-close shot, chest-up, dialogue delivery and emotional grounding. Single hard key source, strong shadow pools, chiaroscuro depth. Motivated naturalistic coverage, performance-driven camera, practical lighting, real locations, no stylistic flourish. Performance: settled jaw, steady gaze, breath deepens before speaking, stillness with weight. Narrative function: Climactic sequence, peak of dramatic tension. Finish on gesture peak or deliberate stillness -- never hold dead frame.",
+      "speech_text": "[DIALOGUE: climax beat -- write from logline: A hitman must protect the witness who can bury him.]",
+      "emotional_beat": "resolve",
+      "scene_heading": "INT. INTERIOR -- NIGHT",
+      "action_line": "The climax. Every decision leads here.",
+      "director_note": "Naturalistic style applied."
+    },
+    {
+      "id": "06_denouement",
+      "role": "denouement",
+      "shot_type": "medium",
+      "duration": 12,
+      "t_start": 89,
+      "t_end": 101,
+      "video_prompt": "CONTINUITY LOCK @Actor-001: identical character face, wardrobe, hair, same eye-line and blocking -- seamless continuation of prior take, zero jump cut. Medium shot, waist-up, neutral coverage, staging and blocking visible. Classical three-point, key plus fill plus rim, clean readable coverage. Motivated naturalistic coverage, performance-driven camera, practical lighting, real locations, no stylistic flourish. Performance: constricted throat, involuntary pauses, eyes wet not crying, jaw tight, held stillness. Narrative function: Resolution, emotional landing. Finish on gesture peak or deliberate stillness -- never hold dead frame.",
+      "speech_text": "",
+      "emotional_beat": "grief",
+      "scene_heading": "INT. INTERIOR -- NIGHT",
+      "action_line": "After the storm. What remains.",
+      "director_note": "Naturalistic style applied."
+    }
+  ],
+  "provenance_card": {
+    "title": "Untitled Thriller — short_form",
+    "subtitle": "PRODUCER Narrative -- Thriller / Naturalistic style",
+    "logline": "A hitman must protect the witness who can bury him.",
+    "agent": "PRODUCER",
+    "generator": "Stonebridge Consultants Group / NEXUS",
+    "footer": "Synthetic performers only. Fictional narrative content."
+  },
+  "guardrails": [
+    "Synthetic performers only -- no real persons depicted without explicit clearance",
+    "No real locations identified as specific addresses",
+    "Violence: suggest, do not gratify -- implied is preferred over explicit",
+    "No content that could be mistaken for documentary or real events",
+    "Legal Gate 0 must pass before STUDIO render",
+    "Violence and threat: atmospheric and suggestive, not gratuitous"
+  ],
+  "qa_rules": [
+    "Every shot with dialogue must use MCU or tighter for lip-sync fidelity",
+    "Wide establishing shots must contain no audible dialogue",
+    "Continuity lock token must appear in every non-insert shot",
+    "Director style modifier must be present in every video_prompt",
+    "Format: short_form -- verify total seconds within target range",
+    "Identity lock consistent across all character shots",
+    "Color grade lock consistent across all shots in scene",
+    "Performance beat specified in every dialogue shot"
+  ],
+  "act_structure": {
+    "acts": 1,
+    "structure": "inciting_action_resolution"
+  },
+  "meta": {
+    "agent": "PRODUCER",
+    "version": "1.0.0",
+    "generated_at": "2026-06-21T22:22:19.418591+00:00",
+    "stub": false,
+    "director_style": "naturalistic",
+    "genre": "thriller",
+    "format": "short_form",
+    "character_count": 0
+  }
+}

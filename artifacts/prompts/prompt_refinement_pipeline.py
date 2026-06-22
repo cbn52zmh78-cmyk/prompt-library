@@ -13,6 +13,17 @@ from lib.studio_paths import pipeline_path
 
 from datetime import datetime
 
+# --- qa_gate wiring ---
+_AI_FED = Path(__file__).resolve().parents[2] / "AI" / "federation"
+if str(_AI_FED) not in sys.path:
+    sys.path.insert(0, str(_AI_FED))
+try:
+    from qa_gate import qa_check as _qa_gate_check
+    _QA_GATE_AVAILABLE = True
+except ImportError:
+    _QA_GATE_AVAILABLE = False
+# --- end qa_gate wiring ---
+
 
 
 try:
@@ -58,6 +69,30 @@ class PromptRefinementPipeline:
             prompt += ", generous negative space, balanced frame, no crowding"
             applied.append("negative_space")
 
+        # --- qa_gate: QA refined prompt, block on RED ---
+        if _QA_GATE_AVAILABLE and prompt and prompt.strip():
+            try:
+                _qa_rp = _qa_gate_check(
+                    content=prompt,
+                    content_type="general",
+                    subject="refined prompt",
+                )
+                if _qa_rp["gate"] == "RED":
+                    print(
+                        f"[QA HOLD] prompt_refinement_pipeline.py: {_qa_rp['summary']} | Issues: {_qa_rp['issues']}",
+                        file=sys.stderr,
+                    )
+                    raise RuntimeError(f"QA gate RED on refined prompt — output held: {_qa_rp['issues']}")
+                elif _qa_rp["gate"] == "YELLOW":
+                    print(
+                        f"[QA WARN] prompt_refinement_pipeline.py: {_qa_rp['summary']}",
+                        file=sys.stderr,
+                    )
+            except RuntimeError:
+                raise
+            except Exception as _exc:
+                print(f"[QA WARN] prompt_refinement_pipeline.py: qa_gate error: {_exc}", file=sys.stderr)
+        # --- end qa_gate ---
         return prompt, applied
 
     def save(self, name: str, refined_prompt: str, applied_stages: list):

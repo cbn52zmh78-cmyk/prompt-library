@@ -1,0 +1,67 @@
+{
+  "nexus_command": "research_pass",
+  "subject_type": "science",
+  "subject_id": "s012",
+  "domain": "physics",
+  "phenomenon": "Gravitational Wave Detection — GW150914, First Direct Observation",
+  "key_measurement": "Peak strain amplitude: h ≈ 1.0 × 10⁻²¹ (dimensionless); Source: merger of 35 M☉ + 30 M☉ black holes → 62 M☉ remnant, radiating 3.0 ± 0.5 M☉c² (5.3 × 10⁴⁷ J) in gravitational waves; Distance: 1.4 ± 0.6 billion light-years (440 Mpc); Detected 09:50:45 UTC September 14, 2015 (Abbott et al. 2016, PRL 116 061102)",
+  "principle_set": [
+    "Einstein's general relativity (1916) predicts that accelerating masses produce ripples in spacetime — gravitational waves — that propagate at the speed of light, stretching and squeezing space transversely as they pass",
+    "Binary black hole systems lose orbital energy to gravitational wave emission, causing the orbit to decay and inspiral over millions of years, culminating in merger on timescales of milliseconds at near-relativistic orbital velocities",
+    "Laser interferometry with 4 km arm lengths can detect strains of h ~ 10⁻²¹, corresponding to a change in arm length smaller than 1/1000 the diameter of a proton — the most precise measurement ever made by humans",
+    "GW150914's chirp signal swept from 35 Hz to 250 Hz over 0.2 seconds, with orbital velocities increasing from 30% to 60% the speed of light in the final inspiral — unambiguously identifying two compact objects of stellar-mass black hole scale",
+    "The peak radiated power during GW150914 merger reached ~3.6 × 10⁴⁹ watts — greater than the combined electromagnetic luminosity of all stars in the observable universe at that instant",
+    "The arrival time difference between Livingston and Hanford detectors (7 ms) confirmed gravitational waves travel at the speed of light, consistent with general relativity and inconsistent with massive graviton theories"
+  ],
+  "framework": "General relativity (strong-field regime); Laser interferometry; Matched-filter signal processing; Numerical relativity (for merger waveform templates)",
+  "institutions": [
+    "LIGO Scientific Collaboration (1000+ scientists worldwide)",
+    "California Institute of Technology (Caltech) — LIGO Laboratory",
+    "Massachusetts Institute of Technology (MIT) — LIGO Laboratory",
+    "Virgo Collaboration (European Gravitational Observatory, Pisa, Italy)",
+    "National Science Foundation (NSF) — primary funder"
+  ],
+  "sources": [
+    {
+      "claim": "First direct detection of gravitational waves (GW150914) announced February 11, 2016, from a binary black hole merger of 36 M☉ + 29 M☉ producing a 62 M☉ remnant at 1.3 billion light-years distance, detected September 14, 2015",
+      "citation": "Abbott et al. (LIGO Scientific Collaboration and Virgo Collaboration) 2016, Physical Review Letters 116 061102",
+      "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.061102",
+      "doi": "10.1103/PhysRevLett.116.061102"
+    },
+    {
+      "claim": "GW150914 statistical significance assessed at ≥ 5.1 sigma (confidence > 99.99994%); signal lasted 0.2 seconds and swept 35–250 Hz; both detectors recorded peak strain ~10⁻²¹",
+      "citation": "Abbott et al. 2016, PRL 116 061102; and Abbott et al. 2016, ApJL 818 L22 (Astrophysical Implications)",
+      "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.061102",
+      "doi": "10.1103/PhysRevLett.116.061102"
+    },
+    {
+      "claim": "Nobel Prize in Physics 2017 awarded to Rainer Weiss (MIT), Kip Thorne (Caltech), and Barry Barish (Caltech) 'for decisive contributions to the LIGO detector and the observation of gravitational waves'",
+      "citation": "Nobel Committee for Physics 2017, Nobel Prize in Physics announcement",
+      "url": "https://www.nobelprize.org/prizes/physics/2017/summary/",
+      "doi": null
+    },
+    {
+      "claim": "LIGO interferometers use 4 km arm cavities with mirrors suspended in multi-stage seismic isolation; Advanced LIGO sensitivity improvement by factor ~10 over initial LIGO enabled the first detection",
+      "citation": "Aasi et al. (LIGO Scientific Collaboration) 2015, Classical and Quantum Gravity 32 074001 (Advanced LIGO design paper)",
+      "url": "https://iopscience.iop.org/article/10.1088/0264-9381/32/7/074001",
+      "doi": "10.1088/0264-9381/32/7/074001"
+    },
+    {
+      "claim": "Indirect evidence for gravitational waves first confirmed in 1974 by Hulse and Taylor via orbital decay of binary pulsar PSR B1913+16 matching GR predictions — awarded Nobel Prize in Physics 1993",
+      "citation": "Hulse & Taylor 1975, ApJ 195 L51",
+      "url": "https://ui.adsabs.harvard.edu/abs/1975ApJ...195L..51H",
+      "doi": "10.1086/181708"
+    }
+  ],
+  "visualization_notes": "The GW150914 signal: two oscillating traces (one from Livingston, one from Hanford, mirrored) showing a rapid frequency chirp — growing from slow wobble to violent peak oscillation in 0.2 seconds, then sharp ringdown to silence. The actual strain is 10⁻²¹ — the LIGO arm physically stretched and compressed by less than 1/1000 the diameter of a proton. The best visual metaphor: if the LIGO arm were the distance to Alpha Centauri (4.2 light-years), the change in length would be less than the diameter of a human hair. The sound: the chirp is in the audible frequency range (35–250 Hz) — like a brief rising 'whoop' or bird chirp lasting one-fifth of a second. The source: two black holes spiraling inward at 30–60% the speed of light, separated by only 350 km when they merged. The merger: an immense flash of gravitational energy equivalent to 3 solar masses converted instantly — yet zero electromagnetic light, completely invisible to ordinary telescopes. Shot ideas: split-screen of Livingston and Hanford detector signals appearing simultaneously; animation of spacetime grid rippling outward from two spiraling black holes; zoom into 4km arm showing laser beam and suspended mirror; waveform overlay on cosmic timeline.",
+  "visualization_compliance": [
+    "GW150914 waveform data is publicly available via LIGO Open Science Center (GWOSC) — usable with attribution",
+    "The merger produces no electromagnetic signal — do not depict light, explosion, or visible flash from the merger itself",
+    "Gravitational waves are not visible or audible without detector hardware — the 'chirp sound' in media is a frequency-shifted data sonification, not a direct sound from space; note this in narration",
+    "The interior of black holes is not observable — the merger waveform encodes only the external spacetime geometry",
+    "All strain numbers are dimensionless ratios (ΔL/L) — take care to distinguish between strain amplitude (10⁻²¹) and physical length change at LIGO scale (~10⁻¹⁸ m)",
+    "LIGO images and diagrams are published by Caltech/MIT/LIGO Lab and NSF — open for educational use with attribution"
+  ],
+  "_ingested_from": "T4_pass1_s012.json",
+  "_ingested_at": "2026-06-21T21:10:56.139442+00:00"
+}

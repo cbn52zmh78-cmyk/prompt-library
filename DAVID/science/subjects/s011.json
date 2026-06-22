@@ -1,0 +1,62 @@
+{
+  "nexus_command": "research_pass",
+  "subject_type": "science",
+  "subject_id": "s011",
+  "domain": "astronomy",
+  "phenomenon": "M87 Black Hole Shadow — First Direct Image of a Black Hole",
+  "key_measurement": "Shadow ring diameter: 42 ± 3 microarcseconds; Black hole mass: (6.5 ± 0.7) × 10⁹ solar masses; Distance: 16.4 ± 0.5 Mpc (53.5 ± 1.6 million light-years) (EHT Collaboration 2019, ApJL 875 L1–L6)",
+  "principle_set": [
+    "General relativity predicts that a black hole's gravitational field bends photon paths so severely that no light escapes from within the event horizon, creating a 'shadow' observable against background emission",
+    "Very Long Baseline Interferometry (VLBI) at 1.3 mm (230 GHz) achieves angular resolution of ~20 microarcseconds by correlating signals from telescopes spanning Earth's diameter",
+    "The bright asymmetric ring arises from relativistic beaming: accreting plasma moving toward the observer appears brighter, causing the southern arc to be ~10% brighter than the northern arc in M87*",
+    "The shadow diameter is approximately 2.6 times the Schwarzschild radius due to photon orbit geometry — light at exactly 1.5 Schwarzschild radii undergoes unstable circular orbits forming the photon ring",
+    "M87's relativistic jet, extending 5,000 light-years, is powered by magnetic fields in the accretion disk around the spinning black hole — the EHT polarization image (March 2021) directly mapped these field lines",
+    "The observed shadow size is consistent with Einstein's general relativity predictions to within measurement precision, providing the strongest direct strong-field test of GR to date"
+  ],
+  "framework": "General relativity; Very Long Baseline Interferometry (VLBI) at 230 GHz; Magneto-hydrodynamic (MHD) accretion disk theory",
+  "institutions": [
+    "Event Horizon Telescope Collaboration (worldwide, 200+ scientists)",
+    "MIT Haystack Observatory",
+    "Max Planck Institute for Radio Astronomy",
+    "National Radio Astronomy Observatory (NRAO)",
+    "Academia Sinica Institute of Astronomy and Astrophysics (ASIAA)",
+    "Harvard-Smithsonian Center for Astrophysics"
+  ],
+  "sources": [
+    {
+      "claim": "EHT released first direct image of a black hole shadow on April 10, 2019, showing a bright asymmetric ring of emission around a central dark region for M87*",
+      "citation": "Event Horizon Telescope Collaboration 2019, ApJL 875 L1 (Paper I: Introduction)",
+      "url": "https://iopscience.iop.org/article/10.3847/2041-8213/ab0ec7",
+      "doi": "10.3847/2041-8213/ab0ec7"
+    },
+    {
+      "claim": "M87* mass measured as (6.5 ± 0.2_stat ± 0.7_sys) × 10⁹ solar masses from EHT shadow size; shadow ring diameter confirmed at 42 microarcseconds",
+      "citation": "Event Horizon Telescope Collaboration 2019, ApJL 875 L6 (Paper VI: Mass)",
+      "url": "https://iopscience.iop.org/article/10.3847/2041-8213/ab1141",
+      "doi": "10.3847/2041-8213/ab1141"
+    },
+    {
+      "claim": "EHT 2021 polarization image revealed ordered magnetic field structure at the base of M87*'s relativistic jet, consistent with magnetically arrested accretion disk models",
+      "citation": "Event Horizon Telescope Collaboration 2021, ApJL 910 L12 (Polarization Paper I)",
+      "url": "https://iopscience.iop.org/article/10.3847/2041-8213/abe71d",
+      "doi": "10.3847/2041-8213/abe71d"
+    },
+    {
+      "claim": "Distance to M87 estimated at 16.4 ± 0.5 Mpc (53.5 ± 1.6 Mly) from weighted average of planetary nebula luminosity, globular cluster size distribution, and tip-of-red-giant-branch methods",
+      "citation": "Bird et al. 2010 / Tonry et al. 2001 / Jensen et al. 2021, as compiled in EHT Paper VI",
+      "url": "https://en.wikipedia.org/wiki/Messier_87",
+      "doi": null
+    }
+  ],
+  "visualization_notes": "Central scene: deep reddish-orange luminous ring — crescent-shaped, brighter at the bottom — set against absolute black. The shadow region at center is not empty space but the gravitational silhouette of M87*. Scale: the shadow subtends 42 microarcseconds — equivalent to viewing a donut on the Moon from Earth. The ring diameter spans 690 AU (103 billion km), larger than our entire Solar System to beyond Neptune. The jet extends perpendicular to the accretion disk: a blue-white relativistic plasma beam 5,000 light-years long, visible in radio and optical. For polarization imagery (2021): the ring is fractured into segmented arcs of polarized light, each arc oriented radially, revealing azimuthal magnetic field structure. Color: the false-color EHT image maps radio emission intensity to orange/gold/white — the actual emission is at 1.3mm wavelength (microwave). The bottom arc is visibly brighter due to relativistic beaming. Shot idea: zoom from Virgo cluster galaxy field → M87 nucleus → jet base → shadow ring.",
+  "visualization_compliance": [
+    "EHT images are publicly released under open access — image credit 'EHT Collaboration' required for any direct use of the official images",
+    "The image is of the accretion disk emission ring and shadow region, NOT the black hole interior — never depict or describe the interior as observable",
+    "Hawking radiation from M87* is unmeasurably small (~10^-17 K) — do not depict as a visible or observable phenomenon",
+    "The jet is observed in radio/optical wavelengths — visualizations should note when false-color is used",
+    "Mass figures should use EHT 2019 Paper VI values (6.5 × 10⁹ M☉); older estimates (3.5–7.2 × 10⁹) are superseded for documentary purposes",
+    "The Hawaiian name 'Pōwehi' (adorned fathomless dark creation) was formally assigned by the University of Hawaii — permissible to use in narration"
+  ],
+  "_ingested_from": "T4_pass1_s011.json",
+  "_ingested_at": "2026-06-21T21:10:56.126492+00:00"
+}

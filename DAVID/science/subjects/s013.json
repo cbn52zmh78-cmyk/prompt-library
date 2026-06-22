@@ -1,0 +1,62 @@
+{
+  "nexus_command": "research_pass",
+  "subject_type": "science",
+  "subject_id": "s013",
+  "domain": "astronomy",
+  "phenomenon": "Formation of the Solar System",
+  "key_measurement": "Age of Solar System: 4.5682 +/- 0.0002 billion years, determined from radiometric dating of calcium-aluminum-rich inclusions (CAIs) in carbonaceous chondrite meteorites (Connelly et al. 2012, Science 338, 651)",
+  "principle_set": [
+    "The Solar System formed from the gravitational collapse of a small part of a giant molecular cloud (solar nebula) approximately 4.568 Ga ago -- this model is known as the nebular hypothesis, first developed by Swedenborg, Kant, and Laplace in the 18th century",
+    "Conservation of angular momentum caused the collapsing cloud to spin and flatten into a protoplanetary disk; most mass collected at the center forming the proto-Sun while the remainder formed the disk out of which planets, moons, asteroids, and small bodies formed",
+    "Solid particles in the disk underwent coagulation and accretion -- dust grains stuck together forming planetesimals (~km-scale bodies), which then accreted further into protoplanets over millions of years",
+    "Jupiter's early formation (~3-4 Myr after Solar System formation) acted as a gravitational shepherd: its inward-then-outward Grand Tack migration scattered and depleted material in the asteroid belt, preventing a full-mass planet from forming there",
+    "Intense solar wind from the young Sun (T Tauri phase) cleared remaining gas from the protoplanetary disk within ~3-10 Myr of formation, halting further gas-giant growth",
+    "The Late Heavy Bombardment (~3.9 Ga) was a period of intense asteroid and comet impacts on the inner planets, likely delivering water and organic molecules to the early Earth and reshaping lunar and planetary surfaces",
+    "The four inner terrestrial planets formed by collisional accretion of rocky planetesimals; the giant planets formed either by core accretion (rocky core attracting gas envelope) or direct gravitational instability in the outer disk"
+  ],
+  "framework": "Nebular hypothesis (Kant-Laplace); Nice Model for outer solar system evolution; Grand Tack model for Jupiter migration; Solar System formation and evolution models",
+  "institutions": [
+    "NASA Jet Propulsion Laboratory",
+    "European Space Agency",
+    "Southwest Research Institute",
+    "Lunar and Planetary Institute",
+    "Max Planck Institute for Solar System Research",
+    "University of Arizona Lunar and Planetary Laboratory"
+  ],
+  "sources": [
+    {
+      "claim": "CAI radiometric dating places Solar System formation at 4.5682 +/- 0.0002 Ga; canonical age from Pb-Pb isotope dating of CAIs in carbonaceous chondrite meteorites",
+      "citation": "Connelly et al. 2012, Science 338, 651",
+      "url": "https://www.science.org/doi/10.1126/science.1226919",
+      "doi": "10.1126/science.1226919"
+    },
+    {
+      "claim": "The Solar System formed from gravitational collapse of a molecular cloud; most mass formed the Sun while the rest became a protoplanetary disk from which planets, moons, asteroids and small bodies formed",
+      "citation": "Wikipedia: Formation and evolution of the Solar System",
+      "url": "https://en.wikipedia.org/wiki/Formation_and_evolution_of_the_Solar_System",
+      "doi": null
+    },
+    {
+      "claim": "Jupiter's Grand Tack migration (inward to ~1.5 AU then outward) shaped the inner solar system and explains the low mass of Mars and the structure of the asteroid belt",
+      "citation": "Walsh et al. 2011, Nature 475, 206",
+      "url": "https://www.nature.com/articles/nature10201",
+      "doi": "10.1038/nature10201"
+    },
+    {
+      "claim": "The Nice Model proposes that gravitational interactions among the giant planets caused a late dynamical instability leading to the Late Heavy Bombardment ~3.9 Ga ago",
+      "citation": "Gomes et al. 2005, Nature 435, 466",
+      "url": "https://www.nature.com/articles/nature03676",
+      "doi": "10.1038/nature03676"
+    }
+  ],
+  "visualization_notes": "Primary visual concept: a sweeping 4.568-billion-year origin story compressed into a documentary shot sequence. Open on a vast dark molecular cloud -- turbulent wisps of cold hydrogen gas and dust, navy-blue and charcoal, backlit faintly by distant stars. A shockwave (perhaps from a nearby supernova) triggers collapse: the cloud begins to condense and spin, pulled inward by gravity. The camera tracks inward as the cloud flattens into a glowing orange-red protoplanetary disk surrounding a brilliant proto-Sun at center. Dust lanes and spiral density waves are visible in the disk. Zoom to disk surface: bright orange and yellow accretion of planetesimals colliding -- small bodies crashing together with heat and rock ejection, magma oceans visible on growing protoplanets. Cut to Jupiter forming rapidly in the outer disk, its massive gravity distorting the disk structure. Final sequence: the young Sun's T Tauri winds blast the remaining disk gas outward -- the system clears -- and our modern Solar System emerges in recognizable configuration. Bookend shot: the current Solar System as seen from above the ecliptic plane. JWST has publicly released protoplanetary disk images (e.g., Orion Nebula proplyd disks; HL Tauri disk via ALMA) that can anchor the disk-formation segment. Colors to emphasize: deep blue-black molecular cloud, orange-white accretion disk, molten red-orange magma ocean surfaces, clearing blue-white stellar wind. Most cinematically powerful moment: the first collision that forms something recognizable as a planet -- the magma ocean stage, glowing orange beneath a black starfield.",
+  "visualization_compliance": [
+    "No classified data -- all Solar System formation observations derive from public telescope data (Hubble, JWST, ALMA, Spitzer)",
+    "Artistic depictions of Solar System formation are widely used and permissible for documentary production",
+    "JWST and Hubble protoplanetary disk images are publicly released -- credit NASA/ESA/CSA and ALMA/ESO required",
+    "Specific age dates (e.g., 4.5682 +/- 0.0002 Ga) must match published radiometric measurements from Connelly et al. 2012",
+    "Grand Tack and Nice Model are theoretical frameworks -- visualizations should be labeled as models, not established fact"
+  ],
+  "_ingested_from": "T4_pass1_s013.json",
+  "_ingested_at": "2026-06-21T21:14:32.702046+00:00"
+}

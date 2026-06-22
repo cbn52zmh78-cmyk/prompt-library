@@ -1,0 +1,18 @@
+{
+  "system_id": "pw_cuneiform_uruk_proto",
+  "name": "Proto-Cuneiform (Uruk Period Tokens and Proto-Signs)",
+  "script_family": "proto-writing / logographic precursor to cuneiform",
+  "approx_period": "c. 3400–3000 BCE (Uruk IV–III periods, southern Mesopotamia)",
+  "decipherment_status": "partially deciphered",
+  "extant_corpus_size": "~5,000 proto-cuneiform tablets from Uruk (Warka, Iraq); also Jemdet Nasr period tablets. Housed primarily in the Vorderasiatisches Museum Berlin and the Iraq Museum Baghdad.",
+  "key_source_documents": [
+    "Nissen, H.J., Damerow, P. & Englund, R.K. (1993), Archaic Bookkeeping: Early Writing and Techniques of Economic Administration in the Ancient Near East (University of Chicago Press) — foundational analysis of proto-cuneiform administrative tablets",
+    "Englund, R.K. (1998), 'Texts from the Late Uruk Period', in Mesopotamien: Späturuk-Zeit und Frühdynastische Zeit, OBO 160/1 — primary corpus analysis",
+    "CDLI (Cuneiform Digital Library Initiative), UCLA — online corpus of proto-cuneiform tablet images and transliterations (cdli.ucla.edu)",
+    "Schmandt-Besserat, D. (1992), Before Writing, Vol. 1: From Counting to Cuneiform (University of Texas Press) — clay token precursor theory"
+  ],
+  "visual_characteristics": "Proto-cuneiform tablets are small convex clay slabs (~5–10 cm) impressed and incised with a reed stylus or pointed tool. Signs are pictographic in origin — a head with a bowl (the later NINDA, 'bread/food' sign), a bull's head, a fish. Signs are arranged in rectangular cases divided by incised lines, read in vertical columns from right to left (before the historical 90° rotation of mature cuneiform). The earliest signs (Uruk IV) are more clearly pictographic; Uruk III signs show rapid schematisation. Numerical notations use circular and semicircular impressions made by the blunt end of a stylus.",
+  "honesty_note": "Partially deciphered: numerical/metrological signs and commodity logograms (grain, livestock, textiles, fish) are understood. However, the language encoded — if any fixed spoken language was intended — is debated. The system may represent a proto-language-agnostic administrative notation rather than a full writing system.",
+  "david_episode_slug": "david_sumerian_corpus_v1",
+  "notes": "Precursor to the Sumerian cuneiform writing system (ws_cuneiform_sumerian_akkadian). The transition from token-based accounting (3D clay objects) to 2D tablet inscription is documented in Schmandt-Besserat (1992). Administrative, not literary — earliest known accounting records."
+}

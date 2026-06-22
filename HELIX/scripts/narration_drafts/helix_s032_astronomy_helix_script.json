@@ -1,0 +1,175 @@
+{
+  "slug": "helix_s032_astronomy",
+  "title": "Sagittarius A* — Milky Way Galactic Center Black Hole",
+  "domain": "astronomy",
+  "target_seconds": 90,
+  "config": {
+    "agent": "HELIX",
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "host_mode": "voiceover_only",
+    "on_screen_host": false,
+    "voice_suffix": "warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+    "voice_gender": "female",
+    "voice_accent": "British RP (slight)",
+    "continuity_prefix": "HELIX VOICEOVER — SCIENCE NARRATION\nVoice: warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole\nNo on-screen presenter. Voiceover only.\nAll visuals are camera/animation/archival — HELIX does not appear on screen.\nAccuracy standard: all claims sourced. Units required. Uncertainty stated.\nTone: informative but never boring. The universe is extraordinary — let it show.",
+    "visual_style": "cinematic science — imagery-forward, minimal text overlay"
+  },
+  "shots": [
+    {
+      "role": "cold_open",
+      "target_s": 8,
+      "speech_text": "Imagine 4.297 million. That single number is the key to understanding Sagittarius A* — Milky Way Galactic Center Black Hole — one of the most dramatic and ancient phenomena in the known universe.",
+      "visual_direction": "OPEN ON: [High-impact visual — The EHT image of Sgr A* shows a glowing orange-gold ring of emission — similar in visual character to M87* but notably f]. Title card: 'Sagittarius A* — Milky Way Galactic Center Black Hole'. No host. Pure visual with HELIX voiceover.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Striking hook — a disorienting scale fact or visual paradox that pulls the viewer in immediately"
+    },
+    {
+      "role": "establish",
+      "target_s": 10,
+      "speech_text": "Sagittarius A* — Milky Way Galactic Center Black Hole sits within the domain of astronomy. General relativity predicts that the photon capture cross-section of a black hole forms an observable 'shadow' — for Sgr A*, this region subtends ~52 microarcseconds, making it the largest apparent angular size of any black hole as seen from Earth despite its relatively modest mass. To understand it, we need to think at a scale that challenges intuition.",
+      "visual_direction": "ESTABLISH SHOT: [Wide or macro view establishing scale and context of Sagittarius A* — Milky Way Galactic Center Black Hole]. Slow zoom or pull-back revealing scope. Minimal text — let the imagery speak.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Set the scene: what is this phenomenon, where does it occur, what scale are we at"
+    },
+    {
+      "role": "explain",
+      "target_s": 12,
+      "speech_text": "General relativity predicts that the photon capture cross-section of a black hole forms an observable 'shadow' — for Sgr A*, this region subtends ~52 microarcseconds, making it the largest apparent angular size of any black hole as seen from Earth despite its relatively modest mass Stellar orbital tracking of the S-star cluster — particularly the star S2, which completes a full orbit in 16 years — provides an independent precise measurement of Sgr A*'s mass and the Earth-to-galactic-center distance The governing framework here is General relativity; Very Long Baseline Interferometry (VLBI); Keplerian orbital mechanics of S-stars; Near-infrared interferometry (GRAVITY/VLTI).",
+      "visual_direction": "EXPLAIN SEQUENCE: [Animation or diagram illustrating the core mechanism of Sagittarius A* — Milky Way Galactic Center Black Hole]. Clear, elegant — no clutter. Labels only where essential. Motion should mirror the narration pace.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Core mechanism or concept — clearly, accurately, engagingly. No jargon without definition"
+    },
+    {
+      "role": "visualize",
+      "target_s": 10,
+      "speech_text": "What you're seeing here — The EHT image of Sgr A* shows a glowing orange-gold ring of emission — similar in visual character to M87* but notably fuzzier in the released image due to rapid variability during.",
+      "visual_direction": "VISUALIZATION: [The EHT image of Sgr A* shows a glowing orange-gold ring of emission — similar in visual character to M87* but notably fuzzier in the released image due to rapid variability during the observation. The ring is roughly symmetric (unlike M87*'s asymmetric crescent), consistent with a nearly face-on accretion disk orientation. Shadow diameter: ~52 microarcseconds — coincidentally almost identical apparent size to M87* in the sky, despite Sgr A* being ~1,500x less massive and ~2,000x closer. The physical shadow diameter is ~51.8 million km (~0.35 AU), smaller than Mercury's orbit. The Schwarzschild radius is 0.08 AU (12 million km). For S-star visualization: the S2 star traces a tight Keplerian ellipse around an invisible point (the black hole) with a 16-year period — a powerful 'proving' visual. The galactic center is hidden behind ~25 magnitudes of interstellar dust extinction in visible light — only radio, infrared, and X-ray can see Sgr A*. Shot ideas: galaxy overhead view showing Earth-to-center distance of 26,000 light-years; S2 orbital animation; zoom to 52-microarcsecond shadow ring; comparison frame with M87* at same angular scale.]. HELIX narrates over continuous visual — no cuts interrupting the flow.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Describe what the camera or animation shows — specific, visual, sensory language"
+    },
+    {
+      "role": "evidence",
+      "target_s": 10,
+      "speech_text": "The numbers confirm it. EHT released first image of Sagittarius A* on May 12, 2022, showing a ring-like structure with angular size 51.8 ± 2.3 microarcseconds consistent with the predicted black hole shadow. This result — published by Event Horizon Telescope Collaboration 2022, ApJL 930 L12 (Paper I: Introduction and Summary) — represents one of the landmark measurements in modern astronomy.",
+      "visual_direction": "EVIDENCE SHOT: [Data visualisation, telescope imagery, or archival footage of the key discovery moment]. Institution logos/credits if available. Measurement values as lower-third text overlay.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "The key measurement, landmark discovery, or institutional proof — cite it precisely"
+    },
+    {
+      "role": "connect",
+      "target_s": 8,
+      "speech_text": "Sagittarius A* — Milky Way Galactic Center Black Hole is not just a phenomenon at the far edge of science. It connects directly to questions about our own origins. The Stellar orbital tracking of the S-star cluster — particularly the star S2, which completes a full orbit in 16 years — provides an independent precise measurement of Sgr A*'s mass and the Earth-to-galactic-center distance has implications that reach far beyond the laboratory.",
+      "visual_direction": "CONNECT SHOT: [Imagery bridging Sagittarius A* — Milky Way Galactic Center Black Hole to human scale or everyday context — e.g. night sky, biological cell, chemical process]. Gentle visual metaphor. Warmer colour grade than previous shots.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Link to the wider universe, human biology, Earth, or the viewer's daily experience"
+    },
+    {
+      "role": "close",
+      "target_s": 6,
+      "speech_text": "We are only beginning to understand Sagittarius A* — Milky Way Galactic Center Black Hole. And perhaps that's exactly the point — the universe keeps its most ancient secrets just within reach, if we keep looking.",
+      "visual_direction": "CLOSE: [Wide, contemplative — return to establishing imagery or slow fade to black]. HELIX narration ends. Silence before credits. No host sign-off.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Resonant closing thought — open-ended, leaves the viewer with something to sit with"
+    }
+  ],
+  "provenance_card": {
+    "title": "Sagittarius A* — Milky Way Galactic Center Black Hole",
+    "domain": "astronomy",
+    "subject_id": "s032",
+    "key_measurement": "Mass: 4.297 ± 0.012 × 10⁶ solar masses (4.297 million M☉); Distance: 26,996 ± 33 light-years (8,277 ± 9 parsecs); Shadow ring angular size: 51.8 ± 2.3 microarcseconds (EHT Collaboration 2022, ApJL 930 L12; GRAVITY Collaboration 2022)",
+    "framework": "General relativity; Very Long Baseline Interferometry (VLBI); Keplerian orbital mechanics of S-stars; Near-infrared interferometry (GRAVITY/VLTI)",
+    "institutions": [
+      "Event Horizon Telescope Collaboration",
+      "Max Planck Institute for Extraterrestrial Physics (MPE) — Reinhard Genzel group",
+      "UCLA Galactic Center Group — Andrea Ghez group",
+      "GRAVITY Collaboration / ESO Very Large Telescope Interferometer",
+      "National Radio Astronomy Observatory (NRAO)",
+      "MIT Haystack Observatory"
+    ],
+    "sources": [
+      {
+        "title": "EHT released first image of Sagittarius A* on May 12, 2022, showing a ring-like structure with angular size 51.8 ± 2.3 microarcseconds consistent with the predicted black hole shadow",
+        "citation": "Event Horizon Telescope Collaboration 2022, ApJL 930 L12 (Paper I: Introduction and Summary)",
+        "url": "https://iopscience.iop.org/article/10.3847/2041-8213/ac6674",
+        "doi": "10.3847/2041-8213/ac6674"
+      },
+      {
+        "title": "Mass of Sgr A* measured at 4.297 ± 0.012 × 10⁶ solar masses and distance 8,277 ± 9 pc (26,996 ly) from GRAVITY interferometer tracking S2 stellar orbit at the VLT",
+        "citation": "GRAVITY Collaboration 2022, A&A 657 L12",
+        "url": "https://www.aanda.org/articles/aa/full_html/2022/01/aa42465-21/aa42465-21.html",
+        "doi": "10.1051/0004-6361/202142465"
+      },
+      {
+        "title": "Sgr A* discovered as a compact radio source in 1974 by Balick and Brown using NRAO baseline interferometer; the asterisk designation added 1982 by Brown to denote 'excited' nature of the source",
+        "citation": "Balick & Brown 1974, ApJ 194 265; Brown 1982 (naming convention)",
+        "url": "https://en.wikipedia.org/wiki/Sagittarius_A*",
+        "doi": "10.1086/153242"
+      },
+      {
+        "title": "Reinhard Genzel and Andrea Ghez awarded the 2020 Nobel Prize in Physics for discovering that Sgr A* is a supermassive compact object — the best empirical evidence that supermassive black holes exist",
+        "citation": "Nobel Committee for Physics 2020, Nobel Prize in Physics announcement",
+        "url": "https://www.nobelprize.org/prizes/physics/2020/summary/"
+      },
+      {
+        "title": "Star S2 reached closest approach (periapsis) to Sgr A* in 2018 at ~120 AU, moving at 2.55% the speed of light (7,650 km/s), with gravitational redshift observed consistent with general relativity",
+        "citation": "GRAVITY Collaboration 2018, A&A 618 L10",
+        "url": "https://www.aanda.org/articles/aa/abs/2018/10/aa33718-18/aa33718-18.html",
+        "doi": "10.1051/0004-6361/201833718"
+      }
+    ],
+    "agent": "HELIX",
+    "accuracy_note": "All measurements cited. Uncertainty stated where present. No fabricated statistics."
+  },
+  "guardrails": [
+    "HELIX is voiceover only — no on-screen host, no synthetic presenter, no avatar.",
+    "All quantitative claims must include units and citation.",
+    "Uncertainty must be stated where present (e.g. 'approximately', 'within a margin of').",
+    "Do not present theoretical models as confirmed fact without qualification.",
+    "Do not fabricate measurements, paper titles, DOIs, or institutional affiliations.",
+    "Maintain wonder without hyperbole — the phenomena are extraordinary enough.",
+    "No speculation presented as established science.",
+    "HELIX does not cover history, biography, or language — those are DAVID's domain."
+  ],
+  "qa_rules": {
+    "min_shots": 7,
+    "min_speech_words": 12,
+    "required_shot_roles": [
+      "cold_open",
+      "establish",
+      "explain",
+      "visualize",
+      "evidence",
+      "connect",
+      "close"
+    ],
+    "voiceover_only": true,
+    "citation_required": true,
+    "unit_required": true,
+    "forbidden_patterns": [
+      "DAVID says",
+      "keeper of the Archive",
+      "MAGENTA SUPPRESS",
+      "charcoal.*wardrobe",
+      "I am HELIX",
+      "\\[UNCITED\\]"
+    ]
+  },
+  "meta": {
+    "subject_id": "s032",
+    "shot_count": 7,
+    "total_s": 64,
+    "agent": "HELIX",
+    "voice_suffix": "warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole"
+  },
+  "_agent": "HELIX",
+  "_generated_at": "2026-06-21T21:27:17.946654+00:00"
+}

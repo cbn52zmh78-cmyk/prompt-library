@@ -1,0 +1,224 @@
+{
+  "slug": "david_coptic_corpus_v1",
+  "title": "DAVID — The Vowels Egyptian Never Wrote",
+  "format_id": "documentary-host",
+  "target_seconds": 120,
+  "intake": {
+    "format_id": "documentary-host",
+    "actor_id": "David-001",
+    "set_id": "@Set-Archive-001",
+    "style_id": "@Style-Documentary-Prestige-001",
+    "source": "STUDIO/Pipeline/production_intake.py",
+    "gate_0": {
+      "version": "1.3",
+      "verdict": "GREEN",
+      "blocked": false,
+      "requires_human_signoff": false,
+      "human_signoff": true,
+      "target_rating": "PG",
+      "channels": [
+        "social",
+        "streaming"
+      ],
+      "report_path": "Studio/Producers_Office/Legal_Gate/GATE_GREEN_david_coptic_corpus_v1_20260619_020005.json",
+      "checklist_domains": {
+        "row_1_synthetic_ownership": "PASS",
+        "row_2_music_sync": "PASS",
+        "row_3_no_real_likeness": "PASS",
+        "row_4_target_channel": "PASS",
+        "row_5_age_documentation": "PASS",
+        "row_6_ai_disclosure": "PASS"
+      },
+      "hard_stops": [],
+      "counsel_flags": [],
+      "distribution_flags": [],
+      "warnings": [],
+      "rating_flags": [],
+      "cara_status": "COMPLIANT",
+      "music_bed_id": "BED-DOC-001",
+      "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
+      "row_2_music_sync": "PASS",
+      "notes": [
+        "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
+        "Social = mass dissemination. Platform AI-label + community guidelines apply.",
+        "Row 2: Manifest-cleared music bed(s): BED-DOC-001 (STUDIO/Music_Sound/clearance_manifest.json)",
+        "Row 1: STUDIO Casting Bible synthetic cast — Upon Tyne ownership; no third-party likeness license.",
+        "Gate 0 cleared for Development/Pre-Production subject to ongoing review."
+      ],
+      "brief_source": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Pipeline\\Concepts\\dead_languages\\david_coptic_corpus_v1_brief.txt"
+    },
+    "libraries": {
+      "formats": "Production_Templates_v1.json (#98)",
+      "sets": "Set_Library_v1.json (#99)",
+      "styles": "Style_Library_v1.json (#99)",
+      "casting": "Casting_Bible/registry/casting_registry.json"
+    },
+    "duration_clamp": {
+      "applied": true,
+      "policy": "seamless_7_9",
+      "lo": 7,
+      "hi": 9,
+      "shots_clamped": 1
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "854x480",
+    "aspect_ratio": "16:9",
+    "voice_suffix": "mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only",
+    "identity_lock": "productions/host_identity_v1/david_identity_lock.json",
+    "avatar_reference": "productions/host_identity_v1/references/david_avatar_reference.jpg",
+    "set_reference": "DAVID/productions/host_identity_v1/references/archive_set_reference.jpg",
+    "seamless": {
+      "primary": "dissolve",
+      "xfade_s": 1.8,
+      "match_color": true,
+      "cut_on_motion": true,
+      "lamp_lock": true,
+      "glasses_lock": true,
+      "loudnorm": true,
+      "pin_audio_sync": true,
+      "reground_interval": 2,
+      "magenta_clamp": true,
+      "neutral_generation": true,
+      "motion_carry": true,
+      "cut_style": "soft"
+    },
+    "render_mode": "test",
+    "music_bed": {
+      "track_id": "BED-DOC-001",
+      "manifest": "STUDIO/Music_Sound/clearance_manifest.json"
+    }
+  },
+  "shots": [
+    {
+      "id": "01_cold_open",
+      "duration": 12,
+      "t_start": 0,
+      "t_end": 12,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host seated at Archive worktable under neutral 5000K ambient key, speaks calmly to camera; motivated desk practical visible on codex surface only. Camera: slow gentle push-in medium. LIGHTING LOCK @Set-Archive-001 (#243): neutral balanced 5000K ambient key on host — natural skin, blue channel intact; soft 5200K shelf bounce ≤25%; motivated desk practical on worktable/codex in desk quadrant only — no warm spill on face, sweater, or shelves; no yellow-green cast; no blue-starved shadows; no magenta ambient. GENERATION LOCK Archive-neutral (#243): neutral balanced 5000K key at generation — skin midtones R≈G≈B within 8%, blue channel intact (B≥40 mids, B/R≥0.35); wood burnt umber #3D2B1F–#5C4033; parchment cream #F5F0E6; shadow neutral grey #3A3530. Motivated desk practical in lower desk quadrant only — zero warm spill on host face, sweater, or shadows. Forbid yellow-green cast. Forbid blue-starved generation. Forbid magenta cast. Forbid global orange skin push. Motivated practical accent only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"I am DAVID. Today, Coptic — the last stage of the Egyptian language, the form that finally wrote the vowels hieroglyphics never recorded, and the key that helped Champollion crack the Rosetta Stone.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame. Opening shot, establish environment slowly.",
+      "speech_text": "I am DAVID. Today, Coptic — the last stage of the Egyptian language, the form that finally wrote the vowels hieroglyphics never recorded, and the key that helped Champollion crack the Rosetta Stone.",
+      "on_screen": "DAVID · The Archive",
+      "duration_v1": 12
+    },
+    {
+      "id": "02_stakes",
+      "duration": 12,
+      "t_start": 12,
+      "t_end": 24,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Same take continues — host reflects, manuscripts behind, same desk; lamp accent unchanged on desk only. Camera: locked medium. LIGHTING LOCK @Set-Archive-001 (#243): neutral balanced 5000K ambient key on host — natural skin, blue channel intact; soft 5200K shelf bounce ≤25%; motivated desk practical on worktable/codex in desk quadrant only — no warm spill on face, sweater, or shelves; no yellow-green cast; no blue-starved shadows; no magenta ambient. GENERATION LOCK Archive-neutral (#243): neutral balanced 5000K key at generation — skin midtones R≈G≈B within 8%, blue channel intact (B≥40 mids, B/R≥0.35); wood burnt umber #3D2B1F–#5C4033; parchment cream #F5F0E6; shadow neutral grey #3A3530. Motivated desk practical in lower desk quadrant only — zero warm spill on host face, sweater, or shadows. Forbid yellow-green cast. Forbid blue-starved generation. Forbid magenta cast. Forbid global orange skin push. Motivated practical accent only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"For three and a half millennia, Egyptian hieroglyphics wrote consonants and left vowels to the reader. When the script died, so did the sound — until Coptic, which wrote Egyptian with the Greek alphabet and preserved what the ancient scribes omitted.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame. Continue from previous shot — same camera direction, smooth motion carry.",
+      "speech_text": "For three and a half millennia, Egyptian hieroglyphics wrote consonants and left vowels to the reader. When the script died, so did the sound — until Coptic, which wrote Egyptian with the Greek alphabet and preserved what the ancient scribes omitted.",
+      "duration_v1": 12
+    },
+    {
+      "id": "03_discovery",
+      "duration": 12,
+      "t_start": 24,
+      "t_end": 36,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host leans slightly forward, traces finger across open document on desk, engaged with the evidence. Camera: medium — lean into evidence. LIGHTING LOCK @Set-Archive-001 (#243): neutral balanced 5000K ambient key on host — natural skin, blue channel intact; soft 5200K shelf bounce ≤25%; motivated desk practical on worktable/codex in desk quadrant only — no warm spill on face, sweater, or shelves; no yellow-green cast; no blue-starved shadows; no magenta ambient. GENERATION LOCK Archive-neutral (#243): neutral balanced 5000K key at generation — skin midtones R≈G≈B within 8%, blue channel intact (B≥40 mids, B/R≥0.35); wood burnt umber #3D2B1F–#5C4033; parchment cream #F5F0E6; shadow neutral grey #3A3530. Motivated desk practical in lower desk quadrant only — zero warm spill on host face, sweater, or shadows. Forbid yellow-green cast. Forbid blue-starved generation. Forbid magenta cast. Forbid global orange skin push. Motivated practical accent only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"Coptic writing emerged in the early centuries of the Common Era, as Egyptian Christians needed to translate scripture for communities who no longer read the old priestly scripts. By adopting twenty-four Greek letters and adding six or seven signs from Demotic for sounds Greek lacked, they created the first Egyptian writing system that recorded vowels. Jean-François Champollion, deciphering the Rosetta Stone in 1822, drew directly on his knowledge of Coptic to identify sound values in hieroglyphics: Coptic was Egyptian's own Rosetta Stone.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame. Continue from previous shot — same camera direction, smooth motion carry.",
+      "speech_text": "Coptic writing emerged in the early centuries of the Common Era, as Egyptian Christians needed to translate scripture for communities who no longer read the old priestly scripts. By adopting twenty-four Greek letters and adding six or seven signs from Demotic for sounds Greek lacked, they created the first Egyptian writing system that recorded vowels. Jean-François Champollion, deciphering the Rosetta Stone in 1822, drew directly on his knowledge of Coptic to identify sound values in hieroglyphics: Coptic was Egyptian's own Rosetta Stone.",
+      "duration_v1": 12
+    },
+    {
+      "id": "04_signature_question",
+      "duration": 12,
+      "t_start": 36,
+      "t_end": 48,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host leans slightly toward camera, intent, signature question moment; face lit by neutral key, not lamp wash. Camera: slight lean toward camera. LIGHTING LOCK @Set-Archive-001 (#243): neutral balanced 5000K ambient key on host — natural skin, blue channel intact; soft 5200K shelf bounce ≤25%; motivated desk practical on worktable/codex in desk quadrant only — no warm spill on face, sweater, or shelves; no yellow-green cast; no blue-starved shadows; no magenta ambient. GENERATION LOCK Archive-neutral (#243): neutral balanced 5000K key at generation — skin midtones R≈G≈B within 8%, blue channel intact (B≥40 mids, B/R≥0.35); wood burnt umber #3D2B1F–#5C4033; parchment cream #F5F0E6; shadow neutral grey #3A3530. Motivated desk practical in lower desk quadrant only — zero warm spill on host face, sweater, or shadows. Forbid yellow-green cast. Forbid blue-starved generation. Forbid magenta cast. Forbid global orange skin push. Motivated practical accent only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"So I ask the question I ask of every supposedly dead tongue: who kept speaking it, and what does the corpus preserve about its sound?\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame. Continue from previous shot — same camera direction, smooth motion carry.",
+      "speech_text": "So I ask the question I ask of every supposedly dead tongue: who kept speaking it, and what does the corpus preserve about its sound?",
+      "on_screen": "Who kept speaking it?",
+      "duration_v1": 12
+    },
+    {
+      "id": "05_proof_beat",
+      "duration": 12,
+      "t_start": 48,
+      "t_end": 60,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Steady close-up, knowing pause; skin mids must retain blue at close range. Camera: steady close-up. LIGHTING LOCK @Set-Archive-001 (#243): neutral balanced 5000K ambient key on host — natural skin, blue channel intact; soft 5200K shelf bounce ≤25%; motivated desk practical on worktable/codex in desk quadrant only — no warm spill on face, sweater, or shelves; no yellow-green cast; no blue-starved shadows; no magenta ambient. GENERATION LOCK Archive-neutral (#243): neutral balanced 5000K key at generation — skin midtones R≈G≈B within 8%, blue channel intact (B≥40 mids, B/R≥0.35); wood burnt umber #3D2B1F–#5C4033; parchment cream #F5F0E6; shadow neutral grey #3A3530. Motivated desk practical in lower desk quadrant only — zero warm spill on host face, sweater, or shadows. Forbid yellow-green cast. Forbid blue-starved generation. Forbid magenta cast. Forbid global orange skin push. Motivated practical accent only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"The proof is in the Nag Hammadi Library — fifty-two Gnostic texts found in a sealed jar in Upper Egypt in 1945, written in Coptic — and in the living liturgy of the Coptic Orthodox Church, where this language has been sung without interruption for seventeen centuries.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame. Continue from previous shot — same camera direction, smooth motion carry.",
+      "speech_text": "The proof is in the Nag Hammadi Library — fifty-two Gnostic texts found in a sealed jar in Upper Egypt in 1945, written in Coptic — and in the living liturgy of the Coptic Orthodox Church, where this language has been sung without interruption for seventeen centuries.",
+      "duration_v1": 12
+    },
+    {
+      "id": "06_method",
+      "duration": 12,
+      "t_start": 60,
+      "t_end": 72,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host gestures to open codex on worktable; desk practical may kiss codex page edges, not gesture hand skin. Camera: medium — gesture to evidence. LIGHTING LOCK @Set-Archive-001 (#243): neutral balanced 5000K ambient key on host — natural skin, blue channel intact; soft 5200K shelf bounce ≤25%; motivated desk practical on worktable/codex in desk quadrant only — no warm spill on face, sweater, or shelves; no yellow-green cast; no blue-starved shadows; no magenta ambient. GENERATION LOCK Archive-neutral (#243): neutral balanced 5000K key at generation — skin midtones R≈G≈B within 8%, blue channel intact (B≥40 mids, B/R≥0.35); wood burnt umber #3D2B1F–#5C4033; parchment cream #F5F0E6; shadow neutral grey #3A3530. Motivated desk practical in lower desk quadrant only — zero warm spill on host face, sweater, or shadows. Forbid yellow-green cast. Forbid blue-starved generation. Forbid magenta cast. Forbid global orange skin push. Motivated practical accent only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"We read Coptic corpus-first: the Greek-based alphabet directly records vowels, making Coptic the only form of Egyptian we can fully vocalise; dialectal comparison between Sahidic, Bohairic, Fayyumic, and Akhmimic reconstructs the vowel history; and surviving Coptic liturgy provides living pronunciation continuity.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame. Continue from previous shot — same camera direction, smooth motion carry.",
+      "speech_text": "We read Coptic corpus-first: the Greek-based alphabet directly records vowels, making Coptic the only form of Egyptian we can fully vocalise; dialectal comparison between Sahidic, Bohairic, Fayyumic, and Akhmimic reconstructs the vowel history; and surviving Coptic liturgy provides living pronunciation continuity.",
+      "duration_v1": 12
+    },
+    {
+      "id": "07_honesty",
+      "duration": 12,
+      "t_start": 72,
+      "t_end": 84,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host direct to camera, calm authority on attested vs reconstructed. Camera: direct to camera. LIGHTING LOCK @Set-Archive-001 (#243): neutral balanced 5000K ambient key on host — natural skin, blue channel intact; soft 5200K shelf bounce ≤25%; motivated desk practical on worktable/codex in desk quadrant only — no warm spill on face, sweater, or shelves; no yellow-green cast; no blue-starved shadows; no magenta ambient. GENERATION LOCK Archive-neutral (#243): neutral balanced 5000K key at generation — skin midtones R≈G≈B within 8%, blue channel intact (B≥40 mids, B/R≥0.35); wood burnt umber #3D2B1F–#5C4033; parchment cream #F5F0E6; shadow neutral grey #3A3530. Motivated desk practical in lower desk quadrant only — zero warm spill on host face, sweater, or shadows. Forbid yellow-green cast. Forbid blue-starved generation. Forbid magenta cast. Forbid global orange skin push. Motivated practical accent only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"Coptic is the best-attested stage of Egyptian precisely because it wrote vowels. The Bohairic dialect survives in active liturgical use; Sahidic — the literary standard — is attested in manuscripts but no longer spoken as a vernacular. I label each claim accordingly.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame. Continue from previous shot — same camera direction, smooth motion carry.",
+      "speech_text": "Coptic is the best-attested stage of Egyptian precisely because it wrote vowels. The Bohairic dialect survives in active liturgical use; Sahidic — the literary standard — is attested in manuscripts but no longer spoken as a vernacular. I label each claim accordingly.",
+      "on_screen": "ATTESTED vowels · LITURGICAL survival (Bohairic) · EXTINCT vernacular",
+      "duration_v1": 12
+    },
+    {
+      "id": "08_demonstration",
+      "duration": 12,
+      "t_start": 84,
+      "t_end": 96,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host delivers pronunciation excerpt; on-screen label chips must read under neutral key (not washed). Camera: medium — deliberate pace. LIGHTING LOCK @Set-Archive-001 (#243): neutral balanced 5000K ambient key on host — natural skin, blue channel intact; soft 5200K shelf bounce ≤25%; motivated desk practical on worktable/codex in desk quadrant only — no warm spill on face, sweater, or shelves; no yellow-green cast; no blue-starved shadows; no magenta ambient. GENERATION LOCK Archive-neutral (#243): neutral balanced 5000K key at generation — skin midtones R≈G≈B within 8%, blue channel intact (B≥40 mids, B/R≥0.35); wood burnt umber #3D2B1F–#5C4033; parchment cream #F5F0E6; shadow neutral grey #3A3530. Motivated desk practical in lower desk quadrant only — zero warm spill on host face, sweater, or shadows. Forbid yellow-green cast. Forbid blue-starved generation. Forbid magenta cast. Forbid global orange skin push. Motivated practical accent only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"Listen — Ⲫⲓⲱⲧ ⲉⲧϩⲛ ⲙ̀ⲫⲏⲟⲩⲓ — Our Father who art in heaven — the Lord's Prayer in Bohairic Coptic, still sung in Egyptian churches today, the oldest surviving voiced form of the Egyptian language.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame. Continue from previous shot — same camera direction, smooth motion carry.",
+      "speech_text": "Listen — Ⲫⲓⲱⲧ ⲉⲧϩⲛ ⲙ̀ⲫⲏⲟⲩⲓ — Our Father who art in heaven — the Lord's Prayer in Bohairic Coptic, still sung in Egyptian churches today, the oldest surviving voiced form of the Egyptian language.",
+      "on_screen": "ATTESTED TEXT · Bohairic Coptic · Lord's Prayer · living liturgy",
+      "duration_raw": 10,
+      "duration_v1": 12
+    },
+    {
+      "id": "09_deeper_dive",
+      "duration": 12,
+      "t_start": 96,
+      "t_end": 108,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host settles back slightly, reflective scholarly mode — hands composed on desk, slight lean back. Camera: medium — slight pullback. LIGHTING LOCK @Set-Archive-001 (#243): neutral balanced 5000K ambient key on host — natural skin, blue channel intact; soft 5200K shelf bounce ≤25%; motivated desk practical on worktable/codex in desk quadrant only — no warm spill on face, sweater, or shelves; no yellow-green cast; no blue-starved shadows; no magenta ambient. GENERATION LOCK Archive-neutral (#243): neutral balanced 5000K key at generation — skin midtones R≈G≈B within 8%, blue channel intact (B≥40 mids, B/R≥0.35); wood burnt umber #3D2B1F–#5C4033; parchment cream #F5F0E6; shadow neutral grey #3A3530. Motivated desk practical in lower desk quadrant only — zero warm spill on host face, sweater, or shadows. Forbid yellow-green cast. Forbid blue-starved generation. Forbid magenta cast. Forbid global orange skin push. Motivated practical accent only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"The question of whether Coptic is truly dead deserves scrutiny. The Coptic Orthodox Church counts some ten million members, and Bohairic Coptic remains its liturgical language — heard in churches every week. Modern revival movements in Egypt have begun teaching Coptic as a spoken language. What died was vernacular Coptic, replaced by Arabic after the Arab conquest of Egypt in the seventh century. The liturgy — and the language embedded in it — endured.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame. Continue from previous shot — same camera direction, smooth motion carry.",
+      "speech_text": "The question of whether Coptic is truly dead deserves scrutiny. The Coptic Orthodox Church counts some ten million members, and Bohairic Coptic remains its liturgical language — heard in churches every week. Modern revival movements in Egypt have begun teaching Coptic as a spoken language. What died was vernacular Coptic, replaced by Arabic after the Arab conquest of Egypt in the seventh century. The liturgy — and the language embedded in it — endured.",
+      "duration_v1": 12
+    },
+    {
+      "id": "10_invitation",
+      "duration": 12,
+      "t_start": 108,
+      "t_end": 120,
+      "role": "host",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Inviting close, slight smile, gentle settle; emotional via expression not gel. Camera: inviting close. LIGHTING LOCK @Set-Archive-001 (#243): neutral balanced 5000K ambient key on host — natural skin, blue channel intact; soft 5200K shelf bounce ≤25%; motivated desk practical on worktable/codex in desk quadrant only — no warm spill on face, sweater, or shelves; no yellow-green cast; no blue-starved shadows; no magenta ambient. GENERATION LOCK Archive-neutral (#243): neutral balanced 5000K key at generation — skin midtones R≈G≈B within 8%, blue channel intact (B≥40 mids, B/R≥0.35); wood burnt umber #3D2B1F–#5C4033; parchment cream #F5F0E6; shadow neutral grey #3A3530. Motivated desk practical in lower desk quadrant only — zero warm spill on host face, sweater, or shadows. Forbid yellow-green cast. Forbid blue-starved generation. Forbid magenta cast. Forbid global orange skin push. Motivated practical accent only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"Follow the Archive, and the language they told you was frozen starts moving again — one attestation at a time.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame. Final shot — slowly pull back or hold still, let breath settle.",
+      "speech_text": "Follow the Archive, and the language they told you was frozen starts moving again — one attestation at a time.",
+      "duration_v1": 12
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 6,
+    "card_type": "closing",
+    "title": "DAVID · The Archive",
+    "subtitle": "Dead languages, actually pronounced.",
+    "footer": "Bring the dead tongues back — one attestation at a time. DAVID."
+  },
+  "qa_rules": {
+    "require_identity_lock": true,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": false,
+    "min_shots": 6
+  },
+  "_meta": {
+    "duration_clamp": {
+      "applied": true,
+      "policy": "seamless_v2_documentary",
+      "lo": 12,
+      "hi": 18,
+      "shots_clamped": 10,
+      "note": "extension-tier — 10 shots at 12s floor, 120s total"
+    }
+  }
+}

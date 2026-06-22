@@ -5,6 +5,7 @@ Turns one-at-a-time production into volume:
   folder of *.concept.json  →  intake (Gate 0 enforced)  →  480p draft render
   →  qa_report per item  →  batch manifest (pass/fail/needs-signoff)
   →  promote subcommand re-renders approved items at 720p final.
+  →  --package wires package_episode into the render loop → upload-ready kit per episode.
 
 Rate-limit aware: sequential processing, exponential backoff on timeout/rate-limit,
 --concat-only cache resume when shots are partially cached (T1 shot-6 recovery pattern).
@@ -12,7 +13,9 @@ Rate-limit aware: sequential processing, exponential backoff on timeout/rate-lim
 Usage:
     python DAVID/scripts/batch_runner.py run STUDIO/Pipeline/Concepts/dead_languages --dry-run
     python DAVID/scripts/batch_runner.py run STUDIO/Pipeline/Concepts/dead_languages
-    python DAVID/scripts/batch_runner.py promote DAVID/batches/<id>/manifest.json
+    python DAVID/scripts/batch_runner.py run STUDIO/Pipeline/Concepts/dead_languages --package
+    python DAVID/scripts/batch_runner.py promote DAVID/batches/<id>/manifest.json --package
+    python DAVID/scripts/batch_runner.py package DAVID/batches/<id>/manifest.json
 """
 
 from __future__ import annotations
@@ -33,6 +36,7 @@ PIPELINE = ROOT / "Studio" / "Pipeline"
 SCIENCE_SCRIPTS = ROOT / "Science" / "scripts"
 INTAKE = PIPELINE / "production_intake.py"
 RENDER = DAVID / "scripts" / "render_longform.py"
+PACKAGE_SCRIPT = PIPELINE / "package_episode.py"
 
 GATE_EXIT_RED = 2
 GATE_EXIT_SIGNOFF_REQUIRED = 3
@@ -61,6 +65,31 @@ def _import_intake():
     import production_intake as intake  # noqa: WPS433
 
     return intake
+
+
+def _import_package():
+    if str(PIPELINE) not in sys.path:
+        sys.path.insert(0, str(PIPELINE))
+    import package_episode as pkg  # noqa: WPS433
+    return pkg
+
+
+def run_package(prod_dir: Path, *, allow_fail_qa: bool = False) -> dict[str, Any]:
+    """Call package_episode.package_production and return result dict (or error dict)."""
+    try:
+        pkg = _import_package()
+        result = pkg.package_production(prod_dir, require_qa_pass=not allow_fail_qa)
+        print(f"  📦 packaged → {result['upload_kit']}")
+        return {"status": "ok", "upload_kit": result["upload_kit"], "manifest": result["manifest"]}
+    except FileNotFoundError as exc:
+        print(f"  ⚠️  package skipped (no MP4 yet): {exc}")
+        return {"status": "skipped_no_mp4", "error": str(exc)}
+    except RuntimeError as exc:
+        print(f"  ⚠️  package skipped: {exc}")
+        return {"status": "skipped_qa_fail", "error": str(exc)}
+    except Exception as exc:  # noqa: BLE001
+        print(f"  ✗ package error: {exc}")
+        return {"status": "error", "error": str(exc)}
 
 
 def _import_honesty_rail():
@@ -506,6 +535,7 @@ def cmd_run(args: argparse.Namespace) -> int:
 
         render_result = None
         qa = None
+        package_result = None
         if args.dry_run:
             status = classify_item(gate=gate, render_result=None, qa=None,
                                    dry_run=True, science=science)
@@ -531,6 +561,10 @@ def cmd_run(args: argparse.Namespace) -> int:
             icon = "✅" if status == "pass" else "✗"
             print(f"  {icon} render exit={render_result.get('exit_code')} qa_pass={qa.get('pass') if qa else None}")
 
+            # --package: build upload kit immediately after a successful render
+            if getattr(args, "package", False) and render_result.get("exit_code") == 0:
+                package_result = run_package(prod_dir, allow_fail_qa=getattr(args, "allow_fail_qa", False))
+
         row = build_item_row(
             concept_path=concept_path,
             script_path=script_path,
@@ -544,6 +578,8 @@ def cmd_run(args: argparse.Namespace) -> int:
             dry_run=args.dry_run,
             science=science,
         )
+        if package_result:
+            row["package"] = package_result
         items.append(row)
 
     manifest = {
@@ -632,18 +668,24 @@ def cmd_promote(args: argparse.Namespace) -> int:
         status = "promoted" if render_result.get("exit_code") == 0 and qa and qa.get("pass") else "promote_fail"
         print(f"    {'✅' if status == 'promoted' else '✗'} exit={render_result.get('exit_code')} qa_pass={qa.get('pass') if qa else None}")
 
-        promoted.append(
-            {
-                **item,
-                "status": status,
-                "phase": "final_720p",
-                "resolution": FINAL_RES,
-                "script_path": str(final_path.relative_to(ROOT)).replace("\\", "/"),
-                "qa_pass": qa.get("pass") if qa else None,
-                "render_exit": render_result.get("exit_code"),
-                "render_mode": render_result.get("mode"),
-            }
-        )
+        promoted_row: dict[str, Any] = {
+            **item,
+            "status": status,
+            "phase": "final_720p",
+            "resolution": FINAL_RES,
+            "script_path": str(final_path.relative_to(ROOT)).replace("\\", "/"),
+            "qa_pass": qa.get("pass") if qa else None,
+            "render_exit": render_result.get("exit_code"),
+            "render_mode": render_result.get("mode"),
+        }
+
+        # --package: build upload kit from final 720p render
+        if getattr(args, "package", False) and render_result.get("exit_code") == 0:
+            prod_dir_720 = resolve_production_dir(final_script)
+            pkg_result = run_package(prod_dir_720, allow_fail_qa=getattr(args, "allow_fail_qa", False))
+            promoted_row["package"] = pkg_result
+
+        promoted.append(promoted_row)
 
     promote_manifest = {
         "batch_id": batch_id,
@@ -662,8 +704,70 @@ def cmd_promote(args: argparse.Namespace) -> int:
     return 0
 
 
-def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="DAVID batch runner — intake → draft → manifest → promote")
+
+def cmd_package(args) -> int:
+    """Package all render-passed items in a batch manifest into upload kits."""
+    manifest_path = Path(args.manifest)
+    if not manifest_path.is_absolute():
+        manifest_path = (ROOT / manifest_path).resolve()
+    if not manifest_path.is_file():
+        raise SystemExit(f"Manifest not found: {manifest_path}")
+
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    batch_id = manifest.get("batch_id", manifest_path.parent.name)
+    phase = manifest.get("phase", "draft_480p")
+    items = manifest.get("items", [])
+    allow_fail_qa = getattr(args, "allow_fail_qa", False)
+
+    candidates = [i for i in items if i.get("status") in ("pass", "promoted")]
+    if not candidates and not allow_fail_qa:
+        candidates = [i for i in items if i.get("status") not in (
+            "skipped_red", "needs_signoff", "render_fail", "promote_fail"
+        )]
+
+    print(f"[package] batch={batch_id} phase={phase} candidates={len(candidates)}")
+    packaged = []
+    for item in candidates:
+        slug = item.get("slug", "?")
+        script_rel = item.get("script_path")
+        if not script_rel:
+            print(f"  - {slug}: no script_path, skipping")
+            continue
+        script_path = ROOT / script_rel
+        if not script_path.is_file():
+            print(f"  - {slug}: script not found ({script_path}), skipping")
+            continue
+        script = json.loads(script_path.read_text(encoding="utf-8"))
+        prod_dir = resolve_production_dir(script)
+        print(f"  ▶ {slug}")
+        pkg_result = run_package(prod_dir, allow_fail_qa=allow_fail_qa)
+        packaged.append({"slug": slug, **pkg_result})
+
+    pkg_manifest_path = manifest_path.parent / "manifest_package.json"
+    pkg_manifest = {
+        "batch_id": batch_id,
+        "phase": "packaged",
+        "source_manifest": str(manifest_path.relative_to(ROOT)).replace("\\", "/"),
+        "generated_at": _utc_now(),
+        "items": packaged,
+        "summary": {
+            "total": len(packaged),
+            "ok": sum(1 for p in packaged if p.get("status") == "ok"),
+            "skipped": sum(1 for p in packaged if p.get("status", "").startswith("skipped")),
+            "error": sum(1 for p in packaged if p.get("status") == "error"),
+        },
+    }
+    write_manifest(pkg_manifest, pkg_manifest_path)
+    print(f"\n[package] manifest → {pkg_manifest_path}")
+    print(f"[package] summary: {pkg_manifest['summary']}")
+    return 0
+
+
+def build_parser():
+    import argparse as _argparse
+    parser = _argparse.ArgumentParser(
+        description="DAVID batch runner — intake → draft → manifest → promote → package"
+    )
     sub = parser.add_subparsers(dest="command", required=True)
 
     run_p = sub.add_parser("run", help="Process a folder of concept JSON files")
@@ -678,6 +782,10 @@ def build_parser() -> argparse.ArgumentParser:
     run_p.add_argument("--dry-run", action="store_true", help="Intake + manifest only; no API renders")
     run_p.add_argument("--no-seamless", action="store_true", help="Omit --seamless render flags")
     run_p.add_argument("--max-attempts", type=int, default=4, help="Render retries on timeout/rate-limit")
+    run_p.add_argument("--package", action="store_true",
+                        help="Package each episode after a successful render")
+    run_p.add_argument("--allow-fail-qa", action="store_true",
+                        help="Allow packaging even when QA did not pass")
     run_p.add_argument("--backoff-base", type=float, default=30.0, help="Initial backoff seconds")
     run_p.add_argument("--backoff-max", type=float, default=300.0, help="Max backoff seconds")
     run_p.set_defaults(func=cmd_run)
@@ -691,12 +799,21 @@ def build_parser() -> argparse.ArgumentParser:
     prom_p.add_argument("--max-attempts", type=int, default=4)
     prom_p.add_argument("--backoff-base", type=float, default=30.0)
     prom_p.add_argument("--backoff-max", type=float, default=300.0)
+    prom_p.add_argument("--package", action="store_true",
+                        help="Package each promoted episode into an upload kit")
+    prom_p.add_argument("--allow-fail-qa", action="store_true",
+                        help="Allow packaging even when QA did not pass")
     prom_p.set_defaults(func=cmd_promote)
+
+    pkg_p = sub.add_parser("package", help="Package rendered episodes from a batch manifest into upload kits")
+    pkg_p.add_argument("manifest", type=Path, help="Path to draft or final manifest.json")
+    pkg_p.add_argument("--allow-fail-qa", action="store_true", help="Package even if QA did not pass")
+    pkg_p.set_defaults(func=cmd_package)
 
     return parser
 
 
-def main(argv: Optional[list[str]] = None) -> int:
+def main(argv=None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
     return args.func(args)

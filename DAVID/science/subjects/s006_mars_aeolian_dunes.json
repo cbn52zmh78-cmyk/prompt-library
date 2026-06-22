@@ -1,0 +1,40 @@
+{
+  "subject_id": "s006-mars-aeolian-dunes",
+  "domain": "planetary_science",
+  "phenomenon": "Mars aeolian dunes and planetary sand cycles",
+  "key_measurement": "Bagnold Dunes, Gale Crater: individual dunes up to ~30 m tall, crest-to-crest spacing ~100–300 m; global Mars sand flux 2.2 ± 1.0 m²/yr per meter width (Bridges et al., 2012, Geology)",
+  "principle_set": "general_scientific",
+  "framework": "Domain_Specific_Visualization_Principles_Framework v1.0",
+  "institutions": [
+    "NASA Jet Propulsion Laboratory (JPL)",
+    "USGS Astrogeology Science Center",
+    "European Space Agency (ESA) Mars Express Science Team",
+    "University of Arizona HiRISE Operations Center"
+  ],
+  "sources": [
+    {
+      "citation": "Bridges, N.T., Ayoub, F., Avouac, J.-P., Leprince, S., Lucas, A., Mattson, S. (2012) 'Planet-wide sand motion on Mars', Geology 40(1):31–34",
+      "type": "primary",
+      "url": "https://pubs.geoscienceworld.org/gsa/geology/article/40/1/31/130809"
+    },
+    {
+      "citation": "Ewing, R.C., Lapotre, M.G.A., Lewis, K.W., Day, M., Stein, N., Rubin, D.M., Sullivan, R., Banham, S., Lamb, M.P., Bridges, N.T., Gupta, S., Fischer, W.W. (2017) 'Sedimentary processes of the Bagnold Dunes: Implications for the eolian rock record of Mars', Journal of Geophysical Research: Planets 122(12):2452–2477",
+      "type": "primary",
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2017JE005324"
+    },
+    {
+      "citation": "NASA/JPL-Caltech/University of Arizona — HiRISE (High Resolution Imaging Science Experiment) Image Catalog, Mars Reconnaissance Orbiter",
+      "type": "secondary",
+      "url": "https://hirise.lpl.arizona.edu/"
+    }
+  ],
+  "visualization_compliance": [
+    "Mars atmospheric pressure (~600–700 Pa, ~0.6% of Earth sea level) must inform saltation threshold — threshold wind speed ~10× higher than Earth equivalent",
+    "Dune morphology (barchan, transverse, linear) must be based on HiRISE or CTX image data — no Earth-analog substitution without labeling",
+    "Surface color must reflect Mars spectroscopy: basaltic grey-black for sand, reddish iron-oxide for dust mantle — not Earth brown/tan tones",
+    "No liquid water or vegetation in any Mars surface frame",
+    "Atmospheric haze/dust suspension must reflect Mars sky color (butterscotch/pink) not Earth blue",
+    "Label ILLUSTRATIVE on any artist reconstructions; cite HiRISE image ID for morphology reference frames",
+    "Scale bar in meters/kilometers required; north arrow with MRO orbit context on plan-view maps"
+  ]
+}

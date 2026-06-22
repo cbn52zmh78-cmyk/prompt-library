@@ -104,6 +104,10 @@ EPISODE_REGISTRY: dict[str, dict[str, Any]] = {
         "attestation_secondary": "RECONSTRUCTED PRONUNCIATION",
         "attestation_note": "Liturgy & law continuous; classical vowel length from meter",
         "accent_hex": "#C9A227",
+        "b_variant": {
+            "hook_title": "STILL\nSPOKEN",
+            "hook_subtitle": "Latin never left",
+        },
     },
     "david_gothic_corpus_v1": {
         "title": "DAVID — Gothic: A Language Saved by One Bible",
@@ -117,6 +121,10 @@ EPISODE_REGISTRY: dict[str, dict[str, Any]] = {
         "attestation_secondary": "RECONSTRUCTED PRONUNCIATION",
         "attestation_note": "Gospel spellings attested; vowel timbre reconstructed",
         "accent_hex": "#8B7355",
+        "b_variant": {
+            "hook_title": "WULFILA\nBIBLE",
+            "hook_subtitle": "The only Gothic witness",
+        },
     },
     "david_ancient_greek_corpus_v1": {
         "title": "DAVID — Ancient Greek: Restoring the Pitch Accent",
@@ -130,6 +138,10 @@ EPISODE_REGISTRY: dict[str, dict[str, Any]] = {
         "attestation_secondary": "RECONSTRUCTED PRONUNCIATION",
         "attestation_note": "Accent marks in manuscripts; peak pitch reconstructed",
         "accent_hex": "#2E6B9E",
+        "b_variant": {
+            "hook_title": "HOMER\nPITCH",
+            "hook_subtitle": "Read it how it scanned",
+        },
     },
     "david_old_english_corpus_v1": {
         "title": "DAVID — Old English: Beowulf's Tongue in Manuscript",
@@ -143,6 +155,10 @@ EPISODE_REGISTRY: dict[str, dict[str, Any]] = {
         "attestation_secondary": "RECONSTRUCTED PRONUNCIATION",
         "attestation_note": "West Saxon graphs attested; unstressed vowels reconstructed",
         "accent_hex": "#7A4E2D",
+        "b_variant": {
+            "hook_title": "HWÆT\nBEOWULF",
+            "hook_subtitle": "Your language, 1,000 years ago",
+        },
     },
     "david_old_norse_corpus_v1": {
         "title": "DAVID — Old Norse: Runes Attested, Sagas Reconstructed",
@@ -156,6 +172,10 @@ EPISODE_REGISTRY: dict[str, dict[str, Any]] = {
         "attestation_secondary": "RECONSTRUCTED",
         "attestation_note": "Jelling inscription attested; skaldic delivery reconstructed",
         "accent_hex": "#5A6E7A",
+        "b_variant": {
+            "hook_title": "VIKING\nTONGUE",
+            "hook_subtitle": "Carved in stone, sung from memory",
+        },
     },
     "david_sumerian_corpus_v1": {
         "title": "DAVID — Sumerian: The First Written Language",
@@ -169,6 +189,113 @@ EPISODE_REGISTRY: dict[str, dict[str, Any]] = {
         "attestation_secondary": "RECONSTRUCTED VOWELS",
         "attestation_note": "Syllabic values from scribes; open-syllable vowels reconstructed",
         "accent_hex": "#B85C38",
+        "b_variant": {
+            "hook_title": "CLAY\nSPEAKS",
+            "hook_subtitle": "5,000 years later",
+        },
+    },
+    # ── Backlog eps 7–12 (T2 #140 extension) ────────────────────────────────
+    "david_sanskrit_corpus_v1": {
+        "title": "DAVID — The Language Memory Kept Alive",
+        "language": "Classical Sanskrit",
+        "hook_title": "MEMORY\nKEPT IT",
+        "hook_subtitle": "No ink needed",
+        "excerpt": "agním īḷe purohitaṃ",
+        "excerpt_script": "Devanagari / IAST",
+        "artifact": "Rigveda palm-leaf manuscript page",
+        "attestation_primary": "ATTESTED TEXT",
+        "attestation_secondary": "RECONSTRUCTED PRONUNCIATION",
+        "attestation_note": "Rigveda transmitted orally; Pāṇini's grammar 4th c. BCE anchors phonology",
+        "accent_hex": "#D4822A",
+        "b_variant": {
+            "hook_title": "ORAL\nARCHIVE",
+            "hook_subtitle": "Recited, not written",
+        },
+    },
+    "david_biblical_hebrew_corpus_v1": {
+        "title": "DAVID — The Language That Came Back",
+        "language": "Biblical Hebrew",
+        "hook_title": "HEBREW\nCAME BACK",
+        "hook_subtitle": "Guarded, then revived",
+        "excerpt": "Shemaʿ Yisraʾel",
+        "excerpt_script": "Hebrew",
+        "artifact": "Dead Sea Scroll fragment (Great Isaiah Scroll, Qumran)",
+        "attestation_primary": "ATTESTED SCROLL",
+        "attestation_secondary": "RECONSTRUCTED VOWELS",
+        "attestation_note": "Dead Sea Scrolls attested; Masoretic pointing reconstructs vowels",
+        "accent_hex": "#4A7C6F",
+        "b_variant": {
+            "hook_title": "DEAD SEA\nSCROLLS",
+            "hook_subtitle": "The voice it preserved",
+        },
+    },
+    "david_akkadian_corpus_v1": {
+        "title": "DAVID — The Voice Inside the Clay",
+        "language": "Akkadian",
+        "hook_title": "VOICE\nIN CLAY",
+        "hook_subtitle": "Babylon's forgotten tongue",
+        "excerpt": "ša naqba īmuru",
+        "excerpt_script": "Akkadian cuneiform / IAST",
+        "artifact": "Gilgamesh epic clay tablet (Nineveh library)",
+        "attestation_primary": "ATTESTED CUNEIFORM",
+        "attestation_secondary": "RECONSTRUCTED PROSODY",
+        "attestation_note": "Syllabic cuneiform attested; vowel length and stress reconstructed",
+        "accent_hex": "#A0522D",
+        "b_variant": {
+            "hook_title": "GILGAMESH\nSPEAKS",
+            "hook_subtitle": "Cuneiform, decoded",
+        },
+    },
+    "david_middle_egyptian_corpus_v1": {
+        "title": "DAVID — The Sound Behind the Hieroglyphs",
+        "language": "Middle Egyptian",
+        "hook_title": "HIEROGLYPHS\nHAD VOWELS",
+        "hook_subtitle": "The script hid the sound",
+        "excerpt": "ḥotep-di-nesu",
+        "excerpt_script": "Hieroglyphic transliteration",
+        "artifact": "Rosetta Stone rubbing + Champollion's key",
+        "attestation_primary": "ATTESTED CONSONANTS",
+        "attestation_secondary": "RECONSTRUCTED VOWELS",
+        "attestation_note": "Consonants in hieroglyphs; vowels reconstructed via Coptic",
+        "accent_hex": "#C8A951",
+        "b_variant": {
+            "hook_title": "ROSETTA\nDECODED",
+            "hook_subtitle": "What Champollion heard",
+        },
+    },
+    "david_classical_nahuatl_corpus_v1": {
+        "title": "DAVID — The Tongue the Conquest Wrote Down",
+        "language": "Classical Nahuatl",
+        "hook_title": "AZTEC\nTONGUE",
+        "hook_subtitle": "Conquest couldn't silence it",
+        "excerpt": "in xochitl in cuicatl",
+        "excerpt_script": "Nahuatl / Latin transliteration",
+        "artifact": "Florentine Codex illustrated page (Sahagún)",
+        "attestation_primary": "ATTESTED MANUSCRIPT",
+        "attestation_secondary": "RECONSTRUCTED PRONUNCIATION",
+        "attestation_note": "Florentine Codex attested; tonal features partially reconstructed",
+        "accent_hex": "#8B3A3A",
+        "b_variant": {
+            "hook_title": "FLORENTINE\nCODEX",
+            "hook_subtitle": "Two civilisations, one book",
+        },
+    },
+    "david_old_church_slavonic_corpus_v1": {
+        "title": "DAVID — The Bible That Built an Alphabet",
+        "language": "Old Church Slavonic",
+        "hook_title": "BUILT\nAN ALPHABET",
+        "hook_subtitle": "Scripture first, then writing",
+        "excerpt": "Otĭče našĭ",
+        "excerpt_script": "Glagolitic / Cyrillic",
+        "artifact": "Codex Zographensis Glagolitic Gospels page",
+        "attestation_primary": "ATTESTED TEXT",
+        "attestation_secondary": "RECONSTRUCTED PRONUNCIATION",
+        "attestation_note": "Glagolitic manuscripts 9th–11th c.; phonology from comparative Slavic",
+        "accent_hex": "#6A5ACD",
+        "b_variant": {
+            "hook_title": "GLAGOLITIC\nSCRIPTURE",
+            "hook_subtitle": "Cyril's first alphabet",
+        },
     },
 }
 
@@ -231,7 +358,7 @@ def build_spec(
     avatar_path = Path(refs["david_avatar"]["file"])
     set_path = Path(refs["archive_set"]["file"])
 
-    return {
+    spec: dict[str, Any] = {
         "slug": slug,
         "issue": 140,
         "title": ep["title"],
@@ -285,6 +412,30 @@ def build_spec(
             "Compatible with Studio/Pipeline/package_episode.py THUMBNAIL_BRIEF handoff",
         ],
     }
+
+    # A/B variant support — A = primary spec above; B = copy overrides only
+    if "b_variant" in ep:
+        b_overrides = ep["b_variant"]
+        b_copy = {**spec["copy"], **b_overrides}
+        b_ep = {**ep, **b_overrides}  # merge for prompt generation
+        spec["variants"] = {
+            "a": {
+                "label": "A — emotional hook",
+                "hook_title": spec["copy"]["hook_title"],
+                "hook_subtitle": spec["copy"]["hook_subtitle"],
+                "filename": f"{slug}_thumbnail_A_1280x720.jpg",
+            },
+            "b": {
+                "label": "B — descriptive / keyword",
+                "hook_title": b_overrides.get("hook_title", spec["copy"]["hook_title"]),
+                "hook_subtitle": b_overrides.get("hook_subtitle", spec["copy"]["hook_subtitle"]),
+                "filename": f"{slug}_thumbnail_B_1280x720.jpg",
+                "imagine_prompt": build_image_prompt(b_ep, lock),
+            },
+        }
+        spec["ab_test_note"] = "Upload both variants; use YouTube A/B test (or early-click-rate manual comparison) to select winner after 48h."
+
+    return spec
 
 
 def _load_fonts() -> dict[str, Any]:

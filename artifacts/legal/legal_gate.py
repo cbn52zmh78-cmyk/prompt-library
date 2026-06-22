@@ -152,6 +152,23 @@ REQUIRED_AGE_PATTERN = re.compile(
 )
 NEGATED_GUARD_PREFIX = re.compile(r"\bno[\s-]|non[\s-]|zero[\s-]|without[\s-]", re.I)
 
+# ── 18 U.S.C. § 2257 / 28 C.F.R. § 75 compliance statement ──────────────────
+# Required on all content involving synthetic performers depicted in any
+# suggestive, intimate, or adult-coded visual context.
+SECTION_2257_STATEMENT = (
+    "18 U.S.C. § 2257 Record-Keeping Requirements Compliance Statement: "
+    "All performers depicted in visual content produced by Upon Tyne Productions "
+    "are synthetic AI-generated characters. No real persons are depicted. "
+    "Custodian of Records: Upon Tyne Productions, [address on file]. "
+    "All synthetic performers are unambiguously depicted as 21+ adults per "
+    "Upon Tyne Productions Age Policy (Age_Policy_Locked.md)."
+)
+
+
+def get_2257_statement() -> str:
+    """Return the 18 U.S.C. § 2257 / 28 C.F.R. § 75 compliance statement."""
+    return SECTION_2257_STATEMENT
+
 
 def _affirmed_pattern_match(pattern: str, text: str) -> bool:
     """True when pattern matches and match is not negated (e.g. 'no NSFW' is not an NSFW flag)."""
@@ -179,6 +196,7 @@ class GateResult:
     checklist_domains: dict[str, str] = field(default_factory=dict)
     historical_figure_gate: dict = field(default_factory=dict)
     science_gate: dict = field(default_factory=dict)
+    section_2257: str = ""
 
     def blocked(self) -> bool:
         return self.verdict == "RED"
@@ -199,6 +217,7 @@ class GateResult:
             "checklist_domains": self.checklist_domains,
             "historical_figure_gate": self.historical_figure_gate,
             "science_gate": self.science_gate,
+            "section_2257": self.section_2257,
             "timestamp": datetime.now().isoformat(),
         }
 
@@ -283,6 +302,32 @@ def _evaluate_checklist_domains(result: GateResult, text: str, channels: list[st
         domains["row_6_ai_disclosure"] = "MANUAL"
     else:
         domains["row_6_ai_disclosure"] = "MANUAL"
+
+    # Row music_clearance — music bed assigned (non-fatal YELLOW if absent)
+    # Reads music_bed_id stamped into script.json intake block (see Clearance_SOP.md).
+    # YELLOW is not a hard stop — missing bed is a production warning, not a legal block.
+    # GREEN = bed_id present in brief text; YELLOW = no assignment yet.
+    _bed_id_match = re.search(
+        r"\b(?:music[_ ]bed(?:_id)?|bed_id)\s*[:=]\s*([A-Za-z0-9_-]+)",
+        text,
+        re.I,
+    )
+    if _bed_id_match:
+        domains["row_music_clearance"] = "GREEN"
+    else:
+        domains["row_music_clearance"] = "YELLOW"
+
+    # Row 2257 — 18 U.S.C. § 2257 compliance statement emitted when has_performers
+    # NOTE: has_performers is not directly available here; resolved in review() and
+    # stored in result.section_2257 before checklist is evaluated.
+    if result.section_2257:
+        domains["row_2257_compliance"] = "GREEN"
+    elif any(a < MIN_PERFORMER_AGE for a in [int(m.group(1)) for m in AGE_EXTRACT_PATTERN.finditer(text)]):
+        # Under-age flag already captured as HARD STOP — 2257 fails too
+        domains["row_2257_compliance"] = "RED"
+    else:
+        # No performers or statement absent — N/A until has_performers known
+        domains["row_2257_compliance"] = "N/A"
 
     return domains
 
@@ -466,7 +511,25 @@ class LegalGate:
         else:
             result.notes.append("Gate 0 cleared for Development/Pre-Production subject to ongoing review.")
 
+        # ── 18 U.S.C. § 2257 statement — emit when production has performers ────
+        if has_performers:
+            result.section_2257 = get_2257_statement()
+
         result.checklist_domains = _evaluate_checklist_domains(result, text, channels)
+
+        # Resolve row_2257_compliance now that section_2257 is set
+        if has_performers and result.section_2257:
+            result.checklist_domains["row_2257_compliance"] = "GREEN"
+        elif has_performers and not result.section_2257:
+            result.checklist_domains["row_2257_compliance"] = "RED"
+            result.hard_stops.append(
+                "[2257] has_performers=True but § 2257 statement absent — HARD STOP"
+            )
+            result.verdict = "RED"
+        else:
+            # No performers — 2257 not applicable
+            result.checklist_domains["row_2257_compliance"] = "N/A"
+
         return result
 
     def save_report(self, result: GateResult, source_text: str = "") -> Path:
@@ -537,83 +600,67 @@ class LegalGate:
             for key in (
                 "row_1_synthetic_ownership",
                 "row_2_music_sync",
+                "row_music_clearance",
                 "row_3_no_real_likeness",
                 "row_4_target_channel",
                 "row_5_age_documentation",
                 "row_6_ai_disclosure",
+                "row_2257_compliance",
             ):
-                if key in result.checklist_domains:
-                    lines.append(f"- **{key}:** {result.checklist_domains[key]}")
+                val = result.checklist_domains.get(key, "—")
+                label = key.replace("_", " ").title()
+                lines.append(f"- **{label}:** {val}")
             lines.append("")
-        lines.append("## Producer Notes")
-        lines.extend(f"- {n}" for n in result.notes)
-        md_path.write_text("\n".join(lines), encoding="utf-8")
+        if result.notes:
+            lines.append("## Notes")
+            lines.extend(f"- {n}" for n in result.notes)
+            lines.append("")
+        if result.section_2257:
+            lines.append("## 18 U.S.C. § 2257 Statement")
+            lines.append(result.section_2257)
+            lines.append("")
+
+        md_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
         return path
 
 
-def main() -> int:
+if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="Legal Gate v1.5 — Gate 0: AI + dissemination + history + science spines (RUN FIRST)"
+        description="Legal Gate 0 — producer hard stop for Upon Tyne Productions"
     )
-    parser.add_argument("--project", required=True, help="Project / slate ID")
-    parser.add_argument("--text", help="Inline brief, prompt, or scene description")
-    parser.add_argument("--file", help="Path to brief/prompt/screenplay excerpt")
-    parser.add_argument("--rating", choices=["G", "PG", "PG-13", "R"], help="Target CARA/rating ceiling")
+    parser.add_argument("text", nargs="?", default="", help="Brief / prompt text to review")
+    parser.add_argument("--project", default="CLI Review", help="Project name")
+    parser.add_argument("--rating", default="PG", help="Target rating (G/PG/PG-13/R)")
     parser.add_argument(
-        "--channels",
-        help="Comma-separated distribution intent: social,streaming,theatrical,festival,client",
+        "--channel",
+        action="append",
+        default=[],
+        dest="channels",
+        help="Distribution channel (social/streaming/theatrical/festival/client); repeatable",
     )
-    parser.add_argument("--no-performers", action="store_true")
+    parser.add_argument("--no-performers", dest="has_performers", action="store_false", default=True)
     args = parser.parse_args()
 
-    if args.file:
-        text = Path(args.file).read_text(encoding="utf-8", errors="replace")
-    elif args.text:
-        text = args.text
-    else:
-        print("❌ Provide --text or --file")
-        return 1
-
-    channels = [c.strip() for c in args.channels.split(",")] if args.channels else []
-
+    brief = args.text or sys.stdin.read()
     gate = LegalGate()
     result = gate.review(
-        text,
-        args.project,
-        target_rating=args.rating or "",
-        channels=channels,
-        has_performers=not args.no_performers,
+        brief,
+        project=args.project,
+        target_rating=args.rating,
+        channels=args.channels or ["social"],
+        has_performers=args.has_performers,
     )
-    path = gate.save_report(result, text)
-
-    icon = {"GREEN": "✅", "YELLOW": "⚠️", "COUNSEL": "⚖️", "RED": "🛑"}.get(result.verdict, "?")
-    print(f"\n{icon} GATE 0 VERDICT: {result.verdict}")
-    if result.target_rating:
-        print(f"   Rating ceiling: {result.target_rating} | CARA: {result.cara_status or 'n/a'}")
-    if result.channels:
-        print(f"   Channels: {', '.join(result.channels)}")
-    for msg in result.hard_stops:
-        print(f"  🛑 HARD STOP: {msg}")
-    for msg in result.counsel_flags:
-        print(f"  ⚖️  COUNSEL: {msg}")
-    for msg in result.rating_flags:
-        print(f"  📋 RATING: {msg}")
-    for msg in result.distribution_flags:
-        print(f"  📡 DISTRIBUTION: {msg}")
-    for msg in result.warnings:
-        print(f"  ⚠️  WARN: {msg}")
-    if result.checklist_domains:
-        print("\n  📋 CHECKLIST DOMAINS:")
-        for key, status in result.checklist_domains.items():
-            print(f"     {key}: {status}")
-    print(f"\nReport: {path}")
-    if result.blocked():
-        print("\nPRODUCER: Gate 0 failed. Legal no. Hard fucking no. We are not making this.")
-        return 2
-    return 0
-
-
-if __name__ == "__main__":
-    sys.exit(main())
+    saved = gate.save_report(result, source_text=brief)
+    print(f"\nVerdict: {result.verdict}")
+    if result.hard_stops:
+        print("Hard stops:")
+        for h in result.hard_stops:
+            print(f"  ✘ {h}")
+    if result.counsel_flags:
+        print("Counsel required:")
+        for c in result.counsel_flags:
+            print(f"  ⚠ {c}")
+    print(f"Report: {saved}")
+    sys.exit(1 if result.verdict == "RED" else 0)

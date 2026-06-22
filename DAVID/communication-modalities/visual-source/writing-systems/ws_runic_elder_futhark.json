@@ -1,0 +1,18 @@
+{
+  "system_id": "ws_runic_elder_futhark",
+  "name": "Runic Script — Elder Futhark (Old Norse / Old English)",
+  "script_family": "alphabetic / runic",
+  "approx_period": "Elder Futhark: c. 150 – 800 CE; Younger Futhark (Old Norse): c. 800 – 1100 CE; Anglo-Saxon Futhorc (Old English): c. 400 – 1100 CE",
+  "decipherment_status": "fully deciphered",
+  "extant_corpus_size": "~350 Elder Futhark inscriptions; ~6,000 Viking Age (Younger Futhark) runic stones, primarily in Scandinavia (Rundata database, Uppsala University)",
+  "key_source_documents": [
+    "Rundata: Scandinavian Runic-text Database, Uppsala University — definitive corpus of Scandinavian runic inscriptions",
+    "Page, R.I. (1987), Runes (British Museum Press) — standard English-language introduction",
+    "Wimmer, L.F.A. (1887), Die Runenschrift — foundational Germanic runological study",
+    "Ruthwell Cross inscription (Dumfriesshire, Scotland), c. 700 CE — major Anglo-Saxon Futhorc monument with Old English poem (Dream of the Rood excerpts)",
+    "Kylver Stone (Gotland, Sweden), c. 400 CE — earliest complete Elder Futhark sequence"
+  ],
+  "visual_characteristics": "Runic letters (runes) are angular, consisting of vertical staves with diagonal or horizontal branches — designed to avoid horizontal strokes for ease of carving across wood grain. The 24-rune Elder Futhark alphabet takes its name from its first six letters (F-U-Þ-A-R-K). Inscriptions appear on stone, bone, metal, and wood; stone runestones from the Viking Age are often painted red and feature interlaced serpent or dragon motifs framing the text. Anglo-Saxon Futhorc extends to 28–33 runes to accommodate Old English phonology.",
+  "david_episode_slug": "david_old_norse_corpus_v1",
+  "notes": "Episodes T3_dryrun references both Old Norse (david_old_norse_corpus_v1) and Old English (david_old_english_corpus_v1). Runic origin is debated — most likely derived from a North Italic (Etruscan-branch) alphabet, c. 2nd century BCE–1st century CE."
+}

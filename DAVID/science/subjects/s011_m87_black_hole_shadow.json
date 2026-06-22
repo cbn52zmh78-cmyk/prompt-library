@@ -1,0 +1,60 @@
+{
+  "subject_id": "m87-black-hole-shadow",
+  "domain": "astrophysics",
+  "phenomenon": "M87 Black Hole Shadow -- First Direct Image (Event Horizon Telescope, 2019)",
+  "key_measurement": "Black hole mass: 6.5 +/- 0.7 billion solar masses; shadow angular diameter ~42 +/- 3 microarcseconds (Event Horizon Telescope Collaboration, ApJL 875:L1, 2019)",
+  "principle_set": "general_relativity_observational",
+  "framework": "Domain_Specific_Visualization_Principles_Framework v1.0",
+  "institutions": [
+    "Event Horizon Telescope Collaboration",
+    "National Science Foundation",
+    "NASA",
+    "European Southern Observatory"
+  ],
+  "sources": [
+    {
+      "citation": "Event Horizon Telescope Collaboration et al., First M87 Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole, ApJL 875, L1 (2019)",
+      "type": "primary",
+      "url": "https://iopscience.iop.org/article/10.3847/2041-8213/ab0ec7"
+    },
+    {
+      "citation": "Event Horizon Telescope Collaboration et al., First M87 Event Horizon Telescope Results. VI. The Shadow and Mass of the Central Black Hole, ApJL 875, L6 (2019)",
+      "type": "primary",
+      "url": "https://iopscience.iop.org/article/10.3847/2041-8213/ab1141"
+    },
+    {
+      "citation": "Event Horizon Telescope Collaboration et al., First M87 Event Horizon Telescope Results. V. Physical Origin of the Asymmetric Ring, ApJL 875, L5 (2019)",
+      "type": "primary",
+      "url": "https://iopscience.iop.org/article/10.3847/2041-8213/ab0e85"
+    },
+    {
+      "citation": "NASA -- Black Holes: Science overview including M87* shadow and supermassive black hole demographics",
+      "type": "secondary",
+      "url": "https://science.nasa.gov/universe/black-holes/"
+    },
+    {
+      "citation": "National Science Foundation -- EHT Press Release: Astronomers Capture First Image of a Black Hole (April 10, 2019)",
+      "type": "secondary",
+      "url": "https://www.nsf.gov/news/news_summ.jsp?cntn_id=298298"
+    }
+  ],
+  "visualization_compliance": {
+    "shadow_diameter_uas": "42 +/- 3 microarcseconds -- do not render smaller or rounder than EHT constraint",
+    "photon_ring": "Bright asymmetric ring required; southern limb brighter due to Doppler beaming from approaching jet side",
+    "black_hole_interior": "No luminous black hole surface -- shadow only; event horizon is NOT a physical surface",
+    "accretion_disk": "Accretion disk temperature gradient required; disk inclined ~17 degrees to line of sight",
+    "doppler_beaming": "Doppler beaming on inclined disk must create brightness asymmetry",
+    "distance_label": "Distance: 16.8 Mpc (~55 million light-years), Virgo A galaxy (M87)",
+    "mass_label": "Mass: 6.5 +/- 0.7 x 10^9 solar masses",
+    "labels_required": "ILLUSTRATIVE + NOT TO SCALE labels on payoff frame; NOT EHT DATA unless using actual interferometry pixels"
+  },
+  "eht_specifics": {
+    "observation_date": "April 5-11, 2019",
+    "telescope_array": "8-station VLBI array spanning Earth baseline",
+    "observing_frequency_GHz": 230,
+    "host_galaxy": "Messier 87 (NGC 4486, Virgo A)",
+    "distance_Mpc": 16.8,
+    "black_hole_mass_solar": "6.5e9 +/- 0.7e9",
+    "relativistic_jet": "~5,000 light-year relativistic jet confirmed in radio/optical"
+  }
+}

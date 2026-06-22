@@ -1,0 +1,33 @@
+{
+  "system_id": "aac_medieval_manuscript_marginalia",
+  "name": "Medieval Illuminated Manuscript Marginalia as Secondary Communication Channel",
+  "art_category": "medieval / manuscript art",
+  "approx_period": "c. 1100 – 1500 CE (peak production of illuminated manuscripts with extensive marginalia: 13th–15th centuries, particularly Flemish, French, and English workshops)",
+  "decipherment_status": "fully deciphered",
+  "key_examples": [
+    "Luttrell Psalter (British Library, Add MS 42130), c. 1320–1340 CE — 54 full-border pages of English agricultural life, grotesques, and hybrid creatures; most studied marginalium corpus in English",
+    "Très Riches Heures du Duc de Berry (Musée Condé, Chantilly, Ms. 65), c. 1412–1416 CE — calendar pages with aristocratic life scenes",
+    "Rutland Psalter (British Library, Add MS 62925), c. 1260 CE — early example of English pen-flourish marginalia",
+    "Maastricht Hours (British Library, Stowe MS 17), c. 1300–1325 CE — Flemish marginalia with jousting rabbits, hybrid musicians, and satirical clerical scenes"
+  ],
+  "key_source_documents": [
+    "Camille, M. (1992), Image on the Edge: The Margins of Medieval Art (Reaktion Books) — foundational art-historical analysis of marginalia as communicative system",
+    "Randall, L.M.C. (1966), Images in the Margins of Gothic Manuscripts (University of California Press) — illustrated census of marginal motifs across 800+ manuscripts",
+    "Sandler, L.F. (1986), Gothic Manuscripts 1285–1385 (Harvey Miller) — Survey of Manuscripts Illuminated in the British Isles, vol. 5",
+    "British Library Digitised Manuscripts Portal — high-resolution open-access images of major holdings: https://www.bl.uk/manuscripts/"
+  ],
+  "visual_characteristics": "Medieval manuscript marginalia occupy the borders, bas-de-page (bottom-of-page) panels, and interlinear spaces of illuminated texts. They are painted in tempera and gilded, sharing the same pigment vocabulary as the main illuminations — ultramarine, vermilion, verdigris, lead white — but in a register deliberately outside the primary text frame. Content ranges from naturalistic flora and fauna to grotesques (hybrid human-animal figures called 'drôleries'), satirical role-reversals (rabbits hunting knights, apes performing surgery), secular narrative vignettes, and heraldic display. The marginalia interact with the primary text through gaze, gesture, and thematic inversion or irony.",
+  "communicative_function": {
+    "primary_channel": "The main text page (scripture, liturgy, law, chronicle) — the authoritative, formal communication.",
+    "secondary_channel": "The marginalia function as a counter-discourse: they comment on, parody, or contextualise the main text; signal workshop identity and patron taste; encode social satire (mocking clerical vice, gender inversions, class friction) that could not appear in the text proper. Camille (1992) argues marginalia are structurally dependent on the centre — they only make meaning in relation to what they surround.",
+    "scholarly_debate": "Whether marginalia are purely decorative ('workshop filler'), programmatically meaningful (Camille's 'image on the edge' thesis), or viewer-specific mnemonic aids remains debated. The Luttrell Psalter marginalia show such topographic specificity (identifiable East Anglian farming implements, local heraldry) that programmatic patron intent is now widely accepted for at least some manuscripts."
+  },
+  "honesty_note": "The marginalia are visually deciphered (iconography is well-studied), but interpretive consensus on communicative intent varies by manuscript and scene. Claim specific meanings only with citation; present the decorative vs. programmatic debate honestly.",
+  "image_access": {
+    "british_library": "British Library Digitised Manuscripts: https://www.bl.uk/manuscripts/ — Luttrell Psalter (Add MS 42130) and Maastricht Hours (Stowe MS 17) freely available in high resolution, public domain.",
+    "musee_conde": "Très Riches Heures: Musée Condé, Chantilly — copyright restrictions apply to high-resolution reproductions; consult https://www.chateaudechantilly.fr. Use Wikimedia Commons uploads of individual calendar pages which are PD-old.",
+    "license_note": "Most medieval manuscripts are public domain by age; high-resolution institutional photography may carry repository copyright. British Library images released under CC BY 4.0 from 2023."
+  },
+  "david_episode_slug": null,
+  "cultural_sensitivity": "Christian liturgical texts (Psalters, Books of Hours) carry religious significance. The marginalia often satirise clergy and church institutions; present this historical critical tradition accurately without anachronistic moralising."
+}

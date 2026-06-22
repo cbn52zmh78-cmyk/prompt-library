@@ -1,0 +1,18 @@
+{
+  "system_id": "ws_cuneiform_sumerian_akkadian",
+  "name": "Cuneiform (Sumerian / Akkadian)",
+  "script_family": "logosyllabic / cuneiform",
+  "approx_period": "c. 3200 BCE – 75 CE (latest known dated cuneiform tablet: 75 CE astronomical text)",
+  "decipherment_status": "fully deciphered",
+  "extant_corpus_size": "~500,000+ clay tablets and fragments; major collections at the British Museum (~130,000), Yale Babylonian Collection (~45,000), and Vorderasiatisches Museum Berlin",
+  "key_source_documents": [
+    "Rawlinson, H.C. (1851), 'Outline of the History of Assyria', JRAS 12 — first systematic decipherment of Akkadian cuneiform",
+    "Behistun Inscription (Bisotun, Iran), c. 520 BCE — trilingual (Old Persian / Elamite / Babylonian Akkadian), key to decipherment",
+    "Grotefend, G.F. (1802), Preis-Schrift — first successful reading of Old Persian cuneiform wedge-signs",
+    "Standard Assyrian Dictionary (CAD), Oriental Institute, Chicago, 1956–2010 — definitive Akkadian lexicon",
+    "Electronic Text Corpus of Sumerian Literature (ETCSL), University of Oxford — primary Sumerian literary corpus"
+  ],
+  "visual_characteristics": "Cuneiform signs are impressed into wet clay tablets using a reed stylus cut at an angle, producing characteristic wedge-shaped (Latin: cuneus) impressions — horizontal, vertical, and diagonal strokes combined into complex sign-clusters. Early Uruk-period signs (c. 3200 BCE) are more pictographic and written in vertical columns; by the Early Dynastic period (c. 2900 BCE) tablets rotate 90° and signs are read left-to-right in horizontal rows. Late Babylonian script is highly cursive and compressed. Sign counts range from ~600 common signs (Old Babylonian) to ~1,000+ in the full sign repertoire.",
+  "david_episode_slug": "david_sumerian_corpus_v1",
+  "notes": "Covers both Sumerian (language isolate) and Akkadian (Semitic) uses of the shared cuneiform script system. Episode T3_dryrun references Sumerian. See also proto-writing entry pw_cuneiform_uruk_proto for precursor token/proto-sign system."
+}

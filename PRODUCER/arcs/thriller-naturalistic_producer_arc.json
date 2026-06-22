@@ -1,0 +1,20 @@
+{
+  "slug": "thriller-naturalistic",
+  "genre": "thriller",
+  "logline": "A hitman must protect the witness who can bury him.",
+  "director_style": "naturalistic",
+  "agent": "PRODUCER",
+  "generated_at": "2026-06-21T22:22:19.374731+00:00",
+  "reasoning_gate": "YELLOW",
+  "reasoning_confidence": 0.6,
+  "passes_completed": 5,
+  "backend_used": "stub",
+  "arc_mode": "producer_narrative",
+  "scene_beats": [
+    "The derivative of x³ is **3x²**.",
+    "Derivation: apply the power rule d/dx[xⁿ] = n·xⁿ⁻¹ with n = 3:",
+    "d/dx[x³] = 3·x²",
+    "This holds for all x ∈ ℝ. No further caveats required."
+  ],
+  "raw_final": "The derivative of x³ is **3x²**.\n\nDerivation: apply the power rule d/dx[xⁿ] = n·xⁿ⁻¹ with n = 3:\n  d/dx[x³] = 3·x² \n\nThis holds for all x ∈ ℝ. No further caveats required."
+}

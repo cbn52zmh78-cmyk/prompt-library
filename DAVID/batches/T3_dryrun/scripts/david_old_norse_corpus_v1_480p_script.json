@@ -1,6 +1,6 @@
 {
   "slug": "david_old_norse_corpus_v1",
-  "title": "DAVID \u2014 Old Norse: Runes Attested, Sagas Reconstructed",
+  "title": "DAVID — Old Norse: Runes Attested, Sagas Reconstructed",
   "format_id": "documentary-host",
   "target_seconds": 69,
   "intake": {
@@ -39,10 +39,10 @@
       "music_clearance_manifest": "STUDIO/Music_Sound/clearance_manifest.json",
       "row_2_music_sync": "PASS",
       "notes": [
-        "Row 6: AI-disclosure obligation planned \u2014 verify presence at Pre-Publish.",
+        "Row 6: AI-disclosure obligation planned — verify presence at Pre-Publish.",
         "Social = mass dissemination. Platform AI-label + community guidelines apply.",
         "Row 2: Manifest-cleared music bed(s): BED-DOC-002 (STUDIO/Music_Sound/clearance_manifest.json)",
-        "Row 1: STUDIO Casting Bible synthetic cast \u2014 Upon Tyne ownership; no third-party likeness license.",
+        "Row 1: STUDIO Casting Bible synthetic cast — Upon Tyne ownership; no third-party likeness license.",
         "Gate 0 cleared for Development/Pre-Production subject to ongoing review."
       ],
       "brief_source": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Pipeline\\Concepts\\dead_languages\\david_old_norse_corpus_v1_brief.txt"
@@ -56,15 +56,15 @@
   },
   "config": {
     "model_video": "grok-imagine-video-1.5",
-    "resolution": "480p",
+    "resolution": "854x480",
     "aspect_ratio": "16:9",
     "voice_suffix": "mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only",
     "identity_lock": "productions/host_identity_v1/david_identity_lock.json",
     "avatar_reference": "productions/host_identity_v1/references/david_avatar_reference.jpg",
     "set_reference": "DAVID/productions/host_identity_v1/references/archive_set_reference.jpg",
     "seamless": {
-      "primary": "extend",
-      "xfade_s": 0.2,
+      "primary": "dissolve",
+      "xfade_s": 1.8,
       "match_color": true,
       "cut_on_motion": true,
       "lamp_lock": true,
@@ -72,102 +72,123 @@
       "loudnorm": true,
       "pin_audio_sync": true,
       "reground_interval": 2,
-      "magenta_clamp": true
+      "magenta_clamp": true,
+      "motion_carry": true,
+      "cut_style": "soft"
     },
     "music_bed": {
       "track_id": "BED-DOC-002",
       "manifest": "STUDIO/Music_Sound/clearance_manifest.json"
-    }
+    },
+    "render_mode": "test"
   },
   "shots": [
     {
       "id": "01_cold_open",
-      "duration": 8,
+      "duration": 12,
       "t_start": 0,
-      "t_end": 8,
+      "t_end": 12,
       "role": "host",
-      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line \u2014 seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior \u2014 floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk \u2014 seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade \u2014 rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host seated at Archive worktable, warm brass lamplight, speaks calmly to camera. Camera: slow gentle push-in medium. Warm gold brass desk lamp 3200K key light locked \u2014 zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only \u2014 no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 \u2014 no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft \u2014 forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll \u2014 never jitter on host. Lip-synced, delivers: \"I am DAVID. Today, Old Norse \u2014 the language of sagas and runestones, where carved stone gives us attested forms and manuscript poetry demands reconstruction.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
-      "speech_text": "I am DAVID. Today, Old Norse \u2014 the language of sagas and runestones, where carved stone gives us attested forms and manuscript poetry demands reconstruction.",
-      "on_screen": "DAVID \u00b7 The Archive"
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host seated at Archive worktable, warm brass lamplight, speaks calmly to camera. Camera: slow gentle push-in medium. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"I am DAVID. Today, Old Norse — the language of sagas and runestones, where carved stone gives us attested forms and manuscript poetry demands reconstruction.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame. Opening shot, establish environment slowly.",
+      "speech_text": "I am DAVID. Today, Old Norse — the language of sagas and runestones, where carved stone gives us attested forms and manuscript poetry demands reconstruction.",
+      "on_screen": "DAVID · The Archive",
+      "duration_v1": 8
     },
     {
       "id": "02_stakes",
-      "duration": 8,
-      "t_start": 8,
-      "t_end": 16,
+      "duration": 12,
+      "t_start": 12,
+      "t_end": 24,
       "role": "host",
-      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line \u2014 seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior \u2014 floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk \u2014 seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade \u2014 rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Same take continues \u2014 host reflects, manuscripts behind, same desk and lamp. Camera: same take continues \u2014 locked medium. Warm gold brass desk lamp 3200K key light locked \u2014 zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only \u2014 no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 \u2014 no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft \u2014 forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll \u2014 never jitter on host. Lip-synced, delivers: \"Vikings spread their speech across the North Atlantic. When the age of settlement ended, the tongue evolved \u2014 but runes and skaldic verse froze pieces of its sound for us.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
-      "speech_text": "Vikings spread their speech across the North Atlantic. When the age of settlement ended, the tongue evolved \u2014 but runes and skaldic verse froze pieces of its sound for us."
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Same take continues — host reflects, manuscripts behind, same desk and lamp. Camera: same take continues — locked medium. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"Vikings spread their speech across the North Atlantic. When the age of settlement ended, the tongue evolved — but runes and skaldic verse froze pieces of its sound for us.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame. Continue from previous shot — same camera direction, smooth motion carry.",
+      "speech_text": "Vikings spread their speech across the North Atlantic. When the age of settlement ended, the tongue evolved — but runes and skaldic verse froze pieces of its sound for us.",
+      "duration_v1": 8
     },
     {
       "id": "03_signature_question",
-      "duration": 8,
-      "t_start": 16,
-      "t_end": 24,
+      "duration": 12,
+      "t_start": 24,
+      "t_end": 36,
       "role": "host",
-      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line \u2014 seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior \u2014 floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk \u2014 seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade \u2014 rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host leans slightly toward camera, intent, signature question moment. Camera: slight lean toward camera. Warm gold brass desk lamp 3200K key light locked \u2014 zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only \u2014 no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 \u2014 no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft \u2014 forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll \u2014 never jitter on host. Lip-synced, delivers: \"Where does the corpus speak with its own mouth \u2014 and where do we supply the breath?\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
-      "speech_text": "Where does the corpus speak with its own mouth \u2014 and where do we supply the breath?",
-      "on_screen": "Attested or reconstructed?"
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host leans slightly toward camera, intent, signature question moment. Camera: slight lean toward camera. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"Where does the corpus speak with its own mouth — and where do we supply the breath?\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame. Continue from previous shot — same camera direction, smooth motion carry.",
+      "speech_text": "Where does the corpus speak with its own mouth — and where do we supply the breath?",
+      "on_screen": "Attested or reconstructed?",
+      "duration_v1": 8
     },
     {
       "id": "04_proof_beat",
-      "duration": 7,
-      "t_start": 24,
-      "t_end": 31,
+      "duration": 12,
+      "t_start": 36,
+      "t_end": 48,
       "role": "host",
-      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line \u2014 seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior \u2014 floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk \u2014 seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade \u2014 rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Steady close-up, knowing pause, second half of signature beat. Camera: steady close-up. Warm gold brass desk lamp 3200K key light locked \u2014 zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only \u2014 no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 \u2014 no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft \u2014 forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll \u2014 never jitter on host. Lip-synced, delivers: \"The Jelling stones, the R\u00f6k runestone, and younger futhark inscriptions attest spellings and names. The Poetic Edda in later Icelandic copies preserves meter that constrains how words must have sounded.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
-      "speech_text": "The Jelling stones, the R\u00f6k runestone, and younger futhark inscriptions attest spellings and names. The Poetic Edda in later Icelandic copies preserves meter that constrains how words must have sounded."
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Steady close-up, knowing pause, second half of signature beat. Camera: steady close-up. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"The Jelling stones, the Rök runestone, and younger futhark inscriptions attest spellings and names. The Poetic Edda in later Icelandic copies preserves meter that constrains how words must have sounded.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame. Continue from previous shot — same camera direction, smooth motion carry.",
+      "speech_text": "The Jelling stones, the Rök runestone, and younger futhark inscriptions attest spellings and names. The Poetic Edda in later Icelandic copies preserves meter that constrains how words must have sounded.",
+      "duration_v1": 7
     },
     {
       "id": "05_method",
-      "duration": 8,
-      "t_start": 31,
-      "t_end": 39,
+      "duration": 12,
+      "t_start": 48,
+      "t_end": 60,
       "role": "host",
-      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line \u2014 seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior \u2014 floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk \u2014 seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade \u2014 rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host gestures to open codex on worktable, explaining corpus-first method. Camera: medium \u2014 gesture to evidence. Warm gold brass desk lamp 3200K key light locked \u2014 zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only \u2014 no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 \u2014 no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft \u2014 forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll \u2014 never jitter on host. Lip-synced, delivers: \"We read runic graphs against Old West Norse phonology, use alliterative patterns in fornyr\u00f0islag, and cross-check Snorri's prose \u2014 separating inscription evidence from normalized saga prose.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
-      "speech_text": "We read runic graphs against Old West Norse phonology, use alliterative patterns in fornyr\u00f0islag, and cross-check Snorri's prose \u2014 separating inscription evidence from normalized saga prose."
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host gestures to open codex on worktable, explaining corpus-first method. Camera: medium — gesture to evidence. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"We read runic graphs against Old West Norse phonology, use alliterative patterns in fornyrðislag, and cross-check Snorri's prose — separating inscription evidence from normalized saga prose.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame. Continue from previous shot — same camera direction, smooth motion carry.",
+      "speech_text": "We read runic graphs against Old West Norse phonology, use alliterative patterns in fornyrðislag, and cross-check Snorri's prose — separating inscription evidence from normalized saga prose.",
+      "duration_v1": 8
     },
     {
       "id": "06_honesty",
-      "duration": 8,
-      "t_start": 39,
-      "t_end": 47,
+      "duration": 12,
+      "t_start": 60,
+      "t_end": 72,
       "role": "host",
-      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line \u2014 seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior \u2014 floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk \u2014 seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade \u2014 rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host direct to camera, calm authority on attested vs reconstructed. Camera: direct to camera. Warm gold brass desk lamp 3200K key light locked \u2014 zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only \u2014 no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 \u2014 no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft \u2014 forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll \u2014 never jitter on host. Lip-synced, delivers: \"A runestone line is attested as carved. Full saga delivery with normalized vowels is reconstructed \u2014 both labels appear on screen when they matter.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
-      "speech_text": "A runestone line is attested as carved. Full saga delivery with normalized vowels is reconstructed \u2014 both labels appear on screen when they matter."
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host direct to camera, calm authority on attested vs reconstructed. Camera: direct to camera. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"A runestone line is attested as carved. Full saga delivery with normalized vowels is reconstructed — both labels appear on screen when they matter.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame. Continue from previous shot — same camera direction, smooth motion carry.",
+      "speech_text": "A runestone line is attested as carved. Full saga delivery with normalized vowels is reconstructed — both labels appear on screen when they matter.",
+      "duration_v1": 8
     },
     {
       "id": "07_demonstration",
-      "duration": 10,
-      "t_start": 47,
-      "t_end": 57,
+      "duration": 12,
+      "t_start": 72,
+      "t_end": 84,
       "role": "host",
-      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line \u2014 seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior \u2014 floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk \u2014 seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade \u2014 rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host delivers example pronunciation or excerpt, scholarly tone, on-screen labels visible. Camera: medium \u2014 deliberate pace. Warm gold brass desk lamp 3200K key light locked \u2014 zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only \u2014 no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 \u2014 no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft \u2014 forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll \u2014 never jitter on host. Lip-synced, delivers: \"Listen \u2014 Haraldr konungr sigrs\u00e6ll \u2014 King Harald, blessed with victory \u2014 as attested on the Jelling stone, beside a reconstructed skaldic line from the meter.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
-      "speech_text": "Listen \u2014 Haraldr konungr sigrs\u00e6ll \u2014 King Harald, blessed with victory \u2014 as attested on the Jelling stone, beside a reconstructed skaldic line from the meter.",
-      "on_screen": "ATTESTED \u00b7 Jelling runes \u00b7 RECONSTRUCTED \u00b7 skaldic meter"
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Host delivers example pronunciation or excerpt, scholarly tone, on-screen labels visible. Camera: medium — deliberate pace. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"Listen — Haraldr konungr sigrsæll — King Harald, blessed with victory — as attested on the Jelling stone, beside a reconstructed skaldic line from the meter.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame. Continue from previous shot — same camera direction, smooth motion carry.",
+      "speech_text": "Listen — Haraldr konungr sigrsæll — King Harald, blessed with victory — as attested on the Jelling stone, beside a reconstructed skaldic line from the meter.",
+      "on_screen": "ATTESTED · Jelling runes · RECONSTRUCTED · skaldic meter",
+      "duration_v1": 10
     },
     {
       "id": "08_invitation",
-      "duration": 8,
-      "t_start": 57,
-      "t_end": 65,
+      "duration": 12,
+      "t_start": 84,
+      "t_end": 96,
       "role": "host",
-      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line \u2014 seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior \u2014 floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk \u2014 seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade \u2014 rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Warm inviting close, slight smile, gentle settle; end on hand gesture mid-motion. Camera: warm inviting close. Warm gold brass desk lamp 3200K key light locked \u2014 zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only \u2014 no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 \u2014 no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft \u2014 forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll \u2014 never jitter on host. Lip-synced, delivers: \"Join the Archive \u2014 and hear the North again, carved in stone and counted in verse.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
-      "speech_text": "Join the Archive \u2014 and hear the North again, carved in stone and counted in verse."
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. CONTINUITY LOCK @Set-Archive-001: identical Archive interior — floor-to-ceiling manuscript shelves, long wooden worktable, open illuminated codex, cuneiform tablet, rolled papyrus, single brass desk lamp, same shelf blur depth, same eye-line to desk — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Warm inviting close, slight smile, gentle settle; end on hand gesture mid-motion. Camera: warm inviting close. Warm gold brass desk lamp 3200K key light locked — zero hue drift, amber pool only on desk and face, no magenta purple ambient, no cool fill, no glasses purple reflection. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Archive: dominant amber 3200K, wood tones burnt umber #3D2B1F to #5C4033, parchment cream #F5F0E6, shadow neutral warm grey #2A2520 — no blue fill, no magenta cast, no teal shadows. GRADE LOCK Documentary-Prestige: skin warmth +3% amber max, shadows warm-neutral not blue, saturation overall -10% vs reality, highlight roll-off soft — forbid magenta midtones, forbid teal shadows, forbid orange skin push. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"Join the Archive — and hear the North again, carved in stone and counted in verse.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame. Final shot — slowly pull back or hold still, let breath settle.",
+      "speech_text": "Join the Archive — and hear the North again, carved in stone and counted in verse.",
+      "duration_v1": 8
     }
   ],
   "provenance_card": {
     "enabled": true,
     "duration_s": 6,
     "card_type": "closing",
-    "title": "DAVID \u00b7 The Archive",
+    "title": "DAVID · The Archive",
     "subtitle": "Dead languages, actually pronounced.",
-    "footer": "Bring the dead tongues back \u2014 one attestation at a time. DAVID."
+    "footer": "Bring the dead tongues back — one attestation at a time. DAVID."
   },
   "qa_rules": {
     "require_identity_lock": true,
     "require_synthetic_guard": true,
     "require_reconstructed_labels": false,
     "min_shots": 6
+  },
+  "_meta": {
+    "duration_clamp": {
+      "applied": true,
+      "policy": "seamless_v2_documentary",
+      "lo": 12,
+      "hi": 18,
+      "shots_clamped": 8,
+      "note": "v2 transition patch — documentary standard 12s floor"
+    }
   }
 }

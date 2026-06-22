@@ -1,0 +1,169 @@
+{
+  "slug": "helix_s013_astronomy",
+  "title": "Formation of the Solar System",
+  "domain": "astronomy",
+  "target_seconds": 90,
+  "config": {
+    "agent": "HELIX",
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "host_mode": "voiceover_only",
+    "on_screen_host": false,
+    "voice_suffix": "warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+    "voice_gender": "female",
+    "voice_accent": "British RP (slight)",
+    "continuity_prefix": "HELIX VOICEOVER — SCIENCE NARRATION\nVoice: warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole\nNo on-screen presenter. Voiceover only.\nAll visuals are camera/animation/archival — HELIX does not appear on screen.\nAccuracy standard: all claims sourced. Units required. Uncertainty stated.\nTone: informative but never boring. The universe is extraordinary — let it show.",
+    "visual_style": "cinematic science — imagery-forward, minimal text overlay"
+  },
+  "shots": [
+    {
+      "role": "cold_open",
+      "target_s": 8,
+      "speech_text": "Imagine 0.0002 billion. That single number is the key to understanding Formation of the Solar System — one of the most dramatic and ancient phenomena in the known universe.",
+      "visual_direction": "OPEN ON: [High-impact visual — Primary visual concept: a sweeping 4.568-billion-year origin story compressed into a documentary shot sequence. Open on ]. Title card: 'Formation of the Solar System'. No host. Pure visual with HELIX voiceover.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Striking hook — a disorienting scale fact or visual paradox that pulls the viewer in immediately"
+    },
+    {
+      "role": "establish",
+      "target_s": 10,
+      "speech_text": "Formation of the Solar System sits within the domain of astronomy. The Solar System formed from the gravitational collapse of a small part of a giant molecular cloud (solar nebula) approximately 4.568 Ga ago -- this model is known as the nebular hypothesis, first developed by Swedenborg, Kant, and Laplace in the 18th century. To understand it, we need to think at a scale that challenges intuition.",
+      "visual_direction": "ESTABLISH SHOT: [Wide or macro view establishing scale and context of Formation of the Solar System]. Slow zoom or pull-back revealing scope. Minimal text — let the imagery speak.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Set the scene: what is this phenomenon, where does it occur, what scale are we at"
+    },
+    {
+      "role": "explain",
+      "target_s": 12,
+      "speech_text": "The Solar System formed from the gravitational collapse of a small part of a giant molecular cloud (solar nebula) approximately 4.568 Ga ago -- this model is known as the nebular hypothesis, first developed by Swedenborg, Kant, and Laplace in the 18th century Conservation of angular momentum caused the collapsing cloud to spin and flatten into a protoplanetary disk; most mass collected at the center forming the proto-Sun while the remainder formed the disk out of which planets, moons, asteroids, and small bodies formed The governing framework here is Nebular hypothesis (Kant-Laplace); Nice Model for outer solar system evolution; Grand Tack model for Jupiter migration; Solar System formation and evolution models.",
+      "visual_direction": "EXPLAIN SEQUENCE: [Animation or diagram illustrating the core mechanism of Formation of the Solar System]. Clear, elegant — no clutter. Labels only where essential. Motion should mirror the narration pace.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Core mechanism or concept — clearly, accurately, engagingly. No jargon without definition"
+    },
+    {
+      "role": "visualize",
+      "target_s": 10,
+      "speech_text": "What you're seeing here — Primary visual concept: a sweeping 4.568-billion-year origin story compressed into a documentary shot sequence. Open on a vast dark molecular cloud -- turbulent wisps of cold hydro.",
+      "visual_direction": "VISUALIZATION: [Primary visual concept: a sweeping 4.568-billion-year origin story compressed into a documentary shot sequence. Open on a vast dark molecular cloud -- turbulent wisps of cold hydrogen gas and dust, navy-blue and charcoal, backlit faintly by distant stars. A shockwave (perhaps from a nearby supernova) triggers collapse: the cloud begins to condense and spin, pulled inward by gravity. The camera tracks inward as the cloud flattens into a glowing orange-red protoplanetary disk surrounding a brilliant proto-Sun at center. Dust lanes and spiral density waves are visible in the disk. Zoom to disk surface: bright orange and yellow accretion of planetesimals colliding -- small bodies crashing together with heat and rock ejection, magma oceans visible on growing protoplanets. Cut to Jupiter forming rapidly in the outer disk, its massive gravity distorting the disk structure. Final sequence: the young Sun's T Tauri winds blast the remaining disk gas outward -- the system clears -- and our modern Solar System emerges in recognizable configuration. Bookend shot: the current Solar System as seen from above the ecliptic plane. JWST has publicly released protoplanetary disk images (e.g., Orion Nebula proplyd disks; HL Tauri disk via ALMA) that can anchor the disk-formation segment. Colors to emphasize: deep blue-black molecular cloud, orange-white accretion disk, molten red-orange magma ocean surfaces, clearing blue-white stellar wind. Most cinematically powerful moment: the first collision that forms something recognizable as a planet -- the magma ocean stage, glowing orange beneath a black starfield.]. HELIX narrates over continuous visual — no cuts interrupting the flow.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Describe what the camera or animation shows — specific, visual, sensory language"
+    },
+    {
+      "role": "evidence",
+      "target_s": 10,
+      "speech_text": "The numbers confirm it. CAI radiometric dating places Solar System formation at 4.5682 +/- 0.0002 Ga; canonical age from Pb-Pb isotope dating of CAIs in carbonaceous chondrite meteorites. This result — published by Connelly et al. 2012, Science 338, 651 — represents one of the landmark measurements in modern astronomy.",
+      "visual_direction": "EVIDENCE SHOT: [Data visualisation, telescope imagery, or archival footage of the key discovery moment]. Institution logos/credits if available. Measurement values as lower-third text overlay.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "The key measurement, landmark discovery, or institutional proof — cite it precisely"
+    },
+    {
+      "role": "connect",
+      "target_s": 8,
+      "speech_text": "Formation of the Solar System is not just a phenomenon at the far edge of science. It connects directly to questions about our own origins. The Conservation of angular momentum caused the collapsing cloud to spin and flatten into a protoplanetary disk; most mass collected at the center forming the proto-Sun while the remainder formed the disk out of which planets, moons, asteroids, and small bodies formed has implications that reach far beyond the laboratory.",
+      "visual_direction": "CONNECT SHOT: [Imagery bridging Formation of the Solar System to human scale or everyday context — e.g. night sky, biological cell, chemical process]. Gentle visual metaphor. Warmer colour grade than previous shots.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Link to the wider universe, human biology, Earth, or the viewer's daily experience"
+    },
+    {
+      "role": "close",
+      "target_s": 6,
+      "speech_text": "We are only beginning to understand Formation of the Solar System. And perhaps that's exactly the point — the universe keeps its most ancient secrets just within reach, if we keep looking.",
+      "visual_direction": "CLOSE: [Wide, contemplative — return to establishing imagery or slow fade to black]. HELIX narration ends. Silence before credits. No host sign-off.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Resonant closing thought — open-ended, leaves the viewer with something to sit with"
+    }
+  ],
+  "provenance_card": {
+    "title": "Formation of the Solar System",
+    "domain": "astronomy",
+    "subject_id": "s013",
+    "key_measurement": "Age of Solar System: 4.5682 +/- 0.0002 billion years, determined from radiometric dating of calcium-aluminum-rich inclusions (CAIs) in carbonaceous chondrite meteorites (Connelly et al. 2012, Science 338, 651)",
+    "framework": "Nebular hypothesis (Kant-Laplace); Nice Model for outer solar system evolution; Grand Tack model for Jupiter migration; Solar System formation and evolution models",
+    "institutions": [
+      "NASA Jet Propulsion Laboratory",
+      "European Space Agency",
+      "Southwest Research Institute",
+      "Lunar and Planetary Institute",
+      "Max Planck Institute for Solar System Research",
+      "University of Arizona Lunar and Planetary Laboratory"
+    ],
+    "sources": [
+      {
+        "title": "CAI radiometric dating places Solar System formation at 4.5682 +/- 0.0002 Ga; canonical age from Pb-Pb isotope dating of CAIs in carbonaceous chondrite meteorites",
+        "citation": "Connelly et al. 2012, Science 338, 651",
+        "url": "https://www.science.org/doi/10.1126/science.1226919",
+        "doi": "10.1126/science.1226919"
+      },
+      {
+        "title": "The Solar System formed from gravitational collapse of a molecular cloud; most mass formed the Sun while the rest became a protoplanetary disk from which planets, moons, asteroids and small bodies formed",
+        "citation": "Wikipedia: Formation and evolution of the Solar System",
+        "url": "https://en.wikipedia.org/wiki/Formation_and_evolution_of_the_Solar_System"
+      },
+      {
+        "title": "Jupiter's Grand Tack migration (inward to ~1.5 AU then outward) shaped the inner solar system and explains the low mass of Mars and the structure of the asteroid belt",
+        "citation": "Walsh et al. 2011, Nature 475, 206",
+        "url": "https://www.nature.com/articles/nature10201",
+        "doi": "10.1038/nature10201"
+      },
+      {
+        "title": "The Nice Model proposes that gravitational interactions among the giant planets caused a late dynamical instability leading to the Late Heavy Bombardment ~3.9 Ga ago",
+        "citation": "Gomes et al. 2005, Nature 435, 466",
+        "url": "https://www.nature.com/articles/nature03676",
+        "doi": "10.1038/nature03676"
+      }
+    ],
+    "agent": "HELIX",
+    "accuracy_note": "All measurements cited. Uncertainty stated where present. No fabricated statistics."
+  },
+  "guardrails": [
+    "HELIX is voiceover only — no on-screen host, no synthetic presenter, no avatar.",
+    "All quantitative claims must include units and citation.",
+    "Uncertainty must be stated where present (e.g. 'approximately', 'within a margin of').",
+    "Do not present theoretical models as confirmed fact without qualification.",
+    "Do not fabricate measurements, paper titles, DOIs, or institutional affiliations.",
+    "Maintain wonder without hyperbole — the phenomena are extraordinary enough.",
+    "No speculation presented as established science.",
+    "HELIX does not cover history, biography, or language — those are DAVID's domain."
+  ],
+  "qa_rules": {
+    "min_shots": 7,
+    "min_speech_words": 12,
+    "required_shot_roles": [
+      "cold_open",
+      "establish",
+      "explain",
+      "visualize",
+      "evidence",
+      "connect",
+      "close"
+    ],
+    "voiceover_only": true,
+    "citation_required": true,
+    "unit_required": true,
+    "forbidden_patterns": [
+      "DAVID says",
+      "keeper of the Archive",
+      "MAGENTA SUPPRESS",
+      "charcoal.*wardrobe",
+      "I am HELIX",
+      "\\[UNCITED\\]"
+    ]
+  },
+  "meta": {
+    "subject_id": "s013",
+    "shot_count": 7,
+    "total_s": 64,
+    "agent": "HELIX",
+    "voice_suffix": "warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole"
+  },
+  "_agent": "HELIX",
+  "_generated_at": "2026-06-21T21:27:17.934343+00:00"
+}

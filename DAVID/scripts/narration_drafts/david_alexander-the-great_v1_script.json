@@ -1,0 +1,84 @@
+{
+  "slug": "david_alexander-the-great_v1",
+  "title": "DAVID — Alexander the Great",
+  "target_seconds": 28,
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "identity_lock": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\david_identity_lock.json",
+    "voice_suffix": "mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible, never stuffy, synthetic host only",
+    "avatar_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\references\\david_avatar_reference.jpg",
+    "archive_set_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\references\\archive_set_reference.jpg"
+  },
+  "shots": [
+    {
+      "id": "01_hook",
+      "duration": 6,
+      "t_start": 0,
+      "t_end": 6,
+      "role": "hook",
+      "video_prompt": "DAVID, keeper of the Archive — identical face, charcoal/deep navy wardrobe, Archive set, warm brass lamp at desk — seamless continuation of prior take, zero jump cut. D65 neutral 5000K balanced ambient; brass lamp amber 3200K in desk quadrant only, ≤25% frame — zero magenta spill on host, walls, or shelf blur. MAGENTA SUPPRESS: R≈G≈B within 8% in frame midtones; forbid purple/violet ambient, forbid pink wall bounce, forbid magenta shadow grey. Synthetic host only. Slow gentle push-in from medium. Direct address to camera. DAVID narrates the life of Alexander the Great with documentary authority. Lip-synced, delivers: \"The derivative of x^3 is **3x²**.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible, never stuffy, synthetic host only. Finish on a clean transitionable hold — no blink or head-turn on final frame.",
+      "speech_text": "The derivative of x^3 is **3x²**.",
+      "on_screen": "DAVID · Alexander the Great"
+    },
+    {
+      "id": "02_climax",
+      "duration": 10,
+      "t_start": 6,
+      "t_end": 16,
+      "role": "climax",
+      "video_prompt": "DAVID, keeper of the Archive — identical face, charcoal/deep navy wardrobe, Archive set, warm brass lamp at desk — seamless continuation of prior take, zero jump cut. D65 neutral 5000K balanced ambient; brass lamp amber 3200K in desk quadrant only, ≤25% frame — zero magenta spill on host, walls, or shelf blur. MAGENTA SUPPRESS: R≈G≈B within 8% in frame midtones; forbid purple/violet ambient, forbid pink wall bounce, forbid magenta shadow grey. Synthetic host only. Slow push to medium-close. DAVID leans slightly forward, intent. DAVID narrates the life of Alexander the Great with documentary authority. Lip-synced, delivers: \"By the power rule: d/dx[x^n] = n·x^(n-1).\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible, never stuffy, synthetic host only. Finish on a clean transitionable hold — no blink or head-turn on final frame.",
+      "speech_text": "By the power rule: d/dx[x^n] = n·x^(n-1).",
+      "on_screen": ""
+    },
+    {
+      "id": "03_sign_off",
+      "duration": 6,
+      "t_start": 16,
+      "t_end": 22,
+      "role": "sign_off",
+      "video_prompt": "DAVID, keeper of the Archive — identical face, charcoal/deep navy wardrobe, Archive set, warm brass lamp at desk — seamless continuation of prior take, zero jump cut. D65 neutral 5000K balanced ambient; brass lamp amber 3200K in desk quadrant only, ≤25% frame — zero magenta spill on host, walls, or shelf blur. MAGENTA SUPPRESS: R≈G≈B within 8% in frame midtones; forbid purple/violet ambient, forbid pink wall bounce, forbid magenta shadow grey. Synthetic host only. Pull back gently. DAVID's posture settles; a beat of quiet gravity. DAVID narrates the life of Alexander the Great with documentary authority. Lip-synced, delivers: \"Setting n = 3: d/dx[x^3] = 3·x^(3-1) = 3x².\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible, never stuffy, synthetic host only. Finish on a clean transitionable hold — no blink or head-turn on final frame.",
+      "speech_text": "Setting n = 3: d/dx[x^3] = 3·x^(3-1) = 3x².",
+      "on_screen": ""
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 6,
+    "card_type": "sources",
+    "title": "Sources — DAVID — Alexander the Great",
+    "subtitle": "Alexander the Great",
+    "footer": "Sources on file in NEXUS.",
+    "banner": "",
+    "lines": [],
+    "_arc_meta": {
+      "reasoning_gate": "YELLOW",
+      "confidence": 0.0
+    }
+  },
+  "guardrails": [
+    "Synthetic avatar only; no real-person likeness — DAVID is a fictional host.",
+    "Historical claims must match the source arc. Do not render unverified claims.",
+    "Attested vs reconstructed labels required for any reconstructed speech or data.",
+    "Reuse locked avatar + Archive set + voice suffix for full consistency.",
+    "Review speech_text against source arc before live render submission."
+  ],
+  "qa_rules": {
+    "require_identity_lock": true,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": false,
+    "require_arc_gate_review": true,
+    "min_shots": 2
+  },
+  "_meta": {
+    "generated_at": "2026-06-21T17:46:28.986268+00:00",
+    "source_arc": "alexander-the-great",
+    "arc_reasoning_gate": "YELLOW",
+    "arc_confidence": 0.0,
+    "beat_count": 3,
+    "shot_count": 3,
+    "agent": "NarrationAgent v1",
+    "status": "draft — review speech_text before live render"
+  }
+}

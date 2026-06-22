@@ -1,0 +1,38 @@
+{
+  "subject_id": "s001-quartz-sand-grain",
+  "domain": "geology",
+  "phenomenon": "Quartz sand grain: erosion, transport, rounding, and deposition",
+  "key_measurement": "Medium sand grain diameter 0.25–0.5 mm (Wentworth scale, 1922); sphericity increases from ~0.5 (angular) to ~0.85 (well-rounded) after >100 km fluvial transport",
+  "principle_set": "general_scientific",
+  "framework": "Domain_Specific_Visualization_Principles_Framework v1.0",
+  "institutions": [
+    "U.S. Geological Survey (USGS)",
+    "British Geological Survey (BGS)",
+    "University of Leicester Department of Geology"
+  ],
+  "sources": [
+    {
+      "citation": "Wentworth, C.K. (1922) 'A Scale of Grade and Class Terms for Clastic Sediments', Journal of Geology 30(5):377–392",
+      "type": "primary",
+      "url": "https://www.journals.uchicago.edu/doi/10.1086/622910"
+    },
+    {
+      "citation": "Kuenen, Ph.H. (1960) 'Experimental abrasion 4: eolian action', Journal of Geology 68(4):427–449",
+      "type": "primary",
+      "url": "https://www.journals.uchicago.edu/doi/10.1086/626675"
+    },
+    {
+      "citation": "USGS Mineral Resources Program — Industrial Sand and Gravel, U.S. Geological Survey Minerals Yearbook",
+      "type": "secondary",
+      "url": "https://www.usgs.gov/centers/national-minerals-information-center/sand-and-gravel-industrial"
+    }
+  ],
+  "visualization_compliance": [
+    "Scale bar in millimeters required on all grain-scale frames (target ~0.25–0.5 mm for medium sand)",
+    "Show grain shape evolution sequence: angular → subangular → subrounded → rounded — label each stage",
+    "Quartz crystal structure (SiO₂, trigonal/hexagonal) must not be depicted with incorrect bond geometry",
+    "Surface texture features (conchoidal fracture, frosted pitting from aeolian abrasion) must match SEM reference imagery",
+    "Transport medium (water vs. wind) must be explicitly labeled — rounding rates differ by order of magnitude",
+    "Label ILLUSTRATIVE on cross-section diagrams; do not depict internal crystal defects without cited SEM data"
+  ]
+}

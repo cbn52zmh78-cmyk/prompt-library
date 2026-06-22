@@ -1,0 +1,174 @@
+{
+  "slug": "helix_s012_physics",
+  "title": "Gravitational Wave Detection — GW150914, First Direct Observation",
+  "domain": "physics",
+  "target_seconds": 90,
+  "config": {
+    "agent": "HELIX",
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "host_mode": "voiceover_only",
+    "on_screen_host": false,
+    "voice_suffix": "warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+    "voice_gender": "female",
+    "voice_accent": "British RP (slight)",
+    "continuity_prefix": "HELIX VOICEOVER — SCIENCE NARRATION\nVoice: warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole\nNo on-screen presenter. Voiceover only.\nAll visuals are camera/animation/archival — HELIX does not appear on screen.\nAccuracy standard: all claims sourced. Units required. Uncertainty stated.\nTone: informative but never boring. The universe is extraordinary — let it show.",
+    "visual_style": "cinematic science — imagery-forward, minimal text overlay"
+  },
+  "shots": [
+    {
+      "role": "cold_open",
+      "target_s": 8,
+      "speech_text": "Imagine 0.6 billion. That single number is the key to understanding Gravitational Wave Detection — GW150914, First Direct Observation — one of the most elegant and counterintuitive phenomena in the known universe.",
+      "visual_direction": "OPEN ON: [High-impact visual — The GW150914 signal: two oscillating traces (one from Livingston, one from Hanford, mirrored) showing a rapid frequency ]. Title card: 'Gravitational Wave Detection — GW150914, First Direct Observation'. No host. Pure visual with HELIX voiceover.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Striking hook — a disorienting scale fact or visual paradox that pulls the viewer in immediately"
+    },
+    {
+      "role": "establish",
+      "target_s": 10,
+      "speech_text": "Gravitational Wave Detection — GW150914, First Direct Observation sits within the domain of physics. Einstein's general relativity (1916) predicts that accelerating masses produce ripples in spacetime — gravitational waves — that propagate at the speed of light, stretching and squeezing space transversely as they pass. To understand it, we need to think at a scale that challenges intuition.",
+      "visual_direction": "ESTABLISH SHOT: [Wide or macro view establishing scale and context of Gravitational Wave Detection — GW150914, First Direct Observation]. Slow zoom or pull-back revealing scope. Minimal text — let the imagery speak.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Set the scene: what is this phenomenon, where does it occur, what scale are we at"
+    },
+    {
+      "role": "explain",
+      "target_s": 12,
+      "speech_text": "Einstein's general relativity (1916) predicts that accelerating masses produce ripples in spacetime — gravitational waves — that propagate at the speed of light, stretching and squeezing space transversely as they pass Binary black hole systems lose orbital energy to gravitational wave emission, causing the orbit to decay and inspiral over millions of years, culminating in merger on timescales of milliseconds at near-relativistic orbital velocities The governing framework here is General relativity (strong-field regime); Laser interferometry; Matched-filter signal processing; Numerical relativity (for merger waveform templates).",
+      "visual_direction": "EXPLAIN SEQUENCE: [Animation or diagram illustrating the core mechanism of Gravitational Wave Detection — GW150914, First Direct Observation]. Clear, elegant — no clutter. Labels only where essential. Motion should mirror the narration pace.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Core mechanism or concept — clearly, accurately, engagingly. No jargon without definition"
+    },
+    {
+      "role": "visualize",
+      "target_s": 10,
+      "speech_text": "What you're seeing here — The GW150914 signal: two oscillating traces (one from Livingston, one from Hanford, mirrored) showing a rapid frequency chirp — growing from slow wobble to violent peak oscillation.",
+      "visual_direction": "VISUALIZATION: [The GW150914 signal: two oscillating traces (one from Livingston, one from Hanford, mirrored) showing a rapid frequency chirp — growing from slow wobble to violent peak oscillation in 0.2 seconds, then sharp ringdown to silence. The actual strain is 10⁻²¹ — the LIGO arm physically stretched and compressed by less than 1/1000 the diameter of a proton. The best visual metaphor: if the LIGO arm were the distance to Alpha Centauri (4.2 light-years), the change in length would be less than the diameter of a human hair. The sound: the chirp is in the audible frequency range (35–250 Hz) — like a brief rising 'whoop' or bird chirp lasting one-fifth of a second. The source: two black holes spiraling inward at 30–60% the speed of light, separated by only 350 km when they merged. The merger: an immense flash of gravitational energy equivalent to 3 solar masses converted instantly — yet zero electromagnetic light, completely invisible to ordinary telescopes. Shot ideas: split-screen of Livingston and Hanford detector signals appearing simultaneously; animation of spacetime grid rippling outward from two spiraling black holes; zoom into 4km arm showing laser beam and suspended mirror; waveform overlay on cosmic timeline.]. HELIX narrates over continuous visual — no cuts interrupting the flow.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Describe what the camera or animation shows — specific, visual, sensory language"
+    },
+    {
+      "role": "evidence",
+      "target_s": 10,
+      "speech_text": "The numbers confirm it. First direct detection of gravitational waves (GW150914) announced February 11, 2016, from a binary black hole merger of 36 M☉ + 29 M☉ producing a 62 M☉ remnant at 1.3 billion light-years distance, detected September 14, 2015. This result — published by Abbott et al. (LIGO Scientific Collaboration and Virgo Collaboration) 2016, Physical Review Letters 116 061102 — represents one of the landmark measurements in modern physics.",
+      "visual_direction": "EVIDENCE SHOT: [Data visualisation, telescope imagery, or archival footage of the key discovery moment]. Institution logos/credits if available. Measurement values as lower-third text overlay.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "The key measurement, landmark discovery, or institutional proof — cite it precisely"
+    },
+    {
+      "role": "connect",
+      "target_s": 8,
+      "speech_text": "Gravitational Wave Detection — GW150914, First Direct Observation is not just a phenomenon at the far edge of science. It connects directly to questions about the fabric of reality. The Binary black hole systems lose orbital energy to gravitational wave emission, causing the orbit to decay and inspiral over millions of years, culminating in merger on timescales of milliseconds at near-relativistic orbital velocities has implications that reach far beyond the laboratory.",
+      "visual_direction": "CONNECT SHOT: [Imagery bridging Gravitational Wave Detection — GW150914, First Direct Observation to human scale or everyday context — e.g. night sky, biological cell, chemical process]. Gentle visual metaphor. Warmer colour grade than previous shots.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Link to the wider universe, human biology, Earth, or the viewer's daily experience"
+    },
+    {
+      "role": "close",
+      "target_s": 6,
+      "speech_text": "We are only beginning to understand Gravitational Wave Detection — GW150914, First Direct Observation. And perhaps that's exactly the point — the universe keeps its most intricate secrets just within reach, if we keep looking.",
+      "visual_direction": "CLOSE: [Wide, contemplative — return to establishing imagery or slow fade to black]. HELIX narration ends. Silence before credits. No host sign-off.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Resonant closing thought — open-ended, leaves the viewer with something to sit with"
+    }
+  ],
+  "provenance_card": {
+    "title": "Gravitational Wave Detection — GW150914, First Direct Observation",
+    "domain": "physics",
+    "subject_id": "s012",
+    "key_measurement": "Peak strain amplitude: h ≈ 1.0 × 10⁻²¹ (dimensionless); Source: merger of 35 M☉ + 30 M☉ black holes → 62 M☉ remnant, radiating 3.0 ± 0.5 M☉c² (5.3 × 10⁴⁷ J) in gravitational waves; Distance: 1.4 ± 0.6 billion light-years (440 Mpc); Detected 09:50:45 UTC September 14, 2015 (Abbott et al. 2016, PRL 116 061102)",
+    "framework": "General relativity (strong-field regime); Laser interferometry; Matched-filter signal processing; Numerical relativity (for merger waveform templates)",
+    "institutions": [
+      "LIGO Scientific Collaboration (1000+ scientists worldwide)",
+      "California Institute of Technology (Caltech) — LIGO Laboratory",
+      "Massachusetts Institute of Technology (MIT) — LIGO Laboratory",
+      "Virgo Collaboration (European Gravitational Observatory, Pisa, Italy)",
+      "National Science Foundation (NSF) — primary funder"
+    ],
+    "sources": [
+      {
+        "title": "First direct detection of gravitational waves (GW150914) announced February 11, 2016, from a binary black hole merger of 36 M☉ + 29 M☉ producing a 62 M☉ remnant at 1.3 billion light-years distance, detected September 14, 2015",
+        "citation": "Abbott et al. (LIGO Scientific Collaboration and Virgo Collaboration) 2016, Physical Review Letters 116 061102",
+        "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.061102",
+        "doi": "10.1103/PhysRevLett.116.061102"
+      },
+      {
+        "title": "GW150914 statistical significance assessed at ≥ 5.1 sigma (confidence > 99.99994%); signal lasted 0.2 seconds and swept 35–250 Hz; both detectors recorded peak strain ~10⁻²¹",
+        "citation": "Abbott et al. 2016, PRL 116 061102; and Abbott et al. 2016, ApJL 818 L22 (Astrophysical Implications)",
+        "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.061102",
+        "doi": "10.1103/PhysRevLett.116.061102"
+      },
+      {
+        "title": "Nobel Prize in Physics 2017 awarded to Rainer Weiss (MIT), Kip Thorne (Caltech), and Barry Barish (Caltech) 'for decisive contributions to the LIGO detector and the observation of gravitational waves'",
+        "citation": "Nobel Committee for Physics 2017, Nobel Prize in Physics announcement",
+        "url": "https://www.nobelprize.org/prizes/physics/2017/summary/"
+      },
+      {
+        "title": "LIGO interferometers use 4 km arm cavities with mirrors suspended in multi-stage seismic isolation; Advanced LIGO sensitivity improvement by factor ~10 over initial LIGO enabled the first detection",
+        "citation": "Aasi et al. (LIGO Scientific Collaboration) 2015, Classical and Quantum Gravity 32 074001 (Advanced LIGO design paper)",
+        "url": "https://iopscience.iop.org/article/10.1088/0264-9381/32/7/074001",
+        "doi": "10.1088/0264-9381/32/7/074001"
+      },
+      {
+        "title": "Indirect evidence for gravitational waves first confirmed in 1974 by Hulse and Taylor via orbital decay of binary pulsar PSR B1913+16 matching GR predictions — awarded Nobel Prize in Physics 1993",
+        "citation": "Hulse & Taylor 1975, ApJ 195 L51",
+        "url": "https://ui.adsabs.harvard.edu/abs/1975ApJ...195L..51H",
+        "doi": "10.1086/181708"
+      }
+    ],
+    "agent": "HELIX",
+    "accuracy_note": "All measurements cited. Uncertainty stated where present. No fabricated statistics."
+  },
+  "guardrails": [
+    "HELIX is voiceover only — no on-screen host, no synthetic presenter, no avatar.",
+    "All quantitative claims must include units and citation.",
+    "Uncertainty must be stated where present (e.g. 'approximately', 'within a margin of').",
+    "Do not present theoretical models as confirmed fact without qualification.",
+    "Do not fabricate measurements, paper titles, DOIs, or institutional affiliations.",
+    "Maintain wonder without hyperbole — the phenomena are extraordinary enough.",
+    "No speculation presented as established science.",
+    "HELIX does not cover history, biography, or language — those are DAVID's domain."
+  ],
+  "qa_rules": {
+    "min_shots": 7,
+    "min_speech_words": 12,
+    "required_shot_roles": [
+      "cold_open",
+      "establish",
+      "explain",
+      "visualize",
+      "evidence",
+      "connect",
+      "close"
+    ],
+    "voiceover_only": true,
+    "citation_required": true,
+    "unit_required": true,
+    "forbidden_patterns": [
+      "DAVID says",
+      "keeper of the Archive",
+      "MAGENTA SUPPRESS",
+      "charcoal.*wardrobe",
+      "I am HELIX",
+      "\\[UNCITED\\]"
+    ]
+  },
+  "meta": {
+    "subject_id": "s012",
+    "shot_count": 7,
+    "total_s": 64,
+    "agent": "HELIX",
+    "voice_suffix": "warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole"
+  },
+  "_agent": "HELIX",
+  "_generated_at": "2026-06-21T21:27:17.930273+00:00"
+}

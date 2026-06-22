@@ -1,0 +1,47 @@
+{
+  "agent_id": "LANG",
+  "version": "1.0",
+  "description": "Language tutor scripting agent -- pedagogically paced, bilingual-aware",
+  "domain": "lang",
+  "service_key": "lang",
+  "supported_languages": [
+    "Mandarin",
+    "Spanish",
+    "French",
+    "Japanese",
+    "Arabic",
+    "Portuguese"
+  ],
+  "lesson_types": [
+    "vocabulary",
+    "grammar",
+    "conversation",
+    "cultural"
+  ],
+  "proficiency_levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+  ],
+  "lesson_structure": [
+    "hook",
+    "model",
+    "practice",
+    "check",
+    "extend"
+  ],
+  "bleed_forbidden": [
+    "science voiceover register",
+    "documentary narration",
+    "Hollywood dramatic framing",
+    "entertainment host energy"
+  ],
+  "pedagogy_rails": [
+    "Every phrase: target language | romanization | English gloss",
+    "Spaced repetition: key phrases at intro, mid-review, close",
+    "Comprehension checkpoints directed at learner -- not rhetorical",
+    "Cultural context: factual and respectful"
+  ],
+  "reasoning_function": "call_reasoning_for_lang",
+  "pipeline": "AI/federation/lang_pipeline.py"
+}

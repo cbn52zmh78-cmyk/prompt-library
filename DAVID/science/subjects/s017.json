@@ -1,0 +1,76 @@
+{
+  "nexus_command": "research_pass",
+  "subject_type": "science",
+  "subject_id": "s017",
+  "domain": "astronomy",
+  "phenomenon": "Neutron Star Mergers and Kilonovae -- r-process Nucleosynthesis",
+  "key_measurement": "GW170817 produced approximately 16,000 Earth masses of r-process heavy elements, including approximately 10 Earth masses of gold and platinum combined; gravitational wave chirp mass measured at 1.188 +0.004/-0.002 solar masses; source at 40 +8/-8 Mpc (approximately 130 million light-years) in galaxy NGC 4993 (Abbott et al. 2017, ApJL 848 L12; arXiv:1710.05833)",
+  "principle_set": [
+    "GW170817 (17 August 2017, 12:41:04.4 UTC) was the first gravitational wave event definitively correlated with electromagnetic observations -- the first multi-messenger astronomy event -- detected by LIGO (Hanford and Livingston) and Virgo interferometers in the galaxy NGC 4993 approximately 140 million light-years away",
+    "The merger of two neutron stars produced short gamma-ray burst GRB 170817A, detected by Fermi Gamma-ray Space Telescope 1.74 +/- 0.05 seconds after the merger signal and independently confirmed by INTEGRAL; this coincidence proved gravitational waves travel at the speed of light to within 3x10^-15 times c",
+    "Eleven hours after the merger, optical transient AT 2017gfo (SSS17a) was detected by the Swope Telescope at Las Campanas Observatory in NGC 4993 -- this was the kilonova: an isotropically expanding fireball of radioactive r-process nuclei ejected at approximately 10% of light speed and glowing from radioactive decay heat",
+    "The kilonova spectrum evolved from blue to red over approximately 10 days as ejecta expanded and cooled -- spectral modeling identified r-process elements strontium and yttrium in the AT 2017gfo ejecta, providing the first direct spectroscopic confirmation that neutron star mergers are sites of r-process nucleosynthesis (Watson et al. 2019, Nature 574, 497)",
+    "The r-process (rapid neutron capture) occurs in extreme neutron-rich environments: free neutrons are captured by seed nuclei faster than beta-decay can occur, building up elements far beyond iron including gold (Z=79), platinum (Z=78), uranium (Z=92), and the lanthanides",
+    "GW170817 confirmed neutron star mergers as a primary site for r-process nucleosynthesis -- accounting for roughly half of all elements heavier than iron in the universe; approximately 16,000 Earth masses of heavy elements were produced in this single event including approximately 10 Earth masses just of gold and platinum",
+    "The multi-messenger paper (arXiv:1710.05833) is authored by approximately 4,000 astronomers from over 900 institutions -- roughly one-third of the worldwide astronomical community -- with observations from 70+ observatories across all 7 continents and in space; awarded Science magazine Breakthrough of the Year 2017"
+  ],
+  "framework": "Multi-messenger astronomy; r-process nucleosynthesis theory; kilonova light curve models (Metzger et al. 2010); neutron star merger astrophysics (Li & Paczynski 1998)",
+  "institutions": [
+    "LIGO Scientific Collaboration (Caltech, MIT, and partner institutions)",
+    "Virgo Collaboration (EGO, European Gravitational Observatory)",
+    "NASA Fermi Gamma-ray Space Telescope team (Goddard Space Flight Center)",
+    "ESA INTEGRAL mission team",
+    "Carnegie Observatories -- One-Meter Two Hemisphere (1M2H) team (Swope Telescope discovery)",
+    "Chandra X-ray Observatory team (NASA/CXC)",
+    "European Southern Observatory (ESO)",
+    "University of Copenhagen (Watson et al. -- strontium identification)"
+  ],
+  "sources": [
+    {
+      "claim": "GW170817 multi-messenger observations: gravitational wave + GRB 170817A + kilonova AT 2017gfo; approximately 16,000 Earth masses of r-process elements produced including ~10 Earth masses of gold and platinum; authored by ~4,000 astronomers from 900+ institutions",
+      "citation": "Abbott et al. (LIGO, Virgo and collaborations) 2017, ApJL 848, L12 -- Multi-messenger Observations of a Binary Neutron Star Merger",
+      "url": "https://arxiv.org/abs/1710.05833",
+      "doi": "10.3847/2041-8213/aa91c9"
+    },
+    {
+      "claim": "Gravitational wave detection of binary neutron star inspiral GW170817; component masses 0.86-2.26 solar masses; chirp mass 1.188 solar masses; distance 40 +8/-8 Mpc; Fermi detected GRB 170817A 1.74 +/- 0.05 s after merger",
+      "citation": "Abbott et al. (LIGO Scientific Collaboration & Virgo Collaboration) 2017, Physical Review Letters 119, 161101",
+      "url": "https://arxiv.org/abs/1710.05832",
+      "doi": "10.1103/PhysRevLett.119.161101"
+    },
+    {
+      "claim": "First spectroscopic identification of r-process element strontium in kilonova AT 2017gfo ejecta from GW170817, providing direct proof that neutron star mergers are r-process nucleosynthesis sites",
+      "citation": "Watson et al. 2019, Nature 574, 497-500",
+      "url": "https://www.nature.com/articles/s41586-019-1676-3",
+      "doi": "10.1038/s41586-019-1676-3"
+    },
+    {
+      "claim": "Kilonova predicted as electromagnetic counterpart to neutron star mergers powered by radioactive decay of r-process nuclei; peak brightness approximately 1000x classical nova -- coining of the term kilonova",
+      "citation": "Metzger et al. 2010, MNRAS 406, 2650",
+      "url": "https://arxiv.org/abs/1001.5029",
+      "doi": "10.1111/j.1365-2966.2010.16864.x"
+    },
+    {
+      "claim": "GRB 170817A jointly detected by Fermi and INTEGRAL; gravitational wave and gamma-ray signals jointly constrain difference in speed of gravity and light to between -3x10^-15 and +7x10^-16 times c",
+      "citation": "Abbott et al. 2017, ApJL 848, L13 -- Gravitational Waves and Gamma-Rays from a Binary Neutron Star Merger",
+      "url": "https://arxiv.org/abs/1710.05834",
+      "doi": "10.3847/2041-8213/aa920c"
+    },
+    {
+      "claim": "JWST observations of kilonova GRB 230307A confirmed heavy element production (tellurium and lanthanides) in a compact binary merger, extending the GW170817 result to a second event",
+      "citation": "Levan et al. 2023, Nature 626, 737-741",
+      "url": "https://www.nature.com/articles/s41586-023-06759-1",
+      "doi": "10.1038/s41586-023-06759-1"
+    }
+  ],
+  "visualization_notes": "This subject offers the most cinematically powerful imagery in the series -- the literal forging of gold in space. Primary visual arc: two dense neutron stars (depicted as perfectly spherical, city-sized objects ~10 km diameter) orbiting each other in an accelerating death spiral. As they approach, space-time warps visibly around them -- gravitational wave ripples radiating outward like rings on the fabric of space. The inspiral lasts ~100 seconds of audible chirp signal -- this can be sonified using the publicly released LIGO audio. At the moment of merger: a blinding flash -- the short gamma-ray burst -- jets of energy lancing outward along the rotation axis. Then expanding around the collision site: the kilonova. Early phase (first 48 hours): a brilliant blue-white fireball expanding at 10% the speed of light, hot and rich in light r-process elements. Over 10 days: the fireball reddens and dims as heavier lanthanide-rich ejecta dominate -- the red color from opacity of heavy nuclei absorbing blue light. Scale context: this single explosion created 10 Earth masses of gold and platinum. Pan to show NGC 4993 galaxy at 40 Mpc -- the event a tiny blue-to-red spark in one elliptical galaxy. Available public images: NASA/ESA Hubble image of AT 2017gfo in NGC 4993 (publicly released October 16, 2017; credit NASA/ESA/STScI); Chandra X-ray image of GW170817 afterglow; ESO artist impressions (Creative Commons); LIGO chirp audio (publicly released). Most cinematically powerful moment: the color transition from blue to red kilonova over 10 days -- a time-lapse in which the screen literally turns from blue-white to red-gold as heavy nuclei form.",
+  "visualization_compliance": [
+    "All GW170817 imagery is public-domain or under NASA/ESA open-access policy -- credit NASA/ESA/STScI for Hubble images",
+    "LIGO facility images are publicly available -- credit Caltech/MIT/LIGO Lab",
+    "ESO artist impressions of kilonova are publicly released under Creative Commons -- credit ESO/L. Calcada",
+    "LIGO GW170817 chirp audio sonification is publicly available from LIGO -- cleared for documentary use with attribution",
+    "All scientific claims are sourced to peer-reviewed literature; arXiv:1710.05833 is freely accessible open access"
+  ],
+  "_ingested_from": "T4_pass1_s017.json",
+  "_ingested_at": "2026-06-21T21:14:32.737512+00:00"
+}

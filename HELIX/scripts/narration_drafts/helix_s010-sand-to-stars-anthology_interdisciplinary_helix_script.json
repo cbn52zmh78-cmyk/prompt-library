@@ -1,0 +1,159 @@
+{
+  "slug": "helix_s010-sand-to-stars-anthology_interdisciplinary",
+  "title": "Sand-to-stars anthology: scale ladder from silanol bond to observable universe",
+  "domain": "interdisciplinary",
+  "target_seconds": 90,
+  "config": {
+    "agent": "HELIX",
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "host_mode": "voiceover_only",
+    "on_screen_host": false,
+    "voice_suffix": "warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+    "voice_gender": "female",
+    "voice_accent": "British RP (slight)",
+    "continuity_prefix": "HELIX VOICEOVER — SCIENCE NARRATION\nVoice: warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole\nNo on-screen presenter. Voiceover only.\nAll visuals are camera/animation/archival — HELIX does not appear on screen.\nAccuracy standard: all claims sourced. Units required. Uncertainty stated.\nTone: informative but never boring. The universe is extraordinary — let it show.",
+    "visual_style": "cinematic science — imagery-forward, minimal text overlay"
+  },
+  "shots": [
+    {
+      "role": "cold_open",
+      "target_s": 8,
+      "speech_text": "Imagine Scale span: Si–O bond length 1.62 Å (1.62×10⁻¹⁰ m) to observ. That single number is the key to understanding Sand-to-stars anthology: scale ladder from silanol bond to observable universe — one of the most extraordinary phenomena in the known universe.",
+      "visual_direction": "OPEN ON: [High-impact visual — dramatic representation of Sand-to-stars anthology: scale ladder from silanol bond to observable universe]. Title card: 'Sand-to-stars anthology: scale ladder from silanol bond to observable universe'. No host. Pure visual with HELIX voiceover.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Striking hook — a disorienting scale fact or visual paradox that pulls the viewer in immediately"
+    },
+    {
+      "role": "establish",
+      "target_s": 10,
+      "speech_text": "Sand-to-stars anthology: scale ladder from silanol bond to observable universe sits within the domain of interdisciplinary. g. To understand it, we need to think at a scale that challenges intuition.",
+      "visual_direction": "ESTABLISH SHOT: [Wide or macro view establishing scale and context of Sand-to-stars anthology: scale ladder from silanol bond to observable universe]. Slow zoom or pull-back revealing scope. Minimal text — let the imagery speak.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Set the scene: what is this phenomenon, where does it occur, what scale are we at"
+    },
+    {
+      "role": "explain",
+      "target_s": 12,
+      "speech_text": "g e The governing framework here is Domain_Specific_Visualization_Principles_Framework v1.0.",
+      "visual_direction": "EXPLAIN SEQUENCE: [Animation or diagram illustrating the core mechanism of Sand-to-stars anthology: scale ladder from silanol bond to observable universe]. Clear, elegant — no clutter. Labels only where essential. Motion should mirror the narration pace.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Core mechanism or concept — clearly, accurately, engagingly. No jargon without definition"
+    },
+    {
+      "role": "visualize",
+      "target_s": 10,
+      "speech_text": "The visual signature of Sand-to-stars anthology: scale ladder from silanol bond to observable universe is unlike anything else in interdisciplinary. The n produces effects visible at extraordinary scale.",
+      "visual_direction": "VISUALIZATION: [Best available imagery/animation of Sand-to-stars anthology: scale ladder from silanol bond to observable universe — archival, simulated, or observational]. HELIX voiceover continuous.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Describe what the camera or animation shows — specific, visual, sensory language"
+    },
+    {
+      "role": "evidence",
+      "target_s": 10,
+      "speech_text": "The key measurement: Scale span: Si–O bond length 1.62 Å (1.62×10⁻¹⁰ m) to observable universe radius ~4.4×10²⁶ m — 36 orders of magnitude; each decade of scale corresponds to one rung on the Powers of Ten ladder. Results like this, produced by National Institute of Standards and Technology (NIST) — CODATA physical constants, transformed our understanding of Sand-to-stars anthology: scale ladder from silanol bond to observable universe.",
+      "visual_direction": "EVIDENCE SHOT: [Data visualisation, telescope imagery, or archival footage of the key discovery moment]. Institution logos/credits if available. Measurement values as lower-third text overlay.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "The key measurement, landmark discovery, or institutional proof — cite it precisely"
+    },
+    {
+      "role": "connect",
+      "target_s": 8,
+      "speech_text": "Sand-to-stars anthology: scale ladder from silanol bond to observable universe is not just a phenomenon at the far edge of science. It connects directly to questions about the fabric of reality. The e has implications that reach far beyond the laboratory.",
+      "visual_direction": "CONNECT SHOT: [Imagery bridging Sand-to-stars anthology: scale ladder from silanol bond to observable universe to human scale or everyday context — e.g. night sky, biological cell, chemical process]. Gentle visual metaphor. Warmer colour grade than previous shots.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Link to the wider universe, human biology, Earth, or the viewer's daily experience"
+    },
+    {
+      "role": "close",
+      "target_s": 6,
+      "speech_text": "We are only beginning to understand Sand-to-stars anthology: scale ladder from silanol bond to observable universe. And perhaps that's exactly the point — the universe keeps its most intricate secrets just within reach, if we keep looking.",
+      "visual_direction": "CLOSE: [Wide, contemplative — return to establishing imagery or slow fade to black]. HELIX narration ends. Silence before credits. No host sign-off.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Resonant closing thought — open-ended, leaves the viewer with something to sit with"
+    }
+  ],
+  "provenance_card": {
+    "title": "Sand-to-stars anthology: scale ladder from silanol bond to observable universe",
+    "domain": "interdisciplinary",
+    "subject_id": "s010-sand-to-stars-anthology",
+    "key_measurement": "Scale span: Si–O bond length 1.62 Å (1.62×10⁻¹⁰ m) to observable universe radius ~4.4×10²⁶ m — 36 orders of magnitude; each decade of scale corresponds to one rung on the Powers of Ten ladder",
+    "framework": "Domain_Specific_Visualization_Principles_Framework v1.0",
+    "institutions": [
+      "National Institute of Standards and Technology (NIST) — CODATA physical constants",
+      "NASA Jet Propulsion Laboratory (Solar System scale reference)",
+      "ESA Planck Science Team (cosmic distance scale)",
+      "Eames Office / IBM (Powers of Ten film, 1977 — foundational scale-ladder reference)"
+    ],
+    "sources": [
+      {
+        "title": "Source",
+        "citation": "NIST CODATA 2018 — Fundamental Physical Constants, National Institute of Standards and Technology",
+        "url": "https://physics.nist.gov/cuu/Constants/"
+      },
+      {
+        "title": "Source",
+        "citation": "Morrison, P. & Morrison, P. (1982) 'Powers of Ten: A Book About the Relative Size of Things in the Universe and the Effect of Adding Another Zero', Scientific American Books / W.H. Freeman, New York",
+        "url": "https://www.worldcat.org/isbn/0716750028"
+      },
+      {
+        "title": "Source",
+        "citation": "Planck Collaboration: Aghanim, N. et al. (2020) 'Planck 2018 results. VI. Cosmological parameters', Astronomy & Astrophysics 641:A6",
+        "url": "https://www.aanda.org/articles/aa/abs/2020/09/aa33910-18/aa33910-18.html"
+      }
+    ],
+    "agent": "HELIX",
+    "accuracy_note": "All measurements cited. Uncertainty stated where present. No fabricated statistics."
+  },
+  "guardrails": [
+    "HELIX is voiceover only — no on-screen host, no synthetic presenter, no avatar.",
+    "All quantitative claims must include units and citation.",
+    "Uncertainty must be stated where present (e.g. 'approximately', 'within a margin of').",
+    "Do not present theoretical models as confirmed fact without qualification.",
+    "Do not fabricate measurements, paper titles, DOIs, or institutional affiliations.",
+    "Maintain wonder without hyperbole — the phenomena are extraordinary enough.",
+    "No speculation presented as established science.",
+    "HELIX does not cover history, biography, or language — those are DAVID's domain."
+  ],
+  "qa_rules": {
+    "min_shots": 7,
+    "min_speech_words": 12,
+    "required_shot_roles": [
+      "cold_open",
+      "establish",
+      "explain",
+      "visualize",
+      "evidence",
+      "connect",
+      "close"
+    ],
+    "voiceover_only": true,
+    "citation_required": true,
+    "unit_required": true,
+    "forbidden_patterns": [
+      "DAVID says",
+      "keeper of the Archive",
+      "MAGENTA SUPPRESS",
+      "charcoal.*wardrobe",
+      "I am HELIX",
+      "\\[UNCITED\\]"
+    ]
+  },
+  "meta": {
+    "subject_id": "s010-sand-to-stars-anthology",
+    "shot_count": 7,
+    "total_s": 64,
+    "agent": "HELIX",
+    "voice_suffix": "warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole"
+  },
+  "_agent": "HELIX",
+  "_generated_at": "2026-06-21T21:27:17.920327+00:00"
+}

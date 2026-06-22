@@ -1,0 +1,104 @@
+{
+  "slug": "david_julius-caesar_v1",
+  "title": "DAVID — Julius Caesar",
+  "target_seconds": 44,
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "identity_lock": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\david_identity_lock.json",
+    "voice_suffix": "mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible, never stuffy, synthetic host only",
+    "avatar_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\references\\david_avatar_reference.jpg",
+    "archive_set_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\references\\archive_set_reference.jpg"
+  },
+  "shots": [
+    {
+      "id": "01_hook",
+      "duration": 6,
+      "t_start": 0,
+      "t_end": 6,
+      "role": "hook",
+      "video_prompt": "DAVID, keeper of the Archive — identical face, charcoal/deep navy wardrobe, Archive set, warm brass lamp at desk — seamless continuation of prior take, zero jump cut. D65 neutral 5000K balanced ambient; brass lamp amber 3200K in desk quadrant only, ≤25% frame — zero magenta spill on host, walls, or shelf blur. MAGENTA SUPPRESS: R≈G≈B within 8% in frame midtones; forbid purple/violet ambient, forbid pink wall bounce, forbid magenta shadow grey. Synthetic host only. Slow gentle push-in from medium. Direct address to camera. DAVID narrates the life of Julius Caesar with documentary authority. Lip-synced, delivers: \"1. The problem asks for the derivative of x^3.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible, never stuffy, synthetic host only. Finish on a clean transitionable hold — no blink or head-turn on final frame.",
+      "speech_text": "1. The problem asks for the derivative of x^3.",
+      "on_screen": "DAVID · Julius Caesar"
+    },
+    {
+      "id": "02_exposition",
+      "duration": 8,
+      "t_start": 6,
+      "t_end": 14,
+      "role": "exposition",
+      "video_prompt": "DAVID, keeper of the Archive — identical face, charcoal/deep navy wardrobe, Archive set, warm brass lamp at desk — seamless continuation of prior take, zero jump cut. D65 neutral 5000K balanced ambient; brass lamp amber 3200K in desk quadrant only, ≤25% frame — zero magenta spill on host, walls, or shelf blur. MAGENTA SUPPRESS: R≈G≈B within 8% in frame midtones; forbid purple/violet ambient, forbid pink wall bounce, forbid magenta shadow grey. Synthetic host only. Locked medium. DAVID at worktable or standing among Archive shelves. DAVID narrates the life of Julius Caesar with documentary authority. Lip-synced, delivers: \"2. By the power rule, d/dx[x^n] = n·x^(n-1).\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible, never stuffy, synthetic host only. Finish on a clean transitionable hold — no blink or head-turn on final frame.",
+      "speech_text": "2. By the power rule, d/dx[x^n] = n·x^(n-1).",
+      "on_screen": ""
+    },
+    {
+      "id": "03_climax",
+      "duration": 10,
+      "t_start": 14,
+      "t_end": 24,
+      "role": "climax",
+      "video_prompt": "DAVID, keeper of the Archive — identical face, charcoal/deep navy wardrobe, Archive set, warm brass lamp at desk — seamless continuation of prior take, zero jump cut. D65 neutral 5000K balanced ambient; brass lamp amber 3200K in desk quadrant only, ≤25% frame — zero magenta spill on host, walls, or shelf blur. MAGENTA SUPPRESS: R≈G≈B within 8% in frame midtones; forbid purple/violet ambient, forbid pink wall bounce, forbid magenta shadow grey. Synthetic host only. Slow push to medium-close. DAVID leans slightly forward, intent. DAVID narrates the life of Julius Caesar with documentary authority. Lip-synced, delivers: \"3. Applying with n=3: d/dx[x^3] = 3·x^2.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible, never stuffy, synthetic host only. Finish on a clean transitionable hold — no blink or head-turn on final frame.",
+      "speech_text": "3. Applying with n=3: d/dx[x^3] = 3·x^2.",
+      "on_screen": ""
+    },
+    {
+      "id": "04_exposition",
+      "duration": 8,
+      "t_start": 24,
+      "t_end": 32,
+      "role": "exposition",
+      "video_prompt": "DAVID, keeper of the Archive — identical face, charcoal/deep navy wardrobe, Archive set, warm brass lamp at desk — seamless continuation of prior take, zero jump cut. D65 neutral 5000K balanced ambient; brass lamp amber 3200K in desk quadrant only, ≤25% frame — zero magenta spill on host, walls, or shelf blur. MAGENTA SUPPRESS: R≈G≈B within 8% in frame midtones; forbid purple/violet ambient, forbid pink wall bounce, forbid magenta shadow grey. Synthetic host only. Locked medium. DAVID at worktable or standing among Archive shelves. DAVID narrates the life of Julius Caesar with documentary authority. Lip-synced, delivers: \"4. No edge cases or domain restrictions for polynomials.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible, never stuffy, synthetic host only. Finish on a clean transitionable hold — no blink or head-turn on final frame.",
+      "speech_text": "4. No edge cases or domain restrictions for polynomials.",
+      "on_screen": ""
+    },
+    {
+      "id": "05_sign_off",
+      "duration": 6,
+      "t_start": 32,
+      "t_end": 38,
+      "role": "sign_off",
+      "video_prompt": "DAVID, keeper of the Archive — identical face, charcoal/deep navy wardrobe, Archive set, warm brass lamp at desk — seamless continuation of prior take, zero jump cut. D65 neutral 5000K balanced ambient; brass lamp amber 3200K in desk quadrant only, ≤25% frame — zero magenta spill on host, walls, or shelf blur. MAGENTA SUPPRESS: R≈G≈B within 8% in frame midtones; forbid purple/violet ambient, forbid pink wall bounce, forbid magenta shadow grey. Synthetic host only. Pull back gently. DAVID's posture settles; a beat of quiet gravity. DAVID narrates the life of Julius Caesar with documentary authority. Lip-synced, delivers: \"5. Result is exact — no [UNCERTAIN] flags needed.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible, never stuffy, synthetic host only. Finish on a clean transitionable hold — no blink or head-turn on final frame.",
+      "speech_text": "5. Result is exact — no [UNCERTAIN] flags needed.",
+      "on_screen": ""
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 6,
+    "card_type": "sources",
+    "title": "Sources — DAVID — Julius Caesar",
+    "subtitle": "Julius Caesar",
+    "footer": "Sources on file in NEXUS.",
+    "banner": "",
+    "lines": [],
+    "_arc_meta": {
+      "reasoning_gate": "YELLOW",
+      "confidence": 0.0
+    }
+  },
+  "guardrails": [
+    "Synthetic avatar only; no real-person likeness — DAVID is a fictional host.",
+    "Historical claims must match the source arc. Do not render unverified claims.",
+    "Attested vs reconstructed labels required for any reconstructed speech or data.",
+    "Reuse locked avatar + Archive set + voice suffix for full consistency.",
+    "Review speech_text against source arc before live render submission."
+  ],
+  "qa_rules": {
+    "require_identity_lock": true,
+    "require_synthetic_guard": true,
+    "require_reconstructed_labels": false,
+    "require_arc_gate_review": true,
+    "min_shots": 2
+  },
+  "_meta": {
+    "generated_at": "2026-06-21T18:36:51.137105+00:00",
+    "source_arc": "julius-caesar",
+    "arc_reasoning_gate": "YELLOW",
+    "arc_confidence": 0.0,
+    "beat_count": 5,
+    "shot_count": 5,
+    "agent": "NarrationAgent v1",
+    "status": "draft — review speech_text before live render"
+  }
+}

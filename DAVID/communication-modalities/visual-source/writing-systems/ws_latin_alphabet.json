@@ -1,0 +1,17 @@
+{
+  "system_id": "ws_latin_alphabet",
+  "name": "Latin Alphabet",
+  "script_family": "alphabetic / Latin",
+  "approx_period": "7th century BCE – present (primary historical use: ~700 BCE – 500 CE for classical epigraphy)",
+  "decipherment_status": "fully deciphered",
+  "extant_corpus_size": "~300,000+ Latin inscriptions catalogued (CIL alone: ~180,000 stone inscriptions)",
+  "key_source_documents": [
+    "Corpus Inscriptionum Latinarum (CIL), Prussian Academy of Sciences, 1853–present — the canonical epigraphic corpus",
+    "Monumenta Germaniae Historica — medieval Latin manuscripts",
+    "Twelve Tables (Leges Duodecim Tabularum), c. 450 BCE — earliest major Latin legal text",
+    "Res Gestae Divi Augusti, 14 CE — monumental imperial inscription preserved at Ankara"
+  ],
+  "visual_characteristics": "The classical Latin alphabet comprises 23 letters (no J, U, W) carved in squared monumental capitals on stone — serifed, geometric, bilaterally proportioned. Inscriptions run left-to-right in a consistent horizontal baseline. Later rustic capitals and cursive variants show compressed, slanted strokes; medieval uncial and half-uncial introduce rounded letterforms on vellum, often with ligatures and abbreviations marked by macrons.",
+  "david_episode_slug": "david_latin_corpus_v1",
+  "notes": "Episode T3_dryrun references this system. The Latin alphabet descends from the Etruscan adaptation of the West Greek alphabet."
+}

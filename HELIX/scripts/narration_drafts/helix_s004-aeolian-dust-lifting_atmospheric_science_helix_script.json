@@ -1,0 +1,159 @@
+{
+  "slug": "helix_s004-aeolian-dust-lifting_atmospheric_science",
+  "title": "Aeolian dust lifting and atmospheric loading",
+  "domain": "atmospheric_science",
+  "target_seconds": 90,
+  "config": {
+    "agent": "HELIX",
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "host_mode": "voiceover_only",
+    "on_screen_host": false,
+    "voice_suffix": "warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+    "voice_gender": "female",
+    "voice_accent": "British RP (slight)",
+    "continuity_prefix": "HELIX VOICEOVER — SCIENCE NARRATION\nVoice: warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole\nNo on-screen presenter. Voiceover only.\nAll visuals are camera/animation/archival — HELIX does not appear on screen.\nAccuracy standard: all claims sourced. Units required. Uncertainty stated.\nTone: informative but never boring. The universe is extraordinary — let it show.",
+    "visual_style": "cinematic science — imagery-forward, minimal text overlay"
+  },
+  "shots": [
+    {
+      "role": "cold_open",
+      "target_s": 8,
+      "speech_text": "Imagine Global mineral dust emission ~2,000 Tg/year; Saharan dust do. That single number is the key to understanding Aeolian dust lifting and atmospheric loading — one of the most extraordinary phenomena in the known universe.",
+      "visual_direction": "OPEN ON: [High-impact visual — dramatic representation of Aeolian dust lifting and atmospheric loading]. Title card: 'Aeolian dust lifting and atmospheric loading'. No host. Pure visual with HELIX voiceover.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Striking hook — a disorienting scale fact or visual paradox that pulls the viewer in immediately"
+    },
+    {
+      "role": "establish",
+      "target_s": 10,
+      "speech_text": "Aeolian dust lifting and atmospheric loading sits within the domain of atmospheric_science. g. To understand it, we need to think at a scale that challenges intuition.",
+      "visual_direction": "ESTABLISH SHOT: [Wide or macro view establishing scale and context of Aeolian dust lifting and atmospheric loading]. Slow zoom or pull-back revealing scope. Minimal text — let the imagery speak.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Set the scene: what is this phenomenon, where does it occur, what scale are we at"
+    },
+    {
+      "role": "explain",
+      "target_s": 12,
+      "speech_text": "g e The governing framework here is Domain_Specific_Visualization_Principles_Framework v1.0.",
+      "visual_direction": "EXPLAIN SEQUENCE: [Animation or diagram illustrating the core mechanism of Aeolian dust lifting and atmospheric loading]. Clear, elegant — no clutter. Labels only where essential. Motion should mirror the narration pace.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Core mechanism or concept — clearly, accurately, engagingly. No jargon without definition"
+    },
+    {
+      "role": "visualize",
+      "target_s": 10,
+      "speech_text": "The visual signature of Aeolian dust lifting and atmospheric loading is unlike anything else in atmospheric_science. The n produces effects visible at extraordinary scale.",
+      "visual_direction": "VISUALIZATION: [Best available imagery/animation of Aeolian dust lifting and atmospheric loading — archival, simulated, or observational]. HELIX voiceover continuous.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Describe what the camera or animation shows — specific, visual, sensory language"
+    },
+    {
+      "role": "evidence",
+      "target_s": 10,
+      "speech_text": "The key measurement: Global mineral dust emission ~2,000 Tg/year; Saharan dust dominates at ~670 Tg/year; fluid threshold wind friction velocity for mineral dust ~0.20–0.25 m/s (Kok et al., 2021, Nature Reviews Earth & Environment). Results like this, produced by NASA Goddard Institute for Space Studies (GISS), transformed our understanding of Aeolian dust lifting and atmospheric loading.",
+      "visual_direction": "EVIDENCE SHOT: [Data visualisation, telescope imagery, or archival footage of the key discovery moment]. Institution logos/credits if available. Measurement values as lower-third text overlay.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "The key measurement, landmark discovery, or institutional proof — cite it precisely"
+    },
+    {
+      "role": "connect",
+      "target_s": 8,
+      "speech_text": "Aeolian dust lifting and atmospheric loading is not just a phenomenon at the far edge of science. It connects directly to questions about the fabric of reality. The e has implications that reach far beyond the laboratory.",
+      "visual_direction": "CONNECT SHOT: [Imagery bridging Aeolian dust lifting and atmospheric loading to human scale or everyday context — e.g. night sky, biological cell, chemical process]. Gentle visual metaphor. Warmer colour grade than previous shots.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Link to the wider universe, human biology, Earth, or the viewer's daily experience"
+    },
+    {
+      "role": "close",
+      "target_s": 6,
+      "speech_text": "We are only beginning to understand Aeolian dust lifting and atmospheric loading. And perhaps that's exactly the point — the universe keeps its most intricate secrets just within reach, if we keep looking.",
+      "visual_direction": "CLOSE: [Wide, contemplative — return to establishing imagery or slow fade to black]. HELIX narration ends. Silence before credits. No host sign-off.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Resonant closing thought — open-ended, leaves the viewer with something to sit with"
+    }
+  ],
+  "provenance_card": {
+    "title": "Aeolian dust lifting and atmospheric loading",
+    "domain": "atmospheric_science",
+    "subject_id": "s004-aeolian-dust-lifting",
+    "key_measurement": "Global mineral dust emission ~2,000 Tg/year; Saharan dust dominates at ~670 Tg/year; fluid threshold wind friction velocity for mineral dust ~0.20–0.25 m/s (Kok et al., 2021, Nature Reviews Earth & Environment)",
+    "framework": "Domain_Specific_Visualization_Principles_Framework v1.0",
+    "institutions": [
+      "NASA Goddard Institute for Space Studies (GISS)",
+      "NOAA Earth System Research Laboratories (ESRL)",
+      "Max Planck Institute for Chemistry (MPIC)",
+      "University of California Los Angeles (UCLA) Department of Atmospheric and Oceanic Sciences"
+    ],
+    "sources": [
+      {
+        "title": "Source",
+        "citation": "Kok, J.F., Storelvmo, T., Karydis, V.A., Adebiyi, A.A., Mahowald, N.M., Evan, A.T., He, C., Leung, D.M. (2023) 'Mineral dust aerosol impacts on global climate and the hydrologic cycle', Nature Reviews Earth & Environment 4:71–86",
+        "url": "https://www.nature.com/articles/s43017-022-00379-5"
+      },
+      {
+        "title": "Source",
+        "citation": "Prospero, J.M., Ginoux, P., Torres, O., Nicholson, S.E., Gill, T.E. (2002) 'Environmental characterization of global sources of atmospheric soil dust identified with the NIMBUS 7 Total Ozone Mapping Spectrometer (TOMS) absorbing aerosol product', Reviews of Geophysics 40(1):1002",
+        "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2000RG000095"
+      },
+      {
+        "title": "Source",
+        "citation": "NASA MERRA-2 — Modern-Era Retrospective Analysis for Research and Applications, Version 2, GMAO/NASA GSFC",
+        "url": "https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/"
+      }
+    ],
+    "agent": "HELIX",
+    "accuracy_note": "All measurements cited. Uncertainty stated where present. No fabricated statistics."
+  },
+  "guardrails": [
+    "HELIX is voiceover only — no on-screen host, no synthetic presenter, no avatar.",
+    "All quantitative claims must include units and citation.",
+    "Uncertainty must be stated where present (e.g. 'approximately', 'within a margin of').",
+    "Do not present theoretical models as confirmed fact without qualification.",
+    "Do not fabricate measurements, paper titles, DOIs, or institutional affiliations.",
+    "Maintain wonder without hyperbole — the phenomena are extraordinary enough.",
+    "No speculation presented as established science.",
+    "HELIX does not cover history, biography, or language — those are DAVID's domain."
+  ],
+  "qa_rules": {
+    "min_shots": 7,
+    "min_speech_words": 12,
+    "required_shot_roles": [
+      "cold_open",
+      "establish",
+      "explain",
+      "visualize",
+      "evidence",
+      "connect",
+      "close"
+    ],
+    "voiceover_only": true,
+    "citation_required": true,
+    "unit_required": true,
+    "forbidden_patterns": [
+      "DAVID says",
+      "keeper of the Archive",
+      "MAGENTA SUPPRESS",
+      "charcoal.*wardrobe",
+      "I am HELIX",
+      "\\[UNCITED\\]"
+    ]
+  },
+  "meta": {
+    "subject_id": "s004-aeolian-dust-lifting",
+    "shot_count": 7,
+    "total_s": 64,
+    "agent": "HELIX",
+    "voice_suffix": "warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole"
+  },
+  "_agent": "HELIX",
+  "_generated_at": "2026-06-21T21:27:17.895267+00:00"
+}

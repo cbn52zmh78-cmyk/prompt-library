@@ -1,0 +1,39 @@
+{
+  "subject_id": "s004-aeolian-dust-lifting",
+  "domain": "atmospheric_science",
+  "phenomenon": "Aeolian dust lifting and atmospheric loading",
+  "key_measurement": "Global mineral dust emission ~2,000 Tg/year; Saharan dust dominates at ~670 Tg/year; fluid threshold wind friction velocity for mineral dust ~0.20–0.25 m/s (Kok et al., 2021, Nature Reviews Earth & Environment)",
+  "principle_set": "general_scientific",
+  "framework": "Domain_Specific_Visualization_Principles_Framework v1.0",
+  "institutions": [
+    "NASA Goddard Institute for Space Studies (GISS)",
+    "NOAA Earth System Research Laboratories (ESRL)",
+    "Max Planck Institute for Chemistry (MPIC)",
+    "University of California Los Angeles (UCLA) Department of Atmospheric and Oceanic Sciences"
+  ],
+  "sources": [
+    {
+      "citation": "Kok, J.F., Storelvmo, T., Karydis, V.A., Adebiyi, A.A., Mahowald, N.M., Evan, A.T., He, C., Leung, D.M. (2023) 'Mineral dust aerosol impacts on global climate and the hydrologic cycle', Nature Reviews Earth & Environment 4:71–86",
+      "type": "primary",
+      "url": "https://www.nature.com/articles/s43017-022-00379-5"
+    },
+    {
+      "citation": "Prospero, J.M., Ginoux, P., Torres, O., Nicholson, S.E., Gill, T.E. (2002) 'Environmental characterization of global sources of atmospheric soil dust identified with the NIMBUS 7 Total Ozone Mapping Spectrometer (TOMS) absorbing aerosol product', Reviews of Geophysics 40(1):1002",
+      "type": "primary",
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2000RG000095"
+    },
+    {
+      "citation": "NASA MERRA-2 — Modern-Era Retrospective Analysis for Research and Applications, Version 2, GMAO/NASA GSFC",
+      "type": "secondary",
+      "url": "https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/"
+    }
+  ],
+  "visualization_compliance": [
+    "Saltation threshold wind speed must be indicated (~5–8 m/s at 10 m height for fine sand); do not imply dust lifts at calm conditions",
+    "Dust plume transport trajectories must be consistent with observed MODIS/MISR imagery — Saharan dust to Amazon basin is documented, label with source",
+    "Aerosol optical depth (AOD) color scale must be anchored to real MODIS retrieval range (0–2+)",
+    "Particle size distribution must distinguish clay (<2 µm), silt (2–50 µm), and coarse dust (>50 µm) modes",
+    "Do not conflate smoke aerosol with mineral dust in composite visualizations without explicit labeling",
+    "Label MODELED/REANALYSIS on any global dust loading maps; cite MERRA-2 or equivalent dataset"
+  ]
+}

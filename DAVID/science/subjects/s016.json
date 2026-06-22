@@ -1,0 +1,62 @@
+{
+  "nexus_command": "research_pass",
+  "subject_type": "science",
+  "subject_id": "s016",
+  "domain": "astronomy",
+  "phenomenon": "Big Bang Nucleosynthesis -- Primordial Element Formation",
+  "key_measurement": "BBN predicts a primordial helium-4 mass fraction Yp approximately 0.247 (about 25% of all baryonic matter by mass); observed cosmic helium abundance Yp = 0.2449 +/- 0.0040 (Aver, Olive & Skillman 2015, JCAP 07, 011); deuterium abundance D/H = (2.527 +/- 0.030) x 10^-5 by number relative to hydrogen (Cooke et al. 2018, ApJ 855, 102) -- both in strong agreement with BBN predictions at baryon-to-photon ratio eta approximately 6.1 x 10^-10",
+  "principle_set": [
+    "Big Bang Nucleosynthesis (BBN) occurred in the first approximately 3-20 minutes of the universe's existence, when temperatures cooled from ~10^10 K to ~10^9 K -- the window in which nuclear reactions could form light nuclei before expansion froze them out",
+    "At T > 10^10 K (first ~1 second), the universe was a hot plasma of quarks, gluons, leptons, and photons in thermal equilibrium; protons and neutrons interconverted freely via weak interactions maintaining a neutron-to-proton ratio near 1:1",
+    "As the universe cooled below ~10^10 K (~1 second post-Big Bang), weak interactions froze out and the neutron-to-proton ratio locked in at approximately 1:7; neutrons then began decaying (half-life ~10 minutes), further reducing the ratio by the time deuterium could form",
+    "BBN produced hydrogen-1 (protons, ~75% by mass), helium-4 (~25% by mass), deuterium (~0.003% by mass), helium-3 (trace), and lithium-7 (trace ~10^-9 by number); essentially no elements heavier than beryllium were produced -- the mass-8 gap prevented further synthesis",
+    "The predicted abundances from BBN theory depend only on the baryon-to-photon ratio (eta) and the number of light neutrino species; observed cosmic abundances match predictions at eta approximately 6.1 x 10^-10, confirming the Standard Model of cosmology",
+    "BBN is one of the three pillars of Big Bang cosmology (alongside the CMB and Hubble expansion); agreement between predicted and observed light element abundances spanning 9 orders of magnitude in abundance is one of the most precise tests of early-universe physics",
+    "The lithium problem: observed primordial Li-7 abundance is approximately 3x lower than BBN predictions -- this discrepancy remains unresolved and is an active area of research, potentially involving stellar depletion of Li or new physics beyond the Standard Model"
+  ],
+  "framework": "Standard Big Bang cosmology; Standard Model of particle physics; BBN theory (Gamow 1940s; Alpher, Bethe, Gamow 1948; refined by Wagoner, Fowler & Hoyle 1967)",
+  "institutions": [
+    "NASA Goddard Space Flight Center (WMAP cosmology team)",
+    "European Space Agency (Planck satellite team)",
+    "Lawrence Berkeley National Laboratory",
+    "University of California (Olive, Skillman -- helium abundance measurements)",
+    "Cambridge Institute of Astronomy (Cooke et al. -- deuterium measurements)",
+    "University of Chicago (Kolb & Turner, The Early Universe)"
+  ],
+  "sources": [
+    {
+      "claim": "Big Bang Nucleosynthesis produced light nuclei (deuterium, He-3, He-4, Li-7) during the first ~20 minutes of the universe; predictions rely on thermodynamic arguments and nuclear reaction rates; model agrees well with observed light element abundances",
+      "citation": "Wikipedia: Big Bang Nucleosynthesis; Schramm & Turner 1998, Rev. Mod. Phys. 70, 303",
+      "url": "https://en.wikipedia.org/wiki/Big_Bang_nucleosynthesis",
+      "doi": null
+    },
+    {
+      "claim": "Observed primordial deuterium abundance D/H = (2.527 +/- 0.030) x 10^-5, consistent with BBN prediction at the Planck-determined baryon density",
+      "citation": "Cooke et al. 2018, ApJ 855, 102",
+      "url": "https://iopscience.iop.org/article/10.3847/1538-4357/aaab53",
+      "doi": "10.3847/1538-4357/aaab53"
+    },
+    {
+      "claim": "Observed primordial helium-4 mass fraction Yp = 0.2449 +/- 0.0040, consistent with Standard BBN predictions",
+      "citation": "Aver, Olive & Skillman 2015, JCAP 07, 011",
+      "url": "https://iopscience.iop.org/article/10.1088/1475-7516/2015/07/011",
+      "doi": "10.1088/1475-7516/2015/07/011"
+    },
+    {
+      "claim": "BBN theory proposed by George Gamow; landmark alpha-beta-gamma paper (Alpher, Bethe, Gamow 1948); computational BBN calculations by Wagoner, Fowler & Hoyle 1967",
+      "citation": "Alpher, Bethe & Gamow 1948, Physical Review 73, 803",
+      "url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.73.803",
+      "doi": "10.1103/PhysRev.73.803"
+    }
+  ],
+  "visualization_notes": "This subject demands the most abstract but most fundamental visual treatment in the series -- the birth of matter itself. Visual arc: open on absolute darkness and extreme density -- the universe one second old. The screen fills with a seething white-yellow plasma of pure energy, indistinguishable from light. As time advances (T+1s to T+20min shown on-screen), the plasma cools: temperature scale drops from 10 billion K to 1 billion K. Key dramatic moment 1 (T approximately 1 second): weak interaction freeze-out -- the neutron-to-proton ratio locks at 1:7. Visualize as two types of glowing particles unable to interconvert. Key dramatic moment 2 (T approximately 3 minutes): deuterium bottleneck breaks -- previously photons were energetic enough to smash apart any deuterium that formed; now the universe is cool enough for deuterium to survive. The first atomic nuclei appear -- visualized as small glowing clusters. Key dramatic moment 3 (T approximately 20 minutes): BBN ends as temperature drops too low for fusion. The universe is now 75% hydrogen, 25% helium -- frozen in this ratio for approximately 380,000 years until recombination. Color palette: searing white-yellow plasma cooling to orange, then amber, then dimmer red as expansion continues. Scale insight: the entire observable universe (93 billion light-years diameter) compressed to a region smaller than the Solar System during BBN. Most cinematically powerful concept: show a gold bar on-screen -- None of this existed at T+20 minutes. All heavy elements came later. Available public images: NASA/WMAP CMB maps (publicly released); ESA/Planck CMB maps. No direct images of BBN exist -- all visualization is artistic, which is standard for this subject.",
+  "visualization_compliance": [
+    "No classified data -- all BBN research is open academic literature",
+    "CMB maps (WMAP/Planck) are publicly released by NASA and ESA -- credit NASA/WMAP Science Team and ESA/Planck Collaboration required",
+    "Artistic depictions of early universe conditions are standard in documentary production and permissible",
+    "Abundance values cited must match published measurements; the lithium problem should be acknowledged as unresolved if discussed",
+    "George Gamow is a historical figure -- archival imagery may be available through public domain sources"
+  ],
+  "_ingested_from": "T4_pass1_s016.json",
+  "_ingested_at": "2026-06-21T21:14:32.720117+00:00"
+}

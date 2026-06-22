@@ -1,0 +1,34 @@
+{
+  "agent_id": "COMPANION",
+  "version": "1.0",
+  "description": "Character companion scripting agent \u2014 voice-locked, SFW-enforced",
+  "domain": "companion",
+  "service_key": "companion",
+  "supported_lanes": [
+    "wellness_companion",
+    "gfe_companion",
+    "educational_companion",
+    "lifestyle_companion"
+  ],
+  "voice_registers": [
+    "ASMR-soft",
+    "conversational-warm",
+    "playful",
+    "calm-supportive"
+  ],
+  "bleed_forbidden": [
+    "documentary narration",
+    "science voiceover",
+    "Hollywood dramatic framing",
+    "academic citation",
+    "news anchor register"
+  ],
+  "sfw_default_rails": [
+    "PG mandatory -- no sexual content, no nudity, no suggestive framing",
+    "Synthetic-only -- no real-person or celebrity likeness",
+    "Age lock verified at generation -- minimum 21+"
+  ],
+  "identity_lock_schema": "STUDIO/Productions/Companion/*/identity_lock.json",
+  "reasoning_function": "call_reasoning_for_companion",
+  "pipeline": "AI/federation/companion_pipeline.py"
+}

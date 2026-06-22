@@ -1,0 +1,27 @@
+{
+  "subject_id": "s001-quartz-sand-grain",
+  "phenomenon": "Quartz sand grain: erosion, transport, rounding, and deposition",
+  "domain": "geology",
+  "principle_set": "general_scientific",
+  "generated_at": "2026-06-21T18:36:59.601358+00:00",
+  "reasoning_gate": "YELLOW",
+  "reasoning_confidence": 0.0,
+  "passes_completed": 2,
+  "backend_used": "stub",
+  "narrative_beats": [
+    "1. The problem asks for the derivative of x^3.",
+    "2. By the power rule, d/dx[x^n] = n·x^(n-1).",
+    "3. Applying with n=3: d/dx[x^3] = 3·x^2.",
+    "4. No edge cases or domain restrictions for polynomials.",
+    "5. Result is exact — no [UNCERTAIN] flags needed."
+  ],
+  "visualization_cues": [
+    "Scale bar in millimeters required on all grain-scale frames (target ~0.25–0.5 mm for medium sand)",
+    "Show grain shape evolution sequence: angular → subangular → subrounded → rounded — label each stage",
+    "Quartz crystal structure (SiO₂, trigonal/hexagonal) must not be depicted with incorrect bond geometry",
+    "Surface texture features (conchoidal fracture, frosted pitting from aeolian abrasion) must match SEM reference imagery",
+    "Transport medium (water vs. wind) must be explicitly labeled — rounding rates differ by order of magnitude",
+    "Label ILLUSTRATIVE on cross-section diagrams; do not depict internal crystal defects without cited SEM data"
+  ],
+  "raw_final": "1. The problem asks for the derivative of x^3.\n2. By the power rule, d/dx[x^n] = n·x^(n-1).\n3. Applying with n=3: d/dx[x^3] = 3·x^2.\n4. No edge cases or domain restrictions for polynomials.\n5. Result is exact — no [UNCERTAIN] flags needed."
+}

@@ -1,0 +1,17 @@
+{
+  "system_id": "ws_ancient_greek_alphabet",
+  "name": "Ancient Greek Alphabet",
+  "script_family": "alphabetic / Greek",
+  "approx_period": "c. 800 BCE – 300 BCE (archaic/classical epigraphy); variant forms persist through Byzantine period",
+  "decipherment_status": "fully deciphered",
+  "extant_corpus_size": "~150,000+ inscriptions in the Inscriptiones Graecae (IG) and Supplementum Epigraphicum Graecum (SEG) series",
+  "key_source_documents": [
+    "Inscriptiones Graecae (IG), Berlin-Brandenburg Academy of Sciences, 1873–present — primary epigraphic corpus",
+    "Supplementum Epigraphicum Graecum (SEG), Brill, 1923–present — annual supplement",
+    "Dipylon Inscription (oenochoë, Athens), c. 740 BCE — one of the earliest datable Greek alphabetic inscriptions",
+    "Rosetta Stone (hieroglyphic / Demotic / Greek), 196 BCE — key trilingual anchor for comparative decipherment"
+  ],
+  "visual_characteristics": "Archaic Greek inscriptions show regional variation (boustrophedon writing — alternating left-to-right and right-to-left — is common before c. 500 BCE) with letters mirrored on right-to-left lines. Classical Attic epigraphy standardises to left-to-right stoichedon grids (letters aligned in even columns). Letters are angular, with sigma written as a three-bar form (Ϲ becomes S-form later); epsilon and omicron appear unaccented. The Ionic/Classical alphabet of 24 letters (from c. 403 BCE Athenian decree) is the canonical epigraphic standard.",
+  "david_episode_slug": "david_ancient_greek_corpus_v1",
+  "notes": "Episode T3_dryrun references this system. Descendant of the Phoenician abjad; ancestor of the Latin, Cyrillic, and Coptic alphabets."
+}

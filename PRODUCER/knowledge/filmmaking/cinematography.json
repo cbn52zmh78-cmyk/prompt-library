@@ -1,0 +1,52 @@
+{
+  "domain": "cinematography",
+  "version": "1.0.0",
+  "shot_grammar": {
+    "wide_establishing": "EWS/WS — sets geography, scale, world. No dialogue. First shot of scene or act.",
+    "medium": "MS — waist-up. Neutral coverage. Workhorse shot for blocking and staging.",
+    "medium_close": "MCU — chest-up. Dialogue delivery, emotional grounding. Default for lip-sync.",
+    "close_up": "CU — face, head, neck. High emotional stakes. Reaction shots. Decision moments.",
+    "extreme_close_up": "ECU — eyes, hands, objects. Maximum tension or detail. Use sparingly.",
+    "OTS": "Over-the-shoulder. Conversation shot. Establishes spatial relationship between characters.",
+    "POV": "Point-of-view. Subjective camera. Character's eyes. Creates identification / dread.",
+    "two_shot": "Two characters in frame. Power dynamics, relationship. Avoid equal framing for conflict.",
+    "dutch_angle": "Canted horizon. Psychological unease, moral ambiguity, disorientation.",
+    "insert": "Close-up of object or detail. Emphasizes significance. Cut in from scene.",
+    "dolly_in": "Camera moves toward subject. Increasing tension, focus, revelation.",
+    "dolly_out": "Camera pulls back. Isolation, loss, world expanding beyond character.",
+    "crane": "Camera lifts or sweeps. God's eye view, spectacle, emotional release.",
+    "steadicam": "Fluid tracking follow. Intimacy + momentum. Character-led movement.",
+    "handheld": "Nervous energy, naturalism, urgency. Baker / Greengrass territory.",
+    "rack_focus": "Foreground to background or reverse. Shifts attention, reveals, conceals.",
+    "whip_pan": "Fast lateral pan connecting shots. Wes Anderson, energy transitions.",
+    "smash_cut": "Hard cut on peak of action or sound. Punctuation. Comedic or shocking."
+  },
+  "lighting_grammar": {
+    "three_point": "Key + fill + rim. Classical coverage. Safe, readable, broadcast standard.",
+    "hard_single_key": "One hard source, strong shadows. Noir, drama, moral weight.",
+    "practical_only": "Lighting from sources visible in frame (lamps, windows, screens). Realism.",
+    "chiaroscuro": "High contrast. Deep shadow pools. Renaissance painting. Prestige drama.",
+    "golden_hour": "Warm, raking, magic. Romance, nostalgia, mortality.",
+    "neon": "Colored practicals from signs/screens. Crime, neo-noir, urban night.",
+    "high_key": "Bright, even, minimal shadow. Comedy, fantasy, commercial."
+  },
+  "color_grammar": {
+    "teal_orange": "Hollywood blockbuster split — warm skin + cool environment. Use sparingly.",
+    "desaturated": "Bleach bypass / silver retention. Gritty realism, war, trauma.",
+    "warm_grade": "Amber-pushed. Period pieces, intimacy, nostalgia.",
+    "cool_grade": "Blue-pushed. Thriller, corporate, isolation.",
+    "high_saturation": "Wes Anderson, stylized, heightened reality."
+  },
+  "act_structure": {
+    "three_act": {
+      "act1": "Setup (25%). Establish world, character, ordinary life. Inciting incident at end.",
+      "act2a": "Confrontation first half (25%). New world, escalating obstacles, ally/antagonist.",
+      "midpoint": "Major reversal or revelation. Stakes raised. Character crosses point of no return.",
+      "act2b": "Confrontation second half (25%). Dark night of the soul, all-is-lost moment.",
+      "act3": "Resolution (25%). Climax, final confrontation, denouement."
+    },
+    "cold_open": "Pre-title sequence. In medias res or thematic statement. Hooks before credits.",
+    "tag": "Post-climax button. Emotional resolution or comedic grace note after main action.",
+    "tv_act_breaks": "Episodic: Cold open → Act 1 → Act 2 → Act 3 → Tag. Each act ends on hook."
+  }
+}

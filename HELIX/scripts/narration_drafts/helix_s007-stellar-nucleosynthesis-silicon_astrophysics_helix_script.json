@@ -1,0 +1,159 @@
+{
+  "slug": "helix_s007-stellar-nucleosynthesis-silicon_astrophysics",
+  "title": "Stellar nucleosynthesis: silicon and oxygen in sand-forming minerals",
+  "domain": "astrophysics",
+  "target_seconds": 90,
+  "config": {
+    "agent": "HELIX",
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "720p",
+    "aspect_ratio": "16:9",
+    "host_mode": "voiceover_only",
+    "on_screen_host": false,
+    "voice_suffix": "warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+    "voice_gender": "female",
+    "voice_accent": "British RP (slight)",
+    "continuity_prefix": "HELIX VOICEOVER — SCIENCE NARRATION\nVoice: warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole\nNo on-screen presenter. Voiceover only.\nAll visuals are camera/animation/archival — HELIX does not appear on screen.\nAccuracy standard: all claims sourced. Units required. Uncertainty stated.\nTone: informative but never boring. The universe is extraordinary — let it show.",
+    "visual_style": "cinematic science — imagery-forward, minimal text overlay"
+  },
+  "shots": [
+    {
+      "role": "cold_open",
+      "target_s": 8,
+      "speech_text": "Imagine Silicon burning in massive stars (>8 M☉) occurs at T ~3×10⁹ . That single number is the key to understanding Stellar nucleosynthesis: silicon and oxygen in sand-forming minerals — one of the most extraordinary phenomena in the known universe.",
+      "visual_direction": "OPEN ON: [High-impact visual — dramatic representation of Stellar nucleosynthesis: silicon and oxygen in sand-forming minerals]. Title card: 'Stellar nucleosynthesis: silicon and oxygen in sand-forming minerals'. No host. Pure visual with HELIX voiceover.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Striking hook — a disorienting scale fact or visual paradox that pulls the viewer in immediately"
+    },
+    {
+      "role": "establish",
+      "target_s": 10,
+      "speech_text": "Stellar nucleosynthesis: silicon and oxygen in sand-forming minerals sits within the domain of astrophysics. a. To understand it, we need to think at a scale that challenges intuition.",
+      "visual_direction": "ESTABLISH SHOT: [Wide or macro view establishing scale and context of Stellar nucleosynthesis: silicon and oxygen in sand-forming minerals]. Slow zoom or pull-back revealing scope. Minimal text — let the imagery speak.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Set the scene: what is this phenomenon, where does it occur, what scale are we at"
+    },
+    {
+      "role": "explain",
+      "target_s": 12,
+      "speech_text": "a s The governing framework here is Domain_Specific_Visualization_Principles_Framework v1.0.",
+      "visual_direction": "EXPLAIN SEQUENCE: [Animation or diagram illustrating the core mechanism of Stellar nucleosynthesis: silicon and oxygen in sand-forming minerals]. Clear, elegant — no clutter. Labels only where essential. Motion should mirror the narration pace.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Core mechanism or concept — clearly, accurately, engagingly. No jargon without definition"
+    },
+    {
+      "role": "visualize",
+      "target_s": 10,
+      "speech_text": "The visual signature of Stellar nucleosynthesis: silicon and oxygen in sand-forming minerals is unlike anything else in astrophysics. The t produces effects visible at extraordinary scale.",
+      "visual_direction": "VISUALIZATION: [Best available imagery/animation of Stellar nucleosynthesis: silicon and oxygen in sand-forming minerals — archival, simulated, or observational]. HELIX voiceover continuous.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Describe what the camera or animation shows — specific, visual, sensory language"
+    },
+    {
+      "role": "evidence",
+      "target_s": 10,
+      "speech_text": "The key measurement: Silicon burning in massive stars (>8 M☉) occurs at T ~3×10⁹ K (~0.26 MeV) over ~1 day; Si-28 and O-16 solar abundances 7.10×10⁵ and 1.41×10⁷ relative to H=10¹² (Lodders, 2003, ApJ 591). Results like this, produced by California Institute of Technology (Caltech) — W.K. Kellogg Radiation Laboratory, transformed our understanding of Stellar nucleosynthesis: silicon and oxygen in sand-forming minerals.",
+      "visual_direction": "EVIDENCE SHOT: [Data visualisation, telescope imagery, or archival footage of the key discovery moment]. Institution logos/credits if available. Measurement values as lower-third text overlay.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "The key measurement, landmark discovery, or institutional proof — cite it precisely"
+    },
+    {
+      "role": "connect",
+      "target_s": 8,
+      "speech_text": "Stellar nucleosynthesis: silicon and oxygen in sand-forming minerals is not just a phenomenon at the far edge of science. It connects directly to questions about the fabric of reality. The s has implications that reach far beyond the laboratory.",
+      "visual_direction": "CONNECT SHOT: [Imagery bridging Stellar nucleosynthesis: silicon and oxygen in sand-forming minerals to human scale or everyday context — e.g. night sky, biological cell, chemical process]. Gentle visual metaphor. Warmer colour grade than previous shots.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Link to the wider universe, human biology, Earth, or the viewer's daily experience"
+    },
+    {
+      "role": "close",
+      "target_s": 6,
+      "speech_text": "We are only beginning to understand Stellar nucleosynthesis: silicon and oxygen in sand-forming minerals. And perhaps that's exactly the point — the universe keeps its most intricate secrets just within reach, if we keep looking.",
+      "visual_direction": "CLOSE: [Wide, contemplative — return to establishing imagery or slow fade to black]. HELIX narration ends. Silence before credits. No host sign-off.",
+      "vo_notes": "HELIX voiceover — warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole",
+      "on_screen_host": false,
+      "role_description": "Resonant closing thought — open-ended, leaves the viewer with something to sit with"
+    }
+  ],
+  "provenance_card": {
+    "title": "Stellar nucleosynthesis: silicon and oxygen in sand-forming minerals",
+    "domain": "astrophysics",
+    "subject_id": "s007-stellar-nucleosynthesis-silicon",
+    "key_measurement": "Silicon burning in massive stars (>8 M☉) occurs at T ~3×10⁹ K (~0.26 MeV) over ~1 day; Si-28 and O-16 solar abundances 7.10×10⁵ and 1.41×10⁷ relative to H=10¹² (Lodders, 2003, ApJ 591)",
+    "framework": "Domain_Specific_Visualization_Principles_Framework v1.0",
+    "institutions": [
+      "California Institute of Technology (Caltech) — W.K. Kellogg Radiation Laboratory",
+      "Max Planck Institute for Astrophysics (MPA Garching)",
+      "European Southern Observatory (ESO)",
+      "University of Chicago Department of Astronomy and Astrophysics"
+    ],
+    "sources": [
+      {
+        "title": "Source",
+        "citation": "Burbidge, E.M., Burbidge, G.R., Fowler, W.A., Hoyle, F. (1957) 'Synthesis of the Elements in Stars', Reviews of Modern Physics 29(4):547–650",
+        "url": "https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.29.547"
+      },
+      {
+        "title": "Source",
+        "citation": "Lodders, K. (2003) 'Solar System Abundances and Condensation Temperatures of the Elements', Astrophysical Journal 591(2):1220–1247",
+        "url": "https://iopscience.iop.org/article/10.1086/375492"
+      },
+      {
+        "title": "Source",
+        "citation": "Arnett, W.D. (1996) 'Supernovae and Nucleosynthesis: An Investigation of the History of Matter, from the Big Bang to the Present', Princeton University Press",
+        "url": "https://press.princeton.edu/books/hardcover/9780691011479/supernovae-and-nucleosynthesis"
+      }
+    ],
+    "agent": "HELIX",
+    "accuracy_note": "All measurements cited. Uncertainty stated where present. No fabricated statistics."
+  },
+  "guardrails": [
+    "HELIX is voiceover only — no on-screen host, no synthetic presenter, no avatar.",
+    "All quantitative claims must include units and citation.",
+    "Uncertainty must be stated where present (e.g. 'approximately', 'within a margin of').",
+    "Do not present theoretical models as confirmed fact without qualification.",
+    "Do not fabricate measurements, paper titles, DOIs, or institutional affiliations.",
+    "Maintain wonder without hyperbole — the phenomena are extraordinary enough.",
+    "No speculation presented as established science.",
+    "HELIX does not cover history, biography, or language — those are DAVID's domain."
+  ],
+  "qa_rules": {
+    "min_shots": 7,
+    "min_speech_words": 12,
+    "required_shot_roles": [
+      "cold_open",
+      "establish",
+      "explain",
+      "visualize",
+      "evidence",
+      "connect",
+      "close"
+    ],
+    "voiceover_only": true,
+    "citation_required": true,
+    "unit_required": true,
+    "forbidden_patterns": [
+      "DAVID says",
+      "keeper of the Archive",
+      "MAGENTA SUPPRESS",
+      "charcoal.*wardrobe",
+      "I am HELIX",
+      "\\[UNCITED\\]"
+    ]
+  },
+  "meta": {
+    "subject_id": "s007-stellar-nucleosynthesis-silicon",
+    "shot_count": 7,
+    "total_s": 64,
+    "agent": "HELIX",
+    "voice_suffix": "warm measured female voice, slight British RP accent, inviting and professional — a trusted guide through the unknown, never clinical, wonder without hyperbole"
+  },
+  "_agent": "HELIX",
+  "_generated_at": "2026-06-21T21:27:17.909592+00:00"
+}

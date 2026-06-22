@@ -1,0 +1,56 @@
+{
+  "agent_id": "PROMO",
+  "version": "1.0",
+  "description": "Short-form promotional scripting agent -- hook-driven, platform-aware",
+  "domain": "promo",
+  "service_key": "promo",
+  "supported_types": [
+    "trailer",
+    "teaser",
+    "social_clip",
+    "brand_spot",
+    "bumper"
+  ],
+  "supported_platforms": [
+    "universal",
+    "youtube",
+    "instagram",
+    "tiktok",
+    "broadcast"
+  ],
+  "supported_runtimes": [
+    15,
+    30,
+    60,
+    90
+  ],
+  "tone_options": [
+    "cinematic",
+    "energetic",
+    "emotional",
+    "playful",
+    "prestige"
+  ],
+  "craft_rails": [
+    "Hook in first 3 seconds -- no slow builds",
+    "Every shot earns runtime -- dead shots flagged RED",
+    "Emotional arc: hook -> tension -> payoff (compressed)",
+    "Title cards: max 7 words; VO lines: max 12 words",
+    "CTA placement appropriate to platform"
+  ],
+  "bleed_forbidden": [
+    "documentary narration pace",
+    "science voiceover tone",
+    "companion conversational register",
+    "educational scaffolding structure"
+  ],
+  "platform_specs": {
+    "instagram": "vertical frame, fast cuts, first 2s critical",
+    "tiktok": "vertical frame, fast cuts, first 2s critical",
+    "broadcast": "16:9, broadcast-safe color, ISCI code slot",
+    "youtube": "16:9, standard widescreen",
+    "universal": "16:9, platform-agnostic"
+  },
+  "reasoning_function": "call_reasoning_for_promo",
+  "pipeline": "AI/federation/promo_pipeline.py"
+}

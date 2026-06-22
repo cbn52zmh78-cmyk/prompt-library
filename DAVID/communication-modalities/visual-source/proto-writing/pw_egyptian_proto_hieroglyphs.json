@@ -1,0 +1,18 @@
+{
+  "system_id": "pw_egyptian_proto_hieroglyphs",
+  "name": "Egyptian Proto-Hieroglyphs (Abydos Tags, Naqada Period)",
+  "script_family": "proto-writing / logographic-phonetic precursor to Egyptian hieroglyphs",
+  "approx_period": "c. 3250–3000 BCE (Naqada IIIa–IIIb / Dynasty 0 / early Dynasty 1); primary finds from Abydos tomb U-j (c. 3250 BCE) and Tomb B1/B2",
+  "decipherment_status": "partially deciphered",
+  "extant_corpus_size": "~200 inscribed ivory and bone tags from Abydos tomb U-j (König Scorpion I context); additional administrative labels from Naqada, Hierakonpolis, and early Dynasty 1 Abydos royal tombs (~300 further pre/early-dynastic labels).",
+  "key_source_documents": [
+    "Dreyer, G. (1998), Umm el-Qaab I: Das prädynastische Königsgrab U-j und seine frühen Schriftzeugnisse (Deutsches Archäologisches Institut Kairo, AV 86) — primary excavation and analysis of Abydos tomb U-j proto-hieroglyphic tags",
+    "Dreyer, G. et al. (1993), 'Umm el-Qaab: Nachuntersuchungen im frühzeitlichen Königsfriedhof', MDAIK 49 — excavation report",
+    "Regulski, I. (2010), A Palaeographic Study of Early Writing in Egypt (Peeters/OLA 195) — systematic palaeographic analysis of proto-hieroglyphic to hieroglyphic transition",
+    "Postgate, J.N., Wang, T. & Wilkinson, T. (1995), 'The evidence for early writing: Utilitarian or ceremonial?', Antiquity 69 — comparative debate on writing origins"
+  ],
+  "visual_characteristics": "The Abydos proto-hieroglyphs appear as incised signs on small ivory and bone labels (~3–5 cm), thought to be administrative tags attached to grave goods. Signs include recognisable pictograms — a seated human figure, a scorpion (interpreted as a royal name), a falcon, a plant/tree, a mountain range — alongside numerical notations. The signs are incised with a pointed tool. Unlike mature hieroglyphs, there is no consistent baseline, sign orientation varies, and the grid-like organisation of the later canonical system is absent. Some signs are phonetically interpretable based on later hieroglyphic parallels; others remain uncertain.",
+  "honesty_note": "Partially deciphered: some signs correspond to established hieroglyphic values (e.g. the scorpion sign, falcon, mountain). But many sign meanings and whether the full system encoded spoken Egyptian phonologically is actively debated. Dreyer's reading of estate/place names on the tags is widely but not universally accepted.",
+  "david_episode_slug": null,
+  "notes": "Whether the Abydos inscriptions predate or are contemporary with Uruk proto-cuneiform is debated (c. 3250 BCE vs c. 3200 BCE) and carries bearing on independent-invention vs diffusion questions for writing. Cultural sensitivity: material derives from royal funerary context; archaeological provenance should be cited precisely."
+}

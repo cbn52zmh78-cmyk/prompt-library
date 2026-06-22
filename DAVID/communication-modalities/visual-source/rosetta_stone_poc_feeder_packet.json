@@ -1,0 +1,48 @@
+{
+  "packet_id": "3884e9d9-d8bb-4efd-96c6-f600ab724196",
+  "source_repo": "DAVID",
+  "domain": "visual_source",
+  "subject": "Visual-Source Interpretation v1 (POC)",
+  "as_of": "2026-06-20",
+  "research_payload": {
+    "facts": [
+      {
+        "claim": "The cartouche spells the royal name Ptolemy (p-t-w-l-m-y-s).",
+        "citation": "Champollion, J.-F. (1822), Lettre a M. Dacier relative a l'alphabet des hieroglyphes phonetiques.",
+        "grade": "primary"
+      },
+      {
+        "claim": "The three scripts record one decree, enabling the decipherment.",
+        "citation": "British Museum, object EA24 (Rosetta Stone), collection record.",
+        "grade": "secondary"
+      }
+    ],
+    "sim_parameters": {}
+  },
+  "render_assets": {
+    "reference_manifest": "DAVID/communication-modalities/visual-source/visual_source_manifest.json",
+    "plates": [
+      {
+        "id": "VS-WS-0001",
+        "path": null,
+        "license": "The Trustees of the British Museum, CC BY-NC-SA 4.0",
+        "source_url": "https://www.britishmuseum.org/collection/object/Y_EA24",
+        "decipherment_status": "DECIPHERED"
+      }
+    ],
+    "parked_sources": {
+      "policy": "403/paywall/blocked = PARK; no bypass, no fabricated provenance.",
+      "parked": [
+        {
+          "url": "https://example-museum.invalid/high-res/linear-a-HT13.tif",
+          "reason": "high-res TIFF behind institutional access wall - returns 403",
+          "status": "PARKED",
+          "fallback": "GORILA line-drawing + Wikimedia Commons category used for reference instead"
+        }
+      ]
+    }
+  },
+  "gate_status": {
+    "visual_source_interpretation_gate": "PASS"
+  }
+}

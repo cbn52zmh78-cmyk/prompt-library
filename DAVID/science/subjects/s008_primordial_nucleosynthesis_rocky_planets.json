@@ -1,0 +1,40 @@
+{
+  "subject_id": "s008-primordial-nucleosynthesis-rocky-planets",
+  "domain": "cosmology",
+  "phenomenon": "From primordial nucleosynthesis to rocky planet formation",
+  "key_measurement": "Big Bang nucleosynthesis (BBN) at T+3 min produced H ~75%, He-4 ~25% by mass, D/H ~2.527×10⁻⁵ (Cooke et al., 2018, ApJ 855); Planck 2018 baryon density Ω_b h² = 0.02237 ± 0.00015",
+  "principle_set": "astrophysics_fidelity",
+  "framework": "Domain_Specific_Visualization_Principles_Framework v1.0",
+  "institutions": [
+    "Planck Collaboration (ESA/NASA)",
+    "Cambridge Institute of Astronomy",
+    "NASA Goddard Space Flight Center",
+    "University of California Santa Cruz (UCSC) — nucleosynthesis group"
+  ],
+  "sources": [
+    {
+      "citation": "Planck Collaboration: Aghanim, N. et al. (2020) 'Planck 2018 results. VI. Cosmological parameters', Astronomy & Astrophysics 641:A6",
+      "type": "primary",
+      "url": "https://www.aanda.org/articles/aa/abs/2020/09/aa33910-18/aa33910-18.html"
+    },
+    {
+      "citation": "Cooke, R.J., Pettini, M., Steidel, C.C. (2018) 'One Percent Determination of the Primordial Deuterium Abundance', Astrophysical Journal 855(2):102",
+      "type": "primary",
+      "url": "https://iopscience.iop.org/article/10.3847/1538-4357/aaab53"
+    },
+    {
+      "citation": "Dauphas, N. & Chaussidon, M. (2011) 'A Perspective from Extinct Radionuclides on a Young Stellar Object: The Sun and Its Accretion Disk', Annual Review of Earth and Planetary Sciences 39:351–386",
+      "type": "secondary",
+      "url": "https://www.annualreviews.org/doi/10.1146/annurev-earth-040610-133428"
+    }
+  ],
+  "visualization_compliance": [
+    "BBN timeline must place nucleosynthesis at T+100 s–T+20 min post-Big Bang — do not conflate with stellar nucleosynthesis epoch (Gyr later)",
+    "Cosmic timeline to rocky planet formation spans ~9 Gyr from Big Bang to Solar System formation at T+9.2 Gyr — label timestamps on all timeline frames",
+    "First-generation (Population III) stars must not be depicted with Earth-like rocky planets — heavy elements absent before first supernova enrichment",
+    "CMB recombination epoch (T ~380,000 yr, T_cmb ~3000 K) must be placed correctly on timeline if depicted",
+    "Primordial composition bar (H/He only) must not show metals — label 'Population III gas cloud: H + He only'",
+    "Label SCHEMATIC on universe evolution diagrams; do not present CMB maps as simulations without citing Planck data release",
+    "Rocky planet formation timescale (~10–50 Myr via planetesimal accretion) must be indicated on any protoplanetary disk sequence"
+  ]
+}

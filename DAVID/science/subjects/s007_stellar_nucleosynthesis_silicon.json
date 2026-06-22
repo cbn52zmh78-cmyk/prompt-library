@@ -1,0 +1,40 @@
+{
+  "subject_id": "s007-stellar-nucleosynthesis-silicon",
+  "domain": "astrophysics",
+  "phenomenon": "Stellar nucleosynthesis: silicon and oxygen in sand-forming minerals",
+  "key_measurement": "Silicon burning in massive stars (>8 M☉) occurs at T ~3×10⁹ K (~0.26 MeV) over ~1 day; Si-28 and O-16 solar abundances 7.10×10⁵ and 1.41×10⁷ relative to H=10¹² (Lodders, 2003, ApJ 591)",
+  "principle_set": "astrophysics_fidelity",
+  "framework": "Domain_Specific_Visualization_Principles_Framework v1.0",
+  "institutions": [
+    "California Institute of Technology (Caltech) — W.K. Kellogg Radiation Laboratory",
+    "Max Planck Institute for Astrophysics (MPA Garching)",
+    "European Southern Observatory (ESO)",
+    "University of Chicago Department of Astronomy and Astrophysics"
+  ],
+  "sources": [
+    {
+      "citation": "Burbidge, E.M., Burbidge, G.R., Fowler, W.A., Hoyle, F. (1957) 'Synthesis of the Elements in Stars', Reviews of Modern Physics 29(4):547–650",
+      "type": "primary",
+      "url": "https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.29.547"
+    },
+    {
+      "citation": "Lodders, K. (2003) 'Solar System Abundances and Condensation Temperatures of the Elements', Astrophysical Journal 591(2):1220–1247",
+      "type": "primary",
+      "url": "https://iopscience.iop.org/article/10.1086/375492"
+    },
+    {
+      "citation": "Arnett, W.D. (1996) 'Supernovae and Nucleosynthesis: An Investigation of the History of Matter, from the Big Bang to the Present', Princeton University Press",
+      "type": "secondary",
+      "url": "https://press.princeton.edu/books/hardcover/9780691011479/supernovae-and-nucleosynthesis"
+    }
+  ],
+  "visualization_compliance": [
+    "Onion-shell burning layer order must be accurate from outside in: H → He → C → Ne → O → Si → Fe core — do not invert or omit layers",
+    "Silicon burning timescale ~1 day must be indicated if burn-sequence animation is used — do not conflate with oxygen burning (~6 months)",
+    "Nuclear binding energy curve (iron peak) must peak at Fe-56/Ni-56, not at lighter elements",
+    "Isotope abundances in visualized ejecta must be consistent with Lodders (2003) solar values — label SOLAR PHOTOSPHERE VALUES",
+    "Stellar mass scale on any HR diagram must be anchored to observed main-sequence data",
+    "Label NOT TO SCALE on cross-sectional stellar interior diagrams; stellar radius scale bar in R☉ required",
+    "ILLUSTRATIVE label required on any artist rendering of supernova ejecta — do not present as simulation output unless citing a specific hydrodynamics code run"
+  ]
+}

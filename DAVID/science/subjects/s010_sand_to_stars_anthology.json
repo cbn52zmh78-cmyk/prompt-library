@@ -1,0 +1,40 @@
+{
+  "subject_id": "s010-sand-to-stars-anthology",
+  "domain": "interdisciplinary",
+  "phenomenon": "Sand-to-stars anthology: scale ladder from silanol bond to observable universe",
+  "key_measurement": "Scale span: Si–O bond length 1.62 Å (1.62×10⁻¹⁰ m) to observable universe radius ~4.4×10²⁶ m — 36 orders of magnitude; each decade of scale corresponds to one rung on the Powers of Ten ladder",
+  "principle_set": "general_scientific",
+  "framework": "Domain_Specific_Visualization_Principles_Framework v1.0",
+  "institutions": [
+    "National Institute of Standards and Technology (NIST) — CODATA physical constants",
+    "NASA Jet Propulsion Laboratory (Solar System scale reference)",
+    "ESA Planck Science Team (cosmic distance scale)",
+    "Eames Office / IBM (Powers of Ten film, 1977 — foundational scale-ladder reference)"
+  ],
+  "sources": [
+    {
+      "citation": "NIST CODATA 2018 — Fundamental Physical Constants, National Institute of Standards and Technology",
+      "type": "primary",
+      "url": "https://physics.nist.gov/cuu/Constants/"
+    },
+    {
+      "citation": "Morrison, P. & Morrison, P. (1982) 'Powers of Ten: A Book About the Relative Size of Things in the Universe and the Effect of Adding Another Zero', Scientific American Books / W.H. Freeman, New York",
+      "type": "secondary",
+      "url": "https://www.worldcat.org/isbn/0716750028"
+    },
+    {
+      "citation": "Planck Collaboration: Aghanim, N. et al. (2020) 'Planck 2018 results. VI. Cosmological parameters', Astronomy & Astrophysics 641:A6",
+      "type": "primary",
+      "url": "https://www.aanda.org/articles/aa/abs/2020/09/aa33910-18/aa33910-18.html"
+    }
+  ],
+  "visualization_compliance": [
+    "Every scale transition frame must display an explicit log₁₀ label (e.g., '10⁻⁹ m — nanometer scale') — no unlabeled scale jumps",
+    "Scale compressions spanning more than 3 orders of magnitude in a single cut must be annotated with a 'SCALE JUMP ×N' overlay",
+    "All phenomena depicted must cross-reference their source subject file (S001–S009) by subject_id in the metadata layer",
+    "Do not merge phenomena from different scale rungs into a single composite frame without explicit scale-discontinuity labeling",
+    "Studio handoff pack must include: subject_id cross-reference table, scale bar master template, and principle_set flag for each rung",
+    "Observable universe boundary must be labeled 'COMOVING RADIUS ~46 Gly — not a physical edge' to avoid implying a hard boundary",
+    "Each inter-episode transition must carry a STUDIO HANDOFF label with the receiving subject_id and scale context"
+  ]
+}

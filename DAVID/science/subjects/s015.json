@@ -1,0 +1,68 @@
+{
+  "nexus_command": "research_pass",
+  "subject_type": "science",
+  "subject_id": "s015",
+  "domain": "physics_cosmology",
+  "phenomenon": "Dark Matter \u2014 Observational Evidence and Current Detection Experiments",
+  "key_measurement": "Dark matter constitutes 26.8% of total mass-energy content of the universe (and 85% of total matter); Bullet Cluster dark matter offset detected at 8\u03c3 statistical significance; Galaxy rotation curves flat to 200+ kpc in spiral galaxies vs. Keplerian falloff predicted for visible matter alone (Planck Collaboration 2020, A&A 641 A6; Clowe et al. 2006, ApJL 648 L109)",
+  "principle_set": [
+    "Galaxy rotation curves (Vera Rubin, 1970s) show stars orbiting at constant velocity far beyond the visible disk \u2014 requiring total enclosed mass to grow linearly with radius, implying an invisible extended 'dark matter halo' vastly more massive than the luminous galaxy",
+    "The Bullet Cluster (1E 0657-56) provides direct empirical separation of dark matter from ordinary matter: during the collision of two galaxy clusters, the hot X-ray-emitting gas (ordinary matter, ~85% of baryons) was electromagnetically slowed and remained between the clusters, while the gravitational lensing mass map shows two dark matter concentrations that passed through each other collisionlessly and now coincide with the galaxies \u2014 offset at 8\u03c3 significance",
+    "Gravitational lensing \u2014 both strong (Einstein rings and arcs) and weak (statistical shape distortion of background galaxies) \u2014 maps total mass distribution independent of luminosity, consistently revealing invisible mass exceeding visible matter by factors of 5\u201310 in galaxy clusters",
+    "Cosmic microwave background (CMB) acoustic peak structure requires a component of matter that does not couple electromagnetically \u2014 the relative heights of the first, second, and third acoustic peaks constrain the baryon-to-dark-matter density ratio, independently confirming dark matter at ~5:1 dark-to-baryon ratio",
+    "Big Bang nucleosynthesis (BBN) limits ordinary baryonic matter to ~5% of the universe's energy density, meaning the remaining ~27% matter cannot be ordinary atoms \u2014 dark matter must be a non-baryonic particle species not yet directly detected",
+    "Current direct detection experiments (LUX-ZEPLIN, XENONnT, PandaX-4T) search for Weakly Interacting Massive Particles (WIMPs) via nuclear recoil in ultrapure liquid xenon detectors deep underground; no confirmed detection as of 2026, placing increasingly stringent upper limits on WIMP-nucleon cross-section"
+  ],
+  "framework": "Lambda-CDM (standard cosmological model); Gravitational lensing (weak and strong); Galactic dynamics; Particle physics (WIMP, axion, sterile neutrino candidates)",
+  "institutions": [
+    "Chandra X-ray Center / Smithsonian Astrophysical Observatory",
+    "Carnegie Institution for Science \u2014 Vera Rubin's original rotation curve work",
+    "Planck Collaboration (ESA)",
+    "LUX-ZEPLIN (LZ) Collaboration \u2014 Sanford Underground Research Facility, South Dakota",
+    "XENON Collaboration \u2014 Gran Sasso National Laboratory, Italy",
+    "PandaX Collaboration \u2014 China Jinping Underground Laboratory"
+  ],
+  "sources": [
+    {
+      "claim": "Bullet Cluster dark matter offset from X-ray gas detected at 8\u03c3 significance \u2014 the gravitational lensing mass concentrations coincide with the galaxies, not the gas, providing direct empirical evidence for collisionless dark matter",
+      "citation": "Clowe et al. 2006, ApJL 648 L109 ('A Direct Empirical Proof of the Existence of Dark Matter')",
+      "url": "https://iopscience.iop.org/article/10.1086/508162",
+      "doi": "10.1086/508162"
+    },
+    {
+      "claim": "Vera Rubin and Kent Ford (1970) measured rotation curves of spiral galaxies showing flat velocity profiles to large radii, implying dark matter halos extending far beyond visible stars",
+      "citation": "Rubin & Ford 1970, ApJ 159 379 (Andromeda rotation curve); Rubin, Ford & Thonnard 1978, ApJL 225 L107 (extended galaxy sample)",
+      "url": "https://ui.adsabs.harvard.edu/abs/1970ApJ...159..379R",
+      "doi": "10.1086/150317"
+    },
+    {
+      "claim": "Planck 2018 CMB results: dark matter density \u03a9_c h\u00b2 = 0.1200 \u00b1 0.0012, corresponding to 26.8% of total energy density; ordinary (baryonic) matter is 4.9%; dark energy 68.3%",
+      "citation": "Planck Collaboration 2020, A&A 641 A6 (Planck 2018 Results VI: Cosmological Parameters)",
+      "url": "https://www.aanda.org/articles/aa/abs/2020/09/aa33910-18/aa33910-18.html",
+      "doi": "10.1051/0004-6361/201833910"
+    },
+    {
+      "claim": "Bullet Cluster X-ray observations by Chandra show 70 million K gas in subcluster plowing through 100 million K main cluster gas at ~4,500 km/s; merger occurred ~150 million years ago from Earth's perspective",
+      "citation": "Markevitch et al. 2004, ApJ 606 819 (Chandra constraints on dark matter self-interaction cross-section from the Bullet Cluster)",
+      "url": "https://iopscience.iop.org/article/10.1086/383178",
+      "doi": "10.1086/383178"
+    },
+    {
+      "claim": "LUX-ZEPLIN (LZ) experiment reached world-leading WIMP sensitivity in 2022 with no confirmed detections, setting spin-independent WIMP-nucleon cross-section upper limits of ~6.5 \u00d7 10\u207b\u2074\u2078 cm\u00b2 at 30 GeV/c\u00b2 WIMP mass",
+      "citation": "LZ Collaboration 2022, Physical Review Letters 131 041002",
+      "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.131.041002",
+      "doi": "10.1103/PhysRevLett.131.041002"
+    }
+  ],
+  "visualization_notes": "The Bullet Cluster: one of the most visually striking composite astronomical images \u2014 combines three datasets. Blue false-color regions show the gravitational lensing mass map (the dark matter); pink/magenta regions show the Chandra X-ray emission (ordinary hot gas); visible-light image of galaxies. The galaxies and blue dark matter halos are on the left and right (having passed through each other), while the pink gas is squeezed between them in the middle \u2014 a vivid visual proof of dark matter's existence. The bow shock on the leading edge of the 'bullet' subcluster is a dramatic arc of heated gas. Vera Rubin visualization: overlaid plots of expected rotation curve (falling off like Keplerian, dashed line) vs. observed rotation curve (flat, solid line) for 21 spiral galaxies \u2014 the gap between expected and observed is the dark matter signature. Scale: the dark matter halo of the Milky Way extends to ~200 kpc (650,000 light-years), roughly 5x the visible disk diameter. Shot ideas: animated Bullet Cluster collision with separating color layers; split-panel rotation curve graph (expected vs observed for Andromeda); underground dark matter detector visual (xenon tank glowing blue in a cavern).",
+  "visualization_compliance": [
+    "Bullet Cluster composite image released by NASA Chandra X-ray Center \u2014 credit 'X-ray: NASA/CXC/CfA/M.Markevitch et al.; Optical: NASA/STScI; Magellan/U.Arizona/D.Clowe et al.; Lensing Map: NASA/STScI; ESO WFI; Magellan/U.Arizona/D.Clowe et al.' required",
+    "Dark matter is inferred \u2014 it has not been directly detected as a particle. All visualizations of dark matter as a substance (blue halos, etc.) are scientific models, not direct observations; narration should acknowledge this",
+    "Modified Newtonian Dynamics (MOND) remains a minority alternative to dark matter for galaxy rotation curves \u2014 a balanced documentary should acknowledge the debate while noting that Bullet Cluster evidence strongly favors particle dark matter",
+    "Hawking radiation and 'primordial black holes as dark matter' are theoretical proposals, not consensus \u2014 label accordingly if included",
+    "LZ/XENONnT null results do not disprove dark matter \u2014 they constrain specific WIMP models; take care not to overstate 'dark matter not found' in narration",
+    "Vera Rubin was not awarded the Nobel Prize before her death in 2016 \u2014 this is historically noted as a significant oversight; may be mentioned but not implied she won"
+  ],
+  "_ingested_from": "T4_pass1_s015.json",
+  "_ingested_at": "2026-06-21T21:11:36.871690+00:00"
+}

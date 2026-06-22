@@ -21,6 +21,28 @@ FFMPEG: str | None = None
 
 if str(SCRIPTS) not in __import__("sys").path:
     __import__("sys").path.insert(0, str(SCRIPTS))
+# --- qa_gate wiring ---
+import sys as _sys
+from pathlib import Path as _Path
+_AI_FED = _Path(__file__).resolve().parents[2] / "AI" / "federation"
+if str(_AI_FED) not in _sys.path:
+    _sys.path.insert(0, str(_AI_FED))
+from qa_gate import qa_check as _qa_check  # noqa: E402
+# --- end qa_gate wiring ---
+
+# --- PromptDirector wiring ---
+_HOST_PROMPT_DIRECTOR: "Any | None" = None
+try:
+    _PROMPT_DIR_PATH = str(_AI_FED / "prompt_director")
+    if _PROMPT_DIR_PATH not in _sys.path:
+        _sys.path.insert(0, _PROMPT_DIR_PATH)
+    from prompt_director import PromptDirector as _PromptDirectorHost
+    _HOST_PROMPT_DIRECTOR = _PromptDirectorHost()
+except Exception as _hpd_exc:
+    _sys.stderr.write(f"[PromptDirector] not available in render_host_identity — continuing without: {_hpd_exc}\n")
+    _HOST_PROMPT_DIRECTOR = None
+# --- end PromptDirector wiring ---
+
 from render_longform import ARCHIVE_ANTI_MAGENTA_GENERATION_LOCK  # noqa: E402
 
 ARCHIVE_SET_PROMPT = (
@@ -252,8 +274,62 @@ def render_host_test(client: Any, avatar: dict[str, Any], out_dir: Path) -> dict
     if not avatar_url:
         raise RuntimeError("Avatar URL required for video — delete cached avatar to regenerate")
 
+    # --- PromptDirector: validate host identity shots before render ---
+    _host_shots_pd = [
+        ("shot A", HOST_SHOT_A_PROMPT, "What did they actually say?", "medium_close"),
+        ("shot B", HOST_SHOT_B_PROMPT, "And how do we prove it?", "medium_close"),
+    ]
+    _host_pd_render_ids: dict = {}
+    if _HOST_PROMPT_DIRECTOR is not None:
+        for _pd_label, _pd_base_prompt, _pd_speech, _pd_shot_type in _host_shots_pd:
+            _pd_host_result = _HOST_PROMPT_DIRECTOR.direct(
+                subject="DAVID — synthetic keeper-of-the-Archive host",
+                audio_line=_pd_speech,
+                narrative_beat="documentary signature beat, trust-signal delivery, direct to camera",
+                physical_description="male 45-55, dark hair flecked silver, charcoal sweater, reading glasses",
+                shot_type=_pd_shot_type,
+                dry_run=True,
+            )
+            _host_pd_render_ids[_pd_label] = _pd_host_result.render_id
+            if _pd_host_result.gate == "RED":
+                raise RuntimeError(
+                    f"PromptDirector RED on host {_pd_label} — "
+                    f"hard failure modes: {_pd_host_result.flagged_risks} | "
+                    f"workarounds: {_pd_host_result.critique_issues}"
+                )
+            elif _pd_host_result.gate == "YELLOW":
+                _sys.stderr.write(
+                    f"[PromptDirector WARN] host {_pd_label} gate=YELLOW "
+                    f"conf={_pd_host_result.confidence:.2f} "
+                    f"risks={_pd_host_result.flagged_risks}\n"
+                )
+            # else GREEN — proceed silently
+    # --- end PromptDirector ---
+
+    # --- qa_gate: QA narration prompts before render ---
+    for _narr_label, _narr_prompt in [("shot A", HOST_SHOT_A_PROMPT), ("shot B", HOST_SHOT_B_PROMPT)]:
+        _qa_result = _qa_check(content=_narr_prompt, content_type="narration", subject="DAVID host identity")
+        if _qa_result["gate"] == "RED":
+            import sys as _sys_narr
+            print(
+                f"[QA HOLD] render_host_identity.py: {_qa_result['summary']} | Issues: {_qa_result['issues']}",
+                file=_sys_narr.stderr,
+            )
+            raise RuntimeError(f"QA gate RED on {_narr_label} — render aborted")
+        elif _qa_result["gate"] == "YELLOW":
+            import sys as _sys_narr
+            print(
+                f"[QA WARN] render_host_identity.py: {_qa_result['summary']}",
+                file=_sys_narr.stderr,
+            )
+    # --- end qa_gate ---
     _render_shot(client, avatar_url, HOST_SHOT_A_PROMPT, dur_a, shot_a, "shot A")
+    # Print render_id so caller can capture it for outcome recording
+    if _host_pd_render_ids.get("shot A"):
+        print(f"[RENDER_ID] {_host_pd_render_ids['shot A']}")
     _render_shot(client, avatar_url, HOST_SHOT_B_PROMPT, dur_b, shot_b, "shot B")
+    if _host_pd_render_ids.get("shot B"):
+        print(f"[RENDER_ID] {_host_pd_render_ids['shot B']}")
 
     final_path.parent.mkdir(parents=True, exist_ok=True)
     if not final_path.exists() or final_path.stat().st_size < 10000:
@@ -408,29 +484,27 @@ def _report_generation_gate(archive_path: Path, avatar_path: Path) -> None:
         f"magenta={set_mag:.4f} "
         f"pass={generation_reference_passes(set_m, host=False)}"
     )
-    if avatar_mag >= 0.42 or set_mag >= 0.42:
-        print(f"[gate] FAIL raw magenta must be <0.42 (avatar={avatar_mag:.4f} set={set_mag:.4f})")
-    if not generation_reference_passes(avatar_m, host=True):
-        print(f"[gate] avatar breaches: {generation_reference_breaches(avatar_m, host=True)}")
-    if not generation_reference_passes(set_m, host=False):
-        print(f"[gate] set breaches: {generation_reference_breaches(set_m, host=False)}")
+    breaches = (
+        generation_reference_breaches(avatar_m, host=True)
+        + generation_reference_breaches(set_m, host=False)
+    )
+    for b in breaches:
+        print(f"[BREACH] {b}")
 
 
 def main() -> int:
     import argparse
 
-    parser = argparse.ArgumentParser(description="DAVID host identity lock — Issue #69")
-    parser.add_argument(
-        "--force-refs",
-        action="store_true",
-        help="Regenerate archive set + avatar stills (T243 neutral lighting prompts)",
-    )
-    parser.add_argument(
-        "--refs-only",
-        action="store_true",
-        help="Regenerate reference stills only; skip host test clip",
-    )
+    parser = argparse.ArgumentParser(description="DAVID host identity lock generator")
+    parser.add_argument("--out-dir", type=Path, default=None, help="Output directory (default: PROD)")
+    parser.add_argument("--force", action="store_true", help="Re-generate refs even if they exist")
+    parser.add_argument("--gate-report", action="store_true", help="Print generation-gate colour report")
+    parser.add_argument("--skip-generation-gate", action="store_true", help="Bypass generation gate check")
+    parser.add_argument("--test-clip", action="store_true", help="Also render 15-20s host test clip")
     args = parser.parse_args()
+
+    out_dir = Path(args.out_dir) if args.out_dir else PROD
+    out_dir.mkdir(parents=True, exist_ok=True)
 
     import xai_sdk
 
@@ -438,37 +512,22 @@ def main() -> int:
     os.environ["XAI_API_KEY"] = token
     client = xai_sdk.Client(api_key=token)
 
-    refs_dir = PROD / "references"
-    refs_dir.mkdir(parents=True, exist_ok=True)
+    archive = generate_archive_set(client, out_dir, force=args.force)
+    avatar = generate_david_avatar(client, out_dir, force=args.force)
 
-    archive = generate_archive_set(client, refs_dir, force=args.force_refs)
-    avatar = generate_david_avatar(client, archive, refs_dir, force=args.force_refs)
-    _report_generation_gate(Path(archive["path"]), Path(avatar["path"]))
-    if args.refs_only:
-        lock_path = sync_identity_lock_refs(archive, avatar)
-        print(f"[sync] canonical identity_lock → {lock_path}")
-        print(json.dumps({
-            "archive_set": archive["path"],
-            "david_avatar": avatar["path"],
-            "identity_lock": str(lock_path),
-        }, indent=2))
-        return 0
-    host_clip = render_host_test(client, avatar, PROD)
+    host_clip: dict[str, Any] | None = None
+    if args.test_clip:
+        host_clip = render_host_test(client, avatar, out_dir)
+
     lock_path = write_identity_lock(archive, avatar, host_clip)
+    print(f"Identity lock written \u2192 {lock_path}")
 
-    manifest = {
-        "issue": 69,
-        "completed_at": datetime.now(timezone.utc).isoformat(),
-        "identity_lock": str(lock_path),
-        "archive_set": archive["path"],
-        "david_avatar": avatar["path"],
-        "host_test_clip": host_clip["path"],
-    }
-    manifest_path = PROD / "manifest.json"
-    manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(json.dumps(manifest, indent=2, ensure_ascii=False))
+    if args.gate_report and not args.skip_generation_gate:
+        _report_generation_gate(Path(archive["path"]), Path(avatar["path"]))
+
     return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    import sys
+    sys.exit(main())

@@ -1,0 +1,33 @@
+{
+  "system_id": "aac_cave_art_lascaux_altamira",
+  "name": "Upper Palaeolithic Cave Art as Communicative System (Lascaux, Altamira)",
+  "art_category": "prehistoric / cave art",
+  "approx_period": "c. 40,000 – 10,000 BCE (Upper Palaeolithic, Aurignacian through Magdalenian periods)",
+  "decipherment_status": "undeciphered",
+  "key_sites": [
+    "Lascaux Cave (Dordogne, France), c. 17,000 BCE — Hall of the Bulls, Axial Gallery; discovered 1940; UNESCO World Heritage Site",
+    "Altamira Cave (Cantabria, Spain), c. 18,500 – 14,000 BCE — polychrome bison ceiling; discovered 1879; UNESCO World Heritage Site",
+    "Chauvet-Pont d'Arc (Ardèche, France), c. 36,000 BCE — oldest well-dated figurative cave art; discovered 1994",
+    "El Castillo (Cantabria, Spain) — red disk panel dated to at least 40,800 BCE (U-series dating)"
+  ],
+  "key_source_documents": [
+    "Clottes, J. & Lewis-Williams, D. (1998), The Shamans of Prehistory: Trance and Magic in the Painted Caves (Abrams) — altered-states/shamanic interpretation",
+    "Leroi-Gourhan, A. (1965), Préhistoire de l'art occidental (Mazenod) — foundational structuralist analysis of sign distributions and pairings",
+    "Clottes, J. (2016), What is Paleolithic Art? Cave Paintings and the Dawn of Human Creativity (University of Chicago Press) — accessible scholarly synthesis",
+    "Conkey, M. & Fritz, C. (1980), 'Art and Female Representation in Palaeolithic Art', Journal of Anthropological Research — gender and social-message critique",
+    "Genevieve von Petzinger (2016), The First Signs: Unlocking the Mysteries of the World's Oldest Symbols (Atria) — geometric sign catalogue across 350+ sites"
+  ],
+  "visual_characteristics": "Upper Palaeolithic cave imagery includes naturalistic animal figures (bison, aurochs, horses, mammoths, rhinoceros, deer) rendered in ochre, charcoal, manganese dioxide, and haematite — often using cave wall contours to suggest volume. Human depictions are rare and stylised. Alongside figurative art, geometric signs (dots, lines, claviforms, tectiforms, hand stencils) appear at sites across Europe and are now catalogued as a recurring non-random sign vocabulary. Compositions exploit deep cave darkness; many images are in remote chambers requiring torchlight. Scale varies from palm-sized engravings to the 5-metre Lascaux bulls.",
+  "communicative_intent_debate": {
+    "symbolic_vs_narrative": "Central scholarly debate: whether the images encode symbolic/cosmological meaning (Leroi-Gourhan's structuralist binary pairings; Clottes/Lewis-Williams' shamanic trance hypothesis) or constitute scene-based narrative (hunting records, seasonal calendars — less favoured in current scholarship). The geometric sign evidence (von Petzinger) suggests a standardised non-linguistic sign system possibly functioning as proto-symbolic notation, though this remains contested.",
+    "consensus_position": "There is no deciphered meaning. The images are interpreted as intentional communicative/symbolic acts, but the specific semantic content cannot be recovered. Honest framing: these are the earliest known certain examples of symbolic visual communication; the exact messages are irrecoverable."
+  },
+  "honesty_note": "R7: UNDECIPHERED in the linguistic sense — no captions, no bilingual key, no writing. Communicative intent is scholarly consensus; specific meaning is not. Present competing interpretations without asserting any as proven.",
+  "image_access": {
+    "lascaux_replica": "Lascaux IV International Cave Art Centre, Montignac — replica open to public; photography permitted. URL: https://www.lascaux.fr",
+    "altamira_museum": "Museo de Altamira, Santillana del Mar — Neocueva replica; https://www.culturaydeporte.gob.es/mnaltamira",
+    "license_note": "Originals are UNESCO World Heritage sites; original cave closed or severely restricted. Use replica/museum images or Wikimedia Commons PD photographs of officially released reproductions."
+  },
+  "david_episode_slug": null,
+  "cultural_sensitivity": "Some cave sites (e.g. in Australia, North America) are on indigenous sacred lands. Lascaux and Altamira are European prehistoric sites with no living cultural claimants, but general respectful framing of prehistoric human experience is appropriate."
+}

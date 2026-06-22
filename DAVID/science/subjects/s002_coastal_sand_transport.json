@@ -1,0 +1,39 @@
+{
+  "subject_id": "s002-coastal-sand-transport",
+  "domain": "oceanography",
+  "phenomenon": "Coastal sand transport: longshore drift and tidal sorting",
+  "key_measurement": "Longshore sediment transport rate at Santa Barbara, California: ~200,000–500,000 m³/year (USACE, measured via dredge records); tidal sorting produces grain-size gradients of 0.1–0.5 φ over 100 m cross-shore distance",
+  "principle_set": "general_scientific",
+  "framework": "Domain_Specific_Visualization_Principles_Framework v1.0",
+  "institutions": [
+    "U.S. Geological Survey Coastal and Marine Hazards and Resources Program",
+    "Woods Hole Oceanographic Institution (WHOI)",
+    "NOAA National Ocean Service",
+    "U.S. Army Corps of Engineers (USACE) Coastal Hydraulics Laboratory"
+  ],
+  "sources": [
+    {
+      "citation": "Komar, P.D. (1998) 'Beach Processes and Sedimentation', 2nd ed., Prentice Hall, Upper Saddle River, NJ",
+      "type": "secondary",
+      "url": "https://www.worldcat.org/isbn/0137549385"
+    },
+    {
+      "citation": "Longshore Sediment Transport, USACE Coastal Engineering Manual EM 1110-2-1100, Part III Ch. 2 (2002)",
+      "type": "primary",
+      "url": "https://www.publications.usace.army.mil/USACE-Publications/Engineer-Manuals/u43544q/636F617374616C20656E67696E656572696E67206D616E75616C/"
+    },
+    {
+      "citation": "Masselink, G. & Gehrels, R. (eds.) (2014) 'Coastal Environments and Global Change', Wiley-Blackwell / American Geophysical Union",
+      "type": "secondary",
+      "url": "https://www.wiley.com/en-us/9780470656594"
+    }
+  ],
+  "visualization_compliance": [
+    "Net longshore transport direction arrow must align with observed dominant wave approach angle for the depicted coastline",
+    "Tidal cycle animation must use a realistic period (diurnal ~24.8 hr or semidiurnal ~12.4 hr) — not compressed without explicit time-lapse label",
+    "Wave height and period in animation must be within documented range for the depicted location",
+    "Grain-size sorting gradient across the surf zone must be directionally accurate (coarser near plunge point, finer offshore)",
+    "Do not depict net transport reversals without citing a seasonal data source",
+    "Label SCHEMATIC on plan-view longshore drift diagrams; scale bar in meters required"
+  ]
+}
