@@ -1,0 +1,603 @@
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'AI_Systems_Index.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'AI_Systems_Overview.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Agent_Registry.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'CLAUDE.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Prompts/Core_System_Prompt.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Prompts/HOW_TO_USE.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Prompts/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Prompts/System_Coordination_Prompt.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Prompts/Task_Intake_Prompt.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Prompts/coordination_prompt.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Prompts/example_task.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Prompts/orchestrator_prompt.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'STRUCTURE.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Systems/Communication_Protocol.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Systems/Delegation_Protocol.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Systems/Error_Handling.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Systems/Orchestration/AI_Systems_Architecture.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Systems/Orchestration/Orchestrator.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Systems/Templates/Agent_Template.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Systems/Templates/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Systems/Templates/Status_Reporting_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'VERSIONING.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/Feeder_AI_STUDIO_Handoff_Contract_v1.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/Federation_Design_Philosophy.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/JANTZEN_PRINCIPLES.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/animation_to_studio.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/jantzen_principles.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/science_integration.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation_coordinator.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation_specs/Bash_Federation/Agents/Bash_Operations_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation_specs/Bash_Federation/Agents/Process_Monitor_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation_specs/Bash_Federation/Agents/Simple_File_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation_specs/Bash_Federation/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation_specs/Editing_Federation/Agents/Dialogue_Editor_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation_specs/Editing_Federation/Agents/Narrative_Editor_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation_specs/Editing_Federation/Agents/Structure_Editor_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation_specs/Editing_Federation/Agents/Tone_Editor_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation_specs/Editing_Federation/Editing_Standards.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation_specs/Editing_Federation/Prompts/Editing_Coordination_Prompt.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation_specs/Editing_Federation/Prompts/Editing_Style_Prompt.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation_specs/Editing_Federation/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Agent_Prompts_Index.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Bash_Federation/Prompts/Bash_Operations_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Bash_Federation/Prompts/Simple_File_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Editing_Federation/Agents/Tone_Editor_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Editing_Federation/Prompts/Dialogue_Editor_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Editing_Federation/Prompts/Narrative_Editor_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Editing_Federation/Prompts/Structure_Editor_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Editing_Federation/Prompts/Tone_Editor_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Editing_Federation/editing_federation_dispatcher.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Reasoning_Federation/Agents/Reasoning_Orchestrator_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Reasoning_Federation/Prompts/Reasoning_Orchestrator_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Reasoning_Federation/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Agents/Applied_Math_Stats_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Agents/Biological_Viz_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Agents/Chemistry_Materials_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Agents/Computational_Math_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Agents/Earth_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Agents/Environmental_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Agents/Math_Orchestrator_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Agents/Mathematical_Modeling_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Agents/Physics_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Agents/Planetary_Space_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Agents/Pure_Math_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Agents/Viz_Orchestrator_Agent.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Prompts/Applied_Math_Stats_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Prompts/Biological_Viz_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Prompts/Chemistry_Materials_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Prompts/Computational_Math_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Prompts/Earth_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Prompts/Environmental_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Prompts/Math_Orchestrator_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Prompts/Mathematical_Modeling_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Prompts/Physics_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Prompts/Planetary_Space_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Prompts/Pure_Math_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/Prompts/Viz_Orchestrator_Agent.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Federations/Visualization_Federation/federation_router.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'NEXUS_AGENT_HANDOFF.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T1_pass1_akhenaten.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T1_pass1_alcibiades.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T1_pass1_chandragupta-maurya.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T1_pass1_cicero.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T1_pass1_constantine-i.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T1_pass1_darius-i.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T1_pass1_demosthenes.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T1_pass1_hadrian.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T1_pass1_mark-antony.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T1_pass1_nebuchadnezzar-ii.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T1_pass1_nefertari.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T1_pass1_ptolemy-i.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T1_pass1_scipio-africanus.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T1_pass1_sulla.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T1_pass1_sun-tzu.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T1_pass1_themistocles.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T1_pass1_thutmose-iii.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T1_pass1_xerxes-i.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T2_pass1_christopher-columbus.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T2_pass1_hernando-cortes.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T2_pass1_ibn-battuta.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T2_pass1_ibn-khaldun.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T2_pass1_isabella-of-castile.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T2_pass1_justinian-i.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T2_pass1_mehmed-ii.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T2_pass1_tamerlane.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T2_pass1_theodora-byzantine.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T2_pass1_vasco-da-gama.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T2_pass1_zheng-he.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T3_pass1_abraham-lincoln.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T3_pass1_charles-darwin.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T3_pass1_frederick-douglass.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T3_pass1_george-washington.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T3_pass1_harriet-tubman.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T3_pass1_mahatma-gandhi.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T3_pass1_marie-curie.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T3_pass1_napoleon-bonaparte.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T3_pass1_nelson-mandela.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T3_pass1_nikola-tesla.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T3_pass1_otto-von-bismarck.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T3_pass1_queen-victoria.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T3_pass1_thomas-jefferson.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T3_pass1_winston-churchill.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T4_pass1_s012.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T4_pass1_s013.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T4_pass1_s014.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T4_pass1_s015.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T4_pass1_s016.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T4_pass1_s017.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T4_pass1_s018.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T4_pass1_s019.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T4_pass1_s020.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T4_pass1_s021.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T4_pass1_s022.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T4_pass1_s023.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T5_pass1_s024.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T5_pass1_s025.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T5_pass1_s026.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T5_pass1_s027.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T5_pass1_s028.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T5_pass1_s029.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T5_pass1_s030.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/commands/T5_pass1_s031.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/ingest_log.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/processed/T1_pass1_akhenaten.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/processed/T1_pass1_cicero.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/processed/T1_pass1_constantine-i.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/processed/T1_pass1_darius-i.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/processed/T1_pass1_xerxes-i.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/processed/T3_pass1_abraham-lincoln.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/processed/T3_pass1_harriet-tubman.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/processed/T3_pass1_marie-curie.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/processed/T3_pass1_napoleon-bonaparte.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/processed/T3_pass1_winston-churchill.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/processed/T4_pass1_s007.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/processed/T4_pass1_s011.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/processed/T4_pass1_s012.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/processed/T4_pass1_s013.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/processed/T4_pass1_s015.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/processed/T4_pass1_s016.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/processed/T4_pass1_s017.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/processed/T4_pass1_s032.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Research/research_status.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/_test_write.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/air_gap.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/audit_logger.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/baa_tracker.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/chroma_store.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/client_intake.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/client_queue.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/companion_pipeline.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/compliance_gate.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/cross_domain_critique.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/domain_validator.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/encryption_layer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/feeder_packet.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/helix_narration_agent.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/helix_pipeline.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/history_pipeline.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/intake_classifier.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/knowledge_graph_stub.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/knowledge_ingester.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/lang_pipeline.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/master_reasoner.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/narration_agent.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/nexus_runner.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/S001_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/S002_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/S003_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/S004_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/S005_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/S006_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/S007_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/S008_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/S009_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/S010_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/akbar-the-great_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/alexander-the-great_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/arthur-of-brittany_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/ashoka_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/ashurbanipal_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/atahualpa_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/augustus_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/benjamin-franklin_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/charlemagne_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/cleopatra-vii_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/confucius_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/constance-of-brittany_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/cyrus-the-great_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/edward-black-prince_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/edward-i-longshanks_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/edward-iii_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/eleanor-of-aquitaine_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/elizabeth-i_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/empress-matilda_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/frederick-barbarossa_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/fulk-of-jerusalem_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/genghis-khan_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/geoffrey-plantagenet_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/giraldus-cambrensis_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/haile-selassie_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/hannibal-barca_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/hatshepsut-nubia_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/hatshepsut_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/henry-i-beauclerc_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/henry-ii_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/henry-iii_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/henry-the-young-king_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/henry-v_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/himiko_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/homer_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/hubert-walter_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/hugh-bigod_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/hypatia-alexandria_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/isabella-of-angouleme_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/joan-of-arc_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/john-lackland_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/julius-caesar_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/la-venta-ruler_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/leonidas-i_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/llywelyn-the-great_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/louis-ix_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/louis-vii_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/mansa-musa_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/marcus-aurelius_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/montezuma-ii_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/murasaki-shikibu_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/nefertiti_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/nero_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/odo-of-bayeux_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/pacal-the-great_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/pachacuti_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/pericles_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/philip-ii-augustus_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/pope-innocent-iii_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/qin-shi-huang_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/ramesses-ii_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/ranulf-de-blondeville_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/richard-de-clare_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/richard-i-lionheart_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/robert-curthose_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/saladin_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/shaka-zulu_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/simon-bolivar_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/simon-de-montfort_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/sitting-bull_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/socrates_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/spartacus_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/stephen-langton_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/stephen-of-blois_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/suleiman-the-magnificent_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/thomas-becket_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/tokugawa-ieyasu_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/tutankhamun_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/william-ii-rufus_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/william-marshal_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/william-the-conqueror_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/william-the-lion_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/wu-zetian_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/output/zhu-yuanzhang_feeder_packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/producer_agent.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/producer_pipeline.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/promo_pipeline.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/prompt_director/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/prompt_director/active_calibrator.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/prompt_director/calibration_report.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/prompt_director/constraint_map.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/prompt_director/constraint_map_schema.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/prompt_director/prompt_director.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/prompt_director/render_log.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/prompt_director/render_log.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/protected_io.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/qa_gate.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/reasoning_config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/reasoning_integrations.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/reasoning_integrations_helix_stub.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/reasoning_memory.jsonl', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/reasoning_memory.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/reasoning_orchestrator.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/reasoning_pipeline.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/reflection_loop.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/research_director.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/run_s007.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/science_pipeline.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/scribe_pipeline.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/security_config.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'federation/tonight_readiness.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'security/.gitignore', LF will be replaced by CRLF the next time Git touches it
+
+warning: in the working copy of 'tests/test_pipeline.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'training/dataset_builder.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'training/finetune_pipeline.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'training/nightly_finetune.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'validate_pipeline.py', LF will be replaced by CRLF the next time Git touches it
+[main 36bafc7] Hard commit: 2026-06-21 — federation pipelines, reasoning layer, research ingest
+ 281 files changed, 42675 insertions(+), 124 deletions(-)
+ create mode 100644 Federations/Agent_Prompts_Index.md
+ create mode 100644 Federations/Bash_Federation/Prompts/Bash_Operations_Agent.txt
+ create mode 100644 Federations/Bash_Federation/Prompts/Simple_File_Agent.txt
+ create mode 100644 Federations/Editing_Federation/Agents/Tone_Editor_Agent.md
+ create mode 100644 Federations/Editing_Federation/Prompts/Dialogue_Editor_Agent.txt
+ create mode 100644 Federations/Editing_Federation/Prompts/Narrative_Editor_Agent.txt
+ create mode 100644 Federations/Editing_Federation/Prompts/Structure_Editor_Agent.txt
+ create mode 100644 Federations/Editing_Federation/Prompts/Tone_Editor_Agent.txt
+ create mode 100644 Federations/Editing_Federation/editing_federation_dispatcher.py
+ create mode 100644 Federations/Reasoning_Federation/Agents/Reasoning_Orchestrator_Agent.md
+ create mode 100644 Federations/Reasoning_Federation/Prompts/Reasoning_Orchestrator_Agent.txt
+ create mode 100644 Federations/Reasoning_Federation/README.md
+ create mode 100644 Federations/Visualization_Federation/Agents/Applied_Math_Stats_Agent.md
+ create mode 100644 Federations/Visualization_Federation/Agents/Biological_Viz_Agent.md
+ create mode 100644 Federations/Visualization_Federation/Agents/Chemistry_Materials_Agent.md
+ create mode 100644 Federations/Visualization_Federation/Agents/Computational_Math_Agent.md
+ create mode 100644 Federations/Visualization_Federation/Agents/Earth_Agent.md
+ create mode 100644 Federations/Visualization_Federation/Agents/Environmental_Agent.md
+ create mode 100644 Federations/Visualization_Federation/Agents/Math_Orchestrator_Agent.md
+ create mode 100644 Federations/Visualization_Federation/Agents/Mathematical_Modeling_Agent.md
+ create mode 100644 Federations/Visualization_Federation/Agents/Physics_Agent.md
+ create mode 100644 Federations/Visualization_Federation/Agents/Planetary_Space_Agent.md
+ create mode 100644 Federations/Visualization_Federation/Agents/Pure_Math_Agent.md
+ create mode 100644 Federations/Visualization_Federation/Agents/Viz_Orchestrator_Agent.md
+ create mode 100644 Federations/Visualization_Federation/Prompts/Applied_Math_Stats_Agent.txt
+ create mode 100644 Federations/Visualization_Federation/Prompts/Biological_Viz_Agent.txt
+ create mode 100644 Federations/Visualization_Federation/Prompts/Chemistry_Materials_Agent.txt
+ create mode 100644 Federations/Visualization_Federation/Prompts/Computational_Math_Agent.txt
+ create mode 100644 Federations/Visualization_Federation/Prompts/Earth_Agent.txt
+ create mode 100644 Federations/Visualization_Federation/Prompts/Environmental_Agent.txt
+ create mode 100644 Federations/Visualization_Federation/Prompts/Math_Orchestrator_Agent.txt
+ create mode 100644 Federations/Visualization_Federation/Prompts/Mathematical_Modeling_Agent.txt
+ create mode 100644 Federations/Visualization_Federation/Prompts/Physics_Agent.txt
+ create mode 100644 Federations/Visualization_Federation/Prompts/Planetary_Space_Agent.txt
+ create mode 100644 Federations/Visualization_Federation/Prompts/Pure_Math_Agent.txt
+ create mode 100644 Federations/Visualization_Federation/Prompts/Viz_Orchestrator_Agent.txt
+ create mode 100644 Federations/Visualization_Federation/README.md
+ create mode 100644 Federations/Visualization_Federation/federation_router.py
+ create mode 100644 NEXUS_AGENT_HANDOFF.md
+ create mode 100644 Research/commands/T1_pass1_akhenaten.json
+ create mode 100644 Research/commands/T1_pass1_alcibiades.json
+ create mode 100644 Research/commands/T1_pass1_chandragupta-maurya.json
+ create mode 100644 Research/commands/T1_pass1_cicero.json
+ create mode 100644 Research/commands/T1_pass1_constantine-i.json
+ create mode 100644 Research/commands/T1_pass1_darius-i.json
+ create mode 100644 Research/commands/T1_pass1_demosthenes.json
+ create mode 100644 Research/commands/T1_pass1_hadrian.json
+ create mode 100644 Research/commands/T1_pass1_mark-antony.json
+ create mode 100644 Research/commands/T1_pass1_nebuchadnezzar-ii.json
+ create mode 100644 Research/commands/T1_pass1_nefertari.json
+ create mode 100644 Research/commands/T1_pass1_ptolemy-i.json
+ create mode 100644 Research/commands/T1_pass1_scipio-africanus.json
+ create mode 100644 Research/commands/T1_pass1_sulla.json
+ create mode 100644 Research/commands/T1_pass1_sun-tzu.json
+ create mode 100644 Research/commands/T1_pass1_themistocles.json
+ create mode 100644 Research/commands/T1_pass1_thutmose-iii.json
+ create mode 100644 Research/commands/T1_pass1_xerxes-i.json
+ create mode 100644 Research/commands/T2_pass1_christopher-columbus.json
+ create mode 100644 Research/commands/T2_pass1_hernando-cortes.json
+ create mode 100644 Research/commands/T2_pass1_ibn-battuta.json
+ create mode 100644 Research/commands/T2_pass1_ibn-khaldun.json
+ create mode 100644 Research/commands/T2_pass1_isabella-of-castile.json
+ create mode 100644 Research/commands/T2_pass1_justinian-i.json
+ create mode 100644 Research/commands/T2_pass1_mehmed-ii.json
+ create mode 100644 Research/commands/T2_pass1_tamerlane.json
+ create mode 100644 Research/commands/T2_pass1_theodora-byzantine.json
+ create mode 100644 Research/commands/T2_pass1_vasco-da-gama.json
+ create mode 100644 Research/commands/T2_pass1_zheng-he.json
+ create mode 100644 Research/commands/T3_pass1_abraham-lincoln.json
+ create mode 100644 Research/commands/T3_pass1_charles-darwin.json
+ create mode 100644 Research/commands/T3_pass1_frederick-douglass.json
+ create mode 100644 Research/commands/T3_pass1_george-washington.json
+ create mode 100644 Research/commands/T3_pass1_harriet-tubman.json
+ create mode 100644 Research/commands/T3_pass1_mahatma-gandhi.json
+ create mode 100644 Research/commands/T3_pass1_marie-curie.json
+ create mode 100644 Research/commands/T3_pass1_napoleon-bonaparte.json
+ create mode 100644 Research/commands/T3_pass1_nelson-mandela.json
+ create mode 100644 Research/commands/T3_pass1_nikola-tesla.json
+ create mode 100644 Research/commands/T3_pass1_otto-von-bismarck.json
+ create mode 100644 Research/commands/T3_pass1_queen-victoria.json
+ create mode 100644 Research/commands/T3_pass1_thomas-jefferson.json
+ create mode 100644 Research/commands/T3_pass1_winston-churchill.json
+ create mode 100644 Research/commands/T4_pass1_s012.json
+ create mode 100644 Research/commands/T4_pass1_s013.json
+ create mode 100644 Research/commands/T4_pass1_s014.json
+ create mode 100644 Research/commands/T4_pass1_s015.json
+ create mode 100644 Research/commands/T4_pass1_s016.json
+ create mode 100644 Research/commands/T4_pass1_s017.json
+ create mode 100644 Research/commands/T4_pass1_s018.json
+ create mode 100644 Research/commands/T4_pass1_s019.json
+ create mode 100644 Research/commands/T4_pass1_s020.json
+ create mode 100644 Research/commands/T4_pass1_s021.json
+ create mode 100644 Research/commands/T4_pass1_s022.json
+ create mode 100644 Research/commands/T4_pass1_s023.json
+ create mode 100644 Research/commands/T5_pass1_s024.json
+ create mode 100644 Research/commands/T5_pass1_s025.json
+ create mode 100644 Research/commands/T5_pass1_s026.json
+ create mode 100644 Research/commands/T5_pass1_s027.json
+ create mode 100644 Research/commands/T5_pass1_s028.json
+ create mode 100644 Research/commands/T5_pass1_s029.json
+ create mode 100644 Research/commands/T5_pass1_s030.json
+ create mode 100644 Research/commands/T5_pass1_s031.json
+ create mode 100644 Research/ingest_log.jsonl
+ create mode 100644 Research/processed/T1_pass1_akhenaten.json
+ create mode 100644 Research/processed/T1_pass1_cicero.json
+ create mode 100644 Research/processed/T1_pass1_constantine-i.json
+ create mode 100644 Research/processed/T1_pass1_darius-i.json
+ create mode 100644 Research/processed/T1_pass1_test-ingester-figure.json
+ create mode 100644 Research/processed/T1_pass1_xerxes-i.json
+ create mode 100644 Research/processed/T3_pass1_abraham-lincoln.json
+ create mode 100644 Research/processed/T3_pass1_harriet-tubman.json
+ create mode 100644 Research/processed/T3_pass1_marie-curie.json
+ create mode 100644 Research/processed/T3_pass1_napoleon-bonaparte.json
+ create mode 100644 Research/processed/T3_pass1_winston-churchill.json
+ create mode 100644 Research/processed/T4_pass1_s007.json
+ create mode 100644 Research/processed/T4_pass1_s011.json
+ create mode 100644 Research/processed/T4_pass1_s012.json
+ create mode 100644 Research/processed/T4_pass1_s013.json
+ create mode 100644 Research/processed/T4_pass1_s015.json
+ create mode 100644 Research/processed/T4_pass1_s016.json
+ create mode 100644 Research/processed/T4_pass1_s017.json
+ create mode 100644 Research/processed/T4_pass1_s032.json
+ create mode 100644 Research/research_status.json
+ create mode 100644 federation/_test_write.py
+ create mode 100644 federation/air_gap.py
+ create mode 100644 federation/audit_logger.py
+ create mode 100644 federation/baa_tracker.py
+ create mode 100644 federation/chroma_data
+ create mode 100644 federation/chroma_data-journal
+ create mode 100644 federation/chroma_store.py
+ create mode 100644 federation/client_intake.py
+ create mode 100644 federation/client_queue.jsonl
+ create mode 100644 federation/companion_pipeline.py
+ create mode 100644 federation/compliance_gate.py
+ create mode 100644 federation/cross_domain_critique.py
+ create mode 100644 federation/domain_validator.py
+ create mode 100644 federation/encryption_layer.py
+ create mode 100644 federation/feeder_packet.py
+ create mode 100644 federation/helix_narration_agent.py
+ create mode 100644 federation/helix_pipeline.py
+ create mode 100644 federation/history_pipeline.py
+ create mode 100644 federation/intake_classifier.py
+ create mode 100644 federation/knowledge_graph_stub.py
+ create mode 100644 federation/knowledge_ingester.py
+ create mode 100644 federation/lang_pipeline.py
+ create mode 100644 federation/master_reasoner.py
+ create mode 100644 federation/narration_agent.py
+ create mode 100644 federation/nexus_runner.py
+ create mode 100644 federation/output/S001_feeder_packet.json
+ create mode 100644 federation/output/S002_feeder_packet.json
+ create mode 100644 federation/output/S003_feeder_packet.json
+ create mode 100644 federation/output/S004_feeder_packet.json
+ create mode 100644 federation/output/S005_feeder_packet.json
+ create mode 100644 federation/output/S006_feeder_packet.json
+ create mode 100644 federation/output/S007_feeder_packet.json
+ create mode 100644 federation/output/S008_feeder_packet.json
+ create mode 100644 federation/output/S009_feeder_packet.json
+ create mode 100644 federation/output/S010_feeder_packet.json
+ create mode 100644 federation/output/akbar-the-great_feeder_packet.json
+ create mode 100644 federation/output/alexander-the-great_feeder_packet.json
+ create mode 100644 federation/output/arthur-of-brittany_feeder_packet.json
+ create mode 100644 federation/output/ashoka_feeder_packet.json
+ create mode 100644 federation/output/ashurbanipal_feeder_packet.json
+ create mode 100644 federation/output/atahualpa_feeder_packet.json
+ create mode 100644 federation/output/augustus_feeder_packet.json
+ create mode 100644 federation/output/benjamin-franklin_feeder_packet.json
+ create mode 100644 federation/output/charlemagne_feeder_packet.json
+ create mode 100644 federation/output/cleopatra-vii_feeder_packet.json
+ create mode 100644 federation/output/confucius_feeder_packet.json
+ create mode 100644 federation/output/constance-of-brittany_feeder_packet.json
+ create mode 100644 federation/output/cyrus-the-great_feeder_packet.json
+ create mode 100644 federation/output/edward-black-prince_feeder_packet.json
+ create mode 100644 federation/output/edward-i-longshanks_feeder_packet.json
+ create mode 100644 federation/output/edward-iii_feeder_packet.json
+ create mode 100644 federation/output/eleanor-of-aquitaine_feeder_packet.json
+ create mode 100644 federation/output/elizabeth-i_feeder_packet.json
+ create mode 100644 federation/output/empress-matilda_feeder_packet.json
+ create mode 100644 federation/output/frederick-barbarossa_feeder_packet.json
+ create mode 100644 federation/output/fulk-of-jerusalem_feeder_packet.json
+ create mode 100644 federation/output/genghis-khan_feeder_packet.json
+ create mode 100644 federation/output/geoffrey-plantagenet_feeder_packet.json
+ create mode 100644 federation/output/giraldus-cambrensis_feeder_packet.json
+ create mode 100644 federation/output/haile-selassie_feeder_packet.json
+ create mode 100644 federation/output/hannibal-barca_feeder_packet.json
+ create mode 100644 federation/output/hatshepsut-nubia_feeder_packet.json
+ create mode 100644 federation/output/hatshepsut_feeder_packet.json
+ create mode 100644 federation/output/henry-i-beauclerc_feeder_packet.json
+ create mode 100644 federation/output/henry-ii_feeder_packet.json
+ create mode 100644 federation/output/henry-iii_feeder_packet.json
+ create mode 100644 federation/output/henry-the-young-king_feeder_packet.json
+ create mode 100644 federation/output/henry-v_feeder_packet.json
+ create mode 100644 federation/output/himiko_feeder_packet.json
+ create mode 100644 federation/output/homer_feeder_packet.json
+ create mode 100644 federation/output/hubert-walter_feeder_packet.json
+ create mode 100644 federation/output/hugh-bigod_feeder_packet.json
+ create mode 100644 federation/output/hypatia-alexandria_feeder_packet.json
+ create mode 100644 federation/output/isabella-of-angouleme_feeder_packet.json
+ create mode 100644 federation/output/joan-of-arc_feeder_packet.json
+ create mode 100644 federation/output/john-lackland_feeder_packet.json
+ create mode 100644 federation/output/julius-caesar_feeder_packet.json
+ create mode 100644 federation/output/la-venta-ruler_feeder_packet.json
+ create mode 100644 federation/output/leonidas-i_feeder_packet.json
+ create mode 100644 federation/output/llywelyn-the-great_feeder_packet.json
+ create mode 100644 federation/output/louis-ix_feeder_packet.json
+ create mode 100644 federation/output/louis-vii_feeder_packet.json
+ create mode 100644 federation/output/mansa-musa_feeder_packet.json
+ create mode 100644 federation/output/marcus-aurelius_feeder_packet.json
+ create mode 100644 federation/output/montezuma-ii_feeder_packet.json
+ create mode 100644 federation/output/murasaki-shikibu_feeder_packet.json
+ create mode 100644 federation/output/nefertiti_feeder_packet.json
+ create mode 100644 federation/output/nero_feeder_packet.json
+ create mode 100644 federation/output/odo-of-bayeux_feeder_packet.json
+ create mode 100644 federation/output/pacal-the-great_feeder_packet.json
+ create mode 100644 federation/output/pachacuti_feeder_packet.json
+ create mode 100644 federation/output/pericles_feeder_packet.json
+ create mode 100644 federation/output/philip-ii-augustus_feeder_packet.json
+ create mode 100644 federation/output/pope-innocent-iii_feeder_packet.json
+ create mode 100644 federation/output/qin-shi-huang_feeder_packet.json
+ create mode 100644 federation/output/ramesses-ii_feeder_packet.json
+ create mode 100644 federation/output/ranulf-de-blondeville_feeder_packet.json
+ create mode 100644 federation/output/richard-de-clare_feeder_packet.json
+ create mode 100644 federation/output/richard-i-lionheart_feeder_packet.json
+ create mode 100644 federation/output/robert-curthose_feeder_packet.json
+ create mode 100644 federation/output/saladin_feeder_packet.json
+ create mode 100644 federation/output/shaka-zulu_feeder_packet.json
+ create mode 100644 federation/output/simon-bolivar_feeder_packet.json
+ create mode 100644 federation/output/simon-de-montfort_feeder_packet.json
+ create mode 100644 federation/output/sitting-bull_feeder_packet.json
+ create mode 100644 federation/output/socrates_feeder_packet.json
+ create mode 100644 federation/output/spartacus_feeder_packet.json
+ create mode 100644 federation/output/stephen-langton_feeder_packet.json
+ create mode 100644 federation/output/stephen-of-blois_feeder_packet.json
+ create mode 100644 federation/output/suleiman-the-magnificent_feeder_packet.json
+ create mode 100644 federation/output/thomas-becket_feeder_packet.json
+ create mode 100644 federation/output/tokugawa-ieyasu_feeder_packet.json
+ create mode 100644 federation/output/tutankhamun_feeder_packet.json
+ create mode 100644 federation/output/william-ii-rufus_feeder_packet.json
+ create mode 100644 federation/output/william-marshal_feeder_packet.json
+ create mode 100644 federation/output/william-the-conqueror_feeder_packet.json
+ create mode 100644 federation/output/william-the-lion_feeder_packet.json
+ create mode 100644 federation/output/wu-zetian_feeder_packet.json
+ create mode 100644 federation/output/zhu-yuanzhang_feeder_packet.json
+ create mode 100644 federation/producer_agent.py
+ create mode 100644 federation/producer_pipeline.py
+ create mode 100644 federation/promo_pipeline.py
+ create mode 100644 federation/prompt_director/__init__.py
+ create mode 100644 federation/prompt_director/active_calibrator.py
+ create mode 100644 federation/prompt_director/calibration_report.py
+ create mode 100644 federation/prompt_director/constraint_map.json
+ create mode 100644 federation/prompt_director/constraint_map_schema.json
+ create mode 100644 federation/prompt_director/prompt_director.py
+ create mode 100644 federation/prompt_director/render_log.jsonl
+ create mode 100644 federation/prompt_director/render_log.py
+ create mode 100644 federation/protected_io.py
+ create mode 100644 federation/qa_gate.py
+ create mode 100644 federation/reasoning_config.py
+ create mode 100644 federation/reasoning_integrations.py
+ create mode 100644 federation/reasoning_integrations_helix_stub.py
+ create mode 100644 federation/reasoning_memory.jsonl
+ create mode 100644 federation/reasoning_memory.py
+ create mode 100644 federation/reasoning_orchestrator.py
+ create mode 100644 federation/reasoning_pipeline.py
+ create mode 100644 federation/reflection_loop.py
+ create mode 100644 federation/research_director.py
+ create mode 100644 federation/run_s007.py
+ create mode 100644 federation/science_pipeline.py
+ create mode 100644 federation/scribe_pipeline.py
+ create mode 100644 federation/security_config.py
+ create mode 100644 federation/tonight_readiness.py
+ create mode 100644 security/.gitignore
+ create mode 100644 tests/__init__.py
+ create mode 100644 tests/test_pipeline.py
+ create mode 100644 training/dataset_builder.py
+ create mode 100644 training/finetune_pipeline.py
+ create mode 100644 training/nightly_finetune.py
+ create mode 100644 validate_pipeline.py
+36bafc727a68ef62ea5421906ad7e9fadea8412a
+To https://github.com/cbn52zmh78-cmyk/AI.gitLines Words Characters Property
+----- ----- ---------- --------
+  281                          
+
+
+
+   11a953a..36bafc7  main -> main

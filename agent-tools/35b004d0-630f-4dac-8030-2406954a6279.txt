@@ -1,0 +1,517 @@
+
+=== AI ===
+fatal: Unable to create 'C:/Users/NCG/Videos/Grok Projects/AI/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, or the lock file may be stale
+fatal: Unable to create 'C:/Users/NCG/Videos/Grok Projects/AI/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, or the lock file may be stale
+
+=== History ===To https://github.com/cbn52zmh78-cmyk/AI.git
+
+   ba6e4d7..11a953a  main -> main
+warning: in the working copy of 'data/roster.yaml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/julius-caesar.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/documentary_outline_generator.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/render_plan_generator.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipelines/history_pipeline.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'arcs/akbar-the-great_arc.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'arcs/alexander-the-great_arc.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'arcs/julius-caesar_arc.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/abraham-lincoln.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/akbar-the-great.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/akhenaten.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/alexander-the-great.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/arthur-of-brittany.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/ashoka.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/ashurbanipal.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/atahualpa.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/augustus.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/benjamin-franklin.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/charlemagne.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/cicero.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/cleopatra-vii.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/confucius.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/constance-of-brittany.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/constantine-i.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/cyrus-the-great.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/darius-i.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/edward-black-prince.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/edward-i-longshanks.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/edward-iii.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/eleanor-of-aquitaine.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/elizabeth-i.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/empress-matilda.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/frederick-barbarossa.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/fulk-of-jerusalem.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/genghis-khan.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/geoffrey-plantagenet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/giraldus-cambrensis.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/haile-selassie.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/hannibal-barca.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/harriet-tubman.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/hatshepsut-nubia.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/hatshepsut.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/henry-i-beauclerc.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/henry-ii.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/henry-iii.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/henry-the-young-king.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/henry-v.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/himiko.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/homer.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/hubert-walter.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/hugh-bigod.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/hypatia-alexandria.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/isabella-of-angouleme.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/joan-of-arc.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/john-lackland.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/la-venta-ruler.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/leonidas-i.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/llywelyn-the-great.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/louis-ix.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/louis-vii.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/mansa-musa.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/marcus-aurelius.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/marie-curie.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/montezuma-ii.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/murasaki-shikibu.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/napoleon-bonaparte.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/nefertiti.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/nero.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/odo-of-bayeux.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/pacal-the-great.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/pachacuti.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/pericles.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/philip-ii-augustus.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/pope-innocent-iii.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/qin-shi-huang.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/ramesses-ii.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/ranulf-de-blondeville.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/richard-de-clare.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/richard-i-lionheart.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/robert-curthose.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/saladin.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/shaka-zulu.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/simon-bolivar.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/simon-de-montfort.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/sitting-bull.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/socrates.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/spartacus.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/stephen-langton.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/stephen-of-blois.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/suleiman-the-magnificent.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/test-ingester-figure.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/thomas-becket.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/tokugawa-ieyasu.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/tutankhamun.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/william-ii-rufus.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/william-marshal.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/william-the-conqueror.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/william-the-lion.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/winston-churchill.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/wu-zetian.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/xerxes-i.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exports/zhu-yuanzhang.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/documentary_arc_reasoner.py', LF will be replaced by CRLF the next time Git touches it
+[main 0884b73] Hard commit: 2026-06-21 — documentary exports roster expansion, arc reasoner
+ 103 files changed, 7538 insertions(+), 436 deletions(-)
+ create mode 100644 Pipelines/history_pipeline.py
+ create mode 100644 arcs/akbar-the-great_arc.json
+ create mode 100644 arcs/alexander-the-great_arc.json
+ create mode 100644 arcs/julius-caesar_arc.json
+ create mode 100644 exports/abraham-lincoln.json
+ create mode 100644 exports/akbar-the-great.json
+ create mode 100644 exports/akhenaten.json
+ create mode 100644 exports/alexander-the-great.json
+ create mode 100644 exports/arthur-of-brittany.json
+ create mode 100644 exports/ashoka.json
+ create mode 100644 exports/ashurbanipal.json
+ create mode 100644 exports/atahualpa.json
+ create mode 100644 exports/augustus.json
+ create mode 100644 exports/benjamin-franklin.json
+ create mode 100644 exports/charlemagne.json
+ create mode 100644 exports/cicero.json
+ create mode 100644 exports/cleopatra-vii.json
+ create mode 100644 exports/confucius.json
+ create mode 100644 exports/constance-of-brittany.json
+ create mode 100644 exports/constantine-i.json
+ create mode 100644 exports/cyrus-the-great.json
+ create mode 100644 exports/darius-i.json
+ create mode 100644 exports/edward-black-prince.json
+ create mode 100644 exports/edward-i-longshanks.json
+ create mode 100644 exports/edward-iii.json
+ create mode 100644 exports/eleanor-of-aquitaine.json
+ create mode 100644 exports/elizabeth-i.json
+ create mode 100644 exports/empress-matilda.json
+ create mode 100644 exports/frederick-barbarossa.json
+ create mode 100644 exports/fulk-of-jerusalem.json
+ create mode 100644 exports/genghis-khan.json
+ create mode 100644 exports/geoffrey-plantagenet.json
+ create mode 100644 exports/giraldus-cambrensis.json
+ create mode 100644 exports/haile-selassie.json
+ create mode 100644 exports/hannibal-barca.json
+ create mode 100644 exports/harriet-tubman.json
+ create mode 100644 exports/hatshepsut-nubia.json
+ create mode 100644 exports/hatshepsut.json
+ create mode 100644 exports/henry-i-beauclerc.json
+ create mode 100644 exports/henry-ii.json
+ create mode 100644 exports/henry-iii.json
+ create mode 100644 exports/henry-the-young-king.json
+ create mode 100644 exports/henry-v.json
+ create mode 100644 exports/himiko.json
+ create mode 100644 exports/homer.json
+ create mode 100644 exports/hubert-walter.json
+ create mode 100644 exports/hugh-bigod.json
+ create mode 100644 exports/hypatia-alexandria.json
+ create mode 100644 exports/isabella-of-angouleme.json
+ create mode 100644 exports/joan-of-arc.json
+ create mode 100644 exports/john-lackland.json
+ create mode 100644 exports/la-venta-ruler.json
+ create mode 100644 exports/leonidas-i.json
+ create mode 100644 exports/llywelyn-the-great.json
+ create mode 100644 exports/louis-ix.json
+ create mode 100644 exports/louis-vii.json
+ create mode 100644 exports/mansa-musa.json
+ create mode 100644 exports/marcus-aurelius.json
+ create mode 100644 exports/marie-curie.json
+ create mode 100644 exports/montezuma-ii.json
+ create mode 100644 exports/murasaki-shikibu.json
+ create mode 100644 exports/napoleon-bonaparte.json
+ create mode 100644 exports/nefertiti.json
+ create mode 100644 exports/nero.json
+ create mode 100644 exports/odo-of-bayeux.json
+ create mode 100644 exports/pacal-the-great.json
+ create mode 100644 exports/pachacuti.json
+ create mode 100644 exports/pericles.json
+ create mode 100644 exports/philip-ii-augustus.json
+ create mode 100644 exports/pope-innocent-iii.json
+ create mode 100644 exports/qin-shi-huang.json
+ create mode 100644 exports/ramesses-ii.json
+ create mode 100644 exports/ranulf-de-blondeville.json
+ create mode 100644 exports/richard-de-clare.json
+ create mode 100644 exports/richard-i-lionheart.json
+ create mode 100644 exports/robert-curthose.json
+ create mode 100644 exports/saladin.json
+ create mode 100644 exports/shaka-zulu.json
+ create mode 100644 exports/simon-bolivar.json
+ create mode 100644 exports/simon-de-montfort.json
+ create mode 100644 exports/sitting-bull.json
+ create mode 100644 exports/socrates.json
+ create mode 100644 exports/spartacus.json
+ create mode 100644 exports/stephen-langton.json
+ create mode 100644 exports/stephen-of-blois.json
+ create mode 100644 exports/suleiman-the-magnificent.json
+ create mode 100644 exports/test-ingester-figure.json
+ create mode 100644 exports/thomas-becket.json
+ create mode 100644 exports/tokugawa-ieyasu.json
+ create mode 100644 exports/tutankhamun.json
+ create mode 100644 exports/william-ii-rufus.json
+ create mode 100644 exports/william-marshal.json
+ create mode 100644 exports/william-the-conqueror.json
+ create mode 100644 exports/william-the-lion.json
+ create mode 100644 exports/winston-churchill.json
+ create mode 100644 exports/wu-zetian.json
+ create mode 100644 exports/xerxes-i.json
+ create mode 100644 exports/zhu-yuanzhang.json
+ create mode 100644 scripts/documentary_arc_reasoner.py
+
+=== Science ===To https://github.com/cbn52zmh78-cmyk/HISTORY.git
+
+   4bc43ce..0884b73  main -> main
+warning: in the working copy of 'corpus/science_fact_base_v2.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'corpus/science_fact_base_watchlist_v2.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/gather_groundtruth_solar_system.py', LF will be replaced by CRLF the next time Git touches it
+[main 6fc4d4d] Hard commit: 2026-06-21 — science fact base updates, pipelines
+ 4 files changed, 571 insertions(+), 14 deletions(-)
+ create mode 100644 Pipelines/science_pipeline.py
+warning: in the working copy of 'systems/research_queue.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipelines/science_pipeline.py', LF will be replaced by CRLF the next time Git touches it
+To https://github.com/cbn52zmh78-cmyk/SCIENCE.git
+
+=== Stonebridge ===   a63dc8b..6fc4d4d  main -> main
+
+warning: in the working copy of 'apps/cli/main.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'connectors/evidence_collector_sdk/recipe_registry.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'connectors/evidence_collector_sdk/verticals/__init__.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'connectors/evidence_collector_sdk/verticals/food_safety.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'connectors/evidence_collector_sdk/verticals/real_estate.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'connectors/evidence_collector_sdk/verticals/security.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'examples/generate_sample_roster.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'stonebridge.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/test_sot.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/abraham-lincoln_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/akhenaten_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/cicero_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/constantine-i_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/darius-i_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/harriet-tubman_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/marie-curie_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/napoleon-bonaparte_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/s007_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/s011_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/s012_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/s013_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/s015_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/s016_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/s017_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/s032_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/test-ingester-figure_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/winston-churchill_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SOT/xerxes-i_sot.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'connectors/evidence_collector_sdk/recipes/jurisdiction/food_safety_fda_daily.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'connectors/evidence_collector_sdk/recipes/jurisdiction/food_safety_state_inspections_daily.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'connectors/evidence_collector_sdk/recipes/jurisdiction/real_estate_county_daily.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'connectors/evidence_collector_sdk/recipes/jurisdiction/real_estate_zillow_daily.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'connectors/evidence_collector_sdk/recipes/jurisdiction/security_cyber_daily.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'connectors/evidence_collector_sdk/recipes/jurisdiction/security_personnel_daily.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'connectors/evidence_collector_sdk/recipes/jurisdiction/security_physical_daily.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'connectors/evidence_collector_sdk/verticals/README_verticals.md', LF will be replaced by CRLF the next time Git touches it
+[main 4214dd4] Hard commit: 2026-06-21 — compliance SOT, evidence collector verticals
+ 45 files changed, 8082 insertions(+), 1189 deletions(-)
+ create mode 100644 SOT/abraham-lincoln_sot.json
+ create mode 100644 SOT/akhenaten_sot.json
+ create mode 100644 SOT/cicero_sot.json
+ create mode 100644 SOT/constantine-i_sot.json
+ create mode 100644 SOT/darius-i_sot.json
+ create mode 100644 SOT/harriet-tubman_sot.json
+ create mode 100644 SOT/marie-curie_sot.json
+ create mode 100644 SOT/napoleon-bonaparte_sot.json
+ create mode 100644 SOT/s007_sot.json
+ create mode 100644 SOT/s011_sot.json
+ create mode 100644 SOT/s012_sot.json
+ create mode 100644 SOT/s013_sot.json
+ create mode 100644 SOT/s015_sot.json
+ create mode 100644 SOT/s016_sot.json
+ create mode 100644 SOT/s017_sot.json
+ create mode 100644 SOT/s032_sot.json
+ create mode 100644 SOT/test-ingester-figure_sot.json
+ create mode 100644 SOT/winston-churchill_sot.json
+ create mode 100644 SOT/xerxes-i_sot.json
+ create mode 100644 Strategy Documents/Stonebridge_Vertical_Integration_Strategy.docx
+ create mode 100644 connectors/evidence_collector_sdk/recipes/jurisdiction/food_safety_fda_daily.py
+ create mode 100644 connectors/evidence_collector_sdk/recipes/jurisdiction/food_safety_state_inspections_daily.py
+ create mode 100644 connectors/evidence_collector_sdk/recipes/jurisdiction/real_estate_county_daily.py
+ create mode 100644 connectors/evidence_collector_sdk/recipes/jurisdiction/real_estate_zillow_daily.py
+ create mode 100644 connectors/evidence_collector_sdk/recipes/jurisdiction/security_cyber_daily.py
+ create mode 100644 connectors/evidence_collector_sdk/recipes/jurisdiction/security_personnel_daily.py
+ create mode 100644 connectors/evidence_collector_sdk/recipes/jurisdiction/security_physical_daily.py
+ create mode 100644 connectors/evidence_collector_sdk/verticals/README_verticals.md
+
+=== Studio ===To https://github.com/cbn52zmh78-cmyk/Stonebridge-Security-Consultants.git
+
+   10382fe..4214dd4  main -> main
+warning: in the working copy of 'Cast/Casting_Bible/registry/magazine_casting_registry.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Cast/GFE/scripts/generate_gfe_asmr_prompts.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Development/scripts/make_scene_prompt.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Development/scripts/orchestrate_scene.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Music_Sound/clearance_manifest.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Music_Sound/slate_music_assignments.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/dead_languages/DEAD_LANGUAGE_SLATE_v1.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/templates/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/templates/conversational-companion.concept.template.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/templates/documentary-host.concept.template.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/templates/explainer-ad.concept.template.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/templates/historical-figure-documentary.concept.template.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/templates/narrative-short-film.concept.template.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/templates/science-explainer.concept.template.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/templates/technical-explainer.concept.template.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Production_Templates/Production_Templates_v1.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/package_episode.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/production_intake.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/shot_duration.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Brand_Kit/About_Copy.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Brand_Kit/Asset_Spec_Sheet.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Brand_Kit/Brand_Identity_v1.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Brand_Kit/Channel_Description_Templates.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Brand_Kit/Gate_0_Channel_Launch_Checklist.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Brand_Kit/Grok_Imagine_Prompts.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Brand_Kit/channel_identity.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Music/Clearance_SOP.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Music/Episode_Music_Assignments.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Music/Music_Bed_Library.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Music/Music_Bed_Manifest.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Thumbnails/THUMBNAIL_QUEUE.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Thumbnails/david_ancient_greek_corpus_v1_thumb_spec.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Thumbnails/david_gothic_corpus_v1_thumb_spec.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Thumbnails/david_latin_corpus_v1_thumb_spec.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Thumbnails/david_old_english_corpus_v1_thumb_spec.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Thumbnails/david_old_norse_corpus_v1_thumb_spec.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Thumbnails/david_sumerian_corpus_v1_thumb_spec.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Thumbnails/lane_sample_david_thumb_spec.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Thumbnails/lane_sample_observatory_thumb_spec.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Thumbnails/lane_sample_science_thumb_spec.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Art_Department/Thumbnails/thumbnail_specs.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Cast/Casting_Bible/ACTORS_138_Companion_Actor_Selection_Sheets.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Cast/Casting_Bible/T2_140_Actor_Catalog_Contact_Sheet.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Cast/Casting_Bible/lock_cards/ZhangYutongLang-001.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Cast/Casting_Bible/lock_cards/ZhangYutongLang-001_identity_lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Cast/Casting_Bible/lock_plates/ZhangYutongLang-001_casting_prompt.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Cast/Casting_Bible/lock_plates/gen_zhang_yutong_plate.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Cast/Casting_Bible/registry/REROLL_QUEUE.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Music_Sound/T5_143_Music_Clearance_SOP.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Code_Audit_Report_2026-06-19.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/LANG_TUTOR_001_Mandarin_TestBatch_Concept.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/T3_141_Companion_Lane_Series_Structure.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/companion/willow_s1/willow_s1_ep01_concept.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/companion/willow_s1/willow_s1_ep02_concept.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/companion/willow_s1/willow_s1_ep03_concept.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/companion/willow_s1/willow_s1_ep04_concept.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/companion/willow_s1/willow_s1_ep05_concept.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/companion/willow_s1/willow_s1_ep06_concept.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/dead_languages/david_classical_japanese_corpus_v1.concept.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/dead_languages/david_classical_japanese_corpus_v1_brief.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/dead_languages/david_coptic_corpus_v1.concept.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/dead_languages/david_coptic_corpus_v1_brief.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/dead_languages/david_etruscan_corpus_v1.concept.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/dead_languages/david_etruscan_corpus_v1_brief.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/dead_languages/david_hittite_corpus_v1.concept.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/dead_languages/david_hittite_corpus_v1_brief.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/dead_languages/david_linear_a_corpus_v1.concept.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/dead_languages/david_linear_a_corpus_v1_brief.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/dead_languages/david_proto_indo_european_corpus_v1.concept.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/dead_languages/david_proto_indo_european_corpus_v1_brief.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Concepts/gate_0_regate_T4_142_lane_samples.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Grok_Terminal_Launch/README_terminals.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Grok_Terminal_Launch/SUMERIAN_queue.sh', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Grok_Terminal_Launch/T1_latin_launch.sh', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Grok_Terminal_Launch/T2_ancient_greek_launch.sh', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Grok_Terminal_Launch/T3_old_english_launch.sh', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Grok_Terminal_Launch/T4_old_norse_launch.sh', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Grok_Terminal_Launch/T5_gothic_launch.sh', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Grok_Terminal_Launch/T6_COMMIT_after_render.sh', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/OPERATOR_FLOW_RUN_TO_UPLOAD.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/Render_Directive_v2.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/batch_runner.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/channel_export.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/consume_ai_handoff.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/test_consume_ai_handoff.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/thumbnail_generator.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Pipeline/verify_gate_0.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Producers_Office/Editorial_Gate/gate_notes.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Companion/willow_companion_proof_v1_dryrun/willow_companion_proof_v1_script.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Companion/willow_s1/willow_companion_identity_lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/bonus/flashcard_sheet_draft.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/bonus/tone_reference_card_draft.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/marketing/README_package_draft.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/marketing/cousin_review_email_DRAFT_HOLD.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/marketing/product_listing_copy_draft.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/prompts/lesson_01_tones_ai_prompts.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/prompts/lesson_02_numbers_time_ai_prompts.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/prompts/lesson_03_market_ai_prompts.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/prompts/lesson_04_questions_ai_prompts.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/prompts/lesson_05_conversation_ai_prompts.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/prompts/master_ongoing_tutor_prompt.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/scripts/lang_tutor_001_batch_manifest.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/scripts/lang_tutor_001_ep01_tones_script.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/scripts/lang_tutor_001_ep02_numbers_time_script.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/scripts/lang_tutor_001_ep03_market_script.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/scripts/lang_tutor_001_ep04_questions_script.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/scripts/lang_tutor_001_ep05_first_conversation_script.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/study_guides/lesson_01_tones_studyguide_draft.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/study_guides/lesson_02_numbers_time_studyguide_draft.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/study_guides/lesson_03_market_studyguide_draft.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/study_guides/lesson_04_questions_studyguide_draft.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/study_guides/lesson_05_conversation_studyguide_draft.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Productions/thumbnails/lane_samples_v1/thumbnail_specs_lane_samples.json', LF will be replaced by CRLF the next time Git touches it
+[main ac61f74] Hard commit: 2026-06-21 — companion lane, dead language concepts, pipeline tooling
+ 117 files changed, 13520 insertions(+), 318 deletions(-)
+ create mode 100644 Art_Department/Brand_Kit/About_Copy.md
+ create mode 100644 Art_Department/Brand_Kit/Asset_Spec_Sheet.md
+ create mode 100644 Art_Department/Brand_Kit/Brand_Identity_v1.md
+ create mode 100644 Art_Department/Brand_Kit/Channel_Description_Templates.md
+ create mode 100644 Art_Department/Brand_Kit/Gate_0_Channel_Launch_Checklist.md
+ create mode 100644 Art_Department/Brand_Kit/Grok_Imagine_Prompts.md
+ create mode 100644 Art_Department/Brand_Kit/channel_identity.json
+ create mode 100644 Art_Department/Music/Clearance_SOP.md
+ create mode 100644 Art_Department/Music/Episode_Music_Assignments.md
+ create mode 100644 Art_Department/Music/Music_Bed_Library.md
+ create mode 100644 Art_Department/Music/Music_Bed_Manifest.json
+ create mode 100644 Art_Department/Thumbnails/THUMBNAIL_QUEUE.md
+ create mode 100644 Art_Department/Thumbnails/david_ancient_greek_corpus_v1_thumb_spec.json
+ create mode 100644 Art_Department/Thumbnails/david_gothic_corpus_v1_thumb_spec.json
+ create mode 100644 Art_Department/Thumbnails/david_latin_corpus_v1_thumb_spec.json
+ create mode 100644 Art_Department/Thumbnails/david_old_english_corpus_v1_thumb_spec.json
+ create mode 100644 Art_Department/Thumbnails/david_old_norse_corpus_v1_thumb_spec.json
+ create mode 100644 Art_Department/Thumbnails/david_sumerian_corpus_v1_thumb_spec.json
+ create mode 100644 Art_Department/Thumbnails/lane_sample_david_thumb_spec.json
+ create mode 100644 Art_Department/Thumbnails/lane_sample_observatory_thumb_spec.json
+ create mode 100644 Art_Department/Thumbnails/lane_sample_science_thumb_spec.json
+ create mode 100644 Art_Department/Thumbnails/thumbnail_specs.json
+ create mode 100644 Cast/Casting_Bible/ACTORS_138_Companion_Actor_Selection_Sheets.md
+ create mode 100644 Cast/Casting_Bible/T2_140_Actor_Catalog_Contact_Sheet.md
+ create mode 100644 Cast/Casting_Bible/lock_cards/ZhangYutongLang-001.md
+ create mode 100644 Cast/Casting_Bible/lock_cards/ZhangYutongLang-001_identity_lock.json
+ create mode 100644 Cast/Casting_Bible/lock_plates/ZhangYutongLang-001_casting_prompt.md
+ create mode 100644 Cast/Casting_Bible/lock_plates/gen_zhang_yutong_plate.py
+ create mode 100644 Cast/Casting_Bible/registry/REROLL_QUEUE.md
+ create mode 100644 Legal/Gate_Reports/GATE_YELLOW_pi_story_20260619_162749_editorial.md
+ create mode 100644 Legal/Gate_Reports/GATE_YELLOW_pi_story_20260619_162750_editorial.md
+ create mode 100644 Music_Sound/T5_143_Music_Clearance_SOP.md
+ create mode 100644 Pipeline/Code_Audit_Report_2026-06-19.md
+ create mode 100644 Pipeline/Concepts/LANG_TUTOR_001_Mandarin_TestBatch_Concept.md
+ create mode 100644 Pipeline/Concepts/T3_141_Companion_Lane_Series_Structure.md
+ create mode 100644 Pipeline/Concepts/companion/willow_s1/willow_s1_ep01_concept.json
+ create mode 100644 Pipeline/Concepts/companion/willow_s1/willow_s1_ep02_concept.json
+ create mode 100644 Pipeline/Concepts/companion/willow_s1/willow_s1_ep03_concept.json
+ create mode 100644 Pipeline/Concepts/companion/willow_s1/willow_s1_ep04_concept.json
+ create mode 100644 Pipeline/Concepts/companion/willow_s1/willow_s1_ep05_concept.json
+ create mode 100644 Pipeline/Concepts/companion/willow_s1/willow_s1_ep06_concept.json
+ create mode 100644 Pipeline/Concepts/dead_languages/david_classical_japanese_corpus_v1.concept.json
+ create mode 100644 Pipeline/Concepts/dead_languages/david_classical_japanese_corpus_v1_brief.txt
+ create mode 100644 Pipeline/Concepts/dead_languages/david_coptic_corpus_v1.concept.json
+ create mode 100644 Pipeline/Concepts/dead_languages/david_coptic_corpus_v1_brief.txt
+ create mode 100644 Pipeline/Concepts/dead_languages/david_etruscan_corpus_v1.concept.json
+ create mode 100644 Pipeline/Concepts/dead_languages/david_etruscan_corpus_v1_brief.txt
+ create mode 100644 Pipeline/Concepts/dead_languages/david_hittite_corpus_v1.concept.json
+ create mode 100644 Pipeline/Concepts/dead_languages/david_hittite_corpus_v1_brief.txt
+ create mode 100644 Pipeline/Concepts/dead_languages/david_linear_a_corpus_v1.concept.json
+ create mode 100644 Pipeline/Concepts/dead_languages/david_linear_a_corpus_v1_brief.txt
+ create mode 100644 Pipeline/Concepts/dead_languages/david_proto_indo_european_corpus_v1.concept.json
+ create mode 100644 Pipeline/Concepts/dead_languages/david_proto_indo_european_corpus_v1_brief.txt
+ create mode 100644 Pipeline/Concepts/gate_0_regate_T4_142_lane_samples.json
+ create mode 100644 Pipeline/Grok_Terminal_Launch/README_terminals.md
+ create mode 100644 Pipeline/Grok_Terminal_Launch/SUMERIAN_queue.sh
+ create mode 100644 Pipeline/Grok_Terminal_Launch/T1_latin_launch.sh
+ create mode 100644 Pipeline/Grok_Terminal_Launch/T2_ancient_greek_launch.sh
+ create mode 100644 Pipeline/Grok_Terminal_Launch/T3_old_english_launch.sh
+ create mode 100644 Pipeline/Grok_Terminal_Launch/T4_old_norse_launch.sh
+ create mode 100644 Pipeline/Grok_Terminal_Launch/T5_gothic_launch.sh
+ create mode 100644 Pipeline/Grok_Terminal_Launch/T6_COMMIT_after_render.sh
+ create mode 100644 Pipeline/OPERATOR_FLOW_RUN_TO_UPLOAD.md
+ create mode 100644 Pipeline/Render_Directive_v2.md
+ create mode 100644 Pipeline/batch_runner.py
+ create mode 100644 Pipeline/channel_export.py
+ create mode 100644 Pipeline/consume_ai_handoff.py
+ create mode 100644 Pipeline/test_consume_ai_handoff.py
+ create mode 100644 Pipeline/thumbnail_generator.py
+ create mode 100644 Pipeline/verify_gate_0.py
+ create mode 100644 Producers_Office/Editorial_Gate/GATE_YELLOW_pi_story_20260619_162749.json
+ create mode 100644 Producers_Office/Editorial_Gate/GATE_YELLOW_pi_story_20260619_162750.json
+ create mode 100644 Producers_Office/Editorial_Gate/gate_notes.md
+ create mode 100644 Productions/Companion/willow_companion_proof_v1_dryrun/willow_companion_proof_v1_script.json
+ create mode 100644 Productions/Companion/willow_s1/willow_companion_identity_lock.json
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/bonus/flashcard_sheet_draft.md
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/bonus/tone_reference_card_draft.md
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/marketing/README_package_draft.txt
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/marketing/cousin_review_email_DRAFT_HOLD.md
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/marketing/product_listing_copy_draft.md
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/prompts/lesson_01_tones_ai_prompts.md
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/prompts/lesson_02_numbers_time_ai_prompts.md
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/prompts/lesson_03_market_ai_prompts.md
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/prompts/lesson_04_questions_ai_prompts.md
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/prompts/lesson_05_conversation_ai_prompts.md
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/prompts/master_ongoing_tutor_prompt.md
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/scripts/lang_tutor_001_batch_manifest.json
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/scripts/lang_tutor_001_ep01_tones_script.json
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/scripts/lang_tutor_001_ep02_numbers_time_script.json
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/scripts/lang_tutor_001_ep03_market_script.json
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/scripts/lang_tutor_001_ep04_questions_script.json
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/scripts/lang_tutor_001_ep05_first_conversation_script.json
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/study_guides/lesson_01_tones_studyguide_draft.md
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/study_guides/lesson_02_numbers_time_studyguide_draft.md
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/study_guides/lesson_03_market_studyguide_draft.md
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/study_guides/lesson_04_questions_studyguide_draft.md
+ create mode 100644 Productions/Language_Tutor/LANG_TUTOR_001_Mandarin/study_guides/lesson_05_conversation_studyguide_draft.md
+ create mode 100644 Productions/thumbnails/lane_samples_v1/thumbnail_specs_lane_samples.json
+To https://github.com/cbn52zmh78-cmyk/STUDIO
+   75f6b3d..ac61f74  main -> main
