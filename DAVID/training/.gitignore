@@ -1,0 +1,5 @@
+.deepseek_key
+*.key
+*_key
+*.env
+*secret*
