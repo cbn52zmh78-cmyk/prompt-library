@@ -1,0 +1,46 @@
+{
+  "language": "old-english",
+  "status": "extinct",
+  "research_type": "pronunciation",
+  "ingested_from": "research_ops/outputs/R2_germanic_raw.json",
+  "ingested_at": "2026-06-23",
+  "scholarly_consensus": "Mitchell & Robinson (West Saxon default); strong dialectal evidence; disputes on short diphthong realization (true diphthongs vs length) and palatalization timing (Hogg/Campbell).",
+  "dialect_notes": {
+    "west_saxon": "Literary dominant (early: breaking heavy; late: smoothing/vowel shifts); Beowulf mostly late WS.",
+    "northumbrian": "Anglian: retains /io/, less breaking, vowel raising/smoothing; Mercian second fronting."
+  },
+  "phoneme_inventory": {
+    "vowels": ["Short/long: i y u e o æ ɑ; diphthongs eo æa io ie (breaking products)."],
+    "consonants": ["p b t d tʃ dʒ k g; f v θ ð s z ʃ ç x ɣ h; m n ŋ; l r; j w ʍ."],
+    "thorn_eth_distinction": "þ/ð interchangeable spelling for /θ ð/; [θ] voiceless (initial/final/after voiceless); [ð] voiced (intervocalic/medial after voiced sounds).",
+    "distinctive_features": "Breaking (æ > ea before r/l/h); palatalization (c>g > tʃ/dʒ); geminates; no modern silent letters."
+  },
+  "ipa_reconstructed": {
+    "sample_text": "Hwæt! We Gardena in geardagum",
+    "transcription": "/ˈhwæt weː ˈɡɑːrˌde.na in ˈjæɑrˌdɑ.ɣum/",
+    "confidence": "high",
+    "confidence_note": "Mitchell/Robinson + British Library readings standard (WS); PGmc alliteration/stress confirms; Northumbrian variants noted."
+  },
+  "stress_rules": "PGmc root-initial primary preserved; unstressed prefixes (ġe-, be-); compounds stress first root.",
+  "prosody": {
+    "rhythm": "Stress-timed",
+    "pitch": "Accentual",
+    "pacing": "Poetic deliberate for lifts",
+    "alliterative_meter_note": "4 stresses/line (two lifts per half-line); alliteration on first lift (often second); vowels cluster; wr/wl with w."
+  },
+  "grok_imagine_guidance": "English speakers: æ as [æ] (cat); hw/ʍ distinct; breaking diphthongs sustained (ea/eo); þ/ð voicing by environment; palatals tʃ/dʒ; long vowels/macrons; alliterative pacing with strong stresses; no schwa reduction.",
+  "tutoring_hooks": [
+    "'Hwæt!' = dramatic 'Listen!' or 'So!' (epic opener, not plain 'what').",
+    "Alliterative meter like ancient rap battles — rules drive word choice.",
+    "Thorn/eth spelling flexible but sound rule strict (positional voicing).",
+    "Dialectal vowel changes (breaking/smoothing) explain modern irregularities.",
+    "Closest ancestor to English yet alien-sounding; Beowulf sets heroic tone with 'Gardena'."
+  ],
+  "sources": [
+    "Mitchell & Robinson 'Guide to Old English'; Wikipedia phonology (citing Hogg 1992, Campbell 1959, Fulk); British Library/OCW readings; Bosworth-Toller; university syllabi."
+  ],
+  "disputed_fields": [
+    "short diphthong realization (true diphthongs vs length)",
+    "palatalization timing (Hogg/Campbell)"
+  ]
+}

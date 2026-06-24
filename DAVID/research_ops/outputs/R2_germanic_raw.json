@@ -1,0 +1,118 @@
+{
+  "gothic": {
+    "language": "gothic",
+    "status": "extinct",
+    "research_type": "pronunciation",
+    "scholarly_consensus": "High-confidence reconstruction via Wulfila Codex Argenteus + Greek/Latin transcriptions + PGmc comparisons (Braune/Wright/Streitberg consensus); minor disputes flagged on diphthong monophthongization timing and nasalization extent.",
+    "script_notes": "Wulfila's 27-letter Greek-uncial base (4th c.) with runic/Latin additions for unique PGmc sounds (e.g. =þ/θ, =q/kʷ, =ƕ/hʷ or [ʍ]); direct 1:1 mapping to phonemes enables precise video captioning (no silent letters; consistent orthography).",
+    "phoneme_inventory": {
+      "vowels": ["Short: /a ɛ i ɔ u/; Long: /aː eː iː oː uː ɛː ɔː/; Diphthongs: /ai au iu/ (allophones [ɛ ɔ] before r/h per PGmc)."],
+      "consonants": ["Stops p b t d k g kʷ gʷ (with fricative allophones β ð ɣ); Fricatives f θ s z x h hʷ; Nasals m n ŋ; Liquids l r; Glides j w."],
+      "proto_germanic_correspondences": "Strong boosts: Gothic preserves PGmc /z/ without rhotacism (unlike ON/OE), Verner-law alternations visible, Grimm stops intact; comparative to ON/OE confirms lengths and diphthongs.",
+      "distinctive_features": "Geminates common; voiced fricatives positional (intervocalic); no umlaut (East Germanic conservatism); nasal longs before h."
+    },
+    "ipa_reconstructed": {
+      "sample_text": "Atta unsar þu in himinam, weihnai namo þein",
+      "transcription": "/ˈatːa ˈunsar θuː in ˈhiminaːm ˈwiːhnai ˈnaːmoː θeiːn/",
+      "confidence": "high",
+      "confidence_note": "Braune/Wright standard (PGmc vowel correspondences + orthography); minor nasal/quality variants possible but core segments undisputed."
+    },
+    "stress_rules": "PGmc root-initial primary stress preserved (fixed, no shift on inflection); secondary on first element of compounds.",
+    "prosody": {
+      "rhythm": "Stress-timed, clear syllable structure",
+      "pitch": "Accentual (no tone)",
+      "pacing": "Deliberate/enunciated for scripture (moderate tempo)"
+    },
+    "grok_imagine_guidance": "English speakers err on dental θ/ð (not stops), fricatives β/ɣ/x (intervocalic), long vowels sustained (macrons), ƕ as [ʍ] or aspirated hw, no schwa reduction, Greek-like vowel qualities; slow pacing with geminates held; laryngeals as [x/h] uvular/fricative.",
+    "tutoring_hooks": [
+      "Sole complete East Germanic corpus (Wulfila Bible translation ~350 AD) — 'missing link' for PGmc reconstruction.",
+      "Wulfila invented unique script specifically for Gothic Bible (Arian Christianity among Goths).",
+      "'Atta' cognate to English 'dad' via baby-talk; no silent letters ever; conservative phonology retains PGmc z and stops.",
+      "Comparative goldmine: Gothic vs ON/OE reveals East vs North/West branches.",
+      "Used for converting Germanic tribes — earliest literary Germanic text."
+    ],
+    "sources": [
+      "Braune's Gothic Grammar (with Balg); Joseph Wright Grammar; Wulfila Project (wulfila.be); Wikipedia phonology (citing Streitberg, Lehmann); UT Austin EIEOL; scholarly syllabi."
+    ]
+  },
+  "old-norse": {
+    "language": "old-norse",
+    "status": "extinct",
+    "research_type": "pronunciation",
+    "scholarly_consensus": "Strong from Codex Regius + runes + Gordon/First Grammatical Treatise; West Norse (Icelandic literary) preferred baseline; disputes on nasal vowel persistence timing and ʀ quality.",
+    "dialect_notes": {
+      "west_norse": "Iceland/Norway/Atlantic: preserves diphthongs/umlauts longer; assimilation (mp>pp); basis for literary Edda/sagas.",
+      "east_norse": "Sweden/Denmark: early monophthongization (ei>ē, au>ø̄ from 10th c.); runic inscriptions more conservative."
+    },
+    "phoneme_inventory": {
+      "vowels": ["Short/long a æ e i o ø u y ɑ ɔ; early nasals; diphthongs ei au ey/øy."],
+      "consonants": ["p b t d k g; f θ s ʀ h; m n; l r; j w (gemination)."],
+      "thorn_eth_distinction": "þ = voiceless /θ/ (initial, after voiceless); ð = voiced /ð/ (intervocalic, after voiced); MSS use interchangeably but positional allophones (no phonemic contrast).",
+      "distinctive_features": "Heavy i-/u-/a-umlaut + breaking; no silent letters; geminates; Younger Futhark runic (16 letters, no length distinction)."
+    },
+    "ipa_reconstructed": {
+      "sample_text": "Hljóðs bið ek allar, helgar kindir",
+      "transcription": "/ˈhljoːðs bið ek ˈallar ˈhelɣar ˈkindir/",
+      "confidence": "high",
+      "confidence_note": "Gordon/Crawford West Norse standard (PGmc *hl + diphthongs); runic vs manuscript minor shifts noted."
+    },
+    "stress_rules": "PGmc root-initial primary + secondary in compounds (preserved in Icelandic).",
+    "prosody": {
+      "rhythm": "Stress-timed",
+      "pitch": "Tone/stød precursors emerging",
+      "pacing": "Poetic deliberate",
+      "alliterative_meter_note": "Skaldic/Eddic: initial consonants (or vowels) alliterate on lifts; key to reconstruction."
+    },
+    "grok_imagine_guidance": "English errs on rounded ø/ǫ (front), ʀ (palatal r-like), long vowels/macrons held, umlauts distinct from modern, no aspiration; voiced ð vs voiceless þ by position; runic period conservative (less umlaut).",
+    "tutoring_hooks": [
+      "No silent letters in any period — spelling phonetic.",
+      "Runic (Younger Futhark) vs manuscript Latin shift reveals evolution (e.g. nasal loss).",
+      "West/East split directly explains modern Scandinavian divergence.",
+      "Völuspá opening summons 'holy kindreds' in alliterative power; preserves PGmc longer than OE.",
+      "Umlauts and breaking create 'musical' vowel changes unique in Germanic."
+    ],
+    "sources": [
+      "Gordon 'Introduction to Old Norse'; Jackson Crawford reconstructions; Wikipedia (citing First Grammatical Treatise, Codex Regius); Poetic Edda editions."
+    ]
+  },
+  "old-english": {
+    "language": "old-english",
+    "status": "extinct",
+    "research_type": "pronunciation",
+    "scholarly_consensus": "Mitchell & Robinson (West Saxon default); strong dialectal evidence; disputes on short diphthong realization (true diphthongs vs length) and palatalization timing (Hogg/Campbell).",
+    "dialect_notes": {
+      "west_saxon": "Literary dominant (early: breaking heavy; late: smoothing/vowel shifts); Beowulf mostly late WS.",
+      "northumbrian": "Anglian: retains /io/, less breaking, vowel raising/smoothing; Mercian second fronting."
+    },
+    "phoneme_inventory": {
+      "vowels": ["Short/long: i y u e o æ ɑ; diphthongs eo æa io ie (breaking products)."],
+      "consonants": ["p b t d tʃ dʒ k g; f v θ ð s z ʃ ç x ɣ h; m n ŋ; l r; j w ʍ."],
+      "thorn_eth_distinction": "þ/ð interchangeable spelling for /θ ð/; [θ] voiceless (initial/final/after voiceless); [ð] voiced (intervocalic/medial after voiced sounds).",
+      "distinctive_features": "Breaking (æ > ea before r/l/h); palatalization (c>g > tʃ/dʒ); geminates; no modern silent letters."
+    },
+    "ipa_reconstructed": {
+      "sample_text": "Hwæt! We Gardena in geardagum",
+      "transcription": "/ˈhwæt weː ˈɡɑːrˌde.na in ˈjæɑrˌdɑ.ɣum/",
+      "confidence": "high",
+      "confidence_note": "Mitchell/Robinson + British Library readings standard (WS); PGmc alliteration/stress confirms; Northumbrian variants noted."
+    },
+    "stress_rules": "PGmc root-initial primary preserved; unstressed prefixes (ġe-, be-); compounds stress first root.",
+    "prosody": {
+      "rhythm": "Stress-timed",
+      "pitch": "Accentual",
+      "pacing": "Poetic deliberate for lifts",
+      "alliterative_meter_note": "4 stresses/line (two lifts per half-line); alliteration on first lift (often second); vowels cluster; wr/wl with w."
+    },
+    "grok_imagine_guidance": "English speakers: æ as [æ] (cat); hw/ʍ distinct; breaking diphthongs sustained (ea/eo); þ/ð voicing by environment; palatals tʃ/dʒ; long vowels/macrons; alliterative pacing with strong stresses; no schwa reduction.",
+    "tutoring_hooks": [
+      "'Hwæt!' = dramatic 'Listen!' or 'So!' (epic opener, not plain 'what').",
+      "Alliterative meter like ancient rap battles — rules drive word choice.",
+      "Thorn/eth spelling flexible but sound rule strict (positional voicing).",
+      "Dialectal vowel changes (breaking/smoothing) explain modern irregularities.",
+      "Closest ancestor to English yet alien-sounding; Beowulf sets heroic tone with 'Gardena'."
+    ],
+    "sources": [
+      "Mitchell & Robinson 'Guide to Old English'; Wikipedia phonology (citing Hogg 1992, Campbell 1959, Fulk); British Library/OCW readings; Bosworth-Toller; university syllabi."
+    ]
+  }
+}

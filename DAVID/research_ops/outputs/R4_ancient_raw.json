@@ -1,0 +1,154 @@
+{
+  "biblical-hebrew": {
+    "language": "biblical-hebrew",
+    "status": "dead",
+    "research_type": "pronunciation",
+    "reconstruction_method": "Tiberian Masoretic vocalization + medieval treatises + comparative Semitic (Khan primary)",
+    "scholarly_consensus": "Tiberian tradition best documented and most reliable reconstruction for Biblical period with medieval continuity.",
+    "tradition_comparison": {
+      "tiberian": "Medieval Galilee Masoretes: full vowels, cantillation, gemination; standard for scholarship (Khan).",
+      "babylonian": "Simpler vowel system; less detail on length/gutturals.",
+      "samaritan": "Conservative consonants; different vowels but oral living tradition.",
+      "most_historical": "Tiberian closest to Second Temple + medieval continuity; Samaritan valuable for archaic gutturals."
+    },
+    "phoneme_inventory": {
+      "vowels": ["a e i o u + length/reduced via niqqud (sheva mobile/silent)"],
+      "consonants": ["bgdkpt (begadkefat spirantization with/without dagesh); q ṣ ṭ; ʾ ḥ ʿ; š ś s z; r l m n w y"],
+      "gutturals": ["ʾ [ʔ], ḥ [ħ~x], ʿ [ʕ], r (uvular/trilled)"],
+      "distinctive_features": "Dagesh forte/lene; matres lectionis; spirantization; pharyngeals preserved."
+    },
+    "ipa_reconstructed": {
+      "sample_text": "בְּרֵאשִׁית בָּרָא אֱלֹהִים",
+      "romanization": "bərēʾšît bārāʾ ʾĕlōhîm",
+      "transcription": "/bə.ʁeː.ˈʔiː.ʃiːt̪ baː.ˈʁaː ʔɛ.loː.ˈhiːm/",
+      "confidence": "high",
+      "confidence_note": "Khan reconstruction + Foreman performances; comparative Semitic strengthens gutturals/pharyngeals."
+    },
+    "stress_rules": "Penultimate or ultimate; cantillation dictates phrasing/stress.",
+    "cantillation_notes": "Ta'amim marks guide melody, pauses, emphasis; critical for authentic pacing and liturgical flow.",
+    "prosody": {
+      "rhythm": "Phrasal/chanted with accent rises",
+      "pacing": "Deliberate with trope-based phrasing"
+    },
+    "grok_imagine_guidance": "Gutturals: ʿayin deep pharyngeal scrape [ʕ], ḥet voiceless [ħ]; resh uvular/trill; sheva schwa or zero; dagesh doubles or hardens; cantillation for natural chant-like rises/falls and emphasis.",
+    "tutoring_hooks": [
+      "Tiberian Masoretes preserved pronunciation meticulously in Galilee.",
+      "Gutturals distinguish meaning — largely lost in Modern Hebrew but key for authenticity.",
+      "Cantillation is ancient musical notation for text — like sheet music for scripture.",
+      "Begadkefat spirantization rule still echoes in Modern Hebrew.",
+      "Samaritan tradition keeps some sounds continuously alive."
+    ],
+    "sources": ["Khan *The Tiberian Pronunciation Tradition*; Joüon-Muraoka; Ben-Hayyim Samaritan; Foreman recitations; comparative Semitic."]
+  },
+  "classical-sanskrit": {
+    "language": "classical-sanskrit",
+    "status": "dead",
+    "research_type": "pronunciation",
+    "reconstruction_method": "Shiksha texts — ancient native phonetics treatises",
+    "scholarly_consensus": "Extremely high precision due to indigenous Shiksha/Pāṇini analysis unmatched until modern era.",
+    "shiksha_notes": "Pāṇinīya Śikṣā and Prātiśākhya describe exact articulation places/manners (retroflex curl, aspirate breath burst, length, sandhi); vowels pure cardinal; 52 akshara system.",
+    "phoneme_inventory": {
+      "vowels": ["a ā i ī u ū ṛ ḷ e ai o au (pure with length)"],
+      "consonants": ["Stops: 5 vargas k/kh g/gh ṅ etc.; retroflex ṭ/ṭh ḍ/ḍh ṇ; dental t/th d/dh n; labial p/ph b/bh m"],
+      "retroflex_series": ["ṭ ṭh ḍ ḍh ṇ ṣ ṛ — tongue curled back"],
+      "aspirate_pairs": ["Plain vs aspirated throughout (ph bh gh etc. — breathy release)"],
+      "distinctive_features": "Voicing + aspiration; retroflex vs dental; full nasals/sibilants; anusvāra/visarga."
+    },
+    "ipa_reconstructed": {
+      "sample_text": "धर्मक्षेत्रे कुरुक्षेत्रे",
+      "romanization": "dharmakṣetre kurukṣetre",
+      "transcription": "/dʱər.mək.ʂeː.t̪reː ku.ɾu.k.ʂeː.t̪reː/",
+      "confidence": "very_high",
+      "confidence_note": "Shiksha/Pāṇini + living Vedic recitation confirms every detail."
+    },
+    "stress_rules": "Quantitative (syllable weight long/short); Vedic pitch accents (udātta etc.).",
+    "prosody": {
+      "rhythm": "Mora/quantitative meter",
+      "pacing": "Precise clear enunciation",
+      "vedic_accent_note": "Pitch accents (high/low/falling) preserved in traditional recitation."
+    },
+    "grok_imagine_guidance": "Retroflex curl for ṭ/ḍ/ṣ (tongue tip back); strong aspirate bursts (ph/bh); pure cardinal long vowels (hold twice); exact length distinctions; sandhi euphony.",
+    "tutoring_hooks": [
+      "Shiksha texts provide more detailed phonetics than Western linguistics until 19th century.",
+      "Devanagari is one of the most perfectly phonetic scripts ever devised.",
+      "Aspirates and retroflexes create a distinctive 'clicky' precision.",
+      "Unbroken pandit recitation tradition keeps pronunciation alive.",
+      "Pāṇini grammar + Shiksha represent pinnacle of ancient linguistic analysis."
+    ],
+    "sources": ["Shiksha treatises (Pāṇinīya etc.); Whitney/MacDonell; Cardona on Pāṇini; living Vedic recitation traditions."]
+  },
+  "akkadian": {
+    "language": "akkadian",
+    "status": "dead",
+    "research_type": "pronunciation",
+    "reconstruction_method": "Cuneiform sign values + bilinguals + Semitic comparative (Huehnergard/von Soden)",
+    "scholarly_consensus": "Strong on consonants/vowel length from signs; emphatics debated (ejective vs pharyngealized).",
+    "dialect_notes": {
+      "old_babylonian": "Early; fuller vowels; less reduction.",
+      "neo_assyrian": "Later shifts in sibilants/emphatics.",
+      "standard_babylonian": "Literary conservative (Enuma Elish style)."
+    },
+    "phoneme_inventory": {
+      "vowels": ["a e i u short/long; mimation endings"],
+      "consonants": ["p b t d k g q ṣ ṭ; s z š; m n l r w y ḥ ʾ"],
+      "emphatic_series": ["ṭ q ṣ (pharyngealized or ejective; Geers' law evidence)"],
+      "distinctive_features": "Mimation (final -m); polyphonic signs; aleph/glottal."
+    },
+    "ipa_reconstructed": {
+      "sample_text": "Enuma Elish approx 'When on high heaven and earth'",
+      "romanization": "enūma eliš lā nabû šamāmu",
+      "transcription": "/e.nuː.ma e.liʃ laː na.buː ʃa.maː.mu/",
+      "confidence": "medium_high",
+      "confidence_note": "Strong on signs; conventional emphatics; dialect shifts noted."
+    },
+    "stress_rules": "Often penultimate or morphological.",
+    "prosody": {
+      "rhythm": "Syllable-timed with length",
+      "pacing": "Epic/narrative deliberate"
+    },
+    "grok_imagine_guidance": "Emphatics as throaty or popped ejectives; hold long vowels; mimation final m; glottal aleph; cuneiform context for polyphony.",
+    "tutoring_hooks": [
+      "Lingua franca of ancient Near East for 2,000+ years — diplomatic 'English'.",
+      "Cuneiform signs multi-value — spelling reveals consonants clearly.",
+      "Emphatics distinguish from Hebrew/Arabic cousins.",
+      "Influenced Aramaic/Hebrew phonology heavily.",
+      "Enuma Elish uses rhythmic parallelism like epic poetry."
+    ],
+    "sources": ["Huehnergard *Grammar of Akkadian*; von Soden; CDLI; Semitic comparative linguistics."]
+  },
+  "sumerian": {
+    "language": "sumerian",
+    "status": "dead",
+    "research_type": "pronunciation",
+    "reconstruction_method": "Akkadian transcriptions + internal spelling + Emesal contrast (Jagersma/Thomsen)",
+    "scholarly_consensus": "Tentative and lowest certainty; many phonemes inferred/indirect.",
+    "emesal_notes": "Priestly/women's dialect: softer/different consonants/vowels; contrast reveals standard realizations via Akkadian lens.",
+    "phoneme_inventory": {
+      "vowels": ["a e i u (length/quality uncertain; harmony hints)"],
+      "consonants": ["p b t d g k; s š z; m n l r; ĝ (ng?/velar); ḫ"],
+      "disputed_phonemes": ["ĝ (nasal or stop?), r (tap/trill/affricate?), extra sibilants; no confirmed /f h/"],
+      "distinctive_features": "Ergative; heavy compounding/logograms; isolate with no relatives."
+    },
+    "ipa_reconstructed": {
+      "sample_text": "en-lil2 lugal kalam-ma",
+      "romanization": "enlil lugal kalam-ma",
+      "transcription": "/en.lil lu.ɡal ka.lam.ma/ (approximate)",
+      "confidence": "low",
+      "confidence_note": "Sumerian pronunciation is the least certain of any language in the DAVID registry — heavily inferred through Akkadian filter."
+    },
+    "stress_rules": "Likely final or unknown; compound-based.",
+    "prosody": {
+      "rhythm": "Syllabic/compounded",
+      "pacing": "Liturgical or narrative"
+    },
+    "grok_imagine_guidance": "Uncertain r/ĝ approximate as nasal/stop/tap; vowel harmony suggestions; heavy logographic compounding slow pacing; ergative endings; Akkadian-like sibilants for approximation.",
+    "tutoring_hooks": [
+      "World's oldest attested language (c. 3200 BCE cuneiform) — true isolate.",
+      "Emesal dialect provides clues through contrast with standard.",
+      "Logograms vs phonetic complements create complex script.",
+      "Akkadian scribes give us our main reconstruction window.",
+      "Liturgical influence survived language death in Babylonian religion."
+    ],
+    "sources": ["Jagersma *Descriptive Grammar*; Thomsen; ETCSL; CDLI bilinguals."]
+  }
+}

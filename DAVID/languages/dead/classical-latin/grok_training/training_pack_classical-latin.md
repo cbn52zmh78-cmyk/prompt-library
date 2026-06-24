@@ -95,6 +95,55 @@ ruling faculty / guiding principle
 
 **Notes:** Cross-language: Greek primary, Latin philosophical loan vocabulary.
 
+## Pronunciation Guide `[reconstructed]`
+
+**Model:** Classical (restituta) — Allen *Vox Latina* standard. NOT Ecclesiastical.
+**Confidence:** high (90% core; 75% exact vowel timbre/nasalization)
+**Profile:** `languages/dead/classical-latin/pronunciation/pronunciation_profile.json`
+
+### Canonical sample (Aeneid I.1)
+
+**Text:** Arma virumque cano, Troiae qui primus ab oris
+**IPA:** `[ˈar.ma wɪˈrũː.kʷɛ ˈkaː.noː ˈtroː.jaj kʷiː ˈpriː.mʊs ab ˈoː.riːs]`
+
+### Key phonemes
+
+- **V = /w/** (bilabial approximant), never English /v/
+- **C/G always hard** /k g/ — no soft sounds before e/i
+- **Qu = /kʷ/** single labialized stop
+- **Vowel length phonemic** — sustain longs ~1.5–2× shorts (meter-critical)
+- **Final -m** nasalizes vowel and often elides in poetry
+- **R** always trilled; **h** pronounced in educated speech
+
+### Stress
+
+Penultimate law: stress heavy penult (long vowel, diphthong, or consonant-closed syllable); otherwise antepenult.
+
+### Grok Imagine audio guidance
+
+Bilabial /w/ with rounded lips; trilled R; hold long vowels distinctly for meter; mild puff on aspirates in Greek loans (ph/th/ch); nasalize before final -m; crisp shorts vs sustained longs; lip rounding for u/o/w; avoid English schwas; phrase-level breath groups.
+
+### Tutoring hooks
+
+- Latin V = /w/ ("weni widi wiki" for Caesar) — not modern v
+- C/G always hard ("Kikero" for Cicero)
+- Vowel length changes meaning (liber "book" vs līber "free")
+- Final M nasalizes/elides in poetic flow
+- Qu = single /kʷ/ like "quick"
+
+### Variants (label on-screen)
+
+| Variant | Notes |
+|---------|-------|
+| Classical | Golden Age restituta — DAVID default |
+| Ecclesiastical | Italianate Church Latin — distinct product, not default |
+
+### Sources
+
+- W. Sidney Allen, *Vox Latina* (2nd ed., 1978)
+- Latin phonology and orthography (Wikipedia, citing Allen)
+- foundinantiquity.com Complete Classical Latin Pronunciation Guide (2021)
+
 ## Instructions for Grok
 
 1. Treat each block as primary evidence — do not invent unattested forms.

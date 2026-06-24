@@ -1,0 +1,1103 @@
+
+<!DOCTYPE html><html  lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, 
+initial-scale=1.0, maximum-scale=2.0, user-scalable=1"><title>Careers at n8n</title><style>@layer properties{@supports 
+((-webkit-hyphens:none) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b))))
+{[data-v-15bcd6e3],[data-v-15bcd6e3]::backdrop,[data-v-15bcd6e3]:after,[data-v-15bcd6e3]:before{--tw-border-style:solid
+;--tw-backdrop-blur:initial;--tw-backdrop-brightness:initial;--tw-backdrop-contrast:initial;--tw-backdrop-grayscale:ini
+tial;--tw-backdrop-hue-rotate:initial;--tw-backdrop-invert:initial;--tw-backdrop-opacity:initial;--tw-backdrop-saturate
+:initial;--tw-backdrop-sepia:initial}}}.navbar-wrapper[data-v-15bcd6e3]:before{border-color:#fff3;border-radius:inherit
+;border-style:var(--tw-border-style);border-width:1px;content:"";height:100%;inset:calc(var(--spacing,.25rem)*0);pointe
+r-events:none;position:absolute;width:100%;z-index:-1}@supports (color:color-mix(in 
+lab,red,red)){.navbar-wrapper[data-v-15bcd6e3]:before{border-color:color-mix(in oklab,var(--color-white,#fff) 
+20%,transparent)}}.navbar-wrapper[data-v-15bcd6e3]:before{background-color:#ffffff1a}@supports (color:color-mix(in 
+lab,red,red)){.navbar-wrapper[data-v-15bcd6e3]:before{background-color:color-mix(in oklab,var(--color-white,#fff) 10%,t
+ransparent)}}.navbar-wrapper[data-v-15bcd6e3]:before{--tw-backdrop-blur:blur(var(--blur-xl,24px));-webkit-backdrop-filt
+er:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) 
+var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) 
+var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) 
+var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) 
+var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,)}@media(min-width:64rem){.navbar-wrap
+per[data-v-15bcd6e3]:before{background-color:#ffffff0d}@supports (color:color-mix(in 
+lab,red,red)){.navbar-wrapper[data-v-15bcd6e3]:before{background-color:color-mix(in oklab,var(--color-white,#fff) 
+5%,transparent)}}}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property 
+--tw-backdrop-blur{syntax:"*";inherits:false}@property --tw-backdrop-brightness{syntax:"*";inherits:false}@property 
+--tw-backdrop-contrast{syntax:"*";inherits:false}@property --tw-backdrop-grayscale{syntax:"*";inherits:false}@property 
+--tw-backdrop-hue-rotate{syntax:"*";inherits:false}@property --tw-backdrop-invert{syntax:"*";inherits:false}@property 
+--tw-backdrop-opacity{syntax:"*";inherits:false}@property --tw-backdrop-saturate{syntax:"*";inherits:false}@property 
+--tw-backdrop-sepia{syntax:"*";inherits:false}</style><style>@layer properties{@supports ((-webkit-hyphens:none) and 
+(not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){[data-v-302a2ffe],[data-v-3
+02a2ffe]::backdrop,[data-v-302a2ffe]:after,[data-v-302a2ffe]:before{--tw-tracking:initial}}}.title[data-v-302a2ffe]{fon
+t-family:var(--font-geomanist,geomanist,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe 
+UI Symbol","Noto Color Emoji");--tw-tracking:-.02em;letter-spacing:-.02em}.title[data-v-302a2ffe],.title--white[data-v-
+302a2ffe]{color:var(--color-base-heading-primary,#fff)}.title--orange[data-v-302a2ffe]{color:var(--color-base-heading-o
+range,#ff9b26)}.title--black[data-v-302a2ffe]{color:var(--color-black,#000)}.title--gray[data-v-302a2ffe]{color:var(--c
+olor-base-heading-secondary,#b6b5b9)}.title--white-rainbow[data-v-302a2ffe]{color:var(--color-base-heading-primary,#fff
+)}.title--white-rainbow[data-v-302a2ffe] strong{--tw-tracking:-.02em;letter-spacing:-.02em;-webkit-text-fill-color:tran
+sparent;-webkit-background-clip:text;background-clip:text;background-image:linear-gradient(89.98deg,#ffb552 
+29.9%,#ff5873 71.24%,#b83dff 96.05%);font-family:inherit}.title[data-v-302a2ffe] 
+.emj-wrap{display:inline-block}.title[data-v-302a2ffe] .emj{background-clip:initial;-webkit-background-clip:initial;bac
+kground-image:none;color:initial;-webkit-text-fill-color:initial}@property 
+--tw-tracking{syntax:"*";inherits:false}</style><style>@layer properties{@supports ((-webkit-hyphens:none) and (not 
+(margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){[data-v-76946205],[data-v-769462
+05]::backdrop,[data-v-76946205]:after,[data-v-76946205]:before{--bg-from:transparent;--bg-to:transparent;--bg-hover:tra
+nsparent;--bg-rotation:0deg;--tw-duration:initial;--tw-translate-x:0;--tw-translate-y:0;--tw-translate-z:0;--tw-ease:in
+itial}}}@property --bg-from{syntax:"<color>";inherits:false;initial-value:#0000}@property 
+--bg-to{syntax:"<color>";inherits:false;initial-value:#0000}@property 
+--bg-hover{syntax:"<color>";inherits:false;initial-value:#0000}@property 
+--bg-rotation{syntax:"<angle>";inherits:false;initial-value:0deg}.btn-anim-icon .btn-label[data-v-76946205]{transition-
+duration:var(--tw-duration,var(--default-transition-duration,.15s));transition-property:transform,translate,scale,rotat
+e;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function,cubic-bezier(.4,0,.2,1)));--tw-dura
+tion:.3s;transition-duration:.3s}.btn-anim-icon .btn-icon[data-v-76946205]{--tw-translate-x:calc(var(--spacing,.25rem)*
+-2);opacity:0;transition-duration:var(--tw-duration,var(--default-transition-duration,.15s));transition-property:color,
+background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw
+-gradient-to,opacity,box-shadow,transform,translate,scale,rotate,filter,backdrop-filter,display,content-visibility,over
+lay,pointer-events;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function,cubic-bezier(.4,0,
+.2,1)));--tw-duration:.3s;transition-duration:.3s}.btn-anim-icon .btn-icon[data-v-76946205],.btn-anim-icon 
+.btn-icon[data-v-76946205]>*{translate:var(--tw-translate-x) var(--tw-translate-y)}.btn-anim-icon .btn-icon[data-v-7694
+6205]>*{left:calc(var(--spacing,.25rem)*0);top:50%;--tw-translate-x:-50%;--tw-translate-y:-50%;position:absolute}.btn-a
+nim-icon:hover:not(:disabled) 
+.btn-label[data-v-76946205]{--tw-translate-x:calc(var(--spacing,.25rem)*-2);translate:var(--tw-translate-x) 
+var(--tw-translate-y)}.btn-anim-icon:hover:not(:disabled) 
+.btn-icon[data-v-76946205]{--tw-translate-x:calc(var(--spacing,.25rem)*1);opacity:1;translate:var(--tw-translate-x) var
+(--tw-translate-y)}.btn-static-icon[data-v-76946205]{gap:calc(var(--spacing,.25rem)*1.5)}.btn-primary[data-v-76946205]{
+--bg-from:var(--color-button-cta-from);--bg-to:var(--color-button-cta);--bg-hover:#fff0;--bg-rotation:30deg;background:
+linear-gradient(to bottom,var(--bg-hover),var(--bg-hover)),linear-gradient(var(--bg-rotation),var(--bg-from),var(--bg-t
+o));transition-duration:.3s;transition-property:--bg-from,--bg-to,--bg-hover,--bg-rotation}.btn-primary[data-v-76946205
+]:hover:not(:disabled){--bg-hover:#ffffff1f;--bg-rotation:10deg}.btn-secondary[data-v-76946205]{--bg-from:var(--color-b
+utton-primary-from);--bg-to:var(--color-button-primary);--bg-hover:#fff0;background:linear-gradient(to 
+bottom,var(--bg-hover),var(--bg-hover)),linear-gradient(141deg,var(--bg-from),var(--bg-to));box-shadow:inset 0 1px 1px 
+#fff3,0 1px 2px #08080833,0 4px 4px #08080814,0 7px 0 -12px #077ac7,inset 0 6px 12px #ffffff1f;transition-duration:.3s;
+transition-property:--bg-from,--bg-to,--bg-hover}.btn-secondary[data-v-76946205]:hover:not(:disabled){--bg-hover:#fffff
+f1f}.btn-link[data-v-76946205]{opacity:.65;transition-duration:var(--tw-duration,var(--default-transition-duration,.15s
+));transition-property:opacity;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function,cubic-
+bezier(.4,0,.2,1)));--tw-duration:.3s;transition-duration:.3s}@media(hover:hover){.btn-link[data-v-76946205]:hover:not(
+:disabled){opacity:1}}.btn-tertiary[data-v-76946205]{background-color:#a3a3a333}@supports (color:color-mix(in 
+lab,red,red)){.btn-tertiary[data-v-76946205]{background-color:color-mix(in 
+oklab,var(--color-button-tertiary-from,#a3a3a3) 20%,transparent)}}.btn-tertiary[data-v-76946205]{transition-duration:va
+r(--tw-duration,var(--default-transition-duration,.15s));transition-property:color,background-color,border-color,outlin
+e-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;transition-timing-funct
+ion:var(--tw-ease,var(--default-transition-timing-function,cubic-bezier(.4,0,.2,1)));--tw-duration:.3s;--tw-ease:linear
+;transition-duration:.3s;transition-timing-function:linear}@media(hover:hover){.btn-tertiary[data-v-76946205]:hover:not
+(:disabled){background-color:#bcbcbc33}@supports (color:color-mix(in 
+lab,red,red)){.btn-tertiary[data-v-76946205]:hover:not(:disabled){background-color:color-mix(in 
+oklab,var(--color-button-tertiary,#bcbcbc) 20%,transparent)}}}.btn-chip-orange[data-v-76946205]{isolation:isolate;trans
+ition-duration:var(--tw-duration,var(--default-transition-duration,.15s));transition-property:color,background-color,bo
+rder-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;transi
+tion-timing-function:var(--tw-ease,var(--default-transition-timing-function,cubic-bezier(.4,0,.2,1)));--tw-duration:.3s
+;background-clip:padding-box;overflow:hidden;position:relative;transition-duration:.3s}.btn-chip-orange[data-v-76946205
+]:before{background:linear-gradient(90deg,#fff3,#fff3);border-radius:var(--radius-lg,.5rem);content:"";inset:calc(var(-
+-spacing,.25rem)*0);-webkit-mask-clip:content-box,border-box;mask-clip:content-box,border-box;-webkit-mask-composite:xo
+r;mask-composite:exclude;-webkit-mask-image:linear-gradient(#fff 0 0),linear-gradient(#fff 0 
+0);mask-image:linear-gradient(#fff 0 0),linear-gradient(#fff 0 
+0);-webkit-mask-origin:content-box,border-box;-webkit-mask-position:0 0,0 0;-webkit-mask-repeat:repeat,repeat;-webkit-m
+ask-size:auto,auto;padding:1px;pointer-events:none;position:absolute;transition:background .3s ease-in-out;-webkit-mask
+-source-type:auto,auto;mask-mode:match-source,match-source}.btn-chip-orange[data-v-76946205]:hover:not(:disabled):befor
+e{background:linear-gradient(90deg,#ff9b26 29.28%,#ee4f27 67.8%)}.btn-chip-orange[data-v-76946205]:hover:not(:disabled)
+{background:#ffffff1a}.effect-hover-shadow[data-v-76946205]:hover:not(:disabled){box-shadow:inset 0 1px 1px #fff3,0 
+1px 2px #08080833,0 4px 4px #08080814,0 7px 80px -12px #ee4f27,inset 0 6px 12px #ffffff1f}@property 
+--tw-duration{syntax:"*";inherits:false}@property --tw-translate-x{syntax:"*";inherits:false;initial-value:0}@property 
+--tw-translate-y{syntax:"*";inherits:false;initial-value:0}@property 
+--tw-translate-z{syntax:"*";inherits:false;initial-value:0}@property 
+--tw-ease{syntax:"*";inherits:false}</style><style>.base-frame .base-frame-inner[data-v-18858912]{box-shadow:inset 0 
+1px 0 1px #ffffff1a,0 0 2px #ffffff30}.base-frame--default[data-v-18858912]{background:#ffffff1a}.base-frame--blue[data
+-v-18858912]{background:radial-gradient(49.97% 85.77% at 51% 5.12%,#ff94941c 0,#dee2ff14 
+45%,#f1f2ff05),linear-gradient(106deg,#e3a573cc -25%,#5780e6cc 92%)}</style><style>.grid-items-align--top[data-v-e6de45
+b4]{align-items:flex-start}.grid-items-align--center[data-v-e6de45b4]{align-items:center}.grid-items-align--bottom[data
+-v-e6de45b4]{align-items:flex-end}.grid-layout[data-v-e6de45b4]{display:grid;gap:calc(var(--spacing,.25rem)*8)}.grid-la
+yout[data-v-e6de45b4],.grid-layout--one-column[data-v-e6de45b4]{grid-template-columns:repeat(1,minmax(0,1fr))}@media(mi
+n-width:64rem){.grid-layout--two-column[data-v-e6de45b4]{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-layout--th
+ree-column[data-v-e6de45b4]{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-layout--four-column[data-v-e6de45b4]{gr
+id-template-columns:repeat(4,minmax(0,1fr))}.grid-layout--five-column[data-v-e6de45b4]{grid-template-columns:repeat(5,m
+inmax(0,1fr))}.grid-layout--six-column[data-v-e6de45b4]{grid-template-columns:repeat(6,minmax(0,1fr))}}</style><style>@
+layer properties{@supports ((-webkit-hyphens:none) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not 
+(color:rgb(from red r g b)))){[data-v-59e5b355],[data-v-59e5b355]::backdrop,[data-v-59e5b355]:after,[data-v-59e5b355]:b
+efore{--bg-from:transparent;--bg-to:transparent;--tw-shadow:0 0 
+#0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 
+#0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 
+#0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 
+#0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;
+--tw-border-style:solid;--tw-duration:initial;--tw-backdrop-blur:initial;--tw-backdrop-brightness:initial;--tw-backdrop
+-contrast:initial;--tw-backdrop-grayscale:initial;--tw-backdrop-hue-rotate:initial;--tw-backdrop-invert:initial;--tw-ba
+ckdrop-opacity:initial;--tw-backdrop-saturate:initial;--tw-backdrop-sepia:initial}}}@property 
+--bg-from{syntax:"<color>";inherits:false;initial-value:#0000}@property 
+--bg-to{syntax:"<color>";inherits:false;initial-value:#0000}.card--base[data-v-59e5b355]{--tw-shadow:0 0 0 1px 
+var(--tw-shadow-color,#ffffff1a) inset,0 1px 0 0 var(--tw-shadow-color,#ff8e5d4d) 
+inset;background-image:radial-gradient(55% 100% at 55% 2%,#a85c5c40 
+0,#67454514),linear-gradient(#0000,#0d0a195e),radial-gradient(85% 170% at 52% 40%,#18047026 0,#a3a78800 
+80%),radial-gradient(125% 197% at 32% 142%,#a85c5ca6 0,#0000 36.9%),radial-gradient(90% 10% at 50% 0,#a85c5c0d 
+0,#67454500 90%);background-repeat:no-repeat;box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-rin
+g-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.card--blank[data-v-59e5b355]{border-color:#ffffff0d;border-sty
+le:var(--tw-border-style);border-width:1px;position:relative}@supports (color:color-mix(in 
+lab,red,red)){.card--blank[data-v-59e5b355]{border-color:color-mix(in oklab,var(--color-white,#fff) 
+5%,transparent)}}.card--brown-gradient[data-v-59e5b355]{--tw-shadow:0 0 0 1px var(--tw-shadow-color,#ffffff1a) inset,0 
+1px 0 0 var(--tw-shadow-color,#ff8e5d4d) inset;box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-r
+ing-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);--bg-from:#432d33;--bg-to:#0e0918;background-color:var(--bg-t
+o);background-image:linear-gradient(180deg,var(--bg-from) -10%,var(--bg-to) 90%);transition-duration:.3s;transition-pro
+perty:--bg-from,--bg-to}.card--brown-gradient.inactive[data-v-59e5b355]{--tw-shadow:0 0 0 1px #ffffff1a inset,0 1px 0 
+0 #ffffff1a inset;--bg-from:#1c1726;--bg-to:#191422}.card--cta[data-v-59e5b355]{--tw-shadow:0 0 0 1px 
+var(--tw-shadow-color,#ffffff1a) inset,0 1px 0 0 var(--tw-shadow-color,#ff8e5d4d) 
+inset;background-image:radial-gradient(50% 90% at 57% 117%,#64646466 0,#26214900),linear-gradient(#67454599,#2621491a);
+background-repeat:no-repeat;box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),
+var(--tw-ring-shadow),var(--tw-shadow);position:relative}.card--default[data-v-59e5b355]{border-color:#ffffff0d;border-
+style:var(--tw-border-style);border-width:1px;position:relative}@supports (color:color-mix(in 
+lab,red,red)){.card--default[data-v-59e5b355]{border-color:color-mix(in oklab,var(--color-white,#fff) 5%,transparent)}}
+.card--default[data-v-59e5b355]{background-color:var(--color-shades-dark-navy,#1b1728);transition-duration:var(--tw-dur
+ation,var(--default-transition-duration,.15s));transition-property:color,background-color,border-color,outline-color,te
+xt-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;transition-timing-function:var(--
+tw-ease,var(--default-transition-timing-function,cubic-bezier(.4,0,.2,1)));--tw-duration:.3s;transition-duration:.3s}.c
+ard--default[data-v-59e5b355]:hover{background-color:var(--color-shades-dark-navy-lighten,#272333)}.card--dark-navy[dat
+a-v-59e5b355]{border-color:#ffffff1a;border-style:var(--tw-border-style);border-width:1px;position:relative}@supports 
+(color:color-mix(in lab,red,red)){.card--dark-navy[data-v-59e5b355]{border-color:color-mix(in 
+oklab,var(--color-white,#fff) 10%,transparent)}}.card--dark-navy[data-v-59e5b355]{background-color:var(--color-shades-d
+ark-navy,#1b1728)}.card--red[data-v-59e5b355]{-webkit-backdrop-filter:blur(100px);backdrop-filter:blur(100px);backgroun
+d-image:radial-gradient(54.44% 97.4% at 54.44% 2.66%,#a85c5c4a 
+0,#67454514),linear-gradient(#0000,#0d0a195e),radial-gradient(circle at 35% -50%,#ff3b21bf 0,#fd89250d 
+50%),radial-gradient(circle at 60% 150%,#fd8925a6 0,#ff3b2100 35%),radial-gradient(84.14% 171.36% at 52.69% 
+41.32%,#18047026 0,#a3a78800 80%),radial-gradient(127.61% 197.4% at 32.86% 142.68%,#a85c5cb3 0,#0000 
+36.9%)}.card--red[data-v-59e5b355],.card--rusty[data-v-59e5b355]{--tw-shadow:0 0 0 1px 
+var(--tw-shadow-color,#ffffff1a) inset,0 1px 0 0 var(--tw-shadow-color,#ff8e5d4d) inset;background-repeat:no-repeat;box
+-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-
+shadow);position:relative}.card--rusty[data-v-59e5b355]{-webkit-backdrop-filter:blur(50px);backdrop-filter:blur(50px);-
+-bg-from:#ee4f2733;background-image:linear-gradient(0deg,var(--bg-from) 0,var(--bg-from) 100%),radial-gradient(266.47% 
+215.14% at 10.15% 142.35%,#d97e4b38 0,#fff0 37%),radial-gradient(138.18% 148.32% at 77.49% 23.63%,#0400ff26 
+0,#a3a78800 80%),linear-gradient(180deg,#0000 0,#0d0a195e),radial-gradient(65.55% 111.2% at 50% 0,#a85c5c17 
+0,#67454500),linear-gradient(180deg,#18132933 0 100%);transition-duration:.3s;transition-property:--bg-from}.card--rust
+y[data-v-59e5b355]:hover{--bg-from:#ee4f2740}.card--shine-blue[data-v-59e5b355]{--tw-shadow:0 0 0 1px 
+var(--tw-shadow-color,#ffffff1a) inset,0 1px 0 0 var(--tw-shadow-color,#ff8e5d4d) inset;box-shadow:var(--tw-inset-shado
+w),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);--tw-backdrop-blur:b
+lur(var(--blur-3xl,64px));-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) 
+var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) 
+var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) 
+var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) 
+var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) 
+var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) 
+var(--tw-backdrop-sepia,);background-image:radial-gradient(126.99% 234.27% at 10.15% 142.35%,#d97e4b22 0,#fff0 
+37%),radial-gradient(66.99% 135.93% at 77.49% 23.63%,#0400ff17 0,#a3a78800 
+80%),linear-gradient(#0000001a,#0d0a1942),radial-gradient(65.55% 111.2% at 50% 0,#a85c5c0b 
+0,#67454500),linear-gradient(#18132999 0 100%);background-repeat:no-repeat}.card--shine-dark[data-v-59e5b355]{border-co
+lor:#ffffff1a;border-style:var(--tw-border-style);border-width:1px}@supports (color:color-mix(in 
+lab,red,red)){.card--shine-dark[data-v-59e5b355]{border-color:color-mix(in oklab,var(--color-white,#fff) 10%,transparen
+t)}}.card--shine-dark[data-v-59e5b355]{background-image:linear-gradient(#67454533,#26214900),radial-gradient(51.83% 
+94.53% at 58.78% 107.81%,#64646433 
+0,#26214900);background-repeat:no-repeat}.card--spark-red[data-v-59e5b355]{background-image:radial-gradient(54.44% 
+97.4% at 54.44% 2.66%,#a85c5c4a 0,#67454514),radial-gradient(120% 145% at 50% 100%,#ff64214d 0,#ff3b210a 
+50%),linear-gradient(#0e091880 0 100%);background-repeat:no-repeat;position:relative}.card--spark-red[data-v-59e5b355]:
+after{background:linear-gradient(55deg,#fd8925 40.84%,#ff0c00);border-radius:inherit;-webkit-mask-clip:content-box,bord
+er-box;mask-clip:content-box,border-box;-webkit-mask-composite:xor;mask-composite:exclude;-webkit-mask-image:linear-gra
+dient(#fff,#fff),linear-gradient(#fff,#fff);mask-image:linear-gradient(#fff,#fff),linear-gradient(#fff,#fff);-webkit-ma
+sk-origin:content-box,border-box;mask-origin:content-box,border-box;-webkit-mask-position:0 0,0 0;mask-position:0 0,0 0
+;-webkit-mask-repeat:repeat,repeat;mask-repeat:repeat,repeat;-webkit-mask-size:auto,auto;mask-size:auto,auto;padding:1p
+x;-webkit-mask-source-type:auto,auto;mask-mode:match-source,match-source}.card--spark-red[data-v-59e5b355]:after,.card-
+-spark-red[data-v-59e5b355]:before{content:"";inset:calc(var(--spacing,.25rem)*0);pointer-events:none;position:absolute
+;z-index:-1}.card--spark-red[data-v-59e5b355]:before{background-image:url(/images/stars-feedback-bg.svg);background-siz
+e:cover}.card--white-transparent[data-v-59e5b355]{border-color:#ffffff1a;border-style:var(--tw-border-style);border-wid
+th:1px}@supports (color:color-mix(in lab,red,red)){.card--white-transparent[data-v-59e5b355]{border-color:color-mix(in 
+oklab,var(--color-white,#fff) 
+10%,transparent)}}.card--white-transparent[data-v-59e5b355]{background-color:#ffffff08}@supports (color:color-mix(in 
+lab,red,red)){.card--white-transparent[data-v-59e5b355]{background-color:color-mix(in oklab,var(--color-white,#fff) 3%,
+transparent)}}.card--white-transparent[data-v-59e5b355]{-webkit-backdrop-filter:blur(200px);backdrop-filter:blur(200px)
+}.card--white-borderless[data-v-59e5b355]{background-color:#ffffff0d}@supports (color:color-mix(in 
+lab,red,red)){.card--white-borderless[data-v-59e5b355]{background-color:color-mix(in oklab,var(--color-white,#fff) 5%,t
+ransparent)}}.card--dark[data-v-59e5b355]{border-color:#ffffff1a;border-radius:var(--radius-2xl,1rem);border-style:var(
+--tw-border-style);border-width:1px}@supports (color:color-mix(in 
+lab,red,red)){.card--dark[data-v-59e5b355]{border-color:color-mix(in oklab,var(--color-white,#fff) 
+10%,transparent)}}.card--dark[data-v-59e5b355]{background-color:var(--color-shades-midnight-navy,#0e0918)}@property 
+--tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property 
+--tw-shadow-color{syntax:"*";inherits:false}@property 
+--tw-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property 
+--tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property 
+--tw-inset-shadow-color{syntax:"*";inherits:false}@property 
+--tw-inset-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property 
+--tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 
+#0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property 
+--tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property 
+--tw-ring-inset{syntax:"*";inherits:false}@property 
+--tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property 
+--tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property 
+--tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property 
+--tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property 
+--tw-duration{syntax:"*";inherits:false}@property --tw-backdrop-blur{syntax:"*";inherits:false}@property 
+--tw-backdrop-brightness{syntax:"*";inherits:false}@property 
+--tw-backdrop-contrast{syntax:"*";inherits:false}@property --tw-backdrop-grayscale{syntax:"*";inherits:false}@property 
+--tw-backdrop-hue-rotate{syntax:"*";inherits:false}@property --tw-backdrop-invert{syntax:"*";inherits:false}@property 
+--tw-backdrop-opacity{syntax:"*";inherits:false}@property --tw-backdrop-saturate{syntax:"*";inherits:false}@property 
+--tw-backdrop-sepia{syntax:"*";inherits:false}</style><style>@layer properties{@supports ((-webkit-hyphens:none) and 
+(not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){[data-v-83ccbb40],[data-v-8
+3ccbb40]::backdrop,[data-v-83ccbb40]:after,[data-v-83ccbb40]:before{--tw-gradient-position:initial;--tw-gradient-from:#
+0000;--tw-gradient-via:#0000;--tw-gradient-to:#0000;--tw-gradient-stops:initial;--tw-gradient-via-stops:initial;--tw-gr
+adient-from-position:0%;--tw-gradient-via-position:50%;--tw-gradient-to-position:100%;--tw-duration:initial}}}@media(mi
+n-width:48rem){.stacked-card-inner.inactive[data-v-83ccbb40] .badge{--tw-gradient-position:to right}@supports 
+(background-image:linear-gradient(in lab,red,red)){.stacked-card-inner.inactive[data-v-83ccbb40] 
+.badge{--tw-gradient-position:to right in oklab}}.stacked-card-inner.inactive[data-v-83ccbb40] 
+.badge{background-image:linear-gradient(var(--tw-gradient-stops))}.stacked-card-inner.inactive[data-v-83ccbb40] 
+.badge{--tw-gradient-from:#fff3}@supports (color:color-mix(in 
+lab,red,red)){.stacked-card-inner.inactive[data-v-83ccbb40] .badge{--tw-gradient-from:color-mix(in 
+oklab,var(--color-white,#fff) 20%,transparent)}}.stacked-card-inner.inactive[data-v-83ccbb40] 
+.badge{--tw-gradient-to:#fff3}@supports (color:color-mix(in 
+lab,red,red)){.stacked-card-inner.inactive[data-v-83ccbb40] .badge{--tw-gradient-to:color-mix(in 
+oklab,var(--color-white,#fff) 20%,transparent)}}.stacked-card-inner.inactive[data-v-83ccbb40] 
+.badge{--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from) 
+var(--tw-gradient-from-position),var(--tw-gradient-to) 
+var(--tw-gradient-to-position))}.stacked-card-inner.inactive[data-v-83ccbb40] 
+.badge{opacity:.2}.stacked-card-inner.inactive[data-v-83ccbb40] .badge{transition-duration:var(--tw-duration,var(--defa
+ult-transition-duration,.15s));transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transitio
+n-timing-function,cubic-bezier(.4,0,.2,1)))}.stacked-card-inner.inactive[data-v-83ccbb40] 
+.badge{--tw-duration:.15s;transition-duration:.15s}}@property 
+--tw-gradient-position{syntax:"*";inherits:false}@property 
+--tw-gradient-from{syntax:"<color>";inherits:false;initial-value:#0000}@property 
+--tw-gradient-via{syntax:"<color>";inherits:false;initial-value:#0000}@property 
+--tw-gradient-to{syntax:"<color>";inherits:false;initial-value:#0000}@property 
+--tw-gradient-stops{syntax:"*";inherits:false}@property --tw-gradient-via-stops{syntax:"*";inherits:false}@property 
+--tw-gradient-from-position{syntax:"<length-percentage>";inherits:false;initial-value:0%}@property 
+--tw-gradient-via-position{syntax:"<length-percentage>";inherits:false;initial-value:50%}@property 
+--tw-gradient-to-position{syntax:"<length-percentage>";inherits:false;initial-value:100%}@property 
+--tw-duration{syntax:"*";inherits:false}</style><style>@layer properties{@supports ((-webkit-hyphens:none) and (not 
+(margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){[data-v-39716c88],[data-v-39716c
+88]::backdrop,[data-v-39716c88]:after,[data-v-39716c88]:before{--tw-border-style:solid}}}.badge--dark[data-v-39716c88]{
+border-color:#ffffff1a;border-style:var(--tw-border-style);border-width:1px}@supports (color:color-mix(in 
+lab,red,red)){.badge--dark[data-v-39716c88]{border-color:color-mix(in oklab,var(--color-white,#fff) 
+10%,transparent)}}.badge--dark[data-v-39716c88]{background-color:#ffffff1a}@supports (color:color-mix(in 
+lab,red,red)){.badge--dark[data-v-39716c88]{background-color:color-mix(in oklab,var(--color-white,#fff) 10%,transparent
+)}}.badge--dark[data-v-39716c88]{color:var(--color-white,#fff)}.badge--orange[data-v-39716c88]{background-image:linear-
+gradient(77.24deg,#fd8925 7.17%,#ff0c00 86.3%)}@property 
+--tw-border-style{syntax:"*";inherits:false;initial-value:solid}</style><style>@layer properties{@supports 
+((-webkit-hyphens:none) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b))))
+{[data-v-f7a61f92],[data-v-f7a61f92]::backdrop,[data-v-f7a61f92]:after,[data-v-f7a61f92]:before{--tw-translate-x:0;--tw
+-translate-y:0;--tw-translate-z:0}}}.timeline-row[data-v-f7a61f92]:before{bottom:calc(var(--spacing,.25rem)*0);content:
+"";top:calc(var(--spacing,.25rem)*0);--tw-translate-x:-50%;background-color:#ffffff12;left:50%;position:absolute;transl
+ate:var(--tw-translate-x) var(--tw-translate-y);width:1px}@supports (color:color-mix(in 
+lab,red,red)){.timeline-row[data-v-f7a61f92]:before{background-color:color-mix(in oklab,var(--color-white,#fff) 7%,tran
+sparent)}}@media(min-width:1024px){.timeline-row[data-v-f7a61f92]:first-child:before{background:linear-gradient(#ffffff
+12,#ffffff12) bottom/1px calc(70% - 58px) no-repeat,repeating-linear-gradient(#ffffff12 0 4px,#0000 4px 10px) top/1px 
+calc(30% + 58px) no-repeat;top:-50px}}.timeline-row[data-v-f7a61f92]:last-child:before{bottom:50%}@media(min-width:1024
+px){.timeline-row[data-v-f7a61f92]:after{background-color:#ffffff12;content:"";height:1px;position:absolute;top:50%}@su
+pports (color:color-mix(in lab,red,red)){.timeline-row[data-v-f7a61f92]:after{background-color:color-mix(in 
+oklab,var(--color-white,#fff) 7%,transparent)}}.timeline-row[data-side=left][data-v-f7a61f92]:after{left:0;right:50%}.t
+imeline-row[data-side=right][data-v-f7a61f92]:after{left:50%;right:0}}@property 
+--tw-translate-x{syntax:"*";inherits:false;initial-value:0}@property 
+--tw-translate-y{syntax:"*";inherits:false;initial-value:0}@property 
+--tw-translate-z{syntax:"*";inherits:false;initial-value:0}</style><style>@layer properties{@supports 
+((-webkit-hyphens:none) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b))))
+{[data-v-9bed7a1f],[data-v-9bed7a1f]::backdrop,[data-v-9bed7a1f]:after,[data-v-9bed7a1f]:before{--tw-border-style:solid
+;--tw-tracking:initial;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 
+#0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 
+#0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 
+#0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;
+--tw-backdrop-blur:initial;--tw-backdrop-brightness:initial;--tw-backdrop-contrast:initial;--tw-backdrop-grayscale:init
+ial;--tw-backdrop-hue-rotate:initial;--tw-backdrop-invert:initial;--tw-backdrop-opacity:initial;--tw-backdrop-saturate:
+initial;--tw-backdrop-sepia:initial}}}.gradient-tile[data-v-9bed7a1f]{align-items:center;border-radius:var(--radius-lg,
+.5rem);border-style:var(--tw-border-style);justify-content:center;row-gap:calc(var(--spacing,.25rem)*6);--tw-tracking:-
+.02em;letter-spacing:-.02em;--tw-shadow:0px 0px 8px 0px var(--tw-shadow-color,#00000042);box-shadow:var(--tw-inset-shad
+ow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);width:100%;--tw-bac
+kdrop-blur:blur(22px);-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) 
+var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) 
+var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) 
+var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) 
+var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) 
+var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);background-color:#0d0a1947;border-co
+lor:#ffffff1a;border-width:1px;display:flex;flex-direction:column;overflow:hidden}.gradient-tile--default[data-v-9bed7a
+1f]{background-image:radial-gradient(circle farthest-side at 100% -80%,#af6a8c75 0,#62415361 39%,#0000 
+55%),radial-gradient(circle at 50% 
+100%,#7a396d4a,#2a192963)}.gradient-tile--orange[data-v-9bed7a1f]{background-image:radial-gradient(circle 
+farthest-side at 0 100%,#b200ff26 0,#fff0 56%),radial-gradient(circle farthest-side at 20% 100%,#ffffff1a 0,#0000 
+43%),radial-gradient(circle at 50% 100%,#a3643a87 
+0,#2a192963)}.gradient-tile--purple[data-v-9bed7a1f]{background-image:radial-gradient(circle at 0 100%,#ff4f311f 
+0,#fff0),radial-gradient(circle at 50% 100%,#ffffff0f 0,#0000),radial-gradient(circle at 50% 100%,#4b397a6e 
+0,#2a192963)}.gradient-tile--blue[data-v-9bed7a1f]{background-image:radial-gradient(126.99% 234.27% at 10.15% 
+142.35%,#d97e4b22 0,#fff0 37%),radial-gradient(66.99% 135.93% at 77.49% 23.63%,#0400ff17 0,#a3a78800 
+80%),linear-gradient(#0000001a,#0d0a1942),radial-gradient(65.55% 111.2% at 50% 0,#a85c5c0b 
+0,#67454500),linear-gradient(#18132999 0 100%)}@property 
+--tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property 
+--tw-tracking{syntax:"*";inherits:false}@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 
+#0000}@property --tw-shadow-color{syntax:"*";inherits:false}@property 
+--tw-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property 
+--tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property 
+--tw-inset-shadow-color{syntax:"*";inherits:false}@property 
+--tw-inset-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property 
+--tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 
+#0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property 
+--tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property 
+--tw-ring-inset{syntax:"*";inherits:false}@property 
+--tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property 
+--tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property 
+--tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property 
+--tw-backdrop-blur{syntax:"*";inherits:false}@property --tw-backdrop-brightness{syntax:"*";inherits:false}@property 
+--tw-backdrop-contrast{syntax:"*";inherits:false}@property --tw-backdrop-grayscale{syntax:"*";inherits:false}@property 
+--tw-backdrop-hue-rotate{syntax:"*";inherits:false}@property --tw-backdrop-invert{syntax:"*";inherits:false}@property 
+--tw-backdrop-opacity{syntax:"*";inherits:false}@property --tw-backdrop-saturate{syntax:"*";inherits:false}@property --
+tw-backdrop-sepia{syntax:"*";inherits:false}</style><style>.gallery-grid-layout[data-v-15b33907]{display:grid;gap:calc(
+var(--spacing,.25rem)*4)}@media(min-width:64rem){.gallery-grid-layout[data-v-15b33907]{grid-template-columns:repeat(12,
+minmax(0,1fr))}}.gallery-grid-layout .grid-item[data-v-15b33907]:nth-child(4n+1),.gallery-grid-layout 
+.grid-item[data-v-15b33907]:nth-child(4n+4){grid-column:span 12/span 12}@media(min-width:64rem){.gallery-grid-layout 
+.grid-item[data-v-15b33907]:nth-child(4n+1),.gallery-grid-layout 
+.grid-item[data-v-15b33907]:nth-child(4n+4){grid-column:span 5/span 5}}.gallery-grid-layout 
+.grid-item[data-v-15b33907]:nth-child(4n+2),.gallery-grid-layout 
+.grid-item[data-v-15b33907]:nth-child(4n+3){grid-column:span 12/span 12}@media(min-width:64rem){.gallery-grid-layout 
+.grid-item[data-v-15b33907]:nth-child(4n+2),.gallery-grid-layout 
+.grid-item[data-v-15b33907]:nth-child(4n+3){grid-column:span 7/span 7}}</style><style>@layer properties{@supports 
+((-webkit-hyphens:none) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b))))
+{[data-v-f911ea46],[data-v-f911ea46]::backdrop,[data-v-f911ea46]:after,[data-v-f911ea46]:before{--tw-duration:initial}}
+}.footer-bottom-bg[data-v-f911ea46]{--gradient-top-end:25%;--gradient-bottom-start:55%;--gradient-bottom-end:100%;--gra
+dient-radial-left:5%;--gradient-radial-right:95%;--gradient-mask-fade-from:20%;bottom:calc(var(--spacing,.25rem)*0);lef
+t:calc(var(--spacing,.25rem)*0);position:absolute;right:calc(var(--spacing,.25rem)*0);top:calc(var(--spacing,.25rem)*-5
+2);z-index:-1}@media(min-width:40rem){.footer-bottom-bg[data-v-f911ea46]{top:calc(var(--spacing,.25rem)*-64)}}@media(mi
+n-width:64rem){.footer-bottom-bg[data-v-f911ea46]{top:calc(var(--spacing,.25rem)*-80)}}.footer-bottom-bg[data-v-f911ea4
+6]{background:linear-gradient(to bottom,#0e0918 5%,#0e091800 var(--gradient-top-end)),linear-gradient(to 
+bottom,#0e091800 var(--gradient-bottom-start),#0e0918 var(--gradient-bottom-end)),radial-gradient(circle at 
+var(--gradient-radial-left) 50%,#fd9825a6 0,#ff3b2100 50%),radial-gradient(circle at var(--gradient-radial-right) 
+40%,#fb9733a6 0,#ff3b2100 50%),linear-gradient(to bottom,#ff2f004d 0,#ff0c00cc 45%,#ff2f0033 
+70%,#ff2f0000);-webkit-mask:linear-gradient(to bottom,#fff0 0,#fff 
+var(--gradient-mask-fade-from));mask:linear-gradient(to bottom,#fff0 0,#fff var(--gradient-mask-fade-from))}@media(min-
+width:40rem){.footer-bottom-bg[data-v-f911ea46]{--gradient-top-end:20%;--gradient-bottom-start:30%;--gradient-bottom-en
+d:90%}}@media(min-width:48rem){.footer-bottom-bg[data-v-f911ea46]{--gradient-top-end:20%;--gradient-bottom-start:30%;--
+gradient-bottom-end:70%}}@media(min-width:64rem){.footer-bottom-bg[data-v-f911ea46]{--gradient-top-end:35%;--gradient-b
+ottom-start:30%;--gradient-bottom-end:90%}}@media(min-width:80rem){.footer-bottom-bg[data-v-f911ea46]{--gradient-top-en
+d:40%;--gradient-bottom-start:35%;--gradient-bottom-end:90%;--gradient-radial-left:5%;--gradient-radial-right:90%}}@med
+ia(min-width:96rem){.footer-bottom-bg[data-v-f911ea46]{--gradient-radial-left:15%;--gradient-radial-right:85%}}.footer-
+bottom-links[data-v-f911ea46]{display:flex;flex-flow:wrap;justify-content:center}@media(min-width:40rem){.footer-bottom
+-links[data-v-f911ea46]{justify-content:flex-start}}.footer-bottom-links[data-v-f911ea46] a{transition-duration:var(--t
+w-duration,var(--default-transition-duration,.15s));transition-property:opacity;transition-timing-function:var(--tw-eas
+e,var(--default-transition-timing-function,cubic-bezier(.4,0,.2,1)));--tw-duration:.3s;transition-duration:.3s}@media(h
+over:hover){.footer-bottom-links[data-v-f911ea46] a:hover{opacity:1}}@media not all and 
+(min-width:40rem){.footer-bottom-links[data-v-f911ea46] a{opacity:.8}}.footer-bottom-links[data-v-f911ea46] 
+a:not(:first-child):before{content:"|";display:inline-block;margin-inline:calc(var(--spacing,.25rem)*3)}@property 
+--tw-duration{syntax:"*";inherits:false}</style><style>.logo[data-theme=default] 
+.path-icon[data-v-64adc7f1]{fill:var(--color-base-pink)}.logo[data-theme=default] 
+.path-name[data-v-64adc7f1]{fill:#fffc}.logo[data-theme=mono] 
+.path-icon[data-v-64adc7f1]{fill:#7a7a7a}.logo[data-theme=mono] 
+.path-name[data-v-64adc7f1]{fill:#fff}.logo[data-theme=mono]:hover 
+.path-icon[data-v-64adc7f1]{fill:var(--color-base-pink)}</style><style>@layer properties{@supports 
+((-webkit-hyphens:none) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b))))
+{[data-v-595f7617],[data-v-595f7617]::backdrop,[data-v-595f7617]:after,[data-v-595f7617]:before{--tw-translate-x:0;--tw
+-translate-y:0;--tw-translate-z:0;--tw-border-style:solid}}}.submenu[data-v-595f7617]:before{content:"";height:calc(var
+(--spacing,.25rem)*2);left:calc(var(--spacing,.25rem)*0);top:calc(var(--spacing,.25rem)*0);--tw-translate-y:-100%;posit
+ion:absolute;translate:var(--tw-translate-x) var(--tw-translate-y);width:100%}.submenu[data-v-595f7617]:after{border-co
+lor:#fff3;border-radius:inherit;border-style:var(--tw-border-style);border-width:1px;content:"";inset:calc(var(--spacin
+g,.25rem)*0);pointer-events:none;position:absolute}@supports (color:color-mix(in 
+lab,red,red)){.submenu[data-v-595f7617]:after{border-color:color-mix(in oklab,var(--color-white,#fff) 
+20%,transparent)}}.submenu[data-v-595f7617]:after{background-color:#ffffff0d}@supports (color:color-mix(in 
+lab,red,red)){.submenu[data-v-595f7617]:after{background-color:color-mix(in oklab,var(--color-white,#fff) 
+5%,transparent)}}.submenu[data-v-595f7617]:after{mix-blend-mode:overlay}@property 
+--tw-translate-x{syntax:"*";inherits:false;initial-value:0}@property 
+--tw-translate-y{syntax:"*";inherits:false;initial-value:0}@property 
+--tw-translate-z{syntax:"*";inherits:false;initial-value:0}@property 
+--tw-border-style{syntax:"*";inherits:false;initial-value:solid}</style><style>@layer properties{@supports 
+((-webkit-hyphens:none) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b))))
+{[data-v-3982f011],[data-v-3982f011]::backdrop,[data-v-3982f011]:after,[data-v-3982f011]:before{--bg-top:#554d5f00;--bg
+-bottom:#a6375500;--tw-border-style:solid}}}@property 
+--bg-top{syntax:"<color>";inherits:false;initial-value:#554d5f00}@property --bg-bottom{syntax:"<color>";inherits:false;
+initial-value:#a6375500}.submenu-item[data-v-3982f011]{background:radial-gradient(60% 60% at 60% 100%,var(--bg-bottom) 
+0,#26214900 90%),linear-gradient(180deg,var(--bg-top) 0,#26214900 100%);transition-delay:0s,.1s;transition-duration:.3s
+,.3s;transition-property:--bg-top,--bg-bottom}.submenu-item[data-v-3982f011]:before{border-color:#0000;border-radius:in
+herit;border-style:var(--tw-border-style);border-width:1px;content:"";inset:calc(var(--spacing,.25rem)*0);pointer-event
+s:none;position:absolute}@supports (color:color-mix(in 
+lab,red,red)){.submenu-item[data-v-3982f011]:before{border-color:color-mix(in oklab,var(--color-white,#fff) 0%,transpar
+ent)}}.submenu-item[data-v-3982f011]:before{mix-blend-mode:overlay;transition-duration:var(--tw-duration,var(--default-
+transition-duration,.15s));transition-property:color,background-color,border-color,outline-color,text-decoration-color,
+fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;transition-timing-function:var(--tw-ease,var(--defaul
+t-transition-timing-function,cubic-bezier(.4,0,.2,1)))}.submenu-item[data-v-3982f011]:hover{--bg-top:#554d5f99;--bg-bot
+tom:#a6375599}.submenu-item[data-v-3982f011]:hover:before{border-color:#fff3}@supports (color:color-mix(in 
+lab,red,red)){.submenu-item[data-v-3982f011]:hover:before{border-color:color-mix(in oklab,var(--color-white,#fff) 
+20%,transparent)}}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}</style><link 
+rel="stylesheet" href="/_nuxt/entry.DYT_bpFi.css" crossorigin><link rel="stylesheet" 
+href="/_nuxt/StrapiComponent.B9fNmTqw.css" crossorigin><link rel="stylesheet" href="/_nuxt/TabsSwitcher.CKq79mMj.css" 
+crossorigin><link rel="stylesheet" href="/_nuxt/Badge.DuxMgtBO.css" crossorigin><link rel="stylesheet" 
+href="/_nuxt/Card.B6l8mko9.css" crossorigin><link rel="stylesheet" href="/_nuxt/ToggleSwitch.tOIhsglL.css" 
+crossorigin><link rel="stylesheet" href="/_nuxt/index.D9DuyhZ1.css" crossorigin><link rel="stylesheet" 
+href="/_nuxt/BaseContentFrame.rEf4J6jY.css" crossorigin><link rel="stylesheet" href="/_nuxt/GradientTile.FcFFW2Ff.css" 
+crossorigin><link rel="stylesheet" href="/_nuxt/NodeIconSet.B6G5k0d9.css" crossorigin><link rel="stylesheet" 
+href="/_nuxt/BaseSkeleton.faCG0Ltw.css" crossorigin><link rel="stylesheet" href="/_nuxt/ResponsiveNav.f-UH_6WE.css" 
+crossorigin><link rel="stylesheet" href="/_nuxt/default.-_5layiV.css" crossorigin><link 
+href="/_scripts/assets/64f98571ac86d5e7.js?id=GTM-K7L9C6X" rel="preload" fetchpriority="low" as="script"><link 
+rel="modulepreload" as="script" crossorigin href="/_nuxt/CBmfmpza.js"><link rel="modulepreload" as="script" 
+crossorigin href="/_nuxt/BUVDVFBk.js"><link rel="modulepreload" as="script" crossorigin 
+href="/_nuxt/iE1KHY1j.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/B2hoOWOL.js"><link 
+rel="modulepreload" as="script" crossorigin href="/_nuxt/C0gdrdbe.js"><link rel="modulepreload" as="script" 
+crossorigin href="/_nuxt/CWNEn_7y.js"><link rel="modulepreload" as="script" crossorigin 
+href="/_nuxt/QVtcosWO.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/CNHLkCn1.js"><link 
+rel="modulepreload" as="script" crossorigin href="/_nuxt/CVFMRCwL.js"><link rel="modulepreload" as="script" 
+crossorigin href="/_nuxt/BRGeg_Lx.js"><link rel="modulepreload" as="script" crossorigin 
+href="/_nuxt/BgOOtBlx.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/CWHp7PHG.js"><link 
+rel="modulepreload" as="script" crossorigin href="/_nuxt/ecEa2CJW.js"><link rel="modulepreload" as="script" 
+crossorigin href="/_nuxt/Bm4YXKSg.js"><link rel="modulepreload" as="script" crossorigin 
+href="/_nuxt/SIdajd9w.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/CYaxueTF.js"><link 
+rel="modulepreload" as="script" crossorigin href="/_nuxt/CTG8Xw6k.js"><link rel="modulepreload" as="script" 
+crossorigin href="/_nuxt/DwaElt35.js"><link rel="modulepreload" as="script" crossorigin 
+href="/_nuxt/DuwFx6aB.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/Cq7OIhuX.js"><link 
+rel="modulepreload" as="script" crossorigin href="/_nuxt/BKM9buBR.js"><link rel="modulepreload" as="script" 
+crossorigin href="/_nuxt/etR_L3oX.js"><link rel="modulepreload" as="script" crossorigin 
+href="/_nuxt/CqkYHcNv.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/D5P85ul5.js"><link 
+rel="modulepreload" as="script" crossorigin href="/_nuxt/CKWPY8Cv.js"><link rel="modulepreload" as="script" 
+crossorigin href="/_nuxt/C0f2lJg1.js"><link rel="modulepreload" as="script" crossorigin 
+href="/_nuxt/X8YEUIMp.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/BBx07SGr.js"><link 
+rel="modulepreload" as="script" crossorigin href="/_nuxt/dimeFMU5.js"><link rel="modulepreload" as="script" 
+crossorigin href="/_nuxt/Rk0pGSS0.js"><link rel="modulepreload" as="script" crossorigin 
+href="/_nuxt/DyWU7oUR.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/CDMTzqPe.js"><link 
+rel="modulepreload" as="script" crossorigin href="/_nuxt/DdJGNcG5.js"><link rel="modulepreload" as="script" 
+crossorigin href="/_nuxt/Cv3lAYPq.js"><link rel="modulepreload" as="script" crossorigin 
+href="/_nuxt/CCI-eDw-.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/qL9O5Iwk.js"><link 
+rel="modulepreload" as="script" crossorigin href="/_nuxt/DZh27EfI.js"><link rel="modulepreload" as="script" 
+crossorigin href="/_nuxt/B7jzVt9e.js"><link rel="modulepreload" as="script" crossorigin 
+href="/_nuxt/_KvMhgW7.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/F_CNND3i.js"><link 
+rel="modulepreload" as="script" crossorigin href="/_nuxt/CjtFPIsK.js"><link rel="modulepreload" as="script" 
+crossorigin href="/_nuxt/Y5pLt9ru.js"><link rel="modulepreload" as="script" crossorigin 
+href="/_nuxt/DyECo0w-.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/BIbsaGdy.js"><link 
+rel="modulepreload" as="script" crossorigin href="/_nuxt/BLhs7a4o.js"><link rel="modulepreload" as="script" 
+crossorigin href="/_nuxt/vXpLA-XR.js"><link rel="modulepreload" as="script" crossorigin 
+href="/_nuxt/BlDWJR7u.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/Do2S7YjN.js"><link 
+rel="modulepreload" as="script" crossorigin href="/_nuxt/CCGmHW5s.js"><link rel="modulepreload" as="script" 
+crossorigin href="/_nuxt/CMziee-S.js"><link rel="modulepreload" as="script" crossorigin 
+href="/_nuxt/vAFwDSZy.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/CJTFJYUT.js"><script 
+type="module" src="/_nuxt/CBmfmpza.js" crossorigin></script><link rel="dns-prefetch" href="https://i.ytimg.com" 
+data-hid="nuxt-script-youtube-img-preconnect"><meta name="description" content="Explore exciting career opportunities 
+at n8n, a leading workflow automation platform. Join our remote-friendly team and grow your career in tech, 
+engineering, marketing, and more. Apply today!"><meta property="og:title" content="Careers at n8n"><meta 
+property="og:description" content="Explore exciting career opportunities at n8n, a leading workflow automation 
+platform. Join our remote-friendly team and grow your career in tech, engineering, marketing, and more. Apply 
+today!"><meta property="og:url" content="https://n8n.io/careers/"><meta property="og:type" content="website"><meta 
+property="og:image" content="https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-stage/assets/og_image
+_website_3_afd66761a9.png"><meta name="twitter:title" content="Careers at n8n"><meta name="twitter:description" 
+content="Explore exciting career opportunities at n8n, a leading workflow automation platform. Join our 
+remote-friendly team and grow your career in tech, engineering, marketing, and more. Apply today!"><meta 
+name="twitter:domain" content="n8n.io"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="
+https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-stage/assets/og_image_website_3_afd66761a9.png"><m
+eta name="twitter:url" content="https://n8n.io/careers/"><meta name="twitter:site" content="@n8n_io"><link 
+rel="canonical" href="https://n8n.io/careers/"></head><body  class="antialiased"><div 
+id="__nuxt"><!--[--><div></div><!--[--><div class="nuxt-loading-indicator" style="position:fixed;top:0;right:0;left:0;p
+ointer-events:none;width:auto;height:3px;opacity:0;background:var(--color-base-pink);background-size:0% 
+auto;transform:scaleX(0%);transform-origin:left;transition:transform 0.1s, height 0.4s, opacity 
+0.4s;z-index:999999;"></div><header class="px-layout-nav-padding md:px-layout-nav-padding-md 
+xl:px-layout-nav-padding-xl fixed top-0 right-0 left-0 z-1000 flex flex-col items-center transition-transform 
+duration-300" data-v-15bcd6e3><!----><div class="navbar-wrapper max-w-section-layout bg-shades-midnight-navy/70 
+lg:bg-shades-midnight-navy/20 relative mt-2 flex w-full flex-col items-center justify-between rounded-2xl md:mt-4 
+lg:mt-2" data-v-15bcd6e3><nav class="flex min-h-[58px] w-full items-center justify-between gap-x-2 px-3" 
+aria-label="Global navigation" role="navigation" data-v-15bcd6e3><span class="flex justify-start xl:w-[30%] xl:shrink" 
+data-v-15bcd6e3><a href="/" class="logo" data-theme="mono" data-v-15bcd6e3 data-v-64adc7f1><!--[--><span 
+class="sr-only" data-v-64adc7f1>n8n.io</span><svg class="max-w-full" width="87" height="24" viewBox="0 0 87 24" 
+fill="none" xmlns="http://www.w3.org/2000/svg" data-v-64adc7f1><path class="path-icon transition duration-300 
+ease-in-out" fill-rule="evenodd" clip-rule="evenodd" d="M47.9855 4.8C47.9855 7.45098 45.8365 9.6 43.1855 9.6C40.949 
+9.6 39.0696 8.0703 38.5368 6H31.8352C30.662 6 29.6607 6.84822 29.4678 8.00544L29.2706 9.18912C29.0832 10.313 28.5147 
+11.2911 27.7108 12C28.5147 12.7089 29.0832 13.687 29.2706 14.8109L29.4678 15.9946C29.6607 17.1518 30.662 18 31.8352 
+18H33.7368C34.2696 15.9297 36.149 14.4 38.3855 14.4C41.0365 14.4 43.1855 16.549 43.1855 19.2C43.1855 21.851 41.0365 24 
+38.3855 24C36.149 24 34.2696 22.4703 33.7368 20.4H31.8352C29.4888 20.4 27.4863 18.7036 27.1005 16.3891L26.9032 
+15.2054C26.7104 14.0482 25.7091 13.2 24.5359 13.2H22.5782C21.979 15.1681 20.1495 16.6 17.9855 16.6C15.8216 16.6 
+13.9921 15.1681 13.3929 13.2H10.5782C9.97901 15.1681 8.14949 16.6 5.98554 16.6C3.33458 16.6 1.18555 14.4509 1.18555 
+11.8C1.18555 9.14904 3.33458 7.00002 5.98554 7.00002C8.29361 7.00002 10.2212 8.62902 10.6812 10.8H13.2899C13.7499 
+8.62902 15.6775 7.00002 17.9855 7.00002C20.2936 7.00002 22.2212 8.62902 22.6812 10.8H24.5359C25.7091 10.8 26.7104 
+9.95178 26.9032 8.79456L27.1005 7.61088C27.4863 5.29638 29.4888 3.6 31.8352 3.6H38.5368C39.0696 1.52973 40.949 0 
+43.1855 0C45.8365 0 47.9855 2.14903 47.9855 4.8ZM45.5855 4.8C45.5855 6.12546 44.511 7.2 43.1855 7.2C41.8601 7.2 
+40.7855 6.12546 40.7855 4.8C40.7855 3.47452 41.8601 2.4 43.1855 2.4C44.511 2.4 45.5855 3.47452 45.5855 4.8ZM5.98554 
+14.2C7.31105 14.2 8.38553 13.1255 8.38553 11.8C8.38553 10.4745 7.31105 9.40002 5.98554 9.40002C4.66006 9.40002 3.58554 
+10.4745 3.58554 11.8C3.58554 13.1255 4.66006 14.2 5.98554 14.2ZM17.9855 14.2C19.311 14.2 20.3855 13.1255 20.3855 
+11.8C20.3855 10.4745 19.311 9.40002 17.9855 9.40002C16.6601 9.40002 15.5855 10.4745 15.5855 11.8C15.5855 13.1255 
+16.6601 14.2 17.9855 14.2ZM38.3855 21.6C39.711 21.6 40.7855 20.5255 40.7855 19.2C40.7855 17.8745 39.711 16.8 38.3855 
+16.8C37.0601 16.8 35.9855 17.8745 35.9855 19.2C35.9855 20.5255 37.0601 21.6 38.3855 21.6Z" 
+data-v-64adc7f1></path><path class="path-name transition duration-300 ease-in-out" fill-rule="evenodd" 
+clip-rule="evenodd" d="M71.7381 11.4027V11.2852C72.5997 10.8544 73.4613 10.1104 73.4613 8.64206C73.4613 6.52754 
+71.7183 5.25488 69.3105 5.25488C66.8433 5.25488 65.0811 6.60584 65.0811 8.68118C65.0811 10.0909 65.9037 10.8544 
+66.8043 11.2852V11.4027C65.8059 11.7551 64.6113 12.8124 64.6113 14.5744C64.6113 16.7086 66.3735 18.1966 69.2907 
+18.1966C72.2079 18.1966 73.9113 16.7086 73.9113 14.5744C73.9113 12.8124 72.7365 11.7747 71.7381 11.4027ZM69.2907 
+7.05614C70.2699 7.05614 70.9941 7.68266 70.9941 8.73992C70.9941 9.79718 70.2501 10.4238 69.2907 10.4238C68.3313 
+10.4238 67.5285 9.79718 67.5285 8.73992C67.5285 7.6631 68.2923 7.05614 69.2907 7.05614ZM69.2907 16.317C68.1549 16.317 
+67.2351 15.5926 67.2351 14.3591C67.2351 13.2431 67.9983 12.4012 69.2709 12.4012C70.5243 12.4012 71.2881 13.2235 
+71.2881 14.3983C71.2881 15.5926 70.4067 16.317 69.2907 16.317ZM52.7871 18.0004H55.2933V12.6945C55.2933 10.952 56.3505 
+10.1884 57.5448 10.1884C58.7195 10.1884 59.6398 10.9715 59.6398 12.577V18.0004H62.1456V12.068C62.1456 9.50314 60.6576 
+8.01514 58.328 8.01514C56.8596 8.01514 56.0372 8.60248 55.4498 9.36604H55.2933L55.0779 
+8.21092H52.7871V18.0004ZM78.9632 18.0004H76.457V8.21092H78.7478L78.9632 9.36604H79.1198C79.7072 8.60248 80.5298 
+8.01514 81.998 8.01514C84.3278 8.01514 85.8158 9.50314 85.8158 12.068V18.0004H83.3096V12.577C83.3096 10.9715 82.3898 
+10.1884 81.215 10.1884C80.0204 10.1884 78.9632 10.952 78.9632 12.6945V18.0004Z" 
+data-v-64adc7f1></path></svg><!--]--></a></span><ul class="hidden items-center justify-center lg:flex lg:shrink-0 
+xl:min-w-[40%]" role="menubar" data-v-15bcd6e3><!--[--><li role="none" data-v-15bcd6e3><a href="/features/" 
+class="text-nav-link relative z-10 flex min-h-[58px] items-center gap-1 px-3 py-3 whitespace-nowrap text-white 
+opacity-70 transition-opacity duration-300 hover:opacity-100" role="menuitem" aria-controls="submenu-product" 
+aria-haspopup="true" aria-expanded="false" data-v-15bcd6e3><!--[-->Product <svg xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ph 
+transition-transform duration-300" style="font-size:16px;" width="1em" height="1em" viewBox="0 0 256 256" 
+data-v-15bcd6e3><path fill="currentColor" d="m213.66 101.66l-80 80a8 8 0 0 1-11.32 0l-80-80a8 8 0 0 1 11.32-11.32L128 
+164.69l74.34-74.35a8 8 0 0 1 11.32 11.32"/></svg><!--]--></a><ul class="grid grid gap-x-4 gap-y-2 grid-cols-1 min-w-64 
+max-w-navigation-single submenu group bg-shades-midnight-navy/20 absolute top-full mt-2 rounded-2xl p-2 
+backdrop-blur-3xl" role="menu" style="display:none;" id="submenu-product" aria-label="Product submenu" 
+aria-hidden="false" data-v-15bcd6e3 data-v-595f7617><!--[--><!--[--><li role="none" class="transition-opacity 
+duration-300 ease-linear group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a href="/features/" 
+class="submenu-item text-nav-link relative box-border flex flex-row gap-3 rounded-lg p-3 relative" role="menuitem" 
+data-v-595f7617 data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center justify-center" 
+data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" 
+role="img" class="iconify iconify--n8n text-white" style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 
+20" data-v-3982f011><g fill="none"><path
+    stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex 
+min-h-5 flex-col justify-center gap-1 leading-tight text-white" data-v-3982f011><!--[-->Product overview <span 
+class="text-sm leading-tight text-white/70" data-v-3982f011>Automate business processes without limits on your 
+logic</span><!--]--></p><!--]--></a></li><li role="none" class="transition-opacity duration-300 ease-linear 
+group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a href="/integrations/" class="submenu-item text-nav-link 
+relative box-border flex flex-row gap-3 rounded-lg p-3 relative" role="menuitem" data-v-595f7617 
+data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center justify-center" data-v-3982f011><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--n8n text-white" style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 20" 
+data-v-3982f011><g fill="none"><path d="M8.333 18.333v-12.5A.833.833 0 0 0 7.5 5H3.333a1.667 1.667 0 0 0-1.667 
+1.667v10a1.667 1.667 0 0 0 1.667 1.666h10A1.667 1.667 0 0 0 15 16.667V12.5a.834.834 0 0 0-.834-.833h-12.5M17.5 
+1.668h-5a.833.833 0 0 0-.834.833v5c0 .46.374.834.834.834h5c.46 0 .833-.373.833-.834v-5a.833.833 0 0 0-.833-.833z" 
+stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 
+flex-col justify-center gap-1 leading-tight text-white" data-v-3982f011><!--[-->Integrations <span class="text-sm 
+leading-tight text-white/70" data-v-3982f011>Seamlessly move and transform data between different apps with 
+n8n.</span><!--]--></p><!--]--></a></li><li role="none" class="transition-opacity duration-300 ease-linear 
+group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a href="/workflows/" class="submenu-item text-nav-link 
+relative box-border flex flex-row gap-3 rounded-lg p-3 relative" role="menuitem" data-v-595f7617 
+data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center justify-center" data-v-3982f011><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--n8n text-white" style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 20" 
+data-v-3982f011><g fill="none"><path
+    stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex 
+min-h-5 flex-col justify-center gap-1 leading-tight text-white" data-v-3982f011><!--[-->Templates <span class="text-sm 
+leading-tight text-white/70" data-v-3982f011>Explore +10k workflow automation 
+templates</span><!--]--></p><!--]--></a></li><li role="none" class="transition-opacity duration-300 ease-linear 
+group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a href="/ai/" class="submenu-item text-nav-link relative 
+box-border flex flex-row gap-3 rounded-lg p-3 relative" role="menuitem" data-v-595f7617 data-v-3982f011><!--[--><span 
+class="flex size-6 shrink-0 items-center justify-center" data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--n8n text-white" 
+style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 20" data-v-3982f011><g fill="none"><path d="M8.28 
+12.918a1.667 1.667 0 0 0-1.197-1.197l-5.112-1.319a.416.416 0 0 1 0-.801l5.112-1.32a1.667 1.667 0 0 0 
+1.198-1.196l1.318-5.113a.417.417 0 0 1 .803 0l1.317 5.113a1.667 1.667 0 0 0 1.198 1.197L18.029 9.6a.417.417 0 0 1 0 
+.803l-5.112 1.318a1.667 1.667 0 0 0-1.198 1.197l-1.318 5.113a.416.416 0 0 1-.803 0l-1.317-5.113zM16.666 
+2.5v3.333M18.333 4.168H15M3.333 14.168v1.667M4.167 15H2.5" stroke="#fff" stroke-linecap="round" 
+stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 flex-col justify-center gap-1 
+leading-tight text-white" data-v-3982f011><!--[-->AI <span class="text-sm leading-tight text-white/70" 
+data-v-3982f011>Get to prod faster — and with more flexibility than coding 
+alone</span><!--]--></p><!--]--></a></li><!--]--><!--]--></ul></li><li role="none" data-v-15bcd6e3><button 
+type="button" class="button-link text-nav-link relative z-10 flex min-h-[58px] items-center gap-1 px-3 py-3 
+whitespace-nowrap text-white opacity-70 transition-opacity duration-300 hover:opacity-100" role="menuitem" 
+aria-controls="submenu-use-cases" aria-haspopup="true" aria-expanded="false" data-v-15bcd6e3><!--[-->Use cases <svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--ph transition-transform duration-300" style="font-size:16px;" width="1em" height="1em" 
+viewBox="0 0 256 256" data-v-15bcd6e3><path fill="currentColor" d="m213.66 101.66l-80 80a8 8 0 0 1-11.32 0l-80-80a8 8 
+0 0 1 11.32-11.32L128 164.69l74.34-74.35a8 8 0 0 1 11.32 11.32"/></svg><!--]--></button><ul class="grid grid gap-x-4 
+gap-y-2 grid-cols-2 min-w-navigation-columns submenu group bg-shades-midnight-navy/20 absolute top-full mt-2 
+rounded-2xl p-2 backdrop-blur-3xl" role="menu" style="display:none;" id="submenu-use-cases" aria-label="Use cases 
+submenu" aria-hidden="false" data-v-15bcd6e3 data-v-595f7617><!--[--><!--[--><li role="none" class="transition-opacity 
+duration-300 ease-linear group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a href="/ai-agents/" 
+class="submenu-item text-nav-link relative box-border flex flex-row gap-3 rounded-lg p-3 relative" role="menuitem" 
+data-v-595f7617 data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center justify-center" 
+data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" 
+role="img" class="iconify iconify--n8n text-white" style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 
+20" data-v-3982f011><g fill="none"><path d="M8.28 12.918a1.667 1.667 0 0 0-1.197-1.197l-5.112-1.319a.416.416 0 0 1 
+0-.801l5.112-1.32a1.667 1.667 0 0 0 1.198-1.196l1.318-5.113a.417.417 0 0 1 .803 0l1.317 5.113a1.667 1.667 0 0 0 1.198 
+1.197L18.029 9.6a.417.417 0 0 1 0 .803l-5.112 1.318a1.667 1.667 0 0 0-1.198 1.197l-1.318 5.113a.416.416 0 0 1-.803 
+0l-1.317-5.113zM16.666 2.5v3.333M18.333 4.168H15M3.333 14.168v1.667M4.167 15H2.5" stroke="#fff" stroke-linecap="round" 
+stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 flex-col justify-center gap-1 
+leading-tight text-white" data-v-3982f011><!--[-->Building AI agents <!----><!--]--></p><!--]--></a></li><li 
+role="none" class="transition-opacity duration-300 ease-linear group-hover:opacity-70 hover:opacity-100!" 
+data-v-595f7617><a href="/rag/" class="submenu-item text-nav-link relative box-border flex flex-row gap-3 rounded-lg 
+p-3 relative" role="menuitem" data-v-595f7617 data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center 
+justify-center" data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+aria-hidden="true" role="img" class="iconify iconify--n8n text-white" style="font-size:20px;" width="1em" height="1em" 
+viewBox="0 0 20 20" data-v-3982f011><g fill="none"><path d="M10.833 11.45a1.667 1.667 0 0 1-1.667 0L2.083 
+7.392a.833.833 0 0 1 0-1.45l7.083-4.059a1.667 1.667 0 0 1 1.667 0l7.083 4.059a.833.833 0 0 1 0 1.45l-7.083 
+4.058zM16.666 11.902l1.25.705a.833.833 0 0 1 0 1.45l-7.083 4.058a1.667 1.667 0 0 1-1.667 0l-7.083-4.058a.834.834 0 0 1 
+0-1.45l1.25-.705" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></g></svg></span><p 
+class="font-geomanist flex min-h-5 flex-col justify-center gap-1 leading-tight text-white" data-v-3982f011><!--[-->RAG 
+<!----><!--]--></p><!--]--></a></li><li role="none" class="transition-opacity duration-300 ease-linear 
+group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a href="/itops/" class="submenu-item text-nav-link 
+relative box-border flex flex-row gap-3 rounded-lg p-3 relative" role="menuitem" data-v-595f7617 
+data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center justify-center" data-v-3982f011><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--n8n text-white" style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 20" 
+data-v-3982f011><g fill="none"><path d="M7.5 2.5H4.167c-.92 0-1.667.746-1.667 1.667V7.5c0 .92.746 1.667 1.667 
+1.667H7.5c.92 0 1.667-.747 1.667-1.667V4.167c0-.92-.747-1.667-1.667-1.667zM5.833 9.168v3.333A1.667 1.667 0 0 0 7.5 
+14.168h3.334M15.834 10.832H12.5c-.92 0-1.666.746-1.666 1.667v3.333c0 .92.746 1.667 1.666 1.667h3.334c.92 0 1.666-.746 
+1.666-1.667v-3.333c0-.92-.746-1.667-1.666-1.667z" stroke="#fff" stroke-linecap="round" 
+stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 flex-col justify-center gap-1 
+leading-tight text-white" data-v-3982f011><!--[-->IT operations <!----><!--]--></p><!--]--></a></li><li role="none" 
+class="transition-opacity duration-300 ease-linear group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a 
+href="/secops/" class="submenu-item text-nav-link relative box-border flex flex-row gap-3 rounded-lg p-3 relative" 
+role="menuitem" data-v-595f7617 data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center justify-center" 
+data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" 
+role="img" class="iconify iconify--n8n text-white" style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 
+20" data-v-3982f011><g fill="none"><path d="M16.667 10.835c0 4.167-2.917 6.25-6.384 7.458a.833.833 0 0 
+1-.558-.008c-3.475-1.2-6.391-3.283-6.391-7.45V5.002a.833.833 0 0 1 .833-.834c1.667 0 3.75-1 5.2-2.266a.975.975 0 0 1 
+1.266 0c1.459 1.275 3.534 2.266 5.2 2.266a.833.833 0 0 1 .834.834v5.833zM6.667 10h.008M10 10h.008M13.334 10h.008" 
+stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 
+flex-col justify-center gap-1 leading-tight text-white" data-v-3982f011><!--[-->Security operations 
+<!----><!--]--></p><!--]--></a></li><li role="none" class="transition-opacity duration-300 ease-linear 
+group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a href="/automate-lead-management/" class="submenu-item 
+text-nav-link relative box-border flex flex-row gap-3 rounded-lg p-3 relative" role="menuitem" data-v-595f7617 
+data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center justify-center" data-v-3982f011><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--n8n text-white" style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 20" 
+data-v-3982f011><g fill="none"><path d="M7.5 2.5H4.167c-.92 0-1.667.746-1.667 1.667V7.5c0 .92.746 1.667 1.667 
+1.667H7.5c.92 0 1.667-.747 1.667-1.667V4.167c0-.92-.747-1.667-1.667-1.667zM5.833 9.168v3.333A1.667 1.667 0 0 0 7.5 
+14.168h3.334M15.834 10.832H12.5c-.92 0-1.666.746-1.666 1.667v3.333c0 .92.746 1.667 1.666 1.667h3.334c.92 0 1.666-.746 
+1.666-1.667v-3.333c0-.92-.746-1.667-1.666-1.667z" stroke="#fff" stroke-linecap="round" 
+stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 flex-col justify-center gap-1 
+leading-tight text-white" data-v-3982f011><!--[-->Lead automation <!----><!--]--></p><!--]--></a></li><li role="none" 
+class="transition-opacity duration-300 ease-linear group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a 
+href="/supercharge-your-crm/" class="submenu-item text-nav-link relative box-border flex flex-row gap-3 rounded-lg p-3 
+relative" role="menuitem" data-v-595f7617 data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center 
+justify-center" data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+aria-hidden="true" role="img" class="iconify iconify--n8n text-white" style="font-size:20px;" width="1em" height="1em" 
+viewBox="0 0 20 20" data-v-3982f011><g fill="none"><path d="M12.5 10.832a2.5 2.5 0 0 0-5 0" stroke="#fff" 
+stroke-linecap="round" stroke-linejoin="round"/>
+        stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 flex-col justify-center gap-1 
+leading-tight text-white" data-v-3982f011><!--[-->Supercharge your CRM <!----><!--]--></p><!--]--></a></li><li 
+role="none" class="transition-opacity duration-300 ease-linear group-hover:opacity-70 hover:opacity-100!" 
+data-v-595f7617><a href="/limitless-integrations/" class="submenu-item text-nav-link relative box-border flex flex-row 
+gap-3 rounded-lg p-3 relative" role="menuitem" data-v-595f7617 data-v-3982f011><!--[--><span class="flex size-6 
+shrink-0 items-center justify-center" data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--n8n text-white" 
+style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 20" data-v-3982f011><g fill="none"><path d="M8.333 
+18.333v-12.5A.833.833 0 0 0 7.5 5H3.333a1.667 1.667 0 0 0-1.667 1.667v10a1.667 1.667 0 0 0 1.667 1.666h10A1.667 1.667 
+0 0 0 15 16.667V12.5a.834.834 0 0 0-.834-.833h-12.5M17.5 1.668h-5a.833.833 0 0 0-.834.833v5c0 
+.46.374.834.834.834h5c.46 0 .833-.373.833-.834v-5a.833.833 0 0 0-.833-.833z" stroke="#fff" stroke-linecap="round" 
+stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 flex-col justify-center gap-1 
+leading-tight text-white" data-v-3982f011><!--[-->Limitless integrations <!----><!--]--></p><!--]--></a></li><li 
+role="none" class="transition-opacity duration-300 ease-linear group-hover:opacity-70 hover:opacity-100!" 
+data-v-595f7617><a href="/saas/" class="submenu-item text-nav-link relative box-border flex flex-row gap-3 rounded-lg 
+p-3 relative" role="menuitem" data-v-595f7617 data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center 
+justify-center" data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+aria-hidden="true" role="img" class="iconify iconify--n8n text-white" style="font-size:20px;" width="1em" height="1em" 
+viewBox="0 0 20 20" data-v-3982f011><g fill="none"><path
+        stroke-linecap="round" stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 
+flex-col justify-center gap-1 leading-tight text-white" data-v-3982f011><!--[-->Backend prototyping 
+<!----><!--]--></p><!--]--></a></li><li role="none" class="transition-opacity duration-300 ease-linear 
+group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a href="/oem/" class="submenu-item text-nav-link relative 
+box-border flex flex-row gap-3 rounded-lg p-3 relative" role="menuitem" data-v-595f7617 data-v-3982f011><!--[--><span 
+class="flex size-6 shrink-0 items-center justify-center" data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--n8n text-white" 
+style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 20" data-v-3982f011><g fill="none"><path
+        stroke-linecap="round" stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 
+flex-col justify-center gap-1 leading-tight text-white" data-v-3982f011><!--[-->Embedding n8n 
+<!----><!--]--></p><!--]--></a></li><li role="none" class="transition-opacity duration-300 ease-linear 
+group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a href="/case-studies/" class="submenu-item text-nav-link 
+relative box-border flex flex-row gap-3 rounded-lg p-3 relative" role="menuitem" data-v-595f7617 
+data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center justify-center" data-v-3982f011><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--n8n text-white" style="font-size:20px;" width="1em" height="1em" viewBox="0 0 256 256" 
+data-v-3982f011><rect width="256" height="256" fill="none"/><path 
+d="M168,224H56a8,8,0,0,1-8-8V72a8,8,0,0,1,8-8h80l40,40V216A8,8,0,0,1,168,224Z" fill="none" stroke="currentColor" 
+stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path 
+d="M80,64V40a8,8,0,0,1,8-8h80l40,40V184a8,8,0,0,1-8,8H176" fill="none" stroke="currentColor" stroke-linecap="round" 
+stroke-linejoin="round" stroke-width="16"/><line x1="88" y1="152" x2="136" y2="152" fill="none" stroke="currentColor" 
+stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="88" y1="184" x2="136" y2="184" fill="none" 
+stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg></span><p 
+class="font-geomanist flex min-h-5 flex-col justify-center gap-1 leading-tight text-white" 
+data-v-3982f011><!--[-->Case studies <!----><!--]--></p><!--]--></a></li><!--]--><!--]--></ul></li><li role="none" 
+data-v-15bcd6e3><a href="https://docs.n8n.io/" rel="noopener noreferrer" target="_blank" role="menuitem" 
+aria-controls="submenu-docs" aria-haspopup="true" aria-expanded="false" class="text-nav-link relative z-10 flex 
+min-h-[58px] items-center gap-1 px-3 py-3 whitespace-nowrap text-white opacity-70 transition-opacity duration-300 
+hover:opacity-100" data-v-15bcd6e3><!--[-->Docs <svg xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ph 
+transition-transform duration-300" style="font-size:16px;" width="1em" height="1em" viewBox="0 0 256 256" 
+data-v-15bcd6e3><path fill="currentColor" d="m213.66 101.66l-80 80a8 8 0 0 1-11.32 0l-80-80a8 8 0 0 1 11.32-11.32L128 
+164.69l74.34-74.35a8 8 0 0 1 11.32 11.32"/></svg><!--]--></a><ul class="grid grid gap-x-4 gap-y-2 grid-cols-1 min-w-64 
+max-w-navigation-single submenu group bg-shades-midnight-navy/20 absolute top-full mt-2 rounded-2xl p-2 
+backdrop-blur-3xl" role="menu" style="display:none;" id="submenu-docs" aria-label="Docs submenu" aria-hidden="false" 
+data-v-15bcd6e3 data-v-595f7617><!--[--><!--[--><li role="none" class="transition-opacity duration-300 ease-linear 
+group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a href="https://docs.n8n.io/hosting" rel="noopener 
+noreferrer" target="_blank" class="submenu-item text-nav-link relative box-border flex flex-row gap-3 rounded-lg p-3 
+relative" role="menuitem" data-v-595f7617 data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center 
+justify-center" data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+aria-hidden="true" role="img" class="iconify iconify--n8n text-white" style="font-size:20px;" width="1em" height="1em" 
+viewBox="0 0 20 20" data-v-3982f011><g fill="none"><path d="M16.666 1.668H3.333c-.92 0-1.667.746-1.667 1.667v3.333c0 
+.92.747 1.667 1.667 1.667h13.334c.92 0 1.666-.747 1.666-1.667V3.335c0-.92-.746-1.667-1.666-1.667zM16.666 
+11.668H3.333c-.92 0-1.667.746-1.667 1.667v3.333c0 .92.747 1.667 1.667 1.667h13.334c.92 0 1.666-.747 
+1.666-1.667v-3.333c0-.92-.746-1.667-1.666-1.667zM5 5h.008M5 15h.008" stroke="#fff" stroke-linecap="round" 
+stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 flex-col justify-center gap-1 
+leading-tight text-white" data-v-3982f011><!--[-->Self-host n8n <!----><!--]--></p><!--]--></a></li><li role="none" 
+class="transition-opacity duration-300 ease-linear group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a 
+href="https://docs.n8n.io" rel="noopener noreferrer" target="_blank" class="submenu-item text-nav-link relative 
+box-border flex flex-row gap-3 rounded-lg p-3 relative" role="menuitem" data-v-595f7617 data-v-3982f011><!--[--><span 
+class="flex size-6 shrink-0 items-center justify-center" data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--n8n text-white" 
+style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 20" data-v-3982f011><g fill="none"><path d="M10 
+5.832v11.667M13.334 10H15M13.334 6.668H15M2.5 15a.833.833 0 0 1-.833-.833V3.333A.833.833 0 0 1 2.5 2.5h4.167A3.333 
+3.333 0 0 1 10 5.833 3.333 3.333 0 0 1 13.333 2.5H17.5a.833.833 0 0 1 .833.833v10.834A.833.833 0 0 1 17.5 15h-5a2.5 
+2.5 0 0 0-2.5 2.5A2.5 2.5 0 0 0 7.5 15h-5zM5 10h1.667M5 6.668h1.667" stroke="#fff" stroke-linecap="round" 
+stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 flex-col justify-center gap-1 
+leading-tight text-white" data-v-3982f011><!--[-->Documentation <!----><!--]--></p><!--]--></a></li><li role="none" 
+class="transition-opacity duration-300 ease-linear group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a 
+href="https://docs.n8n.io/choose-n8n/faircode-license" rel="noopener noreferrer" target="_blank" class="submenu-item 
+text-nav-link relative box-border flex flex-row gap-3 rounded-lg p-3 relative" role="menuitem" data-v-595f7617 
+data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center justify-center" data-v-3982f011><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--n8n text-white" style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 20" 
+data-v-3982f011><g fill="none"><path d="M10 18.335a8.333 8.333 0 1 0 0-16.667 8.333 8.333 0 0 0 0 16.667z" 
+stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.358 12.36a3.334 3.334 0 1 1 0-4.717" 
+stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 
+flex-col justify-center gap-1 leading-tight text-white" data-v-3982f011><!--[-->Our license 
+<!----><!--]--></p><!--]--></a></li><li role="none" class="transition-opacity duration-300 ease-linear 
+group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a href="https://docs.n8n.io/release-notes/" rel="noopener 
+noreferrer" target="_blank" class="submenu-item text-nav-link relative box-border flex flex-row gap-3 rounded-lg p-3 
+relative" role="menuitem" data-v-595f7617 data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center 
+justify-center" data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+aria-hidden="true" role="img" class="iconify iconify--n8n text-white" style="font-size:20px;" width="1em" height="1em" 
+viewBox="0 0 20 20" data-v-3982f011><g fill="none"><path d="M12.5 10H8.334M12.5 6.668H8.334M15.834 14.167v-10A1.667 
+1.667 0 0 0 14.167 2.5H3.333" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.667 
+17.5h10a1.666 1.666 0 0 0 1.666-1.667V15a.833.833 0 0 0-.833-.833H9.166a.834.834 0 0 0-.833.833v.833A1.666 1.666 0 0 1 
+6.666 17.5zm0 0A1.667 1.667 0 0 1 5 15.833V4.167a1.667 1.667 0 0 0-3.333 0v1.666a.833.833 0 0 0 .833.834H5" 
+stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 
+flex-col justify-center gap-1 leading-tight text-white" data-v-3982f011><!--[-->Release notes 
+<!----><!--]--></p><!--]--></a></li><!--]--><!--]--></ul></li><li role="none" data-v-15bcd6e3><button type="button" 
+class="button-link text-nav-link relative z-10 flex min-h-[58px] items-center gap-1 px-3 py-3 whitespace-nowrap 
+text-white opacity-70 transition-opacity duration-300 hover:opacity-100" role="menuitem" 
+aria-controls="submenu-community" aria-haspopup="true" aria-expanded="false" data-v-15bcd6e3><!--[-->Community <svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--ph transition-transform duration-300" style="font-size:16px;" width="1em" height="1em" 
+viewBox="0 0 256 256" data-v-15bcd6e3><path fill="currentColor" d="m213.66 101.66l-80 80a8 8 0 0 1-11.32 0l-80-80a8 8 
+0 0 1 11.32-11.32L128 164.69l74.34-74.35a8 8 0 0 1 11.32 11.32"/></svg><!--]--></button><ul class="grid grid gap-x-4 
+gap-y-2 grid-cols-2 min-w-navigation-columns submenu group bg-shades-midnight-navy/20 absolute top-full mt-2 
+rounded-2xl p-2 backdrop-blur-3xl" role="menu" style="display:none;" id="submenu-community" aria-label="Community 
+submenu" aria-hidden="false" data-v-15bcd6e3 data-v-595f7617><!--[--><!--[--><li role="none" class="transition-opacity 
+duration-300 ease-linear group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a 
+href="https://community.n8n.io/" rel="noopener noreferrer" target="_blank" class="submenu-item text-nav-link relative 
+box-border flex flex-row gap-3 rounded-lg p-3 relative" role="menuitem" data-v-595f7617 data-v-3982f011><!--[--><span 
+class="flex size-6 shrink-0 items-center justify-center" data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--n8n text-white" 
+style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 20" data-v-3982f011><g fill="none"><path d="M11.666 
+7.501A1.667 1.667 0 0 1 10 9.168H5l-3.333 3.333V3.335a1.667 1.667 0 0 1 1.666-1.667H10a1.666 1.666 0 0 1 1.666 
+1.667V7.5zM15 7.5h1.667a1.666 1.666 0 0 1 1.666 1.667v9.166L15 15h-5a1.667 1.667 0 0 1-1.666-1.667V12.5" stroke="#fff" 
+stroke-linecap="round" stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 flex-col 
+justify-center gap-1 leading-tight text-white" data-v-3982f011><!--[-->Forum <!----><!--]--></p><!--]--></a></li><li 
+role="none" class="transition-opacity duration-300 ease-linear group-hover:opacity-70 hover:opacity-100!" 
+data-v-595f7617><a href="https://discord.gg/XPKeKXeB7d" rel="noopener noreferrer" target="_blank" class="submenu-item 
+text-nav-link relative box-border flex flex-row gap-3 rounded-lg p-3 relative" role="menuitem" data-v-595f7617 
+data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center justify-center" data-v-3982f011><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--n8n text-white" style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 20" 
+data-v-3982f011><g fill="none"><path d="M12.945 14.446 14.075 16c.775-.025 3.7-.6 4.725-2.4 
+0-3.836-1.667-8.304-2.4-8.981-1.516-1.218-4-1.419-4-1.419s-.198.441-.25.99" stroke="#fff" stroke-miterlimit="10" 
+stroke-linecap="round" stroke-linejoin="round"/><path d="M12.6 12c.773 0 1.4-.716 1.4-1.6 0-.883-.627-1.6-1.4-1.6-.773 
+0-1.4.717-1.4 1.6 0 .884.627 1.6 1.4 1.6zM7.85 4.19c-.052-.55-.25-.99-.25-.99s-2.484.2-4 1.418c-.733.677-2.4 5.145-2.4 
+8.981 1.025 1.8 3.95 2.375 4.725 2.4l1.13-1.553" stroke="#fff" stroke-miterlimit="10" stroke-linecap="round" 
+stroke-linejoin="round"/><path d="M4.205 13.105s1.92 1.697 5.795 1.697 5.795-1.697 5.795-1.697M15.22 5.371C13.257 
+4.153 10.85 4 10 4c-.849 0-3.256.153-5.22 1.371M7.4 12c.773 0 1.4-.716 1.4-1.6 0-.883-.627-1.6-1.4-1.6-.773 
+0-1.4.717-1.4 1.6 0 .884.627 1.6 1.4 1.6z" stroke="#fff" stroke-miterlimit="10" stroke-linecap="round" 
+stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 flex-col justify-center gap-1 
+leading-tight text-white" data-v-3982f011><!--[-->Discord <!----><!--]--></p><!--]--></a></li><li role="none" 
+class="transition-opacity duration-300 ease-linear group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a 
+aria-current="page" href="/careers/" class="router-link-active router-link-exact-active submenu-item text-nav-link 
+relative box-border flex flex-row gap-3 rounded-lg p-3 relative" role="menuitem" data-v-595f7617 
+data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center justify-center" data-v-3982f011><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--n8n text-white" style="font-size:20px;" width="0.96em" height="1em" viewBox="0 0 24 25" 
+data-v-3982f011><g fill="none"><path
+    fill="#fff"/></g></svg></span><p class="font-geomanist flex min-h-5 flex-col justify-center gap-1 leading-tight 
+text-white" data-v-3982f011><!--[-->Careers <!----><!--]--></p><!--]--></a></li><li role="none" 
+class="transition-opacity duration-300 ease-linear group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a 
+href="https://blog.n8n.io/" rel="noopener noreferrer" target="_blank" class="submenu-item text-nav-link relative 
+box-border flex flex-row gap-3 rounded-lg p-3 relative" role="menuitem" data-v-595f7617 data-v-3982f011><!--[--><span 
+class="flex size-6 shrink-0 items-center justify-center" data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--n8n text-white" 
+style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 20" data-v-3982f011><g fill="none"><path
+    stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex 
+min-h-5 flex-col justify-center gap-1 leading-tight text-white" data-v-3982f011><!--[-->Blog 
+<!----><!--]--></p><!--]--></a></li><li role="none" class="transition-opacity duration-300 ease-linear 
+group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a href="/creators/" class="submenu-item text-nav-link 
+relative box-border flex flex-row gap-3 rounded-lg p-3 relative" role="menuitem" data-v-595f7617 
+data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center justify-center" data-v-3982f011><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--n8n text-white" style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 20" 
+data-v-3982f011><g fill="none"><path
+    stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex 
+min-h-5 flex-col justify-center gap-1 leading-tight text-white" data-v-3982f011><!--[-->Creators 
+<!----><!--]--></p><!--]--></a></li><li role="none" class="transition-opacity duration-300 ease-linear 
+group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a href="https://docs.n8n.io/help-community/contributing/" 
+rel="noopener noreferrer" target="_blank" class="submenu-item text-nav-link relative box-border flex flex-row gap-3 
+rounded-lg p-3 relative" role="menuitem" data-v-595f7617 data-v-3982f011><!--[--><span class="flex size-6 shrink-0 
+items-center justify-center" data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--n8n text-white" 
+style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 20" data-v-3982f011><g fill="none"><path d="M12.5 
+10.832a2.5 2.5 0 0 0-5 0" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+        stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 flex-col justify-center gap-1 
+leading-tight text-white" data-v-3982f011><!--[-->Contribute <!----><!--]--></p><!--]--></a></li><li role="none" 
+class="transition-opacity duration-300 ease-linear group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a 
+href="/partners/" class="submenu-item text-nav-link relative box-border flex flex-row gap-3 rounded-lg p-3 relative" 
+role="menuitem" data-v-595f7617 data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center justify-center" 
+data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" 
+role="img" class="iconify iconify--n8n text-white" style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 
+20" data-v-3982f011><g fill="none"><path d="m12.897 10.742 1.263 7.105a.416.416 0 0 1-.675.392l-2.983-2.24a.834.834 0 
+0 0-.998 0l-2.988 2.239a.417.417 0 0 1-.675-.39l1.261-7.106" stroke="#fff" stroke-linecap="round" 
+stroke-linejoin="round"/><path d="M10 11.668a5 5 0 1 0 0-10 5 5 0 0 0 0 10z" stroke="#fff" stroke-linecap="round" 
+stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 flex-col justify-center gap-1 
+leading-tight text-white" data-v-3982f011><!--[-->Partners <!----><!--]--></p><!--]--></a></li><li role="none" 
+class="transition-opacity duration-300 ease-linear group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a 
+href="https://experts.n8n.io/" rel="noopener noreferrer" target="_blank" class="submenu-item text-nav-link relative 
+box-border flex flex-row gap-3 rounded-lg p-3 relative" role="menuitem" data-v-595f7617 data-v-3982f011><!--[--><span 
+class="flex size-6 shrink-0 items-center justify-center" data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--n8n text-white" 
+style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 20" data-v-3982f011><g fill="none"><path d="M16.667 
+10.835c0 4.167-2.917 6.25-6.384 7.458a.833.833 0 0 1-.558-.008c-3.475-1.2-6.391-3.283-6.391-7.45V5.002a.833.833 0 0 1 
+.833-.834c1.667 0 3.75-1 5.2-2.266a.975.975 0 0 1 1.266 0c1.459 1.275 3.534 2.266 5.2 2.266a.833.833 0 0 1 
+.834.834v5.833zM6.667 10h.008M10 10h.008M13.334 10h.008" stroke="#fff" stroke-linecap="round" 
+stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex min-h-5 flex-col justify-center gap-1 
+leading-tight text-white" data-v-3982f011><!--[-->Hire an expert <!----><!--]--></p><!--]--></a></li><li role="none" 
+class="transition-opacity duration-300 ease-linear group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a 
+href="/community/events/" class="submenu-item text-nav-link relative box-border flex flex-row gap-3 rounded-lg p-3 
+relative" role="menuitem" data-v-595f7617 data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center 
+justify-center" data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+aria-hidden="true" role="img" class="iconify iconify--n8n text-white" style="font-size:20px;" width="0.96em" 
+height="1em" viewBox="0 0 24 25" data-v-3982f011><g fill="none"><path
+    fill="#fff"/></g></svg></span><p class="font-geomanist flex min-h-5 flex-col justify-center gap-1 leading-tight 
+text-white" data-v-3982f011><!--[-->Events <!----><!--]--></p><!--]--></a></li><li role="none" 
+class="transition-opacity duration-300 ease-linear group-hover:opacity-70 hover:opacity-100!" data-v-595f7617><a 
+href="/support/" class="submenu-item text-nav-link relative box-border flex flex-row gap-3 rounded-lg p-3 relative" 
+role="menuitem" data-v-595f7617 data-v-3982f011><!--[--><span class="flex size-6 shrink-0 items-center justify-center" 
+data-v-3982f011><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" 
+role="img" class="iconify iconify--n8n text-white" style="font-size:20px;" width="1em" height="1em" viewBox="0 0 20 
+20" data-v-3982f011><g fill="none"><path d="M10 18.335a8.333 8.333 0 1 0 0-16.667 8.333 8.333 0 0 0 0 16.667zM4.108 
+4.11l3.534 3.533M12.358 7.643l3.534-3.534M12.358 12.36l3.534 3.533M7.642 12.36l-3.534 3.533" stroke="#fff" 
+stroke-linecap="round" stroke-linejoin="round"/><path d="M10 13.335a3.333 3.333 0 1 0 0-6.667 3.333 3.333 0 0 0 0 
+6.667z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></g></svg></span><p class="font-geomanist flex 
+min-h-5 flex-col justify-center gap-1 leading-tight text-white" data-v-3982f011><!--[-->Support 
+<!----><!--]--></p><!--]--></a></li><!--]--><!--]--></ul></li><li role="none" data-v-15bcd6e3><a href="/enterprise/" 
+class="text-nav-link relative z-10 flex min-h-[58px] items-center gap-1 px-3 py-3 whitespace-nowrap text-white 
+opacity-70 transition-opacity duration-300 hover:opacity-100" role="menuitem" aria-haspopup="false" 
+data-v-15bcd6e3><!--[-->Enterprise <!----><!--]--></a><!----></li><li role="none" data-v-15bcd6e3><a href="/pricing/" 
+class="text-nav-link relative z-10 flex min-h-[58px] items-center gap-1 px-3 py-3 whitespace-nowrap text-white 
+opacity-70 transition-opacity duration-300 hover:opacity-100" role="menuitem" aria-haspopup="false" 
+data-v-15bcd6e3><!--[-->Pricing <!----><!--]--></a><!----></li><!--]--></ul><div class="flex items-center justify-end 
+gap-2 xl:w-[30%] xl:shrink" data-v-15bcd6e3><a href="https://github.com/n8n-io/n8n" rel="noopener noreferrer" 
+target="_blank" class="github-badge flex flex-col justify-center text-white bg-white/15 text-sm rounded-lg box-border 
+border border-white/20 pl-1.5 pr-2.5 min-h-8 max-md:hidden max-md:hidden" data-v-15bcd6e3><!--[--><span class="flex 
+flex-row items-center justify-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--uil" 
+style="font-size:24px;" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.247a10 10 0 0 
+0-3.162 19.487c.5.088.687-.212.687-.475c0-.237-.012-1.025-.012-1.862c-2.513.462-3.163-.613-3.363-1.175a3.64 3.64 0 0 
+0-1.025-1.413c-.35-.187-.85-.65-.013-.662a2 2 0 0 1 1.538 1.025a2.137 2.137 0 0 0 2.912.825a2.1 2.1 0 0 1 
+.638-1.338c-2.225-.25-4.55-1.112-4.55-4.937a3.9 3.9 0 0 1 1.025-2.688a3.6 3.6 0 0 1 .1-2.65s.837-.262 2.75 1.025a9.43 
+9.43 0 0 1 5 0c1.912-1.3 2.75-1.025 2.75-1.025a3.6 3.6 0 0 1 .1 2.65a3.87 3.87 0 0 1 1.025 2.688c0 3.837-2.338 
+4.687-4.562 4.937a2.37 2.37 0 0 1 .674 1.85c0 1.338-.012 2.413-.012 2.75c0 .263.187.575.687.475A10.005 10.005 0 0 0 12 
+2.247"/></svg><!--[--><!--]--><!--[--><!--]--><!--[-->193,745<!--]--></span><!--]--></a><a 
+href="https://app.n8n.cloud/login" rel="noopener noreferrer" target="_blank" class="btn relative cursor-pointer flex 
+items-center whitespace-nowrap rounded-lg text-white text-sm disabled:cursor-not-allowed px-3 justify-center min-h-8 
+max-sm:hidden max-sm:hidden" data-v-15bcd6e3 data-v-76946205><!--[--><!--[--> Sign in <!--]--><!--]--></a><a 
+href="https://app.n8n.cloud/register" rel="noopener noreferrer" target="_blank" class="btn relative cursor-pointer 
+flex items-center whitespace-nowrap rounded-lg text-white text-sm disabled:cursor-not-allowed btn-primary px-3 
+justify-center min-h-8" data-v-15bcd6e3 data-v-76946205><!--[--><!--[-->Get 
+Started<!--]--><!--]--></a><!----></div></nav><!----></div></header><!--[--><!--[--><section class="w-full 
+px-section-gap-x md:px-section-gap-x-md lg:px-section-gap-x-lg pt-section-hero-gap-y md:pt-section-hero-gap-y-md 
+lg:pt-section-hero-gap-y-lg relative hero-media-content pb-section-gap-y md:pb-section-gap-y-md lg:pb-section-gap-y-lg 
+min-h-[400px]"><div class="mx-auto w-full max-w-section-default"><!--[--><div class="pointer-events-none absolute 
+top-0 left-1/2 -z-[1] aspect-square w-full max-w-[2560px] -translate-x-1/2 overflow-hidden md:aspect-auto 
+md:min-h-[1200px]"><span class="pointer-events-none absolute aspect-1057/720 w-[130%] max-w-[1057px] origin-center 
+-translate-x-1/2 -translate-y-[20%] md:translate-x-[-40%] md:-translate-y-[35%] lg:w-[90%] lg:translate-y-0 top-0 
+left-1/2"><span class="bg-circle-gradient-partial-brown absolute -top-1/3 -left-[35%] aspect-16/9 h-[135%] rotate-5 
+max-md:opacity-60 md:-top-[25%] md:-left-[25%] md:blur-xl lg:-top-[35%] xl:-left-[35%]"></span><span 
+class="bg-circle-gradient-partial-purple absolute top-0 -right-[15%] z-10 aspect-[12/9] h-[110%] -rotate-10 
+max-md:opacity-60 md:top-[10%] md:blur-2xl lg:-right-[20%] lg:h-[120%]"></span></span><!----><!----><!----></div><div 
+class="z-10 relative"><!--[--><div class="grid grid gap-8 md:grid-cols-2 lg:grid-cols-2"><!--[--><div class="flex 
+flex-col gap-6 py-6"><header class="section-header flex-col gap-y-4 section-hero-heading flex items-center 
+md:max-w-[460px] md:items-start opacity-100 section-hero-heading flex items-center md:max-w-[460px] md:items-start 
+opacity-100"><!--[--><!--[--><!--[--><h1 class="font-geomanist text-headline-sm title title--white section-title 
+opacity-0 flex flex-col max-md:items-center max-md:text-center" data-v-302a2ffe><!--[--><!--[--><!--[--><span 
+class="font-geomanist text-xxl title title--orange section-tagline" data-v-302a2ffe><!--[--><!--[--><!--[-->Careers at 
+n8n<!--]--><!--]--><!--]--></span><!--]--><!--[-->Build the future of AI orchestration. 
+Together.<!--]--><!----><!--]--><!--]--></h1><!--[--><!----><!--]--><!--]--><!--]--><!--]--></header><div 
+class="font-geomanist text-md section-hero-description text-center md:max-w-[460px] md:text-left 
+opacity-0"><!--[--><!--[--><div class="content-styles preset-checked-list"><div><p>Join n8n, the community-first, 
+builder-driven company where autonomy, trust, and impact aren’t buzzwords - they’re how we work.<br>
+</div></div><!--]--><!--]--></div><div class="opacity-0 section-hero-actions flex flex-col gap-4 
+md:flex-row"><!--[--><!--[--><a href="#job-board" class="btn relative cursor-pointer flex items-center 
+whitespace-nowrap rounded-lg text-white text-sm disabled:cursor-not-allowed btn-primary px-5 justify-center min-h-10 
+btn-anim-icon" data-v-76946205><!--[--><!--[--><span class="btn-label" data-v-76946205><!--[--><!--[-->View job 
+openings<!--]--><!--]--></span><span class="btn-icon" data-v-76946205><!--[--><svg xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ph" 
+style="font-size:15px;" width="1em" height="1em" viewBox="0 0 256 256" data-v-76946205><path fill="currentColor" 
+d="m221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 0-16h156.69l-58.35-58.34a8 8 0 0 1 
+11.32-11.32l72 72a8 8 0 0 1 0 11.32"/></svg><!--]--></span><!--]--><!--]--></a><!--]--><!--]--></div><!----></div><div 
+class="col-media"><div class="base-frame relative rounded-2xl bg-white/10 p-2 base-frame--default section-media 
+opacity-0" data-v-18858912><div class="base-frame-inner overflow-hidden rounded-xl" data-v-18858912><!--[--><div 
+class="base-media"><!--[--><img data-nuxt-img 
+srcset="https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-stage/assets/n8n_careers_6d0f0f15d7.png 
+1x, https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-stage/assets/n8n_careers_6d0f0f15d7.png 2x" 
+onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt loading="lazy" class="block w-full" src="https://n8niostoragea
+ccount.blob.core.windows.net/n8nio-strapi-blobs-stage/assets/n8n_careers_6d0f0f15d7.png"><!--]--><!----></div><!--]--><
+/div></div></div><!--]--></div><!--]--></div><!--]--></div></section><section class="w-full px-section-gap-x 
+md:px-section-gap-x-md lg:px-section-gap-x-lg py-section-gap-y md:py-section-gap-y-md lg:py-section-gap-y-lg" 
+data-v-e6de45b4><div class="mx-auto w-full max-w-section-narrow"><!--[--><header class="section-header flex flex-col 
+mb-12 lg:mb-16 xl:mb-16 gap-y-4 items-center" data-v-e6de45b4><!--[--><!--[--><h2 class="font-geomanist 
+text-headline-xs md:text-headline-md lg:text-headline-md title title--white section-title flex flex-col items-center 
+text-center opacity-0 max-w-section-heading" data-v-302a2ffe><!--[--><!--[--><!--[--><!----><!--]--><!--[-->Why 
+n8n<!--]--><!----><!--]--><!--]--></h2><!--[--><div class="content-styles preset-text-light section-description 
+max-w-section-description text-center opacity-0"><div><p>We’re building something rare at n8n: a product that will 
+transform how the world works - and a culture where collaboration and trust take the place of the usual startup 
+noise.</p>
+</div></div><!--]--><!--]--><!--]--></header><ul class="grid-layout--two-column grid-layout" 
+data-v-e6de45b4><!--[--><li class="card card--base overflow-hidden rounded-default p-8 grid-card" data-v-e6de45b4 
+data-v-59e5b355><!--[--><div class="card-content flex min-h-full flex-col gap-5 opacity-0" data-v-e6de45b4><img 
+data-nuxt-img srcset="https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-stage/assets/career_why_prod
+uct_1b13dae88a.png 1x" onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt fetchpriority="auto" class="mx-auto 
+w-full overflow-hidden rounded-2xl" data-v-e6de45b4 src="https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi
+-blobs-stage/assets/career_why_product_1b13dae88a.png"><div class="flex flex-col gap-y-3 px-4" data-v-e6de45b4><h3 
+class="font-geomanist text-xl title title--white leading-tight" data-v-e6de45b4 data-v-302a2ffe><!--[--><!--[-->The 
+product<!--]--><!--]--></h3><div class="content-styles preset-text-light text-[15px]" data-v-e6de45b4><div><p>n8n is 
+becoming the default orchestration layer between AI models and business systems, adopted everywhere from smart home 
+side projects to life-saving UN missions. It has the flexibility engineers demand, the accessibility non-devs deserve 
+and the power to orchestrate the type of multi-agent systems that make everyday builders feel like AI experts.</p>
+</div></div><!--]--><!--]--><!--]--></header><!--[--><div style="top:128px;z-index:0;" 
+class="stacked-card-outer-sticky lg:sticky" data-v-83ccbb40><div class="card card--brown-gradient overflow-hidden 
+rounded-default stacked-card-inner flex origin-top flex-col pt-6 max-lg:gap-y-6 md:pt-8" data-v-83ccbb40 
+data-v-59e5b355><!--[--><div class="relative z-10"><div class="badge flex h-8 w-fit cursor-default items-center 
+gap-0.5 rounded-full py-1 text-md text-white/90 badge--orange pr-3 pl-1.5 mx-auto w-fit lg:absolute lg:inset-x-0" 
+id="462" data-v-39716c88><span class="flex size-6 items-center justify-center" data-v-39716c88><!--[--><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--n8n" style="font-size:20px;" width="1em" height="1em" viewBox="0 0 16 16" data-v-39716c88><g 
+fill="none"><path fill="#fff" d="M14 9.5v-1a6.02 6.02 0 0 0-4-5.657V2.5a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v.343A6.02 6.02 0 
+0 0 2 8.5v1a1 1 0 0 0-1 1V12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1.5a1 1 0 0 0-1-1m-1-1v1h-3V3.917A5.02 5.02 0 0 1 13 
+8.5m-4-6v7H7v-7zm-6 6a5.02 5.02 0 0 1 3-4.583V9.5H3zM14 
+12H2v-1.5h12z"/></g></svg><!--]--></span><!--[-->Builders<!--]--></div></div><img data-nuxt-img srcset="https://n8niost
+orageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/careers_values_builder_522eb75da9.png 1x" 
+onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="WE ARE BUILDERS" fetchpriority="auto" class="max-h-[380px] 
+w-full overflow-hidden rounded-2xl object-contain lg:-mb-10" src="https://n8niostorageaccount.blob.core.windows.net/n8n
+io-strapi-blobs-prod/assets/careers_values_builder_522eb75da9.png"><div class="relative z-10 flex flex-col gap-6 px-8 
+pb-8 lg:px-20"><h3 class="font-geomanist text-xxl title title--white text-center" data-v-302a2ffe><!--[--><!--[-->WE 
+ARE BUILDERS<!--]--><!--]--></h3><div class="grid grid gap-x-6 gap-y-4 md:grid-cols-2"><!--[--><div 
+class="content-styles"><div><p>Being a builder is a mindset, not a job title. Because no matter what your expertise, 
+when you work here, you build things - turning a new idea into a working prototype, a hunch into something real and 
+feedback into something better.</p>
+</div></div><!--]--></div><div class="flex flex-wrap items-center justify-center gap-4"><!--[--><a 
+href="/careers/culture-code/builders/" class="btn relative cursor-pointer flex items-center whitespace-nowrap 
+rounded-lg text-white text-sm disabled:cursor-not-allowed btn-link px-5 justify-center min-h-10 w-fit btn-static-icon 
+w-fit" data-v-76946205><!--[--><!--[--><!--[--><!--[-->Read more<!--]--><!--]--><!--[--><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--ph" style="font-size:15px;" width="1em" height="1em" viewBox="0 0 256 256" 
+data-v-76946205><path fill="currentColor" d="m221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 
+0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 
+11.32"/></svg><!--]--><!--]--><!--]--></a><!--]--></div></div><!--]--></div></div><div style="top:163px;z-index:10;" 
+class="stacked-card-outer-sticky lg:sticky" data-v-83ccbb40><div class="card card--brown-gradient overflow-hidden 
+rounded-default stacked-card-inner flex origin-top flex-col pt-6 max-lg:gap-y-6 md:pt-8" data-v-83ccbb40 
+data-v-59e5b355><!--[--><div class="relative z-10"><div class="badge flex h-8 w-fit cursor-default items-center 
+gap-0.5 rounded-full py-1 text-md text-white/90 badge--orange pr-3 pl-1.5 mx-auto w-fit lg:absolute lg:inset-x-0" 
+id="463" data-v-39716c88><span class="flex size-6 items-center justify-center" data-v-39716c88><!--[--><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--n8n" style="font-size:20px;" width="1em" height="1em" viewBox="0 0 16 16" data-v-39716c88><g 
+fill="none"><path fill="#fff" d="m13.76 6.25-1.082-1.876a1.75 1.75 0 0 0-2.39-.64 1.7 1.7 0 0 
+0-.562.52l-1.089-1.88a1.75 1.75 0 0 0-3.03 0 1.75 1.75 0 0 0-2.598 2.25l.1.173a1.75 1.75 0 0 0-1.374 2.619l2.5 
+4.332a5.47 5.47 0 0 0 3.339 2.562 5.5 5.5 0 0 0 6.186-8.062zm-.416 3.914a4.5 4.5 0 0 1-8.243 1.085L2.6 6.917a.75.75 0 
+0 1 1.299-.75l1.202 2.082a.5.5 0 1 0 .865-.5L3.875 4.124a.75.75 0 1 1 1.298-.75L7.125 6.75a.5.5 0 1 0 .865-.5L6.473 
+3.624a.75.75 0 1 1 1.299-.75L9.86 6.493a3 3 0 0 0-.346 3.787.5.5 0 0 0 .828-.562 2 2 0 0 1 .456-2.719.5.5 0 0 0 
+.133-.65l-.417-.725a.75.75 0 1 1 1.298-.75l1.082 1.875a4.47 4.47 0 0 1 .45 3.414zm-1.829-8.183a.5.5 0 0 1 .61-.357 
+3.73 3.73 0 0 1 2.283 1.75l.02.036a.501.501 0 0 1-.738.652.5.5 0 0 1-.127-.152l-.02-.036a2.73 2.73 0 0 
+0-1.676-1.281.5.5 0 0 1-.352-.612m-6.46 12.83a.5.5 0 0 1-.702.084 7.5 7.5 0 0 1-1.85-2.146.5.5 0 0 1 .867-.5 6.5 6.5 0 
+0 0 1.602 1.858.5.5 0 0 1 .083.705"/></g></svg><!--]--></span><!--[-->Welcoming<!--]--></div></div><img data-nuxt-img s
+rcset="https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/careers_values_welcome_d5198fdb
+d9.png 1x" onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="WE ARE WELCOMING" fetchpriority="auto" 
+class="max-h-[380px] w-full overflow-hidden rounded-2xl object-contain lg:-mb-10" src="https://n8niostorageaccount.blob
+.core.windows.net/n8nio-strapi-blobs-prod/assets/careers_values_welcome_d5198fdbd9.png"><div class="relative z-10 flex 
+flex-col gap-6 px-8 pb-8 lg:px-20"><h3 class="font-geomanist text-xxl title title--white text-center" 
+data-v-302a2ffe><!--[--><!--[-->WE ARE WELCOMING<!--]--><!--]--></h3><div class="grid grid gap-x-6 gap-y-4 
+md:grid-cols-2"><!--[--><div class="content-styles"><div><p>It’s not just what we build that matters, but how. And 
+this is how we build at n8n: with humility, with care and with everyone. We hire excellent people and we’re 
+excellent to each other. Decency may not be the flashiest value, but we’ve found it’s the thing that</p>
+</div></div><!--]--></div><div class="flex flex-wrap items-center justify-center gap-4"><!--[--><a 
+href="/careers/culture-code/welcoming/" class="btn relative cursor-pointer flex items-center whitespace-nowrap 
+rounded-lg text-white text-sm disabled:cursor-not-allowed btn-link px-5 justify-center min-h-10 w-fit btn-static-icon 
+w-fit" data-v-76946205><!--[--><!--[--><!--[--><!--[-->Read more<!--]--><!--]--><!--[--><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--ph" style="font-size:15px;" width="1em" height="1em" viewBox="0 0 256 256" 
+data-v-76946205><path fill="currentColor" d="m221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 
+0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 
+11.32"/></svg><!--]--><!--]--><!--]--></a><!--]--></div></div><!--]--></div></div><div style="top:198px;z-index:20;" 
+class="stacked-card-outer-sticky lg:sticky" data-v-83ccbb40><div class="card card--brown-gradient overflow-hidden 
+rounded-default stacked-card-inner flex origin-top flex-col pt-6 max-lg:gap-y-6 md:pt-8" data-v-83ccbb40 
+data-v-59e5b355><!--[--><div class="relative z-10"><div class="badge flex h-8 w-fit cursor-default items-center 
+gap-0.5 rounded-full py-1 text-md text-white/90 badge--orange pr-3 pl-1.5 mx-auto w-fit lg:absolute lg:inset-x-0" 
+id="464" data-v-39716c88><span class="flex size-6 items-center justify-center" data-v-39716c88><!--[--><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--n8n" style="font-size:20px;" width="0.96em" height="1em" viewBox="0 0 24 25" 
+data-v-39716c88><g fill="none"><path
+</div></div><!--]--></div><div class="flex flex-wrap items-center justify-center gap-4"><!--[--><a 
+href="/careers/culture-code/right-thing/" class="btn relative cursor-pointer flex items-center whitespace-nowrap 
+rounded-lg text-white text-sm disabled:cursor-not-allowed btn-link px-5 justify-center min-h-10 w-fit btn-static-icon 
+w-fit" data-v-76946205><!--[--><!--[--><!--[--><!--[-->Read more<!--]--><!--]--><!--[--><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--ph" style="font-size:15px;" width="1em" height="1em" viewBox="0 0 256 256" 
+data-v-76946205><path fill="currentColor" d="m221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 
+0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 
+11.32"/></svg><!--]--><!--]--><!--]--></a><!--]--></div></div><!--]--></div></div><div style="top:233px;z-index:30;" 
+class="stacked-card-outer-sticky lg:sticky" data-v-83ccbb40><div class="card card--brown-gradient overflow-hidden 
+rounded-default stacked-card-inner flex origin-top flex-col pt-6 max-lg:gap-y-6 md:pt-8" data-v-83ccbb40 
+data-v-59e5b355><!--[--><div class="relative z-10"><div class="badge flex h-8 w-fit cursor-default items-center 
+gap-0.5 rounded-full py-1 text-md text-white/90 badge--orange pr-3 pl-1.5 mx-auto w-fit lg:absolute lg:inset-x-0" 
+id="465" data-v-39716c88><span class="flex size-6 items-center justify-center" data-v-39716c88><!--[--><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--n8n" style="font-size:20px;" width="1em" height="1em" viewBox="0 0 16 16" data-v-39716c88><g 
+fill="none"><path fill="#fff" d="M8.5 5v2.718l2.258 1.354a.5.5 0 0 1-.515.858l-2.5-1.5A.5.5 0 0 1 7.5 8V5a.5.5 0 0 1 1 
+0M14 3.5a.5.5 0 0 0-.5.5v1.126a27 27 0 0 0-1.257-1.365 6 6 0 1 0-.125 8.607.5.5 0 1 0-.688-.728 5 5 0 1 1 
+.104-7.177c.509.515.954 1.012 1.404 1.538H11.5a.5.5 0 0 0 0 1H14a.5.5 0 0 0 .5-.5V4a.5.5 0 0 
+0-.5-.5"/></g></svg><!--]--></span><!--[-->Early<!--]--></div></div><img data-nuxt-img srcset="https://n8niostorageacco
+unt.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/careers_values_early_e8c5ec60fa.png 1x" 
+onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="WE ARE EARLY" fetchpriority="auto" class="max-h-[380px] 
+w-full overflow-hidden rounded-2xl object-contain lg:-mb-10" src="https://n8niostorageaccount.blob.core.windows.net/n8n
+io-strapi-blobs-prod/assets/careers_values_early_e8c5ec60fa.png"><div class="relative z-10 flex flex-col gap-6 px-8 
+pb-8 lg:px-20"><h3 class="font-geomanist text-xxl title title--white text-center" data-v-302a2ffe><!--[--><!--[-->WE 
+ARE EARLY<!--]--><!--]--></h3><div class="grid grid gap-x-6 gap-y-4 md:grid-cols-2"><!--[--><div 
+class="content-styles"><div><p>Being early is a posture more than a pace. Early is staying curious enough to see 
+what’s coming. Early is comfortable enough with change to move towards it. And early is moving fast enough to be 
+part of what changes things.</p>
+</div></div><!--]--></div><div class="flex flex-wrap items-center justify-center gap-4"><!--[--><a 
+href="/careers/culture-code/early/" class="btn relative cursor-pointer flex items-center whitespace-nowrap rounded-lg 
+text-white text-sm disabled:cursor-not-allowed btn-link px-5 justify-center min-h-10 w-fit btn-static-icon w-fit" 
+data-v-76946205><!--[--><!--[--><!--[--><!--[-->Read more<!--]--><!--]--><!--[--><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--ph" style="font-size:15px;" width="1em" height="1em" viewBox="0 0 256 256" 
+data-v-76946205><path fill="currentColor" d="m221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 
+0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 
+11.32"/></svg><!--]--><!--]--><!--]--></a><!--]--></div></div><!--]--></div></div><div style="top:268px;z-index:40;" 
+class="stacked-card-outer-sticky lg:sticky" data-v-83ccbb40><div class="card card--brown-gradient overflow-hidden 
+rounded-default stacked-card-inner flex origin-top flex-col pt-6 max-lg:gap-y-6 md:pt-8" data-v-83ccbb40 
+data-v-59e5b355><!--[--><div class="relative z-10"><div class="badge flex h-8 w-fit cursor-default items-center 
+gap-0.5 rounded-full py-1 text-md text-white/90 badge--orange pr-3 pl-1.5 mx-auto w-fit lg:absolute lg:inset-x-0" 
+id="466" data-v-39716c88><span class="flex size-6 items-center justify-center" data-v-39716c88><!--[--><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--n8n" style="font-size:20px;" width="1em" height="1em" viewBox="0 0 16 16" data-v-39716c88><g 
+fill="none"><path fill="#fff" d="M5 7.5h6a.5.5 0 0 0 .5-.5V4a.5.5 0 0 0-.5-.5H5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 
+.5.5m.5-3h5v2h-5zm7-3h-9a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-11a1 1 0 0 0-1-1m0 12h-9v-11h9zM6.25 
+9.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m2.5 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m2.5 0a.75.75 0 1 1-1.5 0 .75.75 
+0 0 1 1.5 0m-5 2.5a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m2.5 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m2.5 0a.75.75 0 1 
+1-1.5 0 .75.75 0 0 1 1.5 0"/></g></svg><!--]--></span><!--[-->Multipliers<!--]--></div></div><img data-nuxt-img srcset=
+"https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/careers_values_multipliers_4c64914fd8
+.png 1x" onerror="this.setAttribute(&#39;data-error&#39;, 1)" alt="WE ARE MULTIPLIERS" fetchpriority="auto" 
+class="max-h-[380px] w-full overflow-hidden rounded-2xl object-contain lg:-mb-10" src="https://n8niostorageaccount.blob
+.core.windows.net/n8nio-strapi-blobs-prod/assets/careers_values_multipliers_4c64914fd8.png"><div class="relative z-10 
+flex flex-col gap-6 px-8 pb-8 lg:px-20"><h3 class="font-geomanist text-xxl title title--white text-center" 
+data-v-302a2ffe><!--[--><!--[-->WE ARE MULTIPLIERS<!--]--><!--]--></h3><div class="grid grid gap-x-6 gap-y-4 
+md:grid-cols-2"><!--[--><div class="content-styles"><div><p>n8n is an ecosystem, and everyone in it has a stake in 
+what we are becoming. Developers, solo builders, enterprise teams, global institutions, the people driving hours to 
+attend n8n meet-ups, the people who work here: this is how we define community.</p>
+</div></div><!--]--></div><div class="flex flex-wrap items-center justify-center gap-4"><!--[--><a 
+href="/careers/culture-code/multipliers/" class="btn relative cursor-pointer flex items-center whitespace-nowrap 
+rounded-lg text-white text-sm disabled:cursor-not-allowed btn-link px-5 justify-center min-h-10 w-fit btn-static-icon 
+w-fit" data-v-76946205><!--[--><!--[--><!--[--><!--[-->Read more<!--]--><!--]--><!--[--><svg 
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" 
+class="iconify iconify--ph" style="font-size:15px;" width="1em" height="1em" viewBox="0 0 256 256" 
+data-v-76946205><path fill="currentColor" d="m221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 
+0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 11.32"/></svg><!--]--><!--]--><!--]--></a><!--]--></di
+v></div><!--]--></div></div><!--]--><!--]--></div></section><section class="w-full px-section-gap-x 
+md:px-section-gap-x-md lg:px-section-gap-x-lg py-section-gap-y md:py-section-gap-y-md lg:py-section-gap-y-lg 
+case-study-feedback opacity-0"><div class="mx-auto w-full max-w-section-slimmer"><!--[--><div class="card 
+card--spark-red overflow-hidden rounded-default flex flex-row items-start gap-4 p-8" data-v-59e5b355><!--[--><svg 
+class="effect-quote pointer-events-none h-auto shrink-0 card-quote mt-1 w-7" preserveaspectratio="none" width="206" 
+height="152" viewbox="0 0 206 152" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M91.1406 
+16.6562V103.625C91.1275 116.202 86.1255 128.261 77.2321 137.154C68.3386 146.047 56.2803 151.049 43.7031 
+151.062C41.6063 151.062 39.5953 150.23 38.1126 148.747C36.6299 147.264 35.7969 145.253 35.7969 143.156C35.7969 141.059 
+36.6299 139.048 38.1126 137.566C39.5953 136.083 41.6063 135.25 43.7031 135.25C52.0906 135.25 60.1345 131.918 66.0654 
+125.987C71.9962 120.056 75.3281 112.012 75.3281 103.625V95.7188H16.0312C11.8375 95.7188 7.81554 94.0528 4.85012 
+91.0874C1.8847 88.122 0.21875 84.1 0.21875 79.9062V16.6562C0.21875 12.4625 1.8847 8.44054 4.85012 5.47512C7.81554 
+2.5097 11.8375 0.84375 16.0312 0.84375H75.3281C79.5219 0.84375 83.5438 2.5097 86.5092 5.47512C89.4747 8.44054 91.1406 
+12.4625 91.1406 16.6562ZM189.969 0.84375H130.672C126.478 0.84375 122.456 2.5097 119.491 5.47512C116.525 8.44054 
+114.859 12.4625 114.859 16.6562V79.9062C114.859 84.1 116.525 88.122 119.491 91.0874C122.456 94.0528 126.478 95.7188 
+130.672 95.7188H189.969V103.625C189.969 112.012 186.637 120.056 180.706 125.987C174.775 131.918 166.731 135.25 158.344 
+135.25C156.247 135.25 154.236 136.083 152.753 137.566C151.27 139.048 150.438 141.059 150.438 143.156C150.438 145.253 
+151.27 147.264 152.753 148.747C154.236 150.23 156.247 151.062 158.344 151.062C170.921 151.049 182.979 146.047 191.873 
+137.154C200.766 128.261 205.768 116.202 205.781 103.625V16.6562C205.781 12.4625 204.115 8.44054 201.15 5.47512C198.184 
+2.5097 194.162 0.84375 189.969 0.84375Z" fill="#EE4F27"></path></svg><div class="card-content flex flex-col 
+gap-8"><header class="section-header flex flex-col gap-y-4 items-start"><!--[--><!----><div class="content-styles 
+preset-feedback-spark"><!--[--><!----><div class=""><div><p>We’re humble and driven - a community-first team 
+building for the long run, not chasing the typical hype cycle.</p>
+</div></div><!--]--></div></div><div class="timeline-row relative mb-[-1px] flex w-full flex-col items-center gap-4 
+py-[24px] lg:mb-0 lg:grid lg:grid-cols-2 lg:items-center lg:gap-x-8 lg:py-0" data-side="right" data-v-f7a61f92><div to 
+class="gradient-tile gradient-tile--blue timeline-tile relative z-1 w-full p-8 lg:col-start-2 lg:col-end-3 
+lg:justify-self-end" data-v-f7a61f92 data-v-9bed7a1f><!--[--><div class="content-styles" 
+data-v-f7a61f92><div><p><strong>You have technical empathy, whatever your role</strong> - and you’re genuinely 
+passionate about the product itself. You care about how it works, how it feels for users, and how to make it 
+better.</p>
+
+

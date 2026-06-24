@@ -80,6 +80,56 @@ If a man slays…
 
 **Notes:** DAVID Post 10 hook line. Cuneiform attestation secure at Boğazköy; ḫ=[x]; excerpt truncated at lacuna; vocalization reconstructed.
 
+## Pronunciation Guide `[reconstructed]`
+
+**Model:** Melchert/Kimball Neo-Hittite standard — fortis/lenis stops, preserved laryngeals.
+**Confidence:** medium (high consonants/ḫ; medium vowels/stress)
+**Profile:** `languages/extinct/hittite/pronunciation/pronunciation_profile.json`
+
+### Canonical sample (ritual formula)
+
+**Text:** namma antuhsas andan esdu
+**IPA:** `[ˈnam.ma ˈan.tuːχ.saːs ˈan.dan ˈeːʃ.du]`
+
+### Key phonemes
+
+- **ḫ** = guttural fricative [x~χ] (Scottish loch / German Bach) — PIE laryngeal reflex
+- **Fortis geminates** pp/tt/kk held longer than single stops
+- **Four vowels** /a e i u/ with phonemic length (VV plene writing)
+- **š** ≈ [ʃ]; no English voiced b/d/g defaults
+- **Stress** on first full syllable of content word (conservative default)
+
+### Grok Imagine audio guidance
+
+Guttural ḫ as back-of-throat scrape; hold geminate stops; pure vowels; š as [ʃ]. Avoid silent ḫ or English h. Flag ḫ and geminates as non-English articulations.
+
+### Tutoring hooks
+
+- Oldest attested Indo-European language (~1650 BCE)
+- ḫ preserves PIE laryngeals — proof of laryngeal theory
+- Cuneiform spells syllables (ḫa = ḫ+a), not just logograms
+- Fortis/lenis matters more than voiced/voiceless
+- Hittite Laws formula recognizable across millennia
+
+### Sources
+
+- H. Craig Melchert, *Hittite Historical Phonology*
+- Sara E. Kimball, *Hittite Historical Phonology*
+- Alwin Kloekhorst, *Etymological Dictionary of the Hittite Inherited Lexicon*
+- Benjamin W. Fortson IV, *Indo-European Language and Culture*
+
+## Reconstruction Notes
+
+**Method:** Neo-Hittite cuneiform syllabic spelling + plene vowels + comparative Anatolian + PIE laryngeal theory via ḫ.
+
+**High confidence:** Consonant inventory, ḫ as laryngeal reflex, vowel length from plene writing, syllabic cuneiform mapping.
+
+**Low confidence:** Fortis articulation detail, exact ḫ place (uvular vs velar), š value, stress position, unstressed vowel qualities.
+
+**Laryngeal note:** ḫ = empirical proof of PIE *h2/*h3 — colors adjacent vowels; unavailable evidence in Greek/Latin/Sanskrit.
+
+**Disputed phonemes file:** `languages/extinct/hittite/pronunciation/disputed_phonemes.json`
+
 ## Instructions for Grok
 
 1. Treat each block as primary evidence — do not invent unattested forms.

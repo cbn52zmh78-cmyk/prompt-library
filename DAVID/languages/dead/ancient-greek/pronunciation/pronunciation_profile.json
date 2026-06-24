@@ -1,0 +1,51 @@
+{
+  "language": "ancient-greek",
+  "status": "dead",
+  "research_type": "pronunciation",
+  "ingested_from": "research_ops/outputs/R1_latin_greek_raw.json",
+  "ingested_at": "2026-06-23",
+  "scholarly_consensus": "Attic Classical core from Allen Vox Graeca + metrics/inscriptions/grammarians; high on stops/vowels/quantity/pitch; Koine shifts well-attested via papyri.",
+  "pronunciation_variants": {
+    "attic": "5th–4th BCE: aspirated stops [pʰ tʰ kʰ], voiced stops [b d g], /y/ upsilon, pitch accent, full quantity.",
+    "koine": "Hellenistic: spirantization begins (/pʰ/→/f/ etc.), iotacism starts, h lost.",
+    "byzantine": "Medieval: full stress accent, iotacism complete, Modern-like vowels/fricatives."
+  },
+  "phoneme_inventory": {
+    "vowels": ["Short: /a e i y o/; Long: /aː ɛː eː iː yː ɔː uː/ (+ diphthongs ai/au/eu/oi etc.; ei/ou monophthongize early). Quantity moraic."],
+    "consonants": ["Stops: /p t k pʰ tʰ kʰ b d g/; Fricatives /s h/; Nasals /m n/; Liquids /r (trilled, initial voiceless possible) l/; Semivowels /j w/ (lost in Attic text). Zeta [zd] or [dz] debate."],
+    "quantity_system": "Phonemic length (vowels + geminates); morae for accent/meter.",
+    "distinctive_features": "Three-way stop contrast; rough/smooth breathing (h vs zero); pitch accent phonemic."
+  },
+  "ipa_reconstructed": {
+    "sample_text": "μῆνιν ἄειδε θεά, Πηληϊάδεω Ἀχιλῆος",
+    "transcription": "[mɛ̂ː.nin áe̯i̯.de tʰe.áː pɛː.lɛː.i̯.á.de.ɔː a.kʰi.lɛ̂ː.os]",
+    "confidence": "high (85–90% core consonants/vowels/quantity; 70% exact pitch contour)",
+    "confidence_note": "Vowels/stops/quantity strongly attested; pitch via grammarians (reconstructed melodic); Homeric w/digamma metrical but text-silent; zeta/iotacism timing disputed."
+  },
+  "stress_rules": "Pitch accent: one high-tone mora per word (acute = high/rising; circumflex = falling on long; grave = default/low or sandhi).",
+  "prosody": {
+    "rhythm": "Quantitative + pitch for epic hexameter.",
+    "pitch": "Musical contour (high tone on accented mora); practical recreation as slight rise/fall.",
+    "pacing": "Longs/diphthongs double mora; aspirates breathy release.",
+    "pitch_accent_note": "Not English stress; changes to stress accent post-Classical."
+  },
+  "grok_imagine_guidance": "Strong breathy puff on aspirates (phi= p+h not f; theta t+h; chi k+h); upsilon rounded [y] (French tu); beta pure [b]; hold longs/diphthongs 2× duration; musical pitch contour on accents (sing rising/falling); trilled rho; pure vowels (no English diphthong creep); rough breathing initial [h]; timing for hexameter flow with caesura breaths.",
+  "tutoring_hooks": [
+    "Phi/Theta/Chi = aspirated stops (puff of air after p/t/k) — not modern f/th/ch sounds in Attic!",
+    "Beta = [b] (not v); upsilon = [y] like French 'tu'.",
+    "Pitch accent = musical tones (high/fall), not stress — like singing!",
+    "Eta η = long open [ɛː] (evolves to i later via iotacism).",
+    "Zeta ζ often [zd] in Attic (like 'wisdom' z)."
+  ],
+  "sources": [
+    {"author": "W. Sidney Allen", "title": "Vox Graeca (3rd ed.)", "year": "1987", "url": "https://archive.org/details/voxgraecaguideto0000alle"},
+    {"author": "Various (citing Allen)", "title": "Ancient Greek phonology", "year": "n/a", "url": "https://en.wikipedia.org/wiki/Ancient_Greek_phonology"},
+    {"author": "atticgreek.org et al.", "title": "Attic Pronunciation Guide (Allen-based)", "year": "n/a", "url": "http://atticgreek.org/pronunc/pronunc_guide.html"}
+  ],
+  "disputed_fields": [
+    "zeta realization ([zd] vs [dz])",
+    "exact pitch accent melodic contour",
+    "Homeric digamma (metrical but text-silent)",
+    "iotacism timing across Koine transition"
+  ]
+}

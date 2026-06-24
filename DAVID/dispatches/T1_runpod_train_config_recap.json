@@ -1,0 +1,52 @@
+{
+  "message_type": "recap_vcs",
+  "issue": "T1",
+  "title": "T1 — DAVID RunPod train config + dry-run scaffold (14B / 2,351 pairs)",
+  "generated_at": "2026-06-24T04:00:00+00:00",
+  "status": "DRAFT",
+  "verdict": "READY_FOR_INSPECT",
+  "owner_terminal": "T1",
+  "lane": "DAVID",
+  "commit": {
+    "allowed": true,
+    "files": [
+      "DAVID/training/runpod_train_config.json",
+      "DAVID/training/train_david.sh",
+      "DAVID/training/david_finetune_pipeline.py",
+      "DAVID/dispatches/T1_runpod_train_config_recap.json"
+    ]
+  },
+  "recap": {
+    "did": [
+      "Created runpod_train_config.json — 14B base (DeepSeek-R1-Distill-Qwen-14B), 2,351 Alpaca JSONL pairs",
+      "Hyperparams sized for L40S 48GB: rank 32, alpha 16, batch 2 × grad_accum 8, lr 1e-4, 5 epochs (~730 steps)",
+      "Adapter output template models/adapters/david-7b_{timestamp}_{tag} — fleet prefix retained",
+      "Created train_david.sh — dry-run default; --live gated by ALLOW_GPU_TRAIN=1; --install RunPod deps",
+      "Extended david_finetune_pipeline.py with --config path: --check, --stub, --run from runpod_train_config.json"
+    ],
+    "dataset": {
+      "path": "DAVID/training/david_dataset.jsonl",
+      "current_pairs": 2351,
+      "epochs_tier": 5,
+      "estimated_steps": 730
+    },
+    "model": {
+      "key": "deepseek-14b",
+      "unsloth": "unsloth/DeepSeek-R1-Distill-Qwen-14B-bnb-4bit",
+      "adapter_prefix": "david-7b"
+    },
+    "commands": {
+      "local_check": "python training/david_finetune_pipeline.py --check --config training/runpod_train_config.json",
+      "local_stub": "python training/david_finetune_pipeline.py --stub --config training/runpod_train_config.json --tag inspect1",
+      "runpod_live": "ALLOW_GPU_TRAIN=1 bash training/train_david.sh --live --tag run4",
+      "infer_runpod": "python3 training/david_infer.py --adapter /DAVID/models/adapters/david-7b_YYYYMMDD_HHMMSS_run4 --all"
+    },
+    "state": "DRAFT — stub pipeline GREEN; live GPU blocked until Benjamin authorizes ALLOW_GPU_TRAIN=1 on RunPod L40S",
+    "next": [
+      "Benjamin inspect stub output + 14B hyperparams before RunPod spend",
+      "Run 4 fine-tune on L40S with regenerated 2,351-pair dataset",
+      "Download adapter via RunPod file manager — do not kill pod before download"
+    ]
+  },
+  "vcs_commit_message": "RECAP\n- Did: T1 DAVID runpod_train_config + train_david.sh; 14B / 2,351 pairs / rank 32 dry-run GREEN\n- State: DRAFT — stub inspect ready; ALLOW_GPU_TRAIN=1 gates live RunPod\n- Next: Benjamin authorize Run 4 on L40S"
+}

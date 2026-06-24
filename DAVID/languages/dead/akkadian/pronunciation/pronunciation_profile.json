@@ -1,0 +1,48 @@
+{
+  "language": "akkadian",
+  "status": "dead",
+  "research_type": "pronunciation",
+  "ingested_from": "research_ops/outputs/R4_ancient_raw.json",
+  "ingested_at": "2026-06-23",
+  "reconstruction_method": "Cuneiform sign values + bilinguals + Semitic comparative (Huehnergard/von Soden)",
+  "scholarly_consensus": "Strong on consonants/vowel length from signs; emphatics debated (ejective vs pharyngealized).",
+  "dialect_notes": {
+    "old_babylonian": "Early; fuller vowels; less reduction.",
+    "neo_assyrian": "Later shifts in sibilants/emphatics.",
+    "standard_babylonian": "Literary conservative (Enuma Elish style)."
+  },
+  "phoneme_inventory": {
+    "vowels": ["a e i u short/long; mimation endings"],
+    "consonants": ["p b t d k g q ṣ ṭ; s z š; m n l r w y ḥ ʾ"],
+    "emphatic_series": ["ṭ q ṣ (pharyngealized or ejective; Geers' law evidence)"],
+    "distinctive_features": "Mimation (final -m); polyphonic signs; aleph/glottal."
+  },
+  "ipa_reconstructed": {
+    "sample_text": "Enuma Elish approx 'When on high heaven and earth'",
+    "romanization": "enūma eliš lā nabû šamāmu",
+    "transcription": "/e.nuː.ma e.liʃ laː na.buː ʃa.maː.mu/",
+    "confidence": "medium_high",
+    "confidence_note": "Strong on signs; conventional emphatics; dialect shifts noted."
+  },
+  "stress_rules": "Often penultimate or morphological.",
+  "prosody": {
+    "rhythm": "Syllable-timed with length",
+    "pacing": "Epic/narrative deliberate"
+  },
+  "grok_imagine_guidance": "Emphatics as throaty or popped ejectives; hold long vowels; mimation final m; glottal aleph; cuneiform context for polyphony.",
+  "tutoring_hooks": [
+    "Lingua franca of ancient Near East for 2,000+ years — diplomatic 'English'.",
+    "Cuneiform signs multi-value — spelling reveals consonants clearly.",
+    "Emphatics distinguish from Hebrew/Arabic cousins.",
+    "Influenced Aramaic/Hebrew phonology heavily.",
+    "Enuma Elish uses rhythmic parallelism like epic poetry."
+  ],
+  "sources": [
+    "Huehnergard *Grammar of Akkadian*; von Soden; CDLI; Semitic comparative linguistics."
+  ],
+  "disputed_fields": [
+    "emphatic series realization (ejective vs pharyngealized)",
+    "Neo-Assyrian sibilant shifts vs Standard Babylonian",
+    "aleph/vowel quality in polyphonic spellings"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "classical-latin": {
+    "language": "classical-latin",
+    "status": "dead",
+    "research_type": "pronunciation",
+    "scholarly_consensus": "High-confidence reconstruction (Allen Vox Latina standard, supported by grammarians like Quintilian/Cicero, poetic metrics, inscriptions, Romance descendants; minor updates via Calabrese for vowel qualities).",
+    "pronunciation_variants": {
+      "classical": "Golden Age (1st c. BCE): phonemic vowel length, V=/w/, C/G always hard /k g/, aspirates in loans, dynamic stress, trilled R, final M nasalizes/elides",
+      "ecclesiastical": "Italianate Church: V=[v], soft C/G before e/i ([tʃ dʒ]), AE=[ɛ], no quantity distinction, stress often marked, full final consonants"
+    },
+    "phoneme_inventory": {
+      "vowels": ["Short: /a [ä]/, /e [ɛ]/, /i [ɪ]/, /o [ɔ]/, /u [ʊ]/; Long: /aː [äː]/, /eː [eː]/, /iː [iː]/, /oː [oː]/, /uː [uː]/ (+ /y yː/ loans). Quality: shorts more open (Allen); Calabrese debate favors quantity-over-quality for some shorts."],
+      "consonants": ["Stops: /p t k b d g/ (+ labialized /kʷ gʷ/ for qu/gu; aspirated variants [pʰ etc.] in Greek loans); Fricatives: /f s h/; Nasals /m n/ (final m → nasalization); Liquids /r [r trill]/ /l (clear/dark)/; Approximants /j w/ (V=U-cons as /w/)."],
+      "quantity_system": "Phonemic long/short vowels + geminates critical for syllable weight/meter (heavy = long vowel/diphthong or cons.-closed).",
+      "distinctive_features": "No soft c/g; V bilabial approximant; educated h pronounced; r always vibrant."
+    },
+    "ipa_reconstructed": {
+      "sample_text": "Arma virumque cano, Troiae qui primus ab oris",
+      "transcription": "[ˈar.ma wɪˈrũː.kʷɛ ˈkaː.noː ˈtroː.jaj kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+      "confidence": "high (90% core; 75% exact vowel timbre/nasalization)",
+      "confidence_note": "Strongly attested via metrics/grammarians; minor disputes on short high vowel openness & aspiration degree."
+    },
+    "stress_rules": "Penultimate law: heavy penult (long vowel/diphthong or cons.-closed) stressed; otherwise antepenult (e.g., caˈno vs ˈvirumque).",
+    "prosody": {
+      "rhythm": "Quantitative (syllable weight) for dactylic hexameter; elision common.",
+      "pitch": "Primarily stress (intensity); earlier pitch elements possible but not dominant.",
+      "pacing": "Long vowels ~1.5–2× short duration; quantitative meter pacing.",
+      "meter_note": "Dactylic hexameter dominant in epic (Aeneid)."
+    },
+    "grok_imagine_guidance": "Key: bilabial /w/ (lips rounded, not teeth-on-lip v); trilled/rolled R; hold long vowels distinctly (sustained for meter); mild puff on aspirates (ph/th/ch loans); nasalize vowel before final -m (arma ~[ar.mã]); crisp shorts vs. sustained longs; lip rounding for u/o/w; avoid English reductions/schwas; breath groups by phrase for natural flow.",
+    "tutoring_hooks": ["Latin V = /w/ ('weni widi wiki' for Caesar) — not modern v!", "C/G always hard /k g/ ('Kikero' for Cicero) — no soft sounds.", "Vowel length is phonemic & changes meter/meaning (liber 'book' vs. līber 'free').", "Final M often nasalizes/elides (poetic flow secret).", "Qu = single /kʷ/ sound like 'quick'."],
+    "sources": [
+      {"author": "W. Sidney Allen", "title": "Vox Latina (2nd ed.)", "year": "1978", "url": "https://archive.org/details/voxlatinaguideto0000alle_g6w2"},
+      {"author": "Various (citing Allen)", "title": "Latin phonology and orthography", "year": "n/a", "url": "https://en.wikipedia.org/wiki/Latin_phonology_and_orthography"},
+      {"author": "polýMATHY / foundinantiquity", "title": "Complete Classical Latin Pronunciation Guide", "year": "2021", "url": "https://foundinantiquity.com/2021/07/25/a-complete-guide-to-classical-latin-pronunciation-the-sounds-of-golden-age-latin/"}
+    ]
+  },
+  "ancient-greek": {
+    "language": "ancient-greek",
+    "status": "dead",
+    "research_type": "pronunciation",
+    "scholarly_consensus": "Attic Classical core from Allen Vox Graeca + metrics/inscriptions/grammarians; high on stops/vowels/quantity/pitch; Koine shifts well-attested via papyri.",
+    "pronunciation_variants": {
+      "attic": "5th–4th BCE: aspirated stops [pʰ tʰ kʰ], voiced stops [b d g], /y/ upsilon, pitch accent, full quantity.",
+      "koine": "Hellenistic: spirantization begins (/pʰ/→/f/ etc.), iotacism starts, h lost.",
+      "byzantine": "Medieval: full stress accent, iotacism complete, Modern-like vowels/fricatives."
+    },
+    "phoneme_inventory": {
+      "vowels": ["Short: /a e i y o/; Long: /aː ɛː eː iː yː ɔː uː/ (+ diphthongs ai/au/eu/oi etc.; ei/ou monophthongize early). Quantity moraic."],
+      "consonants": ["Stops: /p t k pʰ tʰ kʰ b d g/; Fricatives /s h/; Nasals /m n/; Liquids /r (trilled, initial voiceless possible) l/; Semivowels /j w/ (lost in Attic text). Zeta [zd] or [dz] debate."],
+      "quantity_system": "Phonemic length (vowels + geminates); morae for accent/meter.",
+      "distinctive_features": "Three-way stop contrast; rough/smooth breathing (h vs zero); pitch accent phonemic."
+    },
+    "ipa_reconstructed": {
+      "sample_text": "μῆνιν ἄειδε θεά, Πηληϊάδεω Ἀχιλῆος",
+      "transcription": "[mɛ̂ː.nin áe̯i̯.de tʰe.áː pɛː.lɛː.i̯.á.de.ɔː a.kʰi.lɛ̂ː.os]",
+      "confidence": "high (85–90% core consonants/vowels/quantity; 70% exact pitch contour)",
+      "confidence_note": "Vowels/stops/quantity strongly attested; pitch via grammarians (reconstructed melodic); Homeric w/digamma metrical but text-silent; zeta/iotacism timing disputed."
+    },
+    "stress_rules": "Pitch accent: one high-tone mora per word (acute = high/rising; circumflex = falling on long; grave = default/low or sandhi).",
+    "prosody": {
+      "rhythm": "Quantitative + pitch for epic hexameter.",
+      "pitch": "Musical contour (high tone on accented mora); practical recreation as slight rise/fall.",
+      "pacing": "Longs/diphthongs double mora; aspirates breathy release.",
+      "pitch_accent_note": "Not English stress; changes to stress accent post-Classical."
+    },
+    "grok_imagine_guidance": "Strong breathy puff on aspirates (phi= p+h not f; theta t+h; chi k+h); upsilon rounded [y] (French tu); beta pure [b]; hold longs/diphthongs 2× duration; musical pitch contour on accents (sing rising/falling); trilled rho; pure vowels (no English diphthong creep); rough breathing initial [h]; timing for hexameter flow with caesura breaths.",
+    "tutoring_hooks": ["Phi/Theta/Chi = aspirated stops (puff of air after p/t/k) — not modern f/th/ch sounds in Attic!", "Beta = [b] (not v); upsilon = [y] like French 'tu'.", "Pitch accent = musical tones (high/fall), not stress — like singing!", "Eta η = long open [ɛː] (evolves to i later via iotacism).", "Zeta ζ often [zd] in Attic (like 'wisdom' z)."],
+    "sources": [
+      {"author": "W. Sidney Allen", "title": "Vox Graeca (3rd ed.)", "year": "1987", "url": "https://archive.org/details/voxgraecaguideto0000alle"},
+      {"author": "Various (citing Allen)", "title": "Ancient Greek phonology", "year": "n/a", "url": "https://en.wikipedia.org/wiki/Ancient_Greek_phonology"},
+      {"author": "atticgreek.org et al.", "title": "Attic Pronunciation Guide (Allen-based)", "year": "n/a", "url": "http://atticgreek.org/pronunc/pronunc_guide.html"}
+    ]
+  }
+}

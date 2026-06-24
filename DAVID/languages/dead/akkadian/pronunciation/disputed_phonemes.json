@@ -1,0 +1,28 @@
+{
+  "language": "akkadian",
+  "ingested_from": "research_ops/outputs/R4_ancient_raw.json",
+  "ingested_at": "2026-06-23",
+  "disputed_phonemes": [
+    {
+      "phoneme": "emphatic series (ṭ q ṣ)",
+      "alternatives": ["ejective [tʼ kʼ sʼ]", "pharyngealized [tˤ kˤ sˤ]", "glottalized + vowel backing"],
+      "confidence": "low",
+      "notes": "Geers' law and Semitic comparative evidence support emphatics; exact articulation conventional",
+      "queue_priority": "medium"
+    },
+    {
+      "phoneme": "Neo-Assyrian sibilants",
+      "alternatives": ["š → [ʃ] stable", "š merger with s", "dialectal fricative shifts"],
+      "confidence": "low",
+      "notes": "Later dialect shifts vs Standard Babylonian literary conservatism",
+      "queue_priority": "low"
+    },
+    {
+      "phoneme": "aleph/vowel in polyphonic signs",
+      "alternatives": ["full glottal stop [ʔ]", "vowel onset only", "zero in sandhi"],
+      "confidence": "low",
+      "notes": "Cuneiform CV signs mask vowel quality; bilinguals help but not exhaustive",
+      "queue_priority": "low"
+    }
+  ]
+}

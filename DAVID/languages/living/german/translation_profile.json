@@ -1,0 +1,31 @@
+{
+  "language": "german",
+  "status": "living",
+  "research_type": "translation_service",
+  "variant_notes": {
+    "latin_american": "",
+    "castilian": "",
+    "recommended_default": "standard_German"
+  },
+  "register_system": "Du informal vs Sie formal (business default); registers from colloquial to Hochdeutsch. Traps: wrong Sie/case.",
+  "translationese_traps": [
+    "Literal compounds/splits; genitive/passive; verb-final position; ASCII umlaut/ß ignore."
+  ],
+  "document_conventions": {
+    "legal": "Precise compounds; formal/EU.",
+    "business": "Sie; DD.MM.YYYY.",
+    "academic": "Structured/footnotes.",
+    "creative": "Flexible."
+  },
+  "return_to_original_risks": [
+    "Compound/case recreation fail; ß/umlaut loss; formality drop."
+  ],
+  "idiom_mapping_notes": "Functional ('auf die Nerven gehen'); literal compounds risky.",
+  "tutoring_pronunciation_hooks": [
+    "Umlauts shift vowels (ä~cat); sharp ß; final devoicing."
+  ],
+  "orthography_notes": "Umlauts äöü; ß (ẞ capital); all nouns capitalized.",
+  "professional_resources": [
+    "Duden; EU/Microsoft style; ATA; Goethe-Institut."
+  ]
+}

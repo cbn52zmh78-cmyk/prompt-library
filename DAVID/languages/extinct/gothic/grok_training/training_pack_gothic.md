@@ -80,6 +80,53 @@ Our Father, thou in heaven, hallowed be thy name
 
 **Notes:** Standard entry text for Gothic phonology and morphology training.
 
+## Pronunciation Guide `[reconstructed]`
+
+**Model:** Braune/Wright/Streitberg PGmc reconstruction — Wulfila orthography baseline.
+**Confidence:** high (core segments undisputed; minor nasal/quality variants)
+**Profile:** `languages/extinct/gothic/pronunciation/pronunciation_profile.json`
+
+### Canonical sample (Lord's Prayer opening)
+
+**Text:** Atta unsar þu in himinam, weihnai namo þein
+**IPA:** `/ˈatːa ˈunsar θuː in ˈhiminaːm ˈwiːhnai ˈnaːmoː θeiːn/`
+
+### Key phonemes
+
+- **þ = /θ/** dental fricative (not English th-as-stop)
+- **ƕ = /hʷ/ or [ʍ]** — distinct from plain /h/
+- **q = /kʷ/** labialized velar stop
+- **Long vowels phonemic** — sustain macron vowels; geminates held (e.g. atta /ˈatːa/)
+- **Intervocalic fricatives** β ð ɣ voiced (positional allophones)
+- **No silent letters** — Wulfila script maps 1:1 to phonemes
+
+### Script (captioning)
+
+Wulfila's 27-letter alphabet: Greek-uncial base plus runic/Latin additions for PGmc-only sounds. Direct grapheme-to-phoneme mapping — ideal for on-screen caption alignment.
+
+### Stress
+
+PGmc root-initial primary stress preserved (fixed); secondary stress on first element of compounds.
+
+### Grok Imagine audio guidance
+
+Dental θ/ð (not stops); intervocalic β/ɣ/x as fricatives; sustain long vowels; ƕ as [ʍ] or aspirated hw; Greek-like vowel qualities; slow deliberate pacing with geminates held; laryngeals as [x/h]; no English schwa reduction.
+
+### Tutoring hooks
+
+- Sole complete East Germanic corpus — Wulfila Bible (~350 AD)
+- Wulfila invented the Gothic alphabet for Bible translation
+- 'Atta' cognate to English 'dad'; no silent letters ever
+- Comparative goldmine: Gothic vs ON/OE for PGmc reconstruction
+- Earliest substantial literary Germanic text
+
+### Sources
+
+- Braune's Gothic Grammar (with Balg)
+- Joseph Wright, Gothic grammar
+- Wulfila Project (wulfila.be)
+- Streitberg, Lehmann (via Wikipedia phonology)
+
 ## Instructions for Grok
 
 1. Treat each block as primary evidence — do not invent unattested forms.

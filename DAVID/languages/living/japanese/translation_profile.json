@@ -1,0 +1,33 @@
+{
+  "language": "japanese",
+  "status": "living",
+  "research_type": "translation_service",
+  "script_system": {
+    "hiragana": "Grammar/native words (syllabary).",
+    "katakana": "Loans/emphasis/onomatopoeia.",
+    "kanji": "Core semantics (context-heavy).",
+    "romaji_note": "Hepburn tutoring aid only."
+  },
+  "register_system": "Keigo mandatory: sonkeigo (respect listener), kenjougo (humble self), teineigo (polite); hierarchy critical. Trap: inconsistent levels = offense.",
+  "keigo_notes": "Japanese honorific speech system — critical for document register; sonkeigo/kenjougo/teineigo encode social distance; essential in business/legal (wrong use disastrous).",
+  "translationese_traps": [
+    "Omitted subjects/particles; keigo flattening; Western directness."
+  ],
+  "document_conventions": {
+    "legal": "Ultra-formal keigo; hierarchical terms.",
+    "business": "Polite endings; meishi implies level.",
+    "academic": "Humble/precise.",
+    "creative": "Stylistic range."
+  },
+  "return_to_original_risks": [
+    "Keigo level mismatch; kanji nuance loss; politeness erasure on roundtrip."
+  ],
+  "idiom_mapping_notes": "Heavy functional (kanji compounds/cultural); nature/duty clusters; rare literal.",
+  "tutoring_pronunciation_hooks": [
+    "Mora-timed (not stress); pitch accent; r-flap (no l/r)."
+  ],
+  "orthography_notes": "",
+  "professional_resources": [
+    "JTF/business keigo guides; ATA; kanji dicts; Venuti cultural."
+  ]
+}

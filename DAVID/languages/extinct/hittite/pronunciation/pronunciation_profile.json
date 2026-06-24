@@ -1,0 +1,51 @@
+{
+  "language": "hittite",
+  "status": "extinct",
+  "research_type": "pronunciation",
+  "ingested_from": "research_ops/outputs/R3_extinct_raw.json",
+  "ingested_at": "2026-06-23",
+  "reconstruction_method": "Neo-Hittite cuneiform syllabic spelling + plene vowel writing (V/VV) + comparative Anatolian (Luwian/Palaic) + Akkadian loanword evidence + PIE laryngeal confirmation via ḫ",
+  "scholarly_consensus": "Melchert/Kimball standard: four vowels /a e i u/ with phonemic length; fortis/lenis (geminate vs single) stop contrast dominant over voicing; ḫ as uvular/velar fricative; no distinct voiced stops in standard model; cuneiform maps syllables reliably in Neo-Hittite orthography.",
+  "confidence_overview": "medium (high on consonant inventory, ḫ, and vowel length; medium on unstressed vowel qualities, exact fortis articulation, and stress placement)",
+  "laryngeal_notes": "Hittite ḫ (cuneiform ḫa/ḫi etc.) preserves PIE laryngeals *h2/*h3 as a guttural fricative [x~χ] (uvular to velar); colors adjacent vowels (e.g. *h2 → a-coloring); key empirical proof of the laryngeal theory unavailable in Greek, Latin, or Sanskrit.",
+  "phoneme_inventory": {
+    "vowels": ["/a e i u/ with phonemic length /aː eː iː uː/ (plene writing and comparative evidence); unstressed qualities partly inferred"],
+    "consonants": ["Stops: p pp t tt k kk (fortis/lenis); Fricatives: s š ḫ [x~χ]; Nasals: m n; Liquids: l r; Glides: y w; no distinct b d g in standard Melchert model"],
+    "laryngeals": ["ḫ = [x~χ] (PIE *h2/*h3 reflex); possible allophonic variation uvular vs velar"],
+    "disputed_phonemes": ["fortis/lenis vs older voiced/voiceless (Sturtevant)", "exact ḫ place of articulation", "š value [ʃ] vs [sʲ]", "stress position (initial vs penultimate)"],
+    "distinctive_features": "Fortis/lenis stop contrast; preserved laryngeals; vowel reduction in unstressed syllables; Indo-European's oldest attested branch"
+  },
+  "ipa_reconstructed": {
+    "sample_text": "namma antuhsas andan esdu (ritual formula: 'let mankind remain inside')",
+    "transcription": "[ˈnam.ma ˈan.tuːχ.saːs ˈan.dan ˈeːʃ.du]",
+    "confidence": "medium",
+    "confidence_note": "Consonants and ḫ secure; vowel qualities in antuhsas/esdu reconstructed from plene spellings; stress inferred from Anatolian comparative patterns",
+    "alternatives": "Sturtevant voiced/voiceless model; penultimate stress hypothesis; ḫ as [ħ] in older literature"
+  },
+  "stress_rules": "Likely initial or penultimate stress (Anatolian comparative evidence); exact pattern disputed — conservative default: stress first full syllable of content word",
+  "prosody": {
+    "rhythm": "Syllable-timed with fortis geminates lengthening syllables",
+    "pacing": "Formulaic ritual/legal diction; deliberate enunciation in cult texts",
+    "notes": "Cuneiform does not mark stress; pacing inferred from parallel Luwian and meter in hymns"
+  },
+  "grok_imagine_guidance": "Commit to: guttural ḫ as back-of-throat fricative (Scottish 'loch' / German 'Bach', not English h); fortis geminates held longer (pp/tt/kk); pure vowels a/e/i/u; no English voiced b/d/g defaults. Approximate: š as [ʃ]; long vowels from double VV spellings sustained ~1.5×. Avoid: treating ḫ as silent or as kh; Slavic-style soft consonants; Modern Turkish vowel harmony. Flag: ḫ has no English equivalent — describe as uvular scrape; geminate stops need audible hold.",
+  "tutoring_hooks": [
+    "Hittite is the OLDEST attested Indo-European language (~1650 BCE) — older than Greek or Sanskrit texts.",
+    "Hittite ḫ preserved PIE laryngeals that vanished everywhere else — proof of the laryngeal theory!",
+    "Cuneiform looks like bird tracks but spells syllables: ḫa = ḫ+a, not a logogram.",
+    "Fortis/lenis (double vs single consonants) matters more than voiced/voiceless in standard reconstruction.",
+    "The Hittite Laws open with a formula every student of ancient law recognizes — in a language dead 3,000 years."
+  ],
+  "sources": [
+    {"author": "H. Craig Melchert", "title": "Hittite Historical Phonology (in The Hittite Language)", "year": "2020", "url": "https://en.wikipedia.org/wiki/Hittite_phonology"},
+    {"author": "Sara E. Kimball", "title": "Hittite Historical Phonology", "year": "1999", "url": "https://referenceworks.brill.com/"},
+    {"author": "Alwin Kloekhorst", "title": "Etymological Dictionary of the Hittite Inherited Lexicon", "year": "2008", "url": "https://brill.com/"},
+    {"author": "Benjamin W. Fortson IV", "title": "Indo-European Language and Culture (2nd ed.)", "year": "2010", "url": "https://wiley.com/"}
+  ],
+  "disputed_fields": [
+    "fortis/lenis vs Sturtevant voiced/voiceless",
+    "exact ḫ articulation (uvular vs velar)",
+    "š realization",
+    "stress position"
+  ]
+}

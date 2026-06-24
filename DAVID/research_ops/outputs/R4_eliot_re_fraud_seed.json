@@ -1,0 +1,79 @@
+{
+  "pass": "R4",
+  "agent": "ELIOT",
+  "research_type": "dataset_seed",
+  "topic": "real_estate_fraud_schemes",
+  "scope": "deed_title_wire_rental — detect and investigate (not commit)",
+  "built": "2026-06-23",
+  "seed_pairs": [
+    {"id": "ELIOT-SEED-013", "category": "META", "scheme": "rental_listing_hijack", "source": "FTC"},
+    {"id": null, "category": "META", "scheme": "rental_investigation_checklist", "source": "FTC"},
+    {"id": "ELIOT-SEED-014", "category": "MORTGAGE_FRAUD", "scheme": "deed_transfer_mortgage_rescue", "source": "FTC"},
+    {"id": null, "category": "TITLE_DEED_FRAUD", "scheme": "state_ag_deed_theft_ring", "source": "STATE_AG"},
+    {"id": "ELIOT-SEED-015", "category": "TITLE_DEED_FRAUD", "scheme": "bec_real_estate_closing_wire", "source": "FBI"}
+  ],
+  "related_existing_seeds": [
+    {"id": "ELIOT-SEED-004", "scheme": "foreclosure_rescue_deed", "source": "COMPOSITE"},
+    {"id": "ELIOT-SEED-008", "scheme": "deed_fraud_title_theft", "source": "COMPOSITE"},
+    {"id": "ELIOT-SEED-011", "scheme": "bec_closing_wire_elder", "source": "IC3"}
+  ],
+  "sources": [
+    {
+      "agency": "FBI IC3",
+      "title": "2023 Internet Crime Report",
+      "url": "https://www.ic3.gov/AnnualReport/Reports/2023_IC3Report.pdf",
+      "reliability": "high",
+      "key_facts": [
+        "BEC: 21,489 complaints, $2.9B adjusted losses; real estate sector historically targeted",
+        "Real Estate crime type: 11,578 complaints, $145.2M losses (2023)",
+        "Stamford CT BEC closing case: $426K wire, $425K recovered via FFKC",
+        "Wire complainant guidance: contact bank immediately, file ic3.gov, verify changes out-of-band"
+      ]
+    },
+    {
+      "agency": "FTC",
+      "title": "Rental Listing Scams",
+      "url": "https://consumer.ftc.gov/articles/rental-listing-scams",
+      "reliability": "high",
+      "updated": "2025-12-09",
+      "key_facts": [
+        "Hijacked listings: scammers copy photos/descriptions, replace contact info",
+        "Phantom listings: below-market rent, unavailable landlord, pressure to pay quickly",
+        "Never wire/Zelle/crypto before viewing unit or signing lease",
+        "Investigate: address+owner search, reverse image search, in-person verification",
+        "Report: local LE, listing platform, ReportFraud.ftc.gov"
+      ]
+    },
+    {
+      "agency": "FTC",
+      "title": "Mortgage Relief Scams",
+      "url": "https://consumer.ftc.gov/articles/mortgage-relief-scams",
+      "reliability": "high",
+      "key_facts": [
+        "MARS Rule: illegal to charge upfront before written lender offer accepted",
+        "Deed transfer schemes: scammers pressure homeowners to transfer deed with rent-back promise",
+        "Upfront fee + deed transfer + no lender contact = documented rescue fraud pattern"
+      ]
+    },
+    {
+      "agency": "STATE_AG",
+      "title": "Deed theft / home equity theft enforcement frameworks",
+      "url": "https://ag.ny.gov/press-releases",
+      "reliability": "medium",
+      "key_facts": [
+        "NY RPL §265-a: deed theft criminalization",
+        "CA Civil Code §§2945.4–2945.9: Home Equity Theft Prevention Act",
+        "PA 18 Pa.C.S. §3922.1: elder financial exploitation",
+        "Multi-victim ring indicators: shared registered agent, pattern notary, paid-off targeting"
+      ]
+    }
+  ],
+  "typology_coverage": {
+    "deed_title": ["ELIOT-SEED-008", "ELIOT-SEED-014", "state_ag_deed_theft_ring"],
+    "wire_closing": ["ELIOT-SEED-011", "ELIOT-SEED-015"],
+    "rental": ["ELIOT-SEED-013", "rental_investigation_checklist"],
+    "mortgage_rescue": ["ELIOT-SEED-004", "ELIOT-SEED-014"]
+  },
+  "output_target": "DAVID/training/eliot_dataset_v1.json",
+  "builder": "DAVID/training/eliot_dataset_builder.py"
+}

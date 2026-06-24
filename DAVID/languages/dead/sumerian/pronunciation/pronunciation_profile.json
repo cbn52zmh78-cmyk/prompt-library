@@ -1,0 +1,46 @@
+{
+  "language": "sumerian",
+  "status": "dead",
+  "research_type": "pronunciation",
+  "ingested_from": "research_ops/outputs/R4_ancient_raw.json",
+  "ingested_at": "2026-06-23",
+  "reconstruction_method": "Akkadian transcriptions + internal spelling + Emesal contrast (Jagersma/Thomsen)",
+  "scholarly_consensus": "Tentative and lowest certainty; many phonemes inferred/indirect.",
+  "emesal_notes": "Priestly/women's dialect: softer/different consonants/vowels; contrast reveals standard realizations via Akkadian lens.",
+  "phoneme_inventory": {
+    "vowels": ["a e i u (length/quality uncertain; harmony hints)"],
+    "consonants": ["p b t d g k; s š z; m n l r; ĝ (ng?/velar); ḫ"],
+    "disputed_phonemes": ["ĝ (nasal or stop?), r (tap/trill/affricate?), extra sibilants; no confirmed /f h/"],
+    "distinctive_features": "Ergative; heavy compounding/logograms; isolate with no relatives."
+  },
+  "ipa_reconstructed": {
+    "sample_text": "en-lil2 lugal kalam-ma",
+    "romanization": "enlil lugal kalam-ma",
+    "transcription": "/en.lil lu.ɡal ka.lam.ma/ (approximate)",
+    "confidence": "low",
+    "confidence_note": "Sumerian pronunciation is the least certain of any language in the DAVID registry — heavily inferred through Akkadian filter."
+  },
+  "stress_rules": "Likely final or unknown; compound-based.",
+  "prosody": {
+    "rhythm": "Syllabic/compounded",
+    "pacing": "Liturgical or narrative"
+  },
+  "grok_imagine_guidance": "Uncertain r/ĝ approximate as nasal/stop/tap; vowel harmony suggestions; heavy logographic compounding slow pacing; ergative endings; Akkadian-like sibilants for approximation.",
+  "tutoring_hooks": [
+    "World's oldest attested language (c. 3200 BCE cuneiform) — true isolate.",
+    "Emesal dialect provides clues through contrast with standard.",
+    "Logograms vs phonetic complements create complex script.",
+    "Akkadian scribes give us our main reconstruction window.",
+    "Liturgical influence survived language death in Babylonian religion."
+  ],
+  "sources": [
+    "Jagersma *Descriptive Grammar*; Thomsen; ETCSL; CDLI bilinguals."
+  ],
+  "disputed_fields": [
+    "ĝ realization (nasal vs velar stop)",
+    "r quality (tap vs trill vs affricate)",
+    "vowel length and harmony",
+    "stress placement",
+    "extra sibilant inventory"
+  ]
+}

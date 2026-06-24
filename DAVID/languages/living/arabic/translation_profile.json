@@ -1,0 +1,32 @@
+{
+  "language": "arabic",
+  "status": "living",
+  "research_type": "translation_service",
+  "variant_notes": {
+    "msa": "Modern Standard Arabic — for formal documents (written only).",
+    "regional_awareness": "Dialects spoken/marketing; target-specific."
+  },
+  "script_notes": "right-to-left, no short vowel marking in MSA, abjad system",
+  "register_system": "MSA high/formal written; diglossia major. Trap: dialect bleed or unnatural MSA.",
+  "diglossia_note": "the gulf between written MSA and spoken dialects — critical for document work; MSA mandatory formal, dialects for natural spoken adaptation.",
+  "translationese_traps": [
+    "Vowel/ diacritic issues; long sentences; Sharia term mismatch; punctuation fluidity."
+  ],
+  "document_conventions": {
+    "legal": "Sharia influence; repetitive; formal MSA (no fixed punct).",
+    "business": "Polite; RTL format.",
+    "academic": "Classical lean.",
+    "creative": "MSA base, dialect optional."
+  },
+  "return_to_original_risks": [
+    "Vowel/di acritic corruption; diglossia shift; RTL issues; religious/secular term drift."
+  ],
+  "idiom_mapping_notes": "Functional for Quranic/cultural; avoid literal.",
+  "tutoring_pronunciation_hooks": [
+    "Pharyngeals (ʿayn/ghayn); emphatics; gutturals."
+  ],
+  "orthography_notes": "",
+  "professional_resources": [
+    "Al-Mu'jam; El-Farahaty legal Arabic; ATA; IATE."
+  ]
+}

@@ -1,0 +1,33 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : Monday, June 22, 2026 8:08:57 PM
+2026/06/22 20:08:57 ERROR 3 (0x00000003) Getting File System Type of Source D:\Oliver\
+The system cannot find the path specified.
+
+   Source = D:\Oliver\
+     Dest : C:\Users\NCG\Videos\Grok Projects\OLIVER_mirror\
+
+    Files : *.*
+	    
+  Options : *.* /S /E /COPYALL /XO /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+NOTE : Security may not be copied - Source might not support persistent ACLs.
+
+ERROR : You do not have the Manage Auditing user right.
+*****  You need this to copy auditing information (/COPY:U or /COPYALL).
+
+       Simple Usage :: ROBOCOPY source destination /MIR
+
+             source :: Source Directory (drive:\path or \\server\share\path).
+        destination :: Destination Dir  (drive:\path or \\server\share\path).
+               /MIR :: Mirror a complete directory tree.
+
+    For more usage information run ROBOCOPY /?
+
+                                                          
+****  /MIR can DELETE files as well as copy them !

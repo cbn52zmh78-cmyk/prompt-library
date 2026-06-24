@@ -1,6 +1,7 @@
 {
-  "version": "1.1",
-  "updated": "2026-06-19",
+  "version": "2.0",
+  "updated": "2026-06-23",
+  "total_languages": 28,
   "languages": [
     {
       "id": "etruscan",
@@ -14,7 +15,11 @@
       "corpus_size": "partial",
       "decipherment": "readable_script_unknown_language",
       "history_links": [],
-      "notes": "~13,000 inscriptions; grammar partly understood; no descendant speakers."
+      "notes": "~13,000 inscriptions; grammar partly understood; no descendant speakers.",
+      "ipa_coverage": "partial",
+      "phonology_status": "reconstructed_medium_confidence",
+      "pronunciation_profile": "languages/extinct/etruscan/pronunciation/pronunciation_profile.json",
+      "disputed_phonemes": "languages/extinct/etruscan/pronunciation/disputed_phonemes.json"
     },
     {
       "id": "gothic",
@@ -28,7 +33,10 @@
       "corpus_size": "small_but_complete_texts",
       "decipherment": "fully_read",
       "history_links": [],
-      "notes": "Codex Argenteus and Skeireins — primary training corpus for East Germanic."
+      "notes": "Codex Argenteus and Skeireins — primary training corpus for East Germanic.",
+      "ipa_coverage": "full",
+      "phonology_status": "reconstructed_high_confidence",
+      "pronunciation_profile": "languages/extinct/gothic/pronunciation/pronunciation_profile.json"
     },
     {
       "id": "linear-a",
@@ -56,7 +64,11 @@
       "corpus_size": "extensive",
       "decipherment": "fully_read",
       "history_links": [],
-      "notes": "Massive cuneiform corpus; agglutinative; key for Bronze Age Near East research."
+      "notes": "Massive cuneiform corpus; agglutinative; key for Bronze Age Near East research.",
+      "ipa_coverage": "partial",
+      "phonology_status": "reconstructed_low_confidence",
+      "pronunciation_profile": "languages/dead/sumerian/pronunciation/pronunciation_profile.json",
+      "disputed_phonemes": "languages/dead/sumerian/pronunciation/disputed_phonemes.json"
     },
     {
       "id": "proto-indo-european",
@@ -83,8 +95,14 @@
       "script": "Latin alphabet",
       "corpus_size": "extensive",
       "decipherment": "fully_read",
-      "history_links": ["julius-caesar", "marcus-aurelius"],
-      "notes": "Bridge to History figures; vast literary and inscriptional corpus."
+      "history_links": [
+        "julius-caesar",
+        "marcus-aurelius"
+      ],
+      "notes": "Bridge to History figures; vast literary and inscriptional corpus.",
+      "ipa_coverage": "full",
+      "phonology_status": "reconstructed_high_confidence",
+      "pronunciation_profile": "languages/dead/classical-latin/pronunciation/pronunciation_profile.json"
     },
     {
       "id": "classical-nahuatl",
@@ -97,7 +115,9 @@
       "script": "Latin alphabet (colonial manuscripts); pictographic codices",
       "corpus_size": "moderate",
       "decipherment": "fully_read",
-      "history_links": ["montezuma-ii"],
+      "history_links": [
+        "montezuma-ii"
+      ],
       "notes": "Florentine Codex, Cantares Mexicanos; critical for Aztec history renders."
     },
     {
@@ -112,7 +132,11 @@
       "corpus_size": "extensive",
       "decipherment": "fully_read",
       "history_links": [],
-      "notes": "Royal inscriptions, Amarna letters, Epic of Gilgamesh."
+      "notes": "Royal inscriptions, Amarna letters, Epic of Gilgamesh.",
+      "ipa_coverage": "partial",
+      "phonology_status": "reconstructed_medium_confidence",
+      "pronunciation_profile": "languages/dead/akkadian/pronunciation/pronunciation_profile.json",
+      "disputed_phonemes": "languages/dead/akkadian/pronunciation/disputed_phonemes.json"
     },
     {
       "id": "old-english",
@@ -126,7 +150,10 @@
       "corpus_size": "moderate",
       "decipherment": "fully_read",
       "history_links": [],
-      "notes": "Beowulf, Anglo-Saxon Chronicle; ancestor of Modern English."
+      "notes": "Beowulf, Anglo-Saxon Chronicle; ancestor of Modern English.",
+      "ipa_coverage": "full",
+      "phonology_status": "reconstructed_high_confidence",
+      "pronunciation_profile": "languages/extinct/old-english/pronunciation/pronunciation_profile.json"
     },
     {
       "id": "classical-japanese",
@@ -139,7 +166,9 @@
       "script": "Man'yōgana, kana, kanji",
       "corpus_size": "extensive",
       "decipherment": "fully_read",
-      "history_links": ["murasaki-shikibu"],
+      "history_links": [
+        "murasaki-shikibu"
+      ],
       "notes": "The Tale of Genji, Man'yōshū; essential for Murasaki Shikibu History work."
     },
     {
@@ -154,7 +183,10 @@
       "corpus_size": "extensive",
       "decipherment": "fully_read",
       "history_links": [],
-      "notes": "Homer, Plato, New Testament Koine; foundational for Western philology and PIE reconstruction."
+      "notes": "Homer, Plato, New Testament Koine; foundational for Western philology and PIE reconstruction.",
+      "ipa_coverage": "full",
+      "phonology_status": "reconstructed_high_confidence",
+      "pronunciation_profile": "languages/dead/ancient-greek/pronunciation/pronunciation_profile.json"
     },
     {
       "id": "old-norse",
@@ -168,7 +200,10 @@
       "corpus_size": "moderate",
       "decipherment": "fully_read",
       "history_links": [],
-      "notes": "Eddas, sagas, runic inscriptions; ancestor of Icelandic, Norwegian, Swedish, Danish."
+      "notes": "Eddas, sagas, runic inscriptions; ancestor of Icelandic, Norwegian, Swedish, Danish.",
+      "ipa_coverage": "full",
+      "phonology_status": "reconstructed_high_confidence",
+      "pronunciation_profile": "languages/extinct/old-norse/pronunciation/pronunciation_profile.json"
     },
     {
       "id": "hittite",
@@ -182,7 +217,11 @@
       "corpus_size": "extensive",
       "decipherment": "fully_read",
       "history_links": [],
-      "notes": "Earliest attested Indo-European language; Hittite Laws, royal annals, religious texts."
+      "notes": "Earliest attested Indo-European language; Hittite Laws, royal annals, religious texts.",
+      "ipa_coverage": "partial",
+      "phonology_status": "reconstructed_medium_confidence",
+      "pronunciation_profile": "languages/extinct/hittite/pronunciation/pronunciation_profile.json",
+      "disputed_phonemes": "languages/extinct/hittite/pronunciation/disputed_phonemes.json"
     },
     {
       "id": "classical-sanskrit",
@@ -196,7 +235,10 @@
       "corpus_size": "extensive",
       "decipherment": "fully_read",
       "history_links": [],
-      "notes": "Vedas, Mahabharata, Paninian grammar; key daughter-language anchor for PIE studies."
+      "notes": "Most precisely documented ancient phonology of any language; Shiksha texts are ancient native phonetics treatises.",
+      "ipa_coverage": "full",
+      "phonology_status": "reconstructed_very_high_confidence",
+      "pronunciation_profile": "languages/dead/classical-sanskrit/pronunciation/pronunciation_profile.json"
     },
     {
       "id": "biblical-hebrew",
@@ -204,13 +246,17 @@
       "slug": "biblical-hebrew",
       "status": "dead",
       "revival_tier": "high",
-      "family": "Semitic > Afro-Asiatic",
-      "period": "c. 10th–2nd century BCE (biblical corpus)",
-      "script": "Hebrew alphabet",
+      "family": "Semitic > Afroasiatic",
+      "period": "c. 1200–400 BCE (biblical corpus); liturgical continuity to present",
+      "script": "Abjad (Hebrew alphabet); cantillation marks in Tiberian tradition",
       "corpus_size": "moderate",
       "decipherment": "fully_read",
       "history_links": [],
-      "notes": "Hebrew Bible, Dead Sea Scrolls; distinct from Modern Hebrew revival."
+      "notes": "Multiple pronunciation traditions: Tiberian, Babylonian, Palestinian, Samaritan. Tiberian is standard scholarly reference.",
+      "ipa_coverage": "full",
+      "phonology_status": "reconstructed_high_confidence",
+      "pronunciation_profile": "languages/dead/biblical-hebrew/pronunciation/pronunciation_profile.json",
+      "cantillation_notes": true
     },
     {
       "id": "middle-egyptian",
@@ -218,13 +264,17 @@
       "slug": "middle-egyptian",
       "status": "extinct",
       "revival_tier": "high",
-      "family": "Afro-Asiatic > Egyptian",
-      "period": "c. 2000–1300 BCE (classical phase)",
-      "script": "Hieroglyphs, hieratic, demotic",
+      "family": "Egyptian > Afroasiatic",
+      "period": "c. 2100–1300 BCE (classical literary period)",
+      "script": "Hieroglyphic; also hieratic",
       "corpus_size": "extensive",
       "decipherment": "fully_read",
       "history_links": [],
-      "notes": "Pyramid Texts, Book of the Dead, Amarna letters; classical literary stage of Egyptian."
+      "notes": "Writing omits vowels; reconstruction via Coptic phonological survival and comparative Afroasiatic. Vowels are medium-low confidence.",
+      "ipa_coverage": "partial",
+      "phonology_status": "reconstructed_medium_confidence",
+      "pronunciation_profile": "languages/extinct/middle-egyptian/pronunciation/pronunciation_profile.json",
+      "disputed_phonemes": "languages/extinct/middle-egyptian/pronunciation/disputed_phonemes.json"
     },
     {
       "id": "old-church-slavonic",
@@ -232,13 +282,16 @@
       "slug": "old-church-slavonic",
       "status": "dead",
       "revival_tier": "medium",
-      "family": "South Slavic > Indo-European",
-      "period": "c. 9th–11th century CE",
-      "script": "Glagolitic and Cyrillic",
+      "family": "Slavic > Indo-European",
+      "period": "c. 9th–11th century CE; liturgical continuity in Eastern Orthodox tradition",
+      "script": "Glagolitic (original); Cyrillic (later transmission)",
       "corpus_size": "moderate",
       "decipherment": "fully_read",
       "history_links": [],
-      "notes": "Cyril and Methodius liturgical corpus; bridge to East Slavic and Balkan philology."
+      "notes": "Oldest attested Slavic language. Still used liturgically in Eastern Orthodox churches.",
+      "ipa_coverage": "partial",
+      "phonology_status": "reconstructed_medium_confidence",
+      "pronunciation_profile": null
     },
     {
       "id": "coptic",
@@ -246,13 +299,156 @@
       "slug": "coptic",
       "status": "liturgical",
       "revival_tier": "living_liturgical",
-      "family": "Afro-Asiatic > Egyptian",
-      "period": "c. 2nd century CE - present (liturgical)",
-      "script": "Coptic alphabet (Greek + 7 Demotic-derived letters)",
+      "family": "Egyptian > Afroasiatic",
+      "period": "c. 3rd century CE – present (liturgical use in Coptic Orthodox Church)",
+      "script": "Coptic alphabet (Greek-derived + Demotic letters)",
       "corpus_size": "extensive",
       "decipherment": "fully_read",
       "history_links": [],
-      "notes": "Final stage of Egyptian; Bohairic dialect active in Coptic Orthodox liturgy. Key to Champollion's 1822 hieroglyphic decipherment via vowel anchor. Nag Hammadi Library (Sahidic). Pairs with Middle Egyptian (ep 10) as vowel-revelation counterpart."
+      "notes": "Final stage of the ancient Egyptian language. Critical source for Middle Egyptian vowel reconstruction. Still used in Coptic Orthodox liturgy.",
+      "ipa_coverage": "partial",
+      "phonology_status": "reconstructed_medium_confidence",
+      "pronunciation_profile": null
+    },
+    {
+      "id": "anglo-norman",
+      "name": "Anglo-Norman",
+      "slug": "anglo-norman",
+      "status": "extinct",
+      "revival_tier": "medium",
+      "family": "Romance > Oïl > Old French",
+      "period": "c. 1066–c. 1500 CE",
+      "script": "Latin alphabet (Anglo-Norman orthography)",
+      "corpus_size": "moderate",
+      "decipherment": "fully_read",
+      "history_links": [
+        "richard-i",
+        "eleanor-of-aquitaine",
+        "marie-de-france"
+      ],
+      "notes": "The prestige language of post-Conquest England; court, law, and literary register. Dialect of Old French shaped by English contact. Direct ancestral language.",
+      "personal_significance": "direct_ancestral_language",
+      "ipa_coverage": "partial",
+      "phonology_status": "reconstructed_medium_confidence",
+      "corpus_path": "languages/extinct/anglo-norman/corpus/known_texts.json",
+      "profile_path": "languages/extinct/anglo-norman/profile.json",
+      "training_readiness": "good"
+    },
+    {
+      "id": "tudor-english",
+      "name": "Tudor English (Early Modern English)",
+      "slug": "tudor-english",
+      "status": "extinct",
+      "revival_tier": "high",
+      "family": "West Germanic > Anglo-Saxon continuum",
+      "period": "c. 1485–1603 CE",
+      "script": "Latin alphabet (Early Modern English orthography)",
+      "corpus_size": "moderate",
+      "decipherment": "fully_read",
+      "history_links": [
+        "elizabeth-i"
+      ],
+      "notes": "The English of the Tudor court, Shakespeare, and the Elizabethan age. Phonologically distinct from Modern English — Great Vowel Shift still in transition. Direct ancestral language.",
+      "personal_significance": "direct_ancestral_language",
+      "ipa_coverage": "partial",
+      "phonology_status": "reconstructed_high_confidence",
+      "corpus_path": "languages/extinct/tudor-english/corpus/known_texts.json",
+      "profile_path": "languages/extinct/tudor-english/profile.json",
+      "training_readiness": "excellent"
+    },
+    {
+      "id": "spanish",
+      "name": "Spanish",
+      "slug": "spanish",
+      "status": "living",
+      "revival_tier": "active",
+      "family": "Romance > Ibero-Romance",
+      "research_type": "translation_service",
+      "translation_profile": "languages/living/spanish/translation_profile.json",
+      "tutoring_path": "languages/living/spanish/tutoring/lesson_plan.md"
+    },
+    {
+      "id": "french",
+      "name": "French",
+      "slug": "french",
+      "status": "living",
+      "revival_tier": "active",
+      "family": "Romance > Oïl",
+      "research_type": "translation_service",
+      "translation_profile": "languages/living/french/translation_profile.json",
+      "tutoring_path": "languages/living/french/tutoring/lesson_plan.md"
+    },
+    {
+      "id": "italian",
+      "name": "Italian",
+      "slug": "italian",
+      "status": "living",
+      "revival_tier": "active",
+      "family": "Romance > Italo-Dalmatian",
+      "research_type": "translation_service",
+      "translation_profile": "languages/living/italian/translation_profile.json",
+      "tutoring_path": "languages/living/italian/tutoring/lesson_plan.md"
+    },
+    {
+      "id": "german",
+      "name": "German",
+      "slug": "german",
+      "status": "living",
+      "revival_tier": "active",
+      "family": "West Germanic > High German",
+      "research_type": "translation_service",
+      "translation_profile": "languages/living/german/translation_profile.json",
+      "tutoring_path": "languages/living/german/tutoring/lesson_plan.md"
+    },
+    {
+      "id": "japanese",
+      "name": "Japanese",
+      "slug": "japanese",
+      "status": "living",
+      "revival_tier": "active",
+      "family": "Japonic (isolate)",
+      "research_type": "translation_service",
+      "series_flags": [
+        "keigo_system"
+      ],
+      "translation_profile": "languages/living/japanese/translation_profile.json",
+      "tutoring_path": "languages/living/japanese/tutoring/lesson_plan.md"
+    },
+    {
+      "id": "mandarin",
+      "name": "Mandarin Chinese",
+      "slug": "mandarin",
+      "status": "living",
+      "revival_tier": "active",
+      "family": "Sino-Tibetan > Sinitic",
+      "research_type": "translation_service",
+      "translation_profile": "languages/living/mandarin/translation_profile.json",
+      "tutoring_path": "languages/living/mandarin/tutoring/lesson_plan.md"
+    },
+    {
+      "id": "arabic",
+      "name": "Arabic (Modern Standard)",
+      "slug": "arabic",
+      "status": "living",
+      "revival_tier": "active",
+      "family": "Semitic > Afroasiatic",
+      "research_type": "translation_service",
+      "series_flags": [
+        "diglossia_msa_vs_dialect"
+      ],
+      "translation_profile": "languages/living/arabic/translation_profile.json",
+      "tutoring_path": "languages/living/arabic/tutoring/lesson_plan.md"
+    },
+    {
+      "id": "portuguese",
+      "name": "Portuguese",
+      "slug": "portuguese",
+      "status": "living",
+      "revival_tier": "active",
+      "family": "Romance > Ibero-Romance",
+      "research_type": "translation_service",
+      "translation_profile": "languages/living/portuguese/translation_profile.json",
+      "tutoring_path": "languages/living/portuguese/tutoring/lesson_plan.md"
     }
   ]
 }

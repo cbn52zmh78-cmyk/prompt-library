@@ -1,0 +1,31 @@
+{
+  "language": "portuguese",
+  "status": "living",
+  "research_type": "translation_service",
+  "variant_notes": {
+    "brazilian": "Softer/nasal; informal/warmer; broad default.",
+    "european": "Guttural/closed vowels; formal; tu/você diffs.",
+    "recommended_default": "brazilian_for_business/marketing_european_for_legal"
+  },
+  "register_system": "Você/tu (BR warmer); formal varies. Trap: variant mixing.",
+  "translationese_traps": [
+    "Pronoun position (enclitic/proclitic); vocab mix; literal idioms."
+  ],
+  "document_conventions": {
+    "legal": "Formal/variant-specific.",
+    "business": "BR direct.",
+    "academic": "Structured.",
+    "creative": "Vibrant/regional."
+  },
+  "return_to_original_risks": [
+    "Variant inconsistency; pronoun/accent shift; idiom loss."
+  ],
+  "idiom_mapping_notes": "Functional; adapt regional (some ENG-shared); cultural substitution.",
+  "tutoring_pronunciation_hooks": [
+    "BR open vowels/nasals; EU reduced/guttural; tilde nasal."
+  ],
+  "orthography_notes": "Ç/accents; post-reform minor diffs.",
+  "professional_resources": [
+    "Academia das Ciências (PT); ABL (BR); ATA; Priberam/Casa da Língua."
+  ]
+}

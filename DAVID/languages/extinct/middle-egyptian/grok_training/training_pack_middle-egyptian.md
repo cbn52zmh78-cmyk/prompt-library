@@ -80,6 +80,55 @@ Life, prosperity, health
 
 **Notes:** DAVID Post 6 hook line. Hieroglyphic attestation secure; Egyptological vowel insertions are reconstructed.
 
+## Pronunciation Guide `[reconstructed]`
+
+**Model:** Loprieno/Allen/Peust — Coptic-reflex vocalization over consonantal skeleton.
+**Confidence:** medium-low (high–medium consonants; low vowel timbre)
+**Profile:** `languages/extinct/middle-egyptian/pronunciation/pronunciation_profile.json`
+
+### Canonical sample (Ra formula)
+
+**Text:** m rn.f n ra
+**IPA:** `[mə ˈran.nəf ʔan ˈraʕ]`
+
+### Key phonemes
+
+- **Hieroglyphs = consonants only** — all vowels are scholarly insertions `[reconstructed]`
+- **Ejectives** pʼ/tʼ/kʼ with glottal pop (Afroasiatic, not European)
+- **ꜥ (ayin)** = pharyngeal [ʕ] (Arabic ع) — not silent
+- **ꜣ (aleph)** = glottal stop [ʔ]
+- **Epenthetic schwa** [ə] in unstressed positions (Egyptological convention)
+
+### Grok Imagine audio guidance
+
+Ejectives with glottal pop; pharyngeal ꜥ as deep throat constriction; emphatics heavier than plain stops. Insert epenthetic schwas; pure a/i/u without English diphthongs. Tag all vowels as reconstructed on screen. Reference Arabic/Ge'ez for ꜥ and ejectives.
+
+### Tutoring hooks
+
+- Hieroglyphs spell consonants only — vowels guessed from Coptic
+- ꜥ is a deep throat sound, not a vowel
+- Coptic = latest Egyptian with written vowels
+- Ejectives rare in European languages, core to Egyptian
+- ꜥnḫ wḏꜣ snb formula ubiquitous in tomb art
+
+### Sources
+
+- Antonio Loprieno, *Ancient Egyptian: A Linguistic Introduction*
+- James P. Allen, *Middle Egyptian* (3rd ed.)
+- Carsten Peust, *Egyptian Phonology*
+
+## Reconstruction Notes
+
+**Method:** Coptic phonological survival + Afroasiatic comparative + Greek/Assyrian name transcriptions + hieroglyphic consonantal skeleton.
+
+**High confidence:** Ejectives, pharyngeals (ꜥ/ḥ), emphatics, glottal (ꜣ), consonant inventory.
+
+**Low confidence:** All vowel qualities, stress placement, dialect variation, r articulation, j/w vocalic status.
+
+**Vowel note:** Egyptologists insert epenthetic e/a by convention — these never appear in original script. Every vocalized form must carry `[reconstructed]` tag in revival drafts.
+
+**Disputed phonemes file:** `languages/extinct/middle-egyptian/pronunciation/disputed_phonemes.json`
+
 ## Instructions for Grok
 
 1. Treat each block as primary evidence — do not invent unattested forms.

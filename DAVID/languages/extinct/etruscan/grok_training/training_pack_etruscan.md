@@ -94,6 +94,55 @@ This temple and this sanctuary ... (partial; bilingual context from Phoenician s
 
 **Notes:** Longest continuous Etruscan text; priority for full line-by-line training pack.
 
+## Pronunciation Guide `[reconstructed]`
+
+**Model:** Bonfante/Rix/Wallace standard — Greek-adapted alphabet, no voiced stops.
+**Confidence:** medium (high consonants/alphabet; medium-low vowels/prosody)
+**Profile:** `languages/extinct/etruscan/pronunciation/pronunciation_profile.json`
+
+### Canonical sample (dedicatory formula)
+
+**Text:** mi mulu larisal
+**IPA:** `[mi ˈmu.lu laˈris.al]`
+
+### Key phonemes
+
+- **No voiced stops** — b/d/g absent; use p/t/k only
+- **ph/th/kh** = aspirated stops with audible puff (not fricatives)
+- **Four vowels** /a e i u/ — no forced Italian o-vowel
+- **ś** approximated as [s] or [ʃ] (disputed)
+- **Initial stress** → syncope and consonant clusters in later forms
+
+### Grok Imagine audio guidance
+
+Aspirated puffs on ph/th/kh; pure vowels; no voiced stops; initial stress. Approximate clusters and syllabic liquids; avoid Italianate voicing. Crisp/neutral timbre where vowel quality uncertain.
+
+### Tutoring hooks
+
+- Etruscan had NO voiced stops — unique among neighbors
+- Greek alphabet adapted with unique F-symbol
+- Initial stress caused vowel syncope → wild clusters
+- Phonetics better attested than meanings (isolate)
+- Possible Tuscan aspiration influence
+
+### Sources
+
+- Bonfante & Bonfante, *The Etruscan Language* (2nd ed., 2002)
+- Helmut Rix, *Etruskische Texte*
+- Rex E. Wallace, *Zikh Rasna*
+
+## Reconstruction Notes
+
+**Method:** Greek-derived alphabet + Latin/Greek bilingual transcriptions + internal spelling/syncope patterns.
+
+**High confidence:** Consonant inventory, aspirate/tenuis contrast, absence of voiced stops, alphabet-to-sound mapping.
+
+**Low confidence:** Vowel length/quality, exact ś value, syllabic sonorant extent, prosodic rhythm.
+
+**Disputed phonemes file:** `languages/extinct/etruscan/pronunciation/disputed_phonemes.json`
+
+**Series flag:** `notable_absences` (no b/d/g) — high-value tutoring hook for content planning.
+
 ## Instructions for Grok
 
 1. Treat each block as primary evidence — do not invent unattested forms.

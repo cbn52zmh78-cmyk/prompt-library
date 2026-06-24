@@ -1,0 +1,48 @@
+{
+  "language": "classical-latin",
+  "status": "dead",
+  "research_type": "pronunciation",
+  "ingested_from": "research_ops/outputs/R1_latin_greek_raw.json",
+  "ingested_at": "2026-06-23",
+  "scholarly_consensus": "High-confidence reconstruction (Allen Vox Latina standard, supported by grammarians like Quintilian/Cicero, poetic metrics, inscriptions, Romance descendants; minor updates via Calabrese for vowel qualities).",
+  "pronunciation_variants": {
+    "classical": "Golden Age (1st c. BCE): phonemic vowel length, V=/w/, C/G always hard /k g/, aspirates in loans, dynamic stress, trilled R, final M nasalizes/elides",
+    "ecclesiastical": "Italianate Church: V=[v], soft C/G before e/i ([tʃ dʒ]), AE=[ɛ], no quantity distinction, stress often marked, full final consonants"
+  },
+  "phoneme_inventory": {
+    "vowels": ["Short: /a [ä]/, /e [ɛ]/, /i [ɪ]/, /o [ɔ]/, /u [ʊ]/; Long: /aː [äː]/, /eː [eː]/, /iː [iː]/, /oː [oː]/, /uː [uː]/ (+ /y yː/ loans). Quality: shorts more open (Allen); Calabrese debate favors quantity-over-quality for some shorts."],
+    "consonants": ["Stops: /p t k b d g/ (+ labialized /kʷ gʷ/ for qu/gu; aspirated variants [pʰ etc.] in Greek loans); Fricatives: /f s h/; Nasals /m n/ (final m → nasalization); Liquids /r [r trill]/ /l (clear/dark)/; Approximants /j w/ (V=U-cons as /w/)."],
+    "quantity_system": "Phonemic long/short vowels + geminates critical for syllable weight/meter (heavy = long vowel/diphthong or cons.-closed).",
+    "distinctive_features": "No soft c/g; V bilabial approximant; educated h pronounced; r always vibrant."
+  },
+  "ipa_reconstructed": {
+    "sample_text": "Arma virumque cano, Troiae qui primus ab oris",
+    "transcription": "[ˈar.ma wɪˈrũː.kʷɛ ˈkaː.noː ˈtroː.jaj kʷiː ˈpriː.mʊs ab ˈoː.riːs]",
+    "confidence": "high (90% core; 75% exact vowel timbre/nasalization)",
+    "confidence_note": "Strongly attested via metrics/grammarians; minor disputes on short high vowel openness & aspiration degree."
+  },
+  "stress_rules": "Penultimate law: heavy penult (long vowel/diphthong or cons.-closed) stressed; otherwise antepenult (e.g., caˈno vs ˈvirumque).",
+  "prosody": {
+    "rhythm": "Quantitative (syllable weight) for dactylic hexameter; elision common.",
+    "pitch": "Primarily stress (intensity); earlier pitch elements possible but not dominant.",
+    "pacing": "Long vowels ~1.5–2× short duration; quantitative meter pacing.",
+    "meter_note": "Dactylic hexameter dominant in epic (Aeneid)."
+  },
+  "grok_imagine_guidance": "Key: bilabial /w/ (lips rounded, not teeth-on-lip v); trilled/rolled R; hold long vowels distinctly (sustained for meter); mild puff on aspirates (ph/th/ch loans); nasalize vowel before final -m (arma ~[ar.mã]); crisp shorts vs. sustained longs; lip rounding for u/o/w; avoid English reductions/schwas; breath groups by phrase for natural flow.",
+  "tutoring_hooks": [
+    "Latin V = /w/ ('weni widi wiki' for Caesar) — not modern v!",
+    "C/G always hard /k g/ ('Kikero' for Cicero) — no soft sounds.",
+    "Vowel length is phonemic & changes meter/meaning (liber 'book' vs. līber 'free').",
+    "Final M often nasalizes/elides (poetic flow secret).",
+    "Qu = single /kʷ/ sound like 'quick'."
+  ],
+  "sources": [
+    {"author": "W. Sidney Allen", "title": "Vox Latina (2nd ed.)", "year": "1978", "url": "https://archive.org/details/voxlatinaguideto0000alle_g6w2"},
+    {"author": "Various (citing Allen)", "title": "Latin phonology and orthography", "year": "n/a", "url": "https://en.wikipedia.org/wiki/Latin_phonology_and_orthography"},
+    {"author": "polýMATHY / foundinantiquity", "title": "Complete Classical Latin Pronunciation Guide", "year": "2021", "url": "https://foundinantiquity.com/2021/07/25/a-complete-guide-to-classical-latin-pronunciation-the-sounds-of-golden-age-latin/"}
+  ],
+  "disputed_fields": [
+    "short high vowel openness (Allen vs Calabrese)",
+    "aspiration degree in Greek loanwords"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "language": "middle-egyptian",
+  "ingested_from": "research_ops/outputs/R3_extinct_raw.json",
+  "ingested_at": "2026-06-23",
+  "disputed_phonemes": [
+    {
+      "phoneme": "vowels (all)",
+      "alternatives": ["/a i u/ system", "additional /e o/", "dialect-specific timbres"],
+      "confidence": "low",
+      "notes": "Hieroglyphs omit vowels; all vocalization Egyptological convention from Coptic/AA",
+      "queue_priority": "high"
+    },
+    {
+      "phoneme": "stressed vowel quality",
+      "alternatives": ["open [a]", "central [ə]", "dialect-long [aː]"],
+      "confidence": "low",
+      "notes": "Nile Valley dialect variation poorly attested for Middle Egyptian period",
+      "queue_priority": "high"
+    },
+    {
+      "phoneme": "d (emphatic)",
+      "alternatives": ["[dˤ] emphatic", "[tʼ] ejective", "[ð] fricative (older)"],
+      "confidence": "low",
+      "notes": "Cuneiform ṭ transcriptions suggest emphatic but exact value debated",
+      "queue_priority": "medium"
+    },
+    {
+      "phoneme": "r",
+      "alternatives": ["[ɾ] flap", "[r] trill", "[ʀ] uvular (unlikely)"],
+      "confidence": "low",
+      "notes": "Coptic and transcription evidence mixed",
+      "queue_priority": "low"
+    },
+    {
+      "phoneme": "j / w",
+      "alternatives": ["consonantal [j w]", "vocalic allophones [i u]"],
+      "confidence": "low",
+      "notes": "Syllable-structure dependent; Egyptological vocalization varies by scholar",
+      "queue_priority": "low"
+    }
+  ]
+}

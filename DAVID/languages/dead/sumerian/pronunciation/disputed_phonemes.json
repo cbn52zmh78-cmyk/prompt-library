@@ -1,0 +1,49 @@
+{
+  "language": "sumerian",
+  "ingested_from": "research_ops/outputs/R4_ancient_raw.json",
+  "ingested_at": "2026-06-23",
+  "disputed_phonemes": [
+    {
+      "phoneme": "ĝ",
+      "alternatives": ["[ŋ] velar nasal", "[ɡ] velar stop", "[ŋɡ] prenasalized"],
+      "confidence": "low",
+      "notes": "Akkadian transcriptions ambiguous; no living relatives to confirm",
+      "queue_priority": "high"
+    },
+    {
+      "phoneme": "r",
+      "alternatives": ["[ɾ] tap", "[r] trill", "[ʀ] uvular", "affricate in some positions"],
+      "confidence": "low",
+      "notes": "Emesal contrast hints at variation; cuneiform does not distinguish",
+      "queue_priority": "high"
+    },
+    {
+      "phoneme": "vowel length/quality",
+      "alternatives": ["no phonemic length", "length contrast in open syllables", "vowel harmony across morphemes"],
+      "confidence": "low",
+      "notes": "Internal spelling and Akkadian loan renderings give conflicting signals",
+      "queue_priority": "medium"
+    },
+    {
+      "phoneme": "ḫ",
+      "alternatives": ["[x] velar fricative", "[χ] uvular fricative", "[ħ] pharyngeal"],
+      "confidence": "low",
+      "notes": "Borrowed into Akkadian as ḫ; exact place of articulation inferred",
+      "queue_priority": "medium"
+    },
+    {
+      "phoneme": "sibilant inventory",
+      "alternatives": ["s š z only", "additional palatal/retroflex series", "merger in late period"],
+      "confidence": "low",
+      "notes": "Logographic spellings mask phonetic detail; Emesal may preserve archaisms",
+      "queue_priority": "medium"
+    },
+    {
+      "phoneme": "stress",
+      "alternatives": ["final stress", "initial stress", "compound-internal stress only"],
+      "confidence": "low",
+      "notes": "No direct attestation; inferred from compounding and Akkadian scribe habits",
+      "queue_priority": "medium"
+    }
+  ]
+}

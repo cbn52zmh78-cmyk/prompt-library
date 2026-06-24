@@ -1,0 +1,50 @@
+{
+  "language": "middle-egyptian",
+  "status": "extinct",
+  "research_type": "pronunciation",
+  "ingested_from": "research_ops/outputs/R3_extinct_raw.json",
+  "ingested_at": "2026-06-23",
+  "reconstruction_method": "Coptic phonological survival + comparative Afroasiatic (Semitic/Berber) + Greek/Neo-Assyrian transcriptions of Egyptian proper names + internal consonantal skeleton of hieroglyphs",
+  "scholarly_consensus": "Consonants relatively secure: ejectives (pʼ tʼ kʼ), pharyngeals (ꜥ/ḥ), emphatics, and glottal (ꜣ); vowels reconstructed as /a i u/ with length contrast, heavy dialectal variation; unstressed reduction to schwa-like [ə] common in Egyptological convention.",
+  "confidence_overview": "medium-low overall (high–medium on consonants and ejectives/pharyngeals; low on exact vowel timbre, stress, and dialect splits)",
+  "vowel_reconstruction_note": "Hieroglyphs record a consonantal skeleton only — vowels from Coptic reflexes + transcriptions/AA cognates (high uncertainty on exact quality/timbre/dialects; schwa-like unstressed common). Egyptologists insert epenthetic vowels (e, a) by convention; these are not written in originals.",
+  "phoneme_inventory": {
+    "vowels": ["/a i u/ with length /aː iː uː/ (Coptic and transcription evidence); unstressed [ə] epenthetic; exact timbre disputed across Nile Valley dialects"],
+    "consonants": ["Stops: p t k (plain) + pʼ tʼ kʼ (ejectives); Fricatives: f s z ḫ [x] h; Pharyngeals: ꜥ [ʕ] ḥ [ħ]; Emphatics: d (cuneiform ṭ evidence); Nasals m n; Liquids r l; Glottal ꜣ [ʔ]"],
+    "ayin_aleph_distinction": "ꜥ (ayin) = voiced pharyngeal fricative [ʕ]; ꜣ (aleph/glottal) = glottal stop [ʔ] or vowel onset — distinct in Coptic reflexes and Semitic loan comparisons",
+    "disputed_phonemes": ["exact vowel qualities in stressed vs unstressed syllables", "d emphatic value [dˤ] vs [tʼ]", "r as flap [ɾ] vs trill", "j/y and w as consonants vs vowels"],
+    "distinctive_features": "Ejectives + pharyngeals; no written vowels; Afroasiatic consonant template; Coptic provides latest direct phonological witness"
+  },
+  "ipa_reconstructed": {
+    "sample_text": "m rn.f n ra (formula: 'in the name of Ra')",
+    "transcription": "[mə ˈran.nəf ʔan ˈraʕ]",
+    "confidence": "medium",
+    "confidence_note": "Consonants and pharyngeal ra (r+ꜥ) secure; vowel insertions Egyptological convention; stress on content words inferred from Coptic and comparative AA",
+    "alternatives": "Allen: [mə ɾan.nəf ən ˈɾaːʕa]; Loprieno dialect variants; vocalization of rn.f as [ɾan.nakʰ] in other contexts (suffix-dependent)"
+  },
+  "stress_rules": "Stress likely on penultimate or final content syllable (Coptic and Afroasiatic comparative evidence); exact Middle Egyptian dialect stress partly unknown",
+  "prosody": {
+    "rhythm": "Syllable-timed with epenthetic vowels breaking consonant clusters",
+    "pacing": "Formulaic religious/royal diction; deliberate pacing in ritual phrases",
+    "notes": "Hieroglyphic writing omits vowels entirely — audio generation must use reconstructed vocalization tags"
+  },
+  "grok_imagine_guidance": "Commit to: ejectives pʼ/tʼ/kʼ (sharp glottal pop after stop); pharyngeal ꜥ [ʕ] (deep throat constriction, Arabic ع); emphatic/velarized consonants heavier than plain; glottal stop ꜣ where marked. Approximate: epenthetic schwa [ə] in unstressed slots; pure a/i/u vowels without English diphthongs. Avoid: pronouncing hieroglyphs as consonant-only strings; English th for ḫ; treating ꜥ as silent. Flag: ꜥ and ejectives have no English equivalents — use Arabic/Ge'ez reference clips; all vowels are reconstructed [reconstructed] tags on screen.",
+  "tutoring_hooks": [
+    "Hieroglyphs spell CONSONANTS only — every vowel you hear is a scholarly guess from Coptic!",
+    "Egyptian ꜥ (ayin) is a deep throat sound [ʕ] — not a vowel, not silent.",
+    "Coptic is the time machine: the last stage of Egyptian with full vowels written.",
+    "Ejectives (pʼ tʼ kʼ) pop from the glottis — rare in European languages, common in Afroasiatic.",
+    "The formula 'life, prosperity, health' (ꜥnḫ wḏꜣ snb) adorned every noble's tomb — consonants attested, vowels reconstructed."
+  ],
+  "sources": [
+    {"author": "Antonio Loprieno", "title": "Ancient Egyptian: A Linguistic Introduction", "year": "1995", "url": "https://www.cambridge.org/"},
+    {"author": "James P. Allen", "title": "Middle Egyptian: An Introduction to the Language and Culture of Hieroglyphs (3rd ed.)", "year": "2014", "url": "https://www.cambridge.org/"},
+    {"author": "Carsten Peust", "title": "Egyptian Phonology: An Introduction to the Phonology of a Dead Language", "year": "1999", "url": "https://brill.com/"}
+  ],
+  "disputed_fields": [
+    "exact vowel qualities and dialect variation",
+    "emphatic d realization",
+    "r articulation",
+    "j/w vocalic status"
+  ]
+}

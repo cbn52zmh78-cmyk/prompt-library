@@ -80,6 +80,56 @@ Hearing I ask from all…
 
 **Notes:** DAVID Post 4 hook line. Manuscript attestation secure; lesson IPA is West Norse reconstruction.
 
+## Pronunciation Guide `[reconstructed]`
+
+**Model:** West Norse (Icelandic literary) — Gordon/Crawford standard. NOT East Norse monophthongized forms.
+**Confidence:** high (PGmc *hl + diphthongs well-attested; runic vs manuscript minor shifts)
+**Profile:** `languages/extinct/old-norse/pronunciation/pronunciation_profile.json`
+
+### Canonical sample (Völuspá 1)
+
+**Text:** Hljóðs bið ek allar, helgar kindir
+**IPA:** `/ˈhljoːðs bið ek ˈallar ˈhelɣar ˈkindir/`
+
+### Key phonemes
+
+- **þ = /θ/** voiceless (initial, after voiceless); **ð = /ð/** voiced (intervocalic, after voiced)
+- **ʀ** palatal r-like (distinct from English /r/)
+- **ø/ǫ** front rounded vowels — not English o
+- **Long vowels/macrons** sustained; umlauts distinct from modern Scandinavian
+- **No silent letters** — spelling phonetic in all periods
+- **Gemination** phonemic (e.g. mp > pp assimilation in West Norse)
+
+### Stress
+
+PGmc root-initial primary preserved; secondary stress on first element of compounds.
+
+### Grok Imagine audio guidance
+
+Front rounded ø; palatal ʀ; hold long vowels; umlaut vowels distinct from modern; þ/ð by position (not interchangeable in speech); no aspiration on stops; runic-period forms more conservative (less umlaut); alliterative lift pacing for Eddic verse.
+
+### Tutoring hooks
+
+- No silent letters in any period
+- Runic vs manuscript Latin reveals sound change (e.g. nasal loss)
+- West/East split explains modern Scandinavian divergence
+- Völuspá opening in alliterative power
+- Umlauts and breaking create distinctive vowel shifts
+
+### Variants (label on-screen)
+
+| Variant | Notes |
+|---------|-------|
+| West Norse | Iceland/Norway literary — DAVID default |
+| East Norse | Early monophthongization (ei>ē, au>ø̄ from 10th c.) |
+| Runic period | Younger Futhark — more conservative, no length in script |
+
+### Sources
+
+- Gordon, *Introduction to Old Norse*
+- Jackson Crawford reconstructions
+- First Grammatical Treatise, Codex Regius (via Wikipedia)
+
 ## Instructions for Grok
 
 1. Treat each block as primary evidence — do not invent unattested forms.

@@ -1,0 +1,163 @@
+{
+  "artifact": "david_runpod_train_config",
+  "version": "1.0",
+  "status": "DRAFT",
+  "task": "T1",
+  "agent": "DAVID",
+  "scope": "forensic_linguistics_speech_pedagogy_translation",
+  "as_of": "2026-06-24",
+  "dataset": {
+    "path": "training/david_dataset.jsonl",
+    "format": "alpaca_jsonl",
+    "current_pairs": 2351,
+    "scale_note": "Post C2 Tier-1 rebuild + dedupe; phantom-input zero; 2,351 Alpaca pairs ready for Run 4"
+  },
+  "model": {
+    "key": "deepseek-14b",
+    "base_model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+    "unsloth_model_name": "unsloth/DeepSeek-R1-Distill-Qwen-14B-bnb-4bit",
+    "max_seq_length": 2048,
+    "load_in_4bit": true,
+    "scale_note": "14B base on L40S — adapter dir keeps david-7b_* fleet prefix for continuity"
+  },
+  "lora": {
+    "rank": 32,
+    "alpha": 16,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "scale_note": "rank 32 / alpha 16 — default l40s slot; per-GPU overrides in hardware_slots"
+  },
+  "hardware_slots": {
+    "l40s": {
+      "label": "NVIDIA L40S 48GB",
+      "lora": {
+        "rank": 32,
+        "alpha": 16,
+        "dropout": 0.05,
+        "target_modules": [
+          "q_proj",
+          "k_proj",
+          "v_proj",
+          "o_proj",
+          "gate_proj",
+          "up_proj",
+          "down_proj"
+        ]
+      },
+      "training": {
+        "learning_rate": 0.0001,
+        "batch_size": 2,
+        "gradient_accumulation_steps": 8,
+        "vram_note": "L40S 48GB primary — rank 32, effective batch 16"
+      }
+    },
+    "4090": {
+      "label": "NVIDIA GeForce RTX 4090 24GB",
+      "lora": {
+        "rank": 32,
+        "alpha": 16,
+        "dropout": 0.05,
+        "target_modules": [
+          "q_proj",
+          "k_proj",
+          "v_proj",
+          "o_proj",
+          "gate_proj",
+          "up_proj",
+          "down_proj"
+        ]
+      },
+      "training": {
+        "learning_rate": 0.0001,
+        "batch_size": 1,
+        "gradient_accumulation_steps": 16,
+        "vram_note": "RTX 4090 24GB — batch 1 for 14B headroom; effective batch 16"
+      }
+    },
+    "2060": {
+      "label": "NVIDIA GeForce RTX 2060 12GB",
+      "lora": {
+        "rank": 32,
+        "alpha": 16,
+        "dropout": 0.05,
+        "target_modules": [
+          "q_proj",
+          "k_proj",
+          "v_proj",
+          "o_proj",
+          "gate_proj",
+          "up_proj",
+          "down_proj"
+        ]
+      },
+      "training": {
+        "learning_rate": 0.00002,
+        "batch_size": 1,
+        "gradient_accumulation_steps": 16,
+        "vram_note": "RTX 2060 12GB local overnight — close other apps; lower LR for slower/longer runs"
+      }
+    }
+  },
+  "training": {
+    "lr_scheduler": "cosine",
+    "warmup_ratio": 0.05,
+    "save_steps": 50,
+    "save_total_limit": 3,
+    "seed": 42,
+    "epochs_tiers": {
+      "under_1000": 6,
+      "1000_1999": 5,
+      "2000_plus": 5
+    },
+    "estimated_steps": {
+      "2351_pairs_5_epochs_l40s": 730,
+      "2351_pairs_5_epochs_2060": 735,
+      "note": "steps ≈ max(1, pairs // (batch × grad_accum)) × epochs; l40s/4090/2060 effective batch = 16"
+    }
+  },
+  "hardware": {
+    "primary": "NVIDIA L40S 48GB",
+    "fallback": "NVIDIA GeForce RTX 4090 24GB",
+    "default_slot": "l40s",
+    "minimum_vram_gb": 40,
+    "fallback_lite": {
+      "rank": 16,
+      "alpha": 16,
+      "batch_size": 1,
+      "gradient_accumulation_steps": 16,
+      "vram_note": "Legacy --lite path; prefer --hardware 2060 for local 12GB overnight runs"
+    }
+  },
+  "paths": {
+    "adapter_prefix": "david-7b",
+    "adapter_output_template": "models/adapters/david-7b_{run}",
+    "local_adapter_dir": "DAVID/models/adapters",
+    "runpod_workspace": "/workspace",
+    "runpod_adapter_dir": "/DAVID/models/adapters",
+    "runpod_upload_files": [
+      "training/david_finetune_pipeline.py",
+      "training/runpod_train_config.json",
+      "training/david_dataset.jsonl",
+      "training/david_infer.py"
+    ]
+  },
+  "infer": {
+    "module": "training/david_infer.py",
+    "default_adapter_dir": "models/adapters",
+    "cli_example": "python3 training/david_infer.py --adapter models/adapters/david-7b_YYYYMMDD_HHMMSS_run4 --all"
+  },
+  "dry_run": {
+    "default": true,
+    "live_requires_env": "ALLOW_GPU_TRAIN=1",
+    "note": "Benjamin inspects config + stub output before authorizing RunPod GPU spend"
+  },
+  "runpod_install": "pip install \"unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git\" --quiet && pip install --no-deps trl peft accelerate bitsandbytes --quiet && mkdir -p /DAVID/models/adapters"
+}

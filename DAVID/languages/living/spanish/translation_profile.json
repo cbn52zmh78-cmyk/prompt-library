@@ -1,0 +1,31 @@
+{
+  "language": "spanish",
+  "status": "living",
+  "research_type": "translation_service",
+  "variant_notes": {
+    "latin_american": "Dominates Americas; 'ustedes' plural; vocab e.g. 'computadora', 'carro', 'celular'; neutral often used for broad reach (ATA).",
+    "castilian": "Spain: 'vosotros', 'ordenador', 'coche', 'móvil'; ceceo/theta in some; more formal media tone.",
+    "recommended_default": "neutral_latin_american_or_target_specific"
+  },
+  "register_system": "Tú (informal/peers), Usted (formal/respect); voseo regional in LatAm; written uses heavy subjunctive/formality. Translators err: ignoring audience (e.g. tú in Mexico business offends) or over-formalizing (stiffness).",
+  "translationese_traps": [
+    "Literal calques ('en el caso de' vs natural); passive/reflexive overuse; false friends (actualmente=currently; realizar=perform); Baker collocation/ser-estar mismatches; Venuti 'doughy' domestication failures."
+  ],
+  "document_conventions": {
+    "legal": "Civil law; long/repetitive for precision; notarized; jurisdiction-specific terms (ICR/ATA challenges vs English common law).",
+    "business": "Polite formulas/salutations; DD/MM/YYYY; neutral vocab for intl.",
+    "academic": "Formal, citation-heavy (local norms), subjunctive hypotheticals.",
+    "creative": "Regional idioms/flavor; more flexible narrative."
+  },
+  "return_to_original_risks": [
+    "Formality/variant drift in EN edit; regional vocab/idiom erasure; anglicisms or subjunctive loss on back-translation; highest in legal term re-insertion."
+  ],
+  "idiom_mapping_notes": "Functional/dynamic equivalence (Nida/Baker priority over literal); clusters (food/emotion/business proverbs e.g. 'poner los puntos sobre las íes' -> clarify); domesticate for target fluency (Venuti) unless literary foreignization.",
+  "tutoring_pronunciation_hooks": [
+    "Trilled 'rr' vs flap 'r' (practice 'perro'); clear open vowels no reduction; regional 'll/y' or ceceo; syllable-timed rhythm."
+  ],
+  "orthography_notes": "Acute accents (stress/meaning e.g. papa/papá); ñ; inverted ¿¡; RAE standard with minor regional lexical diffs.",
+  "professional_resources": [
+    "Real Academia Española (DLE/DPD); ATA Spanish cert/guidelines; Fundéu; Baker 'In Other Words'; Venuti applications; bilingual legal glossaries."
+  ]
+}

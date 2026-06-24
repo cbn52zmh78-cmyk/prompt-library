@@ -1,0 +1,46 @@
+{
+  "language": "old-norse",
+  "status": "extinct",
+  "research_type": "pronunciation",
+  "ingested_from": "research_ops/outputs/R2_germanic_raw.json",
+  "ingested_at": "2026-06-23",
+  "scholarly_consensus": "Strong from Codex Regius + runes + Gordon/First Grammatical Treatise; West Norse (Icelandic literary) preferred baseline; disputes on nasal vowel persistence timing and ʀ quality.",
+  "dialect_notes": {
+    "west_norse": "Iceland/Norway/Atlantic: preserves diphthongs/umlauts longer; assimilation (mp>pp); basis for literary Edda/sagas.",
+    "east_norse": "Sweden/Denmark: early monophthongization (ei>ē, au>ø̄ from 10th c.); runic inscriptions more conservative."
+  },
+  "phoneme_inventory": {
+    "vowels": ["Short/long a æ e i o ø u y ɑ ɔ; early nasals; diphthongs ei au ey/øy."],
+    "consonants": ["p b t d k g; f θ s ʀ h; m n; l r; j w (gemination)."],
+    "thorn_eth_distinction": "þ = voiceless /θ/ (initial, after voiceless); ð = voiced /ð/ (intervocalic, after voiced); MSS use interchangeably but positional allophones (no phonemic contrast).",
+    "distinctive_features": "Heavy i-/u-/a-umlaut + breaking; no silent letters; geminates; Younger Futhark runic (16 letters, no length distinction)."
+  },
+  "ipa_reconstructed": {
+    "sample_text": "Hljóðs bið ek allar, helgar kindir",
+    "transcription": "/ˈhljoːðs bið ek ˈallar ˈhelɣar ˈkindir/",
+    "confidence": "high",
+    "confidence_note": "Gordon/Crawford West Norse standard (PGmc *hl + diphthongs); runic vs manuscript minor shifts noted."
+  },
+  "stress_rules": "PGmc root-initial primary + secondary in compounds (preserved in Icelandic).",
+  "prosody": {
+    "rhythm": "Stress-timed",
+    "pitch": "Tone/stød precursors emerging",
+    "pacing": "Poetic deliberate",
+    "alliterative_meter_note": "Skaldic/Eddic: initial consonants (or vowels) alliterate on lifts; key to reconstruction."
+  },
+  "grok_imagine_guidance": "English errs on rounded ø/ǫ (front), ʀ (palatal r-like), long vowels/macrons held, umlauts distinct from modern, no aspiration; voiced ð vs voiceless þ by position; runic period conservative (less umlaut).",
+  "tutoring_hooks": [
+    "No silent letters in any period — spelling phonetic.",
+    "Runic (Younger Futhark) vs manuscript Latin shift reveals evolution (e.g. nasal loss).",
+    "West/East split directly explains modern Scandinavian divergence.",
+    "Völuspá opening summons 'holy kindreds' in alliterative power; preserves PGmc longer than OE.",
+    "Umlauts and breaking create 'musical' vowel changes unique in Germanic."
+  ],
+  "sources": [
+    "Gordon 'Introduction to Old Norse'; Jackson Crawford reconstructions; Wikipedia (citing First Grammatical Treatise, Codex Regius); Poetic Edda editions."
+  ],
+  "disputed_fields": [
+    "nasal vowel persistence timing",
+    "ʀ quality"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "language": "mandarin",
+  "status": "living",
+  "research_type": "translation_service",
+  "script_notes": {
+    "simplified": "PRC/mainland (fewer strokes; most docs).",
+    "traditional": "Taiwan/HK (complex; literary/cultural).",
+    "pinyin": "Tones/romanization tutoring aid (not final output)."
+  },
+  "register_system": "Baihua vs wenyan remnants; context/honorific vocab for formal. Trap: wrong script or tone-ignored pinyin.",
+  "translationese_traps": [
+    "English SVO/word order; literal chengyu; particle overuse; simp/trad mix."
+  ],
+  "document_conventions": {
+    "legal": "Formal/precise characters.",
+    "business": "Simplified + polite.",
+    "academic": "Scholarly.",
+    "creative": "Idiomatic."
+  },
+  "return_to_original_risks": [
+    "Script/tone loss; chengyu flattening; pinyin interference."
+  ],
+  "idiom_mapping_notes": "Chengyu functional key (4-char); Nida dynamic; special handling clusters.",
+  "tutoring_pronunciation_hooks": [
+    "4 tones + neutral; retroflex sounds; no clusters."
+  ],
+  "orthography_notes": "",
+  "professional_resources": [
+    "Xinhua; ATA Chinese; govt styles; Baker chengyu."
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "etruscan": {
+    "language": "etruscan",
+    "status": "extinct",
+    "research_type": "pronunciation",
+    "reconstruction_method": "Greek-derived alphabet adaptation + Latin/Greek transcriptions/bilinguals + internal spelling variation/syncope patterns (Bonfante/Rix/Wallace)",
+    "scholarly_consensus": "4-vowel system secure; aspirate/tenuis contrast dominant; no voiced stops; syllabic sonorants possible (minority).",
+    "confidence_overview": "medium (high on consonants/alphabet; medium-low on vowels/exact prosody due to isolate/sparse corpus)",
+    "phoneme_inventory": {
+      "vowels": ["/a [ɑ]/, /e [e]/, /i [i]/, /u [u]/ (o/u merged in loans/spelling)"],
+      "consonants": ["p/ph, t/th, k/kh (aspirates); f s ś z (affricate?); m n l r (syllabic possible); h j w; no distinct b/d/g"],
+      "notable_absences": "voiced stops (b d g absent or neutralized in loans)",
+      "disputed_phonemes": ["vowel length/qualities", "ś as palatal [ʃ]", "syllabic extent", "aspirates vs palatals"],
+      "distinctive_features": "initial stress → syncope/clusters; aspirate primary contrast; possible geminates/affricates"
+    },
+    "ipa_reconstructed": {
+      "sample_text": "mi mulu larisal (dedicatory formula 'I [am/gave gift] of Laris')",
+      "transcription": "[mi ˈmu.lu laˈris.al]",
+      "confidence": "medium",
+      "confidence_note": "Consonants/alphabet high; vowels conservative placeholder; alternatives in Rix syllabic theory",
+      "alternatives": "More syncopated later realizations; sibilant variants"
+    },
+    "stress_rules": "Likely initial-syllable emphasis (syncope evidence)",
+    "prosody": {
+      "rhythm": "Syllabic + clusters from vowel loss",
+      "pacing": "Compact inscriptions; funerary formulaic",
+      "notes": "Boustrophedon possible; limited direct evidence"
+    },
+    "grok_imagine_guidance": "Commit to: aspirated puffs on ph/th/kh; pure vowels (i e a u); no voiced stops (use p/t/k only); initial stress. Approximate: clusters/syllabic liquids (like English 'button' n); rolled r if present. Avoid: modern voicing/Italianate or forced o-vowel. Flag: aspirate clusters harsh (Tuscan-like link); uncertainties on exact timbre — use crisp/neutral for generation.",
+    "tutoring_hooks": [
+      "Etruscan had NO voiced stops (b/d/g absent) — unique among neighbors!",
+      "Greek alphabet adapted uniquely (added F-symbol for new sound).",
+      "Initial stress caused vowel syncope → wild consonant clusters.",
+      "We read it phonetically far better than we understand meanings (isolate).",
+      "Influenced Latin & possibly modern Tuscan 'gorgia' aspiration."
+    ],
+    "sources": [
+      {"author": "Bonfante & Bonfante", "title": "The Etruscan Language: An Introduction (2nd ed.)", "year": "2002", "url": "https://archive.org/details/etruscanlanguage0000bonf"},
+      {"author": "Helmut Rix", "title": "Etruskische Texte (2 vols.)", "year": "1991", "url": "https://www.zora.uzh.ch/"},
+      {"author": "Rex E. Wallace", "title": "Zikh Rasna: A Manual of the Etruscan Language and Inscriptions", "year": "2008", "url": "https://www.annenberg.net/~hwallace/"}
+    ]
+  },
+  "hittite": {
+    "language": "hittite",
+    "status": "extinct",
+    "research_type": "pronunciation",
+    "reconstruction_method": "Neo-Hittite cuneiform syllabic spelling + plene vowel writing (V/VV) + comparative Anatolian (Luwian/Palaic) + Akkadian loanword evidence + PIE laryngeal confirmation via ḫ",
+    "scholarly_consensus": "Melchert/Kimball standard: four vowels /a e i u/ with phonemic length; fortis/lenis (geminate vs single) stop contrast dominant over voicing; ḫ as uvular/velar fricative; no distinct voiced stops in standard model; cuneiform maps syllables reliably in Neo-Hittite orthography.",
+    "confidence_overview": "medium (high on consonant inventory, ḫ, and vowel length; medium on unstressed vowel qualities, exact fortis articulation, and stress placement)",
+    "laryngeal_notes": "Hittite ḫ (cuneiform ḫa/ḫi etc.) preserves PIE laryngeals *h2/*h3 as a guttural fricative [x~χ] (uvular to velar); colors adjacent vowels (e.g. *h2 → a-coloring); key empirical proof of the laryngeal theory unavailable in Greek, Latin, or Sanskrit.",
+    "phoneme_inventory": {
+      "vowels": ["/a e i u/ with phonemic length /aː eː iː uː/ (plene writing and comparative evidence); unstressed qualities partly inferred"],
+      "consonants": ["Stops: p pp t tt k kk (fortis/lenis); Fricatives: s š ḫ [x~χ]; Nasals: m n; Liquids: l r; Glides: y w; no distinct b d g in standard Melchert model"],
+      "laryngeals": ["ḫ = [x~χ] (PIE *h2/*h3 reflex); possible allophonic variation uvular vs velar"],
+      "disputed_phonemes": ["fortis/lenis vs older voiced/voiceless (Sturtevant)", "exact ḫ place of articulation", "š value [ʃ] vs [sʲ]", "stress position (initial vs penultimate)"],
+      "distinctive_features": "Fortis/lenis stop contrast; preserved laryngeals; vowel reduction in unstressed syllables; Indo-European's oldest attested branch"
+    },
+    "ipa_reconstructed": {
+      "sample_text": "namma antuhsas andan esdu (ritual formula: 'let mankind remain inside')",
+      "transcription": "[ˈnam.ma ˈan.tuːχ.saːs ˈan.dan ˈeːʃ.du]",
+      "confidence": "medium",
+      "confidence_note": "Consonants and ḫ secure; vowel qualities in antuhsas/esdu reconstructed from plene spellings; stress inferred from Anatolian comparative patterns",
+      "alternatives": "Sturtevant voiced/voiceless model; penultimate stress hypothesis; ḫ as [ħ] in older literature"
+    },
+    "stress_rules": "Likely initial or penultimate stress (Anatolian comparative evidence); exact pattern disputed — conservative default: stress first full syllable of content word",
+    "prosody": {
+      "rhythm": "Syllable-timed with fortis geminates lengthening syllables",
+      "pacing": "Formulaic ritual/legal diction; deliberate enunciation in cult texts",
+      "notes": "Cuneiform does not mark stress; pacing inferred from parallel Luwian and meter in hymns"
+    },
+    "grok_imagine_guidance": "Commit to: guttural ḫ as back-of-throat fricative (Scottish 'loch' / German 'Bach', not English h); fortis geminates held longer (pp/tt/kk); pure vowels a/e/i/u; no English voiced b/d/g defaults. Approximate: š as [ʃ]; long vowels from double VV spellings sustained ~1.5×. Avoid: treating ḫ as silent or as kh; Slavic-style soft consonants; Modern Turkish vowel harmony. Flag: ḫ has no English equivalent — describe as uvular scrape; geminate stops need audible hold.",
+    "tutoring_hooks": [
+      "Hittite is the OLDEST attested Indo-European language (~1650 BCE) — older than Greek or Sanskrit texts.",
+      "Hittite ḫ preserved PIE laryngeals that vanished everywhere else — proof of the laryngeal theory!",
+      "Cuneiform looks like bird tracks but spells syllables: ḫa = ḫ+a, not a logogram.",
+      "Fortis/lenis (double vs single consonants) matters more than voiced/voiceless in standard reconstruction.",
+      "The Hittite Laws open with a formula every student of ancient law recognizes — in a language dead 3,000 years."
+    ],
+    "sources": [
+      {"author": "H. Craig Melchert", "title": "Hittite Historical Phonology (in The Hittite Language)", "year": "2020", "url": "https://en.wikipedia.org/wiki/Hittite_phonology"},
+      {"author": "Sara E. Kimball", "title": "Hittite Historical Phonology", "year": "1999", "url": "https://referenceworks.brill.com/"},
+      {"author": "Alwin Kloekhorst", "title": "Etymological Dictionary of the Hittite Inherited Lexicon", "year": "2008", "url": "https://brill.com/"},
+      {"author": "Benjamin W. Fortson IV", "title": "Indo-European Language and Culture (2nd ed.)", "year": "2010", "url": "https://wiley.com/"}
+    ]
+  },
+  "middle-egyptian": {
+    "language": "middle-egyptian",
+    "status": "extinct",
+    "research_type": "pronunciation",
+    "reconstruction_method": "Coptic phonological survival + comparative Afroasiatic (Semitic/Berber) + Greek/Neo-Assyrian transcriptions of Egyptian proper names + internal consonantal skeleton of hieroglyphs",
+    "scholarly_consensus": "Consonants relatively secure: ejectives (pʼ tʼ kʼ), pharyngeals (ꜥ/ḥ), emphatics, and glottal (ꜣ); vowels reconstructed as /a i u/ with length contrast, heavy dialectal variation; unstressed reduction to schwa-like [ə] common in Egyptological convention.",
+    "confidence_overview": "medium-low overall (high–medium on consonants and ejectives/pharyngeals; low on exact vowel timbre, stress, and dialect splits)",
+    "vowel_reconstruction_note": "Hieroglyphs record a consonantal skeleton only — vowels from Coptic reflexes + transcriptions/AA cognates (high uncertainty on exact quality/timbre/dialects; schwa-like unstressed common). Egyptologists insert epenthetic vowels (e, a) by convention; these are not written in originals.",
+    "phoneme_inventory": {
+      "vowels": ["/a i u/ with length /aː iː uː/ (Coptic and transcription evidence); unstressed [ə] epenthetic; exact timbre disputed across Nile Valley dialects"],
+      "consonants": ["Stops: p t k (plain) + pʼ tʼ kʼ (ejectives); Fricatives: f s z ḫ [x] h; Pharyngeals: ꜥ [ʕ] ḥ [ħ]; Emphatics: d (cuneiform ṭ evidence); Nasals m n; Liquids r l; Glottal ꜣ [ʔ]"],
+      "ayin_aleph_distinction": "ꜥ (ayin) = voiced pharyngeal fricative [ʕ]; ꜣ (aleph/glottal) = glottal stop [ʔ] or vowel onset — distinct in Coptic reflexes and Semitic loan comparisons",
+      "disputed_phonemes": ["exact vowel qualities in stressed vs unstressed syllables", "d emphatic value [dˤ] vs [tʼ]", "r as flap [ɾ] vs trill", "j/y and w as consonants vs vowels"],
+      "distinctive_features": "Ejectives + pharyngeals; no written vowels; Afroasiatic consonant template; Coptic provides latest direct phonological witness"
+    },
+    "ipa_reconstructed": {
+      "sample_text": "m rn.f n ra (formula: 'in the name of Ra')",
+      "transcription": "[mə ˈran.nəf ʔan ˈraʕ]",
+      "confidence": "medium",
+      "confidence_note": "Consonants and pharyngeal ra (r+ꜥ) secure; vowel insertions Egyptological convention; stress on content words inferred from Coptic and comparative AA",
+      "alternatives": "Allen: [mə ɾan.nəf ən ˈɾaːʕa]; Loprieno dialect variants; vocalization of rn.f as [ɾan.nakʰ] in other contexts (suffix-dependent)"
+    },
+    "stress_rules": "Stress likely on penultimate or final content syllable (Coptic and Afroasiatic comparative evidence); exact Middle Egyptian dialect stress partly unknown",
+    "prosody": {
+      "rhythm": "Syllable-timed with epenthetic vowels breaking consonant clusters",
+      "pacing": "Formulaic religious/royal diction; deliberate pacing in ritual phrases",
+      "notes": "Hieroglyphic writing omits vowels entirely — audio generation must use reconstructed vocalization tags"
+    },
+    "grok_imagine_guidance": "Commit to: ejectives pʼ/tʼ/kʼ (sharp glottal pop after stop); pharyngeal ꜥ [ʕ] (deep throat constriction, Arabic ع); emphatic/velarized consonants heavier than plain; glottal stop ꜣ where marked. Approximate: epenthetic schwa [ə] in unstressed slots; pure a/i/u vowels without English diphthongs. Avoid: pronouncing hieroglyphs as consonant-only strings; English th for ḫ; treating ꜥ as silent. Flag: ꜥ and ejectives have no English equivalents — use Arabic/Ge'ez reference clips; all vowels are reconstructed [reconstructed] tags on screen.",
+    "tutoring_hooks": [
+      "Hieroglyphs spell CONSONANTS only — every vowel you hear is a scholarly guess from Coptic!",
+      "Egyptian ꜥ (ayin) is a deep throat sound [ʕ] — not a vowel, not silent.",
+      "Coptic is the time machine: the last stage of Egyptian with full vowels written.",
+      "Ejectives (pʼ tʼ kʼ) pop from the glottis — rare in European languages, common in Afroasiatic.",
+      "The formula 'life, prosperity, health' (ꜥnḫ wḏꜣ snb) adorned every noble's tomb — consonants attested, vowels reconstructed."
+    ],
+    "sources": [
+      {"author": "Antonio Loprieno", "title": "Ancient Egyptian: A Linguistic Introduction", "year": "1995", "url": "https://www.cambridge.org/"},
+      {"author": "James P. Allen", "title": "Middle Egyptian: An Introduction to the Language and Culture of Hieroglyphs (3rd ed.)", "year": "2014", "url": "https://www.cambridge.org/"},
+      {"author": "Carsten Peust", "title": "Egyptian Phonology: An Introduction to the Phonology of a Dead Language", "year": "1999", "url": "https://brill.com/"}
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "message_type": "recap_vcs",
+  "issue": "T1-DAVID-HARDWARE-2060",
+  "title": "T1 — DAVID RTX 2060 local hardware profile (run5-local)",
+  "generated_at": "2026-06-24T04:18:21+00:00",
+  "status": "DRAFT",
+  "verdict": "GREEN_DEV",
+  "owner_terminal": "T1",
+  "lane": "DAVID / training",
+  "commit": {
+    "allowed": true,
+    "files": [
+      "DAVID/training/runpod_train_config.json",
+      "DAVID/training/david_finetune_pipeline.py",
+      "DAVID/training/train_david.sh",
+      "DAVID/training/DAVID_Run_Commands.md",
+      "DAVID/dispatches/T1_david_hardware_2060_recap.json"
+    ]
+  },
+  "recap": {
+    "did": [
+      "Added hardware_slots to runpod_train_config.json — l40s, 4090, 2060 profiles",
+      "2060 profile: rank=32, alpha=16, batch=1, grad_accum=16, LR=2e-5 (lower LR for local overnight)",
+      "david_finetune_pipeline.py — --hardware flag + resolve_hardware_slot(); stub-safe Unsloth import",
+      "train_david.sh — --hardware l40s|4090|2060 passthrough",
+      "DAVID_Run_Commands.md — hardware table + local overnight run5-local section"
+    ],
+    "hardware_slots": {
+      "l40s": { "rank": 32, "batch": 2, "grad_accum": 8, "lr": 1e-4 },
+      "4090": { "rank": 32, "batch": 1, "grad_accum": 16, "lr": 1e-4 },
+      "2060": { "rank": 32, "batch": 1, "grad_accum": 16, "lr": 2e-5 }
+    },
+    "commands": {
+      "check": "python training/david_finetune_pipeline.py --check --hardware 2060",
+      "stub": "python training/david_finetune_pipeline.py --stub --hardware 2060 --tag run5-local",
+      "live_local": "ALLOW_GPU_TRAIN=1 python training/david_finetune_pipeline.py --run --hardware 2060 --tag run5-local",
+      "wrapper": "ALLOW_GPU_TRAIN=1 bash training/train_david.sh --live --hardware 2060 --tag run5-local"
+    },
+    "state": "DRAFT GREEN_DEV — stub/check pass; 2,351 pairs × 5 epochs ≈ 730 steps on 2060",
+    "next": [
+      "Benjamin run ALLOW_GPU_TRAIN=1 overnight on local RTX 2060 12GB",
+      "Close other GPU apps before live; monitor VRAM during first epoch",
+      "Infer smoke test after adapter lands in models/adapters/"
+    ]
+  },
+  "vcs_commit_message": "RECAP\n- Did: DAVID hardware_slots l40s/4090/2060; --hardware 2060 for local overnight (rank 32, LR 2e-5)\n- State: DRAFT GREEN_DEV — stub/check pass; run5-local ready\n- Next: ALLOW_GPU_TRAIN=1 live on RTX 2060 12GB"
+}

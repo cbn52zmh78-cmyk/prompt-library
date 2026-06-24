@@ -1,0 +1,31 @@
+{
+  "language": "italian",
+  "status": "living",
+  "research_type": "translation_service",
+  "variant_notes": {
+    "latin_american": "",
+    "castilian": "",
+    "recommended_default": "standard_Italian"
+  },
+  "register_system": "Tu informal vs Lei formal/polite; written elevated. Trap: over-casual business.",
+  "translationese_traps": [
+    "False friends (English/Spanish overlap); article overuse; tense shifts; syntax calques."
+  ],
+  "document_conventions": {
+    "legal": "Sworn/full-text incl stamps (consulate); repetitive/formal.",
+    "business": "Formal salutations; clear.",
+    "academic": "Scholarly.",
+    "creative": "Expressive/idiomatic."
+  },
+  "return_to_original_risks": [
+    "Gender/number agreement loss; formality shift; idiom dilution."
+  ],
+  "idiom_mapping_notes": "Functional for proverbs; avoid literal body idioms.",
+  "tutoring_pronunciation_hooks": [
+    "Geminate/double consonants; rolled r; open/closed e/o."
+  ],
+  "orthography_notes": "Vowel accents; standard Latin.",
+  "professional_resources": [
+    "Accademia della Crusca; ATA; sworn translator lists; dictionaries."
+  ]
+}

@@ -80,6 +80,59 @@ He who saw the Deep
 
 **Notes:** DAVID Post 5 hook line. Cuneiform attestation secure; š=[ʃ]; vowels reconstructed from Semitic root structure.
 
+## Pronunciation Guide `[reconstructed]`
+
+**Model:** Standard Babylonian literary convention (Huehnergard/von Soden).
+**Confidence:** medium_high
+**Profile:** `languages/dead/akkadian/pronunciation/pronunciation_profile.json`
+
+### Canonical sample (Enuma Elish opening)
+
+**Romanization:** enūma eliš lā nabû šamāmu
+**IPA:** `/e.nuː.ma e.liʃ laː na.buː ʃa.maː.mu/`
+
+### Key phonemes
+
+- **Emphatics:** ṭ q ṣ — throaty pharyngealized or popped ejectives (conventional; debated)
+- **Long vowels:** phonemic length from cuneiform V/VV signs — hold distinctly
+- **Mimation:** final -m on nouns/adjectives — pronounce, do not drop
+- **Aleph:** glottal stop [ʔ] where sign values indicate
+- **Š:** [ʃ] as in 'ship'; s and z distinct
+
+### Stress
+
+Often penultimate or morphologically determined; epic parallelism favors deliberate phrasing.
+
+### Reconstruction notes
+
+Cuneiform sign values and bilingual texts give strong consonant and vowel-length data. Emphatic articulation (ejective vs pharyngealized) remains conventional. Neo-Assyrian shows later sibilant shifts vs literary Standard Babylonian conservatism.
+
+### Grok Imagine audio guidance
+
+Emphatics as throaty or lightly ejective; sustain long vowels; pronounce mimation; glottal aleph where marked; deliberate epic pacing with parallelism breath groups; avoid Modern Hebrew/Arabic emphatic defaults without labeling dialect.
+
+### Tutoring hooks
+
+- Lingua franca of the ancient Near East for 2,000+ years
+- Cuneiform multi-value signs — spelling reveals consonants clearly
+- Emphatics distinguish Akkadian from Hebrew/Arabic cousins
+- Heavy influence on Aramaic and Hebrew phonology
+- Enuma Elish uses rhythmic parallelism like epic poetry
+
+### Dialect variants (label on-screen)
+
+| Variant | Notes |
+|---------|-------|
+| Standard Babylonian | DAVID default for literary/epic texts |
+| Old Babylonian | Fuller vowels; less reduction |
+| Neo-Assyrian | Later sibilant/emphatic shifts |
+
+### Sources
+
+- Huehnergard, *A Grammar of Akkadian*
+- von Soden, *Grundriss der akkadischen Grammatik*
+- CDLI corpus notes
+
 ## Instructions for Grok
 
 1. Treat each block as primary evidence — do not invent unattested forms.

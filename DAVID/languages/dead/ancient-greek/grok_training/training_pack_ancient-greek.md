@@ -80,6 +80,57 @@ Know thyself.
 
 **Notes:** DAVID Post 3 hook line. Literary attestation secure; lesson IPA is reconstructed Classical, not Modern Greek.
 
+## Pronunciation Guide `[reconstructed]`
+
+**Model:** Attic Classical — Allen *Vox Graeca* standard. NOT Modern Greek.
+**Confidence:** high (85–90% core consonants/vowels/quantity; 70% exact pitch contour)
+**Profile:** `languages/dead/ancient-greek/pronunciation/pronunciation_profile.json`
+
+### Canonical sample (Iliad I.1)
+
+**Text:** μῆνιν ἄειδε θεά, Πηληϊάδεω Ἀχιλῆος
+**IPA:** `[mɛ̂ː.nin áe̯i̯.de tʰe.áː pɛː.lɛː.i̯.á.de.ɔː a.kʰi.lɛ̂ː.os]`
+
+### Key phonemes
+
+- **Phi/Theta/Chi** = aspirated stops /pʰ tʰ kʰ/ (breathy puff), NOT modern f/th/ch
+- **Beta = /b/** (not /v/)
+- **Upsilon = /y/** (French *tu*)
+- **Eta η = /ɛː/** long open vowel
+- **Zeta ζ** often [zd] in Attic (debated vs [dz])
+- **Rough breathing** = initial [h] where marked
+- **Quantity moraic** — longs/diphthongs double mora duration
+
+### Accent
+
+Pitch accent (not English stress): one high-tone mora per word. Acute = high/rising; circumflex = falling on long syllable; grave = low/default or sandhi.
+
+### Grok Imagine audio guidance
+
+Strong breathy puff on aspirates; upsilon rounded [y]; beta pure [b]; hold longs/diphthongs 2× duration; musical pitch contour on accents (slight rise/fall); trilled rho; pure vowels without English diphthong creep; rough breathing initial [h]; hexameter pacing with caesura breaths.
+
+### Tutoring hooks
+
+- Phi/Theta/Chi = aspirated stops, not fricatives
+- Beta = [b], upsilon = [y] like French *tu*
+- Pitch accent = musical tones, not stress
+- Eta η = long open [ɛː] (later iotacized)
+- Zeta ζ often [zd] in Attic
+
+### Variants (label on-screen)
+
+| Variant | Notes |
+|---------|-------|
+| Attic | 5th–4th c. BCE — DAVID default |
+| Koine | Hellenistic shifts (spirantization, iotacism begins) |
+| Byzantine | Medieval stress accent, Modern-like vowels |
+
+### Sources
+
+- W. Sidney Allen, *Vox Graeca* (3rd ed., 1987)
+- Ancient Greek phonology (Wikipedia, citing Allen)
+- atticgreek.org Attic Pronunciation Guide
+
 ## Instructions for Grok
 
 1. Treat each block as primary evidence — do not invent unattested forms.

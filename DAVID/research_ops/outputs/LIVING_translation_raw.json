@@ -1,0 +1,253 @@
+{
+  "spanish": {
+    "language": "spanish",
+    "status": "living",
+    "research_type": "translation_service",
+    "variant_notes": {
+      "latin_american": "Dominates Americas; 'ustedes' plural; vocab e.g. 'computadora', 'carro', 'celular'; neutral often used for broad reach (ATA).",
+      "castilian": "Spain: 'vosotros', 'ordenador', 'coche', 'móvil'; ceceo/theta in some; more formal media tone.",
+      "recommended_default": "neutral_latin_american_or_target_specific"
+    },
+    "register_system": "Tú (informal/peers), Usted (formal/respect); voseo regional in LatAm; written uses heavy subjunctive/formality. Translators err: ignoring audience (e.g. tú in Mexico business offends) or over-formalizing (stiffness).",
+    "translationese_traps": [
+      "Literal calques ('en el caso de' vs natural); passive/reflexive overuse; false friends (actualmente=currently; realizar=perform); Baker collocation/ser-estar mismatches; Venuti 'doughy' domestication failures."
+    ],
+    "document_conventions": {
+      "legal": "Civil law; long/repetitive for precision; notarized; jurisdiction-specific terms (ICR/ATA challenges vs English common law).",
+      "business": "Polite formulas/salutations; DD/MM/YYYY; neutral vocab for intl.",
+      "academic": "Formal, citation-heavy (local norms), subjunctive hypotheticals.",
+      "creative": "Regional idioms/flavor; more flexible narrative."
+    },
+    "return_to_original_risks": [
+      "Formality/variant drift in EN edit; regional vocab/idiom erasure; anglicisms or subjunctive loss on back-translation; highest in legal term re-insertion."
+    ],
+    "idiom_mapping_notes": "Functional/dynamic equivalence (Nida/Baker priority over literal); clusters (food/emotion/business proverbs e.g. 'poner los puntos sobre las íes' -> clarify); domesticate for target fluency (Venuti) unless literary foreignization.",
+    "tutoring_pronunciation_hooks": [
+      "Trilled 'rr' vs flap 'r' (practice 'perro'); clear open vowels no reduction; regional 'll/y' or ceceo; syllable-timed rhythm."
+    ],
+    "orthography_notes": "Acute accents (stress/meaning e.g. papa/papá); ñ; inverted ¿¡; RAE standard with minor regional lexical diffs.",
+    "professional_resources": [
+      "Real Academia Española (DLE/DPD); ATA Spanish cert/guidelines; Fundéu; Baker 'In Other Words'; Venuti applications; bilingual legal glossaries."
+    ]
+  },
+  "french": {
+    "language": "french",
+    "status": "living",
+    "research_type": "translation_service",
+    "variant_notes": {
+      "european": "Strict vous/formal; anglicisms flexible; elevated literary.",
+      "canadian": "More tu even business; stricter anti-anglicisms (Bill 96); Québec vocab; context-dependent.",
+      "recommended_default": "european_for_written_formal_or_specify_audience"
+    },
+    "register_system": "Tu informal vs Vous formal (CA looser tu); niveaux soutenu/courant/familier. Traps: faux amis or wrong politeness in Quebec docs.",
+    "translationese_traps": [
+      "Faux amis (actuellement=currently; éventuellement=possibly); 'de la' genitives; passive 'on'; English word order/stiffness."
+    ],
+    "document_conventions": {
+      "legal": "Civil/Napoleonic; precise/repetitive; Québec compliance.",
+      "business": "Formal vous; detailed contracts.",
+      "academic": "Elevated/rhetorical; footnotes.",
+      "creative": "Nuanced/cultural adaptation."
+    },
+    "return_to_original_risks": [
+      "Formality collapse (vous->tu); accent/gender loss; variant split ignored; faux amis re-entry."
+    ],
+    "idiom_mapping_notes": "Functional (e.g. 'avoir le cafard' equiv mood); Baker strategies; food/body clusters; Venuti foreignize literary.",
+    "tutoring_pronunciation_hooks": [
+      "Nasal vowels (bon/on); liaison linking; uvular r; silent letters; grouped rhythm."
+    ],
+    "orthography_notes": "Accents (é/è/ç/â); gender agreement strict; lower caps than English.",
+    "professional_resources": [
+      "Académie Française; OQLF (CA); ATA/ITI; Baker/Venuti; Larousse/Le Robert; bilingual legal."
+    ]
+  },
+  "italian": {
+    "language": "italian",
+    "status": "living",
+    "research_type": "translation_service",
+    "variant_notes": {
+      "latin_american": "",
+      "castilian": "",
+      "recommended_default": "standard_Italian"
+    },
+    "register_system": "Tu informal vs Lei formal/polite; written elevated. Trap: over-casual business.",
+    "translationese_traps": [
+      "False friends (English/Spanish overlap); article overuse; tense shifts; syntax calques."
+    ],
+    "document_conventions": {
+      "legal": "Sworn/full-text incl stamps (consulate); repetitive/formal.",
+      "business": "Formal salutations; clear.",
+      "academic": "Scholarly.",
+      "creative": "Expressive/idiomatic."
+    },
+    "return_to_original_risks": [
+      "Gender/number agreement loss; formality shift; idiom dilution."
+    ],
+    "idiom_mapping_notes": "Functional for proverbs; avoid literal body idioms.",
+    "tutoring_pronunciation_hooks": [
+      "Geminate/double consonants; rolled r; open/closed e/o."
+    ],
+    "orthography_notes": "Vowel accents; standard Latin.",
+    "professional_resources": [
+      "Accademia della Crusca; ATA; sworn translator lists; dictionaries."
+    ]
+  },
+  "german": {
+    "language": "german",
+    "status": "living",
+    "research_type": "translation_service",
+    "variant_notes": {
+      "latin_american": "",
+      "castilian": "",
+      "recommended_default": "standard_German"
+    },
+    "register_system": "Du informal vs Sie formal (business default); registers from colloquial to Hochdeutsch. Traps: wrong Sie/case.",
+    "translationese_traps": [
+      "Literal compounds/splits; genitive/passive; verb-final position; ASCII umlaut/ß ignore."
+    ],
+    "document_conventions": {
+      "legal": "Precise compounds; formal/EU.",
+      "business": "Sie; DD.MM.YYYY.",
+      "academic": "Structured/footnotes.",
+      "creative": "Flexible."
+    },
+    "return_to_original_risks": [
+      "Compound/case recreation fail; ß/umlaut loss; formality drop."
+    ],
+    "idiom_mapping_notes": "Functional ('auf die Nerven gehen'); literal compounds risky.",
+    "tutoring_pronunciation_hooks": [
+      "Umlauts shift vowels (ä~cat); sharp ß; final devoicing."
+    ],
+    "orthography_notes": "Umlauts äöü; ß (ẞ capital); all nouns capitalized.",
+    "professional_resources": [
+      "Duden; EU/Microsoft style; ATA; Goethe-Institut."
+    ]
+  },
+  "japanese": {
+    "language": "japanese",
+    "status": "living",
+    "research_type": "translation_service",
+    "script_system": {
+      "hiragana": "Grammar/native words (syllabary).",
+      "katakana": "Loans/emphasis/onomatopoeia.",
+      "kanji": "Core semantics (context-heavy).",
+      "romaji_note": "Hepburn tutoring aid only."
+    },
+    "register_system": "Keigo mandatory: sonkeigo (respect listener), kenjougo (humble self), teineigo (polite); hierarchy critical. Trap: inconsistent levels = offense.",
+    "keigo_notes": "Japanese honorific speech system — critical for document register; sonkeigo/kenjougo/teineigo encode social distance; essential in business/legal (wrong use disastrous).",
+    "translationese_traps": [
+      "Omitted subjects/particles; keigo flattening; Western directness."
+    ],
+    "document_conventions": {
+      "legal": "Ultra-formal keigo; hierarchical terms.",
+      "business": "Polite endings; meishi implies level.",
+      "academic": "Humble/precise.",
+      "creative": "Stylistic range."
+    },
+    "return_to_original_risks": [
+      "Keigo level mismatch; kanji nuance loss; politeness erasure on roundtrip."
+    ],
+    "idiom_mapping_notes": "Heavy functional (kanji compounds/cultural); nature/duty clusters; rare literal.",
+    "tutoring_pronunciation_hooks": [
+      "Mora-timed (not stress); pitch accent; r-flap (no l/r)."
+    ],
+    "orthography_notes": "",
+    "professional_resources": [
+      "JTF/business keigo guides; ATA; kanji dicts; Venuti cultural."
+    ]
+  },
+  "mandarin": {
+    "language": "mandarin",
+    "status": "living",
+    "research_type": "translation_service",
+    "script_notes": {
+      "simplified": "PRC/mainland (fewer strokes; most docs).",
+      "traditional": "Taiwan/HK (complex; literary/cultural).",
+      "pinyin": "Tones/romanization tutoring aid (not final output)."
+    },
+    "register_system": "Baihua vs wenyan remnants; context/honorific vocab for formal. Trap: wrong script or tone-ignored pinyin.",
+    "translationese_traps": [
+      "English SVO/word order; literal chengyu; particle overuse; simp/trad mix."
+    ],
+    "document_conventions": {
+      "legal": "Formal/precise characters.",
+      "business": "Simplified + polite.",
+      "academic": "Scholarly.",
+      "creative": "Idiomatic."
+    },
+    "return_to_original_risks": [
+      "Script/tone loss; chengyu flattening; pinyin interference."
+    ],
+    "idiom_mapping_notes": "Chengyu functional key (4-char); Nida dynamic; special handling clusters.",
+    "tutoring_pronunciation_hooks": [
+      "4 tones + neutral; retroflex sounds; no clusters."
+    ],
+    "orthography_notes": "",
+    "professional_resources": [
+      "Xinhua; ATA Chinese; govt styles; Baker chengyu."
+    ]
+  },
+  "arabic": {
+    "language": "arabic",
+    "status": "living",
+    "research_type": "translation_service",
+    "variant_notes": {
+      "msa": "Modern Standard Arabic — for formal documents (written only).",
+      "regional_awareness": "Dialects spoken/marketing; target-specific."
+    },
+    "script_notes": "right-to-left, no short vowel marking in MSA, abjad system",
+    "register_system": "MSA high/formal written; diglossia major. Trap: dialect bleed or unnatural MSA.",
+    "diglossia_note": "the gulf between written MSA and spoken dialects — critical for document work; MSA mandatory formal, dialects for natural spoken adaptation.",
+    "translationese_traps": [
+      "Vowel/ diacritic issues; long sentences; Sharia term mismatch; punctuation fluidity."
+    ],
+    "document_conventions": {
+      "legal": "Sharia influence; repetitive; formal MSA (no fixed punct).",
+      "business": "Polite; RTL format.",
+      "academic": "Classical lean.",
+      "creative": "MSA base, dialect optional."
+    },
+    "return_to_original_risks": [
+      "Vowel/di acritic corruption; diglossia shift; RTL issues; religious/secular term drift."
+    ],
+    "idiom_mapping_notes": "Functional for Quranic/cultural; avoid literal.",
+    "tutoring_pronunciation_hooks": [
+      "Pharyngeals (ʿayn/ghayn); emphatics; gutturals."
+    ],
+    "orthography_notes": "",
+    "professional_resources": [
+      "Al-Mu'jam; El-Farahaty legal Arabic; ATA; IATE."
+    ]
+  },
+  "portuguese": {
+    "language": "portuguese",
+    "status": "living",
+    "research_type": "translation_service",
+    "variant_notes": {
+      "brazilian": "Softer/nasal; informal/warmer; broad default.",
+      "european": "Guttural/closed vowels; formal; tu/você diffs.",
+      "recommended_default": "brazilian_for_business/marketing_european_for_legal"
+    },
+    "register_system": "Você/tu (BR warmer); formal varies. Trap: variant mixing.",
+    "translationese_traps": [
+      "Pronoun position (enclitic/proclitic); vocab mix; literal idioms."
+    ],
+    "document_conventions": {
+      "legal": "Formal/variant-specific.",
+      "business": "BR direct.",
+      "academic": "Structured.",
+      "creative": "Vibrant/regional."
+    },
+    "return_to_original_risks": [
+      "Variant inconsistency; pronoun/accent shift; idiom loss."
+    ],
+    "idiom_mapping_notes": "Functional; adapt regional (some ENG-shared); cultural substitution.",
+    "tutoring_pronunciation_hooks": [
+      "BR open vowels/nasals; EU reduced/guttural; tilde nasal."
+    ],
+    "orthography_notes": "Ç/accents; post-reform minor diffs.",
+    "professional_resources": [
+      "Academia das Ciências (PT); ABL (BR); ATA; Priberam/Casa da Língua."
+    ]
+  }
+}

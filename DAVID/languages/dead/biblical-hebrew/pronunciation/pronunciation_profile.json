@@ -1,0 +1,50 @@
+{
+  "language": "biblical-hebrew",
+  "status": "dead",
+  "research_type": "pronunciation",
+  "ingested_from": "research_ops/outputs/R4_ancient_raw.json",
+  "ingested_at": "2026-06-23",
+  "reconstruction_method": "Tiberian Masoretic vocalization + medieval treatises + comparative Semitic (Khan primary)",
+  "scholarly_consensus": "Tiberian tradition best documented and most reliable reconstruction for Biblical period with medieval continuity.",
+  "tradition_comparison": {
+    "tiberian": "Medieval Galilee Masoretes: full vowels, cantillation, gemination; standard for scholarship (Khan).",
+    "babylonian": "Simpler vowel system; less detail on length/gutturals.",
+    "samaritan": "Conservative consonants; different vowels but oral living tradition.",
+    "most_historical": "Tiberian closest to Second Temple + medieval continuity; Samaritan valuable for archaic gutturals."
+  },
+  "phoneme_inventory": {
+    "vowels": ["a e i o u + length/reduced via niqqud (sheva mobile/silent)"],
+    "consonants": ["bgdkpt (begadkefat spirantization with/without dagesh); q ṣ ṭ; ʾ ḥ ʿ; š ś s z; r l m n w y"],
+    "gutturals": ["ʾ [ʔ], ḥ [ħ~x], ʿ [ʕ], r (uvular/trilled)"],
+    "distinctive_features": "Dagesh forte/lene; matres lectionis; spirantization; pharyngeals preserved."
+  },
+  "ipa_reconstructed": {
+    "sample_text": "בְּרֵאשִׁית בָּרָא אֱלֹהִים",
+    "romanization": "bərēʾšît bārāʾ ʾĕlōhîm",
+    "transcription": "/bə.ʁeː.ˈʔiː.ʃiːt̪ baː.ˈʁaː ʔɛ.loː.ˈhiːm/",
+    "confidence": "high",
+    "confidence_note": "Khan reconstruction + Foreman performances; comparative Semitic strengthens gutturals/pharyngeals."
+  },
+  "stress_rules": "Penultimate or ultimate; cantillation dictates phrasing/stress.",
+  "cantillation_notes": "Ta'amim marks guide melody, pauses, emphasis; critical for authentic pacing and liturgical flow.",
+  "prosody": {
+    "rhythm": "Phrasal/chanted with accent rises",
+    "pacing": "Deliberate with trope-based phrasing"
+  },
+  "grok_imagine_guidance": "Gutturals: ʿayin deep pharyngeal scrape [ʕ], ḥet voiceless [ħ]; resh uvular/trill; sheva schwa or zero; dagesh doubles or hardens; cantillation for natural chant-like rises/falls and emphasis.",
+  "tutoring_hooks": [
+    "Tiberian Masoretes preserved pronunciation meticulously in Galilee.",
+    "Gutturals distinguish meaning — largely lost in Modern Hebrew but key for authenticity.",
+    "Cantillation is ancient musical notation for text — like sheet music for scripture.",
+    "Begadkefat spirantization rule still echoes in Modern Hebrew.",
+    "Samaritan tradition keeps some sounds continuously alive."
+  ],
+  "sources": [
+    "Khan *The Tiberian Pronunciation Tradition*; Joüon-Muraoka; Ben-Hayyim Samaritan; Foreman recitations; comparative Semitic."
+  ],
+  "disputed_fields": [
+    "exact ḥet realization ([ħ] vs [x])",
+    "resh uvular vs alveolar trill",
+    "Babylonian vs Tiberian vowel length in archaic layers"
+  ]
+}

@@ -171,6 +171,114 @@
       "status": "completed",
       "added": "2026-06-18",
       "last_modality_scrape": "2026-06-18"
+    },
+    {
+      "id": "rq-pron-r1-001",
+      "language": "classical-latin",
+      "priority": "low",
+      "task": "Resolve Allen vs Calabrese short high vowel openness for pronunciation layer",
+      "status": "pending",
+      "added": "2026-06-23",
+      "source": "R1_browser_pass"
+    },
+    {
+      "id": "rq-pron-r1-002",
+      "language": "ancient-greek",
+      "priority": "low",
+      "task": "Pin zeta realization and pitch-accent melodic contour for Attic audio renders",
+      "status": "pending",
+      "added": "2026-06-23",
+      "source": "R1_browser_pass"
+    },
+    {
+      "id": "rq-pron-r2-001",
+      "language": "gothic",
+      "priority": "low",
+      "task": "Resolve diphthong monophthongization timing and nasalization extent for Gothic audio renders",
+      "status": "pending",
+      "added": "2026-06-23",
+      "source": "R2_browser_pass"
+    },
+    {
+      "id": "rq-pron-r2-002",
+      "language": "old-norse",
+      "priority": "low",
+      "task": "Pin nasal vowel persistence timing and ʀ quality for West Norse audio renders",
+      "status": "pending",
+      "added": "2026-06-23",
+      "source": "R2_browser_pass"
+    },
+    {
+      "id": "rq-pron-r2-003",
+      "language": "old-english",
+      "priority": "low",
+      "task": "Resolve short diphthong realization and palatalization timing (Hogg/Campbell) for WS renders",
+      "status": "pending",
+      "added": "2026-06-23",
+      "source": "R2_browser_pass"
+    },
+    {
+      "id": "rq-studio-r2-001",
+      "language": "gothic",
+      "priority": "medium",
+      "task": "Hand off Gothic script_notes (Wulfila grapheme-to-phoneme map) to STUDIO captioning system",
+      "status": "pending",
+      "added": "2026-06-23",
+      "source": "R2_browser_pass"
+    },
+    {
+      "id": "rq-pron-r4-001",
+      "language": "sumerian",
+      "priority": "high",
+      "task": "Resolve ĝ and r phoneme realizations for Sumerian audio renders (Jagersma/ETCSL evidence review)",
+      "status": "pending",
+      "added": "2026-06-23",
+      "source": "R4_browser_pass"
+    },
+    {
+      "id": "rq-pron-r4-002",
+      "language": "sumerian",
+      "priority": "medium",
+      "task": "Pin vowel length/harmony and stress placement from Emesal contrast and Akkadian loan spellings",
+      "status": "pending",
+      "added": "2026-06-23",
+      "source": "R4_browser_pass"
+    },
+    {
+      "id": "rq-pron-r4-003",
+      "language": "akkadian",
+      "priority": "medium",
+      "task": "Resolve emphatic series articulation (ejective vs pharyngealized) for Standard Babylonian audio",
+      "status": "pending",
+      "added": "2026-06-23",
+      "source": "R4_browser_pass"
+    },
+    {
+      "id": "rq-pron-r4-004",
+      "language": "biblical-hebrew",
+      "priority": "low",
+      "task": "Cross-check Tiberian guttural IPA against Samaritan oral tradition recordings",
+      "status": "pending",
+      "added": "2026-06-23",
+      "source": "R4_browser_pass"
+    },
+    {
+      "id": "rq-studio-r4-001",
+      "language": "biblical-hebrew",
+      "priority": "medium",
+      "task": "Hand off cantillation_notes to STUDIO for documentary narration pacing on Hebrew text",
+      "status": "pending",
+      "added": "2026-06-23",
+      "source": "R4_browser_pass"
+    },
+    {
+      "id": "rq-series-r4-001",
+      "language": "classical-sanskrit",
+      "priority": "medium",
+      "task": "Plan tutoring series modules from shiksha_notes and aspirate_pairs (high-value content)",
+      "status": "pending",
+      "added": "2026-06-23",
+      "source": "R4_browser_pass"
     }
   ]
 }

@@ -80,6 +80,53 @@ In those days, in those distant days…
 
 **Notes:** DAVID Post 2 hook line. Transliteration attested on cuneiform tablets; spoken vowels reconstructed.
 
+## Pronunciation Guide `[reconstructed]`
+
+**Model:** Jagersma/Thomsen conventional approximation via Akkadian transcriptions.
+**Confidence:** low — lowest in DAVID registry; tag all audio `[hypothesis]`
+**Profile:** `languages/dead/sumerian/pronunciation/pronunciation_profile.json`
+**Disputed phonemes:** `languages/dead/sumerian/pronunciation/disputed_phonemes.json`
+
+### Canonical sample
+
+**Text:** en-lil2 lugal kalam-ma
+**Romanization:** enlil lugal kalam-ma
+**IPA:** `/en.lil lu.ɡal ka.lam.ma/` (approximate)
+
+### Key phonemes (all tentative)
+
+- **ĝ:** velar nasal [ŋ] or stop [ɡ] — disputed; see disputed_phonemes.json
+- **r:** tap, trill, or affricate — cuneiform does not distinguish
+- **ḫ:** velar/uvular fricative — inferred from Akkadian borrowing
+- **Vowels:** a e i u; length and harmony uncertain
+- **Compounding:** slow pacing across logographic + phonetic spellings
+
+### Stress
+
+Likely final or compound-internal — unknown; do not assert confidently in renders.
+
+### Reconstruction notes
+
+World's oldest attested language (c. 3200 BCE) and a true isolate. Pronunciation inferred almost entirely through Akkadian scribal transcriptions and Emesal dialect contrast. Honest low confidence is methodologically correct — do not inflate.
+
+### Grok Imagine audio guidance
+
+Approximate ĝ as [ŋ] or [ɡ]; r as light tap; Akkadian-like sibilants; slow compound pacing; ergative endings enunciated separately; label all output `[hypothesis]`; avoid false precision.
+
+### Tutoring hooks
+
+- World's oldest attested language — true isolate with no relatives
+- Emesal dialect reveals contrasts via Akkadian lens
+- Logograms vs phonetic complements create complex script
+- Akkadian scribes are our main reconstruction window
+- Liturgical survival in Babylonian religion after language death
+
+### Sources
+
+- Jagersma, *A Descriptive Grammar of Sumerian*
+- Thomsen, *The Sumerian Language*
+- ETCSL; CDLI bilinguals
+
 ## Instructions for Grok
 
 1. Treat each block as primary evidence — do not invent unattested forms.

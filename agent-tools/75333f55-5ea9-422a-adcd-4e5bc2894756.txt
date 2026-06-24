@@ -1,0 +1,788 @@
+=== PAGE 226 ===
+ 
+205 
+12/27/2024  
+CJISSECPOL v6.0 
+ 
+mission/business processes, and for systems, if needed. Procedures describe how the policies or 
+controls are implemented and can be directed at the individual or role that is the object of the 
+procedure. Procedures can be documented in system security and privacy plans or in one or 
+more separate documents. 
+Events that may precipitate an update to personnel security policy and procedures include, but are 
+not limited to, assessment or audit findings, security incidents or breaches, or changes in 
+applicable laws, executive orders, directives, regulations, policies, standards, and guidelines. 
+Simply restating controls does not constitute an organizational policy or procedure. 
+Related Controls: PS-8, SI-12. 
+ 
+PS-2 POSITION RISK DESIGNATION 
+[Priority 2]  
+Control: 
+a. Assign a risk designation to all organizational positions; 
+b. Establish screening criteria for individuals filling those positions; and 
+c. Review and update position risk designations as required. 
+Discussion: Position risk designations reflect Office of Personnel Management (OPM) policy 
+and guidance. Proper position designation is the foundation of an effective and consistent 
+suitability and personnel security program. The Position Designation System (PDS) assesses 
+the duties and responsibilities of a position to determine the degree of potential damage to the 
+efficiency or integrity of the service due to misconduct of an incumbent of a position and 
+establishes the risk level of that position. The PDS assessment also determines if the duties and 
+responsibilities of the position present the potential for position incumbents to bring about a 
+material adverse effect on national security and the degree of that potential effect, which 
+establishes the sensitivity level of a position. The results of the assessment determine what level 
+of investigation is conducted for a position. Risk designations can guide and inform the types of 
+authorizations that individuals receive when accessing organizational information and 
+information systems. 
+ 
+Position screening criteria include explicit information security role appointment requirements. 
+Parts 1400 and 731 of Title 5, Code of Federal Regulations, establish the requirements for 
+federal organizations to evaluate relevant covered positions for a position sensitivity and 
+position risk designation commensurate with the duties and responsibilities of those positions. 
+ 
+Related Controls: AC-5, AT-3, PE-2, PE-3, PL-2, PS-3, PS-6, SA-5, SI-12. 
+ 
+PS-3 PERSONNEL SCREENING 
+[Existing] [Priority 2]  
+
+=== PAGE 227 ===
+ 
+206 
+12/27/2024  
+CJISSECPOL v6.0 
+ 
+Control: 
+a. Screen individuals prior to authorizing access to the information system; 
+1. To properly screen, state of residency and national fingerprint -based record checks shall 
+be conducted. National fingerprint-based record checks must be conducted pursuant to an 
+FBI approved authority such as a federal statute or a state statute approved pursuant to 
+Public Law 92-544. If the person resides in a different state than that of the assigned 
+agency, the agency shall also conduct  state (of the agency) record checks. When 
+appropriate, the screening shall be consistent with: 
+a. 5 CFR 731.106; and/or 
+b. Office of Personnel Management policy, regulations, and guidance; and/or 
+c. agency policy, regulations, and guidance. 
+Agencies authorized to bypass state repositories in compliance with federal law must only 
+conduct a national fingerprint-based record check. 
+Agencies without approved statutory authority authorizing or requiring civil fingerprint -
+based record checks on personnel with access to CHRI are exempt from this requirement 
+until such time as appropriate statutory authority is obtained to conduct such record 
+checks. 
+2. All requests for access shall be made as specified by the CSO, Authorized Recipient 
+Official, or IA Official.  The CSO/designee, Authorized Recipient Official/designee, or 
+IA Official is authorized to approve access to CJI.  All CSO designees shall be from an 
+authorized criminal justice agency. All Authorized Recipient designees shall be employed 
+by the Authorized Recipient Agency. 
+3. If a criminal history record of any kind exists, access to CJI shall not be granted until the 
+CSO/designee, Authorized Recipient Official/designee, or IA Official reviews the matter 
+to determine if access is appropriate. 
+a. If a felony conviction of any kind exists, the agency shall deny access to CJI. 
+However, the requesting agency may ask for a review by the CSO/designee, 
+Authorized Recipient Official/designee, or IA Official in extenuating circumstances 
+where the severity of the offense and the time that has passed would support a possible 
+variance.  
+b. Applicants with a record of misdemeanor offense(s) may be granted access if the 
+CSO/designee, Authorized Recipient Official/designee, or IA Official, determines the 
+nature or severity of the misdemeanor offense(s) do not warrant disqualification. 
+The requesting agency may request the CSO/designee, Authorized Recipient 
+Official/designee, or IA Official review a denial of access determination. 
+c. If a criminal history record of any kind is found on a contractor, the CA shall be 
+formally notified of continuing fitness determination and system access shall be 
+delayed pending review of the criminal history record information. The CA shall in 
+turn notify the contractor’s security officer. 
+4. If the person appears to be a fugitive or has an arrest history without conviction, the 
+CSO/designee, Authorized Recipient Official/designee , or IA Official shall review the 
+
+=== PAGE 228 ===
+ 
+207 
+12/27/2024  
+CJISSECPOL v6.0 
+ 
+matter to determine if access to CJI is appropriate. 
+5. If the person already has access to CJI and is subsequently arrested and or convicted, 
+continued access to CJI shall be determined by the CSO/designee, Authorized Recipient 
+Official/designee, or IA Official. This does not implicitly grant hiring/firing authority with 
+the CSA, Authorized Recipient , or IA Official only the authority to grant access to CJI. 
+For offenses other than felonies, the CSO/designee, Authorized Recipient 
+Official/designee, or IA Official has the latitude to delegate continued access 
+determinations. 
+6. If the CSO/designee, Authorized Recipient Official/designee, or IA Official determines 
+that access to CJI by the person would not be in the public interest, access shall be denied 
+and the person's appointing authority shall be notified in writing of the access denial. 
+7. The criminal and non-criminal justice agency shall maintain a list of personnel who have 
+been authorized unescorted access to unencrypted CJI and shall, upon request, provide a 
+current copy of the access list to the CSO/designee, Authorized Recipient 
+Official/designee, or IA Official. 
+and 
+b. Recommend rescreening individuals in accordance with PS -3(a)(1) above. The authority 
+authorized for the national fingerprint-based background check must also authorize the 
+rescreening. 
+Discussion: Personnel screening and rescreening activities reflect applicable laws, executive 
+orders, directives, regulations, policies, standards, guidelines, and specific criteria established for 
+the risk designations of assigned positions. Examples of personnel screening include background 
+investigations and agency checks. 
+Organizations may define different rescreening conditions and frequencies for personnel 
+accessing systems based on types of information processed, stored, or transmitted by the 
+systems. 
+Related Controls: AC-2, IA-4, MA-5, PE-2, PS-2, PS-6, PS-7. 
+ 
+PS-4 PERSONNEL TERMINATION 
+[Priority 2]  
+Control: 
+Upon termination of individual employment: 
+a. Disable system access within twenty-four (24) hours; 
+b. Terminate or revoke any authenticators and credentials associated with the  
+individual; 
+c. Conduct exit interviews that include a discussion of non-disclosure of CJI and PII; 
+d. Retrieve all security-related organizational system-related property; and 
+e. Retain access to organizational information and systems formerly controlled by 
+
+=== PAGE 229 ===
+ 
+208 
+12/27/2024  
+CJISSECPOL v6.0 
+ 
+terminated individual. 
+Discussion: System property includes hardware authentication tokens, system administration 
+technical manuals, keys, identification cards, and building passes. Exit interviews ensure that 
+terminated individuals understand the security constraints imposed by being former employees 
+and that proper accountability is achieved for system-related property. Security topics at exit 
+interviews include reminding individuals of nondisclosure agreements and potential limitations 
+on future employment. Exit interviews may not always be possible for some individuals, 
+including in cases related to the unavailability of supervisors, illnesses, or job abandonment. 
+Exit interviews are important for individuals with security clearances. The timely execution of 
+termination actions is essential for individuals who have been terminated for cause. In certain 
+situations, organizations consider disabling the system accounts of individuals who are being 
+terminated prior to the individuals being notified. 
+Related Controls: AC-2, IA-4, PE-2, PS-6, PS-7. 
+ 
+PS-5 PERSONNEL TRANSFER 
+[Priority 3]  
+Control: 
+a. Review and confirm ongoing operational need for current logical and physical access 
+authorizations to systems and facilities when individuals are reassigned or transferred to 
+other positions within the organization; 
+b. Initiate appropriate actions such as closing and establishing accounts and changing 
+system access authorizations within twenty-four (24) hours; 
+c. Modify access authorization as needed to correspond with any changes in 
+operational need due to reassignment or transfer; and 
+d. Notify organizational personnel with information security responsibilities, 
+organizational personnel with personnel security responsibilities, system/network 
+administrators, and organizational personnel with account management responsibilities 
+prior to personnel transfer. 
+Discussion: Personnel transfer applies when reassignments or transfers of individuals are 
+permanent or of such extended duration as to make the actions warranted. 
+Organizations define actions appropriate for the types of reassignments or transfers, whether 
+permanent or extended. Actions that may be required for personnel transfers or reassignments 
+to other positions within organizations include returning old and issuing new keys, 
+identification cards, and building passes; closing system accounts and establishing new 
+accounts; changing system access authorizations (i.e., privileges); and providing for access to 
+official records to which individuals had access at previous work locations and in previous 
+system accounts. 
+Related Controls: AC-2, IA-4, PE-2, PS-4, PS-7. 
+ 
+
+=== PAGE 230 ===
+ 
+209 
+12/27/2024  
+CJISSECPOL v6.0 
+ 
+PS-6 ACCESS AGREEMENTS 
+[Priority 4]  
+Control: 
+a. Develop and document access agreements for organizational systems; 
+b. Review and update the access agreements at least annually; and 
+c. Verify that individuals requiring access to organizational information and systems: 
+1. Sign appropriate access agreements prior to being granted access; and 
+2. Re-sign access agreements to maintain access to organizational systems when access 
+agreements have been updated or when signatories change. 
+Discussion: Access agreements include nondisclosure agreements, acceptable use agreements, 
+rules of behavior, and conflict-of-interest agreements. Signed access agreements include an 
+acknowledgement that individuals have read, understand, and agree to abide by the constraints 
+associated with organizational systems to which access is authorized. Organizations can use 
+electronic signatures to acknowledge access agreements unless specifically prohibited by 
+organizational policy. 
+Related Controls: AC-17, PE-2, PL-4, PS-2, PS-3, PS-6, PS-7, PS-8, SI-12. 
+ 
+PS-7 EXTERNAL PERSONNEL SECURITY 
+[Existing] [Priority 2]  
+Control: 
+a. Establish personnel security requirements, including security roles and 
+responsibilities for external providers; 
+b. Require external providers to comply with personnel security policies and 
+procedures established by the organization; 
+c. Document personnel security requirements; 
+d. Require external providers to notify organizational personnel with information security 
+responsibilities, organizational personnel with personnel security responsibilities, 
+system/network administrators, or organizational personnel with account management 
+responsibilities of any personnel transfers or terminations of external personnel who possess 
+organizational credentials and/or badges, or who have system privileges within twenty-four 
+(24) hours; and 
+e. Monitor provider compliance with personnel security requirements. 
+Discussion: External provider refers to organizations other than the organization operating or 
+acquiring the system. External providers include service bureaus, contractors, and other 
+organizations that provide system development, information technology services, testing or 
+assessment services, outsourced applications, and network/security management. Organizations 
+explicitly include personnel security requirements in acquisition-related documents. External 
+providers may have personnel working at organizational facilities with credentials, badges, or 
+
+=== PAGE 231 ===
+ 
+210 
+12/27/2024  
+CJISSECPOL v6.0 
+ 
+system privileges issued by organizations. Notifications of external personnel changes ensure the 
+appropriate termination of privileges and credentials. Organizations define the transfers and 
+terminations deemed reportable by security-related characteristics that include functions, roles, 
+and the nature of credentials or privileges associated with transferred or terminated individuals. 
+Related Controls: AT-2, AT-3, MA-5, PE-3, PS-2, PS-3, PS-4, PS-5, PS-6, SA-5, SA- 9. 
+ 
+PS-8 PERSONNEL SANCTIONS 
+[Priority 4]  
+Control: 
+a. Employ a formal sanctions process for individuals failing to comply with 
+established information security and privacy policies and procedures; and 
+b. Notify organizational personnel with information security responsibilities, organizational 
+personnel with personnel security responsibilities, system/network administrators, or 
+organizational personnel with account management responsibilities within twenty-four 
+(24) hours when a formal employee sanctions process is initiated, identifying the 
+individual sanctioned and the reason for the sanction. 
+Discussion: Organizational sanctions reflect applicable laws, executive orders, directives, 
+regulations, policies, standards, and guidelines. Sanctions processes are described in access 
+agreements and can be included as part of general personnel policies for organizations and/or 
+specified in security and privacy policies. 
+Organizations consult with the Office of the General Counsel regarding matters of employee 
+sanctions. 
+Related Controls: All XX-1 Controls, PL-4, PS-6. 
+ 
+PS-9 POSITION DESCRIPTIONS 
+[Priority 4]  
+Control: 
+Incorporate security and privacy roles and responsibilities into organizational position 
+descriptions. 
+Discussion: Specification of security and privacy roles in individual organizational position 
+descriptions facilitates clarity in understanding the security or privacy responsibilities 
+associated with the roles and the role-based security and privacy training requirements for the 
+roles. 
+ 
+ 
+ 
+ 
+
+=== PAGE 232 ===
+ 
+211 
+12/27/2024  
+CJISSECPOL v6.0 
+ 
+Figure 13 – Personnel Security Use Cases 
+Use Case 1 – A Local Police Department’s Personnel Security Controls 
+A local police department implemented a replacement CAD system that integrated to their 
+state’s CSA and was authorized to process CJI.  In addition to the physical and technical controls 
+already in place, the police department implemented a variety of personnel security controls to 
+reduce the insider threat.  The police department used background screening consistent with the 
+FBI CJIS Security Policy to vet those with unescorted access to areas in which CJI is processed, 
+including the IT administrators employed by a contractor and all janitorial staff.  The police 
+department established sanctions against any vetted person found to be in violation of stated 
+policies.  The police department re -evaluated each person’s suitability for access to CJI every 
+five years. 
+Use Case 2 – Infrastructure as a Service (IaaS) Cloud Service Implementation 
+This model provides the consumer the capability to provision processing, storage, networks, 
+and other fundamental computing resources where the consumer is able to deploy and run 
+arbitrary software, including operating systems and applications. 
+When using the IaaS service model the consumer may have control over operating systems, 
+storage, and deployed applications; and possibly limited control of select networking 
+components (e.g., host firewalls), but does not manage or control the underlying cloud 
+infrastructure – as defined in Appendix G.3. 
+A local agency implements an IaaS solution in a cloud environment leveraging an agency -
+implemented secure virtual private cloud which has been identified to meet the appropriate 
+security controls in the CJIS Security Policy.  The agency maintains sole access to the encryption 
+keys.  In this scenario, cloud service provider personnel have no logical or physical access to 
+any information system resulting in the ability, right, or privilege to view, modify, or make use 
+of unencrypted CJI; therefore, no fingerprint -based background checks are required to comply 
+with the CJIS Security Policy.  Refer to Appendix G.3 Cloud Computing for additional 
+implementation guidance. 
+ 
+Use Case 3 – Platform as a Service (PaaS) Cloud Service Implementation 
+ 
+This model provides the consumer the capability to deploy consumer -created or acquired 
+applications* created using programming languages, libraries, services, and tools supported 
+by the provider onto the cloud infrastructure. 
+ 
+ * This capability does not necessarily preclude the use of compatible programming 
+languages, libraries, services, and tools from other sources. 
+
+=== PAGE 367 ===
+ 
+12/27/2024  
+CJISSECPOL v6.0 
+G.3-1 
+G.3 Cloud Computing 
+ 
+ 
+Cloud Computing 
+ 
+Purpose: 
+ 
+This paper is provided to define and describe cloud computing, discuss CJIS Security Policy 
+(CSP) compliance, detail security and privacy, and provide general recommendations.          
+Attribution: 
+ 
+• NIST SP 800-144, Guidelines on Security and Privacy in Public Cloud Computing (Dec. 
+2011) 
+• NIST SP 800-145, the NIST Definition of Cloud Computing (Sept. 2011) 
+• NIST SP 800-146, Cloud Computing Synopsis and Recommendations (May 2011)  
+• CJIS Security Policy, Version 5.0 
+ 
+Definitions and Terms: 
+ 
+Cloud computing – A distributed computing model that permits on- demand network access to a 
+shared pool of configurable computing resources (e.g., networks, servers, storage, applications, 
+and services), software, and information. 
+ 
+Cloud subscriber – A person or organization that is a customer of a cloud 
+ 
+Cloud client – A machine or software application that accesses a cloud over a network connection, 
+perhaps on behalf of a subscriber 
+ 
+Cloud provider – An organization that provides cloud services 
+ 
+Summary:  
+ 
+With many law enforcement agencies looking for ways to attain greater efficiency while grappling 
+with reduced budgets, the idea of cloud computing to maintain data and applications is a viable 
+business solution.  But the unique security and legal character istics of law enforcement agencies 
+means any migration to cloud services may be challenging.  Anytime the security of information 
+and transactions must be maintained, as it must be with access to the FBI’s CJIS systems and the 
+protection of Criminal Justic e Information (CJI), security and policy compliance concerns are 
+bound to arise. 
+ 
+
+=== PAGE 368 ===
+ 
+12/27/2024  
+CJISSECPOL v6.0 
+G.3-2 
+Cloud computing has become a popular and sometimes contentious topic of discussion for both 
+the private and public sectors.  This is in part because of the difficulty in describing cloud 
+computing in general terms, because it is not a single kind of system.  The “cloud” spans a spectrum 
+of underlying technologies, configuration possibilities, service and deployment models.  C loud 
+computing offers the ability to conveniently rent access to fully featured applications, software 
+development and deployment envi ronments, and computing infrastructure assets -  such as 
+network-accessible data storage and processing from a cloud service provider.   
+  
+One of the benefits of cloud computing is the ability to outsource many of the technical functions 
+agencies may not want to perform for various reasons. Ultimately, the move to cloud computing 
+is a business and security risk decision in which the following relevant factors are given proper 
+consideration:   
+ 
+• readiness of existing applications for cloud deployment  
+• transition costs  
+• life-cycle costs  
+• maturity of service orientation in existing infrastructure  
+• security and privacy requirements – federal, state, and local 
+ 
+Achieving CJIS Security Policy Compliance: 
+ 
+The question that is often asked is, “Can an Agency be compliant with the CJIS Security Policy  
+and also cloud compute?” 
+ 
+Because the CJIS Security Policy  is device and architecture independent (per CSP Section  2.2), 
+the answer is yes, and this can be accomplished— assuming the vendor of the cloud technology is 
+able to meet the existing requirements of the CJIS Security Policy. 
+ 
+There are security challenges that must be addressed if CJI is to be sent into or through, stored 
+within, or accessed from the cloud.   
+ 
+Admittedly, the existing CJIS Security Policy  requirements may be difficult for some cloud-
+computing vendors due to the sheer numbers and the geographic disbursement of their personnel; 
+however, the requirements aren’t new to vendors serving the criminal justice community and many 
+vendors have been successfully meeting the Policy  requirements for years.  Even so, they are the 
+minimum security requirements which will provide an acceptable level of assurance that law 
+enforcement and personally identifiable information (PII) will be protected when shared with other 
+law enforcement agencies across the nation.   
+General CJIS Security Policy Applicability Questions 
+
+=== PAGE 369 ===
+ 
+12/27/2024  
+CJISSECPOL v6.0 
+G.3-3 
+Before tackling these challenges, the cloud subscriber should first be aware of what security and 
+legal requirements they are subject to prior to entering into any agreement with a cloud provider.  
+Asking the following general questions will help frame the process of determining compliance 
+with the existing requirements of the CJIS Security Policy. 
+ 
+• Will access to Criminal Justice Information (CJI) within a cloud environment fall within 
+the category of remote access? (5.5.6 Remote Access) 
+ 
+• Will advanced authentication (AA) be required for access to CJI within a cloud 
+environment? (5.6.2.2 Advanced Authentication, 5.6.2.2.1 Advanced Authentication 
+Policy and Rationale) 
+ 
+• Does/do any cloud service provider’s datacenter(s) used in the transmission or storage of 
+CJI meet all the requirements of a physically secure location? (5.9.1 Physically Secure 
+Location) 
+ 
+• Are the encryption requirements being met? (5.10.1.2 Encryption) 
+o Who will be providing the encryption as required in the CJIS Security Policy 
+(client or cloud service provider)? Note: individuals with access to the keys can 
+decrypt the stored files and therefore have access to unencrypted CJI. 
+o Is the data encrypted while at rest and in transit? 
+ 
+• What are the cloud service provider’s incident response procedures? (5.3 Policy Area 3: 
+Incident Response) 
+o Will the cloud subscriber be notified of any incident? 
+o If CJI is compromised, what are the notification and response procedures? 
+ 
+• Is the cloud service provider a private contractor/vendor? 
+o If so, they are subject to the same screening and agreement requirements as any 
+other private contractors hired to handle CJI? (5.1.1.5 Private Contractor User 
+Agreements and CJIS Security Addendum; 5.12.1.2 Personnel Screening for 
+Contractors and Vendors) 
+ 
+• Will the cloud service provider allow the CSA and FBI to conduct compliance and 
+security audits? Note: Cloud facilities such as datacenters in which CJI will be stored or 
+processed should be audited as would any other datacenter housing and processing CJI. 
+(5.11.1 Audits by the FBI CJIS Division; 5.11.2 Audits by the CSA) 
+ 
+
+=== PAGE 370 ===
+ 
+12/27/2024  
+CJISSECPOL v6.0 
+G.3-4 
+• How will event and content logging be handled? (5.4 Policy Area 4, Auditing and 
+Accountability)  
+o Will the cloud service provider handle the events and content logging required by 
+the CJIS Security Policy and provide that upon request? 
+o What are the cloud service provider’s responsibilities with regard to media 
+protection and destruction? (5.8 Policy Area 8: Media Protection) 
+ 
+Ultimately, the goal is to remain committed to using technology in its information sharing 
+processes, but not at the sacrifice of the security of the information with which it has been 
+entrusted.  As stated in the CJIS Security Policy, device and architecture independence permits the 
+use of cloud computing, but the security requirements do not change.   
+ 
+Cloud Utilization Scenarios 
+1. Encrypted CJI in a Cloud Environment–Key Management Control, Security Awareness 
+Training, and Personnel Controls 
+ 
+Prior to permitting CJI to be stored or traverse through a cloud environment, the agency 
+should ensure proper encryption key management control procedures are implemented to 
+determine who has access and control over the encryption keys. Proper key management 
+control is vital to CJI security as those individuals (agency or cloud employees) with 
+access to the keys can decrypt the stored files, and therefore, have unescorted access to 
+unencrypted CJI. This means all those individuals must be subjected to security 
+awareness training (CJIS Security Policy section 5.2) and must meet personnel security 
+(CJIS Security Policy Section 5.12) requirements as individuals with unescorted access to 
+unencrypted CJI.
+ 
+ 
+Note: As a best security practice, the CJIS ISO Program does not recommend allowing 
+the cloud service provider access to the encryption keys used to protect CJI. However, it 
+may not always be reasonable to expect the agency, criminal justice or noncriminal 
+justice, to accomplish this task. 
+ 
+Note: When selecting a cloud service provider, the CJIS ISO Program reminds agencies 
+the CJIS Security Policy sets the minimum requirements for the protection of CJI. 
+Additional security assurances from other authorizations such as FedRAMP, StateRAMP, 
+SOC Type 2, etc., may be leveraged, however, they do not guarantee compliance with the 
+CJIS Security Policy. 
+ 
+a. Scenario 1–Agency Stores CJI in a Cloud: 
+A CJA stores encrypted CJI (Backup files and drives) in a cloud service provider’s 
+environment. To access CJI, the agency will extract the CJI from the cloud to its local 
+machine, and then decrypt the CJI. The CJI is processed, re-encrypted, and then re-
+uploaded to the cloud environment for storage. In this scenario, the agency always 
+encrypts the CJI prior to placing it in the cloud and only authorized users of the 
+agency have access to the encryption keys. Since the agency maintains the encryption 
+
+=== PAGE 371 ===
+ 
+12/27/2024  
+CJISSECPOL v6.0 
+G.3-5 
+keys, the cloud service provider employees would not need to undergo fingerprint-
+based background checks, nor have security awareness training. These requirements 
+are negated, because only authorized personnel with access to the keys have the 
+ability to view this CJI in an unencrypted form.
+ 
+ 
+b. Scenario 2–Agency Accesses CJI While in a Cloud: 
+A CJA stores CJI (files and drives) in a cloud service provider’s environment, but as 
+part of daily operations authorized users will remotely access the encrypted CJI in the 
+cloud. The user will decrypt the CJI while it is in the cloud’s virtual environment, 
+process the data, and then re-encrypt the data prior to ending the remote session. The 
+agency maintains the keys and the cloud service provider does not have access to the 
+encryption keys. However, since the CJI is decrypted within the cloud’s virtual 
+environment, any administrative personnel employed by the cloud provider having 
+the ability to access the virtual environment must be identified and subjected to 
+security awareness training and personnel security controls as described in the CJIS 
+Security Policy.
+ 
+ 
+c. Scenario 3–CJI Impact from a Cloud Datacenter Critical Systems Crash–Core Dump* 
+Recovery: 
+A CJA utilizes a cloud service provider (IaaS or PaaS) to store CJI and remotely 
+accesses the environment to process CJI. During normal operation, the cloud provider 
+experiences systems outages within the datacenter in which CJI is processed and 
+stored. The cloud provider’s administrators need to repair the systems and restore 
+service using data from a core dump to return to normal operations. The cloud service 
+provider as part of the Service Level Agreement (SLA) with the CJA has been 
+authorized to maintain the encryption keys in order respond to such an event. The 
+cloud administrators with such access have underwent fingerprint-based background 
+checks and security awareness training. This allows the cloud administrators to 
+decrypt CJI so that it is written to the core dump files for restoration following the 
+system outage. CJI, however, is encrypted at all times except when part of the core 
+dump files. As part of the SLA, the cloud service provider has agreed to treat the core 
+dump files as CJI to ensure all protection are in place in compliance with the CJIS 
+Security Policy.
+ 
+ 
+Note: Writing encrypted data to a core dump corrupts the data and makes it unusable 
+because the key no longer decrypts the data. This is problematic when attempting to 
+recover encrypted data written to a core dump. The CJA could have ensured the 
+cloud provider exclude encrypted data (CJI) from the core dump, but chose against it. 
+ 
+* Core Dump - A file of a computer’s documented memory of when a program or 
+computer crashed. The file consists of the recorded status of the working memory at 
+an explicit time, usually close to when the system crashed or when the program ended 
+atypically as it presents the risk that the system failure would ensure the loss of the 
+encrypted data. 
+ 
+
+=== PAGE 372 ===
+ 
+12/27/2024  
+CJISSECPOL v6.0 
+G.3-6 
+The Cloud Model Explained: 
+Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a 
+shared pool of configurable computing resources (e.g., networks, servers, storage, applications, 
+and services) that can be rapidly provisioned and released with minimal management effort or 
+service provider interaction.  
+ 
+The cloud model as defined by NIST consists of five essential characteristics, offers the option of 
+three service models, and may be deployed via any of four deployment models as shown in 
+Figure 1 below: 
+ 
+ 
+ 
+       
+        Figure 1 - Visual Depiction of the NIST Cloud Computing Definition 
+ 
+Essential Characteristics:  
+ 
+On-demand self-service 
+A consumer can unilaterally provision computing capabilities, such as server time and 
+network storage, as needed automatically without requiring human interaction with each 
+service provider.  
+ 
+Broad network access 
+Capabilities are available over the network and accessed through standard mechanisms 
+that promote use by heterogeneous thin or thick client platforms (e.g., mobile phones, 
+tablets, laptops, and workstations).  
+ 
+Resource pooling 
+
+
+=== PAGE 373 ===
+ 
+12/27/2024  
+CJISSECPOL v6.0 
+G.3-7 
+The provider’s computing resources are pooled to serve multiple consumers using a 
+multi-tenant model, with different physical and virtual resources dynamically assigned 
+and reassigned according to consumer demand. There is a sense of location independence 
+in which the customer generally has no control or knowledge over the exact location of 
+the provided resources but may be able to specify location at a higher level of abstraction 
+(e.g., country, state, or datacenter). Examples of resources include storage, processing, 
+memory, and network bandwidth.  
+ 
+Rapid elasticity 
+Capabilities can be elastically provisioned and released, in some cases automatically, to 
+scale rapidly outward and inward commensurate with demand. To the consumer, the 
+capabilities available for provisioning often appear to be unlimited and can be 
+appropriated in any quantity at any time.  
+ 
+ 
+Measured service 
+Cloud systems automatically control and optimize resource use by leveraging a metering 
+capability* at some level of abstraction appropriate to the type of service (e.g., storage, 
+processing, bandwidth, and active user accounts). Resource usage can be monitored, 
+controlled, and reported, providing transparency for both the provider and consumer of 
+the utilized service.  
+ 
+* Typically this is done on a pay-per-use or charge-per-use basis.  
+ 
+Deployment Models:  
+ 
+Private cloud 
+The cloud infrastructure is provisioned for exclusive use by a single organization 
+comprising multiple consumers (e.g., business units). It may be owned, managed, and 
+operated by the organization, a third party, or some combination of them, and it may exist 
+on or off premises.  
+ 
+Community cloud 
+The cloud infrastructure is provisioned for exclusive use by a specific community of 
+consumers from organizations that have shared concerns (e.g., mission, security 
+requirements, policy, and compliance considerations). It may be owned, managed, and 
+operated by one or more of the organizations in the community, a third party, or some 
+combination of them, and it may exist on or off premises.  
+ 
+Public cloud 
+The cloud infrastructure is provisioned for open use by the general public. It may be 
+owned, managed, and operated by a business, academic, or government organization, or 
+some combination of them. It exists on the premises of the cloud provider.  
+ 
+Hybrid cloud 
+
+=== PAGE 374 ===
+ 
+12/27/2024  
+CJISSECPOL v6.0 
+G.3-8 
+The cloud infrastructure is a composition of two or more distinct cloud infrastructures 
+(private, community, or public) that remain unique entities, but are bound together by 
+standardized or proprietary technology that enables data and application portabil ity (e.g., 
+cloud bursting for load balancing between clouds). 
+ 
+Service Models:  
+ 
+Cloud providers offer different levels of service, i.e.; Infrastructure as a Service (IaaS), Platform 
+as a Service (PaaS), and Software as a Service (SaaS).  The way CJI is placed and accessed in 
+the cloud determines if the personnel security requirements in Section 5.12 apply.  Access to 
+encryption keys and management of the resources vary depending on what type of service is 
+used.  The SaaS offering is the most likely service wherein the cloud service provider may have 
+access to unencrypted CJI due to software updates, patches, and management.  However, through 
+management and control of encryption keys, all service offerings may be implemented in an 
+agency-controlled manner where the cloud service provider has no ability to access unencrypted 
+CJI.   
+ 
+For cloud computing services that involve the storage, processing, or transmission of CJI, 
+Section 5.12 security terms and requirements apply to all personnel when their unescorted logical 
+or physical access to any information system results in the ability, right, or privilege to view, 
+modify, or make use of unencrypted CJI.  It is critical for the agency to understand the level of 
+service and access required for each cloud implementation. 
+ 
+Software as a Service (SaaS)  
+This model provides the consumer the capability to use the provider’s applications 
+running on a cloud infrastructure*.  
+ 
+* A cloud infrastructure is the collection of hardware and software that enables 
+the five essential characteristics of cloud computing. The cloud infrastructure can 
+be viewed as containing both a physical layer and an abstraction layer. The 
+physical layer consists of the hardware resources that are necessary to support 
+the cloud services being provided, and typically includes server, storage and 
+network components. The abstraction layer consists of the software deployed 
+across the physical layer, which manifests the essential cloud characteristics. 
+Conceptually the abstraction layer sits above the physical layer.  
+ 
+The SaaS service model is often referred to as “Software deployed as a hosted service 
+and accessed over the Internet.” 
+ 
+The applications are accessible from various client devices through either a thin client 
+interface, such as a web browser (e.g., web-based email), or a program interface.  
+ 
+When using the SaaS service model it should be understood that the consumer does not 
+manage or control the underlying cloud infrastructure including network, servers, 
+operating systems, storage, or even individual application capabilities, with the possible 
+exception of limited user-specific application configuration settings.  
+
+=== PAGE 375 ===
+ 
+12/27/2024  
+CJISSECPOL v6.0 
+G.3-9 
+ 
+Platform as a Service (PaaS)  
+This model provides the consumer the capability to deploy consumer-created or acquired 
+applications* created using programming languages, libraries, services, and tools 
+supported by the provider onto the cloud infrastructure.  
+ 
+* This capability does not necessarily preclude the use of compatible 
+programming languages, libraries, services, and tools from other sources.  
+ 
+When using the PaaS service model the consumer may have control over the deployed 
+applications and possibly configuration settings for the application-hosting environment, 
+but does not manage or control the underlying cloud infrastructure including network, 
+servers, operating systems, or storage.  
+ 
+Infrastructure as a Service (IaaS)  
+This model provides the consumer the capability to provision processing, storage, 
+networks, and other fundamental computing resources where the consumer is able to 
+deploy and run arbitrary software, including operating systems and applications.  
+ 
+When using the IaaS service model the consumer may have control over operating 
+systems, storage, and deployed applications; and possibly limited control of select 
+networking components (e.g., host firewalls), but does not manage or control the 
+underlying cloud infrastructure.  
+ 
+Key Security and Privacy Issues: 
+ 
+Although the emergence of cloud computing is a recent development, insights into critical aspects 
+of security can be gleaned from reported experiences of early adopters and also from researchers 
+analyzing and experimenting with available cloud provider platforms and associated technologies. 
+The sections below highlight privacy and security- related issues that are believed to have long -
+term significance for public cloud computing and, in many cases, for other cloud computing 
+service models.  
+ 
+Because cloud computing has grown out of an amalgamation of technologies, including service 
+oriented architecture, virtualization, Web 2.0, and utility computing, many of the privacy and 
+security issues involved can be viewed as known problems cast in a ne w setting. The importance 
+of their combined effect in this setting, however, should not be discounted. Public cloud computing 
+does represent a thought -provoking paradigm shift from conventional norms to an open 
+organizational infrastructure —at the extreme,  displacing applications from one organization’s 
+infrastructure to the infrastructure of another organization, where the applications of potential 
+adversaries may also operate.  
+ 
+Governance  
+
+=== PAGE 376 ===
+ 
+12/27/2024  
+CJISSECPOL v6.0 
+G.3-10 
+ 
+Governance implies control and oversight by the organization over policies, procedures, and 
+standards for application development and information technology service acquisition, as well as 
+the design, implementation, testing, use, and monitoring of deploye d or engaged services. With 
+the wide availability of cloud computing services, lack of organizational controls over employees 
+engaging such services arbitrarily can be a source of problems. While cloud computing simplifies 
+platform acquisition, it doesn't alleviate the need for governance; instead, it has the opposite effect, 
+amplifying that need.  
+ 
+Dealing with cloud services requires attention to the roles and responsibilities involved between 
+the organization and cloud provider, particularly with respect to managing risks and ensuring 
+organizational requirements are met. Ensuring systems are secure  and risk is managed is 
+challenging in any environment and even more daunting with cloud computing. Audit mechanisms 
+and tools should be in place to determine how data is stored, protected, and used, to validate 
+services, and to verify policy enforcement. A risk management program should also be in place 
+that is flexible enough to deal with the continuously evolving and shifting risk landscape. 
+ 
+ 
+Compliance  
+ 
+Compliance refers to an organization’s responsibility to operate in agreement with established 
+laws, regulations, standards, and specifications. Various types of security and privacy laws and 
+regulations exist within different countries at the national, state, and local levels, making 
+compliance a potentially complicated issue for cloud computing.  
+ 
+Law and Regulations  
+Cloud providers are becoming more sensitive to legal and regulatory concerns, and may be 
+willing to commit to store and process data in specific jurisdictions and apply required 
+safeguards for security and privacy. However, the degree to which they will accept liability 
+in their service agreements, for exposure of content under their control, remains to be seen. 
+Even so, organizations are ultimately accountable for the security and privacy of data held 
+by a cloud provider on their behalf.  
+ 
+Data Location 
+One of the most common compliance issues facing an organization is data location. A 
+characteristic of many cloud computing services is that data is stored redundantly in 
+multiple physical locations and detailed information about the location of an organization’s 
+data is unavailable or not disclosed to the service consumer. This situation makes it difficult 
+to ascertain whether sufficient safeguards are in place and whether legal and regulatory 
+

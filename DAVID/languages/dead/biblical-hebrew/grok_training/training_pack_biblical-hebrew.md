@@ -80,6 +80,60 @@ In the beginning God created…
 
 **Notes:** DAVID Post 7 hook line. Consonants and niqqud attested in Masoretic tradition; distinct from Modern Hebrew revival pronunciation.
 
+## Pronunciation Guide `[reconstructed]`
+
+**Model:** Tiberian Masoretic tradition (Khan standard). NOT Modern Hebrew revival.
+**Confidence:** high
+**Profile:** `languages/dead/biblical-hebrew/pronunciation/pronunciation_profile.json`
+
+### Canonical sample (Genesis 1:1)
+
+**Text:** בְּרֵאשִׁית בָּרָא אֱלֹהִים
+**Romanization:** bərēʾšît bārāʾ ʾĕlōhîm
+**IPA:** `/bə.ʁeː.ˈʔiː.ʃiːt̪ baː.ˈʁaː ʔɛ.loː.ˈhiːm/`
+
+### Key phonemes
+
+- **Gutturals:** ʿayin [ʕ] deep pharyngeal; ḥet [ħ~x] voiceless; aleph [ʔ] glottal stop
+- **Resh:** uvular [ʁ] or trilled — not Modern Hebrew alveolar
+- **Begadkefat:** spirantization without dagesh (b→v, k→x, etc.); dagesh forte doubles or hardens
+- **Sheva:** mobile [ə] vs silent (context-dependent)
+- **Cantillation:** ta'amim govern phrasing, melody, and emphasis — not optional decoration
+
+### Stress
+
+Penultimate or ultimate; cantillation marks override naive stress assignment.
+
+### Reconstruction notes
+
+Tiberian Galilee Masoretes provide the best-documented medieval continuity to Second Temple pronunciation. Samaritan oral tradition valuable for archaic gutturals. Babylonian tradition simpler on vowel length.
+
+### Grok Imagine audio guidance
+
+Deep pharyngeal scrape on ʿayin; voiceless ḥet; uvular/trilled resh; schwa or zero on sheva; dagesh doubles audibly; chant-like rises/falls following trope marks; deliberate trope-based phrasing — never flat English stress.
+
+### Tutoring hooks
+
+- Tiberian Masoretes preserved pronunciation meticulously in Galilee
+- Gutturals distinguish meaning — largely lost in Modern Hebrew
+- Cantillation is ancient musical notation — like sheet music for scripture
+- Begadkefat spirantization still echoes in Modern Hebrew
+- Samaritan tradition keeps some sounds continuously alive
+
+### Tradition variants (label on-screen)
+
+| Variant | Notes |
+|---------|-------|
+| Tiberian | DAVID default — Khan reconstruction |
+| Samaritan | Archaic gutturals; different vowel system |
+| Babylonian | Simpler vowels; less length detail |
+
+### Sources
+
+- Geoffrey Khan, *The Tiberian Pronunciation Tradition*
+- Joüon-Muraoka, *Grammar of Biblical Hebrew*
+- Ben-Hayyim, Samaritan Hebrew studies
+
 ## Instructions for Grok
 
 1. Treat each block as primary evidence — do not invent unattested forms.

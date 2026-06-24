@@ -1,0 +1,31 @@
+{
+  "language": "french",
+  "status": "living",
+  "research_type": "translation_service",
+  "variant_notes": {
+    "european": "Strict vous/formal; anglicisms flexible; elevated literary.",
+    "canadian": "More tu even business; stricter anti-anglicisms (Bill 96); Québec vocab; context-dependent.",
+    "recommended_default": "european_for_written_formal_or_specify_audience"
+  },
+  "register_system": "Tu informal vs Vous formal (CA looser tu); niveaux soutenu/courant/familier. Traps: faux amis or wrong politeness in Quebec docs.",
+  "translationese_traps": [
+    "Faux amis (actuellement=currently; éventuellement=possibly); 'de la' genitives; passive 'on'; English word order/stiffness."
+  ],
+  "document_conventions": {
+    "legal": "Civil/Napoleonic; precise/repetitive; Québec compliance.",
+    "business": "Formal vous; detailed contracts.",
+    "academic": "Elevated/rhetorical; footnotes.",
+    "creative": "Nuanced/cultural adaptation."
+  },
+  "return_to_original_risks": [
+    "Formality collapse (vous->tu); accent/gender loss; variant split ignored; faux amis re-entry."
+  ],
+  "idiom_mapping_notes": "Functional (e.g. 'avoir le cafard' equiv mood); Baker strategies; food/body clusters; Venuti foreignize literary.",
+  "tutoring_pronunciation_hooks": [
+    "Nasal vowels (bon/on); liaison linking; uvular r; silent letters; grouped rhythm."
+  ],
+  "orthography_notes": "Accents (é/è/ç/â); gender agreement strict; lower caps than English.",
+  "professional_resources": [
+    "Académie Française; OQLF (CA); ATA/ITI; Baker/Venuti; Larousse/Le Robert; bilingual legal."
+  ]
+}

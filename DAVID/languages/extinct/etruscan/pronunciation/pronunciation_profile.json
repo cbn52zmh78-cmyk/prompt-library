@@ -1,0 +1,52 @@
+{
+  "language": "etruscan",
+  "status": "extinct",
+  "research_type": "pronunciation",
+  "ingested_from": "research_ops/outputs/R3_extinct_raw.json",
+  "ingested_at": "2026-06-23",
+  "reconstruction_method": "Greek-derived alphabet adaptation + Latin/Greek transcriptions/bilinguals + internal spelling variation/syncope patterns (Bonfante/Rix/Wallace)",
+  "scholarly_consensus": "4-vowel system secure; aspirate/tenuis contrast dominant; no voiced stops; syllabic sonorants possible (minority).",
+  "confidence_overview": "medium (high on consonants/alphabet; medium-low on vowels/exact prosody due to isolate/sparse corpus)",
+  "phoneme_inventory": {
+    "vowels": ["/a [ɑ]/, /e [e]/, /i [i]/, /u [u]/ (o/u merged in loans/spelling)"],
+    "consonants": ["p/ph, t/th, k/kh (aspirates); f s ś z (affricate?); m n l r (syllabic possible); h j w; no distinct b/d/g"],
+    "notable_absences": "voiced stops (b d g absent or neutralized in loans)",
+    "disputed_phonemes": ["vowel length/qualities", "ś as palatal [ʃ]", "syllabic extent", "aspirates vs palatals"],
+    "distinctive_features": "initial stress → syncope/clusters; aspirate primary contrast; possible geminates/affricates"
+  },
+  "ipa_reconstructed": {
+    "sample_text": "mi mulu larisal (dedicatory formula 'I [am/gave gift] of Laris')",
+    "transcription": "[mi ˈmu.lu laˈris.al]",
+    "confidence": "medium",
+    "confidence_note": "Consonants/alphabet high; vowels conservative placeholder; alternatives in Rix syllabic theory",
+    "alternatives": "More syncopated later realizations; sibilant variants"
+  },
+  "stress_rules": "Likely initial-syllable emphasis (syncope evidence)",
+  "prosody": {
+    "rhythm": "Syllabic + clusters from vowel loss",
+    "pacing": "Compact inscriptions; funerary formulaic",
+    "notes": "Boustrophedon possible; limited direct evidence"
+  },
+  "grok_imagine_guidance": "Commit to: aspirated puffs on ph/th/kh; pure vowels (i e a u); no voiced stops (use p/t/k only); initial stress. Approximate: clusters/syllabic liquids (like English 'button' n); rolled r if present. Avoid: modern voicing/Italianate or forced o-vowel. Flag: aspirate clusters harsh (Tuscan-like link); uncertainties on exact timbre — use crisp/neutral for generation.",
+  "tutoring_hooks": [
+    "Etruscan had NO voiced stops (b/d/g absent) — unique among neighbors!",
+    "Greek alphabet adapted uniquely (added F-symbol for new sound).",
+    "Initial stress caused vowel syncope → wild consonant clusters.",
+    "We read it phonetically far better than we understand meanings (isolate).",
+    "Influenced Latin & possibly modern Tuscan 'gorgia' aspiration."
+  ],
+  "sources": [
+    {"author": "Bonfante & Bonfante", "title": "The Etruscan Language: An Introduction (2nd ed.)", "year": "2002", "url": "https://archive.org/details/etruscanlanguage0000bonf"},
+    {"author": "Helmut Rix", "title": "Etruskische Texte (2 vols.)", "year": "1991", "url": "https://www.zora.uzh.ch/"},
+    {"author": "Rex E. Wallace", "title": "Zikh Rasna: A Manual of the Etruscan Language and Inscriptions", "year": "2008", "url": "https://www.annenberg.net/~hwallace/"}
+  ],
+  "disputed_fields": [
+    "vowel length and exact qualities",
+    "ś realization ([s] vs [ʃ])",
+    "syllabic sonorant extent",
+    "aspirates vs palatal allophones"
+  ],
+  "series_planning_flags": [
+    "notable_absences: no voiced stops — high-value tutoring hook"
+  ]
+}

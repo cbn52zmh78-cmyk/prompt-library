@@ -1,0 +1,42 @@
+{
+  "language": "hittite",
+  "ingested_from": "research_ops/outputs/R3_extinct_raw.json",
+  "ingested_at": "2026-06-23",
+  "disputed_phonemes": [
+    {
+      "phoneme": "stop contrast (fortis/lenis)",
+      "alternatives": ["geminate vs single (Melchert)", "voiced vs voiceless (Sturtevant)"],
+      "confidence": "low",
+      "notes": "Older Sturtevant model largely superseded but still cited",
+      "queue_priority": "medium"
+    },
+    {
+      "phoneme": "ḫ",
+      "alternatives": ["[x] velar", "[χ] uvular", "[ħ] pharyngeal (older)"],
+      "confidence": "low",
+      "notes": "PIE laryngeal reflex secure; exact place of articulation debated",
+      "queue_priority": "medium"
+    },
+    {
+      "phoneme": "š",
+      "alternatives": ["[ʃ]", "[sʲ]", "[s]"],
+      "confidence": "low",
+      "notes": "Cuneiform š likely palatal but comparative evidence mixed",
+      "queue_priority": "low"
+    },
+    {
+      "phoneme": "stress",
+      "alternatives": ["initial stress", "penultimate stress", "weight-based stress"],
+      "confidence": "low",
+      "notes": "Cuneiform unmarked; inferred from Luwian and comparative Anatolian",
+      "queue_priority": "medium"
+    },
+    {
+      "phoneme": "unstressed vowel qualities",
+      "alternatives": ["full vowel retention", "reduction to [ə]", "syncope"],
+      "confidence": "low",
+      "notes": "Plene writing helps length; unstressed timbre partly inferred",
+      "queue_priority": "low"
+    }
+  ]
+}

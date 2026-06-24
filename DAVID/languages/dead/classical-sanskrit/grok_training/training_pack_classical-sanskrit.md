@@ -80,6 +80,57 @@ I praise Agni, the priest…
 
 **Notes:** DAVID Post 9 hook line. Manuscript attestation secure; lesson IPA is reconstructed Vedic, not modern pronunciation.
 
+## Pronunciation Guide `[reconstructed]`
+
+**Model:** Shiksha/Pāṇini standard — living Vedic recitation confirms articulation.
+**Confidence:** very_high
+**Profile:** `languages/dead/classical-sanskrit/pronunciation/pronunciation_profile.json`
+
+### Canonical sample (Bhagavad Gita 1:1)
+
+**Text:** धर्मक्षेत्रे कुरुक्षेत्रे
+**Romanization:** dharmakṣetre kurukṣetre
+**IPA:** `/dʱər.mək.ʂeː.t̪reː ku.ɾu.k.ʂeː.t̪reː/`
+
+### Key phonemes
+
+- **Retroflexes:** ṭ ṭh ḍ ḍh ṇ ṣ — tongue tip curled back, distinct from dentals
+- **Aspirates:** plain vs aspirated throughout all five vargas (ph/bh/kh/gh/ch) — audible breath burst
+- **Vowels:** pure cardinal qualities; length phonemic (ā ī ū held ~2× short)
+- **ṛ/ḷ:** syllabic resonants with precise duration
+- **Sandhi:** euphonic merging at word boundaries — mandatory in continuous speech
+
+### Stress
+
+Quantitative (mora-based syllable weight); Vedic pitch accents (udātta/anudātta/svarita) in sacred recitation.
+
+### Reconstruction notes
+
+Pāṇinīya Śikṣā and Prātiśākhya describe articulation places and manners with precision unmatched in Western linguistics until the 19th century. Devanagari maps 1:1 to the 52-akshara system. Unbroken pandit recitation tradition provides living confirmation.
+
+### Grok Imagine audio guidance
+
+Retroflex curl audible on ṭ/ḍ/ṣ; strong aspirate bursts on kh/gh/ph/bh; hold long vowels distinctly; crisp dental vs retroflex contrast; sandhi merges at phrase boundaries; precise enunciation — never English schwa reduction.
+
+### Tutoring hooks
+
+- Shiksha texts exceed Western phonetic precision until modern era
+- Devanagari is among the most perfectly phonetic scripts devised
+- Aspirates and retroflexes create distinctive 'clicky' precision
+- Unbroken pandit recitation keeps pronunciation alive
+- Pāṇini grammar + Shiksha = pinnacle of ancient linguistic analysis
+
+### Series planning flags
+
+- `shiksha_notes` — high-value dedicated tutoring series module
+- `aspirate_pairs` — standalone lesson candidate
+
+### Sources
+
+- Pāṇinīya Śikṣā and Prātiśākhya treatises
+- Whitney/MacDonell Sanskrit grammars
+- Cardona, *Pāṇini: A Survey of Research*
+
 ## Instructions for Grok
 
 1. Treat each block as primary evidence — do not invent unattested forms.

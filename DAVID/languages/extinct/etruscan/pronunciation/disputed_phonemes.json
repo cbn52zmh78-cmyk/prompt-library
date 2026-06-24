@@ -1,0 +1,35 @@
+{
+  "language": "etruscan",
+  "ingested_from": "research_ops/outputs/R3_extinct_raw.json",
+  "ingested_at": "2026-06-23",
+  "disputed_phonemes": [
+    {
+      "phoneme": "vowel length/qualities",
+      "alternatives": ["no phonemic length", "length contrast in open syllables", "merged e/i in late period"],
+      "confidence": "low",
+      "notes": "Isolate with sparse corpus; internal spelling variation ambiguous",
+      "queue_priority": "medium"
+    },
+    {
+      "phoneme": "ś",
+      "alternatives": ["[s]", "[ʃ]", "[sʲ]"],
+      "confidence": "low",
+      "notes": "Greek-derived letter value disputed; palatal hypothesis minority",
+      "queue_priority": "medium"
+    },
+    {
+      "phoneme": "syllabic sonorants",
+      "alternatives": ["syllabic n/l/r in syncopated forms", "vocalic epenthesis instead"],
+      "confidence": "low",
+      "notes": "Rix syllabic theory vs Bonfante vocalic-insertion model",
+      "queue_priority": "low"
+    },
+    {
+      "phoneme": "aspirates (ph/th/kh)",
+      "alternatives": ["true aspirates [pʰ]", "affricates or palatals in some positions"],
+      "confidence": "low",
+      "notes": "Primary contrast secure; exact articulation in clusters disputed",
+      "queue_priority": "low"
+    }
+  ]
+}

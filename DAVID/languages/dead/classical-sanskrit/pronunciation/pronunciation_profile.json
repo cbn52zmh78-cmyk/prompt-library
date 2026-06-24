@@ -1,0 +1,45 @@
+{
+  "language": "classical-sanskrit",
+  "status": "dead",
+  "research_type": "pronunciation",
+  "ingested_from": "research_ops/outputs/R4_ancient_raw.json",
+  "ingested_at": "2026-06-23",
+  "reconstruction_method": "Shiksha texts — ancient native phonetics treatises",
+  "scholarly_consensus": "Extremely high precision due to indigenous Shiksha/Pāṇini analysis unmatched until modern era.",
+  "shiksha_notes": "Pāṇinīya Śikṣā and Prātiśākhya describe exact articulation places/manners (retroflex curl, aspirate breath burst, length, sandhi); vowels pure cardinal; 52 akshara system.",
+  "phoneme_inventory": {
+    "vowels": ["a ā i ī u ū ṛ ḷ e ai o au (pure with length)"],
+    "consonants": ["Stops: 5 vargas k/kh g/gh ṅ etc.; retroflex ṭ/ṭh ḍ/ḍh ṇ; dental t/th d/dh n; labial p/ph b/bh m"],
+    "retroflex_series": ["ṭ ṭh ḍ ḍh ṇ ṣ ṛ — tongue curled back"],
+    "aspirate_pairs": ["Plain vs aspirated throughout (ph bh gh etc. — breathy release)"],
+    "distinctive_features": "Voicing + aspiration; retroflex vs dental; full nasals/sibilants; anusvāra/visarga."
+  },
+  "ipa_reconstructed": {
+    "sample_text": "धर्मक्षेत्रे कुरुक्षेत्रे",
+    "romanization": "dharmakṣetre kurukṣetre",
+    "transcription": "/dʱər.mək.ʂeː.t̪reː ku.ɾu.k.ʂeː.t̪reː/",
+    "confidence": "very_high",
+    "confidence_note": "Shiksha/Pāṇini + living Vedic recitation confirms every detail."
+  },
+  "stress_rules": "Quantitative (syllable weight long/short); Vedic pitch accents (udātta etc.).",
+  "prosody": {
+    "rhythm": "Mora/quantitative meter",
+    "pacing": "Precise clear enunciation",
+    "vedic_accent_note": "Pitch accents (high/low/falling) preserved in traditional recitation."
+  },
+  "grok_imagine_guidance": "Retroflex curl for ṭ/ḍ/ṣ (tongue tip back); strong aspirate bursts (ph/bh); pure cardinal long vowels (hold twice); exact length distinctions; sandhi euphony.",
+  "tutoring_hooks": [
+    "Shiksha texts provide more detailed phonetics than Western linguistics until 19th century.",
+    "Devanagari is one of the most perfectly phonetic scripts ever devised.",
+    "Aspirates and retroflexes create a distinctive 'clicky' precision.",
+    "Unbroken pandit recitation tradition keeps pronunciation alive.",
+    "Pāṇini grammar + Shiksha represent pinnacle of ancient linguistic analysis."
+  ],
+  "sources": [
+    "Shiksha treatises (Pāṇinīya etc.); Whitney/MacDonell; Cardona on Pāṇini; living Vedic recitation traditions."
+  ],
+  "series_planning_flags": [
+    "shiksha_notes — high-value tutoring series content",
+    "aspirate_pairs — dedicated lesson module candidate"
+  ]
+}
