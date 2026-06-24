@@ -1,0 +1,1091 @@
+[ELIOT] Running in STUB mode — no GPU inference.
+[ARGUS] Running in STUB mode — no GPU inference.
+[ATLAS] Running in STUB mode — no GPU inference.
+[OSBORN] Running in STUB mode.
+
+[RECONCILED] 6 agent(s) returned — 20 lead(s) — human confirmation required before release.{
+  "status": "RECONCILED",
+  "correlation_id": "0193f2a0-DRAFT-FULL-FLEET-001",
+  "reason": "",
+  "fan_out_count": 6,
+  "agent_returns": [
+    {
+      "correlationId": "0193f2a0-DRAFT-FULL-FLEET-001",
+      "agent": "ELIOT",
+      "status": "complete",
+      "confidence": "MEDIUM",
+      "findings": {
+        "raw_preview": "[ELIOT STUB \u2014 DRAFT] Would produce FINANCIAL INTELLIGENCE REPORT via eliot-7b adapter.\nInstruction: ELIOT fleet task: analyze_entity. Identify detection indicators only \u2014 no guilt determinations.\nInput reviewed: [\n  {\n    \"source_id\": \"SYNTH-DEED-001\",\n    \"source_type\": \"public_record\",\n   ...\n\nFINANCIAL INTELLIGENCE REPORT\nCase: ELIOT-STUB-001\nAnalyst: ELIOT v0.1 | Human review: Required\n\nRISK SCORE: PENDING\nTYPOLOGY FLAGS: (stub \u2014 load adapter on GPU for live detection)\n\nDETECTION SUMMARY:\nStub mode \u2014 pattern screening deferred until adapter is loaded.\n\nRECOMMENDED INVESTIGATIVE LEADS:\n1. V",
+        "task": "analyze_entity"
+      },
+      "leads": [
+        "Verify entity filings and transaction records against cited typologies",
+        "Human analyst review required before any investigative action"
+      ],
+      "artifacts": [],
+      "humanReview": "Benjamin Cartwright"
+    },
+    {
+      "correlationId": "0193f2a0-DRAFT-FULL-FLEET-001",
+      "agent": "ARGUS",
+      "status": "complete",
+      "confidence": "MEDIUM",
+      "findings": {
+        "raw_preview": "[ARGUS STUB \u2014 DRAFT] Would produce ENTITY ENRICHMENT DOSSIER via argus-7b adapter.\nInstruction: ARGUS fleet task: enrich_entity. Enrich entity from public records and corporate filings \u2014 indicator...\n\nENTITY ENRICHMENT DOSSIER\nAgent: ARGUS v0.1 | Human review: Required\n\nSUBJECT: Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)\nTYPOLOGY FLAGS: recent_formation_pre_acquisition, cross_state_shell_pattern, beneficial_owner_opacity\n\nCONFIRMED IDENTIFIERS (operator must verify):\n- Entity name indicator: Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic) [source: public_record]\n\nREGISTERE",
+        "enrichment": {
+          "entity": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+          "typology_flags": [
+            "recent_formation_pre_acquisition",
+            "cross_state_shell_pattern",
+            "beneficial_owner_opacity"
+          ],
+          "identifiers": [
+            {
+              "field": "entity_name",
+              "value": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+              "source_id": "SYNTH-DEED-001",
+              "confidence": "LOW"
+            }
+          ],
+          "registered_agent_links": [
+            {
+              "agent": "Out-of-state registered agent cluster \u2014 verify SOS filing",
+              "indicator": "Shared-agent cluster possible \u2014 verify adjacent SOS filings",
+              "source_type": "corporate_filing"
+            }
+          ],
+          "related_entities": [
+            {
+              "name": "Adjacent LLC (unverified)",
+              "relationship": "shared_registered_agent",
+              "indicator": "Same agent on multiple formations \u2014 geographic clustering indicator"
+            }
+          ],
+          "sources": [
+            {
+              "source_id": "SYNTH-DEED-001",
+              "source_type": "public_record",
+              "label": "Allegheny County deed filing (synthetic)",
+              "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+            },
+            {
+              "source_id": "SYNTH-WIRE-002",
+              "source_type": "financial_record",
+              "label": "Wire transfer summary (synthetic)",
+              "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+            },
+            {
+              "source_id": "SYNTH-DOC-003",
+              "source_type": "document",
+              "label": "PDF contract submitted by subject (synthetic)",
+              "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+            },
+            {
+              "source_id": "SYNTH-GEO-004",
+              "source_type": "crime_report",
+              "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+              "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+            },
+            {
+              "source_id": "SYNTH-CORP-005",
+              "source_type": "corporate_filing",
+              "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+              "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+            }
+          ]
+        },
+        "task": "enrich_entity"
+      },
+      "leads": [
+        "Verify SOS corporate filing dates against deed closing timeline",
+        "Cross-reference registered agent against adjacent LLC formations",
+        "Human analyst review required before any investigative action",
+        "Typology flag surfaced: recent_formation_pre_acquisition \u2014 verify against primary public records",
+        "Typology flag surfaced: cross_state_shell_pattern \u2014 verify against primary public records",
+        "Typology flag surfaced: beneficial_owner_opacity \u2014 verify against primary public records"
+      ],
+      "artifacts": [],
+      "humanReview": "Benjamin Cartwright"
+    },
+    {
+      "correlationId": "0193f2a0-DRAFT-FULL-FLEET-001",
+      "agent": "ATLAS",
+      "status": "complete",
+      "confidence": "MEDIUM",
+      "findings": {
+        "graph_lead": {
+          "graph_type": "ownership_network",
+          "graph_summary": "[ATLAS STUB \u2014 DRAFT] Ownership/transaction graph with 3 nodes and 2 edges. LLC shell cluster linked to wire source and property \u2014 operator must verify all relationships against primary records. [investigative lead \u2014 verify]",
+          "nodes": [
+            {
+              "node_id": "node-b58ea5e1",
+              "label": "Allegheny County deed filing (synthetic)",
+              "node_type": "llc",
+              "indicator": "Recent formation pattern \u2014 verify SOS filing date vs. closing"
+            },
+            {
+              "node_id": "node-6a653c5d",
+              "label": "Wire transfer summary (synthetic)",
+              "node_type": "financial_entity",
+              "indicator": "Foreign-intermediary wire \u2014 verify origin institution"
+            },
+            {
+              "node_id": "node-46b9fbd0",
+              "label": "Allegheny County deed filing (synthetic)",
+              "node_type": "property",
+              "indicator": "All-cash acquisition \u2014 correlate with entity graph timing"
+            }
+          ],
+          "edges": [
+            {
+              "edge_id": "edge-467a0584",
+              "source_id": "node-6a653c5d",
+              "target_id": "node-b58ea5e1",
+              "relationship": "funds_entity",
+              "indicator": "Wire precedes LLC closing \u2014 timeline correlation indicator"
+            },
+            {
+              "edge_id": "edge-99dc0e5c",
+              "source_id": "node-b58ea5e1",
+              "target_id": "node-46b9fbd0",
+              "relationship": "acquired",
+              "indicator": "Nominee LLC holds title \u2014 expand registered-agent cluster"
+            }
+          ]
+        },
+        "task": "build_graph",
+        "node_count": 3,
+        "edge_count": 2
+      },
+      "leads": [
+        "Expand SOS search for shared registered agent across adjacent LLCs",
+        "ELIOT: correlate transaction timing with FinCEN typology flags"
+      ],
+      "artifacts": [],
+      "humanReview": "Benjamin Cartwright"
+    },
+    {
+      "correlationId": "0193f2a0-DRAFT-FULL-FLEET-001",
+    
+  "agent": "OSBORN",
+      "status": "complete",
+      "confidence": "MEDIUM",
+      "findings": {
+        "raw_preview": "[OSBORN STUB \u2014 DRAFT] Would produce DOCUMENT EXAMINATION REPORT via osborn-7b adapter.\nInstruction: OSBORN fleet task: examine_document. Examine document for forgery indicators, alteration markers, an...\n\nDOCUMENT EXAMINATION REPORT\nAgent: OSBORN v0.1 | Human forensic examiner review: Required\n\nDOCUMENT TYPE: unspecified_document\nEXAMINATION INDICATORS: examination_pending_physical_document_required\n\nRECOMMENDED FORENSIC TESTS:\n- ESDA (Electrostatic Detection Apparatus) for indented writing\n- VSC (Video Spectral Comparator) for ink differentiation\n- Physical measurement of font spacing and bas",
+        "task": "examine_document"
+      },
+      "leads": [
+        "OSBORN document examination indicators surfaced \u2014 qualified examiner review required before evidentiary use."
+      ],
+      "artifacts": [],
+      "humanReview": "Benjamin Cartwright"
+    },
+    {
+      "correlationId": "0193f2a0-DRAFT-FULL-FLEET-001",
+      "agent": "SCOUT",
+      "status": "complete",
+      "confidence": "MEDIUM",
+      "findings": {
+        "raw_preview": "BLOCKED: SCOUT geographic_crime_analysis_only \u2014 instruction rejected.\nReason: instruction requests predictive policing or future crime prediction \u2014 out of scope\nDISCLAIMER: Geographic analysis for investigative use only on existing case data. SCOUT does not predict future crime or identify suspects \u2014 human analyst review required.",
+        "task": "hotspot_analysis"
+      },
+      "leads": [
+        "SCOUT geographic analysis indicators produced \u2014 operator must verify against primary crime records."
+      ],
+      "artifacts": [],
+      "humanReview": "Benjamin Cartwright"
+    },
+    {
+      "correlationId": "0193f2a0-DRAFT-FULL-FLEET-001",
+      "agent": "VERA",
+      "status": "complete",
+      "confidence": "MEDIUM",
+      "findings": {
+        "raw_preview": "[VERA STUB -- DRAFT]\n============================================================\nVERA DIGITAL DOCUMENT EXAMINATION\nScope: digital_document_authenticity_only\nTimestamp: 2026-06-24T09:23:00+00:00\nDocument type (inferred): Portable Document Format\n============================================================\n\nEXAMINATION INDICATORS:\n  1. Creation and modification timestamps: evaluate for plausibility relative to claimed document date -- post-dated modification is an indicator.\n  2. Producer / Creator field: identify PDF generation software and version; anachronistic software for claimed date is a",
+        "task": "metadata_audit"
+      },
+      "leads": [
+        "Creation and modification timestamps: evaluate for plausibility relative to claimed document date -- post-dated modification is an indicator.",
+        "Producer / Creator field: identify PDF generation software and version; anachronistic software for claimed date is an indicator.",
+        "XMP metadata vs DocInfo dictionary consistency: discrepancies between the two metadata stores can indicate post-processing.",
+        "Font embedding: fonts unavailable at claimed creation date are indicators.",
+        "Incremental update structure: unsigned incremental saves after a claimed signed-and-final state are alteration indicators.",
+        "Object stream dates: cross-reference internal object timestamps.",
+        "Digital signature coverage: check whether the signature covers the full document or only partial pages -- partial coverage may indicate content was added after signing."
+      ],
+      "artifacts": [],
+      "humanReview": "Benjamin Cartwright"
+    }
+  ],
+  "bundle": {
+    "correlation_id": "0193f2a0-DRAFT-FULL-FLEET-001",
+    "case_ref": "DRAFT-SYNTHETIC-FULL-001",
+    "draft_mode": true,
+    "confirmation_status": "PENDING",
+    "leads": [
+      {
+        "lead_id": "1e7ea453-d183-44e1-bff5-b323e6b83f9f",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[ELIOT] Verify entity filings and transaction records against cited typologies. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.288087+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      },
+      {
+        "lead_id": "6e07142a-f9b9-4d4b-8421-edbccaa89b78",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[ELIOT] Human analyst review required before any investigative action. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.288087+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      },
+      {
+        "lead_id": "01340b00-5af3-49f5-b024-f8c7a20dd98f",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[ARGUS] Verify SOS corporate filing dates against deed closing timeline. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.288087+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      },
+      {
+        "lead_id": "5aa3ecaa-4172-4f24-a9df-efd3955b6d8c",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[ARGUS] Cross-reference registered agent against adjacent LLC formations. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.288087+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      },
+      {
+        "lead_id": "eb96a9bb-f96b-4c75-a042-4d53168611d4",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[ARGUS] Human analyst review required before any investigative action. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.288087+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      },
+      {
+        "lead_id": "b627afc9-47ed-4c71-ae49-d86c02aff156",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[ARGUS] Typology flag surfaced: recent_formation_pre_acquisition \u2014 verify against primary public records. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.288087+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      },
+      {
+        "lead_id": "4131a66b-1b8d-4abd-98b4-dbeb574b262a",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[ARGUS] Typology flag surfaced: cross_state_shell_pattern \u2014 verify against primary public records. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.288087+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      },
+      {
+        "lead_id": "61472a0b-d33d-4753-bfea-ce4627621eff",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[ARGUS] Typology flag surfaced: beneficial_owner_opacity \u2014 verify against primary public records. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.288087+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      },
+      {
+        "lead_id": "225859ab-a0e9-4b9c-a650-af1aa1b8f40e",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[ATLAS] Expand SOS search for shared registered agent across adjacent LLCs. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.288087+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      },
+      {
+        "lead_id": "1cde6b4c-ea15-4c65-b2f7-a1671a6cd9a8",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[ATLAS] ELIOT: correlate transaction timing with FinCEN typology flags. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.288087+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      },
+      {
+        "lead_id": "c1376f43-2158-4d21-ae72-d8f6c8a7f73f",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[ATLAS STUB \u2014 DRAFT] Ownership/transaction graph with 3 nodes and 2 edges. LLC shell cluster linked to wire source and property \u2014 operator must verify all relationships against primary records. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.288087+00:00",
+        "human_confirmed": false,
+        "reviewer": null,
+        "lead_type": "graph",
+        "graph_type": "ownership_network",
+        "nodes": [
+          {
+            "node_id": "node-b58ea5e1",
+            "label": "Allegheny County deed filing (synthetic)",
+            "node_type": "llc",
+            "indicator": "Recent formation pattern \u2014 verify SOS filing date vs. closing"
+          },
+          {
+            "node_id": "node-6a653c5d",
+            "label": "Wire transfer summary (synthetic)",
+            "node_type": "financial_entity",
+            "indicator": "Foreign-intermediary wire \u2014 verify origin institution"
+          },
+          {
+            "node_id": "node-46b9fbd0",
+            "label": "Allegheny County deed filing (synthetic)",
+            "node_type": "property",
+            "indicator": "All-cash acquisition \u2014 correlate with entity graph timing"
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "edge-467a0584",
+            "source_id": "node-6a653c5d",
+            "target_id": "node-b58ea5e1",
+            "relationship": "funds_entity",
+            "indicator": "Wire precedes LLC closing \u2014 timeline correlation indicator"
+          },
+          {
+            "edge_id": "edge-99dc0e5c",
+            "source_id": "node-b58ea5e1",
+            "target_id": "node-46b9fbd0",
+            "relationship": "acquired",
+            "indicator": "Nominee LLC holds title \u2014 expand registered-agent cluster"
+          }
+        ]
+      },
+      {
+        "lead_id": "840a9242-52ae-41a1-bf2d-937c94d051d8",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[OSBORN] OSBORN document examination indicators surfaced \u2014 qualified examiner review required before evidentiary use. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.289086+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      },
+      {
+        "lead_id": "0ea0ea49-8f5a-4382-915e-a60f793b27d0",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[SCOUT] SCOUT geographic analysis indicators produced \u2014 operator must verify against primary crime records. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.289086+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      },
+      {
+        "lead_id": "03bf0b56-de34-406a-88e7-8c92cd17fe75",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[VERA] Creation and modification timestamps: evaluate for plausibility relative to claimed document date -- post-dated modification is an indicator. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.289086+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      },
+      {
+        "lead_id": "423cdf61-feda-4f82-8c97-7fe7400ba65b",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[VERA] Producer / Creator field: identify PDF generation software and version; anachronistic software for claimed date is an indicator. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.289086+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      },
+      {
+        "lead_id": "7a61130e-21f7-44f5-ab34-8469111ec808",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[VERA] XMP metadata vs DocInfo dictionary consistency: discrepancies between the two metadata stores can indicate post-processing. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.289086+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      },
+      {
+        "lead_id": "83b567db-501a-4890-a062-605070c780d2",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[VERA] Font embedding: fonts unavailable at claimed creation date are indicators. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.289086+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      },
+      {
+        "lead_id": "68b5fb55-f2ef-40fc-8e50-bb91d659c64a",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[VERA] Incremental update structure: unsigned incremental saves after a claimed signed-and-final state are alteration indicators. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.289086+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      },
+      {
+        "lead_id": "5177dd62-956a-49e3-a94b-692ad643944f",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[VERA] Object stream dates: cross-reference internal object timestamps. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.289086+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      },
+      {
+        "lead_id": "ec83447c-c9b3-4f7e-82ad-914dfb6c90ff",
+        "tag": "investigative lead \u2014 verify",
+        "summary": "[VERA] Digital signature coverage: check whether the signature covers the full document or only partial pages -- partial coverage may indicate content was added after signing. [investigative lead \u2014 verify]",
+        "sources": [
+          {
+            "source_id": "SYNTH-DEED-001",
+            "source_type": "public_record",
+            "label": "Allegheny County deed filing (synthetic)",
+            "excerpt": "LLC purchased residential property all-cash 14 days after Wyoming formation."
+          },
+          {
+            "source_id": "SYNTH-WIRE-002",
+            "source_type": "financial_record",
+            "label": "Wire transfer summary (synthetic)",
+            "excerpt": "Inbound wire from intermediary account; beneficial owner not named on closing docs."
+          },
+          {
+            "source_id": "SYNTH-DOC-003",
+            "source_type": "document",
+            "label": "PDF contract submitted by subject (synthetic)",
+            "excerpt": "PDF creation date 2019, modification timestamp 2024-11-02. Producer field: Adobe Acrobat 2024. Font subset includes glyphs absent from 2019 Adobe builds."
+          },
+          {
+            "source_id": "SYNTH-GEO-004",
+            "source_type": "crime_report",
+            "label": "Aggregated burglary incident locations, Q3 2025 (synthetic)",
+            "excerpt": "14 incidents across 3 zip codes. Entry method: rear window. Time range 02:00-04:30. Closest MO cluster: southwest quadrant, radius 0.8 miles."
+          },
+          {
+            "source_id": "SYNTH-CORP-005",
+            "source_type": "corporate_filing",
+            "label": "Delaware SOS filing \u2014 MERIDIAN HOLDINGS LLC (synthetic)",
+            "excerpt": "Registered agent changed 3 times in 18 months. Manager names match ARGUS flag from prior case. No revenue disclosed."
+          }
+        ],
+        "confidence": "MEDIUM",
+        "created_at": "2026-06-24T09:23:00.289086+00:00",
+        "human_confirmed": false,
+        "reviewer": null
+      }
+    ]
+  },
+  "confirmation": {
+    "status": "PENDING",
+    "reviewer": null
+  },
+  "gate_cjis_review": null
+}
