@@ -1,0 +1,195 @@
+QUESTIONED DOCUMENT EXAMINATION — LE FORENSIC RESEARCH NOTES
+================================================================
+Purpose: Training dataset source material for law-enforcement forensic document
+examination (FDE). Technical specificity per SWGDOC/ASB standards and LE practice.
+Compiled: 2026-06-23
+
+--------------------------------------------------------------------------------
+SECTION 1: CHECK FRAUD — MICR TAMPERING, CHEMICAL ALTERATION, CHECK WASHING
+--------------------------------------------------------------------------------
+
+LE forensic document examiners treat altered checks under SWGDOC E03-13 / ANSI/ASB
+Standard 035. Common fraud vectors: (1) check washing — solvent removal of payee
+and amount ink (acetone, toluene, bleach solutions) while MICR E-13B magnetic ink
+at the document bottom often survives; (2) chemical alteration of payee/amount fields
+via oxidizing agents, correction fluid, or re-inking over bleached areas; (3) MICR
+line tampering — re-encoding routing/transit/account numbers with magnetic ink pens,
+strip-and-replace of MICR toner bands, or photocopied MICR lacking proper magnetic
+signal.
+
+Detection (non-destructive first, SWGDOC E03 §7.4): oblique and transmitted light for
+fiber disturbance, discoloration, and smearing in courtesy/legal amount lines. VSC
+multispectral imaging (UV-A 365 nm, visible, IR 780–850 nm) separates ink batches;
+washed zones show fluorescence anomalies or absent IR luminescence. MSFI or MICR
+reader verifies signal strength and character spacing per ANSI X9; tampered MICR shows
+hand-drawn strokes, inconsistent flux density, or registration misalignment. Washing
+leaves roughened paper, disturbed sizing, and ESDA-detectable fiber disruption.
+Stroke intersection order proves post-issuance alteration. Destructive ink comparison
+(SWGDOC M01/M02) requires submitter consultation (E03 §7.13). See ANSI/ASB 172 for
+mechanical checkwriter impressions.
+
+--------------------------------------------------------------------------------
+SECTION 2: SIGNATURE FORGERY — METHODS AND HANDWRITING IDENTIFICATION
+--------------------------------------------------------------------------------
+
+Signature examination follows SWGDOC E01-13 / ANSI/ASB Standard 070 (Examination
+of Handwritten Items), applying ACE-V: Analysis of discriminating elements,
+Comparison, Evaluation, optional Verification. Forgery categories: (1) freehand
+simulation — forger copies a model signature without mechanical aid, producing slow,
+tremulous line quality, pen lifts, retouching, and inconsistent letter formations;
+(2) tracing — transmitted light, carbon intermediates, or indentations reveal guide
+marks; ESDA may recover underlying model signature impressions; (3) auto-pen /
+autopen / robotic signature devices — reproduce uniform pressure, identical
+waveforms across multiple specimens, and absence of natural range of variation.
+
+Examiners evaluate pen pressure (indentation depth via oblique light and ESDA),
+writing speed (line width variation, tapered terminals, ink feathering), and tremor
+(unnatural high-frequency oscillation in curves, patched strokes). SWGDOC E01
+§7.12.4 mandates assessment of line quality, freedom of execution, hesitations,
+stops, patching, and tremor against known (K) standards. Simulated signatures lack
+internal consistency with the writer's range of variation in speed, pressure, and
+proportion. Blind simulations may show model dependence (microscopic similarities
+to the exemplar). Conclusions use SWGDOC Terminology for Expressing Conclusions
+(identification, elimination, inconclusive, or insufficient evidence). Original
+documents required; photocopies may lack sufficient stroke detail (E01 §7.5).
+Graphology is explicitly excluded from FDE scope per SWGDOC guidance.
+
+--------------------------------------------------------------------------------
+SECTION 3: DOCUMENT ALTERATION — OBLITERATION, INSERTION, PAGE SUBSTITUTION
+--------------------------------------------------------------------------------
+
+SWGDOC E03-13 defines alteration as modification by physical, chemical, or
+mechanical means including obliterations, additions, overwritings, or erasures.
+Obliteration methods: abrasive erasure (rubber/vinyl eraser leaving fiber nap and
+surface sheen), chemical solvent erasure, opaque covering (correction tape/fluid,
+acrylic paint), and digital cut-and-paste reprinting. Detection: side lighting
+reveals raised/depressed erasure zones; transmitted light shows thin spots; UV/IRL
+imaging may recover luminescent ink beneath opaque covers; EDD (electrostatic
+detection device per ANSI/ASB 044) visualizes fiber disturbances and prior
+indentations of obliterated text.
+
+Insertion detection: crowded or awkward placement of text (E03 §7.3.3), multiple
+writing instruments, inconsistent slant/size, and intersection sequence analysis —
+altered strokes crossing original lines indicate later application. Digital
+insertions show font inconsistency, halftone dot patterns, and edge artifacts under
+high magnification. Page substitution: physical match examination (SWGDOC Physical
+Match standard) compares tear/cut/perforation edges; paper stock comparison (SWGDOC
+M03 non-destructive paper examination) evaluates basis weight, color, fluorescent
+optical brighteners, and watermark alignment; staple hole patterns, fold lines, and
+binding marks (E03 §7.3.12) must align across purportedly contiguous pages. ESDA
+indentation mapping can link a substituted page to a different writing pad. Sequence
+determination (which ink crossed which) is critical for proving fraudulent revision.
+
+--------------------------------------------------------------------------------
+SECTION 4: PHYSICAL EXAMINATION TOOLS — ESDA, VSC, INFRARED, ULTRAVIOLET
+--------------------------------------------------------------------------------
+
+ESDA (Electrostatic Detection Apparatus, Foster+Freeman ESDA2): non-destructive
+indentation visualization per ANSI/ASB 044. Procedure: humidify document (RH <60%),
+place on grounded platen under Mylar charging film, corona charge (~7 kV), develop
+with cascade toner beads. Detects indentations several sheets deep and decades old.
+Fitness-for-use (FFU) control required each run. Run BEFORE ninhydrin or wet
+chemical processing (E03 §5.3). Also reveals mechanical erasures and footwear
+impressions on paper.
+
+VSC (Video Spectral Comparator): forensic-grade multispectral document examination
+system. Incident illumination: UV-A (365 nm), UV-B (308 nm), UV-C (255 nm), visible,
+IR (780–1100 nm), coaxial, oblique, and transmitted modes. Camera spectral range
+350–1100 nm with narrowband LED arrays (1000+ waveband combinations). Applications:
+ink differentiation via IR reflectance and infrared luminescence (IRL); recovery of
+charred/soot-covered entries; yellow enhancement for MIC/CPS codes; side-by-side
+subtractive comparison of stroke images. PVMS microspectrometer accessory (400–850 nm,
+5 nm resolution) identifies ink spectral curves.
+
+Infrared examination: IR-absorbing inks become transparent under IR illumination,
+revealing underlying writing (E03 §6.3.1 RIR/IRL). UV examination: long-wave UV-A
+excites fluorescent security features and distinguishes ink batches by fluorescence
+pattern (SWGDOC M01). Short-wave UV-C detects paper bleaching and erasure zones.
+All observations documented per SWGDOC Image Capture and Storage Technology standard.
+
+--------------------------------------------------------------------------------
+SECTION 5: STANDARDS — ASTM E2290, SWGDOC, AND ASB SUCCESSOR DOCUMENTS
+--------------------------------------------------------------------------------
+
+ASTM E2290-07a (Standard Guide for Examination of Handwritten Items, Committee E30)
+was withdrawn January 2016 with no ASTM replacement; content migrated to SWGDOC and
+subsequently to ANSI/ASB Standards Board (AAFS) forensic document examination
+Consensus Body. Current authoritative documents (per swgdoc.org, 2021):
+
+  ANSI/ASB 070 — Examination of Handwritten Items (supersedes SWGDOC E01-13, ASTM E2290)
+  ANSI/ASB 035 — Examination of Documents for Alterations (supersedes SWGDOC E03-13)
+  ANSI/ASB 044 — Examination of Documents for Indentations (supersedes SWGDOC E02-13)
+  ANSI/ASB 011 — Scope of Expertise in Forensic Document Examination
+  ANSI/ASB 155 — Minimum Training Requirements (≥24 months supervised apprenticeship)
+  ANSI/ASB 172 — Mechanical Checkwriter Impressions and Machines
+  SWGDOC M01/M02 — Forensic Writing Ink Comparison and Identification (still active)
+  SWGDOC Terminology documents — conclusion language and QDE definitions
+
+SWGDOC (Scientific Working Group for Forensic Document Examination, est. 1997)
+develops consensus standards for federal, state, and local LE document laboratories.
+Training minimums reference ASTM E2388-11 / SWGDOC G02-13 (now ASB 155). Examiners
+apply Huber & Headrick identification principles and document all procedures,
+limitations, and conclusions. Chemical/destructive methods require submitter
+consultation. FDE scope explicitly excludes graphology per SWGDOC policy statement.
+
+--------------------------------------------------------------------------------
+SECTION 6: FAMOUS LE CASES — QUESTIONED DOCUMENT EXAMINATION AS PIVOTAL EVIDENCE
+--------------------------------------------------------------------------------
+
+Lindbergh kidnapping (1934): Albert S. Osborn compared ransom note handwriting to
+Bruno Hauptmann's exemplars; stroke comparison and ink/paper analysis were central
+to conviction. Established FDE expert testimony precedent in U.S. courts.
+
+Alger Hiss perjury trial (1950s): Martin Tytell demonstrated "fake typewriter"
+hypothesis — Woodstock typewriter forgery to replicate Hiss's known machine
+characteristics; typewriter fracture patterns and typeface identification pivotal.
+
+West Midlands Serious Crime Squad (UK, 1980s–1990s): ESDA indentations on police
+interview notes proved witness statements were altered, signed on blank pages, or
+written in reverse sequence. ESDA evidence contributed to 60+ quashed convictions
+and squad disbandment — landmark use of indentation evidence in LE misconduct cases.
+
+Mark Hofmann forgery/murder (1980–84): FDE exposed Salamander Letter forgeries among
+purported Mormon historical documents; ink age, paper anachronisms, and
+handwriting simulation analysis proved fraud.
+
+Killian memos (2004): CBS 60 Minutes Bush National Guard documents; typographic
+analysis (proportional spacing, superscript th), toner vs. typewriter technology
+timeline, and font identification (Times New Roman vs. period typewriters) led to
+document authentication failure and Rather resignation.
+
+Anthrax letters (2001): FBI FDE and materials analysis examined block-letter
+handprinting, paper stock, ink, and indentation patterns; questioned document
+examination integrated with microbial forensics in domestic terrorism investigation.
+
+--------------------------------------------------------------------------------
+SECTION 7: CHAIN OF CUSTODY — QUESTIONED DOCUMENTS AS PHYSICAL EVIDENCE
+--------------------------------------------------------------------------------
+
+Questioned documents admitted as physical evidence require unbroken chain of custody
+documenting every transfer from seizure to courtroom. LE agencies typically follow
+agency policy aligned with ASTM E1459 (Standard Guide for Physical Evidence
+Handling) and NFPA 921 evidence-management principles. Required elements per
+transfer: case number, item description (unique evidence ID), date/time, from/to
+custodian signatures, purpose of transfer (examination, storage, court), and
+condition notes.
+
+FDE-specific handling per SWGDOC E03 §5.3 and E01 §5.3: questioned documents
+examined BEFORE latent print chemical processing (ninhydrin, DFO, cyanoacrylate
+fuming) to preserve indentations and ink fluorescence. Handlers wear clean cotton or
+nitrile gloves; handle by edges; avoid plastic sleeves that trap moisture. Store flat
+in breathable paper envelopes, not PVC; control humidity to preserve ESDA-viable
+indentations. Non-destructive examinations precede destructive ink/solvent tests;
+submitter authorization required for destructive methods (E03 §7.13.2).
+
+Documentation: intake log, examination worksheet, photographic/image capture per
+SWGDOC Image Capture standard (metadata embedded: examiner, date, instrument, lighting
+wavelength). Evidence return/seal integrity verified on return to evidence vault.
+Breaks in chain of custody create admissibility challenges under Daubert/Frye;
+examiner testimony must establish continuous custody and integrity of the specific
+item examined. Digital working copies require hash verification against original
+scans; originals remain authoritative for stroke-level comparison.
+
+--------------------------------------------------------------------------------
+END OF RESEARCH NOTES
+--------------------------------------------------------------------------------

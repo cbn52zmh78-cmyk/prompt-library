@@ -96,23 +96,45 @@ Adapter output: `models/adapters/david-7b_YYYYMMDD_HHMMSS_run5-local`
 | Pairs | Epochs | ~Steps (L40s, rank=64) | Notes |
 |-------|--------|------------------------|-------|
 | 706   | 5      | ~220                   | **Run 1 baseline** |
-| 706   | 8      | ~352                   | If loss still dropping at end of Run 1 |
-| 1,500+| 5      | ~470                   | After next browser research pass |
-| 1,500+| 5      | ~470                   | Target for sub-0.50 loss |
+| 706   | 8      | ~352                   | **Run 2** — prior best at 0.6932 |
+| 1,493 | 5      | ~470                   | **Run 3a** — undertrained at new scale; regressed |
+| 2,351 | 5      | ~730                   | **Run 4** — insufficient epochs; loss 1.1772 |
+| 2,351 | 10     | ~1,470                 | **Run 5** — correct epoch budget for dataset size |
 
 Compare to HELIX: 3,643 pairs × 5 epochs = 1,140 steps → 0.5617 loss.
-DAVID Run 1 will have far fewer steps — bump epochs if loss plateaus high.
+**Rule:** when dataset size increases, bump epochs proportionally — 5 epochs on 706 pairs ≠ 5 epochs on 2,351 pairs.
 
 ---
 
 ## Run Log
 
-| Run | Model | Rank | Epochs | Dataset Pairs | Final Loss | Elapsed | Notes |
-|-----|-------|------|--------|--------------|------------|---------|-------|
-| Run 1 | deepseek-7b | 64 | 5 | 706 | 1.0119 | — | First DAVID run — baseline |
-| Run 2 | deepseek-7b | 64 | 8 | 706 | 0.6932 | — | L40S · loss still dropping — expand dataset for Run 3 |
-| Run 3a | deepseek-7b | 64 | 5 | 1,493 | 1.2837 | 777.8s | L40S · adapter: david-7b_20260623_230354_run3 · LOST (pod killed before download) · loss regression — dataset quality review needed |
-| Run 3b | deepseek-7b | 64 | 5 | 1,493 | — | — | L40S · adapter: david-7b_20260623_234920_run3 · redo run — download in progress |
+| Run | Model | Rank | Epochs | LR | Dataset Pairs | Final Loss | Adapter | Status |
+|-----|-------|------|--------|-----|--------------|------------|---------|--------|
+| Run 1 | deepseek-7b | 64 | 5 | 1e-4 | 706 | **1.0119** | — | Baseline |
+| Run 2 | deepseek-7b | 64 | 8 | 1e-4 | 706 | **0.6932** | — | **Prior best** — loss still dropping at end |
+| Run 3a | deepseek-7b | 64 | 5 | 1e-4 | 1,493 | **1.2837** | `david-7b_20260623_230354_run3` | **LOST** — pod killed before download |
+| Run 4 | deepseek-7b | 64 | 5 | 1e-4 | 2,351 | **1.1772** | `david-7b_20260624_035711_run4` | Dataset mismatch — undertrained at 5 epochs |
+| Run 5 | deepseek-7b | 64 | **10** | **2e-4** | 2,351 | *in progress* | `david-7b_20260624_045918_run5` | **New best** — broke 0.6932 at epoch 3.1 |
+
+### Runs 3–4 regression — root cause
+
+Runs 3 and 4 regressed from Run 2's **0.6932** because the dataset was scaled up (706 → 1,493 → 2,351 pairs) while **epoch count stayed at 5**. Each pair sees fewer gradient updates per epoch relative to the total corpus; at 2,351 pairs, 5 epochs (~730 steps on L40s) is insufficient to converge — the model is undertrained, not under-capacity. Run 3a also introduced new-pair quality issues (see `training/run3_dataset_audit.md`), but the primary fix for Run 4's continued regression was epoch budget, not more data.
+
+**Run 5 correction:** 2,351 pairs × **10 epochs** × LR **2e-4** — doubled training steps to match dataset scale. Loss crossed below 0.6932 at **epoch 3.1**; run still in progress at time of writing.
+
+### Run 5 hyperparameters (L40s)
+```
+--epochs 10
+--learning-rate 2e-4   # pipeline default for L40s slot
+--tag run5
+Dataset: david_dataset.jsonl (2,351 pairs)
+Adapter: david-7b_20260624_045918_run5
+~1,470 steps (L40s, rank=64, batch 2 × accum 8)
+```
+
+```bash
+pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git" --quiet && pip install --no-deps trl peft accelerate bitsandbytes --quiet && mkdir -p /DAVID/models/adapters && python3 /workspace/david_finetune_pipeline.py --run --epochs 10 --tag run5
+```
 
 ---
 
@@ -150,7 +172,7 @@ Dataset grows automatically as new corpus texts / pronunciation profiles / trans
 | `training/classical_latin_translation_150.jsonl` | 150 | `training/generate_latin_translation_150.py` | Cicero, Virgil, Caesar, Livy, Seneca, Horace, Ovid, Tacitus, Catullus — oratory, epic, military, Stoic | ✅ R1 done |
 | `training/etymology_training_150.jsonl` | 150 | `training/generate_etymology_training.py` | Latin, Greek, Old French, Germanic, Arabic — legal, scientific, philosophical, everyday | ✅ R3 done |
 | `training/phonetics_training_150.jsonl` | 150 | `training/generate_phonetics_150.py` | English GA/RP, Classical Latin, Ecclesiastical Latin, Attic Greek, minimal pairs, pitch accent | ✅ R4 done |
-| `training/ancient_greek_translation_150.jsonl` | 150 | `training/generate_greek_translation_150.py` | Homer, Plato, Thucydides, Aristotle, Sophocles, Xenophon, Euripides, Herodotus | ⏳ generating |
+| `training/ancient_greek_translation_150.jsonl` | 150 | `training/generate_greek_translation_150.py` | Homer, Plato, Thucydides, Aristotle, Sophocles, Xenophon, Euripides, Herodotus | ✅ R2 done |
 
-**Total supplemental so far:** 450 pairs (600 when R2 delivers)
-**Run 4 target dataset:** ~2,093 pairs (1,493 existing + 600 supplemental)
+**Total supplemental so far:** 600 pairs (Latin + etymology + phonetics + Greek translation)
+**Current training dataset:** 2,351 pairs (`david_dataset.jsonl`) — used for Run 4 and Run 5
