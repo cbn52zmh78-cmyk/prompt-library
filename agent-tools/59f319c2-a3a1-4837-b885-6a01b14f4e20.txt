@@ -1,0 +1,701 @@
+
+<meta name="keywords" content="contra costa county investigator, paul holes, serial killer, ear, east area rapist, 
+golden state killer" />
+<meta name="news_keywords" content="contra costa county investigator, paul holes, serial killer, ear, east area 
+rapist, golden state killer" />
+<meta name="description" content="Contra Costa County investigator Paul Holes has spent the past two decades searching 
+for the Golden State killer." />
+<meta property="og:description" content="Contra Costa County investigator Paul Holes has spent the past two decades 
+searching for the Golden State killer." />
+<script type="text/javascript">/*<![CDATA[*/ (function(){var 
+tnsrc=window.location.hash.match(/[&#]tncms-source=([^&]+)/);var dl = window.dataLayer = window.dataLayer || [];dl.push
+({"townnews":{"product":{"software":"BLOX","version":"1.94.0"},"crm":{"group_id":469},"content":{"id":"9efb68ea-3e74-54
+01-9ece-af7529a92c12","title":"Chasing Evil","type":"article","published_time":"2018-01-29T18:59:00Z","tags":["contra 
+costa county investigator","paul holes","serial killer","ear","east area rapist","golden state killer"],"authors":[],"t
+axonomies":{"blox_sections":{"ns":"https:\/\/www.townnews.com\/ns\/blox\/v1\/tags\/section","items":["people-style\/peo
+ple"]},"blox_flags":{"ns":"https:\/\/www.townnews.com\/ns\/blox\/v1\/tags\/flag","items":[]}},"metrics":{"image_count":
+7,"video_count":0,"audio_count":0,"word_count":3128},"byline":"By Peter Crooks \/ Photography by Steve Babuljak  "}},"t
+ncms":{"google":{"ga4":"G-BV741R7GDN","ua":"UA-50578-37"},"template":{"version":"3.155.0"},"page":{"grid":"mobile_patte
+rn","style":"default","path":"\/people-style\/people","syndicated":"false","reaction":"false","app":"editorial","theme"
+:"flex","skin":"flex-editorial","http_status":200},"subscription":{"required":"false"},"asset":{"type":"article","autho
+r":"Peter Crooks \/ Photography by Steve Babuljak","start_hour":"10","id":"9efb68ea-3e74-5401-9ece-af7529a92c12","app":
+"editorial","ga_page":"\/people-style\/people\/article_9efb68ea-3e74-5401-9ece-af7529a92c12.html"},"vendor":{"outbrain"
+:"Headlines and photo grid","taboola":""},"system":{"render_time":370},"client":{"is_bot":"no","is_gdpr":"no"}}});if 
+(tnsrc && tnsrc[1]) {dl.push({'tncms.campaign.internal_source': 
+tnsrc[1]});}window.addEventListener("DOMContentLoaded", function(oEvent) {var oTest = 
+document.createElement('div');oTest.innerHTML = '&nbsp;';oTest.className = 
+'adsbox';document.body.appendChild(oTest);var nTimeoutID = window.setTimeout(function() {if (oTest.offsetHeight === 0) 
+{dl.push({'event': 'tncms.ad.blocked'});}document.body.removeChild(oTest);window.clearTimeout(nTimeoutID);}, 
+100);});var nWidth=Math.max(document.documentElement.clientWidth, window.innerWidth || 0),aBPs=[[300,"Extra small: 
+Most smartphones."],[768,"Small: Tablet devices."],[992,"Medium: Laptops & landscape tablets."],[1200,"Large: Desktop c
+omputers."]],i,c,aThisBP,aBP;for(i=0,c=aBPs.length;i<c;i++){aThisBP=aBPs[i];if(aBP===undefined||aThisBP[0]<=nWidth){aBP
+=aThisBP;}}if(aBP!==undefined){dl.push({'tncms.client.breakpoint':aBP[1]});}(function(w,d,s,l,i){w[l]=w[l]||[];w[l].pus
+h({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dat
+aLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+;})(window,document,'script','dataLayer','GTM-PDQV3N');})(); /*]]>*/</script>
+    __tnt.ads.dfp.targeting.k = ["contra costa county investigator","paul holes","serial killer","ear","east area 
+rapist","golden state killer"];
+    <style>body { background-color: #ffffff; color: #333333; }a, a:hover, .pagination>li>a, .pagination>li>a:hover, 
+.btn-link, .dropdown-menu>li>a, blockquote, blockquote p, .asset .asset-body blockquote p { color: #000000; } 
+#main-body-container .container, #main-body-container .container_fluid, .well-main { background-color: #ffffff; } 
+.tnt-content-width-container > * { max-width: 1140px; margin-left: auto; margin-right: auto; } #site-navbar-container, 
+#main-navigation { background-color: #ffffff; } .fixed-nav #main-navigation { background-color: #ffffff !important; } 
+#site-top-nav-container, #site-top-nav { background-color: #ffffff; } #site-footer-container, #site-footer { 
+background-color: #ffffff; color: #333333; } .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:hover, 
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>.open>a, .navbar-default 
+.navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>li>button.nav-link, 
+.navbar-default .navbar-nav>li>button.nav-link:hover, .navbar-default .navbar-nav>li>button.nav-link:focus, 
+.navbar-default .navbar-nav>.open>button.nav-link, .navbar-default .navbar-nav>.open>button.nav-link:hover, 
+.navbar-default .navbar-nav>.open>button.nav-link:focus{ color: #000000; } .navbar-toggle .icon-bar { 
+background-color: #000000 !important; } .navbar-toggle .sr-only-show { color: #000000 !important; } #site-top-nav 
+.list-inline>li>a { color: #000; } .asset .asset-body p, .asset #asset-content p { color: #444; } 
+#site-header-container { background-color: #ffffff; }/* full span block region */ 
+#main-top-container.container-fullscreen-region.container-fluid { padding-left: 0px !important; padding-right: 0px 
+!important; }/* full span block region */ #main-bottom-container.container-fullscreen-region.container-fluid { 
+padding-left: 0px !important; padding-right: 0px !important; }@media (max-width: 991px){ .navbar-default .navbar-nav 
+.open .dropdown-menu>li>a, .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-default .navbar-nav 
+.open .dropdown-menu>li>a:focus { color: #000000; } }#site-copyright a, #site-footer a { color: #555555; 
+}.search-redesign .top-breakout > .row { max-width: 1200px; }.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, 
+.nav-tabs>li.active>a:focus { border-top-color: #ffffff; }#site-header-container{ border-bottom: 3px solid #ffffff; 
+}#site-footer-container{ border-top: 3px solid #ffffff; } .tnt-bg-accent { background-color: #ffffff; } a 
+.tnt-caret-down { color: #ffffff; } .block-title .block-title-inner { border-color: #ffffff; } a.thumbnail:hover, 
+a.thumbnail:focus, a.thumbnail.active { border-color: #ffffff; } .form-control:focus { border-bottom-color: #ffffff; } 
+/* CSS has moved to Site templates/Global skins/flexsystem/resources/site.css.inc.utl */ </style> <!-- 
+site.css.inc.utl has been included. --> <!-- NOTE: anything in an include file, outside of UTL tags , will be output 
+on the page --> <style> /* Place site-wide CSS here font-family: 'Gudea', sans-serif; font-family: 'Open Sans', 
+sans-serif; */ body { font-family: 'Gudea', sans-serif;color:#333333;font-size:14px;} #more-nav-container {display: 
+inline;width: 1170px;display: inline-block;text-align: left;padding-top: 7px;padding-bottom:12px;} #more-nav-container 
+span a { font-family: 'Gudea', sans-serif;font-size: 15px;color: #000000;} #red-more { 
+background:url(global/resources/images/red-arrow-2.png);background-repeat:no-repeat;color: #fff;width: 
+82px;height:20px;text-align:center;display: inherit;} .panel{box-shadow: 0 1px 4px rgba(0,0,0,.03);!important;border: 
+1px solid rgba(0,0,0,.09) !important } body > .ad-placeholder-container .tnt-ads { margin-bottom:0!important;} 
+.pull-left .tnt-ads-container, .pull-right .tnt-ads-container { min-width: 1px;} .tnt-ads { min-height: 1px;} 
+.btn-primary { background-color:#00baf2;border-color:#08b3e7;} .btn-primary:hover { 
+background-color:#0793bd;border-color:#0793bd;} #mobile-nav-left_menu .tnt-section-diablo-mag { display: none 
+!important; } #site-navbar-container { z-index: 500!important;} #main-nav_menu.navbar-nav .tnt-section-diablo-mag { 
+background:transparent url(global/resources/images/logo_sm_whit.png) no-repeat center center 
+!important;background-size:140px !important;padding:0;height:50px;width:0px;visibility:hidden;transition: visibility 
+0s, opacity 1s linear;margin-right:0px;opacity:0;padding-right:0 !important;padding-left:0 !important;} .affix 
+#main-nav_menu.navbar-nav .tnt-section-diablo-mag { visibility: visible;opacity: 1;width:100%;background:transparent 
+url(global/resources/images/logo_sm_whit.png) no-repeat center center !important;background-size:140px 
+!important;padding:0;height:50px;width:150px;transition: visibility 0s, opacity 1s linear;} .navbar-brand { display: 
+none;} .affixed-element { visibility:hidden;transition: all 0s, all .7s linear;margin-right:15px;opacity:0;} .affix 
+.affixed-element { visibility:visible;transition: all 0s, all .7s linear;margin-right:0px;opacity:1;} 
+#main-nav_menu.navbar-nav .tnt-section-diablo-mag .tnt-home{display: none;} #main-navigation {padding-left:0 
+!important;} #site-navbar-container{margin-bottom:0px;padding-top:0px;padding-bottom:0px;} #topbar-col-one li 
+a{text-transform: uppercase;font-weight: bold;text-decoration: none;font-size:12px;} #topbar-col-one li a 
+.tnt-svg{color:#df3122;} #topbar-col-one li a:hover{color:#ffffff;} #topbar-col-two-nav_menu {text-align: 
+right;font-weight: bold;} #topbar-col-two-nav_menu .nav-link{cursor:pointer;} #topbar-col-two-nav_menu 
+.dropdown-menu{right:0 !important;left:auto;padding:0;} #topbar-col-two-nav_menu 
+#topbar-col-two-nav_menu-child-2.dropdown-menu a { display: block;width:250px;height: 
+150px;background:url(global/resources/images/Subscribe-Pop-Up.jpg) no-repeat top center;} #topbar-col-two-nav_menu 
+#topbar-col-two-nav_menu-child-1.dropdown-menu a { display: block;width:250px;height: 
+150px;background:url(global/resources/images/Insiders-Pop-Up.jpg) no-repeat top center;} 
+#topbar-col-two-nav_menu-child-1 { margin-top:-8px;margin-right:15px;} .header-social .btn-link{border:1px solid 
+#f06462;background:none} .header-social .btn-link .tnt-svg{color:#f06462;} .header-social .btn-link:hover { border:0px 
+solid #ffffff;} .header-social .btn-link:hover .tnt-svg { color:#ffffff;} .footer-social .btn-link { border:0px solid 
+#f06462;background:none;} .footer-social .btn-link .tnt-svg { color:#f06462;} .footer-social .btn-link:hover { 
+border:0px solid #ffffff;} .footer-social .btn-link:hover .tnt-svg { color:#ffffff;} #site-header-container { 
+border-bottom:0px solid #646262!important;border-top:0px solid #646262!important;} #site-navbar-container.affix { 
+border-bottom:0px solid #fff200;background:#000000;} #site-navbar-container.affix #main-navigation { 
+background:#000000;} #main-nav_menu { padding-top: 6px; } #masthead-col-one { width:35%;} #masthead-col-two { 
+width:30%;} #masthead-col-three { width:35%;} #masthead-col-three .search-form-container { max-width:300px;margin: 0px 
+0 0px auto;clear:both;} #masthead-col-three .weather-current { margin-top:5px;} .weather-current .dropdown-menu { 
+left:auto!important;right:0!important;} .hamburger-desktop.navbar-toggle { width:50px;position: relative;min-height: 
+50px;border-radius:5px;} .hamburger-desktop.navbar-toggle .sr-only-show{font-size:21px;position: 
+absolute;top:9px;color:#000;display:none !important;} .hamburger-desktop.navbar-toggle 
+.icon-bar{margin-left:0px;width:20px;margin-top:0px;margin-bottom:3px;background:#0080c6;} .affix .navbar-nav 
+.tnt-search{color:#ffffff;} .affix .hamburger-desktop.navbar-toggle .icon-bar{background: #ffffff!important;} 
+.hamburger-desktop.navbar-toggle:hover{} 
+/******************************************************************************************/ .affix 
+.hamburger-desktop.navbar-to .header-user .btn{ margin-bottom:0;} 
+/******************************************************************************************/ .header-user { 
+margin-top:0px;} .header-user .logged-in { margin-top:-8px;} .header-user .tn-user-screenname { color:#000000;} 
+.header-user .caret { color:#ffffff;} .header-user .btn { border-radius:7px;} .header-user .btn-link { border:1px 
+solid #ffffff;color:#333333;text-decoration: none;background:#ffffff;} #main-nav_menu.navbar-nav > li > a { 
+font-size:14px !important;text-shadow:none;font-weight:700 !important;padding-left:0px;padding-right:0px;} .nav > li > 
+a { padding: 10px 12px!important;} .search-form-dropdown { padding-top: 6px; } .affix #main-nav_menu.navbar-nav > li > 
+a { font-size:13px !important;text-shadow:none;font-weight:700 
+!important;padding-left:5px;padding-right:5px;color:#ffffff;} .navbar-right > li > a { transition: all 0.5s 
+ease;padding-left:20px;padding-right:20px;} /* .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav 
+> li > a:focus, #site-top-nav-container .nav > li > a:hover, #site-top-nav-container .nav > li > a:focus { background: 
+#ffffff!important; color:#ed3e3b!important;} .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > 
+.open > a:hover, .navbar-default .navbar-nav > .open > a:focus{ background: #ffffff!important; 
+color:#ed3e3b!important;} */ .navbar-default .navbar-nav > li > a:hover { background-color: 
+#ffffff;color:#ed3e3b!important;} .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, 
+.navbar-default .navbar-nav>.open>a:hover{ background-color:#ffffff!important;color:#ed3e3b!important;} 
+.navbar-default .dropdown-menu { text-transform:capitalize!important;} .affix .navbar-default .navbar-nav>.open>a, 
+.affix .navbar-default .navbar-nav>.open>a:focus, .affix .navbar-default .navbar-nav>.open>a:hover{ 
+background-color:#000000!important;color:#ed3e3b!important;} .affix .navbar-default .navbar-nav > li > a:hover, .affix 
+.navbar-default .navbar-nav > li > a:focus { background:transparent !important; color:#ed3e3b!important;} 
+.navbar-default .dropdown-menu { background-color: #000000;border: 0px solid 
+#CCC;padding-top:0;padding-bottom:0;margin-left:0 !important;} .navbar-default .dropdown-menu > li > a{ 
+color:#ffffff!important;text-shadow:none;line-height:28px;font-size:14px; font-weight:700;padding-left:13px;} .affix 
+.navbar-default .dropdown-menu > li > a { font-size:13px; } .navbar-default .dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:focus { background-color: #000;color: #ed3e3b!important;} .dropdown-menu .dropdown-menu { 
+margin-top:0 !important;} #main-navigation .dropdown .fa-angle-right { float:right;margin-top:2px;} 
+#user-main-menu-wrapper > div > div.col-md-9.col-md-push-3 > div.user-dashboard > div:nth-child(1) > div:nth-child(2), 
+.users-sidebar > #accordion > div:nth-child(3){display:none !important;} .business-claim { display: none; } 
+.business-search-title .block-mobile { display: none; } #business-tab-profile .business-tags { display: none; } @media 
+(min-width: 992px) and (max-width: 1200px){ #main-nav_menu.navbar-nav > li > a { 
+font-size:12px!important;padding-left:8px !important;padding-right:8px !important;font-weight:normal !important; } 
+.navbar-default .dropdown-menu > li > a { font-size: 12px !important;padding-left:7px;font-weight:normal!important;} 
+.affix #main-nav_menu.navbar-nav > li > a { font-size:12px 
+!important;text-shadow:none;font-weight:700!important;padding-left:3px !important;padding-right:3px 
+!important;font-weight:normal !important;} } /* @screen-xs */ @media (max-width: 480px) { #main-navigation{min-height: 
+70px;background:#fff !important;} #site-navbar-container.affix{background:#fff !important;} 
+#site-navbar-container.affix #main-navigation{background:#fff !important;} .hamburger-desktop.navbar-toggle 
+{width:40px;height:40px;min-height:40px;margin-top:15px;} .hamburger-desktop.navbar-toggle 
+.icon-bar{margin-left:0px;width:20px;background:#000 !important;} .affix .hamburger-desktop.navbar-toggle 
+.icon-bar{background: #000 !important;} .navbar-brand{display: block;margin-top:10px;} .card 
+.card-labels{display:block !important;} } /* @screen-sm */ @media (min-width: 480px) and (max-width: 991px){ 
+#main-navigation{min-height: 70px;background:#fff !important;} #site-navbar-container.affix{background:#fff 
+!important;} #site-navbar-container.affix #main-navigation{background:#fff !important;} 
+.hamburger-desktop.navbar-toggle {width:40px;height:40px;min-height:40px;margin-top:15px;} 
+.hamburger-desktop.navbar-toggle .icon-bar{margin-left:0px;width:20px;background:#000 !important;} .affix 
+.hamburger-desktop.navbar-toggle .icon-bar{background: #000 !important;} .navbar-brand{display: 
+block;margin-top:10px;} .card .card-labels{display:block !important;} } #main-navigation li a{border:0 !important;} 
+@media (min-width: 992px) and (max-width: 1200px){.navbar-default .navbar-nav > li > 
+a{font-size:12px;padding-left:11px !important;padding-right:11px !important;} } .offcanvas-drawer {background:#efefef 
+!important;} .offcanvas-drawer .navbar-nav *{color:rgba(0,0,0,1) !important;line-height: 23px 
+!important;text-shadow:none;} .offcanvas-drawer .tnt-section-san-diego-mag{display: none !important;} 
+.offcanvas-drawer .navbar-nav .panel-title a,.offcanvas-drawer .navbar-nav li a{text-shadow: none !important;} .ad-bg 
+.tnt-ads {margin-bottom:0 
+!important;padding-top:15px;padding-bottom:15px;background:url(global/resources/images/banner.png);} 
+.extra-margin-top{margin-top:20px !important;} .extra-margin-bottom{margin-bottom:20px !important;} .block-title * 
+{color:#000 !important;} .block-title .block-title-inner *{font-weight: 700;} .block-title 
+.block-title-inner{padding-right:0px;margin-top:0px;border:0;} .block-title {border-top:0px solid 
+#ddd;border-bottom:2px solid #232323;} .title-no-border .block-title {border:0;} .block-title .block-title-inner{} 
+.light .block-title-inner *{color:#fff !important}; .section-heading .heading .block-title{max-width: 1470px;margin:0 
+auto;padding-left:15px;} .section-heading .heading a{font-family: 'Montserrat',sans-serif;text-decoration: none;} 
+.section-heading .heading .block-title h1{font-size:64px;padding: 0 !important;margin-bottom:0;color:#ed3e3b;} 
+.section-heading .heading .block-title{padding:0 !important;} .section-heading .heading .block-title 
+.block-title-inner{padding:0 !important;margin-bottom:0;} .section-heading .heading {margin-bottom:0;} .section-menu 
+h1 * {font-family: "Montserrat", sans-serif !important;color:#ed3e3b;} .section-menu .pos-bottom {border-top:0 
+!important;border-bottom:2px solid #ccc !important;} .section-menu .pos-bottom a 
+{font-size:14px;color:#000;font-weight: 600 !important;font-family: Montserrat, sans-serif;text-transform: 
+uppercase;font-size:14px;} .section-menu .block-title h1{font-family: Montserrat;font-size: 64px;color:#ed3e3b;} 
+.section-menu .block-title h1 a { color:#ed3e3b;!important;} .section-menu .block-note{font-family: 
+Montserrat;font-size: 18px;color:#b8b8b8;font-weight: 600;margin-bottom:0;} .section-menu 
+.block-title{margin-bottom:0;} .section-menu .block-title a{text-decoration: none;} .section-heading .light .heading 
+.block-title *{color:#ffffff!important;} .fullscreen-region .section-heading.with-image .tnt-prop-img { max-width: 
+initial!important; } .fullscreen-region .section-heading .block-title{border:0;} .fullscreen-region .section-heading 
+.heading{border-bottom:0px solid #ffffff;} .pos-top *{color:#000;text-transform: uppercase;font-weight:700;} .light 
+.pos-top * {color:#ffffff;} .bullet-square {color:#ffffff;} .tnt-headline *{ /*font-family:'Noto Serif 
+TC',serif;*/line-height: 1.1;letter-spacing: 0; /* font-weight:600;*/} .sans-serif-font .tnt-headline *{ 
+/*font-family:'Montserrat',sans-serif;*/ font-weight:600;} @media(max-width:580px) { .tnt-headline *{line-height: 
+1.2;} } .tnt-headline:hover{text-decoration:none;} .card .tnt-headline a{-moz-transition: all 0.5s;-webkit-transition: 
+all 0.5s;-o-transition: all 0.5s; transition: all 0.5s;} .card .tnt-headline a:hover{color:#00baf2;-moz-transition: 
+all 0.5s;-webkit-transition: all 0.5s;-o-transition: all 0.5s; transition: all 0.5s;} .card 
+.tnt-headline{color:#fff;-moz-transition: all 0.5s;-webkit-transition: all 0.5s;-o-transition: all 0.5s; transition: 
+all 0.5s;} .card .tnt-headline:hover{color:#000;-moz-transition: all 0.5s;-webkit-transition: all 0.5s;-o-transition: 
+all 0.5s; transition: all 0.5s;} .card h1.tnt-headline a{font-size: 38px;color:#000000;font-weight:bold;} .card 
+h2.tnt-headline a{font-size: 32px;} .card h3.tnt-headline a{font-size: 26px;} .card h4.tnt-headline a{font-size: 
+20px;} @media(max-width:580px) { .card h1.tnt-headline a{font-size: 32px;color:#B01E23;} .card h2.tnt-headline 
+a{font-size: 34px;} .card h3.tnt-headline a{font-size: 22px;} .card h4.tnt-headline a{font-size: 16px;} } .card 
+.card-lead p{/*font-family: Hind;*/} .card .card-labels .card-label-section {color:#ed3e3b;font-size:12px 
+!important;padding-right:10px;/*font-family:'Montserrat', sans-serif;*/font-weight:600;} .card .card-labels 
+.card-label-flags {padding-right:10px;} .card .card-labels .card-label-section *{color:#ed3e3b;} .card 
+.centered-content-stage .card-labels .card-label-section {} .card.feature .centered-content-container 
+.card-lead{margin-left:10px;margin-right:10px;} .card .centered-content-stage .card-labels {border:0 !important;} 
+article.card{margin-bottom:40px;} article.card.summary {border-top:1px solid 
+#ddd;margin-bottom:0;margin-top:15px;padding-top:15px;} article.card.summary:first-child {border-top:0px solid 
+#ccc;margin-top:0;padding-top:0;} .reset-border article.card.summary:first-child {border-top:1px solid 
+#ddd;margin-top:0;padding-top:15px;} .card .card-labels {} .no-section-bg .tnt-section-tag{background:none 
+!important;} .no-section-bg .card .card-labels .card-label-section{border-bottom:0px solid #ddd !important;} 
+.card-lead p{font-size:120%;line-height:1.5;} .read-more-link 
+{color:#888;text-transform:uppercase;font-size:11px;/*font-family:'Roboto Condensed', 
+sans-serif;*/font-weight:700;letter-spacing:1px;} .card-top-story-list .col-sm-5 .tnt-headline{margin-top:15px 
+!important;} .card.feature .centered-content{background:#fff;padding:10px;margin-bottom:-100px;overflow: 
+visible;position: relative;z-index: 400 !important;border:0px solid #efefef;outline:0px solid 
+rgba(255,255,255,.25);opacity:1;} .card.feature .stage-wrapper{padding-bottom:60px !important;position: relative;} 
+.card.feature .card-labels .card-label-section .tnt-section-tag{background:#ffffff;} .headline-list 
+article.card.summary {border-bottom:0 !important;border-top:0;margin:0;padding:0;} .inline-asset .card .card-body 
+.card-lead p{font-size:16px;line-height:normal;} article.custom-note *{} article.custom-note .tnt-section-tag 
+{color:#12BBF6 !important;} .label-flag-partner-content {background: none;padding:0;color:#12BBF6 
+!important;font-size:12px;font-weight:600;} .label-flag-sponsored-content {background: none;padding:0;color:#12BBF6 
+!important;font-size:12px;font-weight:600;} .asset-header .headline{font-weight: 800 
+!important;color:#000;/*font-family:'Noto Serif TC',serif;*/} .asset .asset-body 
+p{font-size:130%;line-height:1.5;font-family:Hind;} .asset .asset-body .asset-content h1{font-weight: 
+600;color:#B01E23;} .asset .asset-body .asset-content h2{font-weight: 600;} .asset .asset-body .asset-content 
+h3{font-weight: 600;} .asset .asset-body .asset-content h4{font-weight: 600;} .asset .asset-body .asset-content 
+h5{font-weight: 600;} .asset .asset-body a{color:#ffffff;} .asset-header .meta time{color:#000000;} .asset .meta 
+.cm{display: none;} .asset .comment-count-title{display: none;} .asset .collection-card .card-comment-count{display: 
+none;} .asset-header .subhead {line-height: 130% !important;} .form-category-services { display: none; } /* Infinity 
+Scroll block on homepage */ .is-homepage #trigger-next-868435 { margin: 20px auto 0; } .is-homepage 
+#content-discovery-868435 { margin-top: 20px; } /*@media(max-width:480px) { .social-share-links .fb{display: none;}}*/ 
+.asset .asset-body p, .asset #asset-content p { color: #444; font-family: 'Gudea', sans-serif; } .standoutSidebar 
+{float: right; max-width: 180px; margin: 0 0 10px 10px; padding-left: 10px; border-left: 1px solid black;line-height: 
+1.5em; font-size: 0.9em;} span.socig {background: url(global/resources/images/social-instagram.jpg) no-repeat 0% 50%;} 
+span.socig, span.soctw {display: block;padding-left: 22px;font-style: italic; line-height: 1.5em; font-size: 13px;} 
+.standoutSidebar p{margin-bottom:5px !important;} .hood2016quote, .newblockquote {background: 
+url(global/resources/images/quotemark-red.png) no-repeat 5px 10px; padding: 15px 10px 15px 60px; border-top: 3px #000 
+double; border-bottom: 3px #000 double; width: 80%; margin: 25px auto; font-size: 1.2em; clear: both;} .card 
+.card-meta time{color:#000000;} .asset .asset-tags .list-inline{margin-left:180px;} 
+.event-date-square{background:#ffffff !important;} .full-title .block-title-inner{width:100%;} .highlight-grey 
+.block-title-inner{background:#cccccc;} .title-no-margin section{margin-bottom:0px !important;} .block-no-margin 
+section{margin-bottom:0px !important;} .title-no-margin .block-title{margin-bottom:10px;} .title-no-margin 
+.block{margin-bottom:0 !important;} .hide-business .business-cards{display:none;} .hide-headline 
+.card-headline{display:none !important;} .calendar-heading-text p{font-size:125%;line-height: 1.5;} .app-calendar 
+.asset.event-default .btn-schedule {display: none;} #block-808380 .card.event-list .event-list-item 
+.event-date-container { color: #000000 !important; } .photo-carousel .item .photo-container{background:#fff 
+!important;} .block figure.photo{background:none !important;} .center-image img{margin:0 auto !important;} 
+.center-image .promo .pull-left{float: none !important;margin: 0 auto;} .indent-photo .card-image{padding:15px 0 15px 
+15px;} #site-footer .block-title {border-bottom:1px solid #efefef;} #site-footer .bullet-nav {list-style: 
+square;color:#333;} #site-footer .bullet-nav .tnt-section-home .nav-label{display: inline;} #site-footer .bullet-nav 
+.tnt-home{display: none;} #site-footer-container {border-top:1px solid #efefef;} #site-copyright 
+.col-md-7,#site-copyright .col-md-5{width:100%;text-align: center;line-height: 30px;} #footer-col-three 
+.img-responsive{max-width: 230px;} .breaking-ticker .card-body{padding-top:0 !important;padding-bottom:0 !important;} 
+.breaking-ticker .breaking-title{padding-top:4px !important;padding-bottom:6px;} .static-people h4{font-weight: 
+bold;border-bottom:1px solid #004075;padding-bottom:5px;color:#004075;margin-bottom:20px;margin-top:20px;} 
+.static-people h5{font-weight: bold;} .static-people img{margin:0 0 0 auto;float: right;margin-bottom:15px;} 
+.static-people hr{display: block;clear: both;} .static-people h4{clear: both;} 
+#tncms-region-front-custom-top{margin-top:10px;margin-left:-15px;margin-right:-15px;} /* ///////////// CUSTOM BLOCKS 
+\\\\\\\\\\\\\\ */ .big-slider{clear:both;} .big-slider .card-image{float: left !important;width:30% !important;} 
+.big-slider .card-body {margin-left:30% !important;margin-right:0 !important;padding-right:0 
+!important;padding-left:15px !important;} .small-slider{clear:both;} .big-slider article{margin-bottom:0;} .big-slider 
+section{padding-bottom:0;} #block-883452 img { margin: 0 auto; } /* a list signup block */ #tncms-block-883175 { 
+background: #000; } #block-883175 { width: 50%; margin: 0 auto; padding: 15px 0 10px; } #tncms-block-883175 .clearfix 
+{ width: 65%; margin: 0 auto; } #tncms-block-883175 .clearfix .title-883175 { border-bottom: none; text-align: right; 
+} #tncms-block-883175 .clearfix a { color: #ffffff !important; font-size: .7em; } #tncms-block-883175 .block-links a { 
+color: #ffffff !important; padding-right: 125px; } #tncms-block-883175 img { width: 65%; margin: 0 auto; padding: 
+20px; background: #fff; } @media (max-width: 991px) { #block-883175 { width: 100%; } } /* END a list signup block */ 
+/* Business search buttons on home page */ .custom_search_button .promo-button { width: 192px; margin: 0 auto; } 
+.custom_search_button .btn { width: 192px; } /* end Business search buttons on home page */ #block-898097 
+.tnt-headline, #block-898095 .tnt-headline, #block-898089 .tnt-headline, #block-868585 .tnt-headline, #block-898100 
+.tnt-headline { font-weight: 800 !important; } .uppercase-block .tnt-headline { text-transform: uppercase; } @media 
+(min-width: 992px) and (max-width: 1200px){.small-slider .card-image{float: left !important;width:30% !important;} 
+.small-slider .card-body {margin-left:30% !important;margin-right:0 !important;padding-right:0 
+!important;padding-left:15px !important;} } .top-story-mod .col-sm-5 {width:60%;} .top-story-mod .col-sm-7{width:40%;} 
+@media (min-width: 480px) and (max-width: 991px){ .top-story-mod .col-sm-5 {width:100%;} .top-story-mod 
+.col-sm-7{width:100%;} } /* @screen-xs */ @media (max-width: 480px) { .top-story-mod .col-sm-5 {width:100%;} 
+.top-story-mod .col-sm-7{width:100%;} } .top-story-mod .headline-list .has-image .card-body {width: 100%;margin-left:0 
+!important;padding-left:0;padding-top:10px;} .top-story-mod .headline-list .has-image .card-image {width: 
+100%;margin-left:0 !important;float: none;} .top-story-mod .card-meta{display: none;} .list-popular > 
+li::before{margin-top:3px;} .list-popular {column-count: 1;} .trending-block .list-popular li::before{background:none 
+!important;color:red;width:10px;content: counter(list-popular) ".";} .trending-block 
+.tnt-headline{padding-top:5px;margin-left:23px;} .trending-block .tnt-headline a{} .trending-block .list-popular 
+li{border-bottom:1px solid #ddd;padding-bottom:15px;} .block.newsletter-signup{background: #F8F8F8;padding:15px;} 
+.block.newsletter-signup ul{list-style: none;padding:0;} .block.newsletter-signup ul input{margin-right:5px;} 
+.block.newsletter-signup span{font-weight: normal;font-size:16px;line-height: normal;} .block.newsletter-signup 
+.input{margin-bottom:10px;} .block.newsletter-signup .input input[type=text]{width: 100%;border:1px solid #ddd;} 
+.block.newsletter-signup .input input[type=email]{width: 100%;border:1px solid #ddd;} .mod-title 
+.pos-top{width:25%;position: absolute;top:130px;} .mod-title .block-title{width:24%;border:0;max-width:200px;} 
+.mod-title {position: relative;} .mod-title .card-grid{width:70% !important;margin-left:28%;margin-top:-120px;} 
+.mod-title section {max-width: 1170px;margin:0 auto;} .mod-title {background: #000000;} .mod-title .card{text-align: 
+center;} .mod-title .tnt-headline a{font-size:15px !important;} .mod-title article{margin-bottom:0;} .mod-title 
+.pos-top li{display: block;width:200px;padding:0;margin-bottom:15px;} .mod-title .pos-top li:first-child{border:1px 
+solid white;display: block;width:130px;margin-bottom:30px;padding:0;} /* .mod-title .pos-top li:first-child a{display: 
+block;text-decoration: none;font-size:15px;line-height: 250%;text-align: center;letter-spacing: 1px;transition: all 
+.3s ease;} .mod-title .pos-top li:first-child a:hover{background:#fff;color:#000;} .mod-title .pos-top li:nth-child(2) 
+a{letter-spacing: 1px;text-decoration: none;transition: all .3s ease;} .mod-title .pos-top li:nth-child(2) a:hover 
+{color: rgba(255,255,255,.8);} */ .mod-title .pos-top li:first-child a{display: block;text-decoration: 
+none;font-size:15px;line-height: 250%;text-align: center;letter-spacing: 1px;transition: all .3s ease;} .mod-title 
+.pos-top li:first-child a:hover{background:#fff;color:#000;} .mod-title .pos-top li:nth-child(2){border:1px solid 
+white;display: block;width:130px;margin-bottom:30px;padding:0;} .mod-title .pos-top li:nth-child(2) a{display: 
+block;text-decoration: none;font-size:15px;line-height: 250%;text-align: center;letter-spacing: 1px;transition: all 
+.3s ease;} .mod-title .pos-top li:nth-child(2) a:hover {background:#fff;color:#000;} .mod-title 
+h2{font-size:42px;font-weight: 700 !important;} .mod-title .pos-top a{font-weight: 600;} .mod-title 
+.block-title{border:0;} .mod-title .card .card-image .photo.layout-vertical img{max-height: 300px;} @media (min-width: 
+480px) and (max-width: 991px){ .mod-title .pos-top{width:90%;position: absolute;top:120px;} .mod-title 
+.block-title{width:90%;border:0;max-width:100%;} .mod-title .card-grid{width:90% 
+!important;margin-left:0;margin-top:130px;} } /* @screen-xs */ @media (max-width: 480px) { .mod-title 
+.pos-top{width:90%;position: absolute;top:120px;} .mod-title .block-title{width:90%;border:0;} .mod-title 
+.card-grid{width:90% !important;margin-left:0;margin-top:130px;} } .insiders-block .pos-top{width: 150px;position: 
+absolute;right:0;text-align:right;} .insiders-block section > .clearfix{position: relative;} .remove-site-link address 
+strong:first-child{display: none;} .app-calendar .blox-autolist a:hover,.app-calendar .blox-autolist 
+a:focus{background: none;color:#ffffff;} .sponsored-story {margin-bottom:10px 
+!important;padding-top:10px;padding-bottom:5px;background:url(global/resources/images/banner.png);} .small-story 
+article{margin-bottom:0px !important;} .card .label-flag{display: none;} .card 
+.label-flag.label-flag-partner-content{display: inline;} .card .label-flag.label-flag-sponsored-content{display: 
+inline;} .custom-note *{font-family: 'Gudea', sans-serif;} .custom-note .tnt-headline a{} .custom-note h3.tnt-headline 
+a{font-weight: normal;} .blue-partner .custom-note {background: #E4F8FE;padding:10px !important;} .blue-partner 
+.custom-note {padding-left:0 !important;} .small-story.blue-partner .custom-note {padding-left:10px !important;} 
+.results-container .tnt-asset-link{line-height: normal;} .results-container .tnt-asset-link mark{padding: 0 
+!important;line-height: normal !important;} .sect-sub { background: #eb3e38; display: block; font-size:18px; 
+font-weight: 600; line-height: 1.5; padding:8px 15px; color:rgba(255,255,255,1)!important; text-decoration: 
+none!important; border-bottom:2px solid rgba(255,255,255,.5);} .sect-sub .tnt-svg{float: right;margin-top:5px;} 
+.sect-sub:hover {background: #d83630;} .categoryPicker { display: block; text-transform: uppercase;font-weight: 
+bold;letter-spacing: 1px;text-align: center;padding: 5px 0;background: #000;color:#fff;margin: 0 0 10px 0;clear: 
+both;} .article-sub {padding-top:10px;padding-bottom:10px;margin-bottom:24px;border-bottom:1px solid #ccc;} 
+.article-sub .btn{width: 100%;border:0;background: none;font-size:15px;font-weight: 600;padding:3px;border-top:1px 
+solid #ccc;} .article-sub .btn:first-child{border:0;margin-top:10px;} .article-sub .sub-cat {border-top:1px solid 
+#ccc;padding: 10px 0;} .article-sub .sub-cat:first-child{border:0;padding-top:0;} .article-sub .title 
+{color:#000;font-size:18px;font-weight:600;} .article-sub .highlight {background: #f5ff85;color: 
+#48B0EC;font-size:12px;} .article-sub a:hover {color: #48B0EC;text-decoration: none;} .article-sub 
+.col-md-5{padding-left:0;padding-right:0;} @media(max-width:480px) { .article-sub 
+.col-md-7{margin-top:10px;padding-left:0;} } .inline-article-fix .full-asset hr{border:0px solid #000;height: 
+1px;background-color: #000;} .inline-article-fix .full-asset ul {padding-left:15px;} .inline-article-fix .full-asset 
+.table h4 {display: none;} .inline-article-fix .full-asset .table p {padding: 0;margin: 0;font-size: 11.2px;} 
+.inline-article-fix .full-asset .table {font-size: 11.2px;} .inline-article-fix .full-asset aside {border: 0;padding: 
+0;} .inline-article-fix .full-asset aside pre {padding:30px 50px;} .clear-float { clear: both;} @media only screen and 
+(min-width: 992px) { .section-team .tncms-block.col-md-6 {min-height: 525px;} .card-img-xlg .card.summary.has-image 
+.card-container { display: grid; grid-template-columns: 70% 30%; grid-template-rows: auto; align-items: center; } 
+.card-img-xlg .card.has-image > .card-container > .card-body {margin-left:0 !important;} .card-img-xlg .card 
+.card-container > .card-image {width: auto !important;} } .issue-archive .card-lead p { font-size: 90%; border-bottom: 
+solid 1px #ddd; padding-bottom: 2px; padding-top: 3px; margin-bottom: 2px; } #block-870420 .col-sm-3 { margin-right: 
+55px; } @media (max-width: 767px) { #block-870420 .col-sm-3 { margin-right: 0px; } } #main-navigation li a { 
+font-family: 'Gudea', sans-serif; text-transform: uppercase;} #more-nav-container span a { font-family: 'Gudea', 
+sans-serif;font-size: 15px;color: #000000;} .block-title h1, .block-title h2, .block-title h3, .block-title h4, 
+.block-title h5, .block-title h6 { font-family: 'Gudea', sans-serif;} #tncms-region-global-side-primary 
+.block-title-inner { width:100%;text-align:center;} #tncms-region-global-side-primary .block-title { 
+background:#B01E23!important;width:100%;border-radius: 3px;} #tncms-region-global-side-primary .block-title h1, 
+#tncms-region-global-side-primary .block-title h2, #tncms-region-global-side-primary .block-title h3, 
+#tncms-region-global-side-primary .block-title h4, #tncms-region-global-side-primary .block-title h5, 
+#tncms-region-global-side-primary .block-title h6 { text-transform:uppercase; 
+text-align:center;color:#ffffff!important;font-size:110%;letter-spacing: 2px;line-height: 1.75em;} 
+#tncms-region-global-side-primary .block-title .block-title-inner { padding: 0 0px 0px 0;width:100%;} 
+#tncms-region-global-side-primary .block-title .block-title-inner { border-color: #ffffff;} 
+#tncms-region-global-side-primary .block-title { border-bottom: 0px solid rgba(0,0,0,.1);} /* 
+#tncms-region-front-side-secondary .block-title { background:#B01E23!important;width:100%;border-radius: 3px;} 
+#tncms-region-front-side-secondary .block-title-inner { width:100%;text-align:center;} 
+#tncms-region-front-side-secondary .block-title h1, #tncms-region-front-side-secondary .block-title h2, 
+#tncms-region-front-side-secondary .block-title h3, #tncms-region-front-side-secondary .block-title h4, 
+#tncms-region-front-side-secondary .block-title h5, #tncms-region-front-side-secondary .block-title h6 { 
+text-transform:uppercase; text-align:center;color:#ffffff!important;font-size:110%;letter-spacing: 2px;line-height: 
+1.75em;} #tncms-region-front-side-secondary .block-title .block-title-inner { padding: 0 0px 0px 0;width:100%;} 
+#tncms-region-front-side-secondary .block-title .block-title-inner { border-color: #ffffff;} 
+#tncms-region-front-side-secondary .block-title { border-bottom: 0px solid rgba(0,0,0,.1);} */ 
+#tncms-region-global-side-secondary .block-title { background:#B01E23!important;width:100%;border-radius: 3px;} 
+#tncms-region-global-side-secondary .block-title-inner { width:100%;text-align:center;} 
+#tncms-region-global-side-secondary .block-title h1, #tncms-region-global-side-secondary .block-title h2, 
+#tncms-region-global-side-secondary .block-title h3, #tncms-region-global-side-secondary .block-title h4, 
+#tncms-region-global-side-secondary .block-title h5, #tncms-region-global-side-secondary .block-title h6 { 
+text-transform:uppercase; text-align:center;color:#ffffff!important;font-size:110%;letter-spacing: 2px;line-height: 
+1.75em;} #tncms-region-global-side-secondary .block-title .block-title-inner { padding: 0 0px 0px 0;width:100%;} 
+#tncms-region-global-side-secondary .block-title .block-title-inner { border-color: #ffffff;} 
+#tncms-region-global-side-secondary .block-title { border-bottom: 0px solid rgba(0,0,0,.1);} 
+#tncms-region-index-side-primary .block-title { background:#B01E23!important;width:100%;border-radius: 3px;} 
+#tncms-region-index-side-primary .block-title-inner { width:100%;text-align:center;} #tncms-region-index-side-primary 
+.block-title h1, #tncms-region-index-side-primary .block-title h2, #tncms-region-index-side-primary .block-title h3, 
+#tncms-region-index-side-primary .block-title h4, #tncms-region-index-side-primary .block-title h5, 
+#tncms-region-index-side-primary .block-title h6 { text-transform:uppercase; 
+text-align:center;color:#ffffff!important;font-size:110%;letter-spacing: 2px;line-height: 1.75em;} 
+#tncms-region-index-side-primary .block-title .block-title-inner { padding: 0 0px 0px 0;width:100%;} 
+#tncms-region-index-side-primary .block-title .block-title-inner { border-color: #ffffff;} 
+#tncms-region-index-side-primary .block-title { border-bottom: 0px solid rgba(0,0,0,.1);} .remove-card-shadow 
+.card-panel { border-color: #ffffff!important;} .remove-card-shadow .panel { box-shadow: 0px 0px rgba(0,0,0,.1);} 
+.right-rail-blocks .tnt-asset-link { font-family: 'Montserrat',sans-serif;} .right-rail-blocks .panel { box-shadow: 
+none;border: 0px!important;} .diablo-buzz .card .card-labels .card-label-section * { color: #34d3fa; } 
+.diablo-buzz.sans-serif-font .tnt-headline * { font-family: 'Montserrat',sans-serif; font-weight: normal; } 
+.diablo-buzz .card .card-lead p { font-family: 'Montserrat',sans-serif; font-weight:normal; color: #999; } 
+#tncms-block-868432 { padding-top: 25px; } #tncms-block-874575 { margin-bottom: 30px; } .asset-content h2, 
+.asset-content h3, .asset-content h4 { color: #B01E23; } .the-a-list-block {} /* a { color: #B01E23;} */ #rojo-txt { 
+color: #B01E23;} .the-a-list-block .promo-design p.text { font-weight: bold;} .section-heading .heading .block-title 
+h3 a { font-size: 66px;} #site-top-nav .list-inline > li > a {font-family: 'Gudea', sans-serif;font-weight: bold; 
+color: #333333;} #main-navigation li a {font-family: 'Gudea', sans-serif; text-transform: uppercase;} 
+#more-nav-container span a { font-family: 'Gudea', sans-serif;font-size: 15px;color: #000000;} .block-title h1, 
+.block-title h2, .block-title h3, .block-title h4, .block-title h5, .block-title h6 { font-family: 'Gudea', 
+sans-serif;} .big-block-gallery-homepage-top .card-headline a { font-family: 'Gudea', 
+sans-serif;font-weight:700;text-transform:uppercase;} /* centers Black Lives Matter image blocks */ .center-content 
+.img-responsive {margin: 0 auto; text-align:center;width:400px;} .blm-message-block { background:#1a1919;} .asset 
+.asset-header h1 { font-size: 38px; color: #B01E23; } .asset .asset-body a { color: #B01E23; } .asset-photo .image, 
+.photo-carousel .item .photo-container { background-color: #fff; } h1 { font-size: 38px;color:#B01E23;} h2 { 
+font-size: 32px;} h3 { font-size: 26px;} h4 { font-size: 20px;} /* ----- CUSTOM PAGES ----- */ 
+.section-threads-of-hope-overview .asset-header { display: none; } .section-threads-of-hope-overview .asset-content p 
+{ font-size: 110%; } .section-best-of-the-east-bay-voting .asset-header { display: none; } 
+.section-best-of-the-east-bay-voting #block-904985 img { width: 100%; } .section-best-of-the-east-bay-voting 
+#block-904985 .asset-content p { font-size: 110%; } .section-best-of-the-east-bay-voting #block-904985 .hover-expand 
+.expand { font-size: 14px !important; } .section-diablo-women .asset-masthead { display: none; } .section-diablo-women 
+#block-905118 .asset-body p { font-size: 110% !important; } /* Desktops and laptops ----------- */ @media only screen 
+and (min-width: 1224px) { /*.inline-asset .photo img.full { width: 60%; margin: 0 auto;} .inline-asset .caption { 
+width: 60%; margin: 0 auto;} */ #sticky-anchor { background-color: #ffffff;} #sticky-anchor .sticky-anchor-close { 
+right: 15%;} } /* Large screens ----------- */ @media only screen and (min-width: 1824px) { /* .inline-asset .photo 
+img.full { width: 60%;} .inline-asset .caption { width: 60%; margin: 0 auto;} */ #sticky-anchor { background-color: 
+#ffffff;} #sticky-anchor .sticky-anchor-close { right: 15%;} /* Free subscription Form */ #free_subscription__renewal 
+> fieldset.a-list_email_signup > div:nth-child(7) > div > span > h4{ color:#C21E23 !important;} </style>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDQV3N&amp;townnews.product.software=BLOX&amp;t
+ownnews.product.version=1.94.0&amp;townnews.crm.group_id=469&amp;townnews.content.id=9efb68ea-3e74-5401-9ece-af7529a92c
+12&amp;townnews.content.title=Chasing+Evil&amp;townnews.content.type=article&amp;townnews.content.published_time=2018-0
+1-29T18%3A59%3A00Z&amp;townnews.content.tags.0=contra+costa+county+investigator&amp;townnews.content.tags.1=paul+holes&
+amp;townnews.content.tags.2=serial+killer&amp;townnews.content.tags.3=ear&amp;townnews.content.tags.4=east+area+rapist&
+amp;townnews.content.tags.5=golden+state+killer&amp;townnews.content.taxonomies.blox_sections.ns=https%3A%2F%2Fwww.town
+news.com%2Fns%2Fblox%2Fv1%2Ftags%2Fsection&amp;townnews.content.taxonomies.blox_sections.items.0=people-style%2Fpeople&
+amp;townnews.content.taxonomies.blox_flags.ns=https%3A%2F%2Fwww.townnews.com%2Fns%2Fblox%2Fv1%2Ftags%2Fflag&amp;townnew
+s.content.metrics.image_count=7&amp;townnews.content.metrics.video_count=0&amp;townnews.content.metrics.audio_count=0&a
+mp;townnews.content.metrics.word_count=3128&amp;townnews.content.byline=By+Peter+Crooks+%2F+Photography+by+Steve+Babulj
+ak++&amp;tncms.google.ga4=G-BV741R7GDN&amp;tncms.google.ua=UA-50578-37&amp;tncms.template.version=3.155.0&amp;tncms.pag
+e.grid=mobile_pattern&amp;tncms.page.style=default&amp;tncms.page.path=%2Fpeople-style%2Fpeople&amp;tncms.page.syndicat
+ed=false&amp;tncms.page.reaction=false&amp;tncms.page.app=editorial&amp;tncms.page.theme=flex&amp;tncms.page.skin=flex-
+editorial&amp;tncms.page.http_status=200&amp;tncms.subscription.required=false&amp;tncms.asset.type=article&amp;tncms.a
+sset.author=Peter+Crooks+%2F+Photography+by+Steve+Babuljak&amp;tncms.asset.start_hour=10&amp;tncms.asset.id=9efb68ea-3e
+74-5401-9ece-af7529a92c12&amp;tncms.asset.app=editorial&amp;tncms.asset.ga_page=%2Fpeople-style%2Fpeople%2Farticle_9efb
+68ea-3e74-5401-9ece-af7529a92c12.html&amp;tncms.vendor.outbrain=Headlines+and+photo+grid&amp;tncms.vendor.taboola=&amp;
+tncms.system.render_time=370&amp;tncms.client.is_bot=no&amp;tncms.client.is_gdpr=no&amp;tncms.client.noscript=yes" 
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<form method="post" action="https://www.diablomag.com/users/logout/" id="user-logout-form-808470"><input type="hidden" 
+name="referer_url" value="https://www.diablomag.com/people-style/people/chasing-evil/article_9efb68ea-3e74-5401-9ece-af
+7529a92c12.html"><input type="submit" name="logout" value="Logout" class="hide">
+                <li><form id="site-search-808466" aria-label="Site search" action="/search/" method="GET" >
+<form method="post" action="https://www.diablomag.com/users/logout/" id="user-logout-form-808469"><input type="hidden" 
+name="referer_url" value="https://www.diablomag.com/people-style/people/chasing-evil/article_9efb68ea-3e74-5401-9ece-af
+7529a92c12.html"><input type="submit" name="logout" value="Logout" class="hide">
+                <li><form id="site-search-808465" aria-label="Site search" action="/search/" method="GET" >
+    </ul><form method="post" data-uuid="9cd6cc58-74e2-5786-bb40-26d698b12f28" 
+class="save-list-9cd6cc58-74e2-5786-bb40-26d698b12f28-form save-asset-to-list" action="/users/admin/list/">
+            <div class="caption-inner-9efb68ea-3e74-5401-9ece-af7529a92c12 collapse in"><div 
+class="caption-text"><p>In this crime scene in Concord from 1978, the East Area Rapist placed dishes on the male 
+victim's back to be alerted if he moved.</p></div><div class="card-meta">
+    </ul><form method="post" data-uuid="a6ec7bc3-1fa2-5882-a81a-8113a5ad680d" 
+class="save-list-a6ec7bc3-1fa2-5882-a81a-8113a5ad680d-form save-asset-to-list" action="/users/admin/list/">
+    </ul><form method="post" data-uuid="be2cae01-bf0d-5bd8-8ea4-f05fc9469d2e" 
+class="save-list-be2cae01-bf0d-5bd8-8ea4-f05fc9469d2e-form save-asset-to-list" action="/users/admin/list/">
+    </ul><form method="post" data-uuid="a7fc385e-a0b1-56e9-bb1e-e5b58f147155" 
+class="save-list-a7fc385e-a0b1-56e9-bb1e-e5b58f147155-form save-asset-to-list" action="/users/admin/list/">
+    </ul><form method="post" data-uuid="7eaa2ada-f4ad-5437-8ecc-ae55fd2b5fd1" 
+class="save-list-7eaa2ada-f4ad-5437-8ecc-ae55fd2b5fd1-form save-asset-to-list" action="/users/admin/list/">
+    </ul><form method="post" data-uuid="b35c2147-1004-5bdf-a769-f9518b76374c" 
+class="save-list-b35c2147-1004-5bdf-a769-f9518b76374c-form save-asset-to-list" action="/users/admin/list/">
+            <div class="caption-inner-9efb68ea-3e74-5401-9ece-af7529a92c12 collapse in"><div class="caption-text"><p>A 
+beer can and a box of crackers found outside the house, likely consumed by the East Area Rapist.</p></div><div 
+class="card-meta">
+    </ul><form method="post" data-uuid="37bb4e93-99d9-523b-af94-25ea084c86cf" 
+class="save-list-37bb4e93-99d9-523b-af94-25ea084c86cf-form save-asset-to-list" action="/users/admin/list/">
+    <meta itemprop="description" content="<p>Contra Costa County investigator Paul Holes has spent the past two 
+decades searching for the Golden State killer.</p>"/><div itemprop="publisher" itemscope 
+itemtype="https://schema.org/Organization">
+                    <div class="head text-uppercase">
+            <span>Contra Costa County investigator Paul Holes has spent the past two decades searching for one of the 
+most elusive serial killers in U.S. history. </span>
+    </ul><form method="post" data-uuid="9efb68ea-3e74-5401-9ece-af7529a92c12" 
+class="save-list-9efb68ea-3e74-5401-9ece-af7529a92c12-form save-asset-to-list" action="/users/admin/list/">
+    </ul><form method="post" data-uuid="9efb68ea-3e74-5401-9ece-af7529a92c12" 
+class="save-list-9efb68ea-3e74-5401-9ece-af7529a92c12-form save-asset-to-list" action="/users/admin/list/">
+                                <h3>BREAKING NEWS: Sacramento County Sheriff's Department has arrested 
+Joseph James DeAngelo, 72, believed to be the notorious East Area Rapist, the Original Night Stalker, the Visalia 
+Ransacker, and the Golden State Killer, on Wednesday morning April 25, 2018. The Golden State Killer's crimes, 
+including 12 murders and more than 40 rapes, occurred in ten different counties across the 
+state. </h3><h3>DeAngelo is a former police officer who worked in Exeter, California and Auburn, California who was 
+arrested in his home in Citrus Heights, California. DeAngelo had never been a suspect in the case and was only 
+identified through DNA evidence six days before his arrest.  </h3><p><span>Sacramento District Attorney Anne Marie 
+Schubert led a press conference to announce the arrest. Schubert was 12 years old and living in the Sacramento 
+neighborhoods when the East Area Rapist began his reign of terror in 1976. interviewed her for this article, which ran 
+in February 2018. "We always knew the answer was, and always was going to be in the DNA," Schubert announced, later 
+mentioning that DeAngelo's DNA was collected though a discarded sample. "We knew we were looking for a needle in a 
+haystack, but we knew that the needle was there."</span></p><div id="tncms-region-article_instory_top" 
+class="tncms-region hidden-print"></div><p><span>Contra Costa District Attorney Diana Becton was one of many law 
+enforcement officials who spoke at the press conference. Becton made sure to thank Paul Holes, the subject of this 
+<em>Diablo</em> article. Holes retired from his position as Chief Forensics Services Officer for the District 
+Attorney's office, but has continued to work on the case through the arrest of DeAngelo. "His work in using new 
+technologies helped to solve this case," said Becton. </span></p><p><span>Alameda County District Attorney Nancy 
+O'Malley also spoke at the press conference, mentioning her experiences working as a rape crisis counselor in Contra 
+Costa County in the late 1970s, when the East Area Rapist assaulted multiple residents of Concord, Danville, San 
+Ramon, and Walnut Creek.</span></p><div class="inline-asset inline-image layout-vertical  subscriber-hide  
+tnt-inline-asset tnt-inline-relcontent tnt-inline-image tnt-inline-relation-child tnt-inline-presentation-default 
+tnt-inline-width-full"><figure class="photo layout-vertical hover-expand letterbox-style-default"><span class="expand 
+hidden-print"
+        </figure></div><p><span> </span></p><p><span>THE FOLLOWING RAN IN THE FEBRUARY 2018 ISSUE OF 
+<em>DIABLO</em></span></p><p><span> </span></p><p><span>Several hours before dawn on October 7, 1978, a serial 
+predator known as the East Area Rapist prowled the side of a house in a quiet Concord neighborhood near Treat 
+Boulevard and Oak Grove Road. He sliced through a wood veneer on one of the home’s entrances but was deterred by a 
+security bar inside the door. Demonstrating remarkable deftness, the man—whom investigators believe had already 
+committed dozens of break-ins and sexual assaults in similarly quiet suburban neighborhoods in the Sacramento 
+area—punched a small hole in a window. Using a tool to unlatch it, he slipped inside the single-story 
+house.</span></p><p><span>In the master bedroom, a married couple was sound asleep. The intruder, wearing a ski mask, 
+crept into the bedroom and woke up the couple. While shining a flashlight in his victims’ eyes, the East Area Rapist 
+(or EAR, as he was known to the law enforcement task forces that had been searching for him since 1976) warned the 
+couple that he was holding a gun and would fire if they resisted in any way.</span></p><p><span>The criminal gave 
+bindings to the wife and instructed her to tie up her husband, who was facedown on the bed. After checking and 
+reinforcing the bindings, the intruder placed dishes from the couple’s kitchen on the husband’s back and issued a 
+chilling warning.</span></p><div class="inline-asset inline-image layout-horizontal  subscriber-hide  tnt-inline-asset 
+tnt-inline-relcontent tnt-inline-image tnt-inline-relation-child tnt-inline-presentation-default 
+tnt-inline-width-full"><figure class="photo layout-horizontal hover-expand letterbox-style-default"><span 
+class="expand hidden-print"
+                                    <p>In this crime scene in Concord from 1978, the East Area Rapist placed dishes on 
+the male victim's back to be alerted if he moved.</p>
+        </figure></div><p><span>"If you move and these dishes make a noise, I’ll kill you both," he 
+said.</span></p><p><span>With the husband restrained, EAR led the wife into the living room and raped her for several 
+hours. Before leaving, EAR looted the home, stealing 14 sets of expensive Noritake Polonaise 
+china.</span></p><p><span>Then, silently, he disappeared into the night.</span></p><p><span>Six nights later, on 
+October 13, EAR returned to the Concord neighborhood and viciously attacked and robbed a married couple in a nearby 
+house. This time, a child awoke and caught him in the act; EAR locked the child in the bathroom and warned the parents 
+that the child would be executed if they made any noise.</span></p><p><span>Once again, EAR terrorized his victims and 
+left them devastated in their own home. Two weeks later, he committed another rape, this time in San Ramon—one of 
+nine violent crimes attributed to EAR in the East Bay between October 1978 and June 1979, which followed nearly 40 
+similar attacks in Sacramento, Stockton, Modesto, and Davis dating back to June 1976. At a time when the paranoia 
+created by the Zodiac Killer—who murdered at least five victims in the late 1960s and early ’70s—was starting to 
+fade, EAR brought terror to the West Coast for a full decade.</span></p><p><span>More than a year after the San Ramon 
+attack, EAR shot and killed a couple in Goleta, near Santa Barbara. The man and woman were the first known murder 
+victims of one of the most diabolical serial criminals in American history. They would not be the 
+last.</span></p><p><span>To date, EAR—also known as the Original Night Stalker and the Golden State Killer—has yet 
+to be apprehended or even identified.</span></p><h3><span><strong>The Forensic Expert      
+ </strong></span></h3><p><span>Contra Costa County District Attorney’s Office cold-case investigator Paul Holes was 
+just 10 years old when EAR terrorized the East Bay Area in the late 1970s. Holes, who grew up in a military family, 
+was living in Washington, D.C., during that time and remembers watching the NBC mystery show <em>Quincy, M.E.</em>, 
+with fascination. The show, which predated the wave of CSI: <em>Crime Scene Investigation</em> detective shows by 
+decades, featured a coroner who solved criminal cases through medical science.</span></p><p><span>"I watched Quincy 
+regularly," says Holes, 49. "I was fascinated by the investigative thought process he would employ to solve the 
+mystery—utilizing the medical and forensic evidence and investigative techniques. As I got older, I thought, that is 
+what I want to do."</span></p><p><span>Holes has been working in the East Bay for more than 27 years, with roles in 
+the Contra Costa County Sheriff’s Office crime lab and the DA’s office. His tenure in East Bay law enforcement 
+coincides with the evolution of the use of DNA technology as a law enforcement tool. He became a sworn criminalist in 
+1994, the same year the sheriff’s lab invested in a DNA program.</span></p><p><span>DNA technology helped Holes both 
+eliminate suspects and solve crimes, including the 1978 murder of Lafayette resident Armida Wiltsey, a 42-year-old 
+woman who was strangled at the Lafayette Reservoir. Twenty years after her murder, Holes and other investigators 
+paired a DNA sample found under one of Wiltsey’s fingernails with the blood sample of a paroled murderer named 
+Darryl Kemp, who had relocated to Pleasant Hill after being released from prison in Southern California. Kemp was 
+convicted of Wiltsey’s murder and sentenced to death in June 2009. He is still on death row at San Quentin State 
+Prison.</span></p><p><span>After coming across the EAR cold-case files in 1994, Holes asked a colleague, John Murdock, 
+about the case. Murdock had worked with many others to investigate the crimes and hunt down EAR from 1978 to 1979, 
+compiling detailed evidence reports of each crime scene. Every footprint, point of entry, type of binding, and clue 
+was logged in Murdock’s spreadsheet.</span></p><div class="inline-asset inline-image layout-vertical  
+subscriber-hide  tnt-inline-asset tnt-inline-relcontent tnt-inline-image tnt-inline-relation-child 
+tnt-inline-presentation-default tnt-inline-width-full"><figure class="photo layout-vertical hover-expand 
+letterbox-style-default"><span class="expand hidden-print"
+        </figure></div><p><span>Holes was fascinated by the mystery.</span></p><p><span>"This is someone who did not 
+want to be caught: He always wore a mask and shined a flashlight in his victims’ eyes," says Holes. "He’s a white 
+male, very agile. He is tactically sound; he would often use the backyard as an escape route and attack in 
+neighborhoods with single-story homes so there are no neighbors looking out a window that might identify him. The one 
+thing he would not have known at the time of his crimes was that DNA evidence could eventually identify him. And we 
+have DNA evidence [semen] from the crime scenes. We can identify him. This is a solvable 
+case."</span></p><h3><span>Clues on the Train Tracks</span></h3><p><span>At approximately 2 a.m. on December 9, 1978, 
+EAR broke into a home in Danville and raped a single woman who was renting the house. After escaping through a 
+neighboring backyard, he hopped a fence and followed the train tracks—now the Iron Horse Regional Trail—north for 
+several hundred feet.</span></p><p><span>Bloodhounds called to the scene that night lost the scent at the intersection 
+of the train tracks and El Capitan Drive, leading investigators to believe he got in a car and drove away. Although he 
+vanished, likely escaping onto Interstate 680, investigators found a few clues, including several papers along the 
+train tracks, likely dropped by EAR as he stuffed his mask and gloves into a bag.</span></p><div class="inline-asset 
+inline-image layout-vertical  subscriber-hide  tnt-inline-asset tnt-inline-relcontent tnt-inline-image 
+tnt-inline-relation-child tnt-inline-presentation-default tnt-inline-width-full"><figure class="photo layout-vertical 
+hover-expand letterbox-style-default"><span class="expand hidden-print"
+        </figure></div><p><span>Two pages appeared to be school essays written on notebook paper. One page contained a 
+history report about General Custer. The other was a writing assignment that began:</span></p><p><span><em>"Mad is the 
+word, the word that reminds me of 6th grade. I hated that year. I wish I had know [sic] what was going to be going on 
+during my 6th grade year, the last and worst years of elementary school. Mad is the word that remains in my head about 
+my dreadful year as a 6th grader. My madness was one that was caused by disappointments, which hurt me very much. 
+Disappointments from my teacher such as field trips that were planned, then cancelled. My 6th [sic] grade teacher gave 
+me a lot of disappointments that made me very mad and made me built [sic] a state of hatred in my heart, no one ever 
+let me down that hard before and I never ‘hated anyone’ as much as I did 
+him." </em></span></p><p><span>Speculating that the pages may have fallen from a notebook that EAR had kept for 
+years, Holes says, "The ‘Mad Is the Word’ essay was written by a kid with obvious psychological problems." Holes 
+has interviewed many educators about the writing, all of whom said the essay would raise immediate red flags about 
+the student’s mental stability.</span></p><div id="tncms-region-article_instory_middle" class="tncms-region 
+hidden-print"></div><div class="inline-asset inline-image layout-horizontal  subscriber-hide  tnt-inline-asset 
+tnt-inline-relcontent tnt-inline-image tnt-inline-relation-child tnt-inline-presentation-default 
+tnt-inline-width-full"><figure class="photo layout-horizontal hover-expand letterbox-style-default"><span 
+class="expand hidden-print"
+        </figure></div><p><span>The third page found on the train tracks is a sketch of a lake-centric master-planned 
+community. "Initially, investigators found this hand-drawn diagram of a home development and had no idea what it was," 
+says Holes, who keeps a copy of it pinned to the wall of his Martinez office, next to an enlarged photo of a suburban 
+development in the Davis area that may contain connections to the drawing.</span></p><p><span>"I have consulted 
+countless experts across many disciplines," says Holes, "and the consensus opinion is that it was drawn by someone who 
+has some sort of connection to the development or real estate industry."</span></p><p><span>EAR’s 29 assaults in the 
+Sacramento area (the eastern area of the city, hence the moniker East Area Rapist) suggested a knowledge of the area 
+consistent with someone who lived there. However, EAR’s East Bay crimes demonstrated a different modus 
+operandi.</span></p><p><span>Holes pulls up a Google Earth map on his desktop computer, showing where all nine East 
+Bay rapes occurred between October 1978 and June 1979. All were along the I-680 corridor, most within a few blocks of 
+a freeway on-ramp. Additionally, two rapes in November and December of 1978 occurred in San Jose, leading Holes to 
+believe that EAR was driving north and south along I-680 for work, pulling off from time to time to case neighborhoods 
+with single-story homes.</span></p><p><span>"Whenever [EAR] has multiple attacks in a jurisdiction, it is in the very 
+same neighborhood," says Holes. "He already has the mental map of that area. He knows how to get there and 
+escape."</span></p><p><span>Other elements of his crimes are less consistent, and clues to his background remain 
+mysterious. The ages of the assaulted women ranged widely, from 13 to 38. Some of the victims received phone calls 
+from EAR months or even years after their assault. One victim received a call in the early 1980s while working her 
+shift at a diner, meaning that EAR might have dropped in the restaurant by coincidence, or he could have been 
+following his victim from home to work. Without question, EAR made the calls because he was thrilled to terrorize his 
+victims.</span></p><p><span>It’s also possible that some assaults targeted specific people. "One of the original 
+investigators in Sacramento remembers a man standing up at a town hall meeting and making statements about EAR," says 
+Holes. "Later, that man and his wife were attacked."</span></p><h3><span>An Attack Goes 
+Sideways</span></h3><p><span>Just before 4 a.m. on July 5, 1979, EAR broke into an East Bay residence, picking a 
+multilevel condominium in Danville instead of the usual single-story home with a yard. The husband in the residence 
+woke up to see EAR standing in the bedroom, putting on his ski mask.</span></p><p><span>"The husband gets up and faces 
+off with EAR as his wife runs out of the room," explains Holes. "The attack had gone sideways, and EAR lost control. 
+EAR ran out of the condo, and [the] husband chased after him, but EAR got away. The bloodhounds scented him running 
+for several blocks to where he had parked his vehicle."</span></p><p><span>The next time EAR attacked was in October 
+1979, several hours south in Goleta. Again, the attempt went awry and EAR escaped on foot despite being chased by the 
+couple’s neighbor, an off-duty FBI agent.</span></p><div class="inline-asset inline-image layout-horizontal  
+subscriber-hide  tnt-inline-asset tnt-inline-relcontent tnt-inline-image tnt-inline-relation-child 
+tnt-inline-presentation-default tnt-inline-width-full"><figure class="photo layout-horizontal hover-expand 
+letterbox-style-default"><span class="expand hidden-print"
+        </figure></div><p><span>On December 30, 1979, EAR attacked Robert Offerman and Debra Alexandria Manning in 
+Goleta. This time, he shot them, leaving their bodies in the house as he fled the scene. Investigators found that the 
+bindings on Offerman had been untied, leading to the theory that Offerman got loose and lunged at the assailant before 
+being killed.</span></p><p><span>EAR had now become a full-fledged killer. In March of 1980, he murdered Charlene and 
+Lyman Smith in their Ventura home, bludgeoning the couple with a log from a woodpile in their yard. Then in August of 
+that year, he beat to death Keith and Patrice Harrington, of what’s now Dana Point. In both of the 1980 double 
+homicides, the women had been raped.</span></p><p><span>Three more victims were murdered in 1981: Manuela Witthuhn of 
+Irvine, and Cheri Domingo and Gregory Sanchez of Goleta. Five years later, he bludgeoned 19-year-old Janelle Cruz with 
+a pipe wrench in her Irvine home.</span></p><p><span>EAR—later nicknamed the Golden State Killer by the late crime 
+writer <a href="https://www.amazon.com/Ill-Be-Gone-Dark-Obsessive/dp/0062319787/ref=sr_1_1?ie=UTF8&amp;qid=1517246612&a
+mp;sr=8-1&amp;keywords=i%27ll+be+gone+in+the+dark+book" target="_blank">Michelle McNamara, whose book about the case, 
+<em>I’ll Be Gone in the Dark: One Woman’s Obsessive Search for the Golden State Killer</em>, will be released on 
+February 27</a>—was not suspected in another violent crime after 1981. With the exception of a possible phone call 
+to a victim in 1991, the malevolent criminal disappeared entirely.</span></p><p><span>Until 
+2001.</span></p><h3><span>Connecting the DNA Dots</span></h3><p><span>Holes returned to the EAR files frequently 
+between 1996 and 2001, whenever he wasn’t working on active investigations in Contra Costa County. During this time, 
+DNA technology was becoming much more sophisticated, and the Contra Costa County Sheriff’s Office crime lab updated 
+its equipment accordingly.</span></p><div class="inline-asset inline-image layout-horizontal  subscriber-hide  
+tnt-inline-asset tnt-inline-relcontent tnt-inline-image tnt-inline-relation-child tnt-inline-presentation-default 
+tnt-inline-width-full"><figure class="photo layout-horizontal hover-expand letterbox-style-default"><span 
+class="expand hidden-print"
+                                    <p>A beer can and a box of crackers found outside the house, likely consumed by 
+the East Area Rapist.</p>
+        </figure></div><p><span>In March 2001, Holes had analysts compare the DNA analysis from EAR’s semen found at 
+three East Bay crime scenes to DNA evidence from other unsolved cases in Orange County, and a match was found. The 
+same man who committed 50 assaults in Northern California between 1976 and 1979 was now connected to the murders of 10 
+people in Southern California between 1979 and 1986. While the statute of limitations to prosecute the rape cases had 
+long since expired, there is no such limitation on murder charges. That means that Holes, and the many career law 
+enforcement professionals who have spent countless hours hunting this elusive serial criminal, will get to see the 
+Golden State Killer prosecuted—if his identity is ever discovered.</span></p><p><span>In April 2001, Holes and 
+Southern California investigators went public with the revelation that DNA evidence had connected the Northern 
+California assaults with the Southern California murders. The day after <em>The Sacramento Bee</em> ran a story about 
+the investigation update, one of the Sacramento-area victims received a call from her 
+rapist.</span></p><p><span>"Remember when we partied?" the voice whispered into his victim’s ear. It had been about 
+25 years since the assault, but the call brought back the trauma of violence and terror as if it had happened the day 
+before.</span></p><p><span>In June of 2016, the FBI used the 40th anniversary of EAR’s first crime to ask the public 
+for new information. A $50,000 reward was offered to anyone with details leading to the arrest and conviction of the 
+criminal, who would be between 58 and 70 years old today.</span></p><h3><span>Hunting a 
+Monster</span></h3><p><span>Sacramento County District Attorney Anne Marie Schubert was 12 years old when EAR first 
+terrorized the suburbs around Sacramento.</span></p><p><span>"I grew up in a neighborhood that he was hitting, and I 
+can tell you that this man changed communities," says Schubert. "The level of violence that erupted in this man is 
+overwhelming. There are families and victims in our community who deserve to see him 
+prosecuted."</span></p><p><span>Holes, who is due to retire in March, wants to see the exhaustive work he has put into 
+hunting for the serial criminal—the victim interviews, the crime scene visits, the DNA analyses, the Interpol 
+searches for suspects—pay off with an arrest. It would be gratifying to him and a relief to his 
+victims.</span></p><p><span>"Many of the female victims I have spoken to over the years have said, ‘I want to do 
+whatever I can do to help you catch this guy.’ It is still an emotional experience, but they are determined to see 
+him brought to justice," says Holes. "The husbands also want to see him brought to justice, but have a different 
+reaction when speaking with me. Several have instantly become very emotional, having to recall this devastating event 
+when they were unable to protect their wife."</span></p><p><span>All this time, Holes says, the criminal could have 
+been hiding among us in plain sight. He thinks EAR could be a successful, white-collar professional. He could be 
+married with children, a pillar of his community hiding pathological secrets.</span></p><p><span>"I think that when 
+EAR is caught, we will find a man who is similar to the makeup of the BTK Killer, Dennis Rader, of Wichita, Kansas," 
+says Holes. "BTK stood for Bind, Torture, Kill—just horrific crimes. But when Rader was caught, we learned that he 
+was married with kids, he was active in his son’s Boy Scout troop, and he was president of his church. He had worked 
+installing security systems in houses, which is why he knew how to get in and out of a home."</span></p><p><span>If 
+Holes ever gets to interview EAR face-to-face, there are a million questions he would like to 
+ask.</span></p><p><span>"There are so many things I would want answers to, almost from an academic perspective on 
+serial criminality. I would want to go through the cases from the very beginning: How did you select this victim? What 
+were your tactics? Why did you take this weird thing out of the house?"</span></p><p><span>Holes stares at the 
+enlarged photograph of a suburban neighborhood on his wall. He takes a breath and says, "But I think the first thing 
+I’d ask is, ‘Who are you?’ "</span></p><p><span>For more information, go to <a href="http://fbi.gov">fbi.gov</a> 
+and search <em>East Area Rapist</em> or <em>Golden State Killer</em>. </span></p><div 
+id="tncms-region-article_instory_bottom" class="tncms-region hidden-print"></div>
+    </ul><form method="post" data-uuid="9efb68ea-3e74-5401-9ece-af7529a92c12" 
+class="save-list-9efb68ea-3e74-5401-9ece-af7529a92c12-form save-asset-to-list" action="/users/admin/list/">
+                    <a href="/search/?k=%22paul%20holes%22#tncms-source=keyword" class="tag-paul-holes label 
+label-default"  rel="nofollow">Paul Holes</a>
+                    <a href="/search/?k=%22east%20area%20rapist%22#tncms-source=keyword" class="tag-east-area-rapist 
+label label-default"  rel="nofollow">East Area Rapist</a>
+</section></div><div id="tncms-block-882065" class="tncms-block uppercase-block"><section id="block-882065" 
+class="block emphasis-h3   " ><div class="clearfix">
+    </section></div><div id="tncms-block-882064" class="tncms-block uppercase-block"><section id="block-882064" 
+class="block emphasis-h3   " ><div class="clearfix">
+    </section></div><div id="tncms-block-882063" class="tncms-block uppercase-block"><section id="block-882063" 
+class="block emphasis-h3   " ><div class="clearfix">
+    </section></div><div id="tncms-block-1656187" class="tncms-block uppercase-block"><section id="block-1656187" 
+class="block emphasis-h3   " ><div class="clearfix">
+    </section></div><div id="tncms-block-882062" class="tncms-block uppercase-block"><section id="block-882062" 
+class="block emphasis-h3   " ><div class="clearfix">
+    </section></div><div id="tncms-block-882067" class="tncms-block uppercase-block"><section id="block-882067" 
+class="block emphasis-h3   " ><div class="clearfix">
+    </section></div><div id="tncms-block-1013012" class="tncms-block uppercase-block"><section id="block-1013012" 
+class="block emphasis-h3   " ><div class="clearfix">
+    </section></div><div id="tncms-block-882066" class="tncms-block uppercase-block"><section id="block-882066" 
+class="block emphasis-h3   " ><div class="clearfix">
+    </section></div><div id="tncms-block-1595923" class="tncms-block uppercase-block"><section id="block-1595923" 
+class="block emphasis-h3   " ><div class="clearfix">
+            'tncms.asset.keywords': ["contra costa county investigator", "paul holes", "serial killer", "ear", "east 
+area rapist", "golden state killer"]
+
+
