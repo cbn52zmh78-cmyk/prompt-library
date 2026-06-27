@@ -1,3 +1,13 @@
-training/.deepseek_key
-**/.deepseek_key
-*.key
+# Model adapter weights — large binary files, keep on disk/Drive only
+models/adapters/**/*.safetensors
+models/adapters/**/checkpoint-*/
+models/adapters/**/checkpoint-*/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+training/__pycache__/
+
+# venv
+ml_env/
