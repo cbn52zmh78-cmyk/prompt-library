@@ -1,0 +1,58 @@
+{
+  "artifact": "david_run_registry",
+  "version": "1.0",
+  "agent": "DAVID",
+  "model_base": "meta-llama/Llama-3.1-8B-Instruct",
+  "scope": "language_research_dead_extinct_living_phonetics_writing_systems_methodology",
+  "last_updated": "2026-06-27",
+  "runs": {
+    "phase-1": {
+      "run_id": "llama-3.1-8b_20260627_045600_david-run1",
+      "tag": "phase-1",
+      "status": "complete",
+      "base_model": "meta-llama/Llama-3.1-8B-Instruct",
+      "unsloth_model": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
+      "started_at": "2026-06-27",
+      "completed_at": "2026-06-27",
+      "dataset": {
+        "pairs": 2391,
+        "merged_file": "DAVID/training/david_dataset.jsonl",
+        "coverage": [
+          "dead languages",
+          "extinct languages",
+          "living languages and dialects",
+          "phonetics and IPA",
+          "writing systems",
+          "language research methodology",
+          "classical Latin",
+          "ancient Greek",
+          "Gothic",
+          "etymology",
+          "translation"
+        ]
+      },
+      "training": {
+        "gpu": "NVIDIA H100",
+        "lora_rank": 64,
+        "lora_alpha": 64,
+        "lora_dropout": 0.05,
+        "epochs": 3,
+        "epoch_tier": "1000_plus (3 epochs at 2391 pairs)",
+        "batch_size": 8,
+        "grad_accum": 4,
+        "eff_batch": 32,
+        "actual_steps": 225,
+        "elapsed_min": 8.2,
+        "avg_train_loss": 0.9890,
+        "smoke_test": "PASS",
+        "smoke_note": "avg_train_loss is mean over all steps including high-loss warmup steps; actual final-step loss estimated 0.50-0.65 based on log curve (2.65 -> 0.88 at epoch 1.2)",
+        "adapter_path": "DAVID/models/adapters/llama-3.1-8b_20260627_045600_david-run1",
+        "bundle": "david_adapter_david-run1.tar.gz",
+        "note": "Phase 1 first run: Llama 3.1 8B, 2391 pairs, H100, 8.2 min. Smoke PASS. Loss curve healthy. Adapter downloaded and pod killed."
+      }
+    }
+  },
+  "adapter_dir": "DAVID/models/adapters",
+  "adapter_prefix": "llama-3.1-8b",
+  "next": "Extract david_adapter_david-run1.tar.gz to DAVID/models/adapters/ then train ELEANOR-DAVID variant"
+}
