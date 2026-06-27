@@ -1,0 +1,44 @@
+{
+  "artifact": "eleanor_variant_train_config",
+  "version": "0.1",
+  "status": "scaffold",
+  "agent": "ELEANOR-DAVID",
+  "variant_of": "AI/ELEANOR",
+  "base_model": "meta-llama/Llama-3.1-8B-Instruct",
+  "scope": "language_product_governance",
+  "as_of": "2026-06-26",
+  "note": "Scaffold stub for the ELEANOR-DAVID governance variant -- the ELEANOR layer that sits on top of DAVID's Llama 3.1 8B language product. Inherits the base ELEANOR architecture from AI/ELEANOR (the five intrinsic subagents Memory/Deliberation/Voice/Planner/Watcher); adds DAVID-product-specific governance/compliance. Variant corpus shards go in training/eleanor_dataset/ -- do NOT copy the base ELEANOR corpus here.",
+  "dataset": {
+    "path": "models/datasets/eleanor_david_dataset.jsonl",
+    "builder": "DAVID/ELEANOR/training/eleanor_dataset_builder.py",
+    "format": "alpaca_jsonl",
+    "corpus_shards": [],
+    "corpus_shards_note": "Variant-specific shards only (eleanor_david_*_corpus.jsonl in training/eleanor_dataset/). Empty until the variant corpus is authored.",
+    "current_pairs": 0,
+    "min_pairs_live": 200,
+    "target_pairs": 1000
+  },
+  "model": {
+    "key": "llama-8b",
+    "base_model_id": "meta-llama/Llama-3.1-8B-Instruct",
+    "unsloth_model_name": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
+    "max_seq_length": 2048,
+    "load_in_4bit": true,
+    "hf_gated": true,
+    "hf_note": "Requires HUGGING_FACE_HUB_TOKEN and Meta Llama 3.1 approval at huggingface.co/meta-llama/Llama-3.1-8B-Instruct"
+  },
+  "paths": {
+    "adapter_prefix": "eleanor-david-8b",
+    "adapter_output_template": "models/adapters/eleanor-david-8b_{run}",
+    "local_adapter_dir": "DAVID/ELEANOR/models/adapters"
+  },
+  "infer": {
+    "module": "DAVID/ELEANOR/training/eleanor_infer.py"
+  },
+  "dry_run": {
+    "default": true,
+    "live_requires_env": "ALLOW_GPU_TRAIN=1",
+    "min_pairs_requires_live": 200,
+    "note": "Scaffold: no corpus yet. Author variant shards, build, then inspect config + stub output before any RunPod GPU spend."
+  }
+}
