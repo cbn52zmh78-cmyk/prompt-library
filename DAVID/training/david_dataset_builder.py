@@ -52,6 +52,13 @@ _SUPPLEMENTS = (
     "etymology_training_150.jsonl",
     "phonetics_training_150.jsonl",
     "ancient_greek_translation_150.jsonl",
+    # 2026-06-26 research-mined expansion (generate_david_corpus.py): 6 shards x 30 = 180 pairs
+    "david_corpus_T1_dead_languages.jsonl",
+    "david_corpus_T2_extinct_languages.jsonl",
+    "david_corpus_T3_living_languages_dialects.jsonl",
+    "david_corpus_T4_phonetics_ipa.jsonl",
+    "david_corpus_T5_writing_systems.jsonl",
+    "david_corpus_T6_language_research_methodology.jsonl",
 )
 
 _GENERATED_CACHE = _HERE / "david_generated.jsonl"
