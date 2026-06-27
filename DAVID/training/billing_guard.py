@@ -1,24 +1,25 @@
 """
 Billing guard — prevents runaway / unauthorized paid-LLM spend.
 
-Created 2026-06-24 after an autonomous agent burned the DeepSeek key. EVERY paid LLM
-caller (DeepSeek, OpenAI, xAI, Anthropic — any billable endpoint) must route through this
-before making a paid call. Provider-agnostic: the three locks apply to any billable API.
+EVERY paid LLM caller (Anthropic, OpenAI, xAI — any billable endpoint) must route
+through this before making a paid call. Provider-agnostic: the three locks apply to
+any billable API.
 
-CANONICAL COPY. Self-contained, byte-identical copies live next to the callers in other
-submodules (AI/federation/deepseek_guard.py, Stonebridge/Operations/Scripts/deepseek_guard.py)
-so each submodule imports its own without cross-submodule path hacks. Keep them in sync.
+CANONICAL COPY. Self-contained, byte-identical copies live next to the callers in
+other submodules (AI/federation/billing_guard.py,
+Stonebridge/Operations/Scripts/billing_guard.py) so each submodule imports its own
+without cross-submodule path hacks. Keep them in sync.
 
 Three locks:
   1. ALLOW_BILLABLE=1 required        → default OFF, so an autonomous agent can't spend at all.
-  2. Per-run call cap (DEEPSEEK_MAX_CALLS, default 30) → hard kill-switch on volume.
-  3. Key loaded here only             → from env (DEEPSEEK_API_KEY by default), else training/.deepseek_key.
+  2. Per-run call cap (BILLING_MAX_CALLS, default 30) → hard kill-switch on volume.
+  3. Key loaded here only             → from env (caller passes the provider env var), else training/.billing_key.
 
 Two usage patterns:
 
   A. Known batch size — preflight once, tick per call:
-        from deepseek_guard import preflight, tick, load_key
-        API_KEY = load_key()
+        from billing_guard import preflight, tick, load_key
+        API_KEY = load_key("ANTHROPIC_API_KEY")
         def main():
             preflight(expected_calls=len(BATCHES))   # once, before the loop
             for ...:
@@ -26,7 +27,7 @@ Two usage patterns:
                 call_api(...)
 
   B. Choke point / unknown total — gate per call (authorizes on first call, caps every call):
-        from deepseek_guard import gate
+        from billing_guard import gate
         def complete(...):
             gate()                                    # before EACH paid api call
             call_api(...)
@@ -39,16 +40,16 @@ _AUTHORIZED = False
 
 def _cap() -> int:
     try:
-        return int(os.environ.get("DEEPSEEK_MAX_CALLS", "30"))
+        return int(os.environ.get("BILLING_MAX_CALLS", "30"))
     except ValueError:
         return 30
 
 
-def load_key(env_var: str = "DEEPSEEK_API_KEY") -> str:
-    """Load the key from env first (env_var), then the (gitignored) training/.deepseek_key."""
+def load_key(env_var: str = "ANTHROPIC_API_KEY") -> str:
+    """Load the provider key from env first (env_var), then the (gitignored) training/.billing_key."""
     k = os.environ.get(env_var, "").strip()
     if not k:
-        kf = os.path.join(os.path.dirname(__file__), ".deepseek_key")
+        kf = os.path.join(os.path.dirname(__file__), ".billing_key")
         if os.path.exists(kf):
             k = open(kf, encoding="utf-8-sig").read().strip()
     return k
@@ -76,12 +77,12 @@ def preflight(expected_calls: int, *, key=None) -> None:
     if expected_calls > cap:
         raise SystemExit(
             f"BLOCKED: this run wants {expected_calls} paid LLM calls but the cap is {cap}.\n"
-            f"  Raise it deliberately with DEEPSEEK_MAX_CALLS={expected_calls} if you really mean it."
+            f"  Raise it deliberately with BILLING_MAX_CALLS={expected_calls} if you really mean it."
         )
     if key is None:
         key = load_key()
     if not key:
-        raise SystemExit("BLOCKED: no API key (set the provider key env var or training/.deepseek_key).")
+        raise SystemExit("BLOCKED: no API key (set the provider key env var or training/.billing_key).")
     _AUTHORIZED = True
     print(f"[billing_guard] authorized · up to {expected_calls} calls (cap {cap}).")
 

@@ -3,7 +3,7 @@
 DAVID is a language research and educational platform covering dead, extinct,
 living, reconstructed, and undeciphered languages plus communication modalities.
 
-Phase 1 is the first DAVID training run on Llama 3.1 8B (replaces DeepSeek-7B
+Phase 1 is the first DAVID training run on Llama 3.1 8B (replaces Claude-7B
 legacy adapters).
 
 Hardware:  H100 SXM5 80GB (preferred) | A100 SXM4 80GB (minimum)

@@ -9,7 +9,7 @@
 | L40s | 48GB | `--hardware l40s` | rank=32, α=16 | 2 × 8 | 1e-4 | **RunPod primary** — 14B comfortable |
 | RTX 4090 | 24GB | `--hardware 4090` | rank=32, α=16 | 1 × 16 | 1e-4 | 14B fallback — effective batch 16 |
 | RTX 2060 | 12GB | `--hardware 2060` | rank=32, α=16 | 1 × 16 | **2e-5** | **Local overnight** — close other apps; lower LR |
-| RTX 4060 | 8GB | `--model deepseek-7b-lite` | rank=16, α=16 | 1 × 8 | 2e-4 | Legacy 7B path only (no `--config`) |
+| RTX 4060 | 8GB | `--model llama-3.1-8b-lite` | rank=16, α=16 | 1 × 8 | 2e-4 | Legacy 7B path only (no `--config`) |
 
 Slots defined in `training/runpod_train_config.json` → `hardware_slots`.
 
@@ -56,7 +56,7 @@ Use the **RunPod file manager UI** to download from `/workspace/`:
 - Adapter folder (e.g. `david-7b_20260623_234920_run3/`)
 - `david_dataset.jsonl`
 
-Adapter is ~6–7GB for deepseek-7b. **DO NOT use runpodctl. DO NOT stop the pod before both files are downloaded.**
+Adapter is ~6–7GB for llama-3.1-8b. **DO NOT use runpodctl. DO NOT stop the pod before both files are downloaded.**
 
 ### 6. Kill the pod
 Kill immediately after download — no idle time.
@@ -101,7 +101,7 @@ Adapter output: `models/adapters/david-7b_YYYYMMDD_HHMMSS_run5-local`
 | 2,351 | 5      | ~730                   | **Run 4** — insufficient epochs; loss 1.1772 |
 | 2,351 | 10     | ~1,470                 | **Run 5** — correct epoch budget for dataset size |
 
-Compare to HELIX: 3,643 pairs × 5 epochs = 1,140 steps → 0.5617 loss.
+Compare to ELEANOR: 3,643 pairs × 5 epochs = 1,140 steps → 0.5617 loss.
 **Rule:** when dataset size increases, bump epochs proportionally — 5 epochs on 706 pairs ≠ 5 epochs on 2,351 pairs.
 
 ---
@@ -110,11 +110,11 @@ Compare to HELIX: 3,643 pairs × 5 epochs = 1,140 steps → 0.5617 loss.
 
 | Run | Model | Rank | Epochs | LR | Dataset Pairs | Final Loss | Adapter | Status |
 |-----|-------|------|--------|-----|--------------|------------|---------|--------|
-| Run 1 | deepseek-7b | 64 | 5 | 1e-4 | 706 | **1.0119** | — | Baseline |
-| Run 2 | deepseek-7b | 64 | 8 | 1e-4 | 706 | **0.6932** | — | **Prior best** — loss still dropping at end |
-| Run 3a | deepseek-7b | 64 | 5 | 1e-4 | 1,493 | **1.2837** | `david-7b_20260623_230354_run3` | **LOST** — pod killed before download |
-| Run 4 | deepseek-7b | 64 | 5 | 1e-4 | 2,351 | **1.1772** | `david-7b_20260624_035711_run4` | Dataset mismatch — undertrained at 5 epochs |
-| Run 5 | deepseek-7b | 64 | **10** | **2e-4** | 2,351 | *in progress* | `david-7b_20260624_045918_run5` | **New best** — broke 0.6932 at epoch 3.1 |
+| Run 1 | llama-3.1-8b | 64 | 5 | 1e-4 | 706 | **1.0119** | — | Baseline |
+| Run 2 | llama-3.1-8b | 64 | 8 | 1e-4 | 706 | **0.6932** | — | **Prior best** — loss still dropping at end |
+| Run 3a | llama-3.1-8b | 64 | 5 | 1e-4 | 1,493 | **1.2837** | `david-7b_20260623_230354_run3` | **LOST** — pod killed before download |
+| Run 4 | llama-3.1-8b | 64 | 5 | 1e-4 | 2,351 | **1.1772** | `david-7b_20260624_035711_run4` | Dataset mismatch — undertrained at 5 epochs |
+| Run 5 | llama-3.1-8b | 64 | **10** | **2e-4** | 2,351 | *in progress* | `david-7b_20260624_045918_run5` | **New best** — broke 0.6932 at epoch 3.1 |
 
 ### Runs 3–4 regression — root cause
 
@@ -140,9 +140,9 @@ pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git" 
 
 ## Dataset Generation Workflow (CANONICAL)
 
-**DeepSeek API (PowerShell) → RunPod training → local adapter download via file manager UI**
+**Claude API (PowerShell) → RunPod training → local adapter download via file manager UI**
 
-`DEEPSEEK_API_KEY` must be set in Windows User env vars before running generators.
+`ANTHROPIC_API_KEY` must be set in Windows User env vars before running generators.
 
 | Dataset | Command |
 |---------|---------|
@@ -152,7 +152,7 @@ pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git" 
 | Ancient Greek translation | `python training/generate_greek_translation_150.py` |
 
 Run from repo root in a PowerShell terminal. Output goes to `training/*.jsonl`.
-Do NOT use Grok terminals for dataset generation — DeepSeek API only.
+Do NOT use Grok terminals for dataset generation — Claude API only.
 
 ---
 

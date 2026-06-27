@@ -1,6 +1,6 @@
 """david_finetune_pipeline.py — DAVID Unsloth QLoRA Fine-Tune Pipeline
 
-Trains DeepSeek-R1-Distill-Qwen-7B on the DAVID instruction dataset using
+Trains Meta-Llama-3.1-8B-Instruct on the DAVID instruction dataset using
 Unsloth's memory-efficient QLoRA implementation.
 
 DAVID is the Human Communication Agent: Forensic Linguistics, Speech &
@@ -74,8 +74,8 @@ if _RUNPOD_ADAPTERS.parent.exists() and not _ADAPTERS_DIR.parent.exists():
 
 # ── Model config ──────────────────────────────────────────────────────────────
 _MODEL_CONFIGS = {
-    "deepseek-7b": {
-        "model_name":     "unsloth/deepseek-r1-distill-qwen-7b-bnb-4bit",
+    "llama-3.1-8b": {
+        "model_name":     "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
         "max_seq_length": 2048,
         "lora_rank":      64,      # L40s/4090 target; drop to 16 on RTX 4060
         "lora_alpha":     32,      # alpha = rank/2 — standard for 7b
@@ -87,9 +87,9 @@ _MODEL_CONFIGS = {
         "grad_accum":   4,
         "vram_note":    "L40s 48GB / RTX 4090 24GB — rank=64 comfortable",
     },
-    "deepseek-7b-lite": {
+    "llama-3.1-8b-lite": {
         # 8GB fallback — same model, reduced rank + batch
-        "model_name":     "unsloth/deepseek-r1-distill-qwen-7b-bnb-4bit",
+        "model_name":     "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
         "max_seq_length": 2048,
         "lora_rank":      16,
         "lora_alpha":     16,
@@ -102,7 +102,7 @@ _MODEL_CONFIGS = {
         "vram_note":    "RTX 4060 8GB — marginal; close all other apps",
     },
 }
-_DEFAULT_MODEL = "deepseek-7b"
+_DEFAULT_MODEL = "llama-3.1-8b"
 
 # ── Training hyperparams ──────────────────────────────────────────────────────
 _DEFAULT_EPOCHS       = 5       # 706 pairs × 5 epochs ≈ 220 steps on L40s
@@ -207,7 +207,7 @@ def check_gpu() -> dict:
             elif vram >= 11:
                 info["recommendation"] = "Use --hardware 2060 for local overnight runs"
             elif vram >= 8:
-                info["recommendation"] = "Use deepseek-7b-lite, rank=16 — RTX 4060 legacy 7B only"
+                info["recommendation"] = "Use llama-3.1-8b-lite, rank=16 — RTX 4060 legacy 7B only"
             else:
                 info["recommendation"] = f"VRAM too low ({vram:.1f}GB) — use cloud GPU"
     except ImportError:
@@ -438,7 +438,7 @@ def merge_adapter(adapter_path: Path, output_name: str = "") -> str:
         print("[STUB] Unsloth not installed — cannot merge.")
         return ""
 
-    cfg        = _MODEL_CONFIGS["deepseek-7b"]
+    cfg        = _MODEL_CONFIGS["llama-3.1-8b"]
     ts         = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
     name       = output_name or f"david_7b_merged_{ts}"
     _MERGED_DIR.mkdir(parents=True, exist_ok=True)

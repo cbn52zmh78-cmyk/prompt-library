@@ -1,4 +1,4 @@
-.deepseek_key
+.billing_key
 *.key
 *_key
 *.env

@@ -1,11 +1,11 @@
 """
-Generate 150 Alpaca-format Ancient Greek translation training pairs via DeepSeek API.
+Generate 150 Alpaca-format Ancient Greek translation training pairs via Claude API.
 Usage: ALLOW_BILLABLE=1 python training/generate_greek_translation_150.py
 Output: training/ancient_greek_translation_150.jsonl
 """
 import json, os, time
 import urllib.request, urllib.error
-from deepseek_guard import load_key, preflight, tick   # billing guard (ALLOW_BILLABLE + call cap)
+from billing_guard import load_key, preflight, tick   # billing guard (ALLOW_BILLABLE + call cap)
 
 API_KEY = load_key()
 OUT = os.path.join(os.path.dirname(__file__), "ancient_greek_translation_150.jsonl")
@@ -35,13 +35,13 @@ BATCHES = [
 def call_api(author, count, works, note):
     prompt = f"Generate exactly {count} Ancient Greek translation training pairs for {author}. Works: {works}. {note} Output {count} raw JSON lines only."
     body = json.dumps({
-        "model": "deepseek-chat",
+        "model": "claude-sonnet-4-6",
         "messages": [{"role": "system", "content": SYSTEM}, {"role": "user", "content": prompt}],
         "temperature": 0.3,
         "max_tokens": 8000,
     }).encode()
     req = urllib.request.Request(
-        "https://api.deepseek.com/chat/completions",
+        "https://api.anthropic.com/v1/messages",
         data=body,
         headers={"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"},
         method="POST",
@@ -50,7 +50,7 @@ def call_api(author, count, works, note):
         return json.loads(r.read())["choices"][0]["message"]["content"].strip()
 
 def main():
-    preflight(expected_calls=len(BATCHES))   # billing guard: requires ALLOW_BILLABLE=1 + within DEEPSEEK_MAX_CALLS
+    preflight(expected_calls=len(BATCHES))   # billing guard: requires ALLOW_BILLABLE=1 + within BILLING_MAX_CALLS
     pairs = []
     for author, count, works, note in BATCHES:
         print(f"  {author} ({count} pairs)...", end=" ", flush=True)

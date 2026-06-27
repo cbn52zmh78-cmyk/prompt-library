@@ -2,7 +2,7 @@
 
 Converts DAVID's data (corpus texts, pronunciation profiles, translation profiles,
 training packs, language profiles) into Alpaca-format instruction pairs for
-fine-tuning a deepseek-7b sub-LLM.
+fine-tuning a llama-3.1-8b sub-LLM.
 
 Target: 1,200–1,800 pairs balanced across all four pillars.
 
@@ -1544,7 +1544,7 @@ def build_dataset(langs_root: Path, *, dedupe: bool = False) -> tuple[list[dict]
     return clean, merged_tagged, tier1
 
 
-# ── DeepSeek expansion (paid — ALLOW_BILLABLE=1) ─────────────────────────────
+# ── Claude expansion (paid — ALLOW_BILLABLE=1) ─────────────────────────────
 
 _GENERATE_SYSTEM = (
     "You generate DAVID linguistic training data in strict Alpaca JSONL format. "
@@ -1568,9 +1568,9 @@ _GENERATE_TOPICS = (
 )
 
 
-def _deepseek_chat(prompt: str, api_key: str) -> str:
+def _claude_chat(prompt: str, api_key: str) -> str:
     body = json.dumps({
-        "model": "deepseek-chat",
+        "model": "claude-sonnet-4-6",
         "messages": [
             {"role": "system", "content": _GENERATE_SYSTEM},
             {"role": "user", "content": prompt},
@@ -1579,7 +1579,7 @@ def _deepseek_chat(prompt: str, api_key: str) -> str:
         "max_tokens": 8000,
     }).encode()
     req = urllib.request.Request(
-        "https://api.deepseek.com/chat/completions",
+        "https://api.anthropic.com/v1/messages",
         data=body,
         headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
         method="POST",
@@ -1609,15 +1609,15 @@ def _parse_generated_lines(text: str) -> list[dict]:
 
 
 def generate_pairs(count: int, *, dry_run: bool = False) -> list[dict]:
-    """Generate `count` pairs via DeepSeek; append to david_generated.jsonl."""
+    """Generate `count` pairs via Claude; append to david_generated.jsonl."""
     if count <= 0:
         return []
 
     if dry_run:
-        print(f"[dry-run] would request {count} pairs via DeepSeek ({_GENERATED_CACHE})")
+        print(f"[dry-run] would request {count} pairs via Claude ({_GENERATED_CACHE})")
         return []
 
-    from deepseek_guard import load_key, preflight, tick  # noqa: E402
+    from billing_guard import load_key, preflight, tick  # noqa: E402
 
     batch_size = min(10, max(1, count))
     api_calls = (count + batch_size - 1) // batch_size
@@ -1637,7 +1637,7 @@ def generate_pairs(count: int, *, dry_run: bool = False) -> list[dict]:
         print(f"  [batch {batch_idx + 1}/{api_calls}] {lang} ×{n}...", flush=True)
         try:
             tick()
-            raw = _deepseek_chat(prompt, api_key)
+            raw = _claude_chat(prompt, api_key)
             batch = _parse_generated_lines(raw)
             for entry in batch[:n]:
                 fixed = _repair_phantom_input({
@@ -1754,7 +1754,7 @@ def main(argv=None):
     parser.add_argument("--check", action="store_true", help="Validate output JSONL")
     parser.add_argument(
         "--generate", type=int, metavar="N", nargs="?", const=-1,
-        help="Generate N pairs via DeepSeek (omit N → fill to Run 4 target)",
+        help="Generate N pairs via Claude (omit N → fill to Run 4 target)",
     )
     parser.add_argument("--dry-run", action="store_true", help="No paid API calls")
     parser.add_argument(
