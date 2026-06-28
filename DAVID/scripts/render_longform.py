@@ -184,7 +184,7 @@ LOUDNORM_LRA_TIGHT = 7.0
 # Frame-chain joins: 0.2s @24fps ≈5 blended frames — reads as hard-cut on 7–9s shots.
 DEFAULT_XFADE_S = 0.45
 MIN_XFADE_S = 0.35
-MAX_XFADE_S = 0.75
+MAX_XFADE_S = 2.5  # raised from 0.75 — documentary band requires 1.8s (Render_Directive_v2)
 SET_LIBRARY_PATH = WORKSPACE / "Studio" / "Pipeline" / "Set_Library_v1.json"
 DARK_SCENE_KEYWORDS = (
     "warehouse", "industrial", "dusk", "shadow", "darkness", "dramatic",
@@ -363,10 +363,277 @@ def _shot_uses_viz_reference(shot: dict[str, Any]) -> bool:
     return shot.get("role") == "visualization" or shot.get("use_avatar") is False
 
 
+def _extract_zone(text: str) -> str | None:
+    """Parse zone plate id (@1, @3, …) from shot.zone or video_prompt markers."""
+    if not text:
+        return None
+    m = re.search(r"\(@(\d+)", text)
+    if m:
+        return f"@{m.group(1)}"
+    m = re.search(r"@(\d+)\b", text)
+    return f"@{m.group(1)}" if m else None
+
+
+def _shot_zone(shot: dict[str, Any]) -> str | None:
+    raw = shot.get("zone")
+    if raw:
+        z = str(raw).strip()
+        return z if z.startswith("@") else f"@{z}"
+    return _extract_zone(shot.get("video_prompt", ""))
+
+
+ZONE_POSITION_HINTS: dict[str, str] = {
+    "@1": (
+        "zone @1 entrance — presenter at set entrance DC, window grid camera-left, "
+        "full warehouse depth readable behind her, feet on concrete floor"
+    ),
+    "@2": "zone @2 talent frame — presenter centered MCU, casting-reference composition",
+    "@3": (
+        "zone @3 mid-walk window — presenter mid-stride in walk-arc, window key on face, "
+        "mid-set depth, motion-ready stance"
+    ),
+    "@4": "zone @4 far wall — presenter at far wall, compressed depth, longer-lens feel",
+}
+
+MATILDA_ZONE_MAGENTA_LOCK = (
+    "MAGENTA SUPPRESS @Matilda-001: D65 neutral white balance 5000K on presenter face and navy blazer — "
+    "frame-wide midtones R≈G≈B within 8%; fair blonde skin natural warm-neutral, NOT pink or magenta; "
+    "navy blazer true deep navy, NOT purple; no white seamless background; presenter fully integrated in set."
+)
+
+
+def _needs_zone_plates(script: dict[str, Any], refs: dict[str, Any]) -> bool:
+    """Zone plates composite isolated @2 casting refs into @1 set plates (MATILDA-style)."""
+    cfg = script.get("config") or {}
+    if cfg.get("use_zone_plates") is False:
+        return False
+    if not refs.get("set_file"):
+        return False
+    if cfg.get("use_zone_plates") is True:
+        return True
+    if cfg.get("avatar_in_set"):
+        return False
+    lock = refs.get("lock") or {}
+    talent = (lock.get("references") or {}).get("talent_avatar") or {}
+    if cfg.get("use_identity_lock", True) and talent.get("url"):
+        return False
+    return bool(refs.get("avatar_file") or refs.get("avatar_url"))
+
+
+def _load_plate_sidecar(path: Path) -> dict[str, Any]:
+    meta = path.with_suffix(".json")
+    if not meta.is_file():
+        return {}
+    try:
+        return json.loads(meta.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def _save_plate_sidecar(path: Path, data: dict[str, Any]) -> None:
+    path.with_suffix(".json").write_text(
+        json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+
+
+def _resolve_environment_plate_url(
+    client: Any | None,
+    *,
+    set_id: str | None,
+    set_file: str | None,
+) -> str:
+    """Locked empty-set environment plate (@1 background, no talent)."""
+    if set_file:
+        sf = Path(set_file)
+        meta = _load_plate_sidecar(sf)
+        url = meta.get("url") or meta.get("reference_url")
+        if url:
+            return str(url)
+        if sf.is_file() and client is not None:
+            return upload_image_url(client, sf)
+
+    if set_id:
+        entry = (_load_set_library().get("sets") or {}).get(set_id) or {}
+        url = entry.get("reference_url")
+        if url:
+            return str(url)
+        ref_file = entry.get("reference_file")
+        if ref_file:
+            rp = _resolve_workspace_path(str(ref_file))
+            meta = _load_plate_sidecar(rp)
+            url = meta.get("url") or meta.get("reference_url")
+            if url:
+                return str(url)
+            if rp.is_file() and client is not None:
+                return upload_image_url(client, rp)
+
+    raise RuntimeError(
+        f"No environment plate URL for set {set_id or set_file} — "
+        "run STUDIO/Pipeline/generate_set_references.py or provide set_reference sidecar url"
+    )
+
+
+def _presenter_composite_prompt(
+    zone_id: str,
+    script: dict[str, Any],
+    refs: dict[str, Any],
+) -> str:
+    intake = script.get("intake") or {}
+    actor_id = str(intake.get("actor_id") or script.get("config", {}).get("actor_id") or "")
+    slug = str(script.get("slug", "")).lower()
+    set_id = _extract_set_id(
+        str(refs.get("set_file") or "")
+        + " "
+        + json.dumps(script.get("config") or {})
+        + " "
+        + json.dumps(intake)
+    )
+    set_entry = (_load_set_library().get("sets") or {}).get(set_id or "") or {}
+    zone_hint = ZONE_POSITION_HINTS.get(zone_id, f"zone {zone_id} — presenter placed per action field")
+
+    if "matilda" in actor_id.lower() or "matilda" in slug:
+        presenter = (
+            "MATILDA — synthetic Bavarian presenter, warm ash-gold blonde updo bun with face-framing wisps, "
+            "navy single-button blazer, white open-collar shirt, grey tailored trousers, black pointed-toe heels, "
+            "gold watch left wrist. Direct eye-line to camera. No white seamless backdrop — fully in set."
+        )
+        magenta_lock = MATILDA_ZONE_MAGENTA_LOCK
+    else:
+        presenter = "Synthetic documentary presenter, direct eye-line to camera, fully integrated in set."
+        magenta_lock = ARCHIVE_ANTI_MAGENTA_GENERATION_LOCK
+
+    locks = " ".join(
+        x for x in (
+            set_entry.get("continuity_lock"),
+            set_entry.get("lighting_lock"),
+            set_entry.get("color_guard"),
+        ) if x
+    )
+    return (
+        f"{magenta_lock} {locks} {presenter} {zone_hint} "
+        "16:9 cinematic still, photoreal, single presenter only, SFW, no text overlays."
+    )
+
+
+def generate_zone_plate(
+    zone_id: str,
+    client: Any,
+    refs: dict[str, Any],
+    plates_dir: Path,
+    script: dict[str, Any],
+    *,
+    force: bool = False,
+) -> dict[str, Any]:
+    """Composite @2 casting talent into @1 environment plate for image-to-video seed."""
+    plates_dir.mkdir(parents=True, exist_ok=True)
+    plate_path = plates_dir / f"{zone_id}_plate.jpg"
+    meta = _load_plate_sidecar(plate_path)
+    if (
+        not force
+        and plate_path.is_file()
+        and plate_path.stat().st_size > 5000
+        and meta.get("url")
+    ):
+        _log(f"[zone] reusing {zone_id} plate → {plate_path.name}")
+        return {**meta, "path": str(plate_path), "reused": True}
+
+    set_id = _extract_set_id(
+        str(refs.get("set_file") or "")
+        + " "
+        + json.dumps(script.get("intake") or {})
+        + " "
+        + json.dumps(script.get("config") or {})
+    )
+    env_url = _resolve_environment_plate_url(
+        client, set_id=set_id, set_file=refs.get("set_file")
+    )
+    prompt = _presenter_composite_prompt(zone_id, script, refs)
+    _log(f"[zone] generating {zone_id} plate (presenter in set)…")
+    _api_pace()
+    resp = client.image.sample(
+        prompt=prompt,
+        model="grok-imagine-image-quality",
+        image_url=env_url,
+    )
+    _download(resp.url, plate_path)
+    plate_url = resp.url
+    if client is not None:
+        try:
+            plate_url = upload_image_url(client, plate_path)
+        except Exception as exc:  # noqa: BLE001
+            _log(f"[zone] plate upload fallback to API url: {exc}")
+
+    data = {
+        "zone_id": zone_id,
+        "path": str(plate_path),
+        "url": plate_url,
+        "environment_url": env_url,
+        "prompt": prompt,
+        "model": "grok-imagine-image-quality",
+        "set_id": set_id,
+        "status": "REGENERATED" if force else "GENERATED",
+        "reused": False,
+    }
+    _save_plate_sidecar(plate_path, data)
+    return data
+
+
+def _load_cached_zone_plates(refs: dict[str, Any], plates_dir: Path) -> int:
+    """Hydrate refs from prior plate sidecars (concat-only / no API client)."""
+    if not plates_dir.is_dir():
+        return 0
+    loaded = 0
+    for meta_path in plates_dir.glob("@*_plate.json"):
+        try:
+            meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            continue
+        zone_id = meta.get("zone_id") or meta_path.stem.replace("_plate", "")
+        url = meta.get("url")
+        if zone_id and url:
+            refs[f"{zone_id}_plate_url"] = url
+            refs[f"{zone_id}_plate_file"] = meta.get("path") or str(meta_path.with_suffix(".jpg"))
+            loaded += 1
+    return loaded
+
+
+def ensure_zone_plates(
+    script: dict[str, Any],
+    refs: dict[str, Any],
+    client: Any,
+    plates_dir: Path,
+    *,
+    force: bool = False,
+) -> None:
+    """Build zone plate URLs for every host-shot zone used in the script."""
+    if not _needs_zone_plates(script, refs):
+        return
+
+    zones: set[str] = set()
+    for shot in script.get("shots", []):
+        if shot.get("role", "host") == "card" or _shot_uses_viz_reference(shot):
+            continue
+        zone = _shot_zone(shot)
+        if zone:
+            zones.add(zone)
+    if not zones:
+        zones.add("@1")
+
+    for zone_id in sorted(zones):
+        plate = generate_zone_plate(
+            zone_id, client, refs, plates_dir, script, force=force
+        )
+        refs[f"{zone_id}_plate_url"] = plate["url"]
+        refs[f"{zone_id}_plate_file"] = plate["path"]
+
+
 def resolve_shot_image_url(shot: dict[str, Any], refs: dict[str, Any]) -> str:
-    """Presenter shots use avatar; @2 visualization shots use locked science plate."""
+    """Zone plate (@1…) → @2 viz plate → @2 avatar casting ref."""
     if shot.get("image_url"):
         return str(shot["image_url"])
+    zone = _shot_zone(shot)
+    if zone and refs.get(f"{zone}_plate_url"):
+        return str(refs[f"{zone}_plate_url"])
     if _shot_uses_viz_reference(shot) and refs.get("visualization_url"):
         return str(refs["visualization_url"])
     return str(refs["avatar_url"])
@@ -380,6 +647,9 @@ def _use_avatar_reground(
 ) -> bool:
     """Dark/high-contrast: re-ground every shot on locked avatar (never drifted chain frame)."""
     if _shot_uses_viz_reference(shot) and refs.get("visualization_url"):
+        return True
+    zone = _shot_zone(shot)
+    if zone and refs.get(f"{zone}_plate_url"):
         return True
     if _is_dark_scene(refs, shot=shot):
         return True
@@ -954,6 +1224,11 @@ def build_imagine_pack(
         "host_reference": refs.get("avatar_file"),
         "avatar_url": refs.get("avatar_url"),
         "set_reference": refs.get("set_file"),
+        "zone_plates": {
+            k.replace("_plate_url", ""): v
+            for k, v in refs.items()
+            if k.endswith("_plate_url")
+        },
         "voice_suffix": refs["voice_suffix"],
         "seamless": use_seamless,
         "shots": [
@@ -1123,10 +1398,41 @@ def concat_videos(parts: list[Path], out: Path, *, seamless: bool = False) -> No
     list_file.unlink(missing_ok=True)
 
 
-def resolve_xfade_s(*, cli: float | None, script_seam: dict[str, Any] | None = None) -> float:
-    """Clamp cross-dissolve to perceptible range for frame-chain continuity."""
+def _xfade_from_template(format_id: str) -> float:
+    """Load xfade_s from Production_Templates_v1.json for the given format_id.
+
+    Fallback chain: template → DEFAULT_XFADE_S. Never raises.
+    """
+    try:
+        tmpl_path = (
+            WORKSPACE / "Studio" / "Pipeline"
+            / "Production_Templates" / "Production_Templates_v1.json"
+        )
+        tmpl = json.loads(tmpl_path.read_text(encoding="utf-8"))
+        return float(tmpl["formats"][format_id]["seamless_defaults"]["xfade_s"])
+    except Exception:  # noqa: BLE001
+        return DEFAULT_XFADE_S
+
+
+def resolve_xfade_s(
+    *,
+    cli: float | None,
+    script_seam: dict[str, Any] | None = None,
+    format_id: str | None = None,
+) -> float:
+    """Clamp cross-dissolve to perceptible range for frame-chain continuity.
+
+    Fallback chain: CLI → script_seam.xfade_s → template by format_id → DEFAULT_XFADE_S.
+    """
     seam = script_seam or {}
-    raw = float(cli if cli is not None else seam.get("xfade_s", DEFAULT_XFADE_S))
+    if cli is not None:
+        raw = float(cli)
+    elif "xfade_s" in seam:
+        raw = float(seam["xfade_s"])
+    elif format_id:
+        raw = _xfade_from_template(format_id)
+    else:
+        raw = DEFAULT_XFADE_S
     return max(MIN_XFADE_S, min(MAX_XFADE_S, raw))
 
 
@@ -1141,7 +1447,7 @@ class SeamlessOptions:
     loudnorm: bool = True
     pin_audio_sync: bool = True
     reground_interval: int = REGROUND_EVERY_N
-    magenta_clamp: bool = True
+    magenta_clamp: bool = False  # opt-in per production — no universal grade
     neutral_grade: bool = False
     neutral_generation: bool = False
 
@@ -1163,7 +1469,11 @@ def get_seamless_options(script: dict[str, Any], args: argparse.Namespace) -> Se
     auto = seam.get("primary") in ("extend", "extend_chain", True)
     return SeamlessOptions(
         enabled=bool(getattr(args, "seamless", False) or auto),
-        xfade_s=resolve_xfade_s(cli=getattr(args, "xfade", None), script_seam=seam),
+        xfade_s=resolve_xfade_s(
+            cli=getattr(args, "xfade", None),
+            script_seam=seam,
+            format_id=script.get("format_id"),
+        ),
         match_color=getattr(args, "match_color", False) or bool(seam.get("match_color")),
         cut_on_motion=getattr(args, "cut_on_motion", False) or bool(seam.get("cut_on_motion")),
         lamp_lock=bool(seam.get("lamp_lock", True)),
@@ -1171,7 +1481,7 @@ def get_seamless_options(script: dict[str, Any], args: argparse.Namespace) -> Se
         loudnorm=bool(seam.get("loudnorm", True)),
         pin_audio_sync=bool(seam.get("pin_audio_sync", True)),
         reground_interval=int(seam.get("reground_interval", REGROUND_EVERY_N)),
-        magenta_clamp=bool(seam.get("magenta_clamp", True)),
+        magenta_clamp=bool(seam.get("magenta_clamp", False)),  # opt-in only
         neutral_grade=bool(seam.get("neutral_grade", False)),
         neutral_generation=bool(seam.get("neutral_generation", False)),
     )
@@ -1960,7 +2270,7 @@ def match_color_segment(
     elif lamp_lock:
         post_vf = f"{MAGENTA_CLAMP_VF},{LAMP_LOCK_VF}"
     else:
-        post_vf = MAGENTA_CLAMP_VF
+        post_vf = None  # no universal grade — style decided at generation
     if ref.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp"):
         if post_vf:
             vfilter = (
@@ -2618,6 +2928,8 @@ def render_frame_chain_performance(
                         dark = _is_dark_scene(refs, shot=shot)
                         if _shot_uses_viz_reference(shot) and refs.get("visualization_url"):
                             src = "locked @2 science plate re-ground"
+                        elif (z := _shot_zone(shot)) and refs.get(f"{z}_plate_url"):
+                            src = f"locked {z} zone plate re-ground"
                         elif dark:
                             src = "dark-set avatar re-ground (Kelvin locked)"
                         else:
@@ -2674,6 +2986,58 @@ def render_frame_chain_performance(
 
         if magenta_reroll and not magenta_ok and proc_path.is_file():
             _log(f"[magenta] {sid} still elevated after {max_attempts} attempts — keeping best-effort clamp")
+            # Phase A — taxonomy_writer wire: log magenta exhaustion for concept_generator feedback
+            try:
+                _tw_dir = str(WORKSPACE / "STUDIO" / "Pipeline")
+                if _tw_dir not in sys.path:
+                    sys.path.insert(0, _tw_dir)
+                import taxonomy_writer as _tw  # noqa: PLC0415
+                _tw.append_failure(
+                    WORKSPACE / "STUDIO" / "Pipeline" / "failure_taxonomy.json",
+                    {
+                        "timestamp": datetime.now(timezone.utc).isoformat(),
+                        "production_slug": (script_ctx or {}).get("slug", "unknown"),
+                        "shot_id": sid,
+                        "beat_id": shot.get("pacing_beat") or shot.get("beat_id", "unknown"),
+                        "shot_role": shot.get("role", "host"),
+                        "failure_type": "magenta_exhaustion",
+                        "suppression_flags_applied": ["best_effort_clamp"],
+                        "attempts": max_attempts,
+                        "resolved": False,
+                        "resolution_flags": [],
+                    },
+                )
+            except Exception as _tw_exc:  # noqa: BLE001
+                _log(f"[taxonomy] magenta write failed: {_tw_exc}")
+
+        # Phase A — cast_gate_shot() per-shot wire (host lanes only)
+        if proc_path.is_file() and shot.get("role", "host") in ("host", "presenter", "companion"):
+            try:
+                _tw_dir = str(WORKSPACE / "STUDIO" / "Pipeline")
+                if _tw_dir not in sys.path:
+                    sys.path.insert(0, _tw_dir)
+                from clip_cast_gate import cast_gate_shot as _cast_gate  # noqa: PLC0415
+                _cast_result = _cast_gate(
+                    proc_path,
+                    sid,
+                    shot.get("pacing_beat") or shot.get("beat_id", "unknown"),
+                    shot.get("role", "host"),
+                    reference_metrics=color_ref,
+                    production_slug=(script_ctx or {}).get("slug", "unknown"),
+                )
+                if not _cast_result["pass"]:
+                    _log(
+                        f"[cast_gate] {sid} FAIL — "
+                        + "; ".join(_cast_result.get("breaches", []))[:120]
+                    )
+                    if _cast_result.get("taxonomy_entry"):
+                        import taxonomy_writer as _tw  # noqa: PLC0415
+                        _tw.append_failure(
+                            WORKSPACE / "STUDIO" / "Pipeline" / "failure_taxonomy.json",
+                            _cast_result["taxonomy_entry"],
+                        )
+            except Exception as _cg_exc:  # noqa: BLE001
+                _log(f"[cast_gate] {sid} probe skipped: {_cg_exc}")
 
         segments.append(proc_path)
 
@@ -3190,6 +3554,33 @@ def qa_check(
             **EXTEND_API_FINDING,
             "continuity_mode": continuity_mode or "unknown",
         }
+    # Phase A — taxonomy_writer wire: log QA failures for concept_generator feedback
+    if not report.get("pass") and report.get("issues"):
+        try:
+            _tw_dir = str(WORKSPACE / "STUDIO" / "Pipeline")
+            if _tw_dir not in sys.path:
+                sys.path.insert(0, _tw_dir)
+            import taxonomy_writer as _tw  # noqa: PLC0415
+            _taxonomy_path = WORKSPACE / "STUDIO" / "Pipeline" / "failure_taxonomy.json"
+            for _issue in report["issues"]:
+                _tw.append_failure(
+                    _taxonomy_path,
+                    {
+                        "timestamp": datetime.now(timezone.utc).isoformat(),
+                        "production_slug": report.get("slug", "unknown"),
+                        "shot_id": "production",
+                        "beat_id": "qa_check",
+                        "shot_role": "production",
+                        "failure_type": "qa_fail",
+                        "suppression_flags_applied": [],
+                        "attempts": 1,
+                        "resolved": False,
+                        "resolution_flags": [],
+                        "issue": _issue,
+                    },
+                )
+        except Exception as _tw_exc:  # noqa: BLE001
+            _log(f"[taxonomy] qa_check write failed: {_tw_exc}")
     return report
 
 
@@ -3200,6 +3591,7 @@ def render_longform(
     concat_only: bool = False,
     force_shots: set[str] | None = None,
     force_all: bool = False,
+    force_plates: bool = False,
     seamless_opts: SeamlessOptions | None = None,
 ) -> dict[str, Any]:
     prod_dir = resolve_production_dir(script)
@@ -3207,6 +3599,20 @@ def render_longform(
     shots_dir.mkdir(parents=True, exist_ok=True)
 
     refs = resolve_refs(script, client=client)
+    plates_dir = prod_dir / "plates"
+    if _needs_zone_plates(script, refs):
+        if client:
+            ensure_zone_plates(
+                script,
+                refs,
+                client,
+                plates_dir,
+                force=force_plates or force_all,
+            )
+        else:
+            n = _load_cached_zone_plates(refs, plates_dir)
+            if n:
+                _log(f"[zone] loaded {n} cached plate(s) from {plates_dir}")
     opts = _apply_grade_policy(script, refs, seamless_opts or SeamlessOptions())
     pack = build_imagine_pack(script, refs, opts if opts.enabled else None)
     pack_path = prod_dir / f"{script.get('slug', 'longform')}_imagine_pack.json"
@@ -3462,7 +3868,7 @@ def _run_package_stage(prod_dir: Path, *, require_qa_pass: bool = True) -> dict[
 
 
 def main() -> int:
-    # Unicode status glyphs (→, ⚠) must survive a cp1252 Windows console.
+    # Unicode status glyphs (→, ⚠) must survive a cp1252 Windows console — reconfigure stdout/stderr to utf-8.
     for _stream in (sys.stdout, sys.stderr):
         try:
             _stream.reconfigure(encoding="utf-8")
@@ -3472,20 +3878,13 @@ def main() -> int:
     parser.add_argument("script", type=Path, help="Path to script JSON")
     parser.add_argument("--concat-only", action="store_true", help="Reuse cached shots; no API calls")
     parser.add_argument("--script-only", action="store_true", help="Normalize + write imagine pack only")
-    parser.add_argument("--package", action="store_true", help="Build upload kit after render (MP4 → SEO/chapters/end-screen/thumbnail)")
+    parser.add_argument("--package", action="store_true", help="Build upload kit after render")
     parser.add_argument("--package-only", action="store_true", help="Package existing production only; no render")
     parser.add_argument("--force-shot", action="append", default=[], help="Regenerate specific shot id(s)")
     parser.add_argument("--force-all", action="store_true", help="Regenerate every seamless chain shot")
-    parser.add_argument(
-        "--skip-generation-gate",
-        action="store_true",
-        help="Bypass T243 avatar/set blue-channel pre-render gate (dev only)",
-    )
-    parser.add_argument(
-        "--skip-t243-gate",
-        action="store_true",
-        help="Bypass T243-B formal pre-render checklist gate (dev only)",
-    )
+    parser.add_argument("--force-plates", action="store_true", help="Regenerate @1 zone plates (presenter-in-set stills)")
+    parser.add_argument("--skip-generation-gate", action="store_true", help="Bypass T243 avatar/set blue-channel pre-render gate (dev only)")
+    parser.add_argument("--skip-t243-gate", action="store_true", help="Bypass T243-B formal pre-render checklist gate (dev only)")
     parser.add_argument("--seamless", action="store_true", help="STUDIO v1.1 extend-primary + xfade joins")
     parser.add_argument("--match-color", action="store_true", help="Histogram-match before frame-chain joins")
     parser.add_argument("--cut-on-motion", action="store_true", help="Trim tail stillness before card join")
@@ -3554,6 +3953,7 @@ def main() -> int:
         concat_only=args.concat_only,
         force_shots=set(args.force_shot) if args.force_shot else None,
         force_all=args.force_all,
+        force_plates=args.force_plates,
         seamless_opts=seamless_opts,
     )
 

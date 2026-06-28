@@ -1,0 +1,99 @@
+{
+  "slug": "matilda_baseline_30s",
+  "title": "MATILDA — Baseline Pipeline Test",
+  "format_id": "documentary-host",
+  "target_seconds": 30,
+  "intake": {
+    "format_id": "documentary-host",
+    "actor_id": "Matilda-001",
+    "set_id": "@Set-Warehouse-Industrial-001",
+    "style_id": "@Style-Documentary-Prestige-001",
+    "source": "manual — concept: STUDIO/Pipeline/Concepts/matilda_baseline/matilda_baseline_30s.concept.json",
+    "gate_0": {
+      "verdict": "GREEN",
+      "blocked": false,
+      "human_signoff": true,
+      "rating": "PG",
+      "ai_disclosure_method": "title_card",
+      "music_bed_id": "BED-DOC-001",
+      "row_2_music_sync": "PASS",
+      "music_clearance_manifest": "Studio/Music_Sound/clearance_manifest.json",
+      "channels": ["social"],
+      "synthetic_performer_id": "Matilda-001",
+      "compliance_version": "2.2",
+      "compliance_2257": {
+        "scope": "not_applicable",
+        "reason": "synthetic_performer_no_explicit_material"
+      }
+    },
+    "libraries": {
+      "formats": "Production_Templates_v1.json",
+      "sets": "Set_Library_v1.json",
+      "styles": "Style_Library_v1.json",
+      "identity_lock": "DAVID/productions/matilda_meta_demo_v1/matilda_identity_lock.json"
+    },
+    "_identity_lock_note": "use_identity_lock=false because matilda_identity_lock.json uses references.meta_demo_presenter (not talent_avatar), which resolve_refs cannot find. avatar_reference provided directly. Permanent fix: add talent_avatar.url to matilda_identity_lock.json after uploading avatar to x.ai files API."
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "voice_suffix": "clear precise mid-register voice, European-accented English, measured documentary presenter, synthetic performer only",
+    "use_identity_lock": false,
+    "use_zone_plates": true,
+    "avatar_reference": "AI/ELEANOR/products/model_variants/OTHER/grok-image-d25e8689-243d-4c02-9567-e1ab92161ca7.jpg",
+    "set_reference": "STUDIO/Pipeline/references/warehouse_industrial_reference.jpg",
+    "seamless": {
+      "primary": "extend",
+      "xfade_s": 0.3,
+      "match_color": true,
+      "cut_on_motion": true,
+      "lamp_lock": false,
+      "glasses_lock": false,
+      "loudnorm": true,
+      "pin_audio_sync": true,
+      "reground_interval": 2,
+      "magenta_clamp": true
+    }
+  },
+  "shots": [
+    {
+      "id": "01_intro",
+      "duration": 7,
+      "t_start": 0,
+      "t_end": 7,
+      "role": "host",
+      "speech_text": "I'm MATILDA. I'm a synthetic presenter — generated, not filmed.",
+      "on_screen": "MATILDA · Synthetic Presenter · ELEANOR-DAVID Pipeline",
+      "video_prompt": "CONTINUITY LOCK @Matilda-001: identical presenter face, warm ash-gold blonde updo bun with face-framing wisps, same direct eye-line to camera — seamless continuation of prior take, zero jump cut. Wardrobe: navy single-button blazer, white open-collar shirt, grey tailored trousers, black pointed-toe heels, gold watch left wrist. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. MATILDA at DC, weight centered, upright authority posture. Direct eye-line to lens — first address to camera. (@1, warehouse loft — window grid camera-left, brick wall soft behind, concrete floor, metal beams above.) Camera: locked MCU — head and shoulders, presenter frame. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Documentary-Prestige: natural skin at generation — neutral WB, blue channel preserved; forbid global orange push, forbid yellow-green cast, forbid blue-starved shadows, forbid magenta midtones. MAGENTA SUPPRESS @Matilda-001: D65 neutral white balance 5000K on presenter face and blazer — frame-wide midtones R≈G≈B within 8%; fair blonde skin reads natural warm-neutral, NOT pink or magenta; navy blazer holds true deep navy, NOT purple; no pink ambient spill; gold watch stays amber-warm, not orange-magenta; no beauty-filter smoothing. GRADE: desaturated cinema precision — cool-neutral palette, teal-grey shadow base, muted European skin tones, no warmth or amber, shadow detail preserved, high sharpness, zero beauty filter. Bright industrial loft window key 4800K — single directional source, no fill. Corporate authority read at elevated exposure. Controlled contrast — detail in shadows, clean highlights. Fincher institutional daytime precision. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"I'm MATILDA. I'm a synthetic presenter — generated, not filmed.\" clear precise mid-register voice, European-accented English, measured documentary presenter, synthetic performer only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame."
+    },
+    {
+      "id": "02_pipeline",
+      "duration": 8,
+      "t_start": 7,
+      "t_end": 15,
+      "role": "host",
+      "speech_text": "What you're watching was built by the ELEANOR-DAVID pipeline — an automated filmmaking system running on large language models and Grok Imagine.",
+      "video_prompt": "CONTINUITY LOCK @Matilda-001: identical presenter face, warm ash-gold blonde updo bun with face-framing wisps, same direct eye-line to camera — seamless continuation of prior take, zero jump cut. Wardrobe: navy single-button blazer, white open-collar shirt, grey tailored trousers, black pointed-toe heels, gold watch left wrist. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Slight weight shift right, composed stance. Forward lean into the information beat — measured, precise. Eye-line holds lens. (@1, same window grid, same industrial frame, same brick depth.) Camera: slow motivated push-in from MCU to tight MCU over duration. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Documentary-Prestige: natural skin at generation — neutral WB, blue channel preserved; forbid global orange push, forbid yellow-green cast, forbid blue-starved shadows, forbid magenta midtones. MAGENTA SUPPRESS @Matilda-001: D65 neutral white balance 5000K on presenter face and blazer — frame-wide midtones R≈G≈B within 8%; fair blonde skin reads natural warm-neutral, NOT pink or magenta; navy blazer holds true deep navy, NOT purple; no pink ambient spill; gold watch stays amber-warm, not orange-magenta; no beauty-filter smoothing. GRADE: desaturated cinema precision — cool-neutral palette, teal-grey shadow base, muted European skin tones, no warmth or amber, shadow detail preserved, high sharpness, zero beauty filter. Bright industrial loft window key 4800K — single directional source, no fill. Corporate authority read at elevated exposure. Controlled contrast — detail in shadows, clean highlights. Fincher institutional daytime precision. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"What you're watching was built by the ELEANOR-DAVID pipeline — an automated filmmaking system running on large language models and Grok Imagine.\" clear precise mid-register voice, European-accented English, measured documentary presenter, synthetic performer only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame."
+    },
+    {
+      "id": "03_proof",
+      "duration": 7,
+      "t_start": 15,
+      "t_end": 22,
+      "role": "host",
+      "speech_text": "No human filmed this. No editor assembled it. Concept to render — automated end to end.",
+      "video_prompt": "CONTINUITY LOCK @Matilda-001: identical presenter face, warm ash-gold blonde updo bun with face-framing wisps, same direct eye-line to camera — seamless continuation of prior take, zero jump cut. Wardrobe: navy single-button blazer, white open-collar shirt, grey tailored trousers, black pointed-toe heels, gold watch left wrist. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Stillness as authority — upright, both feet grounded. Pause whilst delivering proof beat. Hands settle at rest. Eye-line direct. (@1, same loft, shadow pocket camera-right, window key sharp.) Camera: locked MS — wider to let warehouse read behind her. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Documentary-Prestige: natural skin at generation — neutral WB, blue channel preserved; forbid global orange push, forbid yellow-green cast, forbid blue-starved shadows, forbid magenta midtones. MAGENTA SUPPRESS @Matilda-001: D65 neutral white balance 5000K on presenter face and blazer — frame-wide midtones R≈G≈B within 8%; fair blonde skin reads natural warm-neutral, NOT pink or magenta; navy blazer holds true deep navy, NOT purple; no pink ambient spill; gold watch stays amber-warm, not orange-magenta; no beauty-filter smoothing. GRADE: desaturated cinema precision — cool-neutral palette, teal-grey shadow base, muted European skin tones, no warmth or amber, shadow detail preserved, high sharpness, zero beauty filter. Bright industrial loft window key 4800K — single directional source, no fill. Corporate authority read at elevated exposure. Controlled contrast — detail in shadows, clean highlights. Fincher institutional daytime precision. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"No human filmed this. No editor assembled it. Concept to render — automated end to end.\" clear precise mid-register voice, European-accented English, measured documentary presenter, synthetic performer only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame."
+    },
+    {
+      "id": "04_close",
+      "duration": 8,
+      "t_start": 22,
+      "t_end": 30,
+      "role": "host",
+      "speech_text": "This is what automated filmmaking looks like. We are just getting started.",
+      "on_screen": "ELEANOR-DAVID · Automated Filmmaking Pipeline",
+      "video_prompt": "CONTINUITY LOCK @Matilda-001: identical presenter face, warm ash-gold blonde updo bun with face-framing wisps, same direct eye-line to camera — seamless continuation of prior take, zero jump cut. Wardrobe: navy single-button blazer, white open-collar shirt, grey tailored trousers, black pointed-toe heels, gold watch left wrist. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Final address — chin lifts slightly, precision close. Eye-line to lens, composed hold. Gold watch catches window light at frame edge. (@1, same loft, same set — light holds, dust motes in 4800K key.) Camera: slow gentle push-in to tight MCU — hold on direct gaze through close. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Documentary-Prestige: natural skin at generation — neutral WB, blue channel preserved; forbid global orange push, forbid yellow-green cast, forbid blue-starved shadows, forbid magenta midtones. MAGENTA SUPPRESS @Matilda-001: D65 neutral white balance 5000K on presenter face and blazer — frame-wide midtones R≈G≈B within 8%; fair blonde skin reads natural warm-neutral, NOT pink or magenta; navy blazer holds true deep navy, NOT purple; no pink ambient spill; gold watch stays amber-warm, not orange-magenta; no beauty-filter smoothing. GRADE: desaturated cinema precision — cool-neutral palette, teal-grey shadow base, muted European skin tones, no warmth or amber, shadow detail preserved, high sharpness, zero beauty filter. Bright industrial loft window key 4800K — single directional source, no fill. Corporate authority read at elevated exposure. Controlled contrast — detail in shadows, clean highlights. Fincher institutional daytime precision. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"This is what automated filmmaking looks like. We are just getting started.\" clear precise mid-register voice, European-accented English, measured documentary presenter, synthetic performer only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame."
+    }
+  ]
+}
