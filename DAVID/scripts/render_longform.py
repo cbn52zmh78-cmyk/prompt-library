@@ -443,29 +443,36 @@ def _resolve_environment_plate_url(
     set_file: str | None,
 ) -> str:
     """Locked empty-set environment plate (@1 background, no talent)."""
+    local_files: list[Path] = []
     if set_file:
         sf = Path(set_file)
-        meta = _load_plate_sidecar(sf)
+        if sf.is_file():
+            local_files.append(sf)
+
+    if set_id:
+        entry = (_load_set_library().get("sets") or {}).get(set_id) or {}
+        ref_file = entry.get("reference_file")
+        if ref_file:
+            rp = _resolve_workspace_path(str(ref_file))
+            if rp.is_file() and rp not in local_files:
+                local_files.append(rp)
+
+    # Fresh upload from disk — sidecar/library imgen URLs expire (404).
+    if client is not None:
+        for path in local_files:
+            return upload_image_url(client, path)
+
+    for path in local_files:
+        meta = _load_plate_sidecar(path)
         url = meta.get("url") or meta.get("reference_url")
         if url:
             return str(url)
-        if sf.is_file() and client is not None:
-            return upload_image_url(client, sf)
 
     if set_id:
         entry = (_load_set_library().get("sets") or {}).get(set_id) or {}
         url = entry.get("reference_url")
         if url:
             return str(url)
-        ref_file = entry.get("reference_file")
-        if ref_file:
-            rp = _resolve_workspace_path(str(ref_file))
-            meta = _load_plate_sidecar(rp)
-            url = meta.get("url") or meta.get("reference_url")
-            if url:
-                return str(url)
-            if rp.is_file() and client is not None:
-                return upload_image_url(client, rp)
 
     raise RuntimeError(
         f"No environment plate URL for set {set_id or set_file} — "
@@ -3748,6 +3755,7 @@ def render_longform(
             out.exists()
             and out.stat().st_size > 10000
             and sid not in force_shots
+            and not force_all
         )
         if reuse:
             _log(f"[longform] reusing {out.name}")
