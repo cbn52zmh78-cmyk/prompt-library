@@ -382,28 +382,8 @@ def _shot_zone(shot: dict[str, Any]) -> str | None:
     return _extract_zone(shot.get("video_prompt", ""))
 
 
-ZONE_POSITION_HINTS: dict[str, str] = {
-    "@1": (
-        "zone @1 entrance — presenter at set entrance DC, window grid camera-left, "
-        "full warehouse depth readable behind her, feet on concrete floor"
-    ),
-    "@2": "zone @2 talent frame — presenter centered MCU, casting-reference composition",
-    "@3": (
-        "zone @3 mid-walk window — presenter mid-stride in walk-arc, window key on face, "
-        "mid-set depth, motion-ready stance"
-    ),
-    "@4": "zone @4 far wall — presenter at far wall, compressed depth, longer-lens feel",
-}
-
-MATILDA_ZONE_MAGENTA_LOCK = (
-    "MAGENTA SUPPRESS @Matilda-001: D65 neutral white balance 5000K on presenter face and navy blazer — "
-    "frame-wide midtones R≈G≈B within 8%; fair blonde skin natural warm-neutral, NOT pink or magenta; "
-    "navy blazer true deep navy, NOT purple; no white seamless background; presenter fully integrated in set."
-)
-
-
 def _needs_zone_plates(script: dict[str, Any], refs: dict[str, Any]) -> bool:
-    """Zone plates composite isolated @2 casting refs into @1 set plates (MATILDA-style)."""
+    """Host shots seed from empty @1 environment plates; @2 avatar stays casting-only."""
     cfg = script.get("config") or {}
     if cfg.get("use_zone_plates") is False:
         return False
@@ -480,46 +460,35 @@ def _resolve_environment_plate_url(
     )
 
 
-def _presenter_composite_prompt(
-    zone_id: str,
+def _resolve_environment_plate_file(
     script: dict[str, Any],
     refs: dict[str, Any],
-) -> str:
-    intake = script.get("intake") or {}
-    actor_id = str(intake.get("actor_id") or script.get("config", {}).get("actor_id") or "")
-    slug = str(script.get("slug", "")).lower()
+) -> tuple[Path, str | None]:
+    """Local locked empty-set file (no people) for zone plate copy."""
     set_id = _extract_set_id(
         str(refs.get("set_file") or "")
         + " "
-        + json.dumps(script.get("config") or {})
+        + json.dumps(script.get("intake") or {})
         + " "
-        + json.dumps(intake)
+        + json.dumps(script.get("config") or {})
     )
-    set_entry = (_load_set_library().get("sets") or {}).get(set_id or "") or {}
-    zone_hint = ZONE_POSITION_HINTS.get(zone_id, f"zone {zone_id} — presenter placed per action field")
-
-    if "matilda" in actor_id.lower() or "matilda" in slug:
-        presenter = (
-            "MATILDA — synthetic Bavarian presenter, warm ash-gold blonde updo bun with face-framing wisps, "
-            "navy single-button blazer, white open-collar shirt, grey tailored trousers, black pointed-toe heels, "
-            "gold watch left wrist. Direct eye-line to camera. No white seamless backdrop — fully in set."
+    candidates: list[Path] = []
+    if refs.get("set_file"):
+        sf = Path(str(refs["set_file"]))
+        if sf.is_file():
+            candidates.append(sf)
+    if set_id:
+        ref_file = ((_load_set_library().get("sets") or {}).get(set_id) or {}).get("reference_file")
+        if ref_file:
+            rp = _resolve_workspace_path(str(ref_file))
+            if rp.is_file() and rp not in candidates:
+                candidates.append(rp)
+    if not candidates:
+        raise RuntimeError(
+            f"No empty environment plate on disk for set {set_id or refs.get('set_file')} — "
+            "run STUDIO/Pipeline/generate_set_references.py"
         )
-        magenta_lock = MATILDA_ZONE_MAGENTA_LOCK
-    else:
-        presenter = "Synthetic documentary presenter, direct eye-line to camera, fully integrated in set."
-        magenta_lock = ARCHIVE_ANTI_MAGENTA_GENERATION_LOCK
-
-    locks = " ".join(
-        x for x in (
-            set_entry.get("continuity_lock"),
-            set_entry.get("lighting_lock"),
-            set_entry.get("color_guard"),
-        ) if x
-    )
-    return (
-        f"{magenta_lock} {locks} {presenter} {zone_hint} "
-        "16:9 cinematic still, photoreal, single presenter only, SFW, no text overlays."
-    )
+    return candidates[0], set_id
 
 
 def generate_zone_plate(
@@ -531,7 +500,10 @@ def generate_zone_plate(
     *,
     force: bool = False,
 ) -> dict[str, Any]:
-    """Composite @2 casting talent into @1 environment plate for image-to-video seed."""
+    """Lock empty environment plate for zone (@1 = set only, no talent, no props).
+
+    @2 avatar_url remains the casting reference; video prompts place the performer.
+    """
     plates_dir.mkdir(parents=True, exist_ok=True)
     plate_path = plates_dir / f"{zone_id}_plate.jpg"
     meta = _load_plate_sidecar(plate_path)
@@ -540,45 +512,32 @@ def generate_zone_plate(
         and plate_path.is_file()
         and plate_path.stat().st_size > 5000
         and meta.get("url")
+        and meta.get("plate_type") == "environment_empty"
+        and meta.get("no_people") is True
     ):
-        _log(f"[zone] reusing {zone_id} plate → {plate_path.name}")
+        _log(f"[zone] reusing empty {zone_id} environment plate → {plate_path.name}")
         return {**meta, "path": str(plate_path), "reused": True}
 
-    set_id = _extract_set_id(
-        str(refs.get("set_file") or "")
-        + " "
-        + json.dumps(script.get("intake") or {})
-        + " "
-        + json.dumps(script.get("config") or {})
-    )
-    env_url = _resolve_environment_plate_url(
-        client, set_id=set_id, set_file=refs.get("set_file")
-    )
-    prompt = _presenter_composite_prompt(zone_id, script, refs)
-    _log(f"[zone] generating {zone_id} plate (presenter in set)…")
+    source_path, set_id = _resolve_environment_plate_file(script, refs)
+    if source_path.resolve() != plate_path.resolve():
+        shutil.copy2(source_path, plate_path)
+    _log(f"[zone] locking empty {zone_id} environment plate from {source_path.name}")
     _api_pace()
-    resp = client.image.sample(
-        prompt=prompt,
-        model="grok-imagine-image-quality",
-        image_url=env_url,
-    )
-    _download(resp.url, plate_path)
-    plate_url = resp.url
-    if client is not None:
-        try:
-            plate_url = upload_image_url(client, plate_path)
-        except Exception as exc:  # noqa: BLE001
-            _log(f"[zone] plate upload fallback to API url: {exc}")
+    plate_url = upload_image_url(client, plate_path)
+    source_meta = _load_plate_sidecar(source_path)
 
     data = {
         "zone_id": zone_id,
+        "plate_type": "environment_empty",
+        "no_people": True,
         "path": str(plate_path),
         "url": plate_url,
-        "environment_url": env_url,
-        "prompt": prompt,
-        "model": "grok-imagine-image-quality",
+        "source_file": str(source_path),
+        "source_url": source_meta.get("url"),
         "set_id": set_id,
-        "status": "REGENERATED" if force else "GENERATED",
+        "avatar_reference": refs.get("avatar_url"),
+        "note": "@1 is empty set only — performer identity comes from @2 casting ref + video prompt",
+        "status": "REGENERATED" if force else "LOCKED",
         "reused": False,
     }
     _save_plate_sidecar(plate_path, data)
@@ -635,7 +594,7 @@ def ensure_zone_plates(
 
 
 def resolve_shot_image_url(shot: dict[str, Any], refs: dict[str, Any]) -> str:
-    """Zone plate (@1…) → @2 viz plate → @2 avatar casting ref."""
+    """Empty zone set plate (@1…) → @2 viz plate → @2 avatar casting ref."""
     if shot.get("image_url"):
         return str(shot["image_url"])
     zone = _shot_zone(shot)
@@ -2936,7 +2895,7 @@ def render_frame_chain_performance(
                         if _shot_uses_viz_reference(shot) and refs.get("visualization_url"):
                             src = "locked @2 science plate re-ground"
                         elif (z := _shot_zone(shot)) and refs.get(f"{z}_plate_url"):
-                            src = f"locked {z} zone plate re-ground"
+                            src = f"locked empty {z} set plate re-ground"
                         elif dark:
                             src = "dark-set avatar re-ground (Kelvin locked)"
                         else:
@@ -3890,7 +3849,7 @@ def main() -> int:
     parser.add_argument("--package-only", action="store_true", help="Package existing production only; no render")
     parser.add_argument("--force-shot", action="append", default=[], help="Regenerate specific shot id(s)")
     parser.add_argument("--force-all", action="store_true", help="Regenerate every seamless chain shot")
-    parser.add_argument("--force-plates", action="store_true", help="Regenerate @1 zone plates (presenter-in-set stills)")
+    parser.add_argument("--force-plates", action="store_true", help="Re-lock @1 zone plates (empty environment stills from set_reference)")
     parser.add_argument("--skip-generation-gate", action="store_true", help="Bypass T243 avatar/set blue-channel pre-render gate (dev only)")
     parser.add_argument("--skip-t243-gate", action="store_true", help="Bypass T243-B formal pre-render checklist gate (dev only)")
     parser.add_argument("--seamless", action="store_true", help="STUDIO v1.1 extend-primary + xfade joins")
