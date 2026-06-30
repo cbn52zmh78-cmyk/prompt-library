@@ -1,0 +1,77 @@
+{
+  "_doc": "Unified modifier registry — visual style, animation, hybrid, sonic. Load by ID in Python prompt assembly.",
+  "_version": "1",
+  "_captured": "2026-06-30",
+  "_registry_files": {
+    "visual_live_action": "director_cinematographer_style_prompts_v1.json",
+    "visual_animation": "director_cinematographer_animation_styles_v1.json",
+    "visual_hybrid": "grok_hybrid_styles_camera_innovations_v1.json",
+    "audio": "sonic_signatures_grok_audio_v1.json"
+  },
+  "modifier_types": ["style", "anim", "hybrid", "sound"],
+  "script_injection": {
+    "config.style_dna_tag": "Primary visual modifier — style_* or hybrid_*",
+    "config.audio_dna_tag": "Primary audio modifier — sound_*",
+    "config.anim_style_id": "Optional — anim_* when rendering animated look",
+    "shots[].modifiers": {
+      "style_dna_tag": "per-shot visual override",
+      "audio_dna_tag": "per-shot audio override",
+      "camera_move": "from hybrid registry e.g. Moral Decay Tracking",
+      "chain_visual": "bool — append hybrid chain_prompt",
+      "chain_audio": "bool — append sonic chain_prompt",
+      "anti_generic_armor": "tactile film imperfections + soulful micro-errors + deliberate beautiful mistakes"
+    }
+  },
+  "id_index": {
+    "style": [
+      "style_fincher_khondji",
+      "style_anderson_yeoman",
+      "style_coppola_willis",
+      "style_deakins_villeneuve",
+      "style_bergman_nykvist",
+      "style_bertolucci_storaro",
+      "style_cuaron_lubezki"
+    ],
+    "anim": [
+      "anim_fincher_khondji",
+      "anim_anderson_yeoman",
+      "anim_coppola_willis",
+      "anim_deakins_villeneuve",
+      "anim_bergman_nykvist",
+      "anim_bertolucci_storaro",
+      "anim_cuaron_lubezki"
+    ],
+    "hybrid": [
+      "hybrid_fincher_deakins",
+      "hybrid_anderson_storaro",
+      "hybrid_coppola_lubezki",
+      "hybrid_deakins_bergman",
+      "hybrid_storaro_cuaron",
+      "hybrid_fincher_anderson_deakins",
+      "hybrid_omniscient_evolution"
+    ],
+    "sound": [
+      "sound_fincher_khondji",
+      "sound_anderson_yeoman",
+      "sound_coppola_willis",
+      "sound_deakins",
+      "sound_bergman_nykvist",
+      "sound_storaro_bertolucci",
+      "sound_cuaron_lubezki"
+    ]
+  },
+  "compose_prompt_order": [
+    "continuity_lock",
+    "setting_slot",
+    "talent_slot",
+    "scene_blocking",
+    "camera",
+    "style_dna_resolve",
+    "hybrid_camera_move",
+    "audio_dna_resolve",
+    "audio_chain_if_sequential",
+    "anti_generic_armor",
+    "timing_lock"
+  ],
+  "implementation_status": "wired — DAVID/scripts/style_modifiers.py + render_longform.compile_barebones_prose_prompt"
+}

@@ -1,0 +1,90 @@
+{
+  "_doc": "Sonic signatures for Grok native AV — pairs with visual style_* and hybrid_* IDs",
+  "_source": "Grok Heavy browser research",
+  "_captured": "2026-06-30",
+  "_engine": "Grok Imagine / Aurora — synchronized audio in-pass (dialogue, lip-sync, SFX, ambient, music)",
+  "_chain_rule": "Continue from the attached previous audio tail + final video frame for perfect sync and evolution.",
+  "sound_designers": [
+    {"name": "Walter Murch", "association": "Coppola", "signature": "worldizing, subtractive mix, sound equals picture, inner psychology through layers"},
+    {"name": "Ren Klyce", "association": "Fincher", "signature": "clinical precision, unsettling ambiences, hyper-real psychological foley"},
+    {"name": "Gary Rydstrom", "association": "Spielberg/Lucas", "signature": "organic creation, emotional realism"},
+    {"name": "Ben Burtt", "association": "Lucas", "signature": "iconic invented sounds from found objects"},
+    {"name": "Skip Lievsay", "association": "Coens/Deakins films", "signature": "sparse impactful mix, silence and environment breathe"}
+  ],
+  "sonic_signatures": [
+    {
+      "id": "sound_fincher_khondji",
+      "live_action_style_id": "style_fincher_khondji",
+      "designer_anchor": "Ren Klyce",
+      "name": "Fincher/Khondji Sonic",
+      "description": "Precise cold layered dread. Clinical foley, low-frequency hums, subtractive mix where ambient suddenly drops.",
+      "chain_prompt": "Continue from previous audio tail + attached final frame. Fincher/Khondji sonic: hyper-precise foley with subtle digital glitches in the silence, cold metallic echoes, desaturated ambience that feels calculated and unresolved. Evolve tension organically."
+    },
+    {
+      "id": "sound_anderson_yeoman",
+      "live_action_style_id": "style_anderson_yeoman",
+      "designer_anchor": null,
+      "name": "Anderson/Yeoman Sonic",
+      "description": "Whimsical precision, symmetrical sound design. Ticking metronome motifs, curated quirky foley, balanced musical stings.",
+      "chain_prompt": "Maintain whimsical precision from previous audio, add symmetrical sound motifs that match visual symmetry on the reference frame."
+    },
+    {
+      "id": "sound_coppola_willis",
+      "live_action_style_id": "style_coppola_willis",
+      "designer_anchor": "Walter Murch",
+      "name": "Coppola/Willis Sonic",
+      "description": "Operatic shadow-like layers. Deep rumbling bass, warm intimate dialogue, echoing silences, selective chiaroscuro reveal.",
+      "chain_prompt": "Evolve from previous audio with inherited shadows in the soundscape — warm tones fading into deep rumbling power."
+    },
+    {
+      "id": "sound_deakins",
+      "live_action_style_id": "style_deakins_villeneuve",
+      "designer_anchor": "Skip Lievsay",
+      "name": "Deakins Sonic",
+      "description": "Hyper-real environmental immersion. Practical location foley, volumetric wind/haze, space breathes naturally.",
+      "chain_prompt": "Continue Deakins-style practical ambient from previous tail, match lighting/environment on reference frame with authentic location textures."
+    },
+    {
+      "id": "sound_bergman_nykvist",
+      "live_action_style_id": "style_bergman_nykvist",
+      "designer_anchor": null,
+      "name": "Bergman/Nykvist Sonic",
+      "description": "Intimate psychological minimalism. Soft breaths, ticking clocks, distant bells, near-silence, voice as emotional close-up.",
+      "chain_prompt": "Intimate Nykvist sonic continuation — minimal layers focused on voice and micro-sounds that reveal inner state, reference the final frame face lighting."
+    },
+    {
+      "id": "sound_storaro_bertolucci",
+      "live_action_style_id": "style_bertolucci_storaro",
+      "designer_anchor": null,
+      "name": "Storaro/Bertolucci Sonic",
+      "description": "Symbolic color-equivalent audio. Warm/cool tonal shifts, dramatic swells mirroring color psychology, sensual layered textures.",
+      "chain_prompt": "Storaro sonic evolution — color palette of sound shifts psychologically from previous block's tail."
+    },
+    {
+      "id": "sound_cuaron_lubezki",
+      "live_action_style_id": "style_cuaron_lubezki",
+      "designer_anchor": null,
+      "name": "Cuarón/Lubezki Sonic",
+      "description": "Immersive fluid experiential layers. Organic spatial audio, natural wind/particle sounds, lived-in dialogue.",
+      "chain_prompt": "Seamless Lubezki audio continuation — fluid spatial layers that feel like one long experiential take from the reference frame."
+    }
+  ],
+  "blended_sound_bible": "Full cinematic audio design synthesizing the 7 masters: precise clinical foley and psychological undercurrents (Fincher/Klyce), whimsical balanced motifs (Anderson), operatic shadow layers (Coppola/Murch), hyper-real practical environmental textures (Deakins), intimate minimal soul sounds (Bergman), symbolic emotional tonal shifts (Storaro), and immersive unbroken experiential flow (Cuarón). Generate synchronized dialogue with natural lip-sync performance, organic SFX, evolving ambience, and subtle score that reacts to visual style. Continue perfectly from previous audio tail and attached video frame.",
+  "pipeline_integration": {
+    "script_fields": {
+      "config.style_dna_tag": "hybrid_* or style_* ID",
+      "config.audio_dna_tag": "sound_* ID default for production",
+      "config.audio_chain_mode": "tail_plus_frame",
+      "shots[].barebones.audio.dna_tag": "per-block override",
+      "shots[].barebones.audio.chain_prompt": "override or auto from registry"
+    },
+    "python_assembly": [
+      "Load sonic_signatures by audio_dna_tag",
+      "Merge chain_prompt when block_index > 0",
+      "Attach last_frame + audio_tail references",
+      "Single native AV API call when dialogue required",
+      "Post-stitch EQ/volume automation across xfade joins"
+    ],
+    "combo_tag_example": "DNA-Sound-4 = Deakins practical + Fincher precision"
+  }
+}

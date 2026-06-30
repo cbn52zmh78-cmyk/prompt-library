@@ -1,0 +1,116 @@
+{
+  "_doc": "Grok-native hybrid styles, revolutionary camera moves, Imagine prompting mastery, pipeline differentiation — ELEANOR-DAVID",
+  "_source": "Grok Heavy browser research",
+  "_captured": "2026-06-30",
+  "_context": "MATILDA Stonebridge pipeline validated — B01/B02 blocks, 15s native API, smart stitch; premium commercial/lifestyle quality",
+  "_pairs_with": [
+    "director_cinematographer_style_prompts_v1.json",
+    "director_cinematographer_animation_styles_v1.json"
+  ],
+  "hybrid_styles": [
+    {
+      "id": "hybrid_fincher_deakins",
+      "name": "Precision Natural Decay",
+      "masters": ["style_fincher_khondji", "style_deakins_villeneuve"],
+      "camera_concept": "Omniscient predator drone — perfect geometry with organic light imperfections (dust motes, lens breathing)",
+      "camera_move": "Moral Decay Tracking",
+      "camera_move_description": "Camera slowly tilts or dollies while shadows procedurally grow and consume practical sources",
+      "prompt_seed": "Fincher/Khondji underexposure + Deakins practical volumetric realism, calculated predator camera slowly overtaken by natural entropy."
+    },
+    {
+      "id": "hybrid_anderson_storaro",
+      "name": "Symmetrical Color Psych Opera",
+      "masters": ["style_anderson_yeoman", "style_bertolucci_storaro"],
+      "camera_concept": "Locked orthographic until character breaks rule — then painterly chaos",
+      "camera_move": "Symmetry Fracture Dolly",
+      "camera_move_description": "Camera pushes in while frame literally cracks and color bleeds asymmetrically",
+      "prompt_seed": null
+    },
+    {
+      "id": "hybrid_coppola_lubezki",
+      "name": "Chiaroscuro Immersive Oner",
+      "masters": ["style_coppola_willis", "style_cuaron_lubezki"],
+      "camera_concept": "Can pass through walls; light stays motivated as if physical",
+      "camera_move": "Shadow Inheritance Tracking",
+      "camera_move_description": "Camera follows character while inherited shadows from previous scenes cling to them",
+      "prompt_seed": null
+    },
+    {
+      "id": "hybrid_deakins_bergman",
+      "name": "Luminous Psychological Practical Portrait",
+      "masters": ["style_deakins_villeneuve", "style_bergman_nykvist"],
+      "camera_concept": "Invisible observer slowly orbiting face while light reveals inner state",
+      "camera_move": "Soul Window Push",
+      "camera_move_description": "Camera glides into extreme close-up while environmental light dims to single motivated source on eyes",
+      "prompt_seed": null
+    },
+    {
+      "id": "hybrid_storaro_cuaron",
+      "name": "Color Symphony Fluid Immersion",
+      "masters": ["style_bertolucci_storaro", "style_cuaron_lubezki"],
+      "camera_concept": "Living emotional current — warps space slightly with palette shift",
+      "camera_move": "Palette Current Steadicam",
+      "camera_move_description": "Entire frame subtly flows and breathes with color changes",
+      "prompt_seed": null
+    },
+    {
+      "id": "hybrid_fincher_anderson_deakins",
+      "name": "Controlled Chaos Diorama Noir",
+      "masters": ["style_fincher_khondji", "style_anderson_yeoman", "style_deakins_villeneuve"],
+      "camera_concept": "Locked symmetrical until it isn't — chaos underneath revealed",
+      "camera_move": "Symmetry Breach Reveal",
+      "camera_move_description": "Perfect framing fractures into gritty practical long-take",
+      "prompt_seed": null
+    },
+    {
+      "id": "hybrid_omniscient_evolution",
+      "name": "Grok Omniscient Evolution",
+      "masters": [
+        "style_anderson_yeoman",
+        "style_bergman_nykvist",
+        "style_fincher_khondji",
+        "style_cuaron_lubezki",
+        "style_bertolucci_storaro",
+        "style_coppola_willis",
+        "style_deakins_villeneuve"
+      ],
+      "camera_concept": "Director AI — selects best master per beat",
+      "camera_move": "Style morph across runtime",
+      "camera_move_description": "Style evolves: Anderson whimsy → Bergman intimacy → Fincher bleak → Lubezki immersion → Storaro explosion",
+      "prompt_seed": null
+    }
+  ],
+  "grok_imagine_techniques": {
+    "extend_without_new_prompt": {
+      "discovery": "Extend generations without new prompts — powerful continuity behavior",
+      "template": "Continue this exact shot seamlessly for another 8 seconds, evolve the lighting and camera according to the attached style rules, maintain perfect character and environment consistency."
+    },
+    "capability_discovery": [
+      "surprise me with an emergent technique that no human director has tried",
+      "break the expected rules in a beautiful way while staying coherent"
+    ],
+    "technical_overload_example": "shot on ARRI Alexa 65 + Cooke S4 + custom bleach-bypass LUT + practical cove lighting rig + subtle film grain + anamorphic flares + Deakins negative space + Lubezki Steadicam flow",
+    "consistency_hack": "Upload key frames as references + use these exact character references and lighting temperature",
+    "quick_test_extend_prompt": "Continue this exact scene in the hybrid style of Fincher/Khondji precision + Lubezki fluid immersion + subtle Storaro color psychology, camera becomes an emotional current that gently warps space as her mood shifts, practical lighting evolves organically, maintain perfect character and environment, evolve beautifully without reset, 15 seconds seamless."
+  },
+  "pipeline_strategy": {
+    "style_dna_tag_per_block": "e.g. Fincher-Deakins hybrid on each B01/B02",
+    "variations_per_segment": 3,
+    "auto_select_best": "Python match + stitch with color/grain matching",
+    "signature_system": "Grok Omniscient Camera per movie; master DNA switches visibly; watermark Directed by Grok DNA v1",
+    "anti_generic_armor": "tactile film imperfections + soulful micro-errors + deliberate beautiful mistakes",
+    "python_upgrade": "Read scene emotion → auto-inject hybrid tag + camera innovation",
+    "monetization_angle": "Sell utility — AI director with taste that evolves — not just clips"
+  },
+  "validated_pipeline_notes": {
+    "workflow": "B01/B02 scene blocks → Python scripting → 15s native API runs → smart stitching",
+    "quality_signals": [
+      "elegant practical lighting (undercabinet + pendant + soft fill)",
+      "rock-solid character consistency",
+      "alive expressions and micro-movements",
+      "seamless island performance to couch sit transition",
+      "premium commercial/lifestyle production value",
+      "stitch hiding on point"
+    ]
+  }
+}
