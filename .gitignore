@@ -35,3 +35,9 @@ build/
 
 # Test scratch dirs (e.g. _t173_tmp, _t212_tmp) created by test suites
 **/_t[0-9]*_tmp/
+
+# Personal secrets (HuggingFace API token, etc.)
+(ME)/HIUGGINGFACE.txt
+
+# DAVID production video renders (kept on disk, not committed)
+DAVID/productions/**/*.mp4
