@@ -1,0 +1,40 @@
+{
+  "slug": "matilda_baseline_30s",
+  "qa_at": "2026-06-29T04:04:33.438760+00:00",
+  "pass": false,
+  "passes": [
+    "shot count OK (5 >= 1)",
+    "all shots carry synthetic talent guard (incl. auto-patched)",
+    "target duration ~30s",
+    "STUDIO v1.1 seamless mode ACTIVE",
+    "continuity mode: frame_chain; card join xfade=0.35s",
+    "frame-chain i2v fallback (extend unsupported on 1.5)",
+    "host performance: host_performance_extend.mp4 (28.7s)",
+    "xfade chain + synced audio crossfade at joins",
+    "re-concat join preserved: xfade_chain (0.35s)",
+    "final mux color-cast T4 clean (#244) — B/R=1.013 starve=0.058 Bμ=131.8",
+    "audio PRESENT (david_matilda_baseline_30s_seamless_v1.mp4 mean -24.9 dB)",
+    "loudnorm two-pass target I=-16.0 LUFS per shot",
+    "audio pinned to exact shot duration (no stretch/offset)",
+    "flat loudness across shots (spread 0.55 LU)",
+    "neutral WB — yellow-green suppressed (max 0.002 <= 0.12)",
+    "generation color-cast clean — B/R=1.017 starve=0.066 Bμ=129.6",
+    "lamp warm ratio stable across segments (Δ=0.000)"
+  ],
+  "issues": [
+    "shots missing @David-001 continuity in video_prompt",
+    "magenta detected: [('chain_01_entry_processed', 0.6207080117114719), ('chain_02_pipeline_processed', 0.639247311827957), ('chain_03_models_processed', 0.7953804347826087), ('chain_04_proof_processed', 0.873734533183352), ('chain_05_close_processed', 0.9142381348875936)]",
+    "A/V sync drift: ['01_entry:6.000s', '02_pipeline:6.000s', '03_models:5.920s', '04_proof:6.000s', '05_close:6.000s']"
+  ],
+  "shot_count": 5,
+  "segment_count": 1,
+  "seamless": true,
+  "extend_api": {
+    "scriptable": true,
+    "enabled_on_model": false,
+    "model": "grok-imagine-video-1.5",
+    "editor_extend": "Grok Imagine UI Continue/Extend may work before API parity on 1.5",
+    "finding": "client.video.extend() exists in xAI SDK but grok-imagine-video-1.5 returns 'Video extension is not supported for this model'. Pipeline uses frame-chain i2v fallback.",
+    "continuity_mode": "frame_chain"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "proof": "barebones_10s_v2",
+  "prompt_mode": "barebones",
+  "at": "2026-06-29T03:03:22.084421+00:00",
+  "session_ids": {
+    "@1": "file_c5f54875-67c2-4eb4-bf63-415849953fac",
+    "@2": "file_bae26e50-fa02-4eb6-a9e5-bbd1ae3401ca"
+  },
+  "image_url": "https://files-cdn.x.ai/agY9YL_LRr22zW5y4SuWww/file_c5f54875-67c2-4eb4-bf63-415849953fac.jpg",
+  "image_url_role": "@1 empty warehouse — talent NOT in seed pixels",
+  "prompt": "MATILDA ( @bae26e50-fa02-4eb6-a9e5-bbd1ae3401ca , sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; English only in this scene) enters from offscreen stage left whilst introducing herself to the audience - maintains eye contact with camera entire scene - three steps to center mark by 2s, plants feet facing camera - open-palm gesture on final phrase. locked static medium, waist-up, no camera move",
+  "rules": [
+    "Studio BAREBONES → prose_prompt (MASTER_Matilda_v1 + per-shot barebones)",
+    "@1 empty plate = image_url; MATILDA named @2 UUID outside seed"
+  ],
+  "duration_s": 10,
+  "model": "grok-imagine-video-1.5",
+  "resolution": "480p",
+  "shot_id": "01_entry",
+  "video_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-144b076c-2cf0-952a-8748-d0f8099565bf.mp4",
+  "output_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\barebones_10s_v2.mp4",
+  "frame_0p5s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\barebones_10s_v2_0p5s.jpg",
+  "frame_2s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\barebones_10s_v2_2s.jpg",
+  "frame_4s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\barebones_10s_v2_4s.jpg",
+  "frame_8s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\barebones_10s_v2_8s.jpg"
+}

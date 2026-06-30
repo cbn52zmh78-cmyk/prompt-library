@@ -203,7 +203,8 @@ SMOKE_EXIT=$?
 BUNDLE_NAME="david_adapter_${DAVID_TAG}.tar.gz"
 BUNDLE_PATH="/workspace/${BUNDLE_NAME}"
 echo "  Bundling adapter to ${BUNDLE_PATH}..."
-tar -czf "${BUNDLE_PATH}" -C "$(dirname "${ADAPTER_DIR}")" "$(basename "${ADAPTER_DIR}")"
+ADAPTER_CLEAN="${ADAPTER_DIR%/}"
+tar --exclude='checkpoint-*' -czf "${BUNDLE_PATH}" -C "$(dirname "${ADAPTER_CLEAN}")" "$(basename "${ADAPTER_CLEAN}")"
 echo "  Bundle size: $(du -sh "${BUNDLE_PATH}" | cut -f1)"
 
 # Final summary

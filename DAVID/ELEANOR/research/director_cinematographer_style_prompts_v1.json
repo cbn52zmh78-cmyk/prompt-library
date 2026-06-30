@@ -1,0 +1,61 @@
+{
+  "_doc": "Director-cinematographer visual style prompts — machine-readable for ELEANOR-DAVID R3 corpus and Studio style_id routing",
+  "_source": "Grok Heavy browser research",
+  "_captured": "2026-06-30",
+  "_scope": "visuals_only — lighting, color, composition, texture, camera feel; no blocking or actor direction",
+  "styles": [
+    {
+      "id": "style_fincher_khondji",
+      "director": "David Fincher",
+      "cinematographer": "Darius Khondji",
+      "reference": "Seven",
+      "prompt": "Cinematic visual style in the vein of Fincher and Khondji: extreme underexposure on interiors creating inky blacks and high contrast, desaturated palette with sickly green and warm gold accents, practical overhead fluorescents and motivated light piercing from outside through wet reflective surfaces, bleach-bypass texture and deep velvety shadows, precise geometric framing and rule-of-thirds tension, rain-slicked oppressive urban grit with 'dark clarity' where every highlight and reflection feels sinister and meticulously controlled."
+    },
+    {
+      "id": "style_anderson_yeoman",
+      "director": "Wes Anderson",
+      "cinematographer": "Robert Yeoman",
+      "reference": "The Grand Budapest Hotel",
+      "prompt": "Cinematic visual style in the vein of Anderson and Yeoman: hyper-symmetrical centered compositions and dollhouse-perfect tableaux, vibrant yet meticulously curated pastel color palettes, deep focus that reveals every intricate prop and set detail, flat theatrical lighting that flatters the whimsical architecture and costumes, balanced anamorphic or boxed framing with whip pans and tracking that feels like a perfectly staged play, whimsical precision and theatrical elegance in every frame."
+    },
+    {
+      "id": "style_coppola_willis",
+      "director": "Francis Ford Coppola",
+      "cinematographer": "Gordon Willis",
+      "reference": "The Godfather",
+      "prompt": "Cinematic visual style in the vein of Coppola and Willis: low-key chiaroscuro 'Prince of Darkness' lighting with heavy selective shadows and silhouettes, motivated practical top and side lights that often obscure faces or eyes, warm sepia and earthy tones contrasting deep blacks, geometric Renaissance-inspired compositions, controlled underexposure that builds operatic power dynamics and intimate family menace through masterful light and shadow play."
+    },
+    {
+      "id": "style_deakins_villeneuve",
+      "director": "Denis Villeneuve",
+      "cinematographer": "Roger Deakins",
+      "reference": "Blade Runner 2049",
+      "prompt": "Cinematic visual style in the vein of Deakins: masterful naturalistic and practical lighting with volumetric haze, smoke, dust, and rain sculpting forms, elegant silhouettes and deep-focus geometry, subtle yet innovative color palettes that feel lived-in and atmospheric, precise clean compositions (frames within frames, negative space mastery), vast minimalist grandeur blended with intimate human-scale detail, story-serving elegance and environmental authenticity."
+    },
+    {
+      "id": "style_bergman_nykvist",
+      "director": "Ingmar Bergman",
+      "cinematographer": "Sven Nykvist",
+      "reference": "Cries and Whispers / Persona",
+      "prompt": "Cinematic visual style in the vein of Bergman and Nykvist: poetic naturalism and luminous simplicity, soft diffused window or single-source practical light sculpting expressive human faces in intimate close-ups, stark yet restrained chiaroscuro, symbolic color restraint (dominant rich reds or cool minimalism), minimalist elegant compositions focused on psychological and emotional truth, profound intimacy through light that feels honest and soul-revealing."
+    },
+    {
+      "id": "style_bertolucci_storaro",
+      "director": "Bernardo Bertolucci",
+      "cinematographer": "Vittorio Storaro",
+      "reference": "The Conformist",
+      "prompt": "Cinematic visual style in the vein of Bertolucci and Storaro: bold expressive color theory and psychological symbolism (warm/cool contrasts, Goethe-inspired duality), painterly dramatic lighting with sculpted shafts, atmospheric haze, and rich volumetric depth, operatic widescreen compositions where light and saturated palettes actively convey inner emotion and ideology, sensual yet precise architectural framing and textural elegance."
+    },
+    {
+      "id": "style_cuaron_lubezki",
+      "director": "Alfonso Cuarón",
+      "cinematographer": "Emmanuel Lubezki",
+      "reference": "Children of Men",
+      "prompt": "Cinematic visual style in the vein of Cuarón and Lubezki: immersive naturalistic and available-light mastery, wide lenses creating visceral presence and spatial depth, fluid long-take dynamism with organic handheld or Steadicam flow, lens flares and hyper-real textures, documentary-like realism blended with poetic environmental immersion, minimal artificial intervention that makes every frame feel lived-in, chaotic, and emotionally immediate."
+    }
+  ],
+  "combined_prompt": {
+    "status": "not_captured",
+    "note": "Source referenced a synthesis of all seven styles; paragraph not included in user paste — add when available"
+  }
+}

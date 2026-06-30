@@ -1,0 +1,26 @@
+{
+  "probe": "branch_B_close_static_15s",
+  "at": "2026-06-29T08:23:54.474966+00:00",
+  "mode": "branch_from_source_video",
+  "source_video": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\ceiling_probe\\kitchen_composite_baked@1_15s_ceiling_probe.mp4",
+  "branch_seed_frame_s": 14.889999999999999,
+  "branch_seed_note": "origin end frame \u2014 post creep-zoom close, not 9.5s medium",
+  "branch_seed_frame": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\branch_probe\\frames\\branch_seed_origin_14.89s_tight_close.jpg",
+  "model": "grok-imagine-video-1.5",
+  "duration_requested_s": 15,
+  "dialogue_wrap_target_s": 9.5,
+  "shot_id": "02_role_branch_B_v2",
+  "dialogue_shot": "02_role",
+  "actual_duration_s": 15.04,
+  "output": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\branch_probe\\branch_02_tight_close_static_15s_from_origin_14.9s.mp4",
+  "api_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-b2ce582b-fada-942d-ad36-dd4c769ffa04.mp4",
+  "prompt_path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\branch_probe\\branch_02_tight_close_static_15s_prompt.txt",
+  "generate_kwargs": {
+    "prompt": "Setting: @99a5ccd7-559a-4077-8ef9-9e56b45fabce (see attached render; modern kitchen interior \u2014 empty apartment, no other people, visual only) ; MATILDA already in tight close-up \u2014 face and shoulders dominate frame, no waist visible; maintains unbroken eye contact with camera entire scene; delivers Stonebridge role and Munich background in English; dialogue completes around 9.5 seconds then holds composed static close-up with natural micro-expression through end \u2014 no camera move, no pull-back. Camera does locked tight close-up from first frame \u2014 static, zero dolly, zero zoom, zero reframing, zero pull-back to medium \u2014 framing matches seed plate exactly, face-forward portrait distance entire 15 seconds ; Lip-synced, delivers in dialogue: \"In my role at Stonebridge, I oversee client operations across North America and Europe. I grew up in Munich \u2014 where a handshake still means something \u2014 and that Bavarian background shapes everything about how I work with our European partners.\" ; AUDIO LOCK: absolute silence except MATILDA lip-sync voice \u2014 zero background noise, zero chatter, zero offscreen voices, mute set ; MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; must NOT sound American investigative journalist, NOT CNN/60 Minutes cadence; Munich-born native speaker English \u2014 subtle Bavarian lilt, soft gentle mid-register, natural German cultural references ; documentary prestige, natural skin, neutral WB, no beauty filter",
+    "model": "grok-imagine-video-1.5",
+    "image_file_id": "file_99a5ccd7-559a-4077-8ef9-9e56b45fabce",
+    "duration": 15,
+    "resolution": "480p",
+    "aspect_ratio": "16:9"
+  }
+}

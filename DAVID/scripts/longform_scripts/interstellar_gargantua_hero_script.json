@@ -1,0 +1,67 @@
+{
+  "slug": "interstellar_gargantua_hero",
+  "title": "Gargantua Hero — Interstellar Recreation (4×15s)",
+  "format_id": "science-pure-visual",
+  "target_seconds": 60,
+  "production_dir": "DAVID/productions/interstellar_gargantua_hero_v1",
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "prompt_mode": "barebones",
+    "prompt_template": "Studio/prompts/MASTER_PureVisual_v1.json",
+    "narration": false,
+    "use_identity_lock": false,
+    "use_zone_plates": false,
+    "composite_first_frame": "Stonebridge/Products/CANNON/VIDEOS/RESEARCH/INTERSTELLAR/BLACK_HOLES/origins/act1_scale_origin_LOCKED.jpg",
+    "branch_chain": {
+      "segment_s": 15,
+      "xfade_s": 0.35,
+      "seed_handoff": "last_frame",
+      "output_version": "v2",
+      "total_clips": 4,
+      "stitched_expected_s": 58.95,
+      "audio_post": "chandra_perseus_sonification"
+    },
+    "consistency_locks": {
+      "bh_mass_solar": "1e8",
+      "spin_parameter": "0.998",
+      "disk_tilt_deg": 60,
+      "color_lut": "jantzen_doppler_gr_redshift",
+      "color_dna_reference": "Stonebridge/Products/CANNON/VIDEOS/RESEARCH/INTERSTELLAR/BLACK_HOLES/origins/act5_perspective_color_dna_LOCKED.jpg",
+      "lensing_model": "kerr_metric_thin_disk"
+    }
+  },
+  "shots": [
+    {
+      "id": "01_reveal",
+      "new_origin": true,
+      "origin_composite": "Stonebridge/Products/CANNON/VIDEOS/RESEARCH/INTERSTELLAR/BLACK_HOLES/origins/act1_scale_origin_LOCKED.jpg",
+      "barebones": {
+        "scene": "Supermassive black hole emerging from PURE BLACK empty space with sparse faint pinpoint stars only, NO nebula NO colorful gas clouds NO galaxies in background — ONLY the black hole is luminous, dark sharp-edged circular shadow growing in frame, thin bright photon ring hugging the shadow edge, thin turbulent accretion disk at 60 degree tilt with gravitational lensing wrapping the far disk into a bright arc OVER the top and UNDER the bottom of the shadow — three distinct luminous bands around the dark void, disk surface shows turbulent knots filaments and shearing streams of superheated gas, gold amber white-hot color palette, left approaching side blazing bright white-gold from Doppler beaming, right receding side dimmer deep amber-orange, NOT symmetric, shadow edge razor sharp against the glow, clean isolated black hole against the void, cinematic photorealistic 8K astrophysics visualization, no people no text no watermark; AUDIO LOCK: absolute silence mute generate; CONTINUITY LOCK: match seed frame mass scale tilt color LUT exposure; TIMING LOCK: continuous motion full 15s cut-ready no dead end hold",
+        "camera": "ultra-wide slow push-in from deep space; Gargantua growing in frame; cinematic reveal"
+      }
+    },
+    {
+      "id": "02_hero_hold",
+      "barebones": {
+        "scene": "Supermassive black hole extreme close-up against PURE BLACK empty space with sparse faint pinpoint stars only, NO nebula NO colorful gas clouds NO galaxies in background — ONLY the black hole is luminous, perfectly dark sharp-edged circular shadow at center, thin bright photon ring hugging the shadow edge, thin turbulent accretion disk at 60 degree tilt with gravitational lensing wrapping the far disk into a bright arc OVER the top and UNDER the bottom of the shadow — three distinct luminous bands around the dark void, disk surface shows turbulent knots filaments and shearing streams of superheated gas, gold amber white-hot color palette, left approaching side blazing bright white-gold from Doppler beaming, right receding side dimmer deep amber-orange, NOT symmetric, shadow edge razor sharp against the glow, clean isolated black hole against the void, cinematic photorealistic 8K astrophysics visualization, no people no text no watermark; AUDIO LOCK: absolute silence mute generate; CONTINUITY LOCK: match seed frame mass scale tilt color LUT exposure; TIMING LOCK: continuous motion full 15s cut-ready no dead end hold",
+        "camera": "locked hero framing — near-static with imperceptible micro-drift; disk turbulence provides all motion; the beauty shot"
+      }
+    },
+    {
+      "id": "03_orbit",
+      "barebones": {
+        "scene": "Supermassive black hole against PURE BLACK empty space with sparse faint pinpoint stars only, NO nebula NO colorful gas clouds NO galaxies in background — ONLY the black hole is luminous, slow lateral orbit reveals the three-dimensional structure of gravitational lensing — lensed arcs above and below the shadow shift as viewpoint changes showing real spacetime curvature not a flat ring, perfectly dark sharp-edged circular shadow at center, thin bright photon ring, thin turbulent accretion disk at 60 degree tilt with turbulent knots filaments and shearing streams of superheated gas, gold amber white-hot color palette, left approaching side blazing bright white-gold from Doppler beaming, right receding side dimmer deep amber-orange, NOT symmetric, shadow edge razor sharp, clean isolated black hole against the void, cinematic photorealistic 8K astrophysics visualization, no people no text no watermark; AUDIO LOCK: absolute silence mute generate; CONTINUITY LOCK: match seed frame mass scale tilt color LUT exposure; TIMING LOCK: continuous motion full 15s cut-ready no dead end hold",
+        "camera": "slow 20 degree lateral orbit arc revealing 3D lensing structure; majestic pace"
+      }
+    },
+    {
+      "id": "04_approach",
+      "barebones": {
+        "scene": "Supermassive black hole filling frame against PURE BLACK empty space, NO nebula NO gas clouds NO galaxies — ONLY the black hole is luminous, pushing closer toward the shadow — accretion disk now fills peripheral vision — lensed arcs above and below grow taller and brighter — higher-order photon rings visible as nested bright bands just outside the shadow — each ring is light that orbited the black hole one additional time — shadow edge sharpens into photon sphere boundary — disk turbulence resolves finer knots and magnetic reconnection flares — tidal lensing stretches faint background stars vertically near shadow — approaching Doppler side blazing white-gold — gold amber white-hot color palette — NOT symmetric, shadow edge razor sharp, cinematic photorealistic 8K astrophysics visualization, no people no text no watermark; AUDIO LOCK: absolute silence mute generate; CONTINUITY LOCK: match seed frame mass scale tilt color LUT exposure; TIMING LOCK: continuous motion full 15s cut-ready no dead end hold",
+        "camera": "slow deliberate push-in toward shadow edge; increasing scale and detail; awe not speed"
+      }
+    }
+  ]
+}

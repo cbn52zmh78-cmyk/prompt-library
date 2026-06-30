@@ -1,0 +1,92 @@
+{
+  "slug": "matilda_baseline_30s",
+  "title": "MATILDA — Baseline Pipeline Test",
+  "model_video": "grok-imagine-video-1.5",
+  "resolution": "480p",
+  "aspect_ratio": "16:9",
+  "host_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\OTHER\\grok-image-d25e8689-243d-4c02-9567-e1ab92161ca7.jpg",
+  "avatar_url": "https://files-cdn.x.ai/CziEovduRY-oPQSWc2JmAw/file_ecfef49b-1c5f-49da-b99b-797c30d0c29d.jpg",
+  "set_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Pipeline\\references\\warehouse_industrial_reference.jpg",
+  "zone_plates": {
+    "@1": "https://files-cdn.x.ai/1kX9R-gcTQy6w3lh6EC9nA/file_6405eb49-cd1b-439f-bf9e-6f4aa4209d9a.jpg"
+  },
+  "voice_suffix": "mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only",
+  "seamless": true,
+  "shots": [
+    {
+      "shot_id": "01_entry",
+      "duration": 6,
+      "image_url": "https://files-cdn.x.ai/CziEovduRY-oPQSWc2JmAw/file_ecfef49b-1c5f-49da-b99b-797c30d0c29d.jpg",
+      "video_prompt": "Industrial window 4800K directional key locked — zero hue drift, deep shadow pockets, no magenta brick bounce, no cool fill contamination, no purple ambient. CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. Lip-synced, delivers: \"I'm MATILDA — your synthetic presenter. Generated, not filmed.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "I'm MATILDA — your synthetic presenter. Generated, not filmed.",
+      "speech_ipa": null,
+      "on_screen": "MATILDA · Synthetic Presenter · ELEANOR-DAVID Pipeline",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 0,
+        "end_s": 6
+      }
+    },
+    {
+      "shot_id": "02_pipeline",
+      "duration": 6,
+      "image_url": "https://files-cdn.x.ai/CziEovduRY-oPQSWc2JmAw/file_ecfef49b-1c5f-49da-b99b-797c30d0c29d.jpg",
+      "video_prompt": "Industrial window 4800K directional key locked — zero hue drift, deep shadow pockets, no magenta brick bounce, no cool fill contamination, no purple ambient. CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. Lip-synced, delivers: \"You're watching the ELEANOR-DAVID pipeline — automated scripts, voices, and video renders.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "You're watching the ELEANOR-DAVID pipeline — automated scripts, voices, and video renders.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 6,
+        "end_s": 12
+      }
+    },
+    {
+      "shot_id": "03_models",
+      "duration": 6,
+      "image_url": "https://files-cdn.x.ai/CziEovduRY-oPQSWc2JmAw/file_ecfef49b-1c5f-49da-b99b-797c30d0c29d.jpg",
+      "video_prompt": "Industrial window 4800K directional key locked — zero hue drift, deep shadow pockets, no magenta brick bounce, no cool fill contamination, no purple ambient. CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. Lip-synced, delivers: \"Language models draft every line. Grok Imagine generates every frame you see.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "Language models draft every line. Grok Imagine generates every frame you see.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 12,
+        "end_s": 18
+      }
+    },
+    {
+      "shot_id": "04_proof",
+      "duration": 6,
+      "image_url": "https://files-cdn.x.ai/CziEovduRY-oPQSWc2JmAw/file_ecfef49b-1c5f-49da-b99b-797c30d0c29d.jpg",
+      "video_prompt": "Industrial window 4800K directional key locked — zero hue drift, deep shadow pockets, no magenta brick bounce, no cool fill contamination, no purple ambient. CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. Lip-synced, delivers: \"No human filmed this. No editor cut it. Concept to final render — fully automated.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "No human filmed this. No editor cut it. Concept to final render — fully automated.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 18,
+        "end_s": 24
+      }
+    },
+    {
+      "shot_id": "05_close",
+      "duration": 6,
+      "image_url": "https://files-cdn.x.ai/CziEovduRY-oPQSWc2JmAw/file_ecfef49b-1c5f-49da-b99b-797c30d0c29d.jpg",
+      "video_prompt": "Industrial window 4800K directional key locked — zero hue drift, deep shadow pockets, no magenta brick bounce, no cool fill contamination, no purple ambient. CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. Lip-synced, delivers: \"This is automated filmmaking. We are just getting started.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "This is automated filmmaking. We are just getting started.",
+      "speech_ipa": null,
+      "on_screen": "ELEANOR-DAVID · Automated Filmmaking Pipeline",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 24,
+        "end_s": 30
+      }
+    }
+  ],
+  "provenance_shot": {
+    "type": "code_rendered_png",
+    "duration_s": 7,
+    "enabled": false
+  }
+}

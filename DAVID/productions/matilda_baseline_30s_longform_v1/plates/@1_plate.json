@@ -1,0 +1,15 @@
+{
+  "zone_id": "@1",
+  "plate_type": "environment_empty",
+  "no_people": true,
+  "path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\plates\\@1_plate.jpg",
+  "url": "https://files-cdn.x.ai/1kX9R-gcTQy6w3lh6EC9nA/file_6405eb49-cd1b-439f-bf9e-6f4aa4209d9a.jpg",
+  "file_id": "file_6405eb49-cd1b-439f-bf9e-6f4aa4209d9a",
+  "source_file": "C:\\Users\\NCG\\Videos\\Grok Projects\\STUDIO\\Pipeline\\references\\warehouse_industrial_reference.jpg",
+  "source_url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-f545ad0d-8250-4736-ad6e-527390003939.jpeg",
+  "set_id": "@Set-Warehouse-Industrial-001",
+  "avatar_reference": "https://files-cdn.x.ai/kUOKhvOyRrmVQaujengMyw/file_29a1086e-b990-4494-b7b2-375f785a8c9e.jpg",
+  "note": "@1 empty set on disk only — never composited with @2; video seeds from avatar_url",
+  "status": "REGENERATED",
+  "reused": false
+}

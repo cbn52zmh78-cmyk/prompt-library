@@ -1,0 +1,20 @@
+{
+  "probe": "duration_ceiling_native_generate",
+  "at": "2026-06-29T07:56:52.747100+00:00",
+  "model": "grok-imagine-video-1.5",
+  "requested_duration_s": 15,
+  "actual_duration_s": 15.04,
+  "delta_s": 0.04,
+  "status": "PASS",
+  "composite_seed": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\composite_first_frame_probe.jpg",
+  "api_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-0bc9d287-19c2-96dc-91ec-79e3012c6962.mp4",
+  "output": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\ceiling_probe\\kitchen_composite_baked@1_15s_ceiling_probe.mp4",
+  "generate_kwargs": {
+    "prompt": "Setting: @6820fa94-8ded-4179-862a-091e8cf21c49 (see attached render; modern kitchen interior \u2014 empty apartment, no other people, visual only) ; MATILDA addresses the audience directly through the camera lens \u2014 maintains consistent unbroken eye contact with camera entire scene, never looks away, documentary host speaking to viewer; opens with Bavarian German greeting, introduces herself by full name and Stonebridge title \u2014 dialogue fits 10 sec. Camera does slow creep zoom-in from medium shot to medium close-up over 10 seconds \u2014 controlled Fincher dolly, deliberate and motivated, no handheld ; Lip-synced, delivers in native Bavarian German: \"Gr\u00fc\u00df Gott! Ich bin Matilda Kirschner \u2014 Vice President of Operations der Stonebridge Consultants Group.\" ; AUDIO LOCK: absolute silence except MATILDA lip-sync voice \u2014 zero background noise, zero ambient sound, zero room tone, zero chatter, zero crowd, zero offscreen voices, zero street noise, zero music, mute set ; native M\u00fcnchner Bayerisch \u2014 Munich-born first-language German, warm Bavarian vowels, natural Bayerisch rhythm; must NOT sound like American expat or classroom German ; In the exact visual style of David Fincher: meticulously composed cinematic realism with cold, desaturated teal, gray, and amber tones, high-contrast chiaroscuro lighting that carves deep dramatic shadows across sharp architectural lines and rich textures, clinical precision in every detail, subtle film grain, anamorphic depth, moody atmospheric elegance, and a hauntingly controlled, almost predatory beauty in the finished shot",
+    "model": "grok-imagine-video-1.5",
+    "image_file_id": "file_6820fa94-8ded-4179-862a-091e8cf21c49",
+    "duration": 15,
+    "resolution": "480p",
+    "aspect_ratio": "16:9"
+  }
+}

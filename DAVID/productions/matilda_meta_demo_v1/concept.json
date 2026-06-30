@@ -1,0 +1,319 @@
+{
+  "slug": "matilda_meta_demo_v1",
+  "title": "Ich bin das Ergebnis — MATILDA erklärt die Pipeline / I Am the Result — MATILDA Explains the Pipeline",
+  "format_id": "documentary-host",
+  "actor_id": "Matilda-001",
+  "identity_lock": "matilda_identity_lock.json",
+  "language_structure": "bilingual_block",
+  "language_note": "German cold open (01-03) → English pivot (04) → English body (05-16) → German reprise + English close (17-25). German beats carry on_screen English subtitle chips.",
+  "production_model": {
+    "note": "One environment. One walk. MATILDA enters the loft and moves through it — @1 is the world, @3 and @4 are zones deeper in the same world. She does not change sets. The walk IS the edit structure.",
+    "@1": "source image — @Set-Warehouse-Industrial-001 establishing plate (entrance zone, wide, loft opening). MATILDA enters from frame-left walking toward the window bank.",
+    "@2": "MATILDA casting reference — navy blazer turntable on white (d25e8689). Frame 1 anchor for all i2v shots.",
+    "@3": "ZONE 2 — same loft, mid-floor / window bank area. Camera position shifted deeper into the space, window grid now behind MATILDA as she faces back toward the entrance. TO BE GENERATED: same prompt as @1 with spatial offset 'camera now 12m deeper into the loft, window grid behind, looking back toward the entrance'.",
+    "@4": "ZONE 3 — same loft, far end near the brick wall. Camera at the deepest penetration of the space, MATILDA against or near the far brick wall, window grid at extreme distance camera-right. TO BE GENERATED: same prompt with 'camera at the far brick wall end, looking back the full length of the loft, window light now at extreme distance'.",
+    "walk_arc": "ENTER → (zone A, @1) → WALK TOWARD WINDOWS → (zone B, @3) → CONTINUE DEEPER → (zone C, @4, deepest point) → TURN → WALK BACK → (zone B, @3, return) → ARRIVE AT ENTRANCE → (zone A, @1, return) → CLOSE",
+    "camera": "Follows her walk — tracking at shoulder height, maintaining medium or medium-close. No tripod static. The camera moves because she moves."
+  },
+  "set": "@Set-Warehouse-Industrial-001",
+  "set_reference": "STUDIO/Pipeline/references/warehouse_industrial_reference.jpg",
+  "style": "@Style-Documentary-Prestige-001",
+  "target_seconds": 300,
+  "target_beats": 25,
+  "beat_duration_s": 12,
+  "tags": [
+    "matilda",
+    "meta-demo",
+    "pipeline",
+    "eleanor-david",
+    "bilingual",
+    "german",
+    "synthetic-actor",
+    "autonomous-filmmaking",
+    "grok-imagine",
+    "loft-walk"
+  ],
+  "gate_0": {
+    "human_signoff": true,
+    "rating": "PG",
+    "channels": [
+      "social",
+      "streaming"
+    ],
+    "publish_platform": "youtube",
+    "ai_disclosure": "provenance card + YouTube metadata + on-screen 'Synthetic performer — ELEANOR-DAVID pipeline' lower third",
+    "music_bed_id": "BED-DOC-001"
+  },
+  "brand": {
+    "title": "MATILDA · The Pipeline",
+    "subtitle": "Automated filmmaking, explained by what it made.",
+    "cta": "See DAVID at The Archive — and the system that built us both."
+  },
+  "zone_plates_required": [
+    {
+      "id": "@3",
+      "zone": "mid-loft / window bank",
+      "prompt_delta": "Same industrial loft — camera now 12m deeper into the space. Large window grid NOW BEHIND frame (window light now back-key), looking back toward the loft entrance in the distance. Same concrete floor, same metal beams overhead, same brick wall camera-right at this depth. 4800K window back-light creates rim on subject. No people.",
+      "status": "TO GENERATE before render"
+    },
+    {
+      "id": "@4",
+      "zone": "far end / brick wall",
+      "prompt_delta": "Same industrial loft — camera at the far brick wall, looking back the full length of the loft. Loft entrance visible at far distance, window grid now extreme camera-right. Close brick texture camera-left, long concrete floor receding toward entrance. Metal beam runs overhead. Deep space — the full length of the loft now visible as depth. 4800K window light far right, ambient industrial. No people.",
+      "status": "TO GENERATE before render"
+    }
+  ],
+  "beats": [
+    {
+      "id": "01_cold_open_de",
+      "zone": "A",
+      "zone_plate": "@1",
+      "language": "de",
+      "speech_text": "Ich bin MATILDA. Ich existiere nicht. Nicht wirklich.",
+      "on_screen": "Ich bin MATILDA. Ich existiere nicht. / I am MATILDA. I do not exist.",
+      "action": "MATILDA enters the loft from frame-left — already in motion as the shot begins, walking at a measured pace toward the window bank in the distance; she does not pause for the camera, she walks as she speaks; eye-line forward into the space, not to lens. (@1, Warehouse loft — wide establishing, entrance zone, afternoon window light ahead of her in the distance.) Tracking medium, camera follows at shoulder height from camera-left position, maintaining her profile as she walks."
+    },
+    {
+      "id": "02_automated_de",
+      "zone": "A",
+      "zone_plate": "@1",
+      "language": "de",
+      "speech_text": "Was Sie sehen, wurde vollständig automatisiert erstellt. Kein Mensch hat mich gefilmt.",
+      "on_screen": "Vollständig automatisiert. Kein Mensch hat mich gefilmt. / Fully automated. No human filmed me.",
+      "action": "MATILDA continues the walk — right hand lifts briefly mid-stride and opens toward the camera (which is behind her now as she walks away), the gesture including the camera in the claim; then hand drops back to stride. (@1, Warehouse loft — she is now 4m into the space, walking toward the window zone; window light strengthening ahead.) Tracking medium continues; camera arcs slowly from profile to three-quarter-back as she walks away."
+    },
+    {
+      "id": "03_machine_de",
+      "zone": "A→B transition",
+      "zone_plate": "@1",
+      "language": "de",
+      "speech_text": "Ich wurde erschaffen. Von einer Maschine, die von einer anderen Maschine angewiesen wird.",
+      "on_screen": "Von einer Maschine, die von einer anderen Maschine angewiesen wird. / By a machine, directed by another machine.",
+      "action": "MATILDA arrives at the window bank — pace slows, she stops at the window zone and TURNS to face camera for the first time; the turn is deliberate, unhurried; she faces back toward the loft entrance and holds, eye-line now to lens. (@1→@3 transition — arrival at the window zone; window grid now behind her, back-light from the 4800K afternoon through glass.) Tracking shot settles as she turns; camera completes the arc to direct front."
+    },
+    {
+      "id": "04_pivot_en",
+      "zone": "B",
+      "zone_plate": "@3",
+      "language": "en",
+      "speech_text": "Let me explain exactly how.",
+      "on_screen": "",
+      "action": "MATILDA stands at the window zone, fully turned to face camera — window light rims her back and shoulders, face lit by soft ambient reflected from the loft floor and distant opposite wall; weight settled, both hands at sides; the English register is a choice, not a slip. (@3, Warehouse loft window zone — window grid behind her, loft depth stretching back toward the entrance in the distance.) Slow motivated push-in begins from medium to medium-close over this beat."
+    },
+    {
+      "id": "05_identity_en",
+      "zone": "B",
+      "zone_plate": "@3",
+      "language": "en",
+      "speech_text": "My name is MATILDA. I'm a synthetic German performer — generated by Grok Imagine Video 1.5, rendered shot by shot, assembled without any human editor.",
+      "on_screen": "MATILDA · Synthetic German Presenter · Generated by Grok Imagine Video 1.5",
+      "action": "MATILDA holds at medium close-up, window light behind her — the rim light is the only warmth; face in natural ambient; right hand opens briefly palm-up at 'synthetic' and settles. (@3, Warehouse loft — window zone, window grid creating a strong geometric back-reference.) Static medium close-up, camera holds from push-in; the industrial loft at her back confirms the claim."
+    },
+    {
+      "id": "06_eleanor_en",
+      "zone": "B",
+      "zone_plate": "@3",
+      "language": "en",
+      "speech_text": "The system that produced this video is called the ELEANOR-DAVID pipeline. ELEANOR is a seventy-billion-parameter language model. She is the director.",
+      "on_screen": "ELEANOR — 70B LLM · The Director",
+      "action": "MATILDA gestures upward-left at 'ELEANOR' — toward an implied presence above and behind the frame; then hand drops as the specification runs; the industrial beams overhead make the upward gesture land in a real space. (@3, Warehouse loft — the beam grid overhead provides scale reference for 'seventy billion'.) Medium close-up, static."
+    },
+    {
+      "id": "07_talent_en",
+      "zone": "B",
+      "zone_plate": "@3",
+      "language": "en",
+      "speech_text": "I am the talent. I don't have a union card. I don't have a trailer. I exist only when ELEANOR calls for me.",
+      "on_screen": "MATILDA — The Talent",
+      "action": "MATILDA holds the window zone — slight dry weight to each absence ('union card', 'trailer'); both hands at sides, no gesture; the loft around her has no furniture, no props — the emptiness of the set confirms the claim about no trailer. (@3, Warehouse loft — the empty industrial floor stretching behind her toward the entrance.) Locked medium close-up, static; pull-back begins very slowly toward medium."
+    },
+    {
+      "id": "08_concept_en",
+      "zone": "B→C",
+      "zone_plate": "@3",
+      "language": "en",
+      "speech_text": "When a concept enters the pipeline, ELEANOR reads it, assigns a format — documentary host, technical explainer, narrative short — and builds a structured script, shot by shot.",
+      "on_screen": "concept.json → format_id → script.json",
+      "action": "MATILDA begins walking again — she turns from the window zone and starts moving deeper into the loft; she walks away from camera as she enumerates the formats; right hand counts off index-middle-ring whilst she walks; eye-line ahead into the deep loft, not back to camera. (@3→@4 transition — she leaves the window zone, walking toward the far brick wall.) Camera tracks her from behind at shoulder height; the loft depth opens ahead of her."
+    },
+    {
+      "id": "09_directive_en",
+      "zone": "C",
+      "zone_plate": "@4",
+      "language": "en",
+      "speech_text": "Each shot carries a precise action directive. Not 'woman speaks to camera' — something like: MATILDA at the window zone, weight forward, declarative; right hand traces the air as the technical point lands.",
+      "on_screen": "action_template → action_prompt → video_prompt",
+      "action": "MATILDA is mid-loft now, still walking — she says the quoted directive WHILE performing it exactly; right hand traces a slow deliberate line in the air as she walks, matching the described motion; then on 'Locked medium shot' she stops, turns to face camera, and holds. (@4, Warehouse loft — she has just entered the deep zone, brick wall now close camera-left, loft entrance visible far behind her.) Camera circles slowly from tracking-rear to direct front as she turns; settles on medium."
+    },
+    {
+      "id": "10_director_kit_en",
+      "zone": "C",
+      "zone_plate": "@4",
+      "language": "en",
+      "speech_text": "That directive comes from a template called the ELEANOR Director Kit — encoding the blocking rules, the camera motivation, the concurrent action language, so every shot the system generates is cinematically coherent.",
+      "on_screen": "ELEANOR_Director_Kit.md — blocking · camera · concurrent action",
+      "action": "MATILDA faces camera in the deep loft zone — left hand comes up briefly to count the three items, then drops; brick wall behind her to the left adds texture to the frame; the loft entrance is visible deep in the distance over her right shoulder. (@4, Warehouse loft far zone — brick wall close camera-left, full depth of loft behind her.) Static medium, locked; the loft's full depth is the scale of the system."
+    },
+    {
+      "id": "11_gate_zero_en",
+      "zone": "C",
+      "zone_plate": "@4",
+      "language": "en",
+      "speech_text": "Before a single frame renders, Gate Zero runs. A human reviews the script, signs off on rating, confirms publish platform and disclosure metadata. That gate exists because autonomous systems make mistakes.",
+      "on_screen": "Gate 0 — human_signoff: true · rating: PG · ai_disclosure",
+      "action": "MATILDA pauses — genuine weight before 'Gate Zero'; both hands settle at sides, weight grounded; on 'make mistakes' chin drops fractionally, the acknowledgment is real. (@4, Warehouse loft — deep zone, the far brick wall closest it has been; the gate is the only human thing in this space.) Locked medium, static; the industrial stillness is the gate."
+    },
+    {
+      "id": "12_render_en",
+      "zone": "C",
+      "zone_plate": "@4",
+      "language": "en",
+      "speech_text": "Once Gate Zero is green, Grok Imagine Video 1.5 renders each clip — thirty seconds maximum per generation. ELEANOR chains them with crossfade dissolves. The seam disappears.",
+      "on_screen": "Grok Imagine Video 1.5 · 30s max per clip · xfade 1.8s dissolve",
+      "action": "MATILDA traces a slow horizontal line in the air from left to right — each segment of the loft she has walked through is a clip; both hands come together briefly at 'crossfade dissolves' then separate; on 'seam disappears' they settle. (@4, Warehouse loft — the loft length behind her is the assembled film.) Slow motivated push-in to medium close-up over this beat."
+    },
+    {
+      "id": "13_retry_en",
+      "zone": "C",
+      "zone_plate": "@4",
+      "language": "en",
+      "speech_text": "If a shot fails quality checks — wrong colour cast, identity drift, frame corruption — the system retries automatically. No human touches the render. The loop closes itself.",
+      "on_screen": "auto-retry · failure_taxonomy.json · clip_cast_gate.py",
+      "action": "MATILDA holds medium close-up — right hand makes a brief circular motion at 'loop closes itself'; then drops; the factory windows far behind her in the distance are the right background for 'no human touches the render'. (@4, Warehouse loft far zone — window grid at extreme distance, the full automated length behind her.) Static medium close-up."
+    },
+    {
+      "id": "14_output_en",
+      "zone": "C",
+      "zone_plate": "@4",
+      "language": "en",
+      "speech_text": "The output is a single finished file. Not edited in DaVinci. Not assembled in Premiere. It comes out of the pipeline ready to upload.",
+      "on_screen": "output/<slug>_seamless_v1.mp4 → upload_kit/",
+      "action": "MATILDA delivers flat and factual — both hands open palm-up at 'single finished file' then settle; the claim is simple; the loft is where it was made. (@4, Warehouse loft — the most intimate point of the walk, the place where the claim lands heaviest.) Locked medium close-up, static."
+    },
+    {
+      "id": "15_proof_en",
+      "zone": "C",
+      "zone_plate": "@4",
+      "language": "en",
+      "speech_text": "Every shot you are watching right now went through that loop. The same pipeline. The same QA gates. The same seamless assembly.",
+      "on_screen": "This video — rendered by ELEANOR-DAVID · zero manual edits",
+      "action": "MATILDA gestures to include the whole frame — right hand traces a slow rectangle outlining the shot itself; the gesture is precise, not theatrical; eye-line holds camera throughout. (@4, Warehouse loft — this shot, in this space, is the evidence.) Slow pull-back from medium close-up to medium; the loft behind her widens into frame as the claim expands."
+    },
+    {
+      "id": "16_real_en",
+      "zone": "C",
+      "zone_plate": "@4",
+      "language": "en",
+      "speech_text": "I am not real. But what made me is entirely real — and entirely reproducible.",
+      "on_screen": "",
+      "action": "MATILDA stands fully still in medium frame — no gesture, no tilt, no softening; the loft behind her in full depth; the statement delivered with complete equanimity. (@4, Warehouse loft — the deepest point of the walk; the most honest statement in the most industrial space.) Static medium, locked; full stillness. Then she turns and begins walking back.",
+      "note": "She turns and begins the return walk at the end of this beat — the walk back is the German reprise."
+    },
+    {
+      "id": "17_eleanor_de",
+      "zone": "C→B",
+      "zone_plate": "@4",
+      "language": "de",
+      "speech_text": "ELEANOR hat mich erschaffen. Siebzig Milliarden Parameter.",
+      "on_screen": "ELEANOR created me. Seventy billion parameters.",
+      "action": "MATILDA turns from the far wall and walks back toward the window zone — she speaks over her shoulder initially, then the camera re-orients to track her face in profile; right hand gestures upward at 'ELEANOR' mid-stride; the return walk begins. (@4→@3, Warehouse loft — walking back from the far zone, window light now ahead of her.) Tracking medium, camera repositions to follow the return walk."
+    },
+    {
+      "id": "18_process_de",
+      "zone": "B",
+      "zone_plate": "@3",
+      "language": "de",
+      "speech_text": "Sie liest das Konzept. Sie schreibt das Drehbuch. Sie gibt die Anweisung.",
+      "on_screen": "She reads the concept. She writes the script. She gives the direction.",
+      "action": "MATILDA walks through the mid-loft zone returning toward the entrance — three fingers counting in stride; the window bank now to her right as she passes through; measured pace, deliberate count. (@3, Warehouse loft window zone — passing through on return, window grid now camera-right of her direction of travel.) Tracking medium continues."
+    },
+    {
+      "id": "19_render_de",
+      "zone": "B",
+      "zone_plate": "@3",
+      "language": "de",
+      "speech_text": "Dann rendert Grok Imagine. Nahtlos. Automatisch. Ohne Postproduktion.",
+      "on_screen": "Then Grok Imagine renders. Seamlessly. Automatically. Without post-production.",
+      "action": "MATILDA slows — she is at the window zone again; the three adverbs each land with a breath of space between them; hands at sides; she is not quite stopped, a very slow drift continuing. (@3, Warehouse loft — the window zone on the return pass; 'Nahtlos' said in the same space where the dissolves happen.) Very slow tracking, nearly static; the slowness IS 'Automatisch'."
+    },
+    {
+      "id": "20_result_de",
+      "zone": "B",
+      "zone_plate": "@3",
+      "language": "de",
+      "speech_text": "Ich bin das Ergebnis.",
+      "on_screen": "I am the result.",
+      "action": "MATILDA stops completely in the window zone — weight fully committed, face to camera, no gesture; the push-in from prior beat holds and continues very slowly. (@3, Warehouse loft — window light rimming her back.) Slow push-in, nearly static.",
+      "note": "Signature beat."
+    },
+    {
+      "id": "21_factory_de",
+      "zone": "B",
+      "zone_plate": "@3",
+      "language": "de",
+      "speech_text": "Kein Schauspieler. Kein Kamerateam. Keine Nachbearbeitung.",
+      "on_screen": "No actor. No camera crew. No post-production.",
+      "action": "MATILDA holds medium close-up; three negatives, even cadence; on the third she turns and begins walking toward the entrance. (@3, Warehouse loft.) Static through the three beats; camera begins tracking as she turns."
+    },
+    {
+      "id": "22_factory_en",
+      "zone": "A",
+      "zone_plate": "@1",
+      "language": "en",
+      "speech_text": "The factory produces content the same way a factory makes anything — reliably, at scale, without a human in the loop.",
+      "on_screen": "ELEANOR-DAVID Pipeline · automated filmmaking at scale",
+      "action": "MATILDA walks the final stretch to the entrance — three-quarter profile; 'at scale' lands as she crosses a beam of floor-light. (@1, Warehouse loft — entrance zone, full depth behind her.) Tracking medium."
+    },
+    {
+      "id": "23_three_parts_en",
+      "zone": "A",
+      "zone_plate": "@1",
+      "language": "en",
+      "speech_text": "MATILDA, DAVID, ELEANOR. Three parts of one system. Welcome to automated filmmaking.",
+      "on_screen": "MATILDA · DAVID · ELEANOR — one pipeline",
+      "action": "MATILDA turns to face camera near the entrance — gestures to herself at 'MATILDA', hand left at 'DAVID', hand up at 'ELEANOR'; both settle. (@1, Warehouse loft — entrance zone, full loft depth behind her.) Camera settles to static medium as she turns."
+    },
+    {
+      "id": "24_close_en",
+      "zone": "A",
+      "zone_plate": "@1",
+      "language": "en",
+      "speech_text": "This was MATILDA.",
+      "on_screen": "MATILDA · Synthetic German Presenter · Built by ELEANOR-DAVID · Rendered by Grok Imagine Video 1.5",
+      "action": "MATILDA at the entrance — right hand lifts mid-sentence and stills mid-motion at the cut, never completing the gesture. (@1, Warehouse loft — where the walk started.) Static medium; the unfinished gesture carries forward.",
+      "note": "Cut on held gesture. Do not complete."
+    },
+    {
+      "id": "25_provenance",
+      "zone": "card",
+      "zone_plate": null,
+      "language": "card",
+      "speech_text": "",
+      "on_screen": "MATILDA · The Pipeline · Synthetic performer · Built by ELEANOR-DAVID · Rendered by Grok Imagine Video 1.5",
+      "action": "Provenance card — 6s closing slate.",
+      "note": "Static card via package_episode.py."
+    }
+  ],
+  "provenance_card": {
+    "enabled": true,
+    "duration_s": 6,
+    "card_type": "closing",
+    "title": "MATILDA · The Pipeline",
+    "subtitle": "Synthetic performer — no real-person likeness · Built by ELEANOR-DAVID · Rendered by Grok Imagine Video 1.5",
+    "footer": "See DAVID at The Archive — and the system that built us both."
+  },
+  "render_spec": {
+    "resolution_draft": "480p",
+    "resolution_final": "720p",
+    "xfade_s": 1.8,
+    "shot_floor_s": 12,
+    "model": "grok-imagine-video-1.5"
+  },
+  "pre_render_checklist": [
+    "GENERATE @3 zone plate — same loft, camera 12m deeper, window grid behind, looking back toward entrance. No people.",
+    "GENERATE @4 zone plate — same loft, camera at far brick wall, full loft depth visible looking back. No people.",
+    "GENERATE @Matilda-001 i2v anchor frame from d25e8689 navy blazer reference.",
+    "Run beat 01 solo QA test clip — confirm anti-magenta lock on fair skin in industrial lighting.",
+    "Gate Zero human signoff required before any render run."
+  ]
+}

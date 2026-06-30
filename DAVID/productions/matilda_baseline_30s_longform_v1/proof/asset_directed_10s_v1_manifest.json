@@ -1,0 +1,26 @@
+{
+  "proof": "asset_directed_10s_v1",
+  "prompt_mode": "asset_directed",
+  "at": "2026-06-29T02:43:24.042654+00:00",
+  "session_ids": {
+    "@1": "file_3cddc409-f0eb-4a8f-927c-737df88eb722",
+    "@2": "file_c505f3fb-85f3-45b5-a20e-b7a79bf245e5"
+  },
+  "image_url": "https://files-cdn.x.ai/C1AQzVYSQ66_M2rB-3g1Yw/file_3cddc409-f0eb-4a8f-927c-737df88eb722.jpg",
+  "image_url_role": "@1 empty warehouse — talent NOT in seed pixels",
+  "prompt": "@file_c505f3fb-85f3-45b5-a20e-b7a79bf245e5 CAMERA: locked static medium, waist-up, no camera move. ACTION: enters from offscreen stage left, three steps to center by 2s, plants feet facing camera. Open-palm gesture on \"Generated, not filmed\". SPEAKS: \"I'm MATILDA — your synthetic presenter. Generated, not filmed.\" @file_3cddc409-f0eb-4a8f-927c-737df88eb722",
+  "rules": [
+    "@2 talent UUID + behavior + @1 set UUID — no appearance prose",
+    "@1 and @2 separate — never combined in seed image"
+  ],
+  "duration_s": 10,
+  "model": "grok-imagine-video-1.5",
+  "resolution": "480p",
+  "shot_id": "01_entry",
+  "video_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-64d1f5a3-686d-922c-97a3-44cc6135a7cf.mp4",
+  "output_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\asset_directed_10s_v1.mp4",
+  "frame_0p5s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\asset_directed_10s_v1_0p5s.jpg",
+  "frame_2s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\asset_directed_10s_v1_2s.jpg",
+  "frame_4s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\asset_directed_10s_v1_4s.jpg",
+  "frame_8s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\asset_directed_10s_v1_8s.jpg"
+}

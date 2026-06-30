@@ -1,0 +1,41 @@
+{
+  "slug": "matilda_kitchen_stonebridge_30s",
+  "qa_at": "2026-06-29T06:44:05.996463+00:00",
+  "pass": false,
+  "passes": [
+    "shot count OK (3 >= 1)",
+    "all shots carry synthetic talent guard (incl. auto-patched)",
+    "target duration ~30s",
+    "STUDIO v1.1 seamless mode ACTIVE",
+    "continuity mode: frame_chain; card join xfade=0.35s",
+    "frame-chain i2v fallback (extend unsupported on 1.5)",
+    "host performance: host_performance_extend.mp4 (26.8s)",
+    "xfade chain + synced audio crossfade at joins",
+    "re-concat join preserved: xfade_chain (0.35s)",
+    "audio PRESENT (david_matilda_kitchen_stonebridge_30s_seamless_v1.mp4 mean -22.7 dB)",
+    "#194 archive color: neutral WB + natural skin + localized 3200K lamp accent",
+    "loudnorm two-pass target I=-16.0 LUFS per shot",
+    "audio pinned to exact shot duration (no stretch/offset)",
+    "flat loudness across shots (spread 0.24 LU)",
+    "zero magenta (max score 0.000 <= 0.42)",
+    "lamp warm ratio stable across segments (Δ=0.000)"
+  ],
+  "issues": [
+    "shots missing @David-001 continuity in video_prompt",
+    "final output bypassed grade/xfade path (#244 T4): ['rgb_skew 0.1509 > 0.12', 'blue_starvation_fraction 0.621 > 0.5']",
+    "A/V sync drift: ['02_role:2.000s', '03_close:1.900s']",
+    "yellow-green cast detected: [('chain_01_intro_processed', 0.44339622641509435), ('chain_02_role_processed', 0.2899201596806387), ('chain_03_close_processed', 0.2968421052631579)]",
+    "blue-starved generation cast (#194 T4): [('chain_02_role_processed', ['rgb_skew 0.1487 > 0.12', 'blue_starvation_fraction 0.619 > 0.5']), ('chain_03_close_processed', ['rgb_skew 0.1637 > 0.12', 'blue_starvation_fraction 0.665 > 0.5'])]"
+  ],
+  "shot_count": 3,
+  "segment_count": 1,
+  "seamless": true,
+  "extend_api": {
+    "scriptable": true,
+    "enabled_on_model": false,
+    "model": "grok-imagine-video-1.5",
+    "editor_extend": "Grok Imagine UI Continue/Extend may work before API parity on 1.5",
+    "finding": "client.video.extend() exists in xAI SDK but grok-imagine-video-1.5 returns 'Video extension is not supported for this model'. Pipeline uses frame-chain i2v fallback.",
+    "continuity_mode": "frame_chain"
+  }
+}

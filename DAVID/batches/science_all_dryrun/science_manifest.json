@@ -96,11 +96,11 @@
           {
             "slug": "science_dna_replication_v1",
             "concept_path": "STUDIO/Pipeline/Concepts/molecular_mini_slate/science_dna_replication_v1.concept.json",
-            "plate_slug": "dna-double-helix",
+            "plate_slug": "dna-double-eleanor",
             "plate_id": "@Sci-DNA-001",
             "subject_domain": "Molecular Biology — DNA Replication",
             "domain": "molecular",
-            "visualization_ref": "Science/reference_plates/molecular/images/dna-double-helix_1BNA_rcsb_assembly.jpeg",
+            "visualization_ref": "Science/reference_plates/molecular/images/dna-double-eleanor_1BNA_rcsb_assembly.jpeg",
             "harvest_ok": true,
             "ref_bytes": 37106,
             "ref_ok": true,

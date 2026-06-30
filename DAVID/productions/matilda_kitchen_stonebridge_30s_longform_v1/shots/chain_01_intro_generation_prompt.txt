@@ -1,0 +1,21 @@
+{
+  "shot_id": "01_intro",
+  "prompt": "Setting: @3d6a597f-2bd0-44ff-aa18-eb9d3826e5b1 (see attached render; modern kitchen interior \u2014 empty apartment, no other people, visual only) ; MATILDA addresses the audience directly through the camera lens \u2014 maintains consistent unbroken eye contact with camera entire scene, never looks away; introduces herself by full name and Stonebridge title. Camera does slow creep zoom-in from wide medium to medium close-up over 10 seconds \u2014 controlled Fincher dolly, deliberate and motivated, no handheld ; Lip-synced, delivers in dialogue: \"Guten Tag. I'm Matilda Kirschner, Vice President of Operations at Stonebridge Consultants Group \u2014 an American-based consulting firm. It's a pleasure to meet you.\" ; AUDIO LOCK: absolute silence except MATILDA lip-sync voice \u2014 zero background noise, zero ambient sound, zero room tone, zero chatter, zero crowd, zero offscreen voices, zero street noise, zero music, mute set ; opens with native Bavarian German Guten Tag then clear English; Munich-born presenter, subtle Bavarian lilt on English, NOT American expat accent ; In the exact visual style of David Fincher: meticulously composed cinematic realism with cold, desaturated teal, gray, and amber tones, high-contrast chiaroscuro lighting that carves deep dramatic shadows across sharp architectural lines and rich textures, clinical precision in every detail, subtle film grain, anamorphic depth, moody atmospheric elegance, and a hauntingly controlled, almost predatory beauty in the finished shot",
+  "prompt_mode": "barebones",
+  "barebones_binding": {
+    "seed_mode": "baked_composite@1",
+    "image_field": "image_file_id",
+    "image_value": "file_3d6a597f-2bd0-44ff-aa18-eb9d3826e5b1",
+    "composite_path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\composite_first_frame_probe.jpg"
+  },
+  "generate_kwargs": {
+    "model": "grok-imagine-video-1.5",
+    "image_file_id": "file_3d6a597f-2bd0-44ff-aa18-eb9d3826e5b1",
+    "duration": 12,
+    "resolution": "480p",
+    "aspect_ratio": "16:9"
+  },
+  "neutral_generation": false
+}
+
+video_url: https://vidgen.x.ai/xai-vidgen-bucket/xai-video-88049fab-38cc-9384-a909-52f8ade7e9cf.mp4

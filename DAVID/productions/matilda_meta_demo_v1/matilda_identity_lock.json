@@ -1,0 +1,278 @@
+{
+  "issue": 2,
+  "locked_at": "2026-06-27",
+  "status": "DRAFT — awaiting i2v anchor generation. Issue 2: wardrobe library expanded + composite architecture integrated (head_variants × body_variants + 25-variant pro turnaround system). 7 of 25 business turnarounds generated (2026-06-27).",
+  "character": {
+    "name": "MATILDA",
+    "actor_id": "Matilda-001",
+    "role": "synthetic German presenter / meta-demo host / Stonebridge spokesperson",
+    "language_primary": "German (de-DE)",
+    "language_secondary": "English (en-US)",
+    "core_question": "Ich wurde automatisiert erschaffen — und das ist genau der Punkt.",
+    "age_read": "28-35",
+    "wardrobe_meta_demo": "navy single-button blazer, white open-collar shirt, grey tailored trousers, black pointed-toe heels, gold watch left wrist",
+    "wardrobe_business_alt": "grey herringbone blazer + black turtleneck / black power suit — see wardrobe_library",
+    "wardrobe_gala": "multiple variants — see wardrobe_library",
+    "wardrobe_casual": "brown suede moto jacket / ivory cable-knit / Bavarian casual — see wardrobe_library",
+    "signature_accessory": "NOT LOCKED UNIVERSALLY — accessories are per-episode wardrobe choices. Gold starburst earrings appear in navy blazer and several renders as a natural pairing; silver geometric earrings appear in d6d8124d and abd3d0db. Director chooses per production.",
+    "set_primary": "@Set-Seamless-Neutral-001",
+    "set_note": "NOT the Archive — that is DAVID's domain. MATILDA is clean modern neutral.",
+    "style": "@Style-Documentary-Prestige-001"
+  },
+  "physical_identity": {
+    "hair": "warm ash-to-golden blonde, textured updo bun with face-framing wisps — natural, not polished",
+    "eyes": "clear, steady, cool — direct eye-line to camera",
+    "skin": "fair, warm undertone, European, natural texture",
+    "bone_structure": "refined, high cheekbones, precise features, slight Nordic quality",
+    "build": "slender, upright, precise carriage — authority in stillness",
+    "height_read": "tall"
+  },
+  "references": {
+    "meta_demo_presenter": {
+      "file": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-d25e8689-243d-4c02-9567-e1ab92161ca7.jpg",
+      "description": "Three-view turntable — navy blazer + white shirt + grey trousers + black heels + gold watch. Hero wardrobe for meta-demo episode.",
+      "reuse": "host reference @2 — image_to_video frame 1 for all Matilda meta-demo host shots"
+    },
+    "body_continuity_plate": {
+      "file": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-d26ddcba-4bec-4a95-9fb6-dfcfa8e8164e.jpg",
+      "description": "Body reference — front/side/back. Used to establish physique continuity for Grok Imagine. Not a production costume.",
+      "reuse": "body continuity reference only — do NOT use as @2 in production shots"
+    },
+    "formal_navy_gown": {
+      "file": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-e1256ba7-f8f9-44da-8c3d-333c9081142f.jpg",
+      "description": "Navy sculptural-shoulder gown + gold starburst earrings. Formal/prestige wardrobe variant.",
+      "reuse": "alternate wardrobe — gala or prestige episodes"
+    },
+    "formal_black_gown": {
+      "file": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-13ee0574-f62a-4d99-93a8-665c8f717cf4.jpg",
+      "description": "Black flutter-sleeve evening gown. Gala alternate.",
+      "reuse": "alternate wardrobe — gala or prestige episodes"
+    },
+    "sequin_mini": {
+      "file": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-ba5a7377-ee8f-4b31-85c5-d962661bcb43.jpg",
+      "description": "Black sequin deep-V long-sleeve mini dress + gold starburst earrings. Event/contemporary variant.",
+      "reuse": "alternate wardrobe — contemporary or editorial episodes"
+    },
+    "period_riding_coat": {
+      "file": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-91f10e89-e1bf-44d8-b3bd-4884cdc014c5.jpg",
+      "description": "Dark green riding coat + tricorn hat with blue ribbon + brown riding boots. Historical costume variant.",
+      "reuse": "period costume — historical-figure-documentary shoots where MATILDA plays a period role"
+    }
+  },
+
+  "wardrobe_library": {
+    "note": "Full render library as of 2026-06-27. Canonical location: AI/ELEANOR/products/model_variants/. Currently in folder: d25e8689 (navy blazer hero), bfbe11d0 (grey herringbone). Remaining renders still in DAVID/USER SAVES — move to model_variants to complete migration. All renders: three-view turntable on white/neutral seamless.",
+    "casual": [
+      {
+        "id": "7fef0b5c",
+        "label": "suede_moto",
+        "file_prefix": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-7fef0b5c",
+        "description": "Brown suede cropped moto jacket, black turtleneck, dark fitted jeans, brown knee-high boots, gold hoop earrings.",
+        "use_case": "Casual/editorial — brand content with contemporary energy"
+      },
+      {
+        "id": "fd97f229",
+        "label": "bavarian_cable_knit",
+        "file_prefix": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-fd97f229",
+        "description": "Ivory cable-knit oversized sweater, brown wool cowl scarf, grey corduroy trousers, brown riding boots.",
+        "use_case": "Bavarian casual — strong character authenticity, Munich winter register. Ideal for cultural/lifestyle content."
+      }
+    ],
+    "business": [
+      {
+        "id": "bfbe11d0",
+        "label": "grey_herringbone_blazer",
+        "file_prefix": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-bfbe11d0",
+        "description": "Charcoal/grey herringbone blazer, black turtleneck, black wide-leg trousers, gold delicate chain necklace.",
+        "use_case": "Business casual/Stonebridge presenter — softer authority than navy blazer. Good alternate for second-camera or B-roll."
+      },
+      {
+        "id": "44e8da3c",
+        "label": "black_power_suit",
+        "file_prefix": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-44e8da3c",
+        "description": "Black structured power suit (wide lapel, strong shoulders, open jacket), white satin cami underneath, black wide-leg trousers, black ankle boots, large geometric gold cuff bracelet.",
+        "use_case": "Executive authority — board room, C-suite presentation, high-stakes Stonebridge pitch content."
+      }
+    ],
+    "gala_gold_earrings": {
+      "note": "These variants carry gold earring continuity — safe to use in any shoot where gold starburst lock is active.",
+      "variants": [
+        {
+          "id": "b750f7fd",
+          "label": "black_cowl_gown",
+          "file_prefix": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-b750f7fd",
+          "description": "Black spaghetti-strap draped cowl-neck gown, front slit, gold chain necklace, gold bracelet, black strappy heels.",
+          "use_case": "Gala/prestige"
+        },
+        {
+          "id": "abc10101",
+          "label": "emerald_column_gown",
+          "file_prefix": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-abc10101",
+          "description": "Emerald green satin backless column gown, gold bracelet, gold delicate necklace, black heels.",
+          "use_case": "Gala/prestige — strong color statement"
+        },
+        {
+          "id": "f50c2055",
+          "label": "black_embroidered_mermaid",
+          "file_prefix": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-f50c2055",
+          "description": "Black cap-sleeve mermaid gown with gold botanical embroidery on bodice, smaller gold drop earrings, gold bracelet.",
+          "use_case": "Formal prestige — most refined of the gala variants"
+        },
+        {
+          "id": "0e52507f",
+          "label": "black_bow_shoulder_gown",
+          "file_prefix": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-0e52507f",
+          "description": "Black one-shoulder asymmetric satin gown, oversized dramatic architectural bow at shoulder, gold bracelet, strappy heels.",
+          "use_case": "Statement gala / avant-garde editorial"
+        },
+        {
+          "id": "f4fd5aad",
+          "label": "ivory_bow_gown",
+          "file_prefix": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-f4fd5aad",
+          "description": "Ivory/cream one-shoulder dramatic gown, matching oversized bow, gold chain rope belt, gold strappy heels, gold earrings.",
+          "use_case": "High fashion / prestige — bridal-adjacent, ceremonial"
+        },
+        {
+          "id": "07251d78",
+          "label": "black_hooded_gold_circuit_gown",
+          "file_prefix": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-07251d78",
+          "description": "Black hooded long-sleeve structured gown, gold marble/circuit-trace veining, padded shoulders, asymmetric hem, gold bracelet.",
+          "use_case": "Editorial/sci-fi — most distinctive silhouette in library. Strong AI/technology content visual. Conceptual shoots only."
+        }
+      ]
+    },
+    "gala_silver_earrings": {
+      "note": "These two variants use silver geometric drop earrings — deviation from gold starburst signature. Intentional gala editorial look. Do NOT mix with gold-earring shots in the same production unless wardrobe switch is scripted.",
+      "variants": [
+        {
+          "id": "d6d8124d",
+          "label": "silver_metallic_gown",
+          "file_prefix": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-d6d8124d",
+          "description": "Silver/chrome liquid metallic one-shoulder asymmetric gown with cutout waist detail, triangular geometric silver drop earrings, gold bracelet.",
+          "use_case": "Awards/gala — most avant-garde wardrobe in library. Earring breaks gold rule — silver earrings here."
+        },
+        {
+          "id": "abd3d0db",
+          "label": "burgundy_velvet_column",
+          "file_prefix": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-abd3d0db",
+          "description": "Deep burgundy/wine velvet mock-neck structured column midi gown, padded shoulders, gold chain belt, triangular geometric silver drop earrings.",
+          "use_case": "Gala/editorial — rich tone, strong authority read. Earring breaks gold rule — silver earrings here."
+        }
+      ]
+    },
+    "period": [
+      {
+        "id": "5f7b49e8",
+        "label": "victorian_navy_riding_suit",
+        "file_prefix": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\grok-image-5f7b49e8",
+        "description": "Victorian/Edwardian navy fitted jacket, navy floor-length skirt, white high-collar ruffled blouse, navy wide-brim hat with blue feather plume, brown leather gloves, brown lace-up boots. GOLD STARBURST EARRINGS visible. Slightly warm/grey background (not pure white).",
+        "use_case": "History project period costume. Second period variant alongside dark green riding coat (91f10e89). Navy suit = formal period; green coat = field/active period."
+      }
+    ]
+  },
+  "composite_architecture": {
+    "method": "head plate × body plate composite",
+    "purpose": "Lock MATILDA identity per-episode. Head plate carries face + hair (identity anchor). Body plate carries wardrobe. Composite = consistent actor look with swappable wardrobe per production.",
+    "head_variants": {
+      "location": "AI/ELEANOR/products/model_variants/head_variants/",
+      "count": 15,
+      "format": "3-view portrait turnaround — left profile, front, right profile. Face and neck only, white seamless, no body. This is the MATILDA identity anchor in portrait form.",
+      "purpose": "Face/head reference plates — identity anchor for composite. Multiple variants allow expression and lighting matching per scene type.",
+      "usage": "Select one head plate per episode. Lock it across all shots in that production. Match expression to scene register — neutral for presenter shots, animated for dialogue-heavy scenes."
+    },
+    "body_variants": {
+      "location": "AI/ELEANOR/products/model_variants/body_variants/",
+      "count": 6,
+      "format": "Full body or seated figure in specific wardrobe, environment or white seamless. TWO-STEP GENERATION — generate full actor first (head visible), then image-edit to remove head. Grok will not generate a headless figure directly (moderation block). See body_plate_generation_note for exact removal prompt.",
+      "purpose": "Body plates for wardrobe compositing. Each plate carries specific wardrobe + posture. Face zone cleared via fabric or positioning so head plate can be placed.",
+      "usage": "Select body plate matching episode wardrobe spec. The environment in the body plate becomes the shot environment — generate body plate in the target setting if needed (couch, office, studio).",
+      "body_plate_generation_note": "STEP 1 — Generate full actor: [TARGET ENVIRONMENT or white seamless] — standing/seated figure in [WARDROBE], head and body fully visible, normal generation. STEP 2 — Image edit on the generated image: 'remove head for compositing and replacement purposes - absolutely no violent content or gore'. This exact prompt wording is required to pass moderation. Do not rephrase. Output of step 2 = body plate UUID for @2 slot. Applies to white seamless turnarounds AND scene-baked plates equally. WARDROBE NOTE: open collar / V-neck / blouse necklines produce the cleanest removal edge — the open V frames the composite junction naturally. Turtlenecks and high collars compress the junction and create harder mismatches against the head plate neck angle. Prefer open necklines for body plates when wardrobe permits."
+    },
+    "composite_workflow": {
+      "step_1": "Select head plate from head_variants/ — expression and angle matched to shot type",
+      "step_2": "Select body plate from body_variants/ — wardrobe matched to episode spec, environment matched to scene (or generate scene-specific body plate)",
+      "step_3": "Inline composite syntax: MATILDA (body_reference: @body_uuid, head_reference: @head_uuid; [character traits]; [voice description]) [action + blocking]. [camera].",
+      "step_4": "Grok places head plate face over the occluded face zone in the body plate, maintains wardrobe and environment",
+      "step_5": "Output = MATILDA in target wardrobe and environment for i2v render"
+    },
+    "pro_variant_turnarounds": {
+      "manifest": "AI/ELEANOR/products/model_variants/matilda_pro_variants_manifest.json",
+      "prompts": "AI/ELEANOR/products/model_variants/matilda_pro_variant_prompts.json",
+      "generated": 7,
+      "total_defined": 25,
+      "source_plate": "grok-image-d25e8689-243d-4c02-9567-e1ab92161ca7.jpg",
+      "workflow": "Grok image-edit. Attach source_plate + variant prompt from prompts JSON. Change hair style and outfit only — no face or hair color re-roll. Output: 3-view casting turnaround (side/front/back), white seamless, full body.",
+      "prompt_syntax": "STUDIO §2 — concise change-only edits. Hairstyle = cut/style/parting only. No hair color. No physical re-description.",
+      "status": "pro-v01 through pro-v07 generated. pro-v08 through pro-v25 queued — run to complete business wardrobe catalog.",
+      "use": "Selection and reference library. Best-match turnaround per episode → informs body plate selection or becomes body plate input for composite workflow."
+    }
+  },
+
+  "identity_continuity_lock": "CONTINUITY LOCK @Matilda-001: identical presenter face, warm ash-gold blonde updo bun with face-framing wisps, same direct eye-line to camera — seamless continuation of prior take, zero jump cut. Wardrobe specified per episode — inject [WARDROBE_LOCK] from episode's production_intake config, not from this file.",
+  "anti_magenta_lock": "MAGENTA SUPPRESS @Matilda-001: D65 neutral white balance 5000K on presenter face and blazer — frame-wide midtones R≈G≈B within 8%; fair blonde skin must read natural warm-neutral, NOT pink or magenta; forbid pink skin cast, warm-red bloom on fair cheeks, rose-gold ambient; navy blazer holds true deep navy, NOT purple; seamless neutral background stays white/cool-grey, no pink ambient spill; gold earring detail stays amber-warm, not orange-magenta; no beauty-filter smoothing, no colour gel on key.",
+  "set_lock": "CONTINUITY LOCK @Set-Seamless-Neutral-001: clean white/cool-grey seamless background, no props, no architecture — pure negative space behind presenter; neutral diffuse ambient, soft fill from camera-left, no shadows on background; same depth of field and background exposure across all shots.",
+  "voice": {
+    "register": "mid, clear, precise",
+    "pace": "measured — slightly quicker than DAVID, modern presenter energy",
+    "tone": "authoritative, direct, no warmth performance — the precision IS the warmth",
+    "diction": "European-accented English when speaking EN; native German cadence in DE sections",
+    "german_cadence": "unhurried, clear consonants, slight formal lift — not casual colloquial German",
+    "signature_beat": "Ich bin das Ergebnis. / I am the result.",
+    "prompt_suffix_en": "clear precise mid-register voice, European-accented English, measured documentary presenter, synthetic performer only",
+    "prompt_suffix_de": "klare präzise Stimme, deutschsprachige Präsentation, dokumentarischer Ton, synthetische Darstellerin"
+  },
+  "compliance_2257": {
+    "synthetic_only": true,
+    "age_attestation": "synthetic performer, rendered age 28-35, adult presentation confirmed in all reference renders",
+    "no_real_person_likeness": true,
+    "no_celebrity_mimicry": true
+  },
+  "guardrails": [
+    "synthetic only — no real-person likeness, no celebrity mimicry",
+    "PG default for meta-demo episode — no suggestive framing",
+    "wardrobe is per-episode — locked within an episode, chosen per production, not universal",
+    "accessories per-episode — director chooses per production plan",
+    "German sections require on_screen English subtitle chip in every shot",
+    "identity_continuity_lock mandatory on every shot — no exceptions"
+  ],
+
+  "production_style": {
+    "baseline": "per-episode — no universal grade. Director specifies style per concept.json. This block is the DEFAULT for Stonebridge / corporate / meta-demo content. Override per episode as needed.",
+    "reference": "David Fincher corporate precision — The Social Network, Fight Club office environments. NOT the dark moody Fincher. The institutional daytime Fincher: clean, controlled, authoritative.",
+    "grade": {
+      "palette": "desaturated cinema grade — cool-neutral. Teal-grey shadow base, no warmth in mids or highlights. Skin reads muted European natural, not glowing, not olive-green — precise.",
+      "exposure": "Fincher corporate at +0.5 to +1 stop above standard Fincher dark. Industrial loft window light is the key — bright and directional, not moody. This is a daytime corporate video, not a thriller.",
+      "contrast": "controlled high contrast — shadow detail preserved, nothing crushed. Highlights clean, not blown.",
+      "sharpness": "high. No beauty pass. No softening. The image is precise.",
+      "what_to_avoid": [
+        "warmth — no amber, no golden hour, no lamp glow contamination",
+        "beauty filter glow on skin",
+        "crushed blacks — shadow detail must survive",
+        "lens flare or cinematic bokeh excess",
+        "oversaturated colors",
+        "flat or soft focus"
+      ]
+    },
+    "lighting": {
+      "key": "large window grid — 4800K directional, single source. No fill light contamination.",
+      "shadows": "deep but detailed. Shadow pockets read industrial, not theatrical.",
+      "skin": "window key creates precise half-lit reads on MATILDA's face — this is intentional. Do not soften.",
+      "set": "industrial loft reads clinical and precise under window key. This is the asset — do not warm it."
+    },
+    "framing": {
+      "default_shot_size": "MCU to MS — corporate presenter framing, not talking-head tight",
+      "camera_movement": "controlled. Fincher moves are motivated and slow — no handheld energy, no push-in reveals unless scripted",
+      "depth_of_field": "deliberate shallow-to-mid — background softens but does not swirl. Precise, not cinematic-dreamy"
+    },
+    "prompt_block": "GRADE: desaturated cinema precision — cool-neutral palette, teal-grey shadow base, muted European skin tones, no warmth or amber, shadow detail preserved, high sharpness, zero beauty filter. Bright industrial loft window key 4800K — single directional source, no fill. Corporate authority read at elevated exposure. Controlled contrast — detail in shadows, clean highlights. Fincher institutional daytime precision."
+  },
+
+  "pending": [
+    "Generate remaining 18 pro-variant turnarounds: pro-v08 through pro-v25 via Grok image-edit (prompts in matilda_pro_variant_prompts.json, source plate d25e8689)",
+    "Expand body_variants/ from 6 plates to match key business wardrobe variants — one body plate per production wardrobe category",
+    "Generate proper Grok Imagine i2v anchor frame from navy blazer reference (static → frame 1)",
+    "Generate @Set-Seamless-Neutral-001 environment plate if not already in Set_Library_v1.json",
+    "Beat solo QA test clip before full meta-demo episode render",
+    "Validate anti_magenta_lock against first test clip before full episode render"
+  ]
+}

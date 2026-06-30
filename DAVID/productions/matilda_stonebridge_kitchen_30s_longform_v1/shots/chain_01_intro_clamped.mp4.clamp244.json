@@ -1,0 +1,7 @@
+{
+  "issue": 244,
+  "stage": "process_shot_segment",
+  "vf": "eq=gamma_r=1.00:gamma_g=0.98:gamma_b=0.90:saturation=0.93:brightness=0.00",
+  "magenta": 0.0,
+  "host_blue_mean": 48.0
+}

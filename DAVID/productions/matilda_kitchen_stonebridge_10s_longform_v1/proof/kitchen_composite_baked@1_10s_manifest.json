@@ -1,0 +1,25 @@
+{
+  "proof": "kitchen_composite_baked@1_10s",
+  "gate": "PENDING_REVIEW",
+  "seed_mode": "baked_composite@1",
+  "at": "2026-06-29T05:13:25.927119+00:00",
+  "composite_jpg": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\composite_first_frame_probe.jpg",
+  "binding": {
+    "seed_mode": "baked_composite@1",
+    "image_field": "image_file_id",
+    "image_value": "file_4e6434d8-cb3a-41ab-aa1d-76632883c6a1",
+    "composite_path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\composite_first_frame_probe.jpg"
+  },
+  "generate_kwargs": {
+    "model": "grok-imagine-video-1.5",
+    "image_file_id": "file_4e6434d8-cb3a-41ab-aa1d-76632883c6a1",
+    "duration": 10,
+    "resolution": "480p",
+    "aspect_ratio": "16:9"
+  },
+  "prompt": "Setting: @4e6434d8-cb3a-41ab-aa1d-76632883c6a1 (see attached render; modern kitchen. the sounds of the busy city can be heard from offscreen) ; MATILDA maintains eye contact with camera entire scene whilst she naturally continues the conversation towards the aspects of her job at Stonebridge, going into her German background as well - dialogue shortened to fit 10 sec generation. Camera does static medium shot. ; In the exact visual style of David Fincher: meticulously composed cinematic realism with cold, desaturated teal, gray, and amber tones, high-contrast chiaroscuro lighting that carves deep dramatic shadows across sharp architectural lines and rich textures, clinical precision in every detail, subtle film grain, anamorphic depth, moody atmospheric elegance, and a hauntingly controlled, almost predatory beauty in the finished shot",
+  "duration_s": 10,
+  "model": "grok-imagine-video-1.5",
+  "video_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-1bf3ed57-3aa6-9d0c-a10d-8ac768f54877.mp4",
+  "output_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\kitchen_composite_baked@1_10s.mp4"
+}

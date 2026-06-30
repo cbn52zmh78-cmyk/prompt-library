@@ -1,0 +1,201 @@
+{
+  "slug": "matilda_baseline_30s",
+  "title": "MATILDA — Baseline Pipeline Test",
+  "target_seconds": 30,
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "prompt_mode": "barebones",
+    "prompt_template": "Studio/prompts/MASTER_Matilda_v1.json",
+    "_prompt_mode_note": "@1.description = see attached render; @2.description = see attached render + MATILDA modifiers; scene/camera per shot.",
+    "use_identity_lock": false,
+    "use_zone_plates": true,
+    "avatar_reference": "AI/ELEANOR/products/model_variants/OTHER/grok-image-d25e8689-243d-4c02-9567-e1ab92161ca7.jpg",
+    "set_reference": "STUDIO/Pipeline/references/warehouse_industrial_reference.jpg",
+    "seamless": {
+      "primary": "extend",
+      "duration_lo": 6,
+      "duration_hi": 10,
+      "xfade_s": 0.25,
+      "match_color": false,
+      "magenta_clamp": false,
+      "magenta_reroll": false,
+      "lamp_lock": false,
+      "loudnorm": true,
+      "pin_audio_sync": true,
+      "reground_interval": 1,
+      "cut_on_motion": false,
+      "skip_extend_probe": true
+    },
+    "voice_suffix": "mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only",
+    "avatar_url": "https://files-cdn.x.ai/kUOKhvOyRrmVQaujengMyw/file_29a1086e-b990-4494-b7b2-375f785a8c9e.jpg",
+    "avatar_file_id": "file_9cb645f8-d7d4-4340-8340-48b2ec18f38a"
+  },
+  "shots": [
+    {
+      "id": "01_entry",
+      "duration": 6,
+      "t_start": 0,
+      "t_end": 6,
+      "role": "host",
+      "speech_text": "I'm MATILDA — your synthetic presenter. Generated, not filmed.",
+      "on_screen": "MATILDA · Synthetic Presenter · ELEANOR-DAVID Pipeline",
+      "barebones": {
+        "command": "generate video",
+        "@1": {
+          "description": "see attached render"
+        },
+        "@2": {
+          "description": "see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; English only in this scene"
+        },
+        "scene": "enters from offscreen stage left whilst introducing herself to the audience - maintains eye contact with camera - three steps to center mark by 2s, plants feet facing camera - open-palm gesture on final phrase",
+        "camera": "locked static medium, waist-up, no camera move",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": {
+          "sequence_length": "6s"
+        }
+      },
+      "video_prompt": " Lip-synced, delivers: \"I'm MATILDA — your synthetic presenter. Generated, not filmed.\""
+    },
+    {
+      "id": "02_pipeline",
+      "duration": 6,
+      "t_start": 6,
+      "t_end": 12,
+      "role": "host",
+      "speech_text": "You're watching the ELEANOR-DAVID pipeline — automated scripts, voices, and video renders.",
+      "barebones": {
+        "command": "generate video",
+        "@1": {
+          "description": "see attached render"
+        },
+        "@2": {
+          "description": "see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; English only in this scene"
+        },
+        "scene": "already at center mark - forward lean on 'pipeline' - right-hand open palm on 'automated' - continuous delivery, no pauses",
+        "camera": "locked static medium, waist-up, no camera move",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": {
+          "sequence_length": "6s"
+        }
+      },
+      "video_prompt": " Lip-synced, delivers: \"You're watching the ELEANOR-DAVID pipeline — automated scripts, voices, and video renders.\""
+    },
+    {
+      "id": "03_models",
+      "duration": 6,
+      "t_start": 12,
+      "t_end": 18,
+      "role": "host",
+      "speech_text": "Language models draft every line. Grok Imagine generates every frame you see.",
+      "barebones": {
+        "command": "generate video",
+        "@1": {
+          "description": "see attached render"
+        },
+        "@2": {
+          "description": "see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; English only in this scene"
+        },
+        "scene": "holds center mark - left index finger tap on 'every line' - two-hand outward sweep on 'every frame you see' - continuous delivery, no pauses",
+        "camera": "locked static medium, waist-up, no camera move",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": {
+          "sequence_length": "6s"
+        }
+      },
+      "video_prompt": " Lip-synced, delivers: \"Language models draft every line. Grok Imagine generates every frame you see.\""
+    },
+    {
+      "id": "04_proof",
+      "duration": 6,
+      "t_start": 18,
+      "t_end": 24,
+      "role": "host",
+      "speech_text": "No human filmed this. No editor cut it. Concept to final render — fully automated.",
+      "barebones": {
+        "command": "generate video",
+        "@1": {
+          "description": "see attached render"
+        },
+        "@2": {
+          "description": "see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; English only in this scene"
+        },
+        "scene": "holds center mark - decisive head shake on 'No human filmed' - flat palm cut gesture on 'No editor cut it' - continuous through 'fully automated', no pause",
+        "camera": "locked static medium, waist-up, no camera move",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": {
+          "sequence_length": "6s"
+        }
+      },
+      "video_prompt": " Lip-synced, delivers: \"No human filmed this. No editor cut it. Concept to final render — fully automated.\""
+    },
+    {
+      "id": "05_close",
+      "duration": 6,
+      "t_start": 24,
+      "t_end": 30,
+      "role": "host",
+      "speech_text": "This is automated filmmaking. We are just getting started.",
+      "on_screen": "ELEANOR-DAVID · Automated Filmmaking Pipeline",
+      "barebones": {
+        "command": "generate video",
+        "@1": {
+          "description": "see attached render"
+        },
+        "@2": {
+          "description": "see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; English only in this scene"
+        },
+        "scene": "holds center mark - chin lifts on 'automated filmmaking' - confident nod on 'getting started' - speech ends on gesture peak, no trailing stillness",
+        "camera": "locked static medium, waist-up, no camera move",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": {
+          "sequence_length": "6s"
+        }
+      },
+      "video_prompt": " Lip-synced, delivers: \"This is automated filmmaking. We are just getting started.\""
+    }
+  ],
+  "provenance_card": {
+    "enabled": false
+  },
+  "qa_rules": {
+    "require_identity_lock": true,
+    "require_synthetic_guard": true,
+    "min_shots": 1
+  },
+  "format_id": "documentary-host",
+  "intake": {
+    "format_id": "documentary-host",
+    "actor_id": "Matilda-001",
+    "set_id": "@Set-Warehouse-Industrial-001",
+    "style_id": "@Style-Documentary-Prestige-001",
+    "source": "manual — concept: STUDIO/Pipeline/Concepts/matilda_baseline/matilda_baseline_30s.concept.json",
+    "gate_0": {
+      "verdict": "GREEN",
+      "blocked": false,
+      "human_signoff": true,
+      "rating": "PG",
+      "ai_disclosure_method": "title_card",
+      "music_bed_id": "BED-DOC-001",
+      "row_2_music_sync": "PASS",
+      "music_clearance_manifest": "Studio/Music_Sound/clearance_manifest.json",
+      "channels": [
+        "social"
+      ],
+      "synthetic_performer_id": "Matilda-001",
+      "compliance_version": "2.2",
+      "compliance_2257": {
+        "scope": "not_applicable",
+        "reason": "synthetic_performer_no_explicit_material"
+      }
+    },
+    "libraries": {
+      "formats": "Production_Templates_v1.json",
+      "sets": "Set_Library_v1.json",
+      "styles": "Style_Library_v1.json",
+      "identity_lock": "DAVID/productions/matilda_meta_demo_v1/matilda_identity_lock.json"
+    },
+    "_identity_lock_note": "use_identity_lock=false because matilda_identity_lock.json uses references.meta_demo_presenter (not talent_avatar), which resolve_refs cannot find. avatar_reference provided directly. Permanent fix: add talent_avatar.url to matilda_identity_lock.json after uploading avatar to x.ai files API."
+  }
+}

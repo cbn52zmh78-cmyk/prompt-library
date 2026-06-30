@@ -1,0 +1,29 @@
+{
+  "proof": "barebones_10s_v3_@2front",
+  "prompt_mode": "barebones",
+  "seed_mode": "@2-front",
+  "seed_slot": "@2",
+  "at": "2026-06-29T03:16:08.240131+00:00",
+  "session_ids": {
+    "@1": "file_43163646-c85b-404a-95a8-84253176ccf3",
+    "@2": "file_61fbc747-8d80-4ce9-88e1-c30de0d73f7a"
+  },
+  "image_url": "https://files-cdn.x.ai/9RnczvKESESzE9-Z1WdiHQ/file_38d8fa8f-91d3-4b6b-9915-931ee339d090.jpg",
+  "image_url_role": "@2 front-panel crop — identity pixel lock (no 3-view flash)",
+  "seed_file": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\crops\\grok-image-d25e8689-243d-4c02-9567-e1ab92161ca7_front_panel.jpg",
+  "prompt": "Setting: @43163646-c85b-404a-95a8-84253176ccf3 (CONTINUITY LOCK @Set-Seamless-Neutral-001: clean white/cool-grey seamless background, no props, no architecture — pure negative space behind presenter. Neutral diffuse ambient, soft fill from camera-left, no shadows on background. Same depth of field and background exposure across all shots.) ; enters from offscreen stage left whilst introducing herself to the audience - maintains eye contact with camera entire scene - three steps to center mark by 2s, plants feet facing camera - open-palm gesture on final phrase. locked static medium, waist-up, no camera move",
+  "rules": [
+    "API binds identity via image_url only — @2 UUID in prose does not lock face",
+    "BAREBONES: assets outside seed named in prose; talent in seed = Setting + action"
+  ],
+  "duration_s": 10,
+  "model": "grok-imagine-video-1.5",
+  "resolution": "480p",
+  "shot_id": "01_entry",
+  "video_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-0ff7a36a-f105-9090-a1cc-c96110739ab4.mp4",
+  "output_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\barebones_10s_v3_@2front.mp4",
+  "frame_0p5s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\barebones_10s_v3_@2front_0p5s.jpg",
+  "frame_2s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\barebones_10s_v3_@2front_2s.jpg",
+  "frame_4s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\barebones_10s_v3_@2front_4s.jpg",
+  "frame_8s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\barebones_10s_v3_@2front_8s.jpg"
+}

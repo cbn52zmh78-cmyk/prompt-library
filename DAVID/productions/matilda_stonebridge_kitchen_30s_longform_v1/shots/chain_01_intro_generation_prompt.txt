@@ -1,0 +1,21 @@
+{
+  "shot_id": "01_intro",
+  "prompt": "Setting: @0307d0e1-faf7-49fb-a066-594762737ce4 (see attached render; modern kitchen interior \u2014 empty apartment, no other people, visual only) ; introduces herself to the audience maintaining consistent eye contact with camera throughout entire scene as Vice President of Operations at Stonebridge Consultants Group, an American based consultant firm; opening greeting in German, rest of dialogue in English. Camera does slow creep zoom-in from wide to medium close over 8s ; Lip-synced, delivers in dialogue: \"Gr\u00fc\u00df Gott! I'm Matilda Kirschner, Vice President of Operations at Stonebridge Consultants Group \u2014 an American-based consulting firm.\" ; AUDIO LOCK: absolute silence except MATILDA lip-sync voice \u2014 zero background noise, zero ambient sound, zero room tone, zero chatter, zero crowd, zero offscreen voices, zero street noise, zero music, mute set ; English continuation \u2014 subtle Bavarian lilt, soft gentle mid-register, documentary host clarity ; documentary prestige, natural skin, neutral WB, no beauty filter",
+  "prompt_mode": "barebones",
+  "barebones_binding": {
+    "seed_mode": "baked_composite@1",
+    "image_field": "image_file_id",
+    "image_value": "file_0307d0e1-faf7-49fb-a066-594762737ce4",
+    "composite_path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\composite_first_frame_probe.jpg"
+  },
+  "generate_kwargs": {
+    "model": "grok-imagine-video-1.5",
+    "image_file_id": "file_0307d0e1-faf7-49fb-a066-594762737ce4",
+    "duration": 8,
+    "resolution": "480p",
+    "aspect_ratio": "16:9"
+  },
+  "neutral_generation": false
+}
+
+video_url: https://vidgen.x.ai/xai-vidgen-bucket/xai-video-66f867ea-0e91-9aa0-8545-7a4118ae648c.mp4

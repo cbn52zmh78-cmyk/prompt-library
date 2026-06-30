@@ -1,0 +1,335 @@
+{
+  "slug": "matilda_stonebridge_2min_8branch",
+  "title": "MATILDA — Stonebridge 2min Dual-Setting (8×15s)",
+  "format_id": "documentary-host",
+  "target_seconds": 120,
+  "intake": {
+    "format_id": "documentary-host",
+    "actor_id": "Matilda-001",
+    "set_id": "@Set-Modern-Kitchen-Living-001",
+    "style_id": "@Style-Documentary-Prestige-001",
+    "gate_0": {
+      "verdict": "GREEN",
+      "blocked": false,
+      "human_signoff": true,
+      "rating": "PG",
+      "ai_disclosure_method": "title_card",
+      "synthetic_performer_id": "Matilda-001",
+      "compliance_version": "2.2",
+      "compliance_2257": {
+        "scope": "not_applicable",
+        "reason": "synthetic_performer_no_explicit_material"
+      }
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "prompt_mode": "barebones",
+    "use_identity_lock": false,
+    "use_zone_plates": true,
+    "avatar_reference": "AI/ELEANOR/products/model_variants/Concepts/Plates/2.jpg",
+    "wardrobe_lock": "gray sleeveless jumpsuit with sweetheart neckline and wide-leg trousers, black belt silver rectangular buckle, black ankle boots, large silver filigree statement earrings, blonde low ponytail — canonical per Plates/2.jpg; ONE piece only; NO black dress, NO sweater, NO cardigan; identical b01 through b08",
+    "set_reference": "AI/ELEANOR/products/model_variants/Concepts/Plates/grok-image-2efa731f-f24b-4359-a015-39e400e1fb81.png",
+    "set_reference_2": "AI/ELEANOR/products/model_variants/Concepts/Plates/grok-image-54f1b742-3ed4-4f16-846a-d6173b2e0daf (1).jpg",
+    "composite_first_frame": "AI/ELEANOR/products/model_variants/Concepts/Plates/matilda_kitchen_island_composite.jpg",
+    "slots": {
+      "@1": {
+        "role": "kitchen_composite_b01_seed",
+        "file": "AI/ELEANOR/products/model_variants/Concepts/Plates/matilda_kitchen_island_composite.jpg",
+        "branches": ["b01_intro"]
+      },
+      "@1_empty_kitchen_plate": {
+        "role": "empty_kitchen_env_reference",
+        "file": "AI/ELEANOR/products/model_variants/Concepts/Plates/grok-image-2efa731f-f24b-4359-a015-39e400e1fb81.png",
+        "note": "set_reference — NOT b01 image seed"
+      },
+      "@2": {
+        "role": "living_room_set",
+        "file": "AI/ELEANOR/products/model_variants/Concepts/Plates/grok-image-54f1b742-3ed4-4f16-846a-d6173b2e0daf (1).jpg",
+        "branches": ["b05_transition", "b06_personal", "b07_network", "b08_close_de"]
+      }
+    },
+    "branch_chain": {
+      "segment_s": 15,
+      "dialogue_wrap_s": 12.5,
+      "hold_tail_s": 2.5,
+      "open_pause_s": 0,
+      "statement_pause_s": 0.3,
+      "xfade_s": 0,
+      "seed_handoff": "last_frame",
+      "branch_mode": "last_frame",
+      "mandatory_last_frame": true,
+      "output_version": "v09b_lr_recovery_65",
+      "color_hold": "living_room",
+      "color_clamp_all": false,
+      "color_clamp_shots": [
+        "b05_transition",
+        "b06_personal",
+        "b07_network",
+        "b08_close_de"
+      ],
+      "color_recovery_shots": [
+        "b06_personal",
+        "b07_network",
+        "b08_close_de"
+      ],
+      "color_anchor_shot": "b04_europe",
+      "blocks": {
+        "kitchen": {
+          "shots": ["b01_intro", "b02_company", "b03_services", "b04_europe"],
+          "set_slot": "@1",
+          "b01_origin": "@1",
+          "b01_origin_file": "matilda_kitchen_island_composite.jpg",
+          "handoff": "sequential_last_frame",
+          "note": "b01 @1 = kitchen composite only; @2 living room plate is separate and unchanged"
+        },
+        "transition": {
+          "shots": ["b05_transition"],
+          "set_slot": "@2",
+          "handoff": "sequential_last_frame",
+          "note": "Walk kitchen→living UPSTAGE STAGE-LEFT; @2 living room plate is visual target; exit frame seeds b06"
+        },
+        "living_room": {
+          "shots": ["b06_personal", "b07_network", "b08_close_de"],
+          "set_slot": "@2",
+          "handoff": "sequential_last_frame",
+          "origin_handoff": "b05_transition",
+          "policy": "@2 = living room empty set plate (she walks into this room in b05). b06+ image seed = mandatory_extract_last_frame(b05_transition) then chain — NEVER pre-composite talent into @2 still"
+        }
+      }
+    }
+  },
+  "shots": [
+    {
+      "id": "b01_intro",
+      "duration": 15,
+      "t_start": 0,
+      "t_end": 15,
+      "role": "host",
+      "setting": "kitchen",
+      "speech_text": "Grüß Gott. My name is Matilda Kirschner — I am Vice President of Operations at Stonebridge Consultants Group. Welcome. It is very good to be with you today.",
+      "barebones": {
+        "command": "generate video",
+        "@1": { "description": "@1 = matilda_kitchen_island_composite.jpg — MATILDA behind kitchen island, hands on countertop, talent+set baked in; WARDROBE per Plates/2.jpg: gray sleeveless jumpsuit, black belt, silver earrings, blonde ponytail — this IS the image_file_id seed for b01; NOT the empty kitchen plate" },
+        "dialogue": {
+          "speech_text": "Grüß Gott. My name is Matilda Kirschner — I am Vice President of Operations at Stonebridge Consultants Group. Welcome. It is very good to be with you today.",
+          "language": "en-US",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: absolute silence except MATILDA lip-sync voice — zero background noise, zero chatter, mute set",
+          "voice_direction": "opens mid-greeting — NO pause before Grüß Gott; soft relaxed Bavarian lilt on all English; easy welcoming tone; NOT American anchor; TAIL AUDIO LOCK: after final word lips stay closed — ZERO sigh, ZERO audible exhale, ZERO heavy breath"
+        },
+        "scene": "STAGE LOCK: MATILDA stands behind kitchen island — both hands flat on island countertop, leaning slightly forward at waist; feet planted, zero repositioning; frame one lip-sync Grüß Gott from this island-lean pose — ZERO open pause, ZERO lead-in silence; warm relaxed inviting face; tail 12-15s SILENT CLOSED-MOUTH HOLD — finishes speaking by 12.5s, lips gently closed, hands remain on island, breathing silent through nose only; NO chest exhale, NO shoulder drop, NO shrug, NO audible breath; calm neutral resting face — clean handoff composure for b02",
+        "camera": "opens medium-wide — MATILDA behind island knee-to-crown, eye-level, slight camera-left axis, beige taupe kitchen set visible; slow mechanical creep zoom in 0–12s arriving at medium shot waist-up — camera closes distance, MATILDA does not step forward, hands stay on island; center-frame entire move; locked static hold at medium waist-up 12–15s; key light neutral balanced from camera-left, natural skin",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": { "sequence_length": "15s" }
+      }
+    },
+    {
+      "id": "b02_company",
+      "duration": 15,
+      "t_start": 15,
+      "t_end": 30,
+      "role": "host",
+      "setting": "kitchen",
+      "branch_open_pause": true,
+      "speech_text": "Stonebridge has built its reputation across three decades on a single principle — we do not leave until the work is done. From our U.S. headquarters, we operate across North America and all of Europe, wherever our clients need us to be.",
+      "barebones": {
+        "command": "generate video",
+        "@1": { "description": "see attached chain seed — b01 exit frame; MATILDA in kitchen at island mark; WARDROBE LOCK: same gray jumpsuit, black belt, silver earrings, blonde ponytail per Plates/2.jpg as b01 composite; continue performer identity and kitchen set exactly" },
+        "dialogue": {
+          "speech_text": "Stonebridge has built its reputation across three decades on a single principle — we do not leave until the work is done. From our U.S. headquarters, we operate across North America and all of Europe, wherever our clients need us to be.",
+          "language": "en-US",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: absolute silence except MATILDA lip-sync voice — zero background noise, zero chatter, mute set",
+          "voice_direction": "ACCENT LOCK: native Münchner Bayerisch on ALL English — Munich-born vowels and rhythm; NOT American, NOT General American, NOT network anchor, NOT CNN broadcaster; SOFT ENTRANCE: holds b01 exit composure 1-2 seconds then eases into first word; relaxed conversational host; brief micro-pauses between sentences only"
+        },
+        "scene": "STAGE LOCK: MATILDA holds center stage mark from b01 — same physical position, feet planted, zero repositioning; OPENS SOFT — brief 1-2 second ease-in then speaking; warm inviting energy; genuinely enjoys talking about Stonebridge; NOT robotic, NOT uptight; eye contact on lens; TAIL 11.5-13s BRIEF CLOSE — dialogue complete by ~11.5s; ~1 second quiet settled hold before cut",
+        "camera": "CAMERA STATIC — SUBJECT STATIC: both locked from frame one; medium shot waist-up, eye-level, MATILDA center-frame with slight camera-left axis — exact position camera landed at end of b01; zero reframe, zero zoom, zero drift; key light neutral balanced from camera-left",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": { "sequence_length": "15s" }
+      }
+    },
+    {
+      "id": "b03_services",
+      "duration": 15,
+      "t_start": 30,
+      "t_end": 45,
+      "role": "host",
+      "setting": "kitchen",
+      "branch_open_pause": true,
+      "speech_text": "We specialise in three core areas: supply chain architecture, regulatory compliance, and long-term growth strategy. These are disciplines where precision is not optional — and where the right partner changes everything.",
+      "barebones": {
+        "command": "generate video",
+        "@1": { "description": "see attached chain seed — b02 exit frame; MATILDA in kitchen at island mark; WARDROBE LOCK: same gray jumpsuit, black belt, silver earrings, blonde ponytail per Plates/2.jpg; continue performer identity and kitchen set exactly" },
+        "dialogue": {
+          "speech_text": "We specialise in three core areas: supply chain architecture, regulatory compliance, and long-term growth strategy. These are disciplines where precision is not optional — and where the right partner changes everything.",
+          "language": "en-US",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: absolute silence except MATILDA lip-sync voice — zero background noise, zero chatter, mute set",
+          "voice_direction": "SOFT ENTRANCE: holds b02 exit composure 2-3 seconds — quiet present beat, then eases gently into first word; relaxed inviting host — Munich-born native, Bavarian accent and rhythm on ALL English; warm conversational delivery; NOT American, NOT CNN anchor; brief micro-pauses only"
+        },
+        "scene": "STAGE LOCK: MATILDA holds center stage mark — same physical position as b01 and b02, feet planted, zero repositioning; OPENS SOFT — 2-3 second gentle ease-in; relaxed laid-back friendly energy; warm alive face — micro-expressions, gentle organic movement; eye contact on lens; TAIL 12-15s — finishes sentence, brief ~1.5s hold; pose carries to b04 seed",
+        "camera": "CAMERA STATIC — SUBJECT STATIC: both locked from frame one; medium shot waist-up, eye-level, MATILDA center-frame with slight camera-left axis — identical position to b02; zero reframe, zero zoom, zero drift; key light neutral balanced from camera-left",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": { "sequence_length": "15s" }
+      }
+    },
+    {
+      "id": "b04_europe",
+      "duration": 15,
+      "t_start": 45,
+      "t_end": 60,
+      "role": "host",
+      "setting": "kitchen",
+      "branch_open_pause": false,
+      "speech_text": "I lead our European operations from Munich. My job is to ensure that what Stonebridge commits to in the boardroom is delivered on the ground — in every country, every region, every time we say we will.",
+      "barebones": {
+        "command": "generate video",
+        "@1": { "description": "see attached chain seed — b03 exit frame; MATILDA in kitchen at island mark; WARDROBE LOCK: same gray jumpsuit, black belt, silver earrings, blonde ponytail per Plates/2.jpg; continue performer identity and kitchen set exactly" },
+        "dialogue": {
+          "speech_text": "I lead our European operations from Munich. My job is to ensure that what Stonebridge commits to in the boardroom is delivered on the ground — in every country, every region, every time we say we will.",
+          "language": "en-US",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: absolute silence except MATILDA lip-sync voice — zero background noise, zero chatter, mute set",
+          "voice_direction": "LIP-SYNC LOCK: frame one mouth moves on first syllable of 'I lead' — lips sync first sentence from opening frame; ZERO closed-mouth hold while first-sentence audio plays; ACCENT LOCK: native Münchner Bayerisch on ALL English; warm confident host energy; NOT authoritative, NOT intense; TAIL: finishes final sentence, settles into 2-3s calm composed hold — she is about to move; subtle shift in energy on tail as if preparing to walk"
+        },
+        "scene": "STAGE LOCK: MATILDA holds center stage mark — same physical position as b01/b02/b03, feet planted, zero repositioning; OPENS SPEAKING — frame one lip-sync on 'I lead our European operations from Munich' — mouth moving with audio from first word; warm confident alive face; TAIL 12-15s — subtle internal breath and weight shift only — upper body still, NO step, NO walk until cut; pose carries to b05 seed",
+        "camera": "CAMERA STATIC — SUBJECT STATIC: locked frame one through branch end; medium waist-up, eye-level, center-frame — identical to b02/b03; ZERO zoom, ZERO pull-back, ZERO dolly out, ZERO reframe 12-15s tail — camera does NOT slow out at end; key light neutral balanced from camera-left",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": { "sequence_length": "15s" }
+      }
+    },
+    {
+      "id": "b05_transition",
+      "duration": 15,
+      "t_start": 60,
+      "t_end": 75,
+      "role": "host",
+      "setting": "transition_kitchen_to_living",
+      "branch_open_pause": false,
+      "speech_text": "Actually — before we go further — I want to share something I do not usually say in a formal setting.",
+      "barebones": {
+        "command": "generate video",
+        "@1": { "description": "see attached chain seed — b04 exit frame; MATILDA at kitchen island mark, about to walk UPSTAGE STAGE-LEFT; WARDROBE LOCK: same gray jumpsuit, black belt, silver earrings, blonde ponytail per Plates/2.jpg; continue performer identity exactly" },
+        "@2": { "description": "see attached living room plate — SET GEOGRAPHY: cream beige sofa UPSTAGE against back wall, sheer window on stage-left wall, round coffee table downstage of sofa, kitchen cabinetry stage-right background; visual target only — MATILDA walks into this room upstage-left, sits on upstage sofa facing camera" },
+        "dialogue": {
+          "speech_text": "Actually — before we go further — I want to share something I do not usually say in a formal setting.",
+          "language": "en-US",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: absolute silence except MATILDA lip-sync voice and natural footstep movement — zero background noise, zero chatter",
+          "voice_direction": "ACCENT LOCK: native Münchner Bayerisch on ALL English — NOT American, NOT network anchor; opens from b04 tail composure — brief settled beat, then warm intimate tone; voice slightly softer than kitchen mode — more personal, like sharing a confidence; speaks line THEN begins walking; NOT rushed, NOT dramatic"
+        },
+        "scene": "SET GEOGRAPHY LOCK: kitchen island downstage center; living room UPSTAGE STAGE-LEFT — cream sofa against upstage back wall, window on stage-left wall, kitchen stage-right; living room is RIGHT BEHIND HER to stage-left, NOT downstage. BLOCKING — MATILDA opens at kitchen island (b04 position); speaks line in first 4-6s, eye contact on lens; then steps from behind island, pivots STAGE LEFT, walks UPSTAGE (away from camera) diagonally stage-left into living room — NEVER toward camera, NEVER downstage, NEVER into void; path arcs upstage-left past coffee table to upstage sofa; turns to face camera, sits on UPSTAGE sofa — back in cushion, feet on floor, arm on armrest; by 12-13s seated settling; TAIL: relaxed open body language toward lens — seeds b06",
+        "camera": "opens kitchen medium matching b04; gentle drift STAGE LEFT and slight pull as she walks UPSTAGE-LEFT — camera tracks her arc away from lens, NOT toward downstage; settles medium waist-up as she sits on upstage sofa facing camera; same key direction and exposure as chain seed — neutral grade, no color shift",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter, match chain seed grade",
+        "output": { "sequence_length": "15s" }
+      }
+    },
+    {
+      "id": "b06_personal",
+      "duration": 15,
+      "t_start": 75,
+      "t_end": 90,
+      "role": "host",
+      "setting": "living_room",
+      "handoff_seed_from": "b05_transition_last_frame",
+      "branch_open_pause": true,
+      "speech_text": "I grew up in a family where your word was your only real asset. My father ran a small logistics business in Munich — no contracts, just handshakes. He never lost a client in thirty years. That is the standard I carry into every Stonebridge engagement.",
+      "barebones": {
+        "command": "generate video",
+        "@1": { "description": "see attached chain seed — b05_transition exit frame; MATILDA seated on UPSTAGE sofa stage-left living room; WARDROBE LOCK: same gray jumpsuit, black belt, silver earrings, blonde ponytail per Plates/2.jpg; continuous from walk-in" },
+        "@2": {
+          "description": "see attached living room plate — SET GEOGRAPHY: cream sofa UPSTAGE against back wall, sheer window stage-left, coffee table downstage of sofa, kitchen stage-right background; visual set reference only; match environment exactly"
+        },
+        "dialogue": {
+          "speech_text": "I grew up in a family where your word was your only real asset. My father ran a small logistics business in Munich — no contracts, just handshakes. He never lost a client in thirty years. That is the standard I carry into every Stonebridge engagement.",
+          "language": "en-US",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: absolute silence except MATILDA lip-sync voice — zero background noise, zero chatter, mute set",
+          "voice_direction": "SOFT ENTRANCE: opens from b05 landing composure — 2-3 second settled breath on sofa, then eases into first word; intimate warm confiding tone — this is personal, not a pitch; subtle Bavarian warmth on all English; brief micro-pauses; TAIL AUDIO LOCK: after final word absolute silence — ZERO music, ZERO score, ZERO underscore, ZERO sting; soft 1.5s composed hold voice-only"
+        },
+        "scene": "LIVING ROOM LOCK: MATILDA seated on UPSTAGE cream sofa — same landing position from b05, facing camera, feet on floor, relaxed upright; hands in lap or on knee; WARDROBE unchanged from kitchen; OPENS SOFT — 2-3s ease-in; warm intimate face; eye contact on lens; TAIL 12-15s — quiet hold seated, silent set; pose carries to b07",
+        "camera": "CAMERA STATIC — SUBJECT STATIC: medium waist-up seated on upstage sofa, eye-level; same framing axis as chain seed; neutral key from camera-left — match prior branch grade exactly; zero reframe, zero zoom",
+        "style": "documentary prestige, natural skin midtones balanced, neutral WB, no beauty filter, no pink cast, no purple tint, match chain seed grade",
+        "output": { "sequence_length": "15s" }
+      }
+    },
+    {
+      "id": "b07_network",
+      "duration": 15,
+      "t_start": 90,
+      "t_end": 105,
+      "role": "host",
+      "setting": "living_room",
+      "handoff_seed_from": "b06_personal_last_frame",
+      "branch_open_pause": true,
+      "speech_text": "What we bring to our clients is not just expertise — it is a network. Twenty years of relationships with regulators, logistics operators, and the people who actually move things and approve things across twelve countries. That is not something you can buy. It takes time.",
+      "barebones": {
+        "command": "generate video",
+        "@1": { "description": "see attached chain seed — continues b06_personal exit frame; MATILDA on upstage sofa; WARDROBE LOCK: same gray jumpsuit, black belt, silver earrings, blonde ponytail per Plates/2.jpg; SKIN GRADE: match kitchen b04 neutral skin — no pink, no purple cast" },
+        "@2": {
+          "description": "see attached living room plate — SET GEOGRAPHY: cream sofa UPSTAGE against back wall, coffee table downstage of sofa, kitchen stage-right background; visual set reference; match environment exactly"
+        },
+        "dialogue": {
+          "speech_text": "What we bring to our clients is not just expertise — it is a network. Twenty years of relationships with regulators, logistics operators, and the people who actually move things and approve things across twelve countries. That is not something you can buy. It takes time.",
+          "language": "en-US",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: absolute silence except MATILDA lip-sync voice — zero background noise, zero chatter, mute set",
+          "voice_direction": "SOFT ENTRANCE: holds b06 exit composure 2-3 seconds — settled seated quiet beat, then eases into first word; warm direct delivery with gentle conviction — she believes this deeply; NOT a sales pitch, NOT authoritative; Bavarian lilt on all English; brief micro-pauses between ideas; TAIL: finishes final sentence, 1.5s quiet hold — she lets the words land"
+        },
+        "scene": "LIVING ROOM LOCK: MATILDA seated on sofa — same position as b06, feet on floor, relaxed upright posture; OPENS SOFT — 2-3 second ease-in; warm alive face — quiet conviction, gentle nod or micro-expression on key phrases; eye contact on lens throughout; TAIL 12-13s — finishes sentence, brief composed hold; subtle settling into seat on tail; pose carries to b08 seed",
+        "camera": "CAMERA STATIC — SUBJECT STATIC: medium waist-up seated on upstage sofa, identical to b06; same key and exposure as chain seed; zero reframe, zero zoom",
+        "style": "documentary prestige, skin grade locked to kitchen b01-b04 — fair neutral midtones, neutral WB, no beauty filter, no pink cheeks, no purple skin, no rose walls",
+        "output": { "sequence_length": "15s" }
+      }
+    },
+    {
+      "id": "b08_close_de",
+      "duration": 15,
+      "t_start": 105,
+      "t_end": 120,
+      "role": "host",
+      "setting": "living_room",
+      "handoff_seed_from": "b07_network_last_frame",
+      "branch_open_pause": true,
+      "speech_text": "An unsere Partner und Kunden in ganz Europa — wir sind bereit. Die Dienstleistungen von Stonebridge stehen Ihnen zur Verfügung. Ich freue mich auf unsere Zusammenarbeit. Auf Wiedersehen.",
+      "barebones": {
+        "command": "generate video",
+        "@1": { "description": "see attached chain seed — continues b07_network exit frame; MATILDA on upstage sofa; WARDROBE LOCK: same gray jumpsuit, black belt, silver earrings, blonde ponytail per Plates/2.jpg; SKIN GRADE: match kitchen b04 neutral skin — no pink, no purple cast" },
+        "@2": {
+          "description": "see attached living room plate — SET GEOGRAPHY: cream sofa UPSTAGE against back wall, coffee table downstage of sofa, kitchen stage-right background; visual set reference; match environment exactly"
+        },
+        "dialogue": {
+          "speech_text": "An unsere Partner und Kunden in ganz Europa — wir sind bereit. Die Dienstleistungen von Stonebridge stehen Ihnen zur Verfügung. Ich freue mich auf unsere Zusammenarbeit. Auf Wiedersehen.",
+          "language": "de-DE",
+          "on_screen": "Stonebridge — ready for Europe",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: absolute silence except MATILDA lip-sync voice — zero background noise, zero chatter, mute set",
+          "voice_direction": "SOFT ENTRANCE: holds b07 exit composure 2-3 seconds — settled seated quiet beat; then warm intimate German close; native Münchner Bayerisch — relaxed warm inviting goodbye, like saying farewell to guests in her home; easy conversational pace; brief micro-pauses between phrases; NOT formal, NOT corporate, NOT stiff; TAIL AUDIO LOCK: after Auf Wiedersehen lips stay gently closed — ZERO sigh, ZERO audible exhale, ZERO chest breath"
+        },
+        "scene": "LIVING ROOM LOCK: MATILDA seated on UPSTAGE sofa — same position as b06/b07, feet on floor, relaxed upright; WARDROBE unchanged; OPENS from b07 seed — 2-3s ease-in before German; warm alive face; genuine smile on Auf Wiedersehen; TAIL 12-15s SEATED HOLD — lips close, alive eyes; remains seated — NOT standing, NOT moving",
+        "camera": "CAMERA STATIC — SUBJECT STATIC: medium waist-up on upstage sofa, identical to b06/b07; same key and exposure as chain seed; zero reframe through end; no pull-back, no exit",
+        "style": "documentary prestige, skin grade locked to kitchen b01-b04 — fair neutral midtones, neutral WB, no beauty filter, no pink cheeks, no purple skin, no rose walls",
+        "output": { "sequence_length": "15s" }
+      }
+    }
+  ]
+}

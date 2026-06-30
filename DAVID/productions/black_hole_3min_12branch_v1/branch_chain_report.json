@@ -1,0 +1,24 @@
+{
+  "at": "2026-06-30T00:37:50.415048+00:00",
+  "slug": "black_hole_3min_12branch",
+  "clips": 12,
+  "branches": [
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branches\\b01_emergence_void_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branches\\b02_emergence_lensing_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branches\\b03_emergence_disk_ignites_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branches\\b04_emergence_doppler_lock_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branches\\b05_glory_photon_ring_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branches\\b06_glory_einstein_arcs_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branches\\b07_glory_jets_emerge_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branches\\b08_glory_hero_hold_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branches\\b09_descent_plunge_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branches\\b10_descent_photon_sphere_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branches\\b11_descent_trapped_light_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branches\\b12_descent_darkness_15s.mp4"
+  ],
+  "xfade_s": 0.35,
+  "output": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\output\\black_hole_3min_12branch_branch_chain_12x15s_v2.mp4",
+  "duration_s": 176.83,
+  "expected_s": 176.15,
+  "audio_post": "chandra_perseus_sonification"
+}

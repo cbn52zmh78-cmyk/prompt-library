@@ -1,0 +1,15 @@
+{
+  "zone_id": "@1",
+  "plate_type": "environment_empty",
+  "no_people": true,
+  "path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\plates\\@1_plate.jpg",
+  "url": "https://files-cdn.x.ai/_s0Yu_UsRb6pDY2fXV-Exg/file_cfba301b-ca85-4f39-80fb-2dfba31fd93d.jpg",
+  "file_id": "file_cfba301b-ca85-4f39-80fb-2dfba31fd93d",
+  "source_file": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\Concepts\\_review_frames\\user_ref\\1_0p0s.jpg",
+  "source_url": null,
+  "set_id": "@Set-Modern-Kitchen-001",
+  "avatar_reference": "https://files-cdn.x.ai/8qGUKMLBTWmgImwE9Imoqw/file_e3c7f7d6-1980-4463-a59d-719766130afe.jpg",
+  "note": "@1 empty set on disk only — never composited with @2; video seeds from avatar_url",
+  "status": "REGENERATED",
+  "reused": false
+}

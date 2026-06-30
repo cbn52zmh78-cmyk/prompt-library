@@ -1,0 +1,105 @@
+{
+  "_doc": "Animation transpositions of director-cinematographer visual DNA — ELEANOR-DAVID R3 / Studio style library",
+  "_source": "Grok Heavy browser research",
+  "_captured": "2026-06-30",
+  "_pairs_with": "director_cinematographer_style_prompts_v1.json",
+  "_scope": "original animation directions; pipeline-realistic; homage + innovation beyond existing crossovers",
+  "research_anchors": [
+    "Wes Anderson: Fantastic Mr. Fox, Isle of Dogs",
+    "Roger Deakins: Rango, WALL-E, How to Train Your Dragon consulting",
+    "Loving Vincent painterly frame-by-frame",
+    "Lotte Reiniger silhouette cut-out",
+    "Waltz with Bashir, Flee psychological doc-animation",
+    "Spider-Verse, The Red Turtle, Paprika, Sin City, Love Death & Robots"
+  ],
+  "animation_styles": [
+    {
+      "id": "anim_fincher_khondji",
+      "live_action_style_id": "style_fincher_khondji",
+      "director": "David Fincher",
+      "cinematographer": "Darius Khondji",
+      "live_action_reference": "Seven",
+      "name": "Procedural Underexposure Simulation CGI",
+      "technique": "Hybrid 3D photoreal with heavy rotoscope base + custom procedural shaders",
+      "description": "Frames rendered like security-cam / simulation footage with algorithmic keyframing enforcing obsessive repetition and mechanical dollies. Desaturated palette with bleach-bypass shaders crushing blacks; particle rain/reflections physically motivated but subtly glitch or decay in shadows. Selective gold/green emissives pierce darkness.",
+      "creative_innovation": "Simulation meta-layer of cold calculation (Zodiac investigation files); subtle looping/decay in background for unresolved endings. Sin City meets Paprika psychological depth crossed with Love Death & Robots technical obsession — colder and more relentless.",
+      "pipeline": ["Blender", "Maya", "rotoscope", "procedural shaders", "mechanical camera rig"]
+    },
+    {
+      "id": "anim_anderson_yeoman",
+      "live_action_style_id": "style_anderson_yeoman",
+      "director": "Wes Anderson",
+      "cinematographer": "Robert Yeoman",
+      "live_action_reference": "The Grand Budapest Hotel",
+      "name": "Enforced Symmetry Multi-Plane Diorama Vector/Stop-Motion Hybrid",
+      "technique": "Digital cut-out + physical miniature hybrid with AI symmetry locking + Ghibli-inspired parallax layers",
+      "description": "Every frame rigidly centered/symmetrical with vibrant curated pastels, deep parallax planes, whip-pan simulation, tactile handmade textures (felt, paper, 3D-printed props) like a living pop-up book.",
+      "creative_innovation": "Enforced digital symmetry beyond Anderson's own stop-motion; interactive chapter-book layers openable mid-film. Perfect alignment as thematic joke on control — wilder whimsy while obsessively balanced.",
+      "pipeline": ["stop-motion", "Toon Boom", "After Effects", "symmetry lock", "physical miniatures", "parallax"]
+    },
+    {
+      "id": "anim_coppola_willis",
+      "live_action_style_id": "style_coppola_willis",
+      "director": "Francis Ford Coppola",
+      "cinematographer": "Gordon Willis",
+      "live_action_reference": "The Godfather",
+      "name": "Caravaggio Shadow Opera Silhouette-Paint Hybrid",
+      "technique": "Multi-layer cut-out silhouettes + hand-painted oil cel animation with dynamic volumetric light reveals",
+      "description": "Figures emerge from deep blacks via selective top/side light shafts; warm earthy tones bleed through wax-like textures; faces half-hidden; epic widescreen fresco-like unfolding.",
+      "creative_innovation": "Shadows act as silent family members that morph or consume figures. Lotte Reiniger elevated with Loving Vincent brushwork and Renaissance drama.",
+      "pipeline": ["silhouette cut-out", "oil cel", "hand-painted layers", "volumetric light"]
+    },
+    {
+      "id": "anim_deakins_villeneuve",
+      "live_action_style_id": "style_deakins_villeneuve",
+      "director": "Denis Villeneuve",
+      "cinematographer": "Roger Deakins",
+      "live_action_reference": "Blade Runner 2049",
+      "name": "PBR Practical-Light Volumetric Hybrid",
+      "technique": "Photoreal 3D CGI with strictly motivated simulated practical sources + scanned miniature textures; or Laika-style tactile stop-motion with real-world light rigs filmed",
+      "description": "God rays through dust/haze; silhouettes against vast skies; negative space mastery; lens imperfections and film grain overlays; every light physically present.",
+      "creative_innovation": "Deakins Lens Simulator renderer — animators treat light like a real DP on set in fantastical worlds. No Country desolation with animated environments that breathe as living locations.",
+      "pipeline": ["Unreal", "Blender PBR", "motivated practical light sim", "Laika stop-motion", "film grain overlay"]
+    },
+    {
+      "id": "anim_bergman_nykvist",
+      "live_action_style_id": "style_bergman_nykvist",
+      "director": "Ingmar Bergman",
+      "cinematographer": "Sven Nykvist",
+      "live_action_reference": "Cries and Whispers / Persona",
+      "name": "Luminous Minimalist Ink-Wash Face Portrait Morph",
+      "technique": "Hand-drawn 2D charcoal/ink-wash with soft gradient digital diffusion, extreme close-up focus, sparse symbolic overlays",
+      "description": "Faces as hyper-expressive canvases lit by single-source window gradients; backgrounds dissolve to abstraction; subtle morphs reveal inner turmoil.",
+      "creative_innovation": "Light as interrogator — soft glows slowly expose or hide truths on the face; micro-morphs for psychological depth. Waltz with Bashir lineage but softer, like a living etching.",
+      "pipeline": ["2D ink-wash", "charcoal", "digital diffusion", "extreme CU animation"]
+    },
+    {
+      "id": "anim_bertolucci_storaro",
+      "live_action_style_id": "style_bertolucci_storaro",
+      "director": "Bernardo Bertolucci",
+      "cinematographer": "Vittorio Storaro",
+      "live_action_reference": "The Conformist",
+      "name": "Dynamic Goethe Color Symphony Oil Animation",
+      "technique": "Frame-by-frame painterly like Loving Vincent with programmable color theory shifts and volumetric brushstroke physics",
+      "description": "Palettes actively morph (reds flare in passion, blues isolate ideology); light sculpts figures like Caravaggio in motion; rich textured layers bleed and blend.",
+      "creative_innovation": "Palettes conduct emotion like a score — scenes split or fuse hues to externalize inner conflict. Bertolucci sensual politics as visual opera more alive than paint-on-canvas.",
+      "pipeline": ["oil animation", "painterly frame-by-frame", "programmable hue scripts", "brushstroke physics"]
+    },
+    {
+      "id": "anim_cuaron_lubezki",
+      "live_action_style_id": "style_cuaron_lubezki",
+      "director": "Alfonso Cuarón",
+      "cinematographer": "Emmanuel Lubezki",
+      "live_action_reference": "Children of Men",
+      "name": "Seamless Organic Long-Take Parallax Flow",
+      "technique": "Hybrid 2D/3D multi-plane with continuous virtual Steadicam paths, Ghibli-inspired particle/natural element simulation, wide-angle distortion and available-light rendering",
+      "description": "Unbroken flowing sequences; reactive environments; lens flares and chaos that feel handheld yet poetic.",
+      "creative_innovation": "Breath-Take Animation — virtual camera breathes with the world; environments respond organically; documentary-like humanism in invented realities. Flee meets Spider-Verse fluidity crossed with The Red Turtle poetry — longer and more visceral.",
+      "pipeline": ["virtual Steadicam", "2D/3D parallax", "Ghibli particle sim", "wide lens distortion", "available-light render"]
+    }
+  ],
+  "hybrids": {
+    "status": "reserved",
+    "note": "Source suggested Fincher+Deakins etc.; no combined spec captured"
+  }
+}

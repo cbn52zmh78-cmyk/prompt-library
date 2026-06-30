@@ -4,10 +4,10 @@
   "status": "scaffold",
   "agent": "ELEANOR-DAVID",
   "variant_of": "AI/ELEANOR",
-  "base_model": "meta-llama/Llama-3.1-8B-Instruct",
+  "base_model": "unsloth/Llama-3.3-70B-Instruct-bnb-4bit",
   "scope": "language_product_governance",
-  "as_of": "2026-06-26",
-  "note": "Scaffold stub for the ELEANOR-DAVID governance variant -- the ELEANOR layer that sits on top of DAVID's Llama 3.1 8B language product. Inherits the base ELEANOR architecture from AI/ELEANOR (the five intrinsic subagents Memory/Deliberation/Voice/Planner/Watcher); adds DAVID-product-specific governance/compliance. Variant corpus shards go in training/eleanor_dataset/ -- do NOT copy the base ELEANOR corpus here.",
+  "as_of": "2026-06-27",
+  "note": "ELEANOR-DAVID governance variant -- the 70B ELEANOR gate that governs DAVID's Llama 3.1 8B language product. ELEANOR is always 70B regardless of the product model it gates. Inherits base ELEANOR architecture from AI/ELEANOR; adds DAVID-specific governance (media/language compliance, synthetic-actor rails, pronunciation accuracy, video-script governance). Variant corpus shards only -- do NOT copy the base ELEANOR corpus here.",
   "dataset": {
     "path": "models/datasets/eleanor_david_dataset.jsonl",
     "builder": "DAVID/ELEANOR/training/eleanor_dataset_builder.py",
@@ -30,17 +30,24 @@
     "target_pairs": 1000
   },
   "model": {
-    "key": "llama-8b",
-    "base_model_id": "meta-llama/Llama-3.1-8B-Instruct",
-    "unsloth_model_name": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
-    "max_seq_length": 2048,
+    "key": "llama-70b",
+    "base_model_id": "meta-llama/Llama-3.3-70B-Instruct",
+    "unsloth_model_name": "unsloth/Llama-3.3-70B-Instruct-bnb-4bit",
+    "max_seq_length": 4096,
     "load_in_4bit": true,
+    "hardware_min": "H100_80GB",
     "hf_gated": true,
-    "hf_note": "Requires HUGGING_FACE_HUB_TOKEN and Meta Llama 3.1 approval at huggingface.co/meta-llama/Llama-3.1-8B-Instruct"
+    "hf_note": "Requires HUGGING_FACE_HUB_TOKEN and Meta Llama 3.3 approval at huggingface.co/meta-llama/Llama-3.3-70B-Instruct"
+  },
+  "lora": {
+    "rank": 64,
+    "alpha": 64,
+    "dropout": 0.05,
+    "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
   },
   "paths": {
-    "adapter_prefix": "eleanor-david-8b",
-    "adapter_output_template": "models/adapters/eleanor-david-8b_{run}",
+    "adapter_prefix": "eleanor-david-70b",
+    "adapter_output_template": "models/adapters/eleanor-david-70b_{run}",
     "local_adapter_dir": "DAVID/ELEANOR/models/adapters"
   },
   "infer": {
@@ -50,6 +57,6 @@
     "default": true,
     "live_requires_env": "ALLOW_GPU_TRAIN=1",
     "min_pairs_requires_live": 200,
-    "note": "Scaffold: no corpus yet. Author variant shards, build, then inspect config + stub output before any RunPod GPU spend."
+    "note": "220 pairs in corpus (T1-T10, DAVID-domain only, no LE content). Scale to target_pairs 1000 before live run. H100 80GB minimum for 70B 4-bit."
   }
 }

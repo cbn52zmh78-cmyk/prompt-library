@@ -1,0 +1,29 @@
+{
+  "proof": "kitchen_stonebridge_fincher_10s",
+  "prompt_mode": "barebones",
+  "seed_mode": "@1",
+  "seed_slot": "@1",
+  "at": "2026-06-29T04:18:10.256065+00:00",
+  "session_ids": {
+    "@1": "file_155684c8-e4a1-4c67-ba6c-a581d5f5ddaf",
+    "@2": "file_f4cbebe7-e4f2-4899-ac71-daed8baef53a"
+  },
+  "image_url": "https://files-cdn.x.ai/mMYddSzDSBqC0FBHLCA1xQ/file_155684c8-e4a1-4c67-ba6c-a581d5f5ddaf.jpg",
+  "image_url_role": "@1 empty warehouse — talent NOT in seed pixels",
+  "seed_file": null,
+  "prompt": "Setting: @155684c8-e4a1-4c67-ba6c-a581d5f5ddaf (see attached render; modern kitchen. the sounds of the busy city can be heard from offscreen) ; MATILDA ( @f4cbebe7-e4f2-4899-ac71-daed8baef53a , see attached render. MATILDA: Aged 27, sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; ENGLISH only in this scene, no bilingualism,) MATILDA maintains eye contact with camera entire scene whilst she naturally continues the conversation towards the aspects of her job at Stonebridge, going into her German background as well - dialogue shortened to fit 10 sec generation. Camera does static medium shot. ; In the exact visual style of David Fincher: meticulously composed cinematic realism with cold, desaturated teal, gray, and amber tones, high-contrast chiaroscuro lighting that carves deep dramatic shadows across sharp architectural lines and rich textures, clinical precision in every detail, subtle film grain, anamorphic depth, moody atmospheric elegance, and a hauntingly controlled, almost predatory beauty in the finished shot",
+  "rules": [
+    "API binds identity via image_url only — @2 UUID in prose does not lock face",
+    "BAREBONES: assets outside seed named in prose; talent in seed = Setting + action"
+  ],
+  "duration_s": 10,
+  "model": "grok-imagine-video-1.5",
+  "resolution": "480p",
+  "shot_id": "01_entry",
+  "video_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-0b2c636e-d241-94ae-9107-060b87593a0e.mp4",
+  "output_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\kitchen_stonebridge_fincher_10s.mp4",
+  "frame_0p5s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\kitchen_stonebridge_fincher_10s_0p5s.jpg",
+  "frame_2s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\kitchen_stonebridge_fincher_10s_2s.jpg",
+  "frame_4s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\kitchen_stonebridge_fincher_10s_4s.jpg",
+  "frame_8s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\kitchen_stonebridge_fincher_10s_8s.jpg"
+}

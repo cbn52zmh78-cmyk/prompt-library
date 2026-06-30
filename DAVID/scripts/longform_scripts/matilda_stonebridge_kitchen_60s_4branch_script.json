@@ -1,0 +1,167 @@
+{
+  "slug": "matilda_stonebridge_kitchen_60s",
+  "title": "MATILDA — Stonebridge Kitchen 60s (4×15s branch chain, v4)",
+  "format_id": "documentary-host",
+  "target_seconds": 60,
+  "intake": {
+    "format_id": "documentary-host",
+    "actor_id": "Matilda-001",
+    "set_id": "@Set-Modern-Kitchen-001",
+    "style_id": "@Style-Documentary-Prestige-001",
+    "gate_0": {
+      "verdict": "GREEN",
+      "blocked": false,
+      "human_signoff": true,
+      "rating": "PG",
+      "ai_disclosure_method": "title_card",
+      "synthetic_performer_id": "Matilda-001",
+      "compliance_version": "2.2",
+      "compliance_2257": {
+        "scope": "not_applicable",
+        "reason": "synthetic_performer_no_explicit_material"
+      }
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "prompt_mode": "barebones",
+    "use_identity_lock": false,
+    "use_zone_plates": true,
+    "avatar_reference": "AI/ELEANOR/products/model_variants/Concepts/4.jpg",
+    "set_reference": "AI/ELEANOR/products/model_variants/Concepts/_review_frames/user_ref/1_0p0s.jpg",
+    "composite_first_frame": "DAVID/productions/matilda_kitchen_stonebridge_10s_longform_v1/proof/composite_first_frame_probe.jpg",
+    "branch_chain": {
+      "segment_s": 15,
+      "dialogue_wrap_s": 12.5,
+      "hold_tail_s": 2.5,
+      "open_pause_s": 0,
+      "statement_pause_s": 0.3,
+      "xfade_s": 0,
+      "seed_handoff": "last_frame",
+      "branch_mode": "last_frame",
+      "mandatory_last_frame": true,
+      "output_version": "v19_b01_no_sigh_shrug"
+    }
+  },
+  "shots": [
+    {
+      "id": "b01_intro",
+      "duration": 15,
+      "t_start": 0,
+      "t_end": 15,
+      "role": "host",
+      "speech_text": "Grüß Gott! I'm Matilda Kirschner, Vice President of Operations at Stonebridge Consultants Group. Welcome — it's good to be with you.",
+      "barebones": {
+        "command": "generate video",
+        "@1": { "description": "see attached render; modern kitchen interior — empty apartment, no other people, visual only" },
+        "@2": {
+          "description": "see attached render. MATILDA: relaxed laid-back friendly inviting host; soft gentle warm voice; native Bavarian/Munich accent; warm alive expressive face; enjoys welcoming viewers"
+        },
+        "dialogue": {
+          "speech_text": "Grüß Gott! I'm Matilda Kirschner, Vice President of Operations at Stonebridge Consultants Group. Welcome — it's good to be with you.",
+          "language": "en-US",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: absolute silence except MATILDA lip-sync voice — zero background noise, zero chatter, mute set",
+          "voice_direction_DE": "lip-sync Grüß Gott from first frame — native Münchner Bayerisch, warm Bavarian vowels, mouth moving on greeting; ZERO silent lead-in",
+          "voice_direction": "opens mid-greeting — NO pause before Grüß Gott; soft relaxed Bavarian lilt on English; easy welcoming tone; NOT American anchor; TAIL AUDIO LOCK: on final word lips snap closed and stay closed — ZERO sigh, ZERO breathy sigh, ZERO falling exhale, ZERO audible release, ZERO chest breath sound, ZERO lip-part breath, ZERO vocal fry exhale at end"
+        },
+        "scene": "STAGE LOCK: MATILDA planted at center stage mark — feet fixed, body does NOT move toward or away from camera, does NOT drift, does NOT reposition at any point; she is the fixed axis the camera moves toward; frame one lip-sync Grüß Gott — ZERO open pause, ZERO lead-in silence, ZERO dead air before first word; brief micro-pauses between statements only; warm relaxed inviting face during speech only; tail 12-15s FROZEN COMPOSED HOLD — finishes speaking by 12.5s then statue-still upper body; shoulders squared and LOCKED — ZERO shrug, ZERO shoulder roll, ZERO shoulder drop, ZERO shoulder lift, ZERO gesture, ZERO repositioning; lips gently closed, silent nose breathing only; NO chest exhale, NO audible breath, NO lip part, NO sigh, NO performance beat; calm neutral resting face through final 2-3 seconds — clean handoff composure for b02",
+        "camera": "CAMERA MOVES — SUBJECT DOES NOT: MATILDA holds center stage mark, zero body advance; opens medium-wide — MATILDA full body knee-to-crown, eye-level, slight camera-left axis, kitchen set visible for context; slow mechanical creep zoom in 0–12s arriving at medium shot waist-up — camera closes distance, MATILDA does not step forward; MATILDA center-frame on camera axis the entire move — she is the fixed point, not a moving target; locked static hold at medium waist-up 12–15s — zero reframe, zero pull-back, zero tilt after landing; key light 5600K cool neutral from camera-left, high contrast chiaroscuro, natural skin, no beauty filter",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": { "sequence_length": "15s" }
+      }
+    },
+    {
+      "id": "b02_role",
+      "duration": 15,
+      "t_start": 15,
+      "t_end": 30,
+      "role": "host",
+      "branch_open_pause": true,
+      "speech_text": "At Stonebridge, I help keep things running smoothly across North America and Europe. I grew up in Munich — where a handshake still means something. That Bavarian background shapes how I work with our partners.",
+      "barebones": {
+        "command": "generate video",
+        "@1": { "description": "see attached render; modern kitchen interior — empty apartment, no other people, visual only" },
+        "@2": {
+          "description": "see attached render. MATILDA: relaxed laid-back friendly inviting host; soft gentle warm voice; native Bavarian/Munich accent; conversational — enjoys her work, NOT giggly, NOT laughy, NOT authoritative, NOT intense"
+        },
+        "dialogue": {
+          "speech_text": "At Stonebridge, I help keep things running smoothly across North America and Europe. I grew up in Munich — where a handshake still means something. That Bavarian background shapes how I work with our partners.",
+          "language": "en-US",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: absolute silence except MATILDA lip-sync voice — zero background noise, zero chatter, mute set",
+          "voice_direction": "SOFT ENTRANCE: holds b01 exit composure 2-3 seconds — quiet present beat, then eases gently into first word; gradual warm ramp-in, NOT abrupt start, NOT punch-in, NOT sudden volume jump; OPEN AUDIO LOCK: ZERO laugh, ZERO chuckle, ZERO giggle, ZERO breathy laugh before or on first word; NOT sigh, NOT dead air; relaxed conversational host — Munich-born English with subtle Bavarian lilt; warm inviting easygoing delivery; brief micro-pauses between sentences; NOT corporate commander, NOT authoritative, NOT intense, NOT American broadcaster"
+        },
+        "scene": "STAGE LOCK: MATILDA holds center stage mark from b01 — same physical position, feet planted, zero repositioning, zero drift toward or away from camera; center-frame on camera axis, held for entire 15 seconds; OPENS SOFT — continues b01 tail composure; 2-3 second gentle ease-in before first word; neutral-warm composed face on open — subtle closed-mouth warmth only; NO laugh, NO chuckle, NO giggle, NO smile-laugh, NO audible amusement at start; she warms into speech like resuming conversation, NOT abrupt entrance, NOT snap-to-talk; relaxed laid-back hospitality host energy; warm inviting micro-expressions after speech begins; genuinely enjoys talking about Stonebridge; NOT robotic, NOT uptight, NOT commanding; eye contact on lens; TAIL 11-12s SNAP CLOSE — dialogue complete by ~11s; half-second micro-hold only then cut-ready neutral face; NOT 1 second pause, NOT long tail, NOT extended dead air before b03 handoff",
+        "camera": "CAMERA STATIC — SUBJECT STATIC: both locked from frame one; medium shot waist-up, eye-level, MATILDA center-frame with slight camera-left axis, subject at medium conversational distance — this is the exact position camera landed at end of b01; zero reframe, zero zoom, zero pull-back, zero pan, zero tilt, zero drift, static entire 15 seconds; key light 5600K cool neutral from camera-left, high contrast chiaroscuro",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": { "sequence_length": "15s" }
+      }
+    },
+    {
+      "id": "b03_services",
+      "duration": 15,
+      "t_start": 30,
+      "t_end": 45,
+      "role": "host",
+      "branch_open_pause": true,
+      "speech_text": "Stonebridge brings decades of consulting expertise from our U.S. headquarters. We cover supply chain, compliance, and growth strategy. We're expanding across the European Union — and I'm proud to lead from Munich.",
+      "barebones": {
+        "command": "generate video",
+        "@1": { "description": "see attached render; modern kitchen interior — empty apartment, no other people, visual only" },
+        "@2": {
+          "description": "see attached render. MATILDA: relaxed friendly inviting host; Munich-born native; soft gentle warm voice; Bayerisch rhythm on ALL English — enjoys sharing what Stonebridge offers, NOT American, NOT corporate commander"
+        },
+        "dialogue": {
+          "speech_text": "Stonebridge brings decades of consulting expertise from our U.S. headquarters. We cover supply chain, compliance, and growth strategy. We're expanding across the European Union — and I'm proud to lead from Munich.",
+          "language": "en-US",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: absolute silence except MATILDA lip-sync voice — zero background noise, zero chatter, mute set",
+          "voice_direction": "SOFT ENTRANCE: holds b02 exit composure 2-3 seconds — quiet present beat, then eases gently into first word; gradual warm ramp-in, NOT abrupt start, NOT punch-in; relaxed inviting host — Munich-born native, Bavarian/Munich accent and rhythm on ALL English; warm conversational sell; must NOT sound American, NOT CNN, NOT network anchor; brief micro-pauses only"
+        },
+        "scene": "STAGE LOCK: MATILDA holds center stage mark — same physical position as b01 and b02, feet planted, zero repositioning, zero drift; center-frame on camera axis, held for entire 15 seconds; OPENS SOFT — continues b02 exit composure; 2-3 second gentle ease-in before first word; NOT abrupt entrance, NOT snap-to-talk; relaxed laid-back friendly energy; warm alive face — micro-expressions, gentle organic movement; hospitality host selling Stonebridge conversationally; NOT uptight, NOT mannequin, NOT authoritative; eye contact on lens; TAIL 12-15s — on final beat subtle affirming head shake/nod into handoff; finishes sentence, brief ~1.5s hold with head shake settling; pose carries to b04 seed",
+        "camera": "CAMERA STATIC — SUBJECT STATIC: both locked from frame one; medium shot waist-up, eye-level, MATILDA center-frame with slight camera-left axis, subject at medium conversational distance — identical position to b02; zero reframe, zero zoom, zero pull-back, zero pan, zero tilt, zero drift, static entire 15 seconds; key light 5600K cool neutral from camera-left, high contrast chiaroscuro",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": { "sequence_length": "15s" }
+      }
+    },
+    {
+      "id": "b04_close",
+      "duration": 15,
+      "t_start": 45,
+      "t_end": 60,
+      "role": "host",
+      "branch_open_pause": true,
+      "speech_text": "To our friends and clients across Europe — die Dienstleistungen von Stonebridge werden bald in Ihrer Region verfügbar sein. Wir freuen uns auf die Zusammenarbeit. Auf Wiedersehen.",
+      "barebones": {
+        "command": "generate video",
+        "@1": { "description": "see attached render; modern kitchen interior — empty apartment, no other people, visual only" },
+        "@2": {
+          "description": "see attached render. MATILDA: relaxed laid-back friendly inviting host; native Bayerisch; soft warm voice; easygoing goodbye — enjoys her work, NOT authoritative, NOT intense, NOT flirtatious"
+        },
+        "dialogue": {
+          "speech_text": "To our friends and clients across Europe — die Dienstleistungen von Stonebridge werden bald in Ihrer Region verfügbar sein. Wir freuen uns auf die Zusammenarbeit. Auf Wiedersehen.",
+          "language": "de-DE",
+          "on_screen": "Stonebridge services coming soon to your region",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: absolute silence except MATILDA lip-sync voice — zero background noise, zero chatter, mute set",
+          "voice_direction_DE": "native Münchner Bayerisch — relaxed warm inviting close, like saying goodbye to guests; easy conversational pace; brief micro-pauses between phrases; NOT sigh, NOT authoritative, NOT intense, NOT American, NOT flirtatious"
+        },
+        "scene": "STAGE LOCK: MATILDA holds center stage mark — same physical position as b01/b02/b03, feet planted, zero repositioning until exit cue; center-frame on camera axis; OPENS from b03 seed — frame one continues b03 exit subtle head shake/nod exactly as seeded; holds that head pose first 0.5-1s then settles into soft 2s quiet beat before German; NOT abrupt reset, NOT snap-to-neutral; then warm relaxed German close; friendly inviting host energy through goodbye; alive warm face; on Auf Wiedersehen MATILDA walks offscreen stage right from center mark — deliberate, unhurried exit; eye contact on lens until body clears frame; NOT commanding corporate send-off",
+        "camera": "CAMERA STATIC — SUBJECT STATIC until exit: medium shot waist-up, eye-level, MATILDA center-frame with slight camera-left axis — identical position to b02/b03; zero reframe, zero zoom, zero pull-back, zero pan, zero tilt from frame one through exit; key light 5600K cool neutral from camera-left, high contrast chiaroscuro; camera holds static as MATILDA exits stage right — does NOT follow, does NOT pan, does NOT reframe after she leaves",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": { "sequence_length": "15s" }
+      }
+    }
+  ]
+}

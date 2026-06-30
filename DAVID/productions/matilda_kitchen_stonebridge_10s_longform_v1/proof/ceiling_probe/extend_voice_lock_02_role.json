@@ -1,0 +1,14 @@
+{
+  "probe": "extend_voice_lock_shot02",
+  "at": "2026-06-29T08:07:47.297309+00:00",
+  "origin_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-0bc9d287-19c2-96dc-91ec-79e3012c6962.mp4",
+  "origin_duration_s": 15.04,
+  "extend_model": "grok-imagine-video",
+  "extend_duration_requested_s": 10,
+  "output_duration_s": 25.04,
+  "shot_id": "02_role",
+  "prompt_path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\ceiling_probe\\extend_voice_lock_02_role_prompt.txt",
+  "output": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\ceiling_probe\\extend_voice_lock_15s_origin_plus_10s_02_role.mp4",
+  "api_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-34361eca-9c72-9af6-8240-974e4ab9266b.mp4",
+  "prompt_preview": "maintains eye contact with camera entire scene whilst naturally continuing the conversation towards the aspects of her job at Stonebridge, going into her German background. Camera does locked medium close, static ; Lip-synced, delivers in dialogue: \"In my role at Stonebridge, I oversee client operations across North America and Europe. I grew up in Munich \u2014 where a handshake still means something \u2014 and that Bavarian background shapes everything about how I work with our European partners.\" ; AUD\u2026"
+}

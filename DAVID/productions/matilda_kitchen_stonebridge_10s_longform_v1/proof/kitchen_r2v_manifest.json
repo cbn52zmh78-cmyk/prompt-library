@@ -1,0 +1,48 @@
+{
+  "proof": "kitchen_r2v",
+  "gate": "BLOCKED",
+  "prompt_mode": "barebones",
+  "seed_mode": "@1",
+  "seed_slot": "@1",
+  "at": "2026-06-29T04:53:15.675842+00:00",
+  "session_ids": {
+    "@1": "file_0275af30-1dfa-4ca4-91bb-cb9b0b8fc0b3",
+    "@2": "file_8f053f2a-1fa7-4561-a457-0e53535e3a03"
+  },
+  "image_url": "file_0275af30-1dfa-4ca4-91bb-cb9b0b8fc0b3",
+  "image_url_role": "@1 plate + @2 reference_image_file_ids (R2V+i2v)",
+  "seed_file": null,
+  "prompt": "",
+  "rules": [
+    "@1: image_file_id first frame; @2+: reference_image_file_ids compositing",
+    "Legacy @2/@2-front seeds use image_url only (white turntable at t=0)"
+  ],
+  "duration_s": 10,
+  "model": "grok-imagine-video-1.5",
+  "resolution": "480p",
+  "shot_id": "01_entry",
+  "reference_images_api": {
+    "scriptable": true,
+    "enabled_on_model": false,
+    "model": "grok-imagine-video-1.5",
+    "sdk_field": "reference_image_file_ids",
+    "api_field": "reference_images",
+    "editor_compositing": "Grok Imagine web @2+ compositing binds reference sheets via reference_images; not via prose @UUID tokens alone.",
+    "finding": "SDK exposes reference_image_file_ids on client.video.generate() but grok-imagine-video-1.5 returns 'reference_images is not supported for this model'. Barebones identity lock requires API parity or Editor manual path."
+  },
+  "wiring_verdict": "PR1 binding correct — image_file_id + reference_image_file_ids sent; API model lacks reference_images support",
+  "barebones_binding": {
+    "seed_mode": "@1_plate",
+    "image_field": "image_file_id",
+    "reference_image_file_ids": [
+      "file_8f053f2a-1fa7-4561-a457-0e53535e3a03"
+    ]
+  },
+  "generate_kwargs": {
+    "model": "grok-imagine-video-1.5",
+    "image_file_id": "file_0275af30-1dfa-4ca4-91bb-cb9b0b8fc0b3",
+    "reference_image_file_ids": [
+      "file_8f053f2a-1fa7-4561-a457-0e53535e3a03"
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "b01_emergence_void": {
+    "api_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-86e97c7a-02aa-92f3-b9c9-fd9f23816bc0.mp4",
+    "duration_s": 15.04,
+    "handoff_frame": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branch_frames\\b01_emergence_void_last_frame.jpg",
+    "origin": "Stonebridge/Products/CANNON/VIDEOS/RESEARCH/INTERSTELLAR/BLACK_HOLES/origins/act1_scale_origin_LOCKED.jpg",
+    "new_origin": true
+  },
+  "b02_emergence_lensing": {
+    "api_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-5f966e53-c2d2-9117-a61d-d909e60e973a.mp4",
+    "duration_s": 15.04,
+    "handoff_frame": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branch_frames\\b02_emergence_lensing_last_frame.jpg",
+    "origin": null,
+    "new_origin": null
+  },
+  "b03_emergence_disk_ignites": {
+    "api_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-b2d482be-4cc9-95f0-bfc4-92b05eebb867.mp4",
+    "duration_s": 15.04,
+    "handoff_frame": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branch_frames\\b03_emergence_disk_ignites_last_frame.jpg",
+    "origin": null,
+    "new_origin": null
+  },
+  "b04_emergence_doppler_lock": {
+    "api_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-61f9b869-aa79-9951-8a00-a4f668613694.mp4",
+    "duration_s": 15.04,
+    "handoff_frame": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branch_frames\\b04_emergence_doppler_lock_last_frame.jpg",
+    "origin": null,
+    "new_origin": null
+  },
+  "b05_glory_photon_ring": {
+    "api_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-5e466945-bafa-904f-9c9c-70250e4befa8.mp4",
+    "duration_s": 15.04,
+    "handoff_frame": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branch_frames\\b05_glory_photon_ring_last_frame.jpg",
+    "origin": null,
+    "new_origin": null
+  },
+  "b06_glory_einstein_arcs": {
+    "api_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-b3300c74-90c5-9508-a4bc-d64731d174cd.mp4",
+    "duration_s": 15.04,
+    "handoff_frame": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branch_frames\\b06_glory_einstein_arcs_last_frame.jpg",
+    "origin": null,
+    "new_origin": null
+  },
+  "b07_glory_jets_emerge": {
+    "api_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-84ef455d-a4c2-92bd-a279-4315546f0edb.mp4",
+    "duration_s": 15.04,
+    "handoff_frame": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branch_frames\\b07_glory_jets_emerge_last_frame.jpg",
+    "origin": null,
+    "new_origin": null
+  },
+  "b08_glory_hero_hold": {
+    "api_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-7aa7feb3-baf0-983d-8aa0-aa733f8c94d6.mp4",
+    "duration_s": 15.04,
+    "handoff_frame": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branch_frames\\b08_glory_hero_hold_last_frame.jpg",
+    "origin": null,
+    "new_origin": null
+  },
+  "b09_descent_plunge": {
+    "api_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-c12696cd-0b5a-9897-9760-887cd2807bda.mp4",
+    "duration_s": 15.04,
+    "handoff_frame": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branch_frames\\b09_descent_plunge_last_frame.jpg",
+    "origin": null,
+    "new_origin": null
+  },
+  "b10_descent_photon_sphere": {
+    "api_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-f5ccae36-89ee-990e-a581-ce466ed2c874.mp4",
+    "duration_s": 15.04,
+    "handoff_frame": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branch_frames\\b10_descent_photon_sphere_last_frame.jpg",
+    "origin": null,
+    "new_origin": null
+  },
+  "b11_descent_trapped_light": {
+    "api_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-f6d4bbdb-c6d6-9b91-a1d3-51947d5c7980.mp4",
+    "duration_s": 15.04,
+    "handoff_frame": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branch_frames\\b11_descent_trapped_light_last_frame.jpg",
+    "origin": null,
+    "new_origin": null
+  },
+  "b12_descent_darkness": {
+    "api_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-78f93200-aa58-9f85-8b8d-c1e1cb2cbe94.mp4",
+    "duration_s": 15.04,
+    "handoff_frame": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\black_hole_3min_12branch_v1\\branch_frames\\b12_descent_darkness_last_frame.jpg",
+    "origin": null,
+    "new_origin": null
+  }
+}

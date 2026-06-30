@@ -1,0 +1,17 @@
+{
+  "at": "2026-06-29T15:12:25.492578+00:00",
+  "slug": "matilda_stonebridge_kitchen_60s",
+  "branches": [
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_stonebridge_kitchen_60s_longform_v1\\branches\\b01_intro_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_stonebridge_kitchen_60s_longform_v1\\branches\\b02_role_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_stonebridge_kitchen_60s_longform_v1\\branches\\b03_services_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_stonebridge_kitchen_60s_longform_v1\\branches\\b04_close_15s.mp4"
+  ],
+  "xfade_s": 0.0,
+  "output": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_stonebridge_kitchen_60s_longform_v1\\output\\matilda_stonebridge_kitchen_60s_branch_chain_4x15s_v19_b01_no_sigh_shrug.mp4",
+  "duration_s": 60.19,
+  "expected_s": 60.0,
+  "seed_mode": "last_frame",
+  "staging_policy": "prev branch last frame \u2192 upload \u2192 image_file_id chain seed",
+  "topology": "sequential_last_frame"
+}

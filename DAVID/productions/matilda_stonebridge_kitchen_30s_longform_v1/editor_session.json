@@ -1,0 +1,19 @@
+{
+  "captured_at": "2026-06-29T07:29:07.692482+00:00",
+  "video_slug": "matilda_stonebridge_kitchen_30s",
+  "scope": "this video + extensions only — not portable to new projects",
+  "slots": {
+    "@1": {
+      "role": "setting",
+      "file_id": "file_ecd4d3f6-928a-4df8-9f4a-01dee6e67ab7",
+      "url": "https://files-cdn.x.ai/iXDmT49cSqyfSmT2onfRLQ/file_ecd4d3f6-928a-4df8-9f4a-01dee6e67ab7.jpg",
+      "plate_path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_stonebridge_kitchen_30s_longform_v1\\plates\\@1_plate.jpg"
+    },
+    "@2": {
+      "role": "talent_render",
+      "file_id": "file_20a822bd-918c-42fc-9dfd-16719667a8b3",
+      "url": "https://files-cdn.x.ai/tdkVYjmzTHagNsEwMFzdfA/file_20a822bd-918c-42fc-9dfd-16719667a8b3.jpg",
+      "source": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\Concepts\\4.jpg"
+    }
+  }
+}

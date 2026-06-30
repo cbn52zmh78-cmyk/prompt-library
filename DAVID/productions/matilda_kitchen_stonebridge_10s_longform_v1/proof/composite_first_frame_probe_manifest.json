@@ -1,0 +1,25 @@
+{
+  "probe": "composite_first_frame",
+  "gate": "VISUAL_PASS_IDENTITY",
+  "at": "2026-06-29T05:01:00+00:00",
+  "model": "grok-imagine-image-quality",
+  "sdk_fields_sent": ["image_file_ids"],
+  "image_file_ids": [
+    "file_42050341-7f51-4a59-8d10-c9fa56701ab9",
+    "file_3a0f240f-ad68-4c42-a5d7-e0d87ebefe1b"
+  ],
+  "image_inputs": {
+    "@1": "kitchen empty plate (1_0p0s.jpg)",
+    "@2": "MATILDA turntable Concepts/4.jpg"
+  },
+  "video_slot_remap": {
+    "composite_jpg": "@1",
+    "note": "Talent baked into setting at t=0 — staged from start, not empty-plate + @2 compositing"
+  },
+  "editor_delta": "Manual Editor: @1 empty + @2 ref layer (walk-in). Composite path: @1 only, talent pre-staged.",
+  "video_bridge": "composite JPG → video.generate(image_url=...) — no reference_image_file_ids",
+  "output_jpg": "composite_first_frame_probe.jpg",
+  "wiring_verdict": "Correct MATILDA; acceptable interim unblock — not Editor layer parity",
+  "next_gate": "video i2v from composite as sole @1 seed → motion/identity drift check",
+  "pr2_hold": true
+}

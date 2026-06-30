@@ -1,0 +1,73 @@
+{
+  "artifact": "eleanor_david_run_registry",
+  "version": "1.0",
+  "agent": "ELEANOR-DAVID",
+  "variant_of": "ELEANOR",
+  "model_base": "meta-llama/Llama-3.3-70B-Instruct",
+  "scope": "language_product_governance",
+  "note": "First officially-built ELEANOR wrapper variant. Governs DAVID (language research platform). Carries full base ELEANOR cadre: Memory, Deliberation, Voice, Planner, Watcher.",
+  "last_updated": "2026-06-27",
+  "runs": {
+    "run-1": {
+      "run_id": "llama-3.3-70b_20260627_055153_eleanor-david-run1",
+      "tag": "eleanor-david-run1",
+      "status": "complete",
+      "base_model": "meta-llama/Llama-3.3-70B-Instruct",
+      "unsloth_model": "unsloth/Llama-3.3-70B-Instruct-bnb-4bit",
+      "started_at": "2026-06-27",
+      "completed_at": "2026-06-27",
+      "dataset": {
+        "file": "DAVID/ELEANOR/training/eleanor_david_dataset.jsonl",
+        "total_pairs": 2011,
+        "base_eleanor_pairs": 1794,
+        "david_domain_pairs": 220,
+        "david_domain_shards": [
+          "eleanor_david_T1_educational_compliance.jsonl",
+          "eleanor_david_T2_synthetic_media_compliance.jsonl",
+          "eleanor_david_T3_vision_governance.jsonl",
+          "eleanor_david_T4_language_accuracy.jsonl",
+          "eleanor_david_T5_subagent_routing.jsonl",
+          "eleanor_david_T6_crossproduct_value.jsonl",
+          "eleanor_david_T7_dead_language_governance.jsonl",
+          "eleanor_david_T8_dialect_forensic_value.jsonl",
+          "eleanor_david_T9_living_language_compliance.jsonl",
+          "eleanor_david_T10_video_script_governance.jsonl"
+        ]
+      },
+      "training": {
+        "gpu": "NVIDIA H200",
+        "lora_rank": 64,
+        "lora_alpha": 64,
+        "lora_dropout": 0.05,
+        "epochs": 3,
+        "epoch_tier": "1000_plus (3 epochs at 2011 pairs)",
+        "batch_size": 4,
+        "grad_accum": 8,
+        "eff_batch": 32,
+        "actual_steps": 189,
+        "elapsed_min": 43.1,
+        "avg_train_loss": 0.6533,
+        "final_step_loss_approx": 0.196,
+        "loss_curve": {
+          "epoch_0.16": 2.297,
+          "epoch_0.64": 0.9454,
+          "epoch_1.11": 0.6706,
+          "epoch_1.43": 0.5216,
+          "epoch_2.06": 0.4133,
+          "epoch_2.22": 0.2272,
+          "epoch_2.54": 0.1960,
+          "epoch_2.70": 0.1956
+        },
+        "smoke_test": "2/2 PASS",
+        "smoke_note": "T1: DAVID routing (521 chars), T2: governance assertion (572 chars)",
+        "adapter_path": "DAVID/ELEANOR/models/adapters/llama-3.3-70b_20260627_055153_eleanor-david-run1",
+        "bundle": "eleanor_david_adapter_eleanor-david-run1.tar.gz",
+        "note": "First ELEANOR variant. Combined corpus (1794 base + 220 DAVID-domain). H200, 43.1 min. avg_loss=0.6533 (mean across all steps); final-step ~0.196. 2/2 smoke PASS. Significantly lower final-step loss than phase-c (0.196 vs ~0.50)."
+      }
+    }
+  },
+  "subagent_cadre": ["Memory", "Deliberation", "Voice", "Planner", "Watcher"],
+  "adapter_dir": "DAVID/ELEANOR/models/adapters",
+  "adapter_prefix": "llama-3.3-70b",
+  "next": "SAGAN training, then ELEANOR-SAGAN variant"
+}

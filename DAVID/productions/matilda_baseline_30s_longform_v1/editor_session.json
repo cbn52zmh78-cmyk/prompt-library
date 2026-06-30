@@ -1,0 +1,19 @@
+{
+  "captured_at": "2026-06-29T04:02:22.120303+00:00",
+  "video_slug": "matilda_baseline_30s",
+  "scope": "this video + extensions only — not portable to new projects",
+  "slots": {
+    "@1": {
+      "role": "setting",
+      "file_id": "file_6405eb49-cd1b-439f-bf9e-6f4aa4209d9a",
+      "url": "https://files-cdn.x.ai/1kX9R-gcTQy6w3lh6EC9nA/file_6405eb49-cd1b-439f-bf9e-6f4aa4209d9a.jpg",
+      "plate_path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\plates\\@1_plate.jpg"
+    },
+    "@2": {
+      "role": "talent_render",
+      "file_id": "file_ecfef49b-1c5f-49da-b99b-797c30d0c29d",
+      "url": "https://files-cdn.x.ai/CziEovduRY-oPQSWc2JmAw/file_ecfef49b-1c5f-49da-b99b-797c30d0c29d.jpg",
+      "source": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\OTHER\\grok-image-d25e8689-243d-4c02-9567-e1ab92161ca7.jpg"
+    }
+  }
+}

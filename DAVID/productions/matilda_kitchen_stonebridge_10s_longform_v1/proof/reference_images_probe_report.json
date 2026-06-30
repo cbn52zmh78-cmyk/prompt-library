@@ -1,0 +1,384 @@
+{
+  "probe": "reference_images_api_matrix",
+  "at": "2026-06-29T06:07:42.178731+00:00",
+  "finding_doc": {
+    "scriptable": true,
+    "enabled_on_model": false,
+    "model": "grok-imagine-video-1.5",
+    "sdk_field": "reference_image_file_ids",
+    "api_field": "reference_images",
+    "dead_escalations": [
+      "reference_image_file_ids (video.generate)",
+      "reference_image_urls (video.generate) — same model rejection, not id-vs-url"
+    ],
+    "editor_compositing": "Grok Imagine web @2+ compositing binds reference sheets via reference_images; not via prose @UUID tokens alone.",
+    "finding": "SDK exposes reference_image_file_ids on client.video.generate() but grok-imagine-video-1.5 returns 'reference_images is not supported for this model'. Barebones identity lock requires API parity, composite-first-frame, or Editor manual path."
+  },
+  "sdk_note": "SDK documents separate modes: i2v (image_file_id) vs pure R2V (reference_image_* only, no image_file_id). PR1 uses i2v+refs combo.",
+  "sdk_exposed_params": [
+    "reference_image_file_ids",
+    "reference_image_urls"
+  ],
+  "sdk_no_exposed": [
+    "x-grok-beta header",
+    "enable_references flag",
+    "api_version override"
+  ],
+  "session_ids": {
+    "@1": "file_cfba301b-ca85-4f39-80fb-2dfba31fd93d",
+    "@2": "file_d5a7d3d1-d297-4232-8403-99ba1ccb4d1c"
+  },
+  "summary": {
+    "total": 25,
+    "pass": 3,
+    "reference_images_rejected": 12,
+    "passing_combos": [
+      {
+        "model": "grok-imagine-video",
+        "mode": "r2v_ref_file_ids_only"
+      },
+      {
+        "model": "grok-imagine-video",
+        "mode": "r2v_ref_urls_only"
+      },
+      {
+        "model": "grok-imagine-video",
+        "mode": "r2v_ref_file_ids_and_urls"
+      }
+    ]
+  },
+  "results": [
+    {
+      "model": "grok-imagine-video",
+      "mode": "i2v_plus_ref_file_ids",
+      "sent_fields": [
+        "image_file_id",
+        "reference_image_file_ids"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.3,
+      "error": {
+        "kind": "reference_images_not_supported",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"Cannot specify both 'image' and 'reference_images'. Use 'image' for image-to-video or 'reference_images' for reference-to-video.\"\n\tdebug_error_string = \"INVALID_ARGUMENT:Cannot specify both 'image' and 'reference_images'. Use 'image' for image-to-video or 'reference_images' for reference-to-video.\"\n>"
+      }
+    },
+    {
+      "model": "grok-imagine-video",
+      "mode": "i2v_plus_ref_urls",
+      "sent_fields": [
+        "image_file_id",
+        "reference_image_urls"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.3,
+      "error": {
+        "kind": "reference_images_not_supported",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"Cannot specify both 'image' and 'reference_images'. Use 'image' for image-to-video or 'reference_images' for reference-to-video.\"\n\tdebug_error_string = \"INVALID_ARGUMENT:Cannot specify both 'image' and 'reference_images'. Use 'image' for image-to-video or 'reference_images' for reference-to-video.\"\n>"
+      }
+    },
+    {
+      "model": "grok-imagine-video",
+      "mode": "r2v_ref_file_ids_only",
+      "sent_fields": [
+        "reference_image_file_ids"
+      ],
+      "status": "PASS",
+      "elapsed_s": 22.2,
+      "video_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-88ed92b6-7c8a-9275-a6f5-aac640e1c880.mp4"
+    },
+    {
+      "model": "grok-imagine-video",
+      "mode": "r2v_ref_urls_only",
+      "sent_fields": [
+        "reference_image_urls"
+      ],
+      "status": "PASS",
+      "elapsed_s": 21.3,
+      "video_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-4b4a9d0f-4432-98a5-b882-a3d7c69a91a7.mp4"
+    },
+    {
+      "model": "grok-imagine-video",
+      "mode": "r2v_ref_file_ids_and_urls",
+      "sent_fields": [
+        "reference_image_file_ids",
+        "reference_image_urls"
+      ],
+      "status": "PASS",
+      "elapsed_s": 24.5,
+      "video_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-696d4ad2-f743-9640-8e4c-7bae4dc8af34.mp4"
+    },
+    {
+      "model": "grok-imagine-video-1.5",
+      "mode": "i2v_plus_ref_file_ids",
+      "sent_fields": [
+        "image_file_id",
+        "reference_image_file_ids"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.4,
+      "error": {
+        "kind": "reference_images_not_supported",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"`reference_images` is not supported for this model.\"\n\tdebug_error_string = \"INVALID_ARGUMENT:`reference_images` is not supported for this model.\"\n>"
+      }
+    },
+    {
+      "model": "grok-imagine-video-1.5",
+      "mode": "i2v_plus_ref_urls",
+      "sent_fields": [
+        "image_file_id",
+        "reference_image_urls"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.3,
+      "error": {
+        "kind": "reference_images_not_supported",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"`reference_images` is not supported for this model.\"\n\tdebug_error_string = \"INVALID_ARGUMENT:`reference_images` is not supported for this model.\"\n>"
+      }
+    },
+    {
+      "model": "grok-imagine-video-1.5",
+      "mode": "r2v_ref_file_ids_only",
+      "sent_fields": [
+        "reference_image_file_ids"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.3,
+      "error": {
+        "kind": "reference_images_not_supported",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"`reference_images` is not supported for this model.\"\n\tdebug_error_string = \"INVALID_ARGUMENT:`reference_images` is not supported for this model.\"\n>"
+      }
+    },
+    {
+      "model": "grok-imagine-video-1.5",
+      "mode": "r2v_ref_urls_only",
+      "sent_fields": [
+        "reference_image_urls"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.3,
+      "error": {
+        "kind": "reference_images_not_supported",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"`reference_images` is not supported for this model.\"\n\tdebug_error_string = \"INVALID_ARGUMENT:`reference_images` is not supported for this model.\"\n>"
+      }
+    },
+    {
+      "model": "grok-imagine-video-1.5",
+      "mode": "r2v_ref_file_ids_and_urls",
+      "sent_fields": [
+        "reference_image_file_ids",
+        "reference_image_urls"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.3,
+      "error": {
+        "kind": "reference_images_not_supported",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"`reference_images` is not supported for this model.\"\n\tdebug_error_string = \"INVALID_ARGUMENT:`reference_images` is not supported for this model.\"\n>"
+      }
+    },
+    {
+      "model": "grok-imagine-video-1.5-preview",
+      "mode": "i2v_plus_ref_file_ids",
+      "sent_fields": [
+        "image_file_id",
+        "reference_image_file_ids"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.3,
+      "error": {
+        "kind": "reference_images_not_supported",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"`reference_images` is not supported for this model.\"\n\tdebug_error_string = \"INVALID_ARGUMENT:`reference_images` is not supported for this model.\"\n>"
+      }
+    },
+    {
+      "model": "grok-imagine-video-1.5-preview",
+      "mode": "i2v_plus_ref_urls",
+      "sent_fields": [
+        "image_file_id",
+        "reference_image_urls"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.4,
+      "error": {
+        "kind": "reference_images_not_supported",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"`reference_images` is not supported for this model.\"\n\tdebug_error_string = \"INVALID_ARGUMENT:`reference_images` is not supported for this model.\"\n>"
+      }
+    },
+    {
+      "model": "grok-imagine-video-1.5-preview",
+      "mode": "r2v_ref_file_ids_only",
+      "sent_fields": [
+        "reference_image_file_ids"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.4,
+      "error": {
+        "kind": "reference_images_not_supported",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"`reference_images` is not supported for this model.\"\n\tdebug_error_string = \"INVALID_ARGUMENT:`reference_images` is not supported for this model.\"\n>"
+      }
+    },
+    {
+      "model": "grok-imagine-video-1.5-preview",
+      "mode": "r2v_ref_urls_only",
+      "sent_fields": [
+        "reference_image_urls"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.3,
+      "error": {
+        "kind": "reference_images_not_supported",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"`reference_images` is not supported for this model.\"\n\tdebug_error_string = \"INVALID_ARGUMENT:`reference_images` is not supported for this model.\"\n>"
+      }
+    },
+    {
+      "model": "grok-imagine-video-1.5-preview",
+      "mode": "r2v_ref_file_ids_and_urls",
+      "sent_fields": [
+        "reference_image_file_ids",
+        "reference_image_urls"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.4,
+      "error": {
+        "kind": "reference_images_not_supported",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.INVALID_ARGUMENT\n\tdetails = \"`reference_images` is not supported for this model.\"\n\tdebug_error_string = \"INVALID_ARGUMENT:`reference_images` is not supported for this model.\"\n>"
+      }
+    },
+    {
+      "model": "grok-imagine-video-1.5-beta",
+      "mode": "i2v_plus_ref_file_ids",
+      "sent_fields": [
+        "image_file_id",
+        "reference_image_file_ids"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.3,
+      "error": {
+        "kind": "model_not_found",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.NOT_FOUND\n\tdetails = \"The model grok-imagine-video-1.5-beta does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believe this is a mistake, please contact support and quote your team ID and the model name.\"\n\tdebug_error_string = \"NOT_FOUND:The model grok-imagine-video-1.5-beta does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believ"
+      }
+    },
+    {
+      "model": "grok-imagine-video-1.5-beta",
+      "mode": "i2v_plus_ref_urls",
+      "sent_fields": [
+        "image_file_id",
+        "reference_image_urls"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.4,
+      "error": {
+        "kind": "model_not_found",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.NOT_FOUND\n\tdetails = \"The model grok-imagine-video-1.5-beta does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believe this is a mistake, please contact support and quote your team ID and the model name.\"\n\tdebug_error_string = \"NOT_FOUND:The model grok-imagine-video-1.5-beta does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believ"
+      }
+    },
+    {
+      "model": "grok-imagine-video-1.5-beta",
+      "mode": "r2v_ref_file_ids_only",
+      "sent_fields": [
+        "reference_image_file_ids"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.4,
+      "error": {
+        "kind": "model_not_found",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.NOT_FOUND\n\tdetails = \"The model grok-imagine-video-1.5-beta does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believe this is a mistake, please contact support and quote your team ID and the model name.\"\n\tdebug_error_string = \"NOT_FOUND:The model grok-imagine-video-1.5-beta does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believ"
+      }
+    },
+    {
+      "model": "grok-imagine-video-1.5-beta",
+      "mode": "r2v_ref_urls_only",
+      "sent_fields": [
+        "reference_image_urls"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.4,
+      "error": {
+        "kind": "model_not_found",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.NOT_FOUND\n\tdetails = \"The model grok-imagine-video-1.5-beta does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believe this is a mistake, please contact support and quote your team ID and the model name.\"\n\tdebug_error_string = \"NOT_FOUND:The model grok-imagine-video-1.5-beta does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believ"
+      }
+    },
+    {
+      "model": "grok-imagine-video-1.5-beta",
+      "mode": "r2v_ref_file_ids_and_urls",
+      "sent_fields": [
+        "reference_image_file_ids",
+        "reference_image_urls"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.3,
+      "error": {
+        "kind": "model_not_found",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.NOT_FOUND\n\tdetails = \"The model grok-imagine-video-1.5-beta does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believe this is a mistake, please contact support and quote your team ID and the model name.\"\n\tdebug_error_string = \"NOT_FOUND:The model grok-imagine-video-1.5-beta does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believ"
+      }
+    },
+    {
+      "model": "grok-imagine-video-r2v",
+      "mode": "i2v_plus_ref_file_ids",
+      "sent_fields": [
+        "image_file_id",
+        "reference_image_file_ids"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.4,
+      "error": {
+        "kind": "model_not_found",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.NOT_FOUND\n\tdetails = \"The model grok-imagine-video-r2v does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believe this is a mistake, please contact support and quote your team ID and the model name.\"\n\tdebug_error_string = \"NOT_FOUND:The model grok-imagine-video-r2v does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believe this is "
+      }
+    },
+    {
+      "model": "grok-imagine-video-r2v",
+      "mode": "i2v_plus_ref_urls",
+      "sent_fields": [
+        "image_file_id",
+        "reference_image_urls"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.4,
+      "error": {
+        "kind": "model_not_found",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.NOT_FOUND\n\tdetails = \"The model grok-imagine-video-r2v does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believe this is a mistake, please contact support and quote your team ID and the model name.\"\n\tdebug_error_string = \"NOT_FOUND:The model grok-imagine-video-r2v does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believe this is "
+      }
+    },
+    {
+      "model": "grok-imagine-video-r2v",
+      "mode": "r2v_ref_file_ids_only",
+      "sent_fields": [
+        "reference_image_file_ids"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.3,
+      "error": {
+        "kind": "model_not_found",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.NOT_FOUND\n\tdetails = \"The model grok-imagine-video-r2v does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believe this is a mistake, please contact support and quote your team ID and the model name.\"\n\tdebug_error_string = \"NOT_FOUND:The model grok-imagine-video-r2v does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believe this is "
+      }
+    },
+    {
+      "model": "grok-imagine-video-r2v",
+      "mode": "r2v_ref_urls_only",
+      "sent_fields": [
+        "reference_image_urls"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.3,
+      "error": {
+        "kind": "model_not_found",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.NOT_FOUND\n\tdetails = \"The model grok-imagine-video-r2v does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believe this is a mistake, please contact support and quote your team ID and the model name.\"\n\tdebug_error_string = \"NOT_FOUND:The model grok-imagine-video-r2v does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believe this is "
+      }
+    },
+    {
+      "model": "grok-imagine-video-r2v",
+      "mode": "r2v_ref_file_ids_and_urls",
+      "sent_fields": [
+        "reference_image_file_ids",
+        "reference_image_urls"
+      ],
+      "status": "FAIL",
+      "elapsed_s": 1.3,
+      "error": {
+        "kind": "model_not_found",
+        "message": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.NOT_FOUND\n\tdetails = \"The model grok-imagine-video-r2v does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believe this is a mistake, please contact support and quote your team ID and the model name.\"\n\tdebug_error_string = \"NOT_FOUND:The model grok-imagine-video-r2v does not exist or your team 0d329486-456b-41fd-9548-59290403d46d does not have access to it. If you believe this is "
+      }
+    }
+  ],
+  "stance": "Beta gate on primary endpoint — PR1 wiring preserved; composite-first-frame remains production path until a PASS combo appears."
+}

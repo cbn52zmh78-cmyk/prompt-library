@@ -14,12 +14,12 @@
     "note": "post-dedup clean build, schema-deduplicated 2026-06-27"
   },
   "model": {
-    "key": "llama-3.3-70b",
-    "base_model_id": "meta-llama/Llama-3.3-70B-Instruct",
-    "unsloth_model_name": "unsloth/Llama-3.3-70B-Instruct-bnb-4bit",
+    "key": "llama-3.1-8b",
+    "base_model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "unsloth_model_name": "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
     "max_seq_length": 2048,
     "load_in_4bit": true,
-    "scale_note": "14B base on L40S — adapter dir keeps david-7b_* fleet prefix for continuity"
+    "scale_note": "8B performer base — adapter dir keeps david-7b_* fleet prefix for continuity"
   },
   "lora": {
     "rank": 32,

@@ -1,0 +1,64 @@
+{
+  "slug": "matilda_kitchen_stonebridge_30s",
+  "title": "MATILDA — Kitchen Stonebridge 30s (3×10s frame chain)",
+  "model_video": "grok-imagine-video-1.5",
+  "resolution": "480p",
+  "aspect_ratio": "16:9",
+  "host_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\Concepts\\4.jpg",
+  "avatar_url": "https://files-cdn.x.ai/SonE5JC2SSGtPZ8FONbFAg/file_46ed2968-6153-4352-9ede-9413c8c18180.jpg",
+  "set_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\Concepts\\_review_frames\\user_ref\\1_0p0s.jpg",
+  "zone_plates": {
+    "@1": "https://files-cdn.x.ai/CkVsG6w7Tq2I_4EfZR2FDQ/file_277980bf-a942-4507-8af6-dce34abec87e.jpg"
+  },
+  "voice_suffix": "mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only",
+  "seamless": true,
+  "shots": [
+    {
+      "shot_id": "01_intro",
+      "duration": 10,
+      "image_url": "https://files-cdn.x.ai/SonE5JC2SSGtPZ8FONbFAg/file_46ed2968-6153-4352-9ede-9413c8c18180.jpg",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. Lip-synced, delivers: \"Guten Tag. I'm Matilda Kirschner, Vice President of Operations at Stonebridge Consultants Group — an American-based consulting firm. It's a pleasure to meet you.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "Guten Tag. I'm Matilda Kirschner, Vice President of Operations at Stonebridge Consultants Group — an American-based consulting firm. It's a pleasure to meet you.",
+      "speech_ipa": null,
+      "on_screen": "MATILDA KIRSCHNER — Vice President of Operations, Stonebridge Consultants Group",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 0,
+        "end_s": 8
+      }
+    },
+    {
+      "shot_id": "02_role",
+      "duration": 10,
+      "image_url": "https://files-cdn.x.ai/SonE5JC2SSGtPZ8FONbFAg/file_46ed2968-6153-4352-9ede-9413c8c18180.jpg",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. Lip-synced, delivers: \"In my role at Stonebridge, I oversee client operations across North America and Europe. I grew up in Munich — and that background shapes everything about how I work with our European partners.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "In my role at Stonebridge, I oversee client operations across North America and Europe. I grew up in Munich — and that background shapes everything about how I work with our European partners.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 8,
+        "end_s": 18
+      }
+    },
+    {
+      "shot_id": "03_close",
+      "duration": 10,
+      "image_url": "https://files-cdn.x.ai/SonE5JC2SSGtPZ8FONbFAg/file_46ed2968-6153-4352-9ede-9413c8c18180.jpg",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. Lip-synced, delivers: \"To our clients across Europe — die Dienstleistungen von Stonebridge werden bald in Ihrer Region verfügbar sein. Wir freuen uns darauf, mit Ihnen zusammenzuarbeiten. Auf Wiedersehen.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "To our clients across Europe — die Dienstleistungen von Stonebridge werden bald in Ihrer Region verfügbar sein. Wir freuen uns darauf, mit Ihnen zusammenzuarbeiten. Auf Wiedersehen.",
+      "speech_ipa": null,
+      "on_screen": "Stonebridge services coming soon to your region",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 18,
+        "end_s": 28
+      }
+    }
+  ],
+  "provenance_shot": {
+    "type": "code_rendered_png",
+    "duration_s": 7,
+    "enabled": false
+  }
+}

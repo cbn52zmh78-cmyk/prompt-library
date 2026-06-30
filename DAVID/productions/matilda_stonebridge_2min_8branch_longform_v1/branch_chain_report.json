@@ -1,0 +1,25 @@
+{
+  "at": "2026-06-29T17:30:17.953549+00:00",
+  "slug": "matilda_stonebridge_2min_8branch",
+  "n_shots": 8,
+  "segment_s_default": 15,
+  "branches": [
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_stonebridge_2min_8branch_longform_v1\\branches\\b01_intro_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_stonebridge_2min_8branch_longform_v1\\branches\\b02_company_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_stonebridge_2min_8branch_longform_v1\\branches\\b03_services_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_stonebridge_2min_8branch_longform_v1\\branches\\b04_europe_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_stonebridge_2min_8branch_longform_v1\\branches\\b05_transition_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_stonebridge_2min_8branch_longform_v1\\branches\\b06_personal_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_stonebridge_2min_8branch_longform_v1\\branches\\b07_network_15s.mp4",
+    "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_stonebridge_2min_8branch_longform_v1\\branches\\b08_close_de_15s.mp4"
+  ],
+  "xfade_s": 0.0,
+  "join_mode": "hard_cut",
+  "output": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_stonebridge_2min_8branch_longform_v1\\output\\matilda_stonebridge_2min_8branch_branch_chain_8x15s_v09b_lr_recovery_65.mp4",
+  "duration_s": 120.33,
+  "expected_s": 120.0,
+  "seed_mode": "last_frame",
+  "staging_policy": "prev branch last frame \u2192 upload \u2192 image_file_id chain seed",
+  "topology": "sequential_last_frame",
+  "script": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\scripts\\longform_scripts\\matilda_stonebridge_2min_8branch_script.json"
+}

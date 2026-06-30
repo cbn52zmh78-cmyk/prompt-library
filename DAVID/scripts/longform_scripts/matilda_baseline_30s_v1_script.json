@@ -38,62 +38,126 @@
     "model_video": "grok-imagine-video-1.5",
     "resolution": "480p",
     "aspect_ratio": "16:9",
-    "voice_suffix": "clear precise mid-register voice, European-accented English, measured documentary presenter, synthetic performer only",
+    "prompt_mode": "barebones",
+    "prompt_template": "Studio/prompts/MASTER_Matilda_v1.json",
+    "_prompt_mode_note": "@1.description = see attached render; @2.description = see attached render + MATILDA modifiers; scene/camera per shot.",
     "use_identity_lock": false,
     "use_zone_plates": true,
     "avatar_reference": "AI/ELEANOR/products/model_variants/OTHER/grok-image-d25e8689-243d-4c02-9567-e1ab92161ca7.jpg",
     "set_reference": "STUDIO/Pipeline/references/warehouse_industrial_reference.jpg",
     "seamless": {
       "primary": "extend",
-      "xfade_s": 0.3,
-      "match_color": true,
-      "cut_on_motion": true,
+      "duration_lo": 6,
+      "duration_hi": 10,
+      "xfade_s": 0.25,
+      "match_color": false,
+      "magenta_clamp": false,
+      "magenta_reroll": false,
       "lamp_lock": false,
-      "glasses_lock": false,
       "loudnorm": true,
       "pin_audio_sync": true,
-      "reground_interval": 2,
-      "magenta_clamp": true
+      "reground_interval": 1,
+      "cut_on_motion": false,
+      "skip_extend_probe": true
     }
   },
   "shots": [
     {
-      "id": "01_intro",
-      "duration": 7,
+      "id": "01_entry",
+      "duration": 6,
       "t_start": 0,
-      "t_end": 7,
+      "t_end": 6,
       "role": "host",
-      "speech_text": "I'm MATILDA. I'm a synthetic presenter — generated, not filmed.",
+      "speech_text": "I'm MATILDA — your synthetic presenter. Generated, not filmed.",
       "on_screen": "MATILDA · Synthetic Presenter · ELEANOR-DAVID Pipeline",
-      "video_prompt": "CONTINUITY LOCK @Matilda-001: identical presenter face, warm ash-gold blonde updo bun with face-framing wisps, same direct eye-line to camera — seamless continuation of prior take, zero jump cut. Wardrobe: navy single-button blazer, white open-collar shirt, grey tailored trousers, black pointed-toe heels, gold watch left wrist. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. MATILDA at DC, weight centered, upright authority posture. Direct eye-line to lens — first address to camera. (@1, warehouse loft — window grid camera-left, brick wall soft behind, concrete floor, metal beams above.) Camera: locked MCU — head and shoulders, presenter frame. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Documentary-Prestige: natural skin at generation — neutral WB, blue channel preserved; forbid global orange push, forbid yellow-green cast, forbid blue-starved shadows, forbid magenta midtones. MAGENTA SUPPRESS @Matilda-001: D65 neutral white balance 5000K on presenter face and blazer — frame-wide midtones R≈G≈B within 8%; fair blonde skin reads natural warm-neutral, NOT pink or magenta; navy blazer holds true deep navy, NOT purple; no pink ambient spill; gold watch stays amber-warm, not orange-magenta; no beauty-filter smoothing. GRADE: desaturated cinema precision — cool-neutral palette, teal-grey shadow base, muted European skin tones, no warmth or amber, shadow detail preserved, high sharpness, zero beauty filter. Bright industrial loft window key 4800K — single directional source, no fill. Corporate authority read at elevated exposure. Controlled contrast — detail in shadows, clean highlights. Fincher institutional daytime precision. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"I'm MATILDA. I'm a synthetic presenter — generated, not filmed.\" clear precise mid-register voice, European-accented English, measured documentary presenter, synthetic performer only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame."
+      "barebones": {
+        "command": "generate video",
+        "@1": { "description": "see attached render" },
+        "@2": {
+          "description": "see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; English only in this scene"
+        },
+        "scene": "enters from offscreen stage left whilst introducing herself to the audience - maintains eye contact with camera - three steps to center mark by 2s, plants feet facing camera - open-palm gesture on final phrase",
+        "camera": "locked static medium, waist-up, no camera move",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": { "sequence_length": "6s" }
+      }
     },
     {
       "id": "02_pipeline",
-      "duration": 8,
-      "t_start": 7,
-      "t_end": 15,
+      "duration": 6,
+      "t_start": 6,
+      "t_end": 12,
       "role": "host",
-      "speech_text": "What you're watching was built by the ELEANOR-DAVID pipeline — an automated filmmaking system running on large language models and Grok Imagine.",
-      "video_prompt": "CONTINUITY LOCK @Matilda-001: identical presenter face, warm ash-gold blonde updo bun with face-framing wisps, same direct eye-line to camera — seamless continuation of prior take, zero jump cut. Wardrobe: navy single-button blazer, white open-collar shirt, grey tailored trousers, black pointed-toe heels, gold watch left wrist. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Slight weight shift right, composed stance. Forward lean into the information beat — measured, precise. Eye-line holds lens. (@1, same window grid, same industrial frame, same brick depth.) Camera: slow motivated push-in from MCU to tight MCU over duration. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Documentary-Prestige: natural skin at generation — neutral WB, blue channel preserved; forbid global orange push, forbid yellow-green cast, forbid blue-starved shadows, forbid magenta midtones. MAGENTA SUPPRESS @Matilda-001: D65 neutral white balance 5000K on presenter face and blazer — frame-wide midtones R≈G≈B within 8%; fair blonde skin reads natural warm-neutral, NOT pink or magenta; navy blazer holds true deep navy, NOT purple; no pink ambient spill; gold watch stays amber-warm, not orange-magenta; no beauty-filter smoothing. GRADE: desaturated cinema precision — cool-neutral palette, teal-grey shadow base, muted European skin tones, no warmth or amber, shadow detail preserved, high sharpness, zero beauty filter. Bright industrial loft window key 4800K — single directional source, no fill. Corporate authority read at elevated exposure. Controlled contrast — detail in shadows, clean highlights. Fincher institutional daytime precision. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"What you're watching was built by the ELEANOR-DAVID pipeline — an automated filmmaking system running on large language models and Grok Imagine.\" clear precise mid-register voice, European-accented English, measured documentary presenter, synthetic performer only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame."
+      "speech_text": "You're watching the ELEANOR-DAVID pipeline — automated scripts, voices, and video renders.",
+      "barebones": {
+        "command": "generate video",
+        "@1": { "description": "see attached render" },
+        "@2": {
+          "description": "see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; English only in this scene"
+        },
+        "scene": "already at center mark - forward lean on 'pipeline' - right-hand open palm on 'automated' - continuous delivery, no pauses",
+        "camera": "locked static medium, waist-up, no camera move",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": { "sequence_length": "6s" }
+      }
     },
     {
-      "id": "03_proof",
-      "duration": 7,
-      "t_start": 15,
-      "t_end": 22,
+      "id": "03_models",
+      "duration": 6,
+      "t_start": 12,
+      "t_end": 18,
       "role": "host",
-      "speech_text": "No human filmed this. No editor assembled it. Concept to render — automated end to end.",
-      "video_prompt": "CONTINUITY LOCK @Matilda-001: identical presenter face, warm ash-gold blonde updo bun with face-framing wisps, same direct eye-line to camera — seamless continuation of prior take, zero jump cut. Wardrobe: navy single-button blazer, white open-collar shirt, grey tailored trousers, black pointed-toe heels, gold watch left wrist. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Stillness as authority — upright, both feet grounded. Pause whilst delivering proof beat. Hands settle at rest. Eye-line direct. (@1, same loft, shadow pocket camera-right, window key sharp.) Camera: locked MS — wider to let warehouse read behind her. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Documentary-Prestige: natural skin at generation — neutral WB, blue channel preserved; forbid global orange push, forbid yellow-green cast, forbid blue-starved shadows, forbid magenta midtones. MAGENTA SUPPRESS @Matilda-001: D65 neutral white balance 5000K on presenter face and blazer — frame-wide midtones R≈G≈B within 8%; fair blonde skin reads natural warm-neutral, NOT pink or magenta; navy blazer holds true deep navy, NOT purple; no pink ambient spill; gold watch stays amber-warm, not orange-magenta; no beauty-filter smoothing. GRADE: desaturated cinema precision — cool-neutral palette, teal-grey shadow base, muted European skin tones, no warmth or amber, shadow detail preserved, high sharpness, zero beauty filter. Bright industrial loft window key 4800K — single directional source, no fill. Corporate authority read at elevated exposure. Controlled contrast — detail in shadows, clean highlights. Fincher institutional daytime precision. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"No human filmed this. No editor assembled it. Concept to render — automated end to end.\" clear precise mid-register voice, European-accented English, measured documentary presenter, synthetic performer only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame."
+      "speech_text": "Language models draft every line. Grok Imagine generates every frame you see.",
+      "barebones": {
+        "command": "generate video",
+        "@1": { "description": "see attached render" },
+        "@2": {
+          "description": "see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; English only in this scene"
+        },
+        "scene": "holds center mark - left index finger tap on 'every line' - two-hand outward sweep on 'every frame you see' - continuous delivery, no pauses",
+        "camera": "locked static medium, waist-up, no camera move",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": { "sequence_length": "6s" }
+      }
     },
     {
-      "id": "04_close",
-      "duration": 8,
-      "t_start": 22,
+      "id": "04_proof",
+      "duration": 6,
+      "t_start": 18,
+      "t_end": 24,
+      "role": "host",
+      "speech_text": "No human filmed this. No editor cut it. Concept to final render — fully automated.",
+      "barebones": {
+        "command": "generate video",
+        "@1": { "description": "see attached render" },
+        "@2": {
+          "description": "see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; English only in this scene"
+        },
+        "scene": "holds center mark - decisive head shake on 'No human filmed' - flat palm cut gesture on 'No editor cut it' - continuous through 'fully automated', no pause",
+        "camera": "locked static medium, waist-up, no camera move",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": { "sequence_length": "6s" }
+      }
+    },
+    {
+      "id": "05_close",
+      "duration": 6,
+      "t_start": 24,
       "t_end": 30,
       "role": "host",
-      "speech_text": "This is what automated filmmaking looks like. We are just getting started.",
+      "speech_text": "This is automated filmmaking. We are just getting started.",
       "on_screen": "ELEANOR-DAVID · Automated Filmmaking Pipeline",
-      "video_prompt": "CONTINUITY LOCK @Matilda-001: identical presenter face, warm ash-gold blonde updo bun with face-framing wisps, same direct eye-line to camera — seamless continuation of prior take, zero jump cut. Wardrobe: navy single-button blazer, white open-collar shirt, grey tailored trousers, black pointed-toe heels, gold watch left wrist. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical industrial loft — same window grid camera-left, same concrete floor, same brick tone, same beam geometry — seamless continuation, zero jump cut. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige grade — rich midtones, restrained contrast, natural skin texture, subtle film grain, trustworthy broadcast gravitas, no beauty-filter smoothing, no Instagram saturation. Final address — chin lifts slightly, precision close. Eye-line to lens, composed hold. Gold watch catches window light at frame edge. (@1, same loft, same set — light holds, dust motes in 4800K key.) Camera: slow gentle push-in to tight MCU — hold on direct gaze through close. Industrial window 4800K directional key locked — dust motes optional, deep shadow pockets, no magenta brick bounce, no cool fill contamination, zero hue drift. Motivated practical key only — no unmotivated beauty dish, no fashion rim, lamp or window must be visible or implied. COLOR LOCK Warehouse: brick #8B4A3B desaturated, concrete #A8A8A8, metal #5C5C5C, window light warm-neutral 4800K — no purple shadows, no teal concrete, no neon practicals. GRADE LOCK Documentary-Prestige: natural skin at generation — neutral WB, blue channel preserved; forbid global orange push, forbid yellow-green cast, forbid blue-starved shadows, forbid magenta midtones. MAGENTA SUPPRESS @Matilda-001: D65 neutral white balance 5000K on presenter face and blazer — frame-wide midtones R≈G≈B within 8%; fair blonde skin reads natural warm-neutral, NOT pink or magenta; navy blazer holds true deep navy, NOT purple; no pink ambient spill; gold watch stays amber-warm, not orange-magenta; no beauty-filter smoothing. GRADE: desaturated cinema precision — cool-neutral palette, teal-grey shadow base, muted European skin tones, no warmth or amber, shadow detail preserved, high sharpness, zero beauty filter. Bright industrial loft window key 4800K — single directional source, no fill. Corporate authority read at elevated exposure. Controlled contrast — detail in shadows, clean highlights. Fincher institutional daytime precision. Slow motivated push-in or locked-off medium; handheld only for insert B-roll — never jitter on host. Lip-synced, delivers: \"This is what automated filmmaking looks like. We are just getting started.\" clear precise mid-register voice, European-accented English, measured documentary presenter, synthetic performer only. Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame."
+      "barebones": {
+        "command": "generate video",
+        "@1": { "description": "see attached render" },
+        "@2": {
+          "description": "see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; English only in this scene"
+        },
+        "scene": "holds center mark - chin lifts on 'automated filmmaking' - confident nod on 'getting started' - speech ends on gesture peak, no trailing stillness",
+        "camera": "locked static medium, waist-up, no camera move",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": { "sequence_length": "6s" }
+      }
     }
   ]
 }

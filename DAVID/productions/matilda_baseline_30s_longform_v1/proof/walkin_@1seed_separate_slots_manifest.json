@@ -1,0 +1,24 @@
+{
+  "proof": "matilda_walkin_@1_seed_@2_prompt_separate",
+  "at": "2026-06-29T02:29:40.134095+00:00",
+  "session_ids": {
+    "@1": "file_7840ff93-3a37-468b-9e55-03ce3c81af0c",
+    "@2": "file_759ba976-35fb-4ccc-a5ea-110586ec3a5a"
+  },
+  "image_url": "https://files-cdn.x.ai/fKoW2DJkSs-KB3pvmvjcqg/file_7840ff93-3a37-468b-9e55-03ce3c81af0c.jpg",
+  "image_url_role": "@1 empty warehouse — talent NOT in seed pixels",
+  "prompt": "@file_7840ff93-3a37-468b-9e55-03ce3c81af0c @file_759ba976-35fb-4ccc-a5ea-110586ec3a5a CAMERA: locked static medium shot, waist-up, no camera move. ACTION: walks in from offscreen stage left, three steps to center mark, plants feet facing camera. Silent. No dialogue. No speech.",
+  "rules": [
+    "@1 and @2 separate slots — never combined in seed image",
+    "no appearance prose — editor reads thumbnails",
+    "no dialogue"
+  ],
+  "duration_s": 6,
+  "model": "grok-imagine-video-1.5",
+  "resolution": "480p",
+  "video_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-8d415a44-d734-9453-9274-d10df2137667.mp4",
+  "output_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\walkin_@1seed_separate_slots.mp4",
+  "frame_0p5s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\walkin_@1seed_0p5s.jpg",
+  "frame_2s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\walkin_@1seed_2s.jpg",
+  "frame_4s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\walkin_@1seed_4s.jpg"
+}

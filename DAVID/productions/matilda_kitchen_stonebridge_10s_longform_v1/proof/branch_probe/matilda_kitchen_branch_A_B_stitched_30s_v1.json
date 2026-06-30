@@ -1,0 +1,8 @@
+{
+  "at": "2026-06-29T08:28:07.870948+00:00",
+  "branch_a": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\ceiling_probe\\kitchen_composite_baked@1_15s_ceiling_probe.mp4",
+  "branch_b": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\branch_probe\\branch_02_tight_close_static_15s_from_origin_14.9s.mp4",
+  "xfade_s": 0.35,
+  "output": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\branch_probe\\matilda_kitchen_branch_A_B_stitched_30s_v1.mp4",
+  "duration_s": 29.75
+}

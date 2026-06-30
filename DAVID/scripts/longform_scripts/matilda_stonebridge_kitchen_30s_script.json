@@ -1,0 +1,146 @@
+{
+  "slug": "matilda_stonebridge_kitchen_30s",
+  "title": "MATILDA — Stonebridge VP Introduction (Kitchen)",
+  "format_id": "documentary-host",
+  "target_seconds": 28,
+  "intake": {
+    "format_id": "documentary-host",
+    "actor_id": "Matilda-001",
+    "set_id": "@Set-Modern-Kitchen-001",
+    "style_id": "@Style-Documentary-Prestige-001",
+    "gate_0": {
+      "verdict": "GREEN",
+      "blocked": false,
+      "human_signoff": true,
+      "rating": "PG",
+      "ai_disclosure_method": "title_card",
+      "synthetic_performer_id": "Matilda-001",
+      "compliance_version": "2.2",
+      "compliance_2257": {
+        "scope": "not_applicable",
+        "reason": "synthetic_performer_no_explicit_material"
+      }
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "extend_model": "grok-imagine-video",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "prompt_mode": "barebones",
+    "use_identity_lock": false,
+    "use_zone_plates": true,
+    "avatar_reference": "AI/ELEANOR/products/model_variants/Concepts/4.jpg",
+    "set_reference": "AI/ELEANOR/products/model_variants/Concepts/_review_frames/user_ref/1_0p0s.jpg",
+    "composite_first_frame": "DAVID/productions/matilda_kitchen_stonebridge_10s_longform_v1/proof/composite_first_frame_probe.jpg",
+    "seamless": {
+      "primary": "extend",
+      "duration_lo": 8,
+      "duration_hi": 10,
+      "xfade_s": 0.25,
+      "reground_interval": 1,
+      "loudnorm": true,
+      "pin_audio_sync": true
+    }
+  },
+  "shots": [
+    {
+      "id": "01_intro",
+      "duration": 8,
+      "t_start": 0,
+      "t_end": 8,
+      "extend_at_s": 7.5,
+      "role": "host",
+      "speech_text": "Grüß Gott! I'm Matilda Kirschner, Vice President of Operations at Stonebridge Consultants Group — an American-based consulting firm.",
+      "on_screen": "MATILDA KIRSCHNER · Vice President of Operations · Stonebridge Consultants Group",
+      "barebones": {
+        "command": "generate video",
+        "@1": {
+          "description": "see attached render; modern kitchen interior — empty apartment, no other people, visual only"
+        },
+        "@2": {
+          "description": "see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; opens in German then continues in English"
+        },
+        "dialogue": {
+          "speech_text": "Grüß Gott! I'm Matilda Kirschner, Vice President of Operations at Stonebridge Consultants Group — an American-based consulting firm.",
+          "language": "en-US",
+          "on_screen": "MATILDA KIRSCHNER · Vice President of Operations · Stonebridge Consultants Group",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: absolute silence except MATILDA lip-sync voice — zero background noise, zero ambient sound, zero room tone, zero chatter, zero crowd, zero offscreen voices, zero street noise, zero music, mute set",
+          "voice_direction_DE": "native Münchner Bayerisch on Grüß Gott — Munich-born first-language German, warm Bavarian vowels, natural Bayerisch rhythm",
+          "voice_direction": "English continuation — subtle Bavarian lilt, soft gentle mid-register, documentary host clarity"
+        },
+        "scene": "introduces herself to the audience maintaining consistent eye contact with camera throughout entire scene as Vice President of Operations at Stonebridge Consultants Group, an American based consultant firm; opening greeting in German, rest of dialogue in English",
+        "camera": "slow creep zoom-in from wide to medium close over 8s",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": { "sequence_length": "8s" }
+      }
+    },
+    {
+      "id": "02_role",
+      "duration": 10,
+      "t_start": 8,
+      "t_end": 18,
+      "role": "host",
+      "speech_text": "In my role at Stonebridge, I oversee client operations across North America and Europe. I grew up in Munich — where a handshake still means something — and that Bavarian background shapes everything about how I work with our European partners.",
+      "barebones": {
+        "command": "generate video",
+        "@1": {
+          "description": "see attached render; modern kitchen interior — empty apartment, no other people, visual only"
+        },
+        "@2": {
+          "description": "see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; English in this scene with natural German cultural references"
+        },
+        "dialogue": {
+          "speech_text": "In my role at Stonebridge, I oversee client operations across North America and Europe. I grew up in Munich — where a handshake still means something — and that Bavarian background shapes everything about how I work with our European partners.",
+          "language": "en-US",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: absolute silence except MATILDA lip-sync voice — zero background noise, zero chatter, zero offscreen voices, mute set",
+          "voice_direction": "Munich-born native speaker English — subtle Bavarian lilt, soft gentle voice, natural German cultural references, documentary host clarity"
+        },
+        "scene": "maintains eye contact with camera entire scene whilst naturally continuing the conversation towards the aspects of her job at Stonebridge, going into her German background",
+        "camera": "locked medium close, static",
+        "extension_composition": "medium close-up — matches intro spine exit framing, no unmotivated pull-back to wide",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": { "sequence_length": "10s" }
+      }
+    },
+    {
+      "id": "03_close",
+      "duration": 10,
+      "t_start": 18,
+      "t_end": 28,
+      "role": "host",
+      "speech_text": "To our clients across Europe — die Dienstleistungen von Stonebridge werden bald in Ihrer Region verfügbar sein. Wir freuen uns darauf, mit Ihnen zusammenzuarbeiten. Auf Wiedersehen.",
+      "on_screen": "Stonebridge services coming soon to your region",
+      "barebones": {
+        "command": "generate video",
+        "@1": {
+          "description": "see attached render; modern kitchen interior — empty apartment, no other people, visual only"
+        },
+        "@2": {
+          "description": "see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; closes in German"
+        },
+        "dialogue": {
+          "speech_text": "To our clients across Europe — die Dienstleistungen von Stonebridge werden bald in Ihrer Region verfügbar sein. Wir freuen uns darauf, mit Ihnen zusammenzuarbeiten. Auf Wiedersehen.",
+          "language": "de-DE",
+          "on_screen": "Stonebridge services coming soon to your region",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: absolute silence except MATILDA lip-sync voice — zero background noise, zero chatter, zero offscreen voices, mute set",
+          "voice_direction_DE": "native Münchner Bayerisch — Munich-born first-language German on closing lines; warm Bavarian vowels, natural rhythm; must NOT sound like American expat or classroom German"
+        },
+        "scene": "maintains eye contact with camera entire scene as she wraps up her introduction in German, explaining to EU clients the Stonebridge services will be available soon before saying goodbye and exiting offscreen stage right",
+        "camera": "locked medium close, static",
+        "extension_composition": "medium close-up — matches intro spine exit framing, no unmotivated pull-back to wide",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": { "sequence_length": "10s" }
+      }
+    }
+  ]
+}

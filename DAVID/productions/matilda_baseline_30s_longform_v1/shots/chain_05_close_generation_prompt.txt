@@ -1,0 +1,9 @@
+{
+  "shot_id": "05_close",
+  "image_url": "https://files-cdn.x.ai/OqIoy4HUT-SWaU5D9X2Cqw/file_3264b4a3-f3ef-4360-af9c-e255985d1525.jpg",
+  "prompt": "Setting: @6405eb49-cd1b-439f-bf9e-6f4aa4209d9a (see attached render) ; MATILDA ( @ecfef49b-1c5f-49da-b99b-797c30d0c29d , see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; English only in this scene; CONTINUITY LOCK @Matilda-001: identical presenter face, warm ash-gold blonde updo bun with face-framing wisps, same direct eye-line to camera \u2014 seamless continuation of prior take, zero jump cut. Head plate: AI/ELEANOR/products/model_variants/head_variants/[FILENAME]. ANTI-MAGENTA: D65 neutral white balance 5000K \u2014 fair blonde skin reads natural warm-neutral, not pink or magenta.) holds center mark - chin lifts on 'automated filmmaking' - confident nod on 'getting started' - speech ends on gesture peak, no trailing stillness. Camera does locked static medium, waist-up, no camera move",
+  "prompt_mode": "barebones",
+  "neutral_generation": false
+}
+
+video_url: https://vidgen.x.ai/xai-vidgen-bucket/xai-video-4cac78a1-8baa-910a-b6b5-ae09d4e0a9e6.mp4

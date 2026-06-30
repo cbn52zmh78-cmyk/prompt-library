@@ -1,0 +1,67 @@
+{
+  "slug": "matilda_kitchen_stonebridge_10s",
+  "title": "MATILDA — Kitchen Stonebridge 10s (manual 1.mp4 pattern)",
+  "format_id": "documentary-host",
+  "target_seconds": 10,
+  "intake": {
+    "format_id": "documentary-host",
+    "actor_id": "Matilda-001",
+    "set_id": "@Set-Modern-Kitchen-001",
+    "style_id": "@Style-Fincher-Cinematic-001",
+    "gate_0": {
+      "verdict": "GREEN",
+      "blocked": false,
+      "human_signoff": true,
+      "rating": "PG",
+      "ai_disclosure_method": "title_card",
+      "synthetic_performer_id": "Matilda-001",
+      "compliance_version": "2.2",
+      "compliance_2257": {
+        "scope": "not_applicable",
+        "reason": "synthetic_performer_no_explicit_material"
+      }
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "prompt_mode": "barebones",
+    "use_identity_lock": false,
+    "use_zone_plates": true,
+    "avatar_reference": "AI/ELEANOR/products/model_variants/Concepts/4.jpg",
+    "set_reference": "AI/ELEANOR/products/model_variants/Concepts/_review_frames/user_ref/1_0p0s.jpg",
+    "seamless": { "primary": "extend", "skip_extend_probe": true }
+  },
+  "shots": [
+    {
+      "id": "01_entry",
+      "duration": 10,
+      "role": "host",
+      "speech_text": "Grüß Gott! Ich bin Matilda Kirschner — Vice President of Operations der Stonebridge Consultants Group.",
+      "barebones": {
+        "command": "generate video",
+        "@1": {
+          "description": "see attached render; modern kitchen interior — empty apartment, no other people, visual only"
+        },
+        "@2": {
+          "description": "see attached render. MATILDA KIRSCHNER: aged 27, sassy, witty, charming; born and raised Munich, native Bayerisch speaker — German is her mother tongue, NOT American, NOT English-first, NOT expat-learned German; authentic Munich vowels, soft Bavarian cadence and rhythm even on English title words; warm precise mid-register voice"
+        },
+        "dialogue": {
+          "speech_text": "Grüß Gott! Ich bin Matilda Kirschner — Vice President of Operations der Stonebridge Consultants Group.",
+          "language": "de-DE",
+          "on_screen": "MATILDA KIRSCHNER — Vice President of Operations, Stonebridge Consultants Group",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: absolute silence except MATILDA lip-sync voice — zero background noise, zero ambient sound, zero room tone, zero chatter, zero crowd, zero offscreen voices, zero street noise, zero music, mute set",
+          "voice_direction_DE": "native Münchner Bayerisch — Munich-born first-language German, warm Bavarian vowels, natural Bayerisch rhythm; must NOT sound like American expat or classroom German"
+        },
+        "scene": "MATILDA addresses the audience directly through the camera lens — maintains consistent unbroken eye contact with camera entire scene, never looks away, documentary host speaking to viewer; opens with Bavarian German greeting, introduces herself by full name and Stonebridge title — dialogue fits 10 sec",
+        "camera": "slow creep zoom-in from medium shot to medium close-up over 10 seconds — controlled Fincher dolly, deliberate and motivated, no handheld",
+        "style": "In the exact visual style of David Fincher: meticulously composed cinematic realism with cold, desaturated teal, gray, and amber tones, high-contrast chiaroscuro lighting that carves deep dramatic shadows across sharp architectural lines and rich textures, clinical precision in every detail, subtle film grain, anamorphic depth, moody atmospheric elegance, and a hauntingly controlled, almost predatory beauty in the finished shot",
+        "output": { "sequence_length": "10 seconds" }
+      }
+    }
+  ]
+}

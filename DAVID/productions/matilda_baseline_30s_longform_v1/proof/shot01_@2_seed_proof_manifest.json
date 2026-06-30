@@ -1,0 +1,20 @@
+{
+  "proof": "matilda_shot01_@2_image_url_identity",
+  "at": "2026-06-29T02:12:06.107481+00:00",
+  "hypothesis": "image_url=@2 casting turntable locks Matilda; @1 set is prompt-only",
+  "shot_id": "01_entry",
+  "duration_s": 6,
+  "model": "grok-imagine-video-1.5",
+  "resolution": "480p",
+  "image_url": "https://files-cdn.x.ai/kUOKhvOyRrmVQaujengMyw/file_29a1086e-b990-4494-b7b2-375f785a8c9e.jpg",
+  "image_url_role": "@2 casting turntable (d25e8689) — NOT @1 warehouse plate",
+  "avatar_file": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\OTHER\\grok-image-d25e8689-243d-4c02-9567-e1ab92161ca7.jpg",
+  "avatar_file_id": "file_29a1086e-b990-4494-b7b2-375f785a8c9e",
+  "set_prompt_token": "@file_16c7876e-b6ca-401e-b75c-fdf68d2bb3c1",
+  "avatar_in_prompt": false,
+  "prompt": "@file_16c7876e-b6ca-401e-b75c-fdf68d2bb3c1 CONTINUITY LOCK @Matilda-001: identical presenter face, warm ash-gold blonde updo bun, navy blazer, white open-collar shirt, grey tailored trousers, gold watch left wrist. CONTINUITY LOCK @Set-Warehouse-Industrial-001: identical warehouse loft — window grid camera-left, brick wall, concrete floor, metal beams. STYLE LOCK @Style-Documentary-Prestige-001: documentary prestige, natural skin, neutral WB, no beauty-filter smoothing, no yellow-green cast. (@1, empty warehouse loft.) CAMERA LOCK: locked static medium shot — waist-up framing; only motion is presenter entry, no camera pan tilt zoom or push-in. GENERATION LOCK: all dialogue and movement complete inside this 6-second clip; continuous speech, zero dead pauses, lips moving entire duration. ACTION: MATILDA enters from offscreen stage left at 0s — three brisk steps to center mark by 2s, plants feet, faces lens, delivers line in one unbroken take; brief open-palm gesture on \"Generated, not filmed\" at 4s. Industrial window 4800K key, motivated practical only. Lip-synced, delivers: \"I'm MATILDA — your synthetic presenter. Generated, not filmed.\" clear precise mid-register voice, European-accented English, measured documentary presenter, synthetic performer only. Finish on gesture peak, never hold dead stillness.",
+  "baseline_bug": "render_longform resolve_shot0_set_seed() used @1 plate as image_url",
+  "video_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-97a472be-8397-9bd3-9f19-7c697fca2228.mp4",
+  "output_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\shot01_@2_seed_proof.mp4",
+  "review_frame_1s": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_baseline_30s_longform_v1\\proof\\shot01_@2_seed_proof_frame_1s.jpg"
+}

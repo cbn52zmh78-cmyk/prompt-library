@@ -204,6 +204,14 @@ def _log(*args: Any, **kwargs: Any) -> None:
     print(*args, **kwargs)
 
 
+def _eff_dur(shot: dict[str, Any], refs: dict[str, Any], *, seamless: bool) -> int:
+    return effective_shot_duration(
+        shot,
+        seamless=seamless,
+        seamless_cfg=refs.get("seamless_cfg"),
+    )
+
+
 def resolve_render_exit_code(result: dict[str, Any]) -> int:
     """Return process exit code from QA verdict (#193): 0 when pass, else 1."""
     return 0 if (result.get("qa") or {}).get("pass") is True else 1
@@ -383,7 +391,7 @@ def _shot_zone(shot: dict[str, Any]) -> str | None:
 
 
 def _needs_zone_plates(script: dict[str, Any], refs: dict[str, Any]) -> bool:
-    """Host shots seed from empty @1 environment plates; @2 avatar stays casting-only."""
+    """Lock empty @1 environment plates on disk; video seeds from @2 avatar_url only."""
     cfg = script.get("config") or {}
     if cfg.get("use_zone_plates") is False:
         return False
@@ -515,7 +523,19 @@ def generate_zone_plate(
         and meta.get("plate_type") == "environment_empty"
         and meta.get("no_people") is True
     ):
-        _log(f"[zone] reusing empty {zone_id} environment plate → {plate_path.name}")
+        # Reuse plate pixels + CDN url; always re-upload for a live session file_id.
+        _api_pace()
+        upload_url, plate_file_id = upload_and_capture_id(
+            client, plate_path, friendly=zone_id,
+        )
+        meta["file_id"] = plate_file_id
+        if not meta.get("url"):
+            meta["url"] = upload_url
+        _save_plate_sidecar(plate_path, meta)
+        _log(
+            f"[zone] reusing empty {zone_id} plate pixels — "
+            f"fresh session file_id={plate_file_id}"
+        )
         return {**meta, "path": str(plate_path), "reused": True}
 
     source_path, set_id = _resolve_environment_plate_file(script, refs)
@@ -523,7 +543,9 @@ def generate_zone_plate(
         shutil.copy2(source_path, plate_path)
     _log(f"[zone] locking empty {zone_id} environment plate from {source_path.name}")
     _api_pace()
-    plate_url = upload_image_url(client, plate_path)
+    plate_url, plate_file_id = upload_and_capture_id(
+        client, plate_path, friendly=zone_id,
+    )
     source_meta = _load_plate_sidecar(source_path)
 
     data = {
@@ -532,11 +554,12 @@ def generate_zone_plate(
         "no_people": True,
         "path": str(plate_path),
         "url": plate_url,
+        "file_id": plate_file_id,
         "source_file": str(source_path),
         "source_url": source_meta.get("url"),
         "set_id": set_id,
         "avatar_reference": refs.get("avatar_url"),
-        "note": "@1 is empty set only — performer identity comes from @2 casting ref + video prompt",
+        "note": "@1 empty set on disk only — never composited with @2; video seeds from avatar_url",
         "status": "REGENERATED" if force else "LOCKED",
         "reused": False,
     }
@@ -559,6 +582,7 @@ def _load_cached_zone_plates(refs: dict[str, Any], plates_dir: Path) -> int:
         if zone_id and url:
             refs[f"{zone_id}_plate_url"] = url
             refs[f"{zone_id}_plate_file"] = meta.get("path") or str(meta_path.with_suffix(".jpg"))
+            # file_id intentionally omitted — stale across sessions; live ids from capture_editor_session
             loaded += 1
     return loaded
 
@@ -591,18 +615,974 @@ def ensure_zone_plates(
         )
         refs[f"{zone_id}_plate_url"] = plate["url"]
         refs[f"{zone_id}_plate_file"] = plate["path"]
+        if plate.get("file_id"):
+            refs[f"{zone_id}_plate_file_id"] = plate["file_id"]
+
+
+def inject_api_file_ref_tokens(
+    prompt: str,
+    shot: dict[str, Any],
+    refs: dict[str, Any],
+) -> str:
+    """DEPRECATED — prose @file tokens do not composite; use reference_image_file_ids.
+
+    Prepend @file_XXXX API handles — legacy experiment only.
+    """
+    tokens: list[str] = []
+    zone = _shot_zone(shot)
+    if zone:
+        plate_id = refs.get(f"{zone}_plate_file_id")
+        if plate_id:
+            tokens.append(f"@{plate_id}")
+    avatar_id = refs.get("avatar_file_id")
+    if avatar_id:
+        tokens.append(f"@{avatar_id}")
+    if not tokens:
+        return prompt
+    prefix = " ".join(tokens)
+    _log(f"[file_ref] injecting API handles: {prefix}")
+    return f"{prefix} {prompt}"
+
+
+def _prompt_mode(script: dict[str, Any] | None) -> str:
+    return str((script or {}).get("config", {}).get("prompt_mode") or "seamless")
+
+
+def capture_editor_session(
+    client: Any,
+    refs: dict[str, Any],
+    script: dict[str, Any],
+    prod_dir: Path,
+    *,
+    force: bool = False,
+) -> dict[str, Any]:
+    """Upload fresh @1/@2 session UUIDs — valid for this run + in-run extends only.
+
+    Writes editor_session.json for audit; never reads it back on a new run.
+    """
+    session_path = prod_dir / "editor_session.json"
+    plates_dir = prod_dir / "plates"
+    ensure_zone_plates(script, refs, client, plates_dir, force=True)
+    avatar_file = Path(str(refs["avatar_file"]))
+    _api_pace()
+    avatar_url, avatar_id = upload_and_capture_id(client, avatar_file, friendly="@2")
+
+    session = {
+        "captured_at": datetime.now(timezone.utc).isoformat(),
+        "video_slug": script.get("slug"),
+        "scope": "this video + extensions only — not portable to new projects",
+        "slots": {
+            "@1": {
+                "role": "setting",
+                "file_id": refs["@1_plate_file_id"],
+                "url": refs["@1_plate_url"],
+                "plate_path": refs.get("@1_plate_file"),
+            },
+            "@2": {
+                "role": "talent_render",
+                "file_id": avatar_id,
+                "url": avatar_url,
+                "source": str(avatar_file),
+            },
+        },
+    }
+    session_path.write_text(json.dumps(session, indent=2, ensure_ascii=False), encoding="utf-8")
+    refs["editor_session"] = session
+    refs["avatar_file_id"] = avatar_id
+    refs["avatar_url"] = avatar_url
+    _log(
+        f"[editor_session] captured @1={session['slots']['@1']['file_id']} "
+        f"@2={session['slots']['@2']['file_id']}"
+    )
+    return session
+
+
+def _session_slot_ids(
+    refs: dict[str, Any],
+    prod_dir: Path | None,
+) -> tuple[str | None, str | None]:
+    session = refs.get("editor_session")
+    if session:
+        slots = session.get("slots") or {}
+        talent = (slots.get("@2") or {}).get("file_id")
+        setting = (slots.get("@1") or {}).get("file_id")
+        if talent and setting:
+            return str(talent), str(setting)
+    talent = refs.get("avatar_file_id")
+    setting = refs.get("@1_plate_file_id")
+    return (str(talent) if talent else None, str(setting) if setting else None)
+
+
+DEFAULT_BAREBONES_TEMPLATE = "Studio/prompts/MASTER_Matilda_v1.json"
+BAREBONES_SLOT_KEYS = ("@1", "@2", "@3", "@4", "@5", "@6", "@7")
+BAREBONES_PAYLOAD_KEYS = (
+    *BAREBONES_SLOT_KEYS,
+    "command",
+    "scene",
+    "camera",
+    "dialogue",
+    "audio",
+    "style",
+    "lighting",
+    "output",
+)
+
+
+def _slot_description(slot: dict[str, Any] | None) -> str:
+    """Canonical BAREBONES slot text — description first, performance_modifiers fallback."""
+    if not isinstance(slot, dict):
+        return ""
+    return str(slot.get("description") or slot.get("performance_modifiers") or "").strip()
+
+
+def crop_turntable_front_panel(src: Path, out: Path | None = None) -> Path:
+    """Extract center (front) panel from 3-view casting turntable."""
+    from PIL import Image
+
+    img = Image.open(src).convert("RGB")
+    w, h = img.size
+    third = w // 3
+    crop = img.crop((third, 0, 2 * third, h))
+    dest = out or src.with_name(f"{src.stem}_front_panel.jpg")
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    crop.save(dest, quality=95)
+    return dest
+
+
+def _editor_uuid_token(file_id: str) -> str:
+    """Editor prose syntax — strip API file_ prefix, emit @uuid."""
+    fid = str(file_id).strip()
+    if fid.startswith("file_"):
+        fid = fid[5:]
+    return f"@{fid}"
+
+
+def _resolve_seed_slot(refs: dict[str, Any], image_url: str | None) -> str | None:
+    """Which @ slot is pixel-locked via image_url for this generation."""
+    if not image_url:
+        return None
+    url = str(image_url).strip()
+    session = refs.get("editor_session") or {}
+    for slot_id in BAREBONES_SLOT_KEYS:
+        slot = (session.get("slots") or {}).get(slot_id) or {}
+        if slot.get("url") and str(slot["url"]) == url:
+            return slot_id
+    if refs.get("@1_plate_url") and str(refs["@1_plate_url"]) == url:
+        return "@1"
+    if refs.get("avatar_url") and str(refs["avatar_url"]) == url:
+        return "@2"
+    head_url = refs.get("@3_plate_url")
+    if head_url and str(head_url) == url:
+        return "@3"
+    return None
+
+
+def _slot_file_id(refs: dict[str, Any], prod_dir: Path | None, slot_id: str) -> str | None:
+    session = refs.get("editor_session")
+    if session:
+        fid = (session.get("slots") or {}).get(slot_id, {}).get("file_id")
+        if fid:
+            return str(fid)
+    if slot_id == "@1":
+        return refs.get("@1_plate_file_id")
+    if slot_id == "@2":
+        return refs.get("avatar_file_id")
+    if slot_id == "@3":
+        return refs.get("@3_plate_file_id")
+    return refs.get(f"{slot_id}_plate_file_id")
+
+
+def _barebones_payload(doc: dict[str, Any]) -> dict[str, Any]:
+    out: dict[str, Any] = {}
+    for key in BAREBONES_PAYLOAD_KEYS:
+        if key not in doc:
+            continue
+        val = doc[key]
+        if key in BAREBONES_SLOT_KEYS and isinstance(val, dict):
+            out[key] = dict(val)
+        elif isinstance(val, dict):
+            out[key] = dict(val)
+        else:
+            out[key] = val
+    return out
+
+
+def _merge_barebones_shot(shot: dict[str, Any], script: dict[str, Any] | None) -> dict[str, Any]:
+    """Merge per-shot barebones overrides onto Studio template defaults."""
+    cfg = (script or {}).get("config") or {}
+    default_template = DEFAULT_BAREBONES_TEMPLATE
+    if (script or {}).get("format_id") == "science-pure-visual":
+        default_template = "Studio/prompts/MASTER_PureVisual_v1.json"
+    rel = str(cfg.get("prompt_template") or default_template)
+    template_path = Path(rel) if Path(rel).is_absolute() else _resolve_workspace_path(rel)
+    base: dict[str, Any] = {}
+    if template_path.is_file():
+        try:
+            base = _barebones_payload(json.loads(template_path.read_text(encoding="utf-8")))
+        except (json.JSONDecodeError, OSError):
+            pass
+    merged = dict(base)
+    shot_bb = shot.get("barebones")
+    if not isinstance(shot_bb, dict):
+        return merged
+    for key, val in shot_bb.items():
+        if key in BAREBONES_SLOT_KEYS and isinstance(val, dict):
+            slot_base = dict(merged.get(key) or {})
+            slot_base.update(val)
+            merged[key] = slot_base
+        elif isinstance(val, dict) and isinstance(merged.get(key), dict):
+            block = dict(merged[key])
+            block.update(val)
+            merged[key] = block
+        else:
+            merged[key] = val
+    return merged
+
+
+def _format_camera_clause(camera: str) -> str:
+    c = camera.strip()
+    if not c:
+        return ""
+    if c.lower().startswith("camera"):
+        return c
+    return f"Camera does {c}"
+
+
+def _format_setting_clause(
+    setting_id: str,
+    bb: dict[str, Any],
+) -> str:
+    """@1 always leads — source image Imagine anchors the rest of the video on."""
+    s1 = bb.get("@1") if isinstance(bb.get("@1"), dict) else {}
+    perf = _slot_description(s1)
+    token = _editor_uuid_token(setting_id)
+    if perf:
+        return f"Setting: {token} ({perf})"
+    return f"Setting: {token}"
+
+
+SILENT_SCENE_LOCK = (
+    "NO VOICEOVER, NO NARRATION, SILENT — visual only, zero spoken audio, zero lip-sync, "
+    "zero voice track, mute output"
+)
+
+# Branch-chain seed policies (script config branch_chain.seed_handoff / branch_mode).
+BRANCH_CHAIN_LAST_FRAME_MODE = "last_frame"
+BRANCH_CHAIN_STAGING_MODE = "last_frame_prompt_only"
+BRANCH_STAGING_GUIDE_PREFIX = (
+    "STAGING GUIDE (last-frame reference — prompt only, NOT an image seed, NOT uploaded)"
+)
+
+
+def resolve_branch_chain_seed_handoff(script: dict[str, Any] | None) -> str:
+    """Return branch image-seed policy: sequential last-frame chain vs star composite staging."""
+    branch_cfg = ((script or {}).get("config") or {}).get("branch_chain") or {}
+    seed = str(branch_cfg.get("seed_handoff") or "").strip().lower()
+    if seed == BRANCH_CHAIN_LAST_FRAME_MODE:
+        return BRANCH_CHAIN_LAST_FRAME_MODE
+    mode = str(
+        branch_cfg.get("branch_mode") or branch_cfg.get("staging_guide") or ""
+    ).strip().lower()
+    if mode == BRANCH_CHAIN_LAST_FRAME_MODE:
+        return BRANCH_CHAIN_LAST_FRAME_MODE
+    return BRANCH_CHAIN_STAGING_MODE
+
+
+def narration_enabled(script: dict[str, Any] | None, shot: dict[str, Any] | None = None) -> bool:
+    """False when config.narration or shot.narration is explicitly false."""
+    if shot is not None and shot.get("narration") is False:
+        return False
+    cfg = (script or {}).get("config") or {}
+    return cfg.get("narration") is not False
+
+
+def compile_barebones_prose_prompt(
+    shot: dict[str, Any],
+    refs: dict[str, Any],
+    prod_dir: Path | None,
+    script: dict[str, Any] | None = None,
+    *,
+    image_url: str | None = None,
+    seed_slot: str | None = None,
+    talent_baked_in: bool = False,
+) -> str:
+    """Compile Studio BAREBONES JSON → prose_prompt (MATILDA_Direction_Guide § Grok Syntax).
+
+    Slot order is fixed: @1 Setting first (always — matches image_url source plate),
+    then @2/@3 talent tokens, then scene + integrated camera prose.
+    talent_baked_in: composite @1 carries talent+set pixels (DAVID-style baked seed).
+    """
+    bb = _merge_barebones_shot(shot, script)
+    if seed_slot is None:
+        seed_slot = _resolve_seed_slot(refs, image_url)
+    dialogue = bb.get("dialogue") if isinstance(bb.get("dialogue"), dict) else {}
+    character = str(dialogue.get("character") or "MATILDA").strip()
+
+    scene = str(bb.get("scene") or "").strip()
+    if not scene:
+        scene = str(shot.get("video_prompt") or "").strip()
+    if not narration_enabled(script, shot):
+        if SILENT_SCENE_LOCK not in scene:
+            scene = f"{SILENT_SCENE_LOCK}; {scene}" if scene else SILENT_SCENE_LOCK
+    camera = _format_camera_clause(str(bb.get("camera") or ""))
+
+    parts: list[str] = []
+
+    session = refs.get("editor_session") or {}
+    slot1 = (session.get("slots") or {}).get("@1") or {}
+    chain_handoff = slot1.get("role") == "baked_chain_frame"
+    staging_guide = str(bb.get("staging_guide") or bb.get("handoff_lock") or "").strip()
+    handoff_lock = staging_guide
+    setting_id = _slot_file_id(refs, prod_dir, "@1")
+    if staging_guide and not chain_handoff:
+        parts.append(staging_guide)
+    if chain_handoff:
+        s1 = bb.get("@1") if isinstance(bb.get("@1"), dict) else {}
+        perf = _slot_description(s1) or (
+            "see attached render — prior segment exit frame; camera and lighting locked to seed"
+        )
+        lead = f"Setting: {perf}"
+        if handoff_lock and handoff_lock not in lead:
+            lead = f"{lead}; {handoff_lock}"
+        parts.append(lead)
+    elif setting_id:
+        parts.append(_format_setting_clause(setting_id, bb))
+
+    body_id = _slot_file_id(refs, prod_dir, "@2")
+    shot_bb = shot.get("barebones") if isinstance(shot.get("barebones"), dict) else {}
+    use_head_slot = "@3" in shot_bb
+    head_id = _slot_file_id(refs, prod_dir, "@3") if use_head_slot else None
+    talent_in_seed = talent_baked_in or seed_slot in ("@2", "@3")
+    s2 = bb.get("@2") if isinstance(bb.get("@2"), dict) else {}
+    body_mods = _slot_description(s2)
+    head_mods = (
+        _slot_description(bb.get("@3") if isinstance(bb.get("@3"), dict) else {})
+        if use_head_slot
+        else ""
+    )
+    mods = "; ".join(m for m in (body_mods, head_mods) if m)
+
+    action = scene
+    if camera:
+        action = f"{scene}. {camera}" if scene else camera
+
+    if body_id and not talent_in_seed:
+        if head_id:
+            char_clause = (
+                f"{character} (body_reference: {_editor_uuid_token(body_id)}, "
+                f"head_reference: {_editor_uuid_token(head_id)}"
+            )
+            if mods:
+                char_clause += f"; {mods}"
+            char_clause += ")"
+        else:
+            char_clause = f"{character} ( {_editor_uuid_token(body_id)}"
+            if mods:
+                char_clause += f" , {mods}"
+            char_clause += ")"
+        parts.append(f"{char_clause} {action}".strip())
+    elif action:
+        parts.append(action)
+
+    speech = ""
+    if narration_enabled(script, shot):
+        speech = str(
+            dialogue.get("speech_text") or shot.get("speech_text") or ""
+        ).strip()
+    assembled = " ; ".join(parts)
+    if speech and speech not in assembled:
+        lang = str(dialogue.get("language") or "")
+        lang_note = "native Bavarian German" if lang.startswith("de") else "dialogue"
+        parts.append(f'Lip-synced, delivers in {lang_note}: "{speech}"')
+    audio = bb.get("audio") if isinstance(bb.get("audio"), dict) else {}
+    ambient = str(audio.get("ambient") or "").strip()
+    if ambient:
+        parts.append(ambient)
+    if narration_enabled(script, shot):
+        voice_en = str(audio.get("voice_direction") or "").strip()
+        if voice_en and not str(dialogue.get("language") or "").startswith("de"):
+            parts.append(voice_en)
+        voice_de = str(audio.get("voice_direction_DE") or "").strip()
+        if voice_de and str(dialogue.get("language") or "").startswith("de"):
+            parts.append(voice_de)
+
+    style = str(bb.get("style") or "").strip()
+    if style:
+        parts.append(style)
+
+    prompt = " ; ".join(p for p in parts if p)
+
+    talent_label = (
+        "baked@1" if talent_baked_in else "in-seed" if talent_in_seed else "named@2"
+    )
+    _log(
+        f"[prompt] barebones {shot.get('id')}: seed={seed_slot or 'none'} "
+        f"@1_first=yes talent={talent_label}"
+    )
+    return prompt.strip()
+
+
+def _resolve_composite_first_frame(
+    script: dict[str, Any] | None,
+    prod_dir: Path | None,
+) -> Path | None:
+    """Baked @1 composite JPG for shot 0 — production path when video refs gated."""
+    cfg = (script or {}).get("config") or {}
+    raw = cfg.get("composite_first_frame") or cfg.get("baked_composite_seed")
+    if not raw:
+        return None
+    candidates = [
+        Path(str(raw)),
+        _resolve_workspace_path(str(raw)),
+    ]
+    if prod_dir:
+        candidates.append(Path(prod_dir) / str(raw))
+    for p in candidates:
+        if p.is_file():
+            return p.resolve()
+    return None
+
+
+def generate_baked_composite_video(
+    client: Any,
+    shot: dict[str, Any],
+    refs: dict[str, Any],
+    script: dict[str, Any],
+    prod_dir: Path | None,
+    composite_path: Path,
+    *,
+    duration: int,
+) -> tuple[Any, dict[str, Any]]:
+    """video.generate from composite JPG — talent+set baked into @1 (no reference_images)."""
+    composite_path = Path(composite_path)
+    if not composite_path.is_file():
+        raise FileNotFoundError(f"composite seed missing: {composite_path}")
+    _api_pace()
+    url, fid = upload_and_capture_id(client, composite_path, friendly="@1_composite")
+    session = refs.setdefault("editor_session", {"slots": {}})
+    slots = session.setdefault("slots", {})
+    slots["@1"] = {
+        "role": "baked_composite",
+        "file_id": fid,
+        "url": url,
+        "source": str(composite_path.resolve()),
+    }
+    refs["@1_plate_file_id"] = fid
+    refs["@1_plate_url"] = url
+    prompt = compile_barebones_prose_prompt(
+        shot,
+        refs,
+        prod_dir,
+        script,
+        image_url=url,
+        seed_slot="@1",
+        talent_baked_in=True,
+    )
+    gen_kwargs: dict[str, Any] = {
+        "prompt": prompt,
+        "model": refs["model_video"],
+        "image_file_id": fid,
+        "duration": duration,
+        "resolution": refs["resolution"],
+        "aspect_ratio": _script_aspect_ratio(script),
+    }
+    _log(
+        f"[baked@1] generate {shot.get('id')}: image_file_id={fid[:20]}... "
+        f"talent+set in composite seed"
+    )
+    _api_pace()
+    resp = client.video.generate(**gen_kwargs)
+    req = {
+        "prompt": prompt,
+        "kwargs": gen_kwargs,
+        "binding": {
+            "seed_mode": "baked_composite@1",
+            "image_field": "image_file_id",
+            "image_value": fid,
+            "composite_path": str(composite_path),
+        },
+    }
+    return resp, req
+
+
+def generate_baked_chain_video(
+    client: Any,
+    shot: dict[str, Any],
+    refs: dict[str, Any],
+    script: dict[str, Any],
+    prod_dir: Path | None,
+    *,
+    chain_image_file_id: str,
+    chain_image_url: str | None,
+    duration: int,
+) -> tuple[Any, dict[str, Any]]:
+    """video.generate from chain frame — identity baked in pixels, no reference_images."""
+    fid = str(chain_image_file_id)
+    url = str(chain_image_url or "")
+    session = refs.setdefault("editor_session", {"slots": {}})
+    slots = session.setdefault("slots", {})
+    slots["@1"] = {
+        "role": "baked_chain_frame",
+        "file_id": fid,
+        "url": url,
+    }
+    refs["@1_plate_file_id"] = fid
+    if url:
+        refs["@1_plate_url"] = url
+    prompt = compile_barebones_prose_prompt(
+        shot,
+        refs,
+        prod_dir,
+        script,
+        image_url=url or None,
+        seed_slot="@1",
+        talent_baked_in=True,
+    )
+    gen_kwargs: dict[str, Any] = {
+        "prompt": prompt,
+        "model": refs["model_video"],
+        "image_file_id": fid,
+        "duration": duration,
+        "resolution": refs["resolution"],
+        "aspect_ratio": _script_aspect_ratio(script),
+    }
+    _log(
+        f"[baked@chain] generate {shot.get('id')}: image_file_id={fid[:20]}... "
+        f"talent+set in chain seed (no refs)"
+    )
+    _api_pace()
+    resp = client.video.generate(**gen_kwargs)
+    req = {
+        "prompt": prompt,
+        "kwargs": gen_kwargs,
+        "binding": {
+            "seed_mode": "baked_chain@1",
+            "image_field": "image_file_id",
+            "image_value": fid,
+        },
+    }
+    return resp, req
+
+
+def mandatory_extract_last_frame(video: Path, out_jpg: Path) -> Path:
+    """Hard-fail last-frame extraction — required for branch handoff (#branch-chain)."""
+    if not video.is_file() or video.stat().st_size < 10000:
+        raise FileNotFoundError(f"MANDATORY handoff: branch video missing or empty: {video}")
+    extract_last_frame(video, out_jpg)
+    if not out_jpg.is_file() or out_jpg.stat().st_size < 500:
+        raise RuntimeError(f"MANDATORY handoff: last-frame extraction failed: {out_jpg}")
+    return out_jpg
+
+
+def generate_branch_last_frame_video(
+    client: Any,
+    shot: dict[str, Any],
+    refs: dict[str, Any],
+    script: dict[str, Any],
+    prod_dir: Path | None,
+    *,
+    handoff_frame: Path,
+    prev_shot_id: str,
+    duration: int,
+) -> tuple[Any, dict[str, Any]]:
+    """Branch chain: upload prev-branch last frame → image_file_id seed (sequential topology).
+
+    b02 ← b01 last frame, b03 ← b02 last frame, etc. Identity baked in chain pixels.
+    """
+    handoff_frame = Path(handoff_frame)
+    if not handoff_frame.is_file() or handoff_frame.stat().st_size < 500:
+        raise FileNotFoundError(
+            f"MANDATORY handoff frame missing before branch {shot.get('id')}: {handoff_frame}"
+        )
+    _log(
+        f"[branch-chain] {shot.get('id')} ← {prev_shot_id} "
+        f"seed={handoff_frame.name} (uploaded last-frame chain)"
+    )
+    _api_pace()
+    chain_url, chain_fid = upload_and_capture_id(
+        client, handoff_frame, friendly=f"branch_seed_{shot.get('id')}",
+    )
+    resp, req = generate_baked_chain_video(
+        client,
+        shot,
+        refs,
+        script,
+        prod_dir,
+        chain_image_file_id=chain_fid,
+        chain_image_url=chain_url,
+        duration=duration,
+    )
+    req["binding"] = {
+        **(req.get("binding") or {}),
+        "seed_mode": BRANCH_CHAIN_LAST_FRAME_MODE,
+        "topology": "sequential_last_frame",
+        "handoff_frame_local": str(handoff_frame),
+        "handoff_from": prev_shot_id,
+        "handoff_frame_uploaded": True,
+    }
+    return resp, req
+
+
+def generate_branch_staging_video(
+    client: Any,
+    shot: dict[str, Any],
+    refs: dict[str, Any],
+    script: dict[str, Any],
+    prod_dir: Path | None,
+    *,
+    staging_frame: Path,
+    origin_video_url: str,
+    origin_composite: Path,
+    prev_shot_id: str,
+    duration: int,
+) -> tuple[Any, dict[str, Any]]:
+    """Branch chain (hardcoded): last frame = staging guide only → prompt → star-origin generate.
+
+    1. Extract last frame locally (never uploaded as image/reference seed)
+    2. analyze_handoff_frame → lighting, distance, camera viewpoint
+    3. Inject staging prose into next-branch prompt
+    4. video.generate(image_file_id=origin_composite) — same composite as b01 (star topology)
+       origin_video_url is audit-only (locked b01 UUID); never the previous branch UUID.
+
+    grok-imagine-video-1.5 rejects video_url edit; composite star-seed preserves policy.
+    """
+    staging_frame = Path(staging_frame)
+    origin_composite = Path(origin_composite)
+    if not staging_frame.is_file() or staging_frame.stat().st_size < 500:
+        raise FileNotFoundError(
+            f"MANDATORY staging frame missing before branch {shot.get('id')}: {staging_frame}"
+        )
+    if not origin_composite.is_file():
+        raise FileNotFoundError(f"MANDATORY origin composite missing: {origin_composite}")
+    origin = str(origin_video_url or "").strip()
+    if not origin:
+        raise ValueError(f"MANDATORY origin_video_url (audit) missing for branch {shot.get('id')}")
+
+    staging_meta = analyze_handoff_frame(staging_frame)
+    shot = apply_staging_guide_to_shot(
+        shot, staging_frame, prev_shot_id=prev_shot_id, meta=staging_meta,
+    )
+
+    _log(
+        f"[branch-staging] {shot.get('id')} ← {prev_shot_id} "
+        f"staging={staging_frame.name} (local prompt only) "
+        f"viewpoint={staging_meta.get('camera_viewpoint', '')[:40]}… "
+        f"origin_audit={origin[:48]}… composite_seed={origin_composite.name}"
+    )
+    resp, req = generate_baked_composite_video(
+        client,
+        shot,
+        refs,
+        script,
+        prod_dir,
+        origin_composite,
+        duration=duration,
+    )
+    req["binding"] = {
+        **(req.get("binding") or {}),
+        "seed_mode": BRANCH_CHAIN_STAGING_MODE,
+        "staging_policy": BRANCH_STAGING_GUIDE_PREFIX,
+        "topology": "star_from_origin_composite",
+        "origin_video_url_audit": origin,
+        "origin_composite": str(origin_composite),
+        "staging_frame_local": str(staging_frame),
+        "staging_from": prev_shot_id,
+        "staging_meta": staging_meta,
+        "staging_frame_uploaded": False,
+    }
+    return resp, req
+
+
+def generate_branch_handoff_video(
+    client: Any,
+    shot: dict[str, Any],
+    refs: dict[str, Any],
+    script: dict[str, Any],
+    prod_dir: Path | None,
+    *,
+    handoff_frame: Path,
+    prev_shot_id: str,
+    duration: int,
+    origin_video_url: str = "",
+    origin_composite: Path | None = None,
+    seed_mode: str | None = None,
+) -> tuple[Any, dict[str, Any]]:
+    """Dispatch branch generate by script branch_chain seed policy."""
+    mode = seed_mode or resolve_branch_chain_seed_handoff(script)
+    if mode == BRANCH_CHAIN_LAST_FRAME_MODE:
+        return generate_branch_last_frame_video(
+            client,
+            shot,
+            refs,
+            script,
+            prod_dir,
+            handoff_frame=handoff_frame,
+            prev_shot_id=prev_shot_id,
+            duration=duration,
+        )
+    if not origin_composite:
+        raise ValueError("origin_composite required for staging-guide branch mode")
+    return generate_branch_staging_video(
+        client,
+        shot,
+        refs,
+        script,
+        prod_dir,
+        staging_frame=handoff_frame,
+        origin_video_url=origin_video_url,
+        origin_composite=origin_composite,
+        prev_shot_id=prev_shot_id,
+        duration=duration,
+    )
+
+
+def _uses_baked_composite_pipeline(
+    script: dict[str, Any] | None,
+    prod_dir: Path | None,
+) -> bool:
+    return _resolve_composite_first_frame(script, prod_dir) is not None
+
+
+def _editor_reference_file_ids(refs: dict[str, Any]) -> list[str]:
+    """@2–@7 session file_ids for reference_image_file_ids (compositing, not first frame)."""
+    session = refs.get("editor_session") or {}
+    slots = session.get("slots") or {}
+    ids: list[str] = []
+    for slot in BAREBONES_SLOT_KEYS[1:]:
+        fid = (slots.get(slot) or {}).get("file_id")
+        if fid:
+            ids.append(str(fid))
+    return ids
+
+
+def _script_aspect_ratio(script: dict[str, Any] | None) -> str:
+    return str((script or {}).get("config", {}).get("aspect_ratio") or "16:9")
+
+
+def build_barebones_generate_request(
+    shot: dict[str, Any],
+    refs: dict[str, Any],
+    script: dict[str, Any],
+    prod_dir: Path | None,
+    *,
+    duration: int,
+    chain_image_url: str | None = None,
+    chain_image_file_id: str | None = None,
+    seed_slot: str | None = None,
+) -> dict[str, Any]:
+    """Assemble barebones i2v + R2V kwargs: @1 first frame, @2+ reference sheets."""
+    session = refs.get("editor_session") or {}
+    slots = session.get("slots") or {}
+    ref_ids = _editor_reference_file_ids(refs)
+
+    image_file_id: str | None = None
+    image_url: str | None = None
+    binding: dict[str, Any] = {"reference_image_file_ids": ref_ids}
+
+    if chain_image_file_id:
+        image_file_id = str(chain_image_file_id)
+        binding["seed_mode"] = "chain_frame"
+        binding["image_field"] = "image_file_id"
+        prompt_seed_url = chain_image_url
+        seed_slot = seed_slot or "chain"
+    elif chain_image_url:
+        image_url = str(chain_image_url)
+        binding["seed_mode"] = "chain_frame"
+        binding["image_field"] = "image_url"
+        prompt_seed_url = image_url
+        seed_slot = seed_slot or "chain"
+    else:
+        s1 = slots.get("@1") or {}
+        image_file_id = str(s1["file_id"]) if s1.get("file_id") else None
+        image_url = str(s1["url"]) if s1.get("url") else None
+        binding["seed_mode"] = "@1_plate"
+        prompt_seed_url = image_url
+        seed_slot = seed_slot or "@1"
+        if image_file_id:
+            binding["image_field"] = "image_file_id"
+        elif image_url:
+            binding["image_field"] = "image_url"
+        else:
+            binding["image_field"] = "none"
+
+    prompt = compile_barebones_prose_prompt(
+        shot,
+        refs,
+        prod_dir,
+        script,
+        image_url=prompt_seed_url,
+        seed_slot=seed_slot,
+    )
+
+    gen_kwargs: dict[str, Any] = {
+        "prompt": prompt,
+        "model": refs["model_video"],
+        "duration": duration,
+        "resolution": refs["resolution"],
+        "aspect_ratio": _script_aspect_ratio(script),
+    }
+    if image_file_id:
+        gen_kwargs["image_file_id"] = image_file_id
+        binding["image_value"] = image_file_id
+    elif image_url:
+        gen_kwargs["image_url"] = image_url
+        binding["image_value"] = image_url
+    if ref_ids:
+        gen_kwargs["reference_image_file_ids"] = ref_ids
+
+    return {"prompt": prompt, "kwargs": gen_kwargs, "binding": binding}
+
+
+def generate_barebones_video(
+    client: Any,
+    shot: dict[str, Any],
+    refs: dict[str, Any],
+    script: dict[str, Any],
+    prod_dir: Path | None,
+    *,
+    duration: int,
+    chain_image_url: str | None = None,
+    chain_image_file_id: str | None = None,
+    seed_slot: str | None = None,
+) -> tuple[Any, dict[str, Any]]:
+    """video.generate with @1 image + @2+ reference_image_file_ids."""
+    req = build_barebones_generate_request(
+        shot,
+        refs,
+        script,
+        prod_dir,
+        duration=duration,
+        chain_image_url=chain_image_url,
+        chain_image_file_id=chain_image_file_id,
+        seed_slot=seed_slot,
+    )
+    binding = req["binding"]
+    kwargs = req["kwargs"]
+    sent_fields = [k for k in ("image_file_id", "image_url", "reference_image_file_ids") if kwargs.get(k)]
+    _log(
+        f"[barebones] generate {shot.get('id')}: seed={binding.get('seed_mode')} "
+        f"image_field={binding.get('image_field')} "
+        f"refs={len(binding.get('reference_image_file_ids') or [])} "
+        f"sent={sent_fields}"
+    )
+    _api_pace()
+    try:
+        resp = client.video.generate(**kwargs)
+    except Exception as exc:
+        if _reference_images_not_supported(exc) and kwargs.get("reference_image_file_ids"):
+            _log(
+                f"[barebones] {REFERENCE_IMAGES_API_FINDING['finding']} "
+                f"(model={kwargs.get('model')})"
+            )
+        raise
+    return resp, req
+
+
+def _is_barebones_mode(script: dict[str, Any] | None) -> bool:
+    return _prompt_mode(script) in ("barebones", "asset_directed")
+
+
+def build_asset_directed_prompt(
+    shot: dict[str, Any],
+    refs: dict[str, Any],
+    prod_dir: Path | None,
+    *,
+    script: dict[str, Any] | None = None,
+    image_url: str | None = None,
+    seed_slot: str | None = None,
+) -> str:
+    """Backward-compatible alias — compiles BAREBONES → prose_prompt."""
+    return compile_barebones_prose_prompt(
+        shot, refs, prod_dir, script, image_url=image_url, seed_slot=seed_slot,
+    )
+
+
+def build_video_generation_prompt(
+    shot: dict[str, Any],
+    refs: dict[str, Any],
+    opts: SeamlessOptions,
+    *,
+    script: dict[str, Any] | None = None,
+    prod_dir: Path | None = None,
+    image_url: str | None = None,
+    seed_slot: str | None = None,
+) -> str:
+    mode = _prompt_mode(script)
+    if mode in ("asset_directed", "barebones"):
+        return compile_barebones_prose_prompt(
+            shot,
+            refs,
+            prod_dir,
+            script,
+            image_url=image_url,
+            seed_slot=seed_slot,
+        )
+    base = apply_seamless_prompt(shot, refs, opts)
+    return inject_api_file_ref_tokens(base, shot, refs)
+
+
+def get_pure_character_seed(
+    shot: dict[str, Any],
+    refs: dict[str, Any],
+    *,
+    use_avatar: bool = True,
+) -> str:
+    """@2-only video seed — casting avatar or viz plate; never @1 zone plates.
+
+    use_avatar=False routes science/@2-viz shots to visualization_url only.
+    Empty @1 environment plates stay on disk; set lives in shot video_prompt.
+    """
+    if shot.get("image_url"):
+        return str(shot["image_url"])
+    if _shot_uses_viz_reference(shot) or not use_avatar:
+        viz = refs.get("visualization_url")
+        if viz:
+            return str(viz)
+        if not use_avatar:
+            raise RuntimeError(
+                f"Shot {shot.get('id')}: use_avatar=False but no visualization_url"
+            )
+    avatar = refs.get("avatar_url")
+    if not avatar:
+        raise RuntimeError(
+            f"Shot {shot.get('id')}: no @2 avatar_url for pure character seed"
+        )
+    return str(avatar)
 
 
 def resolve_shot_image_url(shot: dict[str, Any], refs: dict[str, Any]) -> str:
-    """Empty zone set plate (@1…) → @2 viz plate → @2 avatar casting ref."""
+    """Delegate to get_pure_character_seed — @2 avatar/viz seed for re-ground shots."""
+    use_avatar = not _shot_uses_viz_reference(shot)
+    return get_pure_character_seed(shot, refs, use_avatar=use_avatar)
+
+
+def resolve_shot0_set_seed(shot: dict[str, Any], refs: dict[str, Any]) -> str:
+    """Shot 01 image_url — mode-dependent pixel seed.
+
+    barebones/asset_directed: empty @1 set plate (walk-in; @2 named in prose).
+    seamless legacy: @2 avatar locks identity; set lives in @file prompt tokens.
+    """
     if shot.get("image_url"):
         return str(shot["image_url"])
-    zone = _shot_zone(shot)
-    if zone and refs.get(f"{zone}_plate_url"):
-        return str(refs[f"{zone}_plate_url"])
+    # Viz shots: seed from visualization reference (no character anchor needed)
     if _shot_uses_viz_reference(shot) and refs.get("visualization_url"):
         return str(refs["visualization_url"])
-    return str(refs["avatar_url"])
+    mode = str(refs.get("prompt_mode") or "seamless")
+    if mode in ("barebones", "asset_directed"):
+        plate_url = refs.get("@1_plate_url")
+        if plate_url:
+            return str(plate_url)
+    # Character/host shots: avatar is the identity anchor.
+    # Set plate is already in @file tokens via inject_api_file_ref_tokens().
+    avatar_url = refs.get("avatar_url")
+    if avatar_url:
+        return str(avatar_url)
+    # Fallback: plate (pure set shots with no character)
+    zone = _shot_zone(shot) or "@1"
+    plate_url = refs.get(f"{zone}_plate_url")
+    if plate_url:
+        return str(plate_url)
+    return resolve_shot_image_url(shot, refs)
 
 
 def _use_avatar_reground(
@@ -612,10 +1592,10 @@ def _use_avatar_reground(
     opts: "SeamlessOptions",
 ) -> bool:
     """Dark/high-contrast: re-ground every shot on locked avatar (never drifted chain frame)."""
+    mode = str(refs.get("prompt_mode") or "seamless")
+    if mode in ("barebones", "asset_directed"):
+        return shot_index == 0
     if _shot_uses_viz_reference(shot) and refs.get("visualization_url"):
-        return True
-    zone = _shot_zone(shot)
-    if zone and refs.get(f"{zone}_plate_url"):
         return True
     if _is_dark_scene(refs, shot=shot):
         return True
@@ -766,7 +1746,10 @@ def _magenta_clamp_vf(
     return base
 
 
-def _normalize_shot_list(shots: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def _normalize_shot_list(
+    shots: list[dict[str, Any]],
+    cfg: dict[str, Any] | None = None,
+) -> list[dict[str, Any]]:
     out: list[dict[str, Any]] = []
     t = 0
     for s in shots:
@@ -780,7 +1763,7 @@ def _normalize_shot_list(shots: list[dict[str, Any]]) -> list[dict[str, Any]]:
         t = int(shot["t_end"])
         speech = shot.get("speech_text", "")
         prompt = shot.get("video_prompt", "")
-        if speech and speech not in prompt:
+        if speech and speech not in prompt and narration_enabled({"config": cfg or {}}, shot):
             shot["video_prompt"] = f'{prompt.rstrip()} Lip-synced, delivers: "{speech}"'
         out.append(shot)
     return out
@@ -815,6 +1798,7 @@ def _embed_legacy_continuity(
     prefix: str,
     guard: str,
     voice: str,
+    cfg: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     """Bake legacy top-level continuity_prefix/end_guard into video_prompt when missing."""
     out: list[dict[str, Any]] = []
@@ -824,7 +1808,7 @@ def _embed_legacy_continuity(
         if "@David-001" not in prompt and prefix:
             prompt = f"{prefix} {prompt}".strip()
         speech = shot.get("speech_text", "")
-        if speech and speech not in prompt:
+        if speech and speech not in prompt and narration_enabled({"config": cfg or {}}, shot):
             prompt = f'{prompt.rstrip()} Lip-synced, delivers: "{speech}"'
         if "gesture peak" not in prompt.lower() and guard:
             prompt = f"{prompt.rstrip()} {guard}"
@@ -839,11 +1823,13 @@ def normalize_script(raw: dict[str, Any], script_path: Path) -> dict[str, Any]:
     """Accept canonical schema or legacy shapes; always return canonical in-memory."""
     if "config" in raw and "shots" in raw:
         cfg = _canonicalize_config(raw, dict(raw["config"]))
-        shots = _normalize_shot_list(raw["shots"])
+        shots = _normalize_shot_list(raw["shots"], cfg)
         prefix = raw.get("continuity_prefix", "")
         guard = raw.get("end_guard", "")
         if prefix or guard:
-            shots = _embed_legacy_continuity(shots, prefix, guard, cfg.get("voice_suffix", DEFAULT_VOICE_SUFFIX))
+            shots = _embed_legacy_continuity(
+                shots, prefix, guard, cfg.get("voice_suffix", DEFAULT_VOICE_SUFFIX), cfg,
+            )
         prov = raw.get("provenance_card")
         if not prov and raw.get("closing_card"):
             closing = raw["closing_card"]
@@ -1118,26 +2104,52 @@ def resolve_refs(script: dict[str, Any], *, client: Any = None) -> dict[str, Any
         sp = Path(str(set_file))
         set_file = str(sp if sp.is_absolute() else _resolve_workspace_path(str(set_file)))
 
-    def _sidecar_url(image_path: str | None) -> str | None:
+    def _sidecar_get(image_path: str | None, key: str) -> str | None:
         if not image_path:
             return None
         meta = Path(image_path).with_suffix(".json")
         if not meta.is_file():
             return None
         try:
-            return json.loads(meta.read_text(encoding="utf-8")).get("url")
+            val = json.loads(meta.read_text(encoding="utf-8")).get(key)
+            return str(val) if val else None
         except (json.JSONDecodeError, OSError):
             return None
 
+    def _write_image_sidecar(image_path: Path, fields: dict[str, Any]) -> None:
+        meta_path = image_path.with_suffix(".json")
+        existing: dict[str, Any] = {}
+        if meta_path.is_file():
+            try:
+                existing = json.loads(meta_path.read_text(encoding="utf-8"))
+            except (json.JSONDecodeError, OSError):
+                pass
+        existing.update(fields)
+        meta_path.write_text(
+            json.dumps(existing, indent=2, ensure_ascii=False), encoding="utf-8",
+        )
+
     # Prefer fresh regen sidecar over stale identity_lock url (#218).
-    sidecar = _sidecar_url(avatar_file)
+    sidecar = _sidecar_get(avatar_file, "url")
     if sidecar:
         avatar_url = sidecar
         cfg["avatar_url"] = avatar_url
 
-    if not avatar_url and avatar_file and client is not None:
-        avatar_url = upload_image_url(client, Path(avatar_file))
-        cfg["avatar_url"] = avatar_url
+    # CDN url from sidecar is permanent; file_id is session-scoped — never reuse stale ids.
+    avatar_file_id: str | None = None
+    if client is not None and avatar_file:
+        _api_pace()
+        upload_url, avatar_file_id = upload_and_capture_id(
+            client, Path(avatar_file), friendly="avatar",
+        )
+        if not avatar_url:
+            avatar_url = upload_url
+            cfg["avatar_url"] = upload_url
+        cfg["avatar_file_id"] = avatar_file_id
+        _write_image_sidecar(
+            Path(avatar_file),
+            {"url": avatar_url, "file_id": avatar_file_id},
+        )
 
     viz_url = cfg.get("visualization_url")
     viz_file = cfg.get("visualization_reference")
@@ -1152,6 +2164,7 @@ def resolve_refs(script: dict[str, Any], *, client: Any = None) -> dict[str, Any
         "lock": lock,
         "lock_path": lock_path,
         "avatar_url": avatar_url,
+        "avatar_file_id": avatar_file_id,
         "avatar_file": avatar_file,
         "config_avatar_reference": cfg.get("avatar_reference"),
         "visualization_url": viz_url,
@@ -1161,7 +2174,16 @@ def resolve_refs(script: dict[str, Any], *, client: Any = None) -> dict[str, Any
         "format_id": script.get("format_id"),
         "production_meta": script.get("production_meta"),
         "model_video": cfg.get("model_video", "grok-imagine-video-1.5"),
+        "extend_model": cfg.get("extend_model")
+        or (
+            LEGACY_EXTEND_MODEL
+            if "grok-imagine-video-1.5" in str(cfg.get("model_video", ""))
+            else cfg.get("model_video", "grok-imagine-video-1.5")
+        ),
         "resolution": cfg.get("resolution", "720p"),
+        "prompt_mode": cfg.get("prompt_mode", "seamless"),
+        "seamless_cfg": cfg.get("seamless") or {},
+        "narration": narration_enabled(script),
     }
 
 
@@ -1200,7 +2222,7 @@ def build_imagine_pack(
         "shots": [
             {
                 "shot_id": s["id"],
-                "duration": effective_shot_duration(s, seamless=use_seamless),
+                "duration": _eff_dur(s, refs, seamless=use_seamless),
                 "image_url": resolve_shot_image_url(s, refs),
                 "video_prompt": (
                     apply_seamless_prompt(s, refs, seamless_opts)
@@ -1418,15 +2440,103 @@ class SeamlessOptions:
     neutral_generation: bool = False
 
 
+LEGACY_EXTEND_MODEL = "grok-imagine-video"
+
 EXTEND_API_FINDING = {
+    "scriptable": True,
+    "enabled_on_model": True,
+    "generate_model": "grok-imagine-video-1.5",
+    "extend_model": LEGACY_EXTEND_MODEL,
+    "editor_extend": "Grok Imagine UI Continue/Extend may work before API parity on 1.5",
+    "finding": (
+        "grok-imagine-video-1.5 generate + grok-imagine-video extend (split model path). "
+        "1.5 rejects extend; legacy extend PASS from native vidgen URLs (probe 2026-06-29). "
+        "Files API re-upload of trimmed MP4 returns HTTP 403 to extend service — use resp.url, "
+        "not upload_video_url. extend_at_s trim is local join assembly only."
+    ),
+}
+
+REFERENCE_IMAGES_API_FINDING = {
     "scriptable": True,
     "enabled_on_model": False,
     "model": "grok-imagine-video-1.5",
-    "editor_extend": "Grok Imagine UI Continue/Extend may work before API parity on 1.5",
-    "finding": (
-        "client.video.extend() exists in xAI SDK but grok-imagine-video-1.5 returns "
-        "'Video extension is not supported for this model'. Pipeline uses frame-chain i2v fallback."
+    "sdk_field": "reference_image_file_ids",
+    "api_field": "reference_images",
+    "probe_artifact": (
+        "productions/matilda_kitchen_stonebridge_10s_longform_v1/proof/"
+        "reference_images_probe_report.json"
     ),
+    "probe_matrix_2026_06_29": {
+        "total": 25,
+        "pass": 3,
+        "passing": [
+            {"model": "grok-imagine-video", "mode": "r2v_ref_file_ids_only"},
+            {"model": "grok-imagine-video", "mode": "r2v_ref_urls_only"},
+            {"model": "grok-imagine-video", "mode": "r2v_ref_file_ids_and_urls"},
+        ],
+        "i2v_plus_refs_on_grok_imagine_video": (
+            "INVALID_ARGUMENT: Cannot specify both image and reference_images — "
+            "mutual exclusivity, not missing field"
+        ),
+        "all_refs_on_grok_imagine_video_1_5": (
+            "reference_images is not supported for this model — true 1.5 gate"
+        ),
+        "phantom_models": ["grok-imagine-video-1.5-beta", "grok-imagine-video-r2v"],
+        "sdk_no_exposed": ["x-grok-beta header", "enable_references flag", "api_version"],
+    },
+    "dead_escalations": [
+        "reference_image_urls on grok-imagine-video-1.5 — same gate as file_ids",
+        "grok-imagine-video-1.5-beta / grok-imagine-video-r2v — NOT_FOUND on team",
+    ],
+    "editor_compositing": (
+        "Editor web @1+@2 dual-slot may use a surface that allows i2v+refs together; "
+        "public API enforces image XOR reference_images on grok-imagine-video."
+    ),
+    "pr1_stance": (
+        "Keep PR1 wired (image_file_id + reference_image_file_ids). "
+        "When 1.5 gate opens or Editor-parity endpoint ships, zero rewire. "
+        "Rejection repro is actionable for xAI."
+    ),
+    "production_stance": (
+        "composite-first-frame baked@1 (proven kitchen v4) until Editor-parity API."
+    ),
+    "finding": (
+        "Beta gate / surface exposure — not a hard SDK fiction. "
+        "grok-imagine-video accepts pure R2V refs; grok-imagine-video-1.5 rejects all refs; "
+        "i2v+refs combo rejected as mutually exclusive on both. PR1 preserved."
+    ),
+}
+
+COMPOSITE_FIRST_FRAME_API_FINDING = {
+    "scriptable": True,
+    "enabled_on_model": True,
+    "model": "grok-imagine-image-quality",
+    "sdk_fields": ["image_file_ids", "image_urls"],
+    "video_bridge": "composite JPG → video.generate(image_url=...) — no reference_images on video",
+    "mechanism": (
+        "client.image.sample() with image_file_ids=[@1_plate, @2_turntable] and barebones "
+        "directive produces a single still; that still seeds the video chain at t=0."
+    ),
+    "slot_remap": (
+        "Image step uses @1+@2 as edit inputs, but output is one baked frame: talent is "
+        "staged in the setting from t=0. For video.generate that composite is @1 only "
+        "(image_url/image_file_id) — not empty-plate @1 + reference_image_file_ids @2. "
+        "Identity is pixel-locked in the seed; no separate compositing layer on video."
+    ),
+    "editor_delta": (
+        "Editor dual-slot: @1 empty plate at t=0, @2 compositing (walk-in possible). "
+        "Composite-first-frame: @1 carries talent+set baked in (walk-in not reproducible)."
+    ),
+    "finding": (
+        "Image API accepts multi-reference editing via image_file_ids (distinct from video "
+        "reference_images). Kitchen probe 2026-06-29: correct MATILDA identity, talent baked "
+        "into setting — acceptable interim unblock; not Editor @1/@2 layer parity."
+    ),
+    "proof_artifact": (
+        "productions/matilda_kitchen_stonebridge_10s_longform_v1/proof/"
+        "composite_first_frame_probe.jpg"
+    ),
+    "visual_gate": "PASS_IDENTITY",
 }
 
 
@@ -1477,7 +2587,8 @@ def apply_seamless_prompt(shot: dict[str, Any], refs: dict[str, Any], opts: Seam
             out = f"{' '.join(locks)} {out}"
         return out
     base = ensure_voice_in_prompt(base, refs["voice_suffix"])
-    speech = shot.get("speech_text", "")
+    script_ctx = refs.get("script") if isinstance(refs.get("script"), dict) else None
+    speech = shot.get("speech_text", "") if narration_enabled(script_ctx, shot) else ""
     parts = list(locks)
     if "CONTINUITY LOCK @" not in base:
         parts.append(DEFAULT_CONTINUITY_PREFIX)
@@ -1522,6 +2633,190 @@ def extract_frame_at(video: Path, at_s: float, out_jpg: Path) -> Path:
 def extract_last_frame(video: Path, out_jpg: Path) -> Path:
     dur = probe_duration(video)
     return extract_frame_at(video, max(0.0, dur - 0.4), out_jpg)
+
+
+def analyze_handoff_frame(handoff_jpg: Path) -> dict[str, str]:
+    """Read staging signals from last frame — lighting, distance, camera viewpoint.
+
+    Output informs the next-branch prompt only. Frame is never an API image seed.
+    """
+    from PIL import Image
+
+    img = Image.open(handoff_jpg).convert("RGB")
+    w, h = img.size
+
+    def _zone_luma(x0: int, y0: int, x1: int, y1: int) -> tuple[float, float]:
+        rs = gs = bs = n = 0
+        for y in range(y0, y1, max(2, (y1 - y0) // 24)):
+            for x in range(x0, x1, max(2, (x1 - x0) // 24)):
+                r, g, b = img.getpixel((x, y))
+                rs += r
+                gs += g
+                bs += b
+                n += 1
+        if not n:
+            return 128.0, 1.0
+        lum = (0.299 * rs + 0.587 * gs + 0.114 * bs) / n
+        warm = (rs / max(gs, 1)) / n
+        return lum, warm
+
+    fx0, fx1 = int(w * 0.30), int(w * 0.70)
+    fy0, fy1 = int(h * 0.08), int(h * 0.62)
+    face_lum, face_warm = _zone_luma(fx0, fy0, fx1, fy1)
+
+    lx0, lx1 = int(w * 0.05), int(w * 0.45)
+    rx0, rx1 = int(w * 0.55), int(w * 0.95)
+    left_lum, _ = _zone_luma(lx0, fy0, fx1, fy1)
+    right_lum, _ = _zone_luma(rx0, fy0, rx1, fy1)
+    if left_lum > right_lum * 1.08:
+        key_side = "key light from camera-left"
+    elif right_lum > left_lum * 1.08:
+        key_side = "key light from camera-right"
+    else:
+        key_side = "soft balanced frontal key"
+
+    if face_warm > 1.12:
+        kelvin = "warm amber skin key (~3200K)"
+    elif face_warm < 0.92:
+        kelvin = "cool neutral skin key (~5600K)"
+    else:
+        kelvin = "neutral documentary skin key"
+
+    upper_lum, _ = _zone_luma(fx0, int(h * 0.05), fx1, int(h * 0.40))
+    lower_lum, _ = _zone_luma(fx0, int(h * 0.40), fx1, int(h * 0.85))
+    face_coverage = (fx1 - fx0) * (fy1 - fy0) / max(w * h, 1)
+    if upper_lum > lower_lum * 1.18:
+        framing = "tight close-up — face dominates upper frame, shoulders only"
+        subject_distance = "close portrait distance — subject near lens"
+    elif upper_lum > lower_lum * 1.05:
+        framing = "medium close-up — head and upper chest"
+        subject_distance = "medium-close conversational distance"
+    else:
+        framing = "medium shot — waist-up"
+        subject_distance = "medium conversational distance — waist-up"
+
+    if face_coverage > 0.22:
+        subject_distance = "close portrait distance — subject near lens"
+    elif face_coverage < 0.10:
+        subject_distance = "medium-wide distance — more environment visible"
+
+    horiz_bias = (left_lum - right_lum) / max(left_lum + right_lum, 1)
+    if horiz_bias > 0.06:
+        camera_viewpoint = "eye-level, camera viewpoint slightly favoring camera-left angle"
+    elif horiz_bias < -0.06:
+        camera_viewpoint = "eye-level, camera viewpoint slightly favoring camera-right angle"
+    else:
+        camera_viewpoint = "eye-level straight-on — centered camera viewpoint"
+
+    contrast = "high contrast chiaroscuro" if face_lum < 95 else (
+        "soft low-contrast fill" if face_lum > 165 else "moderate documentary contrast"
+    )
+
+    staging_guide = (
+        f"{BRANCH_STAGING_GUIDE_PREFIX}: analyzed exit frame — "
+        f"camera viewpoint: {camera_viewpoint}; "
+        f"subject distance: {subject_distance}; "
+        f"shot scale: {framing}; "
+        f"lighting: {kelvin}; {key_side}; {contrast}; "
+        f"reproduce this staging in generated output — zero drift in camera position, "
+        f"lens distance, eyeline, or lighting"
+    )
+    composition_lock = (
+        f"STAGING COMPOSITION: {camera_viewpoint}; {subject_distance}; {framing}; "
+        f"locked static camera — zero reframing, zero zoom, zero pull-back, zero pan, zero tilt"
+    )
+    lighting_lock = (
+        f"STAGING LIGHTING: {kelvin}; {key_side}; {contrast}; "
+        f"same fill on face and set — zero lighting drift"
+    )
+    return {
+        "framing": framing,
+        "kelvin": kelvin,
+        "key_side": key_side,
+        "contrast": contrast,
+        "camera_viewpoint": camera_viewpoint,
+        "subject_distance": subject_distance,
+        "composition_lock": composition_lock,
+        "lighting_lock": lighting_lock,
+        "staging_guide": staging_guide,
+        "handoff_lock": staging_guide,
+    }
+
+
+def apply_staging_guide_to_shot(
+    shot: dict[str, Any],
+    staging_jpg: Path,
+    *,
+    prev_shot_id: str,
+    meta: dict[str, str] | None = None,
+) -> dict[str, Any]:
+    """Inject last-frame staging analysis into next-branch prompt (not image seed)."""
+    staging_meta = meta or analyze_handoff_frame(staging_jpg)
+    out = dict(shot)
+    bb = dict(out.get("barebones") or {})
+    bb["staging_guide"] = staging_meta["staging_guide"]
+    bb["scene"] = (
+        f"{staging_meta['composition_lock']}; {staging_meta['lighting_lock']}; "
+        f"{str(bb.get('scene') or '').strip()}"
+    ).strip(" ;")
+    bb["camera"] = (
+        f"{staging_meta['camera_viewpoint']}; {staging_meta['framing']}; "
+        f"locked static — matches {prev_shot_id} exit staging; zero camera move"
+    )
+    bb["extension_composition"] = staging_meta["framing"]
+    out["barebones"] = bb
+    out["_staging_from"] = prev_shot_id
+    out["_staging_frame_local"] = str(staging_jpg)
+    return out
+
+
+def apply_handoff_to_shot(
+    shot: dict[str, Any],
+    handoff_jpg: Path,
+    *,
+    prev_shot_id: str,
+) -> dict[str, Any]:
+    """Backward-compatible alias for apply_staging_guide_to_shot."""
+    return apply_staging_guide_to_shot(shot, handoff_jpg, prev_shot_id=prev_shot_id)
+
+
+def resolve_extend_at_s(shot: dict[str, Any], segment_duration: float) -> float | None:
+    """Script editorial out-point — dialogue/movement wrapped, good extend pose."""
+    raw = shot.get("extend_at_s")
+    if raw is None:
+        return None
+    at = float(raw)
+    dur = float(segment_duration)
+    if at <= 0 or at >= dur - 0.1:
+        return None
+    return at
+
+
+def trim_segment_to_s(video: Path, out: Path, end_s: float) -> Path:
+    """Trim segment to script extend_at_s before join (drops tail dead air)."""
+    ff = _ffmpeg_exe()
+    out.parent.mkdir(parents=True, exist_ok=True)
+    cmd = [
+        ff, "-y", "-i", str(video), "-t", f"{end_s:.3f}",
+        "-c:v", "libx264", "-pix_fmt", "yuv420p",
+    ]
+    if has_audio_stream(video):
+        cmd.extend(["-c:a", "aac", "-b:a", "192k"])
+    cmd.append(str(out))
+    subprocess.run(cmd, check=True, capture_output=True)
+    return out
+
+
+def shot_join_segment(proc_path: Path, shot: dict[str, Any], shots_dir: Path) -> Path:
+    """Return segment used for xfade join — trimmed to extend_at_s when scripted."""
+    dur = probe_duration(proc_path)
+    end_s = resolve_extend_at_s(shot, dur)
+    if end_s is None:
+        return proc_path
+    trimmed = shots_dir / f"{proc_path.stem}_extend_at_{end_s:.2f}s.mp4"
+    trim_segment_to_s(proc_path, trimmed, end_s)
+    _log(f"[extend_at] {shot['id']} join trim → {end_s:.2f}s (was {dur:.2f}s)")
+    return trimmed
 
 
 def reject_concat_only_seamless_grade(
@@ -1572,6 +2867,109 @@ def upload_image_url(client: Any, image_path: Path) -> str:
     if not url:
         raise RuntimeError(f"Failed to create public URL for {image_path}")
     return url
+
+
+def upload_video_url(client: Any, video_path: Path) -> str:
+    """Upload MP4 for client.video.extend() source — best-frame trim, not JPG extract."""
+    _log(f"[extend] uploading extend source {video_path.name}")
+    return upload_image_url(client, video_path)
+
+
+def build_extend_prose_prompt(
+    shot: dict[str, Any],
+    refs: dict[str, Any],
+    opts: SeamlessOptions,
+    script: dict[str, Any] | None,
+    prod_dir: Path | None,
+    *,
+    baked_pipeline: bool = False,
+) -> str:
+    """Prompt for client.video.extend() — identity already in video pixels when baked."""
+    if baked_pipeline or _is_barebones_mode(script):
+        bb = shot.get("barebones") if isinstance(shot.get("barebones"), dict) else {}
+        comp = str(
+            shot.get("extension_composition")
+            or bb.get("extension_composition")
+            or ""
+        ).strip()
+        prompt = compile_barebones_prose_prompt(
+            shot,
+            refs,
+            prod_dir,
+            script,
+            talent_baked_in=True,
+            seed_slot="@1",
+        )
+        if comp:
+            prompt = f"{prompt} ; EXTENSION COMPOSITION LOCK: {comp}"
+        return prompt
+    return build_video_generation_prompt(
+        shot, refs, opts, script=script, prod_dir=prod_dir,
+    )
+
+
+def prepare_extend_source_url(
+    client: Any,
+    video_path: Path,
+    shot: dict[str, Any],
+    work_dir: Path,
+    *,
+    native_api_url: str | None = None,
+) -> tuple[str, Path, float]:
+    """Resolve extend API input URL; trim locally for join assembly when extend_at_s set.
+
+    Native vidgen URLs from video.generate()/video.extend() are fetchable by the extend
+    service. Files API re-uploads of trimmed MP4s return HTTP 403 — never use those here.
+    """
+    work_dir.mkdir(parents=True, exist_ok=True)
+    dur = probe_duration(video_path)
+    end_s = resolve_extend_at_s(shot, dur)
+    src = video_path
+    if end_s is not None:
+        trimmed = work_dir / f"extend_source_{shot['id']}_{end_s:.2f}s.mp4"
+        trim_segment_to_s(video_path, trimmed, end_s)
+        src = trimmed
+        _log(
+            f"[extend] join trim {shot['id']}: {dur:.2f}s → {end_s:.2f}s "
+            f"(extend_at_s — local assembly only)"
+        )
+    else:
+        _log(f"[extend] extend source {shot['id']}: full segment {dur:.2f}s")
+    if native_api_url:
+        _log(
+            f"[extend] API handoff {shot['id']}: native vidgen URL "
+            f"(not re-upload; Files API URLs 403 on extend)"
+        )
+        return native_api_url, src, probe_duration(src)
+    _api_pace()
+    url = upload_video_url(client, src)
+    return url, src, probe_duration(src)
+
+
+def upload_and_capture_id(
+    client: Any,
+    image_path: Path,
+    friendly: str | None = None,
+) -> tuple[str, str]:
+    """Upload image; log API file_id (file_XXXX) and return (public_url, file_id)."""
+    uploaded = client.files.upload(str(image_path))
+    raw_id = getattr(uploaded, "id", None)
+    if not raw_id:
+        raise RuntimeError(f"Upload returned no id for {image_path}")
+    _log(
+        f"[DIAGNOSTIC] path={image_path.name} | "
+        f"uploaded.id={raw_id} | "
+        f"type={type(raw_id)} | "
+        f"filename={getattr(uploaded, 'filename', None)} | "
+        f"size={getattr(uploaded, 'size', None)}"
+    )
+    pub = client.files.create_public_url(raw_id)
+    url = getattr(pub, "public_url", None) or getattr(pub, "url", None) or str(pub)
+    if not url:
+        raise RuntimeError(f"Failed to create public URL for {image_path}")
+    if friendly:
+        _log(f"[DIAGNOSTIC] friendly='{friendly}' → id={raw_id}")
+    return url, str(raw_id)
 
 
 def resolve_color_reference(refs: dict[str, Any], shots_dir: Path) -> Path:
@@ -1735,6 +3133,43 @@ def chain_segment_paths(shots_dir: Path, shots: list[dict[str, Any]]) -> list[Pa
         raw = shots_dir / f"chain_{s['id']}.mp4"
         paths.append(proc if proc.is_file() and proc.stat().st_size > 10000 else raw)
     return paths
+
+
+def chain_join_segments(
+    shots_dir: Path,
+    shots: list[dict[str, Any]],
+    proc_segments: list[Path] | None = None,
+) -> list[Path]:
+    """Map processed chain segments to xfade join clips (extend_at_s trim when scripted)."""
+    procs = proc_segments or chain_segment_paths(shots_dir, shots)
+    return [
+        shot_join_segment(proc, shot, shots_dir)
+        for shot, proc in zip(shots, procs)
+        if proc.is_file() and proc.stat().st_size > 10000
+    ]
+
+
+def resolve_chain_seed_segment(shots_dir: Path, prev_shot: dict[str, Any]) -> Path:
+    """Full-duration processed/raw segment for extend_at_s frame extraction."""
+    proc = shots_dir / f"chain_{prev_shot['id']}_processed.mp4"
+    if proc.is_file() and proc.stat().st_size > 10000:
+        return proc
+    raw = shots_dir / f"chain_{prev_shot['id']}.mp4"
+    return raw
+
+
+def _extend_probe_skipped(refs: dict[str, Any], script: dict[str, Any] | None) -> bool:
+    """Skip extend probe only when no legacy extend model is configured."""
+    seam = (script or {}).get("config", {}).get("seamless") or {}
+    if seam.get("skip_extend_probe"):
+        return True
+    extend_model = str(refs.get("extend_model") or refs.get("model_video") or "")
+    gen_model = str(refs.get("model_video") or "")
+    if extend_model == LEGACY_EXTEND_MODEL:
+        return False
+    if "grok-imagine-video-1.5" in gen_model and extend_model == gen_model:
+        return True
+    return False
 
 
 def _chain_cache_status(
@@ -2208,6 +3643,173 @@ def apply_per_shot_magenta_clamp(
     return out
 
 
+GRADE_HOLD_WARM_VF = "eq=gamma_r=1.03:gamma_g=1.00:gamma_b=0.92:saturation=1.06:brightness=0.01"
+GRADE_HOLD_HIST_STRENGTH = 0.28
+LIVING_ROOM_RECOVERY_STRENGTH = 0.65
+LIVING_ROOM_RECOVERY_FINISH_VF = "eq=brightness=-0.04:saturation=1.03"
+
+
+def _probe_video_frame_arr(video: Path, at_s: float | None = None) -> np.ndarray:
+    from PIL import Image
+
+    ff = _ffmpeg_exe()
+    at_s = at_s if at_s is not None else max(0.0, probe_duration(video) * 0.5)
+    jpg = video.with_suffix(".grade_hold_probe.jpg")
+    subprocess.run(
+        [ff, "-y", "-ss", f"{at_s:.3f}", "-i", str(video), "-frames:v", "1", str(jpg)],
+        check=True,
+        capture_output=True,
+    )
+    return np.array(Image.open(jpg).convert("RGB"))
+
+
+def _anchor_channel_mixer_vf(
+    video: Path,
+    anchor: Path,
+    strength: float,
+) -> str | None:
+    """Host-region channel pull toward anchor — fallback when histogrammatching missing."""
+    from color_cast_qa import host_channel_means
+
+    try:
+        vf = _probe_video_frame_arr(video)
+        af = np.array(__import__("PIL").Image.open(anchor).convert("RGB"))
+    except Exception:
+        return None
+    vr, vg, vb, _ = host_channel_means(vf)
+    ar, ag, ab, _ = host_channel_means(af)
+
+    def _ratio(target: float, source: float) -> float:
+        if source < 8.0:
+            return 1.0
+        return max(0.75, min(1.25, target / source))
+
+    rr, gg, bb = _ratio(ar, vr), _ratio(ag, vg), _ratio(ab, vb)
+    s = max(0.0, min(1.0, strength))
+    mixer = (
+        f"colorchannelmixer=rr={rr:.4f}:rg=0:rb=0:"
+        f"gr=0:gg={gg:.4f}:gb=0:br=0:bg=0:bb={bb:.4f}"
+    )
+    return (
+        f"[0:v]split=2[base][src];[src]{mixer}[corr];"
+        f"[base][corr]blend=all_expr='A*(1-{s})+B*{s}'[matched];"
+        f"[matched]{GRADE_HOLD_WARM_VF}[outv]"
+    )
+
+
+def apply_living_room_skin_recovery(
+    video: Path,
+    out: Path,
+    color_ref: Path,
+    *,
+    strength: float = LIVING_ROOM_RECOVERY_STRENGTH,
+) -> Path:
+    """b07/b08 magenta recovery — pull host RGB toward kitchen anchor, no blue crush."""
+    out.parent.mkdir(parents=True, exist_ok=True)
+    ff = _ffmpeg_exe()
+    staged = out.with_name(f"{out.stem}_lr_recovery.mp4")
+    vfilter = _anchor_channel_mixer_vf(video, color_ref, strength)
+    if not vfilter:
+        return apply_grade_hold_light(video, out, color_ref)
+    vfilter = vfilter.replace(GRADE_HOLD_WARM_VF, LIVING_ROOM_RECOVERY_FINISH_VF)
+    cmd = [
+        ff, "-y", "-i", str(video), "-filter_complex", vfilter,
+        "-map", "[outv]", "-c:v", "libx264", "-pix_fmt", "yuv420p",
+    ]
+    if has_audio_stream(video):
+        cmd.extend(["-map", "0:1", "-c:a", "aac", "-b:a", "192k"])
+    cmd.append(str(staged))
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    if r.returncode != 0:
+        _log("[lr-recovery] channel pull failed; grade-hold fallback")
+        return apply_grade_hold_light(video, out, color_ref)
+
+    cur = staged
+    mag = probe_magenta_score(cur)
+    if mag > 0.35:
+        mild = (
+            "colorchannelmixer=rr=0.94:rg=0.02:rb=0:gr=0.02:gg=1.04:gb=0:"
+            "br=0:bg=0:bb=0.96"
+        )
+        mild_out = out.with_name(f"{out.stem}_lr_mild.mp4")
+        if _run_video_eq_pass(cur, mild_out, mild):
+            cur = mild_out
+            _log(f"[lr-recovery] mild magenta trim (score was {mag:.3f})")
+
+    staging = out.with_name(f"{out.stem}__lr_recovery_staging.mp4")
+    if staging.exists():
+        staging.unlink(missing_ok=True)
+    shutil.move(str(cur), str(staging))
+    os.replace(staging, out)
+    return out
+
+
+def apply_grade_hold_light(
+    video: Path,
+    out: Path,
+    color_ref: Path,
+    *,
+    hist_strength: float = GRADE_HOLD_HIST_STRENGTH,
+) -> Path:
+    """Pull living-room grade toward kitchen anchor — preserves warm skin, kills magenta."""
+    out.parent.mkdir(parents=True, exist_ok=True)
+    ff = _ffmpeg_exe()
+    staged = out.with_name(f"{out.stem}_grade_hold.mp4")
+    matched = False
+    if color_ref.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp"):
+        vfilter = (
+            f"[0:v][1:v]histogrammatching=pattern=1:strength={hist_strength}[matched];"
+            f"[matched]{GRADE_HOLD_WARM_VF}[outv]"
+        )
+        cmd = [
+            ff, "-y", "-i", str(video), "-loop", "1", "-i", str(color_ref),
+            "-filter_complex", vfilter,
+            "-map", "[outv]", "-c:v", "libx264", "-pix_fmt", "yuv420p",
+        ]
+        if has_audio_stream(video):
+            cmd.extend(["-map", "0:1", "-c:a", "aac", "-b:a", "192k"])
+        cmd.extend(["-shortest", str(staged)])
+        r = subprocess.run(cmd, capture_output=True, text=True)
+        matched = r.returncode == 0
+        if not matched:
+            _log("[grade-hold] histogram unavailable; anchor channel-mixer fallback")
+
+    if not matched:
+        vfilter = _anchor_channel_mixer_vf(video, color_ref, hist_strength)
+        if vfilter:
+            cmd = [
+                ff, "-y", "-i", str(video), "-filter_complex", vfilter,
+                "-map", "[outv]", "-c:v", "libx264", "-pix_fmt", "yuv420p",
+            ]
+            if has_audio_stream(video):
+                cmd.extend(["-map", "0:1", "-c:a", "aac", "-b:a", "192k"])
+            cmd.append(str(staged))
+            r = subprocess.run(cmd, capture_output=True, text=True)
+            matched = r.returncode == 0
+            if not matched:
+                _log("[grade-hold] channel-mixer failed; warm-eq fallback")
+
+    if not matched:
+        if not _run_video_eq_pass(video, staged, GRADE_HOLD_WARM_VF):
+            shutil.copy2(video, out)
+            return out
+
+    cur = staged
+    mag = probe_magenta_score(cur)
+    if mag > MAGENTA_SCORE_MAX:
+        mild_out = out.with_name(f"{out.stem}_grade_mild.mp4")
+        if _run_video_eq_pass(cur, mild_out, MAGENTA_CLAMP_VF):
+            cur = mild_out
+            _log(f"[grade-hold] mild magenta pass (score was {mag:.3f})")
+
+    staging = out.with_name(f"{out.stem}__grade_hold_staging.mp4")
+    if staging.exists():
+        staging.unlink(missing_ok=True)
+    shutil.move(str(cur), str(staging))
+    os.replace(staging, out)
+    return out
+
+
 def match_color_segment(
     reference: Path,
     target: Path,
@@ -2319,7 +3921,7 @@ def process_shot_segment(
         and (opts.neutral_generation or opts.lamp_lock)
     )
     target_dur = float(
-        effective_shot_duration(shot, seamless=True)
+        _eff_dur(shot, refs, seamless=True)
         if shot.get("duration") is not None
         else clamp_shot_duration(probe_duration(cur))
     )
@@ -2410,7 +4012,7 @@ def tighten_chain_loudness(
                 continue
             leveled = shots_dir / f"{seg.stem}_lvl{iteration}.mp4"
             _remux_av(seg, leveled, af=f"volume={gain_db:.2f}dB")
-            target_dur = float(effective_shot_duration(shot, seamless=True))
+            target_dur = float(_eff_dur(shot, refs, seamless=True))
             pinned = shots_dir / f"{seg.stem}_lvl{iteration}_pin.mp4"
             pin_av_to_duration(leveled, pinned, target_dur)
             staging = shots_dir / f"{seg.stem}__lvl_staging.mp4"
@@ -2613,6 +4215,8 @@ def ensure_segment_audio(
     """Keep Grok i2v dialogue audio; synthesize+mux only when the clip is silent."""
     if audio_has_speech(video):
         return video
+    if refs.get("narration") is False:
+        return video
     speech = shot.get("speech_text", "").strip()
     if not speech:
         return video
@@ -2702,6 +4306,12 @@ def concat_xfade_two(
     color_ref: Path | None = None,
     work_dir: Path | None = None,
 ) -> Path:
+    out.parent.mkdir(parents=True, exist_ok=True)
+    if xfade_s < MIN_XFADE_S:
+        # ffmpeg xfade with duration≈0 corrupts output after the first segment
+        # (only ~segment_s decodes; rest reads as frozen). Use stream-copy hard cut.
+        concat_videos([left, right], out)
+        return out
     ff = _ffmpeg_exe()
     work = work_dir or out.parent
     a, b = left, right
@@ -2759,8 +4369,13 @@ def concat_xfade_chain(
     if not segments:
         raise ValueError("concat_xfade_chain: no segments")
     work = work_dir or out.parent
+    out.parent.mkdir(parents=True, exist_ok=True)
     if len(segments) == 1:
         shutil.copy2(segments[0], out)
+        return out
+    if xfade_s < MIN_XFADE_S:
+        _log(f"[stitch] hard-cut concat (xfade={xfade_s}s < MIN {MIN_XFADE_S}s)")
+        concat_videos(segments, out)
         return out
     current = segments[0]
     for i, nxt in enumerate(segments[1:], start=1):
@@ -2809,7 +4424,23 @@ def build_side_by_side(left: Path, right: Path, out: Path, label_left: str = "v1
 
 def _extend_not_supported(exc: BaseException) -> bool:
     msg = str(exc).lower()
-    return "not supported" in msg or "invalid_argument" in msg
+    if "extension is not supported" in msg or "extend is not supported" in msg:
+        return True
+    if "unable to download provided video_url" in msg or "403 forbidden" in msg:
+        return True
+    return False
+
+
+def _extend_error_detail(exc: BaseException) -> str:
+    msg = str(exc)
+    if "details = " in msg:
+        return msg.split("details = ")[1].split("\n")[0].strip('"')
+    return msg[:200]
+
+
+def _reference_images_not_supported(exc: BaseException) -> bool:
+    msg = str(exc).lower()
+    return "reference_image" in msg and ("not supported" in msg or "invalid_argument" in msg)
 
 
 def render_frame_chain_performance(
@@ -2836,14 +4467,17 @@ def render_frame_chain_performance(
     color_ref = resolve_color_reference(refs, shots_dir)
     avatar_url = refs["avatar_url"]
     script_ctx = script or _script_ctx_from_refs(refs)
-    magenta_reroll = _should_magenta_reroll(script_ctx, refs)
+    seam_cfg = refs.get("seamless_cfg") or {}
+    magenta_reroll = (
+        _should_magenta_reroll(script_ctx, refs)
+        and bool(seam_cfg.get("magenta_reroll", True))
+    )
 
     for i, shot in enumerate(shots):
         sid = shot["id"]
         seg_path = shots_dir / f"chain_{sid}.mp4"
         proc_path = shots_dir / f"chain_{sid}_processed.mp4"
-        dur = effective_shot_duration(shot, seamless=True)
-        prompt = apply_seamless_prompt(shot, refs, opts)
+        dur = _eff_dur(shot, refs, seamless=True)
         regen = force or sid in force_ids
 
         if (
@@ -2853,24 +4487,24 @@ def render_frame_chain_performance(
             and not concat_only
         ):
             _log(f"[seamless] reusing processed {proc_path.name}")
-            segments.append(proc_path)
+            segments.append(shot_join_segment(proc_path, shot, shots_dir))
             continue
 
         if seg_path.exists() and seg_path.stat().st_size > 10000 and not regen and concat_only:
             raw = ensure_segment_audio(seg_path, shot, refs, shots_dir)
             process_shot_segment(raw, proc_path, shot, refs, opts, shots_dir, color_ref)
-            segments.append(proc_path)
+            segments.append(shot_join_segment(proc_path, shot, shots_dir))
             continue
 
         if seg_path.exists() and seg_path.stat().st_size > 10000 and not regen and not concat_only:
             raw = ensure_segment_audio(seg_path, shot, refs, shots_dir)
             process_shot_segment(raw, proc_path, shot, refs, opts, shots_dir, color_ref)
             if not magenta_reroll:
-                segments.append(proc_path)
+                segments.append(shot_join_segment(proc_path, shot, shots_dir))
                 continue
             mag = probe_magenta_score(proc_path)
             if mag <= MAGENTA_SCORE_MAX:
-                segments.append(proc_path)
+                segments.append(shot_join_segment(proc_path, shot, shots_dir))
                 continue
             _log(f"[magenta] cached {sid} score={mag:.3f} — re-roll")
             regen = True
@@ -2889,46 +4523,144 @@ def render_frame_chain_performance(
                 if i == 0 and attempt == 0 and seed_segment and seed_segment.is_file() and not regen:
                     pass
                 else:
-                    if _use_avatar_reground(refs, shot, i, opts):
-                        image_url = resolve_shot_image_url(shot, refs)
+                    chain_url: str | None = None
+                    chain_fid: str | None = None
+                    use_plate_seed = _use_avatar_reground(refs, shot, i, opts)
+
+                    if use_plate_seed:
                         dark = _is_dark_scene(refs, shot=shot)
-                        if _shot_uses_viz_reference(shot) and refs.get("visualization_url"):
+                        if i == 0 and refs.get(f"{_shot_zone(shot) or '@1'}_plate_url"):
+                            src = "locked empty @1 set plate"
+                        elif _shot_uses_viz_reference(shot) and refs.get("visualization_url"):
                             src = "locked @2 science plate re-ground"
-                        elif (z := _shot_zone(shot)) and refs.get(f"{z}_plate_url"):
-                            src = f"locked empty {z} set plate re-ground"
                         elif dark:
                             src = "dark-set avatar re-ground (Kelvin locked)"
                         else:
-                            src = "talent re-ground" if i > 0 else "locked talent avatar"
+                            src = "talent re-ground"
                         _log(f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} ({dur}s) ← {src}")
                     else:
-                        frame_jpg = frames_dir / f"frame_after_{segments[-1].stem}.jpg"
-                        extract_last_frame(segments[-1], frame_jpg)
+                        prev_shot = shots[i - 1]
+                        prev_proc = resolve_chain_seed_segment(shots_dir, prev_shot)
+                        prev_dur = probe_duration(prev_proc)
+                        seed_at = resolve_extend_at_s(prev_shot, prev_dur)
+                        if seed_at is not None:
+                            frame_jpg = (
+                                frames_dir
+                                / f"frame_at_{prev_shot['id']}_{seed_at:.2f}s.jpg"
+                            )
+                            extract_frame_at(prev_proc, seed_at, frame_jpg)
+                            src = f"frame at {seed_at:.2f}s (extend_at_s from {prev_shot['id']})"
+                        else:
+                            frame_jpg = frames_dir / f"frame_after_{prev_proc.stem}.jpg"
+                            extract_last_frame(prev_proc, frame_jpg)
+                            src = "last frame"
                         _api_pace()
-                        image_url = upload_image_url(client, frame_jpg)
-                        _log(f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} ({dur}s) ← last frame")
+                        chain_url, chain_fid = upload_and_capture_id(
+                            client, frame_jpg, friendly=f"chain_{sid}",
+                        )
+                        _log(
+                            f"[seamless] frame-chain {i + 1}/{len(shots)} {sid} ({dur}s) ← {src}"
+                        )
+                        if _is_barebones_mode(script):
+                            if _uses_baked_composite_pipeline(script, shots_dir.parent):
+                                _log(
+                                    f"[baked@chain] shot {sid}: chain_frame identity "
+                                    f"(no reference_image_file_ids)"
+                                )
+                            else:
+                                n_refs = len(_editor_reference_file_ids(refs))
+                                _log(
+                                    f"[barebones] chain shot {sid}: chain_frame + "
+                                    f"reference_image_file_ids×{n_refs}"
+                                )
 
                     prompt_log = shots_dir / f"chain_{sid}_generation_prompt.txt"
-                    prompt_log.write_text(
-                        json.dumps(
-                            {
-                                "shot_id": sid,
-                                "image_url": image_url,
-                                "prompt": prompt,
-                                "neutral_generation": opts.neutral_generation,
+                    composite_seed = (
+                        _resolve_composite_first_frame(script, shots_dir.parent)
+                        if i == 0 and use_plate_seed
+                        else None
+                    )
+                    baked_pipeline = _uses_baked_composite_pipeline(script, shots_dir.parent)
+                    if _is_barebones_mode(script):
+                        if composite_seed:
+                            _log(
+                                f"[baked@1] frame-chain shot 0 {sid} ← composite {composite_seed.name}"
+                            )
+                            resp, bb_req = generate_baked_composite_video(
+                                client,
+                                shot,
+                                refs,
+                                script,
+                                shots_dir.parent,
+                                composite_seed,
+                                duration=dur,
+                            )
+                        elif baked_pipeline and chain_fid:
+                            resp, bb_req = generate_baked_chain_video(
+                                client,
+                                shot,
+                                refs,
+                                script,
+                                shots_dir.parent,
+                                chain_image_file_id=chain_fid,
+                                chain_image_url=chain_url,
+                                duration=dur,
+                            )
+                        else:
+                            resp, bb_req = generate_barebones_video(
+                                client,
+                                shot,
+                                refs,
+                                script,
+                                shots_dir.parent,
+                                duration=dur,
+                                chain_image_url=chain_url,
+                                chain_image_file_id=chain_fid,
+                                seed_slot="@1" if use_plate_seed else "chain",
+                            )
+                        prompt = bb_req["prompt"]
+                        log_payload = {
+                            "shot_id": sid,
+                            "prompt": prompt,
+                            "prompt_mode": _prompt_mode(script),
+                            "barebones_binding": bb_req["binding"],
+                            "generate_kwargs": {
+                                k: v for k, v in bb_req["kwargs"].items() if k != "prompt"
                             },
-                            indent=2,
-                        ),
-                        encoding="utf-8",
-                    )
-                    _api_pace()
-                    resp = client.video.generate(
-                        prompt=prompt,
-                        model=model,
-                        image_url=image_url,
-                        duration=dur,
-                        resolution=refs["resolution"],
-                    )
+                            "neutral_generation": opts.neutral_generation,
+                        }
+                    else:
+                        image_url = (
+                            resolve_shot0_set_seed(shot, refs)
+                            if use_plate_seed and i == 0
+                            else resolve_shot_image_url(shot, refs)
+                            if use_plate_seed
+                            else chain_url
+                        )
+                        prompt = build_video_generation_prompt(
+                            shot,
+                            refs,
+                            opts,
+                            script=script,
+                            prod_dir=shots_dir.parent,
+                            image_url=image_url,
+                        )
+                        log_payload = {
+                            "shot_id": sid,
+                            "image_url": image_url,
+                            "prompt": prompt,
+                            "prompt_mode": _prompt_mode(script),
+                            "neutral_generation": opts.neutral_generation,
+                        }
+                        _api_pace()
+                        resp = client.video.generate(
+                            prompt=prompt,
+                            model=model,
+                            image_url=image_url,
+                            duration=dur,
+                            resolution=refs["resolution"],
+                        )
+                    prompt_log.write_text(json.dumps(log_payload, indent=2), encoding="utf-8")
                     step_urls.append(resp.url)
                     _download(resp.url, seg_path)
                     prompt_log.write_text(
@@ -3005,7 +4737,7 @@ def render_frame_chain_performance(
             except Exception as _cg_exc:  # noqa: BLE001
                 _log(f"[cast_gate] {sid} probe skipped: {_cg_exc}")
 
-        segments.append(proc_path)
+        segments.append(shot_join_segment(proc_path, shot, shots_dir))
 
     _reconcat_seamless_chain(
         segments,
@@ -3052,10 +4784,21 @@ def render_extend_performance(
             script=script,
             concat_only=True, force=force, force_shots=force_shots,
         )
+    if _extend_probe_skipped(refs, script) and not (have_chain and not regen_any):
+        reason = "skip_extend_probe or no legacy extend_model configured"
+        _log(f"[seamless] extend probe skipped — frame-chain fallback ({reason})")
+        return render_frame_chain_performance(
+            shots, client, refs, opts, shots_dir, out_path,
+            script=script,
+            concat_only=False,
+            force=force,
+            force_shots=force_shots,
+        )
     if have_chain and not regen_any:
-        _log(f"[seamless] xfade chain reassembly from {len(chain_segs)} cached segments")
+        join_segs = chain_join_segments(shots_dir, shots, chain_segs)
+        _log(f"[seamless] xfade chain reassembly from {len(join_segs)} cached segments")
         _reconcat_seamless_chain(
-            chain_segs,
+            join_segs,
             shots,
             out_path,
             opts=opts,
@@ -3125,31 +4868,91 @@ def render_extend_performance(
 
     # First segment
     shot0 = shots[0]
-    dur0 = effective_shot_duration(shot0, seamless=True)
-    prompt0 = apply_seamless_prompt(shot0, refs, opts)
-    image_url0 = resolve_shot_image_url(shot0, refs)
-    _log(f"[seamless] extend step 1/{len(shots)} {shot0['id']} ({dur0}s)…")
-    _api_pace()
-    resp = client.video.generate(
-        prompt=prompt0,
-        model=gen_model,
-        image_url=image_url0,
-        duration=dur0,
-        resolution=refs["resolution"],
+    dur0 = _eff_dur(shot0, refs, seamless=True)
+    seed_label = (
+        "locked empty @1 set plate + @2 reference_image_file_ids"
+        if _is_barebones_mode(script)
+        else "@2 avatar seed (identity anchor)"
     )
-    current_url = resp.url
-    step_urls = [current_url]
-    _download(current_url, out_path)
+    _log(
+        f"[seamless] extend step 1/{len(shots)} {shot0['id']} ({dur0}s) ← {seed_label}"
+    )
+    composite_seed = _resolve_composite_first_frame(script, shots_dir.parent)
+    if _is_barebones_mode(script):
+        if composite_seed:
+            _log(f"[baked@1] extend step 1 ← composite {composite_seed.name}")
+            resp, _bb0 = generate_baked_composite_video(
+                client,
+                shot0,
+                refs,
+                script,
+                shots_dir.parent,
+                composite_seed,
+                duration=dur0,
+            )
+        else:
+            resp, _bb0 = generate_barebones_video(
+                client,
+                shot0,
+                refs,
+                script,
+                shots_dir.parent,
+                duration=dur0,
+                seed_slot="@1",
+            )
+    else:
+        image_url0 = resolve_shot0_set_seed(shot0, refs)
+        prompt0 = build_video_generation_prompt(
+            shot0, refs, opts, script=script, prod_dir=shots_dir.parent, image_url=image_url0,
+        )
+        _api_pace()
+        resp = client.video.generate(
+            prompt=prompt0,
+            model=gen_model,
+            image_url=image_url0,
+            duration=dur0,
+            resolution=refs["resolution"],
+        )
+    origin_api_url = resp.url
+    step_urls = [origin_api_url]
+    seg0_path = shots_dir / f"extend_{shot0['id']}.mp4"
+    _download(origin_api_url, seg0_path)
+    shutil.copy2(seg0_path, out_path)
+
+    baked_pipeline = _uses_baked_composite_pipeline(script, shots_dir.parent)
+    extend_work = shots_dir / "extend_sources"
+    current_url, _, _ = prepare_extend_source_url(
+        client, seg0_path, shot0, extend_work, native_api_url=origin_api_url,
+    )
+    refs["origin_video_url"] = origin_api_url
+    refs["origin_video_file"] = str(seg0_path)
+    refs["extend_source_url"] = current_url
+    _log(
+        f"[extend] origin locked {shot0['id']} api={origin_api_url[:48]}… "
+        f"extend_model={extend_model}"
+    )
 
     if len(shots) == 1:
-        state_path.write_text(json.dumps({"mode": "generate_only", "urls": step_urls}), encoding="utf-8")
+        state_path.write_text(
+            json.dumps({
+                "mode": "generate_only",
+                "urls": step_urls,
+                "origin_video_url": origin_api_url,
+            }),
+            encoding="utf-8",
+        )
         return out_path, step_urls, "generate_only"
 
     shot1 = shots[1]
-    dur1 = effective_shot_duration(shot1, seamless=True)
-    prompt1 = apply_seamless_prompt(shot1, refs, opts)
+    dur1 = _eff_dur(shot1, refs, seamless=True)
+    prompt1 = build_extend_prose_prompt(
+        shot1, refs, opts, script, shots_dir.parent, baked_pipeline=baked_pipeline,
+    )
     try:
-        _log(f"[seamless] extend step 2/{len(shots)} {shot1['id']} ({dur1}s)…")
+        _log(
+            f"[seamless] extend step 2/{len(shots)} {shot1['id']} ({dur1}s) "
+            f"← video extend (not frame extract) model={extend_model}"
+        )
         _api_pace()
         resp = client.video.extend(
             prompt=prompt1,
@@ -3159,13 +4962,20 @@ def render_extend_performance(
         )
         current_url = resp.url
         step_urls.append(current_url)
-        _download(current_url, out_path)
+        seg1 = shots_dir / f"extend_{shot1['id']}.mp4"
+        _download(current_url, seg1)
+        shutil.copy2(seg1, out_path)
 
         for i, shot in enumerate(shots[2:], start=3):
             sid = shot["id"]
-            dur = effective_shot_duration(shot, seamless=True)
-            prompt = apply_seamless_prompt(shot, refs, opts)
-            _log(f"[seamless] extend step {i}/{len(shots)} {sid} ({dur}s)…")
+            dur = _eff_dur(shot, refs, seamless=True)
+            prompt = build_extend_prose_prompt(
+                shot, refs, opts, script, shots_dir.parent, baked_pipeline=baked_pipeline,
+            )
+            _log(
+                f"[seamless] extend step {i}/{len(shots)} {sid} ({dur}s) "
+                f"← video extend model={extend_model}"
+            )
             _api_pace()
             resp = client.video.extend(
                 prompt=prompt,
@@ -3175,13 +4985,18 @@ def render_extend_performance(
             )
             current_url = resp.url
             step_urls.append(current_url)
-            _download(current_url, out_path)
+            seg_n = shots_dir / f"extend_{sid}.mp4"
+            _download(current_url, seg_n)
+            shutil.copy2(seg_n, out_path)
 
         state_path.write_text(
             json.dumps({
                 "mode": "extend",
-                "model": extend_model,
+                "generate_model": gen_model,
+                "extend_model": extend_model,
                 "urls": step_urls,
+                "origin_video_url": origin_api_url,
+                "origin_video_file": str(seg0_path),
                 "extend_api": {**EXTEND_API_FINDING, "enabled_on_model": True, "continuity_mode": "extend"},
             }),
             encoding="utf-8",
@@ -3191,7 +5006,10 @@ def render_extend_performance(
     except Exception as exc:
         if not _extend_not_supported(exc):
             raise
-        _log("[seamless] EXTEND unavailable on grok-imagine-video-1.5 — frame-chain fallback (STUDIO v1.1 §2)")
+        _log(
+            f"[seamless] EXTEND failed on {extend_model} — {_extend_error_detail(exc)}; "
+            "frame-chain fallback (last resort; STUDIO v1.1 §2)"
+        )
         seed = shots_dir / f"chain_{shot0['id']}.mp4"
         if out_path.is_file():
             shutil.copy2(out_path, seed)
@@ -3499,7 +5317,11 @@ def qa_check(
             except Exception as exc:
                 issues.append(f"post-process QA probe failed: {exc}")
         for s in shots:
-            band_issue = check_shot_duration_band(s, seamless=seamless_opts.enabled)
+            band_issue = check_shot_duration_band(
+                s,
+                seamless=seamless_opts.enabled,
+                seamless_cfg=(script.get("config") or {}).get("seamless"),
+            )
             if band_issue:
                 issues.append(band_issue)
         if comparison_path and comparison_path.is_file():
@@ -3579,6 +5401,8 @@ def render_longform(
             n = _load_cached_zone_plates(refs, plates_dir)
             if n:
                 _log(f"[zone] loaded {n} cached plate(s) from {plates_dir}")
+    if _prompt_mode(script) in ("asset_directed", "barebones") and client:
+        capture_editor_session(client, refs, script, prod_dir)
     opts = _apply_grade_policy(script, refs, seamless_opts or SeamlessOptions())
     pack = build_imagine_pack(script, refs, opts if opts.enabled else None)
     pack_path = prod_dir / f"{script.get('slug', 'longform')}_imagine_pack.json"
@@ -3729,7 +5553,10 @@ def render_longform(
         if client is None:
             raise RuntimeError("API client required for shot generation")
 
-        prompt = ensure_voice_in_prompt(shot["video_prompt"], refs["voice_suffix"])
+        image_url = resolve_shot_image_url(shot, refs)
+        prompt = build_video_generation_prompt(
+            shot, refs, opts, script=script, prod_dir=prod_dir, image_url=image_url,
+        )
 
         # --- PromptDirector: validate/augment prompt before generation ---
         _pd_render_id = ""
@@ -3784,16 +5611,26 @@ def render_longform(
                 file=sys.stderr,
             )
         # --- end qa_gate ---
-        image_url = resolve_shot_image_url(shot, refs)
         _log(f"[longform] rendering {sid} ({shot['duration']}s)…")
-        _api_pace()
-        vid = client.video.generate(
-            prompt=prompt,
-            model=refs["model_video"],
-            image_url=image_url,
-            duration=shot["duration"],
-            resolution=refs["resolution"],
-        )
+        if _is_barebones_mode(script):
+            vid, _bb = generate_barebones_video(
+                client,
+                shot,
+                refs,
+                script,
+                prod_dir,
+                duration=int(shot["duration"]),
+                seed_slot="@1",
+            )
+        else:
+            _api_pace()
+            vid = client.video.generate(
+                prompt=prompt,
+                model=refs["model_video"],
+                image_url=image_url,
+                duration=shot["duration"],
+                resolution=refs["resolution"],
+            )
         _download(vid.url, out)
         rendered.append(out)
         # Print render_id so caller can capture it for outcome recording
@@ -3913,7 +5750,7 @@ def main() -> int:
         client = xai_sdk.Client(api_key=token)
 
     refs = resolve_refs(script, client=client)
-    seamless_opts = get_seamless_options(script, args) if args.seamless else None
+    seamless_opts = get_seamless_options(script, args)  # reads script config; --seamless flag is one input, not the gate
     result = render_longform(
         script,
         client=client,

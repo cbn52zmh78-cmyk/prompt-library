@@ -1,0 +1,120 @@
+{
+  "slug": "black_hole_3min_12branch",
+  "title": "Black Hole Journey — 12×15s Pure Visual (3 min)",
+  "format_id": "science-pure-visual",
+  "target_seconds": 180,
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "prompt_mode": "barebones",
+    "prompt_template": "Studio/prompts/MASTER_PureVisual_v1.json",
+    "narration": false,
+    "use_identity_lock": false,
+    "use_zone_plates": false,
+    "composite_first_frame": "Stonebridge/Products/CANNON/VIDEOS/RESEARCH/INTERSTELLAR/BLACK_HOLES/origins/act1_scale_origin_LOCKED.jpg",
+    "branch_chain": {
+      "segment_s": 15,
+      "xfade_s": 0.35,
+      "seed_handoff": "last_frame",
+      "output_version": "v2",
+      "total_clips": 12,
+      "stitched_expected_s": 176.15,
+      "audio_post": "chandra_perseus_sonification"
+    },
+    "consistency_locks": {
+      "bh_mass_solar": "1e8-1e9",
+      "disk_tilt_deg": 35,
+      "color_lut": "jantzen_doppler_gr_redshift",
+      "color_dna_reference": "Stonebridge/Products/CANNON/VIDEOS/RESEARCH/INTERSTELLAR/BLACK_HOLES/origins/act5_perspective_color_dna_LOCKED.jpg"
+    }
+  },
+  "shots": [
+    {
+      "id": "b01_emergence_void",
+      "new_origin": true,
+      "origin_composite": "Stonebridge/Products/CANNON/VIDEOS/RESEARCH/INTERSTELLAR/BLACK_HOLES/origins/act1_scale_origin_LOCKED.jpg",
+      "barebones": {
+        "scene": "deep starfield barely visible central dark void faint photon rings only NO hot accretion disk NO jets cold cosmic void absolute stillness before the engine ignites; COLOR DNA LOCK: disk tilt 35deg; left approaching cyan-white hot; right receding orange-red dim; NOT mirror symmetric — match locked origin palette; PHYSICS LOCK: no luminous sphere no waterfall no fire jets no interior; AUDIO LOCK: absolute silence mute generate; CONTINUITY LOCK: match seed frame mass scale tilt color LUT exposure; TIMING LOCK: continuous motion full 15s cut-ready no dead end hold",
+        "camera": "ultra-wide static hold — void dominates frame; imperceptible slow push-in begins"
+      }
+    },
+    {
+      "id": "b02_emergence_lensing",
+      "barebones": {
+        "scene": "edge stars gravitationally lensed into gentle arcs and streaks as approach begins subtle redshift brown glow at periphery terror of invisible mass scale; COLOR DNA LOCK: disk tilt 35deg; left approaching cyan-white hot; right receding orange-red dim; NOT mirror symmetric; PHYSICS LOCK: no luminous sphere no waterfall no fire jets no interior; AUDIO LOCK: absolute silence mute generate; CONTINUITY LOCK: match seed frame mass scale tilt color LUT exposure; TIMING LOCK: continuous motion full 15s cut-ready no dead end hold",
+        "camera": "slow push-in toward center; stars begin warping at edges"
+      }
+    },
+    {
+      "id": "b03_emergence_disk_ignites",
+      "barebones": {
+        "scene": "accretion disk ignites from nothing — first faint orange-brown glow resolves into thin turbulent disk plane Doppler asymmetry emerging left side brightening; COLOR DNA LOCK: disk tilt 35deg; left approaching cyan-white hot; right receding orange-red dim; NOT mirror symmetric; PHYSICS LOCK: no luminous sphere no waterfall no fire jets no interior; AUDIO LOCK: absolute silence mute generate; CONTINUITY LOCK: match seed frame mass scale tilt color LUT exposure; TIMING LOCK: continuous motion full 15s cut-ready no dead end hold",
+        "camera": "continue slow push-in; disk plane resolving edge-on to slightly tilted"
+      }
+    },
+    {
+      "id": "b04_emergence_doppler_lock",
+      "barebones": {
+        "scene": "accretion disk fully resolved turbulent knots visible Doppler beaming locked — left blazing cyan-white hot approaching gas right dim orange-red receding gas asymmetry is the physics not a style choice; COLOR DNA LOCK: disk tilt 35deg; left approaching cyan-white hot; right receding orange-red dim; NOT mirror symmetric; PHYSICS LOCK: no luminous sphere no waterfall no fire jets no interior; AUDIO LOCK: absolute silence mute generate; CONTINUITY LOCK: match seed frame mass scale tilt color LUT exposure; TIMING LOCK: continuous motion full 15s cut-ready no dead end hold",
+        "camera": "slow orbit begins exposing full disk tilt; medium-wide framing"
+      }
+    },
+    {
+      "id": "b05_glory_photon_ring",
+      "barebones": {
+        "scene": "first-order photon ring dominates — bright thin ring of light orbiting the shadow inner disk white-blue outer orange gravitational lensing bending background starfield around the mass; COLOR DNA LOCK: disk tilt 35deg; left approaching cyan-white hot; right receding orange-red dim; NOT mirror symmetric; PHYSICS LOCK: no luminous sphere no waterfall no fire jets no interior; AUDIO LOCK: absolute silence mute generate; CONTINUITY LOCK: match seed frame mass scale tilt color LUT exposure; TIMING LOCK: continuous motion full 15s cut-ready no dead end hold",
+        "camera": "gentle push-in toward photon ring; slow orbit continues"
+      }
+    },
+    {
+      "id": "b06_glory_einstein_arcs",
+      "barebones": {
+        "scene": "background galaxies stretched into Einstein rings and arcs by gravitational lensing full disk glory NASA SVS 13326 turbulence detail magnetic field lines implied in disk structure; COLOR DNA LOCK: disk tilt 35deg; left approaching cyan-white hot; right receding orange-red dim; NOT mirror symmetric; PHYSICS LOCK: no luminous sphere no waterfall no fire jets no interior; AUDIO LOCK: absolute silence mute generate; CONTINUITY LOCK: match seed frame mass scale tilt color LUT exposure; TIMING LOCK: continuous motion full 15s cut-ready no dead end hold",
+        "camera": "slow camera arc 30 degrees orbit; money-shot framing"
+      }
+    },
+    {
+      "id": "b07_glory_jets_emerge",
+      "barebones": {
+        "scene": "relativistic jets emerge collimated blue-white limb-brightened Blandford-Znajek mechanism perpendicular to disk plane M87 morphology jets extend outward through galactic halo; COLOR DNA LOCK: disk tilt 35deg; left approaching cyan-white hot; right receding orange-red dim; NOT mirror symmetric; PHYSICS LOCK: no luminous sphere no waterfall no interior; AUDIO LOCK: absolute silence mute generate; CONTINUITY LOCK: match seed frame mass scale tilt color LUT exposure; TIMING LOCK: continuous motion full 15s cut-ready no dead end hold",
+        "camera": "edge-on reveal tilt emphasizing polar axis and jet extension"
+      }
+    },
+    {
+      "id": "b08_glory_hero_hold",
+      "barebones": {
+        "scene": "hold full black hole glory — disk jets photon ring shadow Einstein arcs all visible maximum Doppler contrast alive with micro-motion turbulent knots streaming through disk plane; COLOR DNA LOCK: disk tilt 35deg; left approaching cyan-white hot; right receding orange-red dim; NOT mirror symmetric; PHYSICS LOCK: no luminous sphere no waterfall no interior; AUDIO LOCK: absolute silence mute generate; CONTINUITY LOCK: match seed frame mass scale tilt color LUT exposure; TIMING LOCK: continuous motion full 15s cut-ready no dead end hold",
+        "camera": "slow hero orbit hold with micro drift; the beauty shot"
+      }
+    },
+    {
+      "id": "b09_descent_plunge",
+      "barebones": {
+        "scene": "camera plunges inward past stable orbits lensing intensifies multiple photon ring orders appearing nested bright rings around deepening shadow; COLOR DNA LOCK: disk tilt 35deg; left approaching cyan-white hot; right receding orange-red dim; NOT mirror symmetric; PHYSICS LOCK: no luminous sphere no waterfall no fire jets no interior; AUDIO LOCK: absolute silence mute generate; CONTINUITY LOCK: match seed frame mass scale tilt color LUT exposure; TIMING LOCK: continuous motion full 15s cut-ready no dead end hold",
+        "camera": "forward acceleration toward photon sphere; urgency builds"
+      }
+    },
+    {
+      "id": "b10_descent_photon_sphere",
+      "barebones": {
+        "scene": "photon sphere visible as glowing orbital light band at 1.5 Schwarzschild radii light orbiting multiple times entire background universe distorted into bright ring around central shadow extreme GR lensing; COLOR DNA LOCK: disk tilt 35deg; left approaching cyan-white hot; right receding orange-red dim; NOT mirror symmetric; PHYSICS LOCK: no luminous sphere no waterfall no fire jets no interior; AUDIO LOCK: absolute silence mute generate; CONTINUITY LOCK: match seed frame mass scale tilt color LUT exposure; TIMING LOCK: continuous motion full 15s cut-ready no dead end hold",
+        "camera": "push through glowing photon sphere band; extreme wide-angle distortion"
+      }
+    },
+    {
+      "id": "b11_descent_trapped_light",
+      "barebones": {
+        "scene": "light trapped in photon orbits glowing bands circling the shadow infinite redshift approaching tidal lensing stretching background stars vertically brown-red gravitational redshift fade beginning; COLOR DNA LOCK: disk tilt 35deg; left approaching cyan-white hot; right receding orange-red dim; NOT mirror symmetric; PHYSICS LOCK: no luminous sphere no waterfall no fire jets no interior; AUDIO LOCK: absolute silence mute generate; CONTINUITY LOCK: match seed frame mass scale tilt color LUT exposure; TIMING LOCK: continuous motion full 15s cut-ready no dead end hold",
+        "camera": "orbit micro-drift around trapped light bands; redshift deepening"
+      }
+    },
+    {
+      "id": "b12_descent_darkness",
+      "barebones": {
+        "scene": "infinite redshift darkness closing in do NOT show interior do NOT show singularity brown-red fade to void all light bending behind the observer last photons redshifting away final silence; COLOR DNA LOCK: disk tilt 35deg; left approaching cyan-white hot; right receding orange-red dim; NOT mirror symmetric; PHYSICS LOCK: no luminous sphere no waterfall no fire jets no interior; AUDIO LOCK: absolute silence mute generate; CONTINUITY LOCK: match seed frame mass scale tilt color LUT exposure; TIMING LOCK: continuous motion full 15s cut-ready no dead end hold",
+        "camera": "slow fade toward darkness closing in; final frame near-black"
+      }
+    }
+  ]
+}

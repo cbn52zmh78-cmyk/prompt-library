@@ -1,0 +1,19 @@
+{
+  "proof": "kitchen_composite_baked@1_v3_10s",
+  "gate": "PENDING_REVIEW",
+  "revision": "v3 — AUDIO LOCK: MATILDA only, no offscreen chatter",
+  "at": "2026-06-29T05:45:45.464605+00:00",
+  "composite_jpg": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\composite_first_frame_probe.jpg",
+  "binding": {
+    "seed_mode": "baked_composite@1",
+    "image_field": "image_file_id",
+    "image_value": "file_7529e177-015f-42ae-a508-17d8504d049e",
+    "composite_path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\composite_first_frame_probe.jpg"
+  },
+  "prompt": "Setting: @7529e177-015f-42ae-a508-17d8504d049e (see attached render; modern kitchen interior — quiet empty apartment, no people visible, no voices offscreen) ; MATILDA maintains direct eye contact with camera; opens with Bavarian German greeting, introduces herself by full name and Stonebridge title, confident professional host energy — dialogue fits 10 sec. Camera does slow creep zoom-in from medium shot to medium close-up over 10 seconds — controlled Fincher dolly, deliberate and motivated, no handheld ; Lip-synced, delivers in native Bavarian German: \"Grüß Gott! Ich bin Matilda Kirschner — Vice President of Operations der Stonebridge Consultants Group.\" ; AUDIO LOCK: MATILDA voice only — no background chatter, no crowd murmur, no offscreen dialogue, no street noise, no party ambience; silent kitchen room tone only ; native Münchner Bayerisch — Munich-born first-language German, warm Bavarian vowels, natural Bayerisch rhythm; must NOT sound like American expat or classroom German ; In the exact visual style of David Fincher: meticulously composed cinematic realism with cold, desaturated teal, gray, and amber tones, high-contrast chiaroscuro lighting that carves deep dramatic shadows across sharp architectural lines and rich textures, clinical precision in every detail, subtle film grain, anamorphic depth, moody atmospheric elegance, and a hauntingly controlled, almost predatory beauty in the finished shot",
+  "speech_text": "Grüß Gott! Ich bin Matilda Kirschner — Vice President of Operations der Stonebridge Consultants Group.",
+  "duration_s": 10,
+  "model": "grok-imagine-video-1.5",
+  "video_url": "https://vidgen.x.ai/xai-vidgen-bucket/xai-video-19eab5af-8d06-97fe-adc5-6937711dc9ae.mp4",
+  "output_mp4": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_kitchen_stonebridge_10s_longform_v1\\proof\\kitchen_composite_baked@1_v3_10s.mp4"
+}
