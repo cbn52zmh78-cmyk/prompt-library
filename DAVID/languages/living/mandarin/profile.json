@@ -1,0 +1,26 @@
+{
+  "id": "mandarin",
+  "name": "Mandarin Chinese",
+  "slug": "mandarin",
+  "status": "living",
+  "revival_tier": "active",
+  "research_type": "living_top10",
+  "top10_rank_2026": 2,
+  "family": "Sino-Tibetan (Sinitic)",
+  "script": "Hanzi + Pinyin",
+  "total_speakers": 1190000000,
+  "total_speakers_display": "~1.18-1.2B",
+  "native_l1_display": "~988M",
+  "primary_regions": [
+    "China",
+    "Taiwan",
+    "Chinese diaspora"
+  ],
+  "major_varieties": [
+    "Standard Mandarin (Beijing-based)",
+    "Southern accents",
+    "Note: Cantonese/Yue and Wu are separate languages"
+  ],
+  "pronunciation_profile": "languages/living/mandarin/pronunciation/pronunciation_profile.json",
+  "profile_path": "languages/living/mandarin/profile.json"
+}

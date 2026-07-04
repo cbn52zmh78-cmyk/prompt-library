@@ -1,0 +1,36 @@
+{
+  "language": "bengali",
+  "status": "living",
+  "research_type": "translation_service",
+  "top10_rank_2026": 7,
+  "variant_notes": {
+    "major_varieties": [
+      "Standard Dhaka",
+      "Standard Kolkata",
+      "Sylheti",
+      "Chittagong"
+    ],
+    "dialect_notes": "Sylheti and Chittagong sometimes contested as separate languages"
+  },
+  "register_system": "Formal vs informal varies by language; see major_varieties for regional targets.",
+  "translationese_traps": [
+    "Literal calques from English",
+    "Wrong regional variety for target audience",
+    "Ignoring diglossia or script conventions where applicable"
+  ],
+  "tutoring_pronunciation_hooks": [
+    "Retroflex consonants",
+    "Aspiration contrast",
+    "Bengali script syllabic units",
+    "Dhaka/Kolkata standard choice"
+  ],
+  "professional_resources": [
+    "https://forvo.com/languages/bn/",
+    "https://www.omniglot.com/writing/bengali.htm",
+    "https://en.wikipedia.org/wiki/Help:IPA/Bengali",
+    "https://www.bbc.com/bengali"
+  ],
+  "orthography_notes": "Bengali",
+  "ingested_from": "data/top10_languages_ranking_2026.json",
+  "ingested_at": "2026-06-29"
+}

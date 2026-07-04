@@ -1,0 +1,24 @@
+{
+  "slug": "arabic",
+  "source": "top10_languages_ranking_2026",
+  "captured": "2026-06-29",
+  "rank": 5,
+  "ethnologue_summary": {
+    "total_speakers_display": "~335M",
+    "native_l1_display": "Low (mostly L2 for MSA)",
+    "family": "Afro-Asiatic (Semitic)"
+  },
+  "pronunciation_notes": [
+    "Pharyngeals ʿayn/ghayn",
+    "Emphatic consonants",
+    "Complex morphology",
+    "Diglossia with colloquials"
+  ],
+  "resources": {
+    "forvo": "https://forvo.com/languages/ar/",
+    "omniglot": "https://www.omniglot.com/writing/arabic.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/Arabic",
+    "talkinarabic": "https://www.talkinarabic.com/",
+    "aljazeera": "https://www.aljazeera.com/"
+  }
+}

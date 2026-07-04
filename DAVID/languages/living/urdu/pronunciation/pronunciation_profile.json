@@ -1,0 +1,69 @@
+{
+  "language": "urdu",
+  "status": "living",
+  "research_type": "pronunciation",
+  "ingested_from": "data/top10_languages_ranking_2026.json",
+  "ingested_at": "2026-06-29",
+  "ethnologue": {
+    "rank_2026": 10,
+    "total_speakers": 246000000,
+    "total_speakers_display": "~246M",
+    "native_l1": 78000000,
+    "native_l1_display": "~78M",
+    "l2_dominant": true,
+    "iso639_1": "ur",
+    "forvo_code": "ur"
+  },
+  "family": "Indo-European (Indo-Aryan)",
+  "script": "Perso-Arabic (Nastaliq)",
+  "primary_regions": [
+    "Pakistan",
+    "India"
+  ],
+  "major_varieties": [
+    "Standard Urdu",
+    "Pakistani vs Indian literary registers"
+  ],
+  "phonology_highlights": [
+    "Same phonology as Hindi in speech",
+    "Perso-Arabic script and vocabulary",
+    "Retroflexes and aspiration"
+  ],
+  "dialect_notes": "Hindustani register with Urdu script and Persian/Arabic lexicon; very close to Hindi in spoken form",
+  "pronunciation_resources": {
+    "forvo": "https://forvo.com/languages/ur/",
+    "omniglot": "https://www.omniglot.com/writing/urdu.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/Urdu",
+    "rekhta": "https://www.rekhta.org/"
+  },
+  "universal_resources": [
+    "forvo",
+    "omniglot",
+    "wikipedia_ipa",
+    "wiktionary",
+    "ucla_phonetics",
+    "sounds_of_speech",
+    "youglish",
+    "ethnologue",
+    "glottolog"
+  ],
+  "grok_imagine_guidance": "Shared Hindustani phonology with Hindi; Nastaliq reading flow; Persianized vocabulary in formal register; specify Pakistani vs Indian if relevant.",
+  "tutoring_hooks": [
+    "Hindustani phonology shared with Hindi",
+    "Perso-Arabic script",
+    "Formal Persian/Arabic loan pronunciation",
+    "Retroflex and aspiration"
+  ],
+  "phonology_status": "attested_native",
+  "ipa_coverage": "full",
+  "sources": [
+    {
+      "name": "Ethnologue 2026",
+      "url": "https://www.ethnologue.com/"
+    },
+    {
+      "name": "Grok browser research pass",
+      "path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\research\\top10_languages_ethnologue_2026_v1.md"
+    }
+  ]
+}

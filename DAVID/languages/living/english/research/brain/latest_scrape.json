@@ -1,0 +1,24 @@
+{
+  "slug": "english",
+  "source": "top10_languages_ranking_2026",
+  "captured": "2026-06-29",
+  "rank": 1,
+  "ethnologue_summary": {
+    "total_speakers_display": "~1.5B",
+    "native_l1_display": "380-450M",
+    "family": "Indo-European (Germanic)"
+  },
+  "pronunciation_notes": [
+    "Highly variable accents",
+    "Rhoticity varies by region",
+    "Vowel shifts (GA vs RP)",
+    "Intonation patterns differ widely"
+  ],
+  "resources": {
+    "forvo": "https://forvo.com/languages/en/",
+    "omniglot": "https://www.omniglot.com/writing/english.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/English",
+    "dialect_archive": "https://www.dialectsarchive.com/",
+    "bbc_learning": "https://www.bbc.co.uk/learningenglish/"
+  }
+}

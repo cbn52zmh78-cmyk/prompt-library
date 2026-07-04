@@ -1,0 +1,35 @@
+{
+  "language": "hindi",
+  "status": "living",
+  "research_type": "translation_service",
+  "top10_rank_2026": 3,
+  "variant_notes": {
+    "major_varieties": [
+      "Standard Hindi",
+      "Hindustani continuum with Urdu"
+    ],
+    "dialect_notes": "Mutually intelligible with Urdu in speech; vocabulary differs (Sanskrit vs Persian/Arabic loans)"
+  },
+  "register_system": "Formal vs informal varies by language; see major_varieties for regional targets.",
+  "translationese_traps": [
+    "Literal calques from English",
+    "Wrong regional variety for target audience",
+    "Ignoring diglossia or script conventions where applicable"
+  ],
+  "tutoring_pronunciation_hooks": [
+    "Retroflex ṭ ḍ ṇ",
+    "Aspiration kh/ph/th",
+    "Schwa syncope",
+    "Hindustani shared phonology with Urdu"
+  ],
+  "professional_resources": [
+    "https://forvo.com/languages/hi/",
+    "https://www.omniglot.com/writing/hindi.htm",
+    "https://en.wikipedia.org/wiki/Help:IPA/Hindi",
+    "https://en.wikipedia.org/wiki/Hindustani_phonology",
+    "https://www.hindipod101.com/"
+  ],
+  "orthography_notes": "Devanagari",
+  "ingested_from": "data/top10_languages_ranking_2026.json",
+  "ingested_at": "2026-06-29"
+}

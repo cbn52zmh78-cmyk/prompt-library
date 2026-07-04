@@ -1,0 +1,75 @@
+{
+  "language": "spanish",
+  "status": "living",
+  "research_type": "pronunciation",
+  "ingested_from": "data/top10_languages_ranking_2026.json",
+  "ingested_at": "2026-06-29",
+  "ethnologue": {
+    "rank_2026": 4,
+    "total_speakers": 561000000,
+    "total_speakers_display": "~561M",
+    "native_l1": 487000000,
+    "native_l1_display": "~487M",
+    "l2_dominant": false,
+    "iso639_1": "es",
+    "forvo_code": "es"
+  },
+  "family": "Indo-European (Romance)",
+  "script": "Latin",
+  "primary_regions": [
+    "Spain",
+    "Mexico",
+    "Colombia",
+    "Argentina",
+    "Latin America"
+  ],
+  "major_varieties": [
+    "Peninsular (Castilian)",
+    "Latin American",
+    "Rioplatense (voseo)"
+  ],
+  "phonology_highlights": [
+    "Trilled /r/ vs flap",
+    "Seseo/yeísmo in most LatAm",
+    "Clear open vowels",
+    "Syllable-timed rhythm"
+  ],
+  "dialect_notes": "Peninsular vs LatAm differences in seseo, yeísmo, voseo; excludes creoles",
+  "pronunciation_resources": {
+    "forvo": "https://forvo.com/languages/es/",
+    "omniglot": "https://www.omniglot.com/writing/spanish.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/Spanish",
+    "rae": "https://www.rae.es/",
+    "rtve": "https://www.rtve.es/"
+  },
+  "universal_resources": [
+    "forvo",
+    "omniglot",
+    "wikipedia_ipa",
+    "wiktionary",
+    "ucla_phonetics",
+    "sounds_of_speech",
+    "youglish",
+    "ethnologue",
+    "glottolog"
+  ],
+  "grok_imagine_guidance": "Specify Peninsular vs LatAm; rolled rr vs single flap; open vowels without English reduction; natural syllable timing.",
+  "tutoring_hooks": [
+    "Trilled rr vs flap r",
+    "Seseo/yeísmo by region",
+    "Voseo (Rioplatense)",
+    "Stress and accent marks"
+  ],
+  "phonology_status": "attested_native",
+  "ipa_coverage": "full",
+  "sources": [
+    {
+      "name": "Ethnologue 2026",
+      "url": "https://www.ethnologue.com/"
+    },
+    {
+      "name": "Grok browser research pass",
+      "path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\research\\top10_languages_ethnologue_2026_v1.md"
+    }
+  ]
+}

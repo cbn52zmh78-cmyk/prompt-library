@@ -1,0 +1,23 @@
+{
+  "id": "indonesian",
+  "name": "Indonesian",
+  "slug": "indonesian",
+  "status": "living",
+  "revival_tier": "active",
+  "research_type": "living_top10",
+  "top10_rank_2026": 9,
+  "family": "Austronesian (Malayo-Polynesian)",
+  "script": "Latin",
+  "total_speakers": 255000000,
+  "total_speakers_display": "~255M",
+  "native_l1_display": "~78M",
+  "primary_regions": [
+    "Indonesia"
+  ],
+  "major_varieties": [
+    "Standard Indonesian (Bahasa Indonesia)",
+    "Regional Malay-influenced sub-dialects"
+  ],
+  "pronunciation_profile": "languages/living/indonesian/pronunciation/pronunciation_profile.json",
+  "profile_path": "languages/living/indonesian/profile.json"
+}

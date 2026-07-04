@@ -1,0 +1,21 @@
+{
+  "slug": "indonesian",
+  "source": "top10_languages_ranking_2026",
+  "captured": "2026-06-29",
+  "rank": 9,
+  "ethnologue_summary": {
+    "total_speakers_display": "~255M",
+    "native_l1_display": "~78M",
+    "family": "Austronesian (Malayo-Polynesian)"
+  },
+  "pronunciation_notes": [
+    "No tones",
+    "Relatively simple phonology",
+    "Malay base with regional loans"
+  ],
+  "resources": {
+    "forvo": "https://forvo.com/languages/id/",
+    "omniglot": "https://www.omniglot.com/writing/indonesian.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/Indonesian"
+  }
+}

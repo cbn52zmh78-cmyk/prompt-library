@@ -1,0 +1,71 @@
+{
+  "language": "portuguese",
+  "status": "living",
+  "research_type": "pronunciation",
+  "ingested_from": "data/top10_languages_ranking_2026.json",
+  "ingested_at": "2026-06-29",
+  "ethnologue": {
+    "rank_2026": 8,
+    "total_speakers": 269000000,
+    "total_speakers_display": "~269M",
+    "native_l1": 252000000,
+    "native_l1_display": "~252M",
+    "l2_dominant": false,
+    "iso639_1": "pt",
+    "forvo_code": "pt"
+  },
+  "family": "Indo-European (Romance)",
+  "script": "Latin",
+  "primary_regions": [
+    "Brazil",
+    "Portugal",
+    "Angola",
+    "Mozambique"
+  ],
+  "major_varieties": [
+    "Brazilian Portuguese",
+    "European Portuguese"
+  ],
+  "phonology_highlights": [
+    "Stronger nasalization in Brazil",
+    "Sibilant differences EU vs BR",
+    "Open vowels"
+  ],
+  "dialect_notes": "Brazilian majority of speakers; European has distinct prosody and consonants",
+  "pronunciation_resources": {
+    "forvo": "https://forvo.com/languages/pt/",
+    "omniglot": "https://www.omniglot.com/writing/portuguese.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/Portuguese",
+    "camoes": "https://www.instituto-camoes.pt/"
+  },
+  "universal_resources": [
+    "forvo",
+    "omniglot",
+    "wikipedia_ipa",
+    "wiktionary",
+    "ucla_phonetics",
+    "sounds_of_speech",
+    "youglish",
+    "ethnologue",
+    "glottolog"
+  ],
+  "grok_imagine_guidance": "Tag Brazilian vs European; nasal diphthongs in BR; softer sibilants in EU; natural syllable rhythm.",
+  "tutoring_hooks": [
+    "Brazilian vs European vowels",
+    "Nasal vowels and diphthongs",
+    "Reduced unstressed vowels in BR",
+    "European closed vowels"
+  ],
+  "phonology_status": "attested_native",
+  "ipa_coverage": "full",
+  "sources": [
+    {
+      "name": "Ethnologue 2026",
+      "url": "https://www.ethnologue.com/"
+    },
+    {
+      "name": "Grok browser research pass",
+      "path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\research\\top10_languages_ethnologue_2026_v1.md"
+    }
+  ]
+}

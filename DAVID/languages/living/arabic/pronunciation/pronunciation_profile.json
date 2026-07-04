@@ -1,0 +1,75 @@
+{
+  "language": "arabic",
+  "status": "living",
+  "research_type": "pronunciation",
+  "ingested_from": "data/top10_languages_ranking_2026.json",
+  "ingested_at": "2026-06-29",
+  "ethnologue": {
+    "rank_2026": 5,
+    "total_speakers": 335000000,
+    "total_speakers_display": "~335M",
+    "native_l1": 0,
+    "native_l1_display": "Low (mostly L2 for MSA)",
+    "l2_dominant": true,
+    "iso639_1": "ar",
+    "forvo_code": "ar"
+  },
+  "family": "Afro-Asiatic (Semitic)",
+  "script": "Arabic",
+  "primary_regions": [
+    "Middle East",
+    "North Africa",
+    "formal media and education"
+  ],
+  "major_varieties": [
+    "MSA (Modern Standard Arabic)",
+    "Egyptian",
+    "Levantine",
+    "Gulf",
+    "Maghrebi colloquial"
+  ],
+  "phonology_highlights": [
+    "Pharyngeals ʿayn/ghayn",
+    "Emphatic consonants",
+    "Complex morphology",
+    "Diglossia with colloquials"
+  ],
+  "dialect_notes": "MSA is formal/literary; 30+ colloquial dialects often mutually unintelligible in speech; Egyptian most common in media",
+  "pronunciation_resources": {
+    "forvo": "https://forvo.com/languages/ar/",
+    "omniglot": "https://www.omniglot.com/writing/arabic.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/Arabic",
+    "talkinarabic": "https://www.talkinarabic.com/",
+    "aljazeera": "https://www.aljazeera.com/"
+  },
+  "universal_resources": [
+    "forvo",
+    "omniglot",
+    "wikipedia_ipa",
+    "wiktionary",
+    "ucla_phonetics",
+    "sounds_of_speech",
+    "youglish",
+    "ethnologue",
+    "glottolog"
+  ],
+  "grok_imagine_guidance": "MSA formal register for documentary/tutor; emphatics and pharyngeals clear; full vowel articulation in careful speech; distinguish MSA from dialect if script tags variety.",
+  "tutoring_hooks": [
+    "Pharyngeals ʕ ʁ",
+    "Emphatic ṣ ḍ ṭ ẓ",
+    "MSA vs dialect awareness",
+    "Short vowels often unwritten"
+  ],
+  "phonology_status": "attested_native",
+  "ipa_coverage": "full",
+  "sources": [
+    {
+      "name": "Ethnologue 2026",
+      "url": "https://www.ethnologue.com/"
+    },
+    {
+      "name": "Grok browser research pass",
+      "path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\research\\top10_languages_ethnologue_2026_v1.md"
+    }
+  ]
+}

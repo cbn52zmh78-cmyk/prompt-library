@@ -1,0 +1,71 @@
+{
+  "language": "bengali",
+  "status": "living",
+  "research_type": "pronunciation",
+  "ingested_from": "data/top10_languages_ranking_2026.json",
+  "ingested_at": "2026-06-29",
+  "ethnologue": {
+    "rank_2026": 7,
+    "total_speakers": 274000000,
+    "total_speakers_display": "~274M",
+    "native_l1": 234000000,
+    "native_l1_display": "~234M",
+    "l2_dominant": false,
+    "iso639_1": "bn",
+    "forvo_code": "bn"
+  },
+  "family": "Indo-European (Indo-Aryan)",
+  "script": "Bengali",
+  "primary_regions": [
+    "Bangladesh",
+    "India (West Bengal)"
+  ],
+  "major_varieties": [
+    "Standard Dhaka",
+    "Standard Kolkata",
+    "Sylheti",
+    "Chittagong"
+  ],
+  "phonology_highlights": [
+    "Retroflexes",
+    "Aspirated consonants",
+    "Vowel harmony tendencies"
+  ],
+  "dialect_notes": "Sylheti and Chittagong sometimes contested as separate languages",
+  "pronunciation_resources": {
+    "forvo": "https://forvo.com/languages/bn/",
+    "omniglot": "https://www.omniglot.com/writing/bengali.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/Bengali",
+    "bbc_bangla": "https://www.bbc.com/bengali"
+  },
+  "universal_resources": [
+    "forvo",
+    "omniglot",
+    "wikipedia_ipa",
+    "wiktionary",
+    "ucla_phonetics",
+    "sounds_of_speech",
+    "youglish",
+    "ethnologue",
+    "glottolog"
+  ],
+  "grok_imagine_guidance": "Retroflex clarity; aspirated/unaspirated contrast; flowing vowel melody; Dhaka vs Kolkata variety if specified.",
+  "tutoring_hooks": [
+    "Retroflex consonants",
+    "Aspiration contrast",
+    "Bengali script syllabic units",
+    "Dhaka/Kolkata standard choice"
+  ],
+  "phonology_status": "attested_native",
+  "ipa_coverage": "full",
+  "sources": [
+    {
+      "name": "Ethnologue 2026",
+      "url": "https://www.ethnologue.com/"
+    },
+    {
+      "name": "Grok browser research pass",
+      "path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\research\\top10_languages_ethnologue_2026_v1.md"
+    }
+  ]
+}

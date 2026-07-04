@@ -1,0 +1,67 @@
+{
+  "language": "indonesian",
+  "status": "living",
+  "research_type": "pronunciation",
+  "ingested_from": "data/top10_languages_ranking_2026.json",
+  "ingested_at": "2026-06-29",
+  "ethnologue": {
+    "rank_2026": 9,
+    "total_speakers": 255000000,
+    "total_speakers_display": "~255M",
+    "native_l1": 78000000,
+    "native_l1_display": "~78M",
+    "l2_dominant": true,
+    "iso639_1": "id",
+    "forvo_code": "id"
+  },
+  "family": "Austronesian (Malayo-Polynesian)",
+  "script": "Latin",
+  "primary_regions": [
+    "Indonesia"
+  ],
+  "major_varieties": [
+    "Standard Indonesian (Bahasa Indonesia)",
+    "Regional Malay-influenced sub-dialects"
+  ],
+  "phonology_highlights": [
+    "No tones",
+    "Relatively simple phonology",
+    "Malay base with regional loans"
+  ],
+  "dialect_notes": "Standardized from Malay; high L2 use as national lingua franca",
+  "pronunciation_resources": {
+    "forvo": "https://forvo.com/languages/id/",
+    "omniglot": "https://www.omniglot.com/writing/indonesian.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/Indonesian"
+  },
+  "universal_resources": [
+    "forvo",
+    "omniglot",
+    "wikipedia_ipa",
+    "wiktionary",
+    "ucla_phonetics",
+    "sounds_of_speech",
+    "youglish",
+    "ethnologue",
+    "glottolog"
+  ],
+  "grok_imagine_guidance": "Clear syllables; no tone; even stress; standard Bahasa Indonesia; avoid Javanese interference unless dialect tagged.",
+  "tutoring_hooks": [
+    "No lexical tone",
+    "Simple CV syllable structure",
+    "Schwa in open syllables",
+    "L2 lingua franca register"
+  ],
+  "phonology_status": "attested_native",
+  "ipa_coverage": "full",
+  "sources": [
+    {
+      "name": "Ethnologue 2026",
+      "url": "https://www.ethnologue.com/"
+    },
+    {
+      "name": "Grok browser research pass",
+      "path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\research\\top10_languages_ethnologue_2026_v1.md"
+    }
+  ]
+}

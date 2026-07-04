@@ -1,0 +1,26 @@
+{
+  "id": "portuguese",
+  "name": "Portuguese",
+  "slug": "portuguese",
+  "status": "living",
+  "revival_tier": "active",
+  "research_type": "living_top10",
+  "top10_rank_2026": 8,
+  "family": "Indo-European (Romance)",
+  "script": "Latin",
+  "total_speakers": 269000000,
+  "total_speakers_display": "~269M",
+  "native_l1_display": "~252M",
+  "primary_regions": [
+    "Brazil",
+    "Portugal",
+    "Angola",
+    "Mozambique"
+  ],
+  "major_varieties": [
+    "Brazilian Portuguese",
+    "European Portuguese"
+  ],
+  "pronunciation_profile": "languages/living/portuguese/pronunciation/pronunciation_profile.json",
+  "profile_path": "languages/living/portuguese/profile.json"
+}

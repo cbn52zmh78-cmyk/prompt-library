@@ -1,0 +1,71 @@
+{
+  "language": "hindi",
+  "status": "living",
+  "research_type": "pronunciation",
+  "ingested_from": "data/top10_languages_ranking_2026.json",
+  "ingested_at": "2026-06-29",
+  "ethnologue": {
+    "rank_2026": 3,
+    "total_speakers": 611000000,
+    "total_speakers_display": "~611M",
+    "native_l1": 347000000,
+    "native_l1_display": "~347M",
+    "l2_dominant": false,
+    "iso639_1": "hi",
+    "forvo_code": "hi"
+  },
+  "family": "Indo-European (Indo-Aryan)",
+  "script": "Devanagari",
+  "primary_regions": [
+    "India",
+    "Fiji"
+  ],
+  "major_varieties": [
+    "Standard Hindi",
+    "Hindustani continuum with Urdu"
+  ],
+  "phonology_highlights": [
+    "Retroflex consonants",
+    "Aspiration (voiced/unvoiced)",
+    "Schwa deletion",
+    "Devanagari script"
+  ],
+  "dialect_notes": "Mutually intelligible with Urdu in speech; vocabulary differs (Sanskrit vs Persian/Arabic loans)",
+  "pronunciation_resources": {
+    "forvo": "https://forvo.com/languages/hi/",
+    "omniglot": "https://www.omniglot.com/writing/hindi.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/Hindi",
+    "hindustani_phonology": "https://en.wikipedia.org/wiki/Hindustani_phonology",
+    "hindipod101": "https://www.hindipod101.com/"
+  },
+  "universal_resources": [
+    "forvo",
+    "omniglot",
+    "wikipedia_ipa",
+    "wiktionary",
+    "ucla_phonetics",
+    "sounds_of_speech",
+    "youglish",
+    "ethnologue",
+    "glottolog"
+  ],
+  "grok_imagine_guidance": "Clear retroflex vs dental contrast; aspirated stops distinct from unaspirated; natural schwa deletion; Devanagari reading flow; avoid Bollywood exaggeration unless scripted.",
+  "tutoring_hooks": [
+    "Retroflex ṭ ḍ ṇ",
+    "Aspiration kh/ph/th",
+    "Schwa syncope",
+    "Hindustani shared phonology with Urdu"
+  ],
+  "phonology_status": "attested_native",
+  "ipa_coverage": "full",
+  "sources": [
+    {
+      "name": "Ethnologue 2026",
+      "url": "https://www.ethnologue.com/"
+    },
+    {
+      "name": "Grok browser research pass",
+      "path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\research\\top10_languages_ethnologue_2026_v1.md"
+    }
+  ]
+}

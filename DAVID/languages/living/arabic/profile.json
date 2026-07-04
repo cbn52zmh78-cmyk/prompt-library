@@ -1,0 +1,28 @@
+{
+  "id": "arabic",
+  "name": "Standard Arabic (MSA)",
+  "slug": "arabic",
+  "status": "living",
+  "revival_tier": "active",
+  "research_type": "living_top10",
+  "top10_rank_2026": 5,
+  "family": "Afro-Asiatic (Semitic)",
+  "script": "Arabic",
+  "total_speakers": 335000000,
+  "total_speakers_display": "~335M",
+  "native_l1_display": "Low (mostly L2 for MSA)",
+  "primary_regions": [
+    "Middle East",
+    "North Africa",
+    "formal media and education"
+  ],
+  "major_varieties": [
+    "MSA (Modern Standard Arabic)",
+    "Egyptian",
+    "Levantine",
+    "Gulf",
+    "Maghrebi colloquial"
+  ],
+  "pronunciation_profile": "languages/living/arabic/pronunciation/pronunciation_profile.json",
+  "profile_path": "languages/living/arabic/profile.json"
+}

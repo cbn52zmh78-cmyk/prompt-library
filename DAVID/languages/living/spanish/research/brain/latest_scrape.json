@@ -1,0 +1,24 @@
+{
+  "slug": "spanish",
+  "source": "top10_languages_ranking_2026",
+  "captured": "2026-06-29",
+  "rank": 4,
+  "ethnologue_summary": {
+    "total_speakers_display": "~561M",
+    "native_l1_display": "~487M",
+    "family": "Indo-European (Romance)"
+  },
+  "pronunciation_notes": [
+    "Trilled /r/ vs flap",
+    "Seseo/yeísmo in most LatAm",
+    "Clear open vowels",
+    "Syllable-timed rhythm"
+  ],
+  "resources": {
+    "forvo": "https://forvo.com/languages/es/",
+    "omniglot": "https://www.omniglot.com/writing/spanish.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/Spanish",
+    "rae": "https://www.rae.es/",
+    "rtve": "https://www.rtve.es/"
+  }
+}

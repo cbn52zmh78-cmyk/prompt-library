@@ -1,0 +1,34 @@
+{
+  "language": "urdu",
+  "status": "living",
+  "research_type": "translation_service",
+  "top10_rank_2026": 10,
+  "variant_notes": {
+    "major_varieties": [
+      "Standard Urdu",
+      "Pakistani vs Indian literary registers"
+    ],
+    "dialect_notes": "Hindustani register with Urdu script and Persian/Arabic lexicon; very close to Hindi in spoken form"
+  },
+  "register_system": "Formal vs informal varies by language; see major_varieties for regional targets.",
+  "translationese_traps": [
+    "Literal calques from English",
+    "Wrong regional variety for target audience",
+    "Ignoring diglossia or script conventions where applicable"
+  ],
+  "tutoring_pronunciation_hooks": [
+    "Hindustani phonology shared with Hindi",
+    "Perso-Arabic script",
+    "Formal Persian/Arabic loan pronunciation",
+    "Retroflex and aspiration"
+  ],
+  "professional_resources": [
+    "https://forvo.com/languages/ur/",
+    "https://www.omniglot.com/writing/urdu.htm",
+    "https://en.wikipedia.org/wiki/Help:IPA/Urdu",
+    "https://www.rekhta.org/"
+  ],
+  "orthography_notes": "Perso-Arabic (Nastaliq)",
+  "ingested_from": "data/top10_languages_ranking_2026.json",
+  "ingested_at": "2026-06-29"
+}

@@ -117,5 +117,75 @@
     "wiktionary": "Old_Church_Slavonic",
     "wiktionary_fallbacks": ["Church Slavonic", "Category:Old Church Slavonic language"],
     "iso639_3": "chu"
+  },
+  "english": {
+    "wikipedia": "English_language",
+    "wikidata": "Q1860",
+    "wiktionary": "English_language",
+    "wiktionary_fallbacks": ["English", "Category:English language"],
+    "iso639_3": "eng"
+  },
+  "mandarin": {
+    "wikipedia": "Standard_Chinese",
+    "wikidata": "Q9192",
+    "wiktionary": "Mandarin_Chinese",
+    "wiktionary_fallbacks": ["Mandarin Chinese", "Category:Mandarin Chinese"],
+    "iso639_3": "cmn"
+  },
+  "hindi": {
+    "wikipedia": "Hindi",
+    "wikidata": "Q1568",
+    "wiktionary": "Hindi",
+    "wiktionary_fallbacks": ["Hindi language", "Category:Hindi language"],
+    "iso639_3": "hin"
+  },
+  "spanish": {
+    "wikipedia": "Spanish_language",
+    "wikidata": "Q1321",
+    "wiktionary": "Spanish_language",
+    "wiktionary_fallbacks": ["Spanish", "Category:Spanish language"],
+    "iso639_3": "spa"
+  },
+  "arabic": {
+    "wikipedia": "Modern_Standard_Arabic",
+    "wikidata": "Q13955",
+    "wiktionary": "Arabic_language",
+    "wiktionary_fallbacks": ["Modern Standard Arabic", "Category:Arabic language"],
+    "iso639_3": "arb"
+  },
+  "french": {
+    "wikipedia": "French_language",
+    "wikidata": "Q150",
+    "wiktionary": "French_language",
+    "wiktionary_fallbacks": ["French", "Category:French language"],
+    "iso639_3": "fra"
+  },
+  "bengali": {
+    "wikipedia": "Bengali_language",
+    "wikidata": "Q9610",
+    "wiktionary": "Bengali_language",
+    "wiktionary_fallbacks": ["Bengali", "Category:Bengali language"],
+    "iso639_3": "ben"
+  },
+  "portuguese": {
+    "wikipedia": "Portuguese_language",
+    "wikidata": "Q5146",
+    "wiktionary": "Portuguese_language",
+    "wiktionary_fallbacks": ["Portuguese", "Category:Portuguese language"],
+    "iso639_3": "por"
+  },
+  "indonesian": {
+    "wikipedia": "Indonesian_language",
+    "wikidata": "Q9240",
+    "wiktionary": "Indonesian_language",
+    "wiktionary_fallbacks": ["Indonesian", "Category:Indonesian language"],
+    "iso639_3": "ind"
+  },
+  "urdu": {
+    "wikipedia": "Urdu",
+    "wikidata": "Q1617",
+    "wiktionary": "Urdu",
+    "wiktionary_fallbacks": ["Urdu language", "Category:Urdu language"],
+    "iso639_3": "urd"
   }
 }

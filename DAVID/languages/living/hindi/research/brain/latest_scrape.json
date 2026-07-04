@@ -1,0 +1,24 @@
+{
+  "slug": "hindi",
+  "source": "top10_languages_ranking_2026",
+  "captured": "2026-06-29",
+  "rank": 3,
+  "ethnologue_summary": {
+    "total_speakers_display": "~611M",
+    "native_l1_display": "~347M",
+    "family": "Indo-European (Indo-Aryan)"
+  },
+  "pronunciation_notes": [
+    "Retroflex consonants",
+    "Aspiration (voiced/unvoiced)",
+    "Schwa deletion",
+    "Devanagari script"
+  ],
+  "resources": {
+    "forvo": "https://forvo.com/languages/hi/",
+    "omniglot": "https://www.omniglot.com/writing/hindi.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/Hindi",
+    "hindustani_phonology": "https://en.wikipedia.org/wiki/Hindustani_phonology",
+    "hindipod101": "https://www.hindipod101.com/"
+  }
+}

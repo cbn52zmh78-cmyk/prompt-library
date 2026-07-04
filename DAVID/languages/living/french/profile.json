@@ -1,0 +1,29 @@
+{
+  "id": "french",
+  "name": "French",
+  "slug": "french",
+  "status": "living",
+  "revival_tier": "active",
+  "research_type": "living_top10",
+  "top10_rank_2026": 6,
+  "family": "Indo-European (Romance)",
+  "script": "Latin",
+  "total_speakers": 334000000,
+  "total_speakers_display": "~334M",
+  "native_l1_display": "~75M",
+  "primary_regions": [
+    "France",
+    "West/Central Africa",
+    "Canada",
+    "Belgium",
+    "Caribbean"
+  ],
+  "major_varieties": [
+    "Standard Parisian",
+    "Québécois",
+    "African French",
+    "Belgian"
+  ],
+  "pronunciation_profile": "languages/living/french/pronunciation/pronunciation_profile.json",
+  "profile_path": "languages/living/french/profile.json"
+}

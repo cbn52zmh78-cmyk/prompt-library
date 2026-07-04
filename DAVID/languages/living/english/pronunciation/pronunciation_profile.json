@@ -1,0 +1,79 @@
+{
+  "language": "english",
+  "status": "living",
+  "research_type": "pronunciation",
+  "ingested_from": "data/top10_languages_ranking_2026.json",
+  "ingested_at": "2026-06-29",
+  "ethnologue": {
+    "rank_2026": 1,
+    "total_speakers": 1500000000,
+    "total_speakers_display": "~1.5B",
+    "native_l1": 415000000,
+    "native_l1_display": "380-450M",
+    "l2_dominant": true,
+    "iso639_1": "en",
+    "forvo_code": "en"
+  },
+  "family": "Indo-European (Germanic)",
+  "script": "Latin",
+  "primary_regions": [
+    "Global",
+    "United States",
+    "United Kingdom",
+    "India",
+    "Nigeria",
+    "Australia",
+    "Canada"
+  ],
+  "major_varieties": [
+    "General American",
+    "Received Pronunciation",
+    "Indian English",
+    "African English",
+    "Australian/NZ English"
+  ],
+  "phonology_highlights": [
+    "Highly variable accents",
+    "Rhoticity varies by region",
+    "Vowel shifts (GA vs RP)",
+    "Intonation patterns differ widely"
+  ],
+  "dialect_notes": "Pluricentric; high L2 use in business, science, and media",
+  "pronunciation_resources": {
+    "forvo": "https://forvo.com/languages/en/",
+    "omniglot": "https://www.omniglot.com/writing/english.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/English",
+    "dialect_archive": "https://www.dialectsarchive.com/",
+    "bbc_learning": "https://www.bbc.co.uk/learningenglish/"
+  },
+  "universal_resources": [
+    "forvo",
+    "omniglot",
+    "wikipedia_ipa",
+    "wiktionary",
+    "ucla_phonetics",
+    "sounds_of_speech",
+    "youglish",
+    "ethnologue",
+    "glottolog"
+  ],
+  "grok_imagine_guidance": "Specify target variety (GenAm, RP, Indian, etc.); clear consonants; natural reduced vowels only where appropriate to variety; avoid over-flat TTS; match intonation to register (news vs conversational).",
+  "tutoring_hooks": [
+    "Rhotic vs non-rhotic /r/",
+    "TH sounds /θ ð/",
+    "Vowel quality by variety",
+    "Stress-timed rhythm"
+  ],
+  "phonology_status": "attested_native",
+  "ipa_coverage": "full",
+  "sources": [
+    {
+      "name": "Ethnologue 2026",
+      "url": "https://www.ethnologue.com/"
+    },
+    {
+      "name": "Grok browser research pass",
+      "path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\research\\top10_languages_ethnologue_2026_v1.md"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "language": "french",
+  "status": "living",
+  "research_type": "pronunciation",
+  "ingested_from": "data/top10_languages_ranking_2026.json",
+  "ingested_at": "2026-06-29",
+  "ethnologue": {
+    "rank_2026": 6,
+    "total_speakers": 334000000,
+    "total_speakers_display": "~334M",
+    "native_l1": 75000000,
+    "native_l1_display": "~75M",
+    "l2_dominant": true,
+    "iso639_1": "fr",
+    "forvo_code": "fr"
+  },
+  "family": "Indo-European (Romance)",
+  "script": "Latin",
+  "primary_regions": [
+    "France",
+    "West/Central Africa",
+    "Canada",
+    "Belgium",
+    "Caribbean"
+  ],
+  "major_varieties": [
+    "Standard Parisian",
+    "Québécois",
+    "African French",
+    "Belgian"
+  ],
+  "phonology_highlights": [
+    "Nasal vowels",
+    "Liaison and elision",
+    "Uvular /ʁ/",
+    "Final consonants often silent"
+  ],
+  "dialect_notes": "Excludes creoles; African varieties growing in global influence",
+  "pronunciation_resources": {
+    "forvo": "https://forvo.com/languages/fr/",
+    "omniglot": "https://www.omniglot.com/writing/french.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/French",
+    "academie": "https://www.academie-francaise.fr/",
+    "tv5monde": "https://www.tv5monde.com/"
+  },
+  "universal_resources": [
+    "forvo",
+    "omniglot",
+    "wikipedia_ipa",
+    "wiktionary",
+    "ucla_phonetics",
+    "sounds_of_speech",
+    "youglish",
+    "ethnologue",
+    "glottolog"
+  ],
+  "grok_imagine_guidance": "Nasal vowels rounded; liaison where expected; uvular r; Parisian standard unless Québécois/African tagged; avoid anglicized vowels.",
+  "tutoring_hooks": [
+    "Nasal vowels ɑ̃ ɛ̃ ɔ̃ œ̃",
+    "Liaison rules",
+    "Uvular /ʁ/",
+    "Silent final consonants"
+  ],
+  "phonology_status": "attested_native",
+  "ipa_coverage": "full",
+  "sources": [
+    {
+      "name": "Ethnologue 2026",
+      "url": "https://www.ethnologue.com/"
+    },
+    {
+      "name": "Grok browser research pass",
+      "path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\research\\top10_languages_ethnologue_2026_v1.md"
+    }
+  ]
+}

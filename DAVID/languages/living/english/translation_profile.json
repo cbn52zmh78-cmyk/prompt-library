@@ -1,0 +1,38 @@
+{
+  "language": "english",
+  "status": "living",
+  "research_type": "translation_service",
+  "top10_rank_2026": 1,
+  "variant_notes": {
+    "major_varieties": [
+      "General American",
+      "Received Pronunciation",
+      "Indian English",
+      "African English",
+      "Australian/NZ English"
+    ],
+    "dialect_notes": "Pluricentric; high L2 use in business, science, and media"
+  },
+  "register_system": "Formal vs informal varies by language; see major_varieties for regional targets.",
+  "translationese_traps": [
+    "Literal calques from English",
+    "Wrong regional variety for target audience",
+    "Ignoring diglossia or script conventions where applicable"
+  ],
+  "tutoring_pronunciation_hooks": [
+    "Rhotic vs non-rhotic /r/",
+    "TH sounds /θ ð/",
+    "Vowel quality by variety",
+    "Stress-timed rhythm"
+  ],
+  "professional_resources": [
+    "https://forvo.com/languages/en/",
+    "https://www.omniglot.com/writing/english.htm",
+    "https://en.wikipedia.org/wiki/Help:IPA/English",
+    "https://www.dialectsarchive.com/",
+    "https://www.bbc.co.uk/learningenglish/"
+  ],
+  "orthography_notes": "Latin",
+  "ingested_from": "data/top10_languages_ranking_2026.json",
+  "ingested_at": "2026-06-29"
+}

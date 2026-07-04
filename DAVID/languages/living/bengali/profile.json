@@ -1,0 +1,26 @@
+{
+  "id": "bengali",
+  "name": "Bengali",
+  "slug": "bengali",
+  "status": "living",
+  "revival_tier": "active",
+  "research_type": "living_top10",
+  "top10_rank_2026": 7,
+  "family": "Indo-European (Indo-Aryan)",
+  "script": "Bengali",
+  "total_speakers": 274000000,
+  "total_speakers_display": "~274M",
+  "native_l1_display": "~234M",
+  "primary_regions": [
+    "Bangladesh",
+    "India (West Bengal)"
+  ],
+  "major_varieties": [
+    "Standard Dhaka",
+    "Standard Kolkata",
+    "Sylheti",
+    "Chittagong"
+  ],
+  "pronunciation_profile": "languages/living/bengali/pronunciation/pronunciation_profile.json",
+  "profile_path": "languages/living/bengali/profile.json"
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "mandarin",
+  "source": "top10_languages_ranking_2026",
+  "captured": "2026-06-29",
+  "rank": 2,
+  "ethnologue_summary": {
+    "total_speakers_display": "~1.18-1.2B",
+    "native_l1_display": "~988M",
+    "family": "Sino-Tibetan (Sinitic)"
+  },
+  "pronunciation_notes": [
+    "Tonal (4 tones + neutral)",
+    "Tone errors change meaning",
+    "Retroflex zh/ch/sh",
+    "No consonant clusters"
+  ],
+  "resources": {
+    "forvo": "https://forvo.com/languages/zh/",
+    "omniglot": "https://www.omniglot.com/chinese/mandarin.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/Mandarin",
+    "allset_pinyin": "https://resources.allsetlearning.com/pronwiki/",
+    "yoyo_chinese": "https://www.yoyochinese.com/"
+  }
+}

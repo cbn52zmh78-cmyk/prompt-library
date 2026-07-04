@@ -1,0 +1,73 @@
+{
+  "language": "mandarin",
+  "status": "living",
+  "research_type": "pronunciation",
+  "ingested_from": "data/top10_languages_ranking_2026.json",
+  "ingested_at": "2026-06-29",
+  "ethnologue": {
+    "rank_2026": 2,
+    "total_speakers": 1190000000,
+    "total_speakers_display": "~1.18-1.2B",
+    "native_l1": 988000000,
+    "native_l1_display": "~988M",
+    "l2_dominant": false,
+    "iso639_1": "zh",
+    "forvo_code": "zh"
+  },
+  "family": "Sino-Tibetan (Sinitic)",
+  "script": "Hanzi + Pinyin",
+  "primary_regions": [
+    "China",
+    "Taiwan",
+    "Chinese diaspora"
+  ],
+  "major_varieties": [
+    "Standard Mandarin (Beijing-based)",
+    "Southern accents",
+    "Note: Cantonese/Yue and Wu are separate languages"
+  ],
+  "phonology_highlights": [
+    "Tonal (4 tones + neutral)",
+    "Tone errors change meaning",
+    "Retroflex zh/ch/sh",
+    "No consonant clusters"
+  ],
+  "dialect_notes": "Standard based on Beijing pronunciation; regional Sinitic varieties treated separately in Ethnologue",
+  "pronunciation_resources": {
+    "forvo": "https://forvo.com/languages/zh/",
+    "omniglot": "https://www.omniglot.com/chinese/mandarin.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/Mandarin",
+    "allset_pinyin": "https://resources.allsetlearning.com/pronwiki/",
+    "yoyo_chinese": "https://www.yoyochinese.com/"
+  },
+  "universal_resources": [
+    "forvo",
+    "omniglot",
+    "wikipedia_ipa",
+    "wiktionary",
+    "ucla_phonetics",
+    "sounds_of_speech",
+    "youglish",
+    "ethnologue",
+    "glottolog"
+  ],
+  "grok_imagine_guidance": "Mandarin tones mandatory on every syllable; crisp retroflexes; neutral tone on particles; standard Putonghua unless script specifies regional accent.",
+  "tutoring_hooks": [
+    "4 tones + neutral tone",
+    "Retroflex zh/ch/sh/r",
+    "Tone sandhi (e.g. 3+3→2+3)",
+    "Pinyin as tutoring aid only"
+  ],
+  "phonology_status": "attested_native",
+  "ipa_coverage": "full",
+  "sources": [
+    {
+      "name": "Ethnologue 2026",
+      "url": "https://www.ethnologue.com/"
+    },
+    {
+      "name": "Grok browser research pass",
+      "path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\research\\top10_languages_ethnologue_2026_v1.md"
+    }
+  ]
+}

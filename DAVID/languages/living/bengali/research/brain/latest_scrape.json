@@ -1,0 +1,22 @@
+{
+  "slug": "bengali",
+  "source": "top10_languages_ranking_2026",
+  "captured": "2026-06-29",
+  "rank": 7,
+  "ethnologue_summary": {
+    "total_speakers_display": "~274M",
+    "native_l1_display": "~234M",
+    "family": "Indo-European (Indo-Aryan)"
+  },
+  "pronunciation_notes": [
+    "Retroflexes",
+    "Aspirated consonants",
+    "Vowel harmony tendencies"
+  ],
+  "resources": {
+    "forvo": "https://forvo.com/languages/bn/",
+    "omniglot": "https://www.omniglot.com/writing/bengali.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/Bengali",
+    "bbc_bangla": "https://www.bbc.com/bengali"
+  }
+}

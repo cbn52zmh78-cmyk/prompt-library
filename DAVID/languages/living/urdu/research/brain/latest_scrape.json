@@ -1,0 +1,22 @@
+{
+  "slug": "urdu",
+  "source": "top10_languages_ranking_2026",
+  "captured": "2026-06-29",
+  "rank": 10,
+  "ethnologue_summary": {
+    "total_speakers_display": "~246M",
+    "native_l1_display": "~78M",
+    "family": "Indo-European (Indo-Aryan)"
+  },
+  "pronunciation_notes": [
+    "Same phonology as Hindi in speech",
+    "Perso-Arabic script and vocabulary",
+    "Retroflexes and aspiration"
+  ],
+  "resources": {
+    "forvo": "https://forvo.com/languages/ur/",
+    "omniglot": "https://www.omniglot.com/writing/urdu.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/Urdu",
+    "rekhta": "https://www.rekhta.org/"
+  }
+}

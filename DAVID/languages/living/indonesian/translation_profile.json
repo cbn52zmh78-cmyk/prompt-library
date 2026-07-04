@@ -1,0 +1,33 @@
+{
+  "language": "indonesian",
+  "status": "living",
+  "research_type": "translation_service",
+  "top10_rank_2026": 9,
+  "variant_notes": {
+    "major_varieties": [
+      "Standard Indonesian (Bahasa Indonesia)",
+      "Regional Malay-influenced sub-dialects"
+    ],
+    "dialect_notes": "Standardized from Malay; high L2 use as national lingua franca"
+  },
+  "register_system": "Formal vs informal varies by language; see major_varieties for regional targets.",
+  "translationese_traps": [
+    "Literal calques from English",
+    "Wrong regional variety for target audience",
+    "Ignoring diglossia or script conventions where applicable"
+  ],
+  "tutoring_pronunciation_hooks": [
+    "No lexical tone",
+    "Simple CV syllable structure",
+    "Schwa in open syllables",
+    "L2 lingua franca register"
+  ],
+  "professional_resources": [
+    "https://forvo.com/languages/id/",
+    "https://www.omniglot.com/writing/indonesian.htm",
+    "https://en.wikipedia.org/wiki/Help:IPA/Indonesian"
+  ],
+  "orthography_notes": "Latin",
+  "ingested_from": "data/top10_languages_ranking_2026.json",
+  "ingested_at": "2026-06-29"
+}

@@ -1,15 +1,24 @@
-# Modern Standard Arabic — Tutoring Lesson Plan (Stub)
+# Standard Arabic (MSA) — Tutoring Lesson Plan
 
-Generated from LIVING translation browser pass (2026-06-23).
+Generated from Top-10 Languages Ethnologue 2026 pass (2026-06-29).
+
+**Rank:** #5 globally (~335M total speakers)
 
 ## Pronunciation hooks
 
-- Pharyngeals (ʿayn/ghayn); emphatics; gutturals.
+- Pharyngeals ʕ ʁ
+- Emphatic ṣ ḍ ṭ ẓ
+- MSA vs dialect awareness
+- Short vowels often unwritten
 
-## Diglossia (series priority)
+## Primary resources
 
-the gulf between written MSA and spoken dialects — critical for document work; MSA mandatory formal, dialects for natural spoken adaptation.
+- [forvo](https://forvo.com/languages/ar/)
+- [omniglot](https://www.omniglot.com/writing/arabic.htm)
+- [wikipedia_ipa](https://en.wikipedia.org/wiki/Help:IPA/Arabic)
+- [talkinarabic](https://www.talkinarabic.com/)
+- [aljazeera](https://www.aljazeera.com/)
 
 ## Status
 
-Stub — expand into full lesson sequence.
+Stub — expand into full lesson sequence. Pronunciation profile: `pronunciation/pronunciation_profile.json`.

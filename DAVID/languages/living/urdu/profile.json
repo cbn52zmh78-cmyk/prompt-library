@@ -1,0 +1,24 @@
+{
+  "id": "urdu",
+  "name": "Urdu",
+  "slug": "urdu",
+  "status": "living",
+  "revival_tier": "active",
+  "research_type": "living_top10",
+  "top10_rank_2026": 10,
+  "family": "Indo-European (Indo-Aryan)",
+  "script": "Perso-Arabic (Nastaliq)",
+  "total_speakers": 246000000,
+  "total_speakers_display": "~246M",
+  "native_l1_display": "~78M",
+  "primary_regions": [
+    "Pakistan",
+    "India"
+  ],
+  "major_varieties": [
+    "Standard Urdu",
+    "Pakistani vs Indian literary registers"
+  ],
+  "pronunciation_profile": "languages/living/urdu/pronunciation/pronunciation_profile.json",
+  "profile_path": "languages/living/urdu/profile.json"
+}

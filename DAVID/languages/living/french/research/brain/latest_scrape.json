@@ -1,0 +1,24 @@
+{
+  "slug": "french",
+  "source": "top10_languages_ranking_2026",
+  "captured": "2026-06-29",
+  "rank": 6,
+  "ethnologue_summary": {
+    "total_speakers_display": "~334M",
+    "native_l1_display": "~75M",
+    "family": "Indo-European (Romance)"
+  },
+  "pronunciation_notes": [
+    "Nasal vowels",
+    "Liaison and elision",
+    "Uvular /ʁ/",
+    "Final consonants often silent"
+  ],
+  "resources": {
+    "forvo": "https://forvo.com/languages/fr/",
+    "omniglot": "https://www.omniglot.com/writing/french.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/French",
+    "academie": "https://www.academie-francaise.fr/",
+    "tv5monde": "https://www.tv5monde.com/"
+  }
+}

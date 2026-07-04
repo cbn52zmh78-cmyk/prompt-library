@@ -1,0 +1,32 @@
+{
+  "id": "english",
+  "name": "English",
+  "slug": "english",
+  "status": "living",
+  "revival_tier": "active",
+  "research_type": "living_top10",
+  "top10_rank_2026": 1,
+  "family": "Indo-European (Germanic)",
+  "script": "Latin",
+  "total_speakers": 1500000000,
+  "total_speakers_display": "~1.5B",
+  "native_l1_display": "380-450M",
+  "primary_regions": [
+    "Global",
+    "United States",
+    "United Kingdom",
+    "India",
+    "Nigeria",
+    "Australia",
+    "Canada"
+  ],
+  "major_varieties": [
+    "General American",
+    "Received Pronunciation",
+    "Indian English",
+    "African English",
+    "Australian/NZ English"
+  ],
+  "pronunciation_profile": "languages/living/english/pronunciation/pronunciation_profile.json",
+  "profile_path": "languages/living/english/profile.json"
+}

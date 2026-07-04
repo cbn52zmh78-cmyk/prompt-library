@@ -1,0 +1,22 @@
+{
+  "slug": "portuguese",
+  "source": "top10_languages_ranking_2026",
+  "captured": "2026-06-29",
+  "rank": 8,
+  "ethnologue_summary": {
+    "total_speakers_display": "~269M",
+    "native_l1_display": "~252M",
+    "family": "Indo-European (Romance)"
+  },
+  "pronunciation_notes": [
+    "Stronger nasalization in Brazil",
+    "Sibilant differences EU vs BR",
+    "Open vowels"
+  ],
+  "resources": {
+    "forvo": "https://forvo.com/languages/pt/",
+    "omniglot": "https://www.omniglot.com/writing/portuguese.htm",
+    "wikipedia_ipa": "https://en.wikipedia.org/wiki/Help:IPA/Portuguese",
+    "camoes": "https://www.instituto-camoes.pt/"
+  }
+}

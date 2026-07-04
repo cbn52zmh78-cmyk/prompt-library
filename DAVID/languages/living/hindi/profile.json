@@ -1,0 +1,24 @@
+{
+  "id": "hindi",
+  "name": "Hindi",
+  "slug": "hindi",
+  "status": "living",
+  "revival_tier": "active",
+  "research_type": "living_top10",
+  "top10_rank_2026": 3,
+  "family": "Indo-European (Indo-Aryan)",
+  "script": "Devanagari",
+  "total_speakers": 611000000,
+  "total_speakers_display": "~611M",
+  "native_l1_display": "~347M",
+  "primary_regions": [
+    "India",
+    "Fiji"
+  ],
+  "major_varieties": [
+    "Standard Hindi",
+    "Hindustani continuum with Urdu"
+  ],
+  "pronunciation_profile": "languages/living/hindi/pronunciation/pronunciation_profile.json",
+  "profile_path": "languages/living/hindi/profile.json"
+}

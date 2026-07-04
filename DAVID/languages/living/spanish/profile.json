@@ -1,0 +1,28 @@
+{
+  "id": "spanish",
+  "name": "Spanish",
+  "slug": "spanish",
+  "status": "living",
+  "revival_tier": "active",
+  "research_type": "living_top10",
+  "top10_rank_2026": 4,
+  "family": "Indo-European (Romance)",
+  "script": "Latin",
+  "total_speakers": 561000000,
+  "total_speakers_display": "~561M",
+  "native_l1_display": "~487M",
+  "primary_regions": [
+    "Spain",
+    "Mexico",
+    "Colombia",
+    "Argentina",
+    "Latin America"
+  ],
+  "major_varieties": [
+    "Peninsular (Castilian)",
+    "Latin American",
+    "Rioplatense (voseo)"
+  ],
+  "pronunciation_profile": "languages/living/spanish/pronunciation/pronunciation_profile.json",
+  "profile_path": "languages/living/spanish/profile.json"
+}
