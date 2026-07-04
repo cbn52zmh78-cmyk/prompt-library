@@ -41,3 +41,13 @@ build/
 
 # DAVID production video renders (kept on disk, not committed)
 DAVID/productions/**/*.mp4
+
+# Training adapter archives (large binaries, never commit)
+adapter.tar.gz
+*.tar.gz
+
+# Claude local settings
+.claude/
+
+# Agent-tools ephemeral outputs
+agent-tools/*.txt
