@@ -36,6 +36,87 @@ BLUE_STARVATION_B_MAX = 12.0
 BLUE_STARVATION_LUM_MAX = 90.0
 
 
+# --------------------------------------------------------------------------
+# Style-aware grade families (#style-QA)
+# --------------------------------------------------------------------------
+# The clinical band above is the *neutral* target. A director/art style is an
+# INTENTIONAL departure from neutral, so QA must judge a styled frame against the
+# style's intended look, not clinical-neutral — otherwise it "corrects" the look
+# back out (Fincher's sickly-green inky blacks read as a yellow-green +
+# blue-starvation breach; Anderson's warm pastel reads as a warm cast).
+#
+# A grade family is a set of threshold RELAXATIONS layered over the clinical
+# defaults. Empty dict == clinical-neutral == today's behavior. Resolve a family
+# to a profile with grade_family_profile(); pass that profile into
+# color_cast_breaches()/color_cast_passes(). No profile → clinical, unchanged.
+#
+# Keys (all optional; omitted → clinical default): rgb_skew_max, ccb_max,
+# blue_starvation_fraction_max, host_br_ratio_min, host_blue_mean_min,
+# blue_starvation_b_max, blue_starvation_lum_max.
+GRADE_FAMILIES: dict[str, dict[str, float]] = {
+    # neutral documentary / clinical seamless — the default target
+    "clinical_neutral": {},
+    # Anderson/Yeoman: warm high-key pastel — warm skew is intent; keep blue health
+    "warm_pastel": {"rgb_skew_max": 0.20, "ccb_max": 0.20},
+    # golden-hour / warm documentary — stronger amber allowed, some blue floor kept
+    "warm_gold": {"rgb_skew_max": 0.24, "ccb_max": 0.22, "host_br_ratio_min": 0.16},
+    # Fincher/Khondji: desaturated green-gold, bleach-bypass, inky blacks
+    "desaturated_cool": {
+        "rgb_skew_max": 0.22, "ccb_max": 0.22,
+        "blue_starvation_fraction_max": 0.80, "host_br_ratio_min": 0.10,
+        "host_blue_mean_min": 8.0, "blue_starvation_b_max": 5.0,
+    },
+    # classic noir: crushed blacks, high contrast, cool low-key
+    "noir": {
+        "rgb_skew_max": 0.20, "ccb_max": 0.20,
+        "blue_starvation_fraction_max": 0.90, "host_br_ratio_min": 0.08,
+        "host_blue_mean_min": 8.0, "blue_starvation_b_max": 4.0,
+        "blue_starvation_lum_max": 70.0,
+    },
+    # blockbuster teal-orange: warm skin against teal shadows
+    "teal_orange": {"rgb_skew_max": 0.18, "ccb_max": 0.20, "host_br_ratio_min": 0.16},
+    # bright, low-contrast — clinical band is already fine
+    "high_key": {},
+}
+DEFAULT_GRADE_FAMILY = "clinical_neutral"
+
+
+def grade_family_profile(name: str | None) -> dict[str, float]:
+    """Resolve a style's grade-family name to a threshold-override profile.
+    Unknown/None → clinical-neutral (empty overrides = today's behavior)."""
+    return GRADE_FAMILIES.get((name or DEFAULT_GRADE_FAMILY), {})
+
+
+# style_dna_tag / director_persona_id  ->  grade family.
+# Seeded from the style registry prose (director_cinematographer_style_prompts_v1).
+# Unmapped ids fall back to clinical_neutral (no behavior change). Extend as styles
+# are classified — or set `grade_family` directly on a movie config / scene block to
+# bypass this map entirely.
+STYLE_GRADE_FAMILY: dict[str, str] = {
+    # --- visual styles (director_cinematographer_style_prompts_v1) ---
+    "style_fincher_khondji":     "desaturated_cool",  # inky blacks, sickly green, bleach-bypass
+    "style_anderson_yeoman":     "warm_pastel",       # symmetrical vibrant pastel, high-key
+    "style_coppola_willis":      "warm_gold",         # Godfather amber chiaroscuro, deep shadow
+    "style_deakins_villeneuve":  "teal_orange",       # BR2049 warm/cool haze, sculpted light
+    "style_bergman_nykvist":     "high_key",          # luminous naturalism, soft single-source
+    "style_bertolucci_storaro":  "teal_orange",       # bold warm/cool color theory (Storaro)
+    "style_cuaron_lubezki":      "desaturated_cool",  # Children of Men desaturated available-light
+    # --- hybrid styles (grok_hybrid_styles_camera_innovations_v1) — inferred from blend ---
+    "hybrid_fincher_deakins":          "desaturated_cool",
+    "hybrid_anderson_storaro":         "warm_pastel",
+    "hybrid_coppola_lubezki":          "warm_gold",
+    "hybrid_deakins_bergman":          "desaturated_cool",
+    "hybrid_storaro_cuaron":           "teal_orange",
+    "hybrid_fincher_anderson_deakins": "desaturated_cool",
+    # hybrid_omniscient_evolution intentionally unmapped -> clinical (needs calibration)
+}
+
+
+def resolve_grade_family(style_id: str | None) -> str:
+    """Map a style/director id to a grade-family name (clinical_neutral if unmapped)."""
+    return STYLE_GRADE_FAMILY.get(style_id or "", DEFAULT_GRADE_FAMILY)
+
+
 def host_region(arr: np.ndarray, *, step: int = 6) -> np.ndarray:
     h, w = arr.shape[:2]
     return arr[int(h * 0.18): int(h * 0.72): step, int(w * 0.08): int(w * 0.48): step]
@@ -120,31 +201,48 @@ def measure_color_cast(arr: np.ndarray) -> dict[str, float]:
     }
 
 
-def color_cast_breaches(metrics: dict[str, float]) -> list[str]:
+def color_cast_breaches(
+    metrics: dict[str, float],
+    profile: dict[str, float] | None = None,
+) -> list[str]:
+    """Cast breaches vs the clinical band, or vs a style's grade-family band when
+    a profile is given. profile == None → clinical-neutral (unchanged behavior)."""
+    p = profile or {}
+    rgb_skew_max = p.get("rgb_skew_max", RGB_SKEW_MAX)
+    ccb_max = p.get("ccb_max", CLINICAL_CHANNEL_BALANCE_MAX)
+    starve_max = p.get("blue_starvation_fraction_max", BLUE_STARVATION_FRACTION_MAX)
+    br_min = p.get("host_br_ratio_min", HOST_BR_RATIO_MIN)
+    bmean_min = p.get("host_blue_mean_min", HOST_BLUE_MEAN_MIN)
+    starve_b_max = p.get("blue_starvation_b_max", BLUE_STARVATION_B_MAX)
+    starve_lum_max = p.get("blue_starvation_lum_max", BLUE_STARVATION_LUM_MAX)
+
     issues: list[str] = []
     lum = metrics.get("lum", 0.0)
     skew = metrics.get("rgb_skew", 0.0)
-    if skew > RGB_SKEW_MAX:
-        issues.append(f"rgb_skew {skew:.4f} > {RGB_SKEW_MAX}")
+    if skew > rgb_skew_max:
+        issues.append(f"rgb_skew {skew:.4f} > {rgb_skew_max}")
     ccb = metrics.get("clinical_channel_balance", 0.0)
-    if 80 <= lum <= 220 and ccb > CLINICAL_CHANNEL_BALANCE_MAX:
-        issues.append(f"clinical_channel_balance {ccb:.4f} > {CLINICAL_CHANNEL_BALANCE_MAX}")
+    if 80 <= lum <= 220 and ccb > ccb_max:
+        issues.append(f"clinical_channel_balance {ccb:.4f} > {ccb_max}")
     starve = metrics.get("blue_starvation_fraction", 0.0)
     br = metrics.get("host_br_ratio", 1.0)
     bmean = metrics.get("host_blue_mean", 255.0)
-    if starve > BLUE_STARVATION_FRACTION_MAX:
-        issues.append(f"blue_starvation_fraction {starve:.3f} > {BLUE_STARVATION_FRACTION_MAX}")
-    if br < HOST_BR_RATIO_MIN:
-        issues.append(f"host B/R {br:.3f} < {HOST_BR_RATIO_MIN}")
-    if lum < BLUE_STARVATION_LUM_MAX and bmean < BLUE_STARVATION_B_MAX:
+    if starve > starve_max:
+        issues.append(f"blue_starvation_fraction {starve:.3f} > {starve_max}")
+    if br < br_min:
+        issues.append(f"host B/R {br:.3f} < {br_min}")
+    if lum < starve_lum_max and bmean < starve_b_max:
         issues.append(f"blue_starvation B={bmean:.1f} lum={lum:.1f}")
-    elif bmean < HOST_BLUE_MEAN_MIN and lum < BLUE_STARVATION_LUM_MAX:
-        issues.append(f"host B mean {bmean:.1f} < {HOST_BLUE_MEAN_MIN}")
+    elif bmean < bmean_min and lum < starve_lum_max:
+        issues.append(f"host B mean {bmean:.1f} < {bmean_min}")
     return issues
 
 
-def color_cast_passes(metrics: dict[str, float]) -> bool:
-    return not color_cast_breaches(metrics)
+def color_cast_passes(
+    metrics: dict[str, float],
+    profile: dict[str, float] | None = None,
+) -> bool:
+    return not color_cast_breaches(metrics, profile)
 
 
 def generation_reference_breaches(

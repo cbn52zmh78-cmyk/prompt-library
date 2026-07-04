@@ -1,0 +1,1953 @@
+{
+  "catalog_version": "1.1",
+  "product": "movie",
+  "entity_types": [
+    "CHAR",
+    "LOC",
+    "PROP",
+    "STYLE",
+    "SET",
+    "SHOT"
+  ],
+  "franchise": "DAVID_Productions",
+  "created": "2026-06-30T07:58:19.988344+00:00",
+  "saved_at": "2026-07-02T04:52:13.647725+00:00",
+  "entry_count": 94,
+  "_next_ids": {
+    "CHAR": 73,
+    "LOC": 1,
+    "PROP": 1,
+    "STYLE": 11,
+    "SET": 13,
+    "SHOT": 1
+  },
+  "entries": {
+    "@CHAR_001": {
+      "id": "@CHAR_001",
+      "type": "CHAR",
+      "name": "David",
+      "created": "2026-06-30T07:58:20.069856+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "David-001",
+        "@David-001",
+        "DAVID"
+      ],
+      "merged_into": null,
+      "state": {
+        "plate_file": "david_talent_v3.png",
+        "plate_type": "actor",
+        "ingest_id": "actor_david_v3",
+        "mtime": null,
+        "size": null
+      },
+      "history": [],
+      "notes": "Auto-registered from ingest watcher (plate_actor)"
+    },
+    "@SET_001": {
+      "id": "@SET_001",
+      "type": "SET",
+      "name": "Archive Chamber",
+      "created": "2026-06-30T07:58:20.131169+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Set-Archive-001",
+        "@Set-Archive-001",
+        "Set-Archive",
+        "The Archive"
+      ],
+      "merged_into": null,
+      "state": {
+        "plate_file": "archive_set_reference_v5.png",
+        "plate_type": "environment",
+        "ingest_id": "set_archive_v1",
+        "mtime": null,
+        "size": null
+      },
+      "history": [],
+      "notes": "Auto-registered from ingest watcher (plate_set)"
+    },
+    "@SET_002": {
+      "id": "@SET_002",
+      "type": "SET",
+      "name": "The Archive",
+      "created": "2026-06-30T07:58:35.420185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Set-Archive-001",
+        "@Set-Archive-001",
+        "The Archive",
+        "Set-Archive"
+      ],
+      "merged_into": null,
+      "state": {
+        "file": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\host_identity_v1\\references\\archive_set_reference.jpg",
+        "url": "https://imgen.x.ai/xai-imgen/xai-tmp-imgen-c120ce39-9839-4911-95d3-f8eff746c245.jpeg"
+      },
+      "history": [],
+      "notes": "Bootstrapped from identity lock set_plate reference"
+    },
+    "@CHAR_002": {
+      "id": "@CHAR_002",
+      "type": "CHAR",
+      "name": "Aiko Nakamura",
+      "created": "2026-06-30T07:58:35.421185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Aiko-001",
+        "@Aiko-001",
+        "Aiko",
+        "aiko_nakamura"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Aiko-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Aiko-001"
+    },
+    "@CHAR_003": {
+      "id": "@CHAR_003",
+      "type": "CHAR",
+      "name": "Amahle Ndaba",
+      "created": "2026-06-30T07:58:35.421185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Amahle-001",
+        "@Amahle-001",
+        "Amahle",
+        "amahle_ndaba"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Amahle-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Amahle-001"
+    },
+    "@CHAR_004": {
+      "id": "@CHAR_004",
+      "type": "CHAR",
+      "name": "Amara Singh",
+      "created": "2026-06-30T07:58:35.421185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Amara-001",
+        "@Amara-001",
+        "Amara",
+        "amara_singh"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Amara-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Amara-001"
+    },
+    "@CHAR_005": {
+      "id": "@CHAR_005",
+      "type": "CHAR",
+      "name": "Amir Khalil",
+      "created": "2026-06-30T07:58:35.421185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Amir-001",
+        "@Amir-001",
+        "Amir",
+        "amir_khalil"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Amir-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Amir-001"
+    },
+    "@CHAR_006": {
+      "id": "@CHAR_006",
+      "type": "CHAR",
+      "name": "Ananya Reddy",
+      "created": "2026-06-30T07:58:35.422185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Ananya-001",
+        "@Ananya-001",
+        "Ananya",
+        "ananya_reddy"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Ananya-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Ananya-001"
+    },
+    "@CHAR_007": {
+      "id": "@CHAR_007",
+      "type": "CHAR",
+      "name": "Anastasia Volkov",
+      "created": "2026-06-30T07:58:35.422185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Anastasia-001",
+        "@Anastasia-001",
+        "Anastasia",
+        "anastasia_volkov"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Anastasia-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Anastasia-001"
+    },
+    "@CHAR_008": {
+      "id": "@CHAR_008",
+      "type": "CHAR",
+      "name": "Andre Silva",
+      "created": "2026-06-30T07:58:35.422185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Andre-001",
+        "@Andre-001",
+        "Andre",
+        "andre_silva"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Andre-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Andre-001"
+    },
+    "@CHAR_009": {
+      "id": "@CHAR_009",
+      "type": "CHAR",
+      "name": "Arjun Mehta",
+      "created": "2026-06-30T07:58:35.422185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Arjun-001",
+        "@Arjun-001",
+        "Arjun",
+        "arjun_mehta"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Arjun-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Arjun-001"
+    },
+    "@CHAR_010": {
+      "id": "@CHAR_010",
+      "type": "CHAR",
+      "name": "Bridget Okafor",
+      "created": "2026-06-30T07:58:35.422185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "BridgetOkafor-001",
+        "@BridgetOkafor-001",
+        "BridgetOkafor",
+        "bridget_okafor"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "BridgetOkafor-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — BridgetOkafor-001"
+    },
+    "@CHAR_011": {
+      "id": "@CHAR_011",
+      "type": "CHAR",
+      "name": "Bridget Walsh",
+      "created": "2026-06-30T07:58:35.422185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "BridgetWalsh-001",
+        "@BridgetWalsh-001",
+        "BridgetWalsh",
+        "bridget_walsh"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "BridgetWalsh-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — BridgetWalsh-001"
+    },
+    "@CHAR_012": {
+      "id": "@CHAR_012",
+      "type": "CHAR",
+      "name": "Camille Reyes",
+      "created": "2026-06-30T07:58:35.422185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Camille-001",
+        "@Camille-001",
+        "Camille",
+        "camille_reyes"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Camille-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Camille-001"
+    },
+    "@CHAR_013": {
+      "id": "@CHAR_013",
+      "type": "CHAR",
+      "name": "Carlos Mendez",
+      "created": "2026-06-30T07:58:35.422185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Carlos-001",
+        "@Carlos-001",
+        "Carlos",
+        "carlos_mendez"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Carlos-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Carlos-001"
+    },
+    "@CHAR_014": {
+      "id": "@CHAR_014",
+      "type": "CHAR",
+      "name": "Carmen Delgado",
+      "created": "2026-06-30T07:58:35.422185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Carmen-001",
+        "@Carmen-001",
+        "Carmen",
+        "carmen_delgado"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Carmen-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Carmen-001"
+    },
+    "@CHAR_015": {
+      "id": "@CHAR_015",
+      "type": "CHAR",
+      "name": "Chiara Romano",
+      "created": "2026-06-30T07:58:35.422185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Chiara-001",
+        "@Chiara-001",
+        "Chiara",
+        "chiara_romano"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Chiara-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Chiara-001"
+    },
+    "@CHAR_016": {
+      "id": "@CHAR_016",
+      "type": "CHAR",
+      "name": "Connor Mitchell",
+      "created": "2026-06-30T07:58:35.422185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Connor-001",
+        "@Connor-001",
+        "Connor",
+        "connor_mitchell"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Connor-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Connor-001"
+    },
+    "@CHAR_017": {
+      "id": "@CHAR_017",
+      "type": "CHAR",
+      "name": "Dante Reyes",
+      "created": "2026-06-30T07:58:35.422185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Dante-001",
+        "@Dante-001",
+        "Dante",
+        "dante_reyes"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Dante-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Dante-001"
+    },
+    "@CHAR_018": {
+      "id": "@CHAR_018",
+      "type": "CHAR",
+      "name": "Diego Morales",
+      "created": "2026-06-30T07:58:35.422185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Diego-001",
+        "@Diego-001",
+        "Diego",
+        "diego_morales"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Diego-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Diego-001"
+    },
+    "@CHAR_019": {
+      "id": "@CHAR_019",
+      "type": "CHAR",
+      "name": "Dmitri Kozlov",
+      "created": "2026-06-30T07:58:35.423185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Dmitri-001",
+        "@Dmitri-001",
+        "Dmitri",
+        "dmitri_kozlov"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Dmitri-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Dmitri-001"
+    },
+    "@CHAR_020": {
+      "id": "@CHAR_020",
+      "type": "CHAR",
+      "name": "Elijah Brooks",
+      "created": "2026-06-30T07:58:35.423185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Elijah-001",
+        "@Elijah-001",
+        "Elijah",
+        "elijah_brooks"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Elijah-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Elijah-001"
+    },
+    "@CHAR_021": {
+      "id": "@CHAR_021",
+      "type": "CHAR",
+      "name": "Elinor Trevelyan",
+      "created": "2026-06-30T07:58:35.423185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Elinor-001",
+        "@Elinor-001",
+        "Elinor",
+        "elinor_trevelyan"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Elinor-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Elinor-001"
+    },
+    "@CHAR_022": {
+      "id": "@CHAR_022",
+      "type": "CHAR",
+      "name": "Emma Larsen",
+      "created": "2026-06-30T07:58:35.423185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Emma-001",
+        "@Emma-001",
+        "Emma",
+        "emma_larsen"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Emma-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Emma-001"
+    },
+    "@CHAR_023": {
+      "id": "@CHAR_023",
+      "type": "CHAR",
+      "name": "Ethan Shaw",
+      "created": "2026-06-30T07:58:35.423185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Ethan-001",
+        "@Ethan-001",
+        "Ethan",
+        "ethan_shaw"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Ethan-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Ethan-001"
+    },
+    "@CHAR_024": {
+      "id": "@CHAR_024",
+      "type": "CHAR",
+      "name": "Fatima Al-Hassan",
+      "created": "2026-06-30T07:58:35.423185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Fatima-001",
+        "@Fatima-001",
+        "Fatima",
+        "fatima_al_hassan"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Fatima-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Fatima-001"
+    },
+    "@CHAR_025": {
+      "id": "@CHAR_025",
+      "type": "CHAR",
+      "name": "Finn MacAllister",
+      "created": "2026-06-30T07:58:35.423185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Finn-001",
+        "@Finn-001",
+        "Finn",
+        "finn_macallister"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Finn-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Finn-001"
+    },
+    "@CHAR_026": {
+      "id": "@CHAR_026",
+      "type": "CHAR",
+      "name": "Grace Okonkwo",
+      "created": "2026-06-30T07:58:35.423185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Grace-001",
+        "@Grace-001",
+        "Grace",
+        "grace_okonkwo"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Grace-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Grace-001"
+    },
+    "@CHAR_027": {
+      "id": "@CHAR_027",
+      "type": "CHAR",
+      "name": "Hana Park",
+      "created": "2026-06-30T07:58:35.424185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Hana-001",
+        "@Hana-001",
+        "Hana",
+        "hana_park"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Hana-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Hana-001"
+    },
+    "@CHAR_028": {
+      "id": "@CHAR_028",
+      "type": "CHAR",
+      "name": "Hassan Odeh",
+      "created": "2026-06-30T07:58:35.424185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Hassan-001",
+        "@Hassan-001",
+        "Hassan",
+        "hassan_odeh"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Hassan-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Hassan-001"
+    },
+    "@CHAR_029": {
+      "id": "@CHAR_029",
+      "type": "CHAR",
+      "name": "Inés Marchetti",
+      "created": "2026-06-30T07:58:35.424185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Inés-001",
+        "@Inés-001",
+        "Inés",
+        "in_s_marchetti"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Inés-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Inés-001"
+    },
+    "@CHAR_030": {
+      "id": "@CHAR_030",
+      "type": "CHAR",
+      "name": "Isabella Vargas",
+      "created": "2026-06-30T07:58:35.424185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Isabella-001",
+        "@Isabella-001",
+        "Isabella",
+        "isabella_vargas"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Isabella-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Isabella-001"
+    },
+    "@CHAR_031": {
+      "id": "@CHAR_031",
+      "type": "CHAR",
+      "name": "James Whitmore",
+      "created": "2026-06-30T07:58:35.424185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "James-001",
+        "@James-001",
+        "James",
+        "james_whitmore"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "James-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — James-001"
+    },
+    "@CHAR_032": {
+      "id": "@CHAR_032",
+      "type": "CHAR",
+      "name": "Jayden Tau",
+      "created": "2026-06-30T07:58:35.424185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Jayden-001",
+        "@Jayden-001",
+        "Jayden",
+        "jayden_tau"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Jayden-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Jayden-001"
+    },
+    "@CHAR_033": {
+      "id": "@CHAR_033",
+      "type": "CHAR",
+      "name": "Ji-Yeon Park",
+      "created": "2026-06-30T07:58:35.425185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "JiYeon-001",
+        "@JiYeon-001",
+        "JiYeon",
+        "ji_yeon_park"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "JiYeon-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — JiYeon-001"
+    },
+    "@CHAR_034": {
+      "id": "@CHAR_034",
+      "type": "CHAR",
+      "name": "Julian Cross",
+      "created": "2026-06-30T07:58:35.425185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Julian-001",
+        "@Julian-001",
+        "Julian",
+        "julian_cross"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Julian-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Julian-001"
+    },
+    "@CHAR_035": {
+      "id": "@CHAR_035",
+      "type": "CHAR",
+      "name": "Katya Morozova",
+      "created": "2026-06-30T07:58:35.425185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Katya-001",
+        "@Katya-001",
+        "Katya",
+        "katya_morozova"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Katya-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Katya-001"
+    },
+    "@CHAR_036": {
+      "id": "@CHAR_036",
+      "type": "CHAR",
+      "name": "Kenji Sato",
+      "created": "2026-06-30T07:58:35.425185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Kenji-001",
+        "@Kenji-001",
+        "Kenji",
+        "kenji_sato"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Kenji-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Kenji-001"
+    },
+    "@CHAR_037": {
+      "id": "@CHAR_037",
+      "type": "CHAR",
+      "name": "Khalid Mansour",
+      "created": "2026-06-30T07:58:35.425185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Khalid-001",
+        "@Khalid-001",
+        "Khalid",
+        "khalid_mansour"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Khalid-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Khalid-001"
+    },
+    "@CHAR_038": {
+      "id": "@CHAR_038",
+      "type": "CHAR",
+      "name": "Kofi Mensah",
+      "created": "2026-06-30T07:58:35.425185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Kofi-001",
+        "@Kofi-001",
+        "Kofi",
+        "kofi_mensah"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Kofi-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Kofi-001"
+    },
+    "@CHAR_039": {
+      "id": "@CHAR_039",
+      "type": "CHAR",
+      "name": "Lars Eriksson",
+      "created": "2026-06-30T07:58:35.426268+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Lars-001",
+        "@Lars-001",
+        "Lars",
+        "lars_eriksson"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Lars-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Lars-001"
+    },
+    "@CHAR_040": {
+      "id": "@CHAR_040",
+      "type": "CHAR",
+      "name": "Layla Mansour",
+      "created": "2026-06-30T07:58:35.426268+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Layla-001",
+        "@Layla-001",
+        "Layla",
+        "layla_mansour"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Layla-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Layla-001"
+    },
+    "@CHAR_041": {
+      "id": "@CHAR_041",
+      "type": "CHAR",
+      "name": "Linh Nguyen",
+      "created": "2026-06-30T07:58:35.426268+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Linh-001",
+        "@Linh-001",
+        "Linh",
+        "linh_nguyen"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Linh-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Linh-001"
+    },
+    "@CHAR_042": {
+      "id": "@CHAR_042",
+      "type": "CHAR",
+      "name": "Luca Fontaine",
+      "created": "2026-06-30T07:58:35.426268+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Luca-001",
+        "@Luca-001",
+        "Luca",
+        "luca_fontaine"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Luca-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Luca-001"
+    },
+    "@CHAR_043": {
+      "id": "@CHAR_043",
+      "type": "CHAR",
+      "name": "Maeve O'Sullivan",
+      "created": "2026-06-30T07:58:35.427186+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Maeve-001",
+        "@Maeve-001",
+        "Maeve",
+        "maeve_o_sullivan"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Maeve-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Maeve-001"
+    },
+    "@CHAR_044": {
+      "id": "@CHAR_044",
+      "type": "CHAR",
+      "name": "Malik Diallo",
+      "created": "2026-06-30T07:58:35.427186+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Malik-001",
+        "@Malik-001",
+        "Malik",
+        "malik_diallo"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Malik-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Malik-001"
+    },
+    "@CHAR_045": {
+      "id": "@CHAR_045",
+      "type": "CHAR",
+      "name": "Marco Esposito",
+      "created": "2026-06-30T07:58:35.427186+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Marco-001",
+        "@Marco-001",
+        "Marco",
+        "marco_esposito"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Marco-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Marco-001"
+    },
+    "@CHAR_046": {
+      "id": "@CHAR_046",
+      "type": "CHAR",
+      "name": "Marcus Cole",
+      "created": "2026-06-30T07:58:35.427186+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Marcus-001",
+        "@Marcus-001",
+        "Marcus",
+        "marcus_cole"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Marcus-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Marcus-001"
+    },
+    "@CHAR_047": {
+      "id": "@CHAR_047",
+      "type": "CHAR",
+      "name": "Mei-Ling Chen",
+      "created": "2026-06-30T07:58:35.428185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "MeiLing-001",
+        "@MeiLing-001",
+        "MeiLing",
+        "mei_ling_chen"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "MeiLing-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — MeiLing-001"
+    },
+    "@CHAR_048": {
+      "id": "@CHAR_048",
+      "type": "CHAR",
+      "name": "Nadia Okoro",
+      "created": "2026-06-30T07:58:35.428185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Nadia-001",
+        "@Nadia-001",
+        "Nadia",
+        "nadia_okoro"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Nadia-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Nadia-001"
+    },
+    "@CHAR_049": {
+      "id": "@CHAR_049",
+      "type": "CHAR",
+      "name": "Nikolai Volsky",
+      "created": "2026-06-30T07:58:35.428185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Nikolai-001",
+        "@Nikolai-001",
+        "Nikolai",
+        "nikolai_volsky"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Nikolai-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Nikolai-001"
+    },
+    "@CHAR_050": {
+      "id": "@CHAR_050",
+      "type": "CHAR",
+      "name": "Noor El-Amir",
+      "created": "2026-06-30T07:58:35.428185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Noor-001",
+        "@Noor-001",
+        "Noor",
+        "noor_el_amir"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Noor-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Noor-001"
+    },
+    "@CHAR_051": {
+      "id": "@CHAR_051",
+      "type": "CHAR",
+      "name": "Olivia Mercer",
+      "created": "2026-06-30T07:58:35.429185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Olivia-001",
+        "@Olivia-001",
+        "Olivia",
+        "olivia_mercer"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Olivia-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Olivia-001"
+    },
+    "@CHAR_052": {
+      "id": "@CHAR_052",
+      "type": "CHAR",
+      "name": "Oluwaseun Bakare",
+      "created": "2026-06-30T07:58:35.429185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Oluwaseun-001",
+        "@Oluwaseun-001",
+        "Oluwaseun",
+        "oluwaseun_bakare"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Oluwaseun-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Oluwaseun-001"
+    },
+    "@CHAR_053": {
+      "id": "@CHAR_053",
+      "type": "CHAR",
+      "name": "Pierre Dubois",
+      "created": "2026-06-30T07:58:35.429185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Pierre-001",
+        "@Pierre-001",
+        "Pierre",
+        "pierre_dubois"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Pierre-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Pierre-001"
+    },
+    "@CHAR_054": {
+      "id": "@CHAR_054",
+      "type": "CHAR",
+      "name": "Priya Malhotra",
+      "created": "2026-06-30T07:58:35.429185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Priya-001",
+        "@Priya-001",
+        "Priya",
+        "priya_malhotra"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Priya-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Priya-001"
+    },
+    "@CHAR_055": {
+      "id": "@CHAR_055",
+      "type": "CHAR",
+      "name": "Rachel Cohen",
+      "created": "2026-06-30T07:58:35.430185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Rachel-001",
+        "@Rachel-001",
+        "Rachel",
+        "rachel_cohen"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Rachel-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Rachel-001"
+    },
+    "@CHAR_056": {
+      "id": "@CHAR_056",
+      "type": "CHAR",
+      "name": "Rafael Costa",
+      "created": "2026-06-30T07:58:35.430185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Rafael-001",
+        "@Rafael-001",
+        "Rafael",
+        "rafael_costa"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Rafael-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Rafael-001"
+    },
+    "@CHAR_057": {
+      "id": "@CHAR_057",
+      "type": "CHAR",
+      "name": "Ravi Menon",
+      "created": "2026-06-30T07:58:35.430185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Ravi-001",
+        "@Ravi-001",
+        "Ravi",
+        "ravi_menon"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Ravi-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Ravi-001"
+    },
+    "@CHAR_058": {
+      "id": "@CHAR_058",
+      "type": "CHAR",
+      "name": "Ren Hayashi",
+      "created": "2026-06-30T07:58:35.431185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Ren-001",
+        "@Ren-001",
+        "Ren",
+        "ren_hayashi"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Ren-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Ren-001"
+    },
+    "@CHAR_059": {
+      "id": "@CHAR_059",
+      "type": "CHAR",
+      "name": "Sam Brody",
+      "created": "2026-06-30T07:58:35.431185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Sam-001",
+        "@Sam-001",
+        "Sam",
+        "sam_brody"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Sam-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Sam-001"
+    },
+    "@CHAR_060": {
+      "id": "@CHAR_060",
+      "type": "CHAR",
+      "name": "Serena Blake",
+      "created": "2026-06-30T07:58:35.431185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Serena-001",
+        "@Serena-001",
+        "Serena",
+        "serena_blake"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Serena-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Serena-001"
+    },
+    "@CHAR_061": {
+      "id": "@CHAR_061",
+      "type": "CHAR",
+      "name": "Sienna Laurent",
+      "created": "2026-06-30T07:58:35.431185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Sienna-001",
+        "@Sienna-001",
+        "Sienna",
+        "sienna_laurent"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Sienna-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Sienna-001"
+    },
+    "@CHAR_062": {
+      "id": "@CHAR_062",
+      "type": "CHAR",
+      "name": "Sofia Andersson",
+      "created": "2026-06-30T07:58:35.432185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Sofia-001",
+        "@Sofia-001",
+        "Sofia",
+        "sofia_andersson"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Sofia-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Sofia-001"
+    },
+    "@CHAR_063": {
+      "id": "@CHAR_063",
+      "type": "CHAR",
+      "name": "Tessa Walsh",
+      "created": "2026-06-30T07:58:35.432185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Tessa-001",
+        "@Tessa-001",
+        "Tessa",
+        "tessa_walsh"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Tessa-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Tessa-001"
+    },
+    "@CHAR_064": {
+      "id": "@CHAR_064",
+      "type": "CHAR",
+      "name": "Theo Nakamura",
+      "created": "2026-06-30T07:58:35.432185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Theo-001",
+        "@Theo-001",
+        "Theo",
+        "theo_nakamura"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Theo-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Theo-001"
+    },
+    "@CHAR_065": {
+      "id": "@CHAR_065",
+      "type": "CHAR",
+      "name": "Tomas Novak",
+      "created": "2026-06-30T07:58:35.433185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Tomas-001",
+        "@Tomas-001",
+        "Tomas",
+        "tomas_novak"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Tomas-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Tomas-001"
+    },
+    "@CHAR_066": {
+      "id": "@CHAR_066",
+      "type": "CHAR",
+      "name": "Valentina Moreau",
+      "created": "2026-06-30T07:58:35.433185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Valentina-001",
+        "@Valentina-001",
+        "Valentina",
+        "valentina_moreau"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Valentina-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Valentina-001"
+    },
+    "@CHAR_067": {
+      "id": "@CHAR_067",
+      "type": "CHAR",
+      "name": "Vikram Rathore",
+      "created": "2026-06-30T07:58:35.433185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Vikram-001",
+        "@Vikram-001",
+        "Vikram",
+        "vikram_rathore"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Vikram-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Vikram-001"
+    },
+    "@CHAR_068": {
+      "id": "@CHAR_068",
+      "type": "CHAR",
+      "name": "Viktor Petrov",
+      "created": "2026-06-30T07:58:35.434185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Viktor-001",
+        "@Viktor-001",
+        "Viktor",
+        "viktor_petrov"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Viktor-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Viktor-001"
+    },
+    "@CHAR_069": {
+      "id": "@CHAR_069",
+      "type": "CHAR",
+      "name": "Wei Zhang",
+      "created": "2026-06-30T07:58:35.434185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Wei-001",
+        "@Wei-001",
+        "Wei",
+        "wei_zhang"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Wei-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Wei-001"
+    },
+    "@CHAR_070": {
+      "id": "@CHAR_070",
+      "type": "CHAR",
+      "name": "Yuki Tanaka",
+      "created": "2026-06-30T07:58:35.434185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Yuki-001",
+        "@Yuki-001",
+        "Yuki",
+        "yuki_tanaka"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Yuki-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Yuki-001"
+    },
+    "@CHAR_071": {
+      "id": "@CHAR_071",
+      "type": "CHAR",
+      "name": "Zara Adebayo",
+      "created": "2026-06-30T07:58:35.435185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Zara-001",
+        "@Zara-001",
+        "Zara",
+        "zara_adebayo"
+      ],
+      "merged_into": null,
+      "state": {
+        "actor_id": "Zara-001",
+        "synthetic": true
+      },
+      "history": [],
+      "notes": "Casting registry — Zara-001"
+    },
+    "@SET_003": {
+      "id": "@SET_003",
+      "type": "SET",
+      "name": "Studio Interior (Editorial Cyclorama)",
+      "created": "2026-06-30T07:58:35.435185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Set-Studio-Interior-001",
+        "@Set-Studio-Interior-001",
+        "Set-Studio-Interior",
+        "Studio Interior (Editorial Cyclorama)"
+      ],
+      "merged_into": null,
+      "state": {
+        "reference_file": "STUDIO/Pipeline/references/studio_interior_cyclorama_reference.jpg"
+      },
+      "history": [],
+      "notes": "Set library — @Set-Studio-Interior-001"
+    },
+    "@SET_004": {
+      "id": "@SET_004",
+      "type": "SET",
+      "name": "Modern Apartment (Lifestyle)",
+      "created": "2026-06-30T07:58:35.435185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Set-Modern-Apartment-001",
+        "@Set-Modern-Apartment-001",
+        "Set-Modern-Apartment",
+        "Modern Apartment (Lifestyle)"
+      ],
+      "merged_into": null,
+      "state": {
+        "reference_file": "STUDIO/Pipeline/references/modern_apartment_reference.jpg"
+      },
+      "history": [],
+      "notes": "Set library — @Set-Modern-Apartment-001"
+    },
+    "@SET_005": {
+      "id": "@SET_005",
+      "type": "SET",
+      "name": "Outdoor (Golden Hour Locked)",
+      "created": "2026-06-30T07:58:35.436185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Set-Outdoor-Golden-001",
+        "@Set-Outdoor-Golden-001",
+        "Set-Outdoor-Golden",
+        "Outdoor (Golden Hour Locked)"
+      ],
+      "merged_into": null,
+      "state": {
+        "reference_file": "STUDIO/Pipeline/references/outdoor_golden_hour_reference.jpg"
+      },
+      "history": [],
+      "notes": "Set library — @Set-Outdoor-Golden-001"
+    },
+    "@SET_006": {
+      "id": "@SET_006",
+      "type": "SET",
+      "name": "Outdoor (Overcast Neutral)",
+      "created": "2026-06-30T07:58:35.436185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Set-Outdoor-Overcast-001",
+        "@Set-Outdoor-Overcast-001",
+        "Set-Outdoor-Overcast",
+        "Outdoor (Overcast Neutral)"
+      ],
+      "merged_into": null,
+      "state": {
+        "reference_file": "STUDIO/Pipeline/references/outdoor_overcast_reference.jpg"
+      },
+      "history": [],
+      "notes": "Set library — @Set-Outdoor-Overcast-001"
+    },
+    "@SET_007": {
+      "id": "@SET_007",
+      "type": "SET",
+      "name": "Neutral Seamless Backdrop",
+      "created": "2026-06-30T07:58:35.436185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Set-Seamless-Neutral-001",
+        "@Set-Seamless-Neutral-001",
+        "Set-Seamless-Neutral",
+        "Neutral Seamless Backdrop"
+      ],
+      "merged_into": null,
+      "state": {
+        "reference_file": "STUDIO/Pipeline/references/seamless_neutral_grey_reference.jpg"
+      },
+      "history": [],
+      "notes": "Set library — @Set-Seamless-Neutral-001"
+    },
+    "@SET_008": {
+      "id": "@SET_008",
+      "type": "SET",
+      "name": "Warehouse / Industrial Loft",
+      "created": "2026-06-30T07:58:35.436185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Set-Warehouse-Industrial-001",
+        "@Set-Warehouse-Industrial-001",
+        "Set-Warehouse-Industrial",
+        "Warehouse / Industrial Loft"
+      ],
+      "merged_into": null,
+      "state": {
+        "reference_file": "STUDIO/Pipeline/references/warehouse_industrial_reference.jpg"
+      },
+      "history": [],
+      "notes": "Set library — @Set-Warehouse-Industrial-001"
+    },
+    "@SET_009": {
+      "id": "@SET_009",
+      "type": "SET",
+      "name": "Rooftop Urban Dusk",
+      "created": "2026-06-30T07:58:35.436185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Set-Rooftop-Urban-001",
+        "@Set-Rooftop-Urban-001",
+        "Set-Rooftop-Urban",
+        "Rooftop Urban Dusk"
+      ],
+      "merged_into": null,
+      "state": {
+        "reference_file": "STUDIO/Pipeline/references/rooftop_urban_dusk_reference.jpg"
+      },
+      "history": [],
+      "notes": "Set library — @Set-Rooftop-Urban-001"
+    },
+    "@STYLE_001": {
+      "id": "@STYLE_001",
+      "type": "STYLE",
+      "name": "Documentary Prestige",
+      "created": "2026-06-30T07:58:35.437188+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Style-Documentary-Prestige-001",
+        "@Style-Documentary-Prestige-001",
+        "Style-Documentary-Prestige"
+      ],
+      "merged_into": null,
+      "state": {},
+      "history": [],
+      "notes": "Style library — @Style-Documentary-Prestige-001"
+    },
+    "@STYLE_002": {
+      "id": "@STYLE_002",
+      "type": "STYLE",
+      "name": "Cinematic",
+      "created": "2026-06-30T07:58:35.437188+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Style-Cinematic-001",
+        "@Style-Cinematic-001",
+        "Style-Cinematic"
+      ],
+      "merged_into": null,
+      "state": {},
+      "history": [],
+      "notes": "Style library — @Style-Cinematic-001"
+    },
+    "@STYLE_003": {
+      "id": "@STYLE_003",
+      "type": "STYLE",
+      "name": "Soft Warm",
+      "created": "2026-06-30T07:58:35.437188+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Style-Soft-Warm-001",
+        "@Style-Soft-Warm-001",
+        "Style-Soft-Warm"
+      ],
+      "merged_into": null,
+      "state": {},
+      "history": [],
+      "notes": "Style library — @Style-Soft-Warm-001"
+    },
+    "@STYLE_004": {
+      "id": "@STYLE_004",
+      "type": "STYLE",
+      "name": "High-Key Fashion",
+      "created": "2026-06-30T07:58:35.437188+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Style-High-Key-Fashion-001",
+        "@Style-High-Key-Fashion-001",
+        "Style-High-Key-Fashion"
+      ],
+      "merged_into": null,
+      "state": {},
+      "history": [],
+      "notes": "Style library — @Style-High-Key-Fashion-001"
+    },
+    "@STYLE_005": {
+      "id": "@STYLE_005",
+      "type": "STYLE",
+      "name": "Cool Clinical",
+      "created": "2026-06-30T07:58:35.437188+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Style-Cool-Clinical-001",
+        "@Style-Cool-Clinical-001",
+        "Style-Cool-Clinical"
+      ],
+      "merged_into": null,
+      "state": {},
+      "history": [],
+      "notes": "Style library — @Style-Cool-Clinical-001"
+    },
+    "@STYLE_006": {
+      "id": "@STYLE_006",
+      "type": "STYLE",
+      "name": "Noir Dramatic",
+      "created": "2026-06-30T07:58:35.437188+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Style-Noir-Dramatic-001",
+        "@Style-Noir-Dramatic-001",
+        "Style-Noir-Dramatic"
+      ],
+      "merged_into": null,
+      "state": {},
+      "history": [],
+      "notes": "Style library — @Style-Noir-Dramatic-001"
+    },
+    "@STYLE_007": {
+      "id": "@STYLE_007",
+      "type": "STYLE",
+      "name": "Naturalistic Daylight",
+      "created": "2026-06-30T07:58:35.438185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Style-Naturalistic-Daylight-001",
+        "@Style-Naturalistic-Daylight-001",
+        "Style-Naturalistic-Daylight"
+      ],
+      "merged_into": null,
+      "state": {},
+      "history": [],
+      "notes": "Style library — @Style-Naturalistic-Daylight-001"
+    },
+    "@STYLE_008": {
+      "id": "@STYLE_008",
+      "type": "STYLE",
+      "name": "Blueprint Technical",
+      "created": "2026-06-30T07:58:35.438185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Style-Blueprint-Technical-001",
+        "@Style-Blueprint-Technical-001",
+        "Style-Blueprint-Technical"
+      ],
+      "merged_into": null,
+      "state": {},
+      "history": [],
+      "notes": "Style library — @Style-Blueprint-Technical-001"
+    },
+    "@STYLE_009": {
+      "id": "@STYLE_009",
+      "type": "STYLE",
+      "name": "Intimate Close (PG-13 Editorial)",
+      "created": "2026-06-30T07:58:35.438185+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Style-Intimate-Close-001",
+        "@Style-Intimate-Close-001",
+        "Style-Intimate-Close"
+      ],
+      "merged_into": null,
+      "state": {},
+      "history": [],
+      "notes": "Style library — @Style-Intimate-Close-001"
+    },
+    "@SET_010": {
+      "id": "@SET_010",
+      "type": "SET",
+      "name": "Modern Kitchen (Stonebridge)",
+      "created": "2026-06-30T08:26:04.122065+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Set-Modern-Kitchen-001",
+        "@Set-Modern-Kitchen-001",
+        "Set-Modern-Kitchen",
+        "Modern Kitchen"
+      ],
+      "merged_into": null,
+      "state": {
+        "product": "stonebridge",
+        "lighting": "warm overhead + practicals"
+      },
+      "history": [],
+      "notes": "Matilda Stonebridge narrator kitchen set"
+    },
+    "@SET_011": {
+      "id": "@SET_011",
+      "type": "SET",
+      "name": "Modern Kitchen-Living (Stonebridge)",
+      "created": "2026-06-30T08:26:04.122072+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Set-Modern-Kitchen-Living-001",
+        "@Set-Modern-Kitchen-Living-001",
+        "Set-Modern-Kitchen-Living",
+        "Modern Kitchen-Living"
+      ],
+      "merged_into": null,
+      "state": {
+        "product": "stonebridge",
+        "lighting": "warm overhead + living room practicals",
+        "note": "open-plan kitchen+living variant"
+      },
+      "history": [],
+      "notes": "Matilda 2min Stonebridge set — kitchen with living room extension"
+    },
+    "@STYLE_010": {
+      "id": "@STYLE_010",
+      "type": "STYLE",
+      "name": "Fincher Cinematic",
+      "created": "2026-06-30T08:26:04.122076+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [
+        "Style-Fincher-Cinematic-001",
+        "@Style-Fincher-Cinematic-001",
+        "Style-Fincher-Cinematic"
+      ],
+      "merged_into": null,
+      "state": {
+        "reference": "David Fincher — desaturated, precise framing, controlled color palette"
+      },
+      "history": [],
+      "notes": "Fincher-inspired cinematic look for Stonebridge/Matilda"
+    },
+    "@CHAR_072": {
+      "id": "@CHAR_072",
+      "type": "CHAR",
+      "name": "Unknown Talent",
+      "created": "2026-07-02T04:49:51.493014+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [],
+      "merged_into": null,
+      "state": {
+        "plate_file": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\Concepts\\Plates\\2.jpg",
+        "plate_url": "https://files-cdn.x.ai/77Ad5aQpQiGkHL4NbomIRQ/file_8616a0c6-9993-411f-95c4-32c02488e4b4.jpg",
+        "plate_type": "actor",
+        "role": ""
+      },
+      "history": [],
+      "notes": "Auto-registered from resolved actor plate"
+    },
+    "@SET_012": {
+      "id": "@SET_012",
+      "type": "SET",
+      "name": "Unknown Set",
+      "created": "2026-07-02T04:49:51.493014+00:00",
+      "status": "active",
+      "version": 1,
+      "aliases": [],
+      "merged_into": null,
+      "state": {
+        "plate_file": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\Concepts\\Plates\\grok-image-2efa731f-f24b-4359-a015-39e400e1fb81.png",
+        "plate_type": "environment"
+      },
+      "history": [],
+      "notes": "Auto-registered from resolved set plate"
+    }
+  }
+}

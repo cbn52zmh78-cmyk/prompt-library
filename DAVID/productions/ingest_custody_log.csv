@@ -1,0 +1,6 @@
+batch_id,source_id,started_at,completed_at,record_count,newest_id,parser_version,status,custody_note,evaluate_triggered
+batch_00001,plate_actor,2026-06-30T07:57:55.403190+00:00,2026-06-30T07:57:55.403190+00:00,1,actor_david_v3,1.0.0,success,Batch batch_00001 from plate_actor,True
+batch_00002,plate_set,2026-06-30T07:57:55.405190+00:00,2026-06-30T07:57:55.405190+00:00,1,set_archive_v1,1.0.0,success,Batch batch_00002 from plate_set,True
+batch_00003,script_revision,2026-06-30T07:57:55.410190+00:00,2026-06-30T07:57:55.410190+00:00,1,script_akkadian_v1,1.0.0,success,Batch batch_00003 from script_revision,True
+batch_00004,script_revision,2026-06-30T07:58:08.212449+00:00,2026-06-30T07:58:08.212449+00:00,72,scripts/longform_scripts/interstellar_gargantua_hero_script.json,1.0.0,success,Batch batch_00004 from script_revision,False
+batch_00005,identity_lock,2026-06-30T07:58:08.221961+00:00,2026-06-30T07:58:08.221961+00:00,1,productions/host_identity_v1/david_identity_lock.json,1.0.0,success,Batch batch_00005 from identity_lock,False

@@ -1,0 +1,134 @@
+{
+  "slug": "matilda_stonebridge_2min_8branch",
+  "title": "MATILDA — Stonebridge 2min Dual-Setting (8×15s)",
+  "model_video": "grok-imagine-video-1.5",
+  "resolution": "480p",
+  "aspect_ratio": "16:9",
+  "host_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\Concepts\\Plates\\2.jpg",
+  "avatar_url": "https://files-cdn.x.ai/aFSx3CmRRzyrZmd_DhNXjw/file_1c23b9bb-ac29-4369-8d32-ce3a018471d6.jpg",
+  "set_reference": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\Concepts\\Plates\\grok-image-2efa731f-f24b-4359-a015-39e400e1fb81.png",
+  "zone_plates": {
+    "@1": "https://files-cdn.x.ai/XhVi7ndfQqSjuzbMUnfb_g/file_5911d7e3-1204-46e3-be27-e2e51bda3555.jpg"
+  },
+  "voice_suffix": "mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only",
+  "seamless": true,
+  "shots": [
+    {
+      "shot_id": "b01_intro",
+      "duration": 15,
+      "image_url": "https://files-cdn.x.ai/aFSx3CmRRzyrZmd_DhNXjw/file_1c23b9bb-ac29-4369-8d32-ce3a018471d6.jpg",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. Lip-synced, delivers: \"Grüß Gott. My name is Matilda Kirschner — I am Vice President of Operations at Stonebridge Consultants Group. Welcome. It is very good to be with you today.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "Grüß Gott. My name is Matilda Kirschner — I am Vice President of Operations at Stonebridge Consultants Group. Welcome. It is very good to be with you today.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 0,
+        "end_s": 15
+      }
+    },
+    {
+      "shot_id": "b02_company",
+      "duration": 15,
+      "image_url": "https://files-cdn.x.ai/aFSx3CmRRzyrZmd_DhNXjw/file_1c23b9bb-ac29-4369-8d32-ce3a018471d6.jpg",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. Lip-synced, delivers: \"Stonebridge has built its reputation across three decades on a single principle — we do not leave until the work is done. From our U.S. headquarters, we operate across North America and all of Europe, wherever our clients need us to be.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "Stonebridge has built its reputation across three decades on a single principle — we do not leave until the work is done. From our U.S. headquarters, we operate across North America and all of Europe, wherever our clients need us to be.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 15,
+        "end_s": 30
+      }
+    },
+    {
+      "shot_id": "b03_services",
+      "duration": 15,
+      "image_url": "https://files-cdn.x.ai/aFSx3CmRRzyrZmd_DhNXjw/file_1c23b9bb-ac29-4369-8d32-ce3a018471d6.jpg",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. Lip-synced, delivers: \"We specialise in three core areas: supply chain architecture, regulatory compliance, and long-term growth strategy. These are disciplines where precision is not optional — and where the right partner changes everything.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "We specialise in three core areas: supply chain architecture, regulatory compliance, and long-term growth strategy. These are disciplines where precision is not optional — and where the right partner changes everything.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 30,
+        "end_s": 45
+      }
+    },
+    {
+      "shot_id": "b04_europe",
+      "duration": 15,
+      "image_url": "https://files-cdn.x.ai/aFSx3CmRRzyrZmd_DhNXjw/file_1c23b9bb-ac29-4369-8d32-ce3a018471d6.jpg",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. Lip-synced, delivers: \"I lead our European operations from Munich. My job is to ensure that what Stonebridge commits to in the boardroom is delivered on the ground — in every country, every region, every time we say we will.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "I lead our European operations from Munich. My job is to ensure that what Stonebridge commits to in the boardroom is delivered on the ground — in every country, every region, every time we say we will.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 45,
+        "end_s": 60
+      }
+    },
+    {
+      "shot_id": "b05_transition",
+      "duration": 15,
+      "image_url": "https://files-cdn.x.ai/aFSx3CmRRzyrZmd_DhNXjw/file_1c23b9bb-ac29-4369-8d32-ce3a018471d6.jpg",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. Lip-synced, delivers: \"Actually — before we go further — I want to share something I do not usually say in a formal setting.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "Actually — before we go further — I want to share something I do not usually say in a formal setting.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 60,
+        "end_s": 75
+      }
+    },
+    {
+      "shot_id": "b06_personal",
+      "duration": 15,
+      "image_url": "https://files-cdn.x.ai/aFSx3CmRRzyrZmd_DhNXjw/file_1c23b9bb-ac29-4369-8d32-ce3a018471d6.jpg",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. Lip-synced, delivers: \"I grew up in a family where your word was your only real asset. My father ran a small logistics business in Munich — no contracts, just handshakes. He never lost a client in thirty years. That is the standard I carry into every Stonebridge engagement.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "I grew up in a family where your word was your only real asset. My father ran a small logistics business in Munich — no contracts, just handshakes. He never lost a client in thirty years. That is the standard I carry into every Stonebridge engagement.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 75,
+        "end_s": 90
+      }
+    },
+    {
+      "shot_id": "b07_network",
+      "duration": 15,
+      "image_url": "https://files-cdn.x.ai/aFSx3CmRRzyrZmd_DhNXjw/file_1c23b9bb-ac29-4369-8d32-ce3a018471d6.jpg",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. Lip-synced, delivers: \"What we bring to our clients is not just expertise — it is a network. Twenty years of relationships with regulators, logistics operators, and the people who actually move things and approve things across twelve countries. That is not something you can buy. It takes time.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "What we bring to our clients is not just expertise — it is a network. Twenty years of relationships with regulators, logistics operators, and the people who actually move things and approve things across twelve countries. That is not something you can buy. It takes time.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 90,
+        "end_s": 105
+      }
+    },
+    {
+      "shot_id": "b08_close_de",
+      "duration": 15,
+      "image_url": "https://files-cdn.x.ai/aFSx3CmRRzyrZmd_DhNXjw/file_1c23b9bb-ac29-4369-8d32-ce3a018471d6.jpg",
+      "video_prompt": "CONTINUITY LOCK @David-001: identical host face, charcoal sweater, Archive desk, brass lamp, same eye-line — seamless continuation of prior take, zero jump cut. Lip-synced, delivers: \"An unsere Partner und Kunden in ganz Europa — wir sind bereit. Die Dienstleistungen von Stonebridge stehen Ihnen zur Verfügung. Ich freue mich auf unsere Zusammenarbeit. Auf Wiedersehen.\" mid-low resonant unhurried voice, precise diction, documentary gravitas, Attenborough-calm, accessible never stuffy, synthetic host only Finish on gesture peak (hand motion or lean), never hold dead stillness or dead frame.",
+      "speech_text": "An unsere Partner und Kunden in ganz Europa — wir sind bereit. Die Dienstleistungen von Stonebridge stehen Ihnen zur Verfügung. Ich freue mich auf unsere Zusammenarbeit. Auf Wiedersehen.",
+      "speech_ipa": null,
+      "on_screen": "",
+      "on_screen_labels": [],
+      "timing": {
+        "start_s": 105,
+        "end_s": 120
+      }
+    }
+  ],
+  "provenance_shot": {
+    "type": "code_rendered_png",
+    "duration_s": 7,
+    "enabled": false
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "registry_version": "1.0",
+  "saved_at": "2026-07-02T04:52:13.650726+00:00",
+  "source_count": 5,
+  "batch_count": 5,
+  "_batch_counter": 5,
+  "sources": {
+    "plate_actor": {
+      "source_id": "plate_actor",
+      "url_pattern": "productions/*/plates/actor_*.png",
+      "parser_version": "1.0.0",
+      "source_type": "file",
+      "product": "movie",
+      "description": "Actor/talent plate images",
+      "status": "active",
+      "poll_interval_s": 300,
+      "last_poll_at": "2026-06-30T07:58:20.007345+00:00",
+      "last_success_at": "2026-06-30T07:58:20.007345+00:00",
+      "last_failure_at": "",
+      "last_failure_reason": "",
+      "last_new_id": "actor_david_v3",
+      "total_records": 1,
+      "total_scrapes": 1,
+      "created_at": "2026-06-30T07:58:19.981344+00:00",
+      "metadata": {}
+    },
+    "plate_set": {
+      "source_id": "plate_set",
+      "url_pattern": "productions/*/plates/set_*.png",
+      "parser_version": "1.0.0",
+      "source_type": "file",
+      "product": "movie",
+      "description": "Set/environment plate images",
+      "status": "active",
+      "poll_interval_s": 300,
+      "last_poll_at": "2026-06-30T07:58:20.069856+00:00",
+      "last_success_at": "2026-06-30T07:58:20.069856+00:00",
+      "last_failure_at": "",
+      "last_failure_reason": "",
+      "last_new_id": "set_archive_v1",
+      "total_records": 1,
+      "total_scrapes": 1,
+      "created_at": "2026-06-30T07:58:19.981344+00:00",
+      "metadata": {}
+    },
+    "plate_zone": {
+      "source_id": "plate_zone",
+      "url_pattern": "productions/*/plates/zone_*.png",
+      "parser_version": "1.0.0",
+      "source_type": "file",
+      "product": "movie",
+      "description": "Zone plate background stills",
+      "status": "active",
+      "poll_interval_s": 300,
+      "last_poll_at": "2026-06-30T07:58:20.131169+00:00",
+      "last_success_at": "",
+      "last_failure_at": "",
+      "last_failure_reason": "",
+      "last_new_id": "",
+      "total_records": 0,
+      "total_scrapes": 0,
+      "created_at": "2026-06-30T07:58:19.981344+00:00",
+      "metadata": {}
+    },
+    "script_revision": {
+      "source_id": "script_revision",
+      "url_pattern": "scripts/longform_scripts/*.json",
+      "parser_version": "1.0.0",
+      "source_type": "file",
+      "product": "movie",
+      "description": "Script JSON revisions",
+      "status": "active",
+      "poll_interval_s": 600,
+      "last_poll_at": "2026-06-30T07:58:20.132168+00:00",
+      "last_success_at": "2026-07-02T04:52:13.650726+00:00",
+      "last_failure_at": "",
+      "last_failure_reason": "",
+      "last_new_id": "matilda_stonebridge_2min_8branch",
+      "total_records": 3,
+      "total_scrapes": 3,
+      "created_at": "2026-06-30T07:58:19.981344+00:00",
+      "metadata": {}
+    },
+    "identity_lock": {
+      "source_id": "identity_lock",
+      "url_pattern": "productions/*/david_identity_lock.json",
+      "parser_version": "1.0.0",
+      "source_type": "file",
+      "product": "movie",
+      "description": "Identity lock revisions",
+      "status": "active",
+      "poll_interval_s": 3600,
+      "last_poll_at": "2026-06-30T07:58:20.139169+00:00",
+      "last_success_at": "",
+      "last_failure_at": "",
+      "last_failure_reason": "",
+      "last_new_id": "",
+      "total_records": 0,
+      "total_scrapes": 0,
+      "created_at": "2026-06-30T07:58:19.981344+00:00",
+      "metadata": {}
+    }
+  },
+  "batches": [
+    {
+      "batch_id": "batch_00001",
+      "source_id": "plate_actor",
+      "started_at": "2026-06-30T07:58:20.007345+00:00",
+      "completed_at": "2026-06-30T07:58:20.007345+00:00",
+      "record_count": 1,
+      "new_record_ids": [
+        "actor_david_v3"
+      ],
+      "newest_id": "actor_david_v3",
+      "parser_version": "1.0.0",
+      "status": "success",
+      "custody_note": "Batch batch_00001 from plate_actor",
+      "evaluate_triggered": true,
+      "evaluate_result": {
+        "registered": 1,
+        "ids": [
+          "@CHAR_001"
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_00002",
+      "source_id": "plate_set",
+      "started_at": "2026-06-30T07:58:20.069856+00:00",
+      "completed_at": "2026-06-30T07:58:20.069856+00:00",
+      "record_count": 1,
+      "new_record_ids": [
+        "set_archive_v1"
+      ],
+      "newest_id": "set_archive_v1",
+      "parser_version": "1.0.0",
+      "status": "success",
+      "custody_note": "Batch batch_00002 from plate_set",
+      "evaluate_triggered": true,
+      "evaluate_result": {
+        "registered": 1,
+        "ids": [
+          "@SET_001"
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_00003",
+      "source_id": "script_revision",
+      "started_at": "2026-06-30T07:58:20.132168+00:00",
+      "completed_at": "2026-06-30T07:58:20.132168+00:00",
+      "record_count": 1,
+      "new_record_ids": [
+        "script_akkadian_v1"
+      ],
+      "newest_id": "script_akkadian_v1",
+      "parser_version": "1.0.0",
+      "status": "success",
+      "custody_note": "Batch batch_00003 from script_revision",
+      "evaluate_triggered": true,
+      "evaluate_result": {
+        "pass": false,
+        "continuity_score": 80,
+        "continuity_tier": "B",
+        "confidence": 0.36,
+        "dimensions": {
+          "continuity": 100,
+          "identity": 0,
+          "state_version": 100,
+          "coverage": 100,
+          "compliance": 100
+        },
+        "total_ids_referenced": 3,
+        "resolved_count": 16,
+        "exception_count": 8,
+        "block_count": 8,
+        "exceptions": [
+          {
+            "severity": "BLOCK",
+            "category": "id_unknown",
+            "shot_id": "01_cold_open",
+            "entity_id": "@STYLE_001",
+            "detail": "Referenced @STYLE_001 not in catalog",
+            "action_needed": "Register entity or fix ID reference"
+          },
+          {
+            "severity": "BLOCK",
+            "category": "id_unknown",
+            "shot_id": "02_stakes",
+            "entity_id": "@STYLE_001",
+            "detail": "Referenced @STYLE_001 not in catalog",
+            "action_needed": "Register entity or fix ID reference"
+          },
+          {
+            "severity": "BLOCK",
+            "category": "id_unknown",
+            "shot_id": "03_signature_question",
+            "entity_id": "@STYLE_001",
+            "detail": "Referenced @STYLE_001 not in catalog",
+            "action_needed": "Register entity or fix ID reference"
+          },
+          {
+            "severity": "BLOCK",
+            "category": "id_unknown",
+            "shot_id": "04_proof_beat",
+            "entity_id": "@STYLE_001",
+            "detail": "Referenced @STYLE_001 not in catalog",
+            "action_needed": "Register entity or fix ID reference"
+          },
+          {
+            "severity": "BLOCK",
+            "category": "id_unknown",
+            "shot_id": "05_method",
+            "entity_id": "@STYLE_001",
+            "detail": "Referenced @STYLE_001 not in catalog",
+            "action_needed": "Register entity or fix ID reference"
+          },
+          {
+            "severity": "BLOCK",
+            "category": "id_unknown",
+            "shot_id": "06_honesty",
+            "entity_id": "@STYLE_001",
+            "detail": "Referenced @STYLE_001 not in catalog",
+            "action_needed": "Register entity or fix ID reference"
+          },
+          {
+            "severity": "BLOCK",
+            "category": "id_unknown",
+            "shot_id": "07_demonstration",
+            "entity_id": "@STYLE_001",
+            "detail": "Referenced @STYLE_001 not in catalog",
+            "action_needed": "Register entity or fix ID reference"
+          },
+          {
+            "severity": "BLOCK",
+            "category": "id_unknown",
+            "shot_id": "08_invitation",
+            "entity_id": "@STYLE_001",
+            "detail": "Referenced @STYLE_001 not in catalog",
+            "action_needed": "Register entity or fix ID reference"
+          }
+        ],
+        "resolved": [
+          {
+            "shot_id": "01_cold_open",
+            "entity_id": "@CHAR_001",
+            "name": "David",
+            "version": 1,
+            "status": "OK"
+          },
+          {
+            "shot_id": "01_cold_open",
+            "entity_id": "@SET_001",
+            "name": "Archive Chamber",
+            "version": 1,
+            "status": "OK"
+          },
+          {
+            "shot_id": "02_stakes",
+            "entity_id": "@CHAR_001",
+            "name": "David",
+            "version": 1,
+            "status": "OK"
+          },
+          {
+            "shot_id": "02_stakes",
+            "entity_id": "@SET_001",
+            "name": "Archive Chamber",
+            "version": 1,
+            "status": "OK"
+          },
+          {
+            "shot_id": "03_signature_question",
+            "entity_id": "@CHAR_001",
+            "name": "David",
+            "version": 1,
+            "status": "OK"
+          },
+          {
+            "shot_id": "03_signature_question",
+            "entity_id": "@SET_001",
+            "name": "Archive Chamber",
+            "version": 1,
+            "status": "OK"
+          },
+          {
+            "shot_id": "04_proof_beat",
+            "entity_id": "@CHAR_001",
+            "name": "David",
+            "version": 1,
+            "status": "OK"
+          },
+          {
+            "shot_id": "04_proof_beat",
+            "entity_id": "@SET_001",
+            "name": "Archive Chamber",
+            "version": 1,
+            "status": "OK"
+          },
+          {
+            "shot_id": "05_method",
+            "entity_id": "@CHAR_001",
+            "name": "David",
+            "version": 1,
+            "status": "OK"
+          },
+          {
+            "shot_id": "05_method",
+            "entity_id": "@SET_001",
+            "name": "Archive Chamber",
+            "version": 1,
+            "status": "OK"
+          },
+          {
+            "shot_id": "06_honesty",
+            "entity_id": "@CHAR_001",
+            "name": "David",
+            "version": 1,
+            "status": "OK"
+          },
+          {
+            "shot_id": "06_honesty",
+            "entity_id": "@SET_001",
+            "name": "Archive Chamber",
+            "version": 1,
+            "status": "OK"
+          },
+          {
+            "shot_id": "07_demonstration",
+            "entity_id": "@CHAR_001",
+            "name": "David",
+            "version": 1,
+            "status": "OK"
+          },
+          {
+            "shot_id": "07_demonstration",
+            "entity_id": "@SET_001",
+            "name": "Archive Chamber",
+            "version": 1,
+            "status": "OK"
+          },
+          {
+            "shot_id": "08_invitation",
+            "entity_id": "@CHAR_001",
+            "name": "David",
+            "version": 1,
+            "status": "OK"
+          },
+          {
+            "shot_id": "08_invitation",
+            "entity_id": "@SET_001",
+            "name": "Archive Chamber",
+            "version": 1,
+            "status": "OK"
+          }
+        ]
+      }
+    },
+    {
+      "batch_id": "batch_00004",
+      "source_id": "script_revision",
+      "started_at": "2026-07-02T04:49:51.498014+00:00",
+      "completed_at": "2026-07-02T04:49:51.498014+00:00",
+      "record_count": 1,
+      "new_record_ids": [
+        "matilda_stonebridge_2min_8branch"
+      ],
+      "newest_id": "matilda_stonebridge_2min_8branch",
+      "parser_version": "1.0.0",
+      "status": "success",
+      "custody_note": "Render of matilda_stonebridge_2min_8branch at 2026-07-02T04:49:51.498014+00:00",
+      "evaluate_triggered": false,
+      "evaluate_result": {}
+    },
+    {
+      "batch_id": "batch_00005",
+      "source_id": "script_revision",
+      "started_at": "2026-07-02T04:52:13.650726+00:00",
+      "completed_at": "2026-07-02T04:52:13.650726+00:00",
+      "record_count": 1,
+      "new_record_ids": [
+        "matilda_stonebridge_2min_8branch"
+      ],
+      "newest_id": "matilda_stonebridge_2min_8branch",
+      "parser_version": "1.0.0",
+      "status": "success",
+      "custody_note": "Render of matilda_stonebridge_2min_8branch at 2026-07-02T04:52:13.650726+00:00",
+      "evaluate_triggered": false,
+      "evaluate_result": {}
+    }
+  ]
+}

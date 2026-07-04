@@ -1,0 +1,9 @@
+severity,category,shot_id,entity_id,detail,action_needed
+INFO,no_catalog_reference,b01_intro,,Shot has no @ID references — not catalog-tracked,Add @CHAR/@LOC/@STYLE references to video_prompt
+INFO,no_catalog_reference,b02_company,,Shot has no @ID references — not catalog-tracked,Add @CHAR/@LOC/@STYLE references to video_prompt
+INFO,no_catalog_reference,b03_services,,Shot has no @ID references — not catalog-tracked,Add @CHAR/@LOC/@STYLE references to video_prompt
+INFO,no_catalog_reference,b04_europe,,Shot has no @ID references — not catalog-tracked,Add @CHAR/@LOC/@STYLE references to video_prompt
+INFO,no_catalog_reference,b05_transition,,Shot has no @ID references — not catalog-tracked,Add @CHAR/@LOC/@STYLE references to video_prompt
+INFO,no_catalog_reference,b06_personal,,Shot has no @ID references — not catalog-tracked,Add @CHAR/@LOC/@STYLE references to video_prompt
+INFO,no_catalog_reference,b07_network,,Shot has no @ID references — not catalog-tracked,Add @CHAR/@LOC/@STYLE references to video_prompt
+INFO,no_catalog_reference,b08_close_de,,Shot has no @ID references — not catalog-tracked,Add @CHAR/@LOC/@STYLE references to video_prompt

@@ -1,0 +1,6 @@
+batch_id,source_id,started_at,completed_at,record_count,newest_id,parser_version,status,custody_note,evaluate_triggered
+batch_00001,plate_actor,2026-06-30T07:58:20.007345+00:00,2026-06-30T07:58:20.007345+00:00,1,actor_david_v3,1.0.0,success,Batch batch_00001 from plate_actor,True
+batch_00002,plate_set,2026-06-30T07:58:20.069856+00:00,2026-06-30T07:58:20.069856+00:00,1,set_archive_v1,1.0.0,success,Batch batch_00002 from plate_set,True
+batch_00003,script_revision,2026-06-30T07:58:20.132168+00:00,2026-06-30T07:58:20.132168+00:00,1,script_akkadian_v1,1.0.0,success,Batch batch_00003 from script_revision,True
+batch_00004,script_revision,2026-07-02T04:49:51.498014+00:00,2026-07-02T04:49:51.498014+00:00,1,matilda_stonebridge_2min_8branch,1.0.0,success,Render of matilda_stonebridge_2min_8branch at 2026-07-02T04:49:51.498014+00:00,False
+batch_00005,script_revision,2026-07-02T04:52:13.650726+00:00,2026-07-02T04:52:13.650726+00:00,1,matilda_stonebridge_2min_8branch,1.0.0,success,Render of matilda_stonebridge_2min_8branch at 2026-07-02T04:52:13.650726+00:00,False

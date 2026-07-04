@@ -1,0 +1,15 @@
+{
+  "zone_id": "@1",
+  "plate_type": "environment_empty",
+  "no_people": true,
+  "path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_stonebridge_2min_8branch_longform_v1\\plates\\@1_plate.jpg",
+  "url": "https://files-cdn.x.ai/XhVi7ndfQqSjuzbMUnfb_g/file_5911d7e3-1204-46e3-be27-e2e51bda3555.jpg",
+  "file_id": "file_5911d7e3-1204-46e3-be27-e2e51bda3555",
+  "source_file": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\Concepts\\Plates\\grok-image-2efa731f-f24b-4359-a015-39e400e1fb81.png",
+  "source_url": null,
+  "set_id": null,
+  "avatar_reference": "https://files-cdn.x.ai/77Ad5aQpQiGkHL4NbomIRQ/file_8616a0c6-9993-411f-95c4-32c02488e4b4.jpg",
+  "note": "@1 empty set on disk only — never composited with @2; video seeds from avatar_url",
+  "status": "REGENERATED",
+  "reused": false
+}

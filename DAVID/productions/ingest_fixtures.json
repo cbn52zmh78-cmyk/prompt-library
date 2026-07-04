@@ -1,0 +1,27 @@
+{
+  "plate_actor": [
+    {
+      "id": "actor_david_v3",
+      "file": "david_talent_v3.png",
+      "type": "actor",
+      "character": "David",
+      "url": "https://cdn.example.com/david_v3.png"
+    }
+  ],
+  "plate_set": [
+    {
+      "id": "set_archive_v1",
+      "file": "archive_set_reference_v5.png",
+      "type": "set",
+      "name": "Archive Chamber"
+    }
+  ],
+  "script_revision": [
+    {
+      "id": "script_akkadian_v1",
+      "file": "david_akkadian_corpus_v1_script.json",
+      "slug": "david_akkadian_corpus_v1",
+      "shot_count": 12
+    }
+  ]
+}

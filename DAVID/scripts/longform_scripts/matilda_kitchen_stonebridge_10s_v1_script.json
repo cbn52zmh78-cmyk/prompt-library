@@ -5,9 +5,9 @@
   "target_seconds": 10,
   "intake": {
     "format_id": "documentary-host",
-    "actor_id": "Matilda-001",
-    "set_id": "@Set-Modern-Kitchen-001",
-    "style_id": "@Style-Fincher-Cinematic-001",
+    "actor_id": "@SB00001",
+    "set_id": "@SET_010",
+    "style_id": "@STYLE_010",
     "gate_0": {
       "verdict": "GREEN",
       "blocked": false,
@@ -31,7 +31,10 @@
     "use_zone_plates": true,
     "avatar_reference": "AI/ELEANOR/products/model_variants/Concepts/4.jpg",
     "set_reference": "AI/ELEANOR/products/model_variants/Concepts/_review_frames/user_ref/1_0p0s.jpg",
-    "seamless": { "primary": "extend", "skip_extend_probe": true }
+    "seamless": {
+      "primary": "extend",
+      "skip_extend_probe": true
+    }
   },
   "shots": [
     {
@@ -60,7 +63,9 @@
         "scene": "MATILDA addresses the audience directly through the camera lens — maintains consistent unbroken eye contact with camera entire scene, never looks away, documentary host speaking to viewer; opens with Bavarian German greeting, introduces herself by full name and Stonebridge title — dialogue fits 10 sec",
         "camera": "slow creep zoom-in from medium shot to medium close-up over 10 seconds — controlled Fincher dolly, deliberate and motivated, no handheld",
         "style": "In the exact visual style of David Fincher: meticulously composed cinematic realism with cold, desaturated teal, gray, and amber tones, high-contrast chiaroscuro lighting that carves deep dramatic shadows across sharp architectural lines and rich textures, clinical precision in every detail, subtle film grain, anamorphic depth, moody atmospheric elegance, and a hauntingly controlled, almost predatory beauty in the finished shot",
-        "output": { "sequence_length": "10 seconds" }
+        "output": {
+          "sequence_length": "10 seconds"
+        }
       }
     }
   ]

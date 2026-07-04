@@ -1,0 +1,389 @@
+{
+  "_doc": "Screenplay Ingest Schema Contract v1 — defines the exact JSON structure that screenplay_ingest.py must produce to feed render_longform.py. Derived from normalize_script() + _canonicalize_config() + _normalize_shot_list() in render_longform.py.",
+  "_version": "1.0",
+  "_created": "2026-06-30",
+  "_purpose": "The ingest parser reads a raw screenplay (PDF, TXT, Fountain, HTML) and emits a JSON file conforming to this schema. render_longform.py consumes it without modification.",
+
+  "schema": {
+    "slug": {
+      "type": "string",
+      "required": true,
+      "description": "URL-safe production identifier. Derived from screenplay title. Used for output directory name under productions/.",
+      "example": "david_charlemagne_v1",
+      "ingest_rule": "Slugify the screenplay title: lowercase, underscores for spaces, strip punctuation. Append _v1."
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "description": "Human-readable production title.",
+      "example": "DAVID — Charlemagne: The Emperor Who Named the Months",
+      "ingest_rule": "Use the screenplay title page title verbatim, or construct from slug."
+    },
+    "format_id": {
+      "type": "string",
+      "required": true,
+      "description": "Production format template. Determines render pipeline behavior (camera defaults, identity lock, seamless config).",
+      "enum": [
+        "documentary-host",
+        "historical-figure-documentary",
+        "science-explainer",
+        "technical-explainer",
+        "narrative-short-film",
+        "movies",
+        "explainer-ad",
+        "science-pure-visual",
+        "conversational-companion"
+      ],
+      "ingest_rule": "Classify from screenplay genre/content. Dialogue-heavy with single host → documentary-host. Action/drama → narrative-short-film or movies. Science/educational → science-explainer. Default: narrative-short-film for screenplays."
+    },
+    "target_seconds": {
+      "type": "integer|null",
+      "required": false,
+      "description": "Total target duration in seconds. Computed from shot durations or estimated from page count (~1 min/page for dialogue-heavy, ~30s/page for action).",
+      "ingest_rule": "Sum of all shot durations, or estimate from screenplay page count."
+    },
+    "concept": {
+      "type": "string",
+      "required": false,
+      "description": "One-line logline or concept summary.",
+      "ingest_rule": "Extract from title page or first action block if it reads as a logline."
+    },
+
+    "intake": {
+      "type": "object",
+      "required": false,
+      "description": "Production intake metadata. The ingest parser populates what it can; Gate 0 fields are left for downstream.",
+      "fields": {
+        "format_id": "string — mirrors top-level format_id",
+        "actor_id": "string — @CHAR_NNN catalog ref or character name for HITL resolution",
+        "set_id": "string — @SET_NNN catalog ref or location name for HITL resolution",
+        "style_id": "string — @STYLE_NNN or style_dna_tag suggestion",
+        "source": "string — 'screenplay_ingest.py' (provenance)",
+        "gate_0": "object — compliance gate (populated downstream, not by ingest)"
+      },
+      "ingest_rule": "Populate actor_id with protagonist name (HITL resolves to @CHAR later). Set set_id from primary location. Suggest style_id from genre."
+    },
+
+    "config": {
+      "type": "object",
+      "required": true,
+      "description": "Render configuration. The ingest parser sets defaults; operator overrides before render.",
+      "fields": {
+        "model_video": {
+          "type": "string",
+          "default": "grok-imagine-video-1.5",
+          "description": "Video generation model."
+        },
+        "resolution": {
+          "type": "string",
+          "default": "720p",
+          "enum": ["480p", "720p", "1080p"]
+        },
+        "aspect_ratio": {
+          "type": "string",
+          "default": "16:9",
+          "enum": ["16:9", "9:16", "1:1", "4:3"]
+        },
+        "prompt_mode": {
+          "type": "string",
+          "default": "seamless",
+          "enum": ["seamless", "barebones"],
+          "description": "seamless = full continuity-lock prompts built by renderer. barebones = shot.barebones slots are the prompt (operator-authored direction). Ingest parser should default to seamless for screenplays."
+        },
+        "voice_suffix": {
+          "type": "string",
+          "description": "Voice direction appended to every shot prompt. Describes vocal quality.",
+          "ingest_rule": "Extract from screenplay character descriptions or parentheticals. Default: 'natural conversational voice, synthetic performer only'."
+        },
+        "identity_lock": {
+          "type": "string|null",
+          "description": "Path to identity lock JSON (for host/performer continuity). null if no locked performer.",
+          "ingest_rule": "null for screenplays unless a known performer is specified."
+        },
+        "avatar_reference": {
+          "type": "string|null",
+          "description": "Path to performer reference image.",
+          "ingest_rule": "null — populated by operator before render."
+        },
+        "set_reference": {
+          "type": "string|null",
+          "description": "Path to primary set reference image.",
+          "ingest_rule": "null — populated by operator before render."
+        },
+        "seamless": {
+          "type": "object|null",
+          "description": "Seamless extend/crossfade config for shot concatenation.",
+          "default_fields": {
+            "primary": "extend",
+            "xfade_s": 0.2,
+            "match_color": true,
+            "cut_on_motion": true,
+            "loudnorm": true
+          },
+          "ingest_rule": "Use defaults for screenplays. Action-heavy scripts may want cut_on_motion: false."
+        },
+        "style_dna_tag": {
+          "type": "string|null",
+          "description": "Global visual style modifier ID from style_modifier_registry.",
+          "ingest_rule": "Suggest from screenplay genre/tone. Film noir → style_fincher_khondji. Period drama → style_deakins_villeneuve. Animation → anim_* or gameart_*. null if uncertain (operator picks)."
+        },
+        "audio_dna_tag": {
+          "type": "string|null",
+          "description": "Global audio style modifier ID.",
+          "ingest_rule": "Suggest from genre. Thriller → sound_fincher_khondji. Sci-fi → sound_davis_matrix. null if uncertain."
+        },
+        "music_dna_tag": {
+          "type": "string|null",
+          "description": "Global music/score modifier ID.",
+          "ingest_rule": "Suggest from genre. Epic → music_williams_leitmotif. Tension → music_herrmann_suspense. null if uncertain."
+        },
+        "pacing_dna_tag": {
+          "type": "string|null",
+          "description": "Global editing rhythm modifier ID.",
+          "ingest_rule": "Suggest from screenplay pace. null if uncertain."
+        },
+        "director_persona_id": {
+          "type": "string|null",
+          "description": "Synthetic auteur persona ID.",
+          "ingest_rule": "null for most screenplays — operator choice."
+        },
+        "language": {
+          "type": "string|null",
+          "description": "Language profile ID from language_profiles_v1.json.",
+          "ingest_rule": "Detect from dialogue language. English → 'en'. Multilingual → specific profile or null."
+        },
+        "branch_chain": {
+          "type": "object|null",
+          "description": "Branch-chain render config (for segmented renders). null for standard linear renders.",
+          "ingest_rule": "null for standard screenplays. Set if format requires branch rendering."
+        },
+        "native_av": {
+          "type": "boolean|null",
+          "description": "true = inject sonic DNA clauses into prompts.",
+          "ingest_rule": "true for narrative content with important sound design. null/false for dialogue-heavy."
+        }
+      }
+    },
+
+    "shots": {
+      "type": "array",
+      "required": true,
+      "description": "Ordered list of shots/scenes. Each shot becomes one video generation call.",
+      "item_schema": {
+        "id": {
+          "type": "string",
+          "required": true,
+          "description": "Unique shot identifier. Format: NN_description (01_cold_open, 02_chase_scene).",
+          "ingest_rule": "Sequential numbering + slugified scene heading or beat description."
+        },
+        "duration": {
+          "type": "integer",
+          "required": true,
+          "description": "Shot duration in seconds.",
+          "ingest_rule": "Estimate from dialogue word count (~150 wpm = 2.5 words/sec) + action line length. Min 5s, max 15s per shot. Split longer scenes into multiple shots."
+        },
+        "t_start": {
+          "type": "number",
+          "required": false,
+          "description": "Cumulative start time in seconds. Auto-computed by normalize_script if missing.",
+          "ingest_rule": "Cumulative sum of prior shot durations."
+        },
+        "t_end": {
+          "type": "number",
+          "required": false,
+          "description": "Cumulative end time. t_start + duration.",
+          "ingest_rule": "t_start + duration."
+        },
+        "role": {
+          "type": "string",
+          "required": false,
+          "description": "Shot role for pipeline routing.",
+          "enum": ["host", "broll", "insert", "title", "transition"],
+          "ingest_rule": "Dialogue scenes → 'host'. Action/description-only → 'broll'. Establishing shots → 'insert'."
+        },
+        "video_prompt": {
+          "type": "string",
+          "required": true,
+          "description": "The complete visual direction for video generation. In seamless mode, renderer builds this from continuity locks + shot description. In barebones mode, this is the raw prompt.",
+          "ingest_rule": "Construct from: action lines (visual description) + parentheticals (performance direction) + camera notes (if specified in screenplay). Do NOT include dialogue text — that goes in speech_text. Include character visual descriptions from screenplay character intros."
+        },
+        "speech_text": {
+          "type": "string|null",
+          "required": false,
+          "description": "Dialogue to be lip-synced. Exact spoken words.",
+          "ingest_rule": "Extract dialogue blocks verbatim. Strip character name prefix. Preserve parenthetical directions separately."
+        },
+        "on_screen": {
+          "type": "string|null",
+          "required": false,
+          "description": "On-screen text/titles/supers.",
+          "ingest_rule": "Extract from TITLE/SUPER/CHYRON screenplay directions."
+        },
+        "speech_lang": {
+          "type": "string|null",
+          "required": false,
+          "description": "Language code for dialogue when not the default production language.",
+          "ingest_rule": "Detect from parentheticals like '(in French)' or non-English dialogue."
+        },
+        "modifiers": {
+          "type": "object|null",
+          "required": false,
+          "description": "Per-shot modifier overrides. Same keys as config-level modifiers.",
+          "fields": {
+            "style_dna_tag": "per-shot visual override",
+            "audio_dna_tag": "per-shot audio override",
+            "music_dna_tag": "per-shot music override",
+            "pacing_dna_tag": "per-shot pacing override",
+            "director_persona_id": "per-shot auteur override",
+            "language": "per-shot language override",
+            "camera_move": "from hybrid registry (e.g. dolly_in, crane_up)"
+          },
+          "ingest_rule": "Set when a scene has distinctly different tone/style from the overall production. Use camera_move from screenplay camera directions (PAN, DOLLY, CRANE, STEADICAM, etc.)."
+        },
+        "barebones": {
+          "type": "object|null",
+          "required": false,
+          "description": "Barebones prompt slots — only used when config.prompt_mode = 'barebones'.",
+          "fields": {
+            "command": "'generate video' (always)",
+            "@1": {"description": "string — set/environment description"},
+            "@2": {"description": "string — character/performer description"},
+            "dialogue": {"speech_text": "string", "language": "string", "character": "string"},
+            "audio": {"ambient": "string", "voice_direction": "string"},
+            "scene": "string — blocking and stage direction",
+            "camera": "string — camera movement and framing",
+            "style": "string — visual style direction",
+            "output": {"sequence_length": "string — e.g. '15s'"}
+          },
+          "ingest_rule": "Only populate if config.prompt_mode = 'barebones'. For standard screenplay ingest, use seamless mode (video_prompt + speech_text)."
+        }
+      }
+    },
+
+    "provenance_card": {
+      "type": "object",
+      "required": true,
+      "description": "End card / credits / provenance information.",
+      "fields": {
+        "enabled": "boolean — true to render end card",
+        "duration_s": "integer — card duration (default 6)",
+        "card_type": "string — 'credits' | 'sources' | 'closing'",
+        "title": "string — card title",
+        "subtitle": "string — card subtitle",
+        "footer": "string — footer text (credits, source attributions)"
+      },
+      "ingest_rule": "enabled: true. title: screenplay title. subtitle: 'Based on screenplay by [writer]'. footer: writer/source credit. card_type: 'credits'."
+    },
+
+    "qa_rules": {
+      "type": "object",
+      "required": false,
+      "description": "QA gate configuration.",
+      "default": {
+        "require_identity_lock": false,
+        "require_synthetic_guard": true,
+        "min_shots": 1
+      },
+      "ingest_rule": "Use defaults. require_identity_lock: false for screenplays (no locked performer yet)."
+    },
+
+    "guardrails": {
+      "type": "object|null",
+      "required": false,
+      "description": "Content guardrails (violence level, nudity policy, language restrictions).",
+      "ingest_rule": "Infer from screenplay content. Flag for HITL if R-rated content detected."
+    }
+  },
+
+  "screenplay_parsing_contract": {
+    "_doc": "Rules for the format parser that feeds this schema.",
+    "scene_heading_to_shot": "Each INT./EXT. scene heading becomes one or more shots. Split if scene exceeds 15s estimated duration.",
+    "action_to_video_prompt": "Action lines become the video_prompt. Describe what the camera sees.",
+    "dialogue_to_speech_text": "Dialogue blocks (under CHARACTER NAME) become speech_text. Character name stripped.",
+    "parenthetical_to_direction": "Parentheticals like (whispering) or (in French) inform voice direction or speech_lang.",
+    "transition_to_shot_boundary": "CUT TO:, DISSOLVE TO:, FADE IN/OUT mark shot boundaries. Transition type informs seamless config.",
+    "camera_direction_to_modifier": "ANGLE ON, PAN TO, DOLLY IN, CRANE UP etc. map to modifiers.camera_move.",
+    "duration_estimation": {
+      "dialogue_wpm": 150,
+      "words_per_second": 2.5,
+      "action_line_seconds": 3,
+      "min_shot_duration": 5,
+      "max_shot_duration": 15,
+      "page_to_minutes": 1.0
+    },
+    "character_extraction": "First appearance of CHARACTER NAME in dialogue → extract for intake.actor_id. Visual description from action lines near first appearance → bake into video_prompt for shots featuring that character.",
+    "location_extraction": "INT./EXT. LOCATION - TIME → extract location for intake.set_id. Description from action lines → video_prompt environmental detail."
+  },
+
+  "example_output": {
+    "_doc": "What the ingest parser produces from a simple screenplay scene.",
+    "input_screenplay": "INT. MOTEL ROOM - NIGHT\n\nA dingy motel room. Rain streaks the window. VINCENT (40s, disheveled suit, tired eyes) sits on the bed, gun on the nightstand.\n\nVINCENT\n(quietly)\nYou know what they call a Quarter Pounder with cheese in Paris?\n\nJULES (O.S.)\nThey don't call it a Quarter Pounder with cheese?\n\nVINCENT\nNo man, they got the metric system. They call it a Royale with cheese.",
+    "output_json": {
+      "slug": "motel_room_scene_v1",
+      "title": "Motel Room Scene",
+      "format_id": "narrative-short-film",
+      "target_seconds": 18,
+      "config": {
+        "model_video": "grok-imagine-video-1.5",
+        "resolution": "720p",
+        "aspect_ratio": "16:9",
+        "prompt_mode": "seamless",
+        "voice_suffix": "natural conversational voice, synthetic performer only",
+        "identity_lock": null,
+        "style_dna_tag": null,
+        "language": "en"
+      },
+      "shots": [
+        {
+          "id": "01_motel_establish",
+          "duration": 5,
+          "t_start": 0,
+          "t_end": 5,
+          "role": "insert",
+          "video_prompt": "Interior dingy motel room at night. Rain streaks down the window pane. Dim overhead light casts harsh shadows. A man in a disheveled suit sits on the edge of the bed, a handgun resting on the nightstand beside him. Camera: static wide establishing shot.",
+          "speech_text": null
+        },
+        {
+          "id": "02_vincent_quarter_pounder",
+          "duration": 6,
+          "t_start": 5,
+          "t_end": 11,
+          "role": "host",
+          "video_prompt": "Medium shot of Vincent (40s, disheveled dark suit, tired eyes) sitting on motel bed. Dim warm practicals. Rain sound. He speaks quietly, conversational, looking off-camera to someone out of frame.",
+          "speech_text": "You know what they call a Quarter Pounder with cheese in Paris?"
+        },
+        {
+          "id": "03_jules_response",
+          "duration": 3,
+          "t_start": 11,
+          "t_end": 14,
+          "role": "host",
+          "video_prompt": "Same motel room. Camera holds on Vincent reacting to off-screen voice. Slight head tilt, listening.",
+          "speech_text": "They don't call it a Quarter Pounder with cheese?"
+        },
+        {
+          "id": "04_vincent_royale",
+          "duration": 4,
+          "t_start": 14,
+          "t_end": 18,
+          "role": "host",
+          "video_prompt": "Medium close-up on Vincent. Small knowing smile. Conversational delivery, matter-of-fact.",
+          "speech_text": "No man, they got the metric system. They call it a Royale with cheese."
+        }
+      ],
+      "provenance_card": {
+        "enabled": true,
+        "duration_s": 6,
+        "card_type": "credits",
+        "title": "Motel Room Scene",
+        "subtitle": "Based on screenplay",
+        "footer": "Ingested by screenplay_ingest.py v1"
+      },
+      "qa_rules": {
+        "require_identity_lock": false,
+        "require_synthetic_guard": true,
+        "min_shots": 1
+      }
+    }
+  }
+}

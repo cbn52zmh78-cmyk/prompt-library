@@ -32,6 +32,7 @@ User / Editor (foreign languages)
 DAVID/
 ├── data/
 │   ├── language_registry.json
+│   ├── top10_languages_ranking_2026.json
 │   └── research_queue.json
 ├── languages/
 │   ├── living/ | dead/ | extinct/ | reconstructed/ | undeciphered/
@@ -96,6 +97,11 @@ Config: `DAVID/data/brain_schedule.json` (`interval_seconds`, `batch_size`, `sta
 python tools/david_status.py
 python DAVID/scripts/david_launcher.py
 python DAVID/scripts/language_registry_manager.py list --tier high
+
+# Top-10 living languages (Ethnologue 2026 total speakers)
+python DAVID/scripts/top10_languages.py list
+python DAVID/scripts/top10_languages.py sync
+python DAVID/scripts/top10_languages.py prompt hindi
 python DAVID/scripts/grok_training_pack_builder.py --language etruscan
 ```
 

@@ -5,9 +5,9 @@
   "target_seconds": 30,
   "intake": {
     "format_id": "documentary-host",
-    "actor_id": "Matilda-001",
-    "set_id": "@Set-Warehouse-Industrial-001",
-    "style_id": "@Style-Documentary-Prestige-001",
+    "actor_id": "@SB00001",
+    "set_id": "@SET_007",
+    "style_id": "@STYLE_001",
     "source": "manual — concept: STUDIO/Pipeline/Concepts/matilda_baseline/matilda_baseline_30s.concept.json",
     "gate_0": {
       "verdict": "GREEN",
@@ -18,7 +18,9 @@
       "music_bed_id": "BED-DOC-001",
       "row_2_music_sync": "PASS",
       "music_clearance_manifest": "Studio/Music_Sound/clearance_manifest.json",
-      "channels": ["social"],
+      "channels": [
+        "social"
+      ],
       "synthetic_performer_id": "Matilda-001",
       "compliance_version": "2.2",
       "compliance_2257": {
@@ -72,14 +74,18 @@
       "on_screen": "MATILDA · Synthetic Presenter · ELEANOR-DAVID Pipeline",
       "barebones": {
         "command": "generate video",
-        "@1": { "description": "see attached render" },
+        "@1": {
+          "description": "see attached render"
+        },
         "@2": {
           "description": "see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; English only in this scene"
         },
         "scene": "enters from offscreen stage left whilst introducing herself to the audience - maintains eye contact with camera - three steps to center mark by 2s, plants feet facing camera - open-palm gesture on final phrase",
         "camera": "locked static medium, waist-up, no camera move",
         "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
-        "output": { "sequence_length": "6s" }
+        "output": {
+          "sequence_length": "6s"
+        }
       }
     },
     {
@@ -91,14 +97,18 @@
       "speech_text": "You're watching the ELEANOR-DAVID pipeline — automated scripts, voices, and video renders.",
       "barebones": {
         "command": "generate video",
-        "@1": { "description": "see attached render" },
+        "@1": {
+          "description": "see attached render"
+        },
         "@2": {
           "description": "see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; English only in this scene"
         },
         "scene": "already at center mark - forward lean on 'pipeline' - right-hand open palm on 'automated' - continuous delivery, no pauses",
         "camera": "locked static medium, waist-up, no camera move",
         "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
-        "output": { "sequence_length": "6s" }
+        "output": {
+          "sequence_length": "6s"
+        }
       }
     },
     {
@@ -110,14 +120,18 @@
       "speech_text": "Language models draft every line. Grok Imagine generates every frame you see.",
       "barebones": {
         "command": "generate video",
-        "@1": { "description": "see attached render" },
+        "@1": {
+          "description": "see attached render"
+        },
         "@2": {
           "description": "see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; English only in this scene"
         },
         "scene": "holds center mark - left index finger tap on 'every line' - two-hand outward sweep on 'every frame you see' - continuous delivery, no pauses",
         "camera": "locked static medium, waist-up, no camera move",
         "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
-        "output": { "sequence_length": "6s" }
+        "output": {
+          "sequence_length": "6s"
+        }
       }
     },
     {
@@ -129,14 +143,18 @@
       "speech_text": "No human filmed this. No editor cut it. Concept to final render — fully automated.",
       "barebones": {
         "command": "generate video",
-        "@1": { "description": "see attached render" },
+        "@1": {
+          "description": "see attached render"
+        },
         "@2": {
           "description": "see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; English only in this scene"
         },
         "scene": "holds center mark - decisive head shake on 'No human filmed' - flat palm cut gesture on 'No editor cut it' - continuous through 'fully automated', no pause",
         "camera": "locked static medium, waist-up, no camera move",
         "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
-        "output": { "sequence_length": "6s" }
+        "output": {
+          "sequence_length": "6s"
+        }
       }
     },
     {
@@ -149,15 +167,32 @@
       "on_screen": "ELEANOR-DAVID · Automated Filmmaking Pipeline",
       "barebones": {
         "command": "generate video",
-        "@1": { "description": "see attached render" },
+        "@1": {
+          "description": "see attached render"
+        },
         "@2": {
           "description": "see attached render. MATILDA: sassy, witty and charming with a soft, gentle voice; speaks German and English fluently with native Bavarian/Munich regional accent; English only in this scene"
         },
         "scene": "holds center mark - chin lifts on 'automated filmmaking' - confident nod on 'getting started' - speech ends on gesture peak, no trailing stillness",
         "camera": "locked static medium, waist-up, no camera move",
         "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
-        "output": { "sequence_length": "6s" }
+        "output": {
+          "sequence_length": "6s"
+        }
       }
     }
-  ]
+  ],
+  "catalog_ref_audit": {
+    "migrated_at": "2026-06-30T07:58:19.620265+00:00",
+    "mappings": {
+      "@Matilda-001": "@SB00001",
+      "@Set-Modern-Kitchen-001": "@SET_010",
+      "@Set-Modern-Kitchen-Living-001": "@SET_011",
+      "@Set-Warehouse-Industrial-001": "@SET_007",
+      "@Style-Documentary-Prestige-001": "@STYLE_001",
+      "@Style-Fincher-Cinematic-001": "@STYLE_010",
+      "Matilda-001": "@SB00001"
+    },
+    "unresolved": []
+  }
 }

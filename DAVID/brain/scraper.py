@@ -116,9 +116,36 @@ def scrape_language(slug: str, *, deep: bool = False) -> dict[str, Any]:
     result["pronunciation_summary"] = _summarize_pronunciation(ipa_all)
     result["etymology_count"] = len(result.get("wiktionary", {}).get("etymology_blocks", []))
 
+    baseline = _load_top10_baseline(slug, entry)
+    if baseline:
+        result["top10_baseline"] = baseline
+
     _persist(slug, entry["status"], result)
     _append_log(slug, result)
     return result
+
+
+def _load_top10_baseline(slug: str, entry: dict[str, Any]) -> dict[str, Any] | None:
+    """Attach Ethnologue 2026 top-10 pronunciation baseline when available."""
+    rel = entry.get("pronunciation_profile")
+    if not rel:
+        return None
+    path = DAVID_ROOT / rel
+    if not path.is_file():
+        return None
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return None
+    return {
+        "source": data.get("ingested_from"),
+        "ethnologue_rank_2026": (data.get("ethnologue") or {}).get("rank_2026"),
+        "grok_imagine_guidance": data.get("grok_imagine_guidance"),
+        "tutoring_hooks": data.get("tutoring_hooks") or [],
+        "phonology_highlights": data.get("phonology_highlights") or [],
+        "major_varieties": data.get("major_varieties") or [],
+        "pronunciation_resources": data.get("pronunciation_resources") or {},
+    }
 
 
 def _summarize_pronunciation(ipa_entries: list[dict[str, str]]) -> dict[str, Any]:

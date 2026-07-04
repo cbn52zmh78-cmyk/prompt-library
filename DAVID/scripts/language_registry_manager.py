@@ -24,7 +24,10 @@ def list_languages(status: str | None = None, tier: str | None = None) -> None:
         links = ", ".join(entry.get("history_links") or []) or "—"
         print(f"  {entry['name']} ({entry['slug']})")
         print(f"    status: {entry['status']} | revival: {entry.get('revival_tier')} | family: {entry['family']}")
-        print(f"    period: {entry['period']} | history: {links}")
+        period = entry.get("period") or entry.get("total_speakers_display") or "—"
+        top10 = entry.get("top10_rank_2026")
+        rank_note = f" | top10: #{top10}" if top10 else ""
+        print(f"    period: {period} | history: {links}{rank_note}")
         print()
 
 

@@ -47,12 +47,17 @@ from render_longform import (  # noqa: E402
     concat_xfade_chain,
     generate_baked_composite_video,
     generate_branch_handoff_video,
+    extract_frame_at,
     mandatory_extract_last_frame,
     normalize_script,
     probe_magenta_score,
+    probe_yellow_green_score,
+    _probe_video_frame_arr,
     resolve_branch_chain_seed_handoff,
+    resolve_extend_at_s,
     probe_duration,
     resolve_refs,
+    shot_join_segment,
     _resolve_composite_first_frame,
 )
 
@@ -71,19 +76,53 @@ RELAXED_HOST = (
     "who enjoys selling Stonebridge; NOT authoritative, NOT intense, NOT commanding, NOT flirtatious"
 )
 TIMING = (
-    "TIMING LOCK: spoken lines complete by {wrap}s; tail {wrap}–{seg}s gentle alive hold "
-    "with subtle micro-expression — NOT frozen mannequin stillness, NOT audible exhale or sigh"
+    "TIMING LOCK: spoken lines complete by {wrap}s; tail {wrap}–{seg}s brief alive hold "
+    "(~1s max) — micro-expression only; NOT frozen head, NOT long dead-air, NOT sigh"
 )
 PAUSE = (
-    "PAUSE LOCK: brief micro-pauses only (~0.3s) between statements — NOT sighs, NOT audible "
-    "exhales, NOT dramatic waits, NOT dead air; b01: ZERO open pause — lip-sync from frame one; "
-    "b01 tail: NO heavy sigh, NO breathy exhale, NO falling pause at end; "
-    "branches 2-N may use brief connector pause before first word only"
+    "PAUSE LOCK: ~0.5s open beat every branch — lips closed, head subtly alive, THEN first word; "
+    "NEVER lip-sync from frame zero; micro-pauses ~0.2s between sentences only; "
+    "short tail — NO heavy sigh, NO breathy exhale, NO dramatic end pause"
+)
+OPEN_BEAT = (
+    "OPEN BEAT LOCK: 0.5s settled composure from cut — eyes on lens, gentle head micro-drift, "
+    "lips closed, THEN speech begins; applies b01 through b08"
 )
 FACE = (
     "FACE LIFE LOCK: warm alive documentary host — natural micro-expressions, subtle eyebrow "
     "and smile shifts, organic breathing; NOT robotic, NOT uptight, NOT mannequin, NOT "
     "statue frozen hold"
+)
+HEAD_LIFE = (
+    "HEAD LIFE: head NEVER still while speaking — continuous nods, tilts, emphatic tracking; "
+    "alive micro-drift even during 0.5s open beat; NOT teleprompter freeze, NOT locked neck"
+)
+EYELINE_KITCHEN = (
+    "EYE CONTACT: warm direct address to camera — natural look-and-return; brief downward "
+    "glance to hands on island then back to lens; NOT off-camera interview eyeline, NOT frozen stare"
+)
+HAND_LIFE_KITCHEN = (
+    "HAND LIFE: conversational island gestures — hands lift off counter for emphasis, open palms, "
+    "subtle counting fingers on lists, light illustrative chops; return to island between beats; "
+    "NOT white-knuckle counter grip, NOT mannequin still hands"
+)
+BODY_LIFE_KITCHEN = (
+    "BODY LIFE: feet planted at island mark — upper body alive; shoulders and torso breathe with "
+    "speech; weight shifts subtle and natural; NOT statue freeze, NOT teleprompter rigidity"
+)
+STITCH_CONNECTOR = (
+    "STITCH: ~0.5s breath from prior frame then speak — NOT frozen cue-wait, NOT instant lip-sync"
+)
+ANTI_MAGENTA_SKIN = (
+    "SKIN: fair neutral R≈G; zero magenta/purple/rose on face; match kitchen b04"
+)
+ANTI_YELLOW_CAST = (
+    "COLOR: D65 5000K neutral WB — zero yellow-green cast, zero amber wash, "
+    "blue channel intact on skin (B≥110 mids); match kitchen b04 grade exactly"
+)
+DAYLIGHT_LOCK = (
+    "DAYLIGHT FROZEN: identical midday 5000K window light frame 1 through 15 — "
+    "NO sunset, NO dusk, NO night, NO time-lapse, NO light fade, NO darkening"
 )
 WARDROBE = (
     "WARDROBE LOCK: identical outfit entire episode per Plates/2.jpg — gray sleeveless "
@@ -123,9 +162,45 @@ def _shot_duration(shot: dict, default: int) -> int:
     return int(shot.get("duration") or default)
 
 
-def _timing_lock(seg_s: int) -> str:
-    wrap = max(1, seg_s - 3)
-    return TIMING.format(wrap=wrap, seg=seg_s)
+def _timing_lock(
+    seg_s: int,
+    branch_cfg: dict | None = None,
+    *,
+    setting: str = "",
+    shot: dict | None = None,
+) -> str:
+    cfg = branch_cfg or {}
+    if shot and shot.get("dialogue_wrap_s") is not None:
+        wrap = float(shot["dialogue_wrap_s"])
+    elif setting == "living_room":
+        wrap = float(cfg.get("living_room_dialogue_wrap_s") or 11.5)
+    else:
+        wrap = float(cfg.get("dialogue_wrap_s") or max(1, seg_s - 3))
+    wrap = max(1.0, min(float(seg_s) - 1.5, wrap))
+    wrap_s = int(wrap) if wrap == int(wrap) else round(wrap, 1)
+    return TIMING.format(wrap=wrap_s, seg=seg_s)
+
+
+def _extract_handoff_frame(video: Path, shot: dict, out_jpg: Path) -> Path:
+    """Handoff still — extend_at_s editorial cut when scripted, else last frame."""
+    dur = probe_duration(video)
+    at = resolve_extend_at_s(shot, dur)
+    if at is not None:
+        extract_frame_at(video, at, out_jpg)
+        if not out_jpg.is_file() or out_jpg.stat().st_size < 500:
+            raise RuntimeError(f"MANDATORY handoff: extend_at_s extraction failed: {out_jpg}")
+        print(
+            f"[handoff] {shot['id']} frame at {at:.2f}s (extend_at_s, gen={dur:.2f}s)",
+            flush=True,
+        )
+        return out_jpg
+    return mandatory_extract_last_frame(video, out_jpg)
+
+
+def _join_duration_s(shot: dict, mp4: Path) -> float:
+    dur = probe_duration(mp4)
+    end = resolve_extend_at_s(shot, dur)
+    return float(end) if end is not None else dur
 
 
 def _prod_dir(script: dict) -> Path:
@@ -133,8 +208,60 @@ def _prod_dir(script: dict) -> Path:
     return ROOT / "productions" / f"{slug}_longform_v1"
 
 
-def _enrich_prompt(prompt: str, *, relaxed_host: bool = True, seg_s: int = 15) -> str:
-    clauses = [EYELINE, PERSONA, FACE, PAUSE, MUTE_SCORE, _timing_lock(seg_s)]
+def _finalize_branch_prompt(
+    prompt: str,
+    *,
+    seg_s: int,
+    setting: str,
+    branch_cfg: dict | None,
+    shot: dict | None = None,
+    extra_clauses: list[str] | None = None,
+) -> str:
+    prompt = _enrich_prompt(
+        prompt,
+        seg_s=seg_s,
+        setting=setting,
+        branch_cfg=branch_cfg,
+        shot=shot,
+    )
+    for clause in extra_clauses or []:
+        if clause not in prompt:
+            prompt = f"{prompt} ; {clause}"
+    return prompt
+
+
+def _enrich_prompt(
+    prompt: str,
+    *,
+    relaxed_host: bool = True,
+    seg_s: int = 15,
+    setting: str = "",
+    branch_cfg: dict | None = None,
+    shot: dict | None = None,
+) -> str:
+    if setting in ("living_room", "transition_kitchen_to_living"):
+        clauses = [
+            PERSONA,
+            HEAD_LIFE,
+            STITCH_CONNECTOR,
+            DAYLIGHT_LOCK,
+            ANTI_YELLOW_CAST,
+            MUTE_SCORE,
+            _timing_lock(seg_s, branch_cfg, setting="living_room", shot=shot),
+        ]
+    else:
+        clauses = [
+            EYELINE_KITCHEN,
+            PERSONA,
+            FACE,
+            OPEN_BEAT,
+            HEAD_LIFE,
+            HAND_LIFE_KITCHEN,
+            BODY_LIFE_KITCHEN,
+            PAUSE,
+            MUTE_SCORE,
+            _timing_lock(seg_s, branch_cfg, shot=shot),
+        ]
     if relaxed_host:
         clauses.append(RELAXED_HOST)
     for clause in clauses:
@@ -148,27 +275,37 @@ def _wardrobe_lock(script: dict) -> str:
     return str(cfg.get("wardrobe_lock") or WARDROBE)
 
 
-def _enrich_shot_barebones(shot: dict, seg_s: int, script: dict | None = None) -> dict:
+def _enrich_shot_barebones(
+    shot: dict,
+    seg_s: int,
+    script: dict | None = None,
+    *,
+    branch_cfg: dict | None = None,
+) -> dict:
     shot_enriched = dict(shot)
     bb = dict(shot_enriched.get("barebones") or {})
     sc = str(bb.get("scene") or "")
-    timing = _timing_lock(seg_s)
-    wardrobe = _wardrobe_lock(script or {})
     setting = str(shot.get("setting") or "")
+    wardrobe = _wardrobe_lock(script or {})
     scene_bits = [sc] if sc else []
-    for clause in (wardrobe, EYELINE, timing):
-        if clause not in sc:
-            scene_bits.append(clause)
+    if setting == "living_room":
+        if wardrobe not in sc:
+            scene_bits.append(wardrobe)
+    else:
+        timing = _timing_lock(seg_s, branch_cfg, setting=setting, shot=shot_enriched)
+        for clause in (wardrobe, EYELINE_KITCHEN, timing):
+            if clause not in sc:
+                scene_bits.append(clause)
     if setting == "transition_kitchen_to_living" and ANTI_DOWNSTAGE not in sc:
         scene_bits.append(ANTI_DOWNSTAGE)
     bb["scene"] = "; ".join(scene_bits)
     st = str(bb.get("style") or "")
-    if setting in ("transition_kitchen_to_living", "living_room") and GRADE_CONTINUITY not in st:
-        bb["style"] = f"{st}; {GRADE_CONTINUITY}" if st else GRADE_CONTINUITY
-    shot_id = str(shot.get("id") or "")
-    if shot_id in ("b07_network", "b08_close_de"):
-        if SKIN_GRADE_LATE not in st:
-            bb["style"] = f"{bb.get('style') or st}; {SKIN_GRADE_LATE}"
+    if setting in ("transition_kitchen_to_living", "living_room"):
+        style_bits = [bb.get("style") or st]
+        for clause in (ANTI_MAGENTA_SKIN, ANTI_YELLOW_CAST):
+            if clause not in " ".join(style_bits):
+                style_bits.append(clause)
+        bb["style"] = "; ".join(s for s in style_bits if s)
     amb = bb.get("audio") if isinstance(bb.get("audio"), dict) else {}
     amb_str = str(amb.get("ambient") or "")
     if MUTE_SCORE.split(":")[0] not in amb_str:
@@ -189,15 +326,21 @@ def _generate_origin(
     composite: Path,
     out_mp4: Path,
     seg_s: int,
+    branch_cfg: dict | None = None,
 ) -> tuple[str, Path, dict]:
     dur = _shot_duration(shot, seg_s)
-    shot_enriched = _enrich_shot_barebones(shot, dur, script)
+    shot_enriched = _enrich_shot_barebones(shot, dur, script, branch_cfg=branch_cfg)
+    setting = str(shot.get("setting") or "")
+    prompt_finalizer = lambda p, _s=setting, _d=dur, _b=branch_cfg, _sh=shot: _finalize_branch_prompt(
+        p, seg_s=_d, setting=_s, branch_cfg=_b, shot=_sh,
+    )
     _api_pace()
     resp, req = generate_baked_composite_video(
         client, shot_enriched, refs, script, prod_dir, composite,
         duration=dur,  # NATIVE_LONG_SEGMENT: swap with native cap when available
+        prompt_finalizer=prompt_finalizer,
     )
-    prompt = _enrich_prompt(req.get("prompt") or "", seg_s=dur)
+    prompt = req.get("prompt") or ""
     out_mp4.with_suffix(".prompt.txt").write_text(prompt, encoding="utf-8")
     _download(resp.url, out_mp4)
     return resp.url, out_mp4, {"prompt": prompt, "binding": req.get("binding")}
@@ -217,6 +360,8 @@ def _generate_branch(
     out_mp4: Path,
     seg_s: int,
     seed_mode: str,
+    branch_cfg: dict | None = None,
+    extra_prompt_clauses: list[str] | None = None,
 ) -> tuple[str, Path, dict]:
     dur = _shot_duration(shot, seg_s)
     staging_meta = (
@@ -224,7 +369,12 @@ def _generate_branch(
         if seed_mode == BRANCH_CHAIN_STAGING_MODE
         else {}
     )
-    shot_enriched = _enrich_shot_barebones(shot, dur, script)
+    shot_enriched = _enrich_shot_barebones(shot, dur, script, branch_cfg=branch_cfg)
+    setting = str(shot.get("setting") or "")
+    clauses = list(extra_prompt_clauses or [])
+    prompt_finalizer = lambda p, _s=setting, _d=dur, _b=branch_cfg, _c=clauses, _sh=shot: _finalize_branch_prompt(
+        p, seg_s=_d, setting=_s, branch_cfg=_b, shot=_sh, extra_clauses=_c,
+    )
     _api_pace()
     resp, req = generate_branch_handoff_video(
         client,
@@ -238,8 +388,9 @@ def _generate_branch(
         origin_video_url=origin_video_url,
         origin_composite=origin_composite,
         seed_mode=seed_mode,
+        prompt_finalizer=prompt_finalizer,
     )
-    prompt = _enrich_prompt(req.get("prompt") or "", seg_s=dur)
+    prompt = req.get("prompt") or ""
     out_mp4.with_suffix(".prompt.txt").write_text(prompt, encoding="utf-8")
     handoff_audit = {
         **staging_meta,
@@ -330,6 +481,185 @@ def _should_clamp_branch(sid: str, branch_cfg: dict) -> bool:
     return sid in clamp_ids
 
 
+def _try_handoff_offsets(
+    prev_mp4: Path,
+    handoff: Path,
+    branch_cfg: dict,
+    *,
+    shot_id: str,
+    lip_risk: float,
+) -> Path:
+    """Re-extract handoff at earlier timestamps when tail frame risks lip clip."""
+    offsets = branch_cfg.get("handoff_extract_offsets_s") or []
+    if lip_risk <= 0.15 or not offsets or not prev_mp4.is_file():
+        return handoff
+
+    dur = probe_duration(prev_mp4)
+    best = handoff
+    best_risk = lip_risk
+    for off in offsets:
+        seek = max(0.0, dur - float(off))
+        alt = handoff.with_name(f"{handoff.stem}_t{off}s.jpg")
+        extract_frame_at(prev_mp4, seek, alt)
+        from handoff_drift_gate import _probe_lip_clip, _load_rgb  # noqa: E402
+
+        lip = _probe_lip_clip(_load_rgb(alt))
+        risk = float(lip.get("lip_clip_risk") or 1.0)
+        if risk < best_risk:
+            best_risk = risk
+            best = alt
+    if best != handoff:
+        best.replace(handoff)
+        print(
+            f"[drift-gate] {shot_id}: lip-offset handoff → {handoff.name} "
+            f"(lip_risk={best_risk:.2f})",
+            flush=True,
+        )
+    return handoff
+
+
+def _prepare_handoff_frame(
+    handoff: Path,
+    prod_dir: Path,
+    script: dict,
+    branch_cfg: dict,
+    *,
+    shot_id: str,
+    continuity_reference: Path | None = None,
+    prev_mp4: Path | None = None,
+) -> tuple[Path, Any | None, list[str]]:
+    """Probe handoff still; color-sanitize; return drift report + prompt reinforcements."""
+    if not branch_cfg.get("handoff_drift_gate", True):
+        return handoff, None, []
+    anchor = _resolve_color_anchor(prod_dir, script, branch_cfg)
+    if anchor is None or not anchor.is_file():
+        return handoff, None, []
+    try:
+        from handoff_drift_gate import (
+            drift_prompt_clauses,
+            log_drift_report,
+            parse_continuity_features,
+            probe_handoff_drift,
+            sanitize_handoff_color,
+        )
+    except ImportError:
+        return handoff, None, []
+
+    wardrobe = str((script.get("config") or {}).get("wardrobe_lock") or "")
+    features = parse_continuity_features(branch_cfg, wardrobe_lock=wardrobe)
+
+    report = probe_handoff_drift(
+        handoff,
+        anchor,
+        wardrobe_lock=wardrobe,
+        continuity_reference_path=continuity_reference,
+        continuity_features=features,
+        branch_cfg=branch_cfg,
+    )
+    lip_risk = float((report.metrics.get("lip_clip") or {}).get("lip_clip_risk") or 0.0)
+    if prev_mp4 and prev_mp4.is_file() and lip_risk > 0.15:
+        handoff = _try_handoff_offsets(
+            prev_mp4, handoff, branch_cfg, shot_id=shot_id, lip_risk=lip_risk,
+        )
+        report = probe_handoff_drift(
+            handoff,
+            anchor,
+            wardrobe_lock=wardrobe,
+            continuity_reference_path=continuity_reference,
+            continuity_features=features,
+            branch_cfg=branch_cfg,
+        )
+    log_drift_report(report, shot_id=shot_id)
+    clauses = drift_prompt_clauses(report, features)
+
+    color_action = any(
+        f.category == "color_grade" and f.severity == "fail"
+        for f in report.findings
+    )
+    if color_action:
+        sanitized = handoff.with_name(f"{handoff.stem}_sanitized.jpg")
+        try:
+            sanitize_handoff_color(handoff, anchor, sanitized)
+            sanitized.replace(handoff)
+            print(f"[drift-gate] {shot_id}: color-sanitized handoff → {handoff.name}", flush=True)
+        except Exception as exc:
+            print(f"[drift-gate] {shot_id}: color-sanitize skipped ({exc})", flush=True)
+    elif not report.pass_:
+        print(
+            f"[drift-gate] {shot_id}: {report.adaptation} — "
+            f"uploading handoff (structural/feature may need regen_prev)",
+            flush=True,
+        )
+
+    return handoff, report, clauses
+
+
+def _render_shot_at_index(
+    i: int,
+    *,
+    client: Any,
+    shots: list[dict],
+    refs: dict,
+    script: dict,
+    prod_dir: Path,
+    branch_dir: Path,
+    frames_dir: Path,
+    composite: Path,
+    segment_s: int,
+    seed_mode: str,
+    branch_cfg: dict,
+    locked_origin_url: str,
+    extra_prompt_clauses: list[str] | None = None,
+) -> tuple[str, Path, dict]:
+    """Generate one branch (origin or handoff) with clamp + last-frame extract."""
+    shot = shots[i]
+    sid = shot["id"]
+    dur = _shot_duration(shot, segment_s)
+    out_mp4 = branch_dir / f"{sid}_{dur}s.mp4"
+    clauses = list(extra_prompt_clauses or [])
+
+    if i == 0:
+        api_url, out_mp4, branch_meta = _generate_origin(
+            client, shot, refs, script, prod_dir,
+            composite=composite, out_mp4=out_mp4, seg_s=segment_s,
+            branch_cfg=branch_cfg,
+        )
+    else:
+        prev = shots[i - 1]["id"]
+        prev_dur = _shot_duration(shots[i - 1], segment_s)
+        prev_mp4 = branch_dir / f"{prev}_{prev_dur}s.mp4"
+        staging_frame = frames_dir / f"{prev}_last_frame.jpg"
+        _extract_handoff_frame(prev_mp4, shots[i - 1], staging_frame)
+        continuity_ref = staging_frame if staging_frame.is_file() else None
+        staging_frame, _, drift_clauses = _prepare_handoff_frame(
+            staging_frame,
+            prod_dir,
+            script,
+            branch_cfg,
+            shot_id=sid,
+            continuity_reference=continuity_ref,
+            prev_mp4=prev_mp4,
+        )
+        clauses.extend(drift_clauses)
+        api_url, out_mp4, branch_meta = _generate_branch(
+            client, shot, refs, script, prod_dir,
+            handoff_frame=staging_frame,
+            origin_video_url=locked_origin_url,
+            origin_composite=composite if seed_mode == BRANCH_CHAIN_STAGING_MODE else None,
+            prev_shot_id=prev,
+            out_mp4=out_mp4,
+            seg_s=segment_s,
+            seed_mode=seed_mode,
+            branch_cfg=branch_cfg,
+            extra_prompt_clauses=clauses or None,
+        )
+
+    _maybe_clamp_branch_color(shot, out_mp4, prod_dir, branch_cfg, script)
+    handoff = frames_dir / f"{sid}_last_frame.jpg"
+    _extract_handoff_frame(out_mp4, shot, handoff)
+    return api_url, out_mp4, branch_meta
+
+
 def _maybe_clamp_branch_color(
     shot: dict,
     mp4: Path,
@@ -345,17 +675,30 @@ def _maybe_clamp_branch_color(
     if anchor is None or not anchor.is_file():
         print(f"[clamp] skip {sid}: color anchor missing", flush=True)
         return
-    before = probe_magenta_score(mp4)
+    from color_cast_qa import blue_deficit_index
+
+    before_mag = probe_magenta_score(mp4)
+    try:
+        before_def = blue_deficit_index(_probe_video_frame_arr(mp4))
+    except Exception:
+        before_def = 0.0
     tmp = mp4.with_name(f"{mp4.stem}_clamped.mp4")
     recovery_ids = branch_cfg.get("color_recovery_shots") or []
+    strength = float(branch_cfg.get("color_recovery_strength") or 0.65)
     if sid in recovery_ids:
-        apply_living_room_skin_recovery(mp4, tmp, anchor)
+        apply_living_room_skin_recovery(mp4, tmp, anchor, strength=strength)
     else:
         apply_grade_hold_light(mp4, tmp, anchor)
     tmp.replace(mp4)
-    after = probe_magenta_score(mp4)
+    after_mag = probe_magenta_score(mp4)
+    try:
+        after_def = blue_deficit_index(_probe_video_frame_arr(mp4))
+    except Exception:
+        after_def = 0.0
     print(
-        f"[clamp] {sid} anchor={anchor.name} magenta {before:.3f}→{after:.3f}",
+        f"[clamp] {sid} anchor={anchor.name} "
+        f"magenta {before_mag:.3f}→{after_mag:.3f} "
+        f"blue_def {before_def:.3f}→{after_def:.3f}",
         flush=True,
     )
 
@@ -402,7 +745,7 @@ def _clamp_existing_branches(
             raise SystemExit(f"--clamp-only: missing branch {mp4}")
         _maybe_clamp_branch_color(shot, mp4, prod_dir, branch_cfg, script)
         handoff = prod_dir / "branch_frames" / f"{sid}_last_frame.jpg"
-        mandatory_extract_last_frame(mp4, handoff)
+        _extract_handoff_frame(mp4, shot, handoff)
 
 
 def _loudnorm_pass(path: Path) -> None:
@@ -496,7 +839,7 @@ def main() -> int:
             sid = shot["id"]
             dur = _shot_duration(shot, segment_s)
             mp4 = branch_dir / f"{sid}_{dur}s.mp4"
-            mandatory_extract_last_frame(mp4, frames_dir / f"{sid}_last_frame.jpg")
+            _extract_handoff_frame(mp4, shot, frames_dir / f"{sid}_last_frame.jpg")
         print("[restore] all branches + handoff frames refreshed from API", flush=True)
 
     if args.clamp_only:
@@ -550,7 +893,7 @@ def main() -> int:
                     origin_video_url = locked_origin_url
                 if i + 1 < n_shots:
                     handoff = frames_dir / f"{sid}_last_frame.jpg"
-                    mandatory_extract_last_frame(out_mp4, handoff)
+                    _extract_handoff_frame(out_mp4, shot, handoff)
                     staging_frame = handoff
                 if len(segments) <= i:
                     segments.append(out_mp4)
@@ -565,13 +908,14 @@ def main() -> int:
                 api_url, out_mp4, branch_meta = _generate_origin(
                     client, shot, refs, script, prod_dir,
                     composite=composite, out_mp4=out_mp4, seg_s=segment_s,
+                    branch_cfg=branch_cfg,
                 )
                 locked_origin_url = api_url
                 origin_video_url = locked_origin_url
                 # Extract B01 last frame — B02 staging guide (prompt only, not image seed).
-                mandatory_extract_last_frame(out_mp4, b01_last_frame_path)
+                _extract_handoff_frame(out_mp4, shot, b01_last_frame_path)
                 print(
-                    f"[branch]   b01 last frame extracted → B02 staging: {b01_last_frame_path.name}",
+                    f"[branch]   b01 handoff frame extracted → B02 staging: {b01_last_frame_path.name}",
                     flush=True,
                 )
             else:
@@ -579,7 +923,7 @@ def main() -> int:
                 prev_dur = _shot_duration(shots[i - 1], segment_s)
                 prev_mp4 = branch_dir / f"{prev}_{prev_dur}s.mp4"
                 staging_frame = frames_dir / f"{prev}_last_frame.jpg"
-                mandatory_extract_last_frame(prev_mp4, staging_frame)
+                _extract_handoff_frame(prev_mp4, shots[i - 1], staging_frame)
                 if not locked_origin_url:
                     locked_origin_url = str(state.get("origin_video_url") or "")
                     if not locked_origin_url:
@@ -593,6 +937,70 @@ def main() -> int:
                         f"handoff frame missing: {staging_frame} — "
                         "previous branch must complete before this one"
                     )
+                continuity_ref = staging_frame if staging_frame.is_file() else None
+
+                regen_attempts = 0
+                max_regen = int(branch_cfg.get("handoff_drift_regen_max") or 1)
+                drift_report = None
+                extra_clauses: list[str] = []
+
+                while True:
+                    staging_frame, drift_report, extra_clauses = _prepare_handoff_frame(
+                        staging_frame,
+                        prod_dir,
+                        script,
+                        branch_cfg,
+                        shot_id=sid,
+                        continuity_reference=continuity_ref,
+                        prev_mp4=prev_mp4,
+                    )
+                    try:
+                        from handoff_drift_gate import needs_prev_regen
+                    except ImportError:
+                        break
+                    if drift_report is None or not needs_prev_regen(drift_report):
+                        break
+                    if regen_attempts >= max_regen:
+                        print(
+                            f"[drift-gate] {sid}: regen_prev exhausted ({max_regen}) — "
+                            f"proceeding with current handoff",
+                            flush=True,
+                        )
+                        break
+                    regen_attempts += 1
+                    prev_i = i - 1
+                    prev_sid = shots[prev_i]["id"]
+                    print(
+                        f"[drift-gate] {sid}: regen_prev {regen_attempts}/{max_regen} "
+                        f"→ {prev_sid}",
+                        flush=True,
+                    )
+                    regen_url, prev_mp4, regen_meta = _render_shot_at_index(
+                        prev_i,
+                        client=client,
+                        shots=shots,
+                        refs=refs,
+                        script=script,
+                        prod_dir=prod_dir,
+                        branch_dir=branch_dir,
+                        frames_dir=frames_dir,
+                        composite=composite,
+                        segment_s=segment_s,
+                        seed_mode=seed_mode,
+                        branch_cfg=branch_cfg,
+                        locked_origin_url=locked_origin_url,
+                        extra_prompt_clauses=extra_clauses,
+                    )
+                    state[prev_sid] = {
+                        "api_url": regen_url,
+                        "duration_s": probe_duration(prev_mp4),
+                        "handoff_frame_local": str(frames_dir / f"{prev_sid}_last_frame.jpg"),
+                        "branch_mode": seed_mode,
+                        **regen_meta,
+                    }
+                    state_path.write_text(json.dumps(state, indent=2), encoding="utf-8")
+                    _extract_handoff_frame(prev_mp4, shots[prev_i], staging_frame)
+
                 if seed_mode == BRANCH_CHAIN_LAST_FRAME_MODE:
                     print(
                         f"[branch] {i + 1}/{n_shots} BRANCH {sid} ({dur}s) "
@@ -615,12 +1023,14 @@ def main() -> int:
                     out_mp4=out_mp4,
                     seg_s=segment_s,
                     seed_mode=seed_mode,
+                    branch_cfg=branch_cfg,
+                    extra_prompt_clauses=extra_clauses or None,
                 )
 
             _maybe_clamp_branch_color(shot, out_mp4, prod_dir, branch_cfg, script)
             actual_dur = probe_duration(out_mp4)
             handoff = frames_dir / f"{sid}_last_frame.jpg"
-            mandatory_extract_last_frame(out_mp4, handoff)
+            _extract_handoff_frame(out_mp4, shot, handoff)
             staging_frame = handoff
             state[sid] = {
                 "api_url": api_url,
@@ -649,10 +1059,13 @@ def main() -> int:
                 segments[i] = out_mp4
 
     # Rebuild segment list in shot order (handles partial cache + force combos)
-    segments = [branch_dir / f"{s['id']}_{_shot_duration(s, segment_s)}s.mp4" for s in shots]
-    for p in segments:
+    raw_segments = [branch_dir / f"{s['id']}_{_shot_duration(s, segment_s)}s.mp4" for s in shots]
+    for p in raw_segments:
         if not p.is_file():
             raise SystemExit(f"missing branch: {p}")
+    join_segments = [
+        shot_join_segment(mp4, shot, branch_dir) for shot, mp4 in zip(shots, raw_segments)
+    ]
 
     ver = branch_cfg.get("output_version", "v1")
     final = out_dir / f"{script['slug']}_branch_chain_{n_shots}x{segment_s}s_{ver}.mp4"
@@ -661,14 +1074,14 @@ def main() -> int:
     join_mode = "hard_cut" if xfade_s < MIN_XFADE_S else "xfade"
     print(f"[stitch] joining {n_shots} branches mode={join_mode} xfade={xfade_s}s", flush=True)
     if xfade_s < MIN_XFADE_S:
-        _concat_reencode(segments, final)
+        _concat_reencode(join_segments, final)
     else:
-        concat_xfade_chain(segments, final, xfade_s=xfade_s, magenta_clamp=False, work_dir=work)
+        concat_xfade_chain(join_segments, final, xfade_s=xfade_s, magenta_clamp=False, work_dir=work)
     print("[stitch] loudnorm pass…", flush=True)
     _loudnorm_pass(final)
     total = probe_duration(final)
 
-    total_seg_s = sum(_shot_duration(s, segment_s) for s in shots)
+    total_seg_s = sum(_join_duration_s(s, p) for s, p in zip(shots, raw_segments))
     expected_s = total_seg_s - xfade_s * (n_shots - 1)
 
     report = {
@@ -676,7 +1089,8 @@ def main() -> int:
         "slug": script["slug"],
         "n_shots": n_shots,
         "segment_s_default": segment_s,
-        "branches": [str(p) for p in segments],
+        "branches": [str(p) for p in raw_segments],
+        "join_segments": [str(p) for p in join_segments],
         "xfade_s": xfade_s,
         "join_mode": join_mode,
         "output": str(final),

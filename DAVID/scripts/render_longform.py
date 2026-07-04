@@ -30,7 +30,9 @@ import urllib.request
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
+
+MAX_VIDEO_PROMPT_LEN = 4000
 
 ROOT = Path(__file__).resolve().parents[1]
 WORKSPACE = ROOT.parent
@@ -44,6 +46,122 @@ if str(_AI_FED) not in sys.path:
     sys.path.insert(0, str(_AI_FED))
 from qa_gate import qa_check as _qa_gate_check  # noqa: E402  # distinct from local qa_check()
 # --- end qa_gate wiring ---
+
+from style_modifiers import (  # noqa: E402
+    log_resolved_modifiers,
+    modifier_clauses_from_resolved,
+    native_av_enabled,
+    resolve_modifier_ids,
+    resolve_style_modifiers,
+)
+
+# --- production catalog (Oliver permanent-ID pattern) ---
+try:
+    from production_catalog import (  # noqa: E402
+        Catalog as _Catalog,
+        bootstrap_from_identity_lock as _bootstrap_catalog,
+        continuity_evaluate as _continuity_evaluate,
+        write_exception_csv as _write_exception_csv,
+    )
+    _HAS_CATALOG = True
+except ImportError:
+    _HAS_CATALOG = False
+
+try:
+    from ingest_registry import (  # noqa: E402
+        IngestRegistry as _IngestRegistry,
+        movie_sources as _movie_sources,
+        movie_fixtures as _movie_fixtures,
+    )
+    _HAS_INGEST = True
+except ImportError:
+    _HAS_INGEST = False
+
+
+def _catalog_register_plates(catalog: Any, refs: dict[str, Any]) -> None:
+    """Auto-register resolved plate files as catalog assets.
+
+    Every actor plate, setting plate, visualization plate gets a permanent
+    number — like working actors with SAG cards. Same ID across every
+    production so you can recall them by number.
+    """
+    if not _HAS_CATALOG:
+        return
+    # Actor / talent plate
+    avatar_file = refs.get("avatar_file")
+    if avatar_file and not _catalog_find_plate(catalog, avatar_file):
+        lock = refs.get("lock", {})
+        char_name = lock.get("character", {}).get("name", "Unknown Talent")
+        entry = catalog.register(
+            "CHAR",
+            char_name,
+            state={
+                "plate_file": str(avatar_file),
+                "plate_url": refs.get("avatar_url", ""),
+                "plate_type": "actor",
+                "role": lock.get("character", {}).get("role", ""),
+            },
+            notes="Auto-registered from resolved actor plate",
+        )
+        _log(f"[catalog] registered actor plate {entry.id} → {Path(avatar_file).name}")
+
+    # Set / environment plate
+    set_file = refs.get("set_file")
+    if set_file and not _catalog_find_plate(catalog, set_file):
+        lock = refs.get("lock", {})
+        set_name = lock.get("character", {}).get("set_name", "Unknown Set")
+        entry = catalog.register(
+            "SET",
+            set_name,
+            state={
+                "plate_file": str(set_file),
+                "plate_type": "environment",
+            },
+            notes="Auto-registered from resolved set plate",
+        )
+        _log(f"[catalog] registered set plate {entry.id} → {Path(set_file).name}")
+
+    # Visualization plate
+    viz_file = refs.get("visualization_file")
+    if viz_file and not _catalog_find_plate(catalog, viz_file):
+        entry = catalog.register(
+            "PROP",
+            f"Visualization ({Path(viz_file).stem})",
+            state={
+                "plate_file": str(viz_file),
+                "plate_url": refs.get("visualization_url", ""),
+                "plate_type": "visualization",
+            },
+            notes="Auto-registered from resolved visualization plate",
+        )
+        _log(f"[catalog] registered viz plate {entry.id} → {Path(viz_file).name}")
+
+    # Zone plates (background environment stills)
+    zone_plates = refs.get("zone_plates", {})
+    for zone_id, zp in zone_plates.items():
+        plate_path = zp if isinstance(zp, str) else zp.get("file", "")
+        if plate_path and not _catalog_find_plate(catalog, plate_path):
+            entry = catalog.register(
+                "SET",
+                f"Zone Plate ({zone_id})",
+                state={
+                    "plate_file": str(plate_path),
+                    "plate_type": "zone_plate",
+                    "zone_id": zone_id,
+                },
+                notes=f"Auto-registered zone plate for {zone_id}",
+            )
+            _log(f"[catalog] registered zone plate {entry.id} → {Path(plate_path).name}")
+
+
+def _catalog_find_plate(catalog: Any, plate_path: str) -> bool:
+    """Check if a plate file is already registered in the catalog."""
+    plate_str = str(plate_path)
+    for entry in catalog.entries.values():
+        if entry.state.get("plate_file") == plate_str:
+            return True
+    return False
+# --- end production catalog ---
 
 # --- PromptDirector wiring ---
 _PROMPT_DIRECTOR: "Any | None" = None
@@ -77,6 +195,23 @@ from shot_duration import (  # noqa: E402
     clamp_shot_duration,
     effective_shot_duration,
 )
+
+# --- EU AI Act compliance enforcement ---
+_ELEANOR_MW = WORKSPACE / "AI" / "ELEANOR" / "middleware"
+if str(_ELEANOR_MW) not in sys.path:
+    sys.path.insert(0, str(_ELEANOR_MW))
+try:
+    from eu_compliance import (  # noqa: E402
+        burn_eu_compliance_label,
+        compliance_provenance_footer,
+        embed_xmp_metadata,
+        log_compliance_action,
+    )
+    _EU_COMPLIANCE_AVAILABLE = True
+except ImportError as _eu_exc:
+    print(f"[EU-COMPLIANCE] CRITICAL — module not available: {_eu_exc}", file=sys.stderr)
+    _EU_COMPLIANCE_AVAILABLE = False
+# --- end EU AI Act compliance enforcement ---
 
 DEFAULT_LOCK = ROOT / "productions" / "host_identity_v1" / "david_identity_lock.json"
 FFMPEG: str | None = None
@@ -170,8 +305,10 @@ from color_cast_qa import (  # noqa: E402
     color_cast_passes,
     generation_reference_breaches,
     generation_reference_passes,
+    grade_family_profile,
     measure_color_cast,
     measure_set_shadow_blue_health,
+    resolve_grade_family,
 )
 CLINICAL_CHANNEL_BALANCE_MAX = 0.12  # #199 — absolute host CCB; fails +66 legacy false-pass frames
 LABEL_CHIP_COLORS = {
@@ -346,7 +483,7 @@ def _use_magenta_hue_qa(script: dict[str, Any], refs: dict[str, Any]) -> bool:
     return (
         _is_archive_production(script, refs)
         or _is_dark_scene(refs, script=script)
-        or script.get("format_id") in ("narrative-short-film", "movies")
+        or script.get("format_id") in ("narrative-short-film", "movies", "cutscenes")
     )
 
 
@@ -1006,6 +1143,20 @@ def compile_barebones_prose_prompt(
         if voice_de and str(dialogue.get("language") or "").startswith("de"):
             parts.append(voice_de)
 
+    resolved_mods = resolve_style_modifiers(
+        script,
+        shot,
+        include_audio=native_av_enabled(script, shot),
+    )
+    assembled_so_far = " ; ".join(parts)
+    for clause in modifier_clauses_from_resolved(resolved_mods):
+        if clause and clause not in assembled_so_far:
+            parts.append(clause)
+            assembled_so_far = (
+                f"{assembled_so_far} ; {clause}" if assembled_so_far else clause
+            )
+    log_resolved_modifiers(str(shot.get("id") or ""), resolved_mods, _log)
+
     style = str(bb.get("style") or "").strip()
     if style:
         parts.append(style)
@@ -1020,6 +1171,29 @@ def compile_barebones_prose_prompt(
         f"@1_first=yes talent={talent_label}"
     )
     return prompt.strip()
+
+
+def cap_video_prompt(prompt: str, max_len: int = MAX_VIDEO_PROMPT_LEN) -> str:
+    """Trim prompt to API limit — dedupe clauses, drop tail segments if needed."""
+    if len(prompt) <= max_len:
+        return prompt
+    parts = [p.strip() for p in prompt.split(";") if p.strip()]
+    seen: set[str] = set()
+    unique: list[str] = []
+    for part in parts:
+        key = part[:72].lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(part)
+    out = " ; ".join(unique)
+    while len(out) > max_len and len(unique) > 8:
+        unique.pop()
+        out = " ; ".join(unique)
+    if len(out) > max_len:
+        out = out[: max_len - 3].rsplit(" ; ", 1)[0]
+    _log(f"[prompt] capped {len(prompt)} → {len(out)} chars")
+    return out
 
 
 def _resolve_composite_first_frame(
@@ -1052,6 +1226,7 @@ def generate_baked_composite_video(
     composite_path: Path,
     *,
     duration: int,
+    prompt_finalizer: Callable[[str], str] | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """video.generate from composite JPG — talent+set baked into @1 (no reference_images)."""
     composite_path = Path(composite_path)
@@ -1078,6 +1253,9 @@ def generate_baked_composite_video(
         seed_slot="@1",
         talent_baked_in=True,
     )
+    if prompt_finalizer:
+        prompt = prompt_finalizer(prompt)
+    prompt = cap_video_prompt(prompt)
     gen_kwargs: dict[str, Any] = {
         "prompt": prompt,
         "model": refs["model_video"],
@@ -1088,7 +1266,7 @@ def generate_baked_composite_video(
     }
     _log(
         f"[baked@1] generate {shot.get('id')}: image_file_id={fid[:20]}... "
-        f"talent+set in composite seed"
+        f"talent+set in composite seed ({len(prompt)} chars)"
     )
     _api_pace()
     resp = client.video.generate(**gen_kwargs)
@@ -1115,6 +1293,7 @@ def generate_baked_chain_video(
     chain_image_file_id: str,
     chain_image_url: str | None,
     duration: int,
+    prompt_finalizer: Callable[[str], str] | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """video.generate from chain frame — identity baked in pixels, no reference_images."""
     fid = str(chain_image_file_id)
@@ -1138,6 +1317,9 @@ def generate_baked_chain_video(
         seed_slot="@1",
         talent_baked_in=True,
     )
+    if prompt_finalizer:
+        prompt = prompt_finalizer(prompt)
+    prompt = cap_video_prompt(prompt)
     gen_kwargs: dict[str, Any] = {
         "prompt": prompt,
         "model": refs["model_video"],
@@ -1148,7 +1330,7 @@ def generate_baked_chain_video(
     }
     _log(
         f"[baked@chain] generate {shot.get('id')}: image_file_id={fid[:20]}... "
-        f"talent+set in chain seed (no refs)"
+        f"talent+set in chain seed ({len(prompt)} chars)"
     )
     _api_pace()
     resp = client.video.generate(**gen_kwargs)
@@ -1184,6 +1366,7 @@ def generate_branch_last_frame_video(
     handoff_frame: Path,
     prev_shot_id: str,
     duration: int,
+    prompt_finalizer: Callable[[str], str] | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """Branch chain: upload prev-branch last frame → image_file_id seed (sequential topology).
 
@@ -1211,6 +1394,7 @@ def generate_branch_last_frame_video(
         chain_image_file_id=chain_fid,
         chain_image_url=chain_url,
         duration=duration,
+        prompt_finalizer=prompt_finalizer,
     )
     req["binding"] = {
         **(req.get("binding") or {}),
@@ -1235,6 +1419,7 @@ def generate_branch_staging_video(
     origin_composite: Path,
     prev_shot_id: str,
     duration: int,
+    prompt_finalizer: Callable[[str], str] | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """Branch chain (hardcoded): last frame = staging guide only → prompt → star-origin generate.
 
@@ -1277,6 +1462,7 @@ def generate_branch_staging_video(
         prod_dir,
         origin_composite,
         duration=duration,
+        prompt_finalizer=prompt_finalizer,
     )
     req["binding"] = {
         **(req.get("binding") or {}),
@@ -1306,6 +1492,7 @@ def generate_branch_handoff_video(
     origin_video_url: str = "",
     origin_composite: Path | None = None,
     seed_mode: str | None = None,
+    prompt_finalizer: Callable[[str], str] | None = None,
 ) -> tuple[Any, dict[str, Any]]:
     """Dispatch branch generate by script branch_chain seed policy."""
     mode = seed_mode or resolve_branch_chain_seed_handoff(script)
@@ -1319,6 +1506,7 @@ def generate_branch_handoff_video(
             handoff_frame=handoff_frame,
             prev_shot_id=prev_shot_id,
             duration=duration,
+            prompt_finalizer=prompt_finalizer,
         )
     if not origin_composite:
         raise ValueError("origin_composite required for staging-guide branch mode")
@@ -1333,6 +1521,7 @@ def generate_branch_handoff_video(
         origin_composite=origin_composite,
         prev_shot_id=prev_shot_id,
         duration=duration,
+        prompt_finalizer=prompt_finalizer,
     )
 
 
@@ -1765,6 +1954,24 @@ def _normalize_shot_list(
         prompt = shot.get("video_prompt", "")
         if speech and speech not in prompt and narration_enabled({"config": cfg or {}}, shot):
             shot["video_prompt"] = f'{prompt.rstrip()} Lip-synced, delivers: "{speech}"'
+        # Resolve the shot's grade family so the cast gate judges the frame against
+        # the intended STYLE look, not clinical-neutral. Uses the authoritative
+        # modifier resolver (shot → branch-chain block → config → persona expansion,
+        # scene overrides movie); falls back to a movie-level lookup if it errors.
+        # Unmapped → left unset (clinical, i.e. today's behavior).
+        if not shot.get("grade_family"):
+            try:
+                _fam = resolve_modifier_ids({"config": cfg or {}}, shot).get("grade_family")
+            except Exception:
+                _mv = cfg or {}
+                _movie_tag = _mv.get("style_dna_tag") or _mv.get("director_persona_id")
+                _fam = (
+                    (resolve_grade_family(shot.get("style_dna_tag")) if shot.get("style_dna_tag") else None)
+                    or _mv.get("grade_family")
+                    or (resolve_grade_family(_movie_tag) if _movie_tag else None)
+                )
+            if _fam and _fam != "clinical_neutral":
+                shot["grade_family"] = _fam
         out.append(shot)
     return out
 
@@ -1857,6 +2064,7 @@ def normalize_script(raw: dict[str, Any], script_path: Path) -> dict[str, Any]:
         for key in (
             "format_id", "concept", "production_dir", "production_meta",
             "guardrails", "continuity_prefix", "end_guard", "intake",
+            "style", "general_style",
         ):
             if raw.get(key) is not None:
                 out[key] = raw[key]
@@ -2350,6 +2558,17 @@ def render_provenance_card(script: dict[str, Any], out_path: Path) -> None:
         if footer:
             draw.text((70, h - 70), footer, fill=(255, 180, 90), font=small_font)
 
+    # --- EU AI Act: mandatory compliance footer on every provenance card ---
+    if _EU_COMPLIANCE_AVAILABLE:
+        eu_footer = compliance_provenance_footer()
+        try:
+            eu_font = ImageFont.truetype("arial.ttf", 16)
+        except OSError:
+            eu_font = ImageFont.load_default()
+        eu_y = h - 35
+        draw.text((50, eu_y), eu_footer, fill=(255, 140, 60, 220), font=eu_font)
+    # --- end EU compliance footer ---
+
     out_path.parent.mkdir(parents=True, exist_ok=True)
     img.save(out_path)
 
@@ -2441,6 +2660,8 @@ class SeamlessOptions:
 
 
 LEGACY_EXTEND_MODEL = "grok-imagine-video"
+EXTEND_API_DUR_LO = 2
+EXTEND_API_DUR_HI = 10
 
 EXTEND_API_FINDING = {
     "scriptable": True,
@@ -3575,8 +3796,14 @@ def apply_per_shot_magenta_clamp(
     lamp_lock: bool = True,
     archive_neutral: bool = False,
     neutral_generation: bool = False,
+    grade_family: str | None = None,
 ) -> Path:
-    """Per-shot magenta suppression — archive-neutral delegates to single-pass #244 clamp."""
+    """Per-shot magenta suppression — archive-neutral delegates to single-pass #244 clamp.
+
+    grade_family: the shot's intended look (director/art style). The measured-cast
+    gate judges the frame against THAT band, not clinical-neutral, so an intentional
+    style grade (Fincher green/inky, Anderson warm pastel) is not "corrected" back
+    out. None → clinical-neutral (unchanged behavior)."""
     out.parent.mkdir(parents=True, exist_ok=True)
     if archive_neutral and not dark_scene:
         return apply_archive_saturation_clamp_once(
@@ -3584,6 +3811,30 @@ def apply_per_shot_magenta_clamp(
             out,
             apply_lamp_accent=not neutral_generation,
         )
+
+    # Measured-cast gate: correct on the ACTUAL frame vs the STYLE's target band
+    # (style first, frame second), never on expected/scene-flag alone. If this shot's
+    # own frame is already within its style band, pass it through untouched rather
+    # than blind-clamping (which crushes blue on clean dark shots and then poisons the
+    # last-frame seed chain — the b06-b08 identity drift — and would also scrub an
+    # intentional style look). Genuine casts still fall through to the clamp + the
+    # measured strong-escalation loop below, so real problems are corrected; clean or
+    # deliberately-styled frames are never over-corrected.
+    try:
+        _style_profile = grade_family_profile(grade_family)
+        _gate_metrics = measure_color_cast(_probe_video_frame_arr(video))
+        _gate_mag = probe_magenta_score(video)
+        if color_cast_passes(_gate_metrics, _style_profile) and _gate_mag <= MAGENTA_SCORE_MAX:
+            _log(
+                f"[cast-gate] {video.stem}: within band for style="
+                f"{grade_family or 'clinical_neutral'} "
+                f"(magenta={_gate_mag:.3f}, warm={_gate_metrics.get('warm_cast_index', 0.0):.3f}) "
+                f"— pass-through, no clamp"
+            )
+            shutil.copy2(video, out)
+            return out
+    except Exception as _gate_exc:  # measurement must never harden into a failure
+        _log(f"[cast-gate] measure skipped ({_gate_exc}) — proceeding with clamp")
 
     clamp_vf = _magenta_clamp_vf(
         dark_scene=dark_scene, lamp_lock=lamp_lock, archive_neutral=archive_neutral,
@@ -3644,9 +3895,20 @@ def apply_per_shot_magenta_clamp(
 
 
 GRADE_HOLD_WARM_VF = "eq=gamma_r=1.03:gamma_g=1.00:gamma_b=0.92:saturation=1.06:brightness=0.01"
+GRADE_HOLD_NEUTRAL_VF = NEUTRAL_WB_VF
 GRADE_HOLD_HIST_STRENGTH = 0.28
 LIVING_ROOM_RECOVERY_STRENGTH = 0.65
-LIVING_ROOM_RECOVERY_FINISH_VF = "eq=brightness=-0.04:saturation=1.03"
+LIVING_ROOM_RECOVERY_FINISH_VF = (
+    "eq=gamma_r=1.00:gamma_g=0.98:gamma_b=1.04:saturation=0.94:brightness=0.00"
+)
+LIVING_ROOM_BLUE_LIFT_VF = (
+    "eq=gamma_r=0.97:gamma_g=1.00:gamma_b=1.08:saturation=0.95:brightness=0.00"
+)
+LIVING_ROOM_BLUE_LIFT_STRONG_VF = (
+    "eq=gamma_r=0.94:gamma_g=0.99:gamma_b=1.16:saturation=0.92:brightness=0.00"
+)
+LIVING_ROOM_MAGENTA_PASS_MIN = 0.18
+LIVING_ROOM_BLUE_DEFICIT_MAX = 0.12
 
 
 def _probe_video_frame_arr(video: Path, at_s: float | None = None) -> np.ndarray:
@@ -3693,8 +3955,62 @@ def _anchor_channel_mixer_vf(
     return (
         f"[0:v]split=2[base][src];[src]{mixer}[corr];"
         f"[base][corr]blend=all_expr='A*(1-{s})+B*{s}'[matched];"
-        f"[matched]{GRADE_HOLD_WARM_VF}[outv]"
+        f"[matched]{GRADE_HOLD_NEUTRAL_VF}[outv]"
     )
+
+
+def _living_room_exposure_brightness(video: Path, anchor: Path) -> float:
+    """Match host luminance to kitchen anchor — prevents branch-to-branch darkening."""
+    from color_cast_qa import host_channel_means
+
+    try:
+        vf = _probe_video_frame_arr(video, at_s=max(1.0, probe_duration(video) * 0.35))
+        from PIL import Image
+
+        af = np.array(Image.open(anchor).convert("RGB"))
+        _, _, _, vlum = host_channel_means(vf)
+        _, _, _, alum = host_channel_means(af)
+        if vlum < 1.0:
+            return 0.0
+        delta = (alum - vlum) / 255.0
+        return max(-0.05, min(0.08, delta * 0.65))
+    except Exception:
+        return 0.0
+
+
+def _living_room_finish_vf(video: Path, anchor: Path) -> str:
+    """Daylight-neutral finish — match exposure to anchor without warm/magenta crush."""
+    bright = _living_room_exposure_brightness(video, anchor)
+    base = LIVING_ROOM_RECOVERY_FINISH_VF
+    if abs(bright) > 0.005:
+        base = base.replace(":brightness=0.00", f":brightness={bright:.3f}")
+    return base
+
+
+def _living_room_blue_deficit_pass(video: Path, out: Path) -> Path:
+    """Lift crushed blue channel — kills yellow cast from magenta pulls or Grok chain drift."""
+    from color_cast_qa import blue_deficit_index
+
+    cur = video
+    for pass_n in range(2):
+        try:
+            arr = _probe_video_frame_arr(cur)
+            deficit = blue_deficit_index(arr)
+        except Exception:
+            return cur
+        if deficit <= LIVING_ROOM_BLUE_DEFICIT_MAX:
+            return cur
+        vf = (
+            LIVING_ROOM_BLUE_LIFT_STRONG_VF
+            if deficit > 0.28
+            else LIVING_ROOM_BLUE_LIFT_VF
+        )
+        step_out = out.with_name(f"{out.stem}_blue{pass_n}.mp4")
+        if not _run_video_eq_pass(cur, step_out, vf):
+            return cur
+        cur = step_out
+        _log(f"[lr-recovery] blue-deficit lift pass {pass_n + 1} (deficit={deficit:.3f})")
+    return cur
 
 
 def apply_living_room_skin_recovery(
@@ -3704,19 +4020,41 @@ def apply_living_room_skin_recovery(
     *,
     strength: float = LIVING_ROOM_RECOVERY_STRENGTH,
 ) -> Path:
-    """b07/b08 magenta recovery — pull host RGB toward kitchen anchor, no blue crush."""
+    """Living-room branches — pull RGB + exposure toward kitchen anchor; kill magenta."""
     out.parent.mkdir(parents=True, exist_ok=True)
     ff = _ffmpeg_exe()
+    cur = video
+    hist_strength = min(0.28, strength * 0.40)
+    if color_ref.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp"):
+        hist_out = out.with_name(f"{out.stem}_lr_hist.mp4")
+        vfilter = (
+            f"[0:v][1:v]histogrammatching=pattern=1:strength={hist_strength}[matched];"
+            f"[matched]null[outv]"
+        )
+        cmd = [
+            ff, "-y", "-i", str(cur), "-loop", "1", "-i", str(color_ref),
+            "-filter_complex", vfilter,
+            "-map", "[outv]", "-c:v", "libx264", "-pix_fmt", "yuv420p",
+        ]
+        if has_audio_stream(cur):
+            cmd.extend(["-map", "0:1", "-c:a", "aac", "-b:a", "192k"])
+        cmd.extend(["-shortest", str(hist_out)])
+        r = subprocess.run(cmd, capture_output=True, text=True)
+        if r.returncode == 0 and hist_out.is_file():
+            cur = hist_out
+            _log(f"[lr-recovery] histogram pre-pass strength={hist_strength:.2f}")
+
     staged = out.with_name(f"{out.stem}_lr_recovery.mp4")
-    vfilter = _anchor_channel_mixer_vf(video, color_ref, strength)
+    vfilter = _anchor_channel_mixer_vf(cur, color_ref, strength)
     if not vfilter:
         return apply_grade_hold_light(video, out, color_ref)
-    vfilter = vfilter.replace(GRADE_HOLD_WARM_VF, LIVING_ROOM_RECOVERY_FINISH_VF)
+    finish = _living_room_finish_vf(cur, color_ref)
+    vfilter = vfilter.replace(GRADE_HOLD_NEUTRAL_VF, finish)
     cmd = [
-        ff, "-y", "-i", str(video), "-filter_complex", vfilter,
+        ff, "-y", "-i", str(cur), "-filter_complex", vfilter,
         "-map", "[outv]", "-c:v", "libx264", "-pix_fmt", "yuv420p",
     ]
-    if has_audio_stream(video):
+    if has_audio_stream(cur):
         cmd.extend(["-map", "0:1", "-c:a", "aac", "-b:a", "192k"])
     cmd.append(str(staged))
     r = subprocess.run(cmd, capture_output=True, text=True)
@@ -3726,15 +4064,14 @@ def apply_living_room_skin_recovery(
 
     cur = staged
     mag = probe_magenta_score(cur)
-    if mag > 0.35:
-        mild = (
-            "colorchannelmixer=rr=0.94:rg=0.02:rb=0:gr=0.02:gg=1.04:gb=0:"
-            "br=0:bg=0:bb=0.96"
-        )
-        mild_out = out.with_name(f"{out.stem}_lr_mild.mp4")
-        if _run_video_eq_pass(cur, mild_out, mild):
-            cur = mild_out
-            _log(f"[lr-recovery] mild magenta trim (score was {mag:.3f})")
+    if mag > LIVING_ROOM_MAGENTA_PASS_MIN:
+        neutral_out = out.with_name(f"{out.stem}_lr_mag.mp4")
+        if _run_video_eq_pass(cur, neutral_out, ARCHIVE_NEUTRAL_CLAMP_VF):
+            cur = neutral_out
+            _log(f"[lr-recovery] neutral magenta pass (score={mag:.3f})")
+
+    blue_out = out.with_name(f"{out.stem}_lr_blue.mp4")
+    cur = _living_room_blue_deficit_pass(cur, blue_out)
 
     staging = out.with_name(f"{out.stem}__lr_recovery_staging.mp4")
     if staging.exists():
@@ -3759,7 +4096,7 @@ def apply_grade_hold_light(
     if color_ref.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp"):
         vfilter = (
             f"[0:v][1:v]histogrammatching=pattern=1:strength={hist_strength}[matched];"
-            f"[matched]{GRADE_HOLD_WARM_VF}[outv]"
+            f"[matched]{GRADE_HOLD_NEUTRAL_VF}[outv]"
         )
         cmd = [
             ff, "-y", "-i", str(video), "-loop", "1", "-i", str(color_ref),
@@ -3945,6 +4282,7 @@ def process_shot_segment(
                 dark_scene=dark_scene, lamp_lock=opts.lamp_lock,
                 archive_neutral=archive_neutral,
                 neutral_generation=opts.neutral_generation,
+                grade_family=shot.get("grade_family"),
             )
         cur = clamped
 
@@ -4422,11 +4760,31 @@ def build_side_by_side(left: Path, right: Path, out: Path, label_left: str = "v1
     return out
 
 
+def _extend_api_duration(dur: int) -> int:
+    """Clamp per-call extend duration to xAI API band (2–10s)."""
+    return max(EXTEND_API_DUR_LO, min(EXTEND_API_DUR_HI, int(dur)))
+
+
+def _shots_exceed_extend_api_band(
+    shots: list[dict[str, Any]],
+    refs: dict[str, Any],
+) -> list[tuple[str, int]]:
+    """Shots whose seamless duration is outside the extend API band."""
+    out: list[tuple[str, int]] = []
+    for shot in shots[1:]:
+        dur = _eff_dur(shot, refs, seamless=True)
+        if dur < EXTEND_API_DUR_LO or dur > EXTEND_API_DUR_HI:
+            out.append((shot["id"], dur))
+    return out
+
+
 def _extend_not_supported(exc: BaseException) -> bool:
     msg = str(exc).lower()
     if "extension is not supported" in msg or "extend is not supported" in msg:
         return True
     if "unable to download provided video_url" in msg or "403 forbidden" in msg:
+        return True
+    if "duration must be between" in msg:
         return True
     return False
 
@@ -4441,6 +4799,69 @@ def _extend_error_detail(exc: BaseException) -> str:
 def _reference_images_not_supported(exc: BaseException) -> bool:
     msg = str(exc).lower()
     return "reference_image" in msg and ("not supported" in msg or "invalid_argument" in msg)
+
+
+def _grade_lock_proc_path(
+    proc_path: Path,
+    *,
+    shot_index: int,
+    shot_id: str,
+    anchor_color: Any,
+    enabled: bool,
+    probe_fn: Callable[..., Any] | None,
+    correct_fn: Callable[..., Any] | None,
+) -> tuple[Path, Any]:
+    """Pin anchor on shot 0; correct later shots. Always safe to call."""
+    if not enabled or not proc_path.is_file() or probe_fn is None:
+        return proc_path, anchor_color
+    try:
+        if shot_index == 0:
+            anchor_color = probe_fn(proc_path)
+            _log(
+                f"[grade_lock] anchor set from {shot_id}: "
+                f"R={anchor_color.r_mean:.1f} "
+                f"G={anchor_color.g_mean:.1f} "
+                f"B={anchor_color.b_mean:.1f}"
+            )
+            return proc_path, anchor_color
+        if anchor_color is None:
+            _log(f"[grade_lock] {shot_id} skipped: shot 0 anchor missing")
+            return proc_path, anchor_color
+        if correct_fn is None:
+            return proc_path, anchor_color
+        gl_result = correct_fn(proc_path, anchor_color, block_id=shot_id)
+        if gl_result.delta_before and gl_result.delta_before.needs_correction:
+            candidate = Path(gl_result.video_out) if gl_result.video_out else proc_path
+            if candidate.is_file():
+                if candidate.resolve() != proc_path.resolve():
+                    proc_path = candidate
+                if gl_result.converged:
+                    after = (
+                        gl_result.delta_after.max_channel_delta
+                        if gl_result.delta_after
+                        else 0.0
+                    )
+                    _log(
+                        f"[grade_lock] {shot_id} corrected in {gl_result.passes} pass(es) "
+                        f"→ max_delta={after:.1f}"
+                    )
+                else:
+                    after = (
+                        gl_result.delta_after.max_channel_delta
+                        if gl_result.delta_after
+                        else -1.0
+                    )
+                    _log(
+                        f"[grade_lock] {shot_id} correction did not converge "
+                        f"(max_delta={after:.1f}), using best attempt"
+                    )
+            else:
+                _log(f"[grade_lock] {shot_id} keeping original — correction output missing")
+        else:
+            _log(f"[grade_lock] {shot_id} within tolerance")
+    except Exception as gl_exc:  # noqa: BLE001
+        _log(f"[grade_lock] {shot_id} skipped: {gl_exc}")
+    return proc_path, anchor_color
 
 
 def render_frame_chain_performance(
@@ -4473,6 +4894,17 @@ def render_frame_chain_performance(
         and bool(seam_cfg.get("magenta_reroll", True))
     )
 
+    # --- grade_lock: anchor-based color drift correction ---
+    _gl_anchor_color = None  # pinned from shot 0
+    _gl_enabled = bool(seam_cfg.get("grade_lock", True))
+    _gl_probe: Callable[..., Any] | None = None
+    _gl_correct: Callable[..., Any] | None = None
+    try:
+        from grade_lock import correct_block as _gl_correct
+        from frame_probe import probe_color as _gl_probe
+    except ImportError:
+        _gl_enabled = False
+
     for i, shot in enumerate(shots):
         sid = shot["id"]
         seg_path = shots_dir / f"chain_{sid}.mp4"
@@ -4487,12 +4919,30 @@ def render_frame_chain_performance(
             and not concat_only
         ):
             _log(f"[seamless] reusing processed {proc_path.name}")
+            proc_path, _gl_anchor_color = _grade_lock_proc_path(
+                proc_path,
+                shot_index=i,
+                shot_id=sid,
+                anchor_color=_gl_anchor_color,
+                enabled=_gl_enabled,
+                probe_fn=_gl_probe,
+                correct_fn=_gl_correct,
+            )
             segments.append(shot_join_segment(proc_path, shot, shots_dir))
             continue
 
         if seg_path.exists() and seg_path.stat().st_size > 10000 and not regen and concat_only:
             raw = ensure_segment_audio(seg_path, shot, refs, shots_dir)
             process_shot_segment(raw, proc_path, shot, refs, opts, shots_dir, color_ref)
+            proc_path, _gl_anchor_color = _grade_lock_proc_path(
+                proc_path,
+                shot_index=i,
+                shot_id=sid,
+                anchor_color=_gl_anchor_color,
+                enabled=_gl_enabled,
+                probe_fn=_gl_probe,
+                correct_fn=_gl_correct,
+            )
             segments.append(shot_join_segment(proc_path, shot, shots_dir))
             continue
 
@@ -4500,10 +4950,28 @@ def render_frame_chain_performance(
             raw = ensure_segment_audio(seg_path, shot, refs, shots_dir)
             process_shot_segment(raw, proc_path, shot, refs, opts, shots_dir, color_ref)
             if not magenta_reroll:
+                proc_path, _gl_anchor_color = _grade_lock_proc_path(
+                    proc_path,
+                    shot_index=i,
+                    shot_id=sid,
+                    anchor_color=_gl_anchor_color,
+                    enabled=_gl_enabled,
+                    probe_fn=_gl_probe,
+                    correct_fn=_gl_correct,
+                )
                 segments.append(shot_join_segment(proc_path, shot, shots_dir))
                 continue
             mag = probe_magenta_score(proc_path)
             if mag <= MAGENTA_SCORE_MAX:
+                proc_path, _gl_anchor_color = _grade_lock_proc_path(
+                    proc_path,
+                    shot_index=i,
+                    shot_id=sid,
+                    anchor_color=_gl_anchor_color,
+                    enabled=_gl_enabled,
+                    probe_fn=_gl_probe,
+                    correct_fn=_gl_correct,
+                )
                 segments.append(shot_join_segment(proc_path, shot, shots_dir))
                 continue
             _log(f"[magenta] cached {sid} score={mag:.3f} — re-roll")
@@ -4737,6 +5205,15 @@ def render_frame_chain_performance(
             except Exception as _cg_exc:  # noqa: BLE001
                 _log(f"[cast_gate] {sid} probe skipped: {_cg_exc}")
 
+        proc_path, _gl_anchor_color = _grade_lock_proc_path(
+            proc_path,
+            shot_index=i,
+            shot_id=sid,
+            anchor_color=_gl_anchor_color,
+            enabled=_gl_enabled,
+            probe_fn=_gl_probe,
+            correct_fn=_gl_correct,
+        )
         segments.append(shot_join_segment(proc_path, shot, shots_dir))
 
     _reconcat_seamless_chain(
@@ -4862,6 +5339,25 @@ def render_extend_performance(
             seed_segment=seed if seed.is_file() else None,
         )
 
+    over_band = _shots_exceed_extend_api_band(shots, refs)
+    if over_band:
+        ids = ", ".join(f"{sid}={d}s" for sid, d in over_band)
+        _log(
+            f"[seamless] extend API band is {EXTEND_API_DUR_LO}-{EXTEND_API_DUR_HI}s; "
+            f"shots out of band ({ids}) — frame-chain fallback (STUDIO v1.1 §4)"
+        )
+        seed = shots_dir / f"chain_{shots[0]['id']}.mp4"
+        if out_path.is_file() and out_path.stat().st_size > 10000 and not seed.is_file():
+            shutil.copy2(out_path, seed)
+        return render_frame_chain_performance(
+            shots, client, refs, opts, shots_dir, out_path,
+            script=script,
+            concat_only=False,
+            force=force,
+            force_shots=force_shots,
+            seed_segment=seed if seed.is_file() else None,
+        )
+
     gen_model = refs["model_video"]
     extend_model = refs.get("extend_model") or gen_model
     avatar_url = refs["avatar_url"]
@@ -4958,7 +5454,7 @@ def render_extend_performance(
             prompt=prompt1,
             model=extend_model,
             video_url=current_url,
-            duration=dur1,
+            duration=_extend_api_duration(dur1),
         )
         current_url = resp.url
         step_urls.append(current_url)
@@ -4981,7 +5477,7 @@ def render_extend_performance(
                 prompt=prompt,
                 model=extend_model,
                 video_url=current_url,
-                duration=dur,
+                duration=_extend_api_duration(dur),
             )
             current_url = resp.url
             step_urls.append(current_url)
@@ -5327,16 +5823,96 @@ def qa_check(
         if comparison_path and comparison_path.is_file():
             passes.append(f"side-by-side: {comparison_path.name}")
 
+    # ── Oliver-pattern dimensional production scoring ────────────────────────
+    # 5 dimensions scored 0-100 with composite. Same principle as Oliver's
+    # Contact/Power/Patience/Speed/Tools → here: production quality dimensions.
+    _dim_color = 100
+    _dim_continuity = 100
+    _dim_compliance = 100
+    _dim_prompt = 100
+    _dim_technical = 100
+
+    # Color fidelity: penalize for color issues
+    color_issues = [i for i in issues if any(k in i.lower() for k in
+                    ["magenta", "color", "hue", "cast", "warm", "blue", "yellow", "green", "lamp"])]
+    _dim_color = max(0, 100 - len(color_issues) * 25)
+
+    # Continuity: penalize for drift, sync, identity issues
+    cont_issues = [i for i in issues if any(k in i.lower() for k in
+                   ["drift", "sync", "identity", "continuity", "missing host"])]
+    _dim_continuity = max(0, 100 - len(cont_issues) * 25)
+
+    # Compliance: penalize for gate, synthetic guard, signoff issues
+    comp_issues = [i for i in issues if any(k in i.lower() for k in
+                   ["gate", "synthetic", "guard", "signoff", "compliance", "2257"])]
+    _dim_compliance = max(0, 100 - len(comp_issues) * 30)
+
+    # Prompt adherence: penalize for missing shots, swap proof, labels
+    prompt_issues = [i for i in issues if any(k in i.lower() for k in
+                     ["shot count", "swap proof", "label", "missing", "reconstructed"])]
+    _dim_prompt = max(0, 100 - len(prompt_issues) * 25)
+
+    # Technical quality: penalize for audio, duration, tiny segments
+    tech_issues = [i for i in issues if any(k in i.lower() for k in
+                   ["audio", "duration", "tiny", "probe failed", "loudness"])]
+    _dim_technical = max(0, 100 - len(tech_issues) * 20)
+
+    # ── Fold catalog continuity evaluate into QA ────────────────────────
+    _cat = refs.get("_catalog_report")
+    if _cat:
+        # Catalog BLOCK exceptions demote continuity dimension further
+        if _cat.get("block_count", 0) > 0:
+            _dim_continuity = max(0, _dim_continuity - _cat["block_count"] * 20)
+            for exc in _cat.get("exceptions", []):
+                if exc.get("severity") == "BLOCK":
+                    issues.append(f"[catalog] {exc['category']}: {exc['detail']}")
+        # Catalog WARNs are informational but worth logging
+        for exc in _cat.get("exceptions", []):
+            if exc.get("severity") == "WARN":
+                passes.append(f"[catalog-warn] {exc['category']}: {exc['detail']}")
+
+    # Recompute composite after catalog adjustments
+    _dims = [_dim_color, _dim_continuity, _dim_compliance, _dim_prompt, _dim_technical]
+    _production_score = round(sum(_dims) / len(_dims))
+    _prod_variance = sum((d - _production_score) ** 2 for d in _dims) / len(_dims)
+    _prod_confidence = round(max(0.1, 1.0 - (_prod_variance / 2500)), 2)
+
     report: dict[str, Any] = {
         "slug": script.get("slug"),
         "qa_at": datetime.now(timezone.utc).isoformat(),
         "pass": len(issues) == 0,
+        "production_score": _production_score,
+        "production_tier": (
+            "A" if _production_score >= 85 else
+            "B" if _production_score >= 70 else
+            "C" if _production_score >= 50 else "F"
+        ),
+        "production_confidence": _prod_confidence,
+        "dimensions": {
+            "color_fidelity": _dim_color,
+            "continuity": _dim_continuity,
+            "compliance": _dim_compliance,
+            "prompt_adherence": _dim_prompt,
+            "technical_quality": _dim_technical,
+        },
         "passes": passes,
         "issues": issues,
         "shot_count": len(shots),
         "segment_count": len(rendered),
         "seamless": seamless_opts.enabled if seamless_opts else False,
     }
+    # Attach full catalog report if available
+    if _cat:
+        report["catalog"] = {
+            "continuity_score": _cat.get("continuity_score"),
+            "continuity_tier": _cat.get("continuity_tier"),
+            "confidence": _cat.get("confidence"),
+            "dimensions": _cat.get("dimensions"),
+            "total_ids_referenced": _cat.get("total_ids_referenced"),
+            "resolved_count": _cat.get("resolved_count"),
+            "exception_count": _cat.get("exception_count"),
+            "block_count": _cat.get("block_count"),
+        }
     if seamless_opts and seamless_opts.enabled:
         report["extend_api"] = {
             **EXTEND_API_FINDING,
@@ -5387,6 +5963,69 @@ def render_longform(
     shots_dir.mkdir(parents=True, exist_ok=True)
 
     refs = resolve_refs(script, client=client)
+
+    # ── Oliver catalog continuity evaluate (pre-render gate) ──────────────
+    # Master catalog lives at franchise level — every plate, actor, set gets a
+    # permanent number like a working actor's SAG card. Same @CHAR_001 across
+    # every production, every script, every episode.
+    _catalog_report: dict[str, Any] | None = None
+    if _HAS_CATALOG:
+        catalog_path = ROOT / "productions" / "master_catalog.json"
+        catalog_path.parent.mkdir(parents=True, exist_ok=True)
+        try:
+            catalog = _Catalog.load(catalog_path)
+            if not catalog.franchise:
+                catalog.franchise = "DAVID_Productions"
+            # Auto-bootstrap from identity lock if catalog is empty
+            if not catalog.entries and refs.get("lock"):
+                _bootstrap_catalog(catalog, refs["lock"])
+                _log(f"[catalog] bootstrapped {len(catalog.entries)} entries from identity lock")
+            # Register plate files as assets if not already cataloged
+            _catalog_register_plates(catalog, refs)
+            _catalog_report = _continuity_evaluate(catalog, script)
+            _log(
+                f"[catalog] continuity evaluate: score={_catalog_report['continuity_score']} "
+                f"tier={_catalog_report['continuity_tier']} "
+                f"exceptions={_catalog_report['exception_count']} "
+                f"blocks={_catalog_report['block_count']}"
+            )
+            if _catalog_report["exceptions"]:
+                exc_path = prod_dir / "continuity_exceptions.csv"
+                _write_exception_csv(_catalog_report["exceptions"], exc_path)
+                _log(f"[catalog] exception queue written → {exc_path}")
+            catalog.save(catalog_path)
+        except Exception as _cat_exc:  # noqa: BLE001
+            _log(f"[catalog] continuity evaluate skipped: {_cat_exc}")
+    refs["_catalog_report"] = _catalog_report
+
+    # ── Ingest registry: log this render as a scrape batch ────────────────
+    if _HAS_INGEST:
+        try:
+            ingest_path = ROOT / "productions" / "ingest_registry.json"
+            ingest = _IngestRegistry.load(ingest_path)
+            # Auto-register movie sources on first run
+            if not ingest.sources:
+                for src_def in _movie_sources():
+                    ingest.register_source(**src_def)
+                # Load fixture data for offline dev
+                for src_id, fixture_records in _movie_fixtures().items():
+                    ingest.fixtures.register_fixture(src_id, fixture_records)
+                _log(f"[ingest] registered {len(ingest.sources)} movie sources")
+            # Record this script render as a scrape batch
+            slug = script.get("slug", "unknown")
+            if "script_revision" in ingest.sources:
+                ingest.record_scrape(
+                    "script_revision",
+                    [{"id": slug, "shot_count": len(script.get("shots", []))}],
+                    custody_note=f"Render of {slug} at {datetime.now(timezone.utc).isoformat()}",
+                )
+            ingest.write_custody_log(prod_dir / "ingest_custody_log.csv")
+            ingest.save(ingest_path)
+            _log(f"[ingest] batch logged — {ingest.custody_summary()['total_batches']} total batches")
+        except Exception as _ing_exc:  # noqa: BLE001
+            _log(f"[ingest] registry update skipped: {_ing_exc}")
+    # ── end catalog + ingest gate ─────────────────────────────────────────
+
     plates_dir = prod_dir / "plates"
     if _needs_zone_plates(script, refs):
         if client:
@@ -5648,6 +6287,48 @@ def render_longform(
     concat_videos(rendered, final_mp4)
     _log(f"[longform] final → {final_mp4}")
 
+    # --- EU AI Act Art. 50 compliance — MANDATORY, non-optional ---
+    if _EU_COMPLIANCE_AVAILABLE:
+        _log("[EU-COMPLIANCE] Burning AI-generated label into final video…")
+        labeled_mp4 = prod_dir / "output" / f"{script.get('slug', 'longform')}_labeled.mp4"
+        burn_eu_compliance_label(final_mp4, labeled_mp4, ffmpeg_exe=FFMPEG)
+
+        _log("[EU-COMPLIANCE] Embedding XMP provenance metadata…")
+        _eu_performer = script.get("performer", script.get("character", "matilda_8b"))
+        _eu_engine = script.get("render_engine", "grok_imagine_video")
+        compliant_mp4 = prod_dir / "output" / f"{script.get('slug', 'longform')}_compliant.mp4"
+        embed_xmp_metadata(
+            labeled_mp4, compliant_mp4,
+            performer=_eu_performer, render_engine=_eu_engine,
+            ffmpeg_exe=FFMPEG,
+        )
+
+        # Replace final output with compliant version
+        shutil.move(str(compliant_mp4), str(final_mp4))
+        if labeled_mp4.exists():
+            labeled_mp4.unlink(missing_ok=True)
+
+        log_compliance_action(
+            prod_dir,
+            component="render_longform",
+            action="video_compliance_complete",
+            details={
+                "label_burned": True,
+                "metadata_embedded": True,
+                "output": str(final_mp4),
+                "performer": _eu_performer,
+            },
+        )
+        _log("[EU-COMPLIANCE] Video compliance complete — label + metadata applied.")
+    else:
+        print(
+            "[EU-COMPLIANCE] WARNING — compliance module not loaded. "
+            "Video output is NOT Article 50 compliant. "
+            "Fix: ensure AI/ELEANOR/middleware/eu_compliance.py is importable.",
+            file=sys.stderr,
+        )
+    # --- end EU AI Act compliance ---
+
     qa = qa_check(script, refs, rendered)
     qa_path = prod_dir / "qa_report.json"
     qa_path.write_text(json.dumps(qa, indent=2, ensure_ascii=False), encoding="utf-8")
@@ -5698,6 +6379,15 @@ def main() -> int:
         default=None,
         help=f"Crossfade seconds (default {DEFAULT_XFADE_S}, min {MIN_XFADE_S})",
     )
+    # --- Batch API flags ---
+    parser.add_argument("--batch", action="store_true",
+                        help="Submit all shots as a batch job (no real-time rendering)")
+    parser.add_argument("--collect", nargs="?", const="", default=None, metavar="BATCH_ID",
+                        help="Collect results from a completed batch (reads batch_state.json if no ID given)")
+    parser.add_argument("--batch-poll", action="store_true",
+                        help="After --batch submit, poll until complete instead of exiting")
+    parser.add_argument("--rebatch", action="store_true",
+                        help="After --collect, automatically re-submit failed shots")
     args = parser.parse_args()
 
     script_path = args.script if args.script.is_absolute() else Path.cwd() / args.script
@@ -5741,6 +6431,165 @@ def main() -> int:
         _log(f"Imagine pack → {out}")
         return 0
 
+    # --- Batch API paths (--batch / --collect) ---
+    if args.batch or args.collect is not None:
+        from grok_batch_adapter import (
+            pack_to_jsonl, submit_batch, poll_batch,
+            collect_results, rebatch_failures,
+            save_batch_state, load_batch_state,
+            format_progress,
+        )
+        import xai_sdk
+
+        token = os.environ.get("XAI_API_KEY") or _load_grok_token()
+        os.environ["XAI_API_KEY"] = token
+        client = xai_sdk.Client(api_key=token)
+        prod_dir = resolve_production_dir(script)
+        prod_dir.mkdir(parents=True, exist_ok=True)
+        slug = script.get("slug", "longform")
+
+
+        if args.batch:
+            # Assemble pack + run pre-gates (no API render calls)
+            refs = resolve_refs(script, client=client)
+            seamless_opts = get_seamless_options(script, args)
+            pack = build_imagine_pack(script, refs, seamless_opts)
+
+            # QA pre-gates fire before submission
+            assert_gate_0_cleared(script)
+
+            mode = "seamless_first" if (seamless_opts and seamless_opts.enabled) else "legacy"
+            jsonl_path = prod_dir / "batch_requests.jsonl"
+            pack_to_jsonl(pack, jsonl_path, mode=mode)
+
+            batch_id = submit_batch(jsonl_path, slug, client=client)
+            save_batch_state(prod_dir, {
+                "batch_id": batch_id,
+                "batch_name": slug,
+                "mode": mode,
+                "model": refs["model_video"],
+                "shot_count": len(pack["shots"]),
+                "shot_ids": [s["shot_id"] for s in pack["shots"]],
+                "jsonl_path": str(jsonl_path),
+                "status": "submitted",
+            })
+
+            _log(f"[batch] Submitted: {batch_id}")
+            _log(f"[batch] State saved: {prod_dir / 'batch_state.json'}")
+            _log(f"[batch] {len(pack['shots'])} shots, mode={mode}")
+
+            if args.batch_poll:
+                _log("[batch] Polling until complete...")
+                final_state = poll_batch(
+                    batch_id, client=client,
+                    callback=lambda s: print(f"  {format_progress(s)}"),
+                )
+                _log(f"[batch] Final: {format_progress(final_state)}")
+
+            return 0
+
+        if args.collect is not None:
+            # --collect [BATCH_ID]
+            batch_id = args.collect or None
+            if not batch_id:
+                state = load_batch_state(prod_dir)
+                if not state:
+                    raise SystemExit(f"No batch_state.json in {prod_dir} and no BATCH_ID given")
+                batch_id = state["batch_id"]
+
+            shots_dir = prod_dir / "shots"
+            _log(f"[batch] Collecting results for {batch_id}...")
+            results = collect_results(batch_id, shots_dir, client=client, download=True)
+
+            succeeded = {k: v for k, v in results.items() if v["status"] == "succeeded"}
+            failed = {k: v for k, v in results.items() if v["status"] != "succeeded"}
+
+            _log(f"[batch] {len(succeeded)} succeeded, {len(failed)} failed")
+
+            if failed:
+                for sid, info in failed.items():
+                    print(f"  FAILED {sid}: {info.get('error', 'unknown')}", file=sys.stderr)
+
+                if args.rebatch:
+                    refs = resolve_refs(script, client=client)
+                    seamless_opts = get_seamless_options(script, args)
+                    pack = build_imagine_pack(script, refs, seamless_opts)
+                    rebatch_path = prod_dir / "rebatch_requests.jsonl"
+                    new_batch_id = rebatch_failures(results, pack, rebatch_path, client=client)
+                    if new_batch_id:
+                        save_batch_state(prod_dir, {
+                            "batch_id": new_batch_id,
+                            "batch_name": f"{slug}_retry",
+                            "mode": "legacy",
+                            "shot_count": len(failed),
+                            "status": "submitted",
+                        })
+                        _log(f"[batch] Re-batched {len(failed)} failures: {new_batch_id}")
+                    return 0
+
+            if not succeeded:
+                raise SystemExit("[batch] No succeeded shots to assemble")
+
+            # Resume normal pipeline: concat + QA + EU compliance
+            refs = resolve_refs(script, client=client)
+            pack = build_imagine_pack(script, refs)
+            shot_order = [s["shot_id"] for s in pack["shots"]]
+            rendered = []
+            for sid in shot_order:
+                cid = f"shot_{sid}"
+                if cid in succeeded and succeeded[cid].get("path"):
+                    rendered.append(Path(succeeded[cid]["path"]))
+                else:
+                    cached = shots_dir / f"{sid}.mp4"
+                    if cached.is_file() and cached.stat().st_size > 10000:
+                        rendered.append(cached)
+                    else:
+                        print(f"  SKIP {sid}: no video available", file=sys.stderr)
+
+            if not rendered:
+                raise SystemExit("[batch] No rendered shots found for concat")
+
+            # Provenance card
+            prov_cfg = script.get("provenance_card", {})
+            if prov_cfg.get("enabled", True):
+                prov_png = prod_dir / "provenance_card.png"
+                render_provenance_card(script, prov_png)
+                prov_mp4 = shots_dir / "provenance.mp4"
+                provenance_to_video(prov_png, prov_mp4, prov_cfg.get("duration_s", 7))
+                rendered.append(prov_mp4)
+
+            final_mp4 = prod_dir / "output" / f"{slug}.mp4"
+            final_mp4.parent.mkdir(parents=True, exist_ok=True)
+            concat_videos(rendered, final_mp4)
+            _log(f"[batch] Final -> {final_mp4}")
+
+            # EU AI Act compliance
+            if _EU_COMPLIANCE_AVAILABLE:
+                _log("[EU-COMPLIANCE] Burning AI-generated label into final video...")
+                labeled_mp4 = prod_dir / "output" / f"{slug}_labeled.mp4"
+                burn_eu_compliance_label(final_mp4, labeled_mp4, ffmpeg_exe=FFMPEG)
+                _eu_performer = script.get("performer", script.get("character", "matilda_8b"))
+                _eu_engine = script.get("render_engine", "grok_imagine_video")
+                compliant_mp4 = prod_dir / "output" / f"{slug}_compliant.mp4"
+                embed_xmp_metadata(
+                    labeled_mp4, compliant_mp4,
+                    performer=_eu_performer, render_engine=_eu_engine,
+                    ffmpeg_exe=FFMPEG,
+                )
+                shutil.move(str(compliant_mp4), str(final_mp4))
+                if labeled_mp4.exists():
+                    labeled_mp4.unlink(missing_ok=True)
+                _log("[EU-COMPLIANCE] Video compliance complete.")
+
+            # QA
+            qa = qa_check(script, refs, rendered)
+            qa_path = prod_dir / "qa_report.json"
+            qa_path.write_text(json.dumps(qa, indent=2, ensure_ascii=False), encoding="utf-8")
+
+            _log(f"[batch] Collect complete. {len(rendered)} segments assembled.")
+            return 0
+
+    # --- Normal render path (unchanged) ---
     client = None
     if not args.concat_only:
         import xai_sdk

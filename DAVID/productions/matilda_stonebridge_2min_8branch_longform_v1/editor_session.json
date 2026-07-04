@@ -1,0 +1,19 @@
+{
+  "captured_at": "2026-07-02T04:52:22.961054+00:00",
+  "video_slug": "matilda_stonebridge_2min_8branch",
+  "scope": "this video + extensions only — not portable to new projects",
+  "slots": {
+    "@1": {
+      "role": "setting",
+      "file_id": "file_5911d7e3-1204-46e3-be27-e2e51bda3555",
+      "url": "https://files-cdn.x.ai/XhVi7ndfQqSjuzbMUnfb_g/file_5911d7e3-1204-46e3-be27-e2e51bda3555.jpg",
+      "plate_path": "C:\\Users\\NCG\\Videos\\Grok Projects\\DAVID\\productions\\matilda_stonebridge_2min_8branch_longform_v1\\plates\\@1_plate.jpg"
+    },
+    "@2": {
+      "role": "talent_render",
+      "file_id": "file_1c23b9bb-ac29-4369-8d32-ce3a018471d6",
+      "url": "https://files-cdn.x.ai/aFSx3CmRRzyrZmd_DhNXjw/file_1c23b9bb-ac29-4369-8d32-ce3a018471d6.jpg",
+      "source": "C:\\Users\\NCG\\Videos\\Grok Projects\\AI\\ELEANOR\\products\\model_variants\\Concepts\\Plates\\2.jpg"
+    }
+  }
+}

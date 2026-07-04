@@ -1,0 +1,365 @@
+{
+  "slug": "matilda_stonebridge_2min_kitchen_only",
+  "title": "MATILDA — Stonebridge 2min Kitchen-Only (8×15s)",
+  "format_id": "documentary-host",
+  "target_seconds": 113,
+  "intake": {
+    "format_id": "documentary-host",
+    "actor_id": "@SB00001",
+    "set_id": "@SET_010",
+    "style_id": "@STYLE_001",
+    "gate_0": {
+      "verdict": "GREEN",
+      "blocked": false,
+      "human_signoff": true,
+      "rating": "PG",
+      "ai_disclosure_method": "title_card",
+      "synthetic_performer_id": "Matilda-001",
+      "compliance_version": "2.2",
+      "compliance_2257": {
+        "scope": "not_applicable",
+        "reason": "synthetic_performer_no_explicit_material"
+      }
+    }
+  },
+  "config": {
+    "model_video": "grok-imagine-video-1.5",
+    "resolution": "480p",
+    "aspect_ratio": "16:9",
+    "prompt_mode": "barebones",
+    "director_persona_id": null,
+    "style_dna_tag": null,
+    "audio_dna_tag": null,
+    "music_dna_tag": null,
+    "pacing_dna_tag": null,
+    "native_av": true,
+    "anti_generic_armor": true,
+    "use_identity_lock": false,
+    "use_zone_plates": true,
+    "avatar_reference": "AI/ELEANOR/products/model_variants/Concepts/Plates/2.jpg",
+    "wardrobe_lock": "gray sleeveless jumpsuit with sweetheart neckline and wide-leg trousers, black belt silver rectangular buckle, black ankle boots, large silver filigree statement earrings, blonde low ponytail — canonical per Plates/2.jpg; ONE piece only; NO black dress, NO sweater, NO cardigan; identical b01 through b08; NEVER leave kitchen",
+    "set_reference": "AI/ELEANOR/products/model_variants/Concepts/Plates/grok-image-2efa731f-f24b-4359-a015-39e400e1fb81.png",
+    "composite_first_frame": "AI/ELEANOR/products/model_variants/Concepts/Plates/matilda_kitchen_island_composite.jpg",
+    "slots": {
+      "@1": {
+        "role": "kitchen_composite_b01_seed",
+        "file": "AI/ELEANOR/products/model_variants/Concepts/Plates/matilda_kitchen_island_composite.jpg",
+        "branches": [
+          "b01_intro",
+          "b02_company",
+          "b03_services",
+          "b04_europe",
+          "b05_personal_pivot",
+          "b06_personal",
+          "b07_network",
+          "b08_close_de"
+        ]
+      },
+      "@1_empty_kitchen_plate": {
+        "role": "empty_kitchen_env_reference",
+        "file": "AI/ELEANOR/products/model_variants/Concepts/Plates/grok-image-2efa731f-f24b-4359-a015-39e400e1fb81.png",
+        "note": "kitchen set reference — entire episode stays at island; NO living room, NO walk, NO set change"
+      }
+    },
+    "branch_chain": {
+      "segment_s": 15,
+      "dialogue_wrap_s": 11,
+      "connector_pause_s": 0.5,
+      "hold_tail_s": 1.0,
+      "open_pause_s": 0.5,
+      "statement_pause_s": 0.2,
+      "xfade_s": 0,
+      "seed_handoff": "last_frame",
+      "branch_mode": "last_frame",
+      "mandatory_last_frame": true,
+      "output_version": "v3_b01_cut_anti_magenta",
+      "handoff_drift_gate": true,
+      "handoff_drift_regen_max": 1,
+      "handoff_drift_regen_on_feature_loss": true,
+      "handoff_extract_offsets_s": [0.4, 1.0, 1.5],
+      "continuity_features": [
+        {"zone": "left_ear", "label": "large silver filigree statement earring", "min_contrast": 11},
+        {"zone": "right_ear", "label": "large silver filigree statement earring", "min_contrast": 11},
+        {"zone": "belt_buckle", "label": "silver rectangular belt buckle on black belt", "min_contrast": 13},
+        {"zone": "neckline", "label": "gray jumpsuit sweetheart neckline", "min_contrast": 9}
+      ],
+      "color_hold": "kitchen",
+      "color_clamp_all": false,
+      "color_recovery_strength": 0.55,
+      "color_clamp_shots": [
+        "b05_personal_pivot",
+        "b06_personal",
+        "b07_network",
+        "b08_close_de"
+      ],
+      "color_recovery_shots": [
+        "b05_personal_pivot",
+        "b06_personal",
+        "b07_network",
+        "b08_close_de"
+      ],
+      "color_anchor_shot": "b04_europe",
+      "blocks": {
+        "kitchen": {
+          "shots": [
+            "b01_intro",
+            "b02_company",
+            "b03_services",
+            "b04_europe",
+            "b05_personal_pivot",
+            "b06_personal",
+            "b07_network",
+            "b08_close_de"
+          ],
+          "set_slot": "@1",
+          "b01_origin": "@1",
+          "b01_origin_file": "matilda_kitchen_island_composite.jpg",
+          "handoff": "sequential_last_frame",
+          "note": "Full 2min at kitchen island — zero relocation, zero living room, zero walk-off"
+        }
+      }
+    }
+  },
+  "shots": [
+    {
+      "id": "b01_intro",
+      "duration": 8,
+      "extend_at_s": 7.5,
+      "dialogue_wrap_s": 6,
+      "t_start": 0,
+      "t_end": 7.5,
+      "role": "host",
+      "setting": "kitchen",
+      "speech_text": "Grüß Gott — I'm Matilda Kirschner, Vice President at Stonebridge. Welcome.",
+      "barebones": {
+        "command": "generate video",
+        "@1": {
+          "description": "@1 = matilda_kitchen_island_composite.jpg — MATILDA behind kitchen island; talent+set baked in; WARDROBE per Plates/2.jpg; KITCHEN ONLY entire episode"
+        },
+        "dialogue": {
+          "speech_text": "Grüß Gott — I'm Matilda Kirschner, Vice President at Stonebridge. Welcome.",
+          "language": "en-US",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: absolute silence except MATILDA lip-sync voice — mute set",
+          "voice_direction": "OPEN 0.5s THEN Grüß Gott; line complete by 6s; brisk warm Bavarian; tail 6-7.5s ONLY — warm neutral smile, alive eyes; ZERO sigh, ZERO exhale, ZERO sad/deflated face, NOT waiting in silence"
+        },
+        "scene": "KITCHEN ISLAND LOCK: OPEN 0.5s; THEN Grüß Gott; GESTURE b01: nod on name, open-palm Welcome; dialogue done 6s; 6-7.5s brief upbeat hold — micro-smile, NOT sigh, NOT slouch, NOT sad; hard cut at 7.5s for b02",
+        "camera": "opens medium-wide; creep zoom through 7.5s to medium waist-up; key camera-left",
+        "style": "documentary prestige, natural skin, neutral WB, no beauty filter",
+        "output": {"sequence_length": "8s"}
+      }
+    },
+    {
+      "id": "b02_company",
+      "duration": 15,
+      "dialogue_wrap_s": 9.5,
+      "t_start": 7.5,
+      "t_end": 22.5,
+      "role": "host",
+      "setting": "kitchen",
+      "branch_open_pause": true,
+      "speech_text": "Stonebridge runs on one rule — we stay until the work is done. From the U.S. we serve clients across North America and Europe.",
+      "barebones": {
+        "command": "generate video",
+        "@1": {
+          "description": "chain seed b01 exit — MATILDA at kitchen island; same wardrobe and set; KITCHEN ONLY"
+        },
+        "dialogue": {
+          "speech_text": "Stonebridge runs on one rule — we stay until the work is done. From the U.S. we serve clients across North America and Europe.",
+          "language": "en-US",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: voice only — mute set",
+          "voice_direction": "OPEN 0.5s from b01 handoff THEN Stonebridge; Bavarian lilt; done by 9.5s; brief tail to 11s — head alive throughout"
+        },
+        "scene": "ISLAND MARK: OPEN 0.5s lips closed micro head drift; THEN Stonebridge; GESTURE b02: nod on rule, chop on work done, sweep regions; head never still while talking; tail 9.5-11s short hold",
+        "camera": "CAMERA STATIC — SUBJECT ALIVE: medium waist-up locked from b01; key camera-left",
+        "style": "documentary prestige, natural skin, neutral WB",
+        "output": {"sequence_length": "15s"}
+      }
+    },
+    {
+      "id": "b03_services",
+      "duration": 15,
+      "dialogue_wrap_s": 11,
+      "t_start": 22.5,
+      "t_end": 37.5,
+      "role": "host",
+      "setting": "kitchen",
+      "branch_open_pause": true,
+      "speech_text": "We specialise in three core areas: supply chain architecture, regulatory compliance, and long-term growth strategy. These are disciplines where precision is not optional — and where the right partner changes everything.",
+      "barebones": {
+        "command": "generate video",
+        "@1": {"description": "chain seed — kitchen island mark; KITCHEN ONLY"},
+        "dialogue": {
+          "speech_text": "We specialise in three core areas: supply chain architecture, regulatory compliance, and long-term growth strategy. These are disciplines where precision is not optional — and where the right partner changes everything.",
+          "language": "en-US",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: voice only",
+          "voice_direction": "OPEN 0.5s settled beat THEN first word; warm Bavarian; complete by 11s; short tail — head alive on every phrase"
+        },
+        "scene": "ISLAND MARK: OPEN 0.5s lips closed head micro-drift; THEN speak; GESTURE b03: count three on fingers, tilt each item, nod on precision; head tracks speech continuously; tail 11-12s brief only",
+        "camera": "CAMERA STATIC — SUBJECT ALIVE: locked medium waist-up",
+        "style": "documentary prestige, natural skin, neutral WB",
+        "output": {"sequence_length": "15s"}
+      }
+    },
+    {
+      "id": "b04_europe",
+      "duration": 15,
+      "dialogue_wrap_s": 11,
+      "t_start": 37.5,
+      "t_end": 52.5,
+      "role": "host",
+      "setting": "kitchen",
+      "branch_open_pause": true,
+      "speech_text": "I lead our European operations from Munich. My job is to ensure that what Stonebridge commits to in the boardroom is delivered on the ground — in every country, every region, every time we say we will.",
+      "barebones": {
+        "command": "generate video",
+        "@1": {"description": "chain seed — kitchen island; KITCHEN ONLY"},
+        "dialogue": {
+          "speech_text": "I lead our European operations from Munich. My job is to ensure that what Stonebridge commits to in the boardroom is delivered on the ground — in every country, every region, every time we say we will.",
+          "language": "en-US",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: voice only",
+          "voice_direction": "OPEN 0.5s THEN 'I lead'; confident warm host; complete by 11s; brief tail; head nods through every clause"
+        },
+        "scene": "ISLAND MARK: OPEN 0.5s beat; THEN I lead our European operations; GESTURE b04: nod Munich, sweep countries; head alive entire speech; tail 11-12s short; color anchor; NO walk",
+        "camera": "CAMERA STATIC — SUBJECT ALIVE: locked medium waist-up",
+        "style": "documentary prestige, natural skin, neutral WB — grade anchor for chain",
+        "output": {"sequence_length": "15s"}
+      }
+    },
+    {
+      "id": "b05_personal_pivot",
+      "duration": 15,
+      "dialogue_wrap_s": 10.5,
+      "t_start": 52.5,
+      "t_end": 67.5,
+      "role": "host",
+      "setting": "kitchen",
+      "branch_open_pause": true,
+      "speech_text": "Actually — before we go further — I want to share something I do not usually say in a formal setting.",
+      "barebones": {
+        "command": "generate video",
+        "@1": {"description": "chain seed — same kitchen island mark; intimate tone shift but ZERO relocation"},
+        "dialogue": {
+          "speech_text": "Actually — before we go further — I want to share something I do not usually say in a formal setting.",
+          "language": "en-US",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: voice only",
+          "voice_direction": "OPEN 0.5s intimate pause THEN Actually; softer confiding tone; done by 10.5s; short tail; head tilt alive while speaking"
+        },
+        "scene": "ISLAND MARK: OPEN 0.5s personal beat; THEN Actually; GESTURE b05: head tilt, one hand lifts briefly; head never frozen; NO walk; tail 10.5-11.5s brief",
+        "camera": "CAMERA STATIC — SUBJECT ALIVE: same kitchen medium waist-up as b04",
+        "style": "documentary prestige, match b04 grade exactly, fair neutral skin R≈G, zero magenta purple rose on face",
+        "output": {"sequence_length": "15s"}
+      }
+    },
+    {
+      "id": "b06_personal",
+      "duration": 15,
+      "dialogue_wrap_s": 11,
+      "t_start": 67.5,
+      "t_end": 82.5,
+      "role": "host",
+      "setting": "kitchen",
+      "branch_open_pause": true,
+      "speech_text": "I grew up in a family where your word was your only real asset. My father ran a small logistics business in Munich — no contracts, just handshakes. He never lost a client in thirty years. That is the standard I carry into every Stonebridge engagement.",
+      "barebones": {
+        "command": "generate video",
+        "@1": {"description": "chain seed — kitchen island; personal story at counter; KITCHEN ONLY"},
+        "dialogue": {
+          "speech_text": "I grew up in a family where your word was your only real asset. My father ran a small logistics business in Munich — no contracts, just handshakes. He never lost a client in thirty years. That is the standard I carry into every Stonebridge engagement.",
+          "language": "en-US",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: voice only",
+          "voice_direction": "OPEN 0.5s THEN I grew up; intimate warm; nod on father; complete by 11s; head alive throughout"
+        },
+        "scene": "ISLAND MARK: OPEN 0.5s; THEN speak; GESTURE b06: hand heart on asset line, nod on father; head tracks story; tail 11-12s brief; standing at island",
+        "camera": "CAMERA STATIC — SUBJECT ALIVE: kitchen medium waist-up",
+        "style": "documentary prestige, match b04 grade exactly, fair neutral skin R≈G, zero magenta purple rose on face",
+        "output": {"sequence_length": "15s"}
+      }
+    },
+    {
+      "id": "b07_network",
+      "duration": 15,
+      "dialogue_wrap_s": 11,
+      "t_start": 82.5,
+      "t_end": 97.5,
+      "role": "host",
+      "setting": "kitchen",
+      "branch_open_pause": true,
+      "speech_text": "What we bring to our clients is not just expertise — it is a network. Twenty years of relationships with regulators, logistics operators, and the people who actually move things and approve things across twelve countries. That is not something you can buy. It takes time.",
+      "barebones": {
+        "command": "generate video",
+        "@1": {"description": "chain seed — kitchen island; KITCHEN ONLY"},
+        "dialogue": {
+          "speech_text": "What we bring to our clients is not just expertise — it is a network. Twenty years of relationships with regulators, logistics operators, and the people who actually move things and approve things across twelve countries. That is not something you can buy. It takes time.",
+          "language": "en-US",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: voice only",
+          "voice_direction": "OPEN 0.5s THEN What we bring; conviction on network; done by 11s; head alive every phrase"
+        },
+        "scene": "ISLAND MARK: OPEN 0.5s; THEN speak; GESTURE b07: tilt on network, weave gesture, nod on takes time; continuous head movement; tail 11-12s brief",
+        "camera": "CAMERA STATIC — SUBJECT ALIVE",
+        "style": "documentary prestige, match b04 grade exactly, fair neutral skin R≈G, zero magenta purple rose on face",
+        "output": {"sequence_length": "15s"}
+      }
+    },
+    {
+      "id": "b08_close_de",
+      "duration": 15,
+      "dialogue_wrap_s": 11,
+      "t_start": 97.5,
+      "t_end": 112.5,
+      "role": "host",
+      "setting": "kitchen",
+      "branch_open_pause": true,
+      "speech_text": "An unsere Partner und Kunden in ganz Europa — wir sind bereit. Die Dienstleistungen von Stonebridge stehen Ihnen zur Verfügung. Ich freue mich auf unsere Zusammenarbeit. Auf Wiedersehen.",
+      "barebones": {
+        "command": "generate video",
+        "@1": {"description": "chain seed — kitchen island close; KITCHEN ONLY finale"},
+        "dialogue": {
+          "speech_text": "An unsere Partner und Kunden in ganz Europa — wir sind bereit. Die Dienstleistungen von Stonebridge stehen Ihnen zur Verfügung. Ich freue mich auf unsere Zusammenarbeit. Auf Wiedersehen.",
+          "language": "de-DE",
+          "on_screen": "Stonebridge — ready for Europe",
+          "character": "MATILDA"
+        },
+        "audio": {
+          "ambient": "AUDIO LOCK: voice only",
+          "voice_direction": "OPEN 0.5s THEN An unsere Partner; warm Bavarian German; smile Auf Wiedersehen by 11s; short tail"
+        },
+        "scene": "ISLAND MARK: OPEN 0.5s; THEN German close; GESTURE b08: nod bereit, smile close; head alive; tail 11-12s brief; ends at island",
+        "camera": "CAMERA STATIC — SUBJECT ALIVE: same kitchen frame",
+        "style": "documentary prestige, match b04 grade exactly, fair neutral skin R≈G, zero magenta purple rose on face",
+        "output": {"sequence_length": "15s"}
+      }
+    }
+  ],
+  "catalog_ref_audit": {
+    "migrated_at": "2026-06-30T07:58:19.624266+00:00",
+    "mappings": {
+      "@Matilda-001": "@SB00001",
+      "@Set-Modern-Kitchen-001": "@SET_010",
+      "@Set-Modern-Kitchen-Living-001": "@SET_011",
+      "@Style-Documentary-Prestige-001": "@STYLE_001",
+      "Matilda-001": "@SB00001"
+    },
+    "unresolved": []
+  }
+}
