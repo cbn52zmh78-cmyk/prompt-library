@@ -1,0 +1,290 @@
+{
+  "_doc": "Music scoring signatures for Grok native AV — live-action + animation + shared",
+  "_source": "Claude OPUS cinematic music scoring deep research v1 + Grok Pass 7 animated music research",
+  "_captured": "2026-06-29",
+  "_version": "1",
+  "_engine": "Grok Imagine / Aurora — synchronized audio in-pass (dialogue, lip-sync, SFX, ambient, music)",
+  "_chain_rule": "Continue from the attached previous audio tail + final video frame for perfect score evolution and harmonic continuity.",
+  "_originality_lock": "Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes.",
+  "_architecture": "Three tiers: live_action (Claude craft + gap-fills), animation (Grok Pass 7), shared (Hisaishi bridges both). music_* governs score/melody/harmony; sound_* governs foley/ambience/SFX. Independent and combinable — any music_* with any sound_* and any style_*.",
+  "_scope_rule": "music_* chain_prompts reference: score, motif, swell, melody, harmony, orchestration, theme, leitmotif. Never reference: foley, ambience, SFX, spatial audio, environmental sound (those belong to sound_*).",
+  "composers": [
+    {"name": "John Williams", "association": "Spielberg/Lucas", "signature": "leitmotif architecture, full orchestral romanticism, motivic economy", "tag": "music_williams_leitmotif"},
+    {"name": "Hans Zimmer", "association": "Nolan/Villeneuve/Scott", "signature": "electronic-orchestral hybrid, Shepard tone integration, motoric pulse", "tag": "music_zimmer_architect"},
+    {"name": "Bernard Herrmann", "association": "Hitchcock/Scorsese", "signature": "constrained orchestration, cluster chords, psychological scoring", "tag": "music_herrmann_suspense"},
+    {"name": "Ennio Morricone", "association": "Leone/Tarantino/Tornatore", "signature": "character-instrument leitmotifs, singable melodies, avant-garde meets folk", "tag": "music_morricone_melodist"},
+    {"name": "Jonny Greenwood", "association": "Paul Thomas Anderson", "signature": "twelve-tone clusters, aleatoric textures, beauty-violence whiplash", "tag": "music_greenwood_dissonant"},
+    {"name": "Ryuichi Sakamoto", "association": "Bertolucci/Iñárritu", "signature": "cross-cultural instrumentation, minimalist electronic cells", "tag": "music_sakamoto_crosscultural"},
+    {"name": "Joe Hisaishi", "association": "Miyazaki/Studio Ghibli", "signature": "central melody method, Impressionist orchestration, image album workflow", "tag": "music_hisaishi_dreamer"},
+    {"name": "Nino Rota", "association": "Fellini/Coppola", "signature": "waltz-melancholy duality, circus-carnival motifs, melodic unity", "tag": "music_rota_storyteller"},
+    {"name": "Ludwig Göransson", "association": "Coogler/Nolan", "signature": "field-research authenticity, palindromic composition, genre destruction", "tag": "music_goransson_fusion"},
+    {"name": "Alexandre Desplat", "association": "Wes Anderson/del Toro", "signature": "chamber-intimate full orchestra, aquatic flow, cultural specificity", "tag": "music_desplat_impressionist"},
+    {"name": "Carter Burwell", "association": "Coen Brothers/Spike Jonze", "signature": "post-minimalist lyricism, negative-space scoring, music-to-environment blur", "tag": "music_burwell_minimalist"},
+    {"name": "A.R. Rahman", "association": "Danny Boyle/Mani Ratnam", "signature": "multicultural fusion as native language, raag-based harmony, technology as instrument", "tag": "music_rahman_alchemist"},
+    {"name": "James Horner", "association": "Cameron (Titanic/Aliens/Avatar)", "signature": "Celtic-orchestral sweep, danger motifs, soaring romantic themes", "tag": "music_horner_epic"},
+    {"name": "Basil Poledouris", "association": "Verhoeven/Milius", "signature": "martial choral-orchestral, anvil percussion, warrior anthem weight", "tag": "music_poledouris_warrior"},
+    {"name": "Michael Giacchino", "association": "Pixar (Up, Inside Out, Ratatouille)", "signature": "emotionally direct orchestral warmth, solo instrument personality", "tag": "music_pixar_family_wonder"},
+    {"name": "Yoko Kanno", "association": "Cowboy Bebop, Ghost in the Shell: SAC", "signature": "genre-demolishing eclecticism — jazz, rock, electronic, orchestral, opera", "tag": "music_anime_eclectic_fusion"},
+    {"name": "Yuki Kajiura / Hiroyuki Sawano / Shiro Sagisu", "association": "Fate/Zero, Attack on Titan, Evangelion", "signature": "monumental choral-orchestral, fabricated-language choir, emotional maximalism", "tag": "music_anime_epic_choral"},
+    {"name": "Danny Elfman", "association": "Burton (Nightmare Before Christmas, Corpse Bride)", "signature": "theatrical gothic waltz, pipe organ + harpsichord, macabre charm", "tag": "music_mature_animation_cabaret"}
+  ],
+  "music_signatures": [
+    {
+      "id": "music_williams_leitmotif",
+      "tier": "live_action",
+      "composer_anchor": "John Williams",
+      "name": "Williams Leitmotif Orchestral",
+      "description": "Full orchestral leitmotif scoring — heroic brass fanfares, yearning string melodies, two-note suspense motifs that accelerate with threat, solo instrument against orchestral mass for emotional counterpoint, Wagnerian romantic sweep. Each character and concept gets a distinct melodic identity.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Williams leitmotif orchestral: heroic brass fanfare themes evolving with character arc, yearning string melodies, motivic economy — simple themes carrying complex emotion. Full orchestral sweep building through the scene. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_zimmer_architect",
+      "tier": "live_action",
+      "composer_anchor": "Hans Zimmer",
+      "name": "Zimmer Architectural Score",
+      "description": "Electronic-orchestral hybrid — synth pads under live strings, non-musical elements as rhythmic backbone (ticking, machinery), Shepard tone tension builds, motoric single-note cello/bass drone with increasing pressure, seismic low-end brass hits. Score and sound design blur into one texture.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Zimmer architectural: electronic-orchestral hybrid evolving organically — motoric pulse driving tension, Shepard tone escalation, seismic brass weight, synth pads merging with live strings. Build pressure without resolution. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_herrmann_suspense",
+      "tier": "live_action",
+      "composer_anchor": "Bernard Herrmann",
+      "name": "Herrmann Psychological Suspense",
+      "description": "String-only constrained orchestration pushed to extremes — dissonant semitone cluster chords, shrieking high-register stabs, descending chromatic spirals for vertigo/dread, unresolved ostinato patterns. Music tells you how to feel before you know why.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Herrmann suspense: strings-only palette — tremolo tension, cluster chord stabs at key visual beats, descending chromatic dread spirals, ostinato anxiety that refuses resolution. Psychological scoring preceding visual reveal. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_morricone_melodist",
+      "tier": "live_action",
+      "composer_anchor": "Ennio Morricone",
+      "name": "Morricone Melodist Score",
+      "description": "Character-instrument assignment — specific instruments for specific characters. Folk melody over avant-garde harmonic bed, slow-build crescendo matching emotional arc, unorthodox instrumentation (whistling, whips, electric guitar in period settings), singable themes that lodge permanently.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Morricone melodist: character-instrument identity evolving with scene, folk melody emerging over avant-garde harmonic tension, building crescendo mirroring emotional arc. Singable theme that grows in orchestral weight. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_greenwood_dissonant",
+      "tier": "live_action",
+      "composer_anchor": "Jonny Greenwood",
+      "name": "Greenwood Dissonant Orchestral",
+      "description": "Twelve-tone chromatic clusters sliding toward resolution, aleatoric orchestral textures (controlled randomness), beauty interrupted by dissonant cracks, physicality of instrumental performance audible in the score, Penderecki-influenced string writing.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Greenwood dissonant: chromatic cluster textures sliding and colliding, aleatoric orchestral randomness under control, beauty-to-violence whiplash — refined passages cracking into dissonant fissures. Bow pressure and string tension audible as part of the music. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_sakamoto_crosscultural",
+      "tier": "live_action",
+      "composer_anchor": "Ryuichi Sakamoto",
+      "name": "Sakamoto Cross-Cultural Score",
+      "description": "Cross-cultural instrumentation — Western orchestra integrated with traditional instruments from the depicted culture. Minimalist electronic cells evolving through subtle harmonic shifts, organic-electronic coexistence, spare piano motifs with electronic texture beneath.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Sakamoto cross-cultural: minimalist electronic cells shifting harmonically beneath spare piano motifs, traditional cultural instruments woven through Western orchestral texture. Organic and electronic coexisting without hierarchy. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_hisaishi_dreamer",
+      "tier": "shared",
+      "composer_anchor": "Joe Hisaishi",
+      "name": "Hisaishi Dreamer Score",
+      "description": "Single central melody varied across emotional temperatures (piano solo → full orchestra → music box/celesta). Impressionist shimmering strings and harp (Debussy/Ravel), wonder-and-melancholy coexistence, choir with orchestral power at intimate emotional scale. Image album method — melody leads, animation absorbs rhythm.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Hisaishi dreamer: central melody theme evolving in emotional temperature — piano solo passages growing into shimmering strings and harp, Impressionist watercolor orchestration, wonder and melancholy coexisting. Celesta/music-box for intimate beats, full orchestral choir for scale moments. Melody leads the rhythm. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_rota_storyteller",
+      "tier": "live_action",
+      "composer_anchor": "Nino Rota",
+      "name": "Rota Storyteller Score",
+      "description": "Waltz rhythms carrying melancholy beneath charm, solo trumpet/instrument opening into full theme (monophony → polyphony), circus-carnival motifs with emotional undercurrent, folk-classical-jazz eclecticism as unified voice, recurring melodic threads across episodic structure.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Rota storyteller: waltz-time melancholy beneath surface charm, solo instrument building into full orchestral statement, circus-carnival motifs threaded through emotional undercurrent. Folk-classical-jazz eclecticism as one unified voice. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_goransson_fusion",
+      "tier": "live_action",
+      "composer_anchor": "Ludwig Göransson",
+      "name": "Göransson Fusion Score",
+      "description": "Culturally authentic instrumentation fused with electronic processing, palindromic/reversible musical phrases, era-specific sampled textures through modular synth, genre-defying fusion (orchestral + electronic + cultural source instruments), field-research-driven authenticity.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Göransson fusion: culturally authentic instruments fused with electronic processing, era-specific textures through modular synth, genre-defying fusion building organically. Palindromic phrases and rhythmic drive. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_desplat_impressionist",
+      "tier": "live_action",
+      "composer_anchor": "Alexandre Desplat",
+      "name": "Desplat Impressionist Score",
+      "description": "Culturally specific instrumentation for fictional settings (balalaika, zither, alpenhorn). Aquatic flowing orchestration without hard edges, chamber-intimate voicing within full orchestra, musical themes returning in varied form as memory/reflection, harp-celesta-string warmth.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Desplat impressionist: chamber-intimate orchestration flowing like water — harp and celesta warmth, culturally specific instrumental color, themes returning in varied form carrying accumulated emotional memory. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_burwell_minimalist",
+      "tier": "live_action",
+      "composer_anchor": "Carter Burwell",
+      "name": "Burwell Minimalist Score",
+      "description": "Post-minimalist repeating cells building emotion through accumulation, music-to-sound-design dissolution (score becomes environment), one unusual instrument defining the sonic world (Hardanger fiddle, prepared piano), extreme restraint (negative-space scoring), spare piano with electronic undertone.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Burwell minimalist: post-minimalist cells accumulating emotion through repetition, spare piano or single unusual instrument grounding the world, extreme restraint — silence between notes carrying as much weight as the notes. Score dissolving into environment. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_rahman_alchemist",
+      "tier": "live_action",
+      "composer_anchor": "A.R. Rahman",
+      "name": "Rahman Alchemist Score",
+      "description": "Multicultural fusion as native language — Indian classical + electronic + world percussion as unified voice. Raag-based harmonic structure beneath Western orchestration, lush strings over synthesized bass, Sufi/devotional vocal textures, technology and tradition as equal instruments.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Rahman alchemist: multicultural fusion — raag-based harmony beneath lush strings, electronic bass foundation, world percussion and traditional instruments woven through Western orchestral texture. Sufi/devotional vocal warmth. Technology and tradition as one. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_horner_epic",
+      "tier": "live_action",
+      "composer_anchor": "James Horner",
+      "name": "Horner Epic Sweep",
+      "description": "Celtic-orchestral sweep — soaring romantic string themes with Celtic fiddle/penny whistle/uilleann pipe color, danger motifs built from four-note brass cells, choir for transcendence, French horn for heroic yearning. Emotional directness without irony.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Horner epic: soaring romantic strings with Celtic instrumental color, danger motifs in brass evolving with threat level, choir entering for transcendent moments. French horn yearning, emotional directness building through the scene. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_poledouris_warrior",
+      "tier": "live_action",
+      "composer_anchor": "Basil Poledouris",
+      "name": "Poledouris Warrior Anthem",
+      "description": "Martial choral-orchestral power — Latin/archaic choir over anvil percussion and brass fanfares, warrior anthem weight with rhythmic drive, orchestral mass conveying physical force and primal momentum, battle hymn crescendo.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Poledouris warrior: martial choral-orchestral power — choir and anvil percussion driving rhythmic momentum, brass fanfares for warrior anthem weight, orchestral mass conveying physical force. Battle hymn crescendo building through combat. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_jazz_noir",
+      "tier": "live_action",
+      "composer_anchor": null,
+      "name": "Jazz Noir Score",
+      "description": "Smoky jazz-noir scoring — solo saxophone or trumpet over brushed drums and walking bass, minor-key harmonic language, blue notes and chromatic passing tones, late-night urban atmosphere. Piano comping with sparse voicings, occasional dissonant cluster for danger.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Jazz noir: smoky saxophone or trumpet solo over brushed drums and walking bass, minor-key blue notes, chromatic tension in the harmony. Late-night urban atmosphere through sparse piano voicings and restrained swing. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_bmovie_synth",
+      "tier": "live_action",
+      "composer_anchor": null,
+      "name": "B-Movie Synth Score",
+      "description": "Retro analog synth scoring — John Carpenter-style arpeggiated synth patterns, pulsing bass sequences, analog pad drones, lo-fi warmth. Horror/sci-fi tension through repetitive synth ostinato, minimal melodic content, maximum atmosphere.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. B-movie synth: retro analog synth patterns — arpeggiated sequences pulsing beneath pad drones, lo-fi warmth with horror/sci-fi tension, minimal melody and maximum atmosphere through repetitive synth ostinato. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_blended_epic_hybrid",
+      "tier": "live_action",
+      "composer_anchor": "synthesis",
+      "name": "Blended Epic Hybrid Score",
+      "description": "Full-spectrum live-action scoring synthesizing all composer traditions — Williams leitmotif architecture, Zimmer electronic-orchestral weight, Herrmann psychological tension, Morricone melodic character, Greenwood dissonant texture, modern fusion. Default for live-action when music_dna_tag unset.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Blended epic hybrid: full-spectrum scoring drawing from all traditions — leitmotif themes for character, electronic-orchestral weight for spectacle, string suspense for tension, singable melody for emotion, dissonant textures for psychological depth. Adapt dominant voice to scene beat. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_pixar_family_wonder",
+      "tier": "animation",
+      "composer_anchor": "Michael Giacchino / Thomas Newman / Randy Newman",
+      "name": "Pixar Family Wonder Score",
+      "description": "Emotionally direct orchestral warmth — solo instrument personality (piano, oboe, ukulele), dynamic range from intimate solo to full orchestral celebration, comedy timing through musical punctuation (stingers, pratfall brass, playful woodwind), earned tears through melodic sincerity.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Pixar family wonder: emotionally direct orchestral warmth — solo instrument carrying character personality, building from intimate to full orchestral celebration. Comedy timing through playful woodwind and brass punctuation. Melodic sincerity earning emotion without manipulation. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_anime_eclectic_fusion",
+      "tier": "animation",
+      "composer_anchor": "Yoko Kanno",
+      "name": "Anime Eclectic Fusion Score",
+      "description": "Genre-demolishing eclecticism — jazz improvisations, rock energy, electronic ambient, orchestral grandeur, opera, and folk all within one score. Each scene gets its own genre identity. Music defines the world's culture as much as visual design.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Anime eclectic fusion: genre-crossing scoring — jazz/rock/electronic/orchestral textures shifting with scene identity, improvisational energy within composed structure. Music defining cultural atmosphere as much as the visual. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_anime_epic_choral",
+      "tier": "animation",
+      "composer_anchor": "Yuki Kajiura / Hiroyuki Sawano / Shiro Sagisu",
+      "name": "Anime Epic Choral Score",
+      "description": "Monumental choral-orchestral writing — Latin/Germanic/fabricated-language choir over driving strings and percussion. Wall-of-sound crescendos matching visual intensity of anime action. Emotional maximalism — the score is as big as the most extreme frames.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Anime epic choral: monumental choir over driving strings and percussion — fabricated-language vocals soaring over wall-of-sound crescendo. Emotional maximalism matching the visual intensity. Score as big as the animation's most extreme frames. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_mature_animation_sophisticated",
+      "tier": "animation",
+      "composer_anchor": "Thomas Newman / Jon Brion",
+      "name": "Mature Animation Sophisticated Score",
+      "description": "Adult-oriented animated scoring — lyrical, textured, emotionally complex without family-film brightness. Chamber-scale instrumentation for character interiority. Prepared piano, marimba, found-sound textures. Scores that gain new dimension from animation's visual freedom.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Mature animation sophisticated: chamber-scale instrumentation for emotional complexity — prepared piano, marimba, found-sound textures carrying character interiority. Lyrical and textured without brightness or sentimentality. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_mature_animation_cabaret",
+      "tier": "animation",
+      "composer_anchor": "Danny Elfman / Marc Shaiman",
+      "name": "Mature Animation Cabaret Score",
+      "description": "Theatrical vaudeville-influenced scoring with gothic undertone — waltz-time with minor-key darkness, diegetic musical numbers integrated into score, pipe organ + harpsichord + music-hall piano + full orchestra for macabre charm.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Mature animation cabaret: theatrical waltz-time scoring with gothic darkness — pipe organ and harpsichord textures, music-hall piano under full orchestra, vaudeville charm with macabre undertone. Diegetic musical elements blending into score. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_anim_blended_master",
+      "tier": "animation",
+      "composer_anchor": "synthesis",
+      "name": "Animation Blended Master Score",
+      "description": "Full-spectrum animated scoring — Hisaishi wonder + Pixar emotional directness + anime eclectic intensity + mature sophistication + cabaret theatricality. Default for config.format='animation' when music_dna_tag unset. Adapts dominant voice to scene emotional beat.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Animation blended master: full-spectrum animated scoring adapting to scene emotional beat — wonder scenes lean Hisaishi/Pixar warmth, combat leans anime epic choral intensity, character study leans mature sophistication, comedy leans theatrical cabaret. Seamless voice-shifting. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    }
+  ],
+  "music_combos": [
+    {
+      "id": "music_combo_zimmer_herrmann",
+      "components": ["music_zimmer_architect", "music_herrmann_suspense"],
+      "label": "Nolan Territory",
+      "description": "Seismic electronic-orchestral with Herrmann's psychological string suspense — Shepard tone dread meets cluster chord stabs.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Zimmer × Herrmann: electronic-orchestral seismic weight with psychological string suspense — Shepard tone escalation meets cluster chord stabs, motoric pulse driving dread. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_combo_morricone_greenwood",
+      "components": ["music_morricone_melodist", "music_greenwood_dissonant"],
+      "label": "Melody Fractured by Violence",
+      "description": "Sweeping folk melody fractured by twelve-tone dissonance — There Will Be Blood territory. Beauty and brutality coexisting.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Morricone × Greenwood: folk melody building through crescendo then cracking into dissonant clusters — beauty and brutality coexisting, aleatoric textures erupting through melodic passages. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_combo_hisaishi_desplat",
+      "components": ["music_hisaishi_dreamer", "music_desplat_impressionist"],
+      "label": "Whimsical Fantasy",
+      "description": "Ghibli-like wonder with Anderson-esque cultural specificity — Impressionist shimmer and central melody method with chamber-intimate orchestration.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Hisaishi × Desplat: central melody in Impressionist orchestral color — shimmering strings and harp, chamber-intimate voicing, wonder-melancholy with culturally specific instrumental detail. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_combo_sakamoto_reznor",
+      "components": ["music_sakamoto_crosscultural", "sound_reznor_ross"],
+      "label": "Cross-Cultural Electronic",
+      "description": "Boundary-crossing instrumentation with industrial-ambient texture — organic cultural instruments through Reznor/Ross electronic processing. Note: crosses music/sound boundary deliberately.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Sakamoto × Reznor/Ross: cross-cultural instruments processed through industrial-electronic texture — minimalist cells with digital artifacts, organic-synthetic boundary dissolved. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    },
+    {
+      "id": "music_combo_anime_hisaishi_kanno",
+      "components": ["music_hisaishi_dreamer", "music_anime_eclectic_fusion"],
+      "label": "Ghibli Meets Bebop",
+      "description": "Ghibli melodic warmth fused with Kanno's genre-crossing intensity — central melody as emotional anchor with jazz/rock/electronic textures providing rhythmic energy.",
+      "chain_prompt": "Continue score from previous audio tail + attached frame. Hisaishi × Kanno: central melody warmth anchoring genre-crossing energy — jazz/rock/electronic textures swirling around Impressionist orchestral core. Wonder and intensity coexisting. Fully original homage-style composition only — no copyrighted melodies, arrangements, or recognizable themes."
+    }
+  ],
+  "music_beat_map": {
+    "_doc": "Emotional beat → music_dna_tag suggestion. Used when music_dna_tag not explicitly set and emotional_beat is present. Parallel to audio emotional_beat_map but for score layer.",
+    "heroic": "music_williams_leitmotif",
+    "adventure": "music_williams_leitmotif",
+    "epic": "music_zimmer_architect",
+    "spectacle": "music_zimmer_architect",
+    "suspense": "music_herrmann_suspense",
+    "horror": "music_herrmann_suspense",
+    "western": "music_morricone_melodist",
+    "period_drama": "music_morricone_melodist",
+    "art_house": "music_greenwood_dissonant",
+    "psychological": "music_greenwood_dissonant",
+    "contemplative": "music_sakamoto_crosscultural",
+    "cross_cultural": "music_sakamoto_crosscultural",
+    "wonder": "music_hisaishi_dreamer",
+    "fantasy": "music_hisaishi_dreamer",
+    "coming_of_age": "music_hisaishi_dreamer",
+    "tragicomedy": "music_rota_storyteller",
+    "italian": "music_rota_storyteller",
+    "contemporary_action": "music_goransson_fusion",
+    "cultural": "music_goransson_fusion",
+    "whimsy": "music_desplat_impressionist",
+    "romantic": "music_desplat_impressionist",
+    "minimalist": "music_burwell_minimalist",
+    "indie": "music_burwell_minimalist",
+    "bollywood": "music_rahman_alchemist",
+    "fusion": "music_rahman_alchemist",
+    "sweeping_romance": "music_horner_epic",
+    "war_anthem": "music_poledouris_warrior",
+    "noir": "music_jazz_noir",
+    "retro_horror": "music_bmovie_synth",
+    "anime_action": "music_anime_epic_choral",
+    "anime_jazz": "music_anime_eclectic_fusion",
+    "family": "music_pixar_family_wonder",
+    "gothic_comedy": "music_mature_animation_cabaret"
+  }
+}

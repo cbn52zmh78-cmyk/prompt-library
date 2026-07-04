@@ -1,0 +1,60 @@
+{
+  "_doc": "Editing and pacing DNA tags — Pass 6 prompt-only layer (FFmpeg polish deferred)",
+  "_source": "Pass 6 Editing & Pacing Mastery",
+  "_captured": "2026-06-30",
+  "editor_anchors": [
+    {"name": "Thelma Schoonmaker", "signature": "effortless momentum, music-like phrasing, emotional energy"},
+    {"name": "Walter Murch", "signature": "Rule of Six, subtractive editing, sound and picture as one"},
+    {"name": "Michael Kahn", "signature": "stillness as deliberate as action, continuity perfection"}
+  ],
+  "pacing_signatures": [
+    {
+      "id": "pacing_slow_build_setup",
+      "name": "Slow Build Setup",
+      "block_role": "b01 / opening",
+      "prompt": "PACING DNA [pacing_slow_build_setup]: Edit and pace like slow-build setup — unhurried entry, intentional stillness before speech, Murch Rule-of-Six emotion-first rhythm, natural breath before first word, optimized for seamless stitch from prior block."
+    },
+    {
+      "id": "pacing_mid_tempo_dialogue",
+      "name": "Mid-Tempo Dialogue",
+      "block_role": "b02-b04 / host dialogue",
+      "prompt": "PACING DNA [pacing_mid_tempo_dialogue]: Schoonmaker effortless mid-tempo momentum; natural conversational pauses between phrases; dialogue tone evolves organically; match-action clean on stitch; subtle sound bridges if flow improves."
+    },
+    {
+      "id": "pacing_schoonmaker_momentum",
+      "name": "Schoonmaker Momentum",
+      "block_role": "general / energetic",
+      "prompt": "PACING DNA [pacing_schoonmaker_momentum]: Thelma Schoonmaker effortless momentum — energy and emotion drive cut rhythm; music-like phrasing; no rush, no drag; 15s block feels like one breathed take."
+    },
+    {
+      "id": "pacing_murch_subtractive",
+      "name": "Murch Subtractive",
+      "block_role": "psychological / intimate",
+      "prompt": "PACING DNA [pacing_murch_subtractive]: Walter Murch subtractive rhythm — emotion over story over rhythm; remove dead air; near-silence as power; sound and picture cut as one organism; intentional pauses that reveal inner state."
+    },
+    {
+      "id": "pacing_fincher_tension_accel",
+      "name": "Fincher Tension Acceleration",
+      "block_role": "b05+ / climax build",
+      "prompt": "PACING DNA [pacing_fincher_tension_accel]: Fincher clinical rhythm acceleration — precise foley sync, vertical-cut energy, tension builds block-over-block without melodrama; ambient may drop subtractively at beat peaks."
+    },
+    {
+      "id": "pacing_lubezki_long_take_flow",
+      "name": "Lubezki Long-Take Flow",
+      "block_role": "immersive / oner feel",
+      "prompt": "PACING DNA [pacing_lubezki_long_take_flow]: Unbroken experiential flow within 15s — camera and sound feel like one long take; organic handheld/Steadicam breathing; invisible stitch at block boundary via J-cut overlap."
+    },
+    {
+      "id": "pacing_invisible_jcut",
+      "name": "Invisible J-Cut",
+      "block_role": "stitch optimization",
+      "prompt": "PACING DNA [pacing_invisible_jcut]: Invisible editing — audio leads or trails picture at block edges; generate built-in J-cut or L-cut overlap; dialogue breath extends across stitch point; zero jump drift."
+    }
+  ],
+  "chain_pacing_prompt": "Continue from attached final frame + previous audio tail. Pace and edit this next block with Schoonmaker effortless momentum and Murch subtractive rhythm. Dialogue has natural breathing pauses and tone evolution. Visual and audio stitch perfectly — no jump, no drift. Evolve toward next emotional beat while maintaining master aesthetic.",
+  "ffmpeg_polish": {
+    "status": "deferred",
+    "script": "DAVID/scripts/stitch_audio_polish.py",
+    "note": "Run after manual stitch when rhythm gaps proven — light EQ ducking and crossfade audio polish"
+  }
+}

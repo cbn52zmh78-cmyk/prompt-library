@@ -1,90 +1,287 @@
 {
-  "_doc": "Sonic signatures for Grok native AV — pairs with visual style_* and hybrid_* IDs",
-  "_source": "Grok Heavy browser research",
+  "_doc": "Sonic signatures for Grok native AV — Tier A aesthetic poles + Tier B designer craft tags",
+  "_source": "Grok Heavy browser research + Claude POUS cinematic sound design deep research v1",
   "_captured": "2026-06-30",
+  "_version": "2",
   "_engine": "Grok Imagine / Aurora — synchronized audio in-pass (dialogue, lip-sync, SFX, ambient, music)",
   "_chain_rule": "Continue from the attached previous audio tail + final video frame for perfect sync and evolution.",
+  "_architecture": "Tier A = visual-aligned aesthetic poles (sound_fincher_khondji, etc.). Tier B = designer-anchored craft tags (sound_burtt_inventive, etc.). Combos mix tiers. emotional_beat_map drives Randy Thom beat-first audio selection in style_modifiers.py.",
   "sound_designers": [
-    {"name": "Walter Murch", "association": "Coppola", "signature": "worldizing, subtractive mix, sound equals picture, inner psychology through layers"},
-    {"name": "Ren Klyce", "association": "Fincher", "signature": "clinical precision, unsettling ambiences, hyper-real psychological foley"},
-    {"name": "Gary Rydstrom", "association": "Spielberg/Lucas", "signature": "organic creation, emotional realism"},
-    {"name": "Ben Burtt", "association": "Lucas", "signature": "iconic invented sounds from found objects"},
-    {"name": "Skip Lievsay", "association": "Coens/Deakins films", "signature": "sparse impactful mix, silence and environment breathe"}
+    {"name": "Walter Murch", "association": "Coppola", "signature": "worldizing, subtractive mix, dense clarity, inner psychology through layers", "tag": "sound_coppola_willis"},
+    {"name": "Ren Klyce", "association": "Fincher", "signature": "clinical precision, unsettling ambiences, hyper-real psychological foley", "tag": "sound_fincher_khondji"},
+    {"name": "Gary Rydstrom", "association": "Spielberg/Pixar", "signature": "emotion-first spectacle, animal composite layering, contrast before scale", "tag": "sound_rydstrom_emotional"},
+    {"name": "Ben Burtt", "association": "Lucas", "signature": "iconic invented sounds from found objects, Doppler manipulation", "tag": "sound_burtt_inventive"},
+    {"name": "Skip Lievsay", "association": "Coens/Deakins films", "signature": "sparse impactful mix, silence as tension, diegetic commitment", "tag": "sound_deakins"},
+    {"name": "Richard King", "association": "Nolan", "signature": "character-POV filtering, seismic sub-bass, vacuum silence as danger", "tag": "sound_king_nolan"},
+    {"name": "Dane Davis", "association": "Matrix", "signature": "time-rate manipulation, multi-temporal layers, digital-organic inversion", "tag": "sound_davis_matrix"},
+    {"name": "Trent Reznor & Atticus Ross", "association": "Fincher/Guadagnino", "signature": "score-as-sound-design, electronic-orchestral hybrid, tonal ambiguity", "tag": "sound_reznor_ross"},
+    {"name": "Hildur Gudnadottir", "association": "Joker/Chernobyl", "signature": "single-source dread, industrial field recording as score, halldorophone texture", "tag": "sound_gudnadottir_dread"},
+    {"name": "Randy Thom", "association": "Skywalker Sound", "signature": "designing for sound at script stage — meta, not a texture tag", "tag": null}
   ],
+  "technique_taxonomy": {
+    "spatial": [
+      {"id": "worldizing", "prompt": "worldized room reflections — sound played back into physical space and re-captured"},
+      {"id": "object_based", "prompt": "object-based spatial audio — individual sounds positioned and moving in three-dimensional space"},
+      {"id": "binaural", "prompt": "binaural spatial capture — left/right ear perspective for intimate headphone 3D"},
+      {"id": "ambisonic", "prompt": "ambisonic spherical audio — full 360-degree spatial sound field"}
+    ],
+    "mix_philosophy": [
+      {"id": "subtractive", "prompt": "subtractive silence drops — ambient layers removed so a single sound event carries maximum weight"},
+      {"id": "dense_clarity", "prompt": "dense clarity layering — multiple distinct elements, each cleanly separated and perceptible"},
+      {"id": "sparse_impact", "prompt": "sparse impactful mix — three to five precisely chosen layers, nothing decorative"},
+      {"id": "score_sound_fusion", "prompt": "score-sound fusion — music and ambient design blur into one inseparable texture"}
+    ],
+    "source_recording": [
+      {"id": "found_object", "prompt": "found-object organic textures — sounds sourced from unexpected real-world materials"},
+      {"id": "animal_composite", "prompt": "animal composite layering — creature voices built from multiple species across frequency registers"},
+      {"id": "location_scoring", "prompt": "location-sourced scoring — the environment itself becomes the instrument"},
+      {"id": "precision_foley", "prompt": "precision foley performance — human-performed sound effects synchronized to on-screen action"}
+    ],
+    "time_perception": [
+      {"id": "multi_temporal", "prompt": "multi-temporal sound layers — elements processed at different time rates within one moment"},
+      {"id": "doppler", "prompt": "Doppler pitch shifting — natural frequency sweep from source motion"},
+      {"id": "shepard_tone", "prompt": "Shepard tone escalation — infinitely rising pitch illusion for mounting dread"},
+      {"id": "character_pov", "prompt": "character-perspective audio — sounds filtered by emotional state, not acoustic physics"}
+    ],
+    "structural": [
+      {"id": "diegetic", "prompt": "diegetic sound — source visible or implied within the scene"},
+      {"id": "non_diegetic", "prompt": "non-diegetic score/narration — audience-only audio layer"},
+      {"id": "meta_diegetic", "prompt": "meta-diegetic interiority — sounds representing internal psychological state"},
+      {"id": "room_tone", "prompt": "room tone bed — the specific silence of this space, its ambient acoustic fingerprint"},
+      {"id": "stinger", "prompt": "stinger hit — single sharp sound punctuating a reveal moment"},
+      {"id": "riser", "prompt": "riser build — gradually escalating pitch/volume approaching a narrative beat"}
+    ]
+  },
+  "emotional_beat_map": {
+    "_doc": "Randy Thom beat-first picker — matched when shot.emotional_beat set and audio_dna_tag not explicitly overridden on shot",
+    "setup": "sound_anderson_yeoman",
+    "dialogue": "sound_bergman_nykvist",
+    "intimacy": "sound_bergman_nykvist",
+    "tension": "sound_fincher_khondji",
+    "dread": "sound_gudnadottir_dread",
+    "silence": "sound_deakins",
+    "revelation": "sound_coppola_willis",
+    "spectacle": "sound_rydstrom_emotional",
+    "action": "sound_king_nolan",
+    "war": "sound_king_nolan",
+    "space": "sound_king_nolan",
+    "sci_fi": "sound_burtt_inventive",
+    "creature": "sound_rydstrom_emotional",
+    "reality_bend": "sound_davis_matrix",
+    "combat": "sound_davis_matrix",
+    "subjective_pov": "sound_king_nolan",
+    "score_texture": "sound_reznor_ross",
+    "immersion": "sound_cuaron_lubezki",
+    "contrast": "sound_rydstrom_emotional",
+    "psychological": "sound_fincher_khondji",
+    "operatic": "sound_coppola_willis"
+  },
+  "emotional_beat_combo_map": {
+    "tension_score": "sound_combo_fincher_reznor",
+    "nolan_epic": "sound_combo_king_reznor",
+    "psychological_dread": "sound_combo_murch_gudnadottir",
+    "sci_fi_combat": "sound_combo_burtt_davis"
+  },
   "sonic_signatures": [
     {
       "id": "sound_fincher_khondji",
+      "tier": "A",
       "live_action_style_id": "style_fincher_khondji",
       "designer_anchor": "Ren Klyce",
       "name": "Fincher/Khondji Sonic",
-      "description": "Precise cold layered dread. Clinical foley, low-frequency hums, subtractive mix where ambient suddenly drops.",
-      "chain_prompt": "Continue from previous audio tail + attached final frame. Fincher/Khondji sonic: hyper-precise foley with subtle digital glitches in the silence, cold metallic echoes, desaturated ambience that feels calculated and unresolved. Evolve tension organically."
+      "techniques": ["precision_foley", "subtractive", "meta_diegetic", "room_tone"],
+      "description": "Precise cold layered dread. Clinical foley at subtly wrong levels, sub-threshold low-frequency drones, fluorescent/mechanical ambience that never fully stops, subtractive silence drops where ambient suddenly cuts.",
+      "chain_prompt": "Continue from previous audio tail + attached final frame. Fincher/Khondji sonic: hyper-precise foley with subtle digital glitches in the silence, cold metallic echoes, desaturated ambience that feels calculated and unresolved. Relentless sonic environment — hum, buzz, distant mechanical sound. Evolve tension organically."
     },
     {
       "id": "sound_anderson_yeoman",
+      "tier": "A",
       "live_action_style_id": "style_anderson_yeoman",
       "designer_anchor": null,
       "name": "Anderson/Yeoman Sonic",
-      "description": "Whimsical precision, symmetrical sound design. Ticking metronome motifs, curated quirky foley, balanced musical stings.",
+      "techniques": ["precision_foley", "diegetic", "sparse_impact"],
+      "description": "Whimsical precision, symmetrical sound design. Ticking metronome motifs, curated quirky foley, balanced musical stings, sparse impactful three-to-five layer mixes.",
       "chain_prompt": "Maintain whimsical precision from previous audio, add symmetrical sound motifs that match visual symmetry on the reference frame."
     },
     {
       "id": "sound_coppola_willis",
+      "tier": "A",
       "live_action_style_id": "style_coppola_willis",
       "designer_anchor": "Walter Murch",
       "name": "Coppola/Willis Sonic",
-      "description": "Operatic shadow-like layers. Deep rumbling bass, warm intimate dialogue, echoing silences, selective chiaroscuro reveal.",
-      "chain_prompt": "Evolve from previous audio with inherited shadows in the soundscape — warm tones fading into deep rumbling power."
+      "techniques": ["worldizing", "subtractive", "dense_clarity", "meta_diegetic"],
+      "description": "Operatic shadow-like layers. Worldized room reflections, deep rumbling bass, warm intimate dialogue, subtractive silence drops, meta-diegetic psychological ambience shifting with character interiority.",
+      "chain_prompt": "Evolve from previous audio with inherited shadows in the soundscape — warm tones fading into deep rumbling power, worldized reflections carrying spatial truth."
     },
     {
       "id": "sound_deakins",
+      "tier": "A",
       "live_action_style_id": "style_deakins_villeneuve",
       "designer_anchor": "Skip Lievsay",
-      "name": "Deakins Sonic",
-      "description": "Hyper-real environmental immersion. Practical location foley, volumetric wind/haze, space breathes naturally.",
-      "chain_prompt": "Continue Deakins-style practical ambient from previous tail, match lighting/environment on reference frame with authentic location textures."
+      "name": "Deakins/Lievsay Sonic",
+      "alias_note": "ID kept as sound_deakins for backward compatibility; anchor is Lievsay sparse minimalism for Coen/Deakins-shot films.",
+      "techniques": ["sparse_impact", "diegetic", "room_tone", "subtractive"],
+      "description": "Lievsay sound-design haiku — sparse impactful mix, deliberate silence stretches with single precise sound events, environmental room-tone as character, diegetically committed sourcing. Silence is the most powerful sound.",
+      "chain_prompt": "Continue Lievsay sparse sonic from previous tail — environmental breathing, wind through space, single diegetic events landing with maximum weight after near-silence. Match reference frame environment with acoustic honesty, not decorative layers."
     },
     {
       "id": "sound_bergman_nykvist",
+      "tier": "A",
       "live_action_style_id": "style_bergman_nykvist",
       "designer_anchor": null,
       "name": "Bergman/Nykvist Sonic",
-      "description": "Intimate psychological minimalism. Soft breaths, ticking clocks, distant bells, near-silence, voice as emotional close-up.",
+      "techniques": ["sparse_impact", "meta_diegetic", "room_tone"],
+      "description": "Intimate psychological minimalism. Soft breaths, ticking clocks, distant bells, near-silence, voice as emotional close-up, meta-diegetic interiority through micro-sounds.",
       "chain_prompt": "Intimate Nykvist sonic continuation — minimal layers focused on voice and micro-sounds that reveal inner state, reference the final frame face lighting."
     },
     {
       "id": "sound_storaro_bertolucci",
+      "tier": "A",
       "live_action_style_id": "style_bertolucci_storaro",
       "designer_anchor": null,
       "name": "Storaro/Bertolucci Sonic",
-      "description": "Symbolic color-equivalent audio. Warm/cool tonal shifts, dramatic swells mirroring color psychology, sensual layered textures.",
+      "techniques": ["dense_clarity", "non_diegetic"],
+      "description": "Symbolic color-equivalent audio. Warm/cool tonal shifts, dramatic swells mirroring color psychology, sensual layered textures, dense clarity in emotional registers.",
       "chain_prompt": "Storaro sonic evolution — color palette of sound shifts psychologically from previous block's tail."
     },
     {
       "id": "sound_cuaron_lubezki",
+      "tier": "A",
       "live_action_style_id": "style_cuaron_lubezki",
       "designer_anchor": null,
       "name": "Cuarón/Lubezki Sonic",
-      "description": "Immersive fluid experiential layers. Organic spatial audio, natural wind/particle sounds, lived-in dialogue.",
+      "techniques": ["object_based", "binaural", "diegetic", "room_tone"],
+      "description": "Immersive fluid experiential layers. Organic spatial audio, natural wind/particle sounds, lived-in dialogue, location-authentic room tone, object-based spatial placement.",
       "chain_prompt": "Seamless Lubezki audio continuation — fluid spatial layers that feel like one long experiential take from the reference frame."
+    },
+    {
+      "id": "sound_blended_7masters",
+      "tier": "A",
+      "live_action_style_id": null,
+      "designer_anchor": "synthesis",
+      "name": "Blended 7-Master Sound Bible",
+      "techniques": ["dense_clarity", "sparse_impact", "score_sound_fusion"],
+      "description": "Full cinematic audio design synthesizing all 7 sonic masters — clinical foley (Fincher/Klyce), whimsical motifs (Anderson), operatic shadows (Coppola/Murch), Lievsay sparse environment (Deakins), intimate minimal soul (Bergman), symbolic tonal shifts (Storaro), immersive flow (Cuarón). Synchronized dialogue, lip-sync, organic SFX, evolving ambience, subtle reactive score.",
+      "chain_prompt": "Continue perfectly from previous audio tail and attached video frame. Evolve the blended 7-master soundscape organically — maintain lip-sync and spatial continuity, shift tonal emphasis toward the next emotional beat."
+    },
+    {
+      "id": "sound_burtt_inventive",
+      "tier": "B",
+      "live_action_style_id": null,
+      "designer_anchor": "Ben Burtt",
+      "name": "Burtt Inventive Sonic",
+      "techniques": ["found_object", "doppler", "diegetic"],
+      "description": "Found-object organic textures sculpted into iconic manufactured sound events. Doppler pitch shifts on mechanical elements, creature voices built from animal + machine composites, handcrafted sounds that feel alive but never existed in nature.",
+      "chain_prompt": "Continue Burtt inventive sonic from previous tail — found-object textures evolving on reference frame action, Doppler-shifted mechanical passes, organic-synthetic blending on technology and creature presence."
+    },
+    {
+      "id": "sound_king_nolan",
+      "tier": "B",
+      "live_action_style_id": null,
+      "designer_anchor": "Richard King",
+      "name": "King/Nolan Sonic",
+      "techniques": ["character_pov", "found_object", "subtractive", "shepard_tone"],
+      "description": "Character-perspective audio filtered by emotional state not physics. Seismic sub-bass mass under impacts, found-object mechanical textures, vacuum silence as danger signal, Shepard tone escalation for mounting dread.",
+      "chain_prompt": "Continue King/Nolan subjective sonic from previous tail — POV-filtered mix where wrong things are too loud and important things barely audible, sub-bass heft under impacts, vacuum cuts signaling hostile environment on reference frame."
+    },
+    {
+      "id": "sound_reznor_ross",
+      "tier": "B",
+      "live_action_style_id": null,
+      "designer_anchor": "Trent Reznor & Atticus Ross",
+      "name": "Reznor/Ross Hybrid Sonic",
+      "techniques": ["score_sound_fusion", "non_diegetic"],
+      "description": "Electronic-orchestral hybrid score blurring music/sound-design boundary. Beautiful-to-sinister tonal ambiguity, digital texture artifacts (glitch, hiss, static) as emotional content, modular synth drones under acoustic instruments.",
+      "chain_prompt": "Continue Reznor/Ross score-as-texture from previous tail — inseparable drone and music, serene piano carrying sinister context shift, digital artifacts as emotional information on reference frame beat."
+    },
+    {
+      "id": "sound_gudnadottir_dread",
+      "tier": "B",
+      "live_action_style_id": null,
+      "designer_anchor": "Hildur Gudnadottir",
+      "name": "Gudnadottir Dread Sonic",
+      "techniques": ["location_scoring", "score_sound_fusion", "meta_diegetic"],
+      "description": "Single-source emotional architecture — solo instrument drones (cello/halldorophone texture), industrial field recording as musical score, feedback manipulation, sustained dread through constraint not melody.",
+      "chain_prompt": "Continue Gudnadottir dread from previous tail — single-source sustained texture deepening, industrial hum-as-orchestra, halldorophone feedback drone evolving with reference frame psychological state."
+    },
+    {
+      "id": "sound_rydstrom_emotional",
+      "tier": "B",
+      "live_action_style_id": null,
+      "designer_anchor": "Gary Rydstrom",
+      "name": "Rydstrom Emotional Sonic",
+      "techniques": ["animal_composite", "character_pov", "contrast_before_scale"],
+      "description": "Emotion-driven layered SFX over spectacle. Animal composite layering across frequency registers, intimate domestic sounds preceding large-scale events, underwater/muffled POV shifts, scale built through contrast not volume.",
+      "chain_prompt": "Continue Rydstrom emotional sonic from previous tail — quiet intimate wrongness before scale, creature presence via animal composite registers, body-interior muffling on reference frame terror beat."
+    },
+    {
+      "id": "sound_davis_matrix",
+      "tier": "B",
+      "live_action_style_id": null,
+      "designer_anchor": "Dane Davis",
+      "name": "Davis Matrix Sonic",
+      "techniques": ["multi_temporal", "found_object", "dense_clarity"],
+      "description": "Time-rate split processing — multi-temporal sound layers where elements exist at different speeds in one moment. Thirty-plus layer composite impacts, digital-organic inversions (machines sound alive, humans sound mechanical), never-heard-before sonic invention.",
+      "chain_prompt": "Continue Davis matrix sonic from previous tail — bullet-time temporal split on reference frame action, composite superhuman impacts, reality-bending layers at mismatched time rates."
     }
   ],
-  "blended_sound_bible": "Full cinematic audio design synthesizing the 7 masters: precise clinical foley and psychological undercurrents (Fincher/Klyce), whimsical balanced motifs (Anderson), operatic shadow layers (Coppola/Murch), hyper-real practical environmental textures (Deakins), intimate minimal soul sounds (Bergman), symbolic emotional tonal shifts (Storaro), and immersive unbroken experiential flow (Cuarón). Generate synchronized dialogue with natural lip-sync performance, organic SFX, evolving ambience, and subtle score that reacts to visual style. Continue perfectly from previous audio tail and attached video frame.",
+  "audio_combos": [
+    {
+      "id": "sound_combo_deakins_fincher",
+      "label": "Lievsay sparse + Klyce precision",
+      "tags": ["sound_deakins", "sound_fincher_khondji"],
+      "description": "Lievsay sparse diegetic ambient and deliberate silence with Klyce clinical precise foley and cold psychological undercurrents.",
+      "chain_prompt": "Continue from previous audio tail + attached final frame. Lievsay sparse diegetic environment meets Fincher/Klyce precision — acoustic honesty with hyper-precise foley and subtle tension in the silence."
+    },
+    {
+      "id": "sound_combo_fincher_reznor",
+      "label": "Klyce effects + Reznor/Ross score-as-texture",
+      "tags": ["sound_fincher_khondji", "sound_reznor_ross"],
+      "description": "Klyce clinical psychological foley and unsettling ambience fused with Reznor/Ross electronic-orchestral score-as-sound-design.",
+      "chain_prompt": "Continue from previous audio tail + attached final frame. Klyce precise foley and sub-threshold drones inseparable from Reznor/Ross hybrid score texture — music and unease blur on reference frame beat."
+    },
+    {
+      "id": "sound_combo_king_reznor",
+      "label": "King/Nolan subjective + Reznor/Ross texture",
+      "tags": ["sound_king_nolan", "sound_reznor_ross"],
+      "description": "Seismic character-POV environments with score-as-texture — Dunkirk/Oppenheimer territory.",
+      "chain_prompt": "Continue from previous audio tail + attached final frame. King subjective POV filtering with seismic sub-bass under Reznor/Ross whole-film texture — terror felt in body, score inseparable from environment."
+    },
+    {
+      "id": "sound_combo_murch_gudnadottir",
+      "label": "Murch philosophical + Gudnadottir dread",
+      "tags": ["sound_coppola_willis", "sound_gudnadottir_dread"],
+      "description": "Worldized philosophical layers with sustained single-source dread — psychological depth through constraint.",
+      "chain_prompt": "Continue from previous audio tail + attached final frame. Murch worldized subtractive layers beneath Gudnadottir single-source dread drone — inner psychology made audible on reference frame."
+    },
+    {
+      "id": "sound_combo_burtt_davis",
+      "label": "Burtt inventive + Davis matrix",
+      "tags": ["sound_burtt_inventive", "sound_davis_matrix"],
+      "description": "Organic invented sci-fi sounds with time-rate manipulation — reality-bending combat vocabulary.",
+      "chain_prompt": "Continue from previous audio tail + attached final frame. Burtt found-object invention meets Davis multi-temporal layering — iconic organic textures split across mismatched time streams on reference frame."
+    }
+  ],
+  "blended_sound_bible": "Full cinematic audio design synthesizing the 7 masters: precise clinical foley and psychological undercurrents (Fincher/Klyce), whimsical balanced motifs (Anderson), operatic shadow layers (Coppola/Murch), Lievsay sparse diegetic environment (Deakins), intimate minimal soul sounds (Bergman), symbolic emotional tonal shifts (Storaro), and immersive unbroken experiential flow (Cuarón). Generate synchronized dialogue with natural lip-sync performance, organic SFX, evolving ambience, and subtle score that reacts to visual style. Continue perfectly from previous audio tail and attached video frame.",
   "pipeline_integration": {
     "script_fields": {
       "config.style_dna_tag": "hybrid_* or style_* ID",
       "config.audio_dna_tag": "sound_* ID default for production",
+      "config.audio_dna_combo": "sound_combo_* optional layer",
+      "config.audio_beat_picker": "true — enable Randy Thom beat-first resolution when shot.emotional_beat set",
       "config.audio_chain_mode": "tail_plus_frame",
+      "shots[].emotional_beat": "Beat key from emotional_beat_map — overrides config/persona audio when shot audio not explicit",
       "shots[].barebones.audio.dna_tag": "per-block override",
+      "shots[].barebones.audio.emotional_beat": "per-block beat override",
       "shots[].barebones.audio.chain_prompt": "override or auto from registry"
     },
     "python_assembly": [
       "Load sonic_signatures by audio_dna_tag",
+      "Resolve emotional_beat → audio_dna_tag via emotional_beat_map when not explicitly overridden",
       "Merge chain_prompt when block_index > 0",
       "Attach last_frame + audio_tail references",
       "Single native AV API call when dialogue required",
       "Post-stitch EQ/volume automation across xfade joins"
-    ],
-    "combo_tag_example": "DNA-Sound-4 = Deakins practical + Fincher precision"
+    ]
   }
 }

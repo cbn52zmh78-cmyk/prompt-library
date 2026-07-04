@@ -1,0 +1,292 @@
+{
+  "_doc": "Original visual style registry — styles not derived from living director/cinematographer pairings. Four families: extinct technologies (dead processes resurrected computationally), material/texture-driven, era/movement fusions (mashups that never existed), and abstract/procedural techniques.",
+  "_version": "1.1",
+  "_captured": "2026-06-30",
+  "_scope": "visuals_only — rendering aesthetic, lighting, color science, texture, composition, post-processing. Audio/music/pacing to be added in a follow-up pass.",
+  "_prefixes": {
+    "extinct_": "Dead visual technologies that cannot be physically reproduced — the camera, film stock, dye process, or chemical no longer exists. AI can resurrect the color science and optical character computationally.",
+    "material_": "Styles anchored to a physical substance — the material's color, texture, reflectance, and decay properties define the entire visual palette.",
+    "fusion_": "Era/movement mashups that never coexisted historically — deliberate anachronistic collisions creating styles no human movement ever produced.",
+    "proc_": "Abstract/procedural — defined by optical or digital technique rather than any cultural reference. The process IS the aesthetic."
+  },
+  "extinct_tech": [
+    {
+      "id": "extinct_technicolor_3strip",
+      "process": "Technicolor Three-Strip (1932-1955)",
+      "death_date": "Last 3-strip camera decommissioned ~1955; dye-transfer printing ended 1975, briefly revived 1997-2002, now impossible",
+      "why_dead": "The beam-splitting prism cameras, imbibition dye-transfer printing matrices, and specific dye chemistry no longer exist. No lab on Earth can produce a true 3-strip print.",
+      "reference": "The Wizard of Oz, Singin' in the Rain, Gone with the Wind, The Red Shoes",
+      "prompt": "Technicolor three-strip dye-transfer visual style: hyper-saturated primary colors with that distinctive candy-coated richness impossible in modern film stock — reds that bleed with warmth, greens that glow like emeralds, blues deeper than any digital sensor captures. Specific Technicolor color response: skin tones pushed warm and golden, fabrics and set dressing exploding with chromatic intensity, deep black separation with no muddy shadows. The characteristic slight halo around high-contrast edges from the beam-splitter registration, lush velvety texture from the dye-transfer process, studio-lit glamour with hard key lights and precise fill ratios, that unmistakable 'Technicolor glow' where every frame looks like a hand-painted jewel box."
+    },
+    {
+      "id": "extinct_technicolor_2color",
+      "process": "Technicolor Two-Color (Process 2/3, 1922-1936)",
+      "death_date": "Superseded by 3-strip; no cemented bipack stock or red-green only matrices remain",
+      "why_dead": "The cemented bipack film and red-green subtractive process chemistry are extinct. Only red and green records existed — no blue channel.",
+      "reference": "The Toll of the Sea, The Black Pirate, early Technicolor musicals",
+      "prompt": "Technicolor two-color subtractive visual style: a world rendered only in red-orange and cyan-green with NO blue channel — skies appear pale greenish-white, blonde hair turns coppery, blue fabric reads as grey-green. Warm amber-salmon skin tones with teal-green shadows, that distinctive split between warm and cool with an entire third of the spectrum simply missing. Slight registration misalignment creating color fringing on motion, the dreamlike quality of a world that feels simultaneously vivid and incomplete, like a hand-colored postcard from an alternate universe where blue was never invented."
+    },
+    {
+      "id": "extinct_kodachrome",
+      "process": "Kodachrome (1935-2010)",
+      "death_date": "Discontinued by Kodak 2009; last roll processed at Dwayne's Photo, Parsons KS, December 30 2010",
+      "why_dead": "The K-14 development process required 15+ chemical steps in precise sequence. No lab maintains K-14 capability. Undeveloped Kodachrome cannot be processed.",
+      "reference": "National Geographic covers, Abraham Zapruder's JFK footage, Steve McCurry's Afghan Girl, Paul Simon's song",
+      "prompt": "Kodachrome reversal film visual style: that legendary color rendition with warm saturated reds and rich deep blues, punchy mid-tone contrast with clean shadow detail, distinctive slightly warm skin tones with a subtle magenta undertone, incredible color stability and archival permanence giving images a timeless clarity. Fine grain structure with razor sharpness from the reversal process, slightly elevated contrast compared to negative film, that specific Kodachrome 'pop' where colors are saturated but never garish — faithful yet enhanced, like reality with the saturation slider at +15% but with taste. Afternoon golden-hour warmth baked into the emulsion's DNA."
+    },
+    {
+      "id": "extinct_autochrome",
+      "process": "Autochrome Lumière (1907-1935)",
+      "death_date": "Production ceased ~1935; the dyed potato starch grain screen manufacturing process is extinct",
+      "why_dead": "Required a mosaic screen of millions of microscopic dyed potato starch grains (orange, green, violet) bonded to the glass plate. The manufacturing process for these precise grain screens no longer exists.",
+      "reference": "Albert Kahn's Archives de la Planète, early National Geographic color, WWI-era color photographs",
+      "prompt": "Autochrome Lumière visual style: the world's first practical color photography rendered through a pointillist mosaic of dyed starch grains — soft dreamy pastel colors with a distinctive stippled texture visible at any magnification, like a Seurat painting captured from life. Muted palette skewing toward warm earth tones and soft lavenders, inherently low contrast with a gentle luminous quality, slight color shifts between grains creating a shimmering organic texture, long exposure times meaning flowing water blurs to silk and people hold perfectly still poses. The characteristic warm amber cast and that irreplaceable quality of early color — not inaccurate, but seeing color through a different eye, as if the world itself were made of crushed flowers and stained glass."
+    },
+    {
+      "id": "extinct_nitrate",
+      "process": "Cellulose Nitrate Film (1889-1951)",
+      "death_date": "Nitrate base stock production ended early 1950s (replaced by safety film). Remaining nitrate prints are degrading and literally explosive.",
+      "why_dead": "Cellulose nitrate is chemically unstable and dangerously flammable (self-oxidizing, burns underwater). Manufacturing banned for motion picture use. The silver-rich emulsions coated on nitrate base had different optical properties than modern safety stock.",
+      "reference": "Every film made before ~1951: Citizen Kane, Casablanca, Metropolis, Nosferatu original prints",
+      "prompt": "Cellulose nitrate film stock visual style: that legendary silver-rich luminosity with blacks deeper and more dimensional than any modern film stock, an almost three-dimensional tonal range where highlights glow with an inner radiance and shadows have infinite depth rather than flat darkness. The distinctive 'nitrate glow' — a silvery sheen to highlights that looks like light is being emitted rather than reflected, exceptionally fine grain from the thick pure-silver emulsion, creamy smooth gradients with no banding, slightly warm base tint from the aging nitrate. Blacks that are simultaneously deep and transparent, as if you could reach into the shadow. The closest visual analogy: the difference between looking at a photograph and looking through a window."
+    },
+    {
+      "id": "extinct_daguerreotype",
+      "process": "Daguerreotype (1839-1860s)",
+      "death_date": "Commercially obsolete by 1860s; the mercury vapor development and silver-iodide plate preparation are still possible but vanishingly rare as fine art",
+      "why_dead": "Requires polished silver-plated copper, iodine/bromine fuming, mercury vapor development, and gold chloride toning — with toxic mercury and iodine exposure. Each image is a unique unreproducible object on metal.",
+      "reference": "Earliest surviving photographs: Boulevard du Temple, portraits of Lincoln, Poe, Frederick Douglass",
+      "prompt": "Daguerreotype visual style: mirror-like polished silver plate surface where the image appears positive or negative depending on viewing angle, infinitely sharp with no grain (continuous-tone metallic surface), long exposure ghosting where moving subjects blur into transparency while architecture stays razor-crisp. That distinctive metallic luminance where faces seem to float on mercury, tonal range from deep mirror-black to brilliant silver-white, hand-tinted cheeks and gold jewelry accents on the monochrome base, the haunting stillness of subjects who had to remain motionless for 15-60 seconds, ornate oval mat and velvet-lined case framing. A photograph that is simultaneously a mirror, a memory, and a precious metal object."
+    },
+    {
+      "id": "extinct_kinemacolor",
+      "process": "Kinemacolor (1908-1914)",
+      "death_date": "System abandoned after patent lawsuits; the specific red-green alternating filter mechanism and high-speed projector no longer exist",
+      "why_dead": "Required filming at 32fps through alternating red and green filters (16fps per color), then projecting through matching filters at 32fps. The specific filter dyes, modified cameras, and projectors are extinct.",
+      "reference": "The Delhi Durbar (1911), With Our King and Queen Through India",
+      "prompt": "Kinemacolor two-color additive visual style: the world's first color motion picture process — red and green channels only with NO blue, projected through alternating color filters creating distinctive color fringing and ghosting on any motion. Static objects render in warm red-green tones while moving subjects trail prismatic color halos, that characteristic temporal color separation where fast motion splits into red and green afterimages. Flickering color saturation from the alternating filter mechanism, warm amber-to-teal color range with blues appearing as dark grey, the pioneering imperfection of seeing color in motion for the first time — technically limited but historically electric."
+    },
+    {
+      "id": "extinct_orthochromatic",
+      "process": "Orthochromatic Film Stock (1884-~1930)",
+      "death_date": "Superseded by panchromatic stock; the specific blue-green-only sensitivity emulsions are no longer manufactured",
+      "why_dead": "Orthochromatic emulsion was sensitive only to blue and green light, blind to red. Once panchromatic (all-color-sensitive) stock became available, ortho stock was abandoned for motion pictures.",
+      "reference": "All silent films before ~1927: Nosferatu, The Cabinet of Dr. Caligari, early Chaplin",
+      "prompt": "Orthochromatic film stock visual style: an emulsion blind to red light creating a world of dramatically altered tonal values — blue skies burn to pure white, red lips render as black, freckles and skin blemishes are exaggerated while complexions appear ghostly pale, blue eyes photograph light and brown eyes dark regardless of actual brightness. That distinctive silent-film look where heavy theatrical makeup was necessary to counteract the tonal distortion: white pancake base, darkened lips and eyebrows, exaggerated contour. High contrast with brilliant whites and deep blacks, limited mid-tone range, the specific quality of early cinema where the film stock itself was seeing a different spectrum than the human eye."
+    },
+    {
+      "id": "extinct_handtinted",
+      "process": "Hand-Tinted / Hand-Colored Film (1895-~1930)",
+      "death_date": "Replaced by photochemical color processes; the frame-by-frame hand-painting workshops (employing hundreds of colorists) no longer exist",
+      "why_dead": "Required teams of artists painting transparent aniline dyes onto individual film frames (or stencil-cut sections) — industrially impractical once chemical color processes existed.",
+      "reference": "Georges Méliès' A Trip to the Moon, Pathécolor stencil films, early Edison hand-tinted shorts",
+      "prompt": "Hand-tinted film visual style: transparent watercolor washes of aniline dye painted over monochrome silver-image frames — color that floats OVER the image rather than being embedded in it, slightly imprecise boundaries where color bleeds past edges, each frame subtly different from the next creating a shimmering organic color fluctuation. Limited palette of 3-6 hand-mixed colors per scene (typically: warm amber for interiors, blue for night/moonlight, red-orange for fire/explosions, green for nature, pink for flesh), the theatrical artificiality of applied color that makes no attempt at photorealism, the charming inconsistency of human hands adding color to a mechanical medium frame by frame."
+    },
+    {
+      "id": "extinct_ektachrome_160t",
+      "process": "Ektachrome 160T Tungsten (1977-2012)",
+      "death_date": "Discontinued by Kodak 2012; the tungsten-balanced reversal emulsion is gone (Ektachrome E100 was revived 2018 but is daylight-balanced, different character entirely)",
+      "why_dead": "The specific tungsten-balanced reversal emulsion with its distinctive grain structure, color crossover characteristics, and push-processing latitude was unique to the 160T formulation. Not the same as modern Ektachrome.",
+      "reference": "1980s concert films, music videos (Michael Jackson's Thriller), documentary work, available-light interiors",
+      "prompt": "Ektachrome 160T tungsten reversal film visual style: designed for artificial light with a warm-neutral balance under tungsten, pushed to 320 or 640 ISO revealing distinctive grain structure and increased contrast with saturated but slightly cross-processed color shifts in the shadows (blue-green shadow bias, warm amber highlights). That specific 1980s music-video and concert-film look — rich saturated color under stage lighting, pronounced but elegant grain, slight magenta shift in midtones when push-processed, the warm intimate quality of tungsten-balanced stock under mixed lighting creating accidental split-toning. Available-light interiors with that irreplaceable reversal-film snap where highlights clip to pure white with zero shoulder."
+    },
+    {
+      "id": "extinct_dufaycolor",
+      "process": "Dufaycolor Additive Reseau Screen (1932-late 1950s)",
+      "death_date": "Manufacturing ended late 1950s; no reseau-coating machines or geometric dye-screen film base production survives",
+      "why_dead": "Required a precise geometric RGB line/mosaic pattern (reseau, ~19-25 lines/mm, ~1.5M color patches per square inch) dyed and printed onto film base before panchromatic emulsion coating. The manufacturing process for these micro-scale geometric dye screens is extinct. Subtractive processes (Kodachrome, Agfacolor, Technicolor) were sharper, brighter, and cheaper.",
+      "reference": "Len Lye A Colour Box (1935), Kaleidoscope (1935), Rainbow Dance (1936), GPO Film Unit shorts, Sons of the Sea",
+      "prompt": "Dufaycolor additive reseau screen visual style: color rendered through a microscopic geometric RGB line grid bonded to the film base — muted yet surprisingly natural colors with a distinctive fine mosaic texture visible on any close inspection, like a precursor to digital pixels made of dyed gelatin. Subtle light loss from the screen absorption giving a gentle softness, colors that blend optically at viewing distance but separate into distinct red-green-blue lines when magnified. That specific quality of additive color where whites are built from all three filter colors overlapping, warm skin tones with slight desaturation, the organic shimmer of a million tiny color cells each contributing their filtered fraction of light. British experimental cinema texture — painterly, contemplative, technically modest but aesthetically distinctive. A pointillist photograph that knows it is made of colored lines."
+    },
+    {
+      "id": "extinct_gasparcolor",
+      "process": "Gasparcolor Silver Dye-Bleach / Chromolytic (1933-1940s)",
+      "death_date": "Developer Bela Gaspar fled Nazi Germany; process never scaled commercially; short production window ended by WWII",
+      "why_dead": "Pre-dyed three-layer film required precise silver-catalyzed dye destruction during processing — extremely complex and expensive chemistry. Gaspar fled Europe, the few labs closed, and it could never compete on cost with Technicolor or Kodachrome. The specific multi-layer pre-dyed stock and chromolytic chemistry are completely extinct.",
+      "reference": "Oskar Fischinger Kreise / Composition in Blue, Len Lye Rainbow Dance / Colour Flight / Trade Tattoo, George Pal Puppetoons",
+      "prompt": "Gasparcolor silver dye-bleach visual style: pre-dyed film where silver catalytically destroys dyes to form the image — producing colors MORE saturated and luminous than even Technicolor, with a purity and brilliance no other photochemical process achieved. Insanely vivid pure hues that glow with an inner radiance, perfect for abstract animation where color IS the subject. Deep stable blacks from the dye-bleach base, that distinctive quality where colors appear lit from within rather than merely reflecting light. Ultra-pure primaries without the slight muddiness of coupler-formed dyes, smooth continuous-tone gradients, the specific black perforations and colored soundtrack edge unique to Gasparcolor prints. A process so brilliant and so impractical that it existed for barely a decade — the Concorde of color film: technically superior, commercially doomed."
+    },
+    {
+      "id": "extinct_vistavision",
+      "process": "VistaVision Horizontal 8-Perf 35mm (1954-1961, VFX use to ~2000s)",
+      "death_date": "Principal photography use ended ~1961; VFX plate use phased out by 2000s as digital resolution overtook it",
+      "why_dead": "Film ran horizontally through a modified camera using 8 perforations per frame — roughly 2x the negative area of standard 4-perf 35mm. Required specialized cameras (rare/expensive), consumed film at 2x rate, and needed custom printers for reduction to standard release prints. Higher-resolution film stocks and then digital made the format advantage moot.",
+      "reference": "White Christmas (1954), The Ten Commandments, Vertigo title sequence, many 1950s Paramount features, ILM VFX plates (Star Wars original trilogy)",
+      "prompt": "VistaVision horizontal 8-perforation visual style: the razor-crisp low-grain clarity of double-area 35mm negative even when optically reduced to standard prints — a sharpness and detail density that standard 35mm could not match, with grain so fine it becomes invisible at normal viewing distances. That distinctive 1950s Paramount lushness where every fabric texture, skin pore, and architectural detail is rendered with large-format precision on a 35mm budget. Rich saturated Eastman color with extended tonal range from the larger negative, clean highlight rolloff, dimensional depth that approaches medium format, widescreen compositions designed for the extra horizontal resolution. The visual equivalent of hearing music in lossless after years of compressed audio — technically identical format, perceptibly superior in every frame."
+    },
+    {
+      "id": "extinct_cinecolor",
+      "process": "Cinecolor Two-Color Subtractive (1932-1954)",
+      "death_date": "Company folded 1954; the specific bipack stock and blue-orange/red-cyan subtractive dye chemistry are extinct",
+      "why_dead": "Cheaper alternative to Technicolor using simpler bipack negative with only two color records (typically red-blue or red-cyan). Produced a limited but distinctive palette. Killed by affordable Eastman Color monopack which offered full three-color for similar cost.",
+      "reference": "Cinecolor B-Westerns, serials, Popeye/Casper cartoons, low-budget 1940s-50s features, The Adventures of Captain Marvel",
+      "prompt": "Cinecolor two-color subtractive visual style: B-movie Technicolor alternative rendering the world in warm golden-amber and cool teal-blue with limited green — distinctively warm glowing skin tones that look like polished bronze, deep saturated blues for skies and shadows, but greens and purples rendered as muddy compromises between the two color records. That specific budget-Technicolor charm where the limited palette creates its own beauty: golden desert landscapes, luminous amber-lit interiors, impossibly warm flesh tones with teal shadow separation. Slight softness from the bipack registration, occasional color fringing on fast motion, the honest imperfection of a process designed for economy not perfection — and accidentally creating an aesthetic more distinctive than the full-color process it was trying to imitate cheaply."
+    }
+  ],
+  "material_texture": [
+    {
+      "id": "material_oxidized_copper",
+      "substance": "Copper patina / verdigris",
+      "prompt": "Visual palette derived from oxidized copper: verdigris green dominant with warm copper-orange undertones breaking through where the patina has worn away, architectural surfaces with that distinctive blue-green chemical bloom, warm metallic highlights catching light on polished edges against cool teal-green shadows, the aesthetic of dignified aging and chemical transformation — warm new copper gradually surrendering to cool green oxidation. Color range from bright penny-orange through chocolate brown to turquoise-green and pale aqua. Lighting emphasizes the interplay between warm reflective metal and cool matte patina, compositions favoring texture-rich surfaces and the boundary between decay and endurance."
+    },
+    {
+      "id": "material_wet_concrete",
+      "substance": "Rain-soaked concrete / urban brutalism",
+      "prompt": "Visual palette derived from wet concrete: dominant grey-scale achromatic palette where color exists ONLY from artificial light sources — neon signs, traffic lights, phone screens, streetlamps — reflecting in rain-slicked concrete surfaces. Brutalist architectural geometry with board-formed texture visible in every slab, standing water creating mirror pools that double the composition, that specific darkening of concrete when saturated with rain shifting from pale grey to deep charcoal. Overcast flat lighting from above, all warmth comes from below (reflected city light in puddles), fog and mist softening distant hard edges, the poetry of utilitarian material made beautiful by water and light."
+    },
+    {
+      "id": "material_volcanic_glass",
+      "substance": "Obsidian / volcanic glass",
+      "prompt": "Visual palette derived from obsidian and volcanic glass: deep pure blacks with conchoidal fracture surfaces creating rainbow iridescent micro-reflections — like oil on water trapped in stone. Sharp geometric fracture planes catching light at unpredictable angles, mahogany-brown translucency where thin edges allow light through, that glassy reflective quality where dark surfaces become imperfect mirrors. Color range: jet black, deep brown-red, silver-grey, rainbow iridescence at fracture edges. High contrast between the light-swallowing mass and the brilliant edge reflections, volcanic landscape palette of black basalt, sulfur yellow, magma orange in the deep background, obsidian's paradox — simultaneously the darkest and most reflective natural material."
+    },
+    {
+      "id": "material_bioluminescent",
+      "substance": "Deep-ocean bioluminescence",
+      "prompt": "Visual palette derived from deep-ocean bioluminescence: total darkness as the baseline with ALL illumination coming from living organisms — cyan-blue bacterial glow, green-yellow jellyfish pulses, deep violet squid chromatophore flashes, red bioluminescent lures. Light that moves, breathes, and fades organically rather than holding steady, that specific quality of photons generated by chemistry rather than electricity — softer, cooler, with gradual falloff into absolute black. No ambient light whatsoever; every photon has a biological source. Compositions emerging from and dissolving into darkness, light as a living event rather than a condition, the alien beauty of illumination that comes FROM the subject rather than falling ON it."
+    },
+    {
+      "id": "material_rusted_iron",
+      "substance": "Iron oxide / ferric rust",
+      "prompt": "Visual palette derived from rusted iron: warm orange-brown oxide dominant palette ranging from bright fresh rust (orange-red) through mature patina (deep chocolate-brown) to ancient flaking scale (dark burgundy-black). Texture-rich surfaces with layered corrosion creating geological strata of color, pitting and perforation where iron has been consumed entirely, the warm palette of entropy and oxidation. Cool blue-grey of surviving bare metal visible where rust has been scraped or worn, water stains trailing orange teardrops down surfaces, industrial archaeology where machines return to mineral. Warm directional light emphasizing the three-dimensional texture of corrosion, that paradox of destruction as beauty."
+    },
+    {
+      "id": "material_cracked_porcelain",
+      "substance": "Crazed porcelain / kintsugi repair",
+      "prompt": "Visual palette derived from cracked porcelain and kintsugi gold-repair: luminous white-cream base surface crossed by hairline crack networks (crazing) that create organic cellular patterns, gold or lacquer filling cracks in the kintsugi tradition — imperfection elevated to beauty, breakage as biography. Translucent quality where light passes through thin porcelain edges creating a warm glow, cobalt blue or celadon green glaze accents, the contrast between the smooth perfect glaze surface and the chaotic crack geometry beneath. High-key lighting to emphasize the translucency, gold highlights catching light in the repair lines, compositions celebrating the tension between fragility and resilience, beauty that requires damage to exist."
+    },
+    {
+      "id": "material_mercury_liquid",
+      "substance": "Liquid mercury / chrome pooling",
+      "prompt": "Visual palette derived from liquid mercury and chrome: mirror-perfect reflections distorted by fluid surface tension, environment maps warped across convex droplet surfaces, that uncanny quality of a liquid that reflects like a solid mirror but moves like water. Monochrome silver-grey palette with all color coming from reflected environment, pooling mercury creating miniature convex mirrors that compress and distort the surrounding world, surface tension creating perfect spherical droplets that merge and split. Cool metallic light, no warm tones from the material itself — all warmth is borrowed reflection, the hypnotic quality of a substance that is simultaneously liquid, mirror, and metal."
+    },
+    {
+      "id": "material_amber_resin",
+      "substance": "Fossilized amber / tree resin",
+      "prompt": "Visual palette derived from amber and fossilized resin: translucent golden-orange depth with layered transparency — objects visible THROUGH the material with warm color shifting as depth increases, trapped inclusions (insects, bubbles, plant matter) frozen in clear golden medium, that warm backlit glow when light passes through. Color range from pale honey-yellow through deep cognac to dark cherry-red in thick sections, internal light scattering creating a warm diffuse radiance, the visual metaphor of preservation and suspended time. Strong backlighting to activate the translucency, warm amber key light with cool shadow contrast, compositions emphasizing depth layers and the frozen-moment quality of things preserved in golden time."
+    },
+    {
+      "id": "material_weathered_wood",
+      "substance": "Sun-bleached / rain-weathered timber",
+      "prompt": "Visual palette derived from weathered wood: silver-grey sun-bleached surface grain over warm brown heartwood, visible growth rings and grain patterns creating natural linear texture, split and cracked end-grain revealing the golden interior beneath the grey exterior. Organic imperfection in every surface — no two boards identical, knots and burls as focal points, the slow erosion of soft grain leaving hard grain standing in relief. Warm brown-amber-grey palette with occasional green moss or orange lichen accents, the material evidence of decades of sun, rain, and wind written into the surface, sidelit to emphasize grain texture depth, that specific aesthetic of honest aging where the material becomes more beautiful as it weathers."
+    },
+    {
+      "id": "material_frosted_glass",
+      "substance": "Sandblasted / acid-etched frosted glass",
+      "prompt": "Visual palette derived from frosted glass: translucent diffusion where forms are visible but detail is obscured — silhouettes and color bleed through but edges dissolve, that specific quality of seeing without seeing clearly. Soft white-blue scattered light with zero sharp shadows, color desaturated by the scattering, human figures reduced to warm-toned shapes behind the diffusion barrier, the privacy-screen aesthetic applied cinematically. Gradients from clear to fully frosted creating zones of clarity and obscurity within a single frame, edge-lit glass glowing with captured light, the visual language of boundaries, barriers, and the things we almost but cannot quite see."
+    }
+  ],
+  "era_fusion": [
+    {
+      "id": "fusion_art_deco_cyberpunk",
+      "era_a": "Art Deco (1920s-1930s)",
+      "era_b": "Cyberpunk (1980s-present)",
+      "prompt": "Art Deco meets cyberpunk: 1920s geometric glamour colliding with neon-soaked dystopia — Chrysler Building chevrons rendered in holographic cyan, gold-leaf sunburst patterns reflecting off rain-slicked streets, ziggurat architecture crowned with LED billboards, flapper silhouettes in fiber-optic fabric. The symmetry and optimism of Deco's machine-age geometry filled with cyberpunk's nocturnal neon anxiety, brass and chrome meeting carbon fiber and acrylic, that impossible mashup of Gatsby's ballroom and Deckard's Los Angeles. Warm gold and cool cyan as the dominant contrast pair, geometric precision in every composition, the specific tension between Deco's utopian futurism and cyberpunk's dystopian present."
+    },
+    {
+      "id": "fusion_baroque_neon",
+      "era_a": "Baroque painting (1600s-1750s)",
+      "era_b": "Neon signage / nightclub lighting",
+      "prompt": "Baroque chiaroscuro meets electric neon: Caravaggio's dramatic single-source lighting but the source is a buzzing neon tube instead of a candle — deep theatrical shadows carved by magenta, cyan, and hot pink artificial light, ornate gilded frames and velvet drapery catching colored neon spill, classical figure composition with faces half-lit in electric violet. The emotional intensity and religious drama of Baroque painting powered by 20th-century commercial signage, that collision of the sacred and the tacky, Rembrandt's shadows filled with LED color bleed, cherubs silhouetted against a cocktail bar sign. Extreme contrast, saturated neon color, classical composition, profane light sources illuminating sacred poses."
+    },
+    {
+      "id": "fusion_constructivist_vaporwave",
+      "era_a": "Soviet Constructivism (1920s-1930s)",
+      "era_b": "Vaporwave aesthetic (2010s)",
+      "prompt": "Soviet Constructivism meets vaporwave: the hard diagonal geometry and propagandistic energy of revolutionary design filtered through pastel nostalgia and digital melancholy — Rodchenko's dynamic angles and Lissitzky's red-black-white rendered in soft pink, teal, and lavender, bold sans-serif Cyrillic typography floating over Roman busts and Windows 95 interfaces, heroic worker figures cast in retrowave neon grid shadows. The industrial optimism of the Soviet avant-garde crossed with vaporwave's ironic consumer mourning, hammer-and-sickle geometry in gradient chrome, the political rendered decorative, the revolutionary made aesthetic. Diagonal compositions, hard geometric shapes, pastel color palette with occasional Soviet red punch."
+    },
+    {
+      "id": "fusion_ukiyo_drone",
+      "era_a": "Ukiyo-e woodblock prints (1600s-1800s)",
+      "era_b": "Modern drone/aerial cinematography",
+      "prompt": "Ukiyo-e woodblock aesthetic applied to aerial drone cinematography: Hokusai's flat perspective and bold outline style mapping onto bird's-eye landscapes — mountains rendered as stacked flat color planes with no atmospheric perspective, rivers as sinuous calligraphic lines, the Great Wave's stylized water patterns applied to real ocean footage from above. Woodblock color palette: indigo, vermillion, pale green, ochre with black keyline, deliberate rejection of photographic depth in favor of decorative flatness even from altitude, cloud formations as Hiroshige-style layered wash bands. The marriage of the oldest aerial perspective (imagined from mountaintops by Edo-period artists) with the newest (drone cameras), traditional composition rules applied to unprecedented viewpoints."
+    },
+    {
+      "id": "fusion_noir_solarpunk",
+      "era_a": "Film Noir (1940s-1950s)",
+      "era_b": "Solarpunk (2010s-present)",
+      "prompt": "Film noir meets solarpunk: hard shadow patterns — venetian blind stripes, fedora brims, fire escape lattices — falling across lush overgrown green walls and solar panel arrays, the cynical darkness of noir's visual language applied to an optimistic eco-utopia. Rain-slicked streets but the puddles reflect rooftop gardens instead of neon signs, trench-coated figures silhouetted against greenhouse glass instead of office windows, that impossible mood of hope expressed through the grammar of despair. High contrast black-and-green instead of black-and-white, motivated lighting from grow-lamps and bioluminescent plants, the detective story set in a world that already solved its biggest problem but still has murders to investigate."
+    },
+    {
+      "id": "fusion_renaissance_glitch",
+      "era_a": "Renaissance painting (1400s-1600s)",
+      "era_b": "Digital glitch art / databending",
+      "prompt": "Renaissance oil painting breaking into digital corruption: classical sfumato and chiaroscuro compositions with pixel-sorting tearing through the canvas — a Botticelli face dissolving into RGB channel separation, Vermeer's window light scattering into compression artifact blocks, da Vinci's anatomical precision corrupted by datamosh smearing. The deliberate tension between the most controlled art form in history and the most chaotic digital failure mode, oil-paint texture interrupted by scanline displacement, golden-ratio composition disrupted by buffer overflow. Classical warm palette (umber, sienna, ochre, lapis blue) with interference patterns of digital magenta and cyan in the corrupted zones."
+    },
+    {
+      "id": "fusion_brutalist_bioluminescence",
+      "era_a": "Brutalist architecture (1950s-1970s)",
+      "era_b": "Bioluminescent organisms",
+      "prompt": "Brutalist concrete architecture infused with living light: massive board-formed concrete structures where the cracks and joints glow with bioluminescent cyan-green organisms, poured-concrete geometry softened by organic light that breathes and pulses, the inhuman scale of brutalism made warm by biological illumination growing in every crevice. Cold grey concrete surfaces with veins of warm living light, monumental geometry with intimate bio-light detail, rain water pooling on flat roofs glowing with dinoflagellates, that specific tension between the most aggressively artificial architecture and the most ancient form of illumination. The concrete provides structure, the biology provides soul."
+    },
+    {
+      "id": "fusion_art_nouveau_circuit",
+      "era_a": "Art Nouveau (1890s-1910s)",
+      "era_b": "Printed circuit board / microelectronics",
+      "prompt": "Art Nouveau organic flowing lines rendered as circuit board traces: Mucha's sinuous hair and botanical curves etched in copper on green FR4 substrate, Klimt's gold-leaf patterns reimagined as gold-plated PCB traces, flowing organic forms that ARE functional circuit paths connecting surface-mount components like jewels in a Lalique brooch. The nature-worship of Art Nouveau expressed through the most precise manufacturing process in electronics, organic curves that conduct electricity, floral patterns that process data. Green PCB base with copper/gold trace palette, the deliberate collision of nature-imitating-art and technology-imitating-nature, hand-drawn curves manufactured to micron precision."
+    },
+    {
+      "id": "fusion_gothic_infrared",
+      "era_a": "Gothic architecture / German Expressionism",
+      "era_b": "Infrared photography",
+      "prompt": "Gothic cathedral verticality shot through infrared film: stone architecture rendered in false-color where living foliage glows brilliant white-pink against dark sky, stained glass windows invisible (glass blocks IR) appearing as black voids in glowing walls, the religious sublime amplified by seeing a spectrum humans were never meant to see. Pointed arches and flying buttresses as dark skeletal forms against white-hot vegetation, graveyard scenes where grass glows ethereally around dark headstones, that specific infrared reversal where life (chlorophyll) blazes bright and death (stone, metal) goes dark. Wood Effect halation around bright foliage, dark threatening skies, the Gothic fascination with the boundary between visible and invisible made literal."
+    },
+    {
+      "id": "fusion_bauhaus_underwater",
+      "era_a": "Bauhaus design (1919-1933)",
+      "era_b": "Underwater / subaquatic photography",
+      "prompt": "Bauhaus geometric minimalism submerged underwater: primary-color geometric shapes (Kandinsky circles, Mondrian grids, Albers squares) sinking through blue-green water with caustic light patterns playing across their surfaces, clean sans-serif typography distorted by refraction, the precision of modernist design principles dissolved by fluid dynamics. Air bubbles as compositional elements, Bauhaus furniture floating in slow motion, that collision between the most controlled design philosophy and the most uncontrollable medium. Reduced Bauhaus palette (red, blue, yellow, black, white) filtered through water's blue-green absorption, geometric forms softened by underwater diffusion, modernist rationality surrendering to fluid chaos."
+    }
+  ],
+  "abstract_procedural": [
+    {
+      "id": "proc_chromatic_aberration",
+      "technique": "RGB channel displacement / prismatic fringing",
+      "prompt": "Chromatic aberration as primary visual identity: deliberate RGB channel displacement where red, green, and blue layers are offset — creating prismatic rainbow fringing around every edge and contrast boundary, the optical imperfection of cheap lenses elevated to a dominant aesthetic. Strongest separation at frame edges with relatively clean center, that specific look of seeing the world decomposed into its three component colors, faces with red and cyan halos, text with rainbow edges. Color fringing increases with distance from optical center (barrel distortion pattern), high contrast scenes creating maximum channel separation, the deliberate embrace of an error that reveals how all color images are actually three monochrome images pretending to be one."
+    },
+    {
+      "id": "proc_datamosh",
+      "technique": "Compression artifact manipulation / I-frame deletion",
+      "prompt": "Datamosh visual aesthetic: intentional digital video compression artifacts created by removing keyframes (I-frames) so motion vectors propagate incorrectly — previous frame textures smearing, stretching, and flowing across the screen following motion that no longer matches, pixel blocks blooming like digital flowers as the codec tries to predict movement from deleted reference frames. That distinctive liquefied quality where faces melt into backgrounds and backgrounds flow like paint, color information from one scene bleeding into the geometry of another, the beautiful failure of video compression made visible. Blocky macro-artifacts, motion-vector rivers, rainbow block noise at scene cuts, the aesthetic of a machine hallucinating between memories."
+    },
+    {
+      "id": "proc_infrared",
+      "technique": "Near-infrared false-color photography",
+      "prompt": "Infrared false-color photographic style: the world re-rendered in the near-infrared spectrum — all living vegetation glows brilliant white or pale pink (Wood Effect from chlorophyll reflecting IR), blue skies turn near-black (atmospheric scattering doesn't affect IR), skin appears smooth and luminous (veins visible beneath surface, blemishes vanish), water turns dark and opaque. That dreamlike quality of familiar scenes made alien by shifting the visible spectrum, halation glow around bright IR-reflective surfaces, deep contrast between the bright organic world and dark mineral/water/sky. No green exists in this world — it's all white, pink, dark red, and near-black, the landscape of a parallel universe where photosynthesis produces light."
+    },
+    {
+      "id": "proc_thermal",
+      "technique": "Thermal imaging / FLIR false-color",
+      "prompt": "Thermal imaging false-color visual style: heat-map palette applied cinematically where warm bodies glow in hot whites and yellows against cool blue-purple environments, recent footprints and handprints visible as fading thermal echoes on surfaces, the invisible made visible — body heat, engine warmth, sun-heated walls all rendered as color temperature. That distinctive FLIR look: ironbow palette (black-blue-magenta-orange-yellow-white mapping cold to hot), silhouette-free imaging where darkness is irrelevant and only temperature matters, the intimacy of seeing human warmth radiate into cold space. Architectural heat loss visible as glowing seams, breath clouds as bright plumes, the surveillance-aesthetic made beautiful."
+    },
+    {
+      "id": "proc_slit_scan",
+      "technique": "Temporal slit-scan / time-displaced capture",
+      "prompt": "Slit-scan temporal displacement visual style: each horizontal line of the image captured at a different moment in time — moving objects stretched and compressed into sinuous time-ribbons, static backgrounds rendered normally while anything in motion becomes a fluid temporal smear. The stargate sequence from 2001: A Space Odyssey as a visual language: reality extruded through a temporal slit, faces stretched into elongated masks, walking figures compressed or expanded by their velocity relative to the scan direction. Vertical structures (buildings, trees) remain sharp while horizontal motion (cars, people, water) becomes abstract temporal paint, the photograph as a record not of a moment but of a duration, time made visible as spatial distortion."
+    },
+    {
+      "id": "proc_double_exposure",
+      "technique": "In-camera multiple exposure / superimposition",
+      "prompt": "Double/multiple exposure visual style: two or more image layers superimposed with additive or screen blending — landscapes visible through human silhouettes, faces containing cityscapes, the visual language of memory, dream, and psychological interiority. Dark areas of one layer reveal bright areas of the other, creating compositions where inside and outside, past and present, occupy the same frame simultaneously. Careful exposure balancing so neither layer dominates, silhouettes as windows into other realities, the specific grammar of superimposition: dark subjects work as frames (silhouette + landscape), bright subjects create ghost layers (face + texture). The poetic device of showing what someone is thinking by literally putting it inside their head."
+    },
+    {
+      "id": "proc_long_exposure",
+      "technique": "Extended shutter time / temporal accumulation",
+      "prompt": "Long exposure temporal accumulation style: extended capture times transforming motion into silky smooth flows and luminous trails — car headlights becoming rivers of light, waterfalls dissolving into white silk, star fields rotating into concentric circle trails around Polaris, ocean waves averaging into misty glass-smooth surfaces. The paradox of recording more time creating simpler, calmer images — chaos averaged into serenity, crowds becoming ghosts, individuals dissolving into the flow of humanity. Tripod-stable architecture as sharp anchors surrounded by temporal blur, the light-painting quality of any moving light source, ND-filter daylight long exposures where water becomes fog and clouds streak across the sky."
+    },
+    {
+      "id": "proc_macro_world",
+      "technique": "Extreme macro / microscopic perspective",
+      "prompt": "Extreme macro-lens world style: everyday objects rendered at microscopic magnification where texture becomes landscape — water droplets as crystal spheres containing inverted reflections of the room, fabric weave as architectural grid, skin surface as terrain with pore-craters and hair-forests, sugar crystals as geological formations. Razor-thin depth of field (fractions of a millimeter) creating extreme bokeh where in-focus and out-of-focus exist centimeters apart, that revelatory quality of seeing the hidden architecture in mundane surfaces. Ring-light or focus-stacked illumination, the macro paradox where magnification makes the familiar unrecognizable, a world where scale is ambiguous and a dewdrop could be a planet."
+    },
+    {
+      "id": "proc_particle_field",
+      "technique": "Atmospheric particulate / visible medium",
+      "prompt": "Visible atmospheric particle field style: the air itself made visible through suspended particulates — dust motes in shaft light becoming galaxies, fog particles scattering beams into volumetric cones, rain as a curtain of visible atmosphere, pollen clouds as golden haze. Every light source reveals its beam path through the medium, creating volumetric light shafts, god rays, and Tyndall-effect color shifts (blue scatter in haze, warm transmission). The atmosphere as a character rather than empty space between subjects, that Spielbergian shaft-of-light quality amplified to a complete aesthetic where EVERY scene exists in visible air, smoke, dust, mist, or precipitation. Dense atmosphere, directional light, particles as the connective tissue between subject and source."
+    },
+    {
+      "id": "proc_photogrammetric",
+      "technique": "Photogrammetry point-cloud / incomplete 3D scan",
+      "prompt": "Photogrammetry point-cloud visual style: the world rendered as a dense cloud of colored 3D points rather than continuous surfaces — recognizable subjects composed of millions of floating color dots with gaps between them where the scanner couldn't reach, that distinctive incomplete-reconstruction quality where occluded areas dissolve into sparse noise. Surfaces that hold together from distance but break apart at close inspection, the digital archaeological aesthetic of reality captured imperfectly and reconstructed incompletely, parallax-revealing gaps where the point cloud is thin, color derived from source photographs mapped onto geometric coordinates. The beauty of seeing through solid objects where the scan is sparse, reality as a pointillist estimation rather than a fact."
+    }
+  ]
+}

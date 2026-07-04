@@ -1,0 +1,605 @@
+{
+  "_doc": "Language profiles for ELEANOR-DAVID multilingual pipeline — dialogue delivery, voice direction, code-switching",
+  "_version": "3",
+  "_captured": "2026-06-30",
+  "_architecture": "Single-language profiles (primary tier) + dialect variants + bilingual/trilingual combos. Resolver cascade: shot.modifiers.language → shot.barebones.dialogue.language → shot.language → config.language. Default: en.",
+  "_scope_rule": "language_clause governs overall production language context (score, narration, cultural framing). Per-shot dialogue.language controls lip-sync delivery language for individual lines.",
+  "_v2_expansion": "Western European coverage — Germanic (EN dialects, DE variants, NL, DA), Romance (ES variants, CA, FR, PT, IT), isolate (EU/Basque). Bilingual combos for cinematically significant pairings.",
+  "_v3_expansion": "Eastern European / Balkan coverage — East Slavic (RU, UK, BE), West Slavic (PL, CS, SK), South Slavic (BG, MK, SR, HR, BS, SL), non-Slavic (HU Uralic, RO Romance, EL Hellenic, SQ Albanian). Bilingual combos for politically charged pairings (SR/HR, HU/RO, RU/UK).",
+  "language_profiles": [
+
+    {"_section": "— ENGLISH & VARIANTS —"},
+
+    {
+      "id": "en",
+      "tier": "primary",
+      "name": "English",
+      "bcp47": "en",
+      "dialogue_directive": "dialogue",
+      "production_clause": "Production language: English. All narration, dialogue, and on-screen text in natural English.",
+      "voice_note": "Standard English delivery — cadence and register determined by character and scene context.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "en_rp",
+      "tier": "primary",
+      "name": "Received Pronunciation English",
+      "bcp47": "en-GB",
+      "dialogue_directive": "RP English",
+      "production_clause": "Production language: English (Received Pronunciation). Dialogue in standard Southern British English — non-rhotic, long vowels, precise consonants. The prestige register of British media and theater. Not aristocratic parody — natural educated speech.",
+      "voice_note": "RP speaker — non-rhotic (no r in 'car'), bath-trap split ([ɑː] not [æ]), crisp dental stops, measured pace. Lip-sync to British vowel shapes.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "en_cockney",
+      "tier": "primary",
+      "name": "Cockney English",
+      "bcp47": "en-GB-cockney",
+      "dialogue_directive": "Cockney English",
+      "production_clause": "Production language: English (Cockney). Dialogue in authentic East London working-class English — glottal stops, th-fronting, distinctive vowel shifts. Not mockney — genuine Cockney rhythm and vocabulary.",
+      "voice_note": "Cockney speaker — glottal stops replacing /t/ ('bo'le'), th-fronting ('fink' for 'think'), diphthong shifts ('face' → [æɪ]). Rapid urban cadence, rhyming slang used sparingly for character color.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "en_scottish",
+      "tier": "primary",
+      "name": "Scottish English",
+      "bcp47": "en-GB-scot",
+      "dialogue_directive": "Scottish English",
+      "production_clause": "Production language: English (Scottish). Dialogue in Scottish English — rhotic, rolled or tapped /r/, monophthongal vowels, distinctive intonation. Scots vocabulary woven naturally. Not caricature — the real rhythm of educated Scottish speech.",
+      "voice_note": "Scottish English speaker — rhotic (rolled /r/), monophthongs where RP has diphthongs ('face' [eː] not [eɪ]), velar fricative in 'loch' [x]. Measured Highland or quicker Lowland pace per character.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "en_irish",
+      "tier": "primary",
+      "name": "Hiberno-English",
+      "bcp47": "en-IE",
+      "dialogue_directive": "Irish English",
+      "production_clause": "Production language: English (Hiberno-English). Dialogue in Irish English — melodic intonation influenced by Irish Gaelic substrate, dental stops for th-sounds, distinctive perfect constructions ('I'm after doing it'). Literary and musical in cadence.",
+      "voice_note": "Hiberno-English speaker — dental [t̪]/[d̪] for 'th', sing-song intonation from Irish Gaelic prosody, Gaelic-influenced syntax ('Is it yourself that's in it?'). Warm, storytelling rhythm.",
+      "code_switch_markers": null
+    },
+
+    {"_section": "— GERMAN & VARIANTS —"},
+
+    {
+      "id": "de",
+      "tier": "primary",
+      "name": "German",
+      "bcp47": "de",
+      "dialogue_directive": "native German",
+      "production_clause": "Production language: German. All dialogue delivered in native German — authentic syntax, natural cadence, culturally grounded phrasing. Not translated-from-English. German sentence structure and word order preserved.",
+      "voice_note": "Native German speaker cadence. Regional inflection (Bavarian, Hochdeutsch, Austrian) follows character context. Lip-sync to German phonemes.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "de_bavarian",
+      "tier": "primary",
+      "name": "Bavarian German",
+      "bcp47": "de-BY",
+      "dialogue_directive": "native Bavarian German",
+      "production_clause": "Production language: Bavarian German. Dialogue in authentic Bavarian dialect — warm, grounded, distinct from Hochdeutsch. Regional vocabulary and cadence preserved.",
+      "voice_note": "Bavarian German speaker — warmer vowels, dialect-specific vocabulary (Grüß Gott, Servus), unhurried rural cadence where character fits.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "de_austrian",
+      "tier": "primary",
+      "name": "Austrian German",
+      "bcp47": "de-AT",
+      "dialogue_directive": "native Austrian German",
+      "production_clause": "Production language: Austrian German. Dialogue in Austrian Standard German — softer consonants than Bundesdeutsch, Viennese melody where character fits, Austrian vocabulary (Jänner, heuer, Paradeiser). Not German-from-Germany with an accent — distinct national variety.",
+      "voice_note": "Austrian German speaker — softer stops, Viennese melodic contour on urban characters, vocabulary that marks Austrian identity. Wienerisch register available for intimate/comedic scenes.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "de_swiss",
+      "tier": "primary",
+      "name": "Swiss German",
+      "bcp47": "gsw",
+      "dialogue_directive": "Swiss German",
+      "production_clause": "Production language: Swiss German (Alemannic). Dialogue in Swiss German dialect — not Standard German with Swiss pronunciation. Authentic Alemannic forms, uvular and velar fricatives, Swiss vocabulary. Diglossia: characters may switch to Hochdeutsch for formal contexts.",
+      "voice_note": "Swiss German speaker — uvular /r/, velar fricatives absent from standard German, distinctive diminutives (-li), measured Alpine cadence. Often mutually unintelligible with Hochdeutsch — use for authenticity where the story demands it.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "de_platt",
+      "tier": "primary",
+      "name": "Low German (Plattdeutsch)",
+      "bcp47": "nds",
+      "dialogue_directive": "Low German / Plattdeutsch",
+      "production_clause": "Production language: Low German (Plattdeutsch). Dialogue in authentic Northern German Low German — closer to Dutch and English historically than to Hochdeutsch. Unshifted consonants, distinctive vowels, maritime/rural North German character.",
+      "voice_note": "Plattdeutsch speaker — unshifted stops ('Water' not 'Wasser', 'maken' not 'machen'), broader vowels, unhurried North German coastal cadence. Often used for rural, maritime, or nostalgic register.",
+      "code_switch_markers": null
+    },
+
+    {"_section": "— YIDDISH —"},
+
+    {
+      "id": "yi",
+      "tier": "primary",
+      "name": "Yiddish",
+      "bcp47": "yi",
+      "dialogue_directive": "Yiddish",
+      "production_clause": "Production language: Yiddish. Dialogue delivered in Eastern Yiddish — Germanic base with Hebrew-Aramaic and Slavic loanwords. Melodic intonation, rhetorical questioning rhythm, proverb-rich speech patterns.",
+      "voice_note": "Yiddish delivery — melodic rise-fall intonation, characteristic rhetorical rhythm. Mame-loshn warmth. Not German with Yiddish words — distinct language with its own syntax and cadence.",
+      "code_switch_markers": null
+    },
+
+    {"_section": "— ROMANCE LANGUAGES —"},
+
+    {
+      "id": "es",
+      "tier": "primary",
+      "name": "Spanish (Castilian)",
+      "bcp47": "es",
+      "dialogue_directive": "Castilian Spanish",
+      "production_clause": "Production language: Spanish (Castilian). Dialogue in standard Castilian Spanish — distinción between /s/ and /θ/, five-vowel clarity, natural Iberian cadence. Not Latin American Spanish. Castilian syntax and vocabulary.",
+      "voice_note": "Castilian Spanish speaker — clear five-vowel system, interdental /θ/ ('Barcelona' with th-sound), trilled /rr/, rhythmic stressed-timed cadence. Lip-sync to Spanish open-mouth vowel shapes.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "es_andalusian",
+      "tier": "primary",
+      "name": "Andalusian Spanish",
+      "bcp47": "es-AN",
+      "dialogue_directive": "Andalusian Spanish",
+      "production_clause": "Production language: Andalusian Spanish. Dialogue in Southern Castilian — seseo or ceceo depending on subregion, aspirated final /s/, more relaxed consonants than Northern Castilian. Warmer, faster cadence with Mediterranean musical quality.",
+      "voice_note": "Andalusian speaker — aspirated or dropped final /s/ ('estamos' → 'ehtamoh'), seseo/ceceo variation, faster tempo than Northern Castilian, Mediterranean warmth. The sound of Seville, Cádiz, Granada.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "ca",
+      "tier": "primary",
+      "name": "Catalan",
+      "bcp47": "ca",
+      "dialogue_directive": "Catalan",
+      "production_clause": "Production language: Catalan. Dialogue in Catalan — not Spanish with an accent. Distinct Romance language with its own syntax, vocabulary, and phonology. Vowel reduction in unstressed syllables, distinctive sibilants. The language of Barcelona, Catalonia, and Valencia.",
+      "voice_note": "Catalan speaker — unstressed vowel reduction (like Portuguese), voiced/voiceless sibilant pairs, final consonant clusters absent from Spanish. Catalonia's distinct linguistic identity.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "fr",
+      "tier": "primary",
+      "name": "French",
+      "bcp47": "fr",
+      "dialogue_directive": "French",
+      "production_clause": "Production language: French. Dialogue in standard French — nasal vowels, liaison, enchaînement, uvular /r/. Natural metropolitan French cadence. Not stilted textbook French — living spoken register with contractions and elisions.",
+      "voice_note": "French speaker — uvular /ʁ/, nasal vowels (on/en/an/un), final consonant liaison, syllable-timed rhythm. Lip-sync to rounded front vowels (/y/, /ø/) and nasal mouth shapes.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "pt",
+      "tier": "primary",
+      "name": "Portuguese (European)",
+      "bcp47": "pt-PT",
+      "dialogue_directive": "European Portuguese",
+      "production_clause": "Production language: European Portuguese. Dialogue in Portuguese from Portugal — heavy vowel reduction, palatalized sibilants, clipped consonant rhythm. Not Brazilian Portuguese. The more compact, consonant-forward sound of Lisbon.",
+      "voice_note": "European Portuguese speaker — extreme unstressed vowel reduction ('Portugal' → 'Purtugal'), palatal sibilants (sh-like /s/), stress-timed rhythm unlike syllable-timed Brazilian. Compact, consonant-dense delivery.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "it",
+      "tier": "primary",
+      "name": "Italian",
+      "bcp47": "it",
+      "dialogue_directive": "Italian",
+      "production_clause": "Production language: Italian. Dialogue in standard Italian — seven-vowel clarity, geminate consonants, open melodic phrasing. Musical, vowel-forward delivery. Italian sentence rhythm drives scene pacing.",
+      "voice_note": "Italian speaker — seven-vowel system (open/closed e, open/closed o), geminate consonants ('notte' with held /t/), syllable-timed musical cadence. Lip-sync to open vowel-final syllables.",
+      "code_switch_markers": null
+    },
+
+    {"_section": "— OTHER GERMANIC —"},
+
+    {
+      "id": "nl",
+      "tier": "primary",
+      "name": "Dutch",
+      "bcp47": "nl",
+      "dialogue_directive": "Dutch",
+      "production_clause": "Production language: Dutch. Dialogue in standard Dutch (ABN) — guttural /g/ and /ch/, diphthong-rich vowels, direct pragmatic tone. Not German, not Flemish — Netherlandic Dutch cadence and vocabulary.",
+      "voice_note": "Dutch speaker — velar/uvular fricative /ɣ/ and /x/ ('gracht'), distinctive diphthongs (ui, ij, ou), direct intonation with less melodic contour than German. Lip-sync to Dutch front rounded vowels.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "nl_flemish",
+      "tier": "primary",
+      "name": "Flemish Dutch",
+      "bcp47": "nl-BE",
+      "dialogue_directive": "Flemish Dutch",
+      "production_clause": "Production language: Flemish Dutch. Dialogue in Belgian Dutch — softer /g/ than Netherlandic, more melodic intonation, Flemish vocabulary (goesting, plezant). Warmer delivery than Northern Dutch.",
+      "voice_note": "Flemish speaker — softer velar fricative than Netherlands Dutch, more musical intonation, distinctly Belgian vocabulary and politeness register. The sound of Brussels, Antwerp, Ghent.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "da",
+      "tier": "primary",
+      "name": "Danish",
+      "bcp47": "da",
+      "dialogue_directive": "Danish",
+      "production_clause": "Production language: Danish. Dialogue in standard Danish — stød (glottal prosody), heavily reduced vowels, soft consonants. The most phonologically compressed of the Scandinavian languages. Understated Nordic delivery.",
+      "voice_note": "Danish speaker — stød (creaky voice/glottal constriction on certain syllables), extreme vowel reduction, 'soft d' [ð̞] ('made' sounds like 'matheh'), muted consonants. Measured, understated cadence.",
+      "code_switch_markers": null
+    },
+
+    {"_section": "— ISOLATE —"},
+
+    {
+      "id": "eu",
+      "tier": "primary",
+      "name": "Basque (Euskara)",
+      "bcp47": "eu",
+      "dialogue_directive": "Basque",
+      "production_clause": "Production language: Basque (Euskara). Dialogue in Basque — a language isolate with no known relatives. Agglutinative grammar, ergative-absolutive case system, pre-Indo-European roots. The oldest living language in Western Europe.",
+      "voice_note": "Basque speaker — five-vowel system (like Spanish), sibilant-rich consonant inventory (apical vs laminal s/z distinction), trilled /r/. Steady rhythmic cadence, SOV word order affects delivery pacing.",
+      "code_switch_markers": null
+    },
+
+    {"_section": "— BILINGUAL COMBOS —"},
+
+    {
+      "id": "de_en",
+      "tier": "bilingual",
+      "name": "German–English Bilingual",
+      "bcp47": "de+en",
+      "primary": "de",
+      "secondary": "en",
+      "dialogue_directive": "bilingual German-English",
+      "production_clause": "Production language: Bilingual German–English. Primary dialogue in German with natural code-switching to English. Code-switches are character-motivated — technical terms, emotional shifts, or cultural context triggers the switch. German passages use native syntax; English passages are natural, not formal. Both languages carry equal dramatic weight.",
+      "voice_note": "Bilingual speaker cadence — German as home language, English as professional/cultural second voice. Switch points feel organic, not dubbed.",
+      "code_switch_markers": ["[EN]", "[DE]"],
+      "switch_rules": "Code-switch triggers: technical/professional context → English; intimate/family context → German; emotional peaks → whichever language the character thinks in. Mark explicit switches with [EN]/[DE] in dialogue lines."
+    },
+    {
+      "id": "de_yi",
+      "tier": "bilingual",
+      "name": "German–Yiddish Bilingual",
+      "bcp47": "de+yi",
+      "primary": "de",
+      "secondary": "yi",
+      "dialogue_directive": "bilingual German-Yiddish",
+      "production_clause": "Production language: Bilingual German–Yiddish. Primary dialogue in German with Yiddish code-switching for emotional emphasis, proverbs, humor, and cultural resonance. Yiddish phrases arrive naturally — not translated, not explained. The two languages share Germanic roots but carry different emotional registers.",
+      "voice_note": "German base with Yiddish emotional coloring. Yiddish phrases carry warmth, irony, or ancestral weight that German alone cannot.",
+      "code_switch_markers": ["[YI]", "[DE]"],
+      "switch_rules": "Code-switch triggers: proverbs/wisdom → Yiddish; humor/irony → Yiddish; formal/modern context → German; emotional intimacy → either, character-dependent."
+    },
+    {
+      "id": "es_ca",
+      "tier": "bilingual",
+      "name": "Spanish–Catalan Bilingual",
+      "bcp47": "es+ca",
+      "primary": "es",
+      "secondary": "ca",
+      "dialogue_directive": "bilingual Spanish-Catalan",
+      "production_clause": "Production language: Bilingual Spanish–Catalan. Primary dialogue in Castilian Spanish with natural code-switching to Catalan. Code-switches are identity-motivated — Catalan for intimacy, family, cultural pride; Spanish for formality, authority, pan-national context. Reflects real Barcelona/Catalonia bilingualism.",
+      "voice_note": "Spanish-Catalan bilingual — switches between Castilian clarity and Catalan vowel reduction. Catalan carries cultural identity weight; Spanish carries institutional/formal register.",
+      "code_switch_markers": ["[ES]", "[CA]"],
+      "switch_rules": "Code-switch triggers: family/intimacy/cultural identity → Catalan; formal/professional/institutional → Spanish; emotional peaks → Catalan (home language); humor → either. Political dimension: language choice is never neutral in Catalonia."
+    },
+    {
+      "id": "nl_fr",
+      "tier": "bilingual",
+      "name": "Dutch–French Bilingual (Belgian)",
+      "bcp47": "nl+fr",
+      "primary": "nl",
+      "secondary": "fr",
+      "dialogue_directive": "bilingual Dutch-French",
+      "production_clause": "Production language: Bilingual Dutch–French (Belgian). Dialogue in Belgian bilingual register — Flemish Dutch as community/home language with French for formal/administrative/cultural-elite context. Reflects Brussels and the linguistic border. Language choice carries class and regional freight.",
+      "voice_note": "Belgian bilingual — Flemish Dutch warmth vs French formality. Language switch signals social register shift. Brussels accent bleeds both ways.",
+      "code_switch_markers": ["[NL]", "[FR]"],
+      "switch_rules": "Code-switch triggers: community/casual → Dutch; formal/administrative/cultural → French; Brussels context → fluid mixing; humor/irony → Dutch; sophistication signal → French. The linguistic border is a class marker."
+    },
+    {
+      "id": "de_fr",
+      "tier": "bilingual",
+      "name": "German–French Bilingual",
+      "bcp47": "de+fr",
+      "primary": "de",
+      "secondary": "fr",
+      "dialogue_directive": "bilingual German-French",
+      "production_clause": "Production language: Bilingual German–French. Dialogue in German with French code-switching — Swiss bilingual context (Röstigraben), Alsatian identity, or cross-border European setting. French for elegance, diplomacy, cultural reference; German for directness, technical precision, home.",
+      "voice_note": "German-French bilingual — two phonological worlds. German consonant precision vs French nasal vowels and liaison. The Röstigraben identity, or Strasbourg/Alsace border consciousness.",
+      "code_switch_markers": ["[DE]", "[FR]"],
+      "switch_rules": "Code-switch triggers: precision/technical → German; culture/cuisine/diplomacy → French; emotional register varies by character background. Swiss context: German base with French for sophistication. Alsatian context: French base with German substrate."
+    },
+    {
+      "id": "eu_es",
+      "tier": "bilingual",
+      "name": "Basque–Spanish Bilingual",
+      "bcp47": "eu+es",
+      "primary": "eu",
+      "secondary": "es",
+      "dialogue_directive": "bilingual Basque-Spanish",
+      "production_clause": "Production language: Bilingual Basque–Spanish. Dialogue in Basque with Spanish code-switching — reflecting real Basque Country bilingualism. Basque for identity, family, cultural assertion; Spanish for wider communication, institutional context. Two completely unrelated language systems in one speaker.",
+      "voice_note": "Basque-Spanish bilingual — ergative Basque syntax shifts to SVO Spanish. Two phonological systems: Basque sibilant richness vs Castilian interdentals. Language choice carries deep political and identity weight.",
+      "code_switch_markers": ["[EU]", "[ES]"],
+      "switch_rules": "Code-switch triggers: identity/family/cultural assertion → Basque; institutional/formal/wider audience → Spanish; emotional peaks → Basque (for those raised in it); technical/modern → often Spanish. The choice is never casual — it signals belonging."
+    },
+
+    {"_section": "— EAST SLAVIC —"},
+
+    {
+      "id": "ru",
+      "tier": "primary",
+      "name": "Russian",
+      "bcp47": "ru",
+      "dialogue_directive": "Russian",
+      "production_clause": "Production language: Russian. Dialogue in Russian — six-case inflection, aspectual verb system, no articles. Moscow-standard pronunciation unless character context specifies otherwise. Rich consonant palatalization, vowel reduction in unstressed syllables. Russian syntax drives scene rhythm.",
+      "voice_note": "Russian speaker — palatalized/non-palatalized consonant pairs, akanye (unstressed /o/ → [a]), rich sibilant inventory. Stress-timed cadence with dramatic dynamic range — Russian whispers and Russian shouts occupy different sonic universes.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "uk",
+      "tier": "primary",
+      "name": "Ukrainian",
+      "bcp47": "uk",
+      "dialogue_directive": "Ukrainian",
+      "production_clause": "Production language: Ukrainian. Dialogue in Ukrainian — not Russian with an accent. Distinct phonology (no akanye, different vowel reduction), vocabulary, and melodic intonation. Softer, more musical cadence than Russian. Ukrainian identity is carried in the language itself.",
+      "voice_note": "Ukrainian speaker — /h/ where Russian has /g/, distinctive /ɪ/ vowel, softer sibilants, more melodic intonation than Russian. The sound is warmer, more lyrical — reflects the language's poetic tradition.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "be",
+      "tier": "primary",
+      "name": "Belarusian",
+      "bcp47": "be",
+      "dialogue_directive": "Belarusian",
+      "production_clause": "Production language: Belarusian. Dialogue in Belarusian — dzekanne and tsekanne (d→dz, t→ts before front vowels), distinct from both Russian and Ukrainian. A language under pressure — choosing to speak Belarusian is itself a dramatic act.",
+      "voice_note": "Belarusian speaker — dzekanne/tsekanne consonant shifts, akanye like Russian but with Belarusian vowel system. Softer than Russian, earthier than Ukrainian. Belarusian carries cultural resistance in its very use.",
+      "code_switch_markers": null
+    },
+
+    {"_section": "— WEST SLAVIC —"},
+
+    {
+      "id": "pl",
+      "tier": "primary",
+      "name": "Polish",
+      "bcp47": "pl",
+      "dialogue_directive": "Polish",
+      "production_clause": "Production language: Polish. Dialogue in Polish — preserved nasal vowels (unique among modern Slavic), heavy consonant clusters, penultimate stress. Seven cases, rich morphology. The sibilant-dense, rhythmically intense sound of Polish drives scene energy.",
+      "voice_note": "Polish speaker — nasal vowels /ɛ̃/ /ɔ̃/, sibilant-rich (sz/ż/cz/dż vs ś/ź/ć/dź), consonant clusters ('źdźbło', 'przestępstwo'). Penultimate stress gives regular rhythmic pulse. Lip-sync to nasal and palatalized consonant shapes.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "cs",
+      "tier": "primary",
+      "name": "Czech",
+      "bcp47": "cs",
+      "dialogue_directive": "Czech",
+      "production_clause": "Production language: Czech. Dialogue in Czech — syllabic consonants (ř, l, r as vowels), initial stress, long/short vowel distinction with háčky. Closely related to Slovak but distinct standard. Czech precision and dry humor carried in the language's compact delivery.",
+      "voice_note": "Czech speaker — unique /ř/ (raised alveolar trill-fricative, found in no other language), initial-syllable stress, vowel length distinction (á/a, í/i). Compact, precise delivery — Czech dialogue cuts like a scalpel.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "sk",
+      "tier": "primary",
+      "name": "Slovak",
+      "bcp47": "sk",
+      "dialogue_directive": "Slovak",
+      "production_clause": "Production language: Slovak. Dialogue in Slovak — melodic Central Slavic speech, rhythmic law (alternating long/short syllables), four diphthongs. Very high intelligibility with Czech but warmer, more musical delivery. Seven cases, three genders.",
+      "voice_note": "Slovak speaker — rhythmic law gives a singing quality absent from Czech, four diphthongs (ia, ie, iu, uo), softer sibilants. Warmer than Czech, more restrained than Polish. Central European musicality.",
+      "code_switch_markers": null
+    },
+
+    {"_section": "— SOUTH SLAVIC —"},
+
+    {
+      "id": "bg",
+      "tier": "primary",
+      "name": "Bulgarian",
+      "bcp47": "bg",
+      "dialogue_directive": "Bulgarian",
+      "production_clause": "Production language: Bulgarian. Dialogue in Bulgarian — the most analytic Slavic language: postposed definite articles (-ът/-та/-то), lost cases (except vocative), verb evidentiality (witnessed vs reported). Cyrillic script tradition from Cyril and Methodius. Bulgarian carries Old Church Slavonic weight.",
+      "voice_note": "Bulgarian speaker — postposed articles affect word-final lip shapes, renarrative mood (evidentials — 'apparently he did' vs 'he did'), schwa /ɤ/ (ъ) as distinctive vowel. Steady South Slavic cadence, Balkan melodic contour.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "mk",
+      "tier": "primary",
+      "name": "Macedonian",
+      "bcp47": "mk",
+      "dialogue_directive": "Macedonian",
+      "production_clause": "Production language: Macedonian. Dialogue in Macedonian — distinct from Bulgarian despite high intelligibility. Antepenultimate stress (third from last), three definite article forms (proximal/medial/distal), Cyrillic with unique letters (ќ, ѓ). Macedonian identity is inseparable from the language.",
+      "voice_note": "Macedonian speaker — antepenultimate stress gives distinctive rhythmic pattern, three-way article system (ovoj/toj/onoj), palatalized consonants ќ/ѓ. Warmer contour than Bulgarian, Balkan melodic lilt.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "sr",
+      "tier": "primary",
+      "name": "Serbian",
+      "bcp47": "sr",
+      "dialogue_directive": "Serbian",
+      "production_clause": "Production language: Serbian. Dialogue in Serbian — ekavian pronunciation standard (mleko not mlijeko), Cyrillic primary script. Part of the BCMS continuum but Serbian standard has its own literary tradition, vocabulary choices, and Cyrillic identity. Seven cases, pitch accent.",
+      "voice_note": "Serbian speaker — ekavian vowels, four-way pitch accent system (rising/falling × long/short), Cyrillic-culture cadence. Deeper, more resonant Balkan delivery. Belgrade standard unless character specifies otherwise.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "hr",
+      "tier": "primary",
+      "name": "Croatian",
+      "bcp47": "hr",
+      "dialogue_directive": "Croatian",
+      "production_clause": "Production language: Croatian. Dialogue in Croatian — ijekavian pronunciation standard (mlijeko not mleko), Latin script. Part of the BCMS continuum but Croatian standard maintains distinct vocabulary, neologisms over loanwords, and Austro-Hungarian literary heritage. Seven cases, pitch accent.",
+      "voice_note": "Croatian speaker — ijekavian diphthongs (ije/je where Serbian has e), Latin-script culture, Adriatic vs continental cadence variation. Zagreb standard cleaner; Dalmatian coastal Croatian carries Mediterranean warmth.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "bs",
+      "tier": "primary",
+      "name": "Bosnian",
+      "bcp47": "bs",
+      "dialogue_directive": "Bosnian",
+      "production_clause": "Production language: Bosnian. Dialogue in Bosnian — ijekavian like Croatian but retains Ottoman/Turkish loanwords (čaršija, dućan, mahala) that carry Bosnian Muslim cultural identity. Both scripts used. Bosnian is the BCMS variant where Ottoman heritage lives in the vocabulary.",
+      "voice_note": "Bosnian speaker — ijekavian base with Turkish/Arabic loanwords as cultural markers, distinctive Bosnian /x/ (h) preservation where Serbian drops it. Sarajevo cadence — warm, slightly faster than Serbian, with Ottoman-era vocabulary coloring.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "sl",
+      "tier": "primary",
+      "name": "Slovenian",
+      "bcp47": "sl",
+      "dialogue_directive": "Slovenian",
+      "production_clause": "Production language: Slovenian. Dialogue in Slovenian — retains dual number (singular/dual/plural), extreme dialect diversity (~50 varieties), closer to West Slavic in some features. Latin script. Not Serbo-Croatian — a distinct South Slavic language with its own literary tradition since the Reformation.",
+      "voice_note": "Slovenian speaker — dual number affects verb/noun forms ('midva delava' = 'we two work'), tonemic accent in some dialects, vowel reduction. Compact, Alpine-influenced cadence. 50 dialects in 2M speakers — direct the specific variant.",
+      "code_switch_markers": null
+    },
+
+    {"_section": "— NON-SLAVIC EASTERN EUROPEAN —"},
+
+    {
+      "id": "hu",
+      "tier": "primary",
+      "name": "Hungarian",
+      "bcp47": "hu",
+      "dialogue_directive": "Hungarian",
+      "production_clause": "Production language: Hungarian. Dialogue in Hungarian — agglutinative Uralic language with no Indo-European relatives in the region. Vowel harmony, 18+ cases via suffixes, no grammatical gender, first-syllable stress. Completely different grammatical logic from all neighboring Slavic/Germanic/Romance languages.",
+      "voice_note": "Hungarian speaker — first-syllable stress, front/back vowel harmony governing all suffixes, long/short vowel distinction (a/á, e/é, o/ó). Compact rhythmic delivery, agglutinative word-building creates long compound forms. The Uralic island in a Slavic sea.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "ro",
+      "tier": "primary",
+      "name": "Romanian",
+      "bcp47": "ro",
+      "dialogue_directive": "Romanian",
+      "production_clause": "Production language: Romanian. Dialogue in Romanian — the Romance language that survived east of the Latin divide. Postposed definite articles (like Bulgarian sprachbund, unlike other Romance), Slavic loanwords layered over Latin core, distinctive vowels /ə/ (ă) and /ɨ/ (â/î). Romanian sounds like Italian heard through Slavic ears.",
+      "voice_note": "Romanian speaker — central vowels /ə/ and /ɨ/ absent from other Romance languages, postposed articles ('lupul' = 'the wolf'), Italian-like open syllables with Slavic consonant coloring. Musical cadence, Balkan prosodic contour.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "el",
+      "tier": "primary",
+      "name": "Greek",
+      "bcp47": "el",
+      "dialogue_directive": "Greek",
+      "production_clause": "Production language: Modern Greek. Dialogue in demotic Greek — five-vowel system, no vowel length distinction (unlike Ancient), stress accent. Greek script. 3,400 years of continuous literary tradition reshaped into modern spoken register. Not Ancient Greek recited — living contemporary speech.",
+      "voice_note": "Greek speaker — five clear vowels, consonant clusters with voiceless/voiced pairs, gemination in some contexts, stress-accent (marked in writing). Mediterranean cadence with Balkan prosodic features. Greek carries millennia of literary weight in casual speech.",
+      "code_switch_markers": null
+    },
+    {
+      "id": "sq",
+      "tier": "primary",
+      "name": "Albanian",
+      "bcp47": "sq",
+      "dialogue_directive": "Albanian",
+      "production_clause": "Production language: Albanian. Dialogue in Albanian — its own branch of Indo-European with no close relatives. Two main dialects: Gheg (north, Kosovo) and Tosk (south, standard). Rich consonant inventory including dental/postalveolar distinction, definite article suffixed. Albanian stands alone in the IE family tree.",
+      "voice_note": "Albanian speaker — dental vs postalveolar distinction (th/dh separate phonemes), postposed articles, rhotacism in Tosk (n→r between vowels). Gheg has nasal vowels. Distinct from all neighbors phonologically. Direct the specific dialect — Gheg and Tosk sound quite different.",
+      "code_switch_markers": null
+    },
+
+    {"_section": "— EASTERN BILINGUAL COMBOS —"},
+
+    {
+      "id": "sr_hr",
+      "tier": "bilingual",
+      "name": "Serbian–Croatian Bilingual",
+      "bcp47": "sr+hr",
+      "primary": "sr",
+      "secondary": "hr",
+      "dialogue_directive": "bilingual Serbian-Croatian",
+      "production_clause": "Production language: Bilingual Serbian–Croatian. Dialogue in the BCMS continuum — characters switch between ekavian/ijekavian, Cyrillic/Latin cultural markers, and vocabulary choices that signal identity. Mutual intelligibility is near-total; the switch is political, not linguistic. Language choice reveals allegiance, history, and trauma.",
+      "voice_note": "BCMS bilingual — the difference between Serbian and Croatian is audible (ekavian vs ijekavian) but comprehension is complete. The switch signals identity, not translation. Post-Yugoslav dramatic tension lives in these vocabulary choices.",
+      "code_switch_markers": ["[SR]", "[HR]"],
+      "switch_rules": "Code-switch triggers: identity/national context determines variant. Serbian (ekavian, Cyrillic cultural markers) vs Croatian (ijekavian, Latin script culture, neologisms over loans). In mixed-community scenes, the choice of variant is never neutral — it carries war memory, family history, and political positioning."
+    },
+    {
+      "id": "hu_ro",
+      "tier": "bilingual",
+      "name": "Hungarian–Romanian Bilingual",
+      "bcp47": "hu+ro",
+      "primary": "hu",
+      "secondary": "ro",
+      "dialogue_directive": "bilingual Hungarian-Romanian",
+      "production_clause": "Production language: Bilingual Hungarian–Romanian. Dialogue in Transylvanian bilingual register — Hungarian for family/community/identity, Romanian for institutional/state/public life. Two completely unrelated language families (Uralic vs Romance) in one speaker. Reflects Székely, Csángó, and urban Transylvanian reality.",
+      "voice_note": "Hungarian-Romanian bilingual — agglutinative Uralic grammar shifts to Romance inflection. Two phonological worlds with no overlap. Hungarian carries Trianon memory and minority identity; Romanian carries state authority and majority culture.",
+      "code_switch_markers": ["[HU]", "[RO]"],
+      "switch_rules": "Code-switch triggers: family/community/cultural assertion → Hungarian; state/institutional/wider communication → Romanian; emotional peaks → Hungarian (for Hungarian-dominant speakers); professional/academic → often Romanian. In Transylvania, language choice maps directly onto ethnic identity and historical grievance."
+    },
+    {
+      "id": "ru_uk",
+      "tier": "bilingual",
+      "name": "Russian–Ukrainian Bilingual",
+      "bcp47": "ru+uk",
+      "primary": "uk",
+      "secondary": "ru",
+      "dialogue_directive": "bilingual Ukrainian-Russian",
+      "production_clause": "Production language: Bilingual Ukrainian–Russian. Dialogue in the Ukrainian-Russian register — surzhyk (mixed speech) for some characters, clean switching for others. Ukrainian as primary assertion of identity; Russian as inherited/familial/Soviet-era default. The most politically charged bilingualism in contemporary Europe.",
+      "voice_note": "Ukrainian-Russian bilingual — surzhyk mixing is natural for many speakers but stigmatized. Clean Ukrainian signals conscious identity choice; Russian signals Soviet/Russian cultural sphere. The switch carries the weight of the current conflict.",
+      "code_switch_markers": ["[UK]", "[RU]"],
+      "switch_rules": "Code-switch triggers: identity assertion/national context → Ukrainian; familial/inherited/older generation → Russian; surzhyk for casual/mixed contexts. Post-2014/2022, language choice in Ukraine is existential — not casual bilingualism but active identity negotiation."
+    },
+
+    {"_section": "— TRILINGUAL COMBOS —"},
+
+    {
+      "id": "de_yi_en",
+      "tier": "trilingual",
+      "name": "German–Yiddish–English Trilingual",
+      "bcp47": "de+yi+en",
+      "primary": "de",
+      "secondary": "en",
+      "tertiary": "yi",
+      "dialogue_directive": "trilingual German-Yiddish-English",
+      "production_clause": "Production language: Trilingual German–Yiddish–English. Three linguistic registers in one voice: German as base language, English for professional/technical/modern context, Yiddish for emotional depth, humor, proverbs, and cultural memory. All three languages feel native — no translation artifacts. Each language carries its own dramatic register and the speaker moves between them fluidly.",
+      "voice_note": "Trilingual speaker — German home base, English professional fluency, Yiddish emotional and cultural substrate. The voice of Central European multilingual identity.",
+      "code_switch_markers": ["[EN]", "[DE]", "[YI]"],
+      "switch_rules": "German: default/narrative. English: technical, professional, modern cultural references. Yiddish: proverbs, emotional peaks, humor, ancestral/cultural weight. Switches are character-motivated and fluid."
+    }
+  ],
+  "language_defaults": {
+    "_doc": "Fallback when config.language is unset",
+    "default": "en",
+    "animation_default": "en"
+  },
+  "composers": [
+    {"language": "en", "profile": "en", "note": "English default"},
+    {"language": "en-GB", "profile": "en_rp", "note": "Received Pronunciation"},
+    {"language": "en-GB-cockney", "profile": "en_cockney", "note": "Cockney East London"},
+    {"language": "en-GB-scot", "profile": "en_scottish", "note": "Scottish English"},
+    {"language": "en-IE", "profile": "en_irish", "note": "Hiberno-English"},
+    {"language": "de", "profile": "de", "note": "Standard German — resolver picks regional variant via de_bavarian if specified"},
+    {"language": "de-BY", "profile": "de_bavarian", "note": "Bavarian German dialect"},
+    {"language": "de-AT", "profile": "de_austrian", "note": "Austrian German"},
+    {"language": "gsw", "profile": "de_swiss", "note": "Swiss German (Alemannic)"},
+    {"language": "nds", "profile": "de_platt", "note": "Low German / Plattdeutsch"},
+    {"language": "yi", "profile": "yi", "note": "Eastern Yiddish"},
+    {"language": "es", "profile": "es", "note": "Castilian Spanish"},
+    {"language": "es-AN", "profile": "es_andalusian", "note": "Andalusian Spanish"},
+    {"language": "ca", "profile": "ca", "note": "Catalan"},
+    {"language": "fr", "profile": "fr", "note": "French"},
+    {"language": "pt-PT", "profile": "pt", "note": "European Portuguese"},
+    {"language": "it", "profile": "it", "note": "Italian"},
+    {"language": "nl", "profile": "nl", "note": "Dutch (Netherlandic)"},
+    {"language": "nl-BE", "profile": "nl_flemish", "note": "Flemish Dutch"},
+    {"language": "da", "profile": "da", "note": "Danish"},
+    {"language": "eu", "profile": "eu", "note": "Basque (Euskara)"},
+    {"language": "de+en", "profile": "de_en", "note": "German-English bilingual"},
+    {"language": "de+yi", "profile": "de_yi", "note": "German-Yiddish bilingual"},
+    {"language": "es+ca", "profile": "es_ca", "note": "Spanish-Catalan bilingual"},
+    {"language": "nl+fr", "profile": "nl_fr", "note": "Dutch-French bilingual (Belgian)"},
+    {"language": "de+fr", "profile": "de_fr", "note": "German-French bilingual"},
+    {"language": "eu+es", "profile": "eu_es", "note": "Basque-Spanish bilingual"},
+    {"language": "ru", "profile": "ru", "note": "Russian"},
+    {"language": "uk", "profile": "uk", "note": "Ukrainian"},
+    {"language": "be", "profile": "be", "note": "Belarusian"},
+    {"language": "pl", "profile": "pl", "note": "Polish"},
+    {"language": "cs", "profile": "cs", "note": "Czech"},
+    {"language": "sk", "profile": "sk", "note": "Slovak"},
+    {"language": "bg", "profile": "bg", "note": "Bulgarian"},
+    {"language": "mk", "profile": "mk", "note": "Macedonian"},
+    {"language": "sr", "profile": "sr", "note": "Serbian (ekavian, Cyrillic)"},
+    {"language": "hr", "profile": "hr", "note": "Croatian (ijekavian, Latin)"},
+    {"language": "bs", "profile": "bs", "note": "Bosnian (ijekavian, Ottoman loanwords)"},
+    {"language": "sl", "profile": "sl", "note": "Slovenian"},
+    {"language": "hu", "profile": "hu", "note": "Hungarian (Uralic)"},
+    {"language": "ro", "profile": "ro", "note": "Romanian"},
+    {"language": "el", "profile": "el", "note": "Modern Greek"},
+    {"language": "sq", "profile": "sq", "note": "Albanian"},
+    {"language": "sr+hr", "profile": "sr_hr", "note": "Serbian-Croatian bilingual (BCMS continuum)"},
+    {"language": "hu+ro", "profile": "hu_ro", "note": "Hungarian-Romanian bilingual (Transylvania)"},
+    {"language": "ru+uk", "profile": "ru_uk", "note": "Russian-Ukrainian bilingual"},
+    {"language": "de+yi+en", "profile": "de_yi_en", "note": "German-Yiddish-English trilingual"}
+  ]
+}

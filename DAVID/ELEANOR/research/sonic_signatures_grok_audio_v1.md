@@ -1,172 +1,135 @@
-# Sonic Signatures & Grok Native Audio v1
+# Sonic Signatures & Grok Native Audio v2
 
-**Source:** Grok Heavy browser research (user capture, 2026-06-30)  
-**Scope:** Cinema sound design legends → seven sonic DNA tags (1:1 with visual masters) + chaining prompts for sequential B-block pipeline.  
-**Engine note:** Grok Imagine / Aurora generates **synchronized audio in-pass** (dialogue + lip-sync, SFX, ambient, music) — not post-muxed unless stitching polish requires it.  
-**Pairs with:**
-- `director_cinematographer_style_prompts_v1.md`
-- `grok_hybrid_styles_camera_innovations_v1.md`
+**Source:** Grok Heavy browser research + Claude POUS cinematic sound design deep research v1  
+**Scope:** Tier A aesthetic poles (7 visual masters) + Tier B designer craft tags + combos + beat-first picker  
+**Engine:** Grok Imagine / Aurora — synchronized audio in-pass (dialogue, lip-sync, SFX, ambient, music)  
+**Pairs with:** `cinematic_sound_design_deep_research_v1.md`, `style_modifier_registry_v1.json`
 
 ---
 
-## Sound designer reference (visual-master equivalents)
+## Architecture
 
-| Designer | Association | Signature |
-|----------|-------------|-----------|
-| Walter Murch | Coppola | Sound = picture; worldizing; subtractive mix; inner psychology through layers |
-| Ren Klyce | Fincher | Clinical precision; unsettling ambiences; hyper-real psychological foley |
-| Gary Rydstrom | Spielberg/Lucas | Organic creation; emotional realism |
-| Ben Burtt | Lucas | Iconic invented sounds from found objects |
-| Skip Lievsay | Coens / Deakins films | Sparse, impactful; silence and environment breathe |
-| Anna Behlmer | (mixed catalog) | — cited in source as part of deep dive |
+| Tier | IDs | Purpose |
+|------|-----|---------|
+| **A** | `sound_fincher_khondji` … `sound_cuaron_lubezki`, `sound_blended_7masters` | Visual-aligned aesthetic poles |
+| **B** | `sound_burtt_inventive`, `sound_king_nolan`, `sound_reznor_ross`, `sound_gudnadottir_dread`, `sound_rydstrom_emotional`, `sound_davis_matrix` | Designer-anchored craft (decoupled from cinematography) |
+| **Combos** | `sound_combo_*` | Layer two tags for production stacks |
+
+**`sound_deakins` fix:** ID unchanged for backward compatibility; anchor is **Skip Lievsay** sparse minimalism (not environmental immersion). Name: Deakins/Lievsay Sonic.
 
 ---
 
-## Chaining rule (all blocks)
+## Tier A — Aesthetic poles
 
-Always reference prior pass tail:
+### `sound_fincher_khondji` (Ren Klyce)
+Clinical foley, sub-threshold drones, subtractive silence drops, relentless mechanical ambience.
+
+### `sound_anderson_yeoman`
+Whimsical symmetrical foley, ticking motifs, sparse 3–5 layer mixes.
+
+### `sound_coppola_willis` (Walter Murch)
+Worldized reflections, operatic shadows, meta-diegetic psychological ambience.
+
+### `sound_deakins` (Skip Lievsay)
+Sound-design haiku — deliberate silence, diegetic commitment, environmental breathing.
+
+### `sound_bergman_nykvist`
+Intimate near-silence, voice as close-up, meta-diegetic micro-sounds.
+
+### `sound_storaro_bertolucci`
+Symbolic warm/cool tonal shifts mirroring color psychology.
+
+### `sound_cuaron_lubezki`
+Fluid spatial immersion, object-based placement, lived-in dialogue.
+
+### `sound_blended_7masters`
+Synthesis of all seven Tier A poles — default for `director_grok_omniscient`.
+
+---
+
+## Tier B — Designer craft
+
+### `sound_burtt_inventive` (Ben Burtt)
+Found-object textures, Doppler shifts, iconic manufactured SFX.
+
+### `sound_king_nolan` (Richard King)
+Character-POV filtering, seismic sub-bass, vacuum silence, Shepard tone dread.
+
+### `sound_reznor_ross` (Trent Reznor & Atticus Ross)
+Score-as-sound-design, electronic-orchestral hybrid, beautiful-to-sinister ambiguity.
+
+### `sound_gudnadottir_dread` (Hildur Gudnadottir)
+Single-source halldorophone/industrial drones, sustained dread without melody.
+
+### `sound_rydstrom_emotional` (Gary Rydstrom)
+Animal composite layering, contrast-before-scale, body-interior POV terror.
+
+### `sound_davis_matrix` (Dane Davis)
+Multi-temporal layers, 30+ composite impacts, digital-organic inversion.
+
+---
+
+## Combos
+
+| ID | Stack |
+|----|-------|
+| `sound_combo_deakins_fincher` | Lievsay sparse + Klyce precision |
+| `sound_combo_fincher_reznor` | Klyce effects + Reznor/Ross score texture |
+| `sound_combo_king_reznor` | King/Nolan POV + Reznor/Ross texture |
+| `sound_combo_murch_gudnadottir` | Murch worldized layers + Gudnadottir dread |
+| `sound_combo_burtt_davis` | Burtt invention + Davis time-rate manipulation |
+
+---
+
+## Beat-first picker (Randy Thom)
+
+Set `emotional_beat` on shot or block. When `audio_dna_tag` is not explicitly set on the shot, `style_modifiers.py` resolves audio from `emotional_beat_map` in the JSON registry.
+
+```json
+{
+  "config": { "audio_beat_picker": true },
+  "shots": [{
+    "id": "b03_climax",
+    "emotional_beat": "action",
+    "block_part": "ext"
+  }]
+}
+```
+
+Example beats: `setup`, `tension`, `dread`, `silence`, `action`, `sci_fi`, `creature`, `reality_bend`, `score_texture`.
+
+Combo beats: `tension_score`, `nolan_epic`, `psychological_dread`, `sci_fi_combat`.
+
+---
+
+## Chaining rule
 
 ```
 Continue from the attached previous audio tail + final video frame for perfect sync and evolution.
 ```
 
-Python: pass `audio_tail_ref` + `last_frame_ref` into next B-block prompt assembly.
+Set `block_part: "ext"` or `modifiers.chain_audio: true` on extend shots.
 
 ---
 
-## Seven sonic signatures
+## Script fields
 
-### 1. Fincher/Khondji — `sound_fincher_khondji`
-
-Precise, cold, layered dread (Klyce-style). Clinical foley; low-frequency hums; subtractive mix where ambient suddenly drops.
-
-**Chaining prompt:**
-```
-Continue from previous audio tail + attached final frame. Fincher/Khondji sonic: hyper-precise foley with subtle digital glitches in the silence, cold metallic echoes, desaturated ambience that feels calculated and unresolved. Evolve tension organically.
-```
-
----
-
-### 2. Anderson/Yeoman — `sound_anderson_yeoman`
-
-Whimsical precision, symmetrical sound design. Ticking metronome motifs; curated quirky foley; balanced musical stings.
-
-**Chaining prompt:**
-```
-Maintain whimsical precision from previous audio, add symmetrical sound motifs that match visual symmetry on the reference frame.
-```
+| Field | Purpose |
+|-------|---------|
+| `config.audio_dna_tag` | Production default |
+| `config.audio_dna_combo` | Layered combo |
+| `config.audio_beat_picker` | Infer beat from `shot.beat` / `barebones.beat` |
+| `shots[].emotional_beat` | Beat-first audio override |
+| `shots[].barebones.audio.dna_tag` | Per-block explicit audio |
 
 ---
 
-### 3. Coppola/Willis — `sound_coppola_willis`
+## Technique taxonomy
 
-Operatic, shadow-like layers. Deep rumbling bass; warm intimate dialogue; echoing silences; selective reveal like chiaroscuro.
-
-**Chaining prompt:**
-```
-Evolve from previous audio with inherited shadows in the soundscape — warm tones fading into deep rumbling power.
-```
+Embedded in JSON `technique_taxonomy` and appended to prompt clauses via each tag's `techniques` array. Categories: spatial, mix philosophy, source recording, time/perception, structural (diegetic, stinger, riser, etc.).
 
 ---
 
-### 4. Deakins — `sound_deakins`
+## Randy Thom (meta — not a tag)
 
-Hyper-real environmental immersion. Practical location foley; volumetric wind/haze; space breathes naturally.
-
-**Chaining prompt:**
-```
-Continue Deakins-style practical ambient from previous tail, match lighting/environment on reference frame with authentic location textures.
-```
-
----
-
-### 5. Bergman/Nykvist — `sound_bergman_nykvist`
-
-Intimate psychological minimalism. Soft breaths, ticking clocks, distant bells; near-silence; voice as emotional close-up.
-
-**Chaining prompt:**
-```
-Intimate Nykvist sonic continuation — minimal layers focused on voice and micro-sounds that reveal inner state, reference the final frame face lighting.
-```
-
----
-
-### 6. Storaro/Bertolucci — `sound_storaro_bertolucci`
-
-Symbolic color-equivalent audio. Warm/cool tonal shifts; dramatic swells mirroring color psychology; sensual layered textures.
-
-**Chaining prompt:**
-```
-Storaro sonic evolution — color palette of sound shifts psychologically from previous block's tail.
-```
-
----
-
-### 7. Cuarón/Lubezki — `sound_cuaron_lubezki`
-
-Immersive fluid experiential layers. Organic spatial audio; natural wind/particle sounds; lived-in dialogue.
-
-**Chaining prompt:**
-```
-Seamless Lubezki audio continuation — fluid spatial layers that feel like one long experiential take from the reference frame.
-```
-
----
-
-## Master blended sound bible (template)
-
-```
-Full cinematic audio design synthesizing the 7 masters: precise clinical foley and psychological undercurrents (Fincher/Klyce), whimsical balanced motifs (Anderson), operatic shadow layers (Coppola/Murch), hyper-real practical environmental textures (Deakins), intimate minimal soul sounds (Bergman), symbolic emotional tonal shifts (Storaro), and immersive unbroken experiential flow (Cuarón). Generate synchronized dialogue with natural lip-sync performance, organic SFX, evolving ambience, and subtle score that reacts to visual style. Continue perfectly from previous audio tail and attached video frame.
-```
-
----
-
-## Pipeline integration (coding targets)
-
-### Script JSON fields (proposed)
-
-```json
-{
-  "config": {
-    "style_dna_tag": "hybrid_fincher_deakins",
-    "audio_dna_tag": "sound_fincher_khondji",
-    "audio_chain_mode": "tail_plus_frame"
-  },
-  "shots": [{
-    "id": "b02_block01_ext",
-    "barebones": {
-      "audio": {
-        "dna_tag": "sound_deakins",
-        "chain_prompt": "...",
-        "ambient": "AUDIO LOCK or native AV directive"
-      }
-    }
-  }]
-}
-```
-
-### Python prompt assembly
-
-| Step | Action |
-|------|--------|
-| 1 | Read `style_dna_tag` + `audio_dna_tag` per block from script |
-| 2 | Load sonic signature from `sonic_signatures_grok_audio_v1.json` |
-| 3 | Append `chain_prompt` when `block_index > 0` |
-| 4 | Attach `last_frame` + optional `audio_tail` reference paths |
-| 5 | Single API call — native AV when dialogue required |
-
-### Post-stitch polish
-
-Light EQ / volume automation across xfade joins so evolving soundscapes read as one sound auteur.
-
-### Modifier registry (save alongside visual)
-
-```
-DAVID/ELEANOR/research/style_modifier_registry_v1.json  ← unified style + audio + hybrid IDs
-```
-
----
-
-## Arc suggestion (from source)
-
-Start clean/commercial (MATILDA lifestyle) → evolve toward dark/immersive across sequential blocks via shifting `audio_dna_tag` + `style_dna_tag`.
+Philosophy wired into `generate_corpus.py` → `sound_conscious_writing` domain and beat picker. Thom informs **how scripts are written**, not a texture injection.

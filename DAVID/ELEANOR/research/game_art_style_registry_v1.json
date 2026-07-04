@@ -1,0 +1,185 @@
+{
+  "_doc": "Video game art style registry — visual styles derived from game engines, eras, and aesthetic movements. Separate from cinematic style_modifier_registry; loaded independently by style_modifiers.py as game_art family.",
+  "_version": "1.0",
+  "_captured": "2026-06-30",
+  "_scope": "visuals_only — rendering aesthetic, lighting model, texture treatment, color palette, geometry density, post-processing. No gameplay or interaction direction.",
+  "_prefix": "gameart_",
+  "_usage": "config.style_dna_tag or shots[].modifiers.style_dna_tag — resolver checks game_art registry when ID starts with gameart_",
+
+  "game_art_styles": [
+    {
+      "id": "gameart_hyperreal_ue5",
+      "family": "hyperreal",
+      "era": "modern",
+      "engine_reference": "Unreal Engine 5",
+      "visual_reference": "The Matrix Awakens, Hellblade II",
+      "prompt": "Hyper-realistic video game visual style: photogrammetry-scanned environments and MetaHuman-quality characters with subsurface skin scattering and pore-level detail, Nanite virtualized geometry rendering billions of polygons with zero LOD pop-in, Lumen dynamic global illumination and real-time reflections, PBR materials with roughness/metallic micro-detail, volumetric fog and atmospheric haze, cinematic depth of field with subtle chromatic aberration, photorealistic but digitally pristine — the uncanny valley rendered as aesthetic."
+    },
+    {
+      "id": "gameart_hyperreal_cryengine",
+      "family": "hyperreal",
+      "era": "modern",
+      "engine_reference": "CryEngine",
+      "visual_reference": "Crysis series, Hunt: Showdown",
+      "prompt": "Hyper-realistic CryEngine visual style: lush dense vegetation with per-leaf geometry and dynamic wind simulation, real-time dynamic day-night global illumination with sun shafts piercing through volumetric clouds, wet surfaces with real-time reflections and ripple displacement, physics-driven destructible environments, outdoor naturalism with extreme draw distances, atmospheric scattering and god rays, dense jungle-to-urban photorealism with an emphasis on organic environmental richness over character fidelity."
+    },
+    {
+      "id": "gameart_90s_goldsrc",
+      "family": "retro_fps",
+      "era": "1990s",
+      "engine_reference": "GoldSrc (modified Quake)",
+      "visual_reference": "Half-Life, Counter-Strike 1.6",
+      "prompt": "1990s GoldSrc engine visual style: low-polygon character models (300-500 polys) with 128-256px hand-painted textures, baked vertex lighting and simple colored lightmaps creating moody pools of light in dark corridors, skeletal animation with limited joint count and snappy interpolation, flat-shaded surfaces with occasional specular highlights, chunky geometric architecture with right-angle BSP construction, that distinctive late-90s FPS aesthetic — immersive through strong art direction despite severe polygon limits, moody sci-fi industrial with warm practicals cutting through cold ambient."
+    },
+    {
+      "id": "gameart_00s_source",
+      "family": "retro_fps",
+      "era": "2000s",
+      "engine_reference": "Source Engine",
+      "visual_reference": "Half-Life 2, Counter-Strike: Source, Portal",
+      "prompt": "2000s Source Engine visual style: radiosity normal mapping with HDR bloom and realistic light falloff, detailed facial flex animation with blend shapes for expressive characters, physics-driven interactive objects with realistic weight and bounce, higher-poly models (2000-5000) with normal-mapped detail, consistent desaturated-realist color grading with warm-cool contrast, dynamic shadows from a single directional source, that distinctive Source look — grounded pseudo-realism with a slightly washed-out documentary quality, clean geometric architecture with phong-shaded props."
+    },
+    {
+      "id": "gameart_retro_quake",
+      "family": "retro_fps",
+      "era": "1990s",
+      "engine_reference": "Quake / id Tech 2-3",
+      "visual_reference": "Quake, Quake II, early Unreal",
+      "prompt": "Mid-90s true 3D FPS visual style: extremely low-poly models (100-300 polys) with 64-128px textures, software-rendered lighting with colored dynamic lights casting hard geometric shadows, vertex-lit environments with brown-grey-green industrial gothic palette, simple skeletal animation with 8-12 frame cycles, affine texture warping on surfaces, that raw early-3D aesthetic — pixelated textures stretched over angular geometry, dark oppressive corridors with colored light sources (red emergency, green toxic, blue tech), chunky visceral and unapologetically digital."
+    },
+    {
+      "id": "gameart_pixel_8bit",
+      "family": "pixel_art",
+      "era": "1980s_retro",
+      "engine_reference": "NES / Master System era",
+      "visual_reference": "Super Mario Bros, Mega Man, Metroid",
+      "prompt": "8-bit pixel art visual style: strictly limited color palette (4-8 colors per sprite, 25 total), chunky 8x8 or 16x16 pixel tiles with nearest-neighbor rendering and zero anti-aliasing, single-scroll parallax backgrounds with flat color fills, dithering patterns for gradients and shadows, black outlines on sprites with bold primary colors, scan-line CRT glow with subtle phosphor bloom, that distinctive NES-era crunch — every pixel hand-placed and deliberate, constraints as aesthetic, tile-based world construction with repeating pattern charm."
+    },
+    {
+      "id": "gameart_pixel_16bit",
+      "family": "pixel_art",
+      "era": "1990s_retro",
+      "engine_reference": "SNES / Genesis / GBA era",
+      "visual_reference": "Chrono Trigger, Final Fantasy VI, Sonic, Stardew Valley",
+      "prompt": "16-bit pixel art visual style: expanded palette (32-256 colors) with sophisticated dithering and gradient techniques, detailed character sprites (32x32 to 64x64) with expressive multi-frame animation cycles, Mode 7-style rotation and parallax scrolling depth layers, rich environmental detail with hand-pixeled foliage and architecture, warm saturated color palettes with atmospheric color shifts (golden hour, cave darkness), that SNES golden-age feel — lush detailed worlds that feel hand-crafted and alive despite the grid, pixel-perfect but painterly."
+    },
+    {
+      "id": "gameart_pixel_modern",
+      "family": "pixel_art",
+      "era": "modern",
+      "engine_reference": "Godot / Unity / GameMaker",
+      "visual_reference": "Celeste, Dead Cells, Hyper Light Drifter",
+      "prompt": "Modern high-resolution pixel art visual style: crisp nearest-neighbor pixels at higher internal resolutions (320x180 to 480x270 upscaled), sophisticated multi-layer parallax with particle effects and dynamic lighting overlaid on pixel sprites, curated limited palettes with careful hue shifting for depth, fluid animation (12-24 fps sprite sheets) with squash-stretch and anticipation frames, screen-shake and hit-pause juice, sub-pixel animation for smooth movement, bloom and glow effects composited over clean pixel base — retro discipline meets modern polish, indie prestige aesthetic."
+    },
+    {
+      "id": "gameart_pixel_isometric",
+      "family": "pixel_art",
+      "era": "mixed",
+      "engine_reference": "Custom / Unity / Godot",
+      "visual_reference": "Pathway, Cult of the Lamb (overworld), Hades (iso-pixel hybrid)",
+      "prompt": "Isometric pixel art visual style: 2:1 or 3:1 isometric projection with hand-pixeled tiles on a diamond grid, top-down three-quarter view with consistent light source (typically upper-left), detailed environmental tiles with water reflections, foliage shadows, and architectural depth, character sprites rendered at isometric angle with 8-direction walk cycles, soft palette with watercolor-like color transitions achieved through careful dithering, that tabletop-miniature quality — tiny detailed worlds viewed from above with warm inviting depth."
+    },
+    {
+      "id": "gameart_cel_shaded",
+      "family": "stylized_3d",
+      "era": "mixed",
+      "engine_reference": "Custom / Unity / UE",
+      "visual_reference": "Zelda: Wind Waker, Jet Set Radio, Borderlands",
+      "prompt": "Cel-shaded toon visual style: flat color fills with hard 2-3 step shading (light/mid/shadow bands, no smooth gradient), bold black ink outlines on character and environment edges via inverted-hull or post-process edge detection, vibrant saturated primary palette with complementary accent colors, simplified material response (no specular highlights except stylized rim light), exaggerated proportions and clean silhouettes, that hand-drawn animation look rendered in real-time — cartoon clarity with 3D depth, every frame reads like a comic panel."
+    },
+    {
+      "id": "gameart_cel_anime",
+      "family": "stylized_3d",
+      "era": "modern",
+      "engine_reference": "Arc System Works / Unity / UE",
+      "visual_reference": "Guilty Gear Strive, Dragon Ball FighterZ, Genshin Impact",
+      "prompt": "Anime cel-shaded visual style: 2D-passing 3D models with carefully sculpted normals to control shading breaks, limited animation at deliberate 12fps with held frames and smear frames for impact, dramatic rim lighting with colored edge highlights, screen-space outlines that vary in weight by distance, anime-specific post-processing (speed lines, impact frames, cross-hatching overlays), vibrant high-saturation palette with dramatic complementary color lighting, that premium anime production look — 3D geometry invisible under perfect 2D presentation, sakuga-quality key poses."
+    },
+    {
+      "id": "gameart_lowpoly_clean",
+      "family": "stylized_3d",
+      "era": "modern",
+      "engine_reference": "Unity / Godot / Three.js",
+      "visual_reference": "Monument Valley, Poly Bridge, A Short Hike",
+      "prompt": "Clean low-poly visual style: intentionally minimal geometry (50-500 polys per object) with flat-shaded unsmoothed faces showing visible facets, no textures — color from vertex coloring or flat material assignments, soft ambient occlusion baked into vertex colors, gentle pastel or muted palette with careful color harmony, simple directional lighting with soft shadows, miniature diorama quality with tilt-shift depth of field, that geometric minimalism aesthetic — beauty through reduction, every triangle deliberate, architectural origami worlds."
+    },
+    {
+      "id": "gameart_lowpoly_textured",
+      "family": "stylized_3d",
+      "era": "1990s_retro",
+      "engine_reference": "PS1 / Saturn / N64 era",
+      "visual_reference": "Final Fantasy VII (field), Silent Hill, Tomb Raider",
+      "prompt": "PS1-era low-poly textured visual style: angular character models (200-800 polys) with affine texture warping and UV swimming, pre-rendered or low-res painted backgrounds, vertex jitter from integer coordinate snapping, 16-bit color depth with visible banding, fog-clipped draw distances, that distinctively wobbly early-3D look — textures shimmer and warp on faces, geometry pops and snaps, dark atmospheric worlds rendered through severe technical limits that became an accidental horror aesthetic."
+    },
+    {
+      "id": "gameart_handpainted",
+      "family": "stylized_3d",
+      "era": "mixed",
+      "engine_reference": "Unity / UE / Custom",
+      "visual_reference": "Ori and the Blind Forest, Hollow Knight, World of Warcraft",
+      "prompt": "Hand-painted visual style: visible brushstroke texture work on 3D models and environments with warm painterly quality, diffuse-only materials with lighting information baked into the texture paint (no PBR roughness/metallic), soft watercolor or oil-paint gradients on surfaces, warm saturated palette with atmospheric color perspective (cool distance, warm foreground), stylized proportions with organic flowing silhouettes, that illustrated storybook quality — every surface looks touched by an artist's brush, cozy and tactile, inviting exploration."
+    },
+    {
+      "id": "gameart_cartoon_stylized",
+      "family": "stylized_3d",
+      "era": "modern",
+      "engine_reference": "UE / Unity / proprietary",
+      "visual_reference": "Fortnite, Overwatch, Ratchet & Clank",
+      "prompt": "Cartoon stylized 3D visual style: exaggerated character proportions (large heads, expressive faces, heroic builds) with smooth high-poly models and vibrant saturated materials, clean readable silhouettes designed for gameplay clarity, bright diffuse lighting with soft colored shadows and rim highlights, Pixar-adjacent material quality with simplified PBR (less micro-detail, more color), bold environmental color coding, that AAA cartoon look — polished and appealing with mass-market warmth, every surface bright and inviting, animation-feature production values in real-time."
+    },
+    {
+      "id": "gameart_voxel",
+      "family": "stylized_3d",
+      "era": "modern",
+      "engine_reference": "Custom / MagicaVoxel / Unity",
+      "visual_reference": "Minecraft, Teardown, Cloudpunk",
+      "prompt": "Voxel visual style: world and objects constructed from uniform cubic volume elements on a visible 3D grid, flat-colored faces with optional ambient occlusion on voxel edges, simple directional lighting with hard blocky shadows that follow the grid, limited palette per biome or zone with strong color identity, destructible geometry where every block is individually removable, that digital LEGO aesthetic — chunky constructive worlds where the grid is the texture, charming through radical simplification, construction as visual language."
+    },
+    {
+      "id": "gameart_painterly_2d",
+      "family": "2d_illustrated",
+      "era": "modern",
+      "engine_reference": "Unity / Godot / Custom",
+      "visual_reference": "Cuphead, Hades, Disco Elysium",
+      "prompt": "Painterly 2D illustrated visual style: hand-drawn or digitally painted character art and backgrounds with visible artistic technique (ink lines, watercolor washes, oil texture), parallax-separated illustration layers creating depth without 3D, rich detailed environmental storytelling in every background panel, expressive character animation via frame-by-frame or rigged 2D bones with hand-drawn texture, sophisticated color palettes with art-historical awareness (Art Deco, Art Nouveau, Impressionist), that gallery-quality illustrated look — every frame a standalone painting, animation as sequential art."
+    },
+    {
+      "id": "gameart_stylized_realism",
+      "family": "hybrid",
+      "era": "modern",
+      "engine_reference": "UE5 / Unity HDRP / proprietary",
+      "visual_reference": "Zelda: Tears of the Kingdom, God of War (2018), Ghost of Tsushima",
+      "prompt": "Stylized realism visual style: realistic lighting and material response (PBR, dynamic GI, volumetric atmospherics) applied to slightly stylized proportions and art-directed color, real-world-plausible but heightened — colors more saturated than life, silhouettes cleaner than photogrammetry, environments curated for visual storytelling, cinematic camera language with gameplay-aware composition, nature rendered with reverent detail but selective emphasis (wind in grass, particle petals, god rays through canopy), that prestige-game middle ground — grounded enough to feel physical, stylized enough to feel authored."
+    }
+  ],
+
+  "id_index": [
+    "gameart_hyperreal_ue5",
+    "gameart_hyperreal_cryengine",
+    "gameart_90s_goldsrc",
+    "gameart_00s_source",
+    "gameart_retro_quake",
+    "gameart_pixel_8bit",
+    "gameart_pixel_16bit",
+    "gameart_pixel_modern",
+    "gameart_pixel_isometric",
+    "gameart_cel_shaded",
+    "gameart_cel_anime",
+    "gameart_lowpoly_clean",
+    "gameart_lowpoly_textured",
+    "gameart_handpainted",
+    "gameart_cartoon_stylized",
+    "gameart_voxel",
+    "gameart_painterly_2d",
+    "gameart_stylized_realism"
+  ],
+
+  "family_index": {
+    "hyperreal": ["gameart_hyperreal_ue5", "gameart_hyperreal_cryengine"],
+    "retro_fps": ["gameart_90s_goldsrc", "gameart_00s_source", "gameart_retro_quake"],
+    "pixel_art": ["gameart_pixel_8bit", "gameart_pixel_16bit", "gameart_pixel_modern", "gameart_pixel_isometric"],
+    "stylized_3d": ["gameart_cel_shaded", "gameart_cel_anime", "gameart_lowpoly_clean", "gameart_lowpoly_textured", "gameart_handpainted", "gameart_cartoon_stylized", "gameart_voxel"],
+    "2d_illustrated": ["gameart_painterly_2d"],
+    "hybrid": ["gameart_stylized_realism"]
+  }
+}
