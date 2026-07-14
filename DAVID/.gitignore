@@ -11,3 +11,11 @@ training/__pycache__/
 
 # venv
 ml_env/
+
+# Video files — never commit (stored on disk + Drive only)
+*.mp4
+*.mov
+*.wav
+*.avi
+*.mkv
+*.webm
