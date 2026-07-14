@@ -51,3 +51,14 @@ adapter.tar.gz
 
 # Agent-tools ephemeral outputs
 agent-tools/*.txt
+
+# Global video exclusion — no video files in any submodule or path
+*.mp4
+*.mov
+*.wav
+*.avi
+*.mkv
+*.webm
+
+# Eval report JSON (ephemeral, keep on disk only)
+*_eval_report.json
