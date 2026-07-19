@@ -17,7 +17,7 @@ MATILDA 8B Run 10 is available at `localhost:11434` (`matilda` model). For Stone
 client-facing narration or trilingual DE/EN/FR content, use skill **ask-matilda** / call:
 
 ```
-python AI/ELEANOR/products/matilda/matilda_ollama_router.py --lang <de|en|fr|auto> "prompt"
+python AI/ADMIN/MATILDA/matilda_ollama_router.py --lang <de|en|fr|auto> "prompt"
 ```
 
 Do not use MATILDA for coding, research, or non-Stonebridge tasks. Data stays local.
