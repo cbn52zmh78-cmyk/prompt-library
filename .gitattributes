@@ -1,3 +1,22 @@
+# Normalize line endings — same template as AI/DAVID/Stonebridge (T25-41 parity).
+* text=auto eol=lf
+# Scripts that run on Linux RunPods MUST stay LF regardless of platform.
+*.sh   text eol=lf
+*.py   text eol=lf
+# Data / config — keep LF, treat as text for diffing.
+*.json  text eol=lf
+*.jsonl text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+# Binaries — never normalize.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.zip  binary
+# Existing LFS rules (parent convention: mp4 via LFS, kept as-is)
 *.safetensors filter=lfs diff=lfs merge=lfs -text
 *.pt filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text

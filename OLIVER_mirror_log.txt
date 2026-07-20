@@ -5,7 +5,7 @@
 
   Started : Monday, June 22, 2026 8:08:57 PM
 2026/06/22 20:08:57 ERROR 3 (0x00000003) Getting File System Type of Source D:\Oliver\
-The system cannot find the path specified.
+The system cannot find the path specified.
 
    Source = D:\Oliver\
      Dest : C:\Users\NCG\Videos\Grok Projects\OLIVER_mirror\
