@@ -1,0 +1,21 @@
+# Normalize line endings — kills CRLF phantom diffs on Windows
+* text=auto eol=lf
+*.sh   text eol=lf
+*.py   text eol=lf
+*.json  text eol=lf
+*.jsonl text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+# Binaries — never normalize
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.mp4  binary
+*.mov  binary
+*.wav  binary
+*.safetensors filter=lfs diff=lfs merge=lfs -text
+*.pt          filter=lfs diff=lfs merge=lfs -text
+*.bin         filter=lfs diff=lfs merge=lfs -text
