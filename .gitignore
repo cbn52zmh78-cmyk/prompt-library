@@ -65,3 +65,6 @@ agent-tools/*.txt
 
 # Unsloth auto-generated compiled trainer cache (regenerable)
 unsloth_compiled_cache/
+
+# Personal dir, not project infrastructure
+(ME)/
