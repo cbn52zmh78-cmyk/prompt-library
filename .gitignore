@@ -62,3 +62,6 @@ agent-tools/*.txt
 
 # Eval report JSON (ephemeral, keep on disk only)
 *_eval_report.json
+
+# Unsloth auto-generated compiled trainer cache (regenerable)
+unsloth_compiled_cache/
