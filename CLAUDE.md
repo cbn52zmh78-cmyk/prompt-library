@@ -13,8 +13,8 @@ Each submodule has its own CLAUDE.md; this file governs the parent root.
 
 ## Local MATILDA (Ollama)
 
-MATILDA 8B Run 10 is available at `localhost:11434` (`matilda` model). For Stonebridge
-client-facing narration or trilingual DE/EN/FR content, use skill **ask-matilda** / call:
+MATILDA 8B Run 18 is available at `localhost:11434` (`matilda` model). For Stonebridge
+client-facing narration or trilingual DE/EN content, use skill **ask-matilda** / call:
 
 ```
 python AI/ADMIN/MATILDA/matilda_ollama_router.py --lang <de|en|fr|auto> "prompt"
