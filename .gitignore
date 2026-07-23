@@ -68,3 +68,6 @@ unsloth_compiled_cache/
 
 # Personal dir, not project infrastructure
 (ME)/
+
+# Local-only scratch / moved-out-of-repo assets (not shared infrastructure)
+_local/
