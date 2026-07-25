@@ -46,13 +46,41 @@ DAVID/productions/**/*.mp4
 adapter.tar.gz
 *.tar.gz
 
+# ── LARGE FILES — no multi-GB files in git, ever ──
+# ML weights
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.gguf
+*.onnx
+# Raster / GIS
+*.tif
+*.tiff
+*.dem
+*.img
+*.hgt
+*.parquet
+# 3D models
+*.blend
+*.glb
+*.gltf
+*.dae
+*.obj
+*.stl
+*.fbx
+*.exr
+# Large data
+*.geojson
+*.zip
+
 # Claude local settings
 .claude/
 
 # Agent-tools ephemeral outputs
 agent-tools/*.txt
 
-# Global video exclusion � no video files in any submodule or path
+# Global video exclusion � no video files in any submodule or path
 *.mp4
 *.mov
 *.wav
