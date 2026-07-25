@@ -19,3 +19,28 @@ ml_env/
 *.avi
 *.mkv
 *.webm
+
+# ── LARGE FILES — no multi-GB files in git, ever ──
+# ML weights (catch-all beyond adapter-specific rules above)
+*.bin
+*.pt
+*.pth
+*.gguf
+*.onnx
+# Raster / GIS / data
+*.tif
+*.tiff
+*.parquet
+*.geojson
+# 3D models
+*.blend
+*.glb
+*.gltf
+*.dae
+*.obj
+*.stl
+*.fbx
+*.exr
+# Archives
+*.tar.gz
+*.zip
